@@ -1,7 +1,5 @@
 module.exports = {
   content: ["./layouts/**/*.html", "./content/**/*.md"],
-  safelist: ["lg:col-span-2", "lg:col-span-3", "lg:col-span-4", "xl:grid-cols-4", "xl:col-span-4"],
-  darkMode: "class",
   theme: {
     extend: {
       colors: {
@@ -14,7 +12,6 @@ module.exports = {
       },
       fontFamily: {
         sans: "'DM Sans',-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif",
-        // serif: ["PT Serif", "serif"],
       },
       fontSize: {
         xs: ['0.75rem', { lineHeight: '1rem' }],
@@ -31,27 +28,12 @@ module.exports = {
         '8xl': ['6rem', { lineHeight: '1' }],
         '9xl': ['8rem', { lineHeight: '1' }],
       },
-      borderRadius: {
-        '4xl': '2.5rem',
-      },
-      letterSpacing: {
-        'widest': '0.2em',
-      },
       lineHeight: {
         loose: '1.875',
       },
-      // maxWidth: ({ theme, breakpoints }) => ({
-      //   '8xl': '84rem',
-      //   ...breakpoints(theme('screens')),
-      // }),
-
-
     },
   },
   plugins: [
-    require("@tailwindcss/aspect-ratio"),
     require("@tailwindcss/typography"),
-    require("@tailwindcss/line-clamp"),
-    require("@tailwindcss/forms"),
   ],
 };
