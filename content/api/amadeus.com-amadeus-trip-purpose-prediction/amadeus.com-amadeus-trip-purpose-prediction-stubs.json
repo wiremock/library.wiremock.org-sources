@@ -1,0 +1,139 @@
+{
+  "mappings" : [ {
+    "id" : "87aab41c-aa18-425a-a51a-a240dc4891ca",
+    "name" : "Returns the forecast purpose of a trip",
+    "request" : {
+      "urlPath" : "/travel/predictions/trip-purpose",
+      "method" : "GET",
+      "queryParameters" : {
+        "returnDate" : {
+          "equalTo" : "2022-06-02T07%3A50%3A38.264159Z"
+        },
+        "destinationLocationCode" : {
+          "equalTo" : "PEM"
+        },
+        "originLocationCode" : {
+          "equalTo" : "HBM"
+        },
+        "departureDate" : {
+          "equalTo" : "2023-02-13T07%3A08%3A38.264078Z"
+        }
+      }
+    },
+    "response" : {
+      "status" : 400,
+      "body" : "{\n  \"errors\" : [ {\n    \"code\" : 477,\n    \"detail\" : \"invalid query parameter format\",\n    \"source\" : {\n      \"example\" : \"CDG\",\n      \"parameter\" : \"airport\"\n    },\n    \"status\" : 400,\n    \"title\" : \"INVALID FORMAT\"\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "application/vnd.amadeus+json"
+      }
+    },
+    "uuid" : "87aab41c-aa18-425a-a51a-a240dc4891ca",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:38.264265Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "getTripPurposePrediction",
+          "schema" : {
+            "required" : [ "errors" ],
+            "type" : "object",
+            "properties" : {
+              "errors" : {
+                "type" : "array",
+                "items" : {
+                  "$ref" : "#/components/schemas/Issue"
+                }
+              }
+            },
+            "example" : {
+              "errors" : [ {
+                "code" : 477,
+                "detail" : "invalid query parameter format",
+                "source" : {
+                  "example" : "CDG",
+                  "parameter" : "airport"
+                },
+                "status" : 400,
+                "title" : "INVALID FORMAT"
+              } ]
+            }
+          }
+        }
+      }
+    },
+    "insertionIndex" : 0
+  }, {
+    "id" : "aceedc72-8002-476b-a878-8183aa69a94a",
+    "name" : "Returns the forecast purpose of a trip",
+    "request" : {
+      "urlPath" : "/travel/predictions/trip-purpose",
+      "method" : "GET",
+      "queryParameters" : {
+        "returnDate" : {
+          "equalTo" : "2022-11-03T05%3A51%3A38.262212Z"
+        },
+        "destinationLocationCode" : {
+          "equalTo" : "OWL"
+        },
+        "originLocationCode" : {
+          "equalTo" : "JDZ"
+        },
+        "departureDate" : {
+          "equalTo" : "2022-10-29T05%3A32%3A38.261463Z"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"data\" : {\n    \"id\" : \"NYCMAD20231201\",\n    \"probability\" : \"0.9995216\",\n    \"result\" : \"LEISURE\",\n    \"subType\" : \"trip-purpose\",\n    \"type\" : \"prediction\"\n  },\n  \"meta\" : {\n    \"defaults\" : {\n      \"searchDate\" : \"2023-01-12\"\n    },\n    \"links\" : {\n      \"self\" : \"https://test.api.amadeus.com/v1/travel/predictions/trip-purpose?originLocationCode=NYC&destinationLocationCode=MAD&departureDate=2023-12-01&returnDate=2023-12-12&searchDate=2023-01-12\"\n    }\n  }\n}",
+      "headers" : {
+        "Content-Type" : "application/vnd.amadeus+json"
+      }
+    },
+    "uuid" : "aceedc72-8002-476b-a878-8183aa69a94a",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:38.263783Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "getTripPurposePrediction",
+          "schema" : {
+            "type" : "object",
+            "properties" : {
+              "data" : {
+                "$ref" : "#/components/schemas/Purpose_Prediction"
+              },
+              "meta" : {
+                "$ref" : "#/components/schemas/Meta"
+              }
+            },
+            "example" : {
+              "data" : {
+                "id" : "NYCMAD20231201",
+                "probability" : "0.9995216",
+                "result" : "LEISURE",
+                "subType" : "trip-purpose",
+                "type" : "prediction"
+              },
+              "meta" : {
+                "defaults" : {
+                  "searchDate" : "2023-01-12"
+                },
+                "links" : {
+                  "self" : "https://test.api.amadeus.com/v1/travel/predictions/trip-purpose?originLocationCode=NYC&destinationLocationCode=MAD&departureDate=2023-12-01&returnDate=2023-12-12&searchDate=2023-01-12"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "insertionIndex" : 1
+  } ]
+}

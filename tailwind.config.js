@@ -20,8 +20,8 @@ module.exports = {
           // 900: '#150042',
 
         },
-        secondary: {
-          800: '#3730a3',
+        sky: {
+          500: '#0EB2EF',
           900: '#312e81',
         },
         // accent: {

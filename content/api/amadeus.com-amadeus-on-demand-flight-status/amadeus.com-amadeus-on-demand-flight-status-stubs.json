@@ -1,0 +1,238 @@
+{
+  "mappings" : [ {
+    "id" : "d483c05c-63d1-4595-aec5-cea2f3d1bfc2",
+    "name" : "Retrieves a unique flight by search criteria.",
+    "request" : {
+      "urlPath" : "/schedule/flights",
+      "method" : "GET",
+      "queryParameters" : {
+        "scheduledDepartureDate" : {
+          "equalTo" : "2022-10-28Z"
+        },
+        "carrierCode" : {
+          "equalTo" : "faw2cy8338durvgbzkfnx4v7y5vhnnjayrzb3ey5m7zvoen66g1tpcgoz5r0fvjd1o9mh7buib"
+        },
+        "flightNumber" : {
+          "equalTo" : "lam8g2mfei57nnptz4es3br0so9mtlfx8c1wiw544bptrxtap5gmqgmi0yv9igya4cndaa4dwncids88kwekf0tvgtz4rr3q9wase796ql5h20jajvch84splrcks0mwv2ssc4gq5963lk2mdpmdkyc1sm902slet1ftohazywyvqcg3laosrypr4d"
+        }
+      }
+    },
+    "response" : {
+      "status" : 401,
+      "body" : "{\n  \"errors\" : [ {\n    \"code\" : 20,\n    \"detail\" : \"Query unauthorized\",\n    \"status\" : 401,\n    \"title\" : \"RESTRICTED\"\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "application/vnd.amadeus+json"
+      }
+    },
+    "uuid" : "d483c05c-63d1-4595-aec5-cea2f3d1bfc2",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:36.101148Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "getFlightsStatus",
+          "schema" : {
+            "required" : [ "errors" ],
+            "type" : "object",
+            "properties" : {
+              "errors" : {
+                "type" : "array",
+                "items" : {
+                  "$ref" : "#/components/schemas/Issue"
+                }
+              }
+            },
+            "example" : {
+              "errors" : [ {
+                "code" : 20,
+                "detail" : "Query unauthorized",
+                "status" : 401,
+                "title" : "RESTRICTED"
+              } ]
+            }
+          }
+        }
+      }
+    },
+    "insertionIndex" : 0
+  }, {
+    "id" : "7aa669f3-5133-4bd5-a8b6-28b500034e9f",
+    "name" : "Retrieves a unique flight by search criteria.",
+    "request" : {
+      "urlPath" : "/schedule/flights",
+      "method" : "GET",
+      "queryParameters" : {
+        "scheduledDepartureDate" : {
+          "equalTo" : "2023-12-19Z"
+        },
+        "carrierCode" : {
+          "equalTo" : "m8fighlnobo6tet3i22qn7yd2ct91xuq4eo18l4dvghmopz30eemv1zed55kok6sut93de0aj7q6qk66om4wzayksr0b82di2r9m8zkpp4ss9e"
+        },
+        "flightNumber" : {
+          "equalTo" : "gk8nrbor5nytrvve0iourhlkju38k5056z4o0b3qv9y8mrcl4qazpwnf0cmbtomxnppd2m4d5d7xj2sebin9td6c3k6pq9qjflfpysxg66eq9x1oru7wgdhzwux2n0wh07t5it1s617j50ubc"
+        }
+      }
+    },
+    "response" : {
+      "status" : 400,
+      "body" : "{\n  \"errors\" : [ {\n    \"code\" : 477,\n    \"detail\" : \"invalid query parameter format\",\n    \"source\" : {\n      \"example\" : \"CDG\",\n      \"parameter\" : \"airport\"\n    },\n    \"status\" : 400,\n    \"title\" : \"INVALID FORMAT\"\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "application/vnd.amadeus+json"
+      }
+    },
+    "uuid" : "7aa669f3-5133-4bd5-a8b6-28b500034e9f",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:36.101029Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "getFlightsStatus",
+          "schema" : {
+            "required" : [ "errors" ],
+            "type" : "object",
+            "properties" : {
+              "errors" : {
+                "type" : "array",
+                "items" : {
+                  "$ref" : "#/components/schemas/Issue"
+                }
+              }
+            },
+            "example" : {
+              "errors" : [ {
+                "code" : 477,
+                "detail" : "invalid query parameter format",
+                "source" : {
+                  "example" : "CDG",
+                  "parameter" : "airport"
+                },
+                "status" : 400,
+                "title" : "INVALID FORMAT"
+              } ]
+            }
+          }
+        }
+      }
+    },
+    "insertionIndex" : 1
+  }, {
+    "id" : "635bec20-a379-495b-bb3f-e1feaae76492",
+    "name" : "Retrieves a unique flight by search criteria.",
+    "request" : {
+      "urlPath" : "/schedule/flights",
+      "method" : "GET",
+      "queryParameters" : {
+        "scheduledDepartureDate" : {
+          "equalTo" : "2023-04-24Z"
+        },
+        "carrierCode" : {
+          "equalTo" : "y07np7xcddmwtox97k5vwbuqkyl1b20dbojbmt4jdakyncabfv4udpud7uj9pjadwkdug0lb5pj0acrvtu76vw74hl7eenvm0imgh5uue11mmopa1rar49x3acd6uhyo08tyaeeajwr8rl7juwjmnzkhls48pu72boo2jq6j1pprse4j8fw1s25buz54ml3hmctm16de"
+        },
+        "flightNumber" : {
+          "equalTo" : "hzrirypmebmolfafk7uynbn1vqtp26a5jqzkc23k1wqyygyx1zui5x8pbpx972qlvrmzkpzzalfh0xpxc3csttg46l7w2932nwc1gncj9ac5ln2nzhjgiaw9t3omwm5"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"data\" : [ {\n    \"flightDesignator\" : {\n      \"carrierCode\" : \"TP\",\n      \"flightNumber\" : 487\n    },\n    \"flightPoints\" : [ {\n      \"departure\" : {\n        \"timings\" : [ {\n          \"qualifier\" : \"STD\",\n          \"value\" : \"2023-08-01T18:10+02:00\"\n        } ]\n      },\n      \"iataCode\" : \"NCE\"\n    }, {\n      \"arrival\" : {\n        \"timings\" : [ {\n          \"qualifier\" : \"STA\",\n          \"value\" : \"2023-08-01T19:45+01:00\"\n        } ]\n      },\n      \"iataCode\" : \"LIS\"\n    } ],\n    \"legs\" : [ {\n      \"aircraftEquipment\" : {\n        \"aircraftType\" : \"E90\"\n      },\n      \"boardPointIataCode\" : \"NCE\",\n      \"offPointIataCode\" : \"LIS\",\n      \"scheduledLegDuration\" : \"PT2H35M\"\n    } ],\n    \"scheduledDepartureDate\" : \"2023-08-01\",\n    \"segments\" : [ {\n      \"boardPointIataCode\" : \"NCE\",\n      \"offPointIataCode\" : \"LIS\",\n      \"partnership\" : {\n        \"operatingFlight\" : {\n          \"carrierCode\" : \"A3\",\n          \"flightNumber\" : 1748\n        }\n      },\n      \"scheduledSegmentDuration\" : \"PT2H35M\"\n    } ],\n    \"type\" : \"DatedFlight\"\n  } ],\n  \"meta\" : {\n    \"count\" : 1,\n    \"links\" : {\n      \"self\" : \"https://test.api.amadeus.com/v2/schedule/flights?carrierCode=TP&flightNumber=487&scheduledDepartureDate=2023-08-01\"\n    }\n  }\n}",
+      "headers" : {
+        "Content-Type" : "application/vnd.amadeus+json"
+      }
+    },
+    "uuid" : "635bec20-a379-495b-bb3f-e1feaae76492",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:36.100814Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "getFlightsStatus",
+          "schema" : {
+            "title" : "Success Flights.",
+            "required" : [ "data" ],
+            "type" : "object",
+            "properties" : {
+              "data" : {
+                "type" : "array",
+                "items" : {
+                  "$ref" : "#/components/schemas/DatedFlight"
+                }
+              },
+              "meta" : {
+                "$ref" : "#/components/schemas/Collection_Meta"
+              },
+              "warnings" : {
+                "type" : "array",
+                "items" : {
+                  "$ref" : "#/components/schemas/Issue"
+                }
+              }
+            },
+            "example" : {
+              "data" : [ {
+                "flightDesignator" : {
+                  "carrierCode" : "TP",
+                  "flightNumber" : 487
+                },
+                "flightPoints" : [ {
+                  "departure" : {
+                    "timings" : [ {
+                      "qualifier" : "STD",
+                      "value" : "2023-08-01T18:10+02:00"
+                    } ]
+                  },
+                  "iataCode" : "NCE"
+                }, {
+                  "arrival" : {
+                    "timings" : [ {
+                      "qualifier" : "STA",
+                      "value" : "2023-08-01T19:45+01:00"
+                    } ]
+                  },
+                  "iataCode" : "LIS"
+                } ],
+                "legs" : [ {
+                  "aircraftEquipment" : {
+                    "aircraftType" : "E90"
+                  },
+                  "boardPointIataCode" : "NCE",
+                  "offPointIataCode" : "LIS",
+                  "scheduledLegDuration" : "PT2H35M"
+                } ],
+                "scheduledDepartureDate" : "2023-08-01",
+                "segments" : [ {
+                  "boardPointIataCode" : "NCE",
+                  "offPointIataCode" : "LIS",
+                  "partnership" : {
+                    "operatingFlight" : {
+                      "carrierCode" : "A3",
+                      "flightNumber" : 1748
+                    }
+                  },
+                  "scheduledSegmentDuration" : "PT2H35M"
+                } ],
+                "type" : "DatedFlight"
+              } ],
+              "meta" : {
+                "count" : 1,
+                "links" : {
+                  "self" : "https://test.api.amadeus.com/v2/schedule/flights?carrierCode=TP&flightNumber=487&scheduledDepartureDate=2023-08-01"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "insertionIndex" : 2
+  } ]
+}

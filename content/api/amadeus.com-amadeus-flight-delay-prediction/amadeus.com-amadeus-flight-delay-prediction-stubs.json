@@ -1,0 +1,405 @@
+{
+  "mappings" : [ {
+    "id" : "1eb359b8-d459-4e33-ba40-3e0511ff8b81",
+    "name" : "Return the delay segment where the flight is likely to lay. (application/json)",
+    "request" : {
+      "urlPath" : "/travel/predictions/flight-delay",
+      "method" : "GET",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/json"
+        }
+      },
+      "queryParameters" : {
+        "departureTime" : {
+          "equalTo" : "10%3A21%3A09.14Z"
+        },
+        "duration" : {
+          "equalTo" : "xouewtvymzvtchsfj0g26o51unnps3natv5to0q7si06gn8vu9fvgg5z6e2o0iytfo5c1aonaxvnqs08wnhp10q7bemt5m8iwzleyzhcz4k96dojkppgsi8atflk15wrrc6ol26xslbv06lmfz8xv80qpq8i2dye"
+        },
+        "destinationLocationCode" : {
+          "equalTo" : "EBL"
+        },
+        "arrivalTime" : {
+          "equalTo" : "08%3A30%3A24.14Z"
+        },
+        "carrierCode" : {
+          "equalTo" : "0t"
+        },
+        "originLocationCode" : {
+          "equalTo" : "NRZ"
+        },
+        "aircraftCode" : {
+          "equalTo" : "NuA"
+        },
+        "departureDate" : {
+          "equalTo" : "2022-08-10Z"
+        },
+        "arrivalDate" : {
+          "equalTo" : "2022-04-19Z"
+        },
+        "flightNumber" : {
+          "equalTo" : "w4g"
+        }
+      }
+    },
+    "response" : {
+      "status" : 400,
+      "body" : "{\n  \"errors\" : [ {\n    \"code\" : 477,\n    \"detail\" : \"invalid query parameter format\",\n    \"source\" : {\n      \"example\" : \"CDG\",\n      \"parameter\" : \"airport\"\n    },\n    \"status\" : 400,\n    \"title\" : \"INVALID FORMAT\"\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "1eb359b8-d459-4e33-ba40-3e0511ff8b81",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:33.140626Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "getFlightDelayPrediction",
+          "schema" : {
+            "required" : [ "errors" ],
+            "type" : "object",
+            "properties" : {
+              "errors" : {
+                "type" : "array",
+                "items" : {
+                  "$ref" : "#/components/schemas/Issue"
+                }
+              }
+            },
+            "example" : {
+              "errors" : [ {
+                "code" : 477,
+                "detail" : "invalid query parameter format",
+                "source" : {
+                  "example" : "CDG",
+                  "parameter" : "airport"
+                },
+                "status" : 400,
+                "title" : "INVALID FORMAT"
+              } ]
+            }
+          }
+        }
+      }
+    },
+    "insertionIndex" : 0
+  }, {
+    "id" : "aad7b4e8-b7bb-4525-82b7-3b2e92348c8c",
+    "name" : "Return the delay segment where the flight is likely to lay. (application/vnd.amadeus+json)",
+    "request" : {
+      "urlPath" : "/travel/predictions/flight-delay",
+      "method" : "GET",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/vnd.amadeus+json"
+        }
+      },
+      "queryParameters" : {
+        "departureTime" : {
+          "equalTo" : "07%3A37%3A45.14Z"
+        },
+        "duration" : {
+          "equalTo" : "ym8np4z4yyz7xe9rai0jqzxifd86tv5xvj1rwhohzzzy64bbb7tpqhp3c0z4p6t6mhjt388ff0asfaqfrwaflrrcs73es78ptlbg2u5"
+        },
+        "destinationLocationCode" : {
+          "equalTo" : "VOP"
+        },
+        "arrivalTime" : {
+          "equalTo" : "11%3A33%3A31.14Z"
+        },
+        "carrierCode" : {
+          "equalTo" : "6"
+        },
+        "originLocationCode" : {
+          "equalTo" : "CVR"
+        },
+        "aircraftCode" : {
+          "equalTo" : "DlV"
+        },
+        "departureDate" : {
+          "equalTo" : "2022-12-01Z"
+        },
+        "arrivalDate" : {
+          "equalTo" : "2022-10-23Z"
+        },
+        "flightNumber" : {
+          "equalTo" : "cfm"
+        }
+      }
+    },
+    "response" : {
+      "status" : 400,
+      "body" : "{\n  \"errors\" : [ {\n    \"code\" : 477,\n    \"detail\" : \"invalid query parameter format\",\n    \"source\" : {\n      \"example\" : \"CDG\",\n      \"parameter\" : \"airport\"\n    },\n    \"status\" : 400,\n    \"title\" : \"INVALID FORMAT\"\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "application/vnd.amadeus+json"
+      }
+    },
+    "uuid" : "aad7b4e8-b7bb-4525-82b7-3b2e92348c8c",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:33.140381Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "getFlightDelayPrediction",
+          "schema" : {
+            "required" : [ "errors" ],
+            "type" : "object",
+            "properties" : {
+              "errors" : {
+                "type" : "array",
+                "items" : {
+                  "$ref" : "#/components/schemas/Issue"
+                }
+              }
+            },
+            "example" : {
+              "errors" : [ {
+                "code" : 477,
+                "detail" : "invalid query parameter format",
+                "source" : {
+                  "example" : "CDG",
+                  "parameter" : "airport"
+                },
+                "status" : 400,
+                "title" : "INVALID FORMAT"
+              } ]
+            }
+          }
+        }
+      }
+    },
+    "insertionIndex" : 1
+  }, {
+    "id" : "7269bae8-e6e6-4def-b8c2-a5fd81325f2c",
+    "name" : "Return the delay segment where the flight is likely to lay. (application/json)",
+    "request" : {
+      "urlPath" : "/travel/predictions/flight-delay",
+      "method" : "GET",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/json"
+        }
+      },
+      "queryParameters" : {
+        "departureTime" : {
+          "equalTo" : "12%3A09%3A30.139Z"
+        },
+        "duration" : {
+          "equalTo" : "grnwkefm74z55aqcyozz5p9orh74wpfvgbshrwzhwrykwb4mnuqp0i8rxwkbfj7nzn9qz04hsby4kf02pg3t8y05lxhhgu7x1h"
+        },
+        "destinationLocationCode" : {
+          "equalTo" : "NOO"
+        },
+        "arrivalTime" : {
+          "equalTo" : "06%3A55%3A16.139Z"
+        },
+        "carrierCode" : {
+          "equalTo" : "1m"
+        },
+        "originLocationCode" : {
+          "equalTo" : "MNO"
+        },
+        "aircraftCode" : {
+          "equalTo" : "xFy"
+        },
+        "departureDate" : {
+          "equalTo" : "2023-08-19Z"
+        },
+        "arrivalDate" : {
+          "equalTo" : "2022-09-01Z"
+        },
+        "flightNumber" : {
+          "equalTo" : "9ls"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"data\" : [ {\n    \"id\" : \"TK1816NCEIST20200801\",\n    \"probability\" : \"0.13336977\",\n    \"result\" : \"LESS_THAN_30_MINUTES\",\n    \"subType\" : \"flight-delay\",\n    \"type\" : \"prediction\"\n  }, {\n    \"id\" : \"TK1816NCEIST20200801\",\n    \"probability\" : \"0.42023364\",\n    \"result\" : \"BETWEEN_30_AND_60_MINUTES\",\n    \"subType\" : \"flight-delay\",\n    \"type\" : \"prediction\"\n  }, {\n    \"id\" : \"TK1816NCEIST20200801\",\n    \"probability\" : \"0.34671372\",\n    \"result\" : \"BETWEEN_60_AND_120_MINUTES\",\n    \"subType\" : \"flight-delay\",\n    \"type\" : \"prediction\"\n  }, {\n    \"id\" : \"TK1816NCEIST20200801\",\n    \"probability\" : \"0.09968289\",\n    \"result\" : \"OVER_120_MINUTES_OR_CANCELLED\",\n    \"subType\" : \"flight-delay\",\n    \"type\" : \"prediction\"\n  } ],\n  \"meta\" : {\n    \"count\" : 4,\n    \"links\" : {\n      \"self\" : \"https://test.api.amadeus.com/v1/travel/predictions/flight-delay?originLocationCode=NCE&destinationLocationCode=IST&departureDate=2020-08-01&departureTime=18:20:00&arrivalDate=2020-08-01&arrivalTime=22:15:00&aircraftCode=321&carrierCode=TK&flightNumber=1816&duration=PT31H10M\"\n    }\n  }\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "7269bae8-e6e6-4def-b8c2-a5fd81325f2c",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:33.140115Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "getFlightDelayPrediction",
+          "schema" : {
+            "type" : "object",
+            "properties" : {
+              "data" : {
+                "type" : "array",
+                "items" : {
+                  "$ref" : "#/components/schemas/Delay_Prediction"
+                }
+              },
+              "meta" : {
+                "$ref" : "#/components/schemas/Collection_Meta_Link"
+              }
+            },
+            "example" : {
+              "data" : [ {
+                "id" : "TK1816NCEIST20200801",
+                "probability" : "0.13336977",
+                "result" : "LESS_THAN_30_MINUTES",
+                "subType" : "flight-delay",
+                "type" : "prediction"
+              }, {
+                "id" : "TK1816NCEIST20200801",
+                "probability" : "0.42023364",
+                "result" : "BETWEEN_30_AND_60_MINUTES",
+                "subType" : "flight-delay",
+                "type" : "prediction"
+              }, {
+                "id" : "TK1816NCEIST20200801",
+                "probability" : "0.34671372",
+                "result" : "BETWEEN_60_AND_120_MINUTES",
+                "subType" : "flight-delay",
+                "type" : "prediction"
+              }, {
+                "id" : "TK1816NCEIST20200801",
+                "probability" : "0.09968289",
+                "result" : "OVER_120_MINUTES_OR_CANCELLED",
+                "subType" : "flight-delay",
+                "type" : "prediction"
+              } ],
+              "meta" : {
+                "count" : 4,
+                "links" : {
+                  "self" : "https://test.api.amadeus.com/v1/travel/predictions/flight-delay?originLocationCode=NCE&destinationLocationCode=IST&departureDate=2020-08-01&departureTime=18:20:00&arrivalDate=2020-08-01&arrivalTime=22:15:00&aircraftCode=321&carrierCode=TK&flightNumber=1816&duration=PT31H10M"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "insertionIndex" : 2
+  }, {
+    "id" : "ddd6d160-c5ee-4a5d-8ffc-51f94d9258ad",
+    "name" : "Return the delay segment where the flight is likely to lay. (application/vnd.amadeus+json)",
+    "request" : {
+      "urlPath" : "/travel/predictions/flight-delay",
+      "method" : "GET",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/vnd.amadeus+json"
+        }
+      },
+      "queryParameters" : {
+        "departureTime" : {
+          "equalTo" : "12%3A00%3A27.139Z"
+        },
+        "duration" : {
+          "equalTo" : "vns9y7705uclgscudp38atgw5vdw2t2r7lhqy10i3xwbt5y8gh8uos245ynf3fk6yx7uj"
+        },
+        "destinationLocationCode" : {
+          "equalTo" : "XSI"
+        },
+        "arrivalTime" : {
+          "equalTo" : "10%3A10%3A17.139Z"
+        },
+        "carrierCode" : {
+          "equalTo" : "l3"
+        },
+        "originLocationCode" : {
+          "equalTo" : "YBE"
+        },
+        "aircraftCode" : {
+          "equalTo" : "GPE"
+        },
+        "departureDate" : {
+          "equalTo" : "2023-11-27Z"
+        },
+        "arrivalDate" : {
+          "equalTo" : "2023-04-21Z"
+        },
+        "flightNumber" : {
+          "equalTo" : "cd68"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"data\" : [ {\n    \"id\" : \"TK1816NCEIST20200801\",\n    \"probability\" : \"0.13336977\",\n    \"result\" : \"LESS_THAN_30_MINUTES\",\n    \"subType\" : \"flight-delay\",\n    \"type\" : \"prediction\"\n  }, {\n    \"id\" : \"TK1816NCEIST20200801\",\n    \"probability\" : \"0.42023364\",\n    \"result\" : \"BETWEEN_30_AND_60_MINUTES\",\n    \"subType\" : \"flight-delay\",\n    \"type\" : \"prediction\"\n  }, {\n    \"id\" : \"TK1816NCEIST20200801\",\n    \"probability\" : \"0.34671372\",\n    \"result\" : \"BETWEEN_60_AND_120_MINUTES\",\n    \"subType\" : \"flight-delay\",\n    \"type\" : \"prediction\"\n  }, {\n    \"id\" : \"TK1816NCEIST20200801\",\n    \"probability\" : \"0.09968289\",\n    \"result\" : \"OVER_120_MINUTES_OR_CANCELLED\",\n    \"subType\" : \"flight-delay\",\n    \"type\" : \"prediction\"\n  } ],\n  \"meta\" : {\n    \"count\" : 4,\n    \"links\" : {\n      \"self\" : \"https://test.api.amadeus.com/v1/travel/predictions/flight-delay?originLocationCode=NCE&destinationLocationCode=IST&departureDate=2020-08-01&departureTime=18:20:00&arrivalDate=2020-08-01&arrivalTime=22:15:00&aircraftCode=321&carrierCode=TK&flightNumber=1816&duration=PT31H10M\"\n    }\n  }\n}",
+      "headers" : {
+        "Content-Type" : "application/vnd.amadeus+json"
+      }
+    },
+    "uuid" : "ddd6d160-c5ee-4a5d-8ffc-51f94d9258ad",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:33.1398Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "getFlightDelayPrediction",
+          "schema" : {
+            "type" : "object",
+            "properties" : {
+              "data" : {
+                "type" : "array",
+                "items" : {
+                  "$ref" : "#/components/schemas/Delay_Prediction"
+                }
+              },
+              "meta" : {
+                "$ref" : "#/components/schemas/Collection_Meta_Link"
+              }
+            },
+            "example" : {
+              "data" : [ {
+                "id" : "TK1816NCEIST20200801",
+                "probability" : "0.13336977",
+                "result" : "LESS_THAN_30_MINUTES",
+                "subType" : "flight-delay",
+                "type" : "prediction"
+              }, {
+                "id" : "TK1816NCEIST20200801",
+                "probability" : "0.42023364",
+                "result" : "BETWEEN_30_AND_60_MINUTES",
+                "subType" : "flight-delay",
+                "type" : "prediction"
+              }, {
+                "id" : "TK1816NCEIST20200801",
+                "probability" : "0.34671372",
+                "result" : "BETWEEN_60_AND_120_MINUTES",
+                "subType" : "flight-delay",
+                "type" : "prediction"
+              }, {
+                "id" : "TK1816NCEIST20200801",
+                "probability" : "0.09968289",
+                "result" : "OVER_120_MINUTES_OR_CANCELLED",
+                "subType" : "flight-delay",
+                "type" : "prediction"
+              } ],
+              "meta" : {
+                "count" : 4,
+                "links" : {
+                  "self" : "https://test.api.amadeus.com/v1/travel/predictions/flight-delay?originLocationCode=NCE&destinationLocationCode=IST&departureDate=2020-08-01&departureTime=18:20:00&arrivalDate=2020-08-01&arrivalTime=22:15:00&aircraftCode=321&carrierCode=TK&flightNumber=1816&duration=PT31H10M"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "insertionIndex" : 3
+  } ]
+}

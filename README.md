@@ -48,7 +48,7 @@ Link/button bg-blue-600 hover:bg-blue-700
 ```
 
 ```
-Muted: text-zinc-600, dark: text-zinc-400
+Muted: text-slate-600, dark: text-slate-400
 Primary: primary-600
 Dark: no class
 Ascent text (superheading): text-accent-500

@@ -1,0 +1,773 @@
+{
+  "mappings" : [ {
+    "id" : "ede1f3b2-c1e2-407c-a5e4-7cc7f84e3746",
+    "name" : "Gets the face_age task [ id -> face age task ] - 404",
+    "request" : {
+      "urlPath" : "/face_age/555n",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 404
+    },
+    "uuid" : "ede1f3b2-c1e2-407c-a5e4-7cc7f84e3746",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:55.57639Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "(none)"
+        }
+      }
+    },
+    "insertionIndex" : 0
+  }, {
+    "id" : "680b2c3e-4809-4e30-9a5f-1055ca32c571",
+    "name" : "Gets the face_age task [ id -> face age task ] (application/json)",
+    "request" : {
+      "urlPath" : "/face_age/31b2",
+      "method" : "GET",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/json"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"this_url\" : \"https://web.example.mocklab.io/306004\",\n  \"answer\" : 1.5853107377323963E307,\n  \"image_url\" : \"https://s3.amazonaws.com/uifaces/faces/twitter/gseguin/128.jpg\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "680b2c3e-4809-4e30-9a5f-1055ca32c571",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:55.576196Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "(none)",
+          "schema" : {
+            "required" : [ "image_url" ],
+            "type" : "object",
+            "properties" : {
+              "answer" : {
+                "type" : "number",
+                "description" : "The answer you are looking for.",
+                "readOnly" : true
+              },
+              "image_url" : {
+                "type" : "string",
+                "description" : "The url of the image that will be processed."
+              },
+              "this_url" : {
+                "type" : "string",
+                "description" : "Use this url to get this task.",
+                "readOnly" : true
+              }
+            }
+          }
+        }
+      }
+    },
+    "insertionIndex" : 1
+  }, {
+    "id" : "54bb0d34-63b0-455c-a538-618d8e4f8bed",
+    "name" : "How old is the person in the image? [ image_url -> id ] - 400",
+    "request" : {
+      "urlPath" : "/face_age",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 400
+    },
+    "uuid" : "54bb0d34-63b0-455c-a538-618d8e4f8bed",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:55.5756Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "(none)"
+        }
+      }
+    },
+    "insertionIndex" : 2
+  }, {
+    "id" : "99d2c061-4292-4edb-9eb5-4a22d5e6f858",
+    "name" : "How old is the person in the image? [ image_url -> id ] (application/json)",
+    "request" : {
+      "urlPath" : "/face_age",
+      "method" : "POST",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/json"
+        }
+      }
+    },
+    "response" : {
+      "status" : 201,
+      "body" : "{\n  \"this_url\" : \"https://web.example.mocklab.io/156238\",\n  \"answer\" : 7.017196476086292E307,\n  \"image_url\" : \"https://s3.amazonaws.com/uifaces/faces/twitter/lingeswaran/128.jpg\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "99d2c061-4292-4edb-9eb5-4a22d5e6f858",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:55.575557Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "(none)",
+          "schema" : {
+            "required" : [ "image_url" ],
+            "type" : "object",
+            "properties" : {
+              "answer" : {
+                "type" : "number",
+                "description" : "The answer you are looking for.",
+                "readOnly" : true
+              },
+              "image_url" : {
+                "type" : "string",
+                "description" : "The url of the image that will be processed."
+              },
+              "this_url" : {
+                "type" : "string",
+                "description" : "Use this url to get this task.",
+                "readOnly" : true
+              }
+            }
+          }
+        }
+      }
+    },
+    "insertionIndex" : 3
+  }, {
+    "id" : "baf2ac54-8fc5-410d-8870-0bc81cd9ab9a",
+    "name" : "Gets the face task [ id -> face task ] - 404",
+    "request" : {
+      "urlPath" : "/face/96hd",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 404
+    },
+    "uuid" : "baf2ac54-8fc5-410d-8870-0bc81cd9ab9a",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:55.575243Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "(none)"
+        }
+      }
+    },
+    "insertionIndex" : 4
+  }, {
+    "id" : "2a97516f-69bb-4115-9874-d02145821e57",
+    "name" : "Gets the face task [ id -> face task ] (application/json)",
+    "request" : {
+      "urlPath" : "/face/3g71",
+      "method" : "GET",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/json"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"this_url\" : \"https://web.example.mocklab.io/993458\",\n  \"answer\" : 1.731840950146316E308,\n  \"image_url\" : \"https://s3.amazonaws.com/uifaces/faces/twitter/nomidesigns/128.jpg\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "2a97516f-69bb-4115-9874-d02145821e57",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:55.575021Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "(none)",
+          "schema" : {
+            "required" : [ "image_url" ],
+            "type" : "object",
+            "properties" : {
+              "answer" : {
+                "type" : "number",
+                "description" : "The answer you are looking for.",
+                "readOnly" : true
+              },
+              "image_url" : {
+                "type" : "string",
+                "description" : "The url of the image that will be processed."
+              },
+              "this_url" : {
+                "type" : "string",
+                "description" : "Use this url to get this task.",
+                "readOnly" : true
+              }
+            }
+          }
+        }
+      }
+    },
+    "insertionIndex" : 5
+  }, {
+    "id" : "fab8d7b1-bb90-4114-a9a5-24f3bd3f224c",
+    "name" : "Find all faces in the image [ image_url -> id ] - 400",
+    "request" : {
+      "urlPath" : "/face",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 400
+    },
+    "uuid" : "fab8d7b1-bb90-4114-a9a5-24f3bd3f224c",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:55.574671Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "(none)"
+        }
+      }
+    },
+    "insertionIndex" : 6
+  }, {
+    "id" : "0596bf9b-3cbe-40a8-beb0-6f28920603ca",
+    "name" : "Find all faces in the image [ image_url -> id ] (application/json)",
+    "request" : {
+      "urlPath" : "/face",
+      "method" : "POST",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/json"
+        }
+      }
+    },
+    "response" : {
+      "status" : 201,
+      "body" : "{\n  \"this_url\" : \"https://web.example.mocklab.io/638852\",\n  \"answer\" : 1.7468829287151237E308,\n  \"image_url\" : \"https://s3.amazonaws.com/uifaces/faces/twitter/kaspernordkvist/128.jpg\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "0596bf9b-3cbe-40a8-beb0-6f28920603ca",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:55.574628Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "(none)",
+          "schema" : {
+            "required" : [ "image_url" ],
+            "type" : "object",
+            "properties" : {
+              "answer" : {
+                "type" : "number",
+                "description" : "The answer you are looking for.",
+                "readOnly" : true
+              },
+              "image_url" : {
+                "type" : "string",
+                "description" : "The url of the image that will be processed."
+              },
+              "this_url" : {
+                "type" : "string",
+                "description" : "Use this url to get this task.",
+                "readOnly" : true
+              }
+            }
+          }
+        }
+      }
+    },
+    "insertionIndex" : 7
+  }, {
+    "id" : "e178cda0-b6b1-4f70-a389-31e23675b756",
+    "name" : "Gets the detect_object task [ id -> detect object task] - 404",
+    "request" : {
+      "urlPath" : "/detect_object/4jso",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 404
+    },
+    "uuid" : "e178cda0-b6b1-4f70-a389-31e23675b756",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:55.574404Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "(none)"
+        }
+      }
+    },
+    "insertionIndex" : 8
+  }, {
+    "id" : "c79a52e8-ec44-49ca-8541-cd9b038e8b7d",
+    "name" : "Gets the detect_object task [ id -> detect object task] (application/json)",
+    "request" : {
+      "urlPath" : "/detect_object/m58z",
+      "method" : "GET",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/json"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"this_url\" : \"https://web.example.mocklab.io/149190\",\n  \"answer\" : 9.518731904596855E307,\n  \"image_url\" : \"https://s3.amazonaws.com/uifaces/faces/twitter/waghner/128.jpg\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "c79a52e8-ec44-49ca-8541-cd9b038e8b7d",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:55.574267Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "(none)",
+          "schema" : {
+            "required" : [ "image_url" ],
+            "type" : "object",
+            "properties" : {
+              "answer" : {
+                "type" : "number",
+                "description" : "The answer you are looking for.",
+                "readOnly" : true
+              },
+              "image_url" : {
+                "type" : "string",
+                "description" : "The url of the image that will be processed."
+              },
+              "this_url" : {
+                "type" : "string",
+                "description" : "Use this url to get this task.",
+                "readOnly" : true
+              }
+            }
+          }
+        }
+      }
+    },
+    "insertionIndex" : 9
+  }, {
+    "id" : "a65acc65-31d1-4ad6-90eb-2be081aa8523",
+    "name" : "What is that object? [ image_url -> id ] - 400",
+    "request" : {
+      "urlPath" : "/detect_object",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 400
+    },
+    "uuid" : "a65acc65-31d1-4ad6-90eb-2be081aa8523",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:55.573875Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "(none)"
+        }
+      }
+    },
+    "insertionIndex" : 10
+  }, {
+    "id" : "6a254dc2-ecab-4d06-8fbd-2393f3107791",
+    "name" : "What is that object? [ image_url -> id ] (application/json)",
+    "request" : {
+      "urlPath" : "/detect_object",
+      "method" : "POST",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/json"
+        }
+      }
+    },
+    "response" : {
+      "status" : 201,
+      "body" : "{\n  \"this_url\" : \"https://web.example.mocklab.io/457989\",\n  \"answer\" : 3.325179705115326E307,\n  \"image_url\" : \"https://s3.amazonaws.com/uifaces/faces/twitter/ostirbu/128.jpg\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "6a254dc2-ecab-4d06-8fbd-2393f3107791",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:55.573758Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "(none)",
+          "schema" : {
+            "required" : [ "image_url" ],
+            "type" : "object",
+            "properties" : {
+              "answer" : {
+                "type" : "number",
+                "description" : "The answer you are looking for.",
+                "readOnly" : true
+              },
+              "image_url" : {
+                "type" : "string",
+                "description" : "The url of the image that will be processed."
+              },
+              "this_url" : {
+                "type" : "string",
+                "description" : "Use this url to get this task.",
+                "readOnly" : true
+              }
+            }
+          }
+        }
+      }
+    },
+    "insertionIndex" : 11
+  }, {
+    "id" : "fd513ea9-a5ff-48a5-9d70-a7eee22253c6",
+    "name" : "Gets a artistic image by task id [ id -> artistic image task ] - 404",
+    "request" : {
+      "urlPath" : "/artistic_image/l585",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 404
+    },
+    "uuid" : "fd513ea9-a5ff-48a5-9d70-a7eee22253c6",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:55.573237Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "(none)"
+        }
+      }
+    },
+    "insertionIndex" : 12
+  }, {
+    "id" : "7a5dfa7f-60c3-4323-81bc-f0e95cd8438b",
+    "name" : "Gets a artistic image by task id [ id -> artistic image task ] (application/json)",
+    "request" : {
+      "urlPath" : "/artistic_image/884q",
+      "method" : "GET",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/json"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"this_url\" : \"https://web.example.mocklab.io/603269\",\n  \"answer\" : 2.3299930887258017E307,\n  \"image_url\" : \"https://s3.amazonaws.com/uifaces/faces/twitter/rtgibbons/128.jpg\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "7a5dfa7f-60c3-4323-81bc-f0e95cd8438b",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:55.573057Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "(none)",
+          "schema" : {
+            "required" : [ "image_url" ],
+            "type" : "object",
+            "properties" : {
+              "answer" : {
+                "type" : "number",
+                "description" : "The answer you are looking for.",
+                "readOnly" : true
+              },
+              "image_url" : {
+                "type" : "string",
+                "description" : "The url of the image that will be processed."
+              },
+              "this_url" : {
+                "type" : "string",
+                "description" : "Use this url to get this task.",
+                "readOnly" : true
+              }
+            }
+          }
+        }
+      }
+    },
+    "insertionIndex" : 13
+  }, {
+    "id" : "115de467-fc86-4e8a-8395-5c8d53f38a03",
+    "name" : "Create an artistic image [ image_url, style_url -> id ] - 400",
+    "request" : {
+      "urlPath" : "/artistic_image",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 400
+    },
+    "uuid" : "115de467-fc86-4e8a-8395-5c8d53f38a03",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:55.572628Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "(none)"
+        }
+      }
+    },
+    "insertionIndex" : 14
+  }, {
+    "id" : "0e5b3fa6-6880-4966-b258-df28b4b4f1d2",
+    "name" : "Create an artistic image [ image_url, style_url -> id ] (application/json)",
+    "request" : {
+      "urlPath" : "/artistic_image",
+      "method" : "POST",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/json"
+        }
+      }
+    },
+    "response" : {
+      "status" : 201,
+      "body" : "{\n  \"this_url\" : \"https://web.example.mocklab.io/675275\",\n  \"answer\" : 7.760887781674917E307,\n  \"image_url\" : \"https://s3.amazonaws.com/uifaces/faces/twitter/themrdave/128.jpg\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "0e5b3fa6-6880-4966-b258-df28b4b4f1d2",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:55.572585Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "(none)",
+          "schema" : {
+            "required" : [ "image_url" ],
+            "type" : "object",
+            "properties" : {
+              "answer" : {
+                "type" : "number",
+                "description" : "The answer you are looking for.",
+                "readOnly" : true
+              },
+              "image_url" : {
+                "type" : "string",
+                "description" : "The url of the image that will be processed."
+              },
+              "this_url" : {
+                "type" : "string",
+                "description" : "Use this url to get this task.",
+                "readOnly" : true
+              }
+            }
+          }
+        }
+      }
+    },
+    "insertionIndex" : 15
+  }, {
+    "id" : "cfec5efb-8330-42d6-a2b2-d00fba2f6b0c",
+    "name" : "Gets the adult_content task [ id -> adult content task ] - 404",
+    "request" : {
+      "urlPath" : "/adult_content/634g",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 404
+    },
+    "uuid" : "cfec5efb-8330-42d6-a2b2-d00fba2f6b0c",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:55.572312Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "(none)"
+        }
+      }
+    },
+    "insertionIndex" : 16
+  }, {
+    "id" : "8bd5d019-67c7-479a-b9e0-4a3a5dcfe4ea",
+    "name" : "Gets the adult_content task [ id -> adult content task ] (application/json)",
+    "request" : {
+      "urlPath" : "/adult_content/d872",
+      "method" : "GET",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/json"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"this_url\" : \"https://web.example.mocklab.io/194724\",\n  \"answer\" : 2.1921868167688095E307,\n  \"image_url\" : \"https://s3.amazonaws.com/uifaces/faces/twitter/salvafc/128.jpg\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "8bd5d019-67c7-479a-b9e0-4a3a5dcfe4ea",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:55.572148Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "(none)",
+          "schema" : {
+            "required" : [ "image_url" ],
+            "type" : "object",
+            "properties" : {
+              "answer" : {
+                "type" : "number",
+                "description" : "The answer you are looking for.",
+                "readOnly" : true
+              },
+              "image_url" : {
+                "type" : "string",
+                "description" : "The url of the image that will be processed."
+              },
+              "this_url" : {
+                "type" : "string",
+                "description" : "Use this url to get this task.",
+                "readOnly" : true
+              }
+            }
+          }
+        }
+      }
+    },
+    "insertionIndex" : 17
+  }, {
+    "id" : "906faa6e-67f3-40a1-b959-36e3902c33a5",
+    "name" : "Image contains nudity or sexually explicit content? [ image_url -> id ] - 400",
+    "request" : {
+      "urlPath" : "/adult_content",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 400
+    },
+    "uuid" : "906faa6e-67f3-40a1-b959-36e3902c33a5",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:55.57174Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "(none)"
+        }
+      }
+    },
+    "insertionIndex" : 18
+  }, {
+    "id" : "6eccb33a-2e55-42cd-8af7-dec6138697a0",
+    "name" : "Image contains nudity or sexually explicit content? [ image_url -> id ] (application/json)",
+    "request" : {
+      "urlPath" : "/adult_content",
+      "method" : "POST",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/json"
+        }
+      }
+    },
+    "response" : {
+      "status" : 201,
+      "body" : "{\n  \"this_url\" : \"https://web.example.mocklab.io/819285\",\n  \"answer\" : 1.6230950131248792E308,\n  \"image_url\" : \"https://s3.amazonaws.com/uifaces/faces/twitter/psdesignuk/128.jpg\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "6eccb33a-2e55-42cd-8af7-dec6138697a0",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:55.571665Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "(none)",
+          "schema" : {
+            "required" : [ "image_url" ],
+            "type" : "object",
+            "properties" : {
+              "answer" : {
+                "type" : "number",
+                "description" : "The answer you are looking for.",
+                "readOnly" : true
+              },
+              "image_url" : {
+                "type" : "string",
+                "description" : "The url of the image that will be processed."
+              },
+              "this_url" : {
+                "type" : "string",
+                "description" : "Use this url to get this task.",
+                "readOnly" : true
+              }
+            }
+          }
+        }
+      }
+    },
+    "insertionIndex" : 19
+  } ]
+}

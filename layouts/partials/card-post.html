@@ -1,4 +1,4 @@
-<div class="relative bg-white p-8 border border-zinc-100 rounded-lg rounded-tl-3xl hover:shadow-xl">
+<div class="relative bg-white p-8 border border-slate-100 rounded-lg rounded-tl-3xl hover:shadow-xl">
   <div class="col-span-3 md:col-span-1">
     {{ if .Params.image }}
       <div class="aspect-w-16 aspect-h-7 lg:aspect-h-10 rounded rounded-tl-2xl overflow-hidden block">
@@ -9,10 +9,10 @@
   <div class="flex items-start justify-between mt-6">
     <div class="flex flex-wrap gap-1">
       {{ if .Params.categories }}
-        {{ range .Params.categories }}<span class="uppercase bg-zinc-100 text-primary-600 text-sm font-semibold rounded-full px-4 py-2 tracking-wider">{{ . }}</span>{{ end }}
+        {{ range .Params.categories }}<span class="uppercase bg-slate-100 text-primary-600 text-sm font-semibold rounded-full px-4 py-2 tracking-wider">{{ . }}</span>{{ end }}
       {{ end }}  
     </div>
-    <time datetime="2020-03-16" class="whitespace-nowrap uppercase bg-zinc-100 text-sm font-semibold rounded-full px-4 py-2 tracking-wider">{{ dateFormat "January 02, 2006" .Date }}</time> 
+    <time datetime="2020-03-16" class="whitespace-nowrap uppercase bg-slate-100 text-sm font-semibold rounded-full px-4 py-2 tracking-wider">{{ dateFormat "January 02, 2006" .Date }}</time> 
   </div>
   <h3 class="text-3xl font-semibold mt-5">{{ .Title }}</h3>
   <p class="mt-4 text-base leading-loose line-clamp-2">{{ .Summary }}</p>

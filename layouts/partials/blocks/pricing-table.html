@@ -28,8 +28,8 @@
                     <div class="font-medium text-xl py-2 border-t border-b border-blue-200 -mb-px z-1">{{ .feature }}</div>
                     <div class="border-t border-b border-blue-200 -mb-px z-1"></div>
                   {{ else }}
-                    <div class="leading-6 text-gray-500 py-4 border-t border-zinc-100 dark:border-zinc-800">{{ .feature }}</div>
-                    <div class="flex items-center justify-end py-4 border-t border-zinc-100 dark:border-zinc-800 text-right pl-3">
+                    <div class="leading-6 text-gray-500 py-4 border-t border-slate-100 dark:border-slate-800">{{ .feature }}</div>
+                    <div class="flex items-center justify-end py-4 border-t border-slate-100 dark:border-slate-800 text-right pl-3">
                       {{ if eq .icon "check" }}
                         <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                           <path fill-rule="evenodd" clip-rule="evenodd" d="M16.7069 6.17951C16.8944 6.36703 16.9997 6.62134 16.9997 6.88651C16.9997 7.15167 16.8944 7.40598 16.7069 7.5935L8.70692 15.5935C8.51939 15.781 8.26508 15.8863 7.99992 15.8863C7.73475 15.8863 7.48045 15.781 7.29292 15.5935L3.29292 11.5935C3.11076 11.4049 3.00997 11.1523 3.01224 10.8901C3.01452 10.6279 3.11969 10.3771 3.3051 10.1917C3.49051 10.0063 3.74132 9.90111 4.00352 9.89883C4.26571 9.89655 4.51832 9.99735 4.70692 10.1795L7.99992 13.4725L15.2929 6.17951C15.4804 5.99203 15.7348 5.88672 15.9999 5.88672C16.2651 5.88672 16.5194 5.99203 16.7069 6.17951Z" fill="#226709"/>
@@ -97,20 +97,20 @@
         <div class="grid grid-cols-3 mt-6">
           {{ range .features }}
             {{ if .heading }}
-              <div class="pt-12 pb-4 border-b border-zinc-100 dark:border-zinc-800">
+              <div class="pt-12 pb-4 border-b border-slate-100 dark:border-slate-800">
                 <h5 class="font-semibold text-sm dark:text-white">{{ .heading }}</h5>
               </div>
-              <div class="col-span-2 border-b border-zinc-100 dark:border-zinc-800"></div>
+              <div class="col-span-2 border-b border-slate-100 dark:border-slate-800"></div>
             {{ else }}
-              <div class="leading-6 py-4 text-sm border-b border-zinc-100 dark:border-zinc-800 text-zinc-600 dark:text-zinc-300">{{ .feature }}</div>
+              <div class="leading-6 py-4 text-sm border-b border-slate-100 dark:border-slate-800 text-slate-600 dark:text-slate-300">{{ .feature }}</div>
               {{ range .plans }}
-                <div class="flex items-center pl-5 py-4 text-sm border-b border-zinc-100 dark:border-zinc-800 text-zinc-600 dark:text-zinc-300">
+                <div class="flex items-center pl-5 py-4 text-sm border-b border-slate-100 dark:border-slate-800 text-slate-600 dark:text-slate-300">
                   {{ if eq .item "check" }}
                     <svg class="text-primary-600 dark:text-primary-500" width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path fill-rule="evenodd" clip-rule="evenodd" d="M16.7069 6.17951C16.8944 6.36703 16.9997 6.62134 16.9997 6.88651C16.9997 7.15167 16.8944 7.40598 16.7069 7.5935L8.70692 15.5935C8.51939 15.781 8.26508 15.8863 7.99992 15.8863C7.73475 15.8863 7.48045 15.781 7.29292 15.5935L3.29292 11.5935C3.11076 11.4049 3.00997 11.1523 3.01224 10.8901C3.01452 10.6279 3.11969 10.3771 3.3051 10.1917C3.49051 10.0063 3.74132 9.90111 4.00352 9.89883C4.26571 9.89655 4.51832 9.99735 4.70692 10.1795L7.99992 13.4725L15.2929 6.17951C15.4804 5.99203 15.7348 5.88672 15.9999 5.88672C16.2651 5.88672 16.5194 5.99203 16.7069 6.17951Z" fill="currentColor"/>
                     </svg>
                   {{ else if eq .item "dash" }}
-                    <svg class="text-zinc-400 dark:text-zinc-500" width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg class="text-slate-400 dark:text-slate-500" width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path fill-rule="evenodd" clip-rule="evenodd" d="M3 10.8867C3 10.6215 3.10536 10.3671 3.29289 10.1796C3.48043 9.99208 3.73478 9.88672 4 9.88672H16C16.2652 9.88672 16.5196 9.99208 16.7071 10.1796C16.8946 10.3671 17 10.6215 17 10.8867C17 11.1519 16.8946 11.4063 16.7071 11.5938C16.5196 11.7814 16.2652 11.8867 16 11.8867H4C3.73478 11.8867 3.48043 11.7814 3.29289 11.5938C3.10536 11.4063 3 11.1519 3 10.8867Z" fill="currentColor"/>
                     </svg>
                   {{ else }}

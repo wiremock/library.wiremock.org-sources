@@ -1,0 +1,895 @@
+{
+  "mappings" : [ {
+    "id" : "34400549-3c47-4ec0-a95b-f627ca84f017",
+    "name" : "Retieve safety information of a location by its Id.",
+    "request" : {
+      "urlPath" : "/safety/safety-rated-locations/hpyy",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 404,
+      "body" : "{\n  \"errors\" : [ {\n    \"code\" : 1797,\n    \"detail\" : \"no response found for this query parameter\",\n    \"source\" : {\n      \"parameter\" : \"airport\"\n    },\n    \"status\" : 404,\n    \"title\" : \"NOT FOUND\"\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "application/vnd.amadeus+json"
+      }
+    },
+    "uuid" : "34400549-3c47-4ec0-a95b-f627ca84f017",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:36.846919Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "getLocationSafetyRanking",
+          "schema" : {
+            "required" : [ "errors" ],
+            "type" : "object",
+            "properties" : {
+              "errors" : {
+                "type" : "array",
+                "items" : {
+                  "$ref" : "#/components/schemas/Issue"
+                }
+              }
+            },
+            "example" : {
+              "errors" : [ {
+                "code" : 1797,
+                "detail" : "no response found for this query parameter",
+                "source" : {
+                  "parameter" : "airport"
+                },
+                "status" : 404,
+                "title" : "NOT FOUND"
+              } ]
+            }
+          }
+        }
+      }
+    },
+    "insertionIndex" : 0
+  }, {
+    "id" : "235e60a9-0ae6-4206-b98f-c35f3bef5e46",
+    "name" : "Retieve safety information of a location by its Id.",
+    "request" : {
+      "urlPath" : "/safety/safety-rated-locations/2948",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 400,
+      "body" : "{\n  \"errors\" : [ {\n    \"code\" : 477,\n    \"detail\" : \"invalid query parameter format\",\n    \"source\" : {\n      \"example\" : \"CDG\",\n      \"parameter\" : \"airport\"\n    },\n    \"status\" : 400,\n    \"title\" : \"INVALID FORMAT\"\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "application/vnd.amadeus+json"
+      }
+    },
+    "uuid" : "235e60a9-0ae6-4206-b98f-c35f3bef5e46",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:36.846406Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "getLocationSafetyRanking",
+          "schema" : {
+            "required" : [ "errors" ],
+            "type" : "object",
+            "properties" : {
+              "errors" : {
+                "type" : "array",
+                "items" : {
+                  "$ref" : "#/components/schemas/Issue"
+                }
+              }
+            },
+            "example" : {
+              "errors" : [ {
+                "code" : 477,
+                "detail" : "invalid query parameter format",
+                "source" : {
+                  "example" : "CDG",
+                  "parameter" : "airport"
+                },
+                "status" : 400,
+                "title" : "INVALID FORMAT"
+              } ]
+            }
+          }
+        }
+      }
+    },
+    "insertionIndex" : 1
+  }, {
+    "id" : "f8cb8bb0-5fb9-4822-9cc3-f27ef61ed052",
+    "name" : "Retieve safety information of a location by its Id.",
+    "request" : {
+      "urlPath" : "/safety/safety-rated-locations/424c",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"data\" : [ {\n    \"geoCode\" : {\n      \"latitude\" : 41.385064,\n      \"longitude\" : 2.173404\n    },\n    \"id\" : \"Q930402719\",\n    \"name\" : \"Barcelona\",\n    \"safetyScores\" : {\n      \"lgbtq\" : 39,\n      \"medical\" : 0,\n      \"overall\" : 45,\n      \"physicalHarm\" : 36,\n      \"politicalFreedom\" : 50,\n      \"theft\" : 44,\n      \"women\" : 34\n    },\n    \"self\" : {\n      \"methods\" : [ \"GET\" ],\n      \"type\" : \"https://test.api.amadeus.com/v1/safety/safety-rated-locations/Q930402719\"\n    },\n    \"subType\" : \"CITY\",\n    \"type\" : \"safety-rated-location\"\n  } ],\n  \"meta\" : {\n    \"links\" : {\n      \"self\" : \"https://test.api.amadeus.com/v1/safety/safety-rated-locations/Q930402719\"\n    }\n  }\n}",
+      "headers" : {
+        "Content-Type" : "application/vnd.amadeus+json"
+      }
+    },
+    "uuid" : "f8cb8bb0-5fb9-4822-9cc3-f27ef61ed052",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:36.845479Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "getLocationSafetyRanking",
+          "schema" : {
+            "title" : "Success",
+            "required" : [ "data" ],
+            "type" : "object",
+            "properties" : {
+              "data" : {
+                "$ref" : "#/components/schemas/SafetyRatedLocation"
+              },
+              "meta" : {
+                "$ref" : "#/components/schemas/Collection_Meta"
+              },
+              "warnings" : {
+                "type" : "array",
+                "items" : {
+                  "$ref" : "#/components/schemas/Issue"
+                }
+              }
+            },
+            "example" : {
+              "data" : [ {
+                "geoCode" : {
+                  "latitude" : 41.385064,
+                  "longitude" : 2.173404
+                },
+                "id" : "Q930402719",
+                "name" : "Barcelona",
+                "safetyScores" : {
+                  "lgbtq" : 39,
+                  "medical" : 0,
+                  "overall" : 45,
+                  "physicalHarm" : 36,
+                  "politicalFreedom" : 50,
+                  "theft" : 44,
+                  "women" : 34
+                },
+                "self" : {
+                  "methods" : [ "GET" ],
+                  "type" : "https://test.api.amadeus.com/v1/safety/safety-rated-locations/Q930402719"
+                },
+                "subType" : "CITY",
+                "type" : "safety-rated-location"
+              } ],
+              "meta" : {
+                "links" : {
+                  "self" : "https://test.api.amadeus.com/v1/safety/safety-rated-locations/Q930402719"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "insertionIndex" : 2
+  }, {
+    "id" : "ddc4a1fd-af4e-4279-8e5a-aafc600f3a5c",
+    "name" : "Returns the safety rating of a given area",
+    "request" : {
+      "urlPath" : "/safety/safety-rated-locations/by-square",
+      "method" : "GET",
+      "queryParameters" : {
+        "east" : {
+          "equalTo" : "4.2882609273389434E307"
+        },
+        "south" : {
+          "equalTo" : "1.1635519811999909E308"
+        },
+        "north" : {
+          "equalTo" : "1.5764781368826988E306"
+        },
+        "west" : {
+          "equalTo" : "4.578891223122958E307"
+        }
+      }
+    },
+    "response" : {
+      "status" : 400,
+      "body" : "{\n  \"errors\" : [ {\n    \"code\" : 477,\n    \"detail\" : \"invalid query parameter format\",\n    \"source\" : {\n      \"example\" : \"CDG\",\n      \"parameter\" : \"airport\"\n    },\n    \"status\" : 400,\n    \"title\" : \"INVALID FORMAT\"\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "application/vnd.amadeus+json"
+      }
+    },
+    "uuid" : "ddc4a1fd-af4e-4279-8e5a-aafc600f3a5c",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:36.843556Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "getSafetyRankBySquare",
+          "schema" : {
+            "required" : [ "errors" ],
+            "type" : "object",
+            "properties" : {
+              "errors" : {
+                "type" : "array",
+                "items" : {
+                  "$ref" : "#/components/schemas/Issue"
+                }
+              }
+            },
+            "example" : {
+              "errors" : [ {
+                "code" : 477,
+                "detail" : "invalid query parameter format",
+                "source" : {
+                  "example" : "CDG",
+                  "parameter" : "airport"
+                },
+                "status" : 400,
+                "title" : "INVALID FORMAT"
+              } ]
+            }
+          }
+        }
+      }
+    },
+    "insertionIndex" : 3
+  }, {
+    "id" : "a26178dd-152a-4df9-acbd-2dbd8968dc84",
+    "name" : "Returns the safety rating of a given area",
+    "request" : {
+      "urlPath" : "/safety/safety-rated-locations/by-square",
+      "method" : "GET",
+      "queryParameters" : {
+        "east" : {
+          "equalTo" : "2.3092645876933605E307"
+        },
+        "south" : {
+          "equalTo" : "5.802886973958113E307"
+        },
+        "north" : {
+          "equalTo" : "4.375148874303978E307"
+        },
+        "west" : {
+          "equalTo" : "1.4335544290638732E308"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"data\" : [ {\n    \"geoCode\" : {\n      \"latitude\" : 41.385064,\n      \"longitude\" : 2.173404\n    },\n    \"id\" : \"Q930402719\",\n    \"name\" : \"Barcelona\",\n    \"safetyScores\" : {\n      \"lgbtq\" : 39,\n      \"medical\" : 0,\n      \"overall\" : 45,\n      \"physicalHarm\" : 36,\n      \"politicalFreedom\" : 50,\n      \"theft\" : 44,\n      \"women\" : 34\n    },\n    \"self\" : {\n      \"methods\" : [ \"GET\" ],\n      \"type\" : \"https://test.api.amadeus.com/v1/safety/safety-rated-locations/Q930402719\"\n    },\n    \"subType\" : \"CITY\",\n    \"type\" : \"safety-rated-location\"\n  }, {\n    \"geoCode\" : {\n      \"latitude\" : 41.3885573,\n      \"longitude\" : 2.1573033\n    },\n    \"id\" : \"Q930402720\",\n    \"name\" : \"Antiga Esquerra de l'Eixample (Barcelona)\",\n    \"safetyScores\" : {\n      \"lgbtq\" : 37,\n      \"medical\" : 0,\n      \"overall\" : 44,\n      \"physicalHarm\" : 34,\n      \"politicalFreedom\" : 50,\n      \"theft\" : 42,\n      \"women\" : 33\n    },\n    \"self\" : {\n      \"methods\" : [ \"GET\" ],\n      \"type\" : \"https://test.api.amadeus.com/v1/safety/safety-rated-locations/Q930402720\"\n    },\n    \"subType\" : \"DISTRICT\",\n    \"type\" : \"safety-rated-location\"\n  }, {\n    \"geoCode\" : {\n      \"latitude\" : 41.412131,\n      \"longitude\" : 2.1683571\n    },\n    \"id\" : \"Q930402721\",\n    \"name\" : \"Baix Guinardó (Barcelona)\",\n    \"safetyScores\" : {\n      \"lgbtq\" : 37,\n      \"medical\" : 0,\n      \"overall\" : 44,\n      \"physicalHarm\" : 34,\n      \"politicalFreedom\" : 50,\n      \"theft\" : 42,\n      \"women\" : 33\n    },\n    \"self\" : {\n      \"methods\" : [ \"GET\" ],\n      \"type\" : \"https://test.api.amadeus.com/v1/safety/safety-rated-locations/Q930402721\"\n    },\n    \"subType\" : \"DISTRICT\",\n    \"type\" : \"safety-rated-location\"\n  }, {\n    \"geoCode\" : {\n      \"latitude\" : 41.380894,\n      \"longitude\" : 2.189385\n    },\n    \"id\" : \"Q930402722\",\n    \"name\" : \"Barceloneta (Barcelona)\",\n    \"safetyScores\" : {\n      \"lgbtq\" : 42,\n      \"medical\" : 0,\n      \"overall\" : 47,\n      \"physicalHarm\" : 39,\n      \"politicalFreedom\" : 50,\n      \"theft\" : 49,\n      \"women\" : 34\n    },\n    \"self\" : {\n      \"methods\" : [ \"GET\" ],\n      \"type\" : \"https://test.api.amadeus.com/v1/safety/safety-rated-locations/Q930402722\"\n    },\n    \"subType\" : \"DISTRICT\",\n    \"type\" : \"safety-rated-location\"\n  }, {\n    \"geoCode\" : {\n      \"latitude\" : 41.4172284,\n      \"longitude\" : 2.163444\n    },\n    \"id\" : \"Q930402724\",\n    \"name\" : \"Can Baró (Barcelona)\",\n    \"safetyScores\" : {\n      \"lgbtq\" : 37,\n      \"medical\" : 0,\n      \"overall\" : 44,\n      \"physicalHarm\" : 34,\n      \"politicalFreedom\" : 50,\n      \"theft\" : 42,\n      \"women\" : 33\n    },\n    \"self\" : {\n      \"methods\" : [ \"GET\" ],\n      \"type\" : \"https://test.api.amadeus.com/v1/safety/safety-rated-locations/Q930402724\"\n    },\n    \"subType\" : \"DISTRICT\",\n    \"type\" : \"safety-rated-location\"\n  }, {\n    \"geoCode\" : {\n      \"latitude\" : 41.384728,\n      \"longitude\" : 2.18286\n    },\n    \"id\" : \"Q930402731\",\n    \"name\" : \"El Born (Barcelona)\",\n    \"safetyScores\" : {\n      \"lgbtq\" : 42,\n      \"medical\" : 0,\n      \"overall\" : 47,\n      \"physicalHarm\" : 39,\n      \"politicalFreedom\" : 50,\n      \"theft\" : 49,\n      \"women\" : 34\n    },\n    \"self\" : {\n      \"methods\" : [ \"GET\" ],\n      \"type\" : \"https://test.api.amadeus.com/v1/safety/safety-rated-locations/Q930402731\"\n    },\n    \"subType\" : \"DISTRICT\",\n    \"type\" : \"safety-rated-location\"\n  }, {\n    \"geoCode\" : {\n      \"latitude\" : 41.4118532,\n      \"longitude\" : 2.1830997\n    },\n    \"id\" : \"Q930402732\",\n    \"name\" : \"El Camp de l'Arpa del Clot (Barcelona)\",\n    \"safetyScores\" : {\n      \"lgbtq\" : 37,\n      \"medical\" : 0,\n      \"overall\" : 45,\n      \"physicalHarm\" : 35,\n      \"politicalFreedom\" : 50,\n      \"theft\" : 43,\n      \"women\" : 33\n    },\n    \"self\" : {\n      \"methods\" : [ \"GET\" ],\n      \"type\" : \"https://test.api.amadeus.com/v1/safety/safety-rated-locations/Q930402732\"\n    },\n    \"subType\" : \"DISTRICT\",\n    \"type\" : \"safety-rated-location\"\n  }, {\n    \"geoCode\" : {\n      \"latitude\" : 41.4046685,\n      \"longitude\" : 2.1659005\n    },\n    \"id\" : \"Q930402733\",\n    \"name\" : \"El Camp d'en Grassot i Gràcia Nova (Barcelona)\",\n    \"safetyScores\" : {\n      \"lgbtq\" : 37,\n      \"medical\" : 0,\n      \"overall\" : 44,\n      \"physicalHarm\" : 34,\n      \"politicalFreedom\" : 50,\n      \"theft\" : 42,\n      \"women\" : 33\n    },\n    \"self\" : {\n      \"methods\" : [ \"GET\" ],\n      \"type\" : \"https://test.api.amadeus.com/v1/safety/safety-rated-locations/Q930402733\"\n    },\n    \"subType\" : \"DISTRICT\",\n    \"type\" : \"safety-rated-location\"\n  }, {\n    \"geoCode\" : {\n      \"latitude\" : 41.422371,\n      \"longitude\" : 2.1560753\n    },\n    \"id\" : \"Q930402734\",\n    \"name\" : \"El Carmel (Barcelona)\",\n    \"safetyScores\" : {\n      \"lgbtq\" : 37,\n      \"medical\" : 0,\n      \"overall\" : 44,\n      \"physicalHarm\" : 34,\n      \"politicalFreedom\" : 50,\n      \"theft\" : 42,\n      \"women\" : 33\n    },\n    \"self\" : {\n      \"methods\" : [ \"GET\" ],\n      \"type\" : \"https://test.api.amadeus.com/v1/safety/safety-rated-locations/Q930402734\"\n    },\n    \"subType\" : \"DISTRICT\",\n    \"type\" : \"safety-rated-location\"\n  }, {\n    \"geoCode\" : {\n      \"latitude\" : 41.4097037,\n      \"longitude\" : 2.1892366\n    },\n    \"id\" : \"Q930402735\",\n    \"name\" : \"El Clot (Barcelona)\",\n    \"safetyScores\" : {\n      \"lgbtq\" : 37,\n      \"medical\" : 0,\n      \"overall\" : 45,\n      \"physicalHarm\" : 35,\n      \"politicalFreedom\" : 50,\n      \"theft\" : 43,\n      \"women\" : 33\n    },\n    \"self\" : {\n      \"methods\" : [ \"GET\" ],\n      \"type\" : \"https://test.api.amadeus.com/v1/safety/safety-rated-locations/Q930402735\"\n    },\n    \"subType\" : \"DISTRICT\",\n    \"type\" : \"safety-rated-location\"\n  } ],\n  \"meta\" : {\n    \"count\" : 43,\n    \"links\" : {\n      \"first\" : \"https://test.api.amadeus.com/v1/safety/safety-rated-locations?latitude=41.397158&longitude=2.160873&page%5Boffset%5D=0&radius=2\",\n      \"last\" : \"https://test.api.amadeus.com/v1/safety/safety-rated-locations?latitude=41.397158&longitude=2.160873&page%5Boffset%5D=4&radius=2\",\n      \"next\" : \"https://test.api.amadeus.com/v1/safety/safety-rated-locations?latitude=41.397158&longitude=2.160873&page%5Boffset%5D=1&radius=2\",\n      \"self\" : \"https://test.api.amadeus.com/v1/safety/safety-rated-locations?latitude=41.397158&longitude=2.160873&radius=2\"\n    }\n  }\n}",
+      "headers" : {
+        "Content-Type" : "application/vnd.amadeus+json"
+      }
+    },
+    "uuid" : "a26178dd-152a-4df9-acbd-2dbd8968dc84",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:36.83862Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "getSafetyRankBySquare",
+          "schema" : {
+            "title" : "Success",
+            "required" : [ "data" ],
+            "type" : "object",
+            "properties" : {
+              "data" : {
+                "type" : "array",
+                "items" : {
+                  "$ref" : "#/components/schemas/SafetyRatedLocation"
+                }
+              },
+              "meta" : {
+                "$ref" : "#/components/schemas/Collection_Meta"
+              },
+              "warnings" : {
+                "type" : "array",
+                "items" : {
+                  "$ref" : "#/components/schemas/Issue"
+                }
+              }
+            },
+            "example" : {
+              "data" : [ {
+                "geoCode" : {
+                  "latitude" : 41.385064,
+                  "longitude" : 2.173404
+                },
+                "id" : "Q930402719",
+                "name" : "Barcelona",
+                "safetyScores" : {
+                  "lgbtq" : 39,
+                  "medical" : 0,
+                  "overall" : 45,
+                  "physicalHarm" : 36,
+                  "politicalFreedom" : 50,
+                  "theft" : 44,
+                  "women" : 34
+                },
+                "self" : {
+                  "methods" : [ "GET" ],
+                  "type" : "https://test.api.amadeus.com/v1/safety/safety-rated-locations/Q930402719"
+                },
+                "subType" : "CITY",
+                "type" : "safety-rated-location"
+              }, {
+                "geoCode" : {
+                  "latitude" : 41.3885573,
+                  "longitude" : 2.1573033
+                },
+                "id" : "Q930402720",
+                "name" : "Antiga Esquerra de l'Eixample (Barcelona)",
+                "safetyScores" : {
+                  "lgbtq" : 37,
+                  "medical" : 0,
+                  "overall" : 44,
+                  "physicalHarm" : 34,
+                  "politicalFreedom" : 50,
+                  "theft" : 42,
+                  "women" : 33
+                },
+                "self" : {
+                  "methods" : [ "GET" ],
+                  "type" : "https://test.api.amadeus.com/v1/safety/safety-rated-locations/Q930402720"
+                },
+                "subType" : "DISTRICT",
+                "type" : "safety-rated-location"
+              }, {
+                "geoCode" : {
+                  "latitude" : 41.412131,
+                  "longitude" : 2.1683571
+                },
+                "id" : "Q930402721",
+                "name" : "Baix Guinardó (Barcelona)",
+                "safetyScores" : {
+                  "lgbtq" : 37,
+                  "medical" : 0,
+                  "overall" : 44,
+                  "physicalHarm" : 34,
+                  "politicalFreedom" : 50,
+                  "theft" : 42,
+                  "women" : 33
+                },
+                "self" : {
+                  "methods" : [ "GET" ],
+                  "type" : "https://test.api.amadeus.com/v1/safety/safety-rated-locations/Q930402721"
+                },
+                "subType" : "DISTRICT",
+                "type" : "safety-rated-location"
+              }, {
+                "geoCode" : {
+                  "latitude" : 41.380894,
+                  "longitude" : 2.189385
+                },
+                "id" : "Q930402722",
+                "name" : "Barceloneta (Barcelona)",
+                "safetyScores" : {
+                  "lgbtq" : 42,
+                  "medical" : 0,
+                  "overall" : 47,
+                  "physicalHarm" : 39,
+                  "politicalFreedom" : 50,
+                  "theft" : 49,
+                  "women" : 34
+                },
+                "self" : {
+                  "methods" : [ "GET" ],
+                  "type" : "https://test.api.amadeus.com/v1/safety/safety-rated-locations/Q930402722"
+                },
+                "subType" : "DISTRICT",
+                "type" : "safety-rated-location"
+              }, {
+                "geoCode" : {
+                  "latitude" : 41.4172284,
+                  "longitude" : 2.163444
+                },
+                "id" : "Q930402724",
+                "name" : "Can Baró (Barcelona)",
+                "safetyScores" : {
+                  "lgbtq" : 37,
+                  "medical" : 0,
+                  "overall" : 44,
+                  "physicalHarm" : 34,
+                  "politicalFreedom" : 50,
+                  "theft" : 42,
+                  "women" : 33
+                },
+                "self" : {
+                  "methods" : [ "GET" ],
+                  "type" : "https://test.api.amadeus.com/v1/safety/safety-rated-locations/Q930402724"
+                },
+                "subType" : "DISTRICT",
+                "type" : "safety-rated-location"
+              }, {
+                "geoCode" : {
+                  "latitude" : 41.384728,
+                  "longitude" : 2.18286
+                },
+                "id" : "Q930402731",
+                "name" : "El Born (Barcelona)",
+                "safetyScores" : {
+                  "lgbtq" : 42,
+                  "medical" : 0,
+                  "overall" : 47,
+                  "physicalHarm" : 39,
+                  "politicalFreedom" : 50,
+                  "theft" : 49,
+                  "women" : 34
+                },
+                "self" : {
+                  "methods" : [ "GET" ],
+                  "type" : "https://test.api.amadeus.com/v1/safety/safety-rated-locations/Q930402731"
+                },
+                "subType" : "DISTRICT",
+                "type" : "safety-rated-location"
+              }, {
+                "geoCode" : {
+                  "latitude" : 41.4118532,
+                  "longitude" : 2.1830997
+                },
+                "id" : "Q930402732",
+                "name" : "El Camp de l'Arpa del Clot (Barcelona)",
+                "safetyScores" : {
+                  "lgbtq" : 37,
+                  "medical" : 0,
+                  "overall" : 45,
+                  "physicalHarm" : 35,
+                  "politicalFreedom" : 50,
+                  "theft" : 43,
+                  "women" : 33
+                },
+                "self" : {
+                  "methods" : [ "GET" ],
+                  "type" : "https://test.api.amadeus.com/v1/safety/safety-rated-locations/Q930402732"
+                },
+                "subType" : "DISTRICT",
+                "type" : "safety-rated-location"
+              }, {
+                "geoCode" : {
+                  "latitude" : 41.4046685,
+                  "longitude" : 2.1659005
+                },
+                "id" : "Q930402733",
+                "name" : "El Camp d'en Grassot i Gràcia Nova (Barcelona)",
+                "safetyScores" : {
+                  "lgbtq" : 37,
+                  "medical" : 0,
+                  "overall" : 44,
+                  "physicalHarm" : 34,
+                  "politicalFreedom" : 50,
+                  "theft" : 42,
+                  "women" : 33
+                },
+                "self" : {
+                  "methods" : [ "GET" ],
+                  "type" : "https://test.api.amadeus.com/v1/safety/safety-rated-locations/Q930402733"
+                },
+                "subType" : "DISTRICT",
+                "type" : "safety-rated-location"
+              }, {
+                "geoCode" : {
+                  "latitude" : 41.422371,
+                  "longitude" : 2.1560753
+                },
+                "id" : "Q930402734",
+                "name" : "El Carmel (Barcelona)",
+                "safetyScores" : {
+                  "lgbtq" : 37,
+                  "medical" : 0,
+                  "overall" : 44,
+                  "physicalHarm" : 34,
+                  "politicalFreedom" : 50,
+                  "theft" : 42,
+                  "women" : 33
+                },
+                "self" : {
+                  "methods" : [ "GET" ],
+                  "type" : "https://test.api.amadeus.com/v1/safety/safety-rated-locations/Q930402734"
+                },
+                "subType" : "DISTRICT",
+                "type" : "safety-rated-location"
+              }, {
+                "geoCode" : {
+                  "latitude" : 41.4097037,
+                  "longitude" : 2.1892366
+                },
+                "id" : "Q930402735",
+                "name" : "El Clot (Barcelona)",
+                "safetyScores" : {
+                  "lgbtq" : 37,
+                  "medical" : 0,
+                  "overall" : 45,
+                  "physicalHarm" : 35,
+                  "politicalFreedom" : 50,
+                  "theft" : 43,
+                  "women" : 33
+                },
+                "self" : {
+                  "methods" : [ "GET" ],
+                  "type" : "https://test.api.amadeus.com/v1/safety/safety-rated-locations/Q930402735"
+                },
+                "subType" : "DISTRICT",
+                "type" : "safety-rated-location"
+              } ],
+              "meta" : {
+                "count" : 43,
+                "links" : {
+                  "first" : "https://test.api.amadeus.com/v1/safety/safety-rated-locations?latitude=41.397158&longitude=2.160873&page%5Boffset%5D=0&radius=2",
+                  "last" : "https://test.api.amadeus.com/v1/safety/safety-rated-locations?latitude=41.397158&longitude=2.160873&page%5Boffset%5D=4&radius=2",
+                  "next" : "https://test.api.amadeus.com/v1/safety/safety-rated-locations?latitude=41.397158&longitude=2.160873&page%5Boffset%5D=1&radius=2",
+                  "self" : "https://test.api.amadeus.com/v1/safety/safety-rated-locations?latitude=41.397158&longitude=2.160873&radius=2"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "insertionIndex" : 4
+  }, {
+    "id" : "8c09e923-5bec-4480-95fd-9346f6e32e30",
+    "name" : "Returns safety rating for a given location and radius.",
+    "request" : {
+      "urlPath" : "/safety/safety-rated-locations",
+      "method" : "GET",
+      "queryParameters" : {
+        "latitude" : {
+          "equalTo" : "8.598524249509626E307"
+        },
+        "longitude" : {
+          "equalTo" : "9.7758684673816E307"
+        }
+      }
+    },
+    "response" : {
+      "status" : 400,
+      "body" : "{\n  \"errors\" : [ {\n    \"code\" : 477,\n    \"detail\" : \"invalid query parameter format\",\n    \"source\" : {\n      \"example\" : \"CDG\",\n      \"parameter\" : \"airport\"\n    },\n    \"status\" : 400,\n    \"title\" : \"INVALID FORMAT\"\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "application/vnd.amadeus+json"
+      }
+    },
+    "uuid" : "8c09e923-5bec-4480-95fd-9346f6e32e30",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:36.832456Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "getSafetyRanking",
+          "schema" : {
+            "required" : [ "errors" ],
+            "type" : "object",
+            "properties" : {
+              "errors" : {
+                "type" : "array",
+                "items" : {
+                  "$ref" : "#/components/schemas/Issue"
+                }
+              }
+            },
+            "example" : {
+              "errors" : [ {
+                "code" : 477,
+                "detail" : "invalid query parameter format",
+                "source" : {
+                  "example" : "CDG",
+                  "parameter" : "airport"
+                },
+                "status" : 400,
+                "title" : "INVALID FORMAT"
+              } ]
+            }
+          }
+        }
+      }
+    },
+    "insertionIndex" : 5
+  }, {
+    "id" : "9fcc3e32-0db9-4801-84aa-b01a264de5c3",
+    "name" : "Returns safety rating for a given location and radius.",
+    "request" : {
+      "urlPath" : "/safety/safety-rated-locations",
+      "method" : "GET",
+      "queryParameters" : {
+        "latitude" : {
+          "equalTo" : "6.431419209409281E307"
+        },
+        "longitude" : {
+          "equalTo" : "1.421045012665385E308"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"data\" : [ {\n    \"geoCode\" : {\n      \"latitude\" : 41.385064,\n      \"longitude\" : 2.173404\n    },\n    \"id\" : \"Q930402719\",\n    \"name\" : \"Barcelona\",\n    \"safetyScores\" : {\n      \"lgbtq\" : 39,\n      \"medical\" : 0,\n      \"overall\" : 45,\n      \"physicalHarm\" : 36,\n      \"politicalFreedom\" : 50,\n      \"theft\" : 44,\n      \"women\" : 34\n    },\n    \"self\" : {\n      \"methods\" : [ \"GET\" ],\n      \"type\" : \"https://test.api.amadeus.com/v1/safety/safety-rated-locations/Q930402719\"\n    },\n    \"subType\" : \"CITY\",\n    \"type\" : \"safety-rated-location\"\n  }, {\n    \"geoCode\" : {\n      \"latitude\" : 41.3885573,\n      \"longitude\" : 2.1573033\n    },\n    \"id\" : \"Q930402720\",\n    \"name\" : \"Antiga Esquerra de l'Eixample (Barcelona)\",\n    \"safetyScores\" : {\n      \"lgbtq\" : 37,\n      \"medical\" : 0,\n      \"overall\" : 44,\n      \"physicalHarm\" : 34,\n      \"politicalFreedom\" : 50,\n      \"theft\" : 42,\n      \"women\" : 33\n    },\n    \"self\" : {\n      \"methods\" : [ \"GET\" ],\n      \"type\" : \"https://test.api.amadeus.com/v1/safety/safety-rated-locations/Q930402720\"\n    },\n    \"subType\" : \"DISTRICT\",\n    \"type\" : \"safety-rated-location\"\n  }, {\n    \"geoCode\" : {\n      \"latitude\" : 41.412131,\n      \"longitude\" : 2.1683571\n    },\n    \"id\" : \"Q930402721\",\n    \"name\" : \"Baix Guinardó (Barcelona)\",\n    \"safetyScores\" : {\n      \"lgbtq\" : 37,\n      \"medical\" : 0,\n      \"overall\" : 44,\n      \"physicalHarm\" : 34,\n      \"politicalFreedom\" : 50,\n      \"theft\" : 42,\n      \"women\" : 33\n    },\n    \"self\" : {\n      \"methods\" : [ \"GET\" ],\n      \"type\" : \"https://test.api.amadeus.com/v1/safety/safety-rated-locations/Q930402721\"\n    },\n    \"subType\" : \"DISTRICT\",\n    \"type\" : \"safety-rated-location\"\n  }, {\n    \"geoCode\" : {\n      \"latitude\" : 41.380894,\n      \"longitude\" : 2.189385\n    },\n    \"id\" : \"Q930402722\",\n    \"name\" : \"Barceloneta (Barcelona)\",\n    \"safetyScores\" : {\n      \"lgbtq\" : 42,\n      \"medical\" : 0,\n      \"overall\" : 47,\n      \"physicalHarm\" : 39,\n      \"politicalFreedom\" : 50,\n      \"theft\" : 49,\n      \"women\" : 34\n    },\n    \"self\" : {\n      \"methods\" : [ \"GET\" ],\n      \"type\" : \"https://test.api.amadeus.com/v1/safety/safety-rated-locations/Q930402722\"\n    },\n    \"subType\" : \"DISTRICT\",\n    \"type\" : \"safety-rated-location\"\n  }, {\n    \"geoCode\" : {\n      \"latitude\" : 41.4172284,\n      \"longitude\" : 2.163444\n    },\n    \"id\" : \"Q930402724\",\n    \"name\" : \"Can Baró (Barcelona)\",\n    \"safetyScores\" : {\n      \"lgbtq\" : 37,\n      \"medical\" : 0,\n      \"overall\" : 44,\n      \"physicalHarm\" : 34,\n      \"politicalFreedom\" : 50,\n      \"theft\" : 42,\n      \"women\" : 33\n    },\n    \"self\" : {\n      \"methods\" : [ \"GET\" ],\n      \"type\" : \"https://test.api.amadeus.com/v1/safety/safety-rated-locations/Q930402724\"\n    },\n    \"subType\" : \"DISTRICT\",\n    \"type\" : \"safety-rated-location\"\n  }, {\n    \"geoCode\" : {\n      \"latitude\" : 41.384728,\n      \"longitude\" : 2.18286\n    },\n    \"id\" : \"Q930402731\",\n    \"name\" : \"El Born (Barcelona)\",\n    \"safetyScores\" : {\n      \"lgbtq\" : 42,\n      \"medical\" : 0,\n      \"overall\" : 47,\n      \"physicalHarm\" : 39,\n      \"politicalFreedom\" : 50,\n      \"theft\" : 49,\n      \"women\" : 34\n    },\n    \"self\" : {\n      \"methods\" : [ \"GET\" ],\n      \"type\" : \"https://test.api.amadeus.com/v1/safety/safety-rated-locations/Q930402731\"\n    },\n    \"subType\" : \"DISTRICT\",\n    \"type\" : \"safety-rated-location\"\n  }, {\n    \"geoCode\" : {\n      \"latitude\" : 41.4118532,\n      \"longitude\" : 2.1830997\n    },\n    \"id\" : \"Q930402732\",\n    \"name\" : \"El Camp de l'Arpa del Clot (Barcelona)\",\n    \"safetyScores\" : {\n      \"lgbtq\" : 37,\n      \"medical\" : 0,\n      \"overall\" : 45,\n      \"physicalHarm\" : 35,\n      \"politicalFreedom\" : 50,\n      \"theft\" : 43,\n      \"women\" : 33\n    },\n    \"self\" : {\n      \"methods\" : [ \"GET\" ],\n      \"type\" : \"https://test.api.amadeus.com/v1/safety/safety-rated-locations/Q930402732\"\n    },\n    \"subType\" : \"DISTRICT\",\n    \"type\" : \"safety-rated-location\"\n  }, {\n    \"geoCode\" : {\n      \"latitude\" : 41.4046685,\n      \"longitude\" : 2.1659005\n    },\n    \"id\" : \"Q930402733\",\n    \"name\" : \"El Camp d'en Grassot i Gràcia Nova (Barcelona)\",\n    \"safetyScores\" : {\n      \"lgbtq\" : 37,\n      \"medical\" : 0,\n      \"overall\" : 44,\n      \"physicalHarm\" : 34,\n      \"politicalFreedom\" : 50,\n      \"theft\" : 42,\n      \"women\" : 33\n    },\n    \"self\" : {\n      \"methods\" : [ \"GET\" ],\n      \"type\" : \"https://test.api.amadeus.com/v1/safety/safety-rated-locations/Q930402733\"\n    },\n    \"subType\" : \"DISTRICT\",\n    \"type\" : \"safety-rated-location\"\n  }, {\n    \"geoCode\" : {\n      \"latitude\" : 41.422371,\n      \"longitude\" : 2.1560753\n    },\n    \"id\" : \"Q930402734\",\n    \"name\" : \"El Carmel (Barcelona)\",\n    \"safetyScores\" : {\n      \"lgbtq\" : 37,\n      \"medical\" : 0,\n      \"overall\" : 44,\n      \"physicalHarm\" : 34,\n      \"politicalFreedom\" : 50,\n      \"theft\" : 42,\n      \"women\" : 33\n    },\n    \"self\" : {\n      \"methods\" : [ \"GET\" ],\n      \"type\" : \"https://test.api.amadeus.com/v1/safety/safety-rated-locations/Q930402734\"\n    },\n    \"subType\" : \"DISTRICT\",\n    \"type\" : \"safety-rated-location\"\n  }, {\n    \"geoCode\" : {\n      \"latitude\" : 41.4097037,\n      \"longitude\" : 2.1892366\n    },\n    \"id\" : \"Q930402735\",\n    \"name\" : \"El Clot (Barcelona)\",\n    \"safetyScores\" : {\n      \"lgbtq\" : 37,\n      \"medical\" : 0,\n      \"overall\" : 45,\n      \"physicalHarm\" : 35,\n      \"politicalFreedom\" : 50,\n      \"theft\" : 43,\n      \"women\" : 33\n    },\n    \"self\" : {\n      \"methods\" : [ \"GET\" ],\n      \"type\" : \"https://test.api.amadeus.com/v1/safety/safety-rated-locations/Q930402735\"\n    },\n    \"subType\" : \"DISTRICT\",\n    \"type\" : \"safety-rated-location\"\n  } ],\n  \"meta\" : {\n    \"count\" : 43,\n    \"links\" : {\n      \"first\" : \"https://test.api.amadeus.com/v1/safety/safety-rated-locations?latitude=41.397158&longitude=2.160873&page%5Boffset%5D=0&radius=2\",\n      \"last\" : \"https://test.api.amadeus.com/v1/safety/safety-rated-locations?latitude=41.397158&longitude=2.160873&page%5Boffset%5D=4&radius=2\",\n      \"next\" : \"https://test.api.amadeus.com/v1/safety/safety-rated-locations?latitude=41.397158&longitude=2.160873&page%5Boffset%5D=1&radius=2\",\n      \"self\" : \"https://test.api.amadeus.com/v1/safety/safety-rated-locations?latitude=41.397158&longitude=2.160873&radius=2\"\n    }\n  }\n}",
+      "headers" : {
+        "Content-Type" : "application/vnd.amadeus+json"
+      }
+    },
+    "uuid" : "9fcc3e32-0db9-4801-84aa-b01a264de5c3",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:36.830832Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "getSafetyRanking",
+          "schema" : {
+            "title" : "Success",
+            "required" : [ "data" ],
+            "type" : "object",
+            "properties" : {
+              "data" : {
+                "type" : "array",
+                "items" : {
+                  "$ref" : "#/components/schemas/SafetyRatedLocation"
+                }
+              },
+              "meta" : {
+                "$ref" : "#/components/schemas/Collection_Meta"
+              },
+              "warnings" : {
+                "type" : "array",
+                "items" : {
+                  "$ref" : "#/components/schemas/Issue"
+                }
+              }
+            },
+            "example" : {
+              "data" : [ {
+                "geoCode" : {
+                  "latitude" : 41.385064,
+                  "longitude" : 2.173404
+                },
+                "id" : "Q930402719",
+                "name" : "Barcelona",
+                "safetyScores" : {
+                  "lgbtq" : 39,
+                  "medical" : 0,
+                  "overall" : 45,
+                  "physicalHarm" : 36,
+                  "politicalFreedom" : 50,
+                  "theft" : 44,
+                  "women" : 34
+                },
+                "self" : {
+                  "methods" : [ "GET" ],
+                  "type" : "https://test.api.amadeus.com/v1/safety/safety-rated-locations/Q930402719"
+                },
+                "subType" : "CITY",
+                "type" : "safety-rated-location"
+              }, {
+                "geoCode" : {
+                  "latitude" : 41.3885573,
+                  "longitude" : 2.1573033
+                },
+                "id" : "Q930402720",
+                "name" : "Antiga Esquerra de l'Eixample (Barcelona)",
+                "safetyScores" : {
+                  "lgbtq" : 37,
+                  "medical" : 0,
+                  "overall" : 44,
+                  "physicalHarm" : 34,
+                  "politicalFreedom" : 50,
+                  "theft" : 42,
+                  "women" : 33
+                },
+                "self" : {
+                  "methods" : [ "GET" ],
+                  "type" : "https://test.api.amadeus.com/v1/safety/safety-rated-locations/Q930402720"
+                },
+                "subType" : "DISTRICT",
+                "type" : "safety-rated-location"
+              }, {
+                "geoCode" : {
+                  "latitude" : 41.412131,
+                  "longitude" : 2.1683571
+                },
+                "id" : "Q930402721",
+                "name" : "Baix Guinardó (Barcelona)",
+                "safetyScores" : {
+                  "lgbtq" : 37,
+                  "medical" : 0,
+                  "overall" : 44,
+                  "physicalHarm" : 34,
+                  "politicalFreedom" : 50,
+                  "theft" : 42,
+                  "women" : 33
+                },
+                "self" : {
+                  "methods" : [ "GET" ],
+                  "type" : "https://test.api.amadeus.com/v1/safety/safety-rated-locations/Q930402721"
+                },
+                "subType" : "DISTRICT",
+                "type" : "safety-rated-location"
+              }, {
+                "geoCode" : {
+                  "latitude" : 41.380894,
+                  "longitude" : 2.189385
+                },
+                "id" : "Q930402722",
+                "name" : "Barceloneta (Barcelona)",
+                "safetyScores" : {
+                  "lgbtq" : 42,
+                  "medical" : 0,
+                  "overall" : 47,
+                  "physicalHarm" : 39,
+                  "politicalFreedom" : 50,
+                  "theft" : 49,
+                  "women" : 34
+                },
+                "self" : {
+                  "methods" : [ "GET" ],
+                  "type" : "https://test.api.amadeus.com/v1/safety/safety-rated-locations/Q930402722"
+                },
+                "subType" : "DISTRICT",
+                "type" : "safety-rated-location"
+              }, {
+                "geoCode" : {
+                  "latitude" : 41.4172284,
+                  "longitude" : 2.163444
+                },
+                "id" : "Q930402724",
+                "name" : "Can Baró (Barcelona)",
+                "safetyScores" : {
+                  "lgbtq" : 37,
+                  "medical" : 0,
+                  "overall" : 44,
+                  "physicalHarm" : 34,
+                  "politicalFreedom" : 50,
+                  "theft" : 42,
+                  "women" : 33
+                },
+                "self" : {
+                  "methods" : [ "GET" ],
+                  "type" : "https://test.api.amadeus.com/v1/safety/safety-rated-locations/Q930402724"
+                },
+                "subType" : "DISTRICT",
+                "type" : "safety-rated-location"
+              }, {
+                "geoCode" : {
+                  "latitude" : 41.384728,
+                  "longitude" : 2.18286
+                },
+                "id" : "Q930402731",
+                "name" : "El Born (Barcelona)",
+                "safetyScores" : {
+                  "lgbtq" : 42,
+                  "medical" : 0,
+                  "overall" : 47,
+                  "physicalHarm" : 39,
+                  "politicalFreedom" : 50,
+                  "theft" : 49,
+                  "women" : 34
+                },
+                "self" : {
+                  "methods" : [ "GET" ],
+                  "type" : "https://test.api.amadeus.com/v1/safety/safety-rated-locations/Q930402731"
+                },
+                "subType" : "DISTRICT",
+                "type" : "safety-rated-location"
+              }, {
+                "geoCode" : {
+                  "latitude" : 41.4118532,
+                  "longitude" : 2.1830997
+                },
+                "id" : "Q930402732",
+                "name" : "El Camp de l'Arpa del Clot (Barcelona)",
+                "safetyScores" : {
+                  "lgbtq" : 37,
+                  "medical" : 0,
+                  "overall" : 45,
+                  "physicalHarm" : 35,
+                  "politicalFreedom" : 50,
+                  "theft" : 43,
+                  "women" : 33
+                },
+                "self" : {
+                  "methods" : [ "GET" ],
+                  "type" : "https://test.api.amadeus.com/v1/safety/safety-rated-locations/Q930402732"
+                },
+                "subType" : "DISTRICT",
+                "type" : "safety-rated-location"
+              }, {
+                "geoCode" : {
+                  "latitude" : 41.4046685,
+                  "longitude" : 2.1659005
+                },
+                "id" : "Q930402733",
+                "name" : "El Camp d'en Grassot i Gràcia Nova (Barcelona)",
+                "safetyScores" : {
+                  "lgbtq" : 37,
+                  "medical" : 0,
+                  "overall" : 44,
+                  "physicalHarm" : 34,
+                  "politicalFreedom" : 50,
+                  "theft" : 42,
+                  "women" : 33
+                },
+                "self" : {
+                  "methods" : [ "GET" ],
+                  "type" : "https://test.api.amadeus.com/v1/safety/safety-rated-locations/Q930402733"
+                },
+                "subType" : "DISTRICT",
+                "type" : "safety-rated-location"
+              }, {
+                "geoCode" : {
+                  "latitude" : 41.422371,
+                  "longitude" : 2.1560753
+                },
+                "id" : "Q930402734",
+                "name" : "El Carmel (Barcelona)",
+                "safetyScores" : {
+                  "lgbtq" : 37,
+                  "medical" : 0,
+                  "overall" : 44,
+                  "physicalHarm" : 34,
+                  "politicalFreedom" : 50,
+                  "theft" : 42,
+                  "women" : 33
+                },
+                "self" : {
+                  "methods" : [ "GET" ],
+                  "type" : "https://test.api.amadeus.com/v1/safety/safety-rated-locations/Q930402734"
+                },
+                "subType" : "DISTRICT",
+                "type" : "safety-rated-location"
+              }, {
+                "geoCode" : {
+                  "latitude" : 41.4097037,
+                  "longitude" : 2.1892366
+                },
+                "id" : "Q930402735",
+                "name" : "El Clot (Barcelona)",
+                "safetyScores" : {
+                  "lgbtq" : 37,
+                  "medical" : 0,
+                  "overall" : 45,
+                  "physicalHarm" : 35,
+                  "politicalFreedom" : 50,
+                  "theft" : 43,
+                  "women" : 33
+                },
+                "self" : {
+                  "methods" : [ "GET" ],
+                  "type" : "https://test.api.amadeus.com/v1/safety/safety-rated-locations/Q930402735"
+                },
+                "subType" : "DISTRICT",
+                "type" : "safety-rated-location"
+              } ],
+              "meta" : {
+                "count" : 43,
+                "links" : {
+                  "first" : "https://test.api.amadeus.com/v1/safety/safety-rated-locations?latitude=41.397158&longitude=2.160873&page%5Boffset%5D=0&radius=2",
+                  "last" : "https://test.api.amadeus.com/v1/safety/safety-rated-locations?latitude=41.397158&longitude=2.160873&page%5Boffset%5D=4&radius=2",
+                  "next" : "https://test.api.amadeus.com/v1/safety/safety-rated-locations?latitude=41.397158&longitude=2.160873&page%5Boffset%5D=1&radius=2",
+                  "self" : "https://test.api.amadeus.com/v1/safety/safety-rated-locations?latitude=41.397158&longitude=2.160873&radius=2"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "insertionIndex" : 6
+  } ]
+}

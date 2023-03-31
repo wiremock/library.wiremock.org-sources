@@ -1,0 +1,62 @@
+{
+  "mappings" : [ {
+    "id" : "39876162-eeb5-4fd1-830e-8165105e6a02",
+    "name" : "Get a list of symbols for which we provide real-time quotes",
+    "request" : {
+      "urlPath" : "/symbols",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "[ \"EURUSD\", \"GBPJPY\", \"AUDUSD\" ]",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "39876162-eeb5-4fd1-830e-8165105e6a02",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:39.552523Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "(none)",
+          "schema" : {
+            "type" : "array",
+            "example" : [ "EURUSD", "GBPJPY", "AUDUSD" ],
+            "items" : {
+              "type" : "string"
+            }
+          }
+        }
+      }
+    },
+    "insertionIndex" : 0
+  }, {
+    "id" : "e3908782-266a-4e54-99dd-e5730fae09ba",
+    "name" : "Get quotes for all symbols - 200",
+    "request" : {
+      "urlPath" : "/quotes",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200
+    },
+    "uuid" : "e3908782-266a-4e54-99dd-e5730fae09ba",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:39.551199Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "(none)"
+        }
+      }
+    },
+    "insertionIndex" : 1
+  } ]
+}

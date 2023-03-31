@@ -1,0 +1,120 @@
+{
+  "mappings" : [ {
+    "id" : "55605834-46f4-4ac6-9918-c6ce658e43bd",
+    "name" : "Return airlines information.",
+    "request" : {
+      "urlPath" : "/reference-data/airlines",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 400,
+      "body" : "{\n  \"errors\" : [ {\n    \"code\" : 477,\n    \"detail\" : \"invalid query parameter format\",\n    \"source\" : {\n      \"example\" : \"CDG\",\n      \"parameter\" : \"airport\"\n    },\n    \"status\" : 400,\n    \"title\" : \"INVALID FORMAT\"\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "application/vnd.amadeus+json"
+      }
+    },
+    "uuid" : "55605834-46f4-4ac6-9918-c6ce658e43bd",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:30.475259Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "getairlines",
+          "schema" : {
+            "required" : [ "errors" ],
+            "type" : "object",
+            "properties" : {
+              "errors" : {
+                "type" : "array",
+                "items" : {
+                  "$ref" : "#/components/schemas/Issue"
+                }
+              }
+            },
+            "example" : {
+              "errors" : [ {
+                "code" : 477,
+                "detail" : "invalid query parameter format",
+                "source" : {
+                  "example" : "CDG",
+                  "parameter" : "airport"
+                },
+                "status" : 400,
+                "title" : "INVALID FORMAT"
+              } ]
+            }
+          }
+        }
+      }
+    },
+    "insertionIndex" : 0
+  }, {
+    "id" : "db8e67b1-fc46-4d5e-8927-892a861af461",
+    "name" : "Return airlines information.",
+    "request" : {
+      "urlPath" : "/reference-data/airlines",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"data\" : [ {\n    \"businessName\" : \"BRITISH AIRWAYS\",\n    \"commonName\" : \"BRITISH A/W\",\n    \"iataCode\" : \"BA\",\n    \"icaoCode\" : \"BAW\",\n    \"type\" : \"airline\"\n  } ],\n  \"meta\" : {\n    \"count\" : 1,\n    \"links\" : {\n      \"self\" : \"https://test.api.amadeus.com/v1/reference-data/airlines?airlineCodes=BA\"\n    }\n  }\n}",
+      "headers" : {
+        "Content-Type" : "application/vnd.amadeus+json"
+      }
+    },
+    "uuid" : "db8e67b1-fc46-4d5e-8927-892a861af461",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:30.475179Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "getairlines",
+          "schema" : {
+            "title" : "Success Things",
+            "required" : [ "data" ],
+            "type" : "object",
+            "properties" : {
+              "data" : {
+                "type" : "array",
+                "items" : {
+                  "$ref" : "#/components/schemas/Airline"
+                }
+              },
+              "meta" : {
+                "$ref" : "#/components/schemas/Collection_Meta"
+              },
+              "warnings" : {
+                "type" : "array",
+                "items" : {
+                  "$ref" : "#/components/schemas/Issue"
+                }
+              }
+            },
+            "example" : {
+              "data" : [ {
+                "businessName" : "BRITISH AIRWAYS",
+                "commonName" : "BRITISH A/W",
+                "iataCode" : "BA",
+                "icaoCode" : "BAW",
+                "type" : "airline"
+              } ],
+              "meta" : {
+                "count" : 1,
+                "links" : {
+                  "self" : "https://test.api.amadeus.com/v1/reference-data/airlines?airlineCodes=BA"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "insertionIndex" : 1
+  } ]
+}

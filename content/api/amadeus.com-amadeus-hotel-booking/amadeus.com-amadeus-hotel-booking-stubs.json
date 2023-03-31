@@ -1,0 +1,144 @@
+{
+  "mappings" : [ {
+    "id" : "166f7661-c6a6-4593-b5b7-1b0dc4ba1de0",
+    "name" : "Create Orders associated to the Hotel Offers",
+    "request" : {
+      "urlPath" : "/booking/hotel-bookings",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 500,
+      "body" : "{\n  \"errors\" : [ {\n    \"code\" : 1,\n    \"detail\" : \"The targeted resource doesn't exist\",\n    \"title\" : \"Resource not found\",\n    \"status\" : 400\n  }, {\n    \"code\" : 1,\n    \"detail\" : \"The targeted resource doesn't exist\",\n    \"title\" : \"Resource not found\",\n    \"status\" : 400\n  }, {\n    \"code\" : 1,\n    \"detail\" : \"The targeted resource doesn't exist\",\n    \"title\" : \"Resource not found\",\n    \"status\" : 400\n  }, {\n    \"code\" : 1,\n    \"detail\" : \"The targeted resource doesn't exist\",\n    \"title\" : \"Resource not found\",\n    \"status\" : 400\n  }, {\n    \"code\" : 1,\n    \"detail\" : \"The targeted resource doesn't exist\",\n    \"title\" : \"Resource not found\",\n    \"status\" : 400\n  }, {\n    \"code\" : 1,\n    \"detail\" : \"The targeted resource doesn't exist\",\n    \"title\" : \"Resource not found\",\n    \"status\" : 400\n  }, {\n    \"code\" : 1,\n    \"detail\" : \"The targeted resource doesn't exist\",\n    \"title\" : \"Resource not found\",\n    \"status\" : 400\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "application/vnd.amadeus+json"
+      }
+    },
+    "uuid" : "166f7661-c6a6-4593-b5b7-1b0dc4ba1de0",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:34.840921Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "createBooking",
+          "schema" : {
+            "title" : "ErrorResponse",
+            "required" : [ "errors" ],
+            "type" : "object",
+            "properties" : {
+              "errors" : {
+                "type" : "array",
+                "items" : {
+                  "$ref" : "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "insertionIndex" : 0
+  }, {
+    "id" : "9efa5864-393c-43f0-bfc5-24e9618a5f13",
+    "name" : "Create Orders associated to the Hotel Offers",
+    "request" : {
+      "urlPath" : "/booking/hotel-bookings",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 400,
+      "body" : "{\n  \"errors\" : [ {\n    \"code\" : 1,\n    \"detail\" : \"The targeted resource doesn't exist\",\n    \"title\" : \"Resource not found\",\n    \"status\" : 400\n  }, {\n    \"code\" : 1,\n    \"detail\" : \"The targeted resource doesn't exist\",\n    \"title\" : \"Resource not found\",\n    \"status\" : 400\n  }, {\n    \"code\" : 1,\n    \"detail\" : \"The targeted resource doesn't exist\",\n    \"title\" : \"Resource not found\",\n    \"status\" : 400\n  }, {\n    \"code\" : 1,\n    \"detail\" : \"The targeted resource doesn't exist\",\n    \"title\" : \"Resource not found\",\n    \"status\" : 400\n  }, {\n    \"code\" : 1,\n    \"detail\" : \"The targeted resource doesn't exist\",\n    \"title\" : \"Resource not found\",\n    \"status\" : 400\n  }, {\n    \"code\" : 1,\n    \"detail\" : \"The targeted resource doesn't exist\",\n    \"title\" : \"Resource not found\",\n    \"status\" : 400\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "application/vnd.amadeus+json"
+      }
+    },
+    "uuid" : "9efa5864-393c-43f0-bfc5-24e9618a5f13",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:34.840816Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "createBooking",
+          "schema" : {
+            "title" : "ErrorResponse",
+            "required" : [ "errors" ],
+            "type" : "object",
+            "properties" : {
+              "errors" : {
+                "type" : "array",
+                "items" : {
+                  "$ref" : "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "insertionIndex" : 1
+  }, {
+    "id" : "2b052906-798f-42ed-af65-a88a6a5f6019",
+    "name" : "Create Orders associated to the Hotel Offers",
+    "request" : {
+      "urlPath" : "/booking/hotel-bookings",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 201,
+      "body" : "{\n  \"data\" : [ {\n    \"associatedRecords\" : [ {\n      \"originSystemCode\" : \"GDS\",\n      \"reference\" : \"QVH2BX\"\n    } ],\n    \"id\" : \"XD_8138319951754\",\n    \"providerConfirmationId\" : \"8138319951754\",\n    \"type\" : \"hotel-booking\"\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "application/vnd.amadeus+json"
+      }
+    },
+    "uuid" : "2b052906-798f-42ed-af65-a88a6a5f6019",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:34.840649Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "createBooking",
+          "schema" : {
+            "title" : "HotelBookedResponse",
+            "type" : "object",
+            "properties" : {
+              "data" : {
+                "type" : "array",
+                "description" : "All room bookings data",
+                "items" : {
+                  "$ref" : "#/components/schemas/HotelBookingLight"
+                }
+              },
+              "warnings" : {
+                "type" : "array",
+                "description" : "All Warnings",
+                "items" : {
+                  "$ref" : "#/components/schemas/Warning"
+                }
+              }
+            },
+            "example" : {
+              "data" : [ {
+                "associatedRecords" : [ {
+                  "originSystemCode" : "GDS",
+                  "reference" : "QVH2BX"
+                } ],
+                "id" : "XD_8138319951754",
+                "providerConfirmationId" : "8138319951754",
+                "type" : "hotel-booking"
+              } ]
+            }
+          }
+        }
+      }
+    },
+    "insertionIndex" : 2
+  } ]
+}

@@ -1,20 +1,18 @@
-<div class="bg-white dark:bg-black border-b border-zinc-100 dark:border-zinc-800{{ if .Site.Params.banner.text }} sticky top-0 z-10{{ end }}" x-data="{ mobile: false }" @click.outside="mobile = false">
+<div class="bg-white border-b border-slate-100" x-data="{ mobile: false }" @click.outside="mobile = false">
   <div class="px-6 lg:px-8">
-    <div class="mx-auto max-w-7xl py-5 lg:py-8">
+    <div class="mx-auto max-w-7xl py-2.5 lg:py-3">
       <div class="flex items-center justify-between lg:justify-start lg:space-x-10">
         <div class="flex justify-start lg:w-0 lg:flex-1">
           <a href="{{ "/" | relLangURL }}">
             <span class="sr-only">{{ .Site.Title }}</span>
-            <img class="h-11 w-auto dark:hidden" src="{{ .Site.Params.logo | absURL }}" alt="{{ .Site.Title }}" />
-            <img class="h-11 w-auto hidden dark:block" src="{{ .Site.Params.logo_light | absURL }}" alt="{{ .Site.Title }}" />
+            <img class="h-5 w-auto" src="{{ .Site.Params.logo | absURL }}" alt="{{ .Site.Title }}" />
           </a>
         </div>
         <div class="flex items-center lg:hidden gap-2">
-          {{ partial "dark-toggle.html" }}
           <button
             @click="mobile = ! mobile"
             type="button"
-            class="inline-flex items-center justify-center text-black dark:text-white hover:text-primary-600 dark:hover:text-primary-500 focus:outline-none"
+            class="inline-flex items-center justify-center text-black hover:text-sky-600 focus:outline-none"
             aria-expanded="false"
           >
             <span class="sr-only">Toggle main menu</span>
@@ -50,14 +48,14 @@
                 <button
                   type="button"
                   @click.prevent="dropdown = ! dropdown"
-                  :class="{ 'text-primary-600 bg-zinc-50 dark:text-primary-500 dark:bg-zinc-900': dropdown, 'text-black dark:text-white': !(dropdown) }"
-                  class="group inline-flex tracking-wide transform-none items-center text-base  hover:bg-zinc-100 dark:hover:bg-zinc-900 dark:text-white hover:text-primary-600 dark:hover:text-primary-500 px-4 py-2.5 rounded-full focus:outline-none"
+                  :class="{ 'text-sky-600': dropdown, 'text-black dark:text-white': !(dropdown) }"
+                  class="group inline-flex tracking-wide transform-none items-center text-sm text-slate-500 hover:text-sky-600 px-4 py-2.5 rounded-full focus:outline-none"
                   aria-expanded="false"
                 >
                   <span>{{ .Name }}</span>
                   <svg
-                    :class="{ 'text-primary-600 dark:text-primary-500 rotate-180': dropdown, 'text-black dark:text-white transform-none': !(dropdown) }"
-                    class="text-primary-600 ml-0.5 h-5 w-5 group-hover:text-primary-600 dark:group-hover:text-primary-600"
+                    :class="{ 'text-sky-600 rotate-180': dropdown, 'text-slate-500 transform-none': !(dropdown) }"
+                    class="text-sky-600 ml-0.5 h-5 w-5 group-hover:text-sky-600"
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 20 20"
                     fill="currentColor"
@@ -80,12 +78,12 @@
                   x-transition:leave-start="opacity-100 translate-y-0"
                   x-transition:leave-end="opacity-0 translate-y-1"
                   @click.outside="dropdown = false"
-                  class="absolute z-10 -ml-4 mt-3 hidden w-screen max-w-[20rem] transform px-2 sm:px-0 lg:left-1/2 lg:ml-0 lg:-translate-x-1/2"
+                  class="absolute z-10 -ml-4 mt-3 hidden w-screen max-w-[14rem] transform px-2 sm:px-0 lg:left-1/2 lg:ml-0 lg:-translate-x-1/2"
                 >
-                  <div class="overflow-hidden rounded-3xl shadow-lg">
-                    <div class="relative grid gap-6 bg-white dark:bg-zinc-900 p-10 sm:gap-8">
+                  <div class="overflow-hidden rounded-xl shadow-lg">
+                    <div class="relative grid gap-6 bg-white dark:bg-slate-900 p-8 sm:gap-8">
                       {{ range .Children }}
-                        <a href="{{ .URL }}" class="-m-4 flex items-start group rounded-xl p-4  text-black dark:text-white hover:text-primary-600 dark:hover:text-primary-500 hover:bg-zinc-100 dark:hover:bg-black">
+                        <a href="{{ .URL }}" class="-m-4 flex items-start group rounded-xl p-3.5 text-slate-500 hover:text-sky-600 hover:bg-slate-50">
                           {{ if .Pre }}
                             <div class="flex-shrink-0 mr-3">
                               {{ $icon := printf "%s%s%s" "icons/" .Pre ".svg" }}
@@ -95,9 +93,9 @@
                             </div>
                           {{ end }}
                           <div>
-                            <p class="text-base">{{ .Name }}</p>
+                            <p class="text-sm">{{ .Name }}</p>
                             {{ with .Params.desc }}
-                            <p class="mt-1 text-sm text-zinc-600 dark:text-zinc-300">{{ . }}</p>
+                            <p class="mt-1 text-sm text-slate-500">{{ . }}</p>
                             {{ end }}
                           </div>
                         </a>
@@ -107,44 +105,11 @@
                 </div>
               </div>
             {{ else }}
-              <a href="{{ .URL }}" class="text-base tracking-wide  hover:bg-zinc-100 dark:hover:bg-zinc-900 dark:text-white hover:text-primary-600 dark:hover:text-primary-500 px-4 py-2.5 rounded-full text-black"{{ if in .URL "http" }} target="_blank"{{ end }}> {{ .Name }} </a>
+              <a href="{{ .URL }}" class="text-sm tracking-wide text-slate-500 hover:text-sky-600 px-4 py-2.5 rounded-full"{{ if in .URL "http" }} target="_blank"{{ end }}> {{ .Name }} </a>
             {{ end }}
           {{ end }}
         </nav>
         <div class="hidden items-center justify-end lg:flex lg:w-0 lg:flex-1 gap-3">
-          {{ partial "dark-toggle.html" }}
-          {{ if .IsTranslated }}
-            <div class="relative" x-data="{ lang: false }" @click.outside="lang = false">
-              <button @click="lang = ! lang" type="button" class="group relative inline-flex items-center  px-4 py-2 text-left focus:outline-none text-base text-black dark:text-white hover:text-primary-600 dark:hover:text-primary-500 hover:bg-zinc-100 dark:hover:bg-zinc-900 rounded-full" 
-                :class="{ 'text-primary-600 dark:text-primary-500': lang, 'text-black dark:text-white': !(lang) }" 
-                aria-haspopup="listbox" aria-expanded="true">
-                <span> {{ .Language.LanguageName }} </span>
-                <svg
-                  :class="{ 'text-primary-600 dark:text-primary-500 rotate-180': lang, 'text-black dark:text-white transform-none': !(lang) }"
-                  class="text-primary-600 ml-0.5 h-5 w-5 group-hover:text-primary-600 dark:group-hover:text-primary-600"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                  aria-hidden="true"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                    clip-rule="evenodd"
-                  />
-                </svg>
-              </button>
-              <ul :class="{ 'block': lang, 'hidden': !(lang) }" class="hidden absolute z-10 left-1.5 bg-white dark:bg-zinc-900 shadow-lg max-h-56 rounded-md text-base ring-opacity-5 overflow-auto focus:outline-none" tabindex="-1">
-                {{ range .Translations }}
-                  <li class="text-black cursor-default select-none relative py-2 px-3" id="listbox-option-0">
-                    <a href="{{ .Permalink }}" class="text-black  dark:text-white hover:text-primary-600 dark:hover:text-primary-500 flex">
-                      {{ .Language.LanguageName }}
-                    </a>
-                  </li>
-                {{ end }}
-              </ul>
-            </div>
-          {{ end }}
           {{ range .Site.Menus.navbar_cta }}
             {{ partial "components/button-navbar.html" . }}
           {{ end }}
@@ -162,7 +127,7 @@
     x-transition:leave="duration-100 ease-in"
     x-transition:leave-start="opacity-100 scale-100"
     x-transition:leave-end="opacity-0 scale-95"
-    class="z-10 origin-top transform transition hidden lg:hidden border-y border-gray-200 dark:border-zinc-800"
+    class="z-10 origin-top transform transition hidden lg:hidden border-y border-gray-200 dark:border-slate-800"
   >
     <div class="overflow-hidden bg-white dark:bg-black">
       <div class="space-y-1 p-4 sm:p-6">
@@ -172,7 +137,7 @@
             <div x-data="{ accordion: false }">
               <a
                 href="#"
-                class="flex items-center rounded-xl px-4 py-3  text-lg text-black hover:text-primary-600 hover:bg-zinc-100 dark:text-white dark:hover:text-primary-500 dark:hover:bg-zinc-900"
+                class="flex items-center rounded-xl px-4 py-3  text-lg text-slate-500 hover:text-sky-600 hover:bg-slate-50"
                 @click.prevent="accordion = ! accordion"
               >
                 <span class="flex-1">{{ .Name }}</span>
@@ -192,9 +157,9 @@
               </a>
               <div x-show="accordion" :class="{ 'block': accordion, 'hidden': !(accordion) }">
                 {{ range .Children }}
-                  <a href="{{ .URL }}" class="ml-4 flex items-center group rounded-xl px-4 py-3 text-black hover:text-primary-600 hover:bg-zinc-100 dark:text-white dark:hover:text-primary-500 dark:hover:bg-zinc-900">
+                  <a href="{{ .URL }}" class="ml-4 flex items-center group rounded-xl px-4 py-3 text-slate-500 hover:text-sky-600 hover:bg-slate-50">
                     {{ if .Pre }}
-                      <div class="flex-shrink-0 mr-2.5 group-hover:text-primary-600">
+                      <div class="flex-shrink-0 mr-2.5 group-hover:text-skay-600">
                         {{ $icon := printf "%s%s%s" "icons/" .Pre ".svg" }}
                         {{ if templates.Exists (printf "%s%s" "partials/" $icon ) }}
                           {{ partial $icon }}
@@ -208,7 +173,7 @@
               </div>
             </div>
           {{ else }}
-            <a href="{{ .URL }}" class="block rounded-xl  tracking-wide px-4 py-3 text-lg text-black hover:text-primary-600 hover:bg-zinc-100 dark:text-white dark:hover:text-primary-500 dark:hover:bg-zinc-900" 
+            <a href="{{ .URL }}" class="block rounded-xl  tracking-wide px-4 py-3 text-lg text-slate-500 hover:text-sky-600 hover:bg-slate-50" 
             {{ if in .URL "http" }} target="_blank"{{ end }}>{{ .Name }}</a>
           {{ end }}
         {{ end }}
@@ -221,7 +186,7 @@
       {{ if .IsTranslated }}
         <div class="px-8 sm:px-10 pb-8 flex justify-center">
           <div class="relative" x-data="{ lang: false }" @click.outside="lang = false">
-            <button @click="lang = ! lang" type="button" class="group relative inline-flex items-center  px-4 py-2 text-left focus:outline-none text-base text-black dark:text-white hover:text-primary-600 dark:hover:text-primary-500 hover:bg-zinc-100 dark:hover:bg-zinc-900 rounded-full" 
+            <button @click="lang = ! lang" type="button" class="group relative inline-flex items-center  px-4 py-2 text-left focus:outline-none text-base text-black dark:text-white hover:text-primary-600 dark:hover:text-primary-500 hover:bg-slate-100 dark:hover:bg-slate-900 rounded-full" 
               :class="{ 'text-primary-600 dark:text-primary-500': lang, 'text-black dark:text-white': !(lang) }" 
               aria-haspopup="listbox" aria-expanded="true">
               <span> {{ .Language.LanguageName }} </span>
@@ -240,7 +205,7 @@
                 />
               </svg>
             </button>
-            <ul :class="{ 'block': lang, 'hidden': !(lang) }" class="hidden absolute z-10 left-1.5  bg-white dark:bg-zinc-900 shadow-lg max-h-56 rounded-md text-base ring-opacity-5 overflow-auto focus:outline-none" tabindex="-1">
+            <ul :class="{ 'block': lang, 'hidden': !(lang) }" class="hidden absolute z-10 left-1.5  bg-white dark:bg-slate-900 shadow-lg max-h-56 rounded-md text-base ring-opacity-5 overflow-auto focus:outline-none" tabindex="-1">
               {{ range .Translations }}
                 <li class="text-black cursor-default select-none relative py-2 px-3" id="listbox-option-0">
                   <a href="{{ .Permalink }}" class="text-black  dark:text-white hover:text-primary-600 dark:hover:text-primary-500 flex">

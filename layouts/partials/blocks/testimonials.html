@@ -9,14 +9,14 @@
     {{ end }}
     <div class="max-w-lg md:max-w-7xl mx-auto md:columns-2 lg:columns-3 gap-x-6 lg:gap-x-10">
       {{ range .testimonials }}
-        <figure class="break-inside-avoid border border-zinc-200 dark:border-zinc-800 rounded-2xl px-11 py-9 mb-6 lg:mb-10">
+        <figure class="break-inside-avoid border border-slate-200 dark:border-slate-800 rounded-2xl px-11 py-9 mb-6 lg:mb-10">
           <p class="font-semibold -mb-3 text-black dark:text-white text-6xl leading-none">“</p>
           <blockquote class="text-lg xl:text-xl leading-relaxed xl:leading-relaxed text-black dark:text-white" cite="https://developer.mozilla.org/samples/html/figure.html">{{ .copy | markdownify }}</blockquote>
           <figcaption class="mt-7 flex items-center space-x-3">
             {{ with .author.image }}
               <div><img class="rounded-full w-10" src="{{ . | absURL }}" alt="{{ $.author.name }}"></div>
             {{ end }}
-            <p class="text-zinc-600 dark:text-zinc-300">{{ .author.name }}</p>
+            <p class="text-slate-600 dark:text-slate-300">{{ .author.name }}</p>
           </figcaption>
           <svg class="mt-8 dark:text-white" width="175" height="27" viewBox="0 0 175 27" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M12.5489 2.92705C12.8483 2.00574 14.1517 2.00574 14.4511 2.92705L16.3064 8.63729C16.4403 9.04931 16.8243 9.32827 17.2575 9.32827H23.2616C24.2303 9.32827 24.6331 10.5679 23.8494 11.1373L18.9919 14.6664C18.6415 14.9211 18.4948 15.3724 18.6287 15.7844L20.484 21.4947C20.7834 22.416 19.7289 23.1821 18.9452 22.6127L14.0878 19.0836C13.7373 18.8289 13.2627 18.8289 12.9122 19.0836L8.0548 22.6127C7.27108 23.1821 6.2166 22.416 6.51596 21.4947L8.37132 15.7844C8.5052 15.3724 8.35854 14.9211 8.00805 14.6664L3.15064 11.1373C2.36692 10.5679 2.7697 9.32827 3.73842 9.32827H9.74252C10.1757 9.32827 10.5597 9.04931 10.6936 8.63729L12.5489 2.92705Z" fill="currentColor"/>
