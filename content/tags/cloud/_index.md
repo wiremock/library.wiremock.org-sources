@@ -1,5 +1,5 @@
 ---
-title: News
+title: Cloud
 header:
   superheading: Our Blog
 ---

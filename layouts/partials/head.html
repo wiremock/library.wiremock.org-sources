@@ -2,7 +2,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-<title itemprop="name">{{ if .IsHome }}{{ .Site.Title }} | {{ .Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
+<title itemprop="name">{{ if .IsHome }}{{ .Site.Title }} | {{ .Title }}{{ else }}{{ strings.FirstUpper (replace .Title "_" " ") }} | {{ .Site.Title }}{{ end }}</title>
 <meta property="og:title" content="{{ .Title }} | {{ .Site.Title }}" />
 <meta name="twitter:title" content="{{ .Title }} | {{ .Site.Title }}" />
 <meta itemprop="name" content="{{ .Title }} | {{ .Site.Title }}" />

@@ -3,42 +3,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* @font-face {
-  font-family: "Euclid Circular B";
-  src: url("/fonts/EuclidCircularB-Regular.woff2") format("woff2"),
-    url("/fonts/EuclidCircularB-Regular.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Euclid Circular B';
-  src: url('/fonts/EuclidCircularB-Medium.woff2') format('woff2'),
-      url('/fonts/EuclidCircularB-Medium.woff') format('woff');
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Euclid Circular B";
-  src: url("/fonts/EuclidCircularB-Semibold.woff2") format("woff2"),
-    url("/fonts/EuclidCircularB-Semibold.woff") format("woff");
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Euclid Circular B";
-  src: url("/fonts/EuclidCircularB-Bold.woff2") format("woff2"),
-    url("/fonts/EuclidCircularB-Bold.woff") format("woff");
-  font-weight: bold;
-  font-style: normal;
-  font-display: swap;
-} */
-
 .svg-8 svg {
   width: 2rem;
   height: 2rem;
@@ -53,53 +17,7 @@
   height: 2rem;
 }
 
-@layer utilities {
-  .slide {
-    animation: slide 15s linear infinite;
-  }
-  @keyframes slide {
-    0% {
-      transform: translate3d(0, 0, 0);
-    }
-    100% {
-      transform: translate3d(-100%, 0, 0);
-    }
-  }
+.svg-logo svg {
+  width: auto;
+  height: 5.125rem;
 }
-
-.text-gradient- {
-  @apply text-transparent;
-  @apply bg-clip-text; 
-  @apply bg-primary-600; 
-  @apply bg-gradient-to-b;
-  @apply from-primary-600;
-  /* @apply via-sky-600; */
-  @apply to-pink-600;
-}
-
-/* @media (min-width: 1024px) {
-  .prose .cp_embed_wrapper {
-    margin-left: -100px;
-    margin-right: -100px;
-    margin-top: 50px;
-  }
-} */
-
-h1 strong, h2 strong, h3 strong, .gradient-text {
-  @apply text-transparent;
-  @apply bg-clip-text; 
-  @apply bg-indigo-600; 
-  @apply bg-gradient-to-r;
-  @apply from-indigo-600;
-  @apply via-purple-600;
-  @apply to-pink-600;
-}
-
-.gradient-bg {
-  @apply bg-indigo-600; 
-  @apply bg-gradient-to-r;
-  @apply from-indigo-600;
-  @apply via-purple-600;
-  @apply to-pink-600;
-}
-  

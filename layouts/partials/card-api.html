@@ -1,0 +1,22 @@
+<div class="relative bg-white py-4 px-5 border border-slate-200 rounded-md shadow-md hover:border-sky-500">
+  {{ $logo := .Resources.GetMatch .Params.logo }}
+  {{ if $logo }}
+    <div class="relative flex justify-center items-center mb-5">
+      <div class="border border-slate-200 p-2 rounded">
+        {{ if eq (path.Ext $logo.Name) ".svg" }}
+          <div class="svg-logo">{{ $logo.Content | safeHTML }}</div>
+        {{ else }}
+          {{ $logo := $logo.Resize "x82" }}
+          <img src="{{ $logo.RelPermalink }}" width="{{ $logo.Width }}" height="{{ $logo.Height }}">
+        {{ end }}
+      </div>
+    </div>
+  {{ end }}
+  <div class="relative text-center">
+    <h3 class="text-xl font-medium">{{ .Title }}</h3>
+    {{ with .Params.description }}
+      <div class="mt-2 text-base leading-relaxed">{{ . | markdownify | safeHTML | truncate 40 "" }}</div>
+    {{ end }}
+  </div>
+  <a href="{{ .Permalink }}" class="absolute inset-0" title="{{ .Title }}"></a>
+</div>

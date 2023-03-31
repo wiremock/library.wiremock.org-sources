@@ -3,16 +3,13 @@
 <head>
     {{ partial "head.html" . }}
 </head>
-<body>
+<body class="bg-slate-50">
     {{ if .Site.Params.banner.text }}
         {{ partial "banner.html" . }}
     {{ end }}
     {{ partial "navbar.html" . }}
     {{ block "main" . }}{{ end }}
-    {{ $footer := (printf "%s%s%s" "" .Site.Params.footer.layout ".html" ) }}
-    {{ if templates.Exists (printf "%s%s" "partials/" $footer ) }}
-      {{ partial $footer . }}
-    {{ end }} 
+    {{ partial "footer.html" . }}
 </body>
 </html>
 

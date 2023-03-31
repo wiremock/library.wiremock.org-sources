@@ -14,19 +14,17 @@
 
 <!-- If there's more than one page. -->
 {{ if gt $paginator.TotalPages 1 }}
-    <!-- Previous page. -->
-    <div class="relative px-6 lg:px-8">
-    <nav class="flex items-center justify-center px-4 sm:px-0">
-    <div class="flex">
+  <!-- Previous page. -->
+  <div class="relative flex justify-center px-6 lg:px-8">
+    <nav class="isolate inline-flex -space-x-px rounded-md shadow-sm" aria-label="Pagination">
     {{ if $paginator.HasPrev }}
-        <a href="{{ $paginator.Prev.URL }}" class="inline-flex items-center pr-1  text-slate-900 hover:text-primary-600">
-            <svg class="w-4 h-4 mr-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
-            </svg>
-            Previous
-        </a>
+      <a href="{{ $paginator.Prev.URL }}" class="relative inline-flex items-center rounded-l-md px-3 py-2 text-slate-900 ring-1 ring-inset ring-slate-300 bg-white hover:bg-slate-50 focus:z-20 focus:outline-offset-0">
+        <span class="sr-only">Previous</span>
+        <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+          <path fill-rule="evenodd" d="M12.79 5.23a.75.75 0 01-.02 1.06L8.832 10l3.938 3.71a.75.75 0 11-1.04 1.08l-4.5-4.25a.75.75 0 010-1.08l4.5-4.25a.75.75 0 011.06.02z" clip-rule="evenodd" />
+        </svg>
+      </a>
     {{ end }}
-    </div>
 
     <!-- Page numbers. -->
     {{ range $paginator.Pagers }}
@@ -78,27 +76,31 @@
       <div class="hidden md:flex">
       <!-- Output page numbers. -->
       {{ if eq ($.Scratch.Get "page_number_flag") true }}
-        <a href="{{ .URL }}" class="{{ if eq . $paginator }}text-slate-900{{else }} text-primary-600{{ end }} hover:text-primary-600 px-4 inline-flex items-center ">
-            {{ .PageNumber }}
-        </a>
+        {{ if eq . $paginator }}
+          <a href="{{ .URL }}" aria-current="page" class="relative inline-flex items-center bg-sky-100 px-4 py-2 text-sm font-medium text-sky-600">{{ .PageNumber }}</a>
+        {{else }}
+          <a href="{{ .URL }}" class="relative inline-flex items-center px-4 py-2 text-sm font-medium text-slate-500 ring-1 ring-inset ring-slate-300 bg-white hover:bg-slate-50 focus:z-20 focus:outline-offset-0">{{ .PageNumber }}</a>
+        {{ end }}
       {{ end }}
       </div>
+    
 
     {{ end }}
 
     <!-- Next page. -->
-    <div class="flex">
     {{ if $paginator.HasNext }}
-
-        <a href="{{ $paginator.Next.URL }}" class="inline-flex items-center pl-1  text-slate-900 hover:text-primary-600">
-            Next
-            <svg class="w-4 h-4 ml-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
-            </svg>
-        </a>
-
+      <a href="{{ $paginator.Next.URL }}" class="relative inline-flex items-center rounded-r-md px-3 py-2 text-slate-900 ring-1 ring-inset ring-slate-300 bg-white hover:bg-slate-50 focus:z-20 focus:outline-offset-0">
+        <span class="sr-only">Next</span>
+        <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+          <path fill-rule="evenodd" d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z" clip-rule="evenodd" />
+        </svg>
+      </a>
     {{ end }}
-    </div>
     </nav>
-    </div>
+  </div>
+  {{ $start := add (mul (sub $paginator.PageNumber 1) $paginator.PageSize) 1 }}
+  {{ $end := add $start (sub (len $paginator.Pages) 1) }}
+  {{ $totalPosts := mul $paginator.TotalPages $paginator.PageSize }}
+  <p class="text-center mt-4 text-slate-900">Showing {{ $start }}-{{ $end }} of {{ $totalPosts }} stubs</p>
+
 {{ end }}

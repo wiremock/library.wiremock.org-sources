@@ -2,7 +2,8 @@
 slug: "amazonaws-com-accessanalyzer"
 title: "Access Analyzer"
 provider: "amazonaws.com"
-description: "<p>Identity and Access Management Access Analyzer helps identify potential\
+description: |-
+  <p>Identity and Access Management Access Analyzer helps identify potential\
   \ resource-access risks by enabling you to identify any policies that grant access\
   \ to an external principal. It does this by using logic-based reasoning to analyze\
   \ resource-based policies in your Amazon Web Services environment. An external principal\
@@ -14,7 +15,7 @@ description: "<p>Identity and Access Management Access Analyzer helps identify p
   \ programmatically. For general information about IAM Access Analyzer, see <a href=\"\
   https://docs.aws.amazon.com/IAM/latest/UserGuide/what-is-access-analyzer.html\"\
   >Identity and Access Management Access Analyzer</a> in the <b>IAM User Guide</b>.</p>\
-  \ <p>To start using IAM Access Analyzer, you first need to create an analyzer.</p>"
+  \ <p>To start using IAM Access Analyzer, you first need to create an analyzer.</p>
 logo: "amazonaws.com-accessanalyzer-logo.png"
 logoMediaType: "image/png"
 tags:

@@ -7,13 +7,13 @@
   </div>
   <div class="mx-auto lg:max-w-7xl pb-16 lg:pb-24">
     <div class="mt-8 lg:mt-12">
-      {{ partial "nav-categories.html" . }}    
+      {{ partial "nav-tags.html" . }}    
     </div>
     {{ $paginator := .Paginator }}
-    {{ $paginator := .Paginate (where .Pages "Type" "posts") }}
+    {{ $paginator := .Paginate (where .Pages "Type" "api") }}
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 mt-8">
       {{ range $paginator.Pages }}
-        {{ partial "card-post.html" . }} 
+        {{ partial "card-api.html" . }} 
       {{ end }}
     </div>
     <div class="mt-14">

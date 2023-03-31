@@ -1,9 +1,7 @@
 ---
 layout: blocks
-title: Lorem en is placeholder text commonly used
-url: ""
+title: mock API
 description: 
-image: 
 
 ---
 
