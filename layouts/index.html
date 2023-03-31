@@ -1,0 +1,74 @@
+{{define "main"}}
+<section class="px-6 sm:px-10 dark:bg-black">
+  <div class="mx-auto max-w-md sm:max-w-3xl xl:max-w-8xl">
+    {{ $posts := where $.Site.RegularPages "Section" "posts" }}
+    <div class="grid sm:grid-cols-2 xl:grid-cols-4 gap-6 lg:gap-8 2xl:gap-10">
+      {{ range first 4 (where $posts ".Params.featured" "==" true) }}
+        {{ partial "card-post-featured.html" . }}
+      {{ end }}
+    </div>
+  </div>
+</section>
+<section id="blog" class="px-6 sm:px-10 pt-24 lg:pt-32 dark:bg-black">
+  <div class="mx-auto max-w-md sm:max-w-3xl xl:max-w-6xl">
+    {{ with .Params.posts }}
+      <div class="mb-12 lg:mb-14 flex justify-between items-end gap-8">
+        {{ partial "components/h2.html" . }}
+        {{ $authors := where $.Site.RegularPages "Section" "authors" }}
+        <div class="hidden lg:block">
+          <div class="isolate -space-x-3 overflow-hidden flex pt-1">
+            {{ range first 4 $authors }}
+              {{ if .Params.image }}
+                <a href="{{ .Permalink }}" class="hover:-translate-y-0.5 transition-all duration-200">
+                  {{ if in .Params.image "http" }}
+                    <img 
+                      src="{{ .Params.image }}" 
+                      loading="lazy" 
+                      class="w-16 h-16 rounded-full relative inline-block ring-4 ring-white dark:ring-black" 
+                      alt="{{ .Title }}">
+                  {{ else }}
+                    {{ with resources.GetMatch .Params.image }}
+                      {{ $img := .Resize "1280x" }}
+                      {{ $webpSmall := $img.Resize "720x webp" }}
+                      {{ $webpMedium := $img.Resize "960x webp" }}
+                      {{ $webpLarge := $img.Resize "1280x webp" }}
+                      <img 
+                        srcset="
+                          {{ $webpSmall.RelPermalink }} 720w, 
+                          {{ $webpMedium.RelPermalink }} 960w, 
+                          {{ $webpLarge.RelPermalink }} 1280w"
+                        sizes="
+                          (max-width: 720px) 100vw, 
+                          (max-width: 960px) 100vw, 
+                          1280px"
+                        src="{{ $img.RelPermalink }}" 
+                        width="{{ $img.Width }}" 
+                        height="{{ $img.Height }}" 
+                        loading="lazy" 
+                        class="w-14 h-14 rounded-full relative inline-block ring-4 ring-white dark:ring-black"
+                        alt="{{ .Title }}">
+                    {{ end }}
+                  {{ end }}
+                </a>
+              {{ end }}
+            {{ end }}
+          </div>
+          <p class="text-right text-xs font-medium dark:text-white mt-2">{{ i18n "author" (len $authors) }}</p>
+        </div>
+      </div>
+    {{ end }}
+    {{ $paginator := .Paginate (where site.RegularPages "Type" "in" site.Params.mainSections) }}
+    <div class="grid sm:grid-cols-2 xl:grid-cols-3 gap-6 lg:gap-8 2xl:gap-10">
+      {{ range $paginator.Pages }}
+        {{ partial "card-post.html" . }}
+      {{ end }}
+    </div>
+    <div class="mt-14 lg:mt-16">
+      {{ partial "pagination.html" . }}
+    </div>
+  </div>
+</section>
+{{ with .Site.Params.cta }}
+  {{ partial "cta.html" . }}
+{{ end }}
+{{ end }}

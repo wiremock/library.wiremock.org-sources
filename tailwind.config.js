@@ -24,15 +24,13 @@ module.exports = {
           500: '#0EB2EF',
           900: '#312e81',
         },
-        // accent: {
-        //   400: '#38bdf8',
-        //   500: '#0ea5e9',
-        //   600: '#0284c7',
-        //   // 700: '#be185d',
-        // },
+        accent: {
+          400: '#F59121',
+          500: '#ee850f',
+        },
       },
       fontFamily: {
-        sans: "'Poppins',-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif",
+        sans: "'DM Sans',-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif",
         // serif: ["PT Serif", "serif"],
       },
       fontSize: {
@@ -44,7 +42,7 @@ module.exports = {
         '2xl': ['1.5rem', { lineHeight: '2rem' }],
         '3xl': ['1.875rem', { lineHeight: '2.25rem' }],
         '4xl': ['2.25rem', { lineHeight: '2.875rem' }],
-        '5xl': ['3.25rem', { lineHeight: '1.2' }],
+        '5xl': ['3rem', { lineHeight: '1.2' }],
         '6xl': ['3.875rem', { lineHeight: '1.2' }],
         '7xl': ['4.5rem', { lineHeight: '1.1872' }],
         '8xl': ['6rem', { lineHeight: '1' }],

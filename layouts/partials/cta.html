@@ -1,0 +1,26 @@
+<section>
+  <div class="px-6 lg:px-8 py-14 lg:py-24">
+    <div class="max-w-5xl mx-auto">
+      <div class="bg-sky-100 rounded-lg bg-cover bg-no-repeat bg-center px-8 py-20 md:px-20 shadow-lg shadow-sky-100" 
+      {{ with .image }}
+        style="background-image: url({{ . | absURL }})"
+      {{ end }}>
+        <div class="max-w-3xl mx-auto space-y-10 lg:space-y-12 text-center">
+          <div class="space-y-4 lg:space-y-5 text-white">
+            {{ partial "components/h2.html" . }}
+            {{ partial "components/subheading.html" . }}
+          </div>
+          {{ partial "components/list.html" . }}
+          {{ with .button }}
+          <a href="{{ .url | relLangURL }}"{{ if in .url "http" }} target="_blank" rel="noopener noreferrer"{{ end }} 
+            class="inline-block tracking-wide transition rounded-md focus:outline-none font-semibold antialiased
+            px-8 py-3 md:px-12 text-lg sm:text-xl
+            text-white border border-orange-400 bg-orange-400 hover:bg-orange-500 hover:border-orange-500">
+            {{ .text }}
+          </a>
+          {{ end }}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
