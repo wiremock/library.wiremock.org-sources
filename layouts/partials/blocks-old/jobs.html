@@ -1,0 +1,166 @@
+<div x-data="modalJob" class="py-16 lg:py-24 bg-gradient-to-b from-white to-blue-50">
+  <div class="max-w-5xl mx-auto px-6 lg:px-8">
+
+    {{ if or .heading .subheading }}
+      <div class="text-center mb-10">
+        {{ with .heading }}
+          <h2 class="text-3xl sm:text-4xl font-semibold leading-tight text-primary md:text-5xl">{{ . }}</h2>
+        {{ end }}
+        {{ with .subheading }}
+          <p class="mt-6 max-w-2xl text-lg sm:text-xl text-slate-500 mx-auto">{{ . }}</p>
+        {{ end }}
+      </div>
+    {{ end }}
+
+    {{ with .text }}
+      <div class="prose mx-auto mb-16">{{ . | markdownify }}</div>
+    {{ end }}
+
+    <div class="grid md:gap-y-6">
+      {{ range .jobs }}
+        <div x-data="{ open: false }" class="border border-slate-100 rounded-xl bg-white">
+          <div class="p-7 sm:flex justify-center">
+            <div class="w-full">
+              <h3 class="text-2xl font-semibold text-primary">{{ .heading }}</h3>
+              {{ if .info }}
+                <div class="mt-1 flex space-x-6 text-sm">
+                  {{ range .info }}
+                    <div class="text-slate-400">{{ . }}</div>
+                  {{ end }}
+                </div>
+              {{ end }}              
+              {{ with .description }}
+                <div class="mt-3 leading-relaxed text-slate-600 prose max-w-none">{{ . | markdownify }}</div>
+              {{ end }}
+              {{ if .labels }}
+                <div class="mt-4 flex space-x-3 text-xs">
+                  {{ range .labels }}
+                    <div class="bg-blue-50 text-blue-400 py-1 px-2 rounded">{{ . }}</div>
+                  {{ end }}
+                </div>
+              {{ end }}              
+              {{ if .content }}
+                <button x-on:click="open = ! open" class="mt-5 text-secondary hover:text-accent-dark  text-sm flex items-center">
+                  <span>More details</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" :class="{ 'rotate-90': open, 'transform-none': !(open) }" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                  </svg>
+                </button>
+                <div x-show="open" class="mt-5 leading-relaxed text-slate-600 prose max-w-none">{{ .content | markdownify }}</div>
+              {{ end }}
+            </div>
+            <div>
+              <a x-on:click.prevent="modalJobShow = true" class="sm:ml-6 lg:ml-16 mt-6 sm:mt-0 whitespace-nowrap inline-flex items-center justify-center px-5 py-2.5 border border-transparent rounded-md shadow text-sm  text-white bg-secondary hover:bg-accent-dark w-full sm:w-fit" href="#">Apply</a>
+            </div>    
+          </div>
+        </div>
+      {{ end }}
+    </div>
+  </div>
+
+  <div x-bind="modalJobWindow" class="fixed inset-0 overflow-y-auto z-[99]" role="dialog" aria-modal="true" aria-labelledby="modal-title-1" style="display: none;">
+    <div x-show="modalJobShow" x-transition.opacity="" class="fixed inset-0 bg-primary-600 bg-opacity-50" aria-hidden="true"></div>
+    <div x-show="modalJobShow" x-transition="" x-on:click="modalJobShow = false"
+      class="relative min-h-screen flex items-center justify-center p-4">
+      <div x-on:click.stop=""
+        class="relative max-w-2xl w-full bg-white rounded-lg shadow-lg p-12 overflow-y-auto">
+
+        <button type="button" x-on:click="modalJobShow = false"
+          class="bg-white hover:bg-slate-100 p-2 text-slate-500 absolute top-3 right-3">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+
+        <div class="text-center">
+          <h2 class="text-3xl font-extrabold tracking-tight text-primary sm:text-4xl">{{ .form.heading }}</h2>
+          {{ with .form.subheading }}
+            <p class="mt-4 text-lg leading-6 text-slate-500">{{ . }}</p>
+          {{ end }}
+        </div>
+        <div class="mt-12">
+          <div id="job-success" class="bg-green-50 text-green-600 p-4 text-center mb-6 rounded-md hidden">You application has been received!</div>
+          <div id="job-error" class="bg-red-50 text-red-600 p-4 text-center mb-6 rounded-md hidden"></div>
+          <form method="POST" name="job" class="grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8" enctype="multipart/form-data" data-netlify="true" data-netlify-recaptcha="true">
+            <div>
+              <label for="first-name" class="block text-sm  text-slate-700">First name</label>
+              <div class="mt-1">
+                <input type="text" name="first-name" id="first-name" autocomplete="given-name" class="py-3 px-4 block w-full shadow-sm focus:ring-primary focus:border-priring-primary border-gray-300 rounded-md" required>
+              </div>
+            </div>
+            <div>
+              <label for="last-name" class="block text-sm  text-slate-700">Last name</label>
+              <div class="mt-1">
+                <input type="text" name="last-name" id="last-name" autocomplete="family-name" class="py-3 px-4 block w-full shadow-sm focus:ring-primary focus:border-priring-primary border-gray-300 rounded-md" required>
+              </div>
+            </div>
+            <div class="sm:col-span-2">
+              <label for="email" class="block text-sm  text-slate-700">Email</label>
+              <div class="mt-1">
+                <input id="email" name="email" type="email" autocomplete="email" class="py-3 px-4 block w-full shadow-sm focus:ring-primary focus:border-priring-primary border-gray-300 rounded-md" required>
+              </div>
+            </div>
+            <div class="sm:col-span-2">
+              <label for="message" class="block text-sm  text-slate-700">Message</label>
+              <div class="mt-1">
+                <textarea id="message" name="message" rows="4" class="py-3 px-4 block w-full shadow-sm focus:ring-primary focus:border-priring-primary border border-gray-300 rounded-md" maxlength="2000" required></textarea>
+              </div>
+            </div>
+            <div class="sm:col-span-2">
+              <label for="attachment" class="block text-sm  text-slate-700">Attachment</label>
+              <div class="mt-1">
+              <input class="py-3 px-4 block w-full shadow-sm focus:ring-primary focus:border-priring-primary border-gray-300 rounded-md
+                border border-solid
+                transition
+                ease-in-out
+                " type="file" name="attachment" id="attachment">
+              </div>
+            </div>
+            <input type="hidden" name="position" id="position">           
+            <div class="sm:col-span-2">
+              <button type="submit" class="w-full inline-flex items-center justify-center px-6 py-3 border border-transparent rounded-md shadow-sm text-base  text-white bg-secondary hover:bg-accent-dark focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary">Submit</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('alpine:init', () => {
+      Alpine.data('modalJob', () => ({
+        modalJobShow: false
+      }))
+
+      Alpine.bind('modalJobWindow', () => ({
+        ['x-show']() {
+          return this.modalJobShow
+        },
+        ['x-on:keydown.escape.prevent.stop']() {
+          this.modalJobShow = false
+        },
+      }))
+    })
+
+    document.forms.job.addEventListener("submit", (event) => {
+      event.preventDefault();
+      const jobSuccess = document.getElementById("job-success");
+      const jobError = document.getElementById("job-error");
+      fetch("/", {
+        body: new FormData(event.target),
+        method: "POST",
+      })
+        .then(() => {
+          jobSuccess.classList.remove("hidden");
+          document.forms.job.reset();
+        })
+        .catch((error) => {
+          jobError.classList.remove("hidden");
+          jobError.innerHTML = `Failed: ${error}`;
+        });
+    });
+    
+  </script>
+
+</div>
+

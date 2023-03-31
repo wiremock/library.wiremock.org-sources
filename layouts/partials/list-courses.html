@@ -1,0 +1,18 @@
+<div class="bg-white px-6 lg:px-8">
+  <div class="mx-auto max-w-7xl pt-10 pb-14 lg:pt-16 lg:pb-24">
+    <h1 class="text-3xl sm:text-4xl lg:text-5xl font-semibold lg:leading-tight text-slate-900 text-center">{{ .Title }}</h1>
+    <div class="col-span-12 lg:col-span-2 mt-6">
+      {{ partial "nav-kategorier.html" . }}    
+    </div>
+    {{ $paginator := .Paginator }}
+    {{ $paginator := .Paginate (where .Pages "Type" "docs") }}
+    <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 lg:gap-10 mt-8 lg:mt-16">
+      {{ range $paginator.Pages }}
+        {{ partial "card-course.html" . }} 
+      {{ end }}
+    </div>
+    <div class="mt-16">
+      {{ partial "pagination.html" . }}
+    </div>
+  </div>
+</div>

@@ -1,0 +1,23 @@
+<div class="bg-white px-6 lg:px-8">
+  <div class="mx-auto lg:max-w-4xl pt-16 lg:pt-24">
+    {{ with .Params.header.superheading }}
+      <div class="text-base font-semibold leading-tight text-center uppercase tracking-widest text-accent-500 mb-3">{{ . }}</div>
+    {{ end }}
+    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-semibold text-center">{{ if .Params.header.heading }}{{ .Params.header.heading }}{{ else }}{{ .Title }}{{ end }}</h1>
+  </div>
+  <div class="mx-auto lg:max-w-7xl pb-16 lg:pb-24">
+    <div class="mt-8 lg:mt-12">
+      {{ partial "nav-categories.html" . }}    
+    </div>
+    {{ $paginator := .Paginator }}
+    {{ $paginator := .Paginate (where .Pages "Type" "posts") }}
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 mt-8">
+      {{ range $paginator.Pages }}
+        {{ partial "card-post.html" . }} 
+      {{ end }}
+    </div>
+    <div class="mt-14">
+      {{ partial "pagination.html" . }}
+    </div>
+  </div>
+</div>

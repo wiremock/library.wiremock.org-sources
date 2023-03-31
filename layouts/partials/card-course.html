@@ -1,0 +1,22 @@
+<div class="relative group">
+  <div class="border border-slate-100 group-hover:border-green-500 rounded-lg shadow-lg h-full bg-white">
+    {{ if .Params.image }}
+    <div class="aspect-w-16 aspect-h-10 rounded-t-lg overflow-hidden">
+      <img class="w-full h-full object-center object-cover" src="{{ .Params.image | relLangURL }}" alt="{{ .Title }}" />
+    </div>
+    {{ end }}
+    <div class="p-6">
+      <h3 class="text-2xl lg:text-2xl leading-tight text-green-500 font-semibold">{{ .Title }}</h3>
+      {{ with .Summary }}
+      <div class="mt-4 text-[1.063rem] text-slate-900">{{ . }}</div>
+      {{ end }}
+      <div class="mt-4 flex justify-between items-center">
+        <div class="text-slate-700 uppercase tracking-widest text-xs font-semibold">{{ if .Params.kategorier }} {{ range .Params.kategorier }}{{ . }}{{ end }} {{ end }}</div>
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-9 w-9 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+        </svg>
+      </div>
+    </div>
+  </div>
+  <a class="absolute inset-0" href="{{ .Permalink }}" title="{{ .Title }}"></a>
+</div>

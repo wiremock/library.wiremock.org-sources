@@ -1,0 +1,6 @@
+<div class="flex items-center justify-center h-14 w-14 rounded-xl bg-primary-600 text-white svg-lg">
+  {{ $icon := printf "%s%s%s" "icons/" .icon ".svg" }}
+  {{ if templates.Exists (printf "%s%s" "partials/" $icon ) }}
+    {{ partial $icon }}
+  {{ end }}            
+</div>

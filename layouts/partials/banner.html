@@ -1,0 +1,10 @@
+<div class="bg-zinc-900 dark">
+  <div class="py-3 px-6 lg:px-8 flex items-center justify-center space-x-5">
+    {{ with .Site.Params.banner.text }}
+      <p class="text-white text-sm tracking-wide">{{ . }}</p>
+    {{ end }}
+    {{ with .Site.Params.banner.button }}
+      {{ partial "components/button.html" . }}
+    {{ end }}
+  </div>
+</div>

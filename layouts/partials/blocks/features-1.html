@@ -1,0 +1,35 @@
+{{ partial "block-open.html" . }}
+  <div class="space-y-10 lg:space-y-14">
+    {{ if or .superheading .heading .subheading }}
+      <div class="max-w-3xl mx-auto text-center space-y-4 lg:space-y-5">
+        {{ partial "components/superheading.html" . }}
+        {{ partial "components/h2.html" . }}
+        {{ partial "components/subheading.html" . }}
+      </div>
+    {{ end }}
+    <div class="mx-auto max-w-lg md:max-w-5xl">
+      <div class="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 lg:gap-x-16 xl:gap-x-24 md:gap-y-12">
+        {{ range .features }}
+          <div class="relative">
+            <div>
+              {{ if .icon }}
+                <div class="absolute">
+                  {{ partial "components/icon-box.html" . }}           
+                </div>
+              {{ end }}
+              <div class="{{ if .icon }}ml-[5rem]{{ end }}">
+                {{ partial "components/h3.html" . }}
+              </div>
+            </div>
+            <div class="mt-4 {{ if .icon }}ml-[5rem]{{ end }}">{{ partial "components/copy.html" . }}</div>
+          </div>
+        {{ end }}
+      </div>
+    </div>
+    {{ with .button }}
+      <div class="mx-auto max-w-lg text-center">
+        {{ partial "components/button.html" . }}
+      </div>
+    {{ end }}
+  </div>
+{{ partial "block-close.html" . }}

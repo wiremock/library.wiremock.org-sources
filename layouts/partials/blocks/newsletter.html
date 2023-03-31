@@ -1,0 +1,32 @@
+{{ partial "block-open.html" . }} 
+  <div class="space-y-10 lg:space-y-12">
+    {{ if or .superheading .heading .subheading }}
+      <div class="max-w-3xl mx-auto text-center space-y-4 lg:space-y-5">
+        {{ partial "components/superheading.html" . }}
+        {{ partial "components/h2.html" . }}
+        {{ partial "components/subheading.html" . }}
+      </div>
+    {{ end }}
+    <div class="max-w-4xl mx-auto">
+      {{ if .revue.username }}
+        <div class="flex justify-center items-center mt-10" id="revue-embed">
+          <form class="w-full sm:w-auto sm:flex rounded-[2rem] sm:rounded-full bg-black dark:bg-white p-2 shadow-sm" action="https://www.getrevue.co/profile/{{ . }}/add_subscriber" method="post" id="revue-form" name="revue-form"  target="_blank">
+            <div class="revue-form-group">
+              <label for="member_email" class="sr-only">Email address</label>
+              <input class="revue-form-field w-full px-4 py-3 text-center font-semibold antialiased sm:text-left bg-transparent text-white dark:text-black placeholder-zinc-300 dark:placeholder-zinc-600 ring-0 border-none focus:ring-0 sm:min-w-[20rem]" placeholder="Your email address" type="email" name="member[email]" id="member_email">
+            </div>
+            <div class="revue-form-actions mt-3 sm:mt-0 sm:flex-shrink-0">
+              <button class="flex w-full items-center justify-center px-8 py-3 border tracking-wide rounded-full focus:outline-none font-semibold antialiased
+              {{ if eq .button.style "primary" }}border-primary-600 bg-primary-600 text-black hover:border-primary-500 hover:bg-primary-500 dark:text-black
+              {{ else }}text-black bg-white hover:bg-transparent border-white hover:text-white dark:text-white dark:bg-black dark:hover:bg-transparent dark:border-black dark:hover:text-black
+              {{ end }}" type="submit" name="member[subscribe]" id="member_submit">{{ .button.text | default "hghg"}}</button>
+            </div>
+          </form>
+        </div>
+      {{ end }}
+      {{ with .subtext }}
+        <div class="mt-5 lg:px-20 text-base text-zinc-600 dark:text-zinc-300 leading-loose text-center">{{ . | markdownify }}</div>
+      {{ end }} 
+    </div>
+  </div>
+{{ partial "block-close.html" . }}

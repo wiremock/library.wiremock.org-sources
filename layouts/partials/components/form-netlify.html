@@ -1,0 +1,50 @@
+<div id="contact-success" class="bg-green-50 dark:bg-green-600 text-green-500 dark:text-white p-2.5 text-center mb-6 rounded-md hidden">{{ i18n "message_sent" }}</div>
+<div id="contact-error" class="bg-red-50 dark:bg-red-500 text-red-600 dark:text-white p-2.5 text-center mb-6 rounded-md hidden"></div>
+<form method="POST" name="job" class="grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8" data-netlify="true">
+  <div>
+    <label for="name" class="block text-sm font-semibold antialiased text-zinc-600 dark:text-zinc-300">{{ i18n "name" }}</label>
+    <div class="mt-2">
+      <input type="text" name="name" id="name" autocomplete="name" class="bg-transparent py-2.5 px-3.5 block w-full text-sm focus:ring-0 border border-zinc-300 dark:border-zinc-700 dark:bg-zinc-800 dark:text-white focus:border-green-500 rounded-md" required>
+    </div>
+  </div>
+  <div>
+    <label for="email" class="block text-sm font-semibold antialiased text-zinc-600 dark:text-zinc-300">{{ i18n "email" }}</label>
+    <div class="mt-2">
+      <input id="email" name="email" type="email" autocomplete="email" class="bg-transparent py-2.5 px-3.5 block w-full text-sm focus:ring-0 border border-zinc-300 dark:border-zinc-700 dark:bg-zinc-800 dark:text-white focus:border-green-500 rounded-md" required>
+    </div>
+  </div>
+  <div class="sm:col-span-2">
+    <label for="phone" class="block text-sm font-semibold antialiased text-zinc-600 dark:text-zinc-300">{{ i18n "phone" }}</label>
+    <div class="mt-2">
+      <input id="phone" name="phone" type="tel" autocomplete="tel" class="bg-transparent py-2.5 px-3.5 block w-full text-sm focus:ring-0 border border-zinc-300 dark:border-zinc-700 dark:bg-zinc-800 dark:text-white focus:border-green-500 rounded-md">
+    </div>
+  </div>
+  <div class="sm:col-span-2">
+    <label for="message" class="block text-sm font-semibold antialiased text-zinc-600 dark:text-zinc-300">{{ i18n "message" }}</label>
+    <div class="mt-2">
+      <textarea id="message" name="message" rows="4" class="bg-transparent py-2.5 px-3.5 block w-full text-sm focus:ring-0 border border-zinc-300 dark:border-zinc-700 dark:bg-zinc-800 dark:text-white focus:border-green-500 rounded-md" maxlength="2000" required></textarea>
+    </div>
+  </div>
+  <div class="sm:col-span-2 mt-4 flex justify-center">
+    <button type="submit" class="w-full sm:w-auto inline-block py-2.5 sm:py-3 px-6 rounded-full font-semibold antialiased text-base text-center focus:outline-none border text-white bg-black hover:bg-transparent border-black hover:text-black dark:text-black dark:bg-white dark:hover:bg-transparent dark:border-white dark:hover:text-white">{{ i18n "send_message" }}</button>
+  </div>
+</form>
+<script>
+  document.forms.job.addEventListener("submit", (event) => {
+    event.preventDefault();
+    const jobSuccess = document.getElementById("contact-success");
+    const jobError = document.getElementById("contact-error");
+    fetch("/", {
+      body: new FormData(event.target),
+      method: "POST",
+    })
+    .then(() => {
+      jobSuccess.classList.remove("hidden");
+      document.forms.job.reset();
+    })
+    .catch((error) => {
+      jobError.classList.remove("hidden");
+      jobError.innerHTML = `Error:: ${error}`;
+    });
+  });
+</script>

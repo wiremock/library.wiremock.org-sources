@@ -1,0 +1,21 @@
+{{ partial "block-open.html" . }} 
+  <div class="max-w-7xl mx-auto">
+    <div class="bg-zinc-100 dark:bg-zinc-900 rounded-t-4xl bg-cover bg-no-repeat bg-center px-8 py-20 md:px-20" 
+    {{ with resources.GetMatch .image }}
+      {{ $img := .Resize "1280x" }}
+      style="background-image: url({{ $img.RelPermalink }})"
+    {{ end }}>
+      <div class="max-w-3xl mx-auto space-y-10 lg:space-y-12 text-center">
+        <div class="space-y-4 lg:space-y-5">
+          {{ partial "components/superheading.html" . }}
+          {{ partial "components/h2.html" . }}
+          {{ partial "components/subheading.html" . }}
+        </div>
+        {{ partial "components/list.html" . }}
+        {{ with .button }}
+          {{ partial "components/button.html" . }}
+        {{ end }}
+      </div>
+    </div>
+  </div>
+{{ partial "block-close.html" . }} 

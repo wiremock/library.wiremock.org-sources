@@ -1,0 +1,23 @@
+<footer class="bg-zinc-50 dark:bg-zinc-900 pt-20 lg:pt-24 pb-14 px-6 lg:px-8">
+  <div class="mx-auto max-w-7xl overflow-hidden">
+    <nav class="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-6 sm:gap-12" aria-label="Footer">
+      {{ range .Site.Menus.footer }}
+        <a href="{{ .URL }}" class="text-sm text-black dark:text-zinc-100 hover:text-primary-600 dark:hover:text-primary-600"> {{ .Name }} </a>
+      {{ end }}
+    </nav>
+    <div class="mt-10 flex justify-center space-x-8">
+      {{ range .Site.Menus.social }}
+        <a href="{{ .URL }}" target="_blank" rel="noopener noreferrer" class="text-zinc-600 dark:text-zinc-300 hover:text-primary-600 dark:hover:text-primary-600 svg-sm">
+          <span class="sr-only">{{ .Name }}</span>
+          {{ $icon := printf "%s%s%s" "icons/" .Pre ".svg" }}
+          {{ if templates.Exists (printf "%s%s" "partials/" $icon ) }}
+            {{ partial $icon }}
+          {{ end }}
+        </a>
+      {{ end }}
+    </div>
+    {{ with .Site.Copyright }}
+      <p class="text-zinc-600 dark:text-zinc-300 text-sm mt-10 text-center">{{ . | markdownify }}</p>
+    {{ end }}
+  </div>
+</footer>

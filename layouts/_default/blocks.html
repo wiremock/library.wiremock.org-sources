@@ -1,0 +1,15 @@
+{{ define "main" }}
+  {{ $blocks := .Params.blocks }}
+  {{ range $blocks }}
+    {{ if eq .block "content" }}
+      <div class="pb-14 lg:pb-24 pt-10 lg:pt-16">
+        <div class="max-w-4xl mx-auto px-6 lg:px-8">
+          <div class="prose sm:prose-lg prose-headings:text-slate-900 max-w-3xl">{{ $.Page.Content }}</div>
+        </div>
+      </div>
+    {{ else }}
+      {{ $file := (printf "%s%s%s" "blocks/" .block ".html" ) }}
+      {{ partial $file . }}
+    {{ end }}
+  {{ end }}
+{{ end }}

@@ -1,0 +1,222 @@
+baseURL: ""
+languageCode: "en-us"
+title: "Wireframe"
+description: jkhkhjk
+copyright: "Copyright © 2022 All Rights Reserved"
+
+enableEmoji: true
+enableGitInfo: true
+enableRobotsTXT: true
+canonifyURLs: true
+
+paginate: 2
+
+taxonomies:
+  categories: 'categories'
+permalinks:
+  categories: "/:slug"
+
+markup:
+  markup.goldmark:
+    markup.goldmark.renderer:
+      unsafe: true
+      
+defaultContentLanguage: "en"
+        
+languages:
+  en:
+    title: 'Wireframe'
+    description: jkhkhjk
+    languageName: "En"
+    contentDir: "content/en"
+    weight: 1
+    menu:
+      navbar:
+      - name: Services
+        url: "#"
+        weight: 10
+      - name: Product one
+        url: "#"
+        parent: Services
+        pre: code
+        weight: 110
+      - name: Product two
+        url: "#"
+        parent: Services
+        pre: hashtag
+        weight: 120
+      - name: Product three
+        url: "#"
+        parent: Services
+        pre: cube-transparent
+        weight: 130
+      - name: Product four
+        url: "#"
+        parent: Services
+        pre: template
+        weight: 140
+      - name: Product five
+        url: "#"
+        parent: Services
+        pre: cube-transparent
+        params:
+          desc: Lorem ipsum
+        weight: 150
+      - name: Pricing
+        url: "#"
+        weight: 20
+      - name: Blog
+        url: "/blog/"
+        weight: 30
+      - name: Contact
+        url: "#"
+        weight: 40
+    
+      navbar_cta:
+      - name: Login
+        url: "#"
+        pre: default
+        weight: 10
+      - name: Sign up
+        url: "#"
+        pre: secondary
+        weight: 20
+    
+      social:
+      - name: Facebook
+        url: "#"
+        pre: facebook
+        weight: 10
+      - name: Instagram
+        url: "#"
+        pre: instagram
+        weight: 20
+      - name: Twitter
+        url: "#"
+        pre: twitter
+        weight: 30
+      - name: GitHub
+        url: "#"
+        pre: github
+        weight: 40
+      - name: Dribbble
+        url: "#"
+        pre: dribbble
+        weight: 50
+    
+      footer:
+      - name: Services
+        weight: 10
+    
+      - name: Applications
+        url: "#"
+        parent: Services
+        weight: 10
+      - name: Work
+        url: "#"
+        parent: Services
+        weight: 20
+      - name: Custom
+        url: "#"
+        parent: Services
+        weight: 30
+    
+      - name: Company
+        weight: 20
+    
+      - name: About
+        url: "#"
+        parent: Company
+        weight: 10
+      - name: Jobs
+        url: "#"
+        parent: Company
+        weight: 20
+      - name: Terms
+        url: "#"
+        parent: Company
+        weight: 30
+        
+      - name: Resources
+        weight: 30
+        
+      - name: Blog
+        url: "#"
+        parent: Resources
+        weight: 10
+      - name: Press
+        url: "#"
+        parent: Resources
+        weight: 20
+      - name: Support
+        url: "#"
+        parent: Resources
+        weight: 30    
+      
+      - name: Products
+        weight: 40
+        
+      - name: Lorem
+        url: "#"
+        parent: Products
+        weight: 10
+      - name: Ipsum
+        url: "#"
+        parent: Products
+        weight: 20
+      - name: Dolorem
+        url: "#"
+        parent: Products
+        weight: 30      
+        
+      - name: Platform
+        weight: 50
+        
+      - name: Isollem
+        url: "#"
+        parent: Platform
+        weight: 10
+      - name: Ipsumum
+        url: "#"
+        parent: Platform
+        weight: 20
+      - name: Doloremus
+        url: "#"
+        parent: Platform
+        weight: 30     
+        
+  de:
+    title: 'Wireframe'
+    languageName: "De"
+    contentDir: "content/de"
+    weight: 2
+    menu:
+      navbar:
+      - name: Kontacten
+        url: "#"
+        weight: 10
+
+params:
+  # description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+  logo: "/images/logo.svg"
+  logo_light: "/images/logo-light.svg"
+  author: "OfficeGeek"
+  github: "#"
+  ogimage: "/images/og.png"
+  sitename: "OfficeGeek"
+  twitter: "#"
+  
+  
+  banner:
+    text: The latest product release brings even faster workflow execution
+    button:
+      text: Learn More
+      url: "#"
+      style: muted
+      size: small
+      
+  navbar:
+    sticky: true
+    
+  footer:
+    layout: footer

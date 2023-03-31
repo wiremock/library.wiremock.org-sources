@@ -1,0 +1,476 @@
+{{define "main"}}
+
+<!-- Header -->
+<div class="bg-purple-990 py-12 lg:py-20 px-6 lg:px-8">
+  <div class="mx-auto max-w-md sm:max-w-3xl lg:max-w-7xl">
+    <h1 class="text-5xl font-bold sm:text-7xl text-green-600 pb-4">Morbi eget neque vel turpis lacinia</h1>
+    <h1 class="text-5xl font-bold sm:text-7xl text-emerald-600 pb-4">Morbi eget neque vel turpis lacinia</h1>
+    <h1 class="text-5xl font-bold sm:text-7xl text-blue-600 pb-4">Morbi eget neque vel turpis lacinia</h1>
+    <h1 class="text-5xl font-bold sm:text-7xl text-indigo-600 pb-4">Morbi eget neque vel turpis lacinia</h1>
+
+
+    <div class="mt-8 lg:mt-16">
+      <a href="#pricing" class="inline-flex tracking-wide rounded-md border border-transparent bg-pink-600 px-10 py-4 text-base sm:text-lg text-white hover:bg-pink-700 focus:outline-none sm:px-12">
+        Get started
+      </a>
+    </div>
+  </div>
+</div>    
+
+<!-- Benefits -->
+<div id="benefits" class="relative bg-purple-990 py-12 lg:py-20 px-6 lg:px-8">
+  <div class="mx-auto max-w-md text-center sm:max-w-3xl">
+    <h2 class="font-semibold text-center tracking-wide text-white text-4xl sm:text-5xl lg:text-6xl">Benefits</h2>
+    <p class="mt-7 text-xl text-center tracking-wide text-white md:text-2xl sm:px-16">TailStack replaces unreliable freelancers and expensive agencies.</p>
+  </div>
+  <div class="mx-auto max-w-md text-center sm:max-w-3xl lg:max-w-7xl mt-16">
+    <div class="grid grid-cols-1 gap-8 lg:gap-10 sm:grid-cols-2 lg:grid-cols-3">
+      {{ range .Params.why }}
+        <div class="pt-6">
+          <div class="flow-root rounded-lg bg-purple-980 px-6 pb-8">
+            <div class="-mt-8">
+              <div>
+                <span class="inline-flex items-center justify-center text-white rounded-md bg-pink-600 p-3 svg-8">
+                  {{ if .icon }}
+                    {{ $icon := (printf "%s%s%s" "icons/" .icon ".svg" ) }}
+                    {{ partial $icon . }}
+                  {{ end }}
+                </span>
+              </div>
+              <h3 class="mt-8 text-2xl font-bold text-white">{{ .heading }}</h3>
+              <p class="mt-5 text-purple-100 text-lg">{{ .text }}</p>
+            </div>
+          </div>
+        </div>
+      {{ end }}
+    </div>
+  </div>
+</div>
+
+<!-- Work -->
+<div id="work" x-data="modalWork" class="bg-purple-990 py-12 lg:py-20 px-6 lg:px-8">
+  <div class="mx-auto max-w-md  sm:max-w-3xl lg:max-w-6xl">
+    <h2 class="font-semibold text-center tracking-wide text-white text-4xl sm:text-5xl lg:text-6xl">Recent Work</h2>
+    <p class="mt-7 text-xl text-center tracking-wide text-white md:text-2xl">Visions executed flawlessly, and nothing less.</p>
+    <div class="mt-10 text-center">
+      <a x-on:click.prevent="modalWorkShow = true" href="#" class="inline-flex tracking-wide rounded-md border border-transparent bg-white px-10 py-4 text-base sm:text-lg font-semibold text-purple-980 hover:bg-pink-600 hover:text-white focus:outline-none sm:px-12">
+        View recent work
+      </a>
+    </div>    
+    <div class="grid sm:grid-cols-2 gap-6 sm:gap-8 mt-14">
+      {{ range .Params.work }}
+      {{ $image := resources.Get .image }}
+        {{ with $image }}
+          <div><img src="{{ .Permalink }}" width="{{ .Width }}" height="{{ .Height }}" loading="lazy" alt="Work"></div>
+        {{ end }}
+      {{ end }}
+    </div>
+  </div>
+
+  <div x-bind="modalWorkWindow" class="fixed inset-0 overflow-y-auto z-[99]" role="dialog" aria-modal="true" style="display: none;">
+    <div x-show="modalWorkShow" x-transition.opacity="" class="fixed inset-0 bg-purple-980" aria-hidden="true"></div>
+    <div x-show="modalWorkShow" x-transition="" x-on:click="modalWorkShow = false"
+      class="relative mdmin-h-screen flex items-center justify-center">
+      <div x-on:click.stop=""
+        class="relative max-w-7xl w-full px-16 py-6 overflow-y-auto">
+
+        <button type="button" x-on:click="modalWorkShow = false"
+          class="text-purple-100 hover:text-purple-500 absolute top-4 right-3">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+
+        <div x-data="carousel" class="flex flex-col w-full">
+          <div
+            x-bind="container"
+            class="flex relative"
+            tabindex="0"
+            role="region"
+          >
+            <button
+              x-on:click="previous"
+              class="text-6xl text-purple-100 hover:text-purple-500 absolute -left-14 top-1/2 -translate-y-1/2"
+            >
+              <span aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+                </svg>
+              </span>
+
+              <span class="sr-only">Skip to previous slide</span>
+            </button>
+
+            <span id="carousel-content-label" class="sr-only" hidden=""
+              >Carousel</span
+            >
+
+            <ul
+              x-ref="slider"
+              tabindex="0"
+              role="listbox"
+              aria-labelledby="carousel-content-label"
+              class="flex w-full overflow-x-scroll snap-x snap-mandatory"
+            >
+              {{ range .Params.work_full }}
+                <li class="snap-start w-full h-screen shrink-0 flex flex-col items-center justify-center" role="option">
+                  <div class="max-h-screen overflow-x-scroll">
+                    {{ $image := resources.Get .image }}
+                    {{ with $image }}
+                      <img class="outline-primary-600" src="{{ .Permalink }}" width="{{ .Width }}" height="{{ .Height }}" loading="lazy" alt="Work" />
+                    {{ end }}
+                  </div>
+                </li>
+              {{ end }}
+            </ul>
+
+            <button
+              x-on:click="next"
+              class="text-6xl text-purple-100 hover:text-purple-500 absolute -right-14 top-1/2 -translate-y-1/2"
+            >
+              <span aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
+              </span>
+
+              <span class="sr-only">Skip to next slide</span>
+            </button>
+          </div>
+        </div>
+
+        <script>
+          document.addEventListener("alpine:init", () => {
+            Alpine.data("carousel", () => ({
+              advance: 1,
+              next() {
+                this.to((current, offset) => current + offset * this.advance);
+              },
+              previous() {
+                this.to((current, offset) => current - offset * this.advance);
+              },
+              to(strategy) {
+                let slider = this.$refs.slider;
+                let current = slider.scrollLeft;
+                let offset = slider.firstElementChild.getBoundingClientRect().width;
+                slider.scrollTo({
+                  left: strategy(current, offset),
+                  behavior: "smooth",
+                });
+              },
+              focusableWhenVisible: {
+                "x-intersect:enter"() {
+                  this.$el.removeAttribute("tabindex");
+                },
+                "x-intersect:leave"() {
+                  this.$el.setAttribute("tabindex", "-1");
+                },
+              },
+            }));
+
+            Alpine.bind("container", () => ({
+              ["x-on:keydown.right"]() {
+                this.next();
+              },
+              ["x-on:keydown.left"]() {
+                this.previous();
+              },
+              ["tabindex"]: "0",
+              ["role"]: "region",
+            }));
+          });
+        </script>
+
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('alpine:init', () => {
+      Alpine.data('modalWork', () => ({
+        modalWorkShow: false
+      }))
+
+      Alpine.bind('modalWorkWindow', () => ({
+        ['x-show']() {
+          return this.modalWorkShow
+        },
+        ['x-on:keydown.escape.prevent.stop']() {
+          this.modalWorkShow = false
+        },
+      }))
+    })
+  </script>
+</div>
+
+<!-- Testimonials -->
+<div class="relative bg-purple-990 py-12 lg:py-20 px-6 lg:px-8">
+  <div class="mx-auto max-w-md text-center sm:max-w-3xl">
+    <h2 class="font-semibold text-center tracking-wide text-white text-4xl sm:text-5xl lg:text-6xl">Exceeded expectations</h2>
+    <p class="mt-7 text-xl text-center tracking-wide text-white md:text-2xl sm:px-20">We do what we say we are going to do, when we say we are going to do.</p>
+  </div>
+  <div class="mx-auto max-w-md sm:max-w-3xl lg:max-w-7xl mt-16">
+    <div class="grid grid-cols-1 gap-6 lg:gap-8 sm:grid-cols-2 lg:grid-cols-3">
+      <ul class="space-y-8">
+        <li class="leading-relaxed text-lg">
+          <figure
+            class="relative flex flex-col-reverse bg-purple-980 rounded-lg p-6">
+            <blockquote class="text-white mt-4">
+              <p>I am amazed by his design and coding skills, he has a great eye and knows how to provide the right suggestions to get the job done effectively and efficiently. </p>
+            </blockquote>
+            <figcaption class="flex items-center space-x-4">
+              <img src="{{ "/images/antonio.jpeg" | absURL }}" alt="Antonio Vitti" class="flex-none w-14 h-14 rounded-full object-cover" loading="lazy">
+              <div class="flex-auto">
+                <div class="text-xl text-slate-100 font-semibold">Antonio Vitti</div>
+                <div class="text-purple-350 text-base">CEO, Pontoro Inc.</div>
+              </div>
+            </figcaption>
+          </figure>
+        </li>
+        <li class="leading-relaxed text-lg">
+          <figure
+            class="relative flex flex-col-reverse bg-purple-980 rounded-lg p-6">
+            <blockquote class="text-white mt-4">
+              <p>Communication was excellent, work was completed to the highest of standards and overall it was a very pleasant experience.</p>
+            </blockquote>
+            <figcaption class="flex items-center space-x-4">
+              <img src="{{ "/images/jack-dolby.jpeg" | absURL }}" alt="Jack Dolby" class="flex-none w-14 h-14 rounded-full object-cover" loading="lazy">
+              <div class="flex-auto">
+                <div class="text-xl text-slate-100 font-semibold">Jack Dolby</div>
+                <div class="text-purple-350 text-base">Founder, Dolbs.NFT</div>
+              </div>
+            </figcaption>
+          </figure>
+        </li>
+        <li class="leading-relaxed text-lg">
+          <figure
+            class="relative flex flex-col-reverse bg-purple-980 rounded-lg p-6">
+            <blockquote class="text-white mt-4">
+              <p>I was very impressed by his ability to understand our needs/vision, make smart and thoughtful recommendations, and efficiently deliver a site that exceeded expectations. </p>
+            </blockquote>
+            <figcaption class="flex items-center space-x-4">
+              <img src="{{ "/images/april.jpeg" | absURL }}" alt="April Esgate" class="flex-none w-14 h-14 rounded-full object-cover" loading="lazy">
+              <div class="flex-auto">
+                <div class="text-xl text-slate-100 font-semibold">April Esgate</div>
+                <div class="text-purple-350 text-base">Rialtic</div>
+              </div>
+            </figcaption>
+          </figure>
+        </li>
+      </ul>
+      <ul class="space-y-8 hidden sm:block">
+        <li class="leading-relaxed text-lg">
+          <figure
+            class="relative flex flex-col-reverse bg-purple-980 rounded-lg p-6">
+            <blockquote class="text-white mt-4">
+              <p>Went beyond anything that we requested, adding to the process and recommending based on his experience and skills. </p>
+            </blockquote>
+            <figcaption class="flex items-center space-x-4">
+              <img src="{{ "/images/ez.jpeg" | absURL }}" alt="Ezequiel Djeredjian" class="flex-none w-14 h-14 rounded-full object-cover" loading="lazy">
+              <div class="flex-auto">
+                <div class="text-xl text-slate-100 font-semibold">Ezequiel Djeredjian</div>
+                <div class="text-purple-350 text-base">Senior Digital Marketing Manager Next Big Thing AG</div>
+              </div>
+            </figcaption>
+          </figure>
+        </li>
+        <li class="leading-relaxed text-lg">
+          <figure
+            class="relative flex flex-col-reverse bg-purple-980 rounded-lg p-6">
+            <blockquote class="text-white mt-4">
+              <p>It is always an outstanding experience, very professional, responsive and fast.</p>
+            </blockquote>
+            <figcaption class="flex items-center space-x-4">
+              <img src="{{ "/images/elias.jpeg" | absURL }}" alt="Elias Pajares" class="flex-none w-14 h-14 rounded-full object-cover" loading="lazy">
+              <div class="flex-auto">
+                <div class="text-xl text-slate-100 font-semibold">Elias Pajares</div>
+                <div class="text-purple-350 text-base">Co-Founder, Plan4better GmbH</div>
+              </div>
+            </figcaption>
+          </figure>
+        </li>
+        <li class="leading-relaxed text-lg">
+          <figure
+            class="relative flex flex-col-reverse bg-purple-980 rounded-lg p-6">
+            <blockquote class="text-white mt-4">
+              <p>Despite being in very different timezones he was always available to jump on a call. </p>
+            </blockquote>
+            <figcaption class="flex items-center space-x-4">
+              <img src="{{ "/images/rs.png" | absURL }}" alt="Raymond Shuai" class="flex-none w-14 h-14 rounded-full object-cover" loading="lazy">
+              <div class="flex-auto">
+                <div class="text-xl text-slate-100 font-semibold">Raymond Shuai</div>
+                <div class="text-purple-350 text-base">Co-founder CrunchSpark</div>
+              </div>
+            </figcaption>
+          </figure>
+        </li>
+        <li class="leading-relaxed text-lg">
+          <figure
+            class="relative flex flex-col-reverse bg-purple-980 rounded-lg p-6">
+            <blockquote class="text-white mt-4">
+              <p>Very talented and experienced, quickly understands your needs and executes them flawlessly.</p>
+            </blockquote>
+            <figcaption class="flex items-center space-x-4">
+              <img src="{{ "/images/kleos.jpeg" | absURL }}" alt="Kleos Media Ltd" class="flex-none w-14 h-14 rounded-full object-cover" loading="lazy">
+              <div class="flex-auto">
+                <div class="text-xl text-slate-100 font-semibold">Riccardo Blocco</div>
+                <div class="text-purple-350 text-base">Kleos Media Ltd.</div>
+              </div>
+            </figcaption>
+          </figure>
+        </li>
+      </ul>
+      <ul class="space-y-8 hidden lg:block">
+        <li class="leading-relaxed text-lg">
+          <figure
+            class="relative flex flex-col-reverse bg-purple-980 rounded-lg p-6">
+            <blockquote class="text-white mt-4">
+              <p>Brought ideas to the table, taught me some things along the way, and soon gained my trust. He dealt well with drifting project scheduling and quickly delivered code that just worked.</p>
+            </blockquote>
+            <figcaption class="flex items-center space-x-4">
+              <img src="{{ "/images/john-lee.jpeg" | absURL }}" alt="John Lee" class="flex-none w-14 h-14 rounded-full object-cover" loading="lazy">
+              <div class="flex-auto">
+                <div class="text-xl text-slate-100 font-semibold">John Lee</div>
+                <div class="text-purple-350 text-base">Solid Web Foundations Ltd.</div>
+              </div>
+            </figcaption>
+          </figure>
+        </li>
+        <li class="leading-relaxed text-lg">
+          <figure
+            class="relative flex flex-col-reverse bg-purple-980 rounded-lg p-6">
+            <blockquote class="text-white mt-4">
+              <p>Able to ask the right questions, work autonomously, and contribute some really nice ideas. The work he did for us was stellar.</p>
+            </blockquote>
+            <figcaption class="flex items-center space-x-4">
+              <img src="{{ "/images/stephane.png" | absURL }}" alt="Stephane Maarek" class="flex-none w-14 h-14 rounded-full object-cover" loading="lazy">
+              <div class="flex-auto">
+                <div class="text-xl text-slate-100 font-semibold">Stephane Maarek</div>
+                <div class="text-purple-350 text-base">CMO, Conduktor</div>
+              </div>
+            </figcaption>
+          </figure>
+        </li>
+        <li class="leading-relaxed text-lg">
+          <figure
+            class="relative flex flex-col-reverse bg-purple-980 rounded-lg p-6">
+            <blockquote class="text-white mt-4">
+              <p>A rare combination of being technically excellent, and a great communicator. Available when he said he was going to be and extremely fast and efficient.</p>
+            </blockquote>
+            <figcaption class="flex items-center space-x-4">
+              <img src="{{ "/images/edward.jpeg" | absURL }}" alt="Edward Newton" class="flex-none w-14 h-14 rounded-full object-cover" loading="lazy">
+              <div class="flex-auto">
+                <div class="text-xl text-slate-100 font-semibold">Edward Newton</div>
+                <div class="text-purple-350 text-base">Founder, Cleanily</div>
+              </div>
+            </figcaption>
+          </figure>
+        </li>   
+      </ul>
+    </div>
+  </div>
+</div>    
+
+<!-- Pricing -->
+<div id="pricing" class="relative bg-purple-990 py-12 lg:py-20 px-6 lg:px-8">
+  <div class="mx-auto max-w-md text-center sm:max-w-3xl">
+    <h2 class="font-semibold text-center tracking-wide text-white text-4xl sm:text-5xl lg:text-6xl">Let's keep it simple</h2>
+    <p class="mt-7 text-xl text-center tracking-wide text-white md:text-2xl">Choose a package that's right for you.</p>
+  </div>
+  <div class="mx-auto max-w-md lg:max-w-6xl mt-12">
+    <div class="grid grid-cols-1 gap-8 lg:gap-10 lg:grid-cols-3">
+      <div class="rounded-xl border border-indigo-600 p-6 lg:p-10 text-white flex flex-1 flex-col justify-between">
+        <div class="flex-1">
+          <h3 class="font-bold text-3xl sm:text-[2.5rem]">Essential</h3>
+          <div class="border-t border-purple-350 my-6 lg:my-8 -mx-6 lg:-mx-10"></div>
+          <p class="sm:text-lg text-purple-350">What's included:</p>
+          <ul class="sm:text-lg flex flex-col space-y-4 mt-4 text-slate-100">
+            <li>Front-end development using Tailwind CSS & Alpine.js</li>
+          </ul>
+        </div>
+        <div class="mt-10">
+          <h4 class="font-bold text-3xl sm:text-[2.5rem]">$1995</h4>
+          <a class="block mt-10 w-full text-center tracking-wide rounded-md border border-transparent bg-indigo-600 px-10 py-4 text-base sm:text-lg  text-white hover:bg-indigo-700 focus:outline-none sm:px-12" href="#call">Get started</a>
+        </div>
+      </div>
+      <div class="rounded-xl border border-purple-600 p-6 lg:p-10 text-white flex flex-1 flex-col justify-between">
+        <div class="flex-1">
+          <h3 class="font-bold text-3xl sm:text-[2.5rem]">Standard</h3>
+          <div class="border-t border-purple-350 my-6 lg:my-8 -mx-6 lg:-mx-10"></div>
+          <p class="sm:text-lg text-purple-350">What's included:</p>
+          <ul class="sm:text-lg flex flex-col space-y-4 mt-4 text-slate-100">
+            <li>Front-end development using Tailwind CSS & Alpine.js</li>
+            <li>Web design in browser</li>
+          </ul>
+        </div>
+        <div class="mt-10">
+          <h4 class="font-bold text-3xl sm:text-[2.5rem]">$3995</h4>
+          <a class="block mt-10 w-full text-center tracking-wide rounded-md border border-transparent bg-purple-600 px-10 py-4 text-base sm:text-lg  text-white hover:bg-purple-700 focus:outline-none sm:px-12" href="#call">Get started</a>
+        </div>
+      </div>
+      <div class="rounded-xl border border-pink-600 p-6 lg:p-10 text-white flex flex-1 flex-col justify-between">
+        <div class="flex-1">
+          <h3 class="font-bold text-3xl sm:text-[2.5rem]">Premium</h3>
+          <div class="border-t border-purple-350 my-6 lg:my-8 -mx-6 lg:-mx-10"></div>
+          <p class="sm:text-lg text-purple-350">What's included:</p>
+          <ul class="sm:text-lg flex flex-col space-y-4 mt-4 text-slate-100">
+            <li>Front-end development using Tailwind CSS & Alpine.js</li>
+            <li>Web design in browser</li>
+            <li>Static generator Hugo or Jekyll</li>
+          </ul>
+        </div>
+        <div class="mt-10">
+          <h4 class="font-bold text-3xl sm:text-[2.5rem]">$4995</h4>
+          <a class="block mt-10 w-full text-center tracking-wide rounded-md border border-transparent bg-pink-600 px-10 py-4 text-base sm:text-lg  text-white hover:bg-pink-700 focus:outline-none sm:px-12" href="#call">Get started</a>
+        </div>
+      </div>      
+    </div>
+  </div>
+</div>
+
+<!-- FAQ -->
+<div id="faq" class="bg-purple-990 py-12 lg:py-20 px-6 lg:px-8">
+  <div class="mx-auto max-w-md text-center sm:max-w-3xl">
+    {{ with .Params.faq.heading }}
+      <h2 class="font-semibold text-center tracking-wide text-white text-4xl sm:text-5xl lg:text-6xl">{{ . }}</h2>
+    {{ end }}
+    {{ with .Params.faq.subheading }}
+      <p class="mt-7 text-xl text-center tracking-wide text-white md:text-2xl">{{ . }}</p>
+    {{ end }}
+  </div>  
+  <div class="mx-auto max-w-3xl mt-10 text-white">
+    {{ range .Params.faq.faqs }}
+      <div x-data="{ expanded: false }" class="border-b border-purple-350">
+        <h3>
+          <button x-on:click="expanded = ! expanded" :class="{ 'text-purple-400': expanded }" class="w-full py-8 flex items-center text-left text-xl md:text-2xl font-semibold hover:text-purple-400">
+            <span class="grow">{{ .title }}</span>
+            <svg xmlns="http://www.w3.org/2000/svg" :class="{ 'rotate-90': expanded, 'transform-none': !(expanded) }" class="h-7 w-7 duration-300" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+            </svg>
+          </button>
+        </h3>
+        <div x-show="expanded" x-collapse>
+          <div class="max-w-none prose prose-xl dark:prose-invert mx-auto prose-h2:text-3xl prose-h3:text-2xl prose-h4:text-xl pb-8">
+            {{ .content | markdownify }}
+          </div>
+        </div>
+      </div>
+    {{ end }}
+  </div>
+</div>
+
+<!-- CTA -->
+<div id="call" class="relative bg-purple-990 py-12 lg:py-20 px-6 lg:px-8">
+  <div class="mx-auto lg:max-w-4xl">
+    <div class="bg-gradient-to-t from-indigo-500 via-purple-500 to-pink-500 rounded-xl p-8 lg:p-16">
+      <h2 class="font-semibold text-center tracking-wide text-purple-990 text-4xl sm:text-5xl lg:text-6xl">Book a call now</h2>
+      <p class="mt-7 text-xl text-center tracking-wide text-purple-990 md:text-2xl">Learn more about how TailStack works and how we can help you.</p>
+      <div class="mt-10 text-center">
+        <a class="inline-flex tracking-wide rounded-md border border-transparent bg-purple-990 px-10 py-4 text-base sm:text-lg font-semibold text-white hover:bg-purple-980 focus:outline-none sm:px-12" 
+        href="https://fantastical.app/ivanc/tailstack" target="_blank" rel="noopener noreferrer">Book a call</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+{{end}}

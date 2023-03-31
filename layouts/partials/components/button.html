@@ -1,0 +1,19 @@
+{{ if eq .type "link" }}
+  <a href="{{ .url | relLangURL }}"{{ if in .url "http" }} target="_blank" rel="noopener noreferrer"{{ end }} 
+    class="inline-block tracking-wide transition focus:outline-none font-semibold antialiased text-sm
+    {{ if eq .style "primary" }}gradient-text hover:opacity-90
+    {{ else }}text-black hover:text-zinc-700 dark:text-white dark:hover:text-zinc-300
+    {{ end }}">
+  {{ .text }}
+  <span aria-hidden="true">→</span>
+</a>
+{{ else }}
+  <a href="{{ .url | relLangURL }}"{{ if in .url "http" }} target="_blank" rel="noopener noreferrer"{{ end }} 
+    class="inline-block tracking-wide transition rounded-full focus:outline-none font-semibold antialiased
+    {{ if eq .size "small" }}px-4 py-1.5 text-sm{{ else if eq .size "large" }}px-8 py-3 md:px-10 md:py-4{{ else }}px-6 py-2{{ end }}
+    {{ if eq .style "primary" }}text-white gradient-bg hover:opacity-90
+    {{ else if eq .style "secondary" }}border text-white bg-black hover:bg-transparent border-black hover:text-black dark:text-black dark:bg-white dark:hover:bg-transparent dark:border-white dark:hover:text-white
+    {{ else }}border border-black hover:bg-black hover:text-white dark:border-white dark:text-white dark:hover:bg-white dark:hover:text-black{{ end }}">
+    {{ .text }}
+  </a>
+{{ end }}

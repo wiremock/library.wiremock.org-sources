@@ -1,0 +1,76 @@
+{{ partial "block-open.html" . }}
+  <div class="space-y-10 lg:space-y-14">
+    {{ if or .superheading .heading .subheading }}
+      <div class="max-w-3xl mx-auto text-center space-y-4 lg:space-y-5">
+        {{ partial "components/superheading.html" . }}
+        {{ partial "components/h2.html" . }}
+        {{ partial "components/subheading.html" . }}
+      </div>
+    {{ end }}
+    <div class="max-w-4xl mx-auto">
+      {{ if .youtube }}
+        <div class="relative aspect-w-16 aspect-h-9 rounded-2xl overflow-hidden"
+          x-data="{
+            player: null,
+            initPlayer() {
+              const videoId = '{{ .youtube }}';
+              this.player = new YT.Player('youtube', {
+                height: '360',
+                width: '640',
+                videoId: videoId,
+                events: {
+                  'onReady': () => {
+                    // play the video when the player is ready
+                    this.player.playVideo();
+                  },
+                  'onStateChange': (event) => {
+                    // do something when the player state changes
+                  }
+                }
+              });
+            }
+          }">
+          <div class="aspect-w-16 aspect-h-9">
+            {{ partial "components/image.html" . }}
+            <button x-on:click="initPlayer()" class="flex justify-center items-center left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-white/75 hover:text-white focus:text-white">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-20 h-20">
+                <path fill-rule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm14.024-.983a1.125 1.125 0 010 1.966l-5.603 3.113A1.125 1.125 0 019 15.113V8.887c0-.857.921-1.4 1.671-.983l5.603 3.113z" clip-rule="evenodd" />
+              </svg>
+            </button>
+          </div>
+          <div id="youtube" hidden></div>
+        </div>
+        <script src="https://www.youtube.com/iframe_api"></script>
+      {{ end }}
+      {{ if .vimeo }}
+        <div class="rounded-2xl overflow-hidden"
+          x-data="{
+            player: null,
+            initPlayer() {
+              const videoId = '{{ .vimeo }}';
+              this.player = new Vimeo.Player('vimeo', {
+                id: videoId,
+                width: 640,
+                height: 360,
+                autoplay: true,
+                loop: false
+              });
+            }
+          }">
+          <div id="vimeo" class="aspect-w-16 aspect-h-9">
+            {{ partial "components/image.html" . }}
+            <button x-on:click="initPlayer()" class="flex justify-center items-center left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-white/75 hover:text-white focus:text-white">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-20 h-20">
+                <path fill-rule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm14.024-.983a1.125 1.125 0 010 1.966l-5.603 3.113A1.125 1.125 0 019 15.113V8.887c0-.857.921-1.4 1.671-.983l5.603 3.113z" clip-rule="evenodd" />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <script src="https://player.vimeo.com/api/player.js"></script>
+      {{ end }}
+    </div>
+  </div>
+{{ partial "block-close.html" . }}
+
+
+

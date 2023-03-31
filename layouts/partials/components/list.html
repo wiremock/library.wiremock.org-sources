@@ -1,0 +1,20 @@
+{{ with .list }}
+  <dl class="flex flex-col space-y-8">
+    {{ range . }}
+      <div>
+        <dt class="flex items-center">
+          {{ $icon := printf "%s%s%s" "icons/" .icon ".svg" }}
+          {{ if templates.Exists (printf "%s%s" "partials/" $icon ) }}
+            <div class="svg-lg mr-3 dark:text-white">
+              {{ partial $icon }}
+            </div>
+          {{ end }}
+          <h3 class="text-xl lg:text-2xl font-bold dark:text-white">{{ .heading }}</h3>
+        </dt>
+        {{ if .copy }}
+          <dd class="mt-3 text-zinc-600 dark:text-zinc-300 leading-loose{{ if .icon }} ml-11{{ end }}">{{ .copy }}</dd>
+        {{ end }}
+      </div>
+    {{ end }} 
+  </dl>
+{{ end }}

@@ -1,0 +1,27 @@
+{{define "main"}}
+<div class="bg-gradient-to-b from-white to-blue-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 pt-8 pb-16 lg:pt-12 lg:pb-24">
+    <div class="max-w-4xl mx-auto">
+      <h1 class="text-5xl  text-primary md:text-6xl leading-tight md:leading-tight text-center">{{ .Title }}</h1>
+    </div>
+    <div class="max-w-3xl mx-auto text-center">
+      {{ with .Params.subheading }}
+        <p class="mt-4 text-slate-400 md:text-xl">{{ . }}</p>
+      {{ end }}
+    </div>
+    {{ with .Params.video }}
+      <div class="flex justify-center mt-16">
+        <iframe class="w-full rounded-lg md:w-4/5 aspect-video" src="{{ . }}" title="Video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    {{ end }}
+    {{ with .Params.image }}
+      <div class="flex justify-center mt-16">
+        <img class="w-full rounded-lg md:w-4/5" src="{{ . | absURL }}">
+      </div>
+    {{ end }}
+    <div class="mt-16 prose mx-auto prose-h2:text-3xl prose-h3:text-2xl prose-h4:text-xl">
+      {{ .Content }}
+    </div>
+  </div>
+</div>
+{{end}}

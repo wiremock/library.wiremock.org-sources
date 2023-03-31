@@ -1,0 +1,30 @@
+{{ if in .image "http" }}
+  <img 
+    src="{{ .image }}" 
+    loading="lazy" 
+    class="rounded-2xl" 
+    alt="{{ $.heading }}">
+{{ else }}
+  {{ with resources.GetMatch .image }}
+    {{ $img := .Resize "1280x" }}
+    {{ $webpSmall := $img.Resize "720x webp" }}
+    {{ $webpMedium := $img.Resize "960x webp" }}
+    {{ $webpLarge := $img.Resize "1280x webp" }}
+    <img 
+      srcset="
+        {{ $webpSmall.RelPermalink }} 720w, 
+        {{ $webpMedium.RelPermalink }} 960w, 
+        {{ $webpLarge.RelPermalink }} 1280w"
+      sizes="
+        (max-width: 720px) 100vw, 
+        (max-width: 960px) 100vw, 
+        1280px"
+      src="{{ $img.RelPermalink }}" 
+      width="{{ $img.Width }}" 
+      height="{{ $img.Height }}" 
+      loading="lazy" 
+      class="rounded-2xl"
+      alt="{{ $.heading }}">
+  {{ end }}
+{{ end }}
+
