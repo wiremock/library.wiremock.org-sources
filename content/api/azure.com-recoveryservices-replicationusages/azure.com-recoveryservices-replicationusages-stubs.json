@@ -1,0 +1,49 @@
+{
+  "mappings" : [ {
+    "id" : "15cb05c6-0fe1-484c-8022-4945883ea379",
+    "name" : "Fetches the replication usages of the vault.",
+    "request" : {
+      "urlPath" : "/Subscriptions/6x9s/resourceGroups/Lizabeth+Douglas/providers/Microsoft.RecoveryServices/vaults/Andrew+Romaguera/replicationUsages",
+      "method" : "GET",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "3d60ehhckrjpwtrhn53mob1xq"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"value\" : [ {\n    \"monitoringSummary\" : {\n      \"supportedProviderCount\" : 5728351230412590943,\n      \"unHealthyProviderCount\" : 7523135771131567697,\n      \"unHealthyVmCount\" : 8895788215628813941,\n      \"eventsCount\" : 1730484637083744607,\n      \"deprecatedProviderCount\" : 1606368315671029790,\n      \"unsupportedProviderCount\" : 2825723858774079016\n    },\n    \"protectedItemCount\" : 6000790912403174676,\n    \"jobsSummary\" : {\n      \"failedJobs\" : 366598480564970685,\n      \"inProgressJobs\" : 8440447296548405191,\n      \"suspendedJobs\" : 8925177637183414942\n    },\n    \"recoveryPlanCount\" : 4661329216573987680,\n    \"registeredServersCount\" : 6507652760413444955,\n    \"recoveryServicesProviderAuthType\" : 6011617512265504514\n  }, {\n    \"monitoringSummary\" : {\n      \"supportedProviderCount\" : 6350938275977719678,\n      \"unHealthyProviderCount\" : 2474849999589366098,\n      \"unHealthyVmCount\" : 4830818061888742824,\n      \"eventsCount\" : 610149406199148601,\n      \"deprecatedProviderCount\" : 7434712983405349369,\n      \"unsupportedProviderCount\" : 799534059664578792\n    },\n    \"protectedItemCount\" : 2468471856238419893,\n    \"jobsSummary\" : {\n      \"failedJobs\" : 8737579972912120860,\n      \"inProgressJobs\" : 7797447447883548963,\n      \"suspendedJobs\" : 388863875786594979\n    },\n    \"recoveryPlanCount\" : 6203731977322432952,\n    \"registeredServersCount\" : 8731937822548936221,\n    \"recoveryServicesProviderAuthType\" : 9162286145158596213\n  }, {\n    \"monitoringSummary\" : {\n      \"supportedProviderCount\" : 5532734576533389831,\n      \"unHealthyProviderCount\" : 7778609060850837645,\n      \"unHealthyVmCount\" : 3619019170148382965,\n      \"eventsCount\" : 1969193981269116490,\n      \"deprecatedProviderCount\" : 1422219852625326622,\n      \"unsupportedProviderCount\" : 8365408605303289392\n    },\n    \"protectedItemCount\" : 8558857304524493597,\n    \"jobsSummary\" : {\n      \"failedJobs\" : 8350426503923282018,\n      \"inProgressJobs\" : 2131149405416929782,\n      \"suspendedJobs\" : 6264500416841441860\n    },\n    \"recoveryPlanCount\" : 7219131438281519958,\n    \"registeredServersCount\" : 2929763463855446113,\n    \"recoveryServicesProviderAuthType\" : 949319917885362462\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "15cb05c6-0fe1-484c-8022-4945883ea379",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:10.864573Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "ReplicationUsages_List",
+          "schema" : {
+            "type" : "object",
+            "properties" : {
+              "value" : {
+                "type" : "array",
+                "description" : "The list of replication usages for the given vault.",
+                "items" : {
+                  "$ref" : "#/components/schemas/ReplicationUsage"
+                }
+              }
+            },
+            "description" : "Replication usages for vault."
+          }
+        }
+      }
+    },
+    "insertionIndex" : 0
+  } ]
+}

@@ -1,0 +1,49 @@
+{
+  "mappings" : [ {
+    "id" : "be4ec82b-96d3-4bf2-802c-cd6d42b66b5b",
+    "name" : "Fetches the usages of the vault.",
+    "request" : {
+      "urlPath" : "/Subscriptions/5967/resourceGroups/Mr.+Maris+Renner/providers/Microsoft.RecoveryServices/vaults/Monroe+Friesen/usages",
+      "method" : "GET",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "tf9beyfdm8b873f7xp"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"value\" : [ {\n    \"unit\" : \"BytesPerSecond\",\n    \"quotaPeriod\" : \"413lt23s8ijdxfx299oatmcnur4mng2um7nl6n4v34z50nrxqv3x5qf643w42myf4fhdvj1jif4qpjtrw0umnbb88ni8dpwa8fe0g61c1dw6a7wzltecg6ce43eaej8pp0ep4t9op9wnlg2ue8b76e3ktwo3r8v51r46tzoxpms80hybdaw3z\",\n    \"limit\" : 4473930047066647455,\n    \"name\" : {\n      \"localizedValue\" : \"vcoorcxkrhcy1zcpsxzz6hqc104l884wrwrm4qdgedh3cjc\",\n      \"value\" : \"g17o1budv9uxw0w4s8inolmmb24dr7y3kvphqsebw7zqoppgb9n025xar\"\n    },\n    \"nextResetTime\" : \"2022-09-05T18:26:40.316Z\",\n    \"currentValue\" : 4636564821309592645\n  }, {\n    \"unit\" : \"BytesPerSecond\",\n    \"quotaPeriod\" : \"057rea422vn0ot30imjdkti777exsr29i9wzrimen4dr62cjcc\",\n    \"limit\" : 3090902259386801494,\n    \"name\" : {\n      \"localizedValue\" : \"03xqp3imjvok02fdhpp\",\n      \"value\" : \"8b2rdcpdju9ndwry6m7h9sqa5c4mh7clzwcculkq7gegprwkt9b31o8rj05czee5fmysrb2i1c08e88ib30mb1nmmdd4kmxa8m0ygrtkamfj00b4k175g916myswkzqaumtzt8nehbmbeze25mocil7miz9z68rf7oii9scb6ialqg8g566tmla4y0h7gfqfk\"\n    },\n    \"nextResetTime\" : \"2024-01-26T10:29:55.316Z\",\n    \"currentValue\" : 3727188778793338596\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "be4ec82b-96d3-4bf2-802c-cd6d42b66b5b",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:11.317104Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "Usages_ListByVaults",
+          "schema" : {
+            "type" : "object",
+            "properties" : {
+              "value" : {
+                "type" : "array",
+                "description" : "The list of usages for the given vault.",
+                "items" : {
+                  "$ref" : "#/components/schemas/VaultUsage"
+                }
+              }
+            },
+            "description" : "Usage for vault."
+          }
+        }
+      }
+    },
+    "insertionIndex" : 0
+  } ]
+}

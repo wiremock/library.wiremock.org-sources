@@ -1,0 +1,663 @@
+{
+  "mappings" : [ {
+    "id" : "d8e6e664-328d-493e-b48f-f8fbc93dee9f",
+    "name" : "Updates an elastic pool. - 202",
+    "request" : {
+      "urlPath" : "/subscriptions/12na/resourceGroups/Mrs.+Barry+Hyatt/providers/Microsoft.Sql/servers/Ms.+Elwanda+Rolfson/elasticPools/Schuppe",
+      "method" : "PATCH",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "90fi6h64lmqdckj1d08ii73txsysfnwpqs1bhvdgwr6swt95s4m4z70sqw6mrkllvckspfp2c6rerl17h2qbklz9rzadf8tmqlq67ealqa2zp1icibhrkzyik11m7yhjt62wq171jzq5dxhul65o3qjjt6vx8d8cm4dkjyauhynaohq74"
+        }
+      }
+    },
+    "response" : {
+      "status" : 202
+    },
+    "uuid" : "d8e6e664-328d-493e-b48f-f8fbc93dee9f",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:09.88248Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "ElasticPools_Update"
+        }
+      }
+    },
+    "insertionIndex" : 0
+  }, {
+    "id" : "a765c965-29f7-48ad-bf2a-329c242e5b50",
+    "name" : "Updates an elastic pool. (application/json)",
+    "request" : {
+      "urlPath" : "/subscriptions/7x49/resourceGroups/Hollis+Lubowitz+V/providers/Microsoft.Sql/servers/Donovan+Rolfson/elasticPools/Boyer",
+      "method" : "PATCH",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/json"
+        }
+      },
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "10ceikbkkw1c16jg2g69m"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"kind\" : \"25mcwwtrh1apv4z7kbliqovjdcf0qfozowodk8yytzt33zz8bjsm4cj2min9pd0vyd51txi3lh87hwwd1q9cqqty7g2k7aw1c4n27aji4av0pfjahif4azi7ow476me5rdga2f9hbhombb3a4hgb5a9o80st0\",\n  \"location\" : \"i58oa5ig6kmi2vtjyhsj46rjgjq3\",\n  \"sku\" : {\n    \"size\" : \"1z21jepkj9jte8v7h45prthji49ujdmqwjxwpjsdqzvyxzwgbubw23zrvlnjpudxawdrdctgevh8njd24s\",\n    \"tier\" : \"byqbuqsiq4k4ykivurct3gkbs\",\n    \"name\" : \"Bernard Auer\",\n    \"family\" : \"0vsbc2eerisw8swmtrwoo1ts7hhn2i\",\n    \"capacity\" : 1601792211\n  },\n  \"properties\" : {\n    \"licenseType\" : \"BasePrice\",\n    \"perDatabaseSettings\" : {\n      \"maxCapacity\" : 1.3030361500261264E307,\n      \"minCapacity\" : 1.7397184117114125E308\n    },\n    \"maxSizeBytes\" : 6772692470926614549,\n    \"zoneRedundant\" : true,\n    \"state\" : \"Disabled\",\n    \"creationDate\" : \"2022-10-12T06:14:03.881Z\"\n  },\n  \"tags\" : { }\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "a765c965-29f7-48ad-bf2a-329c242e5b50",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:09.882165Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "ElasticPools_Update",
+          "schema" : {
+            "properties" : {
+              "kind" : {
+                "type" : "string",
+                "description" : "Kind of elastic pool. This is metadata used for the Azure portal experience.",
+                "readOnly" : true
+              },
+              "properties" : {
+                "$ref" : "#/components/schemas/ElasticPoolProperties"
+              },
+              "sku" : {
+                "required" : [ "name" ],
+                "type" : "object",
+                "properties" : {
+                  "capacity" : {
+                    "type" : "integer",
+                    "description" : "Capacity of the particular SKU.",
+                    "format" : "int32"
+                  },
+                  "family" : {
+                    "type" : "string",
+                    "description" : "If the service has different generations of hardware, for the same SKU, then that can be captured here."
+                  },
+                  "name" : {
+                    "type" : "string",
+                    "description" : "The name of the SKU, typically, a letter + Number code, e.g. P3."
+                  },
+                  "size" : {
+                    "type" : "string",
+                    "description" : "Size of the particular SKU"
+                  },
+                  "tier" : {
+                    "type" : "string",
+                    "description" : "The tier or edition of the particular SKU, e.g. Basic, Premium."
+                  }
+                },
+                "description" : "An ARM Resource SKU."
+              }
+            },
+            "description" : "An elastic pool.",
+            "allOf" : [ {
+              "required" : [ "location" ],
+              "properties" : {
+                "location" : {
+                  "type" : "string",
+                  "description" : "Resource location."
+                },
+                "tags" : {
+                  "type" : "object",
+                  "additionalProperties" : {
+                    "type" : "string"
+                  },
+                  "description" : "Resource tags."
+                }
+              },
+              "description" : "ARM tracked top level resource.",
+              "allOf" : [ {
+                "type" : "object",
+                "properties" : {
+                  "id" : {
+                    "type" : "string",
+                    "description" : "Resource ID.",
+                    "readOnly" : true
+                  },
+                  "name" : {
+                    "type" : "string",
+                    "description" : "Resource name.",
+                    "readOnly" : true
+                  },
+                  "type" : {
+                    "type" : "string",
+                    "description" : "Resource type.",
+                    "readOnly" : true
+                  }
+                },
+                "description" : "ARM resource."
+              } ]
+            } ]
+          }
+        }
+      }
+    },
+    "insertionIndex" : 1
+  }, {
+    "id" : "8194d7fc-f97e-4ffe-9338-6500ea10ae16",
+    "name" : "Deletes an elastic pool. - 204",
+    "request" : {
+      "urlPath" : "/subscriptions/sza0/resourceGroups/Lloyd+Brown/providers/Microsoft.Sql/servers/Alecia+Kuhlman/elasticPools/Turcotte",
+      "method" : "DELETE",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "g3raxpson9vr96gnrts393ax9qu6h2hy3g1nvzaqqipkly1en07njkc32x8d0ipvzev7q8tub5gb12d9b7dvijfm33g2tkjxy4gsgwzcol85nr9vuzom8m1oip8n2kqs1beecvss24oel3gl6cl1reo7s6bshqmlcyjfatufduea2g6mshcw"
+        }
+      }
+    },
+    "response" : {
+      "status" : 204
+    },
+    "uuid" : "8194d7fc-f97e-4ffe-9338-6500ea10ae16",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:09.881373Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "ElasticPools_Delete"
+        }
+      }
+    },
+    "insertionIndex" : 2
+  }, {
+    "id" : "f332fd32-b33b-4831-a323-cc2ff868506d",
+    "name" : "Deletes an elastic pool. - 202",
+    "request" : {
+      "urlPath" : "/subscriptions/a82b/resourceGroups/Mr.+Danae+Kuhn/providers/Microsoft.Sql/servers/Hank+Parisian/elasticPools/Rutherford",
+      "method" : "DELETE",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "4s865t7n35undatz4yf4p4dmmnk1j7a5dkwvvbfmh"
+        }
+      }
+    },
+    "response" : {
+      "status" : 202
+    },
+    "uuid" : "f332fd32-b33b-4831-a323-cc2ff868506d",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:09.881057Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "ElasticPools_Delete"
+        }
+      }
+    },
+    "insertionIndex" : 3
+  }, {
+    "id" : "6c254619-bc49-43e3-95e5-1a94eddfc399",
+    "name" : "Deletes an elastic pool. - 200",
+    "request" : {
+      "urlPath" : "/subscriptions/100v/resourceGroups/Taina+Hagenes/providers/Microsoft.Sql/servers/France+Koch+PhD/elasticPools/Rosenbaum",
+      "method" : "DELETE",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "t5owgbzy3xeqoctvyyto4sn70yvggzuwzj2ly6r"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200
+    },
+    "uuid" : "6c254619-bc49-43e3-95e5-1a94eddfc399",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:09.880746Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "ElasticPools_Delete"
+        }
+      }
+    },
+    "insertionIndex" : 4
+  }, {
+    "id" : "c20181b7-9485-48a3-9cea-77b03b97ac2f",
+    "name" : "Creates or updates an elastic pool. - 202",
+    "request" : {
+      "urlPath" : "/subscriptions/78r5/resourceGroups/Dr.+Jacques+Kihn/providers/Microsoft.Sql/servers/Millard+Robel/elasticPools/Kuhic",
+      "method" : "PUT",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "sskrxes06aao5a2dnulhyrik5qm7vo4vklwvih020fc"
+        }
+      }
+    },
+    "response" : {
+      "status" : 202
+    },
+    "uuid" : "c20181b7-9485-48a3-9cea-77b03b97ac2f",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:09.880504Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "ElasticPools_CreateOrUpdate"
+        }
+      }
+    },
+    "insertionIndex" : 5
+  }, {
+    "id" : "ca624483-dcfe-488b-94b0-3dbea8478da6",
+    "name" : "Creates or updates an elastic pool. (application/json)",
+    "request" : {
+      "urlPath" : "/subscriptions/11u4/resourceGroups/Kimberli+Kunde+DVM/providers/Microsoft.Sql/servers/Issac+Cummings/elasticPools/Mraz",
+      "method" : "PUT",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/json"
+        }
+      },
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "hiinxslkipp0kska28ae4s1ri4sfqwkvxobf225a4xwbbj73bevjxg3tjgervav5giltpud62vlt05n3lev7a0qsfo4glop1a6wp5bs5cqpa4k7"
+        }
+      }
+    },
+    "response" : {
+      "status" : 201,
+      "body" : "{\n  \"kind\" : \"pgloz4hgbbfv0k6kc12djamd5rwo6iah0x34wazomdxcr3rukf7ylzgt4qfd56i8vywed8zl64a8us6gfgp2pjaduq84upp\",\n  \"location\" : \"5jzdegj7lg6tpm61az3euvzsam2ecgxmk66ktp792a13atgl1cqvd4ww26g2if9xl1axovrc556ifppzwnzoibugekty01cjz5tuwxl9rd4byr1j0r6wpsxbf6le9zkn4bph4n1vklj3zme7bysmvsolpq466oubya1w9tgf5yv096iwpyo4j64rs1yyicx0blh\",\n  \"sku\" : {\n    \"size\" : \"fs8h2pmztaq9zh7q92zndcqjzcdghn5db8w57xhgaolfwm6mt6bzjnfyhtrxzvvh1jpmmptohi4onxwb18mep6f63c5y52yw0hrws\",\n    \"tier\" : \"x616382099ucyek8a01f7qwaq5kn37z6rpqzka0sg1evgm1ewa058ipgpvld9j0n17veeh2w4lmyjdvkcq8if18sb3dknd0cghzq8iz1xafbgz60y6irklpys98k0kbzqijhuxchzr4vmrakyh83hg3ug\",\n    \"name\" : \"Vito McGlynn\",\n    \"family\" : \"jrpmc8flh9etqiearpryj4ven484v9tdnlz4ejdx8ollvsov5bmklg8pnwntx0uddt8jd0j775pf5h5rg5uhqodnp4txcd8m12ojlvr7pmxj6ed17jj5mclsd1kp36eqdo\",\n    \"capacity\" : 1921297501\n  },\n  \"properties\" : {\n    \"licenseType\" : \"BasePrice\",\n    \"perDatabaseSettings\" : {\n      \"maxCapacity\" : 5.478809200624745E307,\n      \"minCapacity\" : 5.902545902967928E307\n    },\n    \"maxSizeBytes\" : 6652504162260643543,\n    \"zoneRedundant\" : false,\n    \"state\" : \"Disabled\",\n    \"creationDate\" : \"2022-11-22T00:30:56.879Z\"\n  },\n  \"tags\" : { }\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "ca624483-dcfe-488b-94b0-3dbea8478da6",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:09.880213Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "ElasticPools_CreateOrUpdate",
+          "schema" : {
+            "properties" : {
+              "kind" : {
+                "type" : "string",
+                "description" : "Kind of elastic pool. This is metadata used for the Azure portal experience.",
+                "readOnly" : true
+              },
+              "properties" : {
+                "$ref" : "#/components/schemas/ElasticPoolProperties"
+              },
+              "sku" : {
+                "required" : [ "name" ],
+                "type" : "object",
+                "properties" : {
+                  "capacity" : {
+                    "type" : "integer",
+                    "description" : "Capacity of the particular SKU.",
+                    "format" : "int32"
+                  },
+                  "family" : {
+                    "type" : "string",
+                    "description" : "If the service has different generations of hardware, for the same SKU, then that can be captured here."
+                  },
+                  "name" : {
+                    "type" : "string",
+                    "description" : "The name of the SKU, typically, a letter + Number code, e.g. P3."
+                  },
+                  "size" : {
+                    "type" : "string",
+                    "description" : "Size of the particular SKU"
+                  },
+                  "tier" : {
+                    "type" : "string",
+                    "description" : "The tier or edition of the particular SKU, e.g. Basic, Premium."
+                  }
+                },
+                "description" : "An ARM Resource SKU."
+              }
+            },
+            "description" : "An elastic pool.",
+            "allOf" : [ {
+              "required" : [ "location" ],
+              "properties" : {
+                "location" : {
+                  "type" : "string",
+                  "description" : "Resource location."
+                },
+                "tags" : {
+                  "type" : "object",
+                  "additionalProperties" : {
+                    "type" : "string"
+                  },
+                  "description" : "Resource tags."
+                }
+              },
+              "description" : "ARM tracked top level resource.",
+              "allOf" : [ {
+                "type" : "object",
+                "properties" : {
+                  "id" : {
+                    "type" : "string",
+                    "description" : "Resource ID.",
+                    "readOnly" : true
+                  },
+                  "name" : {
+                    "type" : "string",
+                    "description" : "Resource name.",
+                    "readOnly" : true
+                  },
+                  "type" : {
+                    "type" : "string",
+                    "description" : "Resource type.",
+                    "readOnly" : true
+                  }
+                },
+                "description" : "ARM resource."
+              } ]
+            } ]
+          }
+        }
+      }
+    },
+    "insertionIndex" : 6
+  }, {
+    "id" : "d2375c90-dfcd-40e1-8337-7a6ee4788e04",
+    "name" : "Creates or updates an elastic pool. (application/json)",
+    "request" : {
+      "urlPath" : "/subscriptions/0u08/resourceGroups/Sherill+Wehner/providers/Microsoft.Sql/servers/Marshall+Quitzon/elasticPools/Sanford",
+      "method" : "PUT",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/json"
+        }
+      },
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "3x77zqptnfa251u3igewew4otqhn9ss7405ycjq2u1po4lfw5ex13uilgslja5l0an664qfk6cusu40i6ob1jjy062sb0i01kod6bem2fm5plp56aorndnenjobufsc6qq37w4gal1lf3x29zg1bfvj"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"kind\" : \"1wixw5ua9vyufh58yko00s878icxlqabajgd4ogsxvfdkpj2zqe34lcv5nstbxrikdzm946cregu4xj6yne7kcxkl9v4s4f6q4tf07daub9c5r83450uy5li8og2eaj4tdzwvoksvgg\",\n  \"location\" : \"61ls0162xx4491pdqm9ryvjlqyr9y38d0szb3w2nwizenpmo4uyedelv9vre4q89339vbwonxbtisotht0zx59z69hymgl8rboc1ia6ncco0rdzdmmqjg6fneqizt1431s0kvtmim55s203bu1c3jnruqkln7\",\n  \"sku\" : {\n    \"size\" : \"1rysh4ef4d8ncris4zdcz3jrq7wy0p9qvyo8x7oebw0yj5lmlvlde6e8om09uiewkpzn100qhp4l5n12qmpy2y4wz00oq19rg8c0b72vfauiw0roxuxwjuzi4taxkxglufnkosvk4zvbrc9cv00u222zb4c\",\n    \"tier\" : \"lgvu9ya3kog46mh4q7uwo6v1vmrs9dh2euxcjtu9z4i6tflwtaid4bhen\",\n    \"name\" : \"Elias Stehr\",\n    \"family\" : \"2kurgsvwa34oac74j4s8bmngqypigj2b0vgbokp8rwybxxgjx3eqysdq0bsdf87ydje58goljgvoy77fum2tbnu3wo36t\",\n    \"capacity\" : 1878208497\n  },\n  \"properties\" : {\n    \"licenseType\" : \"BasePrice\",\n    \"perDatabaseSettings\" : {\n      \"maxCapacity\" : 1.1912896374013297E308,\n      \"minCapacity\" : 1.5498253591013836E308\n    },\n    \"maxSizeBytes\" : 1403340975259325463,\n    \"zoneRedundant\" : true,\n    \"state\" : \"Creating\",\n    \"creationDate\" : \"2023-07-29T22:42:32.878Z\"\n  },\n  \"tags\" : { }\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "d2375c90-dfcd-40e1-8337-7a6ee4788e04",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:09.879366Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "ElasticPools_CreateOrUpdate",
+          "schema" : {
+            "properties" : {
+              "kind" : {
+                "type" : "string",
+                "description" : "Kind of elastic pool. This is metadata used for the Azure portal experience.",
+                "readOnly" : true
+              },
+              "properties" : {
+                "$ref" : "#/components/schemas/ElasticPoolProperties"
+              },
+              "sku" : {
+                "required" : [ "name" ],
+                "type" : "object",
+                "properties" : {
+                  "capacity" : {
+                    "type" : "integer",
+                    "description" : "Capacity of the particular SKU.",
+                    "format" : "int32"
+                  },
+                  "family" : {
+                    "type" : "string",
+                    "description" : "If the service has different generations of hardware, for the same SKU, then that can be captured here."
+                  },
+                  "name" : {
+                    "type" : "string",
+                    "description" : "The name of the SKU, typically, a letter + Number code, e.g. P3."
+                  },
+                  "size" : {
+                    "type" : "string",
+                    "description" : "Size of the particular SKU"
+                  },
+                  "tier" : {
+                    "type" : "string",
+                    "description" : "The tier or edition of the particular SKU, e.g. Basic, Premium."
+                  }
+                },
+                "description" : "An ARM Resource SKU."
+              }
+            },
+            "description" : "An elastic pool.",
+            "allOf" : [ {
+              "required" : [ "location" ],
+              "properties" : {
+                "location" : {
+                  "type" : "string",
+                  "description" : "Resource location."
+                },
+                "tags" : {
+                  "type" : "object",
+                  "additionalProperties" : {
+                    "type" : "string"
+                  },
+                  "description" : "Resource tags."
+                }
+              },
+              "description" : "ARM tracked top level resource.",
+              "allOf" : [ {
+                "type" : "object",
+                "properties" : {
+                  "id" : {
+                    "type" : "string",
+                    "description" : "Resource ID.",
+                    "readOnly" : true
+                  },
+                  "name" : {
+                    "type" : "string",
+                    "description" : "Resource name.",
+                    "readOnly" : true
+                  },
+                  "type" : {
+                    "type" : "string",
+                    "description" : "Resource type.",
+                    "readOnly" : true
+                  }
+                },
+                "description" : "ARM resource."
+              } ]
+            } ]
+          }
+        }
+      }
+    },
+    "insertionIndex" : 7
+  }, {
+    "id" : "bb078100-22d0-48cd-8823-14c60a553be2",
+    "name" : "Gets an elastic pool.",
+    "request" : {
+      "urlPath" : "/subscriptions/u984/resourceGroups/Lenore+Okuneva/providers/Microsoft.Sql/servers/Anika+Reichert+Jr./elasticPools/Heaney",
+      "method" : "GET",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "35xr5x1quutq0ifisuaitdzsy7ydtytz5ptir8pqlxgkgknrgvzfu41tdvdlekk3r32e440wiak0r4f1mqovruzs0rvpdstsmt7qjei6sdp8276xicug2l9qi287yn4t5ksip6nd2yrildqz9y3"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"kind\" : \"bzmr73orx3er3njqg349p96nytx1ah65n604sf3qx9med420oq0cdy4nr1dcrp5hohth39hwr32ea4ygb3a4o7nc8ji6smyn648yni608eyryrx0ihc6a8341flz3go6a76j282zba1t4uozopy2plgaqbhzmjpubtija5ps8q375b8ala5obbafs1rhms08afx\",\n  \"location\" : \"rjtdg34vb7b8cl9r6pji0x4yzeogxd1oh9nn00s785x64\",\n  \"sku\" : {\n    \"size\" : \"zdczsomciz1s9f67jol4oscbl2dn2c4lc2c0m6zmw0ojpb0ha3594kfp3ctgucpeujwd2hpx2sqrk9k719cj9e\",\n    \"tier\" : \"f202kfgtkvpjv5aa3azvq067dhnjp5e24yxjhgjl6s5u0fwzxk0ahornqhxd3hp13yi00vsufce7ob43r9tnsnsecedrdrk7q1tfw4igc6e75m2duu73vfxc8zr4flbaudrqaj6bo3m8x0361an20yoaeoylt4vtuyoywhzc0jyamprwm\",\n    \"name\" : \"Michal Hirthe\",\n    \"family\" : \"9riu2h0u1hxns1mhtcb3jor9r89er6d0hyoob9c3e488xl1p4srsy53xl6h1xzdzo1qthvc77lt310cw48dsh0ca9js2zkkk2duz8eguvst1z5o3tpb5ejrb3kkvaqmq7yz3pqcf0da3nwc1yq16wmsxnt5llrqlufmx0nbasnefyd1zty5z8navd25t5516dmlusedt\",\n    \"capacity\" : 659764527\n  },\n  \"properties\" : {\n    \"licenseType\" : \"BasePrice\",\n    \"perDatabaseSettings\" : {\n      \"maxCapacity\" : 9.542873869305636E307,\n      \"minCapacity\" : 9.02327044703828E307\n    },\n    \"maxSizeBytes\" : 2943478688949764257,\n    \"zoneRedundant\" : true,\n    \"state\" : \"Disabled\",\n    \"creationDate\" : \"2022-08-02T00:54:06.878Z\"\n  },\n  \"tags\" : { }\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "bb078100-22d0-48cd-8823-14c60a553be2",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:09.878608Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "ElasticPools_Get",
+          "schema" : {
+            "properties" : {
+              "kind" : {
+                "type" : "string",
+                "description" : "Kind of elastic pool. This is metadata used for the Azure portal experience.",
+                "readOnly" : true
+              },
+              "properties" : {
+                "$ref" : "#/components/schemas/ElasticPoolProperties"
+              },
+              "sku" : {
+                "required" : [ "name" ],
+                "type" : "object",
+                "properties" : {
+                  "capacity" : {
+                    "type" : "integer",
+                    "description" : "Capacity of the particular SKU.",
+                    "format" : "int32"
+                  },
+                  "family" : {
+                    "type" : "string",
+                    "description" : "If the service has different generations of hardware, for the same SKU, then that can be captured here."
+                  },
+                  "name" : {
+                    "type" : "string",
+                    "description" : "The name of the SKU, typically, a letter + Number code, e.g. P3."
+                  },
+                  "size" : {
+                    "type" : "string",
+                    "description" : "Size of the particular SKU"
+                  },
+                  "tier" : {
+                    "type" : "string",
+                    "description" : "The tier or edition of the particular SKU, e.g. Basic, Premium."
+                  }
+                },
+                "description" : "An ARM Resource SKU."
+              }
+            },
+            "description" : "An elastic pool.",
+            "allOf" : [ {
+              "required" : [ "location" ],
+              "properties" : {
+                "location" : {
+                  "type" : "string",
+                  "description" : "Resource location."
+                },
+                "tags" : {
+                  "type" : "object",
+                  "additionalProperties" : {
+                    "type" : "string"
+                  },
+                  "description" : "Resource tags."
+                }
+              },
+              "description" : "ARM tracked top level resource.",
+              "allOf" : [ {
+                "type" : "object",
+                "properties" : {
+                  "id" : {
+                    "type" : "string",
+                    "description" : "Resource ID.",
+                    "readOnly" : true
+                  },
+                  "name" : {
+                    "type" : "string",
+                    "description" : "Resource name.",
+                    "readOnly" : true
+                  },
+                  "type" : {
+                    "type" : "string",
+                    "description" : "Resource type.",
+                    "readOnly" : true
+                  }
+                },
+                "description" : "ARM resource."
+              } ]
+            } ]
+          }
+        }
+      }
+    },
+    "insertionIndex" : 8
+  }, {
+    "id" : "ba2af5f7-bc08-45fc-b570-f5b504cbf6a6",
+    "name" : "Gets all elastic pools in a server.",
+    "request" : {
+      "urlPath" : "/subscriptions/kn1p/resourceGroups/Syble+Anderson+V/providers/Microsoft.Sql/servers/Dr.+Alessandra+Rodriguez/elasticPools",
+      "method" : "GET",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "3y6iyv52l7es8n7375m2toqn3irlxet3g8ccgmyseouuzo4"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"value\" : [ {\n    \"kind\" : \"8oyp\",\n    \"location\" : \"yvtotuzfzbi8k\",\n    \"sku\" : {\n      \"size\" : \"ayy2vy3lscwwtctjjqi724pct4uejc8zge2fd7scp49dsnfiq8ldevozxzoyrer39g2\",\n      \"tier\" : \"rcvqc2z8ew0k9sf1ang24ke436uv47x9mtp9i5gzxqx9wv9adz5bxgagyqd0ulmpv86reiot21tf22ey84\",\n      \"name\" : \"Dovie Barton\",\n      \"family\" : \"zf91j849gficn4q3zknbb\",\n      \"capacity\" : 660163515\n    },\n    \"properties\" : {\n      \"licenseType\" : \"LicenseIncluded\",\n      \"perDatabaseSettings\" : {\n        \"maxCapacity\" : 4.1948669062863E307,\n        \"minCapacity\" : 1.7809109111711594E308\n      },\n      \"maxSizeBytes\" : 5514445756413444953,\n      \"zoneRedundant\" : true,\n      \"state\" : \"Disabled\",\n      \"creationDate\" : \"2023-06-12T08:09:37.877Z\"\n    },\n    \"tags\" : { }\n  }, {\n    \"kind\" : \"bh21vog5oeq9l2ccb2xdmqpvgar4jlokleccupsh5eivq9q60yhs3lcfe662x2brim7f1ajes32rpy3zdznyalb2dhtghzc70i9kt74830oslsgu1fzekof0l2e2qny7s24udpsg57zc2vpwekhe8usneezppfqfi5jgmrq1m2z9xol1iby9e1hgjh3jo1\",\n    \"location\" : \"68yit4rbfb2j5af0aw8g92r8a9e06w906po1\",\n    \"sku\" : {\n      \"size\" : \"47cx9y2dyab3j90ydkwendwa38o57xke6g7vh9pakqe5ebhzco3gfddv7xhc1lgl6eri6crgxds302\",\n      \"tier\" : \"fakl01l0ruciciuzkysl1f8efody8g4x7clnfr7i7wli5ha8qdood4hk043e44bvjxtvldmdsbq8uuowp2h6idiqf77zigx6k7ndto6n\",\n      \"name\" : \"Mrs. Wally Batz\",\n      \"family\" : \"s6zxsqs\",\n      \"capacity\" : 1251058006\n    },\n    \"properties\" : {\n      \"licenseType\" : \"LicenseIncluded\",\n      \"perDatabaseSettings\" : {\n        \"maxCapacity\" : 1.5589139503265533E308,\n        \"minCapacity\" : 1.3276710791255439E308\n      },\n      \"maxSizeBytes\" : 529340895019396906,\n      \"zoneRedundant\" : true,\n      \"state\" : \"Creating\",\n      \"creationDate\" : \"2024-03-11T11:44:29.877Z\"\n    },\n    \"tags\" : { }\n  } ],\n  \"nextLink\" : \"xnza4kfln6hyo8xapqlyymwyxggracxrxin1at6vvmt8c7c38cjj8e853vwser09t07htqcwstm0g3e31j24z81hkwbmycvokl70gdkkmsok3mwj0yo9m2alvalc078c70fcwnv9gu7y1mq9t2ztotfdxxqzro3yu9262loheo27223j7ug13ulqameavw3px\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "ba2af5f7-bc08-45fc-b570-f5b504cbf6a6",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:09.877837Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "ElasticPools_ListByServer",
+          "schema" : {
+            "type" : "object",
+            "properties" : {
+              "nextLink" : {
+                "type" : "string",
+                "description" : "Link to retrieve next page of results.",
+                "readOnly" : true
+              },
+              "value" : {
+                "type" : "array",
+                "description" : "Array of results.",
+                "readOnly" : true,
+                "items" : {
+                  "$ref" : "#/components/schemas/ElasticPool"
+                }
+              }
+            },
+            "description" : "The result of an elastic pool list request."
+          }
+        }
+      }
+    },
+    "insertionIndex" : 9
+  } ]
+}

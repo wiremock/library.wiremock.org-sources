@@ -1,0 +1,280 @@
+{
+  "mappings" : [ {
+    "id" : "af88e132-4e2f-4218-86b4-9cee3f7da770",
+    "name" : "Gets the tenants for your account.",
+    "request" : {
+      "urlPath" : "/tenants",
+      "method" : "GET",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "aw65wwq91fqa1wtatuz9men0gf8iflj4ftya1rjdbqwxppfdz"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"value\" : [ {\n    \"tenantId\" : \"arly\",\n    \"id\" : \"n940\"\n  }, {\n    \"tenantId\" : \"883h\",\n    \"id\" : \"n0cw\"\n  } ],\n  \"nextLink\" : \"gh61hxumes61bl8e7miym36vov0151i13xjxjarg4\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "af88e132-4e2f-4218-86b4-9cee3f7da770",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:20.180353Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "Tenants_List",
+          "schema" : {
+            "required" : [ "nextLink" ],
+            "type" : "object",
+            "properties" : {
+              "nextLink" : {
+                "type" : "string",
+                "description" : "The URL to use for getting the next set of results."
+              },
+              "value" : {
+                "type" : "array",
+                "description" : "An array of tenants.",
+                "items" : {
+                  "$ref" : "#/components/schemas/TenantIdDescription"
+                }
+              }
+            },
+            "description" : "Tenant Ids information."
+          }
+        }
+      }
+    },
+    "insertionIndex" : 0
+  }, {
+    "id" : "8ba8ee13-a571-49f1-91aa-960324be91d0",
+    "name" : "Gets all available geo-locations.",
+    "request" : {
+      "urlPath" : "/subscriptions/5447/locations",
+      "method" : "GET",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "ec9mh9qf6dlnrz0n0gqg7jc4vyagmbbv1ljdyztzs7ym8tp373stkdjn4uxldlcu5665g9e8tqkzicyyusstwlspmwjfser6brxm3wm45qfqa07bpq30evpa12ks2zfeg00k635c0abrbacnrmbe"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"value\" : [ {\n    \"displayName\" : \"Mitzi Emmerich\",\n    \"latitude\" : \"xqhk6pg3yay3n5nwqjygryqj0lt\",\n    \"name\" : \"Jermaine MacGyver\",\n    \"id\" : \"09m5\",\n    \"subscriptionId\" : \"526q\",\n    \"longitude\" : \"clbray3ojgkkntolz3qnzemoaoz31hp5we8pp1t93f7i6bnb23h9i4m4sn47ja9k0f8t138p3wbssl8nfqn1ogy2sqgltrxlm4vubbyewx8bg11ywup3avq2e3up48yssxetmny61glu7vgrr195kdvzu0iosot7hikkfr3mi4q1duidn9ndd1n2hgpt83o\"\n  }, {\n    \"displayName\" : \"George Flatley DVM\",\n    \"latitude\" : \"e9fny8vpcuxsxjbk2tiwcnll46eui1ebyy0ys8c4x86arp222k5u296gh3dhmv1bn45zcnit4vpxpjne29d0ovxazd4rie0w6m2zkxpemftm9llssl8z92swltzua4fcll4qz6k5llmo3b2chspb2idpip\",\n    \"name\" : \"Miss Cyril Hamill\",\n    \"id\" : \"8ad5\",\n    \"subscriptionId\" : \"7qns\",\n    \"longitude\" : \"p5zq949wj7k94aup3y5q24ws3yj756i62xr7l7k3px\"\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "8ba8ee13-a571-49f1-91aa-960324be91d0",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:20.179966Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "Subscriptions_ListLocations",
+          "schema" : {
+            "type" : "object",
+            "properties" : {
+              "value" : {
+                "type" : "array",
+                "description" : "An array of locations.",
+                "items" : {
+                  "$ref" : "#/components/schemas/Location"
+                }
+              }
+            },
+            "description" : "Location list operation response."
+          }
+        }
+      }
+    },
+    "insertionIndex" : 1
+  }, {
+    "id" : "4c94c129-95a5-4574-a2c0-9cc10713673d",
+    "name" : "Gets details about a specified subscription.",
+    "request" : {
+      "urlPath" : "/subscriptions/265c",
+      "method" : "GET",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "zqt2fb9badzr1qzh7x6ovk9e82awmb6rv9rprnb28hqebiuw869ewwt4a9f7jz1urx7ztkdcjvkygsekb"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"displayName\" : \"Tanner Emard DDS\",\n  \"tenantId\" : \"ah3c\",\n  \"id\" : \"3ced\",\n  \"managedByTenants\" : [ {\n    \"tenantId\" : \"ui7i\"\n  }, {\n    \"tenantId\" : \"bzxq\"\n  }, {\n    \"tenantId\" : \"119j\"\n  }, {\n    \"tenantId\" : \"s13n\"\n  } ],\n  \"state\" : \"Warned\",\n  \"subscriptionId\" : \"8ugv\",\n  \"subscriptionPolicies\" : {\n    \"spendingLimit\" : \"On\",\n    \"locationPlacementId\" : \"h26m\",\n    \"quotaId\" : \"4m6z\"\n  },\n  \"authorizationSource\" : \"q3lnur2luvrtez1wqhiw977bcm7duya5nz2khe5gd6187y38049l5nz7su4j0aesrf1u8y4n35bdocpc3s2pmvp1mxv91a7eu4nc6zpc17441n6gbtan6evrm43io1q2w4b0vkxwct\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "4c94c129-95a5-4574-a2c0-9cc10713673d",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:20.17929Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "Subscriptions_Get",
+          "schema" : {
+            "type" : "object",
+            "properties" : {
+              "authorizationSource" : {
+                "type" : "string",
+                "description" : "The authorization source of the request. Valid values are one or more combinations of Legacy, RoleBased, Bypassed, Direct and Management. For example, 'Legacy, RoleBased'."
+              },
+              "displayName" : {
+                "type" : "string",
+                "description" : "The subscription display name.",
+                "readOnly" : true
+              },
+              "id" : {
+                "type" : "string",
+                "description" : "The fully qualified ID for the subscription. For example, /subscriptions/00000000-0000-0000-0000-000000000000.",
+                "readOnly" : true
+              },
+              "managedByTenants" : {
+                "type" : "array",
+                "description" : "An array containing the tenants managing the subscription.",
+                "items" : {
+                  "$ref" : "#/components/schemas/ManagedByTenant"
+                }
+              },
+              "state" : {
+                "type" : "string",
+                "description" : "The subscription state. Possible values are Enabled, Warned, PastDue, Disabled, and Deleted.",
+                "readOnly" : true,
+                "enum" : [ "Enabled", "Warned", "PastDue", "Disabled", "Deleted" ]
+              },
+              "subscriptionId" : {
+                "type" : "string",
+                "description" : "The subscription ID.",
+                "readOnly" : true
+              },
+              "subscriptionPolicies" : {
+                "$ref" : "#/components/schemas/SubscriptionPolicies"
+              },
+              "tenantId" : {
+                "type" : "string",
+                "description" : "The subscription tenant ID.",
+                "readOnly" : true
+              }
+            },
+            "description" : "Subscription information."
+          }
+        }
+      }
+    },
+    "insertionIndex" : 2
+  }, {
+    "id" : "b405a164-b63c-4696-9806-07065961870c",
+    "name" : "Gets all subscriptions for a tenant.",
+    "request" : {
+      "urlPath" : "/subscriptions",
+      "method" : "GET",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "rg0y8c8enqt8hukg18d8y1g9hfkq2eirowkmwgiwi8666c82if2ylx3hhuz2qj7ynz7oyt3rzhs8rlwzn6s1wozcl3gfs"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"value\" : [ {\n    \"displayName\" : \"Clair Hyatt I\",\n    \"tenantId\" : \"g31j\",\n    \"id\" : \"4pvc\",\n    \"managedByTenants\" : [ {\n      \"tenantId\" : \"q260\"\n    }, {\n      \"tenantId\" : \"v7i7\"\n    }, {\n      \"tenantId\" : \"i1pj\"\n    }, {\n      \"tenantId\" : \"ve71\"\n    }, {\n      \"tenantId\" : \"rc76\"\n    }, {\n      \"tenantId\" : \"p6bg\"\n    } ],\n    \"state\" : \"Deleted\",\n    \"subscriptionId\" : \"bzc8\",\n    \"subscriptionPolicies\" : {\n      \"spendingLimit\" : \"On\",\n      \"locationPlacementId\" : \"5117\",\n      \"quotaId\" : \"yu99\"\n    },\n    \"authorizationSource\" : \"hcla6icok2mw11o938oppbabj9utajv9mbjiij2saeb25rbhyolqy2c7scr6bm2zdp7y\"\n  }, {\n    \"displayName\" : \"Danilo Stokes DDS\",\n    \"tenantId\" : \"sf5x\",\n    \"id\" : \"3wi3\",\n    \"managedByTenants\" : [ {\n      \"tenantId\" : \"95t2\"\n    } ],\n    \"state\" : \"Deleted\",\n    \"subscriptionId\" : \"g53d\",\n    \"subscriptionPolicies\" : {\n      \"spendingLimit\" : \"CurrentPeriodOff\",\n      \"locationPlacementId\" : \"sj76\",\n      \"quotaId\" : \"c214\"\n    },\n    \"authorizationSource\" : \"0cs6nrh5462l55aaqu8e9nec5t\"\n  }, {\n    \"displayName\" : \"Carrol Hartmann\",\n    \"tenantId\" : \"g852\",\n    \"id\" : \"b8s8\",\n    \"managedByTenants\" : [ {\n      \"tenantId\" : \"y84u\"\n    }, {\n      \"tenantId\" : \"g836\"\n    }, {\n      \"tenantId\" : \"ao5b\"\n    }, {\n      \"tenantId\" : \"cdiv\"\n    }, {\n      \"tenantId\" : \"2bbd\"\n    } ],\n    \"state\" : \"Warned\",\n    \"subscriptionId\" : \"6pt6\",\n    \"subscriptionPolicies\" : {\n      \"spendingLimit\" : \"Off\",\n      \"locationPlacementId\" : \"10dt\",\n      \"quotaId\" : \"v391\"\n    },\n    \"authorizationSource\" : \"48ykmd6fdum0rtwv57wc3wmwqs1vamfzospyr5km3961u0n93u5eluav2bmk5r7hdcxhkhw6tqckqgil1bh75irm292qbbhg109xdejch34p31o8\"\n  }, {\n    \"displayName\" : \"Larry Padberg\",\n    \"tenantId\" : \"wcw5\",\n    \"id\" : \"2925\",\n    \"managedByTenants\" : [ {\n      \"tenantId\" : \"429d\"\n    }, {\n      \"tenantId\" : \"s4l0\"\n    }, {\n      \"tenantId\" : \"mokf\"\n    }, {\n      \"tenantId\" : \"4voz\"\n    }, {\n      \"tenantId\" : \"5731\"\n    }, {\n      \"tenantId\" : \"97xq\"\n    }, {\n      \"tenantId\" : \"c4dm\"\n    } ],\n    \"state\" : \"Enabled\",\n    \"subscriptionId\" : \"bx3s\",\n    \"subscriptionPolicies\" : {\n      \"spendingLimit\" : \"Off\",\n      \"locationPlacementId\" : \"48m1\",\n      \"quotaId\" : \"nf76\"\n    },\n    \"authorizationSource\" : \"npgu93daqn550y4r82mjiyatl4yucavrspwebplwb1iwv6zpis300l\"\n  }, {\n    \"displayName\" : \"Gayla Ward\",\n    \"tenantId\" : \"0bd8\",\n    \"id\" : \"cc6c\",\n    \"managedByTenants\" : [ {\n      \"tenantId\" : \"8u8x\"\n    }, {\n      \"tenantId\" : \"9787\"\n    }, {\n      \"tenantId\" : \"t5iq\"\n    }, {\n      \"tenantId\" : \"9yuo\"\n    } ],\n    \"state\" : \"Enabled\",\n    \"subscriptionId\" : \"9130\",\n    \"subscriptionPolicies\" : {\n      \"spendingLimit\" : \"Off\",\n      \"locationPlacementId\" : \"a2p0\",\n      \"quotaId\" : \"cn33\"\n    },\n    \"authorizationSource\" : \"rlae4x2hra7p9ckpu8\"\n  }, {\n    \"displayName\" : \"Samuel Osinski\",\n    \"tenantId\" : \"6xwn\",\n    \"id\" : \"0fbq\",\n    \"managedByTenants\" : [ {\n      \"tenantId\" : \"zz36\"\n    }, {\n      \"tenantId\" : \"mn08\"\n    }, {\n      \"tenantId\" : \"z75y\"\n    } ],\n    \"state\" : \"Enabled\",\n    \"subscriptionId\" : \"b67q\",\n    \"subscriptionPolicies\" : {\n      \"spendingLimit\" : \"CurrentPeriodOff\",\n      \"locationPlacementId\" : \"60z0\",\n      \"quotaId\" : \"h9ab\"\n    },\n    \"authorizationSource\" : \"rbvn80a0rydv6xzzbg5cg4kyke0jjx0os1pookyraen\"\n  } ],\n  \"nextLink\" : \"sg79jzubdqph5ct941vhpemos0kp3r8t5xucp0ok4\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "b405a164-b63c-4696-9806-07065961870c",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:20.178325Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "Subscriptions_List",
+          "schema" : {
+            "required" : [ "nextLink" ],
+            "type" : "object",
+            "properties" : {
+              "nextLink" : {
+                "type" : "string",
+                "description" : "The URL to get the next set of results."
+              },
+              "value" : {
+                "type" : "array",
+                "description" : "An array of subscriptions.",
+                "items" : {
+                  "$ref" : "#/components/schemas/Subscription"
+                }
+              }
+            },
+            "description" : "Subscription list operation response."
+          }
+        }
+      }
+    },
+    "insertionIndex" : 3
+  }, {
+    "id" : "d68461f9-704a-42db-9a91-9114d184ece4",
+    "name" : "Lists all of the available Microsoft.Resources REST API operations.",
+    "request" : {
+      "urlPath" : "/providers/Microsoft.Resources/operations",
+      "method" : "GET",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "7ntt5zfv0fmrymnd37c8zogz3x5lowzo4otbn0assg7p6kcyy6sxyidbud16nqgdyqjncsr8x4r6h06k3g1y9gdkxiexret9cuwuzdv"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"value\" : [ {\n    \"display\" : {\n      \"provider\" : \"sk9198hbya5oxj4bxppafyqmz515pnsi89o8sjds76n1qzoixo7jvkzaz3q94ccghq6gpy7nfzvh0tsolsn0pt7p4zpdv49zpvsi1ebou8guwlwxprxb995g2708hooam4v4mejuk79hlhr0lvp93yvqxlu\",\n      \"resource\" : \"g3d3gfbw9aze1pe22h19j3gwrz45bete2bv40rbs8\",\n      \"description\" : \"Delectus ratione perferendis id ut ad odio. Inventore fugit quaerat omnis. Placeat temporibus quod. Repellat et molestiae nobis.\",\n      \"operation\" : \"no6eckfound7xtl9d5\"\n    },\n    \"name\" : \"Rolf D'Amore\"\n  }, {\n    \"display\" : {\n      \"provider\" : \"huzk179sziq1mb7j3p5gymli5ipehgpg0rwxccuvjevv8ifz2ty3p987ln1obkz5z9s5we0s88wukcgfwkgrfvlphg0aav0tzqdjptdjv1qiqezirf0uond84yay02xp81l4cvo6jxtnq\",\n      \"resource\" : \"ob9wm3vy6rl62f106ld4zrqdrz7hqrcpwgizn16wvc6ls0g553dsocd4a62dpvqsfb21vpxhokbjy4c3ms1xoo2tw0xviozafcs2qn9arvb6r3zq5iavit67og6fgvj7e68uucub6dt00qip6uj3nzonkh4t0vvp\",\n      \"description\" : \"Repudiandae animi delectus possimus. Provident inventore esse ratione deserunt reprehenderit voluptatem blanditiis. Error optio quia itaque ab. Officiis ab dignissimos.\",\n      \"operation\" : \"94x9rzhd0mh07277feaauo39nv1xy4clvk8x3gkhv4tvd2x0d2mloz8clp9fmraci53s9ubw879gff5n5447jxojmz2or99p0ukz6o4sqop4hjwer1x1s9na639bvj8r0j3xikia5msibcwbcc4i1hp1p72m8wbpf8h3tg1bepvbpzfwn9bnvzikx2s24amtryq\"\n    },\n    \"name\" : \"Homer Ullrich I\"\n  }, {\n    \"display\" : {\n      \"provider\" : \"sknkb5va9a8pr7gzjcjjcsp21fvfo4ih7ndapr7170ccfv9lfnyn744p17sne6b9d2hqfztlt3jyfzpccrsnw97f2qq0p5cod93j0qdq77d8zzwdtpzki3ywt8l7nmvwsvrbvzon00asjtbsu21osopbxtgz2wjvd\",\n      \"resource\" : \"3nolc0vjk\",\n      \"description\" : \"Eum temporibus quis et blanditiis tenetur blanditiis. Tempore qui qui quibusdam. Qui nisi esse esse doloribus.\",\n      \"operation\" : \"svx73sf35ydawk9146keqz357xbquof17y46j25bl32fckso0m7d3auvo5saae0kf80uehwfr3lmuu9o631vonm2hv22kde6hl9veiwmdki40ek9p0ts49cmbz\"\n    },\n    \"name\" : \"Logan Koelpin\"\n  }, {\n    \"display\" : {\n      \"provider\" : \"itk2fxmdw1xyc8z0w56l0hwkzewiyjcnk5cpzegz3chj8w4w\",\n      \"resource\" : \"zxbekq1vs33f3w7cd4pemy7i4e\",\n      \"description\" : \"In asperiores vitae iure id explicabo voluptatem. Sequi earum delectus beatae corporis quisquam. Eum dignissimos dolorem voluptatem sit sed. Suscipit nihil dolorem temporibus. Repellat ad est dolorum \",\n      \"operation\" : \"fwjcl0j97is9ldfaanmtkt0637qnlhzz01a1fo01uhp1ttwggd3409uigersy4fjpmzox2x1p4zc6bz7sxezmxu0b7z2wj5zm6o0g2ihqw2y1lmgz3ehjmokizt1p32hnpolr42mj5cmtxeajx7b6mga39h\"\n    },\n    \"name\" : \"Julianne Weissnat I\"\n  }, {\n    \"display\" : {\n      \"provider\" : \"e6ky91rav7h3typ7n99k2zek4hhx01woe6fmdyjz30x2yrwqvzz1tb6o9r8rxwv98i\",\n      \"resource\" : \"agfu5xlatsdpcfymu6fo0mvwdhh5xj2jiqv2963rtza93bxa31zhikzchuw2m4izynnh39\",\n      \"description\" : \"Maxime aperiam et ipsam ut quos. Atque rerum officia repellendus. Sequi architecto vel. Delectus placeat qui temporibus vel qui culpa. Esse nisi ea sed ducimus beatae est voluptate.\",\n      \"operation\" : \"g4i86478t1cryfzxkawt9jaxg3slj3g47yw3abd0db8iojpnofnkgx013t8p9bwt4v1l4q8cspscczc5gtqc9itmz9g3rtspgvgsy8cju4b6581r4gq0tj5f4jma5ysuaem6gmcswyl7g6p14oyl32sdzf26qtb9m\"\n    },\n    \"name\" : \"Chauncey Stokes\"\n  } ],\n  \"nextLink\" : \"sl6w\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "d68461f9-704a-42db-9a91-9114d184ece4",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:20.173551Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "Operations_List",
+          "schema" : {
+            "type" : "object",
+            "properties" : {
+              "nextLink" : {
+                "type" : "string",
+                "description" : "URL to get the next set of operation list results if there are any."
+              },
+              "value" : {
+                "type" : "array",
+                "description" : "List of Microsoft.Resources operations.",
+                "items" : {
+                  "$ref" : "#/components/schemas/Operation"
+                }
+              }
+            },
+            "description" : "Result of the request to list Microsoft.Resources operations. It contains a list of operations and a URL link to get the next set of results."
+          }
+        }
+      }
+    },
+    "insertionIndex" : 4
+  } ]
+}

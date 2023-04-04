@@ -1,0 +1,524 @@
+{
+  "openapi" : "3.0.1",
+  "info" : {
+    "title" : "NetworkManagementClient",
+    "description" : "The Microsoft Azure Network management API provides a RESTful set of web services that interact with Microsoft Azure Networks service to manage your network resources. The API has entities that capture the relationship between an end user and the Microsoft Azure Networks service.",
+    "version" : "2018-10-01"
+  },
+  "servers" : [ {
+    "url" : "https://management.azure.com/"
+  } ],
+  "security" : [ {
+    "azure_auth" : [ "user_impersonation" ]
+  } ],
+  "paths" : {
+    "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/microsoft.Compute/virtualMachineScaleSets/{virtualMachineScaleSetName}/networkInterfaces" : {
+      "get" : {
+        "tags" : [ "NetworkInterfaces" ],
+        "description" : "Gets all network interfaces in a virtual machine scale set.",
+        "operationId" : "NetworkInterfaces_ListVirtualMachineScaleSetNetworkInterfaces",
+        "parameters" : [ {
+          "name" : "resourceGroupName",
+          "in" : "path",
+          "description" : "The name of the resource group.",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "virtualMachineScaleSetName",
+          "in" : "path",
+          "description" : "The name of the virtual machine scale set.",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "api-version",
+          "in" : "query",
+          "description" : "Client API version.",
+          "required" : true,
+          "schema" : {
+            "type" : "string",
+            "enum" : [ "2017-03-30" ]
+          }
+        }, {
+          "name" : "subscriptionId",
+          "in" : "path",
+          "description" : "The subscription credentials which uniquely identify the Microsoft Azure subscription. The subscription ID forms part of the URI for every service call.",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Request successful. The operation returns a list of NetworkInterface resources.",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "type" : "object",
+                  "properties" : {
+                    "nextLink" : {
+                      "type" : "string",
+                      "description" : "The URL to get the next set of results.",
+                      "readOnly" : true
+                    },
+                    "value" : {
+                      "type" : "array",
+                      "description" : "A list of network interfaces in a resource group.",
+                      "items" : {
+                        "type" : "object",
+                        "properties" : {
+                          "etag" : {
+                            "type" : "string",
+                            "description" : "A unique read-only string that changes whenever the resource is updated."
+                          },
+                          "properties" : {
+                            "$ref" : "#/components/schemas/NetworkInterfacePropertiesFormat"
+                          }
+                        },
+                        "description" : "A network interface in a resource group."
+                      }
+                    }
+                  },
+                  "description" : "Response for the ListNetworkInterface API service call."
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/microsoft.Compute/virtualMachineScaleSets/{virtualMachineScaleSetName}/virtualMachines/{virtualmachineIndex}/networkInterfaces" : {
+      "get" : {
+        "tags" : [ "NetworkInterfaces" ],
+        "description" : "Gets information about all network interfaces in a virtual machine in a virtual machine scale set.",
+        "operationId" : "NetworkInterfaces_ListVirtualMachineScaleSetVMNetworkInterfaces",
+        "parameters" : [ {
+          "name" : "resourceGroupName",
+          "in" : "path",
+          "description" : "The name of the resource group.",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "virtualMachineScaleSetName",
+          "in" : "path",
+          "description" : "The name of the virtual machine scale set.",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "virtualmachineIndex",
+          "in" : "path",
+          "description" : "The virtual machine index.",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "api-version",
+          "in" : "query",
+          "description" : "Client API version.",
+          "required" : true,
+          "schema" : {
+            "type" : "string",
+            "enum" : [ "2017-03-30" ]
+          }
+        }, {
+          "name" : "subscriptionId",
+          "in" : "path",
+          "description" : "The subscription credentials which uniquely identify the Microsoft Azure subscription. The subscription ID forms part of the URI for every service call.",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Request successful. The operation returns a list of NetworkInterface resources.",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "type" : "object",
+                  "properties" : {
+                    "nextLink" : {
+                      "type" : "string",
+                      "description" : "The URL to get the next set of results.",
+                      "readOnly" : true
+                    },
+                    "value" : {
+                      "type" : "array",
+                      "description" : "A list of network interfaces in a resource group.",
+                      "items" : {
+                        "type" : "object",
+                        "properties" : {
+                          "etag" : {
+                            "type" : "string",
+                            "description" : "A unique read-only string that changes whenever the resource is updated."
+                          },
+                          "properties" : {
+                            "$ref" : "#/components/schemas/NetworkInterfacePropertiesFormat"
+                          }
+                        },
+                        "description" : "A network interface in a resource group."
+                      }
+                    }
+                  },
+                  "description" : "Response for the ListNetworkInterface API service call."
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/microsoft.Compute/virtualMachineScaleSets/{virtualMachineScaleSetName}/virtualMachines/{virtualmachineIndex}/networkInterfaces/{networkInterfaceName}" : {
+      "get" : {
+        "tags" : [ "NetworkInterfaces" ],
+        "description" : "Get the specified network interface in a virtual machine scale set.",
+        "operationId" : "NetworkInterfaces_GetVirtualMachineScaleSetNetworkInterface",
+        "parameters" : [ {
+          "name" : "resourceGroupName",
+          "in" : "path",
+          "description" : "The name of the resource group.",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "virtualMachineScaleSetName",
+          "in" : "path",
+          "description" : "The name of the virtual machine scale set.",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "virtualmachineIndex",
+          "in" : "path",
+          "description" : "The virtual machine index.",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "networkInterfaceName",
+          "in" : "path",
+          "description" : "The name of the network interface.",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "api-version",
+          "in" : "query",
+          "description" : "Client API version.",
+          "required" : true,
+          "schema" : {
+            "type" : "string",
+            "enum" : [ "2017-03-30" ]
+          }
+        }, {
+          "name" : "subscriptionId",
+          "in" : "path",
+          "description" : "The subscription credentials which uniquely identify the Microsoft Azure subscription. The subscription ID forms part of the URI for every service call.",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "$expand",
+          "in" : "query",
+          "description" : "Expands referenced resources.",
+          "schema" : {
+            "type" : "string"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Request successful. The operation returns the resulting NetworkInterface resource.",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "properties" : {
+                    "etag" : {
+                      "type" : "string",
+                      "description" : "A unique read-only string that changes whenever the resource is updated."
+                    },
+                    "properties" : {
+                      "$ref" : "#/components/schemas/NetworkInterfacePropertiesFormat"
+                    }
+                  },
+                  "description" : "A network interface in a resource group.",
+                  "allOf" : [ {
+                    "type" : "object",
+                    "properties" : {
+                      "id" : {
+                        "type" : "string",
+                        "description" : "Resource ID."
+                      },
+                      "location" : {
+                        "type" : "string",
+                        "description" : "Resource location."
+                      },
+                      "name" : {
+                        "type" : "string",
+                        "description" : "Resource name.",
+                        "readOnly" : true
+                      },
+                      "tags" : {
+                        "type" : "object",
+                        "additionalProperties" : {
+                          "type" : "string"
+                        },
+                        "description" : "Resource tags."
+                      },
+                      "type" : {
+                        "type" : "string",
+                        "description" : "Resource type.",
+                        "readOnly" : true
+                      }
+                    },
+                    "description" : "Common resource representation."
+                  } ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/microsoft.Compute/virtualMachineScaleSets/{virtualMachineScaleSetName}/virtualMachines/{virtualmachineIndex}/networkInterfaces/{networkInterfaceName}/ipConfigurations" : {
+      "get" : {
+        "tags" : [ "NetworkInterfaces" ],
+        "description" : "Get the specified network interface ip configuration in a virtual machine scale set.",
+        "operationId" : "NetworkInterfaces_ListVirtualMachineScaleSetIpConfigurations",
+        "parameters" : [ {
+          "name" : "resourceGroupName",
+          "in" : "path",
+          "description" : "The name of the resource group.",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "virtualMachineScaleSetName",
+          "in" : "path",
+          "description" : "The name of the virtual machine scale set.",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "virtualmachineIndex",
+          "in" : "path",
+          "description" : "The virtual machine index.",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "networkInterfaceName",
+          "in" : "path",
+          "description" : "The name of the network interface.",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "api-version",
+          "in" : "query",
+          "description" : "Client API version.",
+          "required" : true,
+          "schema" : {
+            "type" : "string",
+            "enum" : [ "2017-03-30" ]
+          }
+        }, {
+          "name" : "subscriptionId",
+          "in" : "path",
+          "description" : "The subscription credentials which uniquely identify the Microsoft Azure subscription. The subscription ID forms part of the URI for every service call.",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "$expand",
+          "in" : "query",
+          "description" : "Expands referenced resources.",
+          "schema" : {
+            "type" : "string"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Request successful. The operation returns the list of resulting NetworkInterfaceIPConfigurations resources.",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "type" : "object",
+                  "properties" : {
+                    "nextLink" : {
+                      "type" : "string",
+                      "description" : "The URL to get the next set of results.",
+                      "readOnly" : true
+                    },
+                    "value" : {
+                      "type" : "array",
+                      "description" : "A list of ip configurations.",
+                      "items" : {
+                        "type" : "object",
+                        "properties" : {
+                          "etag" : {
+                            "type" : "string",
+                            "description" : "A unique read-only string that changes whenever the resource is updated."
+                          },
+                          "name" : {
+                            "type" : "string",
+                            "description" : "The name of the resource that is unique within a resource group. This name can be used to access the resource."
+                          },
+                          "properties" : {
+                            "$ref" : "#/components/schemas/NetworkInterfaceIPConfigurationPropertiesFormat"
+                          }
+                        },
+                        "description" : "IPConfiguration in a network interface."
+                      }
+                    }
+                  },
+                  "description" : "Response for list ip configurations API service call."
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/microsoft.Compute/virtualMachineScaleSets/{virtualMachineScaleSetName}/virtualMachines/{virtualmachineIndex}/networkInterfaces/{networkInterfaceName}/ipConfigurations/{ipConfigurationName}" : {
+      "get" : {
+        "tags" : [ "NetworkInterfaces" ],
+        "description" : "Get the specified network interface ip configuration in a virtual machine scale set.",
+        "operationId" : "NetworkInterfaces_GetVirtualMachineScaleSetIpConfiguration",
+        "parameters" : [ {
+          "name" : "resourceGroupName",
+          "in" : "path",
+          "description" : "The name of the resource group.",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "virtualMachineScaleSetName",
+          "in" : "path",
+          "description" : "The name of the virtual machine scale set.",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "virtualmachineIndex",
+          "in" : "path",
+          "description" : "The virtual machine index.",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "networkInterfaceName",
+          "in" : "path",
+          "description" : "The name of the network interface.",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "ipConfigurationName",
+          "in" : "path",
+          "description" : "The name of the ip configuration.",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "api-version",
+          "in" : "query",
+          "description" : "Client API version.",
+          "required" : true,
+          "schema" : {
+            "type" : "string",
+            "enum" : [ "2017-03-30" ]
+          }
+        }, {
+          "name" : "subscriptionId",
+          "in" : "path",
+          "description" : "The subscription credentials which uniquely identify the Microsoft Azure subscription. The subscription ID forms part of the URI for every service call.",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "$expand",
+          "in" : "query",
+          "description" : "Expands referenced resources.",
+          "schema" : {
+            "type" : "string"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Request successful. The operation returns the resulting NetworkInterfaceIPConfiguration resource.",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "properties" : {
+                    "etag" : {
+                      "type" : "string",
+                      "description" : "A unique read-only string that changes whenever the resource is updated."
+                    },
+                    "name" : {
+                      "type" : "string",
+                      "description" : "The name of the resource that is unique within a resource group. This name can be used to access the resource."
+                    },
+                    "properties" : {
+                      "$ref" : "#/components/schemas/NetworkInterfaceIPConfigurationPropertiesFormat"
+                    }
+                  },
+                  "description" : "IPConfiguration in a network interface.",
+                  "allOf" : [ {
+                    "type" : "object",
+                    "properties" : {
+                      "id" : {
+                        "type" : "string",
+                        "description" : "Resource ID."
+                      }
+                    },
+                    "description" : "Reference to another subresource."
+                  } ]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components" : {
+    "schemas" : {
+      "NetworkInterfaceIPConfigurationPropertiesFormat" : {
+        "type" : "object"
+      },
+      "NetworkInterfacePropertiesFormat" : {
+        "type" : "object"
+      }
+    },
+    "securitySchemes" : {
+      "azure_auth" : {
+        "type" : "oauth2",
+        "description" : "Azure Active Directory OAuth2 Flow."
+      }
+    }
+  }
+}

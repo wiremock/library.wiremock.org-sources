@@ -1,0 +1,325 @@
+{
+  "mappings" : [ {
+    "id" : "69ab4b29-236d-4703-8eef-db877aff0f87",
+    "name" : "Get the specified network interface ip configuration in a virtual machine scale ...",
+    "request" : {
+      "urlPath" : "/subscriptions/8fpi/resourceGroups/Sal+Mills/providers/microsoft.Compute/virtualMachineScaleSets/Joey+Fay/virtualMachines/leasvl2llbc9mhswtch20m6oraannl3aim7zct71ubq13etns9ahu8ysbqv2aqk8g0wz7t3earvpwg3tmqvgkkff4javqnn1rwz6x2fslud3gxh/networkInterfaces/Jeraldine+Von/ipConfigurations/Quinton+Lowe+V",
+      "method" : "GET",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "2017-03-30"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"name\" : \"Rory Deckow\",\n  \"etag\" : \"beatae\",\n  \"id\" : \"0042\",\n  \"properties\" : { }\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "69ab4b29-236d-4703-8eef-db877aff0f87",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:35.94981Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "NetworkInterfaces_GetVirtualMachineScaleSetIpConfiguration",
+          "schema" : {
+            "properties" : {
+              "etag" : {
+                "type" : "string",
+                "description" : "A unique read-only string that changes whenever the resource is updated."
+              },
+              "name" : {
+                "type" : "string",
+                "description" : "The name of the resource that is unique within a resource group. This name can be used to access the resource."
+              },
+              "properties" : {
+                "$ref" : "#/components/schemas/NetworkInterfaceIPConfigurationPropertiesFormat"
+              }
+            },
+            "description" : "IPConfiguration in a network interface.",
+            "allOf" : [ {
+              "type" : "object",
+              "properties" : {
+                "id" : {
+                  "type" : "string",
+                  "description" : "Resource ID."
+                }
+              },
+              "description" : "Reference to another subresource."
+            } ]
+          }
+        }
+      }
+    },
+    "insertionIndex" : 0
+  }, {
+    "id" : "2cb5aeec-3b4c-484c-95e5-e9ca7c5cd368",
+    "name" : "Get the specified network interface ip configuration in a virtual machine scale ...",
+    "request" : {
+      "urlPath" : "/subscriptions/6x3z/resourceGroups/Jerrell+Ortiz+III/providers/microsoft.Compute/virtualMachineScaleSets/Miss+Adaline+Hessel/virtualMachines/bmtu7a60xjglor60mw26rv5p4i1lftpv5rgaj4ep2m00iyfzmwdhiagztpbrjpo4jjzgzf9x1euj4a478qygfmxamrewcjocif4y164tln2qu0qftxjlsw67nvkasdolu6lum1m8fo4gha8vdya2j12dgdzqu191zdwpz48ufdbnbqaonglca/networkInterfaces/Sommer+Prohaska/ipConfigurations",
+      "method" : "GET",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "2017-03-30"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"value\" : [ {\n    \"name\" : \"Adah Rogahn\",\n    \"etag\" : \"assumenda\",\n    \"properties\" : { }\n  }, {\n    \"name\" : \"Elli Crona II\",\n    \"etag\" : \"iste\",\n    \"properties\" : { }\n  }, {\n    \"name\" : \"Jacob Bergstrom III\",\n    \"etag\" : \"sed\",\n    \"properties\" : { }\n  }, {\n    \"name\" : \"Darron Tromp\",\n    \"etag\" : \"deleniti\",\n    \"properties\" : { }\n  }, {\n    \"name\" : \"Crissy Gorczany DVM\",\n    \"etag\" : \"molestiae\",\n    \"properties\" : { }\n  }, {\n    \"name\" : \"Ardella Herman MD\",\n    \"etag\" : \"omnis\",\n    \"properties\" : { }\n  }, {\n    \"name\" : \"Trina Weissnat\",\n    \"etag\" : \"similique\",\n    \"properties\" : { }\n  } ],\n  \"nextLink\" : \"nlb1d51dgj14c3\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "2cb5aeec-3b4c-484c-95e5-e9ca7c5cd368",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:35.949205Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "NetworkInterfaces_ListVirtualMachineScaleSetIpConfigurations",
+          "schema" : {
+            "type" : "object",
+            "properties" : {
+              "nextLink" : {
+                "type" : "string",
+                "description" : "The URL to get the next set of results.",
+                "readOnly" : true
+              },
+              "value" : {
+                "type" : "array",
+                "description" : "A list of ip configurations.",
+                "items" : {
+                  "type" : "object",
+                  "properties" : {
+                    "etag" : {
+                      "type" : "string",
+                      "description" : "A unique read-only string that changes whenever the resource is updated."
+                    },
+                    "name" : {
+                      "type" : "string",
+                      "description" : "The name of the resource that is unique within a resource group. This name can be used to access the resource."
+                    },
+                    "properties" : {
+                      "$ref" : "#/components/schemas/NetworkInterfaceIPConfigurationPropertiesFormat"
+                    }
+                  },
+                  "description" : "IPConfiguration in a network interface."
+                }
+              }
+            },
+            "description" : "Response for list ip configurations API service call."
+          }
+        }
+      }
+    },
+    "insertionIndex" : 1
+  }, {
+    "id" : "fff61c76-c30b-404e-a58f-e06c7da78aa0",
+    "name" : "Get the specified network interface in a virtual machine scale set.",
+    "request" : {
+      "urlPath" : "/subscriptions/1ds5/resourceGroups/Augustina+Hoppe+DVM/providers/microsoft.Compute/virtualMachineScaleSets/Mrs.+Cesar+Vandervort/virtualMachines/p3rjovgmz4u7n4m8i9l30p079r9ul061a1y0yxy8wbqvggmonzdcp5ndb0vp1rjmcp4au7zbqbqy0gl0701xd6zoopak9hhjrdcy79mt7/networkInterfaces/Lettie+Schmidt",
+      "method" : "GET",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "2017-03-30"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"name\" : \"Asa Wilderman\",\n  \"etag\" : \"velit\",\n  \"location\" : \"22yqk1w66en239sruul9rpdspe868lv9kqtluj3tj6epmmyk27ulmer9anak3y7869krzoj5dq4iu8720wvm6oktinq1dt3ba6qlvs69pyngylreq3emcz82b494xqb9z7j3vrymzu233ji3veacyosnbrxz3197423pmm3zr51i05r2ei7vf6gekwcx0znkn3qz08\",\n  \"id\" : \"5e27\",\n  \"type\" : \"hd78i8nmyk09gj0\",\n  \"properties\" : { },\n  \"tags\" : { }\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "fff61c76-c30b-404e-a58f-e06c7da78aa0",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:35.948003Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "NetworkInterfaces_GetVirtualMachineScaleSetNetworkInterface",
+          "schema" : {
+            "properties" : {
+              "etag" : {
+                "type" : "string",
+                "description" : "A unique read-only string that changes whenever the resource is updated."
+              },
+              "properties" : {
+                "$ref" : "#/components/schemas/NetworkInterfacePropertiesFormat"
+              }
+            },
+            "description" : "A network interface in a resource group.",
+            "allOf" : [ {
+              "type" : "object",
+              "properties" : {
+                "id" : {
+                  "type" : "string",
+                  "description" : "Resource ID."
+                },
+                "location" : {
+                  "type" : "string",
+                  "description" : "Resource location."
+                },
+                "name" : {
+                  "type" : "string",
+                  "description" : "Resource name.",
+                  "readOnly" : true
+                },
+                "tags" : {
+                  "type" : "object",
+                  "additionalProperties" : {
+                    "type" : "string"
+                  },
+                  "description" : "Resource tags."
+                },
+                "type" : {
+                  "type" : "string",
+                  "description" : "Resource type.",
+                  "readOnly" : true
+                }
+              },
+              "description" : "Common resource representation."
+            } ]
+          }
+        }
+      }
+    },
+    "insertionIndex" : 2
+  }, {
+    "id" : "79225137-ae36-43eb-85d8-b421bc20f048",
+    "name" : "Gets information about all network interfaces in a virtual machine in a virtual ...",
+    "request" : {
+      "urlPath" : "/subscriptions/ezcn/resourceGroups/Vicky+Nolan/providers/microsoft.Compute/virtualMachineScaleSets/Keenan+Christiansen/virtualMachines/bonhvboagesd4fz552m8i9sxyekmc1kb5vzq8vdwoh7tp1eoh587uju3kehf94sz5ukc48fifrgfq1frhxdymgamc47k2nkiu7m7mib8o5z0ecznkh5rrde0r3k9/networkInterfaces",
+      "method" : "GET",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "2017-03-30"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"value\" : [ {\n    \"etag\" : \"earum\",\n    \"properties\" : { }\n  }, {\n    \"etag\" : \"vitae\",\n    \"properties\" : { }\n  }, {\n    \"etag\" : \"explicabo\",\n    \"properties\" : { }\n  }, {\n    \"etag\" : \"omnis\",\n    \"properties\" : { }\n  }, {\n    \"etag\" : \"voluptatem\",\n    \"properties\" : { }\n  }, {\n    \"etag\" : \"fuga\",\n    \"properties\" : { }\n  }, {\n    \"etag\" : \"vel\",\n    \"properties\" : { }\n  } ],\n  \"nextLink\" : \"lgqqfzngcuiwkw44iy3mhxam442ay90qd363eto26ngunev6drdlwqn5kpsb1mtl94qyqezitkwe5xlni6hsf7h3jb9xguk500j65a9k8goqnj2ndo2bzev6giuzt8pn33z4etk9489c8tb7x0uiz62tonl63kvyl0rg6rr4dcvt8jf2zwfkanx1yq3ax92\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "79225137-ae36-43eb-85d8-b421bc20f048",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:35.947461Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "NetworkInterfaces_ListVirtualMachineScaleSetVMNetworkInterfaces",
+          "schema" : {
+            "type" : "object",
+            "properties" : {
+              "nextLink" : {
+                "type" : "string",
+                "description" : "The URL to get the next set of results.",
+                "readOnly" : true
+              },
+              "value" : {
+                "type" : "array",
+                "description" : "A list of network interfaces in a resource group.",
+                "items" : {
+                  "type" : "object",
+                  "properties" : {
+                    "etag" : {
+                      "type" : "string",
+                      "description" : "A unique read-only string that changes whenever the resource is updated."
+                    },
+                    "properties" : {
+                      "$ref" : "#/components/schemas/NetworkInterfacePropertiesFormat"
+                    }
+                  },
+                  "description" : "A network interface in a resource group."
+                }
+              }
+            },
+            "description" : "Response for the ListNetworkInterface API service call."
+          }
+        }
+      }
+    },
+    "insertionIndex" : 3
+  }, {
+    "id" : "c32905ea-5c91-4a0d-9a5f-35c7491795bb",
+    "name" : "Gets all network interfaces in a virtual machine scale set.",
+    "request" : {
+      "urlPath" : "/subscriptions/d57e/resourceGroups/Jess+Berge+III/providers/microsoft.Compute/virtualMachineScaleSets/Carol+Romaguera/networkInterfaces",
+      "method" : "GET",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "2017-03-30"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"value\" : [ {\n    \"etag\" : \"fuga\",\n    \"properties\" : { }\n  }, {\n    \"etag\" : \"molestiae\",\n    \"properties\" : { }\n  }, {\n    \"etag\" : \"modi\",\n    \"properties\" : { }\n  }, {\n    \"etag\" : \"uuuut\",\n    \"properties\" : { }\n  }, {\n    \"etag\" : \"totam\",\n    \"properties\" : { }\n  }, {\n    \"etag\" : \"neque\",\n    \"properties\" : { }\n  }, {\n    \"etag\" : \"iure\",\n    \"properties\" : { }\n  } ],\n  \"nextLink\" : \"k5x8p7np22nqbreltxoj25bo8zdyvh8eb6ynoypby3xwhfl0d99u3uuuw78vsto3v8tvk1\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "c32905ea-5c91-4a0d-9a5f-35c7491795bb",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:35.946949Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "NetworkInterfaces_ListVirtualMachineScaleSetNetworkInterfaces",
+          "schema" : {
+            "type" : "object",
+            "properties" : {
+              "nextLink" : {
+                "type" : "string",
+                "description" : "The URL to get the next set of results.",
+                "readOnly" : true
+              },
+              "value" : {
+                "type" : "array",
+                "description" : "A list of network interfaces in a resource group.",
+                "items" : {
+                  "type" : "object",
+                  "properties" : {
+                    "etag" : {
+                      "type" : "string",
+                      "description" : "A unique read-only string that changes whenever the resource is updated."
+                    },
+                    "properties" : {
+                      "$ref" : "#/components/schemas/NetworkInterfacePropertiesFormat"
+                    }
+                  },
+                  "description" : "A network interface in a resource group."
+                }
+              }
+            },
+            "description" : "Response for the ListNetworkInterface API service call."
+          }
+        }
+      }
+    },
+    "insertionIndex" : 4
+  } ]
+}
