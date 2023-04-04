@@ -1,0 +1,48 @@
+{
+  "mappings" : [ {
+    "id" : "169d7334-6af0-4149-9fea-4314baa8aedc",
+    "name" : "Queries policy activities on GCP resources.",
+    "request" : {
+      "urlPath" : "/v1beta1/r0r5ah6ml10yx7bymhow4hq4fksj9bppmvctqtuc14on38unqbaam1j57kycfmy7rlg3gq2gbehee2um1555to2dwiunzpegu5fvw49x3kdxvqj3ooys02y3aks3n0syevhirf7ir5yo4woqfqn0fi09wc41pixv94mb0yt1mpu6w8xbax9vy1b1ox/activities:query",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"activities\" : [ {\n    \"activity\" : { },\n    \"fullResourceName\" : \"Ricki Greenholt DDS\",\n    \"activityType\" : \"qonvqtqprfgik4mepqgwan9rdqmtrh5jugi8lcxo0dsuaehpxyfwp8a95g1n79g134nvgjqlvcjbdh6vr84jo77mg5569lc0s9vr9kk\",\n    \"observationPeriod\" : {\n      \"startTime\" : \"2022-11-29T06:07:22.428294Z\",\n      \"endTime\" : \"2023-02-13T06:36:22.428338Z\"\n    }\n  }, {\n    \"activity\" : { },\n    \"fullResourceName\" : \"Nicolette Thiel\",\n    \"activityType\" : \"pidov8an1crh2f9e2fm7fg14wmn1pkgmoi3w70odei4t0cmvmn0j8zoeh1a9a85k6j3uh6l93qqrwojozq5k0545n3imbwworl3yo164cbzgj2h0h4ac4aj1kk1to1ltbnp8tp2xxbqkl63c44qdrqudme1gquqs2208fvi92c84s9b3kfli92gmy4hcdf\",\n    \"observationPeriod\" : {\n      \"startTime\" : \"2023-01-31T07:17:22.428438Z\",\n      \"endTime\" : \"2023-03-25T05:36:22.428469Z\"\n    }\n  } ],\n  \"nextPageToken\" : \"69ey9sy5b8tl\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "169d7334-6af0-4149-9fea-4314baa8aedc",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:22.428639Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "policyanalyzer.projects.locations.activityTypes.activities.query",
+          "schema" : {
+            "description" : "Response to the `QueryActivity` method.",
+            "properties" : {
+              "activities" : {
+                "description" : "The set of activities that match the filter included in the request.",
+                "items" : {
+                  "$ref" : "#/components/schemas/GoogleCloudPolicyanalyzerV1beta1Activity"
+                },
+                "type" : "array"
+              },
+              "nextPageToken" : {
+                "description" : "If there might be more results than those appearing in this response, then `nextPageToken` is included. To get the next set of results, call this method again using the value of `nextPageToken` as `pageToken`.",
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 0
+  } ]
+}

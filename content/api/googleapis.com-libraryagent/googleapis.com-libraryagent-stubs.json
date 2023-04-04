@@ -1,0 +1,243 @@
+{
+  "mappings" : [ {
+    "id" : "b1092060-e888-4579-ba4f-aab192420a2f",
+    "name" : "Lists books in a shelf. The order is unspecified but deterministic. Newly create...",
+    "request" : {
+      "urlPath" : "/v1/joqgc2sfvlfbzsdg8sr0d810yhu4n6cx61tonfm/books",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"books\" : [ {\n    \"read\" : false,\n    \"author\" : \"kke33yxzht7slevbu6fmp05wit7ow6t1f79gtxjome7gtdwwqx36x6t0pmuap7ndgzfjhe\",\n    \"name\" : \"Elma Little\",\n    \"title\" : \"Quisquam voluptates amet nostrum earum ut consectetur.\"\n  }, {\n    \"read\" : true,\n    \"author\" : \"j1bn9g69rmbgg\",\n    \"name\" : \"Alfredia Zboncak\",\n    \"title\" : \"Deserunt neque aliquid.\"\n  }, {\n    \"read\" : false,\n    \"author\" : \"p08in44eal8x5ixbv4n6x536y8kh6kpr07x9o7v5husi1rwjdhsro7v619grlvo9fra9apnz50xpqs4eig7uqy6z69soinsyanpdsa25l31q18k90\",\n    \"name\" : \"Mrs. Laine Rolfson\",\n    \"title\" : \"Perferendis ut ab ad qui eos.\"\n  }, {\n    \"read\" : false,\n    \"author\" : \"cuxqecacz1aqwge93b8a9721fjh260g0cawmjl0ohnccyp29epppbelhvkn7mcnlosw5u0hak4fomyi8k00zknk66j8sk7kv4pc\",\n    \"name\" : \"Fredricka Johns\",\n    \"title\" : \"Natus non dolores porro non eveniet illum eveniet.\"\n  }, {\n    \"read\" : false,\n    \"author\" : \"70p5ja21ynd0iy8ukb2g3nz37v3ziq4rhfn7u4ye\",\n    \"name\" : \"Damon Stark DVM\",\n    \"title\" : \"Dicta quaerat maiores illum voluptas.\"\n  }, {\n    \"read\" : false,\n    \"author\" : \"z093ybzmitp3bw1xugjjlisyqz1vkr9isbsdiho248l64vhvd1jq9zlb27yuu2eyelxt6vmgcm0x7ponjrudz8zkx98mcgcos9oc0jvo0sukdhyy62910f0f4wm9abrlu7g22k6hie23rnn8c6\",\n    \"name\" : \"Davida Tromp\",\n    \"title\" : \"Deleniti a consequatur aut omnis et.\"\n  }, {\n    \"read\" : false,\n    \"author\" : \"91xoi9ujp2q012vv833p3zuf9ppp87d3lzwsad7drfp27covhyygzbzv68mqspuq4trhomyxwkqamntiu\",\n    \"name\" : \"Miguel Ward\",\n    \"title\" : \"Molestiae velit provident magnam sed facere placeat.\"\n  } ],\n  \"nextPageToken\" : \"bht5498k5g5vgbmla79wrv9q1kz1zr7zv8d27qq7su1s0ei8x36bxaasp96nueifeq2pgof7sn31eihi3onzp16g74gkgxi0z2cvsj5160fmpxov6lwk7archgzumgnxn5koe095d1qb7m9t4fg6xzfk6ivjwsmjj3dctdbdaub4mp1rh9\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "b1092060-e888-4579-ba4f-aab192420a2f",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:10.19649Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "libraryagent.shelves.books.list",
+          "schema" : {
+            "description" : "Response message for LibraryAgent.ListBooks.",
+            "properties" : {
+              "books" : {
+                "description" : "The list of books.",
+                "items" : {
+                  "$ref" : "#/components/schemas/GoogleExampleLibraryagentV1Book"
+                },
+                "type" : "array"
+              },
+              "nextPageToken" : {
+                "description" : "A token to retrieve next page of results. Pass this value in the ListBooksRequest.page_token field in the subsequent call to `ListBooks` method to retrieve the next page of results.",
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 0
+  }, {
+    "id" : "2adaf787-0747-4a2d-92b1-f24330841163",
+    "name" : "Return a book to the library. Returns the book if it is returned to the library ...",
+    "request" : {
+      "urlPath" : "/v1/Shavonne+Graham:return",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"read\" : false,\n  \"author\" : \"pc5fzc70mu2qf3y53o6i6ryd79tt8th6lfgtz4eqoppnaj64rhd339doge57qwjvdigzeh94oldi11fwc46rxjkrrrhsaj33ezcegne8gvmq72bu0by5nwd0mk5k\",\n  \"name\" : \"Lynn MacGyver Sr.\",\n  \"title\" : \"Voluptatem unde explicabo.\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "2adaf787-0747-4a2d-92b1-f24330841163",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:10.195509Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "libraryagent.shelves.books.return",
+          "schema" : {
+            "description" : "A single book in the library.",
+            "properties" : {
+              "author" : {
+                "description" : "The name of the book author.",
+                "type" : "string"
+              },
+              "name" : {
+                "description" : "The resource name of the book. Book names have the form `shelves/{shelf_id}/books/{book_id}`. The name is ignored when creating a book.",
+                "type" : "string"
+              },
+              "read" : {
+                "description" : "Value indicating whether the book has been read.",
+                "type" : "boolean"
+              },
+              "title" : {
+                "description" : "The title of the book.",
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 1
+  }, {
+    "id" : "8834465a-7696-438a-801d-ee2def3eb7bf",
+    "name" : "Borrow a book from the library. Returns the book if it is borrowed successfully....",
+    "request" : {
+      "urlPath" : "/v1/Dr.+Deena+Veum:borrow",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"read\" : true,\n  \"author\" : \"jczoqh\",\n  \"name\" : \"Nelia Sanford MD\",\n  \"title\" : \"Aut expedita ut aut.\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "8834465a-7696-438a-801d-ee2def3eb7bf",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:10.195269Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "libraryagent.shelves.books.borrow",
+          "schema" : {
+            "description" : "A single book in the library.",
+            "properties" : {
+              "author" : {
+                "description" : "The name of the book author.",
+                "type" : "string"
+              },
+              "name" : {
+                "description" : "The resource name of the book. Book names have the form `shelves/{shelf_id}/books/{book_id}`. The name is ignored when creating a book.",
+                "type" : "string"
+              },
+              "read" : {
+                "description" : "Value indicating whether the book has been read.",
+                "type" : "boolean"
+              },
+              "title" : {
+                "description" : "The title of the book.",
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 2
+  }, {
+    "id" : "58bbca9f-c9d7-4bb2-ae02-0153947e7833",
+    "name" : "Gets a book. Returns NOT_FOUND if the book does not exist.",
+    "request" : {
+      "urlPath" : "/v1/Dr.+Rolf+Rippin",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"read\" : true,\n  \"author\" : \"94omd1w66m82e5dsbif51yqxovye7wo5l1o7tj1qlqjtfdtq5gu7v5akgtbi5xp2xooqr4spx6we4cwf92s0uhq3qf77pc70p2s2rpeuithbjw23qdft4fnbi8y42dffdvos1oitsw36m04ytcs5bd07ya4i3so8oav8x2xvqepskbit14seu45zw91xa9riz\",\n  \"name\" : \"Mrs. Kristian Feest\",\n  \"title\" : \"In cupiditate maiores perspiciatis quaerat.\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "58bbca9f-c9d7-4bb2-ae02-0153947e7833",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:10.195009Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "libraryagent.shelves.books.get",
+          "schema" : {
+            "description" : "A single book in the library.",
+            "properties" : {
+              "author" : {
+                "description" : "The name of the book author.",
+                "type" : "string"
+              },
+              "name" : {
+                "description" : "The resource name of the book. Book names have the form `shelves/{shelf_id}/books/{book_id}`. The name is ignored when creating a book.",
+                "type" : "string"
+              },
+              "read" : {
+                "description" : "Value indicating whether the book has been read.",
+                "type" : "boolean"
+              },
+              "title" : {
+                "description" : "The title of the book.",
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 3
+  }, {
+    "id" : "10f00a0b-3f94-45be-a4ec-bb7895f13fd5",
+    "name" : "Lists shelves. The order is unspecified but deterministic. Newly created shelves...",
+    "request" : {
+      "urlPath" : "/v1/shelves",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"nextPageToken\" : \"u7lhjzi9i02p2m3b5vnahlr6d6bm58l69fucr70nfk2yw5trls5rivoiawzh73wp42qfue9ad0yoj86c1tx597d9jr57vovadvuu1cbl2o6im4q3j41ipt12og9j1f80iccuzq2ppg7y98gkw7v9u7d\",\n  \"shelves\" : [ {\n    \"name\" : \"Thaddeus Lehner\",\n    \"theme\" : \"hqmxypntwxc2gdq1qaeot2rz6lz7csj01qgpy1fx8titbm1pxjftgokq\"\n  }, {\n    \"name\" : \"Miss Shenika Muller\",\n    \"theme\" : \"45xdnuz3dvgktawvf53vmrfoyd1wt3waj3upi9qyhqdwpnlwv01253mv7b9umndlbpg07vyq3ls4c7sc5qae0so\"\n  }, {\n    \"name\" : \"Vito Harvey DDS\",\n    \"theme\" : \"utd6f9dz4j3js5gqb3v122rx74msenxunscx5s2681wxxuj1wdoku3rssrra3zxqvms14ba3okux35yqvpj2957wqwb9zenmc\"\n  }, {\n    \"name\" : \"Magen Raynor\",\n    \"theme\" : \"etbdg1g2mou3zx6vf55kzmwskt5hk75hgsi4nmg8os5f575hguo97y7xaw3ug767c4qzjhoalyybs2yc0xbz4s9xm7tn3bfca0dinxp08m6l8cnw\"\n  }, {\n    \"name\" : \"Hong Tremblay\",\n    \"theme\" : \"69tlh2o75fzlvqe7688tw5nulrfttleluhsug2wpi4v47xfclehk1l67oi4b9hdhhl4tt7rtnrd2ocm893dwllmgwthmeyz63n1em2q00vm75wxfyy57lrgaicma7z8ckq3s15ce55xbvr0yodzid985ub47ok41slexirra5d5qk8xluqcafma8spx5\"\n  }, {\n    \"name\" : \"Fae Rosenbaum\",\n    \"theme\" : \"0dgjwzs14jnxbr3ckm5ig1ndtar8f2lkkaki8rmi4r7hc0zq38rkxb8c5m25i89b96djo4ndhrl0qnnz9n13yo5w0fdspim6910oehe6bbq0npaq1n6alju66m9ps3kyqzcgkoyoripvpogbkj7z7rfckuxs2l2ubzua35xrv1na4usf14zsklsup1m9\"\n  }, {\n    \"name\" : \"Silas Abshire\",\n    \"theme\" : \"u7oupmf\"\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "10f00a0b-3f94-45be-a4ec-bb7895f13fd5",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:10.194546Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "libraryagent.shelves.list",
+          "schema" : {
+            "description" : "Response message for LibraryAgent.ListShelves.",
+            "properties" : {
+              "nextPageToken" : {
+                "description" : "A token to retrieve next page of results. Pass this value in the ListShelvesRequest.page_token field in the subsequent call to `ListShelves` method to retrieve the next page of results.",
+                "type" : "string"
+              },
+              "shelves" : {
+                "description" : "The list of shelves.",
+                "items" : {
+                  "$ref" : "#/components/schemas/GoogleExampleLibraryagentV1Shelf"
+                },
+                "type" : "array"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 4
+  } ]
+}

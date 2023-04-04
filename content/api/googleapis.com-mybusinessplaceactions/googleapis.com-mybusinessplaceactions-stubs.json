@@ -1,0 +1,347 @@
+{
+  "mappings" : [ {
+    "id" : "b5020e0e-fdd2-475c-82ae-40d9df3c8eed",
+    "name" : "Creates a place action link associated with the specified location, and returns ...",
+    "request" : {
+      "urlPath" : "/v1/bucfknb99opk0bjb07468i94555gnpkxof016h587lcebf7itbv4x562ad1jgzyk/placeActionLinks",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"placeActionType\" : \"FOOD_TAKEOUT\",\n  \"isEditable\" : false,\n  \"createTime\" : \"2022-04-04T06:05:16.163638Z\",\n  \"name\" : \"Beau Sporer\",\n  \"updateTime\" : \"2022-12-27T06:48:16.163702Z\",\n  \"isPreferred\" : true,\n  \"uri\" : \"https://web.example.mocklab.io/513771\",\n  \"providerType\" : \"PROVIDER_TYPE_UNSPECIFIED\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "b5020e0e-fdd2-475c-82ae-40d9df3c8eed",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:16.163886Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "mybusinessplaceactions.locations.placeActionLinks.create",
+          "schema" : {
+            "description" : "Represents a place action link and its attributes.",
+            "properties" : {
+              "createTime" : {
+                "description" : "Output only. The time when the place action link was created.",
+                "format" : "google-datetime",
+                "readOnly" : true,
+                "type" : "string"
+              },
+              "isEditable" : {
+                "description" : "Output only. Indicates whether this link can be edited by the client.",
+                "readOnly" : true,
+                "type" : "boolean"
+              },
+              "isPreferred" : {
+                "description" : "Optional. Whether this link is preferred by the merchant. Only one link can be marked as preferred per place action type at a location. If a future request marks a different link as preferred for the same place action type, then the current preferred link (if any exists) will lose its preference.",
+                "type" : "boolean"
+              },
+              "name" : {
+                "description" : "Optional. The resource name, in the format `locations/{location_id}/placeActionLinks/{place_action_link_id}`. The name field will only be considered in UpdatePlaceActionLink and DeletePlaceActionLink requests for updating and deleting links respectively. However, it will be ignored in CreatePlaceActionLink request, where `place_action_link_id` will be assigned by the server on successful creation of a new link and returned as part of the response.",
+                "type" : "string"
+              },
+              "placeActionType" : {
+                "description" : "Required. The type of place action that can be performed using this link.",
+                "enum" : [ "PLACE_ACTION_TYPE_UNSPECIFIED", "APPOINTMENT", "ONLINE_APPOINTMENT", "DINING_RESERVATION", "FOOD_ORDERING", "FOOD_DELIVERY", "FOOD_TAKEOUT", "SHOP_ONLINE" ],
+                "type" : "string"
+              },
+              "providerType" : {
+                "description" : "Output only. Specifies the provider type.",
+                "enum" : [ "PROVIDER_TYPE_UNSPECIFIED", "MERCHANT", "AGGREGATOR_3P" ],
+                "readOnly" : true,
+                "type" : "string"
+              },
+              "updateTime" : {
+                "description" : "Output only. The time when the place action link was last modified.",
+                "format" : "google-datetime",
+                "readOnly" : true,
+                "type" : "string"
+              },
+              "uri" : {
+                "description" : "Required. The link uri. The same uri can be reused for different action types across different locations. However, only one place action link is allowed for each unique combination of (uri, place action type, location).",
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 0
+  }, {
+    "id" : "34211cee-3b5a-4429-8dd8-518c374bc4ea",
+    "name" : "Lists the place action links for the specified location.",
+    "request" : {
+      "urlPath" : "/v1/dicsylbq2ism44x3gpz8cjlnbn0q86gccv0fh59s0ix8j27bczvu61bzudl9u7ix2ql4kyszx0ntvgm1/placeActionLinks",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"placeActionLinks\" : [ {\n    \"placeActionType\" : \"ONLINE_APPOINTMENT\",\n    \"isEditable\" : false,\n    \"createTime\" : \"2022-08-14T08:26:16.162949Z\",\n    \"name\" : \"Dr. Lonny Green\",\n    \"updateTime\" : \"2022-10-13T07:05:16.16302Z\",\n    \"isPreferred\" : false,\n    \"uri\" : \"https://web.example.mocklab.io/033953\",\n    \"providerType\" : \"AGGREGATOR_3P\"\n  }, {\n    \"placeActionType\" : \"FOOD_ORDERING\",\n    \"isEditable\" : true,\n    \"createTime\" : \"2022-06-08T07:44:16.163135Z\",\n    \"name\" : \"Man Pfeffer\",\n    \"updateTime\" : \"2023-01-19T07:12:16.163208Z\",\n    \"isPreferred\" : false,\n    \"uri\" : \"https://web.example.mocklab.io/598240\",\n    \"providerType\" : \"MERCHANT\"\n  }, {\n    \"placeActionType\" : \"PLACE_ACTION_TYPE_UNSPECIFIED\",\n    \"isEditable\" : true,\n    \"createTime\" : \"2022-05-22T05:48:16.163328Z\",\n    \"name\" : \"Bret Koch\",\n    \"updateTime\" : \"2022-08-20T09:11:16.163392Z\",\n    \"isPreferred\" : false,\n    \"uri\" : \"https://web.example.mocklab.io/001564\",\n    \"providerType\" : \"PROVIDER_TYPE_UNSPECIFIED\"\n  } ],\n  \"nextPageToken\" : \"0ck1yrgbmq9rty8ye3euuouftpv91sceh2zcj75yz4j0o1otuynhe4kkxv0qrewldgcs74\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "34211cee-3b5a-4429-8dd8-518c374bc4ea",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:16.163585Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "mybusinessplaceactions.locations.placeActionLinks.list",
+          "schema" : {
+            "description" : "Response message for PlaceActions.ListPlaceActionLinks.",
+            "properties" : {
+              "nextPageToken" : {
+                "description" : "If there are more place action links than the requested page size, then this field is populated with a token to fetch the next page of results.",
+                "type" : "string"
+              },
+              "placeActionLinks" : {
+                "description" : "The returned list of place action links.",
+                "items" : {
+                  "$ref" : "#/components/schemas/PlaceActionLink"
+                },
+                "type" : "array"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 1
+  }, {
+    "id" : "512d7be4-88c6-4b20-ac86-8d6e4c9667e3",
+    "name" : "Updates the specified place action link and returns it.",
+    "request" : {
+      "urlPath" : "/v1/Tracy+Rippin",
+      "method" : "PATCH"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"placeActionType\" : \"SHOP_ONLINE\",\n  \"isEditable\" : true,\n  \"createTime\" : \"2022-05-16T07:53:16.162607Z\",\n  \"name\" : \"Georgiana Will\",\n  \"updateTime\" : \"2023-02-23T09:20:16.162673Z\",\n  \"isPreferred\" : true,\n  \"uri\" : \"https://web.example.mocklab.io/855233\",\n  \"providerType\" : \"AGGREGATOR_3P\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "512d7be4-88c6-4b20-ac86-8d6e4c9667e3",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:16.162885Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "mybusinessplaceactions.locations.placeActionLinks.patch",
+          "schema" : {
+            "description" : "Represents a place action link and its attributes.",
+            "properties" : {
+              "createTime" : {
+                "description" : "Output only. The time when the place action link was created.",
+                "format" : "google-datetime",
+                "readOnly" : true,
+                "type" : "string"
+              },
+              "isEditable" : {
+                "description" : "Output only. Indicates whether this link can be edited by the client.",
+                "readOnly" : true,
+                "type" : "boolean"
+              },
+              "isPreferred" : {
+                "description" : "Optional. Whether this link is preferred by the merchant. Only one link can be marked as preferred per place action type at a location. If a future request marks a different link as preferred for the same place action type, then the current preferred link (if any exists) will lose its preference.",
+                "type" : "boolean"
+              },
+              "name" : {
+                "description" : "Optional. The resource name, in the format `locations/{location_id}/placeActionLinks/{place_action_link_id}`. The name field will only be considered in UpdatePlaceActionLink and DeletePlaceActionLink requests for updating and deleting links respectively. However, it will be ignored in CreatePlaceActionLink request, where `place_action_link_id` will be assigned by the server on successful creation of a new link and returned as part of the response.",
+                "type" : "string"
+              },
+              "placeActionType" : {
+                "description" : "Required. The type of place action that can be performed using this link.",
+                "enum" : [ "PLACE_ACTION_TYPE_UNSPECIFIED", "APPOINTMENT", "ONLINE_APPOINTMENT", "DINING_RESERVATION", "FOOD_ORDERING", "FOOD_DELIVERY", "FOOD_TAKEOUT", "SHOP_ONLINE" ],
+                "type" : "string"
+              },
+              "providerType" : {
+                "description" : "Output only. Specifies the provider type.",
+                "enum" : [ "PROVIDER_TYPE_UNSPECIFIED", "MERCHANT", "AGGREGATOR_3P" ],
+                "readOnly" : true,
+                "type" : "string"
+              },
+              "updateTime" : {
+                "description" : "Output only. The time when the place action link was last modified.",
+                "format" : "google-datetime",
+                "readOnly" : true,
+                "type" : "string"
+              },
+              "uri" : {
+                "description" : "Required. The link uri. The same uri can be reused for different action types across different locations. However, only one place action link is allowed for each unique combination of (uri, place action type, location).",
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 2
+  }, {
+    "id" : "18d57fa3-6665-41c3-840e-86e94dacdc83",
+    "name" : "Gets the specified place action link.",
+    "request" : {
+      "urlPath" : "/v1/Lakia+Bartoletti",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"placeActionType\" : \"FOOD_DELIVERY\",\n  \"isEditable\" : false,\n  \"createTime\" : \"2022-07-05T06:33:16.162178Z\",\n  \"name\" : \"Caroyln Heller\",\n  \"updateTime\" : \"2022-08-15T08:26:16.162257Z\",\n  \"isPreferred\" : true,\n  \"uri\" : \"https://web.example.mocklab.io/878764\",\n  \"providerType\" : \"PROVIDER_TYPE_UNSPECIFIED\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "18d57fa3-6665-41c3-840e-86e94dacdc83",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:16.162551Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "mybusinessplaceactions.locations.placeActionLinks.get",
+          "schema" : {
+            "description" : "Represents a place action link and its attributes.",
+            "properties" : {
+              "createTime" : {
+                "description" : "Output only. The time when the place action link was created.",
+                "format" : "google-datetime",
+                "readOnly" : true,
+                "type" : "string"
+              },
+              "isEditable" : {
+                "description" : "Output only. Indicates whether this link can be edited by the client.",
+                "readOnly" : true,
+                "type" : "boolean"
+              },
+              "isPreferred" : {
+                "description" : "Optional. Whether this link is preferred by the merchant. Only one link can be marked as preferred per place action type at a location. If a future request marks a different link as preferred for the same place action type, then the current preferred link (if any exists) will lose its preference.",
+                "type" : "boolean"
+              },
+              "name" : {
+                "description" : "Optional. The resource name, in the format `locations/{location_id}/placeActionLinks/{place_action_link_id}`. The name field will only be considered in UpdatePlaceActionLink and DeletePlaceActionLink requests for updating and deleting links respectively. However, it will be ignored in CreatePlaceActionLink request, where `place_action_link_id` will be assigned by the server on successful creation of a new link and returned as part of the response.",
+                "type" : "string"
+              },
+              "placeActionType" : {
+                "description" : "Required. The type of place action that can be performed using this link.",
+                "enum" : [ "PLACE_ACTION_TYPE_UNSPECIFIED", "APPOINTMENT", "ONLINE_APPOINTMENT", "DINING_RESERVATION", "FOOD_ORDERING", "FOOD_DELIVERY", "FOOD_TAKEOUT", "SHOP_ONLINE" ],
+                "type" : "string"
+              },
+              "providerType" : {
+                "description" : "Output only. Specifies the provider type.",
+                "enum" : [ "PROVIDER_TYPE_UNSPECIFIED", "MERCHANT", "AGGREGATOR_3P" ],
+                "readOnly" : true,
+                "type" : "string"
+              },
+              "updateTime" : {
+                "description" : "Output only. The time when the place action link was last modified.",
+                "format" : "google-datetime",
+                "readOnly" : true,
+                "type" : "string"
+              },
+              "uri" : {
+                "description" : "Required. The link uri. The same uri can be reused for different action types across different locations. However, only one place action link is allowed for each unique combination of (uri, place action type, location).",
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 3
+  }, {
+    "id" : "e9a09cb8-3ff2-4cbe-9f37-cfe5c55ea2ad",
+    "name" : "Deletes a place action link from the specified location.",
+    "request" : {
+      "urlPath" : "/v1/Son+Nicolas+IV",
+      "method" : "DELETE"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{ }",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "e9a09cb8-3ff2-4cbe-9f37-cfe5c55ea2ad",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:16.16211Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "mybusinessplaceactions.locations.placeActionLinks.delete",
+          "schema" : {
+            "description" : "A generic empty message that you can re-use to avoid defining duplicated empty messages in your APIs. A typical example is to use it as the request or the response type of an API method. For instance: service Foo { rpc Bar(google.protobuf.Empty) returns (google.protobuf.Empty); }",
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 4
+  }, {
+    "id" : "ef7ae6dc-b634-4cc5-9730-1be09d4e4068",
+    "name" : "Returns the list of available place action types for a location or country.",
+    "request" : {
+      "urlPath" : "/v1/placeActionTypeMetadata",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"placeActionTypeMetadata\" : [ {\n    \"placeActionType\" : \"APPOINTMENT\",\n    \"displayName\" : \"Elliot Okuneva Jr.\"\n  } ],\n  \"nextPageToken\" : \"6z5syre7gb3cc1g8p9tae5w55id6nq2m1\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "ef7ae6dc-b634-4cc5-9730-1be09d4e4068",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:16.161992Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "mybusinessplaceactions.placeActionTypeMetadata.list",
+          "schema" : {
+            "description" : "Response message for PlaceActions.ListPlaceActionTypeMetadata.",
+            "properties" : {
+              "nextPageToken" : {
+                "description" : "If the number of action types exceeded the requested page size, this field will be populated with a token to fetch the next page on a subsequent call to `placeActionTypeMetadata.list`. If there are no more results, this field will not be present in the response.",
+                "type" : "string"
+              },
+              "placeActionTypeMetadata" : {
+                "description" : "A collection of metadata for the available place action types.",
+                "items" : {
+                  "$ref" : "#/components/schemas/PlaceActionTypeMetadata"
+                },
+                "type" : "array"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 5
+  } ]
+}

@@ -1,0 +1,40 @@
+{
+  "mappings" : [ {
+    "id" : "1a024e08-55f6-48c6-9866-77a4d2760ffd",
+    "name" : "Decodes the integrity token and returns the token payload.",
+    "request" : {
+      "urlPath" : "/v1/Fausto+Beahan:decodeIntegrityToken",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"tokenPayloadExternal\" : {\n    \"testingDetails\" : {\n      \"isTestingResponse\" : false\n    },\n    \"deviceIntegrity\" : {\n      \"deviceRecognitionVerdict\" : [ \"MEETS_VIRTUAL_INTEGRITY\" ]\n    },\n    \"requestDetails\" : {\n      \"timestampMillis\" : \"2022-11-27T07:49:21.858167Z\",\n      \"requestPackageName\" : \"Santiago Bernhard\",\n      \"requestHash\" : \"jepa9765oly21gdswx19d9pooe4np4mqn5222m6lgzs952awzz4w9nvp4zhkxshpix5pntiytkldtwzj054wnatkb4cfzqx5\",\n      \"nonce\" : \"5yz\"\n    },\n    \"accountDetails\" : {\n      \"appLicensingVerdict\" : \"UNKNOWN\",\n      \"accountActivity\" : {\n        \"activityLevel\" : \"TYPICAL_STRONG\"\n      }\n    },\n    \"appIntegrity\" : {\n      \"appRecognitionVerdict\" : \"UNKNOWN\",\n      \"certificateSha256Digest\" : [ \"4soshf3xuwdukdob7wa7se0vuf2akkyk65dx5udtui27nzofphtxmxtwb6erq5bn5ywm2rj4gjuh98d3yfte0139v0j7cmt8xypzay3lce6g5726nbd0tk3jssuag59yjrx47rqp31po02jsmwugvs7mxvj4s1n\" ],\n      \"packageName\" : \"Lakeisha Ratke DDS\",\n      \"versionCode\" : \"5itbhfkv8i3v0z0qrjk72tpuwp77f\"\n    }\n  }\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "1a024e08-55f6-48c6-9866-77a4d2760ffd",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:21.858606Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "playintegrity.decodeIntegrityToken",
+          "schema" : {
+            "description" : "Response containing the decoded integrity payload.",
+            "properties" : {
+              "tokenPayloadExternal" : {
+                "$ref" : "#/components/schemas/TokenPayloadExternal"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 0
+  } ]
+}

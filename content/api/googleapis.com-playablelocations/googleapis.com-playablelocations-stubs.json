@@ -1,0 +1,113 @@
+{
+  "mappings" : [ {
+    "id" : "e67e8a2a-2b88-491d-b438-492a28f080b5",
+    "name" : "Returns a set of playable locations that lie within a specified area, that satis...",
+    "request" : {
+      "urlPath" : "/v3:samplePlayableLocations",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"locationsPerGameObjectType\" : { },\n  \"ttl\" : \"yjo59q34xzhy9ysq64k6c5xnkk8pfo1r5qly48fykhwrt0kd934gkjjwoqdctefu7h4ipnskfrklvefe4n1jjcxb3y4hgnlklsjtzfo1ufsa835vkurkt3bow2upszk5p7ac3z13uk14vo6p62ftktki39aq8nz5ha89d7s0x1hn1we3gl4su\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "e67e8a2a-2b88-491d-b438-492a28f080b5",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:21.167187Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "playablelocations.samplePlayableLocations",
+          "schema" : {
+            "description" : " Response for the SamplePlayableLocations method.",
+            "properties" : {
+              "locationsPerGameObjectType" : {
+                "additionalProperties" : {
+                  "$ref" : "#/components/schemas/GoogleMapsPlayablelocationsV3SamplePlayableLocationList"
+                },
+                "description" : "Each PlayableLocation object corresponds to a game_object_type specified in the request.",
+                "type" : "object"
+              },
+              "ttl" : {
+                "description" : "Required. Specifies the \"time-to-live\" for the set of playable locations. You can use this value to determine how long to cache the set of playable locations. After this length of time, your back-end game server should issue a new SamplePlayableLocations request to get a fresh set of playable locations (because for example, they might have been removed, a park might have closed for the day, a business might have closed permanently).",
+                "format" : "google-duration",
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 0
+  }, {
+    "id" : "ea52abba-d977-4c84-a516-79d55c758e6b",
+    "name" : "Logs bad playable location reports submitted by players. Reports are not partial...",
+    "request" : {
+      "urlPath" : "/v3:logPlayerReports",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{ }",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "ea52abba-d977-4c84-a516-79d55c758e6b",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:21.167035Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "playablelocations.logPlayerReports",
+          "schema" : {
+            "description" : "A response for the LogPlayerReports method. This method returns no data upon success.",
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 1
+  }, {
+    "id" : "9f6ec099-8382-40dd-9bac-3d32326e9dd8",
+    "name" : "Logs new events when playable locations are displayed, and when they are interac...",
+    "request" : {
+      "urlPath" : "/v3:logImpressions",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{ }",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "9f6ec099-8382-40dd-9bac-3d32326e9dd8",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:21.166966Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "playablelocations.logImpressions",
+          "schema" : {
+            "description" : "A response for the LogImpressions method. This method returns no data upon success.",
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 2
+  } ]
+}

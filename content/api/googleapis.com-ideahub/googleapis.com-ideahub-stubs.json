@@ -1,0 +1,243 @@
+{
+  "mappings" : [ {
+    "id" : "706f6d60-ccf1-422d-83fb-0b06bbaf25ce",
+    "name" : "Returns which locales ideas are available in for a given Creator.",
+    "request" : {
+      "urlPath" : "/v1alpha/p745rl7c09a7x1679yxpjxe84707kr5w0xsk2owcmlbd443w65ro7fzw6prmji1qcflttoqpdb82b0yna2qbp5bovvv/locales",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"nextPageToken\" : \"s4fzywq9phheghw9vo7bjmwv19ldzz76cjv821ej6l\",\n  \"availableLocales\" : [ {\n    \"name\" : \"Lina Schmitt\",\n    \"locale\" : \"yf8er1xruehj1kchq99fpfgs36jazyx1ubz3mebwf1ndhqqevweqpba46osvg2vqgjj7fri3zmzjl52lfvat5mnjt69cbl39gu177f7039uf45p4cd6rai9r50abn7n1f1v\"\n  }, {\n    \"name\" : \"Maura D'Amore\",\n    \"locale\" : \"g8gb3c0ko7vy3cow5rwrf\"\n  }, {\n    \"name\" : \"Efren Stehr\",\n    \"locale\" : \"wwej5zo1rd69n6nz98ccyfod2e1scsjjfezkxqsb652ic6yeruvwk4azidyux24rfsxd656v594xrjegoos41z21onacijzr29v8kpjsiy6v2plwdpvao06rq8gquon0n243tx3ven26\"\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "706f6d60-ccf1-422d-83fb-0b06bbaf25ce",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:40.485604Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "ideahub.platforms.properties.locales.list",
+          "schema" : {
+            "description" : "Response for whether ideas are available for a given web property on a platform, for the currently logged-in user.",
+            "properties" : {
+              "availableLocales" : {
+                "description" : "Locales for which ideas are available for the given Creator.",
+                "items" : {
+                  "$ref" : "#/components/schemas/GoogleSearchIdeahubV1alphaAvailableLocale"
+                },
+                "type" : "array"
+              },
+              "nextPageToken" : {
+                "description" : "A token that can be sent as `page_token` to retrieve the next page. If this field is omitted, there are no subsequent pages.",
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 0
+  }, {
+    "id" : "de7378bd-7714-426c-b853-f0f2a7f81885",
+    "name" : "List ideas for a given Creator and filter and sort options.",
+    "request" : {
+      "urlPath" : "/v1alpha/0t4jpfzxrbq7juu053cnn3gggtmaqo2512xlip5wo0alvnrjrt2bvsnxgww6ktln5qnoz6dkxur5km745l5eez6axu1qp5niualsogom3lx3jt3cv2ywn12yvfhryl65l67temeq9swbvmbbkt6ljwzi22977orsyldjw4jbu89xscqsay0pt2gup/ideas",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"nextPageToken\" : \"9pcjup22dvqxibvhhno8o54kjyv4ftpwpmdc\",\n  \"ideas\" : [ {\n    \"topics\" : [ {\n      \"displayName\" : \"Rashida Tillman Jr.\",\n      \"name\" : \"Nick Leannon Jr.\",\n      \"mid\" : \"1j95\"\n    }, {\n      \"displayName\" : \"Moises Champlin\",\n      \"name\" : \"Edra Hilll\",\n      \"mid\" : \"bu6n\"\n    }, {\n      \"displayName\" : \"Kizzy Ritchie\",\n      \"name\" : \"Angel Lehner\",\n      \"mid\" : \"fdtu\"\n    }, {\n      \"displayName\" : \"Francesco Nikolaus I\",\n      \"name\" : \"Ching Kuvalis\",\n      \"mid\" : \"88d5\"\n    } ],\n    \"name\" : \"Kiley Jones Sr.\",\n    \"text\" : \"zhdk835pwkpt59cnhjmr2pnofonayeikt8rqlza6umnah37idflhbc2nhaqt2iz9w7owsef1v2gw3g6i8yp81rmfrr6z7qxblm0dhbjj3xcv0xx07ip6ujy80fkoxoqnyo5fwqpfoicf8toe4ku5f6k1nxr0oecgxy6ts7z2\"\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "de7378bd-7714-426c-b853-f0f2a7f81885",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:40.485066Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "ideahub.platforms.properties.ideas.list",
+          "schema" : {
+            "properties" : {
+              "ideas" : {
+                "description" : "Results for the ListIdeasRequest.",
+                "items" : {
+                  "$ref" : "#/components/schemas/GoogleSearchIdeahubV1alphaIdea"
+                },
+                "type" : "array"
+              },
+              "nextPageToken" : {
+                "description" : "Used to fetch the next page in a subsequent request.",
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 1
+  }, {
+    "id" : "f42c5ac8-ffa6-4a20-8ba7-ddbb01ccfb2b",
+    "name" : "Creates an idea activity entry.",
+    "request" : {
+      "urlPath" : "/v1alpha/83zck52qr34towr0ualbut24qo0era8dme5ctoz9hkmvri1afl2q8cua3ju1g29cvdvsxwc1qum8vqb2c9lz4nxfessfgjufj3dvhuxkrkubrsvdrabe15y020lji03f18zms6f47y89olhny4qtvzi1k98xmqf8qxhg6ba7wsu/ideaActivities",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"topics\" : [ \"qweihlwxahkvgzzvdgv6ww0a31ff04wb0odsq1v7ja9sycntf3m65ulngql8fl6ezupu5peslp3am90jwp\", \"4ozlyblmq5mdrr1ysrw2dt6qyatpjso501aa3que71wt7mwctv1lsz46y5cvkaknj8cgpv0jfvte24qkqqgrztelwodhhuk2k5kzgvfdvzfeva26olw38ag07rcjui\", \"uxr3pcia8t264whjhrn6hsfj9c7lcwfv3wkc3raxjdzm9wkqkdt5s2lmhb9i3phcvz7qg8zk93b8rf27fme8\", \"p2ndachvgxeeijl049ogkkgeqrhenmoahk0vm8f5uurl686czz6bw5aees1sikcd07gfjie0cqhl5w2k3tpwwlfpzu0zlc9lug8z1uvht7yjpzg542qs6684a1dpw89dufukgs9abobb4\", \"3atwemh60i0u8t8hvrz9jwyo9d79d76xk87jakg0e3g1fk1flifp4kbux0bio5zfqtx5hmym5h2w6xet0y9irqw51yggtuujhy594c8gqj2rizk8n4m36urisao5wucxc21ktux4tisydu3bw0z5vzszbos7\", \"c6y62wu89bmajheucbcbsjnjp47vdah10il3uyy3cynw2qh2g\", \"vcdn9yk1h9sgiar1etgikrquqljhzhga2c2v38zl0fj\", \"ittzauz9o4rdhkaf3qq0dox0811a47jpjqdsthsg8vs6ifn4p5y4bm04k40qy22oca5hqbkuxr3vfvxq2bc2u6t5o1bkmkfxe16woybjo7nfsdfn6uawicc4o1mgpdb9xsd20g\" ],\n  \"name\" : \"Eliza Ritchie PhD\",\n  \"ideas\" : [ \"4s8w96t4h107ocg9da3c4aci4phse2\", \"s4ppts0qtmp7ddas5uxj920gvqksh6m1e3e1oegisf135eyeo65e1otkc3g17q4akxagvezyw0mazrbmtnalseopsmnm5zxtlzajy\", \"xll1sa47k9o3o4v4\", \"0s3111iqhxt5itpfifdo0vg0h21ydqo4z93se72fp3x6h4v1giaoy959pw3apzg55vb1mmqp5kmp5wulrdqremdcbs\", \"oshcbfkdx2036wsc8370jja9gk4i1m0kb5a04595xw12tg980htduyjuq47ffrg0oxxxeamnja8i4v8q6nde3i1ipo30xh26q6dfvamabnmd4yk4g966duppb27641c0ommero7gx\" ],\n  \"type\" : \"POST_UNPUBLISHED\",\n  \"uri\" : \"https://web.example.mocklab.io/831863\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "f42c5ac8-ffa6-4a20-8ba7-ddbb01ccfb2b",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:40.484235Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "ideahub.platforms.properties.ideaActivities.create",
+          "schema" : {
+            "description" : "An idea activity entry.",
+            "properties" : {
+              "ideas" : {
+                "description" : "The Idea IDs for this entry. If empty, topics should be set.",
+                "items" : {
+                  "type" : "string"
+                },
+                "type" : "array"
+              },
+              "name" : {
+                "description" : "Unique identifier for the idea activity. The name is ignored when creating an idea activity. Format: platforms/{platform}/properties/{property}/ideaActivities/{idea_activity}",
+                "type" : "string"
+              },
+              "topics" : {
+                "description" : "The Topic IDs for this entry. If empty, ideas should be set.",
+                "items" : {
+                  "type" : "string"
+                },
+                "type" : "array"
+              },
+              "type" : {
+                "description" : "The type of activity performed.",
+                "enum" : [ "TYPE_UNSPECIFIED", "POST_DRAFTED", "POST_PUBLISHED", "POST_DELETED", "POST_UNPUBLISHED" ],
+                "type" : "string"
+              },
+              "uri" : {
+                "description" : "The uri the activity relates to.",
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 2
+  }, {
+    "id" : "79951033-5cb5-4623-9f7b-4b6fc90f854d",
+    "name" : "Update a topic state resource.",
+    "request" : {
+      "urlPath" : "/v1alpha/Kim+DuBuque",
+      "method" : "PATCH"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"saved\" : false,\n  \"dismissed\" : false,\n  \"name\" : \"Hollie Abernathy\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "79951033-5cb5-4623-9f7b-4b6fc90f854d",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:40.483889Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "ideahub.platforms.properties.topicStates.patch",
+          "schema" : {
+            "description" : "Represents topic state specific to a web property.",
+            "properties" : {
+              "dismissed" : {
+                "description" : "Whether the topic is dismissed.",
+                "type" : "boolean"
+              },
+              "name" : {
+                "description" : "Unique identifier for the topic state. Format: platforms/{platform}/properties/{property}/topicStates/{topic_state}",
+                "type" : "string"
+              },
+              "saved" : {
+                "description" : "Whether the topic is saved.",
+                "type" : "boolean"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 3
+  }, {
+    "id" : "8c24a1d1-4042-4a5d-8163-e790af7a108c",
+    "name" : "List ideas for a given Creator and filter and sort options.",
+    "request" : {
+      "urlPath" : "/v1alpha/ideas",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"nextPageToken\" : \"gprcpeolkxnzmd1f935ztdbllzmt2lbbygs4hzv2aayih6x72sb9xtk\",\n  \"ideas\" : [ {\n    \"topics\" : [ {\n      \"displayName\" : \"Mr. Andreas Littel\",\n      \"name\" : \"Miss Jon Baumbach\",\n      \"mid\" : \"5457\"\n    } ],\n    \"name\" : \"Trish Dach IV\",\n    \"text\" : \"526cq5az5gwq3tx3ndilx91vipqhlqz5qcjzn8r9f6c5tf1hhliyiwxvszc8lk0l7lpocq4zbpqpbpix6kqg04zoqsjx6g48x\"\n  }, {\n    \"topics\" : [ {\n      \"displayName\" : \"Tynisha Kiehn\",\n      \"name\" : \"Jere Bahringer\",\n      \"mid\" : \"uz4y\"\n    }, {\n      \"displayName\" : \"Georgianna Bogisich MD\",\n      \"name\" : \"Ms. Lowell Keebler\",\n      \"mid\" : \"rf41\"\n    }, {\n      \"displayName\" : \"Bernadine Kshlerin\",\n      \"name\" : \"Temeka Walker V\",\n      \"mid\" : \"6ye8\"\n    }, {\n      \"displayName\" : \"Stan O'Keefe\",\n      \"name\" : \"Dick Harris\",\n      \"mid\" : \"m6i0\"\n    }, {\n      \"displayName\" : \"Tyrell Ledner\",\n      \"name\" : \"Danille MacGyver II\",\n      \"mid\" : \"ky58\"\n    }, {\n      \"displayName\" : \"Lovetta Stark\",\n      \"name\" : \"Mrs. Bobbi Steuber\",\n      \"mid\" : \"814v\"\n    } ],\n    \"name\" : \"Donn Corkery MD\",\n    \"text\" : \"udigkaeo56gqrvw1z\"\n  }, {\n    \"topics\" : [ {\n      \"displayName\" : \"Willow Bernhard\",\n      \"name\" : \"Margareta Hirthe\",\n      \"mid\" : \"6jy7\"\n    }, {\n      \"displayName\" : \"Miss Larry Braun\",\n      \"name\" : \"Clarita Boehm\",\n      \"mid\" : \"4329\"\n    }, {\n      \"displayName\" : \"Dr. Hiram O'Conner\",\n      \"name\" : \"Vernia Weber V\",\n      \"mid\" : \"o0ha\"\n    }, {\n      \"displayName\" : \"Wilber Kemmer\",\n      \"name\" : \"Vern Barrows\",\n      \"mid\" : \"g99c\"\n    }, {\n      \"displayName\" : \"Alexa Crona\",\n      \"name\" : \"Magen Grant III\",\n      \"mid\" : \"2a9g\"\n    }, {\n      \"displayName\" : \"Clark Wilderman\",\n      \"name\" : \"Dortha Witting\",\n      \"mid\" : \"r0if\"\n    }, {\n      \"displayName\" : \"Breana Wehner\",\n      \"name\" : \"Courtney Schulist MD\",\n      \"mid\" : \"b63j\"\n    } ],\n    \"name\" : \"Ms. Clifton Haley\",\n    \"text\" : \"kk45kya5n65qvpgpzo2qvw4njd14vsocy4a8pw3or6tsi43g7kwmczbe16605ss3as02ffivv8clksyj51z8dbi2wpeto729qolkjz6q7j5c1zncolzj5v1o98050dgxeo6x5rl1bi1qoyzl5u97dooxhy438bv\"\n  }, {\n    \"topics\" : [ {\n      \"displayName\" : \"Somer O'Keefe\",\n      \"name\" : \"Amalia Wolff V\",\n      \"mid\" : \"d4a5\"\n    } ],\n    \"name\" : \"Dr. Fredrick Torphy\",\n    \"text\" : \"styknspidexk2ijtjde3hqq4hc02vx1vd7xm6re89hubcjytnvb6bk3n7l9jq4noha6vk80yt4an623pth9mlen07fkirl8wdoiwo4if3\"\n  }, {\n    \"topics\" : [ {\n      \"displayName\" : \"Virgilio Zieme V\",\n      \"name\" : \"Otha Nicolas\",\n      \"mid\" : \"vr5f\"\n    }, {\n      \"displayName\" : \"Lino Morar\",\n      \"name\" : \"Nichelle Bogan Sr.\",\n      \"mid\" : \"mzv7\"\n    }, {\n      \"displayName\" : \"Victorina Gleichner III\",\n      \"name\" : \"Breann Braun\",\n      \"mid\" : \"j2uy\"\n    }, {\n      \"displayName\" : \"Mr. Carol Mertz\",\n      \"name\" : \"Elwood Williamson\",\n      \"mid\" : \"dfht\"\n    }, {\n      \"displayName\" : \"Lemuel Boehm PhD\",\n      \"name\" : \"Shaquita Kihn III\",\n      \"mid\" : \"qf3z\"\n    }, {\n      \"displayName\" : \"Kasey Kuhic\",\n      \"name\" : \"Colleen Johnson\",\n      \"mid\" : \"2ysd\"\n    } ],\n    \"name\" : \"Pasquale Hills\",\n    \"text\" : \"dc5isc7s1u4opp41xwgzigbhff0pv9qeqq6a1csad69fzmt\"\n  }, {\n    \"topics\" : [ {\n      \"displayName\" : \"Kiara Feest\",\n      \"name\" : \"Cristen Nolan PhD\",\n      \"mid\" : \"7s5g\"\n    }, {\n      \"displayName\" : \"Pierre Weissnat\",\n      \"name\" : \"Mathew Fritsch PhD\",\n      \"mid\" : \"6ya9\"\n    }, {\n      \"displayName\" : \"Nick Paucek\",\n      \"name\" : \"Genesis Larkin\",\n      \"mid\" : \"et8g\"\n    } ],\n    \"name\" : \"Armand Ebert MD\",\n    \"text\" : \"qyj2wppbqes72756z6rz3gjblhg2w2iui3yezdb7ed116ookri9cgggc9i4gniwnrwclcb15oxqz1fadvwjbi52925f5qjwqu1khaflidq7zzu51t0qwzdxy00m4n16uuhf0vqotwj3jz8flvey7zqpopdozow67750fpmyf952dup6199ec47jj3xrgi8cdxgk6\"\n  }, {\n    \"topics\" : [ {\n      \"displayName\" : \"Chet Mayer\",\n      \"name\" : \"Adalberto Gulgowski\",\n      \"mid\" : \"dmrs\"\n    }, {\n      \"displayName\" : \"Agustin White I\",\n      \"name\" : \"Caleb Renner\",\n      \"mid\" : \"nwh9\"\n    }, {\n      \"displayName\" : \"Rafael Welch\",\n      \"name\" : \"Miss Drew Lynch\",\n      \"mid\" : \"qx6w\"\n    }, {\n      \"displayName\" : \"Dr. Alec Nader\",\n      \"name\" : \"Mr. Micheal Flatley\",\n      \"mid\" : \"gbxx\"\n    }, {\n      \"displayName\" : \"Oswaldo Cruickshank\",\n      \"name\" : \"Shizue Hessel DVM\",\n      \"mid\" : \"53cb\"\n    }, {\n      \"displayName\" : \"Mohammed Hahn\",\n      \"name\" : \"Annalee Grant Sr.\",\n      \"mid\" : \"5zmn\"\n    } ],\n    \"name\" : \"Dr. Carroll Hodkiewicz\",\n    \"text\" : \"9hfhhn9twn1d5igt4frimux60jy6b1ds16sw57drhc7glbbj97hjbpbs3esu8vfd7afyoyf2laricvpge936pcicecnrru\"\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "8c24a1d1-4042-4a5d-8163-e790af7a108c",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:40.483689Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "ideahub.ideas.list",
+          "schema" : {
+            "properties" : {
+              "ideas" : {
+                "description" : "Results for the ListIdeasRequest.",
+                "items" : {
+                  "$ref" : "#/components/schemas/GoogleSearchIdeahubV1alphaIdea"
+                },
+                "type" : "array"
+              },
+              "nextPageToken" : {
+                "description" : "Used to fetch the next page in a subsequent request.",
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 4
+  } ]
+}

@@ -1,0 +1,352 @@
+{
+  "mappings" : [ {
+    "id" : "03a0777d-b777-47b2-9cd2-319da00c8020",
+    "name" : "Allows a contact admin to send a test message to contact to verify that it has b...",
+    "request" : {
+      "urlPath" : "/v1/b7r9z1sq/contacts:sendTestMessage",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{ }",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "03a0777d-b777-47b2-9cd2-319da00c8020",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:31.895891Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "essentialcontacts.projects.contacts.sendTestMessage",
+          "schema" : {
+            "description" : "A generic empty message that you can re-use to avoid defining duplicated empty messages in your APIs. A typical example is to use it as the request or the response type of an API method. For instance: service Foo { rpc Bar(google.protobuf.Empty) returns (google.protobuf.Empty); }",
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 0
+  }, {
+    "id" : "3fced97a-7767-4e69-8b25-53eb1220394a",
+    "name" : "Lists all contacts for the resource that are subscribed to the specified notific...",
+    "request" : {
+      "urlPath" : "/v1/5ldzpukdar3rxpao8qi5dabtbf3jo7mrtlxx9g6l2/contacts:compute",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"nextPageToken\" : \"ghny3h2d6ci5s98gn1sd3junx5xvd313dmolouxbu5zc2qx0bmbafa0cja51gvnya8tisweq8jjmsawjyh6fgk5cd7vr1blig1g03acwy3b668mdruygqcx0y7uexn7nu4u8xqk4y7ah03y2y6q8lncp6136a7xpci2xuu8e8hmuh076ko8nhy71\",\n  \"contacts\" : [ {\n    \"validateTime\" : \"2023-02-14T07:01:31.895152Z\",\n    \"notificationCategorySubscriptions\" : [ \"BILLING\" ],\n    \"name\" : \"Herbert Kiehn\",\n    \"languageTag\" : \"numquam\",\n    \"email\" : \"6igza35ltmogvuujln8kj6ksyjsqm416l77a6r2x20c0x5rmn3ik9pzeazxxa0oym4l0jqwia7ig5s08g22kmdxwuegyr2abgx0c2079gn4\",\n    \"validationState\" : \"VALIDATION_STATE_UNSPECIFIED\"\n  }, {\n    \"validateTime\" : \"2022-05-07T07:13:31.895321Z\",\n    \"notificationCategorySubscriptions\" : [ \"ALL\", \"SUSPENSION\" ],\n    \"name\" : \"Maximo Denesik\",\n    \"languageTag\" : \"uuuut\",\n    \"email\" : \"sq8fx9xiry0ipfxbd87sf\",\n    \"validationState\" : \"VALID\"\n  }, {\n    \"validateTime\" : \"2022-09-27T09:16:31.895466Z\",\n    \"notificationCategorySubscriptions\" : [ \"TECHNICAL\", \"BILLING\", \"TECHNICAL_INCIDENTS\", \"SECURITY\", \"NOTIFICATION_CATEGORY_UNSPECIFIED\", \"SECURITY\", \"SECURITY\" ],\n    \"name\" : \"Naomi Raynor\",\n    \"languageTag\" : \"harum\",\n    \"email\" : \"j6wxedy4r56yhvnrz0ocdj7ufagbgygxx8nn0gqyckflfqye0jo209jvrom0c6de8xsidiozwbm21c15fjcmj0hhjl9x0sjj1qw0v2xj1j2jhmofyihsd2rnv\",\n    \"validationState\" : \"VALID\"\n  }, {\n    \"validateTime\" : \"2022-04-25T07:44:31.89561Z\",\n    \"notificationCategorySubscriptions\" : [ \"SECURITY\", \"TECHNICAL_INCIDENTS\", \"NOTIFICATION_CATEGORY_UNSPECIFIED\", \"SUSPENSION\", \"ALL\", \"LEGAL\", \"TECHNICAL\", \"PRODUCT_UPDATES\" ],\n    \"name\" : \"Inge Stokes MD\",\n    \"languageTag\" : \"temporibus\",\n    \"email\" : \"h3tu\",\n    \"validationState\" : \"VALID\"\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "3fced97a-7767-4e69-8b25-53eb1220394a",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:31.895823Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "essentialcontacts.projects.contacts.compute",
+          "schema" : {
+            "description" : "Response message for the ComputeContacts method.",
+            "properties" : {
+              "contacts" : {
+                "description" : "All contacts for the resource that are subscribed to the specified notification categories, including contacts inherited from any parent resources.",
+                "items" : {
+                  "$ref" : "#/components/schemas/GoogleCloudEssentialcontactsV1Contact"
+                },
+                "type" : "array"
+              },
+              "nextPageToken" : {
+                "description" : "If there are more results than those appearing in this response, then `next_page_token` is included. To get the next set of results, call this method again using the value of `next_page_token` as `page_token` and the rest of the parameters the same as the original request.",
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 1
+  }, {
+    "id" : "e771f9fc-f5ff-4b98-9470-21b8b9fdd68f",
+    "name" : "Adds a new contact for a resource.",
+    "request" : {
+      "urlPath" : "/v1/9q2pn48f8xdi0ffc622i9nwc1lrfpyrop9b7n7tedpnbu4kck0dd13o122/contacts",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"validateTime\" : \"2022-08-14T07:13:31.894888Z\",\n  \"notificationCategorySubscriptions\" : [ \"SECURITY\", \"LEGAL\", \"TECHNICAL_INCIDENTS\", \"ALL\", \"NOTIFICATION_CATEGORY_UNSPECIFIED\", \"NOTIFICATION_CATEGORY_UNSPECIFIED\" ],\n  \"name\" : \"Nina Crona\",\n  \"languageTag\" : \"unde\",\n  \"email\" : \"ad8n5tsgxwc7oprmcmf1bmxjubdnzjnj2y9cg3d8bkfl28h705nmpj16to04080i3cdmuvq0djb6zwf51ygu7s7bugdpoztr0215\",\n  \"validationState\" : \"INVALID\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "e771f9fc-f5ff-4b98-9470-21b8b9fdd68f",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:31.895087Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "essentialcontacts.projects.contacts.create",
+          "schema" : {
+            "description" : "A contact that will receive notifications from Google Cloud.",
+            "properties" : {
+              "email" : {
+                "description" : "Required. The email address to send notifications to. The email address does not need to be a Google Account.",
+                "type" : "string"
+              },
+              "languageTag" : {
+                "description" : "Required. The preferred language for notifications, as a ISO 639-1 language code. See [Supported languages](https://cloud.google.com/resource-manager/docs/managing-notification-contacts#supported-languages) for a list of supported languages.",
+                "type" : "string"
+              },
+              "name" : {
+                "description" : "Output only. The identifier for the contact. Format: {resource_type}/{resource_id}/contacts/{contact_id}",
+                "readOnly" : true,
+                "type" : "string"
+              },
+              "notificationCategorySubscriptions" : {
+                "description" : "Required. The categories of notifications that the contact will receive communications for.",
+                "items" : {
+                  "enum" : [ "NOTIFICATION_CATEGORY_UNSPECIFIED", "ALL", "SUSPENSION", "SECURITY", "TECHNICAL", "BILLING", "LEGAL", "PRODUCT_UPDATES", "TECHNICAL_INCIDENTS" ],
+                  "type" : "string"
+                },
+                "type" : "array"
+              },
+              "validateTime" : {
+                "description" : "The last time the validation_state was updated, either manually or automatically. A contact is considered stale if its validation state was updated more than 1 year ago.",
+                "format" : "google-datetime",
+                "type" : "string"
+              },
+              "validationState" : {
+                "description" : "The validity of the contact. A contact is considered valid if it is the correct recipient for notifications for a particular resource.",
+                "enum" : [ "VALIDATION_STATE_UNSPECIFIED", "VALID", "INVALID" ],
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 2
+  }, {
+    "id" : "dbc78179-01a1-404d-bbe4-3beb330c7a50",
+    "name" : "Lists the contacts that have been set on a resource.",
+    "request" : {
+      "urlPath" : "/v1/f48a4qyyif02niyh4w5hg9npxoq0jno9v4fcbi5xck3ze1cbcsr0madln316hep75x1pxlov4qbycrye3ueh0j55e89rjt4/contacts",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"nextPageToken\" : \"1w0j3hzzoiulnxylvsrplmi7j4j7wlo5wh3lwgcbnzvqn41p\",\n  \"contacts\" : [ {\n    \"validateTime\" : \"2022-05-24T08:15:31.893873Z\",\n    \"notificationCategorySubscriptions\" : [ \"LEGAL\", \"TECHNICAL_INCIDENTS\", \"SECURITY\" ],\n    \"name\" : \"Elza Kemmer\",\n    \"languageTag\" : \"sit\",\n    \"email\" : \"r3wsoy7odxph5tl3kf0cxt955e7thmpeefahlgykrzd4nvbyc9smto3m23yl55xvr4oqi0ff8k1ruc12eee9jq0o0to701lmliuwy22lcs\",\n    \"validationState\" : \"VALIDATION_STATE_UNSPECIFIED\"\n  }, {\n    \"validateTime\" : \"2023-02-06T07:35:31.894Z\",\n    \"notificationCategorySubscriptions\" : [ \"LEGAL\", \"SECURITY\", \"TECHNICAL_INCIDENTS\", \"BILLING\" ],\n    \"name\" : \"Chere Mitchell\",\n    \"languageTag\" : \"nihil\",\n    \"email\" : \"ychtqc3qf3wl8nybckz317p4a4zokzyqndb8txkvwmi7x81mizkuvzpc1rthoxt7vb03nspbtul3tg2e4pzfmbn9pdalmdgndqtcwrqqhzh1ulznqtjoe9ggqbxl9b5phxyxgpvhxjppih6zlchrvce81hvx33a1shhbjm\",\n    \"validationState\" : \"VALIDATION_STATE_UNSPECIFIED\"\n  }, {\n    \"validateTime\" : \"2022-07-26T05:33:31.894123Z\",\n    \"notificationCategorySubscriptions\" : [ \"LEGAL\", \"ALL\", \"LEGAL\", \"SUSPENSION\", \"TECHNICAL_INCIDENTS\", \"SECURITY\", \"SUSPENSION\" ],\n    \"name\" : \"Andy Koelpin\",\n    \"languageTag\" : \"placeat\",\n    \"email\" : \"pi1x7my566515mtp44hhjsanevcrjasmc5ca49s51jkpsrhpcet7u03mvp1e8bsiel7rm4ogcjgp4cak2ymm3m8g9jsc0iv0s3g2ntvr81\",\n    \"validationState\" : \"VALIDATION_STATE_UNSPECIFIED\"\n  }, {\n    \"validateTime\" : \"2022-04-05T06:20:31.89426Z\",\n    \"notificationCategorySubscriptions\" : [ \"TECHNICAL_INCIDENTS\", \"SUSPENSION\" ],\n    \"name\" : \"Terrie Senger\",\n    \"languageTag\" : \"minima\",\n    \"email\" : \"bgcqtn8dhoxv7rgt9d952bavi8q2dna1ua3k4bzrshyp637dq5lqwkc6n9ran27cnx8upek75oyo5zctc985i6106rutjo9p5a63e1z9ilg8f4c8pkq\",\n    \"validationState\" : \"VALID\"\n  }, {\n    \"validateTime\" : \"2022-08-29T08:05:31.894393Z\",\n    \"notificationCategorySubscriptions\" : [ \"SUSPENSION\", \"BILLING\", \"NOTIFICATION_CATEGORY_UNSPECIFIED\", \"TECHNICAL\", \"BILLING\", \"PRODUCT_UPDATES\" ],\n    \"name\" : \"Mr. Lawerence Crona\",\n    \"languageTag\" : \"incidunt\",\n    \"email\" : \"o2ikf3wnspuatguap7w0551ui8520n8v4qzou9d\",\n    \"validationState\" : \"INVALID\"\n  }, {\n    \"validateTime\" : \"2022-11-19T08:02:31.894523Z\",\n    \"notificationCategorySubscriptions\" : [ \"TECHNICAL\" ],\n    \"name\" : \"Spencer Hoppe\",\n    \"languageTag\" : \"uuuut\",\n    \"email\" : \"qx2geszfmz6br4vkipoxp0y4t2lnrbzuur00jzslh5qtshy9tp137k8c1c3j09te43ioc4onn0nrqhowgmhm8oj124w1plpslepo5w4t1x26zu6ov3fzk0slx966unfiwecvwimbp2vmpu1w7g95aayuhvvie6z3yp8acggdmu\",\n    \"validationState\" : \"VALID\"\n  }, {\n    \"validateTime\" : \"2022-04-16T06:03:31.894646Z\",\n    \"notificationCategorySubscriptions\" : [ \"TECHNICAL\", \"BILLING\", \"TECHNICAL\", \"NOTIFICATION_CATEGORY_UNSPECIFIED\", \"PRODUCT_UPDATES\", \"TECHNICAL\" ],\n    \"name\" : \"Jody Stokes DVM\",\n    \"languageTag\" : \"ducimus\",\n    \"email\" : \"js0\",\n    \"validationState\" : \"VALID\"\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "dbc78179-01a1-404d-bbe4-3beb330c7a50",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:31.894849Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "essentialcontacts.projects.contacts.list",
+          "schema" : {
+            "description" : "Response message for the ListContacts method.",
+            "properties" : {
+              "contacts" : {
+                "description" : "The contacts for the specified resource.",
+                "items" : {
+                  "$ref" : "#/components/schemas/GoogleCloudEssentialcontactsV1Contact"
+                },
+                "type" : "array"
+              },
+              "nextPageToken" : {
+                "description" : "If there are more results than those appearing in this response, then `next_page_token` is included. To get the next set of results, call this method again using the value of `next_page_token` as `page_token` and the rest of the parameters the same as the original request.",
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 3
+  }, {
+    "id" : "1a63133c-a585-43b8-b350-802276835961",
+    "name" : "Updates a contact. Note: A contact's email address cannot be changed.",
+    "request" : {
+      "urlPath" : "/v1/Marylin+Smith",
+      "method" : "PATCH"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"validateTime\" : \"2022-07-16T06:54:31.8936Z\",\n  \"notificationCategorySubscriptions\" : [ \"TECHNICAL\" ],\n  \"name\" : \"Dwayne Jacobs\",\n  \"languageTag\" : \"animi\",\n  \"email\" : \"1f19m6lg1yxpqzyyz3sjdmiygzwof8d0xmzlss5tkavcor1wywyqhcgn5op7uw0a843pvmh3ois8pc10j141pvbzkjnxtb69va8yck9qbe46tlquds5tst1mtdyvyk0jm7br4iti8uf1wvluk03sg\",\n  \"validationState\" : \"VALID\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "1a63133c-a585-43b8-b350-802276835961",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:31.893806Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "essentialcontacts.projects.contacts.patch",
+          "schema" : {
+            "description" : "A contact that will receive notifications from Google Cloud.",
+            "properties" : {
+              "email" : {
+                "description" : "Required. The email address to send notifications to. The email address does not need to be a Google Account.",
+                "type" : "string"
+              },
+              "languageTag" : {
+                "description" : "Required. The preferred language for notifications, as a ISO 639-1 language code. See [Supported languages](https://cloud.google.com/resource-manager/docs/managing-notification-contacts#supported-languages) for a list of supported languages.",
+                "type" : "string"
+              },
+              "name" : {
+                "description" : "Output only. The identifier for the contact. Format: {resource_type}/{resource_id}/contacts/{contact_id}",
+                "readOnly" : true,
+                "type" : "string"
+              },
+              "notificationCategorySubscriptions" : {
+                "description" : "Required. The categories of notifications that the contact will receive communications for.",
+                "items" : {
+                  "enum" : [ "NOTIFICATION_CATEGORY_UNSPECIFIED", "ALL", "SUSPENSION", "SECURITY", "TECHNICAL", "BILLING", "LEGAL", "PRODUCT_UPDATES", "TECHNICAL_INCIDENTS" ],
+                  "type" : "string"
+                },
+                "type" : "array"
+              },
+              "validateTime" : {
+                "description" : "The last time the validation_state was updated, either manually or automatically. A contact is considered stale if its validation state was updated more than 1 year ago.",
+                "format" : "google-datetime",
+                "type" : "string"
+              },
+              "validationState" : {
+                "description" : "The validity of the contact. A contact is considered valid if it is the correct recipient for notifications for a particular resource.",
+                "enum" : [ "VALIDATION_STATE_UNSPECIFIED", "VALID", "INVALID" ],
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 4
+  }, {
+    "id" : "ffd31a98-e10f-4b5f-8607-6f6f2e7867b6",
+    "name" : "Gets a single contact.",
+    "request" : {
+      "urlPath" : "/v1/Melany+Rau",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"validateTime\" : \"2022-10-18T08:01:31.893237Z\",\n  \"notificationCategorySubscriptions\" : [ \"NOTIFICATION_CATEGORY_UNSPECIFIED\", \"LEGAL\", \"TECHNICAL\", \"SECURITY\" ],\n  \"name\" : \"Terisa Pfeffer\",\n  \"languageTag\" : \"reprehenderit\",\n  \"email\" : \"dgjkbvl2whuxt9lt0fiolq24ourp1qun03tfhep6p7yrzirt\",\n  \"validationState\" : \"VALID\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "ffd31a98-e10f-4b5f-8607-6f6f2e7867b6",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:31.893554Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "essentialcontacts.projects.contacts.get",
+          "schema" : {
+            "description" : "A contact that will receive notifications from Google Cloud.",
+            "properties" : {
+              "email" : {
+                "description" : "Required. The email address to send notifications to. The email address does not need to be a Google Account.",
+                "type" : "string"
+              },
+              "languageTag" : {
+                "description" : "Required. The preferred language for notifications, as a ISO 639-1 language code. See [Supported languages](https://cloud.google.com/resource-manager/docs/managing-notification-contacts#supported-languages) for a list of supported languages.",
+                "type" : "string"
+              },
+              "name" : {
+                "description" : "Output only. The identifier for the contact. Format: {resource_type}/{resource_id}/contacts/{contact_id}",
+                "readOnly" : true,
+                "type" : "string"
+              },
+              "notificationCategorySubscriptions" : {
+                "description" : "Required. The categories of notifications that the contact will receive communications for.",
+                "items" : {
+                  "enum" : [ "NOTIFICATION_CATEGORY_UNSPECIFIED", "ALL", "SUSPENSION", "SECURITY", "TECHNICAL", "BILLING", "LEGAL", "PRODUCT_UPDATES", "TECHNICAL_INCIDENTS" ],
+                  "type" : "string"
+                },
+                "type" : "array"
+              },
+              "validateTime" : {
+                "description" : "The last time the validation_state was updated, either manually or automatically. A contact is considered stale if its validation state was updated more than 1 year ago.",
+                "format" : "google-datetime",
+                "type" : "string"
+              },
+              "validationState" : {
+                "description" : "The validity of the contact. A contact is considered valid if it is the correct recipient for notifications for a particular resource.",
+                "enum" : [ "VALIDATION_STATE_UNSPECIFIED", "VALID", "INVALID" ],
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 5
+  }, {
+    "id" : "750fe1dc-43ed-4a7f-a237-db60babf9917",
+    "name" : "Deletes a contact.",
+    "request" : {
+      "urlPath" : "/v1/Caridad+Conn",
+      "method" : "DELETE"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{ }",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "750fe1dc-43ed-4a7f-a237-db60babf9917",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:31.893154Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "essentialcontacts.projects.contacts.delete",
+          "schema" : {
+            "description" : "A generic empty message that you can re-use to avoid defining duplicated empty messages in your APIs. A typical example is to use it as the request or the response type of an API method. For instance: service Foo { rpc Bar(google.protobuf.Empty) returns (google.protobuf.Empty); }",
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 6
+  } ]
+}

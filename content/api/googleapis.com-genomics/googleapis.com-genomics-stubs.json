@@ -1,0 +1,245 @@
+{
+  "mappings" : [ {
+    "id" : "890bc327-d290-4721-a375-30366a2369ac",
+    "name" : "Starts asynchronous cancellation on a long-running operation. The server makes a...",
+    "request" : {
+      "urlPath" : "/v2alpha1/Sandi+VonRueden:cancel",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{ }",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "890bc327-d290-4721-a375-30366a2369ac",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:37.447741Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "genomics.projects.operations.cancel",
+          "schema" : {
+            "description" : "A generic empty message that you can re-use to avoid defining duplicated empty messages in your APIs. A typical example is to use it as the request or the response type of an API method. For instance: service Foo { rpc Bar(google.protobuf.Empty) returns (google.protobuf.Empty); }",
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 0
+  }, {
+    "id" : "416f8bb8-e9ac-460c-9654-b17d59d66b2c",
+    "name" : "Lists operations that match the specified filter in the request. Authorization r...",
+    "request" : {
+      "urlPath" : "/v2alpha1/Delisa+Metz",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"operations\" : [ {\n    \"metadata\" : { },\n    \"response\" : { },\n    \"name\" : \"Bianca Johns\",\n    \"error\" : {\n      \"code\" : 394409781,\n      \"details\" : [ { }, { }, { }, { }, { } ],\n      \"message\" : \"Eligendi corrupti libero architecto quia. Vitae aliquid molestiae. Minima voluptatem non eum officia nesciunt dolores cupiditate. Ducimus sit optio. Consequuntur est enim dicta omnis.\"\n    },\n    \"done\" : false\n  } ],\n  \"nextPageToken\" : \"olsj4mdkpc3l8llcna1xlrv7xa13sqm0l8pit0lmt6r7cggbtm6tpqy7xpz6522dtt275pjxpzszug6c8p0dhxt7rl95ud4g9knyfg8eec7fcrgpi2106y53ssd9xe2clmofgrkuvsa9le5dx730r45wnf8e5xrl8rl\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "416f8bb8-e9ac-460c-9654-b17d59d66b2c",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:37.447656Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "genomics.projects.operations.list",
+          "schema" : {
+            "description" : "The response message for Operations.ListOperations.",
+            "properties" : {
+              "nextPageToken" : {
+                "description" : "The standard List next-page token.",
+                "type" : "string"
+              },
+              "operations" : {
+                "description" : "A list of operations that matches the specified filter in the request.",
+                "items" : {
+                  "$ref" : "#/components/schemas/Operation"
+                },
+                "type" : "array"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 1
+  }, {
+    "id" : "0c43e5e7-de29-4ce7-9a12-8ea89fb44f84",
+    "name" : "The worker uses this method to retrieve the assigned operation and provide perio...",
+    "request" : {
+      "urlPath" : "/v2alpha1/z5kx:checkIn",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"features\" : { },\n  \"metadata\" : { },\n  \"deadline\" : \"2alg2u2azq81rz2llmwmmymc8xezte7ing68bbd9dxzbnyqg1dxldeihngjd9w60adfqd7fmtuqlb8drczbs1i3w1gn0febhuynj2sfbnyz6coc3mlqgwu74h4x446wkjp3rrvln8j0fuzy286zcpx8h4wqahy312921o0hu0rxf9pvhlq\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "0c43e5e7-de29-4ce7-9a12-8ea89fb44f84",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:37.447361Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "genomics.projects.workers.checkIn",
+          "schema" : {
+            "description" : "The response to the CheckIn method.",
+            "properties" : {
+              "deadline" : {
+                "description" : "The deadline by which the worker must request an extension. The backend will allow for network transmission time and other delays, but the worker must attempt to transmit the extension request no later than the deadline.",
+                "format" : "google-datetime",
+                "type" : "string"
+              },
+              "features" : {
+                "additionalProperties" : {
+                  "description" : "Properties of the object. Contains field @type with type URL."
+                },
+                "description" : "Feature configuration for the operation.",
+                "type" : "object"
+              },
+              "metadata" : {
+                "additionalProperties" : {
+                  "description" : "Properties of the object. Contains field @type with type URL."
+                },
+                "description" : "The metadata that describes the operation assigned to the worker.",
+                "type" : "object"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 2
+  }, {
+    "id" : "cc407cdf-7786-4da2-9c3e-0dba8a1082d3",
+    "name" : "The worker uses this method to retrieve the assigned operation and provide perio...",
+    "request" : {
+      "urlPath" : "/v2alpha1/workers/4l17:checkIn",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"features\" : { },\n  \"metadata\" : { },\n  \"deadline\" : \"s38nkb5dclp047idx6vfzj210p8lsrm15ub57u9t\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "cc407cdf-7786-4da2-9c3e-0dba8a1082d3",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:37.447174Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "genomics.workers.checkIn",
+          "schema" : {
+            "description" : "The response to the CheckIn method.",
+            "properties" : {
+              "deadline" : {
+                "description" : "The deadline by which the worker must request an extension. The backend will allow for network transmission time and other delays, but the worker must attempt to transmit the extension request no later than the deadline.",
+                "format" : "google-datetime",
+                "type" : "string"
+              },
+              "features" : {
+                "additionalProperties" : {
+                  "description" : "Properties of the object. Contains field @type with type URL."
+                },
+                "description" : "Feature configuration for the operation.",
+                "type" : "object"
+              },
+              "metadata" : {
+                "additionalProperties" : {
+                  "description" : "Properties of the object. Contains field @type with type URL."
+                },
+                "description" : "The metadata that describes the operation assigned to the worker.",
+                "type" : "object"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 3
+  }, {
+    "id" : "243d4ebb-893d-4017-88d0-91d5ac8778ab",
+    "name" : "Runs a pipeline. The returned Operation's metadata field will contain a google.g...",
+    "request" : {
+      "urlPath" : "/v2alpha1/pipelines:run",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"metadata\" : { },\n  \"response\" : { },\n  \"name\" : \"Daron Turcotte IV\",\n  \"error\" : {\n    \"code\" : 892554125,\n    \"details\" : [ { }, { }, { }, { }, { }, { }, { }, { } ],\n    \"message\" : \"Minus possimus et. Ad ullam ab. Aut est est ex est voluptatem dolorem. Quos magnam sed nam. Ipsam autem accusantium quibusdam et quod est beatae.\"\n  },\n  \"done\" : true\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "243d4ebb-893d-4017-88d0-91d5ac8778ab",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:37.446908Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "genomics.pipelines.run",
+          "schema" : {
+            "description" : "This resource represents a long-running operation that is the result of a network API call.",
+            "properties" : {
+              "done" : {
+                "description" : "If the value is `false`, it means the operation is still in progress. If `true`, the operation is completed, and either `error` or `response` is available.",
+                "type" : "boolean"
+              },
+              "error" : {
+                "$ref" : "#/components/schemas/Status"
+              },
+              "metadata" : {
+                "additionalProperties" : {
+                  "description" : "Properties of the object. Contains field @type with type URL."
+                },
+                "description" : "An OperationMetadata or Metadata object. This will always be returned with the Operation.",
+                "type" : "object"
+              },
+              "name" : {
+                "description" : "The server-assigned name, which is only unique within the same service that originally returns it. For example: `operations/CJHU7Oi_ChDrveSpBRjfuL-qzoWAgEw`",
+                "type" : "string"
+              },
+              "response" : {
+                "additionalProperties" : {
+                  "description" : "Properties of the object. Contains field @type with type URL."
+                },
+                "description" : "An Empty object.",
+                "type" : "object"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 4
+  } ]
+}
