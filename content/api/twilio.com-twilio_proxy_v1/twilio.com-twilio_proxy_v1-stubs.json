@@ -1,0 +1,2772 @@
+{
+  "mappings" : [ {
+    "id" : "baaf0947-f776-4bec-b066-2561f8eaba7d",
+    "name" : "Update a specific Service.",
+    "request" : {
+      "urlPath" : "/v1/Services/KS7AEF3Ef0cacb9d8AaeABB1fa1baaaf8D",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"date_updated\" : \"2022-07-19T19:07:37.439Z\",\n  \"intercept_callback_url\" : \"https://web.example.mocklab.io/234674\",\n  \"date_created\" : \"2023-10-12T06:25:35.439Z\",\n  \"chat_instance_sid\" : \"IS44c945EeCE75D8FCCC4e6cCcbabF6fce\",\n  \"geo_match_level\" : \"overlay\",\n  \"url\" : \"https://web.example.mocklab.io/704887\",\n  \"sid\" : \"KSf92bd14DBa8A20685A97BA9A83bF2047\",\n  \"callback_url\" : \"https://web.example.mocklab.io/479403\",\n  \"unique_name\" : \"Mrs. Shandi Greenholt\",\n  \"default_ttl\" : 5606406424023393784,\n  \"account_sid\" : \"ACB3FaD1F6ed210d84484AC9Ab143Bd239\",\n  \"links\" : { },\n  \"number_selection_behavior\" : \"prefer-sticky\",\n  \"out_of_session_callback_url\" : \"https://web.example.mocklab.io/013971\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "baaf0947-f776-4bec-b066-2561f8eaba7d",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:21.440069Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "UpdateService",
+          "schema" : {
+            "properties" : {
+              "account_sid" : {
+                "description" : "The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the Service resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^AC[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "callback_url" : {
+                "description" : "The URL we call when the interaction status changes.",
+                "format" : "uri",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "chat_instance_sid" : {
+                "description" : "The SID of the Chat Service Instance managed by Proxy Service. The Chat Service enables Proxy to forward SMS and channel messages to this chat instance. This is a one-to-one relationship.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^IS[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "date_created" : {
+                "description" : "The [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) date and time in GMT when the resource was created.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "date_updated" : {
+                "description" : "The [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) date and time in GMT when the resource was last updated.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "default_ttl" : {
+                "description" : "The default `ttl` value for Sessions created in the Service. The TTL (time to live) is measured in seconds after the Session's last create or last Interaction. The default value of `0` indicates an unlimited Session length. You can override a Session's default TTL value by setting its `ttl` value.",
+                "nullable" : true,
+                "type" : "integer"
+              },
+              "geo_match_level" : {
+                "$ref" : "#/components/schemas/service_enum_geo_match_level"
+              },
+              "intercept_callback_url" : {
+                "description" : "The URL we call on each interaction. If we receive a 403 status, we block the interaction; otherwise the interaction continues.",
+                "format" : "uri",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "links" : {
+                "description" : "The URLs of resources related to the Service.",
+                "format" : "uri-map",
+                "nullable" : true,
+                "type" : "object"
+              },
+              "number_selection_behavior" : {
+                "$ref" : "#/components/schemas/service_enum_number_selection_behavior"
+              },
+              "out_of_session_callback_url" : {
+                "description" : "The URL we call when an inbound call or SMS action occurs on a closed or non-existent Session. If your server (or a Twilio [function](https://www.twilio.com/functions)) responds with valid [TwiML](https://www.twilio.com/docs/voice/twiml), we will process it. This means it is possible, for example, to play a message for a call, send an automated text message response, or redirect a call to another Phone Number. See [Out-of-Session Callback Response Guide](https://www.twilio.com/docs/proxy/out-session-callback-response-guide) for more information.",
+                "format" : "uri",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "sid" : {
+                "description" : "The unique string that we created to identify the Service resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^KS[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "unique_name" : {
+                "description" : "An application-defined string that uniquely identifies the resource. This value must be 191 characters or fewer in length and be unique. Supports UTF-8 characters. **This value should not have PII.**",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "url" : {
+                "description" : "The absolute URL of the Service resource.",
+                "format" : "uri",
+                "nullable" : true,
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 0
+  }, {
+    "id" : "25ce0288-1808-4c34-b05c-08e20fa50147",
+    "name" : "Fetch a specific Service.",
+    "request" : {
+      "urlPath" : "/v1/Services/e3e0",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"date_updated\" : \"2023-03-08T15:47:43.438Z\",\n  \"intercept_callback_url\" : \"https://web.example.mocklab.io/352524\",\n  \"date_created\" : \"2024-03-20T05:12:18.439Z\",\n  \"chat_instance_sid\" : \"ISE3ebFC9137b466CAb82C717faba937fd\",\n  \"geo_match_level\" : \"radius\",\n  \"url\" : \"https://web.example.mocklab.io/887583\",\n  \"sid\" : \"KSc01EBBfbd12FC1eDe50A84c51Cd79fa6\",\n  \"callback_url\" : \"https://web.example.mocklab.io/830988\",\n  \"unique_name\" : \"Gretta Jaskolski\",\n  \"default_ttl\" : 6503081844580227787,\n  \"account_sid\" : \"ACB1FcA0AfFECA15223d639bEc92B4F6EE\",\n  \"links\" : { },\n  \"number_selection_behavior\" : \"prefer-sticky\",\n  \"out_of_session_callback_url\" : \"https://web.example.mocklab.io/557538\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "25ce0288-1808-4c34-b05c-08e20fa50147",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:21.439574Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "FetchService",
+          "schema" : {
+            "properties" : {
+              "account_sid" : {
+                "description" : "The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the Service resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^AC[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "callback_url" : {
+                "description" : "The URL we call when the interaction status changes.",
+                "format" : "uri",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "chat_instance_sid" : {
+                "description" : "The SID of the Chat Service Instance managed by Proxy Service. The Chat Service enables Proxy to forward SMS and channel messages to this chat instance. This is a one-to-one relationship.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^IS[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "date_created" : {
+                "description" : "The [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) date and time in GMT when the resource was created.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "date_updated" : {
+                "description" : "The [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) date and time in GMT when the resource was last updated.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "default_ttl" : {
+                "description" : "The default `ttl` value for Sessions created in the Service. The TTL (time to live) is measured in seconds after the Session's last create or last Interaction. The default value of `0` indicates an unlimited Session length. You can override a Session's default TTL value by setting its `ttl` value.",
+                "nullable" : true,
+                "type" : "integer"
+              },
+              "geo_match_level" : {
+                "$ref" : "#/components/schemas/service_enum_geo_match_level"
+              },
+              "intercept_callback_url" : {
+                "description" : "The URL we call on each interaction. If we receive a 403 status, we block the interaction; otherwise the interaction continues.",
+                "format" : "uri",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "links" : {
+                "description" : "The URLs of resources related to the Service.",
+                "format" : "uri-map",
+                "nullable" : true,
+                "type" : "object"
+              },
+              "number_selection_behavior" : {
+                "$ref" : "#/components/schemas/service_enum_number_selection_behavior"
+              },
+              "out_of_session_callback_url" : {
+                "description" : "The URL we call when an inbound call or SMS action occurs on a closed or non-existent Session. If your server (or a Twilio [function](https://www.twilio.com/functions)) responds with valid [TwiML](https://www.twilio.com/docs/voice/twiml), we will process it. This means it is possible, for example, to play a message for a call, send an automated text message response, or redirect a call to another Phone Number. See [Out-of-Session Callback Response Guide](https://www.twilio.com/docs/proxy/out-session-callback-response-guide) for more information.",
+                "format" : "uri",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "sid" : {
+                "description" : "The unique string that we created to identify the Service resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^KS[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "unique_name" : {
+                "description" : "An application-defined string that uniquely identifies the resource. This value must be 191 characters or fewer in length and be unique. Supports UTF-8 characters. **This value should not have PII.**",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "url" : {
+                "description" : "The absolute URL of the Service resource.",
+                "format" : "uri",
+                "nullable" : true,
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 1
+  }, {
+    "id" : "9fea6813-31ce-432b-bab4-7b3cfa41fec2",
+    "name" : "Delete a specific Service. - 204",
+    "request" : {
+      "urlPath" : "/v1/Services/KS7Ccf4f7bbe6da6f51EfA4B1C5e3c94e3",
+      "method" : "DELETE"
+    },
+    "response" : {
+      "status" : 204
+    },
+    "uuid" : "9fea6813-31ce-432b-bab4-7b3cfa41fec2",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:21.438947Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "DeleteService"
+        }
+      }
+    },
+    "insertionIndex" : 2
+  }, {
+    "id" : "3202fab3-bb38-42ff-ba4b-e336b867bc81",
+    "name" : "Update a specific Short Code.",
+    "request" : {
+      "urlPath" : "/v1/Services/KS2f0dbBedB1F769923eCC138BBCD6aaFe/ShortCodes/SCfBD11a658eA9AbD2EF20c9Fc98F29a40",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"is_reserved\" : false,\n  \"service_sid\" : \"KS070cbAd0572183C26feaCeD2FcB97ebc\",\n  \"iso_country\" : \"Canada\",\n  \"capabilities\" : {\n    \"voice\" : false,\n    \"mms\" : false,\n    \"sms\" : true,\n    \"fax\" : false\n  },\n  \"date_updated\" : \"2022-08-29T02:23:56.438Z\",\n  \"date_created\" : \"2022-11-23T17:53:45.438Z\",\n  \"account_sid\" : \"ACf0c498fba7c24cfDd2d49eA1B4BDcD2d\",\n  \"url\" : \"https://web.example.mocklab.io/223769\",\n  \"short_code\" : \"u6djeiatzn82imoo89e3ejlk9blpfk6ake6cco80x4sd1vfrnujgn6gd9fp8i5uidwwct6o8kr12xtcggmu4y4dw0\",\n  \"sid\" : \"SC7AfCbdb3Eda670919D8d9f8cccf5c0EF\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "3202fab3-bb38-42ff-ba4b-e336b867bc81",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:21.43891Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "UpdateShortCode",
+          "schema" : {
+            "properties" : {
+              "account_sid" : {
+                "description" : "The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the ShortCode resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^AC[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "capabilities" : {
+                "description" : "The capabilities of the short code.",
+                "format" : "phone-number-capabilities",
+                "nullable" : true,
+                "properties" : {
+                  "fax" : {
+                    "type" : "boolean"
+                  },
+                  "mms" : {
+                    "type" : "boolean"
+                  },
+                  "sms" : {
+                    "type" : "boolean"
+                  },
+                  "voice" : {
+                    "type" : "boolean"
+                  }
+                },
+                "type" : "object"
+              },
+              "date_created" : {
+                "description" : "The [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) date and time in GMT when the resource was created.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "date_updated" : {
+                "description" : "The [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) date and time in GMT when the resource was last updated.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "is_reserved" : {
+                "description" : "Whether the short code should be reserved and not be assigned to a participant using proxy pool logic. See [Reserved Phone Numbers](https://www.twilio.com/docs/proxy/reserved-phone-numbers) for more information.",
+                "nullable" : true,
+                "type" : "boolean"
+              },
+              "iso_country" : {
+                "description" : "The ISO Country Code for the short code.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "service_sid" : {
+                "description" : "The SID of the ShortCode resource's parent [Service](https://www.twilio.com/docs/proxy/api/service) resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^KS[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "short_code" : {
+                "description" : "The short code's number.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "sid" : {
+                "description" : "The unique string that we created to identify the ShortCode resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^SC[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "url" : {
+                "description" : "The absolute URL of the ShortCode resource.",
+                "format" : "uri",
+                "nullable" : true,
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 3
+  }, {
+    "id" : "a5f06889-f081-4804-a55e-6d45df150d8a",
+    "name" : "Fetch a specific Short Code.",
+    "request" : {
+      "urlPath" : "/v1/Services/KS9c03Cc5EDeb7FFA3BCf31c14DD991Fc4/ShortCodes/SCf2D90DA2d2B3da9B83e816156d546aCe",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"is_reserved\" : false,\n  \"service_sid\" : \"KSb460e5a8375fc3AD9ed175aFd1CC77Be\",\n  \"iso_country\" : \"Bahamas\",\n  \"capabilities\" : {\n    \"voice\" : false,\n    \"mms\" : true,\n    \"sms\" : false,\n    \"fax\" : true\n  },\n  \"date_updated\" : \"2022-11-10T22:57:22.438Z\",\n  \"date_created\" : \"2023-10-02T18:17:44.438Z\",\n  \"account_sid\" : \"AC516a26DAC4E5f9d32dc4283f7d8Dc151\",\n  \"url\" : \"https://web.example.mocklab.io/362820\",\n  \"short_code\" : \"94inxymh9tben6q3jd1k2napzapyjrr93wrldsxzrqm23u05d36ly88dnetuueycl1pb20ub2qyq39toc4upb871n3q1nmg8s30pn9j3bc4ceebxuhwbcv23dz2f66z7m6aw6of0kki\",\n  \"sid\" : \"SCA7BCAA10cAbfa2b531baCf052C2bd61f\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "a5f06889-f081-4804-a55e-6d45df150d8a",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:21.438638Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "FetchShortCode",
+          "schema" : {
+            "properties" : {
+              "account_sid" : {
+                "description" : "The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the ShortCode resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^AC[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "capabilities" : {
+                "description" : "The capabilities of the short code.",
+                "format" : "phone-number-capabilities",
+                "nullable" : true,
+                "properties" : {
+                  "fax" : {
+                    "type" : "boolean"
+                  },
+                  "mms" : {
+                    "type" : "boolean"
+                  },
+                  "sms" : {
+                    "type" : "boolean"
+                  },
+                  "voice" : {
+                    "type" : "boolean"
+                  }
+                },
+                "type" : "object"
+              },
+              "date_created" : {
+                "description" : "The [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) date and time in GMT when the resource was created.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "date_updated" : {
+                "description" : "The [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) date and time in GMT when the resource was last updated.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "is_reserved" : {
+                "description" : "Whether the short code should be reserved and not be assigned to a participant using proxy pool logic. See [Reserved Phone Numbers](https://www.twilio.com/docs/proxy/reserved-phone-numbers) for more information.",
+                "nullable" : true,
+                "type" : "boolean"
+              },
+              "iso_country" : {
+                "description" : "The ISO Country Code for the short code.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "service_sid" : {
+                "description" : "The SID of the ShortCode resource's parent [Service](https://www.twilio.com/docs/proxy/api/service) resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^KS[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "short_code" : {
+                "description" : "The short code's number.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "sid" : {
+                "description" : "The unique string that we created to identify the ShortCode resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^SC[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "url" : {
+                "description" : "The absolute URL of the ShortCode resource.",
+                "format" : "uri",
+                "nullable" : true,
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 4
+  }, {
+    "id" : "78672e0d-cf60-4160-81f0-828a0fde08ac",
+    "name" : "Delete a specific Short Code from a Service. - 204",
+    "request" : {
+      "urlPath" : "/v1/Services/KSa47BbbD29b1dBde36C0FFAdaCC93f939/ShortCodes/SC27f41eeEb5e6fbAfc7070EBeCfbecC1E",
+      "method" : "DELETE"
+    },
+    "response" : {
+      "status" : 204
+    },
+    "uuid" : "78672e0d-cf60-4160-81f0-828a0fde08ac",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:21.438366Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "DeleteShortCode"
+        }
+      }
+    },
+    "insertionIndex" : 5
+  }, {
+    "id" : "d9fbf152-9891-4166-a40a-7db034c51cf7",
+    "name" : "Add a Short Code to the Proxy Number Pool for the Service.",
+    "request" : {
+      "urlPath" : "/v1/Services/KSdE1B088C1dcD7B4DDAb9aD9c8bAbceea/ShortCodes",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 201,
+      "body" : "{\n  \"is_reserved\" : true,\n  \"service_sid\" : \"KSE1A26BEC422a6244Fc4F8DBAEd2D5a1d\",\n  \"iso_country\" : \"Croatia\",\n  \"capabilities\" : {\n    \"voice\" : true,\n    \"mms\" : false,\n    \"sms\" : false,\n    \"fax\" : false\n  },\n  \"date_updated\" : \"2023-08-17T03:15:20.438Z\",\n  \"date_created\" : \"2022-09-19T23:09:08.438Z\",\n  \"account_sid\" : \"AC7f028e1E62E986Aac33Ef81b46F9e47E\",\n  \"url\" : \"https://web.example.mocklab.io/086967\",\n  \"short_code\" : \"d0mu58couvfq597gtoc5ynumxf1gh0t4sjcjm6xywd4cticj4aoxh97f9vqplthp6b3r1qeei5n1rgy0fuzd83hwm4ojamesj12xx2jdk305rdomz5kaigtie8iqn7rxjmfpipnrinbk6cw38mlmf5bsfk0\",\n  \"sid\" : \"SC94fddeff7d1e8d9162dE2830DDfFFE13\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "d9fbf152-9891-4166-a40a-7db034c51cf7",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:21.438322Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "CreateShortCode",
+          "schema" : {
+            "properties" : {
+              "account_sid" : {
+                "description" : "The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the ShortCode resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^AC[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "capabilities" : {
+                "description" : "The capabilities of the short code.",
+                "format" : "phone-number-capabilities",
+                "nullable" : true,
+                "properties" : {
+                  "fax" : {
+                    "type" : "boolean"
+                  },
+                  "mms" : {
+                    "type" : "boolean"
+                  },
+                  "sms" : {
+                    "type" : "boolean"
+                  },
+                  "voice" : {
+                    "type" : "boolean"
+                  }
+                },
+                "type" : "object"
+              },
+              "date_created" : {
+                "description" : "The [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) date and time in GMT when the resource was created.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "date_updated" : {
+                "description" : "The [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) date and time in GMT when the resource was last updated.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "is_reserved" : {
+                "description" : "Whether the short code should be reserved and not be assigned to a participant using proxy pool logic. See [Reserved Phone Numbers](https://www.twilio.com/docs/proxy/reserved-phone-numbers) for more information.",
+                "nullable" : true,
+                "type" : "boolean"
+              },
+              "iso_country" : {
+                "description" : "The ISO Country Code for the short code.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "service_sid" : {
+                "description" : "The SID of the ShortCode resource's parent [Service](https://www.twilio.com/docs/proxy/api/service) resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^KS[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "short_code" : {
+                "description" : "The short code's number.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "sid" : {
+                "description" : "The unique string that we created to identify the ShortCode resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^SC[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "url" : {
+                "description" : "The absolute URL of the ShortCode resource.",
+                "format" : "uri",
+                "nullable" : true,
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 6
+  }, {
+    "id" : "819d69dd-5413-48fa-b35f-2c2c50c1ae92",
+    "name" : "Retrieve a list of all Short Codes in the Proxy Number Pool for the Service. A m...",
+    "request" : {
+      "urlPath" : "/v1/Services/KSbcdff9fFD8f1deeda9ED1dA4C6d5c69F/ShortCodes",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"meta\" : {\n    \"first_page_url\" : \"https://web.example.mocklab.io/486328\",\n    \"next_page_url\" : \"https://web.example.mocklab.io/743712\",\n    \"previous_page_url\" : \"https://web.example.mocklab.io/617924\",\n    \"page\" : 8095533579115467141,\n    \"key\" : \"5e7qkqp665sye6qwcxi1vhbhrscsm3cv2dpt\",\n    \"url\" : \"https://web.example.mocklab.io/615838\",\n    \"page_size\" : 3126955213325337387\n  },\n  \"short_codes\" : [ {\n    \"is_reserved\" : true,\n    \"service_sid\" : \"KSA3F0Bb5a6aE863EBBdE0EfC5fBDcD54E\",\n    \"iso_country\" : \"Bolivia (Plurinational State of)\",\n    \"capabilities\" : {\n      \"voice\" : true,\n      \"mms\" : true,\n      \"sms\" : false,\n      \"fax\" : false\n    },\n    \"date_updated\" : \"2023-01-21T15:11:07.437Z\",\n    \"date_created\" : \"2022-07-19T18:17:10.437Z\",\n    \"account_sid\" : \"AC382Aab3cA4F80fe238b4BEeE10b2c49E\",\n    \"url\" : \"https://web.example.mocklab.io/834728\",\n    \"short_code\" : \"delg9v1ajcvc9gstaznqsv9xpjgpv40ycooe2xdncaqtb\",\n    \"sid\" : \"SC294Df7Fba30d09D4f2A9EFFfbBeb60C7\"\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "819d69dd-5413-48fa-b35f-2c2c50c1ae92",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:21.437997Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "ListShortCode",
+          "schema" : {
+            "properties" : {
+              "meta" : {
+                "properties" : {
+                  "first_page_url" : {
+                    "format" : "uri",
+                    "type" : "string"
+                  },
+                  "key" : {
+                    "type" : "string"
+                  },
+                  "next_page_url" : {
+                    "format" : "uri",
+                    "nullable" : true,
+                    "type" : "string"
+                  },
+                  "page" : {
+                    "type" : "integer"
+                  },
+                  "page_size" : {
+                    "type" : "integer"
+                  },
+                  "previous_page_url" : {
+                    "format" : "uri",
+                    "nullable" : true,
+                    "type" : "string"
+                  },
+                  "url" : {
+                    "format" : "uri",
+                    "type" : "string"
+                  }
+                },
+                "type" : "object"
+              },
+              "short_codes" : {
+                "items" : {
+                  "$ref" : "#/components/schemas/proxy.v1.service.short_code"
+                },
+                "type" : "array"
+              }
+            },
+            "title" : "ListShortCodeResponse",
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 7
+  }, {
+    "id" : "8dc5e365-f6d9-491d-bd9e-63df1f76ea04",
+    "name" : "Update a specific Session.",
+    "request" : {
+      "urlPath" : "/v1/Services/KSEbdb32cA45d19aA6fAC5fC2EcAEbaa1B/Sessions/KCfb3aBc072cfD82cacF9E0dada7535A28",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"date_updated\" : \"2024-03-12T01:15:48.437Z\",\n  \"date_created\" : \"2023-01-19T12:49:20.437Z\",\n  \"ttl\" : 3044159343334867892,\n  \"url\" : \"https://web.example.mocklab.io/523070\",\n  \"sid\" : \"KC8B6b1379ca3cbFBdFc9E3de7cff2A7C5\",\n  \"mode\" : \"voice-only\",\n  \"service_sid\" : \"KSA6B5d23d3adc9f6E5CB4B24BBfF9Fc74\",\n  \"date_ended\" : \"2023-09-02T21:22:27.437Z\",\n  \"unique_name\" : \"Claretta Moore III\",\n  \"closed_reason\" : \"ey0uxej1rl8bpcz6hfxfkmtpnurzl3zd06z0538gedjmn9ef85lwzpayh0digd9x5z5xj0jvsyfh3uzmotvihlfk6ejm3sf3hj7h7pzybovhe2flp365b\",\n  \"date_last_interaction\" : \"2022-12-20T15:50:35.437Z\",\n  \"account_sid\" : \"AC9eCb6F846CCE1fcf55BFfFB37Fc7dBA1\",\n  \"links\" : { },\n  \"date_started\" : \"2022-08-12T22:28:40.437Z\",\n  \"date_expiry\" : \"2022-07-19T20:26:50.437Z\",\n  \"status\" : \"in-progress\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "8dc5e365-f6d9-491d-bd9e-63df1f76ea04",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:21.437366Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "UpdateSession",
+          "schema" : {
+            "properties" : {
+              "account_sid" : {
+                "description" : "The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the Session resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^AC[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "closed_reason" : {
+                "description" : "The reason the Session ended.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "date_created" : {
+                "description" : "The [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) date and time in GMT when the resource was created.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "date_ended" : {
+                "description" : "The [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) date when the Session ended.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "date_expiry" : {
+                "description" : "The [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) date when the Session should expire. If this is value is present, it overrides the `ttl` value.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "date_last_interaction" : {
+                "description" : "The [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) date when the Session last had an interaction.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "date_started" : {
+                "description" : "The [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) date when the Session started.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "date_updated" : {
+                "description" : "The [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) date and time in GMT when the resource was last updated.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "links" : {
+                "description" : "The URLs of resources related to the Session.",
+                "format" : "uri-map",
+                "nullable" : true,
+                "type" : "object"
+              },
+              "mode" : {
+                "$ref" : "#/components/schemas/session_enum_mode"
+              },
+              "service_sid" : {
+                "description" : "The SID of the [Service](https://www.twilio.com/docs/proxy/api/service) the session is associated with.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^KS[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "sid" : {
+                "description" : "The unique string that we created to identify the Session resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^KC[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "status" : {
+                "$ref" : "#/components/schemas/session_enum_status"
+              },
+              "ttl" : {
+                "description" : "The time, in seconds, when the session will expire. The time is measured from the last Session create or the Session's last Interaction.",
+                "nullable" : true,
+                "type" : "integer"
+              },
+              "unique_name" : {
+                "description" : "An application-defined string that uniquely identifies the resource. This value must be 191 characters or fewer in length and be unique. Supports UTF-8 characters. **This value should not have PII.**",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "url" : {
+                "description" : "The absolute URL of the Session resource.",
+                "format" : "uri",
+                "nullable" : true,
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 8
+  }, {
+    "id" : "69b55a06-ec59-411a-bc34-8df66b357a2a",
+    "name" : "Fetch a specific Session.",
+    "request" : {
+      "urlPath" : "/v1/Services/KSEbce2E568B68B59516aa5De4CBDeBC2C/Sessions/c351",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"date_updated\" : \"2023-07-13T10:51:57.436Z\",\n  \"date_created\" : \"2023-07-26T17:55:18.436Z\",\n  \"ttl\" : 7621199275207177251,\n  \"url\" : \"https://web.example.mocklab.io/829029\",\n  \"sid\" : \"KC8AFE0ed055DFe5cBA6d29C4589dd1be1\",\n  \"mode\" : \"voice-and-message\",\n  \"service_sid\" : \"KS38FE05dbd3fa56ecb77d24b9f8acfced\",\n  \"date_ended\" : \"2023-08-24T00:47:35.436Z\",\n  \"unique_name\" : \"Gayle Cruickshank\",\n  \"closed_reason\" : \"cxowvpxzbx9t0ddqpcavkopvvk6ac\",\n  \"date_last_interaction\" : \"2023-10-28T14:42:59.436Z\",\n  \"account_sid\" : \"AC1FBac2bE9b5cA8ebaCfF5Fab55630448\",\n  \"links\" : { },\n  \"date_started\" : \"2022-05-17T21:13:51.436Z\",\n  \"date_expiry\" : \"2023-05-16T09:27:12.436Z\",\n  \"status\" : \"failed\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "69b55a06-ec59-411a-bc34-8df66b357a2a",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:21.437025Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "FetchSession",
+          "schema" : {
+            "properties" : {
+              "account_sid" : {
+                "description" : "The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the Session resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^AC[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "closed_reason" : {
+                "description" : "The reason the Session ended.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "date_created" : {
+                "description" : "The [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) date and time in GMT when the resource was created.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "date_ended" : {
+                "description" : "The [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) date when the Session ended.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "date_expiry" : {
+                "description" : "The [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) date when the Session should expire. If this is value is present, it overrides the `ttl` value.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "date_last_interaction" : {
+                "description" : "The [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) date when the Session last had an interaction.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "date_started" : {
+                "description" : "The [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) date when the Session started.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "date_updated" : {
+                "description" : "The [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) date and time in GMT when the resource was last updated.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "links" : {
+                "description" : "The URLs of resources related to the Session.",
+                "format" : "uri-map",
+                "nullable" : true,
+                "type" : "object"
+              },
+              "mode" : {
+                "$ref" : "#/components/schemas/session_enum_mode"
+              },
+              "service_sid" : {
+                "description" : "The SID of the [Service](https://www.twilio.com/docs/proxy/api/service) the session is associated with.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^KS[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "sid" : {
+                "description" : "The unique string that we created to identify the Session resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^KC[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "status" : {
+                "$ref" : "#/components/schemas/session_enum_status"
+              },
+              "ttl" : {
+                "description" : "The time, in seconds, when the session will expire. The time is measured from the last Session create or the Session's last Interaction.",
+                "nullable" : true,
+                "type" : "integer"
+              },
+              "unique_name" : {
+                "description" : "An application-defined string that uniquely identifies the resource. This value must be 191 characters or fewer in length and be unique. Supports UTF-8 characters. **This value should not have PII.**",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "url" : {
+                "description" : "The absolute URL of the Session resource.",
+                "format" : "uri",
+                "nullable" : true,
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 9
+  }, {
+    "id" : "a62cad10-5107-43b4-94a1-06dba0f23db0",
+    "name" : "Delete a specific Session. - 204",
+    "request" : {
+      "urlPath" : "/v1/Services/KS8051cA75b69E211aACC41eAac3Ba5ad7/Sessions/KCaaB5d2A22De1FdFA5bbFccB8c68cdDeB",
+      "method" : "DELETE"
+    },
+    "response" : {
+      "status" : 204
+    },
+    "uuid" : "a62cad10-5107-43b4-94a1-06dba0f23db0",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:21.436533Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "DeleteSession"
+        }
+      }
+    },
+    "insertionIndex" : 10
+  }, {
+    "id" : "54a69ab6-6d14-46e5-89fa-e049fd228d2f",
+    "name" : "Fetch a specific Participant.",
+    "request" : {
+      "urlPath" : "/v1/Services/KS458079bd3e59d0c73EDbA03A6f0df860/Sessions/KC29359ECB2ca9fb45f9fbA4dBBe2FDD06/Participants/KPD2c3C9eFABCE4784b6AacfdDc9ED5aFc",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"proxy_identifier\" : \"0bk1s2u94h3xwju4km7orf6svmrdutxowgd44ccvt5qbax6zhu7akbxgqbwhmcfjz0loczhp74jl4xa3byjcnhwp\",\n  \"identifier\" : \"asr5wjlmz85d8touulltq0q6ga5w1zodu7ej7c2mpgyvp1dp556i2jdkuix31n4supioqt8cr4e4s7ddnm7wi9c6mj1f0k40y2k8ac1uzoktt38tzk77bicnmqe6ggyweywjz80ncr11oe6rt6rv4in4uvca7h1g3gxdk5lkz24ioy7\",\n  \"friendly_name\" : \"Elwanda Monahan\",\n  \"date_updated\" : \"2023-03-27T14:33:42.436Z\",\n  \"date_deleted\" : \"2024-01-20T16:57:35.436Z\",\n  \"date_created\" : \"2022-06-17T09:10:01.436Z\",\n  \"session_sid\" : \"KCaef1BE8c0Cff934FFb04Abddd68ac1e7\",\n  \"url\" : \"https://web.example.mocklab.io/427497\",\n  \"sid\" : \"KP62AeD7aEEC8d4BDbca8aDB14F8f5A5E6\",\n  \"proxy_identifier_sid\" : \"PNC0be6B8422beb4c03010e236c3876501\",\n  \"service_sid\" : \"KSccDB54fCDf1f3eBD1aF5C5C59CfCCbaa\",\n  \"account_sid\" : \"ACDcb942331Acdc1694C1e524D1BAf5468\",\n  \"links\" : { }\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "54a69ab6-6d14-46e5-89fa-e049fd228d2f",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:21.436487Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "FetchParticipant",
+          "schema" : {
+            "properties" : {
+              "account_sid" : {
+                "description" : "The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the Participant resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^AC[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "date_created" : {
+                "description" : "The [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) date and time in GMT when the resource was created.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "date_deleted" : {
+                "description" : "The [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) date when the Participant was removed from the session.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "date_updated" : {
+                "description" : "The [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) date and time in GMT when the resource was last updated.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "friendly_name" : {
+                "description" : "The string that you assigned to describe the participant. This value must be 255 characters or fewer. Supports UTF-8 characters. **This value should not have PII.**",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "identifier" : {
+                "description" : "The phone number or channel identifier of the Participant. This value must be 191 characters or fewer. Supports UTF-8 characters.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "links" : {
+                "description" : "The URLs to resources related the participant.",
+                "format" : "uri-map",
+                "nullable" : true,
+                "type" : "object"
+              },
+              "proxy_identifier" : {
+                "description" : "The phone number or short code (masked number) of the participant's partner. The participant will call or message the partner participant at this number.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "proxy_identifier_sid" : {
+                "description" : "The SID of the Proxy Identifier assigned to the Participant.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^PN[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "service_sid" : {
+                "description" : "The SID of the resource's parent [Service](https://www.twilio.com/docs/proxy/api/service) resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^KS[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "session_sid" : {
+                "description" : "The SID of the parent [Session](https://www.twilio.com/docs/proxy/api/session) resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^KC[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "sid" : {
+                "description" : "The unique string that we created to identify the Participant resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^KP[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "url" : {
+                "description" : "The absolute URL of the Participant resource.",
+                "format" : "uri",
+                "nullable" : true,
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 11
+  }, {
+    "id" : "ad63114c-54fd-4f08-bd4f-97bab6b23ed6",
+    "name" : "Delete a specific Participant. This is a soft-delete. The participant remains as... - 204",
+    "request" : {
+      "urlPath" : "/v1/Services/KSBD3175E5A33D60ca55caAE99f25F8c1a/Sessions/KC8e00E17DF39E8E1C77E3DD6A6DFFBDF7/Participants/KPadAE6cAAEc1f55CE7Ec95AA0fe19a6fF",
+      "method" : "DELETE"
+    },
+    "response" : {
+      "status" : 204
+    },
+    "uuid" : "ad63114c-54fd-4f08-bd4f-97bab6b23ed6",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:21.436079Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "DeleteParticipant"
+        }
+      }
+    },
+    "insertionIndex" : 12
+  }, {
+    "id" : "5256ac45-cbf3-443a-bd4c-ed3aee5d21b9",
+    "name" : "",
+    "request" : {
+      "urlPath" : "/v1/Services/KSD3DEDFedc4172586FbDcD56F4A00f08B/Sessions/KC13A6E336Cb0b9fdAF070eB5becEC4C43/Participants/KPcc6Eedd5989F07BB8a7feae8Af0ae10c/MessageInteractions/KI82ACCDAFDcAC3570D53C3D61398666d2",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"outbound_resource_url\" : \"https://web.example.mocklab.io/799914\",\n  \"outbound_resource_sid\" : \"HFC4bB1a3C4578be9a6843e7cCdfE12361\",\n  \"inbound_resource_url\" : \"https://web.example.mocklab.io/544271\",\n  \"date_updated\" : \"2024-01-21T12:33:28.435Z\",\n  \"data\" : \"oudzjcfcw6urdr8ya70pbjlwcf0aeqq0urmz6hscnujg2ptw96xvvb6z6wzmdtfxxoc0juvx122kt9q47aowtygcy8imgb9y7w9i77tw6viaoajj10dkx3buivcbi4xk2d3tw1dhalb22krhznt3822zf1hbr0zuohxhm74f58xccgj90pq19v6rh118ooq9b83e4\",\n  \"inbound_resource_sid\" : \"nTE8F7fcFb6DDe38abA287d3A7bcebc92E\",\n  \"date_created\" : \"2022-11-29T07:31:02.435Z\",\n  \"outbound_resource_status\" : \"no-answer\",\n  \"inbound_participant_sid\" : \"KPf2108BEfAb5eE55b9eD4fB3E033052BB\",\n  \"participant_sid\" : \"KP5B7C62DFabCA7746219dbde33D2141ef\",\n  \"session_sid\" : \"KC5B4902bCaCc06a439ECFFDF1Aa7D8b3e\",\n  \"type\" : \"voice\",\n  \"outbound_participant_sid\" : \"KP6c0fdaC7B6c6F1Cc55668feCB54Ce6Ef\",\n  \"url\" : \"https://web.example.mocklab.io/340947\",\n  \"sid\" : \"KId5Fc95f496292C2aE0de48bDf479cc4c\",\n  \"service_sid\" : \"KS5dFeacCdac132beE46cB54Cd9a842524\",\n  \"inbound_resource_status\" : \"deleted\",\n  \"outbound_resource_type\" : \"qvps8z3utusb3200flf9n4emmond8bdbr6q6iy2dxmpcuayo7ap7canh4yfmkr3sw1lx7k26aeirczm6hz6sx1dnxqo3hapkc6ug9u173qhntc2bxaj3y3axrwmnbb5pc8ssac8lpf\",\n  \"account_sid\" : \"ACD3D25B574ae092B8Af30c6FffacF3Cfa\",\n  \"inbound_resource_type\" : \"pxqwd2f1yviig66w4vcccjz0xbyc6zi06vffc4kmkovdrtf7jd00dcmrwqae3cyk81kt0ydtrr0u8c6oi6f1tjba0xil5yhnosdupqn40bro3oj7z4g6tijnk4\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "5256ac45-cbf3-443a-bd4c-ed3aee5d21b9",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:21.436016Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "FetchMessageInteraction",
+          "schema" : {
+            "properties" : {
+              "account_sid" : {
+                "description" : "The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the MessageInteraction resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^AC[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "data" : {
+                "description" : "A JSON string that includes the message body sent to the participant. (e.g. `{\"body\": \"hello\"}`)",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "date_created" : {
+                "description" : "The [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) date and time in GMT when the resource was created.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "date_updated" : {
+                "description" : "The [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) date and time in GMT when the resource was last updated.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "inbound_participant_sid" : {
+                "description" : "Always empty for created Message Interactions.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^KP[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "inbound_resource_sid" : {
+                "description" : "Always empty for created Message Interactions.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^[a-zA-Z]{2}[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "inbound_resource_status" : {
+                "$ref" : "#/components/schemas/message_interaction_enum_resource_status"
+              },
+              "inbound_resource_type" : {
+                "description" : "Always empty for created Message Interactions.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "inbound_resource_url" : {
+                "description" : "Always empty for created Message Interactions.",
+                "format" : "uri",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "outbound_participant_sid" : {
+                "description" : "The SID of the outbound [Participant](https://www.twilio.com/docs/proxy/api/participant) resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^KP[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "outbound_resource_sid" : {
+                "description" : "The SID of the outbound [Message](https://www.twilio.com/docs/sms/api/message-resource) resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^[a-zA-Z]{2}[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "outbound_resource_status" : {
+                "$ref" : "#/components/schemas/message_interaction_enum_resource_status"
+              },
+              "outbound_resource_type" : {
+                "description" : "The outbound resource type. This value is always `Message`.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "outbound_resource_url" : {
+                "description" : "The URL of the Twilio message resource.",
+                "format" : "uri",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "participant_sid" : {
+                "description" : "The SID of the [Participant](https://www.twilio.com/docs/proxy/api/participant) resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^KP[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "service_sid" : {
+                "description" : "The SID of the parent [Service](https://www.twilio.com/docs/proxy/api/service) resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^KS[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "session_sid" : {
+                "description" : "The SID of the parent [Session](https://www.twilio.com/docs/proxy/api/session) resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^KC[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "sid" : {
+                "description" : "The unique string that we created to identify the MessageInteraction resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^KI[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "type" : {
+                "$ref" : "#/components/schemas/message_interaction_enum_type"
+              },
+              "url" : {
+                "description" : "The absolute URL of the MessageInteraction resource.",
+                "format" : "uri",
+                "nullable" : true,
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 13
+  }, {
+    "id" : "43038302-ac4b-44f1-a288-b06bfd0d1974",
+    "name" : "Create a new message Interaction to send directly from your system to one [Parti...",
+    "request" : {
+      "urlPath" : "/v1/Services/KSC55a5AdA3A6AA13fD4183AfB51219dE1/Sessions/KCafaaf4cf576F7251F5E90F8dfe93dCce/Participants/KPeCbEcc15d6efCA4Dfc4a2cbfaA4D1Eed/MessageInteractions",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 201,
+      "body" : "{\n  \"outbound_resource_url\" : \"https://web.example.mocklab.io/055083\",\n  \"outbound_resource_sid\" : \"tHa41AEc7FBAEa4220B867eaA7af33cbb8\",\n  \"inbound_resource_url\" : \"https://web.example.mocklab.io/692925\",\n  \"date_updated\" : \"2023-09-20T12:10:49.435Z\",\n  \"data\" : \"xaathyk62jx82lc0493brivwx4dzwtwfah0560ftnf6ngxlehlgd9tufhhpxayebf77njpy52f286g2o15ejp06al49\",\n  \"inbound_resource_sid\" : \"kC87ddBfF5EFA964F9AeDbCF85541ab437\",\n  \"date_created\" : \"2022-06-19T08:54:40.435Z\",\n  \"outbound_resource_status\" : \"unknown\",\n  \"inbound_participant_sid\" : \"KPd4079eeBEBa0c02dc6E9C1edEaf50259\",\n  \"participant_sid\" : \"KP5793cd7EC5dA0d88c18eAC66AeC241f2\",\n  \"session_sid\" : \"KCcf28163e3CC4BA70af7c9aE59FcaAf7f\",\n  \"type\" : \"unknown\",\n  \"outbound_participant_sid\" : \"KPBEE574CaB0DA814E538Ec71A210EA1B1\",\n  \"url\" : \"https://web.example.mocklab.io/179063\",\n  \"sid\" : \"KIa7a7c0745f0eA4AdffCC47abfAD288a7\",\n  \"service_sid\" : \"KS8ed515086dfC87b05FC1ddE4Eab4bDd2\",\n  \"inbound_resource_status\" : \"received\",\n  \"outbound_resource_type\" : \"8tqpsa1r649e5qskjm3dqh9ap9tdcpw75vi9vqeg94pgxzszzsyowkrz07k8kfpxe3xoed66h2s2x4cqhe5ghw\",\n  \"account_sid\" : \"ACf8A25d0EE06441EFaEfeFeBd8f39899e\",\n  \"inbound_resource_type\" : \"6jckhntch0oorax7n27wpq0quf0pv8qw7h74tfyi1\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "43038302-ac4b-44f1-a288-b06bfd0d1974",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:21.435459Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "CreateMessageInteraction",
+          "schema" : {
+            "properties" : {
+              "account_sid" : {
+                "description" : "The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the MessageInteraction resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^AC[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "data" : {
+                "description" : "A JSON string that includes the message body sent to the participant. (e.g. `{\"body\": \"hello\"}`)",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "date_created" : {
+                "description" : "The [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) date and time in GMT when the resource was created.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "date_updated" : {
+                "description" : "The [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) date and time in GMT when the resource was last updated.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "inbound_participant_sid" : {
+                "description" : "Always empty for created Message Interactions.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^KP[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "inbound_resource_sid" : {
+                "description" : "Always empty for created Message Interactions.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^[a-zA-Z]{2}[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "inbound_resource_status" : {
+                "$ref" : "#/components/schemas/message_interaction_enum_resource_status"
+              },
+              "inbound_resource_type" : {
+                "description" : "Always empty for created Message Interactions.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "inbound_resource_url" : {
+                "description" : "Always empty for created Message Interactions.",
+                "format" : "uri",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "outbound_participant_sid" : {
+                "description" : "The SID of the outbound [Participant](https://www.twilio.com/docs/proxy/api/participant) resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^KP[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "outbound_resource_sid" : {
+                "description" : "The SID of the outbound [Message](https://www.twilio.com/docs/sms/api/message-resource) resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^[a-zA-Z]{2}[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "outbound_resource_status" : {
+                "$ref" : "#/components/schemas/message_interaction_enum_resource_status"
+              },
+              "outbound_resource_type" : {
+                "description" : "The outbound resource type. This value is always `Message`.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "outbound_resource_url" : {
+                "description" : "The URL of the Twilio message resource.",
+                "format" : "uri",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "participant_sid" : {
+                "description" : "The SID of the [Participant](https://www.twilio.com/docs/proxy/api/participant) resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^KP[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "service_sid" : {
+                "description" : "The SID of the parent [Service](https://www.twilio.com/docs/proxy/api/service) resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^KS[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "session_sid" : {
+                "description" : "The SID of the parent [Session](https://www.twilio.com/docs/proxy/api/session) resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^KC[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "sid" : {
+                "description" : "The unique string that we created to identify the MessageInteraction resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^KI[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "type" : {
+                "$ref" : "#/components/schemas/message_interaction_enum_type"
+              },
+              "url" : {
+                "description" : "The absolute URL of the MessageInteraction resource.",
+                "format" : "uri",
+                "nullable" : true,
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 14
+  }, {
+    "id" : "dad2f090-1c27-456b-8e6a-34f9cf66b172",
+    "name" : "",
+    "request" : {
+      "urlPath" : "/v1/Services/KS9bec62FcF4bbf03a6D6EcaB4c119eCFb/Sessions/KC97fCe63eEEfb3B41A459F66B8EB3fFFA/Participants/KP7ceEcedaFf7a6f434141CC87dFeE0354/MessageInteractions",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"meta\" : {\n    \"first_page_url\" : \"https://web.example.mocklab.io/044605\",\n    \"next_page_url\" : \"https://web.example.mocklab.io/791132\",\n    \"previous_page_url\" : \"https://web.example.mocklab.io/929579\",\n    \"page\" : 5493032310211529431,\n    \"key\" : \"ksidjbbijnhx9g\",\n    \"url\" : \"https://web.example.mocklab.io/220911\",\n    \"page_size\" : 330694611294037699\n  },\n  \"interactions\" : [ {\n    \"outbound_resource_url\" : \"https://web.example.mocklab.io/494666\",\n    \"outbound_resource_sid\" : \"ihd490deFced4dBeaCe90ecA6A9e58CA31\",\n    \"inbound_resource_url\" : \"https://web.example.mocklab.io/768445\",\n    \"date_updated\" : \"2022-12-16T10:26:00.432Z\",\n    \"data\" : \"jxnsdwg2q6lgncwg1z7xumkyj6elspi084463upcqvymii8w9pctaydfwzx7e24gyftjxeglw98clymsj7mvvr3t8dnmwfsiqoaavspx0uz1xtwd54ag7fkwlmjywtdi4qivlo8fn56227htvw430z6wbgm9yrbbu26c35ql0\",\n    \"inbound_resource_sid\" : \"lYc55a0A0E6f6Fb1CfA354AF982Be01dEc\",\n    \"date_created\" : \"2023-01-02T11:44:15.432Z\",\n    \"outbound_resource_status\" : \"completed\",\n    \"inbound_participant_sid\" : \"KP378d7926DcAFc8e23b2ce38Eacb3eabf\",\n    \"participant_sid\" : \"KPa8D76BFaA801fEDbB7c4cDeCaC98A4BB\",\n    \"session_sid\" : \"KC8F3f14577dAD9eEE8A0BF92fb8e4deD9\",\n    \"type\" : \"voice\",\n    \"outbound_participant_sid\" : \"KPB5f1DfEfA44f79aA4b6fa94C2d0fC975\",\n    \"url\" : \"https://web.example.mocklab.io/244007\",\n    \"sid\" : \"KIBaADdc1A5EdDeec5Fa9FbdFc2727CF7D\",\n    \"service_sid\" : \"KS28a8bDbD8C91041566AF8Af9A2B7796e\",\n    \"inbound_resource_status\" : \"undelivered\",\n    \"outbound_resource_type\" : \"f5titid5dliq1g54f1jio8l\",\n    \"account_sid\" : \"AC78C7Dd7aD7a23A2eA8F4F97b1c5287C2\",\n    \"inbound_resource_type\" : \"2z42l0tdxv2t39j7weyvyn6do4y5p0cw7q7tp8iqozefyrgl5zxlohkcn2y2x4cse90njx1fsdb14msc42yni5po0ccme3kq1k6gauqk784vx7j7c6xgwoffst9xcamrfc\"\n  }, {\n    \"outbound_resource_url\" : \"https://web.example.mocklab.io/121999\",\n    \"outbound_resource_sid\" : \"Ux7b04DeA9fc1B680Bed1c5Da0bC39DD4d\",\n    \"inbound_resource_url\" : \"https://web.example.mocklab.io/361561\",\n    \"date_updated\" : \"2023-07-16T12:45:37.432Z\",\n    \"data\" : \"xtyfi69satxxe11v8f6u60r3nudk3ckvidcg8k6pgfgtzu1cw8ttnzea79fapjqf3e86pqswfnvu8cgw36pgptgpa339d5j80k07xh8gkcp2kkx3w39j362\",\n    \"inbound_resource_sid\" : \"pZECBF12d6Ec1F4EDe5e949bDa2ff999fB\",\n    \"date_created\" : \"2022-04-22T09:27:34.432Z\",\n    \"outbound_resource_status\" : \"answered\",\n    \"inbound_participant_sid\" : \"KP88AA6cfc5e9bCb75Fd0AA6222aECcB2A\",\n    \"participant_sid\" : \"KP4e0Ec3Ea42e5b8A40B2CA2fBb19dCF60\",\n    \"session_sid\" : \"KC84fE62fD4A4AF57864fb23C9fb1F19E8\",\n    \"type\" : \"message\",\n    \"outbound_participant_sid\" : \"KP0FBDFE289E0Dea17Bb818A0bbFB2252B\",\n    \"url\" : \"https://web.example.mocklab.io/842895\",\n    \"sid\" : \"KI692B0Ba64fF2813695BBD46Aa958CCE9\",\n    \"service_sid\" : \"KS0DFDC0A0F8C2e9e6AD57A52F7B262ACE\",\n    \"inbound_resource_status\" : \"canceled\",\n    \"outbound_resource_type\" : \"0p53935p9o27ok1ggq20z8munu0fdx1x7whndx3yna1liwqioapc67rqh9hakizv6550gv1u\",\n    \"account_sid\" : \"ACB1cBA9c5EE7F27dedE0f9E3De55e14E4\",\n    \"inbound_resource_type\" : \"4gvp8nmsoo9lxl0kjw21bhtutxpz938dy55rcnbh1nhwkwscxwtocy5bsiv40o2tuf0ioevwtlnt8b1pjhmvjfjw0f2e6are7rlycf416nngslaahqc\"\n  }, {\n    \"outbound_resource_url\" : \"https://web.example.mocklab.io/575980\",\n    \"outbound_resource_sid\" : \"TFb5E9eF4b905646c0eA110b705D3D4e9F\",\n    \"inbound_resource_url\" : \"https://web.example.mocklab.io/568682\",\n    \"date_updated\" : \"2022-12-11T20:38:22.433Z\",\n    \"data\" : \"po7pnew7ip21uh3877stkkula66menqtkro8h0gowy5vl5dfy6wjwa702enspggz4fzan6c508ca1kg8lk37lebs7f41r1hkjkkx1uoyr31i29h6scm8t2djpyipp7\",\n    \"inbound_resource_sid\" : \"dGAD115A3F647ED6fDeA3340443f225fdc\",\n    \"date_created\" : \"2022-06-12T01:08:20.433Z\",\n    \"outbound_resource_status\" : \"undelivered\",\n    \"inbound_participant_sid\" : \"KP7061F32B47C23abcaBBc9fB4FFF8EEAC\",\n    \"participant_sid\" : \"KP59eAfED9ed9E04Aed0c15bA5dba0f66F\",\n    \"session_sid\" : \"KCaCebd9C870ee10e855c8db2017776b66\",\n    \"type\" : \"unknown\",\n    \"outbound_participant_sid\" : \"KPA1bD5aBC0fdcdBbEaF13A4DbDE842E85\",\n    \"url\" : \"https://web.example.mocklab.io/856816\",\n    \"sid\" : \"KI37eCaD3C9D5CD2dcF8ECd1eccFfeaBEf\",\n    \"service_sid\" : \"KSa6DEc0bAeB8aaaFdBdF30e6d6e8110dD\",\n    \"inbound_resource_status\" : \"received\",\n    \"outbound_resource_type\" : \"6jkgyp6invikcnhdzm0q1jva8bibq8fsaw70\",\n    \"account_sid\" : \"ACb0B3cBdEE171C9E44dB7EaC2ACeccAAD\",\n    \"inbound_resource_type\" : \"3ghuxg06ob9tnu9qbadnrhgdd5qd9dcvybqt1jj9vv1cnogxwrpakynp5u26v8wtp7t89s4kxhpdrk375dpngf8rgrbfbuvpubfco2ph07wjgqltwbdq0i5por1fqp37j0z47ogujhye51r\"\n  }, {\n    \"outbound_resource_url\" : \"https://web.example.mocklab.io/793320\",\n    \"outbound_resource_sid\" : \"cx6ecAE162DD5E15BFEE51d5EB9De083cb\",\n    \"inbound_resource_url\" : \"https://web.example.mocklab.io/980247\",\n    \"date_updated\" : \"2022-08-05T09:06:19.433Z\",\n    \"data\" : \"n0ovdr7m924fvqve2qrm69ig3qvjberq8fodcnbfhhwm9ukrnxj0xn4djh\",\n    \"inbound_resource_sid\" : \"QK90E3aD91974913C811ba89b5fdfBfce1\",\n    \"date_created\" : \"2023-12-31T10:45:18.433Z\",\n    \"outbound_resource_status\" : \"initiated\",\n    \"inbound_participant_sid\" : \"KP2B6EddBD3c42b6eBaEb1b495af4EC3B6\",\n    \"participant_sid\" : \"KPce1f9c9D38FeEe5eef7d13936bFddDfF\",\n    \"session_sid\" : \"KCd5A0aff7C57D8e0A11EdF2dfA7EEAD5c\",\n    \"type\" : \"message\",\n    \"outbound_participant_sid\" : \"KPF8BDBf0ef8346F6F3f9CcA5ebaA0fF3c\",\n    \"url\" : \"https://web.example.mocklab.io/827754\",\n    \"sid\" : \"KI0Cc9b2C6af3b0f81d9BCfBDd68b575CA\",\n    \"service_sid\" : \"KS6c1FCe64cF6CdfbdB7d26b61c9d49ddF\",\n    \"inbound_resource_status\" : \"accepted\",\n    \"outbound_resource_type\" : \"eh8swaesx8u14ct12lcvs1qlub75sbfku9d07s2gu82u47ox61vggq6wc9ae1kr5\",\n    \"account_sid\" : \"AC01d01EBE5BAd0b4Ba2B70F16dA8320e6\",\n    \"inbound_resource_type\" : \"by21g6vfpj3e29kke3kr1\"\n  }, {\n    \"outbound_resource_url\" : \"https://web.example.mocklab.io/572517\",\n    \"outbound_resource_sid\" : \"dia0564bd0eF4e54Effd6D02fcb1F78709\",\n    \"inbound_resource_url\" : \"https://web.example.mocklab.io/161614\",\n    \"date_updated\" : \"2023-08-14T16:00:03.433Z\",\n    \"data\" : \"xato3amrr09g4ve8vfvkbrhydok4mlddcj6xa2x07262yk3il63hwb6a6zztxsshr1w71wdx820noiahdlga6e2l8fyfv63099\",\n    \"inbound_resource_sid\" : \"OUbEA76c02D8Ae02C8d4C4fDe1c8E4AC5f\",\n    \"date_created\" : \"2023-10-27T22:39:40.433Z\",\n    \"outbound_resource_status\" : \"scheduled\",\n    \"inbound_participant_sid\" : \"KPd9a2Aa15Ab6C7a46fAb89c769882e20B\",\n    \"participant_sid\" : \"KP430b398fEc9B90DeD8bE0F3bEA1fD488\",\n    \"session_sid\" : \"KCEAcbc04cEA2B7f0503aC174d2f3B8090\",\n    \"type\" : \"unknown\",\n    \"outbound_participant_sid\" : \"KP468FF5EF8A38e8C42D5e865653077EA6\",\n    \"url\" : \"https://web.example.mocklab.io/725264\",\n    \"sid\" : \"KIe3b31fBbEcb03cc57B8AebfdBC73a8B0\",\n    \"service_sid\" : \"KScCc9A2ec1cb136fF4EB20fba2BDEeF0B\",\n    \"inbound_resource_status\" : \"answered\",\n    \"outbound_resource_type\" : \"xmnsd4yse76zwol4nbyeb93z45zyvitymmj766kyy2hjn43nvplsu7gzq3r5r2cbac5ps5hra3juoam1rqar1w7p5sf5rvrj1iv5j9natq30sadm5j6xygffmakmk7szilbbkiwoljxdfsxrs9mo03adx3olhc0qvlvvrd80welpo4yg3b1ug2ds2kd\",\n    \"account_sid\" : \"ACDB49Fd96Fbfb857a446fcFfb4C08A16b\",\n    \"inbound_resource_type\" : \"rfm0j7746r0pzw18wu4ce6d6mmlxyv90m8d0y4hpx2iekae5b97l9h7eifmw1qs8s1mgyynyrm0vfp9awmigaw8pz7l1gmvsjbk3paufkbg\"\n  }, {\n    \"outbound_resource_url\" : \"https://web.example.mocklab.io/784663\",\n    \"outbound_resource_sid\" : \"FuCeDaE5E04d2c2cCCc9f5d47D24f286c6\",\n    \"inbound_resource_url\" : \"https://web.example.mocklab.io/162578\",\n    \"date_updated\" : \"2023-10-13T02:51:54.434Z\",\n    \"data\" : \"0gzl2siiaoyv24wfvyqkqj76t9ylscf5xrrgsafepem8wtwxphsbd4snq3oto3cqmo2b29soh44a3w6vzt7kk1aru51n82vxwnaras9wesqqg8lwyk4bpzvd\",\n    \"inbound_resource_sid\" : \"EfbCCA91107a64bAFDe7b9D78D6c4EfE43\",\n    \"date_created\" : \"2022-10-20T23:26:22.434Z\",\n    \"outbound_resource_status\" : \"accepted\",\n    \"inbound_participant_sid\" : \"KP8ccD273CFA6b1744e7C5C9D7fF36066B\",\n    \"participant_sid\" : \"KP4d8CD53c1f19a0C7aE0FaB5Fd309242F\",\n    \"session_sid\" : \"KCD857AdF3D5A3f8AFC0BfFd5deDfA5bca\",\n    \"type\" : \"message\",\n    \"outbound_participant_sid\" : \"KP1Ea3e0fca0b8119dEb4fC6DeD68c48d1\",\n    \"url\" : \"https://web.example.mocklab.io/757944\",\n    \"sid\" : \"KICA17Cae9fefa1f3fcEDfBddEAdEC906a\",\n    \"service_sid\" : \"KS3bDFDC80BF4C490CFAC63B0842CdFD57\",\n    \"inbound_resource_status\" : \"scheduled\",\n    \"outbound_resource_type\" : \"5kurep4zuvbb3hm8h2tbuu1okpavluswp91ck6axdmhvi7gq2zkg4utk6peoyb5z072rb1szrytfwsukszjypxnglk67d9x0ren5ftefxp2p4n1tv1ckhbu4z3vu7i83ghi8tnwp6t72q0k63j55d8a625s6qop3fyatk116obdribsusv1\",\n    \"account_sid\" : \"AC9c0FAdfEBe07826Ffff417a073a0d2A0\",\n    \"inbound_resource_type\" : \"obpnqy3qfjlsob2lmh9r7u11ncf8onuxedcj2ccapaupuw812bfyuabjvlgitkkqscm11a6jtyh18isejxjozjv\"\n  }, {\n    \"outbound_resource_url\" : \"https://web.example.mocklab.io/913322\",\n    \"outbound_resource_sid\" : \"dNab05fA3A51D2B2c76fDE5C6A0793Ff30\",\n    \"inbound_resource_url\" : \"https://web.example.mocklab.io/723523\",\n    \"date_updated\" : \"2024-02-01T21:49:17.434Z\",\n    \"data\" : \"8onkumbpn0nsowu64gc7iwgh5qp47fahnb6ghiwod2c1xc9lrqodav6xor97rb4lq9l9skkpbqmwwsnrbcuj7vksipp04srmps3wsymw5alqn4tdtvq5obvkjschy00snb2tqjyl1uwz1o6h16gyxhewm\",\n    \"inbound_resource_sid\" : \"IA6aABD3eC26cFB04Be88dfD5e09ECa5AD\",\n    \"date_created\" : \"2022-08-04T09:39:05.434Z\",\n    \"outbound_resource_status\" : \"received\",\n    \"inbound_participant_sid\" : \"KPAcB2a29AFDFa8CECbaFbe18357459aFC\",\n    \"participant_sid\" : \"KPbBfc7EA2F7075Fcd8D81E8AA13cdbd82\",\n    \"session_sid\" : \"KCED2d23e2a41B39a7aF2BEf84ef56b614\",\n    \"type\" : \"voice\",\n    \"outbound_participant_sid\" : \"KP62d357c853ed6EEEc8A7a49Ce959ea70\",\n    \"url\" : \"https://web.example.mocklab.io/904151\",\n    \"sid\" : \"KICcDf9cCE96dDEF3de03603B3bDDe8E5b\",\n    \"service_sid\" : \"KS68AEbfEBe590FFB7637a950ec0ef21a7\",\n    \"inbound_resource_status\" : \"delivery-unknown\",\n    \"outbound_resource_type\" : \"j2hfbqpim53cpbgff452b45wngzmjtu2rbm8zbf6ra0wcn2l28sm3op4pkoikkz5zz\",\n    \"account_sid\" : \"ACCFbf222B70b50c14A96Ad996BEd965D6\",\n    \"inbound_resource_type\" : \"0dk9v00hp4wfgj2nqwf36qsizcm3modzjlpk6irzro8ce7olre4hf59o0x95uvdvel6ld\"\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "dad2f090-1c27-456b-8e6a-34f9cf66b172",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:21.434891Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "ListMessageInteraction",
+          "schema" : {
+            "properties" : {
+              "interactions" : {
+                "items" : {
+                  "$ref" : "#/components/schemas/proxy.v1.service.session.participant.message_interaction"
+                },
+                "type" : "array"
+              },
+              "meta" : {
+                "properties" : {
+                  "first_page_url" : {
+                    "format" : "uri",
+                    "type" : "string"
+                  },
+                  "key" : {
+                    "type" : "string"
+                  },
+                  "next_page_url" : {
+                    "format" : "uri",
+                    "nullable" : true,
+                    "type" : "string"
+                  },
+                  "page" : {
+                    "type" : "integer"
+                  },
+                  "page_size" : {
+                    "type" : "integer"
+                  },
+                  "previous_page_url" : {
+                    "format" : "uri",
+                    "nullable" : true,
+                    "type" : "string"
+                  },
+                  "url" : {
+                    "format" : "uri",
+                    "type" : "string"
+                  }
+                },
+                "type" : "object"
+              }
+            },
+            "title" : "ListMessageInteractionResponse",
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 15
+  }, {
+    "id" : "43b45e2f-d1a9-47d2-8066-d6e0f8507d0a",
+    "name" : "Add a new Participant to the Session",
+    "request" : {
+      "urlPath" : "/v1/Services/KS4bfE7a212caDDaBA631EAb2cb0Eb380b/Sessions/KC5ECF3703710e4916cdb8bF78FAAea522/Participants",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 201,
+      "body" : "{\n  \"proxy_identifier\" : \"vt88rxxranxilpf6d8lrlzdpgpdgo5\",\n  \"identifier\" : \"m7ffeyuwzz7n8l6so3r3n32tie6s8odvyehix09bvayyw0dwkkxugw2n9gh4svarbjpjpiihz5p5azlw5bwmfj8l\",\n  \"friendly_name\" : \"Nancee Bogan\",\n  \"date_updated\" : \"2024-03-18T03:29:33.431Z\",\n  \"date_deleted\" : \"2023-02-02T04:12:09.431Z\",\n  \"date_created\" : \"2022-04-01T08:16:44.431Z\",\n  \"session_sid\" : \"KC4Ec1F3D062C7e8fbfc7C7735cB67Cf0E\",\n  \"url\" : \"https://web.example.mocklab.io/417346\",\n  \"sid\" : \"KP1bEDB19217fc4318dB7Bc837D5e281Fb\",\n  \"proxy_identifier_sid\" : \"PNcAB6860CC9ae5BCb2E3a0E92EA7fe94b\",\n  \"service_sid\" : \"KS545AdD91cbE3bef1DDe66bE2Bf392AB0\",\n  \"account_sid\" : \"AC76a1a556A59E4D6FD84FdFA6a7B039d9\",\n  \"links\" : { }\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "43b45e2f-d1a9-47d2-8066-d6e0f8507d0a",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:21.431981Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "CreateParticipant",
+          "schema" : {
+            "properties" : {
+              "account_sid" : {
+                "description" : "The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the Participant resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^AC[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "date_created" : {
+                "description" : "The [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) date and time in GMT when the resource was created.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "date_deleted" : {
+                "description" : "The [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) date when the Participant was removed from the session.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "date_updated" : {
+                "description" : "The [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) date and time in GMT when the resource was last updated.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "friendly_name" : {
+                "description" : "The string that you assigned to describe the participant. This value must be 255 characters or fewer. Supports UTF-8 characters. **This value should not have PII.**",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "identifier" : {
+                "description" : "The phone number or channel identifier of the Participant. This value must be 191 characters or fewer. Supports UTF-8 characters.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "links" : {
+                "description" : "The URLs to resources related the participant.",
+                "format" : "uri-map",
+                "nullable" : true,
+                "type" : "object"
+              },
+              "proxy_identifier" : {
+                "description" : "The phone number or short code (masked number) of the participant's partner. The participant will call or message the partner participant at this number.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "proxy_identifier_sid" : {
+                "description" : "The SID of the Proxy Identifier assigned to the Participant.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^PN[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "service_sid" : {
+                "description" : "The SID of the resource's parent [Service](https://www.twilio.com/docs/proxy/api/service) resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^KS[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "session_sid" : {
+                "description" : "The SID of the parent [Session](https://www.twilio.com/docs/proxy/api/session) resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^KC[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "sid" : {
+                "description" : "The unique string that we created to identify the Participant resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^KP[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "url" : {
+                "description" : "The absolute URL of the Participant resource.",
+                "format" : "uri",
+                "nullable" : true,
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 16
+  }, {
+    "id" : "1625814b-96dc-4844-b571-759b96b0d6fa",
+    "name" : "Retrieve a list of all Participants in a Session.",
+    "request" : {
+      "urlPath" : "/v1/Services/KS683FC6a4fF2C02174EA3ef6dbcbC4a51/Sessions/KCF9B91dd2fB2FFcD95fD3a4304f51C5FE/Participants",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"meta\" : {\n    \"first_page_url\" : \"https://web.example.mocklab.io/432955\",\n    \"next_page_url\" : \"https://web.example.mocklab.io/604777\",\n    \"previous_page_url\" : \"https://web.example.mocklab.io/374251\",\n    \"page\" : 8623430721973415958,\n    \"key\" : \"z33en\",\n    \"url\" : \"https://web.example.mocklab.io/428256\",\n    \"page_size\" : 5121850859565995752\n  },\n  \"participants\" : [ {\n    \"proxy_identifier\" : \"z2iz6hkxkfiudjsw3p6f12u9m9zv9uobwmdhqeqa9drw898heqju2ar9g5byw8tftdozki218fgi4j7w8g1z0zbf5mq86smmgj752t4whhd6guclk303z5fvvmra\",\n    \"identifier\" : \"y8n3ilerxfdll28qmo33ej9xxlrrnf37a4xxwid7u33m8hn2awftya8agey2by1t6idtwwhv4x8jmg0jnkop81muibqugtyt6xslfplrcvo8k2vkfcl2hki27545b6n4yq4cs\",\n    \"friendly_name\" : \"Frederic Bergstrom\",\n    \"date_updated\" : \"2023-09-07T10:14:29.43Z\",\n    \"date_deleted\" : \"2023-11-11T12:34:25.43Z\",\n    \"date_created\" : \"2022-12-20T13:54:49.43Z\",\n    \"session_sid\" : \"KCBeE8216ba77D67654F3efDFe16b7c66A\",\n    \"url\" : \"https://web.example.mocklab.io/272735\",\n    \"sid\" : \"KP2Ada0Ef2eb2eF5e7e14bD0fC26539a0A\",\n    \"proxy_identifier_sid\" : \"PNeCbD7Fb22BfA9Dc9D008c040E1aD7EFd\",\n    \"service_sid\" : \"KSc035025c79ea4c97C5222Ee9d928C790\",\n    \"account_sid\" : \"ACD63197c988e90d24A7EF2dDE202F12a4\",\n    \"links\" : { }\n  }, {\n    \"proxy_identifier\" : \"7iwbzozrx33zh0m4f3mj50ynyuaflwy9qhk136kognl8k6bpurl61t5ys4ej2uytykonr0d2h7kncxckdm71m9c1q0pjjbrtte8bcakal40lahwes6u6z7wvh3fbnnb\",\n    \"identifier\" : \"syt84sltbxloz6rgco34trqklkz95vq7z\",\n    \"friendly_name\" : \"Ardelia Krajcik\",\n    \"date_updated\" : \"2022-10-08T03:18:11.431Z\",\n    \"date_deleted\" : \"2024-03-22T01:49:22.431Z\",\n    \"date_created\" : \"2023-07-16T18:37:23.431Z\",\n    \"session_sid\" : \"KC7215fA1227599D7D8Bc9EfE9f2Cdecc7\",\n    \"url\" : \"https://web.example.mocklab.io/239048\",\n    \"sid\" : \"KP9287E8Ac7448C7158B991FC6475CE7e6\",\n    \"proxy_identifier_sid\" : \"PN2dFACa9acfbCe9f3bC0B3E62Af3c8b63\",\n    \"service_sid\" : \"KS7Ed0cBFdddd0DFEB88E2Ab4F5Fd2b1af\",\n    \"account_sid\" : \"ACcc8FF9FBD17deFdEab2BCaae78Cc9e30\",\n    \"links\" : { }\n  }, {\n    \"proxy_identifier\" : \"b7ljscomjchnz9ws4l9q9rg1epvri1vn6k4203mofm9j7gzon4qf8dh2rt4f3xgzwtg6azbkzhz3680s2p2sh\",\n    \"identifier\" : \"nn781hgkyixdi5rmnmb4kyyp88zt64uh08zi86v6bs\",\n    \"friendly_name\" : \"Porfirio Mohr\",\n    \"date_updated\" : \"2022-08-07T14:41:19.431Z\",\n    \"date_deleted\" : \"2022-08-01T09:45:08.431Z\",\n    \"date_created\" : \"2023-03-19T19:39:31.431Z\",\n    \"session_sid\" : \"KC7Cb0d092B051A46Ac8bFD4FaCc65A14a\",\n    \"url\" : \"https://web.example.mocklab.io/479746\",\n    \"sid\" : \"KP80A4b5cc5102b63df9e3BC17325032Cf\",\n    \"proxy_identifier_sid\" : \"PN71eDDAC505EACF587d8b4de7F45ccabd\",\n    \"service_sid\" : \"KS0dAd16DeedB5cd8bF0B55eBDF65aadcD\",\n    \"account_sid\" : \"AC9E9dE1c6A03BaDA8cADCFe6127828D3C\",\n    \"links\" : { }\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "1625814b-96dc-4844-b571-759b96b0d6fa",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:21.431616Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "ListParticipant",
+          "schema" : {
+            "properties" : {
+              "meta" : {
+                "properties" : {
+                  "first_page_url" : {
+                    "format" : "uri",
+                    "type" : "string"
+                  },
+                  "key" : {
+                    "type" : "string"
+                  },
+                  "next_page_url" : {
+                    "format" : "uri",
+                    "nullable" : true,
+                    "type" : "string"
+                  },
+                  "page" : {
+                    "type" : "integer"
+                  },
+                  "page_size" : {
+                    "type" : "integer"
+                  },
+                  "previous_page_url" : {
+                    "format" : "uri",
+                    "nullable" : true,
+                    "type" : "string"
+                  },
+                  "url" : {
+                    "format" : "uri",
+                    "type" : "string"
+                  }
+                },
+                "type" : "object"
+              },
+              "participants" : {
+                "items" : {
+                  "$ref" : "#/components/schemas/proxy.v1.service.session.participant"
+                },
+                "type" : "array"
+              }
+            },
+            "title" : "ListParticipantResponse",
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 17
+  }, {
+    "id" : "79a92169-03d7-4602-9cf1-a37b110957f9",
+    "name" : "Retrieve a list of Interactions for a given [Session](https://www.twilio.com/doc...",
+    "request" : {
+      "urlPath" : "/v1/Services/KSC33aeA27aBDeaE5Ec6d5d2AA82aE9FBb/Sessions/KC2dAdf2B658C1A51CDfb776ACC048a212/Interactions/KID8baBcb7A9DC83F9Ca38B3DdE64fCCED",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"outbound_resource_url\" : \"https://web.example.mocklab.io/213697\",\n  \"outbound_resource_sid\" : \"Ed9c9A3cb272FC538b7cFB4F3B8Af573c4\",\n  \"inbound_resource_url\" : \"https://web.example.mocklab.io/464147\",\n  \"date_updated\" : \"2023-05-25T02:32:03.43Z\",\n  \"data\" : \"x68e0suo4an4c4crb8j2kp9f68chwm70awoeywzihgp86lw9u5e13eabjji2ke7f9ere4lpp7mw3igdbq0kmwmdnp9fynabfme3p1df30g4nd2wrjj7hyabb69grgfecnif0tqqu5zqctvluook051srgbb830liagaicdtw95whsy3ciy\",\n  \"inbound_resource_sid\" : \"qtf312AaE293cBF516bCaeFF4BfbdAc804\",\n  \"date_created\" : \"2023-03-31T12:45:03.43Z\",\n  \"outbound_resource_status\" : \"canceled\",\n  \"inbound_participant_sid\" : \"KPf4C2c08aa69290aea3930edDd5A84FfE\",\n  \"session_sid\" : \"KC5CFA9d5AFFb130Bd69cEe36A6cD80BE7\",\n  \"type\" : \"message\",\n  \"outbound_participant_sid\" : \"KP342c92379A62dCadc15cc0AB4DDCF6d7\",\n  \"url\" : \"https://web.example.mocklab.io/075218\",\n  \"sid\" : \"KI625e11c09fD736dc0566058A39876309\",\n  \"service_sid\" : \"KSAbFaD1bfF99eD52ee4A3B2B39ead0E23\",\n  \"inbound_resource_status\" : \"ringing\",\n  \"outbound_resource_type\" : \"qo7r2z9s5x6w77s0p6g51o3widz9pz203l8hai4wauh3in3t4a8l46qro9f48qt416khf39nakcjdemtr2l6o7q4erishe9q01jzk28ashs9ywk2d9ojucyhxk4i6vamhx7p\",\n  \"account_sid\" : \"ACbc753df925CBAddD9AbFE77c2e5BE5c7\",\n  \"inbound_resource_type\" : \"ly256d8jr41e99qswxkbu2wtofy5wyd9a1uwd84utodoggocakzg6ejziqq0ejp0a10of6kfkjfyi07yxsdgm0o4bfvfhvcq2nkki4n5c7pandfiuinqezs02nl55pukpxptje80ozggzucrwwkaddhz4ksn\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "79a92169-03d7-4602-9cf1-a37b110957f9",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:21.430556Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "FetchInteraction",
+          "schema" : {
+            "properties" : {
+              "account_sid" : {
+                "description" : "The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the Interaction resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^AC[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "data" : {
+                "description" : "A JSON string that includes the message body of message interactions (e.g. `{\"body\": \"hello\"}`) or the call duration (when available) of a call (e.g. `{\"duration\": \"5\"}`).",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "date_created" : {
+                "description" : "The [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) date and time in GMT when the Interaction was created.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "date_updated" : {
+                "description" : "The [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) date and time in GMT when the resource was last updated.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "inbound_participant_sid" : {
+                "description" : "The SID of the inbound [Participant](https://www.twilio.com/docs/proxy/api/participant) resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^KP[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "inbound_resource_sid" : {
+                "description" : "The SID of the inbound resource; either the [Call](https://www.twilio.com/docs/voice/api/call-resource) or [Message](https://www.twilio.com/docs/sms/api/message.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^[a-zA-Z]{2}[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "inbound_resource_status" : {
+                "$ref" : "#/components/schemas/interaction_enum_resource_status"
+              },
+              "inbound_resource_type" : {
+                "description" : "The inbound resource type. Can be [Call](https://www.twilio.com/docs/voice/api/call-resource) or [Message](https://www.twilio.com/docs/sms/api/message-resource).",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "inbound_resource_url" : {
+                "description" : "The URL of the Twilio inbound resource",
+                "format" : "uri",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "outbound_participant_sid" : {
+                "description" : "The SID of the outbound [Participant](https://www.twilio.com/docs/proxy/api/participant)).",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^KP[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "outbound_resource_sid" : {
+                "description" : "The SID of the outbound resource; either the [Call](https://www.twilio.com/docs/voice/api/call-resource) or [Message](https://www.twilio.com/docs/sms/api/message-resource).",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^[a-zA-Z]{2}[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "outbound_resource_status" : {
+                "$ref" : "#/components/schemas/interaction_enum_resource_status"
+              },
+              "outbound_resource_type" : {
+                "description" : "The outbound resource type. Can be: [Call](https://www.twilio.com/docs/voice/api/call-resource) or [Message](https://www.twilio.com/docs/sms/api/message-resource).",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "outbound_resource_url" : {
+                "description" : "The URL of the Twilio outbound resource.",
+                "format" : "uri",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "service_sid" : {
+                "description" : "The SID of the parent [Service](https://www.twilio.com/docs/proxy/api/service) resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^KS[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "session_sid" : {
+                "description" : "The SID of the parent [Session](https://www.twilio.com/docs/proxy/api/session) resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^KC[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "sid" : {
+                "description" : "The unique string that we created to identify the Interaction resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^KI[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "type" : {
+                "$ref" : "#/components/schemas/interaction_enum_type"
+              },
+              "url" : {
+                "description" : "The absolute URL of the Interaction resource.",
+                "format" : "uri",
+                "nullable" : true,
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 18
+  }, {
+    "id" : "31f828c1-f723-45d8-b3b9-e91652780fee",
+    "name" : "Delete a specific Interaction. - 204",
+    "request" : {
+      "urlPath" : "/v1/Services/KS23dc0ce3FAeaA7A8c1f3FEd8c3CAB3cE/Sessions/KC2Dd3EAeECeF3CAfBAaf21Aef230cdA2A/Interactions/KI2b14d50E44B480dcDB472Fb6D83854AE",
+      "method" : "DELETE"
+    },
+    "response" : {
+      "status" : 204
+    },
+    "uuid" : "31f828c1-f723-45d8-b3b9-e91652780fee",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:21.429962Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "DeleteInteraction"
+        }
+      }
+    },
+    "insertionIndex" : 19
+  }, {
+    "id" : "2e840e29-309b-4efc-929c-a7f0c5dd4a14",
+    "name" : "Retrieve a list of all Interactions for a Session. A maximum of 100 records will...",
+    "request" : {
+      "urlPath" : "/v1/Services/KS75E73650E5Cf8424FFBA9065a2Ea223F/Sessions/KCDCcAC39f620Fa386A7a1c6Edb2Bb067A/Interactions",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"meta\" : {\n    \"first_page_url\" : \"https://web.example.mocklab.io/445791\",\n    \"next_page_url\" : \"https://web.example.mocklab.io/480660\",\n    \"previous_page_url\" : \"https://web.example.mocklab.io/092580\",\n    \"page\" : 4749744036639428952,\n    \"key\" : \"ayakna6vdujwa1oyehcwa1fopwrin1uv8gx7yjx5bq2ye91hlzlu9cqyqpuj6\",\n    \"url\" : \"https://web.example.mocklab.io/070436\",\n    \"page_size\" : 3675168605347346928\n  },\n  \"interactions\" : [ {\n    \"outbound_resource_url\" : \"https://web.example.mocklab.io/653754\",\n    \"outbound_resource_sid\" : \"bJ9C13e41FCAF3286B3A926DAf9BD191AB\",\n    \"inbound_resource_url\" : \"https://web.example.mocklab.io/099659\",\n    \"date_updated\" : \"2023-10-17T12:00:01.427Z\",\n    \"data\" : \"h7r65a\",\n    \"inbound_resource_sid\" : \"gGDfd8b56beCC2fABC7F0b0a43214fB6ec\",\n    \"date_created\" : \"2023-07-31T14:33:20.427Z\",\n    \"outbound_resource_status\" : \"busy\",\n    \"inbound_participant_sid\" : \"KP605e12Cd48b5BDF5Bac3cE3462490b51\",\n    \"session_sid\" : \"KCaF2Bfa1daDcfc64F74530da845AD105a\",\n    \"type\" : \"voice\",\n    \"outbound_participant_sid\" : \"KP04A2B99af9cEA5cc9739C0f2b6a52CeC\",\n    \"url\" : \"https://web.example.mocklab.io/742426\",\n    \"sid\" : \"KI331fEAf9e8aF1Ec11e5D43aa7279B92E\",\n    \"service_sid\" : \"KSeB5DFad55F882CCe86f994922de6f3f0\",\n    \"inbound_resource_status\" : \"accepted\",\n    \"outbound_resource_type\" : \"x1mv8421u6hrgn2x8bppnhwfkqw4176ywduktunpfh5iwgg5r96r5n02s77x9fe0ggkj6w887v8lyl40m1vd6q42pvn3x6rt3y1xk9j22h2zdv9klapgu2avfx9q4c7sjjwtbm2vgvgguhhywg3ip8kpbt0uswncu7qzqumaedps0wvxcz196gk\",\n    \"account_sid\" : \"AC581Ea2Ba4C05E32EDB0daDe7d0AbA21B\",\n    \"inbound_resource_type\" : \"x77feup8b4u4zpiryketemvcsvwua105wu0alpbunbzzz7uybdn6rfaf7ymmcc4puayhpe47zfnkl1cmftfhrtk3qsote9t6ky9l5ehatslif3legmeb4vikr173ncz5p7t9x4g136xqzk4ijasv5rclb\"\n  }, {\n    \"outbound_resource_url\" : \"https://web.example.mocklab.io/058975\",\n    \"outbound_resource_sid\" : \"jOE41F9a21aCa5df2fb8A4B6Cf7a3557AB\",\n    \"inbound_resource_url\" : \"https://web.example.mocklab.io/389778\",\n    \"date_updated\" : \"2023-08-29T04:11:36.427Z\",\n    \"data\" : \"eu8zo2ludbtt27ih1w8fqzz\",\n    \"inbound_resource_sid\" : \"Czde1BB1a526DB9a2DCc37eca00d7d6FFc\",\n    \"date_created\" : \"2022-08-10T03:50:52.427Z\",\n    \"outbound_resource_status\" : \"no-answer\",\n    \"inbound_participant_sid\" : \"KPbccF0d3dfC19893198506482b0f46ea2\",\n    \"session_sid\" : \"KC013DAcDd6AAE7d0CcD7492d353ACdcCF\",\n    \"type\" : \"unknown\",\n    \"outbound_participant_sid\" : \"KPAC2E2eC2BC7D5edDA978dD91BE37f672\",\n    \"url\" : \"https://web.example.mocklab.io/151279\",\n    \"sid\" : \"KIa69fB4fD3C6F02fec8FEF9cDeB4bbFb6\",\n    \"service_sid\" : \"KS49fad0ae8bCeaD237F8af55772422a8b\",\n    \"inbound_resource_status\" : \"busy\",\n    \"outbound_resource_type\" : \"pxtgske2zjyi7gahgp9ymbrqqrrqlsjuw65ruuyp3sr87u998icmybsqrl3mfn7l97fvwhhrfoovsqs1h7ez3yyvb0te3ygfii74udrcborg1x2\",\n    \"account_sid\" : \"AC788BA2ED7b2acdd636F0dbFeba9EBefa\",\n    \"inbound_resource_type\" : \"ejzpc6rwthraue787ntycswog8wgil1l6m6fuxyu2ynit7fgz0\"\n  }, {\n    \"outbound_resource_url\" : \"https://web.example.mocklab.io/223316\",\n    \"outbound_resource_sid\" : \"ID8b3D3cFa61dedCfB26BBA2F26efeecCa\",\n    \"inbound_resource_url\" : \"https://web.example.mocklab.io/323247\",\n    \"date_updated\" : \"2024-02-05T02:19:12.428Z\",\n    \"data\" : \"377fpe9626a39mxyje8mzp74wl7gp1akwwnqyu5145ls6ud3wqbzy1iwm2p92ked7c71wr7z05j2zx10h4nth1d9hl5pbo7238s0czxri159a8hgyvs9zxiy7fucla7qx4x7mpp22979chd7541klhcv2n1qskgm\",\n    \"inbound_resource_sid\" : \"MDB82e6bfaA9d4EFE009F2dA8b9f68E19a\",\n    \"date_created\" : \"2023-07-30T22:40:04.428Z\",\n    \"outbound_resource_status\" : \"sent\",\n    \"inbound_participant_sid\" : \"KP85C1ee1Da3cE0CCf20969B471c335e13\",\n    \"session_sid\" : \"KC07cF4244aa4C02D28B7c498F5fd7E8C6\",\n    \"type\" : \"voice\",\n    \"outbound_participant_sid\" : \"KPBAA26B45a9Bcb2117b7f7b29e7356ecc\",\n    \"url\" : \"https://web.example.mocklab.io/504622\",\n    \"sid\" : \"KIe7a26D6A871fB8BE82da70FC4F3A2fB3\",\n    \"service_sid\" : \"KSF3f1deDc63AeE188eFEd3d2C6D7fe351\",\n    \"inbound_resource_status\" : \"delivered\",\n    \"outbound_resource_type\" : \"x6hxdq42fs103hh4rlahcl2y3msqtqjm5h3hjedarbznvgiiziqcnlg6aom8tpjedi5zc2940afxrjfr0wcal1fv3sjeal5yt236y8g4ig3lmu0orbvgc3m4ap0ag854g0lfqqlzpx4pgsbwsuh1nlai40bq305br9zi1y0ggyuju3ube54\",\n    \"account_sid\" : \"ACfA8E05acbC745a9DAE79AaD963C4671A\",\n    \"inbound_resource_type\" : \"59w5jvjwdlcdg1nlbwebidqrrq7lcp5lqieyj8pgc9ovnw2ptuzwd5kmfan1rh0k6v4r2gvjn3dfnr6yzoenturexyq208iwblx2g35y9ybti2msqfq6t9pwwesq2hj4b8axlubfqrtsdtke1yg7nstz85826njh6ni9wvypvqoiv1bs\"\n  }, {\n    \"outbound_resource_url\" : \"https://web.example.mocklab.io/774515\",\n    \"outbound_resource_sid\" : \"MuAe2ff1065B0fF82f1cB5Af5e9aa9e43F\",\n    \"inbound_resource_url\" : \"https://web.example.mocklab.io/189123\",\n    \"date_updated\" : \"2022-04-11T18:53:25.428Z\",\n    \"data\" : \"q4mdt1km4mezpd0bosflyy2ozj3a0lnlo12jxc66m5640k2pqz2jqi9wvc9fkioc7gxykv5uh7eajwfh3wi3r3jijk4boyamn7r0fgj7yca9b0rvf135d2o7edqud318sk5v55e1d6mlco6muw69omhuag6w178ums9tziqfmvfq4h7rfjt\",\n    \"inbound_resource_sid\" : \"gE7cE91C32A3ddEC2f56C79fD79eD982A5\",\n    \"date_created\" : \"2024-01-24T09:04:03.428Z\",\n    \"outbound_resource_status\" : \"canceled\",\n    \"inbound_participant_sid\" : \"KPccad0b8Db2a4A29cb7dee721427b3D7B\",\n    \"session_sid\" : \"KCADd9fd2F9ad6E65Eb419C1e2DCEf822d\",\n    \"type\" : \"voice\",\n    \"outbound_participant_sid\" : \"KPa5EeaEe6DABCd3a5cC8c0Bcb507D9aa4\",\n    \"url\" : \"https://web.example.mocklab.io/313430\",\n    \"sid\" : \"KI92Baa65FdaABF6E6ea62EfFCB6273faa\",\n    \"service_sid\" : \"KSBeb6E2e7ADdAAfC8CedFE0AA7CBD6dDE\",\n    \"inbound_resource_status\" : \"canceled\",\n    \"outbound_resource_type\" : \"w46h0wuwxi7s7xro9zgaym73axla1dtqzbdb07anqn4q62z0w4x7ou0vi02nh8o7864pt6xlg9y3srqzhjnl6p\",\n    \"account_sid\" : \"AC2C76FFc0EdD4Fc0B856DBcaF6CB2CFBF\",\n    \"inbound_resource_type\" : \"3by27yk7zyefogmwkvctsxffa7ujjbf7ucggp5eaog368jbssawocv7oc2fdvt1qulhib8xlriojgqbe450m0\"\n  }, {\n    \"outbound_resource_url\" : \"https://web.example.mocklab.io/094872\",\n    \"outbound_resource_sid\" : \"xoa2aF60F042D7CcBece1Ee9D758AFDaA1\",\n    \"inbound_resource_url\" : \"https://web.example.mocklab.io/761242\",\n    \"date_updated\" : \"2024-03-16T16:47:21.428Z\",\n    \"data\" : \"2hof0c6w7c9nim8x33p5jsnj7vtgbcbjcxrka15pehjlsefv1rjzbogg6v9qd2a7qyjt7fai8md53w7hfo3w6cquyh2gat7g22mzkimen6aaycazbhmk23dpk\",\n    \"inbound_resource_sid\" : \"rGcfa5fdfDe782C138baDbEAE7C24DCCcB\",\n    \"date_created\" : \"2023-06-04T19:17:19.428Z\",\n    \"outbound_resource_status\" : \"canceled\",\n    \"inbound_participant_sid\" : \"KPFbCddA3df8bB49D6E28B5CAAd0BE09bF\",\n    \"session_sid\" : \"KC8C5D6Ff494E7B3dc9fccBECDEdDb148d\",\n    \"type\" : \"voice\",\n    \"outbound_participant_sid\" : \"KP6B058Fd5FD582Da2EB3aA1BffBAADD05\",\n    \"url\" : \"https://web.example.mocklab.io/250471\",\n    \"sid\" : \"KI2a1d05828Bd437fBd988cb1aD76Cecd4\",\n    \"service_sid\" : \"KSb54d6a7CD961DcBefaf4d7B1BC2F697f\",\n    \"inbound_resource_status\" : \"sending\",\n    \"outbound_resource_type\" : \"2lu\",\n    \"account_sid\" : \"AC0aFb88D8B0bdf2AB4E3bcCE545DADbb4\",\n    \"inbound_resource_type\" : \"x4rktveyuou57rg9etgi4dpq7r1a2zq5jg9448eutfu47apslbggz4ai763kx42b08k1n9ajv377upoehamkrqymtc0dqhh6gfeg69qmtz9uq6gjemx8wgwawbs86b7mql\"\n  }, {\n    \"outbound_resource_url\" : \"https://web.example.mocklab.io/794130\",\n    \"outbound_resource_sid\" : \"hJ1B43B42B2b23c81ccdD97BF8fdebFc9d\",\n    \"inbound_resource_url\" : \"https://web.example.mocklab.io/745412\",\n    \"date_updated\" : \"2022-12-14T06:38:41.429Z\",\n    \"data\" : \"8fpejqv8vo89ux2ifg2719g6s2zfhf1u4ce3h1yesitqu6cjxzxowso1px524c5dxhux1tjq\",\n    \"inbound_resource_sid\" : \"uq1Fd10cEC7D4eE971aADe3ae14e1229EE\",\n    \"date_created\" : \"2022-04-30T21:51:34.429Z\",\n    \"outbound_resource_status\" : \"busy\",\n    \"inbound_participant_sid\" : \"KPfE0C3E9F582BCF521D820dF9c2Fb565D\",\n    \"session_sid\" : \"KC8C4cE2EF2DF3DF3aacCBcb0bbfCfC4E8\",\n    \"type\" : \"message\",\n    \"outbound_participant_sid\" : \"KPbCe9c7a67ce7dbaEea4beb8aF1ca0dC9\",\n    \"url\" : \"https://web.example.mocklab.io/127297\",\n    \"sid\" : \"KIBE78219BA3821eb7aEF6C06EBCC4aaB7\",\n    \"service_sid\" : \"KSDeFc09dB2A7bbCC94FbeDDAF8A9B2B15\",\n    \"inbound_resource_status\" : \"unknown\",\n    \"outbound_resource_type\" : \"7kuy1xteoc01o26nkakq25b77h0ewqbxxzckw9quy8xbqa6mzwbyv5t2uhnxhlhs5txv02isn6e03hbadzamw41nlz4qb89j3wg6r46ymj\",\n    \"account_sid\" : \"AC2dec86b71adADa41636cE6A5cF093c70\",\n    \"inbound_resource_type\" : \"iwgtmi52nlfc64fpdm7svv244bx5eq09hugwe1wx3060z6esx4yii5ps5p69k3wa18wqugf7xb7kz1h4l3l0rmh25y3i383xhleygzhh5bp4fx40rve4llvg9yot5gcve6clujnm2zano6wc452cnum05wly6rffombrv6outgku5kk0jdxkz8uek\"\n  }, {\n    \"outbound_resource_url\" : \"https://web.example.mocklab.io/499789\",\n    \"outbound_resource_sid\" : \"Ira52F7C9b9452C030bAB7DBfF1C342Ab0\",\n    \"inbound_resource_url\" : \"https://web.example.mocklab.io/323864\",\n    \"date_updated\" : \"2022-10-21T08:52:27.429Z\",\n    \"data\" : \"8zen8o9s6irn8nv9tkamwl7xk5zzwjl9qpn4dy3ptnaotvwqzn9ouhyu1triohtd965c2h1d\",\n    \"inbound_resource_sid\" : \"sXbe67FB8e86A1893eee786dfC9b7eA178\",\n    \"date_created\" : \"2023-02-17T08:54:35.429Z\",\n    \"outbound_resource_status\" : \"completed\",\n    \"inbound_participant_sid\" : \"KPA0CeeBc0fE11917D3d0fA6c808E8638f\",\n    \"session_sid\" : \"KCDbc34E25B9cdFD66D7563af014bC6D0B\",\n    \"type\" : \"unknown\",\n    \"outbound_participant_sid\" : \"KPf77aCC5e6575bCDEDe3c6afC433952c1\",\n    \"url\" : \"https://web.example.mocklab.io/524563\",\n    \"sid\" : \"KI0fd2a6dDed56bfbCE4Ad5A19FDcF9aa3\",\n    \"service_sid\" : \"KSd0Fb4bbcdbD2Ba5eb4eCAD9bF45AB17C\",\n    \"inbound_resource_status\" : \"completed\",\n    \"outbound_resource_type\" : \"ukoa7avdft0i8uvm100y3b5rbxpq85ls1te6628b7eij2k2t1sit5i9mre93wn6lk\",\n    \"account_sid\" : \"ACD2E2Ff4f3cdcDb8b3334aCaA18EcE2eC\",\n    \"inbound_resource_type\" : \"s0gwk2jp1lufn9c2n6y89y3mhxid6vpnztgrj88yg7b30od2kmzk7683mshizuf9314fkvzzhth95sce8jnsc2t5w2b7ohdhgwxkrwrgomsx07abwxq76ghui51n6h4vz17yp2g96kuwz1643009o74flmr5292dsi11s53pnp5w8txe2r47yc3rhd5a2628\"\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "2e840e29-309b-4efc-929c-a7f0c5dd4a14",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:21.429882Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "ListInteraction",
+          "schema" : {
+            "properties" : {
+              "interactions" : {
+                "items" : {
+                  "$ref" : "#/components/schemas/proxy.v1.service.session.interaction"
+                },
+                "type" : "array"
+              },
+              "meta" : {
+                "properties" : {
+                  "first_page_url" : {
+                    "format" : "uri",
+                    "type" : "string"
+                  },
+                  "key" : {
+                    "type" : "string"
+                  },
+                  "next_page_url" : {
+                    "format" : "uri",
+                    "nullable" : true,
+                    "type" : "string"
+                  },
+                  "page" : {
+                    "type" : "integer"
+                  },
+                  "page_size" : {
+                    "type" : "integer"
+                  },
+                  "previous_page_url" : {
+                    "format" : "uri",
+                    "nullable" : true,
+                    "type" : "string"
+                  },
+                  "url" : {
+                    "format" : "uri",
+                    "type" : "string"
+                  }
+                },
+                "type" : "object"
+              }
+            },
+            "title" : "ListInteractionResponse",
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 20
+  }, {
+    "id" : "9e2c22bc-b4b0-4a2c-819b-2f3cdbf45430",
+    "name" : "Create a new Session",
+    "request" : {
+      "urlPath" : "/v1/Services/KS9f33538d03AafD1fCe2350d57ddFf2bb/Sessions",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 201,
+      "body" : "{\n  \"date_updated\" : \"2023-09-13T06:14:38.426Z\",\n  \"date_created\" : \"2023-07-19T05:18:58.426Z\",\n  \"ttl\" : 1405259225346840532,\n  \"url\" : \"https://web.example.mocklab.io/269657\",\n  \"sid\" : \"KC69CCebEAC439cF7A3a840AAf7075B9a7\",\n  \"mode\" : \"voice-only\",\n  \"service_sid\" : \"KSDEE22FC45130b4f20deafbC84fB09c80\",\n  \"date_ended\" : \"2023-10-09T02:43:20.426Z\",\n  \"unique_name\" : \"Priscila Koch\",\n  \"closed_reason\" : \"f3o9depcgcywaakzzt1d9suf9yqpvz38ozzrng3j5wdzmi16y7or43wem9b9isp\",\n  \"date_last_interaction\" : \"2023-04-10T00:18:27.426Z\",\n  \"account_sid\" : \"AC4D730bA08d9FEE8c2ebc1bD953aB1FeD\",\n  \"links\" : { },\n  \"date_started\" : \"2022-10-21T14:36:14.426Z\",\n  \"date_expiry\" : \"2024-02-01T17:48:31.426Z\",\n  \"status\" : \"in-progress\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "9e2c22bc-b4b0-4a2c-819b-2f3cdbf45430",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:21.426759Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "CreateSession",
+          "schema" : {
+            "properties" : {
+              "account_sid" : {
+                "description" : "The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the Session resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^AC[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "closed_reason" : {
+                "description" : "The reason the Session ended.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "date_created" : {
+                "description" : "The [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) date and time in GMT when the resource was created.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "date_ended" : {
+                "description" : "The [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) date when the Session ended.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "date_expiry" : {
+                "description" : "The [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) date when the Session should expire. If this is value is present, it overrides the `ttl` value.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "date_last_interaction" : {
+                "description" : "The [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) date when the Session last had an interaction.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "date_started" : {
+                "description" : "The [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) date when the Session started.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "date_updated" : {
+                "description" : "The [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) date and time in GMT when the resource was last updated.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "links" : {
+                "description" : "The URLs of resources related to the Session.",
+                "format" : "uri-map",
+                "nullable" : true,
+                "type" : "object"
+              },
+              "mode" : {
+                "$ref" : "#/components/schemas/session_enum_mode"
+              },
+              "service_sid" : {
+                "description" : "The SID of the [Service](https://www.twilio.com/docs/proxy/api/service) the session is associated with.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^KS[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "sid" : {
+                "description" : "The unique string that we created to identify the Session resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^KC[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "status" : {
+                "$ref" : "#/components/schemas/session_enum_status"
+              },
+              "ttl" : {
+                "description" : "The time, in seconds, when the session will expire. The time is measured from the last Session create or the Session's last Interaction.",
+                "nullable" : true,
+                "type" : "integer"
+              },
+              "unique_name" : {
+                "description" : "An application-defined string that uniquely identifies the resource. This value must be 191 characters or fewer in length and be unique. Supports UTF-8 characters. **This value should not have PII.**",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "url" : {
+                "description" : "The absolute URL of the Session resource.",
+                "format" : "uri",
+                "nullable" : true,
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 21
+  }, {
+    "id" : "e33da088-b9e3-4e9a-b05d-21177a4893cd",
+    "name" : "Retrieve a list of all Sessions for the Service. A maximum of 100 records will b...",
+    "request" : {
+      "urlPath" : "/v1/Services/KSC4E7c748A227B1a5CF9D9BFDCf4B3bac/Sessions",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"sessions\" : [ {\n    \"date_updated\" : \"2022-07-26T02:45:14.424Z\",\n    \"date_created\" : \"2023-05-18T16:29:56.424Z\",\n    \"ttl\" : 5582391875201816432,\n    \"url\" : \"https://web.example.mocklab.io/069064\",\n    \"sid\" : \"KC0FC39Ec420c543cD364aA93A2886eBCe\",\n    \"mode\" : \"voice-and-message\",\n    \"service_sid\" : \"KS6Fc5DE8A4aB32CDcc9Ecd1165AeBec4E\",\n    \"date_ended\" : \"2023-04-05T13:31:56.424Z\",\n    \"unique_name\" : \"Lindsay Sanford\",\n    \"closed_reason\" : \"2udimcyin2jepv4uqxtc20zdfhcgn87qmbyad2kvhlflatu90z5mnqmh3o80e033e3qflyd0cgvnw1tab7ecqgi4uhu5p2hr7j5upse20wsfkptbpw81kqklopuargfjv38ba3rbdk1zm\",\n    \"date_last_interaction\" : \"2023-09-22T18:41:40.424Z\",\n    \"account_sid\" : \"AC6a9D7ac361AFeDcB9d352eb37dCeE7d0\",\n    \"links\" : { },\n    \"date_started\" : \"2024-01-16T10:28:18.424Z\",\n    \"date_expiry\" : \"2022-08-01T04:51:36.424Z\",\n    \"status\" : \"failed\"\n  }, {\n    \"date_updated\" : \"2023-01-29T23:12:53.424Z\",\n    \"date_created\" : \"2024-01-30T15:36:14.424Z\",\n    \"ttl\" : 8889227847103873868,\n    \"url\" : \"https://web.example.mocklab.io/328123\",\n    \"sid\" : \"KCd3914b8ffCF4f6578a6Dea8C1757Aca8\",\n    \"mode\" : \"message-only\",\n    \"service_sid\" : \"KSB5b8bEEDEC4e13fA5AB1C44D70FF55b5\",\n    \"date_ended\" : \"2023-03-30T15:07:42.424Z\",\n    \"unique_name\" : \"Miss Zachery Hilll\",\n    \"closed_reason\" : \"nw40nqbyrd3gnd9bojyq1d7aiezka2t\",\n    \"date_last_interaction\" : \"2022-06-15T06:21:21.424Z\",\n    \"account_sid\" : \"ACecBBEa3eE1de1A7bd008DdB45ca8C182\",\n    \"links\" : { },\n    \"date_started\" : \"2022-12-03T15:12:49.424Z\",\n    \"date_expiry\" : \"2023-03-29T18:33:20.424Z\",\n    \"status\" : \"failed\"\n  }, {\n    \"date_updated\" : \"2022-07-03T22:28:24.424Z\",\n    \"date_created\" : \"2022-04-14T10:05:52.424Z\",\n    \"ttl\" : 2153008576896733774,\n    \"url\" : \"https://web.example.mocklab.io/860693\",\n    \"sid\" : \"KC2dEAabBCaC64809C2abdBfab23d17AfD\",\n    \"mode\" : \"message-only\",\n    \"service_sid\" : \"KSEd4c116BD800B3eB2CbAffEdf2beDcBa\",\n    \"date_ended\" : \"2022-06-15T22:18:47.424Z\",\n    \"unique_name\" : \"Kaye Doyle\",\n    \"closed_reason\" : \"dgv6304fvocz9ktpqht0trbp6o9ium7jz019q9uf6z1jkspkq7hueq184spuk6v01utijw1qoxd0uae0pfxzcl2cyh96bjr4espwmodp4rizcfit8rjbl\",\n    \"date_last_interaction\" : \"2022-08-10T13:53:49.424Z\",\n    \"account_sid\" : \"ACb01fc9767fC9A9ad49Db7ACAdA7e28e1\",\n    \"links\" : { },\n    \"date_started\" : \"2022-10-24T06:58:16.424Z\",\n    \"date_expiry\" : \"2023-09-26T18:48:11.424Z\",\n    \"status\" : \"unknown\"\n  }, {\n    \"date_updated\" : \"2024-01-06T07:06:17.424Z\",\n    \"date_created\" : \"2023-01-18T05:04:15.424Z\",\n    \"ttl\" : 4201452669653979249,\n    \"url\" : \"https://web.example.mocklab.io/782452\",\n    \"sid\" : \"KCf9c5b2DeaFcFf79aBbDef3Fb9F3C4c9c\",\n    \"mode\" : \"message-only\",\n    \"service_sid\" : \"KS7dDED01aebb78fBDcaD54DAc1d992B38\",\n    \"date_ended\" : \"2022-09-05T03:30:32.424Z\",\n    \"unique_name\" : \"Shawnta Mills\",\n    \"closed_reason\" : \"cm0r0izp42qyo5829jblfxw2njcs4dp2ukgt5lfrop4f9oc8uw41r5lfcz3me8ktk5h363zd6fk6hsbmixuu7zhpo4o6cuejir6dhu8h1k0h6ly4puh2x840zqglyf\",\n    \"date_last_interaction\" : \"2023-11-05T11:55:05.424Z\",\n    \"account_sid\" : \"AC9b9FdFB588B3cBe3Df16A91612e2E8a6\",\n    \"links\" : { },\n    \"date_started\" : \"2022-07-08T00:47:39.424Z\",\n    \"date_expiry\" : \"2023-01-01T12:09:34.424Z\",\n    \"status\" : \"closed\"\n  }, {\n    \"date_updated\" : \"2023-04-17T09:02:30.424Z\",\n    \"date_created\" : \"2022-10-30T00:24:09.424Z\",\n    \"ttl\" : 1874894588531287081,\n    \"url\" : \"https://web.example.mocklab.io/694056\",\n    \"sid\" : \"KCD2E2150ee2d95a1291ba38faBCCFaA96\",\n    \"mode\" : \"voice-only\",\n    \"service_sid\" : \"KS085c2400a327f94D0fa6Fda7DcD5425C\",\n    \"date_ended\" : \"2022-12-13T22:21:19.425Z\",\n    \"unique_name\" : \"Chris Ruecker\",\n    \"closed_reason\" : \"huildnoap4e9v537gnwx50j3i5ldlib06640lcqa0xmyk1trfe1dkamtuefv6i12hpna33qvr2gn74owe5irh0uxkrik899f\",\n    \"date_last_interaction\" : \"2022-05-30T08:46:55.425Z\",\n    \"account_sid\" : \"AC15b5d7eB106fFFeEF1CC3ad76ba3C246\",\n    \"links\" : { },\n    \"date_started\" : \"2022-10-24T15:48:39.425Z\",\n    \"date_expiry\" : \"2022-05-24T07:50:21.425Z\",\n    \"status\" : \"in-progress\"\n  }, {\n    \"date_updated\" : \"2023-10-14T03:01:37.425Z\",\n    \"date_created\" : \"2022-11-11T12:49:33.425Z\",\n    \"ttl\" : 1383830649015342441,\n    \"url\" : \"https://web.example.mocklab.io/266398\",\n    \"sid\" : \"KC87C5D96D9a1DfCeff615a2DDf0bEF43f\",\n    \"mode\" : \"voice-only\",\n    \"service_sid\" : \"KSDDEFA989Cf8ced1c63aE589feF785099\",\n    \"date_ended\" : \"2023-05-12T20:37:30.425Z\",\n    \"unique_name\" : \"Shawnda Ullrich\",\n    \"closed_reason\" : \"2tyse2uavu07pfkwzq1uqewtdnbl194c0al75g6dg8y6lnl2ur6s2j9qg92vp5ekjvee42mh3b21q1t1vyn0xft\",\n    \"date_last_interaction\" : \"2022-11-01T08:04:04.425Z\",\n    \"account_sid\" : \"ACdA4208cC8Fcd4fDF3EaD9cE9bCbb0c7F\",\n    \"links\" : { },\n    \"date_started\" : \"2023-08-17T20:42:27.425Z\",\n    \"date_expiry\" : \"2022-06-18T17:13:40.425Z\",\n    \"status\" : \"closed\"\n  }, {\n    \"date_updated\" : \"2023-06-14T18:24:31.425Z\",\n    \"date_created\" : \"2023-09-24T23:52:39.425Z\",\n    \"ttl\" : 3202957742277896011,\n    \"url\" : \"https://web.example.mocklab.io/571233\",\n    \"sid\" : \"KCcB787aBef80a6a8C8fd8336ee9cCd5db\",\n    \"mode\" : \"voice-and-message\",\n    \"service_sid\" : \"KSFe34ceA6ca16aAef7713daA66f6359D5\",\n    \"date_ended\" : \"2023-10-30T18:42:46.425Z\",\n    \"unique_name\" : \"Michaele Gerlach V\",\n    \"closed_reason\" : \"evy\",\n    \"date_last_interaction\" : \"2023-08-10T10:00:24.425Z\",\n    \"account_sid\" : \"AC18c3ADA2Ac6Fc3EDFbA255b9DeCaefa8\",\n    \"links\" : { },\n    \"date_started\" : \"2023-11-25T11:26:16.425Z\",\n    \"date_expiry\" : \"2023-07-05T09:48:06.425Z\",\n    \"status\" : \"closed\"\n  }, {\n    \"date_updated\" : \"2022-04-16T23:57:45.425Z\",\n    \"date_created\" : \"2023-03-16T20:55:04.425Z\",\n    \"ttl\" : 7432496753546948668,\n    \"url\" : \"https://web.example.mocklab.io/558659\",\n    \"sid\" : \"KC278933CAfB3f3C6CCb424b42F8Bc5475\",\n    \"mode\" : \"voice-and-message\",\n    \"service_sid\" : \"KS3ADfb8129F8bB4AED8eeF44c449c0AEB\",\n    \"date_ended\" : \"2023-10-11T18:03:23.425Z\",\n    \"unique_name\" : \"Chelsie Marvin\",\n    \"closed_reason\" : \"msz65csvh9d958u7o2fjw\",\n    \"date_last_interaction\" : \"2022-06-03T21:35:40.425Z\",\n    \"account_sid\" : \"AC976F1B95F3EB0f8bf5E2eFDbcb031A7E\",\n    \"links\" : { },\n    \"date_started\" : \"2023-07-18T11:34:41.425Z\",\n    \"date_expiry\" : \"2023-09-13T15:33:31.425Z\",\n    \"status\" : \"failed\"\n  } ],\n  \"meta\" : {\n    \"first_page_url\" : \"https://web.example.mocklab.io/562015\",\n    \"next_page_url\" : \"https://web.example.mocklab.io/094026\",\n    \"previous_page_url\" : \"https://web.example.mocklab.io/693628\",\n    \"page\" : 8631886731615855296,\n    \"key\" : \"7k1xuebkczcmbv2bm91en5cdcuqzli59w8ullvebth\",\n    \"url\" : \"https://web.example.mocklab.io/780427\",\n    \"page_size\" : 3706148044008535565\n  }\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "e33da088-b9e3-4e9a-b05d-21177a4893cd",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:21.426265Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "ListSession",
+          "schema" : {
+            "properties" : {
+              "meta" : {
+                "properties" : {
+                  "first_page_url" : {
+                    "format" : "uri",
+                    "type" : "string"
+                  },
+                  "key" : {
+                    "type" : "string"
+                  },
+                  "next_page_url" : {
+                    "format" : "uri",
+                    "nullable" : true,
+                    "type" : "string"
+                  },
+                  "page" : {
+                    "type" : "integer"
+                  },
+                  "page_size" : {
+                    "type" : "integer"
+                  },
+                  "previous_page_url" : {
+                    "format" : "uri",
+                    "nullable" : true,
+                    "type" : "string"
+                  },
+                  "url" : {
+                    "format" : "uri",
+                    "type" : "string"
+                  }
+                },
+                "type" : "object"
+              },
+              "sessions" : {
+                "items" : {
+                  "$ref" : "#/components/schemas/proxy.v1.service.session"
+                },
+                "type" : "array"
+              }
+            },
+            "title" : "ListSessionResponse",
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 22
+  }, {
+    "id" : "4248617a-bcc7-4fc8-866d-d84453e372dd",
+    "name" : "Update a specific Proxy Number.",
+    "request" : {
+      "urlPath" : "/v1/Services/KSb8FDBCa6cfa86ECeBABC94adFDEBB4b6/PhoneNumbers/PNaCAcec15c4BE613cE2C5f6dc22aB9c0E",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"is_reserved\" : true,\n  \"service_sid\" : \"KSC7FBfa1E1e0BfeAe75EC649aAdF9fcBA\",\n  \"friendly_name\" : \"Clarence Herman\",\n  \"iso_country\" : \"Slovakia\",\n  \"capabilities\" : {\n    \"voice\" : false,\n    \"mms\" : false,\n    \"sms\" : false,\n    \"fax\" : false\n  },\n  \"date_updated\" : \"2022-10-26T09:57:14.423Z\",\n  \"date_created\" : \"2023-07-10T20:59:39.423Z\",\n  \"account_sid\" : \"AC056B4FA02F89De20e9A16eFaDA3f9fAd\",\n  \"in_use\" : 6022436139513784632,\n  \"phone_number\" : \"863.362.7140\",\n  \"url\" : \"https://web.example.mocklab.io/889172\",\n  \"sid\" : \"PNEB7Ed5F9cA2faD6db8eDF92e3BbCa08d\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "4248617a-bcc7-4fc8-866d-d84453e372dd",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:21.424106Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "UpdatePhoneNumber",
+          "schema" : {
+            "properties" : {
+              "account_sid" : {
+                "description" : "The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the PhoneNumber resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^AC[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "capabilities" : {
+                "description" : "The capabilities of the phone number.",
+                "format" : "phone-number-capabilities",
+                "nullable" : true,
+                "properties" : {
+                  "fax" : {
+                    "type" : "boolean"
+                  },
+                  "mms" : {
+                    "type" : "boolean"
+                  },
+                  "sms" : {
+                    "type" : "boolean"
+                  },
+                  "voice" : {
+                    "type" : "boolean"
+                  }
+                },
+                "type" : "object"
+              },
+              "date_created" : {
+                "description" : "The [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) date and time in GMT when the resource was created.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "date_updated" : {
+                "description" : "The [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) date and time in GMT when the resource was last updated.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "friendly_name" : {
+                "description" : "The string that you assigned to describe the resource.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "in_use" : {
+                "description" : "The number of open session assigned to the number. See the [How many Phone Numbers do I need?](https://www.twilio.com/docs/proxy/phone-numbers-needed) guide for more information.",
+                "nullable" : true,
+                "type" : "integer"
+              },
+              "is_reserved" : {
+                "description" : "Whether the phone number should be reserved and not be assigned to a participant using proxy pool logic. See [Reserved Phone Numbers](https://www.twilio.com/docs/proxy/reserved-phone-numbers) for more information.",
+                "nullable" : true,
+                "type" : "boolean"
+              },
+              "iso_country" : {
+                "description" : "The ISO Country Code for the phone number.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "phone_number" : {
+                "description" : "The phone number in [E.164](https://www.twilio.com/docs/glossary/what-e164) format, which consists of a + followed by the country code and subscriber number.",
+                "format" : "phone-number",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "service_sid" : {
+                "description" : "The SID of the PhoneNumber resource's parent [Service](https://www.twilio.com/docs/proxy/api/service) resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^KS[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "sid" : {
+                "description" : "The unique string that we created to identify the PhoneNumber resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^PN[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "url" : {
+                "description" : "The absolute URL of the PhoneNumber resource.",
+                "format" : "uri",
+                "nullable" : true,
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 23
+  }, {
+    "id" : "6965a166-3c6f-4394-b150-a46055d20606",
+    "name" : "Fetch a specific Phone Number.",
+    "request" : {
+      "urlPath" : "/v1/Services/KSe335DEFbb98744BcDD2fC7AD7ff427b4/PhoneNumbers/PN6b9A8eBCd1FBe3Ab3D34e57e00db8678",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"is_reserved\" : false,\n  \"service_sid\" : \"KS5ad00BCcFDCE8Fb2feeCaFEbDfAD7B1F\",\n  \"friendly_name\" : \"Ms. Alexandra Kling\",\n  \"iso_country\" : \"Serbia\",\n  \"capabilities\" : {\n    \"voice\" : false,\n    \"mms\" : true,\n    \"sms\" : false,\n    \"fax\" : true\n  },\n  \"date_updated\" : \"2023-02-23T08:39:07.423Z\",\n  \"date_created\" : \"2023-04-26T16:51:58.423Z\",\n  \"account_sid\" : \"ACe9C8C6870Dd44653cF75563F235E8AaF\",\n  \"in_use\" : 692972190708172444,\n  \"phone_number\" : \"391-715-5586 x127\",\n  \"url\" : \"https://web.example.mocklab.io/987264\",\n  \"sid\" : \"PNDEeAC5CBe12Ab6821fe7111bd8DfBBCe\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "6965a166-3c6f-4394-b150-a46055d20606",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:21.423744Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "FetchPhoneNumber",
+          "schema" : {
+            "properties" : {
+              "account_sid" : {
+                "description" : "The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the PhoneNumber resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^AC[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "capabilities" : {
+                "description" : "The capabilities of the phone number.",
+                "format" : "phone-number-capabilities",
+                "nullable" : true,
+                "properties" : {
+                  "fax" : {
+                    "type" : "boolean"
+                  },
+                  "mms" : {
+                    "type" : "boolean"
+                  },
+                  "sms" : {
+                    "type" : "boolean"
+                  },
+                  "voice" : {
+                    "type" : "boolean"
+                  }
+                },
+                "type" : "object"
+              },
+              "date_created" : {
+                "description" : "The [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) date and time in GMT when the resource was created.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "date_updated" : {
+                "description" : "The [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) date and time in GMT when the resource was last updated.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "friendly_name" : {
+                "description" : "The string that you assigned to describe the resource.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "in_use" : {
+                "description" : "The number of open session assigned to the number. See the [How many Phone Numbers do I need?](https://www.twilio.com/docs/proxy/phone-numbers-needed) guide for more information.",
+                "nullable" : true,
+                "type" : "integer"
+              },
+              "is_reserved" : {
+                "description" : "Whether the phone number should be reserved and not be assigned to a participant using proxy pool logic. See [Reserved Phone Numbers](https://www.twilio.com/docs/proxy/reserved-phone-numbers) for more information.",
+                "nullable" : true,
+                "type" : "boolean"
+              },
+              "iso_country" : {
+                "description" : "The ISO Country Code for the phone number.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "phone_number" : {
+                "description" : "The phone number in [E.164](https://www.twilio.com/docs/glossary/what-e164) format, which consists of a + followed by the country code and subscriber number.",
+                "format" : "phone-number",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "service_sid" : {
+                "description" : "The SID of the PhoneNumber resource's parent [Service](https://www.twilio.com/docs/proxy/api/service) resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^KS[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "sid" : {
+                "description" : "The unique string that we created to identify the PhoneNumber resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^PN[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "url" : {
+                "description" : "The absolute URL of the PhoneNumber resource.",
+                "format" : "uri",
+                "nullable" : true,
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 24
+  }, {
+    "id" : "be1b3011-eaa4-48aa-bec4-e3d91fc98650",
+    "name" : "Delete a specific Phone Number from a Service. - 204",
+    "request" : {
+      "urlPath" : "/v1/Services/KSda3deba02B1D2FB2c8c7a0Cf37fa9059/PhoneNumbers/PN6A45b35cdfF9fc60EBd8f1a97bb37Cc9",
+      "method" : "DELETE"
+    },
+    "response" : {
+      "status" : 204
+    },
+    "uuid" : "be1b3011-eaa4-48aa-bec4-e3d91fc98650",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:21.423383Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "DeletePhoneNumber"
+        }
+      }
+    },
+    "insertionIndex" : 25
+  }, {
+    "id" : "b183143c-4615-4a7c-803b-4ffec5e9bb39",
+    "name" : "Add a Phone Number to a Service's Proxy Number Pool.",
+    "request" : {
+      "urlPath" : "/v1/Services/KSEaDcAdaC6Da6025ed3651bDdE346ceC2/PhoneNumbers",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 201,
+      "body" : "{\n  \"is_reserved\" : false,\n  \"service_sid\" : \"KSd1CAe99BEddaf7FDdEEe886E96da96AA\",\n  \"friendly_name\" : \"Issac Kuhic\",\n  \"iso_country\" : \"Mexico\",\n  \"capabilities\" : {\n    \"voice\" : true,\n    \"mms\" : false,\n    \"sms\" : false,\n    \"fax\" : true\n  },\n  \"date_updated\" : \"2022-07-20T08:37:42.423Z\",\n  \"date_created\" : \"2023-12-29T23:35:17.423Z\",\n  \"account_sid\" : \"ACA09ED6F50dfB14aEf10beE327bf2a66B\",\n  \"in_use\" : 8832392654380348870,\n  \"phone_number\" : \"799.988.9946\",\n  \"url\" : \"https://web.example.mocklab.io/854349\",\n  \"sid\" : \"PNAaB842034f36CA3B488FC6b37e123d7a\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "b183143c-4615-4a7c-803b-4ffec5e9bb39",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:21.423331Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "CreatePhoneNumber",
+          "schema" : {
+            "properties" : {
+              "account_sid" : {
+                "description" : "The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the PhoneNumber resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^AC[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "capabilities" : {
+                "description" : "The capabilities of the phone number.",
+                "format" : "phone-number-capabilities",
+                "nullable" : true,
+                "properties" : {
+                  "fax" : {
+                    "type" : "boolean"
+                  },
+                  "mms" : {
+                    "type" : "boolean"
+                  },
+                  "sms" : {
+                    "type" : "boolean"
+                  },
+                  "voice" : {
+                    "type" : "boolean"
+                  }
+                },
+                "type" : "object"
+              },
+              "date_created" : {
+                "description" : "The [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) date and time in GMT when the resource was created.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "date_updated" : {
+                "description" : "The [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) date and time in GMT when the resource was last updated.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "friendly_name" : {
+                "description" : "The string that you assigned to describe the resource.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "in_use" : {
+                "description" : "The number of open session assigned to the number. See the [How many Phone Numbers do I need?](https://www.twilio.com/docs/proxy/phone-numbers-needed) guide for more information.",
+                "nullable" : true,
+                "type" : "integer"
+              },
+              "is_reserved" : {
+                "description" : "Whether the phone number should be reserved and not be assigned to a participant using proxy pool logic. See [Reserved Phone Numbers](https://www.twilio.com/docs/proxy/reserved-phone-numbers) for more information.",
+                "nullable" : true,
+                "type" : "boolean"
+              },
+              "iso_country" : {
+                "description" : "The ISO Country Code for the phone number.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "phone_number" : {
+                "description" : "The phone number in [E.164](https://www.twilio.com/docs/glossary/what-e164) format, which consists of a + followed by the country code and subscriber number.",
+                "format" : "phone-number",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "service_sid" : {
+                "description" : "The SID of the PhoneNumber resource's parent [Service](https://www.twilio.com/docs/proxy/api/service) resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^KS[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "sid" : {
+                "description" : "The unique string that we created to identify the PhoneNumber resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^PN[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "url" : {
+                "description" : "The absolute URL of the PhoneNumber resource.",
+                "format" : "uri",
+                "nullable" : true,
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 26
+  }, {
+    "id" : "ff629bf3-f7e6-474a-86f7-9e67c7f7d714",
+    "name" : "Retrieve a list of all Phone Numbers in the Proxy Number Pool for a Service. A m...",
+    "request" : {
+      "urlPath" : "/v1/Services/KSa0EC67A40Af18AC8d97bbB0F302F5A6c/PhoneNumbers",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"phone_numbers\" : [ {\n    \"is_reserved\" : true,\n    \"service_sid\" : \"KSF18a01b6Ad0153bcD2deCd3B42CAACaF\",\n    \"friendly_name\" : \"Josefa Yundt\",\n    \"iso_country\" : \"Senegal\",\n    \"capabilities\" : {\n      \"voice\" : true,\n      \"mms\" : false,\n      \"sms\" : false,\n      \"fax\" : false\n    },\n    \"date_updated\" : \"2023-11-22T16:31:21.422Z\",\n    \"date_created\" : \"2023-08-10T04:26:54.422Z\",\n    \"account_sid\" : \"ACCc0Dc1986Db2cdaaDF645c64bb47Be72\",\n    \"in_use\" : 2306415177777943317,\n    \"phone_number\" : \"430.553.5004\",\n    \"url\" : \"https://web.example.mocklab.io/017240\",\n    \"sid\" : \"PNC6a7195dbe142077e08acECBE122FbaB\"\n  }, {\n    \"is_reserved\" : true,\n    \"service_sid\" : \"KSdEEb68c3aaEfeB1Bf8d6Ba9AEDeA5025\",\n    \"friendly_name\" : \"Jesse Dare\",\n    \"iso_country\" : \"Djibouti\",\n    \"capabilities\" : {\n      \"voice\" : false,\n      \"mms\" : true,\n      \"sms\" : true,\n      \"fax\" : false\n    },\n    \"date_updated\" : \"2023-11-05T15:39:20.422Z\",\n    \"date_created\" : \"2023-02-26T03:16:39.422Z\",\n    \"account_sid\" : \"ACaEDC9FEBf8f1883b9eBeDDa9Cf4Ea4b7\",\n    \"in_use\" : 9090561738867423518,\n    \"phone_number\" : \"1-044-224-2699 x22896\",\n    \"url\" : \"https://web.example.mocklab.io/167926\",\n    \"sid\" : \"PN10b2017AACadBFA787D2DE1C6deC4029\"\n  } ],\n  \"meta\" : {\n    \"first_page_url\" : \"https://web.example.mocklab.io/293428\",\n    \"next_page_url\" : \"https://web.example.mocklab.io/888745\",\n    \"previous_page_url\" : \"https://web.example.mocklab.io/514419\",\n    \"page\" : 7366852085196561594,\n    \"key\" : \"aa2h4z4ibm4d6zkfrzwtygtoquamkxqhcorlelctu7xu358yptrghh7p4jwnl0z7rjtpvztkvqxw1atvilywnuvkdgzzljes4at0ledwuaw3og4xs4sfyxydgoiuwmys3ibvwnu053he0s\",\n    \"url\" : \"https://web.example.mocklab.io/466326\",\n    \"page_size\" : 2741113840828666240\n  }\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "ff629bf3-f7e6-474a-86f7-9e67c7f7d714",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:21.422929Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "ListPhoneNumber",
+          "schema" : {
+            "properties" : {
+              "meta" : {
+                "properties" : {
+                  "first_page_url" : {
+                    "format" : "uri",
+                    "type" : "string"
+                  },
+                  "key" : {
+                    "type" : "string"
+                  },
+                  "next_page_url" : {
+                    "format" : "uri",
+                    "nullable" : true,
+                    "type" : "string"
+                  },
+                  "page" : {
+                    "type" : "integer"
+                  },
+                  "page_size" : {
+                    "type" : "integer"
+                  },
+                  "previous_page_url" : {
+                    "format" : "uri",
+                    "nullable" : true,
+                    "type" : "string"
+                  },
+                  "url" : {
+                    "format" : "uri",
+                    "type" : "string"
+                  }
+                },
+                "type" : "object"
+              },
+              "phone_numbers" : {
+                "items" : {
+                  "$ref" : "#/components/schemas/proxy.v1.service.phone_number"
+                },
+                "type" : "array"
+              }
+            },
+            "title" : "ListPhoneNumberResponse",
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 27
+  }, {
+    "id" : "de1bce09-81f0-4641-a1f4-499292703d6e",
+    "name" : "Create a new Service for Twilio Proxy",
+    "request" : {
+      "urlPath" : "/v1/Services",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 201,
+      "body" : "{\n  \"date_updated\" : \"2023-12-01T10:21:11.421Z\",\n  \"intercept_callback_url\" : \"https://web.example.mocklab.io/858394\",\n  \"date_created\" : \"2023-05-27T14:34:41.421Z\",\n  \"chat_instance_sid\" : \"ISfD3a0280bEe5B4FB6DeD3EF9B92a83cF\",\n  \"geo_match_level\" : \"country\",\n  \"url\" : \"https://web.example.mocklab.io/219499\",\n  \"sid\" : \"KSde3d7a8C83FDCAeae6DAB1fEBb52C7a3\",\n  \"callback_url\" : \"https://web.example.mocklab.io/365996\",\n  \"unique_name\" : \"Kay Lang\",\n  \"default_ttl\" : 7297364556749820664,\n  \"account_sid\" : \"ACceC79Fe76D3c22c0Cc232CfD22098ea4\",\n  \"links\" : { },\n  \"number_selection_behavior\" : \"avoid-sticky\",\n  \"out_of_session_callback_url\" : \"https://web.example.mocklab.io/515205\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "de1bce09-81f0-4641-a1f4-499292703d6e",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:21.421988Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "CreateService",
+          "schema" : {
+            "properties" : {
+              "account_sid" : {
+                "description" : "The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the Service resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^AC[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "callback_url" : {
+                "description" : "The URL we call when the interaction status changes.",
+                "format" : "uri",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "chat_instance_sid" : {
+                "description" : "The SID of the Chat Service Instance managed by Proxy Service. The Chat Service enables Proxy to forward SMS and channel messages to this chat instance. This is a one-to-one relationship.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^IS[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "date_created" : {
+                "description" : "The [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) date and time in GMT when the resource was created.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "date_updated" : {
+                "description" : "The [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) date and time in GMT when the resource was last updated.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "default_ttl" : {
+                "description" : "The default `ttl` value for Sessions created in the Service. The TTL (time to live) is measured in seconds after the Session's last create or last Interaction. The default value of `0` indicates an unlimited Session length. You can override a Session's default TTL value by setting its `ttl` value.",
+                "nullable" : true,
+                "type" : "integer"
+              },
+              "geo_match_level" : {
+                "$ref" : "#/components/schemas/service_enum_geo_match_level"
+              },
+              "intercept_callback_url" : {
+                "description" : "The URL we call on each interaction. If we receive a 403 status, we block the interaction; otherwise the interaction continues.",
+                "format" : "uri",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "links" : {
+                "description" : "The URLs of resources related to the Service.",
+                "format" : "uri-map",
+                "nullable" : true,
+                "type" : "object"
+              },
+              "number_selection_behavior" : {
+                "$ref" : "#/components/schemas/service_enum_number_selection_behavior"
+              },
+              "out_of_session_callback_url" : {
+                "description" : "The URL we call when an inbound call or SMS action occurs on a closed or non-existent Session. If your server (or a Twilio [function](https://www.twilio.com/functions)) responds with valid [TwiML](https://www.twilio.com/docs/voice/twiml), we will process it. This means it is possible, for example, to play a message for a call, send an automated text message response, or redirect a call to another Phone Number. See [Out-of-Session Callback Response Guide](https://www.twilio.com/docs/proxy/out-session-callback-response-guide) for more information.",
+                "format" : "uri",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "sid" : {
+                "description" : "The unique string that we created to identify the Service resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^KS[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "unique_name" : {
+                "description" : "An application-defined string that uniquely identifies the resource. This value must be 191 characters or fewer in length and be unique. Supports UTF-8 characters. **This value should not have PII.**",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "url" : {
+                "description" : "The absolute URL of the Service resource.",
+                "format" : "uri",
+                "nullable" : true,
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 28
+  }, {
+    "id" : "80229a32-5d90-4dfe-a68c-1f634f09af52",
+    "name" : "Retrieve a list of all Services for Twilio Proxy. A maximum of 100 records will ...",
+    "request" : {
+      "urlPath" : "/v1/Services",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"meta\" : {\n    \"first_page_url\" : \"https://web.example.mocklab.io/308424\",\n    \"next_page_url\" : \"https://web.example.mocklab.io/677148\",\n    \"previous_page_url\" : \"https://web.example.mocklab.io/957035\",\n    \"page\" : 4944136572560962872,\n    \"key\" : \"flk8k43ootc7ifkfjqqvsc4lk1apmep6e2jzulovbq4ymkdr6mdmcbx7fyeaer36zywtp565ikk5ryuomjpqrh9aztjv92p4m9o0t8ouwlci6gm8mxueszra7miico8nzwa2drc5xz3n7qcrl\",\n    \"url\" : \"https://web.example.mocklab.io/366984\",\n    \"page_size\" : 1865129417309663645\n  },\n  \"services\" : [ {\n    \"date_updated\" : \"2023-09-26T17:27:42.42Z\",\n    \"intercept_callback_url\" : \"https://web.example.mocklab.io/786180\",\n    \"date_created\" : \"2023-01-29T17:00:15.42Z\",\n    \"chat_instance_sid\" : \"ISc7Eb57Ece707Cff656C5BC5E31acE84A\",\n    \"geo_match_level\" : \"radius\",\n    \"url\" : \"https://web.example.mocklab.io/736770\",\n    \"sid\" : \"KSF7245896787B68A7bAa11FFdeF28Dc7C\",\n    \"callback_url\" : \"https://web.example.mocklab.io/773892\",\n    \"unique_name\" : \"Dr. Kirby Christiansen\",\n    \"default_ttl\" : 3843457689669553582,\n    \"account_sid\" : \"ACEf6DC745fA15dc7eCbD0527aa12ba1ec\",\n    \"links\" : { },\n    \"number_selection_behavior\" : \"prefer-sticky\",\n    \"out_of_session_callback_url\" : \"https://web.example.mocklab.io/614511\"\n  }, {\n    \"date_updated\" : \"2023-11-12T22:59:05.42Z\",\n    \"intercept_callback_url\" : \"https://web.example.mocklab.io/877340\",\n    \"date_created\" : \"2022-05-10T13:26:37.42Z\",\n    \"chat_instance_sid\" : \"IS6D6D7fa65f3dAD6CAeED0b888AbAd4Cc\",\n    \"geo_match_level\" : \"overlay\",\n    \"url\" : \"https://web.example.mocklab.io/767824\",\n    \"sid\" : \"KS92496356d6A8B1d50630Cb3BcB7F6cde\",\n    \"callback_url\" : \"https://web.example.mocklab.io/923247\",\n    \"unique_name\" : \"Kori Schumm\",\n    \"default_ttl\" : 1091027929601587046,\n    \"account_sid\" : \"ACdcCdA9fB34ADecaEed3EDeB745faa467\",\n    \"links\" : { },\n    \"number_selection_behavior\" : \"avoid-sticky\",\n    \"out_of_session_callback_url\" : \"https://web.example.mocklab.io/143945\"\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "80229a32-5d90-4dfe-a68c-1f634f09af52",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:21.421405Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "ListService",
+          "schema" : {
+            "properties" : {
+              "meta" : {
+                "properties" : {
+                  "first_page_url" : {
+                    "format" : "uri",
+                    "type" : "string"
+                  },
+                  "key" : {
+                    "type" : "string"
+                  },
+                  "next_page_url" : {
+                    "format" : "uri",
+                    "nullable" : true,
+                    "type" : "string"
+                  },
+                  "page" : {
+                    "type" : "integer"
+                  },
+                  "page_size" : {
+                    "type" : "integer"
+                  },
+                  "previous_page_url" : {
+                    "format" : "uri",
+                    "nullable" : true,
+                    "type" : "string"
+                  },
+                  "url" : {
+                    "format" : "uri",
+                    "type" : "string"
+                  }
+                },
+                "type" : "object"
+              },
+              "services" : {
+                "items" : {
+                  "$ref" : "#/components/schemas/proxy.v1.service"
+                },
+                "type" : "array"
+              }
+            },
+            "title" : "ListServiceResponse",
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 29
+  } ]
+}

@@ -1,0 +1,328 @@
+{
+  "mappings" : [ {
+    "id" : "a5736843-9024-40c7-973b-b2dec0944d16",
+    "name" : "Update Policy",
+    "request" : {
+      "urlPath" : "/api/policy-engine/policies/u920",
+      "method" : "PUT"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "[ {\n  \"description\" : \"TesteMarcosPromotionsAlert\",\n  \"id\" : \"pa_test_001\",\n  \"name\" : \"TestAlarmBerenice\",\n  \"statements\" : [ {\n    \"actions\" : [ {\n      \"id\" : \"SendSlackMessage\",\n      \"metadata\" : {\n        \"alertDescription\" : \"Avoid selling products from Berenice with a discount greater than 40%.\",\n        \"channel\" : \"C01NJFF35R6\",\n        \"relatedUsers\" : [ \"URUNDC2NB\" ]\n      }\n    } ],\n    \"condition\" : {\n      \"conditions\" : [ {\n        \"conditions\" : [ ],\n        \"key\" : \"brandId\",\n        \"operation\" : \"stringEquals\",\n        \"values\" : [ \"2000001\" ]\n      }, {\n        \"conditions\" : [ ],\n        \"key\" : \"discountPercentage\",\n        \"operation\" : \"numericGreaterThan\",\n        \"values\" : [ \"40.00\" ]\n      } ],\n      \"operation\" : \"and\"\n    },\n    \"effect\" : \"Allow\",\n    \"resource\" : \"vrn:vtex.promotions-alert:aws-us-east-1:kamila:master:/_v/promotions_alert\"\n  } ]\n} ]",
+      "headers" : {
+        "Content-Type" : "application/octet-stream"
+      }
+    },
+    "uuid" : "a5736843-9024-40c7-973b-b2dec0944d16",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.790606Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "(none)",
+          "schema" : {
+            "example" : [ {
+              "description" : "TesteMarcosPromotionsAlert",
+              "id" : "pa_test_001",
+              "name" : "TestAlarmBerenice",
+              "statements" : [ {
+                "actions" : [ {
+                  "id" : "SendSlackMessage",
+                  "metadata" : {
+                    "alertDescription" : "Avoid selling products from Berenice with a discount greater than 40%.",
+                    "channel" : "C01NJFF35R6",
+                    "relatedUsers" : [ "URUNDC2NB" ]
+                  }
+                } ],
+                "condition" : {
+                  "conditions" : [ {
+                    "conditions" : [ ],
+                    "key" : "brandId",
+                    "operation" : "stringEquals",
+                    "values" : [ "2000001" ]
+                  }, {
+                    "conditions" : [ ],
+                    "key" : "discountPercentage",
+                    "operation" : "numericGreaterThan",
+                    "values" : [ "40.00" ]
+                  } ],
+                  "operation" : "and"
+                },
+                "effect" : "Allow",
+                "resource" : "vrn:vtex.promotions-alert:aws-us-east-1:kamila:master:/_v/promotions_alert"
+              } ]
+            } ],
+            "items" : {
+              "$ref" : "#/components/schemas/PolicyGetResponse"
+            },
+            "type" : "array"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 0
+  }, {
+    "id" : "1de68050-9f03-403d-93c1-84cd51bc3fef",
+    "name" : "Create Policy",
+    "request" : {
+      "urlPath" : "/api/policy-engine/policies/s16z",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "[ {\n  \"description\" : \"TesteMarcosPromotionsAlert\",\n  \"id\" : \"pa_test_001\",\n  \"name\" : \"TestAlarmBerenice\",\n  \"statements\" : [ {\n    \"actions\" : [ {\n      \"id\" : \"SendSlackMessage\",\n      \"metadata\" : {\n        \"alertDescription\" : \"Avoid selling products from Berenice with a discount greater than 70%.\",\n        \"channel\" : \"C01NJFF35R6\",\n        \"relatedUsers\" : [ \"URUNDC2NB\" ]\n      }\n    } ],\n    \"condition\" : {\n      \"conditions\" : [ {\n        \"conditions\" : [ ],\n        \"key\" : \"brandId\",\n        \"operation\" : \"stringEquals\",\n        \"values\" : [ \"2000001\" ]\n      }, {\n        \"conditions\" : [ ],\n        \"key\" : \"discountPercentage\",\n        \"operation\" : \"numericGreaterThan\",\n        \"values\" : [ \"70.00\" ]\n      } ],\n      \"operation\" : \"and\"\n    },\n    \"resource\" : \"vrn:vtex.promotions-alert:aws-us-east-1:kamila:master:/_v/promotions_alert\"\n  } ]\n} ]",
+      "headers" : {
+        "Content-Type" : "application/octet-stream"
+      }
+    },
+    "uuid" : "1de68050-9f03-403d-93c1-84cd51bc3fef",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.790483Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "Policy_CreateOrUpdate",
+          "schema" : {
+            "example" : [ {
+              "description" : "TesteMarcosPromotionsAlert",
+              "id" : "pa_test_001",
+              "name" : "TestAlarmBerenice",
+              "statements" : [ {
+                "actions" : [ {
+                  "id" : "SendSlackMessage",
+                  "metadata" : {
+                    "alertDescription" : "Avoid selling products from Berenice with a discount greater than 70%.",
+                    "channel" : "C01NJFF35R6",
+                    "relatedUsers" : [ "URUNDC2NB" ]
+                  }
+                } ],
+                "condition" : {
+                  "conditions" : [ {
+                    "conditions" : [ ],
+                    "key" : "brandId",
+                    "operation" : "stringEquals",
+                    "values" : [ "2000001" ]
+                  }, {
+                    "conditions" : [ ],
+                    "key" : "discountPercentage",
+                    "operation" : "numericGreaterThan",
+                    "values" : [ "70.00" ]
+                  } ],
+                  "operation" : "and"
+                },
+                "resource" : "vrn:vtex.promotions-alert:aws-us-east-1:kamila:master:/_v/promotions_alert"
+              } ]
+            } ],
+            "items" : {
+              "$ref" : "#/components/schemas/PolicyGetResponse"
+            },
+            "type" : "array"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 1
+  }, {
+    "id" : "bccc82a6-4c9b-42e8-b31b-85b9d851245c",
+    "name" : "Get Policy by ID",
+    "request" : {
+      "urlPath" : "/api/policy-engine/policies/q4yo",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "[ {\n  \"description\" : \"TesteMarcosPromotionsAlert\",\n  \"id\" : \"pa_test_001\",\n  \"name\" : \"TestAlarmBerenice\",\n  \"statements\" : [ {\n    \"actions\" : [ {\n      \"id\" : \"SendSlackMessage\",\n      \"metadata\" : {\n        \"alertDescription\" : \"Avoid selling products from Berenice with a discount greater than 70%.\",\n        \"channel\" : \"C01NJFF35R6\",\n        \"relatedUsers\" : [ \"URUNDC2NB\" ]\n      }\n    } ],\n    \"condition\" : {\n      \"conditions\" : [ {\n        \"conditions\" : [ ],\n        \"key\" : \"brandId\",\n        \"operation\" : \"stringEquals\",\n        \"values\" : [ \"2000001\" ]\n      }, {\n        \"conditions\" : [ ],\n        \"key\" : \"discountPercentage\",\n        \"operation\" : \"numericGreaterThan\",\n        \"values\" : [ \"70.00\" ]\n      } ],\n      \"operation\" : \"and\"\n    },\n    \"effect\" : \"Allow\",\n    \"resource\" : \"vrn:vtex.promotions-alert:aws-us-east-1:kamila:master:/_v/promotions_alert\"\n  } ]\n} ]",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "bccc82a6-4c9b-42e8-b31b-85b9d851245c",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.790353Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "Policy_Get",
+          "schema" : {
+            "example" : [ {
+              "description" : "TesteMarcosPromotionsAlert",
+              "id" : "pa_test_001",
+              "name" : "TestAlarmBerenice",
+              "statements" : [ {
+                "actions" : [ {
+                  "id" : "SendSlackMessage",
+                  "metadata" : {
+                    "alertDescription" : "Avoid selling products from Berenice with a discount greater than 70%.",
+                    "channel" : "C01NJFF35R6",
+                    "relatedUsers" : [ "URUNDC2NB" ]
+                  }
+                } ],
+                "condition" : {
+                  "conditions" : [ {
+                    "conditions" : [ ],
+                    "key" : "brandId",
+                    "operation" : "stringEquals",
+                    "values" : [ "2000001" ]
+                  }, {
+                    "conditions" : [ ],
+                    "key" : "discountPercentage",
+                    "operation" : "numericGreaterThan",
+                    "values" : [ "70.00" ]
+                  } ],
+                  "operation" : "and"
+                },
+                "effect" : "Allow",
+                "resource" : "vrn:vtex.promotions-alert:aws-us-east-1:kamila:master:/_v/promotions_alert"
+              } ]
+            } ],
+            "items" : {
+              "$ref" : "#/components/schemas/PolicyGetResponse"
+            },
+            "type" : "array"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 2
+  }, {
+    "id" : "ca421360-7ce0-4cc0-8eb6-8dbb193b6ed2",
+    "name" : "Delete Policy by ID - 200",
+    "request" : {
+      "urlPath" : "/api/policy-engine/policies/846q",
+      "method" : "DELETE"
+    },
+    "response" : {
+      "status" : 200
+    },
+    "uuid" : "ca421360-7ce0-4cc0-8eb6-8dbb193b6ed2",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.790223Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "Policy_Delete"
+        }
+      }
+    },
+    "insertionIndex" : 3
+  }, {
+    "id" : "8ccbd8d6-fe5f-4859-b268-21c4360abe46",
+    "name" : "Get Policy List",
+    "request" : {
+      "urlPath" : "/api/policy-engine/policies",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "[ {\n  \"description\" : \"TesteMarcosPromotionsAlert\",\n  \"id\" : \"pa_test_001\",\n  \"name\" : \"TestAlarmBerenice\",\n  \"statements\" : [ {\n    \"actions\" : [ {\n      \"id\" : \"SendSlackMessage\",\n      \"metadata\" : {\n        \"alertDescription\" : \"Avoid selling products from Berenice with a discount greater than 70%.\",\n        \"channel\" : \"C01NJFF35R6\",\n        \"relatedUsers\" : [ \"URUNDC2NB\" ]\n      }\n    } ],\n    \"condition\" : {\n      \"conditions\" : [ {\n        \"conditions\" : [ ],\n        \"key\" : \"brandId\",\n        \"operation\" : \"stringEquals\",\n        \"values\" : [ \"2000001\" ]\n      }, {\n        \"conditions\" : [ ],\n        \"key\" : \"discountPercentage\",\n        \"operation\" : \"numericGreaterThan\",\n        \"values\" : [ \"70.00\" ]\n      } ],\n      \"operation\" : \"and\"\n    },\n    \"effect\" : \"Allow\",\n    \"resource\" : \"vrn:vtex.promotions-alert:aws-us-east-1:kamila:master:/_v/promotions_alert\"\n  } ]\n} ]",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "8ccbd8d6-fe5f-4859-b268-21c4360abe46",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.790113Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "Policy_List",
+          "schema" : {
+            "example" : [ {
+              "description" : "TesteMarcosPromotionsAlert",
+              "id" : "pa_test_001",
+              "name" : "TestAlarmBerenice",
+              "statements" : [ {
+                "actions" : [ {
+                  "id" : "SendSlackMessage",
+                  "metadata" : {
+                    "alertDescription" : "Avoid selling products from Berenice with a discount greater than 70%.",
+                    "channel" : "C01NJFF35R6",
+                    "relatedUsers" : [ "URUNDC2NB" ]
+                  }
+                } ],
+                "condition" : {
+                  "conditions" : [ {
+                    "conditions" : [ ],
+                    "key" : "brandId",
+                    "operation" : "stringEquals",
+                    "values" : [ "2000001" ]
+                  }, {
+                    "conditions" : [ ],
+                    "key" : "discountPercentage",
+                    "operation" : "numericGreaterThan",
+                    "values" : [ "70.00" ]
+                  } ],
+                  "operation" : "and"
+                },
+                "effect" : "Allow",
+                "resource" : "vrn:vtex.promotions-alert:aws-us-east-1:kamila:master:/_v/promotions_alert"
+              } ]
+            } ],
+            "items" : {
+              "$ref" : "#/components/schemas/PolicyGetResponse"
+            },
+            "type" : "array"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 4
+  }, {
+    "id" : "63bef9a0-92e1-4db6-b1b9-978cdcb4973c",
+    "name" : "Evaluate Policies",
+    "request" : {
+      "urlPath" : "/api/policy-engine/evaluate",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "[ {\n  \"id\" : \"SendSlackMessage\",\n  \"metadata\" : {\n    \"alertDescription\" : \"Avoid selling products from Berenice with a discount greater than 70%.\",\n    \"channel\" : \"C01NJFF35R6\",\n    \"relatedUsers\" : [ \"URUNDC2NB\" ]\n  }\n} ]",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "63bef9a0-92e1-4db6-b1b9-978cdcb4973c",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.790013Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "Policy_Evaluate",
+          "schema" : {
+            "example" : [ {
+              "id" : "SendSlackMessage",
+              "metadata" : {
+                "alertDescription" : "Avoid selling products from Berenice with a discount greater than 70%.",
+                "channel" : "C01NJFF35R6",
+                "relatedUsers" : [ "URUNDC2NB" ]
+              }
+            } ],
+            "items" : {
+              "$ref" : "#/components/schemas/PolicyActionGetResponse"
+            },
+            "type" : "array"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 5
+  } ]
+}

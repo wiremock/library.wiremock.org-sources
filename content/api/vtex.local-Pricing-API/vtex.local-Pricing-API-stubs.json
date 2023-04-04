@@ -1,0 +1,953 @@
+{
+  "mappings" : [ {
+    "id" : "053b53ef-fa8f-4358-8961-25fb8bb24c4f",
+    "name" : "List price tables",
+    "request" : {
+      "urlPath" : "/pricing/tables",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "[ \"1\", \"2\", \"3\", \"b2c\", \"b2b\", \"gold\" ]",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "053b53ef-fa8f-4358-8961-25fb8bb24c4f",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:58.33134Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "Listpricetables",
+          "schema" : {
+            "description" : "Array of price tables.",
+            "items" : {
+              "description" : "Price table name.",
+              "type" : "string"
+            },
+            "type" : "array"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 0
+  }, {
+    "id" : "fd915d98-e44e-417e-80ed-95377dab303d",
+    "name" : "Create or Update Fixed Prices on a price table or trade policy - 200",
+    "request" : {
+      "urlPath" : "/pricing/prices/2255164416240986453/fixed/x746",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 200
+    },
+    "uuid" : "fd915d98-e44e-417e-80ed-95377dab303d",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:58.331292Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "createorupdatefixedpricesonpricetableortradepolicy"
+        }
+      }
+    },
+    "insertionIndex" : 1
+  }, {
+    "id" : "0c9629a4-1e15-4e4e-8a33-ee5f089f53d9",
+    "name" : "Get Fixed Prices on a price table or trade policy",
+    "request" : {
+      "urlPath" : "/pricing/prices/7613260393188440360/fixed/z60l",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "[ {\n  \"dateRange\" : {\n    \"from\" : \"2021-12-30T22:00:00-03:00\",\n    \"to\" : \"2021-12-30T22:00:00-04:00\"\n  },\n  \"listPrice\" : 22.9,\n  \"minQuantity\" : 1,\n  \"tradePolicyId\" : \"6\",\n  \"value\" : 20.9\n}, {\n  \"minQuantity\" : 1,\n  \"tradePolicyId\" : \"1\",\n  \"value\" : 18.9\n} ]",
+      "headers" : {
+        "Content-Type" : "application/json; charset=utf-8"
+      }
+    },
+    "uuid" : "0c9629a4-1e15-4e4e-8a33-ee5f089f53d9",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:58.33118Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "GetFixedPricesonapricetable",
+          "schema" : {
+            "items" : {
+              "$ref" : "#/components/schemas/FixedPrice"
+            },
+            "type" : "array"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 2
+  }, {
+    "id" : "07c59c28-d5af-413f-a294-bd7e90b2387c",
+    "name" : "Delete Fixed Prices on a price table or trade policy - 200",
+    "request" : {
+      "urlPath" : "/pricing/prices/5028428036107197527/fixed/x8jf",
+      "method" : "DELETE"
+    },
+    "response" : {
+      "status" : 200
+    },
+    "uuid" : "07c59c28-d5af-413f-a294-bd7e90b2387c",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:58.33101Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "Deletefixedpricesonapricetableortradepolicy"
+        }
+      }
+    },
+    "insertionIndex" : 3
+  }, {
+    "id" : "6bd7f694-60ee-48cb-a325-7f1a3b356db2",
+    "name" : "Get Fixed Prices",
+    "request" : {
+      "urlPath" : "/pricing/prices/50801165791835612/fixed",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "[ {\n  \"dateRange\" : {\n    \"from\" : \"2021-12-30T22:00:00-03:00\",\n    \"to\" : \"2021-12-30T22:00:00-03:00\"\n  },\n  \"listPrice\" : 22.9,\n  \"minQuantity\" : 1,\n  \"tradePolicyId\" : \"6\",\n  \"value\" : 20.9\n}, {\n  \"dateRange\" : {\n    \"from\" : \"2021-12-30T22:00:00-03:00\",\n    \"to\" : \"2021-12-30T22:00:00-03:00\"\n  },\n  \"minQuantity\" : 1,\n  \"tradePolicyId\" : \"1\",\n  \"value\" : 18.9\n} ]",
+      "headers" : {
+        "Content-Type" : "application/json; charset=utf-8"
+      }
+    },
+    "uuid" : "6bd7f694-60ee-48cb-a325-7f1a3b356db2",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:58.330903Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "GetFixedPrices",
+          "schema" : {
+            "items" : {
+              "$ref" : "#/components/schemas/FixedPrice"
+            },
+            "type" : "array"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 4
+  }, {
+    "id" : "bd82d1ca-1d1d-439a-b322-05cd9ef0cca8",
+    "name" : "Get Computed Price by price table or trade policy",
+    "request" : {
+      "urlPath" : "/pricing/prices/6493693336241001207/computed/th8i",
+      "method" : "GET",
+      "queryParameters" : {
+        "categoryIds" : {
+          "equalTo" : "4431076528468968518"
+        },
+        "quantity" : {
+          "equalTo" : "3796825313489218161"
+        },
+        "brandId" : {
+          "equalTo" : "1774630034416167625"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"costPrice\" : 76.92,\n  \"listPrice\" : 30,\n  \"priceValidUntil\" : \"2018-12-20T18:12:14Z\",\n  \"sellingPrice\" : 18.9,\n  \"tradePolicyId\" : \"1\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json; charset=utf-8"
+      }
+    },
+    "uuid" : "bd82d1ca-1d1d-439a-b322-05cd9ef0cca8",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:58.330793Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "GetComputedPricebypricetable",
+          "schema" : {
+            "example" : {
+              "costPrice" : 76.92,
+              "listPrice" : 30,
+              "priceValidUntil" : "2018-12-20T18:12:14Z",
+              "sellingPrice" : 18.9,
+              "tradePolicyId" : "1"
+            },
+            "properties" : {
+              "costPrice" : {
+                "description" : "Cost price.",
+                "type" : "number"
+              },
+              "listPrice" : {
+                "description" : "Trade Policy List Price, also known as \"from\" price.",
+                "format" : "int32",
+                "type" : "integer"
+              },
+              "priceValidUntil" : {
+                "description" : "Date until when the computed price will be valid, due to price scheduling. If no price scheduling applies, this will be set a year from the current time.",
+                "type" : "string"
+              },
+              "sellingPrice" : {
+                "description" : "Computed Price before applying coupons, promotions and taxes. This price may change before reaching the shelf.",
+                "type" : "number"
+              },
+              "tradePolicyId" : {
+                "description" : "Trade Policy ID.",
+                "type" : "string"
+              }
+            },
+            "required" : [ "tradePolicyId", "listPrice", "sellingPrice", "priceValidUntil" ],
+            "title" : "Get Computed Price response",
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 5
+  }, {
+    "id" : "fd9270f0-651f-4865-b9a8-cb5471e3b5ee",
+    "name" : "Create or Update Base Price or Fixed Prices - 200",
+    "request" : {
+      "urlPath" : "/pricing/prices/1188625209760084235",
+      "method" : "PUT"
+    },
+    "response" : {
+      "status" : 200
+    },
+    "uuid" : "fd9270f0-651f-4865-b9a8-cb5471e3b5ee",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:58.330467Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "CreateUpdatePriceOrFixedPrice"
+        }
+      }
+    },
+    "insertionIndex" : 6
+  }, {
+    "id" : "131b6a8e-7fc7-4d53-8a38-37cb6ef50b55",
+    "name" : "Get Price",
+    "request" : {
+      "urlPath" : "/pricing/prices/761437346076219030",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"basePrice\" : 117,\n  \"costPrice\" : 90,\n  \"fixedPrices\" : [ {\n    \"dateRange\" : {\n      \"from\" : \"2021-12-31T01:00:00Z\",\n      \"to\" : \"2022-12-31T01:00:00Z\"\n    },\n    \"listPrice\" : 50.5,\n    \"minQuantity\" : 2,\n    \"tradePolicyId\" : \"1\",\n    \"value\" : 50.5\n  }, {\n    \"listPrice\" : 50,\n    \"minQuantity\" : 2,\n    \"tradePolicyId\" : \"2\",\n    \"value\" : 30\n  } ],\n  \"itemId\" : \"1\",\n  \"listPrice\" : 50,\n  \"markup\" : 30\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "131b6a8e-7fc7-4d53-8a38-37cb6ef50b55",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:58.330424Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "GetPrice",
+          "schema" : {
+            "example" : {
+              "basePrice" : 250,
+              "costPrice" : 10,
+              "fixedPrices" : [ {
+                "minQuantity" : 1,
+                "tradePolicyId" : "1",
+                "value" : 666.66
+              }, {
+                "minQuantity" : 1,
+                "tradePolicyId" : "9",
+                "value" : 4500
+              }, {
+                "dateRange" : {
+                  "from" : "2017-12-07T14:30:00Z",
+                  "to" : "2017-12-30T14:30:00Z"
+                },
+                "minQuantity" : 1,
+                "tradePolicyId" : "9",
+                "value" : 600
+              }, {
+                "dateRange" : {
+                  "from" : "2017-12-20T14:30:00Z",
+                  "to" : "2017-12-22T14:30:00Z"
+                },
+                "minQuantity" : 1,
+                "tradePolicyId" : "9",
+                "value" : 5555.55
+              }, {
+                "dateRange" : {
+                  "from" : "2017-12-06T15:00:00Z",
+                  "to" : "2017-12-14T15:00:00Z"
+                },
+                "minQuantity" : 1,
+                "tradePolicyId" : "9",
+                "value" : 555.55
+              }, {
+                "minQuantity" : 1,
+                "tradePolicyId" : "10",
+                "value" : 5555.55
+              }, {
+                "minQuantity" : 1,
+                "tradePolicyId" : "18",
+                "value" : 555.55
+              } ],
+              "itemId" : "1234512354",
+              "listPrice" : 300,
+              "markup" : 2400
+            },
+            "properties" : {
+              "basePrice" : {
+                "description" : "SKU's reference price.",
+                "format" : "int32",
+                "type" : "integer"
+              },
+              "costPrice" : {
+                "description" : "SKU's cost price.",
+                "format" : "int32",
+                "type" : "integer"
+              },
+              "fixedPrices" : {
+                "description" : "The fixed price is a price that overlaps all other existing price configurations of a price table.",
+                "items" : {
+                  "$ref" : "#/components/schemas/FixedPrice"
+                },
+                "type" : "array"
+              },
+              "itemId" : {
+                "description" : "SKU ID.",
+                "type" : "string"
+              },
+              "listPrice" : {
+                "description" : "Suggested retail price for the SKU.",
+                "format" : "int32",
+                "type" : "integer"
+              },
+              "markup" : {
+                "description" : "Desired profit margin with the SKU's sale.",
+                "format" : "int32",
+                "type" : "integer"
+              }
+            },
+            "required" : [ "itemId", "listPrice", "costPrice", "markup", "basePrice", "fixedPrices" ],
+            "title" : "Get Price response",
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 7
+  }, {
+    "id" : "ebd0d2f4-4d68-4e6d-b6fa-b6a72538e4b7",
+    "name" : "Delete Price - 200",
+    "request" : {
+      "urlPath" : "/pricing/prices/3712761073538013099",
+      "method" : "DELETE"
+    },
+    "response" : {
+      "status" : 200
+    },
+    "uuid" : "ebd0d2f4-4d68-4e6d-b6fa-b6a72538e4b7",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:58.330225Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "DeletePrice"
+        }
+      }
+    },
+    "insertionIndex" : 8
+  }, {
+    "id" : "64fd4496-9766-45cf-a2a5-3903fd89df4b",
+    "name" : "Update rules for a price table - 201",
+    "request" : {
+      "urlPath" : "/pricing/pipeline/catalog/c095",
+      "method" : "PUT"
+    },
+    "response" : {
+      "status" : 201
+    },
+    "uuid" : "64fd4496-9766-45cf-a2a5-3903fd89df4b",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:58.330192Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "(none)"
+        }
+      }
+    },
+    "insertionIndex" : 9
+  }, {
+    "id" : "6bc3d9d0-88bf-4402-8ff2-561c6079ad0f",
+    "name" : "Get rules for a price table - 429",
+    "request" : {
+      "urlPath" : "/pricing/pipeline/catalog/gb8m",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 429
+    },
+    "uuid" : "6bc3d9d0-88bf-4402-8ff2-561c6079ad0f",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:58.330092Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "Getrulesforapricetable"
+        }
+      }
+    },
+    "insertionIndex" : 10
+  }, {
+    "id" : "cfc6e3b3-17f6-467e-84bc-8925eefce0a3",
+    "name" : "Get rules for a price table - 403",
+    "request" : {
+      "urlPath" : "/pricing/pipeline/catalog/p11a",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 403
+    },
+    "uuid" : "cfc6e3b3-17f6-467e-84bc-8925eefce0a3",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:58.330001Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "Getrulesforapricetable"
+        }
+      }
+    },
+    "insertionIndex" : 11
+  }, {
+    "id" : "6d407d54-84ea-44d5-8b1d-67fc72f84a6c",
+    "name" : "Get rules for a price table - 401",
+    "request" : {
+      "urlPath" : "/pricing/pipeline/catalog/8o53",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 401
+    },
+    "uuid" : "6d407d54-84ea-44d5-8b1d-67fc72f84a6c",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:58.329905Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "Getrulesforapricetable"
+        }
+      }
+    },
+    "insertionIndex" : 12
+  }, {
+    "id" : "8149e28b-61e0-42bc-8140-fe1b75f5d2e0",
+    "name" : "Get rules for a price table (application/json)",
+    "request" : {
+      "urlPath" : "/pricing/pipeline/catalog/x91i",
+      "method" : "GET",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/json"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"rules\" : [ {\n    \"context\" : {\n      \"brands\" : {\n        \"2000009\" : \"Whiskas\"\n      },\n      \"categories\" : { }\n    },\n    \"id\" : 0,\n    \"percentualModifier\" : 15\n  } ],\n  \"tradePolicyId\" : \"b2c\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "8149e28b-61e0-42bc-8140-fe1b75f5d2e0",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:58.329762Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "Getrulesforapricetable",
+          "schema" : {
+            "properties" : {
+              "percentualModifier" : {
+                "description" : "Percentual modifier.",
+                "type" : "integer"
+              },
+              "rules" : {
+                "description" : "Array of rules for the price table.",
+                "items" : {
+                  "description" : "Object containing a price table rule.",
+                  "properties" : {
+                    "context" : {
+                      "description" : "Rule Context is a group of filters to be checked at an item level when applying the rule. If all those filters check out, the rule will be applied for that item, unless there is a fixed price for that item.",
+                      "properties" : {
+                        "brands" : {
+                          "additionalProperties" : {
+                            "additionalProperties" : {
+                              "description" : "Brand Name.",
+                              "type" : "string"
+                            },
+                            "description" : "Brand ID.",
+                            "type" : "string"
+                          },
+                          "description" : "Brands that an item should have to be eligible for the rule. Format: key: `brandId`, value: `brandName`.",
+                          "type" : "object"
+                        },
+                        "categories" : {
+                          "additionalProperties" : {
+                            "additionalProperties" : {
+                              "description" : "Category Name.",
+                              "type" : "string"
+                            },
+                            "description" : "Category ID.",
+                            "type" : "string"
+                          },
+                          "description" : "Categories that an item should have to be eligible for the rule. Format: key: `categoryId`, value: `categoryName`.",
+                          "type" : "object"
+                        },
+                        "dateRange" : {
+                          "description" : "The rule will be active during this time range.",
+                          "nullable" : true,
+                          "properties" : {
+                            "from" : {
+                              "description" : "Date when rule will be activated. Date format: `RFC3339`.",
+                              "type" : "string"
+                            },
+                            "to" : {
+                              "description" : "Date when the rule will be deactivated. Date format: `RFC3339`.",
+                              "type" : "string"
+                            }
+                          },
+                          "type" : "object"
+                        },
+                        "internalCategories" : {
+                          "description" : "Internal Categories.",
+                          "nullable" : true,
+                          "type" : "object"
+                        },
+                        "markupRange" : {
+                          "description" : "For an item to be eligible to the rule, it's markup should be in this Markup Range.",
+                          "nullable" : true,
+                          "properties" : {
+                            "from" : {
+                              "description" : "Item markup should be greater than or equal to this value.",
+                              "type" : "integer"
+                            },
+                            "to" : {
+                              "description" : "Item markup should be less than or equal to this value.",
+                              "type" : "integer"
+                            }
+                          },
+                          "type" : "object"
+                        },
+                        "stockStatuses" : {
+                          "description" : "Stock statuses.",
+                          "nullable" : true,
+                          "type" : "object"
+                        }
+                      },
+                      "type" : "object"
+                    },
+                    "id" : {
+                      "description" : "Rule ID.",
+                      "type" : "number"
+                    }
+                  },
+                  "type" : "object"
+                },
+                "type" : "array"
+              },
+              "tradePolicyId" : {
+                "description" : "Trade Policy ID (Price Table ID).",
+                "type" : "string"
+              }
+            },
+            "title" : "",
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 13
+  }, {
+    "id" : "7389536b-e421-4658-bb1b-074bc97312cb",
+    "name" : "Get all price tables and their rules",
+    "request" : {
+      "urlPath" : "/pricing/pipeline/catalog",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "[ {\n  \"rules\" : [ {\n    \"context\" : {\n      \"brands\" : { },\n      \"categories\" : { }\n    },\n    \"id\" : 0,\n    \"percentualModifier\" : 20\n  } ],\n  \"tradePolicyId\" : \"2\"\n}, {\n  \"rules\" : [ {\n    \"context\" : {\n      \"brands\" : {\n        \"2000009\" : \"Whiskas\"\n      },\n      \"categories\" : { }\n    },\n    \"id\" : 0,\n    \"percentualModifier\" : 15\n  } ],\n  \"tradePolicyId\" : \"b2c\"\n} ]",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "7389536b-e421-4658-bb1b-074bc97312cb",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:58.329224Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "getallpricetablesandrules",
+          "schema" : {
+            "items" : {
+              "properties" : {
+                "percentualModifier" : {
+                  "description" : "Percentual modifier.",
+                  "type" : "integer"
+                },
+                "rules" : {
+                  "description" : "Array of rules for the price table.",
+                  "items" : {
+                    "description" : "Object containing a price table rule.",
+                    "properties" : {
+                      "context" : {
+                        "description" : "Rule Context is a group of filters to be checked at an item level when applying the rule. If all those filters check out, the rule will be applied for that item, unless there is a fixed price for that item.",
+                        "properties" : {
+                          "brands" : {
+                            "additionalProperties" : {
+                              "additionalProperties" : {
+                                "description" : "Brand Name.",
+                                "type" : "string"
+                              },
+                              "description" : "Brand ID.",
+                              "type" : "string"
+                            },
+                            "description" : "Brands that an item should have to be eligible for the rule. Format: key: `brandId`, value: `brandName`.",
+                            "type" : "object"
+                          },
+                          "categories" : {
+                            "additionalProperties" : {
+                              "additionalProperties" : {
+                                "description" : "Category Name.",
+                                "type" : "string"
+                              },
+                              "description" : "Category ID.",
+                              "type" : "string"
+                            },
+                            "description" : "Categories that an item should have to be eligible for the rule. Format: key: `categoryId`, value: `categoryName`.",
+                            "type" : "object"
+                          },
+                          "dateRange" : {
+                            "description" : "The rule will be active during this time range.",
+                            "nullable" : true,
+                            "properties" : {
+                              "from" : {
+                                "description" : "Date when rule will be activated. Date format: `RFC3339`.",
+                                "type" : "string"
+                              },
+                              "to" : {
+                                "description" : "Date when the rule will be deactivated. Date format: `RFC3339`.",
+                                "type" : "string"
+                              }
+                            },
+                            "type" : "object"
+                          },
+                          "internalCategories" : {
+                            "description" : "Internal Categories.",
+                            "nullable" : true,
+                            "type" : "object"
+                          },
+                          "markupRange" : {
+                            "description" : "For an item to be eligible to the rule, it's markup should be in this Markup Range.",
+                            "nullable" : true,
+                            "properties" : {
+                              "from" : {
+                                "description" : "Item markup should be greater than or equal to this value.",
+                                "type" : "integer"
+                              },
+                              "to" : {
+                                "description" : "Item markup should be less than or equal to this value.",
+                                "type" : "integer"
+                              }
+                            },
+                            "type" : "object"
+                          },
+                          "stockStatuses" : {
+                            "description" : "Stock statuses.",
+                            "nullable" : true,
+                            "type" : "object"
+                          }
+                        },
+                        "type" : "object"
+                      },
+                      "id" : {
+                        "description" : "Rule ID.",
+                        "type" : "number"
+                      }
+                    },
+                    "type" : "object"
+                  },
+                  "type" : "array"
+                },
+                "tradePolicyId" : {
+                  "description" : "Trade Policy ID (Price Table ID).",
+                  "type" : "string"
+                }
+              },
+              "type" : "object"
+            },
+            "title" : "",
+            "type" : "array"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 14
+  }, {
+    "id" : "51fc523e-da64-4e8c-95cb-664b02dd139a",
+    "name" : "Get Pricing v2 Status",
+    "request" : {
+      "urlPath" : "/pricing/migration",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"hasMigrated\" : true,\n  \"isActive\" : true\n}",
+      "headers" : {
+        "Content-Type" : "application/json; charset=utf-8"
+      }
+    },
+    "uuid" : "51fc523e-da64-4e8c-95cb-664b02dd139a",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:58.328903Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "GetPricingv2Status",
+          "schema" : {
+            "properties" : {
+              "hasMigrated" : {
+                "description" : "Defines if the account has migrated to Pricing V2.",
+                "example" : true,
+                "type" : "boolean"
+              },
+              "isActive" : {
+                "description" : "Defines if the account is active.",
+                "example" : true,
+                "type" : "boolean"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 15
+  }, {
+    "id" : "ff80c2b6-936b-45c7-bffb-631c0cc8d2cf",
+    "name" : "Get Pricing Configuration",
+    "request" : {
+      "urlPath" : "/pricing/config",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"blockAccount\" : false,\n  \"defaultMarkup\" : 100,\n  \"hasMigrated\" : true,\n  \"hasOptionalBasePrice\" : false,\n  \"hasPriceInheritance\" : false,\n  \"migrationStatus\" : \"Completed\",\n  \"minimumMarkups\" : {\n    \"1\" : 100,\n    \"2\" : 90\n  },\n  \"priceInheritance\" : \"never\",\n  \"priceTableSelectionStrategy\" : \"first\",\n  \"priceVariation\" : { },\n  \"sellersToOverride\" : [ ],\n  \"tradePolicyConfigs\" : [ ]\n}",
+      "headers" : {
+        "Content-Type" : "application/json; charset=utf-8"
+      }
+    },
+    "uuid" : "ff80c2b6-936b-45c7-bffb-631c0cc8d2cf",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:58.328786Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "GetPricingConfig",
+          "schema" : {
+            "example" : {
+              "blockAccount" : false,
+              "defaultMarkup" : 100,
+              "hasMigrated" : true,
+              "hasOptionalBasePrice" : false,
+              "hasPriceInheritance" : false,
+              "migrationStatus" : "Completed",
+              "minimumMarkups" : {
+                "1" : 100,
+                "2" : 90
+              },
+              "priceInheritance" : "never",
+              "priceTableSelectionStrategy" : "first",
+              "priceVariation" : { },
+              "sellersToOverride" : [ ],
+              "tradePolicyConfigs" : [ ]
+            },
+            "properties" : {
+              "blockAccount" : {
+                "description" : "Defines if access to the Pricing APIs is blocked for external requests.",
+                "example" : false,
+                "type" : "boolean"
+              },
+              "blockedRoutes" : {
+                "description" : "Array with all blocked routes.",
+                "items" : {
+                  "description" : "Blocked route.",
+                  "type" : "string"
+                },
+                "nullable" : true,
+                "type" : "array"
+              },
+              "defaultMarkup" : {
+                "description" : "Account default markup.",
+                "example" : 2,
+                "format" : "int32",
+                "type" : "integer"
+              },
+              "hasMigrated" : {
+                "description" : "Defines if the account has migrated to Pricing V2.",
+                "example" : true,
+                "type" : "boolean"
+              },
+              "hasOptionalBasePrice" : {
+                "description" : "Defines if optional base price is allowed.",
+                "example" : false,
+                "type" : "boolean"
+              },
+              "hasPriceInheritance" : {
+                "deprecated" : true,
+                "description" : "Deprecated. Use the `priceInheritance` field instead.",
+                "type" : "boolean"
+              },
+              "migrationStatus" : {
+                "description" : "Pricing V2 migration status.",
+                "example" : "Completed",
+                "type" : "string"
+              },
+              "minimumMarkups" : {
+                "additionalProperties" : {
+                  "format" : "int32",
+                  "type" : "integer"
+                },
+                "description" : "Account minimum markup.",
+                "type" : "object"
+              },
+              "priceInheritance" : {
+                "description" : "Condition of price inheritance from its parent account. This field can have three possible values: `never` if the store should never inherit prices, `nonexistent` if the store should only inherit prices in case of nonexistent prices for a given product, or `always` if the store should always inherit prices, regardless of its own prices.",
+                "example" : "nonexistent",
+                "type" : "string"
+              },
+              "priceTableLimit" : {
+                "description" : "Price Table Limit.",
+                "example" : 100,
+                "nullable" : true,
+                "type" : "integer"
+              },
+              "priceTableSelectionStrategy" : {
+                "default" : "first",
+                "description" : "The strategy used to get prices when there is more than one option. Possible values: `first`, `highest`, `lowest`. Default: `first`.",
+                "example" : "highest",
+                "type" : "string"
+              },
+              "priceVariation" : {
+                "description" : "Price Variation object.",
+                "properties" : {
+                  "lowerLimit" : {
+                    "description" : "Lower variation limit.",
+                    "example" : 1,
+                    "nullable" : true,
+                    "type" : "integer"
+                  },
+                  "upperLimit" : {
+                    "description" : "Upper variation limit.",
+                    "example" : 10,
+                    "nullable" : true,
+                    "type" : "integer"
+                  }
+                },
+                "type" : "object"
+              },
+              "sellersToOverride" : {
+                "description" : "Overrides prices from sellers.",
+                "type" : "array"
+              },
+              "tradePolicyConfigs" : {
+                "description" : "Trade Policy Configurations array.",
+                "items" : {
+                  "properties" : {
+                    "minimumMarkup" : {
+                      "description" : "Trade Policy Minimum Markup.",
+                      "example" : 80,
+                      "type" : "integer"
+                    },
+                    "rulesShouldAffectListPrice" : {
+                      "description" : "Defines if the Price Rule should affect the list price too.",
+                      "example" : false,
+                      "type" : "boolean"
+                    },
+                    "tradePolicyId" : {
+                      "description" : "Trade Policy ID.",
+                      "example" : "b2c",
+                      "type" : "string"
+                    }
+                  },
+                  "type" : "object"
+                },
+                "type" : "array"
+              }
+            },
+            "required" : [ "hasMigrated", "defaultMarkup", "minimumMarkups" ],
+            "title" : "Pricing Configuration response",
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 16
+  } ]
+}

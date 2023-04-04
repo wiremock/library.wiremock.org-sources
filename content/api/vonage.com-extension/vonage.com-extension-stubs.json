@@ -1,0 +1,214 @@
+{
+  "mappings" : [ {
+    "id" : "e9e227ad-94c8-49ef-a682-c9631defedab",
+    "name" : "Get extension data by account ID and extension number",
+    "request" : {
+      "urlPath" : "/api/accounts/4bn2/extensions/1.0414295482765012E308",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 404,
+      "body" : "{\n  \"msg\" : \"06spj5i5cddnmldo75qmgu29\",\n  \"status\" : 7.269943582315046E307\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "e9e227ad-94c8-49ef-a682-c9631defedab",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:33.640425Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "ExtensionCtrl.getAccountExtensionByID",
+          "schema" : {
+            "properties" : {
+              "msg" : {
+                "description" : "Error message",
+                "type" : "string"
+              },
+              "status" : {
+                "description" : "Http Response Code",
+                "type" : "number"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 0
+  }, {
+    "id" : "2ae4d85f-ca65-4ec0-9561-66bbe81f4e5c",
+    "name" : "Get extension data by account ID and extension number",
+    "request" : {
+      "urlPath" : "/api/accounts/f0hm/extensions/1.7378564388209309E308",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"_embedded\" : {\n    \"data\" : {\n      \"dnd_enabled\" : false,\n      \"caller_id\" : \"John Smith\",\n      \"extension_number\" : \"789\",\n      \"block_caller_id\" : false,\n      \"dids\" : [ {\n        \"custom_tag\" : \"My Tag\",\n        \"phone_number\" : \"14155550100\"\n      } ],\n      \"vtt_enabled\" : true,\n      \"extension_handsets\" : [ {\n        \"sip_id\" : \"VH16370927\",\n        \"handset_name\" : \"line1-VH6370927\"\n      }, {\n        \"sip_id\" : \"VH16370927\",\n        \"handset_name\" : \"line1-VH6370927\"\n      }, {\n        \"sip_id\" : \"VH16370927\",\n        \"handset_name\" : \"line1-VH6370927\"\n      }, {\n        \"sip_id\" : \"VH16370927\",\n        \"handset_name\" : \"line1-VH6370927\"\n      }, {\n        \"sip_id\" : \"VH16370927\",\n        \"handset_name\" : \"line1-VH6370927\"\n      }, {\n        \"sip_id\" : \"VH16370927\",\n        \"handset_name\" : \"line1-VH6370927\"\n      }, {\n        \"sip_id\" : \"VH16370927\",\n        \"handset_name\" : \"line1-VH6370927\"\n      } ],\n      \"user\" : {\n        \"login_name\" : \"jsmith\",\n        \"last_name\" : \"Smith\",\n        \"first_name\" : \"John\",\n        \"email\" : \"john.smith@example.com\"\n      },\n      \"location_id\" : 145214\n    }\n  },\n  \"_links\" : {\n    \"next\" : {\n      \"href\" : \"39p5fr4wqznmenc0iko92qan3hm76vvr7tn74r2ywkfn21uo5uxypnir1q6ukr4d4wrouzmxbxygfqkzf71s2szv64t26uqekecssdhmbmohe50w0ep7b4oeng5k0e6gpqrrrsdo1m8arvj4m9snu3gk7he8p6aqa181bkno0dmve2iu71fkcl\"\n    },\n    \"prev\" : {\n      \"href\" : \"903x8vl77wo9qqxysfeaermnxdcorssrjrcwrdkeclo2h58feeado43aq4k2uc4zy73fq2oeyb0r5c6qaw68wfmg975ww463jwegwf20kzvljsh57h3h2ndbfa8vlpzlhaj57ccb7u7v55kut953742oc1tcahaudw7d6w906\"\n    },\n    \"self\" : {\n      \"href\" : \"qgrjba71nm54vyj7wswq759ugckrnw0pwh820jtfuogq0plp3t5yh7c2cd7fdeeecoezs2v6v6dqb7u7cn9ceoj8s12\"\n    },\n    \"first\" : {\n      \"href\" : \"xqj33otdhzlo853h3h5l1pc7l44nc4j5c82fep7g7v\"\n    }\n  },\n  \"page\" : 1,\n  \"total_pages\" : 10,\n  \"total_items\" : 100,\n  \"page_size\" : 10\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "2ae4d85f-ca65-4ec0-9561-66bbe81f4e5c",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:33.640262Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "ExtensionCtrl.getAccountExtensionByID",
+          "schema" : {
+            "properties" : {
+              "_embedded" : {
+                "$ref" : "#/components/schemas/EndUserRouteEmbeddedObject"
+              },
+              "_links" : {
+                "$ref" : "#/components/schemas/Links"
+              },
+              "page" : {
+                "description" : "Current page number",
+                "example" : 1,
+                "type" : "number"
+              },
+              "page_size" : {
+                "description" : "Number of records per page",
+                "example" : 10,
+                "type" : "number"
+              },
+              "total_items" : {
+                "description" : "Total number of records",
+                "example" : 100,
+                "type" : "number"
+              },
+              "total_pages" : {
+                "description" : "Total number of pages",
+                "example" : 10,
+                "type" : "number"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 1
+  }, {
+    "id" : "76a405e8-c6ce-4a24-8a17-1765870aa94b",
+    "name" : "Get account extensions data by account ID",
+    "request" : {
+      "urlPath" : "/api/accounts/8603/extensions",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 400,
+      "body" : "{\n  \"instance\" : \"9hpizssiacb0znv1ktf35s2ooa\",\n  \"title\" : \"Inventore dolores asperiores.\",\n  \"invalid_parameters\" : [ {\n    \"reason\" : \"o5vgwdpty9sgbjsuc4hnjtz67ll4dd5lr1nsfjjthkm6uetldx8u0fq4\",\n    \"name\" : \"Shaquita Larkin\"\n  }, {\n    \"reason\" : \"eulg1hwvcvyxz7sapsyoxezyoxklrqyzc0xulu1q2m1rtqvitubtrngmgz513nh3j\",\n    \"name\" : \"Tommy McGlynn\"\n  }, {\n    \"reason\" : \"578wzh1t22p9xtmtdn6794wbk8pmpehq00f9nci3ebhf1ap4bh0iq4yx9xtofa938\",\n    \"name\" : \"Dan Schneider\"\n  }, {\n    \"reason\" : \"z5tgz0lv1rqzp8mtlh6j2knbtedynkmia2uuy1xx41ieqkfu5uu7pq2eiahlcszgwhjh2mh67dynd5dlywp3ifprx3khorg5x10iujnwbs9jwcut9cavxez3y5iarxxlyr2ultxjbxl1v30v8pii2rr9yjssp3ehpr17gi1djm6v0c5mxdk28mnecq625s3w1gk\",\n    \"name\" : \"Dulce Casper\"\n  }, {\n    \"reason\" : \"2qllxhvp97zcup90z9vkmq1cfournvjlaxfkugr7f6h0x3srpur85oskder9qtnjffpufm1t8a7apyfoybk65z6iw9uecy1c9cq5s0kkay8oepc36ty3move3pw3wde9c0asnpxv6lefytrrxk5ddy5d5k32bqtx37dznt4zs4xo35ukundhea\",\n    \"name\" : \"Miss Jim Torphy\"\n  } ],\n  \"status\" : 4.503771166190876E307\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "76a405e8-c6ce-4a24-8a17-1765870aa94b",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:33.639885Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "ExtensionCtrl.getAccountExtensions",
+          "schema" : {
+            "properties" : {
+              "instance" : {
+                "description" : "Error Track ID",
+                "type" : "string"
+              },
+              "invalid_parameters" : {
+                "description" : "Invalid parameters and their reason for failing",
+                "items" : {
+                  "$ref" : "#/components/schemas/DetailedInvalidParam"
+                },
+                "type" : "array"
+              },
+              "status" : {
+                "description" : "Error status code",
+                "type" : "number"
+              },
+              "title" : {
+                "description" : "Error title",
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 2
+  }, {
+    "id" : "22ab2bd5-5d64-4647-9816-f61737b13c13",
+    "name" : "Get account extensions data by account ID",
+    "request" : {
+      "urlPath" : "/api/accounts/hho5/extensions",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"_embedded\" : {\n    \"data\" : {\n      \"dnd_enabled\" : false,\n      \"caller_id\" : \"John Smith\",\n      \"extension_number\" : \"789\",\n      \"block_caller_id\" : false,\n      \"dids\" : [ {\n        \"custom_tag\" : \"My Tag\",\n        \"phone_number\" : \"14155550100\"\n      } ],\n      \"vtt_enabled\" : true,\n      \"extension_handsets\" : [ {\n        \"sip_id\" : \"VH16370927\",\n        \"handset_name\" : \"line1-VH6370927\"\n      }, {\n        \"sip_id\" : \"VH16370927\",\n        \"handset_name\" : \"line1-VH6370927\"\n      }, {\n        \"sip_id\" : \"VH16370927\",\n        \"handset_name\" : \"line1-VH6370927\"\n      }, {\n        \"sip_id\" : \"VH16370927\",\n        \"handset_name\" : \"line1-VH6370927\"\n      }, {\n        \"sip_id\" : \"VH16370927\",\n        \"handset_name\" : \"line1-VH6370927\"\n      }, {\n        \"sip_id\" : \"VH16370927\",\n        \"handset_name\" : \"line1-VH6370927\"\n      }, {\n        \"sip_id\" : \"VH16370927\",\n        \"handset_name\" : \"line1-VH6370927\"\n      } ],\n      \"user\" : {\n        \"login_name\" : \"jsmith\",\n        \"last_name\" : \"Smith\",\n        \"first_name\" : \"John\",\n        \"email\" : \"john.smith@example.com\"\n      },\n      \"location_id\" : 145214\n    }\n  },\n  \"_links\" : {\n    \"next\" : {\n      \"href\" : \"hj2xgvjxgmte0mi28ab0zb9cvk4e11arqh3zcvwb2rzd9z3iw81zjw7gmhhw8fej5k835d8e8mgp3frtkm9kqksfrnzf7ym365v3npwraotnsq5vknd8clhmyy8hnrnjz418zficb52ueca758qna5dvbluzygkjm4uhnsynw07wveg9rwg0ye91h1r5te2wspq\"\n    },\n    \"prev\" : {\n      \"href\" : \"vwmkuy9fzbx8iomzpdb808duqug1bmaaufsfuftleadj9lx1gpd1n8aiwryy4j1b6lnu6k45bl30ub89jvgwa38e6yjw1j5sd39bfehif6tnk7e062qrm561p18\"\n    },\n    \"self\" : {\n      \"href\" : \"z2ukycqjfac1s7opfr85kig0isswdmpcy48c4scy0p3dwep5grhl9ukl7n40vom7y4s1a8f6zw4rgtujsjx8om621vkxvsx30id3rq1tsa0rizcpkk4v9n17ib8ayyv36xw3s7zxr7iec\"\n    },\n    \"first\" : {\n      \"href\" : \"em8dcxhta4h5dgbsbbd2acg57c4n88i560595v7omk1ea1zwh\"\n    }\n  },\n  \"page\" : 1,\n  \"total_pages\" : 10,\n  \"total_items\" : 100,\n  \"page_size\" : 10\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "22ab2bd5-5d64-4647-9816-f61737b13c13",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:33.639312Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "ExtensionCtrl.getAccountExtensions",
+          "schema" : {
+            "properties" : {
+              "_embedded" : {
+                "$ref" : "#/components/schemas/EndUserRouteEmbeddedObject"
+              },
+              "_links" : {
+                "$ref" : "#/components/schemas/Links"
+              },
+              "page" : {
+                "description" : "Current page number",
+                "example" : 1,
+                "type" : "number"
+              },
+              "page_size" : {
+                "description" : "Number of records per page",
+                "example" : 10,
+                "type" : "number"
+              },
+              "total_items" : {
+                "description" : "Total number of records",
+                "example" : 100,
+                "type" : "number"
+              },
+              "total_pages" : {
+                "description" : "Total number of pages",
+                "example" : 10,
+                "type" : "number"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 3
+  } ]
+}

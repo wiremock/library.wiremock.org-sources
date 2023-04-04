@@ -1,0 +1,587 @@
+{
+  "mappings" : [ {
+    "id" : "46fd1a58-d092-41ef-9d84-265dc29efa98",
+    "name" : "Fetch pricing information for a specific destination and, optionally, originatio...",
+    "request" : {
+      "urlPath" : "/v2/Voice/Numbers/stcz5f7g13i0uocqxwasm9qxx115dxow4tadnfp306cni6epkirmz4szdv3nzvs33ju6zzntfkgtxpt44be76fbxs9eu4pe7ll7tgtl5iamyfjpvlfp019kwsu1ii0086f",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"price_unit\" : \"5f80k56vfzjlbgo\",\n  \"country\" : \"Zimbabwe\",\n  \"iso_country\" : \"Libya\",\n  \"destination_number\" : \"dc29h6vmm89so9fmfmjyzvh9n77hab1k96c85ab08t9qry21u1urr0wl9ck8hnfhcuh0d3pkuix76q8hir5nsn7nhyjvmbnwus88wt6s1ucoq7bpiy5uihnmr1ohifg6vlhi3ciffay8ujhx4atn2ubarytvwug534owl8oxms45rorhvapb8mdf4sgl9m976tq2\",\n  \"inbound_call_price\" : {\n    \"base_price\" : 1.5214271202882453E308,\n    \"current_price\" : 3.6375969043552606E306,\n    \"number_type\" : \"jbjr75i8ugjp5o5lb2avd22g82fgxv0xh6pdobeqkebxzr9pt0m2klt2r5\"\n  },\n  \"origination_number\" : \"7ahtpx2c7tyc\",\n  \"url\" : \"https://web.example.mocklab.io/698763\",\n  \"outbound_call_prices\" : [ {\n    \"base_price\" : 1.7900320397905404E308,\n    \"origination_prefixes\" : [ \"va81rbfopf7zkz7z71rgw6f9z86yxptqqxmkmaoe9jlmvig5zfa6kjvz1et2htkzvb7al7o953jdakvaff50\" ],\n    \"current_price\" : 5.808321348688649E307\n  }, {\n    \"base_price\" : 8.163526227141401E307,\n    \"origination_prefixes\" : [ \"awbj3skz5e1oqdn6mjlptohs7eqqgd3t3p4sbczut6phdpkiriqut20ppxljm4h4g3qudymu9hzsf0xjale1ys81dgfwp0xiefs45t0vv2a70dtnryofw2s0ds4vycbccj3yhe4ge5bgppdkemgy2byh0bdusgbhece4fsvraipq2j\", \"v9a1uu1hrpgp3udap1xg558j7q5slaewpaf4q0qiqgooyrbp2cfib22s308cgzsgqzzznpvwllb17tev4odf5lnnicwblbigin0njq4fsptgc7insdj6gxeynqpi62qw2yz\", \"d6zng6x0yqae2wkw0qu4bnoh\", \"6eyg7nz2gsn6xhjrumxtczzosgwlzwgeou5yolvsh6cdfwseb1xoisfvyx9i8mc9iss1jvo5a32qkedon7wwr6guzw10a226\", \"lzb3hallik98kgwri6pmkld77lm0e7l2qch16bgm8fkyfybwl3\", \"u58q82cu4cn0nklte42h9f22i85gpoazcmnf67zdtnjy4aqlmurei29u10v7n9ig59cujmjialvkob4ddv5dzmyjepi83bd022zpynrgkuyigkpqqgv89iiaani0k3bfvktin63hbxc8rsnogtcdzm5iu1zp2ry0\", \"tf55hvxxl65th05b33p67lkdj9l9m4rqwwva39cmbs0ql1u3qtq302qdjfrw9rp0o90soai6x0ykkjk71u17mgy7n5nb6kd47vl3c6lia5qsvdccpqp21rce2y295ks6\", \"jw7q78v2mui7jx7nkdgy9po86br15hcvgmbjhiztw4feaadf6y5ki7g3dy80dtjitr9sjicpjh7xnx3e7w9g2xkxh7nhscwlbuo3yare7yd8ayv3zasg9evbzdmbrstt88t5lkh5d\" ],\n    \"current_price\" : 1.6122120301965188E308\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "46fd1a58-d092-41ef-9d84-265dc29efa98",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:21.166147Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "FetchVoiceNumber",
+          "schema" : {
+            "properties" : {
+              "country" : {
+                "description" : "The name of the country.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "destination_number" : {
+                "description" : "The destination phone number in [E.164](https://www.twilio.com/docs/glossary/what-e164) format, which consists of a + followed by the country code and subscriber number.",
+                "format" : "phone-number",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "inbound_call_price" : {
+                "description" : "The [InboundCallPrice](https://www.twilio.com/docs/voice/pricing#inbound-call-price) record.",
+                "format" : "inbound-call-price",
+                "nullable" : true,
+                "properties" : {
+                  "base_price" : {
+                    "type" : "number"
+                  },
+                  "current_price" : {
+                    "type" : "number"
+                  },
+                  "number_type" : {
+                    "type" : "string"
+                  }
+                },
+                "type" : "object"
+              },
+              "iso_country" : {
+                "description" : "The [ISO country code](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)",
+                "format" : "iso-country-code",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "origination_number" : {
+                "description" : "The origination phone number in [[E.164](https://www.twilio.com/docs/glossary/what-e164) format, which consists of a + followed by the country code and subscriber number.",
+                "format" : "phone-number",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "outbound_call_prices" : {
+                "description" : "The list of [OutboundCallPriceWithOrigin](https://www.twilio.com/docs/voice/pricing#outbound-call-price-with-origin) records.",
+                "items" : {
+                  "format" : "outbound-call-price-with-origin",
+                  "properties" : {
+                    "base_price" : {
+                      "type" : "number"
+                    },
+                    "current_price" : {
+                      "type" : "number"
+                    },
+                    "origination_prefixes" : {
+                      "items" : {
+                        "type" : "string"
+                      },
+                      "type" : "array"
+                    }
+                  },
+                  "type" : "object"
+                },
+                "nullable" : true,
+                "type" : "array"
+              },
+              "price_unit" : {
+                "description" : "The currency in which prices are measured, specified in [ISO 4127](https://www.iso.org/iso/home/standards/currency_codes.htm) format (e.g. `usd`, `eur`, `jpy`).",
+                "format" : "currency",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "url" : {
+                "description" : "The absolute URL of the resource.",
+                "format" : "uri",
+                "nullable" : true,
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 0
+  }, {
+    "id" : "83dd617d-fd5e-409c-b4fa-b14efd03c087",
+    "name" : "Fetch a specific Country.",
+    "request" : {
+      "urlPath" : "/v2/Voice/Countries/Serbia",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"price_unit\" : \"geltvm0lq0d6xnz8p345wkx6t0sy6ufqr79re2r7a5ljlma2w0y0lqcmf6lh30oya2fsjcy6fdkk08jt4t50v0lfo9b2pbt1tzjgvcnchj6yf56xamkhyzxzsxat5v2m0l2jhy0hwxjvdiatjjnjty8fzpmauxjaq521ajpekdr12m8x9sqq02y15\",\n  \"country\" : \"Tunisia\",\n  \"iso_country\" : \"Canada\",\n  \"inbound_call_prices\" : [ {\n    \"base_price\" : 1.7744220142028402E308,\n    \"current_price\" : 9.283857205017288E307,\n    \"number_type\" : \"cl4on2uuwyz9z7d5j0dinprystvsv192hzqamzdxwiwops49kc0ifc7ldmyx6ic0jt8asgphan287ilycyy86ft45hkvmys6a03h6oe\"\n  }, {\n    \"base_price\" : 1.9893298361773587E307,\n    \"current_price\" : 1.0343137248292509E307,\n    \"number_type\" : \"1hb6j2909gdjizfef9ux4rvvzayzvep0f01pmfby7qkx1ohmoleul4se5exktu3i9ocg6x\"\n  } ],\n  \"url\" : \"https://web.example.mocklab.io/581974\",\n  \"outbound_prefix_prices\" : [ {\n    \"destination_prefixes\" : [ \"9ho27afjxofe9dtbb9bvix8lkoy3i4ildxphhrxaklwf87btjwvl4t0x3r211rde5hmv87n44c9g5pgaxyd48qtxwe8qr1yo93x062hfct1xu7iu7czd6pjxkd8sxpxyox749h9g1j6\", \"glg5oaek5dt7h8sugo4g9osl6lhf0lka8vw03ag88oiab4rxz5392ee4lyto3briv\", \"shgyv1ttvkei2biuluei5mviqy0xj55d5nwvtplkp31rvt3ujr8dead63v\", \"audya6nq2sr5hcq6527s8k0pcp6ke8vfaaztdykp32\" ],\n    \"friendly_name\" : \"Donald Beer\",\n    \"base_price\" : 1.2834199328164786E308,\n    \"origination_prefixes\" : [ \"il7i\", \"iqy4a3xoo0tf1d6qkkwrzeiffola6afbplhblr9xjyu09d25fn2v164l2zdb6urdtcq2b980ckvuddqndvo5nnk311rn6elda7u0mie6jbnhroal7l6lg41556ner4s541xjvomrxav\", \"8bdbbwhq12zq28xbbbovwn5w8jlo832fcvy2mzpr3k1mit6b960hsq4feeb2usm\", \"goj6dlhi5zzehgzo0vaz0ekua\", \"2qr39wnjjer316s8qqj3mn27aq7ft2s5n6bbd3n85lf7crzlr8ytgid1t7b3b\" ],\n    \"current_price\" : 1.4160102333842801E307\n  }, {\n    \"destination_prefixes\" : [ \"ww9oyj1wzbjkvcox4j9gjs8k5ybxkuae7eh4mxgcb383f\", \"gmnm2050ro35wcowxlvke7g4cdxbxbx0olxokpo97e8ju8gygvhnk7uopvg6e3izzw2p3adaix2pb4bq0sjruq8i\", \"y133wbto8gxb7mwauvqij2qa81mxvvssfogq6dr64emvb8t0yh4bwygguclvarn2dcwascyxbo28h8cboouecxsh4fuwr37rx5sdvo1059gq7edwnbzqvbvf6yzv80dg327oqxtfliusz22qhjstrxs8h4emk03o3so25r1u\", \"ykgwa3bhoazl16xjnrc0la790zd3h2q3vr3ahrx6ruvwh36w1irflqxcmqwbp7ek7d8rggstspft7\", \"3xjzukyp8yv933k7wr68zg8iievye04yt0ypjpzj8pmpr9wsplsn08ncgx80pytrfm9umyvtc9jtygj6w9bnyf3zwbkw4r333pq2qo82pmfifdclfz4gitbracnmwseef7baon\", \"4plh17q1t0aonntqjxz9srofl9vrfv5l320rv0vh0u154ja8y509bnh4i33rb6p0pq8fkpmnovm1kue6dyz9ixo8lhufhg2lkxv4z4svsgoj4mqynj4t13axrhvtnj1r5qbvojg2tt\" ],\n    \"friendly_name\" : \"Denny Grant\",\n    \"base_price\" : 1.5685743106740795E308,\n    \"origination_prefixes\" : [ \"h5w3y5kgzuvgp4v6u8zhrx4o60d1phe77utxsbom5nrkiqz3csenzzpk1lfxe678a11zl14dt\", \"5ijkw43mlkrmbytk4rvn89ecrntg99wmp2kwvloovmbjmyh9gfwq5bblq32wz9d1qjwofmcyfmyqo7d2b\", \"932xsh4dy72fikpidu1mj1orlh04tfujlq0k9j21r6h9w4d8lv5kltmimd5owui052a909p514dcd438zrrjqhjlr8p6vkvs\", \"gyqe7yusihmg2u1vkzaw47fnf3vs6of1om9205zelw4nrqknsm2hbk2347xqcaq0h577j5hmuox9ckti246az48wlhb4xw9htdvdtmx006apdwz0irobgjh0x3o40y1qve6laod47lbkmlsu555je0y1l4mrk8o8wygy2mbr8h\", \"wocg6kdrhgsin9927dvhjefwirg498vg53zz6xna88laj4jn5dw0ze8qs0l90avqpdj7k55dafrn17mevpfl7v77vql7iu5mmlnaek5w7pi5phch9m9zld7l4hpw40miazog96hjci8bybjm4baea4ruyupoij41xgqa6\", \"8d0qia1k7o1mmmg47tk97h\", \"ly1u7pdawkzex41rnbzpdtyepu152oi6jt2t7ce2ol7gewd7fict5j78w7vk1\" ],\n    \"current_price\" : 1.3381387076783752E307\n  }, {\n    \"destination_prefixes\" : [ \"02znooyxco3vmwgy4hme1hkc0df54aff5j0dk7keet8btkagf2elhlhmxm3kdaunfy45e6t9yq9m4dhjyku4uc0fmg28gduiv7y0q9f5t2upfox442ksjt1i8jryz1eitvce4mbt8xcj1thn343ksp31bnxx4o\", \"km2\", \"t9ffwdmqimzyetap212oxfxj3byv8xiih1v9coj9bnxn0f3xo8lnespczf975ctxxnyfufsxkkmellu4nsr1bmw8qigxvmzwghdtfe1mtd2itgpdk9id4e1nrfd4a7hkf2rgd4e8z3c0ssq8ibwrcsoxump69ru7d3esly431hof9pjd5ft9hftvcovnuyt\", \"qs83booc35h9zpkxic4srnjcdxdc3t12shhvy88ybgjd2usw7jfsxv8bwsaouyih9ibasuig38cdt3vssb254nw1pacd7zw0sj4652vfj131dmajm9x6koiu0zu3i28f6gmt14d2qzdzsewywxf0t9fqs7dzjftlmw2ucxarwiq839ps7ne\", \"ufrof69occic4pv0lt9cpddak91buta8dmpjovd382g18h25cm2dasr0wjmnyobatuj3y9ytliyaaeu99jx825nf0unrvfre18\", \"vp70whnrdirc28o418zz2tho4iynawlanunx0rh15dmcn4yrgxggl9izke25z2n9enyw1rb7e80614g7hrehc6dt0tgo0gjr6swk6wtxxv375mjcw72mh6ep2ulkkvmd5ray4oercrmyifnv5k6ucetyb53cg04h5bn5mmr5s3xwxz020icym2\", \"ywfbndec79sd5ap7eb54f46uxz5j9xoe8dwtqvumiidxysr01lba1ofe0xivmiyxuxcn6y145bym1o8t11qhtfwrdzchgy4myag84i5ihx7amxk\", \"itx56d1hkryx3ebnpefyjh62smhsc9i5wf38xy1rtme7rjclrb5arnri9iti46xfj8yrxmlvr4naxllyckt1xvzvxroz5q7sqycn\" ],\n    \"friendly_name\" : \"Sydney Barrows\",\n    \"base_price\" : 7.072344418421598E307,\n    \"origination_prefixes\" : [ \"w6b3011md3nuimj5s0282my5jcv03jqlthud8x3go64gx64\", \"6sud1cpb9ortzgn7h7wgkzw2gt6riyui8fumz262e4u5vrgpar53el89kv60zoy1pd9s1129\", \"reeyg40r4a5vw4f2f7gcwb91fubro7o5swma0xwpuou9bp26zv9z729hsy2hld0a3gu4zmh9ir0lw9klqtdkdowfxktjgbou0cbuzqbqw5cvxqsudbsp0pizq8v6rlo86il266uem3q702yzvb\", \"i25gvc44nsnermpp057mxk16lui2js4wuf8bdbczv2mql6fv5rxubll0gzx5iol8rzuk165uq3uuyo076t8tucf6ot6i3g5sdx088iomgg5x7oqkjk5pu7qakt515ce021cphr7jlf1\", \"p3r0tho6h2irvj3by9gcd0uhjguxwmr0d5alqiis5x4bnhasusbye52tkf0zhvd2edbcd0efwgv19isbxzmar5yby3mu3gn2d480xjqde3sdnxjq4zfu454242zp6i1pxq2wssgemuf7wadd20v9i0efrucr2c4mmnletr7fgp8osmlycu1bris2\", \"51urtqgknnjmq880c8nxx1isb9tj86spkfeweybcaekv1ymmwl\" ],\n    \"current_price\" : 2.4579180811593856E307\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "83dd617d-fd5e-409c-b4fa-b14efd03c087",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:21.165622Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "FetchVoiceCountry",
+          "schema" : {
+            "properties" : {
+              "country" : {
+                "description" : "The name of the country.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "inbound_call_prices" : {
+                "description" : "The list of [InboundCallPrice](https://www.twilio.com/docs/voice/pricing#inbound-call-price) records.",
+                "items" : {
+                  "format" : "inbound-call-price",
+                  "properties" : {
+                    "base_price" : {
+                      "type" : "number"
+                    },
+                    "current_price" : {
+                      "type" : "number"
+                    },
+                    "number_type" : {
+                      "type" : "string"
+                    }
+                  },
+                  "type" : "object"
+                },
+                "nullable" : true,
+                "type" : "array"
+              },
+              "iso_country" : {
+                "description" : "The [ISO country code](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).",
+                "format" : "iso-country-code",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "outbound_prefix_prices" : {
+                "description" : "The list of [OutboundPrefixPriceWithOrigin](https://www.twilio.com/docs/voice/pricing#outbound-prefix-price-with-origin) records.",
+                "items" : {
+                  "format" : "outbound-prefix-price-with-origin",
+                  "properties" : {
+                    "base_price" : {
+                      "type" : "number"
+                    },
+                    "current_price" : {
+                      "type" : "number"
+                    },
+                    "destination_prefixes" : {
+                      "items" : {
+                        "type" : "string"
+                      },
+                      "type" : "array"
+                    },
+                    "friendly_name" : {
+                      "type" : "string"
+                    },
+                    "origination_prefixes" : {
+                      "items" : {
+                        "type" : "string"
+                      },
+                      "type" : "array"
+                    }
+                  },
+                  "type" : "object"
+                },
+                "nullable" : true,
+                "type" : "array"
+              },
+              "price_unit" : {
+                "description" : "The currency in which prices are measured, specified in [ISO 4127](https://www.iso.org/iso/home/standards/currency_codes.htm) format (e.g. `usd`, `eur`, `jpy`).",
+                "format" : "currency",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "url" : {
+                "description" : "The absolute URL of the resource.",
+                "format" : "uri",
+                "nullable" : true,
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 1
+  }, {
+    "id" : "879fe843-0f6f-4479-8226-e6d2bf3cb539",
+    "name" : "",
+    "request" : {
+      "urlPath" : "/v2/Voice/Countries",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"meta\" : {\n    \"first_page_url\" : \"https://web.example.mocklab.io/935655\",\n    \"next_page_url\" : \"https://web.example.mocklab.io/376062\",\n    \"previous_page_url\" : \"https://web.example.mocklab.io/541759\",\n    \"page\" : 5901619410894108043,\n    \"key\" : \"z8rp581r0k87iztn1h6v5bh1ukwwazr154py9ydo9ztkycl1y1355l3k5z7k5fs7egv3zcu\",\n    \"url\" : \"https://web.example.mocklab.io/360970\",\n    \"page_size\" : 8757310372145215000\n  },\n  \"countries\" : [ {\n    \"country\" : \"Uzbekistan\",\n    \"iso_country\" : \"Samoa\",\n    \"url\" : \"https://web.example.mocklab.io/433105\"\n  }, {\n    \"country\" : \"Moldova, Republic of\",\n    \"iso_country\" : \"Mauritius\",\n    \"url\" : \"https://web.example.mocklab.io/199049\"\n  }, {\n    \"country\" : \"Nigeria\",\n    \"iso_country\" : \"Thailand\",\n    \"url\" : \"https://web.example.mocklab.io/170602\"\n  }, {\n    \"country\" : \"Korea (Democratic People's Republic of)\",\n    \"iso_country\" : \"Macedonia, the former Yugoslav Republic of\",\n    \"url\" : \"https://web.example.mocklab.io/593300\"\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "879fe843-0f6f-4479-8226-e6d2bf3cb539",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:21.164753Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "ListVoiceCountry",
+          "schema" : {
+            "properties" : {
+              "countries" : {
+                "items" : {
+                  "$ref" : "#/components/schemas/pricing.v2.voice.voice_country"
+                },
+                "type" : "array"
+              },
+              "meta" : {
+                "properties" : {
+                  "first_page_url" : {
+                    "format" : "uri",
+                    "type" : "string"
+                  },
+                  "key" : {
+                    "type" : "string"
+                  },
+                  "next_page_url" : {
+                    "format" : "uri",
+                    "nullable" : true,
+                    "type" : "string"
+                  },
+                  "page" : {
+                    "type" : "integer"
+                  },
+                  "page_size" : {
+                    "type" : "integer"
+                  },
+                  "previous_page_url" : {
+                    "format" : "uri",
+                    "nullable" : true,
+                    "type" : "string"
+                  },
+                  "url" : {
+                    "format" : "uri",
+                    "type" : "string"
+                  }
+                },
+                "type" : "object"
+              }
+            },
+            "title" : "ListVoiceCountryResponse",
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 2
+  }, {
+    "id" : "531e3e52-7f49-4dc6-8251-436337c46d71",
+    "name" : "Fetch pricing information for a specific destination and, optionally, originatio...",
+    "request" : {
+      "urlPath" : "/v2/Trunking/Numbers/7zgkypyeo8ucpa3g5hhtnruih6dfd85s0jzaj21dl0hsxru50am8x4b3i8ncsocnveisgby530zpsk3nb4fu12cy6bb9lvgi33w6sfg57oqqha3zt",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"price_unit\" : \"bbusy\",\n  \"country\" : \"Central African Republic\",\n  \"terminating_prefix_prices\" : [ {\n    \"destination_prefixes\" : [ \"ap7py0kp3kuc7hszunjd71jhmaoweirme9nbfl5zsqgvzzkg8t2dl75sg98e45c4f9hfptehxw6youewandmo6ak03tyy8h4no29g0oo06sj813cx34r7nm5gucertey9hxek3qjbkl80ox5vg8kcegrmwg\", \"khnmhd3h3iqrupyco7ks2gr8cc8yukmas6xxinsutlks9dgz47b38pxjp7poaovtey6v3f71vcu97p57dsy\", \"wj3ukwu3ipnr7x4k5tdaltf0k1wpqsb0lcb3veg0ttej4ai4k13lvveo71f3du1dba4cp1t9hri88546thbu542ztitwdrc5d9h21t9eizfeoie214e9cdf8e2q0iyp1bpqk9nwl8g2a0es7y6jiwxp5a2rwlx999ekiy\", \"nx9vysbr7vi0d8de8mehbp6m044z8mmk1x00w4jtrnxjkth4sf5200skuqmf8e63tdc1krs0s07hymahqqkttcl1uetekaijhnfv7ep405wbups0xq3nlv0h154peswqs1ulfwvda3\" ],\n    \"friendly_name\" : \"Drusilla Marquardt\",\n    \"base_price\" : 1.0252704180478112E308,\n    \"origination_prefixes\" : [ \"a5pl1ulb2ash5c8an6ale5csejabtmtt4a8l1457o6zxtjh7wsc3gkrug20kgl6jfa9z16agrqsmc4eq8iknp3x0tzmgnxgsx8jpzdmczlwe8zugby1v0kjpa2pepwv3gdm9dicox0nq2sp43y5oqtdute05c\", \"oy6kusav8eskexi7s9740e9vkyyatke5fqr2dsobpy0l9ob3l9qk1hkycv94ns3rb2xliqom55qw7hdj25g7mv9z06nae4oz1s45glthjt6ikxeoif59kc6hdb9c1wemhuc2dargz4renvluq5xm1pehyqjqi50zm24h\", \"yt0zbh286auxbyz7lacz42d5aiiwwfqeagqrb7pwc73e8fqiltzviducwmw7ogaf38ard57wjbvx85hqsf1ukj3e6afjkok30xk9n6gk1se3es3qxsjope818nbr4jfuq7gtzvn\", \"gfcggp0tx0cp1db13bvpjtfvlao0ctgoy03k779umdag0wgnsvymmxewhc5fn8knwn7feuybnik3ywfwcanlnkj6hwdgfm3oifez3eke2d7chy4dyty6k1y88ww5zomuh65y41usvjmaq9pangumstcj\", \"9vnmdyaciszdx14b73k06ffyx05l3xiuwtxmwad18r0xorwz78w0eswgco50wnfyha9fyu3dpagbj7s77u9b49lrh2umad6719gx0vg4f8kbf4bbgj2ocknvwhtksfjv078nmt4vsl7tnk6behnc\", \"3318l1k9aty3gudpymdzwtpci5r1zryt5cidmkjd1nt1oe4r2ch7ddeh6d4mxy\", \"9z5zf7173rk3fzyjh513clrinlzz78atsqmx4hnispmawjbk9o34hykgvdh1a7hnqu722i0o0buk6mhytngn5se0ll7pl8ajuxxj9mcf0kvkmt3m2b0fkrhuwgo0v72eoe3bgdru34\", \"av3yar8tbmviwfg6\" ],\n    \"current_price\" : 8.164888754671669E307\n  }, {\n    \"destination_prefixes\" : [ \"8ek3ze6b7cqcsbugi0a950rogll\", \"33mox7uu70ffw41bhc6sn1qvhjtshlyrv1l5i8powmmkvrt71be1hj51yyuz1n7ykob9icovnevpsmc6gqhpqynmoknv1fkhezqsijd0of46zxwzeutr7lfidhztx9hp5imtocalvx76uv2\", \"a4tnlzx5kn07a4nru2j5461eb40rlnw2kukgdw3y5zimsby2att4wb8lbuw46jaghou6jq384o6e00w4laxu73j8\", \"ntntuf23mkbhhv6huz2747jfo8y72sm277l3gtg5uqoc92amzuaa4t8pswsrqwln3csbifvg39suis0i33bg1ldjofwrw3wq3incb3rimypjivx5i6she4t5f2hlou7ec8ovem0yag9mnznq68mrxq1wiol6e6qbqnsgxz6nkb4brakri4hr4vna3hed95550d22qhuj\", \"q7i\", \"kxccydz5nlvqbc7lshh6zff62wrwnxibj3lxwj8qot8u07pw2nx6wjlym8qrqdjb21te25vrclh667d9f57wnsml2h22vg4q6pkrfzjg\" ],\n    \"friendly_name\" : \"Ronny Ernser\",\n    \"base_price\" : 1.7499244602846395E308,\n    \"origination_prefixes\" : [ \"otkn51dfrdemeo53778ffay49wla6kcb83u9q3rvnh0dxlmcz0163bu6m1jhxdbddvg7zu212h25unhhy\", \"2yaeb3o7dxm39ogeyp7m8j37j\", \"vrc8czgi5psromfy8c4hil9dy0ow4ar1j4bjza0z2tmg96zx4nym2zuleu9kj3j3sxl3k1u2y6qwr87v8feboo64nyk427casmz909mfxnz934fs0qsmssobpivvobbhd7mnt9eljms8g4un4i4gat65k4pb99zhg3xeat4kc1f9eu\", \"yja0wxq7wawj65fciaki8\", \"bsqg3ptam7v9ajfd49lymsemswdkiupxuu88p7wxtpw5nouq22odgpahc67qeq774jdfiwti8vnkrk86ir90rvxo39r6nwiaeuqn4ddp09y9q5dtz5ozaaq8hq6a5sr7vcjdhk32pyu1sxysecodmazwhp4m\", \"u8dlaf66vj7yfuwlltu7byxzjvf7vd01y0fp13ei6l37cb7icd3zxt9kg58muuxs290j2n7hyhigh1bjmck9rpo2883qa4aleojtagtj3g0hq15198ysh1l2z4q9c8u1i0o2g4z21heaa9twqbvzg127txbl3tqb93v1cpmf4ajn9g2rpthgjd4u5et0zne4\", \"ne824s4b17lg1bcgrlkui241lcw6lumbkhdt0\", \"u3fs\" ],\n    \"current_price\" : 7.566415904148677E307\n  }, {\n    \"destination_prefixes\" : [ \"nazi69pqke8ds0tpg0w289m9s1rwqqort0ocisqujt2j5qep71dpekyo2yat6dj7vu60jehcxh2hxkgzhd4z3zklk3ggz2qs2hbexf12wb4mj607y7dnwfiil7mdsqgcqodcdrpehye3o0\", \"pk98wdcggpj4okuokcvje2m09g8pqmztnq306cxzv7l12gr2bwat09glpqb2js27r2kmw3ur88at7gwlq9a82mktdigyuprha057vjav48gcg3eekus80ua4i3re29af9lgq1kydj7arof856r23759qkdxcv6ksjnebpa5sd1ctbh3icgi4deqiak8gxi1mykw7occk\", \"i56skww9wike4lhp3o65f7qvtn9hd081om6hpbe5rrwwtkzwn2x6pfn7b8tyf8mvwt5z\", \"m5ui0c6u5b2d8bkk83jjvl4a\", \"eza5oewle828qjytof739gddc8uzlon50jr4190lm1szwzytohhx6saw5ovtzk0xm1n1cbbl4iau2ywmu80jwdqgc9ud2u1cxxta9f4supm8ckg8yqy6ixsjjr6syyxtz\", \"o0bitgpx8d1obrsx2989ef2l8exw1v280tzl1tixwfeapmhvv97i65qnk4rx5wo581dw2ha3ca2v56\" ],\n    \"friendly_name\" : \"Bula Herman\",\n    \"base_price\" : 1.0729517450083325E308,\n    \"origination_prefixes\" : [ \"nd6tu5svny06owxmg1nl4x9dnb55hmr7h5eilukefv1s9poolxanclou9sk5is3le96p2zrsf8bni42zwqfx3wrehcpgwto6nts09kbugfgbxwrjzu5tap68zvshyayh3xvqhr10d33ezejv8js3dxsvjwi0kagsud00v5xt9wdu0a1sendpzczcy\", \"kp6nqu0g0x6szc3dmqdrfxu2v2ru5fcvf927gj5u67tls65\", \"f2xzx86joor5boo22pojslvzggp3fftjvgiv2q9s9a0hs87mksunl83rm62fvwfa90z0szzzy69egndpbe2e937uv\", \"tlg1ks7fan3ijyriei7s7bqebvzfcnqtrub0ue6tqcxlokb9byyyi7xu\", \"xfhvvk1sqrrdp0phzi28yu9o661mt92at814o2cz5d1oqghc6apfk89xvgqnyu6bg3xe567yrz58dzqk5mvg1bv4cimn4xgnt9enz14ytvqc9j6h528i1zu0r65lluge41kjibp1ijptkuvr5y8mw4mr3kwp5t68i\", \"cr6lgosnoc77lqyxhsmwzj6834u4938b2pascxvdcws0d7rhn8cx9kpxk2s8ut3qc5v5cved7208f6xt5we2yk9izkalbisjg6633qc8upenj3bs8i2w2o6cwt1j888ab3qo\" ],\n    \"current_price\" : 5.356176112197328E307\n  }, {\n    \"destination_prefixes\" : [ \"y6mqgc8ko2hnlfwos82e2m089ohxoizn9s15mhb483ic1z35lieejjkh9ma1em5norgpofdty2c85lxbfz91uk18xjvwmzdkgrswgiancb8oda028br31sedvxvvbtj8v0scv\", \"lgzk7f9285u7gjob523pavgay43v619n18nj6ajnd482n7l7ocvwzv03x71cc0p531ca7xiy0x8a1f9dje20dagp17cj365dj0j0ugrnuouirsrn9r\", \"xniwlyf580f559gzuycaeho6kztp42pbsc020lnf3776x0zgheawcz83x601k20yaibhavrgafepy3eeicm1769abdipellb6t0drgqp4l7mme2j2wfgzuoq6j24mt\" ],\n    \"friendly_name\" : \"Dr. Odell Krajcik\",\n    \"base_price\" : 4.742476913878188E307,\n    \"origination_prefixes\" : [ \"m6bpvu2zycs0pdkae7smw8850sohq8abk0uo62jt4tj84en40ulh0zn1jotv0q0rnle2l0m8oajolyul1i5wfc7d8i7bhsw6qg3goint52f4ozv5omp8p8bcpx5giao36ae411y4j6p4p33epn4hq4m7dqrg7tdv5vavraboaxtcfdzbscafxbqd1dj90\", \"3ftvzi\", \"s65qv5b5dv2eqd3i6jtum1d8shnffc8v1ko4eswtrgae4xwngpm03g7h4e0z5tty8rceas0lzysr4bmpxh3gaybt5ixav5h4l279x66d2qxdgvpseoo16gq77jfrbatt7uzqk472sg5ja5ukuud4ecnb2ya0rfopfyiwc3xn0j0mhmku2ixyv\", \"pv6tycd2nozc0hnbulfoiqma2ajjvca9rfq4m01532ftfahpgl3lhsm287o5vyhbz4ekttlpfbppfpybot9iak1mcpgw8ntojbrn\", \"lga61u6bu7tx\" ],\n    \"current_price\" : 2.341985044037091E307\n  }, {\n    \"destination_prefixes\" : [ \"ipi4g1kwsj8zgl6l129x7rlpxi3lolep2smy7xk9kgan8fd5kg5zj1ch72zxgeeki97pli\", \"zhsfr82d3qpi7nd9ysd2i6payy10t929spajnx6nu2axh7xtbh6dckr35lgdh2u6ariv07wna2c9auk59q6m8ya3zv\", \"oagjftps1gyr1feraq5iisii1qkz1gs80bh0iud9yf0fcqo797kon5l42zi9sfvmuviox7z65un84l8lq23k473h8tiudkyo49e53zm7dl6ag0\", \"xca5cvsocushfpjgn3iwv70t1o0ekphi8bc47lozzjuxykqgk6uz3newhtiz3313h7bo6kl7mpsj35ki1mk6easq70j3hwrwsilt6zqxzjgjgzubbpl7f2sg9nj4ncqplg03m7pcojph4m0mo1vzftkehg2ccnjfvznuq7ehjbb5wfyw9jkuhjgjts8dt2yuc\" ],\n    \"friendly_name\" : \"Elaina Goyette\",\n    \"base_price\" : 3.078603397980724E306,\n    \"origination_prefixes\" : [ \"d0vz5bh7ufj1mgbowu20ipezgttfsnp0k74ugeio1rxgvttj4supetb2fd14jb1tvtflh8c6x07wbjssisdg9nrsd4ht498m9zcq0ji9l1fmhuk2po8a4jkh4t\", \"tet122z31pye6824s8rwbr3d5vgyziedf7uzijqd23ivhuwvpr8plfeg6xwk4u9n0gseua370yfmpwdps7rjxfd962484v1bl53micenervlm6hfp2mxb3w29bg8b6d9y6nmjsa3i8dik7fxfrgw75q0ualri3uc348m8zzha30hg033nmdyabkzyl5qzt7ybd5j\", \"bqp2rmp247xzfs0uvon0mqjoj3ejmnkr9rjse7oben9lok3\", \"a5ju9opn7hpzte7mzu17sutwbrfowpxhgfijzqjv9dppwd8wt\" ],\n    \"current_price\" : 1.6618260247405457E308\n  } ],\n  \"iso_country\" : \"Equatorial Guinea\",\n  \"destination_number\" : \"exec92co61j5qrliacitzclyhvdjtm922ce8olxc7j1gjiswqemls9cks6ekjy6qsthtvhtz4s7ohoo98wm0fxf2s60l12tpih3ve2kyx0zej3fujyixu0iuvsg9ldaivnu5k8msq8faycmcademsh7ifbpl3l0pinkk2jaorfanl3ddjoaczucoebndwd8yda\",\n  \"origination_number\" : \"zov2dnqh9001k8jgl7q0o0bwjfkoekzsxhqi14m9jsjdkr1krpb6yb1ftauedbse3x6oxerruo5ubf6snz0mvxwcb7w2ca54mvwpfaf6zzlujmidx3wym3ai7q78magm90kqpzxyw2zi5r192b8row8mnyqb99slsgtpsgxw3pw2x6nnpjv1l767ek24n5xw\",\n  \"originating_call_price\" : {\n    \"base_price\" : 1.485341764563149E308,\n    \"current_price\" : 1.3657673150520201E308,\n    \"number_type\" : \"nbnmmhe2i7htmg2qmdvweukw423so3p8bfgp823049h2e9\"\n  },\n  \"url\" : \"https://web.example.mocklab.io/031440\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "531e3e52-7f49-4dc6-8251-436337c46d71",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:21.163822Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "FetchTrunkingNumber",
+          "schema" : {
+            "properties" : {
+              "country" : {
+                "description" : "The name of the country.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "destination_number" : {
+                "description" : "The destination phone number in [E.164](https://www.twilio.com/docs/glossary/what-e164) format, which consists of a + followed by the country code and subscriber number.",
+                "format" : "phone-number",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "iso_country" : {
+                "description" : "The [ISO country code](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)",
+                "format" : "iso-country-code",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "originating_call_price" : {
+                "description" : "The [OriginatingCallPrice](https://www.twilio.com/docs/voice/pricing#inbound-call-price) record.",
+                "format" : "inbound-call-price",
+                "nullable" : true,
+                "properties" : {
+                  "base_price" : {
+                    "type" : "number"
+                  },
+                  "current_price" : {
+                    "type" : "number"
+                  },
+                  "number_type" : {
+                    "type" : "string"
+                  }
+                },
+                "type" : "object"
+              },
+              "origination_number" : {
+                "description" : "The origination phone number in [[E.164](https://www.twilio.com/docs/glossary/what-e164) format, which consists of a + followed by the country code and subscriber number.",
+                "format" : "phone-number",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "price_unit" : {
+                "description" : "The currency in which prices are measured, specified in [ISO 4127](https://www.iso.org/iso/home/standards/currency_codes.htm) format (e.g. `usd`, `eur`, `jpy`).",
+                "format" : "currency",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "terminating_prefix_prices" : {
+                "items" : {
+                  "format" : "outbound-prefix-price-with-origin",
+                  "properties" : {
+                    "base_price" : {
+                      "type" : "number"
+                    },
+                    "current_price" : {
+                      "type" : "number"
+                    },
+                    "destination_prefixes" : {
+                      "items" : {
+                        "type" : "string"
+                      },
+                      "type" : "array"
+                    },
+                    "friendly_name" : {
+                      "type" : "string"
+                    },
+                    "origination_prefixes" : {
+                      "items" : {
+                        "type" : "string"
+                      },
+                      "type" : "array"
+                    }
+                  },
+                  "type" : "object"
+                },
+                "nullable" : true,
+                "type" : "array"
+              },
+              "url" : {
+                "description" : "The absolute URL of the resource.",
+                "format" : "uri",
+                "nullable" : true,
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 3
+  }, {
+    "id" : "5b7065a4-b84a-46ce-98e7-822e6ca4b2f8",
+    "name" : "Fetch a specific Country.",
+    "request" : {
+      "urlPath" : "/v2/Trunking/Countries/Luxembourg",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"price_unit\" : \"gl7kx7duewg0i3f2ejrem301wi5yra85k0mf2okpds2fvg6mng1hbx6951koaelyirxjd85kj3qkgoe\",\n  \"country\" : \"Netherlands\",\n  \"terminating_prefix_prices\" : [ {\n    \"destination_prefixes\" : [ \"40hwwibpbb6p6dalxn2ssyg589xf6xw4w32opocuaw8nqqfu0w0cx2rs6l4nnr7epuih30w17pmuencrhqbu6a63so\", \"rubmr65p9c68pc5ni9h5fhidf5ckec88htx057ojjcvbnemt3ycv6srjbtxsocfcdnmrfh8y1p9giag7rup80mps3c172ww8v1kjx7wrpivvbbdvnvls1y\", \"hve0ojmcl972hjbbrr0gdkor58sxm7zj2ucbr37ntcxa081wh1cljslmxsqb\", \"g3vy7dcxncej9n1mh1y07mf0np0ktzekcybp805h3u765p6iw8u7v0dhf251sv5fjeyw\", \"m1d2aq0cr2yyk2n3vdgofjucfmmt5f3y1y00msjs4u77g\", \"l47565rkh0wc5c3yk7101bpe9lmhcl98s0lnm4851ehpn2414wuk6a86sv7afm8liwau681ymhv8ej6hqa5rep7ttretywuxlqf73rtnczlzy0162mcqcopa1t84xon\", \"m57s67qv1ou8vq72vz4jgj9i886utyqde97ar1hb536aoioazgrbmjn046typqmmrstik1iw6hl47zlta\", \"cx1phg3ub6fa5sj309rtw3z2o5b3s252bg8s2b39scggo7nlxo3ls3ds9gwy4a9w3cio2gi0ac6z6gjt02hwhnfdpmsa6h\" ],\n    \"friendly_name\" : \"Alycia Kulas DDS\",\n    \"base_price\" : 1.2748704859948445E308,\n    \"origination_prefixes\" : [ \"xibiz2rlt4igdvwzsmgqnehki5nb53ua6ypkru45eucwu73viqtn2q53qwavkvr61w9xge8d277x1besgfsdl7io4lwissta\", \"7y11cj3m02lz0l52nmb22mzlr\", \"xgt8t8gzcdmth4dzlc81jhqj3s5pwib8bfbrwpya4eqvi717j97ftytkfe28o08dno4xqz0za6pg64x0xn3ivy2hhkll4tgpo4sxi19sop5ltq9kn545q0ks78qnnauxjhk8g0x3c3k2baeal7qcooc2ia53m\", \"5413lixise92b0nfnias3vbbitgcmj4s6m18h92d7novutx76eksliw1joz554nzht2w6p7onlp83437elh0jtrg93ra5u5779ghlq84i2k3me6yvm5cwi7062rpx8a6h93hqt8\", \"9wfqivabrz7nhskueh0y4wrc74cxwhkkff1qnsbcidi5oslri33b0tlpam06wy559736vrnyu4rszvy17thetaog44b5mz3qbztuqbqsbm6dl03tae18yzk3p2qw25kb557unlsk5563\", \"em11bb750r0b948jxkaf4los4jtka2jbmttvm50y012x0g4shl7dkriwzm08spaldxh7x71s4adtpiuhd9jgv7k4lpwao2lr\", \"khtnfuteyq849g7pl9o5nz9vbeoy4a2sl41nfzuwyrx8etpwcz0p58t5zz7167labeea943ss2tffw\" ],\n    \"current_price\" : 1.3887139808630024E308\n  }, {\n    \"destination_prefixes\" : [ \"jl6n56cxo9e65p7781pcfp7fdbc46g6nbqug4f1mz4\", \"fo2bppmflxicsgakksyefp34er8oi6tovm52v7jt20huxrkzr03h0fi359evtbo8858m5amp1d43nddya7ph4ode12777wpvqdzi3v6pz8rbeu2hdhhhpx0b\", \"8bxee4s2c3v06mn7azhs8ohpyp6rtcahwjkkph37faxwwxhmwo7umbv56yikgtxv5qewfh13gpn70w780hrhp\", \"rdeor7u8gvag36b0n76udzxoaolsd7ea8xyo\", \"h3y400kt1s8yqhvavr7b083k0uo3s4dcfat779ie084zy9h1qjkq25s62oumi7nocwcykatqxu5q4n09v8javsosmoyc8h45z0v5q44szg6d4egwbwzhvt\", \"02iz1mxwwsw130w5xoxtzwjbwb0eaaaejzj\" ],\n    \"friendly_name\" : \"Stacee Farrell\",\n    \"base_price\" : 9.24685841861304E307,\n    \"origination_prefixes\" : [ \"w9vii3xlbrhgo17h0iq7hsc6bwx6xp14xag2piw2lna9uoqvy7dniz4los4j7lks80721x34x5vfmx6urack9\", \"xgybmld3botlt67nb9riujxfl3rvj36tzui5euhz6uwpgfdapptsllad31h3poxx0o4mu6j88t21jsas7mnrmo7y228zyuytsincp1oamabga43v1y1mfn0y4i72wmjo6stc6231sbiq5sf8obnpa3xcy98xtqbb3ek77548d504w3y24bcwxj\", \"lhnmxbc5g3od5dezqs317efd4j2cv4pxpp0dnbpud42w2sjggowx3unpxh7s2\", \"2dzefo6cduzddve2fsa1uz9ma1fylwzb2balj031t1ptmyf8t2dkpsxxwrtserlp6fx3ywofui0wwua6jdv620gudpjqh22mxx6q\", \"ikdg7z2ljl8hq26bqna2zlskeb9cmby3mubkjpn5y1qpzwnd16rk6l6zl01j7jmggepag9vf68ddlwafm7ebuukqcdog786kq2qvh3h9yo4k0ixmj8j3oij3k25u6ec5y0nzmud6vjofvwu4bwdjclml10h6n0vlkss0ynz9ngxtsgjqro5s\", \"2om34ynbbgky7riqfxrsr8n5zp031aswwtohrut1lhrkvovnd4n5awy8yam2ir0sneqywx15uz4x22lma5xn623qt76rcq5kqohyzyp6cb5fnv9jlka9st3ncrqae71gbyc0v7y4150gvpzvg2d0as234yla9umc908xoevggf40eyepui28wgzrvpr48j9os73w\", \"zv03eq45ymn7s2cuuyhzwa243kls159faxivsy\", \"95kiihgccn27szxa3w9tid0ii2labgkx9d3xf0sj84nkvmqey8okzl080zh4is84lywlixts5w761b6hz\" ],\n    \"current_price\" : 1.572258366124678E308\n  } ],\n  \"iso_country\" : \"Malta\",\n  \"originating_call_prices\" : [ {\n    \"base_price\" : 1.5193085316828847E307,\n    \"current_price\" : 7.717464654664417E307,\n    \"number_type\" : \"omzqwki25nlukrmr3l0rcpwlyvobub3e0dsu48txo7wxw016lh2u3qst5lzajfq7gv0di4jjocr5qj7eord\"\n  }, {\n    \"base_price\" : 1.2160547906163254E308,\n    \"current_price\" : 1.2420506745874975E308,\n    \"number_type\" : \"u2rlfr847s731mj2hism3rd4tm14ak4yabj86t4f8qhdgx4kyosenh\"\n  }, {\n    \"base_price\" : 8.634957775569014E307,\n    \"current_price\" : 7.678782195037811E307,\n    \"number_type\" : \"m64ililvtsjr09n3r7n1cmd37087nniw8mdzitkvyhnjtwgnv54n9dggev1isd07f0gap1ticuxjoxbex85xp3gcwru4afyi657\"\n  }, {\n    \"base_price\" : 1.3427873872802192E308,\n    \"current_price\" : 1.3799675497231903E308,\n    \"number_type\" : \"mewqkn5h7efnpm7v5hyckrmsc56ctli6cc05cfnxg\"\n  }, {\n    \"base_price\" : 8.241688764694383E306,\n    \"current_price\" : 1.4578546518844124E308,\n    \"number_type\" : \"jcf6b3qk4ymbwkme1ejz7euj7q4i\"\n  }, {\n    \"base_price\" : 1.0593467995583782E308,\n    \"current_price\" : 1.5828336462794455E308,\n    \"number_type\" : \"x9xyfrrhy83vzjotwzw26rz\"\n  }, {\n    \"base_price\" : 5.510962155620098E307,\n    \"current_price\" : 1.4238818145350738E308,\n    \"number_type\" : \"05jmwuq67txfxwj7fzroaryx9xepl0y0gi4ncfr\"\n  } ],\n  \"url\" : \"https://web.example.mocklab.io/470896\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "5b7065a4-b84a-46ce-98e7-822e6ca4b2f8",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:21.162504Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "FetchTrunkingCountry",
+          "schema" : {
+            "properties" : {
+              "country" : {
+                "description" : "The name of the country.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "iso_country" : {
+                "description" : "The [ISO country code](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).",
+                "format" : "iso-country-code",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "originating_call_prices" : {
+                "description" : "The list of [OriginatingCallPrice](https://www.twilio.com/docs/voice/pricing#inbound-call-price) records.",
+                "items" : {
+                  "format" : "inbound-call-price",
+                  "properties" : {
+                    "base_price" : {
+                      "type" : "number"
+                    },
+                    "current_price" : {
+                      "type" : "number"
+                    },
+                    "number_type" : {
+                      "type" : "string"
+                    }
+                  },
+                  "type" : "object"
+                },
+                "nullable" : true,
+                "type" : "array"
+              },
+              "price_unit" : {
+                "description" : "The currency in which prices are measured, specified in [ISO 4127](https://www.iso.org/iso/home/standards/currency_codes.htm) format (e.g. `usd`, `eur`, `jpy`).",
+                "format" : "currency",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "terminating_prefix_prices" : {
+                "description" : "The list of [TerminatingPrefixPrice](https://www.twilio.com/docs/voice/pricing#outbound-prefix-price-with-origin) records.",
+                "items" : {
+                  "format" : "outbound-prefix-price-with-origin",
+                  "properties" : {
+                    "base_price" : {
+                      "type" : "number"
+                    },
+                    "current_price" : {
+                      "type" : "number"
+                    },
+                    "destination_prefixes" : {
+                      "items" : {
+                        "type" : "string"
+                      },
+                      "type" : "array"
+                    },
+                    "friendly_name" : {
+                      "type" : "string"
+                    },
+                    "origination_prefixes" : {
+                      "items" : {
+                        "type" : "string"
+                      },
+                      "type" : "array"
+                    }
+                  },
+                  "type" : "object"
+                },
+                "nullable" : true,
+                "type" : "array"
+              },
+              "url" : {
+                "description" : "The absolute URL of the resource.",
+                "format" : "uri",
+                "nullable" : true,
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 4
+  }, {
+    "id" : "6fd50d11-5dbd-445a-b534-eb4e3aa9af83",
+    "name" : "",
+    "request" : {
+      "urlPath" : "/v2/Trunking/Countries",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"meta\" : {\n    \"first_page_url\" : \"https://web.example.mocklab.io/088884\",\n    \"next_page_url\" : \"https://web.example.mocklab.io/063257\",\n    \"previous_page_url\" : \"https://web.example.mocklab.io/879752\",\n    \"page\" : 5696395246555446806,\n    \"key\" : \"lsku0xdbsdcunzbhs6l02fxkmeom03xj3xkp\",\n    \"url\" : \"https://web.example.mocklab.io/442162\",\n    \"page_size\" : 7590972866584629808\n  },\n  \"countries\" : [ {\n    \"country\" : \"Italy\",\n    \"iso_country\" : \"Togo\",\n    \"url\" : \"https://web.example.mocklab.io/835249\"\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "6fd50d11-5dbd-445a-b534-eb4e3aa9af83",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:21.161332Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "ListTrunkingCountry",
+          "schema" : {
+            "properties" : {
+              "countries" : {
+                "items" : {
+                  "$ref" : "#/components/schemas/pricing.v2.trunking_country"
+                },
+                "type" : "array"
+              },
+              "meta" : {
+                "properties" : {
+                  "first_page_url" : {
+                    "format" : "uri",
+                    "type" : "string"
+                  },
+                  "key" : {
+                    "type" : "string"
+                  },
+                  "next_page_url" : {
+                    "format" : "uri",
+                    "nullable" : true,
+                    "type" : "string"
+                  },
+                  "page" : {
+                    "type" : "integer"
+                  },
+                  "page_size" : {
+                    "type" : "integer"
+                  },
+                  "previous_page_url" : {
+                    "format" : "uri",
+                    "nullable" : true,
+                    "type" : "string"
+                  },
+                  "url" : {
+                    "format" : "uri",
+                    "type" : "string"
+                  }
+                },
+                "type" : "object"
+              }
+            },
+            "title" : "ListTrunkingCountryResponse",
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 5
+  } ]
+}

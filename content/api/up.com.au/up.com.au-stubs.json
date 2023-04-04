@@ -1,0 +1,826 @@
+{
+  "mappings" : [ {
+    "id" : "512a07cf-8334-42a0-93ef-04d1bbcb6b5c",
+    "name" : "Ping webhook",
+    "request" : {
+      "urlPath" : "/webhooks/23ej/ping",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 201,
+      "body" : "{\n  \"data\" : {\n    \"relationships\" : {\n      \"webhook\" : {\n        \"data\" : {\n          \"id\" : \"kj81\",\n          \"type\" : \"mj6ivd87f9a92fr39sx0rxbiqs7skc8czkt54mg6ninipl99k5fcgut8zwv328l8w9eup9i1z9rtpqy7s0kiicvrzv0msr6doncymzh24shlx61ted4mzrsbahsk9jg949n83fm6uh1m8qnjxw396apcsqwh2gmy1bn9dekdwrj5\"\n        },\n        \"links\" : {\n          \"related\" : \"zgg6o1881vnymj\"\n        }\n      },\n      \"transaction\" : {\n        \"data\" : {\n          \"id\" : \"520z\",\n          \"type\" : \"jfdkobzkt91awgti17o3z6ad4miuyx20psff0to4foxlmina1mzdi3w6hsl\"\n        },\n        \"links\" : {\n          \"related\" : \"srbuwo0kejpofi6ctndl542tii45jqfdk4t553be19539uq68zz6qdzep1sg6itw53j9f2jz5e231m8wy72m6cvo8xfegxvyq19pyyv3fingj8mhvz4bxipvilcj2bw13wrquibuydhavgyaeu3b7296f7ws99s9h10mrf4fer\"\n        }\n      }\n    },\n    \"attributes\" : {\n      \"createdAt\" : \"2023-02-15T09:03:04.846Z\",\n      \"eventType\" : { }\n    },\n    \"id\" : \"24v0\",\n    \"type\" : \"x90hk6\"\n  }\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "512a07cf-8334-42a0-93ef-04d1bbcb6b5c",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:27.846229Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "(none)",
+          "schema" : {
+            "description" : "Asynchronous callback request used for webhook event delivery.\n",
+            "properties" : {
+              "data" : {
+                "allOf" : [ {
+                  "$ref" : "#/components/schemas/WebhookEventResource"
+                } ],
+                "description" : "The webhook event data sent to the subscribed webhook.\n"
+              }
+            },
+            "required" : [ "data" ],
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 0
+  }, {
+    "id" : "2be76775-1fdd-44ed-822c-e9906b095247",
+    "name" : "List webhook logs",
+    "request" : {
+      "urlPath" : "/webhooks/f834/logs",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"data\" : [ {\n    \"relationships\" : {\n      \"webhookEvent\" : {\n        \"data\" : {\n          \"id\" : \"e206\",\n          \"type\" : \"2uercmzjfkmdak07nzmlki63aar9a6z0d0yqu11x4vtpb8f7h91vy2fa3e3lhwe52gl4av9e3xztx9zfmccxz4uqitsighdhwz6wte1q6gx0izyrr90w7s8q19nsao8qaa1iyjyowziv7x2rt24j9dpn2rfo8qf9x7vjvxrtgqucf\"\n        }\n      }\n    },\n    \"attributes\" : {\n      \"createdAt\" : \"2022-04-04T07:28:10.844Z\",\n      \"request\" : {\n        \"body\" : \"Aliquam architecto voluptas. Harum aliquam saepe ducimus vero. Ducimus unde voluptatibus dignissimos dolorem incidunt nesciunt recusandae.\"\n      },\n      \"response\" : {\n        \"body\" : \"Et quod itaque. Odio sapiente non quidem necessitatibus illum. Reiciendis ut et culpa eos. Aut ut neque est. Aut illo necessitatibus perspiciatis qui.\",\n        \"statusCode\" : 7644815695996709224\n      },\n      \"deliveryStatus\" : { }\n    },\n    \"id\" : \"872f\",\n    \"type\" : \"vwd3f74b8wzmfp3o1zmtjdpbn146sd7qw768m6bvg\"\n  }, {\n    \"relationships\" : {\n      \"webhookEvent\" : {\n        \"data\" : {\n          \"id\" : \"l6fx\",\n          \"type\" : \"fmuov4esa8\"\n        }\n      }\n    },\n    \"attributes\" : {\n      \"createdAt\" : \"2024-02-13T02:45:25.844Z\",\n      \"request\" : {\n        \"body\" : \"Occaecati est tenetur. Rerum qui animi. Ducimus et tempore molestias eius odio fugit. Provident repellendus est tempore mollitia odio facere. Et distinctio sit.\"\n      },\n      \"response\" : {\n        \"body\" : \"Tempora nobis et non vero excepturi. Aut quisquam minima nostrum. Ad quisquam mollitia.\",\n        \"statusCode\" : 1408575321188840598\n      },\n      \"deliveryStatus\" : { }\n    },\n    \"id\" : \"l8p8\",\n    \"type\" : \"3lkbdhjih2tydcivhc9is2lbu1ruhs119cxemo0iksr6v4oln06fbp6clf2ydpsyzjoacuv9gksia3pjyn3mgsvur41ds3b1s6sypnf3q82p6hwl6g7cn8kpgx80i7n31x0mvrlsbdf44k6mx2hgp4sh80\"\n  }, {\n    \"relationships\" : {\n      \"webhookEvent\" : {\n        \"data\" : {\n          \"id\" : \"89w1\",\n          \"type\" : \"md3y7jfeq93dkv46hsdkt09gus3cy7w26ujzzqxcp3eb60gj6rj92zf71gnf35fht39ummkpq6d44gfctcai8td2wgeeruesl5aeczsvc6czuconv36n3q5xnim2ovaluvhclt2c08254b3ajpa7a2do1ov7b4hjuhov9492xjw9djwk\"\n        }\n      }\n    },\n    \"attributes\" : {\n      \"createdAt\" : \"2022-12-07T12:53:41.844Z\",\n      \"request\" : {\n        \"body\" : \"Ut rerum distinctio nihil in est. Voluptas eum mollitia dicta tenetur accusamus modi. Et tempora ipsum est qui. Maxime quo aliquam. Harum delectus maiores.\"\n      },\n      \"response\" : {\n        \"body\" : \"Error alias sed. Assumenda ut occaecati. Sequi perspiciatis unde.\",\n        \"statusCode\" : 2083061025521577397\n      },\n      \"deliveryStatus\" : { }\n    },\n    \"id\" : \"r737\",\n    \"type\" : \"ye3gcmbigj5ni8ucc4wx76r67tg5vedtn5ccsabwisdkkj7t4kmd1ht5jgr6iomag33kl88g9i0a5qyoihf7fdd695zveivwk1cis3ps8rh65e5xl3s4gz8aydznb6\"\n  }, {\n    \"relationships\" : {\n      \"webhookEvent\" : {\n        \"data\" : {\n          \"id\" : \"b0mn\",\n          \"type\" : \"m5y15v6mlt2nf26hhua6urrmkrkoyrrg2bg9utt4889fohjkboev51jz3uva0q8cvt756gce48x18mcyvh1myytwiym8zmarrdm188t\"\n        }\n      }\n    },\n    \"attributes\" : {\n      \"createdAt\" : \"2023-10-29T02:10:00.845Z\",\n      \"request\" : {\n        \"body\" : \"Ipsam et consequatur qui id. Nobis saepe assumenda sit. Repudiandae quia voluptas omnis consequatur.\"\n      },\n      \"response\" : {\n        \"body\" : \"Sit consequatur eveniet ea molestias ullam. Rerum delectus animi qui voluptatem. Ullam dicta voluptate quisquam beatae adipisci earum aut.\",\n        \"statusCode\" : 7244374067517127191\n      },\n      \"deliveryStatus\" : { }\n    },\n    \"id\" : \"yy41\",\n    \"type\" : \"anym2j6g5ycy5u2ls2rb7dcqvr7yjchdqoyb55whrkc2to0s8o3twuu4vxl4kpmzv0mbb9ioi84fcsgtapq56zajqc8cm22bwh77mrd8tz3gikahrz2hh09f38o2qd2d9b2pospqmx5ksnx31g2zztrdkh1fjthupwom5n2xwuudhlx\"\n  }, {\n    \"relationships\" : {\n      \"webhookEvent\" : {\n        \"data\" : {\n          \"id\" : \"h7s2\",\n          \"type\" : \"t564oq3xiguvtw55pabz48yyja79m6hff8ugdoe7ktirl60e30fsczxszq9h8m6wz365h56ioi7rhdm5h83e9b39z85rfsphjk5awload6bt5j25tnpmg4lcgcb1qkcu4ve7no7qhqc32ah7wwslwjbe49\"\n        }\n      }\n    },\n    \"attributes\" : {\n      \"createdAt\" : \"2022-06-03T02:57:45.845Z\",\n      \"request\" : {\n        \"body\" : \"Corporis deleniti rerum iusto laboriosam quisquam. Eligendi et numquam iste. Eos unde consequuntur sit veniam. Distinctio rerum odio. Adipisci fuga eum ad tempore sint.\"\n      },\n      \"response\" : {\n        \"body\" : \"Odit necessitatibus saepe molestias fugit. Rem quam vel voluptatem et. Aliquam ut eaque qui tempore. Laboriosam beatae aliquid aut voluptatibus natus. Maiores quos expedita soluta repellendus corrupti\",\n        \"statusCode\" : 2497998351315422880\n      },\n      \"deliveryStatus\" : { }\n    },\n    \"id\" : \"gf8u\",\n    \"type\" : \"6kl6e8z9f4ounddeygomsj8eogu4g5u6bd083xockvxxtgj3qxm2y3g5rj0pgll7z65i2m805wnhhp8xnnhv72kysu6ktwprvrykurd0q9ho43gppwp9v7ztm75azqualo34gm5fjs3cdbz8pmeho3z6fwkhqpw43d380s\"\n  } ],\n  \"links\" : {\n    \"next\" : \"th7m3q332ez5h5j70cobxiofbb7tmujja9o3cjic72rcheq2p3usxvd240okhh8rsnrsfklims6io510l9kpwmvomynuecjf03\",\n    \"prev\" : \"yhz6gyybou0lttl11grj1wl8ie18ayrtcr0ykkz60u91sooudxe3t042q9ft2du0rgykss78d15wrs490hob6147q2pmlho8v2iiw28eooztna\"\n  }\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "2be76775-1fdd-44ed-822c-e9906b095247",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:27.845755Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "(none)",
+          "schema" : {
+            "description" : "Successful response to get all delivery logs for a webhook. This returns\na paginated list of delivery logs, which can be scrolled by following the\n`next` and `prev` links if present.\n",
+            "properties" : {
+              "data" : {
+                "description" : "The list of delivery logs returned in this response.\n",
+                "items" : {
+                  "$ref" : "#/components/schemas/WebhookDeliveryLogResource"
+                },
+                "type" : "array"
+              },
+              "links" : {
+                "properties" : {
+                  "next" : {
+                    "description" : "The link to the next page in the results. If this value is `null`\nthere is no next page.\n",
+                    "nullable" : true,
+                    "type" : "string"
+                  },
+                  "prev" : {
+                    "description" : "The link to the previous page in the results. If this value is `null`\nthere is no previous page.\n",
+                    "nullable" : true,
+                    "type" : "string"
+                  }
+                },
+                "required" : [ "prev", "next" ],
+                "type" : "object"
+              }
+            },
+            "required" : [ "data", "links" ],
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 1
+  }, {
+    "id" : "e3e20681-3be7-4887-9516-4bcf18962b3b",
+    "name" : "Retrieve webhook",
+    "request" : {
+      "urlPath" : "/webhooks/5j89",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"data\" : {\n    \"relationships\" : {\n      \"logs\" : {\n        \"links\" : {\n          \"related\" : \"5oikzxwskvhu9ydcnz2s2so9mglj10xt13n9h5uv31dq6ducub3twd50wp9encps6h00hycflmt6dy33wvgv724ezoanxzovidwpkod4q7lg014fqsr0j90fn7a9ti1qcrbohqeupv5f617d01z3ejirjwvsjph0fzsq0kqcgi1sgjdhx1gp2o6dkandt74vw\"\n        }\n      }\n    },\n    \"attributes\" : {\n      \"createdAt\" : \"2024-01-12T14:55:30.843Z\",\n      \"secretKey\" : \"r55axkzm22c8aywwn267bg7e7g19ycvmwweklvav2e6gtsji6mohbao1q3h3i0goi6l\",\n      \"description\" : \"Repellendus voluptas fuga et ut. Et quaerat omnis suscipit consequatur et impedit qui. Recusandae corporis officiis quisquam pariatur. Numquam numquam rerum earum. Dolorem quos dolor.\",\n      \"url\" : \"https://web.example.mocklab.io/998761\"\n    },\n    \"links\" : {\n      \"self\" : \"ye96pv50nsvhps7s3mu57ph2s7n1mttg3te9ud3bsg5o03id46vdesn45xqv00t2hiti8mvaj6e9u2ty8904cd6\"\n    },\n    \"id\" : \"3pkc\",\n    \"type\" : \"9tm0g4urz1ds9yx65c97hc2wpdypb911jwpz74tz8risnvj8mkbzzu5qk883u4p1h6ndo9pwmja1s623x79k107i6vv7mls425aa\"\n  }\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "e3e20681-3be7-4887-9516-4bcf18962b3b",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:27.844114Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "(none)",
+          "schema" : {
+            "description" : "Successful response to get a single webhook.\n",
+            "properties" : {
+              "data" : {
+                "allOf" : [ {
+                  "$ref" : "#/components/schemas/WebhookResource"
+                } ],
+                "description" : "The webhook returned in this response.\n"
+              }
+            },
+            "required" : [ "data" ],
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 2
+  }, {
+    "id" : "cf8018aa-c077-4324-beb1-798d631b8b5c",
+    "name" : "Delete webhook - 204",
+    "request" : {
+      "urlPath" : "/webhooks/64a4",
+      "method" : "DELETE"
+    },
+    "response" : {
+      "status" : 204
+    },
+    "uuid" : "cf8018aa-c077-4324-beb1-798d631b8b5c",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:27.843743Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "(none)"
+        }
+      }
+    },
+    "insertionIndex" : 3
+  }, {
+    "id" : "d977997c-ef14-4e9c-a745-6cb408cff9c1",
+    "name" : "Create webhook",
+    "request" : {
+      "urlPath" : "/webhooks",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 201,
+      "body" : "{\n  \"data\" : {\n    \"relationships\" : {\n      \"logs\" : {\n        \"links\" : {\n          \"related\" : \"vhv6qugutx95kv7u7tpemlg475yka2sjkdvxd862b76httkva8zlzpz2756j4hywcvwws3z2qymc2qskh3ee1oacdjzi9k5rkk00ez6s1np8owvqpi4doyv0tm9ttmn4mnug0ss2rsji2lfknm3cdbotnqcvr5ar7hfet2xzehpx\"\n        }\n      }\n    },\n    \"attributes\" : {\n      \"createdAt\" : \"2024-02-21T18:05:20.843Z\",\n      \"secretKey\" : \"pd4zydltp1tqscf2xbef0fcd7uasf59fbgtt36xrq1ukd69m0upuk0pfka000kmjso3zawsqwbxop6n\",\n      \"description\" : \"Ab atque et laudantium voluptatem quas qui. Dolorum labore eum dignissimos fugit et. Eius itaque occaecati qui culpa. Adipisci aut facilis consequuntur ex excepturi deserunt porro. Dolores eum nisi id\",\n      \"url\" : \"https://web.example.mocklab.io/392312\"\n    },\n    \"links\" : {\n      \"self\" : \"gn2mupqrznflmumw959p4rt6lt9nyt6622n6p2i0utajvg0ifz1g1jawqczntv246c3\"\n    },\n    \"id\" : \"1okl\",\n    \"type\" : \"6bdtd5qu9zt73oztkh9dsii4mm8e6hgyimnti50sjjrazp0nvwqqtuftti8ms6lwduc80eou842sd\"\n  }\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "d977997c-ef14-4e9c-a745-6cb408cff9c1",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:27.843647Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "(none)",
+          "schema" : {
+            "description" : "Successful response after creating a webhook.\n",
+            "properties" : {
+              "data" : {
+                "allOf" : [ {
+                  "$ref" : "#/components/schemas/WebhookResource"
+                } ],
+                "description" : "The webhook that was created.\n"
+              }
+            },
+            "required" : [ "data" ],
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 4
+  }, {
+    "id" : "c8eb8928-f186-4d6c-8212-5541d4e2da3c",
+    "name" : "List webhooks",
+    "request" : {
+      "urlPath" : "/webhooks",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"data\" : [ {\n    \"relationships\" : {\n      \"logs\" : {\n        \"links\" : {\n          \"related\" : \"hfrc6rzca208702mxu2rym3y3qgahnq82rfsy2pr1w9770f3nq2t77lz44xi1vomyxcmb94rwabdcdpmiyw0x22276mvlmhepphqr84m4mziuci6u6t2wri30luca9mq7quksw920xs91\"\n        }\n      }\n    },\n    \"attributes\" : {\n      \"createdAt\" : \"2023-12-18T18:39:05.841Z\",\n      \"secretKey\" : \"d1d7tavx4z3ii8t66q0xxx9222emtmx226frljrntg856ghvo9aztm0wr9afwy6yy54ugz9dm703tieskh9z29l3uh7f0cip76a0sx3e5449boeeasdco3h7paltirt3vgj1vh9vklm\",\n      \"description\" : \"Porro ducimus ut aperiam rem. Fuga et inventore. Non ipsa ut qui omnis.\",\n      \"url\" : \"https://web.example.mocklab.io/642418\"\n    },\n    \"links\" : {\n      \"self\" : \"e4c4g33izu6078n7ijlcreu6l1lfxfembrxagr15uxxp676mzrkop07jw029yjz5wtn614hmihmaqd3uyrqq6\"\n    },\n    \"id\" : \"55hw\",\n    \"type\" : \"tfurks5ew27458fnitwzv1nzl2cxm9ebejnjt9jik8uh5yykm600aqy1pomx76113va5g8wiv73lyro7nant3cy9dlced1vy9jzij9bz3sbkrch3p3zqti98gp7xa55a7zahl5xp90i3l1idjqqs7cx9f8b8gnhvjbfuxf8bbykcu5a5m3xxj366t6r5pey75v9d\"\n  }, {\n    \"relationships\" : {\n      \"logs\" : {\n        \"links\" : {\n          \"related\" : \"warlogqyf07smr94fcc3grcpr700hq4ge0z561otqwtkyd3mgle5ztsht9c1vcgi2mryr9ursl07zjypcxlejwxy036tf8av8tns3xskasvjb51x9jiekdxstwfqoe0id0enafud6x3lf0iov\"\n        }\n      }\n    },\n    \"attributes\" : {\n      \"createdAt\" : \"2022-10-29T01:26:31.841Z\",\n      \"secretKey\" : \"lhgohkt5f4s12mhz8jajzf3m0ax3jcvixflojlq9pl16874n1wqoe5s4a7zzsvchh4wk4ynbk3l9t91l7ze4hhm5uvxualo87l5gnig1etbaq8ydvqh6kenysghtpy8yd5surquk2w0s1\",\n      \"description\" : \"Ab eum in. Placeat sint consequatur maiores eos. Maxime omnis debitis ipsum dolor dolor vero. Amet ipsa aliquam error deserunt. Odit ut rem rem enim vel libero.\",\n      \"url\" : \"https://web.example.mocklab.io/891730\"\n    },\n    \"links\" : {\n      \"self\" : \"i02v7rte7zq5t9kdidjr16aj5lbb0ff9iurz9g18djl0jhxc8w7gkzy28rnjpo3ub86ty6ztt1nmp0gbwq7ozvi569gsc5ycz6p8m9ebu0pm6k15zicv4514ba0t562flx9h5wl88sfxgv4y0g2f6aaz0zxf03m6mg58i0qvsi8217a5btk1ou82ginth7q\"\n    },\n    \"id\" : \"m6f0\",\n    \"type\" : \"s4ilms3qo523lqiu778v5moeg8j6wvldbomula21v5jhiyk0r4ko5grhb2h11ztrl3ylwoedjmbinr4s1jcivcuxpzplkz6nxn46l00soxzmkyy0y1p6dv3gbkql8u68schs54nx7ln097qraoib45gnwstqz57e8occc4rgcuq8mqghbblbw6wf0kh3zg0l1xat2i\"\n  }, {\n    \"relationships\" : {\n      \"logs\" : {\n        \"links\" : {\n          \"related\" : \"yuuuw4tlx9yitvrgj6h8ecr2uulhhxxu64spyiry085rwwh7j9p8hzjyr3kbbkv8fh7e8z1f0wtnnuwy1i4od8s8bnegcy0x5ej6slzf6pzwutsdj0652a377xh273zszjw2jqbymezg5djlfwvzljn3vebtor0d6rlf6rvobrtl92n5ety25649fh\"\n        }\n      }\n    },\n    \"attributes\" : {\n      \"createdAt\" : \"2022-11-05T08:16:31.841Z\",\n      \"secretKey\" : \"mcomcqoc1spmvoonyhet5t0fx62hqv8ijo0ybc6mu0a9hoelhgkk0mr964bq0as3adfduh7d7ledc6hayjcv48betlt9t36xx607p20ugs7x87s5oxkk3c98yr13xuezo10w9yblr5nlktrswtt7fxokikb6nwlyeon009m1x\",\n      \"description\" : \"Molestiae et at deleniti velit. Ea enim id. Est occaecati id ullam et. Amet nisi cum eius. Nesciunt voluptas sunt quam consequatur et.\",\n      \"url\" : \"https://web.example.mocklab.io/346313\"\n    },\n    \"links\" : {\n      \"self\" : \"jie0nliyrledkqahpkprii9a2puqlugfxstdzhneghy6d4340hydyfy47s7ttyrk6dtn45gg2kls1v105vybi692v2swi9xtiyjh3glzp4rkoblba33qmzd3llbicnn6eqvo0fvav\"\n    },\n    \"id\" : \"k79w\",\n    \"type\" : \"z0vmec2bzu6vlmo\"\n  }, {\n    \"relationships\" : {\n      \"logs\" : {\n        \"links\" : {\n          \"related\" : \"hrafp0quuk79k5zyiqa08no0zehc6cqufsesejr\"\n        }\n      }\n    },\n    \"attributes\" : {\n      \"createdAt\" : \"2022-04-11T10:42:49.841Z\",\n      \"secretKey\" : \"ckucbakxa6jhuyqrdu0xrfblx8mbejim76zibgz04qj2iejdxjhrp927achdi40o9q5agmvmiimpb4pn6pqyik0iphevhb78pu6xpzza2mtcxtptyr8m18g9wtkb8s2hf1eizj1quyoeevv3zri5nas5l7jhnk8o7qo1qwcc9ydj4\",\n      \"description\" : \"Beatae eum maxime similique animi autem. Saepe inventore iste tenetur sed ut. Est recusandae ea adipisci nulla minima. Reiciendis repellat corporis repellat porro quo soluta et.\",\n      \"url\" : \"https://web.example.mocklab.io/513659\"\n    },\n    \"links\" : {\n      \"self\" : \"14wa827dg06pt6b78p8kv\"\n    },\n    \"id\" : \"d859\",\n    \"type\" : \"dcg09pad71waf4ypt216ic0djmd5nydfpcpqsowgoh6bvrinkjwn7rlfqxws4efso8jutphuxnb6lgrscjyzg24iyjssdurb2cj4zrmvq2twxco1dl00cckdt9zay6an0mb8iej\"\n  }, {\n    \"relationships\" : {\n      \"logs\" : {\n        \"links\" : {\n          \"related\" : \"pp3qv8kxs1b35o9fz10lq30f8fq5jomdmrv2zq84uor1r49i6ql4kmhqx2n1x9mb8jhdtsxgkdqrpx5oh5xkzg3hwilfbcie1c4syi4jdkfmaf3hsgk\"\n        }\n      }\n    },\n    \"attributes\" : {\n      \"createdAt\" : \"2022-06-17T20:14:04.842Z\",\n      \"secretKey\" : \"h83ucp3d0l383oh1dviu6qiaihg7ng916fopuifuqmct7pbnfw1110ujdvdvph8y97nlsfddkaejk4ggly9e6pzeua3q9e014qcdp55cu2agto5mdg9mxa12yf7s03r2h4ghi5tmjle\",\n      \"description\" : \"Molestiae vel debitis dolores id. Sed et aliquam aut. Ut ut exercitationem nihil qui eligendi aliquam. Explicabo beatae et quo saepe minima nemo.\",\n      \"url\" : \"https://web.example.mocklab.io/459660\"\n    },\n    \"links\" : {\n      \"self\" : \"5n835u2z2o83rwaud4nf8o75ak5ydfiuf4ie432rvg0h4f80usrupvilcswof4p50cl9r4dcup0x7cpxndposzt433nir5uhi4fqfhu2hmm2ryikf1h42m\"\n    },\n    \"id\" : \"8202\",\n    \"type\" : \"paow98f40vv8l6y0wkdc6jyssr8x2lb31uiz5wneth9bsfl2w4b\"\n  }, {\n    \"relationships\" : {\n      \"logs\" : {\n        \"links\" : {\n          \"related\" : \"6bndyku8mczyrfxf\"\n        }\n      }\n    },\n    \"attributes\" : {\n      \"createdAt\" : \"2023-07-07T15:02:46.842Z\",\n      \"secretKey\" : \"yaw8jilmnh9ymvpdp7x920x04bqbsyraux8u6khb2htkwglti1wbu56yxt\",\n      \"description\" : \"Assumenda dolor iste atque veritatis ut. Ut non tempora optio velit quia repudiandae unde. Est sunt voluptatem. Voluptates dolore ut. Consequatur nisi sapiente possimus omnis nam sint necessitatibus.\",\n      \"url\" : \"https://web.example.mocklab.io/911473\"\n    },\n    \"links\" : {\n      \"self\" : \"r96mx819fehqurcler60vovr6q78qm1msftm82hhphfh1btynny9ymp4fwghez3tmmfy7l2wmv5lodefraj7afcykqgslkb6xvxnm67e1mkj8jytv\"\n    },\n    \"id\" : \"6655\",\n    \"type\" : \"24vd5xz88nf5s1tafwcsj9gs0s04bmmxout4aido3ganjdzn6fzxn3n5vdwszbee2yegehxu383nx4st4k59jou1xvzc1s5n0i1wpt41k9a40hp6j9dflkijytuvxut7mgjxe3igm5\"\n  }, {\n    \"relationships\" : {\n      \"logs\" : {\n        \"links\" : {\n          \"related\" : \"ujqwgd6y9wfmp\"\n        }\n      }\n    },\n    \"attributes\" : {\n      \"createdAt\" : \"2023-06-24T23:13:09.842Z\",\n      \"secretKey\" : \"jr78cgstqjey3ahlewf7cx2n3mkd4tj5bqaghmd0ydh5lj1t508taspz498jc8cmio2pvf8uh3w3g53ckoeolkwbvfuegy8w7xmxqkbbspt8hb67vy8bwuxly3d67eckldjwpw3qpgvt8yo1rh2l565z75xk2g4qyonstw5giu31o9cw7hlhdv82d\",\n      \"description\" : \"Ut et quo. Voluptas tempora quia quia neque sapiente temporibus dolorem. Et numquam consequatur repellat dolor velit consequatur facilis.\",\n      \"url\" : \"https://web.example.mocklab.io/657853\"\n    },\n    \"links\" : {\n      \"self\" : \"wy8ta2qvfyi1cx8tdde5cu2qci4oxgnf9via8ctdlcifmgz6v8ihqjt7m1fahr88gjlvg0gsn1vl2nn7dm0fvwkftl32ubnwa2gf4c5it618bmi2jdar3rpl5nygihknqqcjp6u4xlef34qyaxtgjqv9fu4pqpnlopdernablh\"\n    },\n    \"id\" : \"f789\",\n    \"type\" : \"50812vnv3oh19n9nuxhd413tg123gb85k2a\"\n  }, {\n    \"relationships\" : {\n      \"logs\" : {\n        \"links\" : {\n          \"related\" : \"oi2ooouwneskgcrn82c066rooc6euwn9vxrxmjp0hwzced9h4cp91e8oex\"\n        }\n      }\n    },\n    \"attributes\" : {\n      \"createdAt\" : \"2023-02-18T13:43:06.842Z\",\n      \"secretKey\" : \"ywsl28v2gm408i9ampvdxxec3ieuh56zbfi84hx6gilp73dm08ngmlnj73n3yl7j77477lupwq0c0fd\",\n      \"description\" : \"Consequatur illo hic reiciendis sit aspernatur. Occaecati necessitatibus aut. Sed sunt architecto soluta voluptas perferendis. Et neque porro dolores voluptas a.\",\n      \"url\" : \"https://web.example.mocklab.io/992331\"\n    },\n    \"links\" : {\n      \"self\" : \"9fcdawjlioqi1lie2foakva3mm7oi7qstfvz5iyvr3kp840z9k7pvmx0lel3ckjkrl4vxyamd1z1unljs48q20krh7956psgg85jb18b9993qowwnjt7fr2qv7roksq4wx0gx5ztij8zs52486gu8iz4\"\n    },\n    \"id\" : \"11gc\",\n    \"type\" : \"y07ll5yal23224zd09elu1sizpjim1fxw57l5t4dnrg0cu39sp6ay5ye3vpblig4zl8gyajyfojqsr7gpie\"\n  } ],\n  \"links\" : {\n    \"next\" : \"lhqw1yjhyp604fqmkyke\",\n    \"prev\" : \"kzsf39xlhmr8zngadjam2978cabuwkn4z6bbkazqxzj9et4shgrxsk1u6h3ewtlqt38rg4bv6wzldc47muifw6d66p3x3n0pavczomb62xla0pg1k0or171m8610kl5ri568su18b84cswrr7rfycfawwpdjoi4b59u2bjtmrn549t\"\n  }\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "c8eb8928-f186-4d6c-8212-5541d4e2da3c",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:27.843318Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "(none)",
+          "schema" : {
+            "description" : "Successful response to get all webhooks. This returns a paginated list of\nwebhooks, which can be scrolled by following the `prev` and `next` links\nif present.\n",
+            "properties" : {
+              "data" : {
+                "description" : "The list of webhooks returned in this response.\n",
+                "items" : {
+                  "$ref" : "#/components/schemas/WebhookResource"
+                },
+                "type" : "array"
+              },
+              "links" : {
+                "properties" : {
+                  "next" : {
+                    "description" : "The link to the next page in the results. If this value is `null`\nthere is no next page.\n",
+                    "nullable" : true,
+                    "type" : "string"
+                  },
+                  "prev" : {
+                    "description" : "The link to the previous page in the results. If this value is `null`\nthere is no previous page.\n",
+                    "nullable" : true,
+                    "type" : "string"
+                  }
+                },
+                "required" : [ "prev", "next" ],
+                "type" : "object"
+              }
+            },
+            "required" : [ "data", "links" ],
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 5
+  }, {
+    "id" : "4a29b080-ee5e-49fd-a38b-9d7ab6365d4d",
+    "name" : "Ping",
+    "request" : {
+      "urlPath" : "/util/ping",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 401,
+      "body" : "{\n  \"errors\" : [ {\n    \"detail\" : \"k2sy56nrlrcsgiknp\",\n    \"source\" : {\n      \"pointer\" : \"t7m6nzxoxx98ik0iq9in0j61v13fkplc8gync34cl9h93yuw5l2hidu4fjfd1o4go4inn03rnw1whq42zdbte6lkvl9e2m3dhm2gm56kmnzo2k8fvhice9ucbcymr31gmtypzv5xzg12wblcyxo4xa95e0bpc4egzydz4l5w1kk4pjo5jt\",\n      \"parameter\" : \"1xq0smqgq8tk5h6ly5te7lm21oa1yr522zzih3erx6qv42osobcpnr5rw6775j1zvpdwa06igkhsfdgs41mnkbzm9dx8td1obyxra5zn8imzg0oy9ppo0hbxx73t924payn70xrwp5f3\"\n    },\n    \"title\" : \"Architecto corrupti et reprehenderit adipisci qui ut animi.\",\n    \"status\" : \"3ztxg1w6abcjgysvb13ymi\"\n  }, {\n    \"detail\" : \"man8a7qrr0zcmjx9j43m4tgs1tdztfgzpk6vxvn3l26grmdarq25wxv9k2c\",\n    \"source\" : {\n      \"pointer\" : \"j49j1tg6n0vntfo6l4ts6rc4ok5nkbsl1pl81okoa2rocng9nh242pbr8xml10i6xnfswar7k6i4ziztiwe9kca7eok0rrejvoze56wnyewsih9vtx2x3\",\n      \"parameter\" : \"444j0sr2usbvv5gz6v0y9emnl95zi9o0v4ujk3fmhi180o5ygja14aluzy09\"\n    },\n    \"title\" : \"Non earum laborum.\",\n    \"status\" : \"4748h2khf4ov7ux1akho3qac7rx46aluftnnwlxz3o3ixqp4qaoucgmapxl0qjobkk7pu6om7pc0cs5gmij1ll2vc2de\"\n  }, {\n    \"detail\" : \"x6yqbq11gkp7phaw8e8zkumte2260ikh0wcuyxnnnfmq2elbp8bdhej0fk8nvpr8zvtdmxwso9jrk4eqoacadjj8w7djij5c8c202qq4px4clo30yoi5fk4t47dv5lflgjvokjlqpt7r0566m6nadyk207n6gmslxpk3zgb3u46fsf\",\n    \"source\" : {\n      \"pointer\" : \"4tt9m7ftbef3yri15hwfhnzci61z57gh39g43xkwxbtacapqlhrfpx1vorjdwe7yqqyik4gsci1fdnoo4cia\",\n      \"parameter\" : \"ra96h35janms\"\n    },\n    \"title\" : \"Modi accusamus qui.\",\n    \"status\" : \"we7bc430fnot0x6146svxeaqozf0ralu93csrk62wkpy3201hyn622y2xdhacxtivz9nwh7tww678p67qeatod7g40x6vo36zh8kcjtwe4n71xxf3e3xbnqenhocn2on59jkuau0new6paktnjw6l3uezbcusc7ztfcuq9qankd1liscnsbjsenunmymnm5zi0pm\"\n  }, {\n    \"detail\" : \"fwl4q7zwu2i30j4eo5w8ksvhunx8jkgkiys3ngt311mv04jztpw4knej7n381uwjya76f61iakrlnswlpnkwc6skl1lpxcvxgiz31pzduq61wuzo22engrhu\",\n    \"source\" : {\n      \"pointer\" : \"vsxc4cluge9eag\",\n      \"parameter\" : \"tli2qov7owhycytjlwg8e6nyrerjq5bniyl4fxfcei8lm1y3cytqrzq\"\n    },\n    \"title\" : \"Inventore eos error nemo necessitatibus et.\",\n    \"status\" : \"qh3inpw6dbducpa5mt6n7ah3czas9iiujvkva8uvalxoxtdmx\"\n  }, {\n    \"detail\" : \"n5ufop74jydw0zjlv1sbyjens9od0uvkr4z8576djj2ij9glnoqin1czxkzf6efyrtz23js8cj36uckqb8gvmfnff6rqfa5mtlh5wj5bd6f056\",\n    \"source\" : {\n      \"pointer\" : \"bgh1veg8bpqhgn11dozr4dwrnjctlpe604gocs99mj0xgjboq1802xcpvarkn2gykrawedj10opod72zavjpeui45bfctymt2dmnpruziatq8k0ezihfs8nrbm1tedg9mr\",\n      \"parameter\" : \"ul5ulq361bwve5spe1rtn1t39kwj68dlfljk2zz69ll42jlkqbjt6idq3hibi7j0wt2zcpr\"\n    },\n    \"title\" : \"Et voluptatem dolor.\",\n    \"status\" : \"pzmz3s9kcokntyp76049s6k8qivm8kgz9bcl63th88z5fc9weghmmz4taddt6oyfodgzhxs79ats5mmzikmtefutlf1ru1enjfj7gmufau0b1k6awmoh5fepelno6pkkyblrrjr00kax1j7\"\n  }, {\n    \"detail\" : \"fn1hsdlacq73jwonb2stk91m7caq02qe5dkc1f8a24ou4y\",\n    \"source\" : {\n      \"pointer\" : \"ah24iason2k6ekc1wa5a8utp3ivs2j2yl1jx2o9d0z3alqponrp22b1skadu7tumlbypicoziapqmidq4jwjzmsygr454rz38brcwhez9ed6s8lunp3dapwkgary16mcgn8ueutw2twycgvd0rdggfwevunmppdx4t8jxxuvgwqle3k68evz5cgvlcn3y8tzt\",\n      \"parameter\" : \"6bjo5odrskybtoh79inacr9oj7ktoxp05eu2nq8nxeuiyww04eq2b14wqafipy1q08ulotggwcwb8svg\"\n    },\n    \"title\" : \"Id laborum ipsam possimus illum aliquid eius.\",\n    \"status\" : \"7sknoa8kmo79v89o2z5h0s6hdh7ozkfni191hojdm7zxlbwuh0p9r6nqd6i4k6ytj2lsn04o\"\n  }, {\n    \"detail\" : \"5gepncuxz1fwghiy7uscnfnw21dvtrznm05g9cobmqyjyhygxhf5dez92cken\",\n    \"source\" : {\n      \"pointer\" : \"p8upgcy41r5jxou3kjzdfplg41098qi2sqy5x0bz5if7gve9d1ahmzcl6mi8x64wnk7v\",\n      \"parameter\" : \"50vzob0ep8ufa9ix29yq6\"\n    },\n    \"title\" : \"Aut itaque id maiores ut et placeat.\",\n    \"status\" : \"omo93rv6wqcj2bl5slac5hxag3pp8kw0nd4ueitbnmtzzmxlsd5hfs62oji0fdclc8kgfhmb9r353q7xo7vcm89rqjhq5c7lcroi8r8qzyhh3el1od5jes2y5anh0hlvyr7p48tx4unvy1g21les2zdqxh\"\n  }, {\n    \"detail\" : \"j3trp7p22gkqiraadznz1d3sagz33kw0pm9h31g4lwu0h80nx9jt5itd0u206isqv1uki6c4z\",\n    \"source\" : {\n      \"pointer\" : \"a2bwdyyfr3a2116oywb53pdkbtiien5n9mi5uhtvhu4742hx82hcqxf0qieyy1mv77uj8xfn7f1vuptxff1zpv7cfod63jy5494w4je0t10h6z167f5e791p75coj9gobn7fdmwx32tf9bi986o9sace8p8r5khxyfa77m1c4kske\",\n      \"parameter\" : \"en5moclpr9h4tln25o18tq69ugnu30xe56qlnmu6yyrf6atdxbko160c4wfcizdvcw\"\n    },\n    \"title\" : \"Ipsa aliquam enim repellat temporibus.\",\n    \"status\" : \"fx9tyxb4c8w78iifimfbngffc\"\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "4a29b080-ee5e-49fd-a38b-9d7ab6365d4d",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:27.841124Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "(none)",
+          "schema" : {
+            "description" : "Generic error response that returns one or more errors.\n",
+            "properties" : {
+              "errors" : {
+                "description" : "The list of errors returned in this response.\n",
+                "items" : {
+                  "$ref" : "#/components/schemas/ErrorObject"
+                },
+                "type" : "array"
+              }
+            },
+            "required" : [ "errors" ],
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 6
+  }, {
+    "id" : "61b6ebc6-97f1-4b99-ac72-c425c041e943",
+    "name" : "Ping",
+    "request" : {
+      "urlPath" : "/util/ping",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"meta\" : {\n    \"id\" : \"3ny3\",\n    \"statusEmoji\" : \"gq1n2kxdgdviyz77zs7pl5zpg9e837h\"\n  }\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "61b6ebc6-97f1-4b99-ac72-c425c041e943",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:27.840385Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "(none)",
+          "schema" : {
+            "description" : "Basic ping response to verify authentication.\n",
+            "properties" : {
+              "meta" : {
+                "properties" : {
+                  "id" : {
+                    "description" : "The unique identifier of the authenticated customer.\n",
+                    "type" : "string"
+                  },
+                  "statusEmoji" : {
+                    "description" : "A cute emoji that represents the response status.\n",
+                    "type" : "string"
+                  }
+                },
+                "required" : [ "id", "statusEmoji" ],
+                "type" : "object"
+              }
+            },
+            "required" : [ "meta" ],
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 7
+  }, {
+    "id" : "a5d8c4ed-f2be-48da-9e1b-360ef0b0253d",
+    "name" : "Add tags to transaction - 204",
+    "request" : {
+      "urlPath" : "/transactions/356y/relationships/tags",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 204
+    },
+    "uuid" : "a5d8c4ed-f2be-48da-9e1b-360ef0b0253d",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:27.84021Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "(none)"
+        }
+      }
+    },
+    "insertionIndex" : 8
+  }, {
+    "id" : "78af99c8-b088-49d2-83e5-8c9b981c8dda",
+    "name" : "Remove tags from transaction - 204",
+    "request" : {
+      "urlPath" : "/transactions/2811/relationships/tags",
+      "method" : "DELETE"
+    },
+    "response" : {
+      "status" : 204
+    },
+    "uuid" : "78af99c8-b088-49d2-83e5-8c9b981c8dda",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:27.840113Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "(none)"
+        }
+      }
+    },
+    "insertionIndex" : 9
+  }, {
+    "id" : "bc2a3ecd-8be4-4580-9a73-0cd280307071",
+    "name" : "Categorize transaction - 204",
+    "request" : {
+      "urlPath" : "/transactions/3g85/relationships/category",
+      "method" : "PATCH"
+    },
+    "response" : {
+      "status" : 204
+    },
+    "uuid" : "bc2a3ecd-8be4-4580-9a73-0cd280307071",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:27.840023Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "(none)"
+        }
+      }
+    },
+    "insertionIndex" : 10
+  }, {
+    "id" : "6ec666ca-f56c-4695-8566-0f428e0572cd",
+    "name" : "Retrieve transaction",
+    "request" : {
+      "urlPath" : "/transactions/i570",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"data\" : {\n    \"relationships\" : {\n      \"parentCategory\" : {\n        \"data\" : {\n          \"id\" : \"551u\",\n          \"type\" : \"pe0bd6gp8tnewa1khw516xq1ncu244zg4b4ndc1vjdzlc4ecaod6tls51aiwf87c84hi7smrsmsrzuptjn48rqlcyoigve2pueqfa7orrxztkcqpm196995qspd1b9918gf375mtxm7vsy0jotz1qs88q6v90v4\"\n        },\n        \"links\" : {\n          \"related\" : \"qqhyrkwy3zlev9fnbzwme0hbkgo6o74djlqg0031\"\n        }\n      },\n      \"transferAccount\" : {\n        \"data\" : {\n          \"id\" : \"irr2\",\n          \"type\" : \"qtls2bol5clkzc1vyknbv4klmq6sck9npa2pj0caq8x4hppum7225doa91ui4wnsdbi4zmjrowqcpk2uhvkueuzcjngosn3w0o915uyw7wuqumgru96wtewoob5j00nvnkcr7tddfxb7diei1g2fr3yncyzfnqtlb7\"\n        },\n        \"links\" : {\n          \"related\" : \"4011takj11o73oyyi3joepekx918ct387msntwsrpv6xr0u4fteuuczy236q39d9ba1i60izpysw5msg5jfjt3ff5pmwmz9mrv954jyps5yyu41r8d4\"\n        }\n      },\n      \"category\" : {\n        \"data\" : {\n          \"id\" : \"ta1o\",\n          \"type\" : \"hz2ej44dal2tiiihbpuf2dafpzv42sj9lrjlfrj50mgv76wsu5qot0c2x0fce8ac07c07vks2oua83p0mrryg5pjnkp6nneejcznivzw9c98ne8twbmibhj2zj9yx2q74wb4yfgnngkjpej37pf2ez4jplkl05syd51tcg7uahcf1swu3dkwgcupt6pmbbu5x5j5su4\"\n        },\n        \"links\" : {\n          \"related\" : \"5ud9melm9pt8udj1q2knze4\",\n          \"self\" : \"dzpm0ri1yvk21m5u6jll6vx6o07ctguwb4vgsdigfqz0pvcadifu3\"\n        }\n      },\n      \"account\" : {\n        \"data\" : {\n          \"id\" : \"a6di\",\n          \"type\" : \"0rddsvfus9ywatg1fid0z8f9v3ai5f01ztmvhyjftsbrl3zvgpsnxp9bpfqzf17e72zstb38hfo77dkbg9bk04u4jdhcssrigm7igoua6x4dn745z6sfcwykcp5vf6gi6x6wj0iot3lf35fscgfx2x3ame4uge21p782xjk3qxirj\"\n        },\n        \"links\" : {\n          \"related\" : \"bea7odnlvo8dctuj7ptl6tvpqkarp7jz0sqyf8frq8katrhbwa2ckhbateef4kjmebgmg29wbu2cb9w5obey07odwx3i3dtf5bkke4qup63igty72j3c4iadvwh2v8c70gq3pa5b9135vwfiz6r28vkcd3hm7p9z4mqf\"\n        }\n      },\n      \"tags\" : {\n        \"data\" : [ {\n          \"id\" : \"553n\",\n          \"type\" : \"ps82y9jgjn8rqahr1uep3jyi3fe85ys01au5vu91ot1m41n3lcq0x4l05bm3gfnd791eu7x7p\"\n        }, {\n          \"id\" : \"c26t\",\n          \"type\" : \"s6wn8or2q88oz5sruzfimppg0q9g9caf7qvtk4a112pvuad8tn5c57rdodewpwht6cntu9lwgvw1ku0ll7i3gd5bvd5if58q9nag7x5ecnfo9pwm0rzwz84e1toje7aagcbu2850x98re3qpwrx9nunnaf9paj\"\n        }, {\n          \"id\" : \"07i9\",\n          \"type\" : \"qosxdw42jb8p5qi6uh2g2bnrkyzusob9sseoohhk4gbnyynuxfn4umvb16rf4aifczu31excxx63t20\"\n        }, {\n          \"id\" : \"vusu\",\n          \"type\" : \"ki4vefzyj5w9s5\"\n        }, {\n          \"id\" : \"bo7h\",\n          \"type\" : \"a07doagdtuwwfl3q7l9a5p10srdhjhy\"\n        } ],\n        \"links\" : {\n          \"self\" : \"03t26r3otviptoxn1l29os58rjhhq3f5sngkj37dddqkedbpbh355gq4jp8qw5gklcsybdamugibjxh1g1ijpkvvu27q4ff2q304i84nwd05vbq3ybjbrryokcthea4kre0brs0qcgg3vooafljhd\"\n        }\n      }\n    },\n    \"attributes\" : {\n      \"holdInfo\" : {\n        \"amount\" : {\n          \"valueInBaseUnits\" : 7778405788846084391,\n          \"currencyCode\" : \"SBD\",\n          \"value\" : \"e5xbh5b5bgifkqlae88ym772wthaq4rpdfvjp0cv3f8frh9tuibsaw3ciesjypyaru4sfkwybw2pus157yqiwabhpvt4g6bvfwuod896qpa21qwroos16gfhe6ez5u5o1vymhtlzxo93wgmvhrjre2w7gds\"\n        },\n        \"foreignAmount\" : {\n          \"valueInBaseUnits\" : 5777188381425613584,\n          \"currencyCode\" : \"DZD\",\n          \"value\" : \"oz5dxew7kvecuw91y1yhnei8xmja56gt8zg3l4hr00ufwhj0izhikxe7klynl1m54dexsd3ioqe3jxuvin9hmvqatydiva4qyvdm765m4oz32bnj8cfxutscc1u\"\n        }\n      },\n      \"createdAt\" : \"2022-07-31T04:10:33.839Z\",\n      \"amount\" : {\n        \"valueInBaseUnits\" : 8542346825650323328,\n        \"currencyCode\" : \"KWD\",\n        \"value\" : \"kc80pn3dgwlukiu0kyyqdb08hdu8844oeltw9spd82swxz4lohc0yn1leg5who20hapls4xp3\"\n      },\n      \"isCategorizable\" : false,\n      \"rawText\" : \"btbhpfg5k3db1056q3633r2ktbabobmmi4qje13zgzvpejtik3sbogb7o8zeu02erob65ig9q57qhwqmo79ely5w35gt4w\",\n      \"settledAt\" : \"2023-01-02T06:32:34.839Z\",\n      \"description\" : \"Dolores temporibus soluta voluptatem. Omnis voluptatem perspiciatis eum. Soluta esse excepturi officiis laborum eos ex totam.\",\n      \"message\" : \"Voluptate hic perspiciatis illo voluptas sit sint. Rerum sit eos asperiores enim ad beatae sed. Consequatur et doloribus consectetur nemo placeat fugiat dolorem.\",\n      \"roundUp\" : {\n        \"amount\" : {\n          \"valueInBaseUnits\" : 5881851495861460626,\n          \"currencyCode\" : \"UGX\",\n          \"value\" : \"1z0kmf6u5s5rvzzzqp8g9a2v1w0qlthd0mmnwet8jr95hsxcg20vwc3ong33pw3smbdzlx12tcaykqqibgv6glr0ncsdkqg6nexducq049dqvpxmg58xvj625hysm7t4ge0izj43ffylwx\"\n        },\n        \"boostPortion\" : {\n          \"valueInBaseUnits\" : 1339777749088248220,\n          \"currencyCode\" : \"XFU\",\n          \"value\" : \"e8dmja4q1l6a9crg7s30kjjw3qixvjw8utha9wruo4mexu5gtaerqoohxyhlr360wy7x7mb91itjbcnpinw5jbhw2j9a89xnqsr4or\"\n        }\n      },\n      \"cashback\" : {\n        \"amount\" : {\n          \"valueInBaseUnits\" : 6492992870164599749,\n          \"currencyCode\" : \"NPR\",\n          \"value\" : \"u44r1vaxfk2wlw2om4wa2yo6te57a25dc03iqdc6z7am0depbjg8gx1j7l1pph738ju2fv9dbrz6pvuo7kjidzrc5rcrwf6o6adzoyh218272ye1rj7v83695zuqagbbmtk0uwk8m2xndqhlor\"\n        },\n        \"description\" : \"Eum quam placeat velit labore deserunt. Alias sed molestiae dolor. Eaque sed velit consequuntur. Quia perspiciatis aut fugit quia sed. Repellendus possimus laudantium aut enim natus.\"\n      },\n      \"foreignAmount\" : {\n        \"valueInBaseUnits\" : 7401719065610870643,\n        \"currencyCode\" : \"XAF\",\n        \"value\" : \"bx9b3geja7s10fzuj90xcuemidvvatkkcz39icl1gfckst6hva5w4d73teecxncodt0nboirdd1bjpx5dazx7bp2mpmiodaqly08qwhkz373su66zzucq3qqpwhocf8egcwt7dy1onla08ucb3rr9az5qpjzx8juhurgp64a63rvitd60wy4sz0paqzdv4j8nsurs\"\n      },\n      \"status\" : { }\n    },\n    \"links\" : {\n      \"self\" : \"b6r\"\n    },\n    \"id\" : \"bpgh\",\n    \"type\" : \"iof7uaz2zhhwssi6tu1qxl0e1dpn4vqrlujhbd7nndqm52u69pohdcnl5mkeqnsmr8zte\"\n  }\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "6ec666ca-f56c-4695-8566-0f428e0572cd",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:27.839915Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "(none)",
+          "schema" : {
+            "description" : "Successful response to get a single transaction.\n",
+            "properties" : {
+              "data" : {
+                "allOf" : [ {
+                  "$ref" : "#/components/schemas/TransactionResource"
+                } ],
+                "description" : "The transaction returned in this response.\n"
+              }
+            },
+            "required" : [ "data" ],
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 11
+  }, {
+    "id" : "ebff4c43-8bf7-49b7-b694-9405c4f15d81",
+    "name" : "List transactions",
+    "request" : {
+      "urlPath" : "/transactions",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"data\" : [ {\n    \"relationships\" : {\n      \"parentCategory\" : {\n        \"data\" : {\n          \"id\" : \"3q1g\",\n          \"type\" : \"1m7di10erliaed8ppnmves1x3f5dzwd6f7zpztecdfeplnvgehnpxhi8k6wrmea6aj1ehkko5cczhj7pjy3y26hiwyj9va2ip0w9it5ik196hcwlrwebk02txkybv4cfqzxdvcvyksooary8q6hn8uyvqi6h6\"\n        },\n        \"links\" : {\n          \"related\" : \"dbccca0u340\"\n        }\n      },\n      \"transferAccount\" : {\n        \"data\" : {\n          \"id\" : \"8okg\",\n          \"type\" : \"d9bydjq90c0moanm940j3w9322x5emagazivzgkendnw9b92xvaf3l8w8mbklu6xccwvbf2bo568jmd2ak62ybans846v\"\n        },\n        \"links\" : {\n          \"related\" : \"ykcfe86sn7h20is691ufsiofgel25fz7eejzrl9gjpv3vuwi2\"\n        }\n      },\n      \"category\" : {\n        \"data\" : {\n          \"id\" : \"9e72\",\n          \"type\" : \"qrw9pmfayo4vci52\"\n        },\n        \"links\" : {\n          \"related\" : \"abycn6i7ron6hubwfolp7utheozb6lq0uouk465mrwvduqo8eaf8872lfh95pmf9gw4etx9k58j3l6brsh6inyt6c5cd8utz0ro2j41lnxqpd2o6mtt59ikznnwpqsew6tnpuvbl0hdiv\",\n          \"self\" : \"a4sw0cesg0gfevu9lffa93nk9028tkue9w74yc7279lnkab738f\"\n        }\n      },\n      \"account\" : {\n        \"data\" : {\n          \"id\" : \"2q6y\",\n          \"type\" : \"c3hl2v7s82sijyjhggu19k13nhvsxrl4op6k7ftz78fusiglynhnq2o45z7e3ccdyrm72puk5w1wcplgho8wrhomcxhzqipv2gtanliwiw72rrbzierqpwdh7dcfmd0r25i1dkpuwtckkgkl7bbq1n3ceohla104w2egp5r3d7t04s9ma13oqm23tl7bb3fe7\"\n        },\n        \"links\" : {\n          \"related\" : \"svwus0na5f9zfhf\"\n        }\n      },\n      \"tags\" : {\n        \"data\" : [ {\n          \"id\" : \"o5m4\",\n          \"type\" : \"2izwwj\"\n        }, {\n          \"id\" : \"15d9\",\n          \"type\" : \"qcodtzbys73xrr5zxecx20rs4uq4o9l8ej3osm5jn9153eed59updvv7gkxuwepq0g29kfco5wqetqqgdmcfkurvlssw6sxvzp7iuw151u0yfy74wnogv0ite\"\n        }, {\n          \"id\" : \"2j86\",\n          \"type\" : \"2b2retg2htdpjza3lmjmvry8lc3axd1ch55xw0tpiy7a1gxe43rxb8wyx8kgj1uj1fuubywgu2xudyy031r0eckaiu03pdrjjbi5nzfl5rei2k176g7gwps2lmwv6fltkyoeo4rdb4rw5it95hgwxfuzgsi58zi1fotmlhdslgzqxdgjgq1pwbj84g9o8iz\"\n        }, {\n          \"id\" : \"rwv8\",\n          \"type\" : \"twqy1nvaoa1opj3od8l8l99j1crfqp3ou85ucpw1ailkjr27a7fey7lzcamjj5evocn2oo93nj0973y12ca9\"\n        }, {\n          \"id\" : \"pl2m\",\n          \"type\" : \"b5yeyshelk3y7tka1ngmhuu8pkf40i2omhbhd3ddo\"\n        }, {\n          \"id\" : \"zgp8\",\n          \"type\" : \"8ng4ye4jqwzux4lexyktc451mwnqolor3mpy1ad3j31j0qn8qv5xrqu5z90sx6hpn9n0sz63qbqdle7jny6vsvd35xyuy7k22x36k64ov82bi0nfz3r2r7a7jht2dbj\"\n        } ],\n        \"links\" : {\n          \"self\" : \"irpy4ollq54g91req5m7z8p6hcupx4lz6thggg65f51wqy55t0qjubjkxi8v8pv0nbl7o0yrzz2mcdat193u7tum6slunqihykubs0wa1p8endz8x8bon9h3k4q8g6qzv2igd1ujz0kw0r8mgxthygd8aq\"\n        }\n      }\n    },\n    \"attributes\" : {\n      \"holdInfo\" : {\n        \"amount\" : {\n          \"valueInBaseUnits\" : 1242538967217242649,\n          \"currencyCode\" : \"BND\",\n          \"value\" : \"lulzifb9i4p9hu3dyzda95y6\"\n        },\n        \"foreignAmount\" : {\n          \"valueInBaseUnits\" : 1111363700299247150,\n          \"currencyCode\" : \"HKD\",\n          \"value\" : \"wo4fxbgsazqh4xi0jh72qze6v7unmfks9snnv15dv00625zkuod79v0cluf\"\n        }\n      },\n      \"createdAt\" : \"2023-12-03T06:52:28.831Z\",\n      \"amount\" : {\n        \"valueInBaseUnits\" : 5165637377739483185,\n        \"currencyCode\" : \"BRL\",\n        \"value\" : \"jlw7163ug1p4p0glqbtvpq00l3r9ny0b2vigo0gz\"\n      },\n      \"isCategorizable\" : true,\n      \"rawText\" : \"ya237726s3aznupk5epbn45z2n0cren8kq0ulwa52327zyr92uyq0exyz6m08w4d21i6vx7qf6b8uz0fiylfzmg88nn74s2mhbn1w9er1y\",\n      \"settledAt\" : \"2023-12-25T02:36:31.831Z\",\n      \"description\" : \"Asperiores sit in aut rerum. Quidem exercitationem suscipit. Minus dignissimos eum explicabo et sit optio.\",\n      \"message\" : \"Cum necessitatibus delectus repudiandae laudantium ut reprehenderit omnis. Exercitationem voluptate aspernatur doloremque sed et ullam sit. Consequatur est ex enim nihil voluptates fugit laboriosam. V\",\n      \"roundUp\" : {\n        \"amount\" : {\n          \"valueInBaseUnits\" : 7334466734324420497,\n          \"currencyCode\" : \"USD\",\n          \"value\" : \"u5r5fepah71jyn2cuy26u8aaq1ey2hdh\"\n        },\n        \"boostPortion\" : {\n          \"valueInBaseUnits\" : 8270561758187834494,\n          \"currencyCode\" : \"UZS\",\n          \"value\" : \"zof7p1lq5hzqanp0anv1qi1mznxd96cmtmbzqfyttrerz0uk5oz1aruxkl5mokyhiqs16xu4oiyvv11lkrt83mkxqvi22wj18hwr9ize3gapn506focioyh22sn6pbuwpe\"\n        }\n      },\n      \"cashback\" : {\n        \"amount\" : {\n          \"valueInBaseUnits\" : 6577932129944615271,\n          \"currencyCode\" : \"KMF\",\n          \"value\" : \"7p3yq5bxyczwmruykbdom37m34c3w8wxoicj4k0o3tstie2fwjumi32vm0jdhpggnumfve1n9hz15e35cgay10eyepuq\"\n        },\n        \"description\" : \"Natus enim facere itaque. Modi magni delectus. Exercitationem error nisi delectus quia quas consequatur at. Tenetur vitae ipsam est suscipit consequatur quidem consequatur. Est esse et assumenda ratio\"\n      },\n      \"foreignAmount\" : {\n        \"valueInBaseUnits\" : 2965917755704245979,\n        \"currencyCode\" : \"KPW\",\n        \"value\" : \"e17eji4kaasp2n14y1bahl67yqvpoahlzxc7u41aq9axd1mw1ykmz0nvn45eid6icb2b15g0y\"\n      },\n      \"status\" : { }\n    },\n    \"links\" : {\n      \"self\" : \"eu57sisie4n4byp29eofo4zga7exkkc8rzcofat4526f8sbgfd66penxyjvatdninitij4bid5h32qnba5csdxt66o56mr18y6d5h\"\n    },\n    \"id\" : \"57f1\",\n    \"type\" : \"iiladplxt7bsurx6vqrsag5g8sn9tu4n8gay1vhc4tu1fjcykjswhfme1ekf0g1vuuzf8x7kkfiv1gio82tfmwzgh937l542la2ojxvsj19un4qfb54r05nkq6k25vriw9x8a9wljapntqdnol45z\"\n  }, {\n    \"relationships\" : {\n      \"parentCategory\" : {\n        \"data\" : {\n          \"id\" : \"2v87\",\n          \"type\" : \"m7ck6tc10a67890e6dvt6xuq9pi\"\n        },\n        \"links\" : {\n          \"related\" : \"12xneofwzb5psl0ojbzsr0asmxgp9pwn9o9kfste9tcb5sm77nqtr7oltq6epdzc7uomz8vnf8rvlui2kxj0kgf86kfri24roe\"\n        }\n      },\n      \"transferAccount\" : {\n        \"data\" : {\n          \"id\" : \"5pzt\",\n          \"type\" : \"xy92hfyr98f16fu2184vlt7eewu0wym3yqqvghs0l4ssg3kfp623rhf05h8glqksi8obuz4r07nnh4i4mz6966by0jlnrxrisus3epplu0cvluz5ugu0s9vw6941re2a0fgrxekcz808lxqwisolsve\"\n        },\n        \"links\" : {\n          \"related\" : \"h6juup2wxxth141lo4s5i66n3khd25tde3\"\n        }\n      },\n      \"category\" : {\n        \"data\" : {\n          \"id\" : \"l1ln\",\n          \"type\" : \"ld9a932dcfor9i82bolegyt53vhbuihxeif9bz61vln1gofarrc85rr4ovjkts9i2bzr3wzhjckrxz49or70tsjfsxd5utc7xzd3d8jrsm8j6jadv89k5c1gqpguj5xgkf83hc05wt7ltgp0n3uhluypu\"\n        },\n        \"links\" : {\n          \"related\" : \"z8zyb2a75xd1e4uoyktllb7g5lzcnew4t8g3ngg6ffvagfdhuzu5l1h4yccg7dt7bbufvitvumg6mmtqk\",\n          \"self\" : \"8tfa05dtr41kvmde83h4y79g1ljg3ejrhh3lwi4kqccf9kcb44espc3es8qr9ipq9cmoe3fmmb2zrcv5pp785rni5tfl5bt7gx71\"\n        }\n      },\n      \"account\" : {\n        \"data\" : {\n          \"id\" : \"4m89\",\n          \"type\" : \"kf34ve7bi080vtzcjk0pxct1h447hwg2w1l5zr6re5d6r3iwlcgt4odk1stqvi38esgevc\"\n        },\n        \"links\" : {\n          \"related\" : \"eo3axh44z8rh2ksxjxanj52rl9gqt79h2yulppl8wyf1u0e6gq4ro0p8dzirc678y8ue0gyqw5gcpq1ja772g659b0o5v04nkjkh3zb70ycfau5biuomc43me2yhrrf51raa8cb3k054l11\"\n        }\n      },\n      \"tags\" : {\n        \"data\" : [ {\n          \"id\" : \"8aj9\",\n          \"type\" : \"6wrg2d1zv1s6gz3rn596hisr5myspb9wesxqu6tf9bmidacxsu7ulbxmyfv3t65kcs0ov\"\n        }, {\n          \"id\" : \"i2g0\",\n          \"type\" : \"qxo3bxseabbltpwtjjcdl0ilqybn2s5nfmqvfplky0cxxbqmty9g6q4k3cq977z4v9tj21lim4oygzjv89pyki\"\n        }, {\n          \"id\" : \"55dz\",\n          \"type\" : \"vefwonpaqgcw1dl9ozo3s0cmyfn9jn3a0chqz9a3d1c0kt7ft7dxi2pyypfnxx5y3vy5yj0kzgt5vtiqvanumc0ojy2xmprssjmx78m8d5a12avxpgzeiwlfi7bjcnn1wn3yzcg7y7c2gncgfzd5jpxjpkewr8i82c\"\n        }, {\n          \"id\" : \"7n4p\",\n          \"type\" : \"j8atb6weh45hqk3nkbhy3ebx0ibru8840tpt6w0zcn9w1n1uuhgw9dvflp468rfbx0hj1u0scxj5lvurtqpbmfl\"\n        }, {\n          \"id\" : \"5290\",\n          \"type\" : \"b9nuadmqvkatgcgjra2rdibkbrp0cfmyblcr76cp0cqw9yomk2g2y4cqlb5ts\"\n        } ],\n        \"links\" : {\n          \"self\" : \"8gativixpfht4h5lrhjgkclkwnp1l816pdwrmuir2gs378i8seamegh99qqpn8rnbmlno0sp1vrzhducw9tocme\"\n        }\n      }\n    },\n    \"attributes\" : {\n      \"holdInfo\" : {\n        \"amount\" : {\n          \"valueInBaseUnits\" : 4674836486693658595,\n          \"currencyCode\" : \"GMD\",\n          \"value\" : \"lykexodnh52767jrlq\"\n        },\n        \"foreignAmount\" : {\n          \"valueInBaseUnits\" : 628577935078370921,\n          \"currencyCode\" : \"HUF\",\n          \"value\" : \"k9gg1nj5cqpy2hee06w0mmxl5t6cfprutncfpva3iygiavdx86jlanl7d2evol3bk13czftn82epy929vq23qisqieczhz2adysfl6ltd68b5c5k7wypfn\"\n        }\n      },\n      \"createdAt\" : \"2024-02-17T21:55:16.833Z\",\n      \"amount\" : {\n        \"valueInBaseUnits\" : 1358154869136677756,\n        \"currencyCode\" : \"LVL\",\n        \"value\" : \"769m\"\n      },\n      \"isCategorizable\" : true,\n      \"rawText\" : \"y8sqymsl6orodb7oli3b8slq51g5c5uanvoc37bk26g\",\n      \"settledAt\" : \"2023-04-20T08:24:23.833Z\",\n      \"description\" : \"Sint inventore qui autem facilis quia. Debitis debitis ex suscipit a tenetur rerum. Officia unde ut deleniti ex iusto. Dolorem vel hic. Quaerat dolores repudiandae debitis.\",\n      \"message\" : \"Temporibus consectetur fugit accusantium velit. Veritatis numquam et iusto. Dolorem deserunt voluptatum explicabo itaque totam ad.\",\n      \"roundUp\" : {\n        \"amount\" : {\n          \"valueInBaseUnits\" : 6149027507400552067,\n          \"currencyCode\" : \"GMD\",\n          \"value\" : \"rgg6tgfq4elb732yqu2yht76hnarc943s4eqzcdhej45cab2j9ioufnw5slwviymxr8blt3ryd756nuoaeuu5ga\"\n        },\n        \"boostPortion\" : {\n          \"valueInBaseUnits\" : 750934716582072719,\n          \"currencyCode\" : \"KHR\",\n          \"value\" : \"89a0b359nq0k1zezvk1qwhtankcrvui4qvpdaly9lm7250w30kokqn1h1rwxfd8e24b25cegsel6lka7i30hugd1t46bhhz1avawvw8uehbr6xkf9z0x47vmrehw950n61cf1p9ck3kafwh7xvxcfiplzah9t9f3wlcarq6krl8i5xzk64p1\"\n        }\n      },\n      \"cashback\" : {\n        \"amount\" : {\n          \"valueInBaseUnits\" : 8020849450630781782,\n          \"currencyCode\" : \"XPF\",\n          \"value\" : \"pjtg5w1npvzcw024\"\n        },\n        \"description\" : \"Excepturi non illum rem possimus eius molestiae et. Pariatur qui ea. Ut dolor dignissimos illo maxime.\"\n      },\n      \"foreignAmount\" : {\n        \"valueInBaseUnits\" : 210712623721941789,\n        \"currencyCode\" : \"MNT\",\n        \"value\" : \"kptav2h74fnuqbzbsjsiyefigwulxcwvydsqjwg4hlj5jzv8n10x1ggs1b8t2jvozr21eb36x14g8twimw2k48mms7krzhwxtbvy36hkzdw6cpqjhvssjn1a7oqajfrbp6fqui6z08h7ze0q7mf57dmij2m3f8hgvmfczzn84rlkq5a669ft\"\n      },\n      \"status\" : { }\n    },\n    \"links\" : {\n      \"self\" : \"vz7it1irl08tq6ouyfwkwwbnluci80utaog1mv0lq5hox7rbd9lc1stz4suu34nk678rizgigh2yqzsxnmp9ttibdb6g0t8yq0ektpj7uwhljfij9j6kvqqym7nsiwg2p2isxycg26oz8qajm82v4\"\n    },\n    \"id\" : \"4kys\",\n    \"type\" : \"02341yoyww8ie6gtxn0a9o10kip62225uuol9\"\n  }, {\n    \"relationships\" : {\n      \"parentCategory\" : {\n        \"data\" : {\n          \"id\" : \"7tbb\",\n          \"type\" : \"uiblvbr9x3rqtl0jt12hwesf18gu5ax62xxgceo021vg7phkzedmaroef5i\"\n        },\n        \"links\" : {\n          \"related\" : \"cx9hxb5sqxnwcvr78bxco90vp9fg2t0y8wdc2ypnkt3r919ke\"\n        }\n      },\n      \"transferAccount\" : {\n        \"data\" : {\n          \"id\" : \"1h4g\",\n          \"type\" : \"t636kd7se0hcnpvp0opghw9lu0c5j5ogygamxslv0u51ubv3lkikjkzolyizat8whb2ekykb96jl74ojmrh04pjn8x0nmc81p6e014vx4wp\"\n        },\n        \"links\" : {\n          \"related\" : \"3lfw955myf30t015usjvuvu59onfdih7jhi018t6zfjou4lq3nmfwqqkq8ykvev3ao72iinoozbf9kqzwiywtmxvb2ou4sh9fmyarx523v6ae92gxfe5cns8ileehgnmev8ttv0qu89zsmf8nhzy6jhlifa3iglzjv5mk8o1kojoc0rclkgg2rh3vfv1y5zznm3hv5d\"\n        }\n      },\n      \"category\" : {\n        \"data\" : {\n          \"id\" : \"0k88\",\n          \"type\" : \"a7nd6z1gqx5z19nhhrhrwht4o90emglaevpvxqeknf2sjd32299v9798cyeewnl8s05ylk1onbajwsairfzaxp02a3pxz3bulfxy6sl\"\n        },\n        \"links\" : {\n          \"related\" : \"3r4x3e4p9c10zt45b3nmjzd21u1nlkzlj11zhq226j907f2vn4ptqm20yiqe9ccrnyiidszjgytg8dojgydrbsdpq1mew888zma8w0cs3dl\",\n          \"self\" : \"5zim1f4a8lul8hoyqc1hv1tbf80vv1qqb48lttl4h3li6qr5q9bviw3jlrb0gbjn2yh5mp0earx5268tya39tevmhi0dwzcspu05nvbqiegp\"\n        }\n      },\n      \"account\" : {\n        \"data\" : {\n          \"id\" : \"2199\",\n          \"type\" : \"5xwnhwniwx\"\n        },\n        \"links\" : {\n          \"related\" : \"y6k1iuim0clhg5jprhlq7zi5v1ebfahchrgxgeyxa699dfn3b1kymhuhzophj1eh0uulqrgvp777cnngcdbgvicm5csfhcd8lgji7p9k8rpuaq6uzdqpaqiw5q19xj\"\n        }\n      },\n      \"tags\" : {\n        \"data\" : [ {\n          \"id\" : \"9gs0\",\n          \"type\" : \"ikgahbi60za0oaqpibabpn6ryosmcks98rebea8ji0pwdjq8fksc6dba6jdmds6n1j5uh7ld5ne5avbyag0gsu879v2lsw2hnw4kz1o71c4bf9fxrs663eecvj3w\"\n        }, {\n          \"id\" : \"7664\",\n          \"type\" : \"zrunbd62jacjam5hw\"\n        } ],\n        \"links\" : {\n          \"self\" : \"1s7s4znq1zywzd5ognrbvnvawlhr5purpcsu35x1413kg89rzjuutbdy5o0gkv5xwquoclw2c694xyj00stjy75nlc44kubhcp3g37fg8qpol4jojkool41p0c5lxvt3zbtzpnzluwog1c0ecng7352mxe8o0\"\n        }\n      }\n    },\n    \"attributes\" : {\n      \"holdInfo\" : {\n        \"amount\" : {\n          \"valueInBaseUnits\" : 8602148557154821632,\n          \"currencyCode\" : \"EUR\",\n          \"value\" : \"5q9mnxe23kobci3p7\"\n        },\n        \"foreignAmount\" : {\n          \"valueInBaseUnits\" : 4154142110398561978,\n          \"currencyCode\" : \"GTQ\",\n          \"value\" : \"137d59xy0ffvdeexiatg53co4xyb3jvxjwwql5b4a609e02rsvpzzyo460imqu2cmbve6v3rdp4ipcd88to0fjsr0kyrh8erdtrskut7q4iwdi3besmtrohigmvm07vmwd5aaixhg67l\"\n        }\n      },\n      \"createdAt\" : \"2022-11-14T19:18:02.834Z\",\n      \"amount\" : {\n        \"valueInBaseUnits\" : 3348753078589418205,\n        \"currencyCode\" : \"EGP\",\n        \"value\" : \"4e9pfcz012io3zfyd9ggprvdequi7drfqfygyepgldwwz\"\n      },\n      \"isCategorizable\" : true,\n      \"rawText\" : \"cx6o5siqhxivowyenqkbq7ry8ka77rpjx9pmgz2yy5i5xipwfavq67ok774eob8cw5prvstz0wbrk94zvmkjxbmoc\",\n      \"settledAt\" : \"2023-08-03T10:10:06.834Z\",\n      \"description\" : \"Alias qui sed iste distinctio vel eius qui. Ut quibusdam iure. Quas ducimus id placeat eum maxime.\",\n      \"message\" : \"Aliquam nisi ipsam temporibus. Sed voluptas ut. Quia eos sint rerum quia nihil. Laboriosam molestiae quia sunt sequi. Aspernatur enim voluptas aperiam minus et.\",\n      \"roundUp\" : {\n        \"amount\" : {\n          \"valueInBaseUnits\" : 6742568477360264363,\n          \"currencyCode\" : \"VND\",\n          \"value\" : \"n05e623yzgaja234q4s4b901pc341c321zid770afyxq9k8f7j39d3aaw0c7xputxvj16nh495tj8q1eoccg3yfof7grrsnq\"\n        },\n        \"boostPortion\" : {\n          \"valueInBaseUnits\" : 8466449777444368907,\n          \"currencyCode\" : \"XAG\",\n          \"value\" : \"6oppgcz4pjj2sru8bltkdi9qng98xhf7cefjuh8iyhdkhvgfmbbmvhblg2akyr4kwg6uub4v0sy69iea2nwr9cqkb87kmugmo4j7uvoixx92zy5smeldmif8cplynuahms8vh8r8i8qyw54ynoknifapfvug1dc70tv0smewc9tkjqovupv1az6ujwo\"\n        }\n      },\n      \"cashback\" : {\n        \"amount\" : {\n          \"valueInBaseUnits\" : 4417595354240573055,\n          \"currencyCode\" : \"TOP\",\n          \"value\" : \"4j932cdaalv1i600baxy7dhyenpdp3xxuk\"\n        },\n        \"description\" : \"Repudiandae nihil ut possimus. Et eum itaque eveniet voluptates nobis minus. Debitis dignissimos non velit.\"\n      },\n      \"foreignAmount\" : {\n        \"valueInBaseUnits\" : 2997746108136056560,\n        \"currencyCode\" : \"XAG\",\n        \"value\" : \"m9itynehlqnx6v7c1pcvfiun1kd226jbdpyevq0te6dz81aa86t22444y3vghe65hukg8rvhwa8ybvsckycjaiuaidw187258euah30r7vx675g2zkqrxhv94f2uenzmn21572742qg8o\"\n      },\n      \"status\" : { }\n    },\n    \"links\" : {\n      \"self\" : \"s719w1mhr4kq060nfo6350tcwgk6e7srb5onx\"\n    },\n    \"id\" : \"8g50\",\n    \"type\" : \"f3mfp5dizr\"\n  }, {\n    \"relationships\" : {\n      \"parentCategory\" : {\n        \"data\" : {\n          \"id\" : \"1sx9\",\n          \"type\" : \"4ijczl8g7aqbcdjoa2v7b2uckbnovx8xeowtqy2one4r06cdn1u18plra5dcn9eikaatx4b7pufyg5rbjy5k5j9f4p3f4falr31ziur50u1ldk9wmtazo2vter43d40eqkpx\"\n        },\n        \"links\" : {\n          \"related\" : \"f6xrhbmexk2wut6d43jc3l1g6ecf7494sjwmr3v3f6jb2iuvoc8txejz07rzkxci3gvyb6go8rtw93g93u2d0d0324s2ngmig6i36dh51xnsx12b70egkgb9ug42nh6k848t8yed50ttsaa2c8ku1pbkfc3\"\n        }\n      },\n      \"transferAccount\" : {\n        \"data\" : {\n          \"id\" : \"tz08\",\n          \"type\" : \"5k4cv1cfj7jdtzl7jpkohtwx4uid3vci7k0drohb4dn4u6d85qit2e9o7xvxj4w2enldarht265m0iid51js8tt46q40mwuh6i3r03kvidyd5vrv1l734ytxcn5g77r6u16kyirt7w4bmm5437qn41vbuxh5ednh7\"\n        },\n        \"links\" : {\n          \"related\" : \"231p8nbzuh1dawgxind81n68psbhx5ymy23v8yaquuyjaeqxshc2q3r287n1p333iq9m5sm7fdqqsj3svujiwwboxabwp6dua591zh7w20j2v17n0tchp9r0dj360zzrtt1kkgu3olz7vapvmy5y4bi4okjsblmx8crcaujt8rwq5ziyfi8d2ml1yobp\"\n        }\n      },\n      \"category\" : {\n        \"data\" : {\n          \"id\" : \"ta22\",\n          \"type\" : \"cndzs7wuzh2qgi7qunh5wotxa501way3hlm51gz9voyp7swh0zpce1tpm6adj52bhgdhhh0zpgmjqkcq8d165gbd6r1e3vare6bm075aciq79eq7zxyjdm4dyaabp5mloxrh2uo05w96ca\"\n        },\n        \"links\" : {\n          \"related\" : \"dhkozk79j4g6gssicnzquxyeuq1ppu80sd6eca36axvx50w3tg94009042nkgtov7sbibtupw6pkigcltmvb6ntgjzv4\",\n          \"self\" : \"d8qeksn0jmugeeirrxs2uqlqek8cj2rp2n6a3h8lwv83wgknag0dw7h53x0nycuiz\"\n        }\n      },\n      \"account\" : {\n        \"data\" : {\n          \"id\" : \"0dul\",\n          \"type\" : \"kudt2rhz70lim957niqi9\"\n        },\n        \"links\" : {\n          \"related\" : \"a2cf5vpk\"\n        }\n      },\n      \"tags\" : {\n        \"data\" : [ {\n          \"id\" : \"j45f\",\n          \"type\" : \"7n9a2zavd01vgz6jqg2pt4bxarqw4vm5pu70xoenwsln719i32ipeivtqa2mkpvkav6vynjvz2i69gkopudlb3sd5x6eh7asa0qlcbbc2euzi68mo9wlj3clp7eum6ohli4kflu51w8kknhogb11u3pzkqegj15gvt6ugzu4kk4odxm9dg\"\n        }, {\n          \"id\" : \"gtsw\",\n          \"type\" : \"ftvn2ifzfw83kldxcyd3lze78yi5128dtfdsdt57kpoomvdeh8acic7ek299c588ow93cs6sg584z3a1po3bbrmp8fzyofjgeusxwcn960fwos36wzpdoh2fq2yh2pk39bj5vlv4bfzfcjlxoy\"\n        }, {\n          \"id\" : \"194f\",\n          \"type\" : \"qdiro83\"\n        }, {\n          \"id\" : \"akz6\",\n          \"type\" : \"w641x76dmrzbzs6sq397qqi349hwbs1g\"\n        } ],\n        \"links\" : {\n          \"self\" : \"s55rzltvdq0h1ijaqz37erys5xpmzzyl7nrnnndghm0j1h\"\n        }\n      }\n    },\n    \"attributes\" : {\n      \"holdInfo\" : {\n        \"amount\" : {\n          \"valueInBaseUnits\" : 8230247996637191556,\n          \"currencyCode\" : \"ALL\",\n          \"value\" : \"j12v4thid4aqe1ij48x9xnx3gg3os\"\n        },\n        \"foreignAmount\" : {\n          \"valueInBaseUnits\" : 4311593324363667615,\n          \"currencyCode\" : \"PAB\",\n          \"value\" : \"nuvsv22omiajbdw1bgigwxivm1sr3dbhfil5vae8772liz2vgejj01lw1ncy0dka37e88qozt26m8esypz4jz2wjsd95swj75chdmupzys5pcm55kathtx8gnyvppq3nvjh32t8i0jriviyeue6nbl0ztcl5qillawoiecm1vpjqc3y3b8n10whwf\"\n        }\n      },\n      \"createdAt\" : \"2023-11-02T09:53:51.836Z\",\n      \"amount\" : {\n        \"valueInBaseUnits\" : 223788997593165539,\n        \"currencyCode\" : \"CHF\",\n        \"value\" : \"5gee4vd7i8jlgvkso10lj9foqez5j6dgagc7x49323s2zadbwyo12yfqrb5d75736dbikuxsefk2lj9yx3whd2w1jkwisp33pqs8ntdde122aq7p3urkrubog8v515f5nw27pl4s1hno83xryclwsxno79xsm9plw314njf9hfdx5vslut2stj5slhc54ilakfd3j\"\n      },\n      \"isCategorizable\" : false,\n      \"rawText\" : \"0ynznemxorbevwsnyvb6rgydk2iris8h06l1qngdazi6iqldk823ccaiw347eihnalo7r8en5zn0s9ngciw716jl20mrrnidgvypp4w5g8nvx1juh1d9i6robukbpnpzm19050idrd1o16zdoazyu8x9eaoqo6\",\n      \"settledAt\" : \"2023-01-23T00:41:23.836Z\",\n      \"description\" : \"Ea dolores debitis officiis aut. Est voluptas consequatur quae ad. Consequatur perspiciatis fugit illum odit.\",\n      \"message\" : \"Corrupti distinctio quia quod expedita. Consequatur harum est excepturi et non. Molestiae consequatur dolorum in quis debitis.\",\n      \"roundUp\" : {\n        \"amount\" : {\n          \"valueInBaseUnits\" : 529831019822834055,\n          \"currencyCode\" : \"KES\",\n          \"value\" : \"dmg3hf4esrfkz9\"\n        },\n        \"boostPortion\" : {\n          \"valueInBaseUnits\" : 5525565376474251528,\n          \"currencyCode\" : \"EGP\",\n          \"value\" : \"6ijqicm7cfzifeakopjh7sjov2at3zvyezzr2u7gw9upwn477ikqf44jwvyncgt1546pahp62w0ku2irw8q7dsflbpc6971j9sw93jzoskfka99kz4ybukcs1m1d9i4koga71r4\"\n        }\n      },\n      \"cashback\" : {\n        \"amount\" : {\n          \"valueInBaseUnits\" : 7052119112757982348,\n          \"currencyCode\" : \"BMD\",\n          \"value\" : \"o2gniq16pf286mdarkqt3sffh2y7vh3tvhqw2epgh2f07739lacxt9vwourhq1ql9yg4qt145\"\n        },\n        \"description\" : \"Aut qui facere. Nobis voluptatem libero magni vel quasi amet. Et maiores voluptas debitis inventore neque qui. Molestias ut dolores eius rerum nihil atque. Dolor possimus explicabo autem sed fugit rer\"\n      },\n      \"foreignAmount\" : {\n        \"valueInBaseUnits\" : 4873778061342034686,\n        \"currencyCode\" : \"CUP\",\n        \"value\" : \"vwk4v2xih602yggxrjss44yq2pgll1w7kdtn2vk9pu98zja3dfm1dbwmol7ycsadsv9hibftq87etat4htiiwawrxtsqq1bp8j0e63wrg38802g7y2l8q3dbw174z41pgjqup\"\n      },\n      \"status\" : { }\n    },\n    \"links\" : {\n      \"self\" : \"3xjljomkoj344eh04w99eb4v1b80cjjrijrvuuqd04qo0t2kbaftmsprqbu3qcdhuj1uco9ovd0s\"\n    },\n    \"id\" : \"afr5\",\n    \"type\" : \"y6kddg7rlebi2ro1g4btvaj6baap21wsn4avq238uxiw2jvfddj9kbrjnb0h9t784oofp7h606dolne\"\n  }, {\n    \"relationships\" : {\n      \"parentCategory\" : {\n        \"data\" : {\n          \"id\" : \"71pp\",\n          \"type\" : \"htjxwqmv4k4rg0yljo3m0g5raoeh2zgehj5rb1djq8ahxeqrsjdvpbiylvfz98l6tcrfelcb0ckiffbqwsozo6k4g1fnj22th549ycv7clex3r0qtm8rmxkre6h3uptvpls8zwtnle9v0eav5193qkepew6779rdxckl4rv8m3cbfc5i6e\"\n        },\n        \"links\" : {\n          \"related\" : \"navvr4dnzkbjirq16b1m51l9mbvryr4d014dhxq0cuz1e46btchhdebjk02uvu39q69njc28p4mzg5y796cafsjggzds7qtdsqicfjuh1tu2ounf5hupxs3m53v53o5n78llrwxukp4md2nd9zm5p3diwk1og43t\"\n        }\n      },\n      \"transferAccount\" : {\n        \"data\" : {\n          \"id\" : \"3bs9\",\n          \"type\" : \"hqr6qfmoykcevjtoiwa1etz8rc87v9zenlwfk33zibfa1d8rubws6ng5uk64k8ia6shdvw25o544a5qqyud2y8dl1tr92z3\"\n        },\n        \"links\" : {\n          \"related\" : \"1f8hv70lbl13s3m0z6ej2qomvigwa8ec7o8eplc9kggyuy9h2kgvpynzlxttk6572h1e66wz38op6025b5goo6afer6jz\"\n        }\n      },\n      \"category\" : {\n        \"data\" : {\n          \"id\" : \"0508\",\n          \"type\" : \"dy91optujykiyzoa9bzeq0yarzds59rsm3x8k2iur6fbpwqnep93ey37bney0tl7gdiueedcpyjbr9pyibdeax7foyva1cn70ubi198rltpgn9i72mg9dhv6hwub5gcbwh8l1fca7gkvli5fgwtlglkspmhajatnpgmfj7tso54fejew150pnbxlmf07hy67snnzrr2\"\n        },\n        \"links\" : {\n          \"related\" : \"fl9xr35mesosfyf2ykjno65tcyyxnwkrv9apm5peunxgsagnm1qid9h81bbssduyz1cvpt5t5bj7vd9zm2bslri8k0sw6rrstfj\",\n          \"self\" : \"e693j3gbuda83frtwzuffa1p7dmqzkcnvblywugay\"\n        }\n      },\n      \"account\" : {\n        \"data\" : {\n          \"id\" : \"ma34\",\n          \"type\" : \"apd0iq9l54ajcasni5tmn85cxkxyhd4hkkrxg1v03kiwozinan24t8bxuwadbodc5mve43mn1so6qt6mqqui3u782yzn7qdjy7\"\n        },\n        \"links\" : {\n          \"related\" : \"hn0u7s8svk2txvlz7r3h9tc6z1ztw\"\n        }\n      },\n      \"tags\" : {\n        \"data\" : [ {\n          \"id\" : \"yh52\",\n          \"type\" : \"ideetzoqe6as6oj13883gj1fib2wejo38w4abg91cz9pqexynsmr4jdzev03ts3339xv6au0k22fcypqe3jd7r81i74pf81hbsdw3wc5h1zq4ryujutttohj2ljumziwzhahoqpkkmhq2q\"\n        } ],\n        \"links\" : {\n          \"self\" : \"1a11x9bkiosvav2m0wnstxcohte0071kvsqbqnxy5cw2sy01cqqy88xmw52ja003na0e0hu52w2nsdd61afj2iucxnqnjvx3toqqnfdm7a1q8qnidr2kmhh12xx2o2kg\"\n        }\n      }\n    },\n    \"attributes\" : {\n      \"holdInfo\" : {\n        \"amount\" : {\n          \"valueInBaseUnits\" : 6863896188067916651,\n          \"currencyCode\" : \"CRC\",\n          \"value\" : \"63e20yvlk42wizcp5slvu80z4kk09trl72ca124xpad2unq928gct3jdruyy4i8sj0edwo5sqwqc657099ue65w6r12q6b0cld48z8r4eq7q6r4ysj9qkjwe9juoqh41ahi2a6irvga2vu4zc63jk52j9nxt108zudgbrthrz6uxcdprdbiq92z8ah2ol\"\n        },\n        \"foreignAmount\" : {\n          \"valueInBaseUnits\" : 4068326256356320494,\n          \"currencyCode\" : \"TTD\",\n          \"value\" : \"kzs314d9c17neqj4h8hnhkz7roq3kz8lf0jmhrosu4ydh5qg8immi4yj1v6ewtf7kpf13dgti0562zu9e711lojx0eyfs9mtxjri6t064iybnyc1cbzxlifb\"\n        }\n      },\n      \"createdAt\" : \"2022-04-16T22:53:23.837Z\",\n      \"amount\" : {\n        \"valueInBaseUnits\" : 5614334984481375096,\n        \"currencyCode\" : \"VEF\",\n        \"value\" : \"e0vsucy80csll6jqfdci0i6o9vbknhq75oppgeq8tx94x4iezcnaaaohx9j1aq1jn4dfw52u5ghivtu84ah7ch7ir2vig42powffxp1fusmk00f71re45ro4z\"\n      },\n      \"isCategorizable\" : true,\n      \"rawText\" : \"s8tgs9mdfb\",\n      \"settledAt\" : \"2022-12-20T18:00:35.837Z\",\n      \"description\" : \"Dolores possimus minima veniam. Quia error facere aut. Eos hic quos at sint sed sunt. Harum impedit dolor assumenda unde veniam.\",\n      \"message\" : \"Aut quisquam facere. Accusantium inventore eligendi voluptas laboriosam sequi enim eligendi. Consequatur et ab dolores. Tempora consectetur perspiciatis et aut veniam aut maxime.\",\n      \"roundUp\" : {\n        \"amount\" : {\n          \"valueInBaseUnits\" : 4836207766556416895,\n          \"currencyCode\" : \"SAR\",\n          \"value\" : \"n38pig44jc0c7yzi4fd4uun510f7ntlji0v2txqmsr372y2872pprjh6qitzasvcq7ppp99fla61m2n9ej1veti0nv41wu5z1ahjd5hus54vf66qi9q6tkpqi5akyjrz7sc\"\n        },\n        \"boostPortion\" : {\n          \"valueInBaseUnits\" : 8105994782187135538,\n          \"currencyCode\" : \"XAF\",\n          \"value\" : \"f2kgs6ioglmaysyun9eq68lnfee92sm97442pyjqkkyiocptfj5fzzlpq32amzz7lz28ihz8zznv4z0lk5u26f2wm8m0vcx1a5chtze2htbl16jtyfm3440i84yinvqyh9au8ztovibr15nj8aw5ux\"\n        }\n      },\n      \"cashback\" : {\n        \"amount\" : {\n          \"valueInBaseUnits\" : 4585747762977160761,\n          \"currencyCode\" : \"GMD\",\n          \"value\" : \"w7hivb3jeqyar23887hje\"\n        },\n        \"description\" : \"Reiciendis nulla aut quibusdam. Similique voluptas soluta. Voluptates optio ipsa odit quod et minima ut. Ut dolorem ex adipisci illum a. A dolores cum reprehenderit.\"\n      },\n      \"foreignAmount\" : {\n        \"valueInBaseUnits\" : 2242322694989196173,\n        \"currencyCode\" : \"MZN\",\n        \"value\" : \"d2azmn421yr2hdxommbrolu4c2uvxj5d8udvhd7cznt0yanjjnfxsuij2oj7twbys5r8nqbpqrzvzg7v3sodxwe0k03m8vqrxikg0u44jbxfgmjlq3au486cyt4w9wezb3g4purj3bvk6gotczl6gt2bk50t5orzuyjh6pwq03tqcm16of54hjtstu69bqwnq0\"\n      },\n      \"status\" : { }\n    },\n    \"links\" : {\n      \"self\" : \"zb5elgvtr3ozdq1l913jlna6hf3tnofz\"\n    },\n    \"id\" : \"m915\",\n    \"type\" : \"e0k4ec9jobeu0u5s05lngx1gs4rqm0a4n2e8osnh7xthys3obxmcqnum458fmor4al5c2t1fcw7wd\"\n  } ],\n  \"links\" : {\n    \"next\" : \"hlvasfrjt24oxboxal49mk5bncks652mvozgmdo3cv52d2h5a41ttszolzbrf89yewarnryn2ufixmz6nx0fk\",\n    \"prev\" : \"a9z9deslkdylln0moqhqyqyasaxsoo50r\"\n  }\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "ebff4c43-8bf7-49b7-b694-9405c4f15d81",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:27.838036Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "(none)",
+          "schema" : {
+            "description" : "Successful response to get all transactions. This returns a paginated\nlist of transactions, which can be scrolled by following the `prev` and\n`next` links if present.\n",
+            "properties" : {
+              "data" : {
+                "description" : "The list of transactions returned in this response.\n",
+                "items" : {
+                  "$ref" : "#/components/schemas/TransactionResource"
+                },
+                "type" : "array"
+              },
+              "links" : {
+                "properties" : {
+                  "next" : {
+                    "description" : "The link to the next page in the results. If this value is `null`\nthere is no next page.\n",
+                    "nullable" : true,
+                    "type" : "string"
+                  },
+                  "prev" : {
+                    "description" : "The link to the previous page in the results. If this value is `null`\nthere is no previous page.\n",
+                    "nullable" : true,
+                    "type" : "string"
+                  }
+                },
+                "required" : [ "prev", "next" ],
+                "type" : "object"
+              }
+            },
+            "required" : [ "data", "links" ],
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 12
+  }, {
+    "id" : "0456d43b-8bfe-432b-9db5-ef79c15fdc44",
+    "name" : "List tags",
+    "request" : {
+      "urlPath" : "/tags",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"data\" : [ {\n    \"relationships\" : {\n      \"transactions\" : {\n        \"links\" : {\n          \"related\" : \"zaxpwkb5t7dinvmadppmkmt3s0a41qds1njelw2trhsnbamaan6bsx6vfk835mzziufjinxiysrpzl3htszhvd5ezjwsjp7mcmqb7ysd21dj95oqq7hw8j8u3vaot7t3oe5i9cuiescpgx5q06oomelpteidumi40kp8a93wn4qj0yy93r4533z3xh35id\"\n        }\n      }\n    },\n    \"id\" : \"laj9\",\n    \"type\" : \"fa4wsptiekgniw3zs4icgwn7wsmz53tluy5d6zgp13ekjgm72cd0i0z7nhvaxxik5eci0wdqxsfiwpxyyetih74icu6fludnnkyi2srp5v4r77lvnsm4ry25pgn6npm7givwc87pi4electj68s02nuwf9tj\"\n  }, {\n    \"relationships\" : {\n      \"transactions\" : {\n        \"links\" : {\n          \"related\" : \"t60bfz00xch2kzx4bmvzc8aum58jf\"\n        }\n      }\n    },\n    \"id\" : \"mzk3\",\n    \"type\" : \"rlw2taai2rx1zr9j7yy33bkdshlai6mij0l0es2e\"\n  }, {\n    \"relationships\" : {\n      \"transactions\" : {\n        \"links\" : {\n          \"related\" : \"2mk5c219dy36ilg5a5vlr327f1iczfuo33z4wugdelc59q1v8c86h6rkky5t7jw7j5pkddz7ky2l668cunvquhjnjk\"\n        }\n      }\n    },\n    \"id\" : \"0yaw\",\n    \"type\" : \"qtc7ubkrofllxpz2ihzbjkueu10f7fqzti750jefi2hsurx0kxi4e084z5gjl8kfzxyqt1oshgpjac9d2yy23c3mrj6xmqa7r4tqa0u4urje0cmpi815gnps8gwu10gofvc2qktpsa5dh6hg2jdq0eeq3mgmqrl21ofl5bh9uuhhvj1i3704\"\n  }, {\n    \"relationships\" : {\n      \"transactions\" : {\n        \"links\" : {\n          \"related\" : \"9cepkdfgj8ybm1hnt3dyhb3ftx63hy7gjdlw8ntfxibajxj8tm67ib88zv7pu0f0o46ou533g4qv43uvl3s7qozx36qqvq23hv9x5fc9bao6bl2gvhwpmn9kat0vue8fu6lqzh2butxht0n7f15a2g0qntozxlui67z3j2tiuowjfwygku5eyf2jqgcm1b6290me\"\n        }\n      }\n    },\n    \"id\" : \"38k9\",\n    \"type\" : \"o08sid7u6prndhxwxf8x2torpj4lnd5zenp4z6uql8a0mv8gzyrvfpcaocieyl9tpf60aazpb40yoxmnp8legfnt52gqzjtzr5ujna1ygjclkt\"\n  }, {\n    \"relationships\" : {\n      \"transactions\" : {\n        \"links\" : {\n          \"related\" : \"0k6vufke1c1chvrkore7sv8x1ynvcsjmm5h6bssyyxrmbtbvc73a57izbiqtsdnf90eb00cz9tvxdq5gj6wtnzy0xfpb2bymttw15qxi7c9skavsl298g4z6zhwazf1lu10t2nln22fs\"\n        }\n      }\n    },\n    \"id\" : \"o50t\",\n    \"type\" : \"qxyo9h0m3lsw0z5n90mqx3uxot4ovch1gdw1z18gtg1r9awwle5h4ro8uv8rkcluefws3rhfx\"\n  } ],\n  \"links\" : {\n    \"next\" : \"fg6l5mngltc6reb1rd0k2fofysbbbzxbbnq6b42nl67uheiq88e8ftde8n16hujpmyysab2ex1lwgqo6ql7g3kidxarnmj9st9g69ysz\",\n    \"prev\" : \"66pvn6hxnm0pywpt5ze9bopbdus\"\n  }\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "0456d43b-8bfe-432b-9db5-ef79c15fdc44",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:27.830536Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "(none)",
+          "schema" : {
+            "description" : "Successful response to get all tags. This returns a paginated list of\ntags, which can be scrolled by following the `prev` and `next` links if\npresent.\n",
+            "properties" : {
+              "data" : {
+                "description" : "The list of tags returned in this response.\n",
+                "items" : {
+                  "$ref" : "#/components/schemas/TagResource"
+                },
+                "type" : "array"
+              },
+              "links" : {
+                "properties" : {
+                  "next" : {
+                    "description" : "The link to the next page in the results. If this value is `null`\nthere is no next page.\n",
+                    "nullable" : true,
+                    "type" : "string"
+                  },
+                  "prev" : {
+                    "description" : "The link to the previous page in the results. If this value is `null`\nthere is no previous page.\n",
+                    "nullable" : true,
+                    "type" : "string"
+                  }
+                },
+                "required" : [ "prev", "next" ],
+                "type" : "object"
+              }
+            },
+            "required" : [ "data", "links" ],
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 13
+  }, {
+    "id" : "5fae39bd-2715-4c3b-bdec-ae1862a92b14",
+    "name" : "Retrieve category",
+    "request" : {
+      "urlPath" : "/categories/qt15",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"data\" : {\n    \"relationships\" : {\n      \"parent\" : {\n        \"data\" : {\n          \"id\" : \"26s9\",\n          \"type\" : \"hg60kag4c9mpgq8g4g4ga457lsyl5svp9duwhnfgkn4e7yo0xi8rabcsn8tabsrxo0eiyl745vktzc6db72hd4u4juf8lck4rlndfyzcmuaz32hc7cv7xf32u09gpawvgzdjrwx\"\n        },\n        \"links\" : {\n          \"related\" : \"9sqyq6xwsik03i9vwug88mvb8oyv91lt7fx7mzdb9olfuxyfv62en2zkiergre228yviwnaxt8no9vcjzdhmm31zt4ax3wm2b6t1dumqkh9jvycfrr6xm1tkuhkudpx05n29lgbjfssj6agc37c8zl0azrkgd408h4inwukb0cr6k599res9d9o1mb70q05zfuv\"\n        }\n      },\n      \"children\" : {\n        \"data\" : [ {\n          \"id\" : \"6aj0\",\n          \"type\" : \"smk1qvhc7mlvrimreexandwa0tb1kv\"\n        }, {\n          \"id\" : \"f6pw\",\n          \"type\" : \"3w2a5h3xsr768js2fb86opupwkn0lu7j0lscqeh68zw0osgo41i72wrkhjih8y871ui6udmogt72bkb8bae70j9uuixatzzwqg1sglm3xlbyyjmurzh8b6k314bir8bc0bc\"\n        }, {\n          \"id\" : \"wz64\",\n          \"type\" : \"2s3m6db07nm78mbmjjavabg8a672748tiubk2ob0a0h92fu1uv8y8d53xkofu46l9x48\"\n        } ],\n        \"links\" : {\n          \"related\" : \"6sxahnxfwl24myq29vhx7c6px62cgbxdt5afe85u3c78s6tkcz9yn4tb114eqxgsiji1e7dxx4hymng3vlrajdfme0od9y6ataj782difqgi3whp3lmog7rrg26vywnim9qz5kxjr2fwhpnwnovymuw5gkzy9pb1epmn921cnrvwuuissyqupegtly3whn\"\n        }\n      }\n    },\n    \"attributes\" : {\n      \"name\" : \"Lee Gibson\"\n    },\n    \"links\" : {\n      \"self\" : \"8unlqylfx6wesp6892qojudo43z1th93gdkiku1apvtitcbry\"\n    },\n    \"id\" : \"8ue9\",\n    \"type\" : \"48j1sczjw3lqc1j9wr7s5vxps2e0lao4skitl8236gqtqvhokmw3z36zxag3jt11xoyptly0r2aloco40l5kz6t3bfj9o9ed49kkqbeci9\"\n  }\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "5fae39bd-2715-4c3b-bdec-ae1862a92b14",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:27.829843Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "(none)",
+          "schema" : {
+            "description" : "Successful response to get a single category and its ancestry.\n",
+            "properties" : {
+              "data" : {
+                "allOf" : [ {
+                  "$ref" : "#/components/schemas/CategoryResource"
+                } ],
+                "description" : "The category returned in this response.\n"
+              }
+            },
+            "required" : [ "data" ],
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 14
+  }, {
+    "id" : "5f15b54f-bcdd-4a41-b48b-ce7b3ee6e868",
+    "name" : "List categories",
+    "request" : {
+      "urlPath" : "/categories",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"data\" : [ {\n    \"relationships\" : {\n      \"parent\" : {\n        \"data\" : {\n          \"id\" : \"u63z\",\n          \"type\" : \"z4qjw53p9q3dy5fjxqdkw06ufm7w46ak4ugm0850wg4whnarxh2qyxrfnnqb7oea8p1xvsqrjnewk1dg78tv8d96fv0xbeoolkglha6s0d1t7pj3zyrua2ok2n9qtdg2ml2hid8t69uopfi02b00u1rp8bznho2vbvlppai\"\n        },\n        \"links\" : {\n          \"related\" : \"w55vtynj901m8dipku3\"\n        }\n      },\n      \"children\" : {\n        \"data\" : [ {\n          \"id\" : \"nwn8\",\n          \"type\" : \"1dg2ymlz05t4nzhybo267obtkd1hr9o34wllsw8oyppqaor5u3pgja0vw66r62eh0t4fefgluzf92yfi9hpjczw0p27c\"\n        }, {\n          \"id\" : \"0vp7\",\n          \"type\" : \"8k238a03i6l6ozfansqgq9abipzr3gw6i3tlk9wsxekrzcpolpf2mflh0vy99i0697dpoh3gf0vzbbb6659hcap8emzppk1\"\n        } ],\n        \"links\" : {\n          \"related\" : \"uy00lsz5wccxq3c\"\n        }\n      }\n    },\n    \"attributes\" : {\n      \"name\" : \"Buford Murazik\"\n    },\n    \"links\" : {\n      \"self\" : \"n17s95qvkzuxsl3uwz5fnpnv7a4i3fuqoliuklk3cbmfgjgol4ldaelcombg5tmvgjdp48wvn9lntkk9\"\n    },\n    \"id\" : \"zogj\",\n    \"type\" : \"pvlxv399nwksdh9jzq6e2blni3nejdioamg3wffkua7gdztdgwi85abws91\"\n  }, {\n    \"relationships\" : {\n      \"parent\" : {\n        \"data\" : {\n          \"id\" : \"er2c\",\n          \"type\" : \"6in2mr4ez9ondj1g1svc0bxew1xijfhtq05srhti3tm44557l9o9pz29c1gt2ylu\"\n        },\n        \"links\" : {\n          \"related\" : \"sqtdf18tuc71c\"\n        }\n      },\n      \"children\" : {\n        \"data\" : [ {\n          \"id\" : \"yb0t\",\n          \"type\" : \"vfl0mou0ae5g2suivowd18q8z1fv4\"\n        } ],\n        \"links\" : {\n          \"related\" : \"bbqrhkr6akfzf8\"\n        }\n      }\n    },\n    \"attributes\" : {\n      \"name\" : \"Darrick Abernathy\"\n    },\n    \"links\" : {\n      \"self\" : \"8xlqafgucqu5qc3m6y9ttp7kmek3x481lganbt6zr8ep588i8djuap3udoa82yyythxpxpk2m38k99jtr0j4yp9vmi1ys820du86xlmnd0s6kgl0jh7lyfoiszntduc0z0x92rozkbi75e5upd6ytadddk\"\n    },\n    \"id\" : \"f017\",\n    \"type\" : \"b65uppbqyfc8zsz2xgg5c1bjmenw0k7p328taskzbcrepsp0mssyzhws9hgdt57n9olhmp9bywpmjk8cy9ry2dqu14uqagiegkbv2hy8ss4t37ojpqd6oiqcl41bppkygbbiy46a3yuuqytdzvb1rzwdx6v1yrp7dboud1zntcv1\"\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "5f15b54f-bcdd-4a41-b48b-ce7b3ee6e868",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:27.829122Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "(none)",
+          "schema" : {
+            "description" : "Successful response to get all categories and their ancestry. The\nreturned list is not paginated.\n",
+            "properties" : {
+              "data" : {
+                "description" : "The list of categories returned in this response.\n",
+                "items" : {
+                  "$ref" : "#/components/schemas/CategoryResource"
+                },
+                "type" : "array"
+              }
+            },
+            "required" : [ "data" ],
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 15
+  }, {
+    "id" : "05602fb1-641b-47ea-aeb9-9264708b734b",
+    "name" : "Retrieve account",
+    "request" : {
+      "urlPath" : "/accounts/bs6i",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"data\" : {\n    \"relationships\" : {\n      \"transactions\" : {\n        \"links\" : {\n          \"related\" : \"zt1lq3s2gfmaajs56dxgzpu85\"\n        }\n      }\n    },\n    \"attributes\" : {\n      \"ownershipType\" : { },\n      \"createdAt\" : \"2023-02-28T12:01:44.827Z\",\n      \"balance\" : {\n        \"valueInBaseUnits\" : 2607304165666460525,\n        \"currencyCode\" : \"MXN\",\n        \"value\" : \"vpwr9mlalgig12plkez6xhlao1kl17f7u6zcaunstiu3zfuqd5igi0zhrlh8zluua713lqut215b96cboax1wi1k2pbkauie2t6jnzuzkl7rz3lfm1x5fnxrtj78zch233ax8x8s432k5989e7purblm7ld5nl00j1c0nj3zlyo9bax3l72l0qktgm4a0lo31cppivu\"\n      },\n      \"displayName\" : \"Charlie Denesik\",\n      \"accountType\" : { }\n    },\n    \"links\" : {\n      \"self\" : \"gtx3clbrufewujr4\"\n    },\n    \"id\" : \"9ktx\",\n    \"type\" : \"njjreg44vhe6hp0gxrlbmwlxeg3y7ncd4fyfc4fjpnpk2s744jym75nk5l0fguqrhs1mu3wynvd8h755819z370b3otzludnpoye4lv7\"\n  }\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "05602fb1-641b-47ea-aeb9-9264708b734b",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:27.828139Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "(none)",
+          "schema" : {
+            "description" : "Successful response to get a single account.\n",
+            "properties" : {
+              "data" : {
+                "allOf" : [ {
+                  "$ref" : "#/components/schemas/AccountResource"
+                } ],
+                "description" : "The account returned in this response.\n"
+              }
+            },
+            "required" : [ "data" ],
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 16
+  }, {
+    "id" : "2cd40d48-a5fe-40b1-8b09-b0aa6675cce4",
+    "name" : "List transactions by account",
+    "request" : {
+      "urlPath" : "/accounts/c45s/transactions",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"data\" : [ {\n    \"relationships\" : {\n      \"parentCategory\" : {\n        \"data\" : {\n          \"id\" : \"8in8\",\n          \"type\" : \"l7pylth8slnojk8mtay47n9ciz8luoqqnn1v750sehlkt867y99ou7g3xkznizp8jy1fcr8jp9\"\n        },\n        \"links\" : {\n          \"related\" : \"p6lklzaqwml6yyjogrw5emdmp7tk0c2gwnn7trrr9ntyc5b02bmtwpko9bhvt4o458m1eepopr2dswtqqividd215m1gqimc79dydo872fldbat6qn5f6dfmp5gjk2l19r0hxw7ae91o4l6ohj2db7yep7mre4auth0vzwcr4pum4zxkm918bqw1l\"\n        }\n      },\n      \"transferAccount\" : {\n        \"data\" : {\n          \"id\" : \"5f6x\",\n          \"type\" : \"6gl3pkxtz36zli4cm52120nn8tvbf6tt64hw85n7ojmrapg5ynvgye5uuhtsd4po3oluysyv74k2xfp8tbv89oqcvtnjf4hs9xxc4jxw8n36rit68h08gr1t1ckw92pw96ywlsxmj3b038m5lq\"\n        },\n        \"links\" : {\n          \"related\" : \"w9dir8fsisbfz500lex1vownqvcyxhs1jn7d0d9mpeg5yitxexltaibr8g03w42j0g7ffsugk4kqx\"\n        }\n      },\n      \"category\" : {\n        \"data\" : {\n          \"id\" : \"5u4r\",\n          \"type\" : \"0oachqd8g1olxwjc1hrv517ex53mcqpdl7oucns1fbvo1uinwqvqba7\"\n        },\n        \"links\" : {\n          \"related\" : \"qbakyx7fmh9ryh0u8tiy7zhbptru1znrbplyu6sxdohinehvwwc0oldk60upzdsu360m5q5na711rp7i4vwbp53t8v7hmeodjp11iwgj2s10muyjvrg7zt6ozcrvure8umi2t2wb5ltdot5denmm0abavmgqwsj4b65iedjsadlfa9\",\n          \"self\" : \"xm3tag15kgr2qbdih0nzh086xvfanw6wol2e40t4bq7a53r9jd5v7a6ehb85kpxcqfvdfkaph1lydnj8y6aj0lryz9i6dxnm6x\"\n        }\n      },\n      \"account\" : {\n        \"data\" : {\n          \"id\" : \"53ok\",\n          \"type\" : \"zhf1l6phkq3rpt3lf71mm7ri4la1\"\n        },\n        \"links\" : {\n          \"related\" : \"a8ujc928gnjm4ujk75bwh5yjkxo0cd3d6v0j2s07iohwrch1e5z945qh0oq4a5sxi66m67x1e1x3iczd9vh7gsqlcxoujxwfj9qg\"\n        }\n      },\n      \"tags\" : {\n        \"data\" : [ {\n          \"id\" : \"5pjz\",\n          \"type\" : \"uy1gb\"\n        }, {\n          \"id\" : \"5yk4\",\n          \"type\" : \"dhe3aqj5aivi1paw5fglprm6tz08xlsj8ia4d0rl119bkr1772gpn3o73bub076ptsj0fe14znt88xrxl8rv20io6vx00gc9l3lo4rscdq7qfljveembx30m7cksnrg1yshsf\"\n        }, {\n          \"id\" : \"ff1h\",\n          \"type\" : \"8b05itiwjlo2zbqensyhy536k6qr4uil34f2kz4byweurwdif1zu42v1ezoae3fdlwv6vwgu1jq6wqhf0vqnts19qsfcf12slpby204lnk86n7ggoiovp6vsf31ll6394pkizregs2\"\n        } ],\n        \"links\" : {\n          \"self\" : \"hk02t7cmitr16dv2fq9jqk43y1kcnlikxz04rnskoo86i3y5pveen8h16aja4nigs9ig4rlvv88l8tz6hk2r0plyt6sn5f0rezlsnnp36siihhscz3eah4fai35gfamir0vkf6yse83g9xb5eyyc6hjxh3i9m0vmh8yt25j5e9\"\n        }\n      }\n    },\n    \"attributes\" : {\n      \"holdInfo\" : {\n        \"amount\" : {\n          \"valueInBaseUnits\" : 1702561961662069577,\n          \"currencyCode\" : \"SZL\",\n          \"value\" : \"qpuosukdwj7zzwmi6jrmoyzmqts1wgv8ucogxjt29wb\"\n        },\n        \"foreignAmount\" : {\n          \"valueInBaseUnits\" : 4666532924803606886,\n          \"currencyCode\" : \"QAR\",\n          \"value\" : \"qg3xg2jhg557szazf9hf\"\n        }\n      },\n      \"createdAt\" : \"2022-10-01T20:24:22.822Z\",\n      \"amount\" : {\n        \"valueInBaseUnits\" : 5354355808676223789,\n        \"currencyCode\" : \"CVE\",\n        \"value\" : \"b2tdcovbylwr04zciat9rjdu1ud315h9ppw7gifqonuufay98z1p6sprz1sibxmro95vac568hc3pp50u596xovyf5lz7\"\n      },\n      \"isCategorizable\" : true,\n      \"rawText\" : \"z6913eam4nbahw8e8s426prpu9h87inalx5l74crge53o8b0jtfngepuok00xbetm99ahh64gid37gffq14e7s9gfe1k97k0xelo2pk8vst4lrw26n703embnhwgz4xdmzwnq433ibt4rj2668vlj7mgwzzreotg55ufc2xifhuxxjxea0dhl\",\n      \"settledAt\" : \"2023-03-09T05:14:52.822Z\",\n      \"description\" : \"Autem officia aut. Earum maxime et. Ad qui est suscipit iure ex. Ab explicabo molestiae rem nihil. Asperiores consequatur impedit.\",\n      \"message\" : \"Et dolor perspiciatis omnis est et consequatur magnam. Sit mollitia est. Explicabo ducimus harum iste est excepturi. Quia qui doloribus possimus veniam explicabo.\",\n      \"roundUp\" : {\n        \"amount\" : {\n          \"valueInBaseUnits\" : 5202512768124063972,\n          \"currencyCode\" : \"TTD\",\n          \"value\" : \"7jkt8jnq9v3eaecojcdoial3l3ykz7r2mgl6ot67brv550wyg6ekbw447cfp2p59a514e8ymao270o5z83ft89mhphd17b7tb7sjk47ubekowltb2a8kft8qql5vihheowe88g2x5hmnrkvaz\"\n        },\n        \"boostPortion\" : {\n          \"valueInBaseUnits\" : 2714346717550420235,\n          \"currencyCode\" : \"BHD\",\n          \"value\" : \"is12gm62q7xxjsinjb1nyb0y01jnvycsn2zyi3u1rigumk32ytsc0\"\n        }\n      },\n      \"cashback\" : {\n        \"amount\" : {\n          \"valueInBaseUnits\" : 3941000736613760917,\n          \"currencyCode\" : \"GBP\",\n          \"value\" : \"aqufefgv1vxvmer3lkvo72g8xnl08h8muuvfq4g9qgemazauqrgeo1y6wqc8xvqjlqm49mykr3idxrhyv5ukqltfscf6k2ugxe7gofbk7mxm9bu8193iugoq9iaslzfgdyep13y87urelajznukcqp4s4y\"\n        },\n        \"description\" : \"Qui omnis est ratione eius fuga inventore repellendus. Nulla ut molestias voluptate optio ut. Nihil impedit et est sit sint. Cupiditate accusantium dolorum aut minus saepe.\"\n      },\n      \"foreignAmount\" : {\n        \"valueInBaseUnits\" : 1605941962178301652,\n        \"currencyCode\" : \"JOD\",\n        \"value\" : \"xzh5z49i6db4ce5hp9cqos6fkomvtfuog7q2gkkpfcge1v8z3y6rtwu4qoixxe709t6lpeplzi5x4f53ttxwgx\"\n      },\n      \"status\" : { }\n    },\n    \"links\" : {\n      \"self\" : \"qia\"\n    },\n    \"id\" : \"k7eu\",\n    \"type\" : \"vr2pvsihoamnllmx39prpynk00w5r3e8nkjtlucuz8qigsb526tiy3muvpcxu31rai7d3otxekicrzc\"\n  }, {\n    \"relationships\" : {\n      \"parentCategory\" : {\n        \"data\" : {\n          \"id\" : \"4062\",\n          \"type\" : \"qy8u26zijsszjabbj8ssyqyjrzo0uhcidiyyw\"\n        },\n        \"links\" : {\n          \"related\" : \"t5r9kpe0frluk46igt4o0cep41ss9ak5rmqyje06hbsw60cwc\"\n        }\n      },\n      \"transferAccount\" : {\n        \"data\" : {\n          \"id\" : \"i7y4\",\n          \"type\" : \"8wv1cx1v4ktbk1yju6p196s1ew9s5z0iesown4317x5kms2vp1j5dma1jln4i2vzb2dbvr9wvzs8azq9xqqvw4klummmhvxngk8xqkpxsc0xjv2hbq6ut7g8szf64y\"\n        },\n        \"links\" : {\n          \"related\" : \"m7wo41da5tst8lcsyx158jnzfxa08qikeb6d5n6wldaasa9w9wotm8xpxpczz661emb0d4en6x5lwu63ubpwwm7jmudf8gfrdzth300xftc3anx1dnss7122ht1w586uwbm0jbo6hcp0o393tg\"\n        }\n      },\n      \"category\" : {\n        \"data\" : {\n          \"id\" : \"kr7t\",\n          \"type\" : \"gsjekfldwmkwgocakco4vef6t9njmtfjsxo\"\n        },\n        \"links\" : {\n          \"related\" : \"c5e9vyfmiapjuzsrjh4d73n2e24n16l4qv8h1dexfndaoe8orld5t7y2qp5zem3isl46qlebw9kvez201v2opdlmybbfdde9fg3xhmwr\",\n          \"self\" : \"36as8y80sjbfk8j3f4t91quob1yd6aqs8i0zy92jzpvd2pimhdc2mnx0ug2vs5nywa9cy0nazfjbfb7zcw09mawi\"\n        }\n      },\n      \"account\" : {\n        \"data\" : {\n          \"id\" : \"kb1n\",\n          \"type\" : \"094pklepphlr99cdcblm72vanri0c5nxtkxbuah4gbhyjkvpaod88amsvxeidumv08hej\"\n        },\n        \"links\" : {\n          \"related\" : \"s7ddsmp36okvv2q40h6pnlnl0knawm9rtiogg001gzpfcz2idjhoilyb1m9iz14mn43wfmswot2kekua52wp6ekv96y94\"\n        }\n      },\n      \"tags\" : {\n        \"data\" : [ {\n          \"id\" : \"525i\",\n          \"type\" : \"fw96i6xh4d4x0cntdun5ea9c49dq8641tz2u5zmmkexqz518enepnmklbeoechdavrszpt0oo93eygeo4s79ihulhkfv7wfarpi64ia3oufhhz8qckb1ju2r865l9l\"\n        }, {\n          \"id\" : \"77t0\",\n          \"type\" : \"o2vgexb6yoeek2q0q0da2p1alj7panr8q0urr10g7xoucnzeeo6oap1rnnpcatlxavmtmhksn49l7r4skjiuhnv8ui0s0r20a\"\n        }, {\n          \"id\" : \"2z1h\",\n          \"type\" : \"k5mhq37r0a1fo8nt6ozpdoerydqn833ggki5sqzso5jfez2624nvbn2jc6qdw6hndalmvae7mxux9vo12ucs4co97yxfsw9g1k9on5fbu2y9eduzixc8vfaon\"\n        }, {\n          \"id\" : \"cv70\",\n          \"type\" : \"td76inl55zh5ouj\"\n        } ],\n        \"links\" : {\n          \"self\" : \"afxg8jwf3znpa0qna16ttv71natfhz7jjvz73ziys2tgyhvj2i6zixgz84mwfxv88ezwzp3betmfrtn5pouhu31ck0rzl0852rg83bqhm3tev32m7edk072kgph0bad6onisprfcqt6lon\"\n        }\n      }\n    },\n    \"attributes\" : {\n      \"holdInfo\" : {\n        \"amount\" : {\n          \"valueInBaseUnits\" : 9173440082534780201,\n          \"currencyCode\" : \"HNL\",\n          \"value\" : \"iv7w3h0r7aotq75ab26oozl27bmgrgm90xt8w6wa03etb5iii63l2u0h7ri7hms11wts1w2z1sljn3hr6twls9yg900assix9115g45pe6r3hzrjv4isgg7e52gwacwmnnvjkz68mrh5hnz6kaeiwvw8mg6e9w7b\"\n        },\n        \"foreignAmount\" : {\n          \"valueInBaseUnits\" : 4415147013173339904,\n          \"currencyCode\" : \"HRK\",\n          \"value\" : \"txwa0meo49kb9440hu7c3bah9xwhh5kvutfihvfc6ergoka15p8ctzthnjtt249627nsdf8phbn90y387bzcdpynkud6m9ed9iq4lwz28u9sc55odtx0u2vraitkcaun4z3hh1irbroym522lepg6ci2f3\"\n        }\n      },\n      \"createdAt\" : \"2022-11-20T16:58:28.824Z\",\n      \"amount\" : {\n        \"valueInBaseUnits\" : 5027406855280327270,\n        \"currencyCode\" : \"RUB\",\n        \"value\" : \"tt17dypp89iwha665xn3q\"\n      },\n      \"isCategorizable\" : true,\n      \"rawText\" : \"c6sesj00cz60z3ledkfcdnlj1xc16j34d7ckt7y9e31mv24e9fzdli4h1qm8zma5lwuq0urwszf2mmj9fmwd1z9ibutqosfa1jacidwojfzn\",\n      \"settledAt\" : \"2023-08-04T17:19:40.824Z\",\n      \"description\" : \"Omnis beatae dolorem eius ut. Qui consectetur iusto. Sunt amet nemo et illo. Ea iste pariatur.\",\n      \"message\" : \"Iusto facere illo pariatur aspernatur praesentium occaecati cupiditate. A sed tenetur possimus voluptatem saepe quas. Ab consequatur doloremque nobis.\",\n      \"roundUp\" : {\n        \"amount\" : {\n          \"valueInBaseUnits\" : 4328684233395893958,\n          \"currencyCode\" : \"EEK\",\n          \"value\" : \"n3zk2uuw8n53ssz4fhpxysg07r4a8twvj7tp7ov5k73009cnirsdg5mu8zaev5s0jybl31flp7ujctcyn715vvg95kz6wiuuq7cadpdr6iilq1coqrcshav\"\n        },\n        \"boostPortion\" : {\n          \"valueInBaseUnits\" : 6817104980214447392,\n          \"currencyCode\" : \"CLP\",\n          \"value\" : \"6g77h58ft7ribubv4ro7buukdunib5ohw7fsq5mmqf8kwhd\"\n        }\n      },\n      \"cashback\" : {\n        \"amount\" : {\n          \"valueInBaseUnits\" : 5424679910588705587,\n          \"currencyCode\" : \"GTQ\",\n          \"value\" : \"2welivhv5g7507qhj1nsut1b2j3dvblgybc1bokax3irhujcth4jpe210di49ddxr9hfwvbs2r5fmryo5nax1voqy72fo33\"\n        },\n        \"description\" : \"Maiores vero sit perferendis culpa. Praesentium fugit sit quidem dolorem in culpa rem. Qui odio distinctio nostrum aut maxime. Fugit harum assumenda doloremque. Enim assumenda et.\"\n      },\n      \"foreignAmount\" : {\n        \"valueInBaseUnits\" : 5112762358099296733,\n        \"currencyCode\" : \"ALL\",\n        \"value\" : \"r4h\"\n      },\n      \"status\" : { }\n    },\n    \"links\" : {\n      \"self\" : \"cm2otumls1951s90p4b4vzznedj9v8h2r0f4z3wa0llfde6q4927xl7qyi3f435an4rdh0z9p86akqhgyhc7d9ihyp6ctmfj0dzq9xjyh6ry4gltupzxx4e2uwrkyz5lxdun2ae\"\n    },\n    \"id\" : \"7t05\",\n    \"type\" : \"3849g6xro4igf2pn238qgmay6s3qk8msrzhf1dyw7a8zymwx4i0xnvfcymr0gbvoeswx7uory2e3\"\n  }, {\n    \"relationships\" : {\n      \"parentCategory\" : {\n        \"data\" : {\n          \"id\" : \"2214\",\n          \"type\" : \"efusl1ak4leq7duh5w4s0ir6z2rskvkmv2y7q8mol4a8xwu9wp65g1i4696j7w0z9bbo378g35kge4earehikt9bo56hus16xxbaa6tov86291l0omjynn1534jwuikscsllu0pcw1jz\"\n        },\n        \"links\" : {\n          \"related\" : \"jdg6yrj5afetecmf6dz2watp9elhew2skcibkahf12c17u\"\n        }\n      },\n      \"transferAccount\" : {\n        \"data\" : {\n          \"id\" : \"04l0\",\n          \"type\" : \"yuzdmcnu44crm1aeest18fmpznvik3c640vqay75hg5ioc8n8rc0ynl5asa23tot2ol7jp4g83et1i0kz96\"\n        },\n        \"links\" : {\n          \"related\" : \"3tvtiug9gdmyn9ptegvrj2nh7s16b30k1qnxepd6oinn7202wsabhlst9sk35au2cauukrn3emp503itth1lpyoormt3mrcf4xraec7ppfv8ppnutnq9q0xylywi12oopr0yk80cufw8nr6k464fx8lav32ce0wsrkxjx8sziv75\"\n        }\n      },\n      \"category\" : {\n        \"data\" : {\n          \"id\" : \"m0x2\",\n          \"type\" : \"ur5e64m79d54gpwb16ls\"\n        },\n        \"links\" : {\n          \"related\" : \"cp3wt2fnbdclxo8s4mztsed\",\n          \"self\" : \"8dk03wfsvgrwiwlm5pv9zzge9huc2wouatcjmbphb0quxvsgygn7g15of07js2k2vucqxcm2z26mbpjj5tcbhqft77v4b9neh1c96r68legjdqm7at022rupod7t18b9jwp41jljhlzx2tkiit7nh7p8n4q638lwlwak8p2exhv4zanmwj07ob\"\n        }\n      },\n      \"account\" : {\n        \"data\" : {\n          \"id\" : \"7qfi\",\n          \"type\" : \"hdtrsesm169tsuruw39a8h0apuuf8tsig3be0dkrz8dklllhr13vid225gqs1qigkq8qeshnqoi4peczoabnlw3ylq8qxotvn9nfrs8cjkiohw2w0ojn1mg5wv\"\n        },\n        \"links\" : {\n          \"related\" : \"jr7uo7ja0fmppfoezcwnr2cuzfrd400fe22od03d5vvevi5tjxpxeqo3xtp0xlzzvul2cpytpq0f8bynifznqt3b4jm8k2czetzttucy4ll8cx06ukt5in2a4zspba8f3y30xl2c\"\n        }\n      },\n      \"tags\" : {\n        \"data\" : [ {\n          \"id\" : \"7z0j\",\n          \"type\" : \"j4uquy5uz0dgg975krn474jfb61jn66qwwqoots3u53l977kxolhk5p6qqytrspvaik8n9e\"\n        }, {\n          \"id\" : \"9p8q\",\n          \"type\" : \"j6f8m1dr3k245x7ppbcpt4bsmdyfuf5oh0o1p5gfp2lffetgpaotdhff6vc2br8lkisj3mnm0ks4yrrhme2gshu8pr1aacieeassrmxyo7j4fuy724\"\n        } ],\n        \"links\" : {\n          \"self\" : \"1g52bykrxsf9ya0xs1zazyozb3n4sn6r5y66i7btfdedqlqo9arh2okdnzjk64v6a6dp5z17mqcin93sofb31rb97t9sfnxdg18lbivvsiflw5euhx92vczcnxdu1hjzbze5gxc6zb\"\n        }\n      }\n    },\n    \"attributes\" : {\n      \"holdInfo\" : {\n        \"amount\" : {\n          \"valueInBaseUnits\" : 231682796589577908,\n          \"currencyCode\" : \"UGX\",\n          \"value\" : \"q7pqvbx2c9jd2gc8pv9ybv7ze6bxous8xlxkymaa8yrk7lshj\"\n        },\n        \"foreignAmount\" : {\n          \"valueInBaseUnits\" : 3171881606477720805,\n          \"currencyCode\" : \"XPT\",\n          \"value\" : \"a2sqvjb0bhutnpaecjuj4040t3hb02w333c9qq1wpm977cvu8ntd7zuv3pwyd0k5z39rou3m7iwt6uhukwntl561ahugcn0g9uhxa8yaoblk620p1ybqf0g\"\n        }\n      },\n      \"createdAt\" : \"2022-12-16T06:08:29.825Z\",\n      \"amount\" : {\n        \"valueInBaseUnits\" : 1449682702080027445,\n        \"currencyCode\" : \"KWD\",\n        \"value\" : \"uhn6mfmjavpptufligari7bweurwvv5zzj1w50iqt5nvlj7cw0t0a407hfttjhqiwa55fvihlzlmi3y4sscm6tsiqh4dgous0w78v02nx7a4luilurq5v7rgz\"\n      },\n      \"isCategorizable\" : true,\n      \"rawText\" : \"a7sipe56m7pp63l68ob8p0a0fkbg8x6kbazw5rgy5mbevjakr2f4my35mdrlewlqxp9g4cvlkai9b7wi2zo0j2ao669nxujqq8v05r3oa491rzftub02a2y8bm60z2gdyh8tmaefo7t4i034a5\",\n      \"settledAt\" : \"2023-09-27T05:40:03.825Z\",\n      \"description\" : \"Sed omnis blanditiis ratione repudiandae. Impedit possimus similique quo ipsa autem. Eaque dolor alias sint deserunt.\",\n      \"message\" : \"Eligendi earum qui eius aliquid accusantium. Sit saepe placeat aut odit illum qui totam. Quaerat cum ut incidunt harum aut.\",\n      \"roundUp\" : {\n        \"amount\" : {\n          \"valueInBaseUnits\" : 3815071687364033207,\n          \"currencyCode\" : \"SCR\",\n          \"value\" : \"6ekh6frqt3nk4vgla49a1jpklalvy95ljb5gwkue089ukvs8ltj9tib8labhm7r9ibqxeaffn5s\"\n        },\n        \"boostPortion\" : {\n          \"valueInBaseUnits\" : 186887097591784041,\n          \"currencyCode\" : \"SAR\",\n          \"value\" : \"h21d5a0y5wp8qx4obhc1tchq3iy4kaj0uomvwr9d87wsrsyqy\"\n        }\n      },\n      \"cashback\" : {\n        \"amount\" : {\n          \"valueInBaseUnits\" : 1706847950605290423,\n          \"currencyCode\" : \"XOF\",\n          \"value\" : \"p59eoq6ryizvq1dbv71bi9burb9f9ewdjvliu8770\"\n        },\n        \"description\" : \"Incidunt ut beatae odio vitae adipisci. Quo tempora consequuntur amet. Aliquam culpa dolorem eos et deserunt quae.\"\n      },\n      \"foreignAmount\" : {\n        \"valueInBaseUnits\" : 89773783624674302,\n        \"currencyCode\" : \"COP\",\n        \"value\" : \"idefq83785p2mc132yz94rjlvd089oroqexmmsmdmqquw0m4we8zf81egj36m3z69e\"\n      },\n      \"status\" : { }\n    },\n    \"links\" : {\n      \"self\" : \"9mc2tjsw0uhcglogdb7n94n8gig5zgqufkuy7xh135hpb7wqc13ophvzq9sn6zoogybp6fis9kcpsah4nk\"\n    },\n    \"id\" : \"1ti1\",\n    \"type\" : \"5wnikfuz6umdm4vhphegio31ds1yc4rhcyj4mnam1ercdrpg79nfj4jvkz7a2iwm2nm67cm4sezh896jxw52mbfqwse1j4zcirnx8ys93tqfzkoelsmva50nbabj694h6835dt92u3grfmhli5oi\"\n  }, {\n    \"relationships\" : {\n      \"parentCategory\" : {\n        \"data\" : {\n          \"id\" : \"xgkk\",\n          \"type\" : \"anydnmtmnv68n34yudv9ph1t90x3ta6v3kfs9ux9lhuokid6gfw3rwd25gig9agys7568jepbtobxj16or7krclp2p2m0ppdsnf96ghw27roi9ewhodudvnaefhxdv73o5uy4tsht9ol515s44ufk3kqhdswuxxpa4tpyj4ls9akwd3c78tdpa9oxvmpp1bucdl2ns\"\n        },\n        \"links\" : {\n          \"related\" : \"tssyb0r2gi3p5df1g5qy21tglq5nxhmhm5bv32tkxuzvf9l8q9a0eacmsouhbcs7ahrm8t6zrj6mbf1qi9cetnbnmcnl2a09efhtyc8ouv381vhi8m7pjbyk\"\n        }\n      },\n      \"transferAccount\" : {\n        \"data\" : {\n          \"id\" : \"p11n\",\n          \"type\" : \"kbsr2h9w0sl2rd4k69y6pf67d1k21lgzsgnjiih81bmg0avo31oemmz8lp0vtz0ffnhoezkvn2ihn9tx5020h8tm2rlbncma\"\n        },\n        \"links\" : {\n          \"related\" : \"ijgz74qb5co5sq0soijvlkeztd6x3rrwcpy31cbdjp6yn3r36d7labyf8tzm8xqj75idoyi439v6kbx0744w9gpz57\"\n        }\n      },\n      \"category\" : {\n        \"data\" : {\n          \"id\" : \"026s\",\n          \"type\" : \"m8uf0bpft9h77vlw5w8ehd4fni3qw1z3pnmdcp9qyx6ucvpjzv706yv2adzoe9v4a89gncoip82c3d670vofnl40uphodhe9xjwuk0fij6va6or5djt6x2mgn6ht90jhm5hz3lpkjjozdd1l6b0tvq9wscov\"\n        },\n        \"links\" : {\n          \"related\" : \"8wjwfz0drmmn8jggaxl280365co9bx82wsvgybi7qeyyil90483h0bxx20sboug476r2z5u0yufozoi4dbeobzrg6dredyirl77uqn8nj1ldammjfv023\",\n          \"self\" : \"jeooqdufqk7ukgahnblk0b9xejjliwhyju70ztvmi3popv5s4hzipl3\"\n        }\n      },\n      \"account\" : {\n        \"data\" : {\n          \"id\" : \"2s34\",\n          \"type\" : \"mrlqkf4we4k5uyog5cwq4xraxfaumowcc4fjhab0g9zhbisi7x274me94n2lpv9znmetw0scs8hgtnjcw1k7b\"\n        },\n        \"links\" : {\n          \"related\" : \"0sqjz18axi33upoanrkodnn3z7qnyai5n2lqoqmct4g89uhrlihw8sqfawa05qo643twzpnyjqsqk20tn7t4l6p5atvvhvr3op6ni7x5ym7ukl3pyudovd4unwh6o23r7u2p4ve9jeph3oxnxrhweok96n3adicogj3txeqdh0xgi27v9hxtq3ow\"\n        }\n      },\n      \"tags\" : {\n        \"data\" : [ {\n          \"id\" : \"949z\",\n          \"type\" : \"eeqem6s58n05d91w2o36mm3tqhz0l60e3nk839iv0ne5a47iezjecqtmusixq5q6lwbg6n9d5bxchn7ymsqwdjevinxw31wnf6n7qg0\"\n        }, {\n          \"id\" : \"r900\",\n          \"type\" : \"ihzjrfrpiifoaa6lhs9ng68fdaluocunbs73no5r72ie4igwc\"\n        } ],\n        \"links\" : {\n          \"self\" : \"x3umrar4ktcd5js88faqsxno3lu63tsxbw3gl4impt20gki2yjkp1fon8cs3kocwjzb5anmvdgw7v9wck1z4ktynwz45bjwavir4wshkz\"\n        }\n      }\n    },\n    \"attributes\" : {\n      \"holdInfo\" : {\n        \"amount\" : {\n          \"valueInBaseUnits\" : 1190889134034117199,\n          \"currencyCode\" : \"KRW\",\n          \"value\" : \"wcteq4igg8bsojq5ww2rtozza2i148pu8vzshpzx5arfv7e6whjlbrpw5rj8l2705owjouqeog83sj8ujr\"\n        },\n        \"foreignAmount\" : {\n          \"valueInBaseUnits\" : 1726249889975630461,\n          \"currencyCode\" : \"ZAR\",\n          \"value\" : \"couhojixiwavdmdh7z6sbj0n08w2c1tn89r1y8cf7tocuwbcf9pstvd89m3mfypae8p58o9sopoh9i5hgju1pj8n3pht6qj9nxjc3ee1g1ev58wbp03nstzfa6bfhz3fuxeznrme0ch9wmm\"\n        }\n      },\n      \"createdAt\" : \"2024-02-19T11:58:44.826Z\",\n      \"amount\" : {\n        \"valueInBaseUnits\" : 5252549310140368552,\n        \"currencyCode\" : \"BND\",\n        \"value\" : \"g3r6d0cauzozddk9h3xtuk94bmnsybd2eejnw3sh4p1d8rycfb678sjo2j2ic5x5ekyz6jqzy7vxf4erm1dfrtwkfr4fg9\"\n      },\n      \"isCategorizable\" : false,\n      \"rawText\" : \"gfslv\",\n      \"settledAt\" : \"2022-05-02T19:37:20.826Z\",\n      \"description\" : \"Consequatur ut et quaerat iste omnis eveniet. Laudantium omnis dicta ut autem eaque. Eaque voluptatum quis omnis aut similique quidem magni. Dolore vel aspernatur nemo et.\",\n      \"message\" : \"Quia ullam est voluptatem. Dolores rerum dolore. Distinctio eligendi consequatur nesciunt. Nesciunt corporis alias reprehenderit numquam deleniti temporibus libero.\",\n      \"roundUp\" : {\n        \"amount\" : {\n          \"valueInBaseUnits\" : 6666578999481660152,\n          \"currencyCode\" : \"SGD\",\n          \"value\" : \"2jgcqgwmb25by3xf5fr2jonxg6rugj6oxsik481ou74msa7gxqmgwteb42llp2ywad8se0qbx71xq7j0pt3rejjtz5ph1azx2htoffs47ouksz9fqqjsazmnul0wbry2hsfyb7ir1xkgqiwp01syw0g0c4bm3hidv2xt\"\n        },\n        \"boostPortion\" : {\n          \"valueInBaseUnits\" : 6235572832366106534,\n          \"currencyCode\" : \"MGA\",\n          \"value\" : \"nnwc32w5vctpi7ignvkw71n76e36hu94a1yv7siuixfyy6t6gdintmzirl93ouqnu39c5l9rj3uwp5m78hqwv4xcgfjark7tv1c8cxtr5bzo6jkhnrx5gvnpa93ifl09pc7z4khfekptyqcapr2ylvv6v2rk7vd8s3mp\"\n        }\n      },\n      \"cashback\" : {\n        \"amount\" : {\n          \"valueInBaseUnits\" : 753676000911555811,\n          \"currencyCode\" : \"NPR\",\n          \"value\" : \"o86xvzsflgcydg7listcvg6vssc\"\n        },\n        \"description\" : \"Aperiam atque itaque quam earum et. Provident alias possimus eaque impedit laboriosam atque. Molestiae dolores quos quisquam deserunt. Commodi sint aliquam laboriosam natus consequuntur quia et.\"\n      },\n      \"foreignAmount\" : {\n        \"valueInBaseUnits\" : 2234580785676115346,\n        \"currencyCode\" : \"UZS\",\n        \"value\" : \"oauuiyzj5pu\"\n      },\n      \"status\" : { }\n    },\n    \"links\" : {\n      \"self\" : \"l0c794uz2ty09ba09ymmt0pxajm7spxnp2ehfthd3v9x4xfppmye7i8\"\n    },\n    \"id\" : \"vm76\",\n    \"type\" : \"bx5hjn410miwtdskdqvro5250orkic11u8c4cupddopryxxwvi7u1pcv272by21f8d7o10ofqoss9pg5ad1rxt5dmuyuesl9cbsch39ymozqzkmxtfv00hiyoqpwi8q04f0e9xym2l2q2dubhla3m16mjnd\"\n  } ],\n  \"links\" : {\n    \"next\" : \"j8wyofkzckf69ygd7ff53mj9h4oqw2rdcd8lz65j25x0x902inrj39kjay3e9\",\n    \"prev\" : \"lyhlxjd9mqhmqpdpu6wmq3yiumx45p0xlff0h9jdtnlagniit87angefd09fbeatbysmda2dyrebnwuxamf45bmj5ck0fe4g909pjff9cokh974ymx4p1z1pke4cpno34xo827tbx01x91pf\"\n  }\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "2cd40d48-a5fe-40b1-8b09-b0aa6675cce4",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:27.827705Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "(none)",
+          "schema" : {
+            "description" : "Successful response to get all transactions. This returns a paginated\nlist of transactions, which can be scrolled by following the `prev` and\n`next` links if present.\n",
+            "properties" : {
+              "data" : {
+                "description" : "The list of transactions returned in this response.\n",
+                "items" : {
+                  "$ref" : "#/components/schemas/TransactionResource"
+                },
+                "type" : "array"
+              },
+              "links" : {
+                "properties" : {
+                  "next" : {
+                    "description" : "The link to the next page in the results. If this value is `null`\nthere is no next page.\n",
+                    "nullable" : true,
+                    "type" : "string"
+                  },
+                  "prev" : {
+                    "description" : "The link to the previous page in the results. If this value is `null`\nthere is no previous page.\n",
+                    "nullable" : true,
+                    "type" : "string"
+                  }
+                },
+                "required" : [ "prev", "next" ],
+                "type" : "object"
+              }
+            },
+            "required" : [ "data", "links" ],
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 17
+  }, {
+    "id" : "27ab9474-308a-4150-b6b6-313bb2fc5ac1",
+    "name" : "List accounts",
+    "request" : {
+      "urlPath" : "/accounts",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"data\" : [ {\n    \"relationships\" : {\n      \"transactions\" : {\n        \"links\" : {\n          \"related\" : \"qm00101g95wzthoovu53dycguvk\"\n        }\n      }\n    },\n    \"attributes\" : {\n      \"ownershipType\" : { },\n      \"createdAt\" : \"2022-10-09T04:20:38.82Z\",\n      \"balance\" : {\n        \"valueInBaseUnits\" : 1277478668789610282,\n        \"currencyCode\" : \"ZAR\",\n        \"value\" : \"h4fvfwoge1jfp7mr8ek59dxe2oouf7wmpkulao1vxrpbv7qbgc9e8mpe26wbyi192k22v7ewn7x2nb0tss0j78hgh8z6d3h799mlx1462sd92\"\n      },\n      \"displayName\" : \"Marylouise Pfeffer\",\n      \"accountType\" : { }\n    },\n    \"links\" : {\n      \"self\" : \"a8nvcs3r23zbn8wq7i5ymyywidjbkwnoi4ziamzqbx3tgvolzhpy9ydr88rimkahnggaeyy277d2ltqmvv\"\n    },\n    \"id\" : \"1t68\",\n    \"type\" : \"uxxvogq2ufd7hxk6ntj25cq6z\"\n  }, {\n    \"relationships\" : {\n      \"transactions\" : {\n        \"links\" : {\n          \"related\" : \"awcvi2uk0a5jm18g1xf6yy5xpbad882689\"\n        }\n      }\n    },\n    \"attributes\" : {\n      \"ownershipType\" : { },\n      \"createdAt\" : \"2024-01-18T17:32:50.82Z\",\n      \"balance\" : {\n        \"valueInBaseUnits\" : 2377635591994611553,\n        \"currencyCode\" : \"CVE\",\n        \"value\" : \"jt92t9s21xcruz9fbbhlwxh38imgh4sdtm4rob\"\n      },\n      \"displayName\" : \"Zane Klocko\",\n      \"accountType\" : { }\n    },\n    \"links\" : {\n      \"self\" : \"q5cyxfcqc3fzatyesmbcsz02asplaly2howoj69s2r3mklu8b5m\"\n    },\n    \"id\" : \"7hqw\",\n    \"type\" : \"15wfxdk744a6515bedj20jq25l5b63q24op7btydbesafkq5310xl37ccgtmisrhxd19lful8sac2zp\"\n  }, {\n    \"relationships\" : {\n      \"transactions\" : {\n        \"links\" : {\n          \"related\" : \"wu54081nyiyihz1u\"\n        }\n      }\n    },\n    \"attributes\" : {\n      \"ownershipType\" : { },\n      \"createdAt\" : \"2022-08-08T16:53:09.82Z\",\n      \"balance\" : {\n        \"valueInBaseUnits\" : 5450495652840168200,\n        \"currencyCode\" : \"BGN\",\n        \"value\" : \"883xunw6mau9kycb5he3g7xqac0p9neh13m5rj4smhv6akk5reh04xb0eyugpkg31r5aptu3xfjwr1rp17wdenhpzkhr46majdmn505wcnvpe0lzxn0ow1n2x7bmz50d8l2p1ydlzpznb7pvlraj4snip\"\n      },\n      \"displayName\" : \"Holley Lynch\",\n      \"accountType\" : { }\n    },\n    \"links\" : {\n      \"self\" : \"ehfrs9q313ulkqb9trp7oye2fazjyzzhiz5em2wkgipyj7t4lasn3pqmsbuhca5zrtk7kkepkmxjm9c7o7znf63g1nph98to9xg70pv5avzotwfjdphcgp\"\n    },\n    \"id\" : \"52ij\",\n    \"type\" : \"uiv9uwy3kc8\"\n  }, {\n    \"relationships\" : {\n      \"transactions\" : {\n        \"links\" : {\n          \"related\" : \"2gw12kap7vmp5brvtdh6469p3flck6pgxdl4klhgjxo7x0eqzi6qpyfjhttrnjw72vqm3tjv8kns8bzdh1w0bk8ohnjsmcgovpysc22y4l629rixtav6gpuuzjc0n01gf6x86o7k9atcxg96q5rq1pwec6bhf0\"\n        }\n      }\n    },\n    \"attributes\" : {\n      \"ownershipType\" : { },\n      \"createdAt\" : \"2022-12-06T18:06:39.821Z\",\n      \"balance\" : {\n        \"valueInBaseUnits\" : 7099787036731605084,\n        \"currencyCode\" : \"CZK\",\n        \"value\" : \"kkjh2ln2dw37gnauum4spx7vl84d1isj1ef33biszp9lu1g5emb6njprfj2xdju616q27aqw2vw7juryiw8h3t38ns3i2133j2a7jbeuvckhut4rkzjaoqfwwrk72rcgt9xcy1215i6c8g6ievo4m7p07xzhc2hvprlo85bjn08sbcadh87oqj2oc05255d\"\n      },\n      \"displayName\" : \"Le Veum\",\n      \"accountType\" : { }\n    },\n    \"links\" : {\n      \"self\" : \"sctuzlovjh4tbb5jb2xoohtd0s7122qnc5688q0ms9qcqekf8dm7xaqsbha0wcjignpgp4ryqlvkmvzmtt7rcebbqoa57ypit19ovvkoa4nfgyx7z9k7qlw935i4x0c225j6aba3nfpvcw2b4asxjny\"\n    },\n    \"id\" : \"a0rf\",\n    \"type\" : \"ao998qii2o1jmqgx9lwu1pw90tywl7gesx97w4jxljxdk8dbgrf6b4qoh49qtz7mdy8ip071hngtg4vd8bo27iup5dmpth5s6i7gnmjcevs39w6pn45q7100k1a59\"\n  } ],\n  \"links\" : {\n    \"next\" : \"nok3iko926yr00ya2pzj8vugq5prks5\",\n    \"prev\" : \"2zc3tn9frxv2yhgib7dvhys5x4j7f6slz6gh5js8fch7cdsp1eejgpq3lqzsv7aajepylfjggq8krbg9he5dlyqjh2ba1qyplgnxwed3jau1p9dx\"\n  }\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "27ab9474-308a-4150-b6b6-313bb2fc5ac1",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:27.821432Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "(none)",
+          "schema" : {
+            "description" : "Successful response to get all accounts. This returns a paginated list of\naccounts, which can be scrolled by following the `prev` and `next` links\nif present.\n",
+            "properties" : {
+              "data" : {
+                "description" : "The list of accounts returned in this response.\n",
+                "items" : {
+                  "$ref" : "#/components/schemas/AccountResource"
+                },
+                "type" : "array"
+              },
+              "links" : {
+                "properties" : {
+                  "next" : {
+                    "description" : "The link to the next page in the results. If this value is `null`\nthere is no next page.\n",
+                    "nullable" : true,
+                    "type" : "string"
+                  },
+                  "prev" : {
+                    "description" : "The link to the previous page in the results. If this value is `null`\nthere is no previous page.\n",
+                    "nullable" : true,
+                    "type" : "string"
+                  }
+                },
+                "required" : [ "prev", "next" ],
+                "type" : "object"
+              }
+            },
+            "required" : [ "data", "links" ],
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 18
+  } ]
+}

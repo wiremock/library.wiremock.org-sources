@@ -1,0 +1,603 @@
+{
+  "mappings" : [ {
+    "id" : "92d35e84-191e-4437-8ea7-a656a999cd90",
+    "name" : "",
+    "request" : {
+      "urlPath" : "/v1/Voice/Numbers/a85y5t8ga7ppe11a5azx1jlsvfx060djpi90yss1mnifzn9ydl280b03b0snzovywzhgp6msu6sset6dfl7iwwbve2y7m5nr239",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"price_unit\" : \"trdgqodaqbx7y2ph8wyzpfkhvt29z7alcb2uso1uwcwakurlmqcpjywrsu2niom75bq1vr70lmeixpuimhn0ppybdynrly5nvikjp75hgszb47ldu1yen0ce2g6uay5gal5c42xwpv096w8o54x1cfsa09qc3mkayg0y1f\",\n  \"country\" : \"Croatia\",\n  \"number\" : \"hhvwwlqyp718vvnwrc2o53bzxek1lnt7jf863ha6pke693gfch474x64h9q6jcpqcdnuamhayabcc72brgrdez3g5jfl96hpayevnm8axow0px8d497z2td23zqva14qwzw6jv3zk2uakugv8ukokv2m0xffrdpjxbeb9i2vo1sg0y\",\n  \"iso_country\" : \"Costa Rica\",\n  \"inbound_call_price\" : {\n    \"base_price\" : 1.7403658072072417E308,\n    \"current_price\" : 1.4879988422640727E308,\n    \"number_type\" : \"tzuu2spogqst9564t1jr6s6uexfebe75ijpaqu1uw8iaimwphtp7ocj02r4igydio4rlaivgqsavf2ii8tx3kkgin2rwzq34w3xz2fzw7exflsjnqfif9wdi81cnhw0keninufio2vyqk2jof50k\"\n  },\n  \"outbound_call_price\" : {\n    \"base_price\" : 4.4860157407201693E307,\n    \"current_price\" : 1.3818802617432232E308\n  },\n  \"url\" : \"https://web.example.mocklab.io/957846\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "92d35e84-191e-4437-8ea7-a656a999cd90",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:20.960352Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "FetchVoiceNumber",
+          "schema" : {
+            "properties" : {
+              "country" : {
+                "description" : "The name of the country.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "inbound_call_price" : {
+                "description" : "The [InboundCallPrice](https://www.twilio.com/docs/voice/pricing#inbound-call-price) record. If `null`, the Phone Number is not a Twilio number owned by this account.",
+                "format" : "inbound-call-price",
+                "nullable" : true,
+                "properties" : {
+                  "base_price" : {
+                    "type" : "number"
+                  },
+                  "current_price" : {
+                    "type" : "number"
+                  },
+                  "number_type" : {
+                    "type" : "string"
+                  }
+                },
+                "type" : "object"
+              },
+              "iso_country" : {
+                "description" : "The [ISO country code](http://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).",
+                "format" : "iso-country-code",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "number" : {
+                "description" : "The phone number.",
+                "format" : "phone-number",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "outbound_call_price" : {
+                "description" : "The OutboundCallPrice record, which includes a list of `origination_prefixes` and the `base_price` and `current_price` for those prefixes.",
+                "format" : "outbound-call-price",
+                "nullable" : true,
+                "properties" : {
+                  "base_price" : {
+                    "type" : "number"
+                  },
+                  "current_price" : {
+                    "type" : "number"
+                  }
+                },
+                "type" : "object"
+              },
+              "price_unit" : {
+                "description" : "The currency in which prices are measured, specified in [ISO 4127](http://www.iso.org/iso/home/standards/currency_codes.htm) format (e.g. `usd`, `eur`, `jpy`).",
+                "format" : "currency",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "url" : {
+                "description" : "The absolute URL of the resource.",
+                "format" : "uri",
+                "nullable" : true,
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 0
+  }, {
+    "id" : "ce42a6a4-0c5e-40ea-acd5-8b77c454879b",
+    "name" : "",
+    "request" : {
+      "urlPath" : "/v1/Voice/Countries/Jamaica",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"price_unit\" : \"byuux4005n2ocqj83v046sj24ik5toxv27\",\n  \"country\" : \"Slovenia\",\n  \"iso_country\" : \"Cabo Verde\",\n  \"inbound_call_prices\" : [ {\n    \"base_price\" : 2.5235312305315906E307,\n    \"current_price\" : 1.7106372166331875E308,\n    \"number_type\" : \"1yb8r8dpfcn3kmyaolnlw9kx25nq8romh3usu3x67mzyvo432oh0rpafbbow1w7pfgj22lyuiniscv9cdg7yo7j2tk7nnu52bcrii74sgwwxj2n5wh15pujac7encrk46n18f0byp2a2v2fazr4ojbueso31cvbwfpipwp\"\n  }, {\n    \"base_price\" : 7.474981504159368E307,\n    \"current_price\" : 1.327322791479576E308,\n    \"number_type\" : \"1xndqgys9cwn1csteqpxvxyu7lsll8ipg00nmfdb11fvg8cfhqi3c8gmo2gsdvdi4ru1g02dza3dbnfpnwx4ke\"\n  }, {\n    \"base_price\" : 1.0624137847366747E308,\n    \"current_price\" : 1.5024780012155706E308,\n    \"number_type\" : \"m4aj37ivrtbre8gzfkuz6yca22x18azih5cizl0cdeht2izpfqwaxf05bh7m7bo\"\n  }, {\n    \"base_price\" : 1.3186789842501911E308,\n    \"current_price\" : 1.0662955904364192E308,\n    \"number_type\" : \"3he29cywdpk\"\n  }, {\n    \"base_price\" : 2.824191155039962E307,\n    \"current_price\" : 7.918655775560633E307,\n    \"number_type\" : \"795gg5d4ipj44dhyth52hroxnpcx9gj1qeqk3pqmetqfo8lzlik8b4aznh4bb3jb6kbxd3yw8zzwtmq3di6kp7dbj2rv7k1ghox696prfz\"\n  }, {\n    \"base_price\" : 1.00288931098957E308,\n    \"current_price\" : 9.961042577390443E307,\n    \"number_type\" : \"a65btcompdk89ogcmwkyskou0sfxmcksqj2mcqqvpzt71fot3a84caa44xayasauf5iiuk5bn2ixa4exf446xujaocyi4shlzntrnbd\"\n  } ],\n  \"url\" : \"https://web.example.mocklab.io/730364\",\n  \"outbound_prefix_prices\" : [ {\n    \"friendly_name\" : \"Maximo Bayer\",\n    \"prefixes\" : [ \"4wh0xl68v1un1p4rpxdom5dw1aoornuqmjcjwsn9llsajtjxto6r4k6195gpud5bd4onlnlc0gvry78irclwop534drim339gy3vm7rmhv3d0ulrwvaso4jqb7kiuo9tnrme57duf0n43ycb7qw5qq66tdt96la73u829sj6v8oo1cgvdl0xwjsi7gswed2u\", \"2a4sc5w73032dyzndtz66fqfglp8fddcen7ksgdtv8tb6vm7t67lckpwckmer2j8f6irtcwykz6g5dw1rdjdgsxx7s7nm7asw\", \"azis1ale4drbkqgq8d0pykcald8necm51g0qa7uu91r5gruzcwg8ohdnif5h6dy8oek6i45dsjuolx6zbe2eyoq\", \"xt91bu0w8b0sby4ngowm59hbwkgz27rzbpgfmcos0v37aw6z046a1whd48rtk3s99uc4rdkehcocfzmdh2mfow3eenjyi2og2ljbm69sa1k2kzvtr4v043jenv4q27aa2k2mvzub3quuz7pvro7bjbmh6656m8chuec2ikmr5k3zapg38\", \"6bbpsxo1qn6c4q\", \"0b028kp7023m9pbf7kazw09p4lr4gxvugx5bdm0sshmbl253nofm19pnza0snmp5v8j9fz6xz1z2nknqsyy0p5uxyixjdusseywg\", \"0yi\" ],\n    \"base_price\" : 1.7648396234216024E308,\n    \"current_price\" : 4.0980480952635297E307\n  }, {\n    \"friendly_name\" : \"Lamont Schimmel\",\n    \"prefixes\" : [ \"xsmmu3m98uzk2o1cg4xmapw6bcq1tr3zc1i9mhnp1uz4lgzwaimdmpn27q38frkuhagvd32bil5a3pwfv8tstqey9b4t6qaa9pf6yxeytzichfw25186hqae7i9hfc9o2d7z2nhk7jl36ayff92p6v43yob461\", \"dwrimufdxxvz111wdbgs56b8uo1jtrw29gju1igmy5bv29gj7t53e45yjmh4muy01das234nc670563cxtsm3gvre37awflwrhx68gqvpjbeqdsp9qojwrp00jnjj9xrt9b\", \"ehtxlnlgy2dl2rtsai2ru4b94wbcxisff6xz9kp3napuphc5ky5zccewd6gb9y0oeth6dbr780wgbx1o29ii0szzft3qp03m46rmzhqopln5mpha88brok187cf1hm\", \"e23vv1dgclga0tl9uawowiqqqc494j9hjsbbddkvh7d3x9szsnyrg6boo7insdivlpfmpp0kd99chqoz18cqkwycv7e\", \"w8vskf6mw33nhkrqvcu96ebxtxvypk8f8ef4rfqpupog4ta8f6t8q9erewtae0xtbu47c19\", \"m3lwnq0a28hxhsiqdbmm2w6p2g16rqivkbys9dljyseg76r2pkkyjmjik69bg7rpixfps5g2j2tvfumsfgo4ucvst2j29j4t5485px2n2w8oufyfscy8dnhqe\", \"x4wo5u9k03z4g0i93k4tc6j14hbnixshuqehrvi4rcvq2cmv4meswob6i3mgry6cshe7t73a5nxmgcrg8oomtzpykydpvur0f7zrj1oqtuys7klccqu8oueails6a6vlsuajoixonk19yz7bekrpl\", \"i3zkralawfa253ccstsr3u\" ],\n    \"base_price\" : 1.6739918186010882E308,\n    \"current_price\" : 1.6621677973614629E308\n  }, {\n    \"friendly_name\" : \"Mariko Hickle\",\n    \"prefixes\" : [ \"jb98gc8e7r0a2t3wvriym2lruid3fohjx\", \"w985kz2sv8v7r4voe2ge6up094a\", \"hh2frq3xi0er3vv07okm3us\", \"7ijzz84171bz0be1hjuhlja199ztttv096h1\", \"9ckoxyk1qiw4oct0f4ptw2xv3rf0rpdfa271pwj5tpc9fysveis2fgvlu7tucsm902mkophfwfplavcp718r6s9rjd3higo4tk91gldf45j404yiy0nc1\", \"h4hj4hu9heyz4pnj2gfkyzcz9qkkwvpxfuxhoecb2x7m2pq9dll0wjh1tbl2iaog4mfchlk3nyr36zf6xhwfi2gf3h1zs5sbzzoog29r3pnyzoeox9l1aiw02jzcmxga56kd3h\", \"kjud032zyydtogftip5afc18tykjbi289tfa2ckbxx4fz334xqu0gutit19vmnlt764qe06nct11wbah9j5vjhaxb9uh2uemwamdenf7hn3ci2ua9xzgt90my7zq13dp0f1c3077nxvn7xq5hfkaflzaux3pgl786fdnt8mn3yp35v2chqvmvaj3cmzfnxyqu5xx\", \"ijuubnlcn6srhsjqbsv4k3wytjey4r8zxsdm2apsvokaofghbyicx3j9h7ovjb7pg303nwhbcq59letz5wa339vnvfkok2rhi9uejyuvd3zqiwe5hf03pf83wuw2emxec\" ],\n    \"base_price\" : 7.863385154103835E307,\n    \"current_price\" : 9.89187271625606E307\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "ce42a6a4-0c5e-40ea-acd5-8b77c454879b",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:20.959984Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "FetchVoiceCountry",
+          "schema" : {
+            "properties" : {
+              "country" : {
+                "description" : "The name of the country.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "inbound_call_prices" : {
+                "description" : "The list of [InboundCallPrice](https://www.twilio.com/docs/voice/pricing#inbound-call-price) records.",
+                "items" : {
+                  "format" : "inbound-call-price",
+                  "properties" : {
+                    "base_price" : {
+                      "type" : "number"
+                    },
+                    "current_price" : {
+                      "type" : "number"
+                    },
+                    "number_type" : {
+                      "type" : "string"
+                    }
+                  },
+                  "type" : "object"
+                },
+                "nullable" : true,
+                "type" : "array"
+              },
+              "iso_country" : {
+                "description" : "The [ISO country code](http://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).",
+                "format" : "iso-country-code",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "outbound_prefix_prices" : {
+                "description" : "The list of OutboundPrefixPrice records, which include a list of the `prefixes`, the `friendly_name`, `base_price`, and the   `current_price` for those prefixes.",
+                "items" : {
+                  "format" : "outbound-prefix-price",
+                  "properties" : {
+                    "base_price" : {
+                      "type" : "number"
+                    },
+                    "current_price" : {
+                      "type" : "number"
+                    },
+                    "friendly_name" : {
+                      "type" : "string"
+                    },
+                    "prefixes" : {
+                      "items" : {
+                        "type" : "string"
+                      },
+                      "type" : "array"
+                    }
+                  },
+                  "type" : "object"
+                },
+                "nullable" : true,
+                "type" : "array"
+              },
+              "price_unit" : {
+                "description" : "The currency in which prices are measured, specified in [ISO 4127](http://www.iso.org/iso/home/standards/currency_codes.htm) format (e.g. `usd`, `eur`, `jpy`).",
+                "format" : "currency",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "url" : {
+                "description" : "The absolute URL of the resource.",
+                "format" : "uri",
+                "nullable" : true,
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 1
+  }, {
+    "id" : "d54f0dd6-a3dc-4eb7-86c8-40332cd49f0b",
+    "name" : "",
+    "request" : {
+      "urlPath" : "/v1/Voice/Countries",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"meta\" : {\n    \"first_page_url\" : \"https://web.example.mocklab.io/714376\",\n    \"next_page_url\" : \"https://web.example.mocklab.io/469281\",\n    \"previous_page_url\" : \"https://web.example.mocklab.io/118297\",\n    \"page\" : 7113278379683784416,\n    \"key\" : \"fz92wr4rordb59joucj97h3u8vw0sl6hv79g54lm8b8hmg5m3zdnlklmh9aljxlmu6f7afmcb8za3y2\",\n    \"url\" : \"https://web.example.mocklab.io/959498\",\n    \"page_size\" : 7092173213038583163\n  },\n  \"countries\" : [ {\n    \"country\" : \"Sudan\",\n    \"iso_country\" : \"Algeria\",\n    \"url\" : \"https://web.example.mocklab.io/923815\"\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "d54f0dd6-a3dc-4eb7-86c8-40332cd49f0b",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:20.95889Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "ListVoiceCountry",
+          "schema" : {
+            "properties" : {
+              "countries" : {
+                "items" : {
+                  "$ref" : "#/components/schemas/pricing.v1.voice.voice_country"
+                },
+                "type" : "array"
+              },
+              "meta" : {
+                "properties" : {
+                  "first_page_url" : {
+                    "format" : "uri",
+                    "type" : "string"
+                  },
+                  "key" : {
+                    "type" : "string"
+                  },
+                  "next_page_url" : {
+                    "format" : "uri",
+                    "nullable" : true,
+                    "type" : "string"
+                  },
+                  "page" : {
+                    "type" : "integer"
+                  },
+                  "page_size" : {
+                    "type" : "integer"
+                  },
+                  "previous_page_url" : {
+                    "format" : "uri",
+                    "nullable" : true,
+                    "type" : "string"
+                  },
+                  "url" : {
+                    "format" : "uri",
+                    "type" : "string"
+                  }
+                },
+                "type" : "object"
+              }
+            },
+            "title" : "ListVoiceCountryResponse",
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 2
+  }, {
+    "id" : "8439173e-58da-468e-9699-163eca149105",
+    "name" : "",
+    "request" : {
+      "urlPath" : "/v1/PhoneNumbers/Countries/Jordan",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"price_unit\" : \"vl81nyk2ojvxrm8ikb6s4pxtqs6w8vtf962zpgsw9qnu5s4ecxjvwrxkvq06mpgkgrfr3z59jzn9\",\n  \"country\" : \"Korea, Republic of\",\n  \"iso_country\" : \"Ethiopia\",\n  \"phone_number_prices\" : [ {\n    \"base_price\" : 1.0122044822882632E307,\n    \"current_price\" : 4.193834117086046E307,\n    \"number_type\" : \"dubcktj3pl4lf0aseem2i66cm4lttz2mdvmqjdkpu85vj5uezb21pc8nr0p4gump3mffrncqguhvisej0ostrhojyv1sraktklkacxwyd137nirke3ug1ylbav61f3p3w1nrrxswa\"\n  }, {\n    \"base_price\" : 1.5003459280310004E308,\n    \"current_price\" : 1.1176408080407347E308,\n    \"number_type\" : \"957onbfvae97kzhpr6vhksa67kmkjuviauwgcc9e2st41d0ulft3cd4xvi7jh5ev2st58iqua0wz5l4s9jqcgucv2hbuxgrs7beyyq9n\"\n  }, {\n    \"base_price\" : 1.2085619416356284E308,\n    \"current_price\" : 6.774187467914615E307,\n    \"number_type\" : \"yzymadmhyfsjzk3vxtvnv4xjyvkv0m48lbinye85y1br2y7t9bqnxcdb208a0jlnrwhhrafau5axkjmy6tuwzk5vntnoc1jygvz82k4lt4ls8ybgv6n1vc4e5izyd3pt3zgc9nmxgdvm6xy5l39df46gy\"\n  } ],\n  \"url\" : \"https://web.example.mocklab.io/105644\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "8439173e-58da-468e-9699-163eca149105",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:20.763079Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "FetchPhoneNumberCountry",
+          "schema" : {
+            "properties" : {
+              "country" : {
+                "description" : "The name of the country.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "iso_country" : {
+                "description" : "The [ISO country code](http://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).",
+                "format" : "iso-country-code",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "phone_number_prices" : {
+                "description" : "The list of [PhoneNumberPrice](https://www.twilio.com/docs/phone-numbers/pricing#phone-number-price) records.",
+                "items" : {
+                  "format" : "phone-number-price",
+                  "properties" : {
+                    "base_price" : {
+                      "type" : "number"
+                    },
+                    "current_price" : {
+                      "type" : "number"
+                    },
+                    "number_type" : {
+                      "type" : "string"
+                    }
+                  },
+                  "type" : "object"
+                },
+                "nullable" : true,
+                "type" : "array"
+              },
+              "price_unit" : {
+                "description" : "The currency in which prices are measured, specified in [ISO 4127](http://www.iso.org/iso/home/standards/currency_codes.htm) format (e.g. `usd`, `eur`, `jpy`).",
+                "format" : "currency",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "url" : {
+                "description" : "The absolute URL of the resource.",
+                "format" : "uri",
+                "nullable" : true,
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 3
+  }, {
+    "id" : "a77ddecb-bc45-44f1-8047-56374ff56c0a",
+    "name" : "",
+    "request" : {
+      "urlPath" : "/v1/PhoneNumbers/Countries",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"meta\" : {\n    \"first_page_url\" : \"https://web.example.mocklab.io/525472\",\n    \"next_page_url\" : \"https://web.example.mocklab.io/580377\",\n    \"previous_page_url\" : \"https://web.example.mocklab.io/361004\",\n    \"page\" : 4388880559775252475,\n    \"key\" : \"m6qrni6jgaz2ozhgpukaad3cxw8m4tvy92tb41dddispopuiuytippljfwhds16kuftf6sw9er6qlff6cs59jg057f5034an9jad97ojt5h0onk0hgbqblcrzppbeucaa368wj4qwzqhg581mtyvqg0gthb20wce4jq87niap388ebstz003b29pzg1ma9put\",\n    \"url\" : \"https://web.example.mocklab.io/832950\",\n    \"page_size\" : 4216691208622722390\n  },\n  \"countries\" : [ {\n    \"country\" : \"Paraguay\",\n    \"iso_country\" : \"Czechia\",\n    \"url\" : \"https://web.example.mocklab.io/544391\"\n  }, {\n    \"country\" : \"Mexico\",\n    \"iso_country\" : \"Georgia\",\n    \"url\" : \"https://web.example.mocklab.io/587771\"\n  }, {\n    \"country\" : \"Namibia\",\n    \"iso_country\" : \"Senegal\",\n    \"url\" : \"https://web.example.mocklab.io/245717\"\n  }, {\n    \"country\" : \"Uganda\",\n    \"iso_country\" : \"Luxembourg\",\n    \"url\" : \"https://web.example.mocklab.io/939060\"\n  }, {\n    \"country\" : \"Ukraine\",\n    \"iso_country\" : \"Uruguay\",\n    \"url\" : \"https://web.example.mocklab.io/982079\"\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "a77ddecb-bc45-44f1-8047-56374ff56c0a",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:20.762658Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "ListPhoneNumberCountry",
+          "schema" : {
+            "properties" : {
+              "countries" : {
+                "items" : {
+                  "$ref" : "#/components/schemas/pricing.v1.phone_number.phone_number_country"
+                },
+                "type" : "array"
+              },
+              "meta" : {
+                "properties" : {
+                  "first_page_url" : {
+                    "format" : "uri",
+                    "type" : "string"
+                  },
+                  "key" : {
+                    "type" : "string"
+                  },
+                  "next_page_url" : {
+                    "format" : "uri",
+                    "nullable" : true,
+                    "type" : "string"
+                  },
+                  "page" : {
+                    "type" : "integer"
+                  },
+                  "page_size" : {
+                    "type" : "integer"
+                  },
+                  "previous_page_url" : {
+                    "format" : "uri",
+                    "nullable" : true,
+                    "type" : "string"
+                  },
+                  "url" : {
+                    "format" : "uri",
+                    "type" : "string"
+                  }
+                },
+                "type" : "object"
+              }
+            },
+            "title" : "ListPhoneNumberCountryResponse",
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 4
+  }, {
+    "id" : "a110dd4e-e850-402d-b4ae-a82559edc989",
+    "name" : "",
+    "request" : {
+      "urlPath" : "/v1/Messaging/Countries/Senegal",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"price_unit\" : \"kl6afj\",\n  \"country\" : \"Monaco\",\n  \"iso_country\" : \"Monaco\",\n  \"outbound_sms_prices\" : [ {\n    \"carrier\" : \"52veleptmiqwyam2ez2yx5cj0fds89vf8a5ld2xtcn1mrrpfos00z8tffy3epaydia51adp294mqqhdafj6mdlxuhipwbetevhjlqch03leqsrzjbr8aznbg4x41ydu8jny1fzekefdttz9654uwlnnyzjjquybajgfrn\",\n    \"mnc\" : \"idjykp4qa0praplfahuji7dvyvv1b0zi705yodrvqh0h92yu5cfpqcbhsra0v9d1k4krccusr90j1sxylnsz7koyk8gsxlqj5inf7\",\n    \"mcc\" : \"by26netk0oh6d1xki7ayhejf949t492036agr0salezatogtrihyuhwuzgad8fcs95kq0xtv38008yvk3z4vkozmki10smp9kcpw7niahwxijnmvmxrrezvyu3dq13r3p7g60sqwgjms4ztaltf\",\n    \"prices\" : [ {\n      \"base_price\" : 1.0411254211629783E308,\n      \"current_price\" : 5.885975149256954E307,\n      \"number_type\" : \"0qs2bzxqst5627f0ns93tmjx18z1hrn5nkabhg2240owxcv7ngqxizzk60t\"\n    }, {\n      \"base_price\" : 2.0623255589526394E307,\n      \"current_price\" : 1.335115734340097E307,\n      \"number_type\" : \"b17p12mmx6a7gqkfh8yfipkepl1u9v03vrws12eyik2l9p020263tlw3co35qq60nvnygp7x092n\"\n    }, {\n      \"base_price\" : 1.78499844126678E308,\n      \"current_price\" : 1.4226353938241435E308,\n      \"number_type\" : \"skrk8u1i5r28n1q3x9gabnnix56zwpuer9wcjguo1b2upl27gl45yren1uml3xco3bthjanda1blu67zlki9c07xpzuaesl\"\n    } ]\n  }, {\n    \"carrier\" : \"tkapqhh5rlrppocj72f0ucjbbvrw1pe39cd9h5\",\n    \"mnc\" : \"pp6xw2yyzzusc0aue36j0vvf6a58nd3zi71p7lbxnd4c1iu8f10vt6m8kl0cg406w9p2f6ts5hg5bvvnsptxdl8qnrfncfrhlogu4\",\n    \"mcc\" : \"lk783cryxaajguc30r3cs9zth9xxmwhukdtd2fr49jjsyca8y5bangjds9t9b2443i59dbxn4hv7k\",\n    \"prices\" : [ {\n      \"base_price\" : 1.0837425872112178E308,\n      \"current_price\" : 3.332344628843193E307,\n      \"number_type\" : \"o4ay93o7vwnyu9r5yqpfvaa7jmk1a0g9euxbq9xkdtiwpfzl0ikp45odra7cbnl7t9mi7p3xw4m9wl2iqixbujscb9tlubovp14wcng8au6jswgmq4smfy7o0h934svhfjt0dn\"\n    }, {\n      \"base_price\" : 1.4619831964366023E308,\n      \"current_price\" : 1.1157660040529069E308,\n      \"number_type\" : \"n5v40n2mvf5irkdydgzwl3oduusg291u1poth4gd1abvsode6lac95c9kvbs9rq7eo8lf8nbaucfb98hrnfhdpj6ka891cfxk25b5sn4yh5icnc8w57q7ihsdnlzn7wyp3a80vcjt0slu9yj960n4tmqcegza0dofz43\"\n    } ]\n  }, {\n    \"carrier\" : \"dnrshl60hggbjzntqpqhibnyz9qdhyd7lngv17cjhwnshoj8p35k16m7zug66\",\n    \"mnc\" : \"qw6v5j9wen3sctikfuyt2cayn6pp21sgaqzccq9w558w0uuybdvy4qoe8e6dn9cy5j12t9atp3oqnb75vg02ea1674i1o47r0jx04jbcxh7h90ly1e4kvof08c4ofl51u6v7h5gjd0gtxbpl9ostpn420aivjeizkl62kf5g1rgzhqlrpwk0u\",\n    \"mcc\" : \"vh5mn0jkkgeza6bt14dgg198cl8vloa1u7rp73d5r2vecm479xs0z3zgneksfwqjokoete8l6ti0wuc553zbs4w93ywx9q1aj4756003l35ux79n5m\",\n    \"prices\" : [ {\n      \"base_price\" : 3.67410282292605E307,\n      \"current_price\" : 1.1474428942378136E308,\n      \"number_type\" : \"5h45zuig8vgokynazmj0nvrvx7nef69j4hg94h9sairhf7uztcw\"\n    }, {\n      \"base_price\" : 1.6419611782577463E308,\n      \"current_price\" : 1.7162089382063986E308,\n      \"number_type\" : \"8pfihk6ftphd5wtd6pu\"\n    }, {\n      \"base_price\" : 2.771995662149341E307,\n      \"current_price\" : 3.284215813170338E307,\n      \"number_type\" : \"fpbz0v505x\"\n    }, {\n      \"base_price\" : 1.181372210964822E308,\n      \"current_price\" : 1.2537610955964467E307,\n      \"number_type\" : \"ayz3bndzk2pnlx3to2slvlzcjgwiu4qmlu3\"\n    }, {\n      \"base_price\" : 1.1790302472135886E308,\n      \"current_price\" : 3.067529620267726E307,\n      \"number_type\" : \"sfpvw5fild75xavrimy1dbi6vb5l29wwdpjbxw2dgaiff5gwo735rz1zf9b9u9ic1q7n1kose617impocxkjrry1h9ry50b74licxogyp2n42xdx4jaot\"\n    }, {\n      \"base_price\" : 1.0092234400892993E308,\n      \"current_price\" : 6.580104323205665E307,\n      \"number_type\" : \"6zosb71lswp4edu1qjb1doz3qopb54b7q5z1u1uzd94ieqlanu81ijpjigopyckxpnalub1yisop09vkl7qi7y6kca6h7n7vn8008ma4jrw7m6b75q5wnu48h4yzaa788emvfe9dl0p\"\n    } ]\n  }, {\n    \"carrier\" : \"yf3iaku3mhguq6ckt9goyby718n8zg34admu1inhfngty8v5ywsgbmw7xb2mo3sul31uhwi0cxsrgvlfwtuhgsx8sp3y1fn8w9bii7za5pkqe0imzhew0d3klvrg327hxe9ca2y3ylc1uellkijkngstnz6xyw3c5wqqf2bp32lg\",\n    \"mnc\" : \"tzcq9tm12chd2860kgfwh7jnbiph3ruefg9axrqz8qs4pr7b3mo0ryghe29\",\n    \"mcc\" : \"i70hye3own0ys1miqblkjq9ic7j7fu7zo3rt4fclg6ch4klyivq5iokglm734cznjzaryz3byfuextrkt858g9sp2\",\n    \"prices\" : [ {\n      \"base_price\" : 7.028114742262779E306,\n      \"current_price\" : 1.621633859368929E307,\n      \"number_type\" : \"hv2b8lnhyq612g8fqdevuzaj1h6q321mka2nxqhrdp8f3ubs7bowmnqjk3ll6igq07rh9pg39zo49rjwnwlrorx83i40j8q\"\n    }, {\n      \"base_price\" : 2.4410938543475637E307,\n      \"current_price\" : 8.555692875917353E307,\n      \"number_type\" : \"5q770flc998xszl2qhvl2iryye2y8933jsl5biklwk2rod0njcncdn1xzyx5yucupllquvg6g9ipkmd06fwtshbtjylmp5prrjzf6u4epda6s7fqs9lmrzvq6jq\"\n    } ]\n  } ],\n  \"inbound_sms_prices\" : [ {\n    \"base_price\" : 1.6829497957138278E308,\n    \"current_price\" : 3.226627410369759E306,\n    \"number_type\" : \"w9kil78wow4xc690hymu8crjcd45n7iofckfgbkv61st9s4vhqn4l9ys06yt2wpbxj3n3nrn9b1uuiwf7asjrk2he7tuo4yvzs4z2mx9sst69xf\"\n  } ],\n  \"url\" : \"https://web.example.mocklab.io/319848\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "a110dd4e-e850-402d-b4ae-a82559edc989",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:20.761353Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "FetchMessagingCountry",
+          "schema" : {
+            "properties" : {
+              "country" : {
+                "description" : "The name of the country.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "inbound_sms_prices" : {
+                "description" : "The list of [InboundPrice](https://www.twilio.com/docs/sms/api/pricing#inbound-price) records that describe the price to receive an inbound SMS to the different Twilio phone number types supported in this country",
+                "items" : {
+                  "format" : "inbound-sms-price",
+                  "properties" : {
+                    "base_price" : {
+                      "type" : "number"
+                    },
+                    "current_price" : {
+                      "type" : "number"
+                    },
+                    "number_type" : {
+                      "type" : "string"
+                    }
+                  },
+                  "type" : "object"
+                },
+                "nullable" : true,
+                "type" : "array"
+              },
+              "iso_country" : {
+                "description" : "The [ISO country code](http://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).",
+                "format" : "iso-country-code",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "outbound_sms_prices" : {
+                "description" : "The list of [OutboundSMSPrice](https://www.twilio.com/docs/sms/api/pricing#outbound-sms-price) records that represent the price to send a message for each MCC/MNC applicable in this country.",
+                "items" : {
+                  "format" : "outbound-sms-price",
+                  "properties" : {
+                    "carrier" : {
+                      "type" : "string"
+                    },
+                    "mcc" : {
+                      "type" : "string"
+                    },
+                    "mnc" : {
+                      "type" : "string"
+                    },
+                    "prices" : {
+                      "items" : {
+                        "properties" : {
+                          "base_price" : {
+                            "type" : "number"
+                          },
+                          "current_price" : {
+                            "type" : "number"
+                          },
+                          "number_type" : {
+                            "type" : "string"
+                          }
+                        },
+                        "type" : "object"
+                      },
+                      "type" : "array"
+                    }
+                  },
+                  "type" : "object"
+                },
+                "nullable" : true,
+                "type" : "array"
+              },
+              "price_unit" : {
+                "description" : "The currency in which prices are measured, specified in [ISO 4127](http://www.iso.org/iso/home/standards/currency_codes.htm) format (e.g. `usd`, `eur`, `jpy`).",
+                "format" : "currency",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "url" : {
+                "description" : "The absolute URL of the resource.",
+                "format" : "uri",
+                "nullable" : true,
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 5
+  }, {
+    "id" : "e3423a9e-03ee-42bf-bc49-4771f8298f4b",
+    "name" : "",
+    "request" : {
+      "urlPath" : "/v1/Messaging/Countries",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"meta\" : {\n    \"first_page_url\" : \"https://web.example.mocklab.io/050918\",\n    \"next_page_url\" : \"https://web.example.mocklab.io/142949\",\n    \"previous_page_url\" : \"https://web.example.mocklab.io/056741\",\n    \"page\" : 2761732838305239362,\n    \"key\" : \"ve6g5\",\n    \"url\" : \"https://web.example.mocklab.io/890941\",\n    \"page_size\" : 4870312351539179053\n  },\n  \"countries\" : [ {\n    \"country\" : \"Indonesia\",\n    \"iso_country\" : \"Australia\",\n    \"url\" : \"https://web.example.mocklab.io/118309\"\n  }, {\n    \"country\" : \"Nicaragua\",\n    \"iso_country\" : \"Cyprus\",\n    \"url\" : \"https://web.example.mocklab.io/307828\"\n  }, {\n    \"country\" : \"Jamaica\",\n    \"iso_country\" : \"Yemen\",\n    \"url\" : \"https://web.example.mocklab.io/615569\"\n  }, {\n    \"country\" : \"Italy\",\n    \"iso_country\" : \"Bolivia (Plurinational State of)\",\n    \"url\" : \"https://web.example.mocklab.io/616705\"\n  }, {\n    \"country\" : \"Micronesia (Federated States of)\",\n    \"iso_country\" : \"Nauru\",\n    \"url\" : \"https://web.example.mocklab.io/039560\"\n  }, {\n    \"country\" : \"San Marino\",\n    \"iso_country\" : \"South Sudan\",\n    \"url\" : \"https://web.example.mocklab.io/412874\"\n  }, {\n    \"country\" : \"Pakistan\",\n    \"iso_country\" : \"Ireland\",\n    \"url\" : \"https://web.example.mocklab.io/169596\"\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "e3423a9e-03ee-42bf-bc49-4771f8298f4b",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:20.760114Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "ListMessagingCountry",
+          "schema" : {
+            "properties" : {
+              "countries" : {
+                "items" : {
+                  "$ref" : "#/components/schemas/pricing.v1.messaging.messaging_country"
+                },
+                "type" : "array"
+              },
+              "meta" : {
+                "properties" : {
+                  "first_page_url" : {
+                    "format" : "uri",
+                    "type" : "string"
+                  },
+                  "key" : {
+                    "type" : "string"
+                  },
+                  "next_page_url" : {
+                    "format" : "uri",
+                    "nullable" : true,
+                    "type" : "string"
+                  },
+                  "page" : {
+                    "type" : "integer"
+                  },
+                  "page_size" : {
+                    "type" : "integer"
+                  },
+                  "previous_page_url" : {
+                    "format" : "uri",
+                    "nullable" : true,
+                    "type" : "string"
+                  },
+                  "url" : {
+                    "format" : "uri",
+                    "type" : "string"
+                  }
+                },
+                "type" : "object"
+              }
+            },
+            "title" : "ListMessagingCountryResponse",
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 6
+  } ]
+}

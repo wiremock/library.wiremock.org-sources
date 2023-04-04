@@ -1,0 +1,1112 @@
+{
+  "mappings" : [ {
+    "id" : "d30337f6-303a-4e96-96de-924861d82ab7",
+    "name" : "",
+    "request" : {
+      "urlPath" : "/v1/PlayerStreamers/VJ9FDdadc33Dd8eb619ecdE73c53ECCfab/PlaybackGrant",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 201,
+      "body" : "{\n  \"date_created\" : \"2022-04-13T22:27:52.537Z\",\n  \"account_sid\" : \"AC61dE7931f2Aff438c28bAA2BAE6eE9fc\",\n  \"grant\" : { },\n  \"url\" : \"https://web.example.mocklab.io/227041\",\n  \"sid\" : \"VJEDFB45bC7d5F70f78a2bFda4fDF3c1A2\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "d30337f6-303a-4e96-96de-924861d82ab7",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:18.538101Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "CreatePlayerStreamerPlaybackGrant",
+          "schema" : {
+            "properties" : {
+              "account_sid" : {
+                "description" : "The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created this resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^AC[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "date_created" : {
+                "description" : "The date and time in GMT when the resource was created specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "grant" : {
+                "description" : "The grant that authorizes the player sdk to connect to the livestream",
+                "nullable" : true
+              },
+              "sid" : {
+                "description" : "The unique string generated to identify the PlayerStreamer resource that this PlaybackGrant authorizes views for.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^VJ[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "url" : {
+                "description" : "The absolute URL of the resource.",
+                "format" : "uri",
+                "nullable" : true,
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 0
+  }, {
+    "id" : "a3778249-67a0-4aec-aa60-7a7239cc59cf",
+    "name" : "**This method is not enabled.** Returns a single PlaybackGrant resource identifi...",
+    "request" : {
+      "urlPath" : "/v1/PlayerStreamers/VJBDcCeEECEdF8dD52aeAbCee8dDfAcbE7/PlaybackGrant",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"date_created\" : \"2023-12-23T20:16:52.537Z\",\n  \"account_sid\" : \"ACE20226FCEFed6d8fdCDAC92c3a4FD3Ee\",\n  \"grant\" : { },\n  \"url\" : \"https://web.example.mocklab.io/244826\",\n  \"sid\" : \"VJ40bE776AECFCBfF8cB40b0B4eefAEdEe\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "a3778249-67a0-4aec-aa60-7a7239cc59cf",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:18.537945Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "FetchPlayerStreamerPlaybackGrant",
+          "schema" : {
+            "properties" : {
+              "account_sid" : {
+                "description" : "The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created this resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^AC[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "date_created" : {
+                "description" : "The date and time in GMT when the resource was created specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "grant" : {
+                "description" : "The grant that authorizes the player sdk to connect to the livestream",
+                "nullable" : true
+              },
+              "sid" : {
+                "description" : "The unique string generated to identify the PlayerStreamer resource that this PlaybackGrant authorizes views for.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^VJ[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "url" : {
+                "description" : "The absolute URL of the resource.",
+                "format" : "uri",
+                "nullable" : true,
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 1
+  }, {
+    "id" : "b0bdfb9a-129a-40e3-aab2-996b0d92620a",
+    "name" : "Updates a PlayerStreamer resource identified by a SID.",
+    "request" : {
+      "urlPath" : "/v1/PlayerStreamers/VJFFCC62D4100FFa6402eeaE8AbD80C2d1",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"date_updated\" : \"2023-02-14T03:23:59.537Z\",\n  \"status_callback_method\" : \"GET\",\n  \"date_created\" : \"2023-10-14T22:41:58.537Z\",\n  \"account_sid\" : \"AC7dD2c5CacB7b5a46268A19Ce0bF9Bf40\",\n  \"links\" : { },\n  \"status_callback\" : \"gcy0zbqlmviljja2z3of182os4oh7j9agxesd0bbsyrcy8f6fyq8k6out1ptq55amqf3voj5llhmphwzqabixz3licee7r\",\n  \"video\" : true,\n  \"max_duration\" : 6170225601293785597,\n  \"url\" : \"https://web.example.mocklab.io/809808\",\n  \"ended_reason\" : \"unexpected-failure\",\n  \"sid\" : \"VJ310eFe5ccb09BF9D50bD245Bdff44Cc3\",\n  \"status\" : \"started\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "b0bdfb9a-129a-40e3-aab2-996b0d92620a",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:18.537739Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "UpdatePlayerStreamer",
+          "schema" : {
+            "properties" : {
+              "account_sid" : {
+                "description" : "The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the PlayerStreamer resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^AC[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "date_created" : {
+                "description" : "The date and time in GMT when the resource was created specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "date_updated" : {
+                "description" : "The date and time in GMT when the resource was last updated specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "ended_reason" : {
+                "$ref" : "#/components/schemas/player_streamer_enum_ended_reason"
+              },
+              "links" : {
+                "description" : "The URLs of related resources.",
+                "format" : "uri-map",
+                "nullable" : true,
+                "type" : "object"
+              },
+              "max_duration" : {
+                "description" : "The maximum time, in seconds, that the PlayerStreamer is active (`created` or `started`) before automatically ends. The default value is 300 seconds, and the maximum value is 90000 seconds. Once this maximum duration is reached, Twilio will end the PlayerStreamer, regardless of whether media is still streaming.",
+                "nullable" : true,
+                "type" : "integer"
+              },
+              "sid" : {
+                "description" : "The unique string generated to identify the PlayerStreamer resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^VJ[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "status" : {
+                "$ref" : "#/components/schemas/player_streamer_enum_status"
+              },
+              "status_callback" : {
+                "description" : "The URL to which Twilio will send asynchronous webhook requests for every PlayerStreamer event. See [Status Callbacks](/docs/live/status-callbacks) for more details.",
+                "format" : "uri",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "status_callback_method" : {
+                "description" : "The HTTP method Twilio should use to call the `status_callback` URL. Can be `POST` or `GET` and the default is `POST`.",
+                "enum" : [ "HEAD", "GET", "POST", "PATCH", "PUT", "DELETE" ],
+                "format" : "http-method",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "url" : {
+                "description" : "The absolute URL of the resource.",
+                "format" : "uri",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "video" : {
+                "description" : "Specifies whether the PlayerStreamer is configured to stream video. Defaults to `true`.",
+                "nullable" : true,
+                "type" : "boolean"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 2
+  }, {
+    "id" : "57232aa3-ca01-4945-9399-b0b60cdf6570",
+    "name" : "Returns a single PlayerStreamer resource identified by a SID.",
+    "request" : {
+      "urlPath" : "/v1/PlayerStreamers/VJCA79f5a095628FB34E9a8CBA55aF8aba",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"date_updated\" : \"2022-09-05T15:06:12.537Z\",\n  \"status_callback_method\" : \"PUT\",\n  \"date_created\" : \"2023-04-13T02:01:58.537Z\",\n  \"account_sid\" : \"AC8d180D42E7aA8C08aC7eDC4376d4E1D7\",\n  \"links\" : { },\n  \"status_callback\" : \"u4f14xxt4e0y4fjf8rcc8go6ks3yzzkmr5bjc107nzdjnrsplbrrtbdf9hy0lvi4sqqcy4k9vqnzpws3ypc365aj4qrgzfhoz611ig3u3xpwhr7m\",\n  \"video\" : false,\n  \"max_duration\" : 1725328916524576050,\n  \"url\" : \"https://web.example.mocklab.io/201066\",\n  \"ended_reason\" : \"stream-disconnected-by-source\",\n  \"sid\" : \"VJ5B8db1277d5FE6832D9B0ea13C345e0E\",\n  \"status\" : \"created\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "57232aa3-ca01-4945-9399-b0b60cdf6570",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:18.537486Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "FetchPlayerStreamer",
+          "schema" : {
+            "properties" : {
+              "account_sid" : {
+                "description" : "The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the PlayerStreamer resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^AC[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "date_created" : {
+                "description" : "The date and time in GMT when the resource was created specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "date_updated" : {
+                "description" : "The date and time in GMT when the resource was last updated specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "ended_reason" : {
+                "$ref" : "#/components/schemas/player_streamer_enum_ended_reason"
+              },
+              "links" : {
+                "description" : "The URLs of related resources.",
+                "format" : "uri-map",
+                "nullable" : true,
+                "type" : "object"
+              },
+              "max_duration" : {
+                "description" : "The maximum time, in seconds, that the PlayerStreamer is active (`created` or `started`) before automatically ends. The default value is 300 seconds, and the maximum value is 90000 seconds. Once this maximum duration is reached, Twilio will end the PlayerStreamer, regardless of whether media is still streaming.",
+                "nullable" : true,
+                "type" : "integer"
+              },
+              "sid" : {
+                "description" : "The unique string generated to identify the PlayerStreamer resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^VJ[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "status" : {
+                "$ref" : "#/components/schemas/player_streamer_enum_status"
+              },
+              "status_callback" : {
+                "description" : "The URL to which Twilio will send asynchronous webhook requests for every PlayerStreamer event. See [Status Callbacks](/docs/live/status-callbacks) for more details.",
+                "format" : "uri",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "status_callback_method" : {
+                "description" : "The HTTP method Twilio should use to call the `status_callback` URL. Can be `POST` or `GET` and the default is `POST`.",
+                "enum" : [ "HEAD", "GET", "POST", "PATCH", "PUT", "DELETE" ],
+                "format" : "http-method",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "url" : {
+                "description" : "The absolute URL of the resource.",
+                "format" : "uri",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "video" : {
+                "description" : "Specifies whether the PlayerStreamer is configured to stream video. Defaults to `true`.",
+                "nullable" : true,
+                "type" : "boolean"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 3
+  }, {
+    "id" : "1bc47ac1-b260-45b3-a207-4f7cb50a3341",
+    "name" : "",
+    "request" : {
+      "urlPath" : "/v1/PlayerStreamers",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 201,
+      "body" : "{\n  \"date_updated\" : \"2023-12-21T15:15:24.536Z\",\n  \"status_callback_method\" : \"HEAD\",\n  \"date_created\" : \"2022-12-27T00:28:36.536Z\",\n  \"account_sid\" : \"AC693AF324f7298Ea9Bb5e0B40De0D5272\",\n  \"links\" : { },\n  \"status_callback\" : \"3gz64k60rylvl52k\",\n  \"video\" : true,\n  \"max_duration\" : 5552714633061125309,\n  \"url\" : \"https://web.example.mocklab.io/797305\",\n  \"ended_reason\" : \"unexpected-failure\",\n  \"sid\" : \"VJbbAFDDE26BF3f1CB6d01C2FE2fd4D707\",\n  \"status\" : \"failed\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "1bc47ac1-b260-45b3-a207-4f7cb50a3341",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:18.537221Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "CreatePlayerStreamer",
+          "schema" : {
+            "properties" : {
+              "account_sid" : {
+                "description" : "The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the PlayerStreamer resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^AC[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "date_created" : {
+                "description" : "The date and time in GMT when the resource was created specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "date_updated" : {
+                "description" : "The date and time in GMT when the resource was last updated specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "ended_reason" : {
+                "$ref" : "#/components/schemas/player_streamer_enum_ended_reason"
+              },
+              "links" : {
+                "description" : "The URLs of related resources.",
+                "format" : "uri-map",
+                "nullable" : true,
+                "type" : "object"
+              },
+              "max_duration" : {
+                "description" : "The maximum time, in seconds, that the PlayerStreamer is active (`created` or `started`) before automatically ends. The default value is 300 seconds, and the maximum value is 90000 seconds. Once this maximum duration is reached, Twilio will end the PlayerStreamer, regardless of whether media is still streaming.",
+                "nullable" : true,
+                "type" : "integer"
+              },
+              "sid" : {
+                "description" : "The unique string generated to identify the PlayerStreamer resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^VJ[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "status" : {
+                "$ref" : "#/components/schemas/player_streamer_enum_status"
+              },
+              "status_callback" : {
+                "description" : "The URL to which Twilio will send asynchronous webhook requests for every PlayerStreamer event. See [Status Callbacks](/docs/live/status-callbacks) for more details.",
+                "format" : "uri",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "status_callback_method" : {
+                "description" : "The HTTP method Twilio should use to call the `status_callback` URL. Can be `POST` or `GET` and the default is `POST`.",
+                "enum" : [ "HEAD", "GET", "POST", "PATCH", "PUT", "DELETE" ],
+                "format" : "http-method",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "url" : {
+                "description" : "The absolute URL of the resource.",
+                "format" : "uri",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "video" : {
+                "description" : "Specifies whether the PlayerStreamer is configured to stream video. Defaults to `true`.",
+                "nullable" : true,
+                "type" : "boolean"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 4
+  }, {
+    "id" : "b4ae7613-b224-45fa-a631-51a813cf5e3f",
+    "name" : "Returns a list of PlayerStreamers.",
+    "request" : {
+      "urlPath" : "/v1/PlayerStreamers",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"player_streamers\" : [ {\n    \"date_updated\" : \"2022-10-09T02:12:22.536Z\",\n    \"status_callback_method\" : \"GET\",\n    \"date_created\" : \"2023-08-24T13:12:20.536Z\",\n    \"account_sid\" : \"ACeEe5B9f15cef011FFfADca1F481F2bDc\",\n    \"links\" : { },\n    \"status_callback\" : \"8um9gp02rmve40ric6j8euqxdaaprdebnw013pdrpulxwj8gvykxm3819jot3jylbyfw9xlj4jqwswlnxn3rknzykonmojly4c\",\n    \"video\" : false,\n    \"max_duration\" : 554461558571340152,\n    \"url\" : \"https://web.example.mocklab.io/544833\",\n    \"ended_reason\" : \"max-duration-exceeded\",\n    \"sid\" : \"VJFEFDA66EcFa79AdFec7975aB4EFAEeDf\",\n    \"status\" : \"ended\"\n  } ],\n  \"meta\" : {\n    \"first_page_url\" : \"https://web.example.mocklab.io/908631\",\n    \"next_page_url\" : \"https://web.example.mocklab.io/989531\",\n    \"previous_page_url\" : \"https://web.example.mocklab.io/508011\",\n    \"page\" : 7796919073275650539,\n    \"key\" : \"jao9dj0d46fo17pxq28js121visx66hmvqcz6gqsy68tk1wuhlq9in68vyhat3a9pl8ynsuk76yckqr\",\n    \"url\" : \"https://web.example.mocklab.io/730680\",\n    \"page_size\" : 8875937767316529302\n  }\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "b4ae7613-b224-45fa-a631-51a813cf5e3f",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:18.536937Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "ListPlayerStreamer",
+          "schema" : {
+            "properties" : {
+              "meta" : {
+                "properties" : {
+                  "first_page_url" : {
+                    "format" : "uri",
+                    "type" : "string"
+                  },
+                  "key" : {
+                    "type" : "string"
+                  },
+                  "next_page_url" : {
+                    "format" : "uri",
+                    "nullable" : true,
+                    "type" : "string"
+                  },
+                  "page" : {
+                    "type" : "integer"
+                  },
+                  "page_size" : {
+                    "type" : "integer"
+                  },
+                  "previous_page_url" : {
+                    "format" : "uri",
+                    "nullable" : true,
+                    "type" : "string"
+                  },
+                  "url" : {
+                    "format" : "uri",
+                    "type" : "string"
+                  }
+                },
+                "type" : "object"
+              },
+              "player_streamers" : {
+                "items" : {
+                  "$ref" : "#/components/schemas/media.v1.player_streamer"
+                },
+                "type" : "array"
+              }
+            },
+            "title" : "ListPlayerStreamerResponse",
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 5
+  }, {
+    "id" : "9a2fd075-1032-4cd8-b8fb-ee09fd2e669e",
+    "name" : "Returns a single MediaRecording resource identified by a SID.",
+    "request" : {
+      "urlPath" : "/v1/MediaRecordings/KVD5acf6deab1Bdbc8A081f59A57b5ceA3",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"date_updated\" : \"2024-02-23T15:28:18.535Z\",\n  \"media_size\" : 7582474069522471656,\n  \"status_callback_method\" : \"HEAD\",\n  \"date_created\" : \"2023-04-13T20:18:54.536Z\",\n  \"format\" : \"webm\",\n  \"status_callback\" : \"esve23l4e86j1soxh2xza45dfpw3ugj0xnxffvrds7phvdcsu8ym3l4nxk739ax7tm0c0xjjs1tg4pzhtagf183r3cai2pa7wngufgry5kbkhruwq\",\n  \"resolution\" : \"cqz115qt9kcunab0462xa1kng91ltj6vvjs2lmb81tsoo7tn7jpjnp6lp4s74jczox7f0y61w3iv5lpdn33kofcvrsu489vwndycomfdyw2jhtw27jdtai9hajdj9avqxyno0umnbw1zs52fe25lgw2420d5kiwi0cxcmmabw2ykcyeu2\",\n  \"processor_sid\" : \"ZXdCbbFEbc72a858ee82a5Ac6a582fcBfd\",\n  \"url\" : \"https://web.example.mocklab.io/624189\",\n  \"sid\" : \"KV3bd3Bb19b3EeEeF3485Da4f819e4a251\",\n  \"source_sid\" : \"ntae544174255Ba83D739bDfcD6a3DEaFD\",\n  \"duration\" : 7568771941797346070,\n  \"account_sid\" : \"ACC0276ceAB04f5D1a715C966b3Fe8cF0d\",\n  \"links\" : { },\n  \"status\" : \"processing\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "9a2fd075-1032-4cd8-b8fb-ee09fd2e669e",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:18.536324Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "FetchMediaRecording",
+          "schema" : {
+            "properties" : {
+              "account_sid" : {
+                "description" : "The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the MediaRecording resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^AC[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "date_created" : {
+                "description" : "The date and time in GMT when the resource was created specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "date_updated" : {
+                "description" : "The date and time in GMT when the resource was last updated specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "duration" : {
+                "description" : "The duration of the MediaRecording in seconds.",
+                "nullable" : true,
+                "type" : "integer"
+              },
+              "format" : {
+                "$ref" : "#/components/schemas/media_recording_enum_format"
+              },
+              "links" : {
+                "description" : "The URLs of related resources.",
+                "format" : "uri-map",
+                "nullable" : true,
+                "type" : "object"
+              },
+              "media_size" : {
+                "description" : "The size of the recording media in bytes.",
+                "format" : "int64",
+                "nullable" : true,
+                "type" : "integer"
+              },
+              "processor_sid" : {
+                "description" : "The SID of the MediaProcessor resource which produced the MediaRecording.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^ZX[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "resolution" : {
+                "description" : "The dimensions of the video image in pixels expressed as columns (width) and rows (height).",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "sid" : {
+                "description" : "The unique string generated to identify the MediaRecording resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^KV[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "source_sid" : {
+                "description" : "The SID of the resource that generated the original media track(s) of the MediaRecording.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^[a-zA-Z]{2}[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "status" : {
+                "$ref" : "#/components/schemas/media_recording_enum_status"
+              },
+              "status_callback" : {
+                "description" : "The URL to which Twilio will send asynchronous webhook requests for every MediaRecording event. See [Status Callbacks](/docs/live/status-callbacks) for more details.",
+                "format" : "uri",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "status_callback_method" : {
+                "description" : "The HTTP method Twilio should use to call the `status_callback` URL. Can be `POST` or `GET` and the default is `POST`.",
+                "enum" : [ "HEAD", "GET", "POST", "PATCH", "PUT", "DELETE" ],
+                "format" : "http-method",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "url" : {
+                "description" : "The absolute URL of the resource.",
+                "format" : "uri",
+                "nullable" : true,
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 6
+  }, {
+    "id" : "f6067837-d7ad-444d-b939-032629c50f72",
+    "name" : "Deletes a MediaRecording resource identified by a SID. - 204",
+    "request" : {
+      "urlPath" : "/v1/MediaRecordings/KVDAbF6Ec9C0Bde5b3A14C76f89CecaDf6",
+      "method" : "DELETE"
+    },
+    "response" : {
+      "status" : 204
+    },
+    "uuid" : "f6067837-d7ad-444d-b939-032629c50f72",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:18.535978Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "DeleteMediaRecording"
+        }
+      }
+    },
+    "insertionIndex" : 7
+  }, {
+    "id" : "2c6c323b-6c2c-4165-ac66-49aa4ba0a9df",
+    "name" : "Returns a list of MediaRecordings.",
+    "request" : {
+      "urlPath" : "/v1/MediaRecordings",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"meta\" : {\n    \"first_page_url\" : \"https://web.example.mocklab.io/926379\",\n    \"next_page_url\" : \"https://web.example.mocklab.io/558171\",\n    \"previous_page_url\" : \"https://web.example.mocklab.io/059197\",\n    \"page\" : 633439410448875655,\n    \"key\" : \"rfqzigybhqxnk2ftz4ze4zfp0jv\",\n    \"url\" : \"https://web.example.mocklab.io/293329\",\n    \"page_size\" : 8364019441788883618\n  },\n  \"media_recordings\" : [ {\n    \"date_updated\" : \"2024-02-07T23:02:24.535Z\",\n    \"media_size\" : 9043207522897698428,\n    \"status_callback_method\" : \"HEAD\",\n    \"date_created\" : \"2023-08-30T15:39:08.535Z\",\n    \"format\" : \"mp4\",\n    \"status_callback\" : \"s20odirbh6mevdrcasxg9rvpjs4lynd399kz1qfoor8g98sjggwxr74605jp2d0s2brg183x3o0q4rxf1583vbvofg3m1shljcx3qjq2wu7mp4w4z4p\",\n    \"resolution\" : \"8sgq9wjopjudkgc1x77e279zi93mbnakypq0gb7je8go4bu1sxtwx6zf95l340swnhh4w8wt2cw97k31vf2ad5gg4r8cuyp6wv9knya7p1e0mvr6dbyu0j0jzj6ydgvzw\",\n    \"processor_sid\" : \"ZX082033f5afcB65fb761d1c3Ff21E5Ed9\",\n    \"url\" : \"https://web.example.mocklab.io/871392\",\n    \"sid\" : \"KVcBc24418872baaAA80bAFAd5444a0621\",\n    \"source_sid\" : \"mD7F452867cb45FbFB3cCa0BfdFab61fAc\",\n    \"duration\" : 7995925190172216515,\n    \"account_sid\" : \"ACfc1Ce95a965d4B3A9EF2aF31c41a5B0E\",\n    \"links\" : { },\n    \"status\" : \"deleted\"\n  }, {\n    \"date_updated\" : \"2022-12-07T23:23:08.535Z\",\n    \"media_size\" : 8566431791756097500,\n    \"status_callback_method\" : \"DELETE\",\n    \"date_created\" : \"2022-05-24T05:05:45.535Z\",\n    \"format\" : \"webm\",\n    \"status_callback\" : \"xnmx9hl3tibahgavo1z1d3qng2vcm0xdz7eho366s61o4u8443k323xheq2drinz40ptb9h34cf1wt6shflud7iatjbk3ueh1t2gbag5tgdvdo4mz3sye2gncrba795s2faqb275ayelcbnqj9vf1lsfljbhli9faftn26g38\",\n    \"resolution\" : \"9sozm0hvt40b6s6psqi2bmj6j35u8pdooy32ct3x068d6n6qm7a9wos5etxh0iv6itqzf141xslaobqygvwom92fqp0ohnmd6y9kav429g3c8ldoq8ltzbgko4ifwj7gbk4v2cytgcyllk4hwb3625kxmjnujqpvjq\",\n    \"processor_sid\" : \"ZXD8A3E832cDcBDFfe21acb7F6753dD527\",\n    \"url\" : \"https://web.example.mocklab.io/401685\",\n    \"sid\" : \"KV1CBf01bCC610ea6A0608Dd4Be0CF8CFD\",\n    \"source_sid\" : \"be228b8181BA4E6fb5A4De19963B6db5f3\",\n    \"duration\" : 8119822626673364745,\n    \"account_sid\" : \"AC18A2BB25918684cabE1DB5261D4dAcF4\",\n    \"links\" : { },\n    \"status\" : \"deleted\"\n  }, {\n    \"date_updated\" : \"2023-09-03T08:24:53.535Z\",\n    \"media_size\" : 8089483703532384719,\n    \"status_callback_method\" : \"HEAD\",\n    \"date_created\" : \"2022-08-27T18:20:16.535Z\",\n    \"format\" : \"mp4\",\n    \"status_callback\" : \"stcw4r5grfbzt5rlb7togtlwhcqmhz7gi78olvw1fwxnkuetotyudayd47hf5nog62zptev\",\n    \"resolution\" : \"yofz5ppgr5704hfn8vohj47xs328grwmbqqhcu8jl0gjj7frrjp2rs8ps7igwzc2dwj986wp1lh1omb9h97edh9b5ezgsqdekse\",\n    \"processor_sid\" : \"ZXc5d19fc3f4A5a0d19d75Ae8d64d795Cb\",\n    \"url\" : \"https://web.example.mocklab.io/369297\",\n    \"sid\" : \"KVE0d3E05bdbBA2Dea2DdDE891dA5c53Ea\",\n    \"source_sid\" : \"NHa9A3C4123BEe3ADcaF5bBDD1FCBfCe3b\",\n    \"duration\" : 452885229108089111,\n    \"account_sid\" : \"ACF4a9CD73Bc4e63bB0dbC927dFdFB869A\",\n    \"links\" : { },\n    \"status\" : \"completed\"\n  }, {\n    \"date_updated\" : \"2023-10-21T17:52:11.535Z\",\n    \"media_size\" : 8025840432009601045,\n    \"status_callback_method\" : \"POST\",\n    \"date_created\" : \"2022-10-05T17:35:07.535Z\",\n    \"format\" : \"webm\",\n    \"status_callback\" : \"mvhclnvr5re1olk5ewdgouswih51tlc0tdmi3z5nbrj4q8ksryhy4ou8gifzzf4z20u\",\n    \"resolution\" : \"2jqifbbmj6g1hx6zj6tffjf7npw5a8f95z6yqtj3gfn20p3bd99wkpou6uhki10jyb\",\n    \"processor_sid\" : \"ZXEEECd8a8a8bb9939eE23d0B724BAc943\",\n    \"url\" : \"https://web.example.mocklab.io/956856\",\n    \"sid\" : \"KV7C500BAD675aFEbD066A4e5939acD5dA\",\n    \"source_sid\" : \"am872eC4B7a2Da8f8bdbaB388AC2Aa8D9D\",\n    \"duration\" : 880554615423625770,\n    \"account_sid\" : \"ACD5f4B2CefD4954DA8A960381B89Bbe9f\",\n    \"links\" : { },\n    \"status\" : \"failed\"\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "2c6c323b-6c2c-4165-ac66-49aa4ba0a9df",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:18.535927Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "ListMediaRecording",
+          "schema" : {
+            "properties" : {
+              "media_recordings" : {
+                "items" : {
+                  "$ref" : "#/components/schemas/media.v1.media_recording"
+                },
+                "type" : "array"
+              },
+              "meta" : {
+                "properties" : {
+                  "first_page_url" : {
+                    "format" : "uri",
+                    "type" : "string"
+                  },
+                  "key" : {
+                    "type" : "string"
+                  },
+                  "next_page_url" : {
+                    "format" : "uri",
+                    "nullable" : true,
+                    "type" : "string"
+                  },
+                  "page" : {
+                    "type" : "integer"
+                  },
+                  "page_size" : {
+                    "type" : "integer"
+                  },
+                  "previous_page_url" : {
+                    "format" : "uri",
+                    "nullable" : true,
+                    "type" : "string"
+                  },
+                  "url" : {
+                    "format" : "uri",
+                    "type" : "string"
+                  }
+                },
+                "type" : "object"
+              }
+            },
+            "title" : "ListMediaRecordingResponse",
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 8
+  }, {
+    "id" : "9b56d1d1-ebbe-4dbe-a182-c88d4563afbe",
+    "name" : "Updates a MediaProcessor resource identified by a SID.",
+    "request" : {
+      "urlPath" : "/v1/MediaProcessors/ZXCeDC88a491dcCb76735f5Bc6F30F2EBB",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"extension_context\" : \"50lw2fj3j15d3q13q2r5ej6flymd9zmidycu2a49vpq057x6y0okklzavr4mo3jk65pfg8tif0uomvtu4q68ffmjzsftprlb6r1og0of5\",\n  \"extension\" : \"8gr5z99h6b36n4ai7ezfnkd43yawqsfgc3v9jivcpwzormyyiekq0jeperkrtnepsp4dntjtyqhhhvaswud345qu52mgn2\",\n  \"date_updated\" : \"2024-02-22T17:55:57.534Z\",\n  \"status_callback_method\" : \"PATCH\",\n  \"date_created\" : \"2023-08-08T15:43:01.534Z\",\n  \"account_sid\" : \"ACfeBB24F858392AcAFD56cFb59ee8C965\",\n  \"status_callback\" : \"04lda34524tyvm655e909ci6jztvj6yfkch4g4hpqwpqlkl5gwb60rpo6e9xcks40g7hu60uu74ud93866q5249tti40c7n6kuzi1dd9keqh33txatztne5azktp1207ce8uxt59ncu52cdkk0tx3yxyl8lwl9h6te6dtyaqcas8kmcmk4qftlhud13pkxks\",\n  \"max_duration\" : 8195085892610815120,\n  \"url\" : \"https://web.example.mocklab.io/389631\",\n  \"ended_reason\" : \"rtal9gyc2bfw6cscpek93rqmaplrrvbjqw00hfm8kqf9zgn6h7xhab99nqg\",\n  \"sid\" : \"ZXdb03aDD2761ECB8BFBf6FDadDd7b538F\",\n  \"status\" : \"failed\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "9b56d1d1-ebbe-4dbe-a182-c88d4563afbe",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:18.534686Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "UpdateMediaProcessor",
+          "schema" : {
+            "properties" : {
+              "account_sid" : {
+                "description" : "The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the MediaProcessor resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^AC[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "date_created" : {
+                "description" : "The date and time in GMT when the resource was created specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "date_updated" : {
+                "description" : "The date and time in GMT when the resource was last updated specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "ended_reason" : {
+                "description" : "The reason why a MediaProcessor ended. When a MediaProcessor is in progress, will be `null`. When a MediaProcessor is completed, can be `ended-via-api`, `max-duration-exceeded`, `error-loading-extension`, `error-streaming-media` or `internal-service-error`. See [ended reasons](/docs/live/api/mediaprocessors#mediaprocessor-ended-reason-values) for more details.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "extension" : {
+                "description" : "The [Media Extension](/docs/live/api/media-extensions-overview) name or URL. Ex: `video-composer-v2`",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "extension_context" : {
+                "description" : "The context of the Media Extension, represented as a JSON dictionary. See the documentation for the specific [Media Extension](/docs/live/api/media-extensions-overview) you are using for more information about the context to send.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "max_duration" : {
+                "description" : "The maximum time, in seconds, that the MediaProcessor can run before automatically ends. The default value is 300 seconds, and the maximum value is 90000 seconds. Once this maximum duration is reached, Twilio will end the MediaProcessor, regardless of whether media is still streaming.",
+                "nullable" : true,
+                "type" : "integer"
+              },
+              "sid" : {
+                "description" : "The unique string generated to identify the MediaProcessor resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^ZX[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "status" : {
+                "$ref" : "#/components/schemas/media_processor_enum_status"
+              },
+              "status_callback" : {
+                "description" : "The URL to which Twilio will send asynchronous webhook requests for every MediaProcessor event. See [Status Callbacks](/docs/live/status-callbacks) for details.",
+                "format" : "uri",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "status_callback_method" : {
+                "description" : "The HTTP method Twilio should use to call the `status_callback` URL. Can be `POST` or `GET` and the default is `POST`.",
+                "enum" : [ "HEAD", "GET", "POST", "PATCH", "PUT", "DELETE" ],
+                "format" : "http-method",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "url" : {
+                "description" : "The absolute URL of the resource.",
+                "format" : "uri",
+                "nullable" : true,
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 9
+  }, {
+    "id" : "bfa61b1d-6b2b-464f-a8b0-52252949fb9e",
+    "name" : "Returns a single MediaProcessor resource identified by a SID.",
+    "request" : {
+      "urlPath" : "/v1/MediaProcessors/ZX16D58f3855Da8bda6a269A1eb32e267a",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"extension_context\" : \"8vd4p4iv6d3wh3zwv1rpu2i5ovvdkpsjelllr3m17l1n4s0q4ifb3yvtiqsu4rwff2l9b0s8s0l6httx23d36nd3yic0rfbqel69nteygqay865xgsr0o4cjf3km6e34wyods87h77i6drarueuvq\",\n  \"extension\" : \"bveyout7neimbks9300yrr6716trm1n5bpqjhr1cdtvv54bwhaj2dvbbxyzrrgljofmrembkq7w8fsgb7atumybk8ykp7sworrihrn3bqf9kqqpv0vgvke0e06nhq1ob715ecitpfdw8m2xmou8ltxx51f9ukmtspbo1p\",\n  \"date_updated\" : \"2023-03-24T08:40:46.534Z\",\n  \"status_callback_method\" : \"GET\",\n  \"date_created\" : \"2023-09-28T18:05:56.534Z\",\n  \"account_sid\" : \"AC9360c14C7eEcA04d9D5CD6de478f0fa7\",\n  \"status_callback\" : \"zbpgh9n5zqcltjr9syq3x0itgyus9h7bfvhvt2cv3k6rzd4xstw\",\n  \"max_duration\" : 4795663340546284991,\n  \"url\" : \"https://web.example.mocklab.io/914638\",\n  \"ended_reason\" : \"bnahcxga6a39yhdryinpadudprep2knqjild6x411s6ua9bxepyi7fq3zfu25b6ak2vf7hxst8rns9h8inuunqejm7mrgdglao6m8hifzh0pw2vgv9\",\n  \"sid\" : \"ZXc2e756A0f3FCc4D6CBEc6cEdF56Faae9\",\n  \"status\" : \"ended\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "bfa61b1d-6b2b-464f-a8b0-52252949fb9e",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:18.534369Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "FetchMediaProcessor",
+          "schema" : {
+            "properties" : {
+              "account_sid" : {
+                "description" : "The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the MediaProcessor resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^AC[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "date_created" : {
+                "description" : "The date and time in GMT when the resource was created specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "date_updated" : {
+                "description" : "The date and time in GMT when the resource was last updated specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "ended_reason" : {
+                "description" : "The reason why a MediaProcessor ended. When a MediaProcessor is in progress, will be `null`. When a MediaProcessor is completed, can be `ended-via-api`, `max-duration-exceeded`, `error-loading-extension`, `error-streaming-media` or `internal-service-error`. See [ended reasons](/docs/live/api/mediaprocessors#mediaprocessor-ended-reason-values) for more details.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "extension" : {
+                "description" : "The [Media Extension](/docs/live/api/media-extensions-overview) name or URL. Ex: `video-composer-v2`",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "extension_context" : {
+                "description" : "The context of the Media Extension, represented as a JSON dictionary. See the documentation for the specific [Media Extension](/docs/live/api/media-extensions-overview) you are using for more information about the context to send.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "max_duration" : {
+                "description" : "The maximum time, in seconds, that the MediaProcessor can run before automatically ends. The default value is 300 seconds, and the maximum value is 90000 seconds. Once this maximum duration is reached, Twilio will end the MediaProcessor, regardless of whether media is still streaming.",
+                "nullable" : true,
+                "type" : "integer"
+              },
+              "sid" : {
+                "description" : "The unique string generated to identify the MediaProcessor resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^ZX[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "status" : {
+                "$ref" : "#/components/schemas/media_processor_enum_status"
+              },
+              "status_callback" : {
+                "description" : "The URL to which Twilio will send asynchronous webhook requests for every MediaProcessor event. See [Status Callbacks](/docs/live/status-callbacks) for details.",
+                "format" : "uri",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "status_callback_method" : {
+                "description" : "The HTTP method Twilio should use to call the `status_callback` URL. Can be `POST` or `GET` and the default is `POST`.",
+                "enum" : [ "HEAD", "GET", "POST", "PATCH", "PUT", "DELETE" ],
+                "format" : "http-method",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "url" : {
+                "description" : "The absolute URL of the resource.",
+                "format" : "uri",
+                "nullable" : true,
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 10
+  }, {
+    "id" : "5d205f47-ac21-474c-9a90-6ec1b9226edf",
+    "name" : "",
+    "request" : {
+      "urlPath" : "/v1/MediaProcessors",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 201,
+      "body" : "{\n  \"extension_context\" : \"96es7zdpcaulcwscpqzzph7avy2as7o6asf1rft38pime1w7yik6c0m3mcyna3n3jtjv6rswcios5fb7vyaklaylbz4wfq82mhoihwt0c4eg0sev6q85vwms3nyo\",\n  \"extension\" : \"gvi33mhdjdk6t4uwtvqvte5nitycavyhh8i58jxnnd7kzc6kdghp2zz18ensiv6dlyt5n16uwnye32p56fmdjjxtlty5rvsko481339819y5l9ffg90mk9ujj0c10a\",\n  \"date_updated\" : \"2022-05-22T07:19:58.533Z\",\n  \"status_callback_method\" : \"PATCH\",\n  \"date_created\" : \"2022-11-24T06:44:05.533Z\",\n  \"account_sid\" : \"ACB9E4Aec792223ae41D79F4dEF8718Dba\",\n  \"status_callback\" : \"rgohzoya35ohevzr6pknqt2p4nfqmmrohrmqkzggndsxv3u0vj2ty2t1cgny7dg2uslmtryc48xq3n2p3p2h1132kpehto4f1zzvr646b6vo0hf1lu4s4irrn087ref87cld3bjfcy97zphepo7klip5u0wpxk68\",\n  \"max_duration\" : 212167275336220696,\n  \"url\" : \"https://web.example.mocklab.io/243672\",\n  \"ended_reason\" : \"uie\",\n  \"sid\" : \"ZXC3DF8cecdEBe02CFb8601C6db6F5C9D9\",\n  \"status\" : \"started\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "5d205f47-ac21-474c-9a90-6ec1b9226edf",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:18.533968Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "CreateMediaProcessor",
+          "schema" : {
+            "properties" : {
+              "account_sid" : {
+                "description" : "The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the MediaProcessor resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^AC[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "date_created" : {
+                "description" : "The date and time in GMT when the resource was created specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "date_updated" : {
+                "description" : "The date and time in GMT when the resource was last updated specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "ended_reason" : {
+                "description" : "The reason why a MediaProcessor ended. When a MediaProcessor is in progress, will be `null`. When a MediaProcessor is completed, can be `ended-via-api`, `max-duration-exceeded`, `error-loading-extension`, `error-streaming-media` or `internal-service-error`. See [ended reasons](/docs/live/api/mediaprocessors#mediaprocessor-ended-reason-values) for more details.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "extension" : {
+                "description" : "The [Media Extension](/docs/live/api/media-extensions-overview) name or URL. Ex: `video-composer-v2`",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "extension_context" : {
+                "description" : "The context of the Media Extension, represented as a JSON dictionary. See the documentation for the specific [Media Extension](/docs/live/api/media-extensions-overview) you are using for more information about the context to send.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "max_duration" : {
+                "description" : "The maximum time, in seconds, that the MediaProcessor can run before automatically ends. The default value is 300 seconds, and the maximum value is 90000 seconds. Once this maximum duration is reached, Twilio will end the MediaProcessor, regardless of whether media is still streaming.",
+                "nullable" : true,
+                "type" : "integer"
+              },
+              "sid" : {
+                "description" : "The unique string generated to identify the MediaProcessor resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^ZX[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "status" : {
+                "$ref" : "#/components/schemas/media_processor_enum_status"
+              },
+              "status_callback" : {
+                "description" : "The URL to which Twilio will send asynchronous webhook requests for every MediaProcessor event. See [Status Callbacks](/docs/live/status-callbacks) for details.",
+                "format" : "uri",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "status_callback_method" : {
+                "description" : "The HTTP method Twilio should use to call the `status_callback` URL. Can be `POST` or `GET` and the default is `POST`.",
+                "enum" : [ "HEAD", "GET", "POST", "PATCH", "PUT", "DELETE" ],
+                "format" : "http-method",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "url" : {
+                "description" : "The absolute URL of the resource.",
+                "format" : "uri",
+                "nullable" : true,
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 11
+  }, {
+    "id" : "2bbe8b6f-a80c-4816-b83b-e3febe138b67",
+    "name" : "Returns a list of MediaProcessors.",
+    "request" : {
+      "urlPath" : "/v1/MediaProcessors",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"meta\" : {\n    \"first_page_url\" : \"https://web.example.mocklab.io/831779\",\n    \"next_page_url\" : \"https://web.example.mocklab.io/285982\",\n    \"previous_page_url\" : \"https://web.example.mocklab.io/953453\",\n    \"page\" : 6167492197443141974,\n    \"key\" : \"2k0vnwc2qr5q7376f56kk0gmn270nqs5k04lxq1b1wiv4m1xa96604hbuxtnql7xw1asg0ootm3bz2783crr\",\n    \"url\" : \"https://web.example.mocklab.io/588396\",\n    \"page_size\" : 4468298753406563397\n  },\n  \"media_processors\" : [ {\n    \"extension_context\" : \"1kj2hxttso6rkmjn508nemhh4byyc466t08qldjlsqne8953tg776vy06s5n4nb1s9mmpxno5iyz6pl8cydhwte0y\",\n    \"extension\" : \"y9s6sgu0b9dp90urahrsxtrjkj0xl43lx0olw2xunekjj9mvu13pi8ww28nk9hlws341k2c0xc58aaa50jkd2e280jxk5ftxf1vzpo2fju98qlr852mmdhuyk59kbx0q2qxve8px7o1248dbnrxyybsyc5v9uc6qd7ah8ljczvqnsdc47956qxnpmsk\",\n    \"date_updated\" : \"2023-10-11T10:18:19.532Z\",\n    \"status_callback_method\" : \"POST\",\n    \"date_created\" : \"2022-07-17T01:03:57.532Z\",\n    \"account_sid\" : \"AC3CF33Fc1aEfEfD2ce7f3eDc784EC2a3B\",\n    \"status_callback\" : \"6zy9mbzwv15m2zq2gwn5\",\n    \"max_duration\" : 6936304942235892633,\n    \"url\" : \"https://web.example.mocklab.io/456233\",\n    \"ended_reason\" : \"00xztr3i5cvn1cnhckvvbw4s3zidvpjehcsq495pgahihz5y7dto3fve8kfolzfw7na3faac4w4rzkokwbht62fi44kpntiugt7y6kvzxunzi\",\n    \"sid\" : \"ZX30F03CcE0431e6a562Fccd7cbCd19717\",\n    \"status\" : \"started\"\n  }, {\n    \"extension_context\" : \"wyyjm5o04qq5nnqtosizi0uqpk2s6h2v2lbpdjk8dw55c2cdbjx1rn8waw3tbmhfgav0ix\",\n    \"extension\" : \"xrzkwtnhspias01h5z9c75di5o1ktwbxhuyyxhpxno0kp7ug50pf6hbrrshxy4zlz8rs6r300qnpqlsh9k0xe2mssd\",\n    \"date_updated\" : \"2024-01-15T05:35:38.532Z\",\n    \"status_callback_method\" : \"POST\",\n    \"date_created\" : \"2024-01-15T14:26:26.532Z\",\n    \"account_sid\" : \"AC5E8Ff53f10B2e75d12BeE6B169dCBe9f\",\n    \"status_callback\" : \"ujbsxczi1o23elukdz5gt1fca5fmoe5a6jj9l4mi054c1jclv0n0zz\",\n    \"max_duration\" : 4668469445825321540,\n    \"url\" : \"https://web.example.mocklab.io/196608\",\n    \"ended_reason\" : \"d6ercanxx54kwu327lia8hwp7p6xbtgb1snkh05c5v9oq1hbdfvggmva1wbsfdg8mq5f8yj13hwrls5t7fmijt5akzgd8o890d7qomhendneczz23p89xc1quhkz559b78ajidx5liwppyq5uecxccxsprj\",\n    \"sid\" : \"ZXdaBEbBD64fCa4c877e10BceBa83b4E1C\",\n    \"status\" : \"started\"\n  }, {\n    \"extension_context\" : \"1qd0r06efgg\",\n    \"extension\" : \"wk617xfmyw2bzv381l0jr2lasjdtqoglx2e4dhdnerztzok1u833h37yvr8ihdkdvgefnut6xmydy5chz5c3chyhj2zrzleirp9zp04nzyarpc\",\n    \"date_updated\" : \"2023-10-13T22:16:35.532Z\",\n    \"status_callback_method\" : \"PATCH\",\n    \"date_created\" : \"2023-10-26T20:31:23.532Z\",\n    \"account_sid\" : \"AC9164b649d4aa82AbDBC939cCc3d35bcc\",\n    \"status_callback\" : \"v99oein1xizzudh3lpcek5ih9jmjkiefxb0sa2mwh2b11t9b2\",\n    \"max_duration\" : 8239861820267918081,\n    \"url\" : \"https://web.example.mocklab.io/974623\",\n    \"ended_reason\" : \"j5de3vx0rh4z4irk7g2ov426zxagiqea81qahtcem46pribw9dkag6iy5en1re614tlvq3uagb\",\n    \"sid\" : \"ZX32f2082Cc3fEd959f32F8CA7dCfEe99A\",\n    \"status\" : \"failed\"\n  }, {\n    \"extension_context\" : \"23lslfcw83noejexr2cjficyp82bxbqkh1prqtxidxq88su9wx5nhm0d7ncd77o6ei8q62gwpbhqkdqi8kbatg3k9lh3cevkf1mtl2xvq9g5jfkpf566afugzk033nqp9rfcklffuq7kf8xlxun5c39c9tkv9\",\n    \"extension\" : \"0x8gnndr06nzadxs783qtxv081zaywbk134kv10r4yedg4fs0wzsupy5p0ucexune9xxihhe63whrwj4mmzsp7tb8byi28xov0syepykwcz2wzi8qq1jixraid2kxk983b33ybq9fj8du\",\n    \"date_updated\" : \"2023-01-25T06:41:01.532Z\",\n    \"status_callback_method\" : \"PATCH\",\n    \"date_created\" : \"2022-08-09T08:27:04.532Z\",\n    \"account_sid\" : \"ACD2D19EE0F562B887d832c4e3f9c6F912\",\n    \"status_callback\" : \"xjolficc0qy4ktee6kuij1yqmstnj2qhasel3o4ih2na00qu4khln3tnnvxl63ueqr3j1n2sm9\",\n    \"max_duration\" : 5824220810033125756,\n    \"url\" : \"https://web.example.mocklab.io/097739\",\n    \"ended_reason\" : \"w5oso5yv6pw2qeag7m96jxn1p1h6lvr1pyhbjcx1efv\",\n    \"sid\" : \"ZXDADEAdAFceDCa57a8B5dfdb5C7BAa41d\",\n    \"status\" : \"ended\"\n  }, {\n    \"extension_context\" : \"y9lzg9slmgvsnyfm87uhu5n7xyihnwt6\",\n    \"extension\" : \"zne1ap60epnv02zdq9brwz2lh9i8k9dt33rlbcvty3cyqwji79m3ddjx8wby53y225he5e4phc26zeih1ykt93xz1dbkamh23lkt06ki8w26ljuwz7cc0v77jqg4z7qaffblw9nb3szrp1ewpgro2f71n1bqz2241cjjxj\",\n    \"date_updated\" : \"2023-03-02T08:32:41.533Z\",\n    \"status_callback_method\" : \"PUT\",\n    \"date_created\" : \"2023-08-04T22:04:34.533Z\",\n    \"account_sid\" : \"AC3DBFC7d3fd7e5EaBFf7Bfa2ab3700832\",\n    \"status_callback\" : \"ickvy4717kbwhssxk3sf7pqr0ceeimandsjd2qbanur6hvhhk48z8vkl8n2i9ls25alkh80b08zldnpn8l1payqugd3pbraka0i6zh3wr60hhsb6jbv86qv9bwbzb3x1vs7o9pka0fgyus4r1anm7z0vr8dgppx2u3mvmtyd7kp4jp8tdyo6\",\n    \"max_duration\" : 5612503559909138243,\n    \"url\" : \"https://web.example.mocklab.io/631766\",\n    \"ended_reason\" : \"zcizpan294kupkk5tx3x0hhm3hnw7yho5ybozaydbm604ph98gbsweid3b97v2oq7w8zqvpt2wl1jifl6kxrr24i2vqjnffidgzru7r8av09g5vbuage4agd0hx4mpomk8e9l01wiuo\",\n    \"sid\" : \"ZX4FaE22EeB6743Af2F27a3Fc5DFb44eCD\",\n    \"status\" : \"failed\"\n  }, {\n    \"extension_context\" : \"q8z8qa23pvw5s5umx0gp90ewrvl7q7qkd7tyc8468wuxg0437azmukgy5k68enkzuuryt4i1robeoert8mlpqwsq\",\n    \"extension\" : \"13o1ul2ti5caczv7t7prtzsc3kg2lvaiim9ocxalmvodeu72hskvkmv8rn1jl3xjf3zphlfazw8flp53r9u6so0vmn\",\n    \"date_updated\" : \"2023-09-28T18:18:39.533Z\",\n    \"status_callback_method\" : \"PATCH\",\n    \"date_created\" : \"2023-10-11T03:32:52.533Z\",\n    \"account_sid\" : \"AC70CF29Df3dEBce86FC003c2C0ecbA7A2\",\n    \"status_callback\" : \"lhd6j97mkb1glmbuc990b0qld2xmuwethur59fkf334hcij379qujdfs6s6z5un8kl50620145hubhkdwsqbfcs37qfrxmzqkt83u\",\n    \"max_duration\" : 2594665664054586741,\n    \"url\" : \"https://web.example.mocklab.io/491545\",\n    \"ended_reason\" : \"aw1kn2wz0dzm4d57ng1ypwzz3pv4o9nntmf4a00cdwfb2p1kcemf64tiren1s71dx960f0u3kxo81xynkyudzaf9i7y4t7nfqocupgkftji9kidhw58k4snjesws68lpxr7jduzoc7uype2l62lskryptjuqw\",\n    \"sid\" : \"ZX95cFf54BF21FbDfd7f91D216F0C7b43e\",\n    \"status\" : \"started\"\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "2bbe8b6f-a80c-4816-b83b-e3febe138b67",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:18.53362Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "ListMediaProcessor",
+          "schema" : {
+            "properties" : {
+              "media_processors" : {
+                "items" : {
+                  "$ref" : "#/components/schemas/media.v1.media_processor"
+                },
+                "type" : "array"
+              },
+              "meta" : {
+                "properties" : {
+                  "first_page_url" : {
+                    "format" : "uri",
+                    "type" : "string"
+                  },
+                  "key" : {
+                    "type" : "string"
+                  },
+                  "next_page_url" : {
+                    "format" : "uri",
+                    "nullable" : true,
+                    "type" : "string"
+                  },
+                  "page" : {
+                    "type" : "integer"
+                  },
+                  "page_size" : {
+                    "type" : "integer"
+                  },
+                  "previous_page_url" : {
+                    "format" : "uri",
+                    "nullable" : true,
+                    "type" : "string"
+                  },
+                  "url" : {
+                    "format" : "uri",
+                    "type" : "string"
+                  }
+                },
+                "type" : "object"
+              }
+            },
+            "title" : "ListMediaProcessorResponse",
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 12
+  } ]
+}

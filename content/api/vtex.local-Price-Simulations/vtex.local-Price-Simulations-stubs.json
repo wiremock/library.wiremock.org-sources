@@ -1,0 +1,425 @@
+{
+  "mappings" : [ {
+    "id" : "d2188cb5-e4f8-4ed4-99cb-4a6a5c95840f",
+    "name" : "Update Order Configuration",
+    "request" : {
+      "urlPath" : "/sessions/",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{ }",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "d2188cb5-e4f8-4ed4-99cb-4a6a5c95840f",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:58.039562Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "(none)"
+        }
+      }
+    },
+    "insertionIndex" : 0
+  }, {
+    "id" : "a927274a-4d56-49fd-b50e-d37506344b10",
+    "name" : "Create or Update custom prices schema",
+    "request" : {
+      "urlPath" : "/_v/custom-prices/session/schema",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"useEmail\" : true,\n  \"fields\" : [ {\n    \"name\" : \"Jaime Trantow\",\n    \"type\" : \"ji9v2gtzm64571hhnkgvp1g8zwii0f5k9ieebwgbi\"\n  }, {\n    \"name\" : \"Clair Green\",\n    \"type\" : \"98o87xnd7e78yum3nm90jo3jxrbeukpk5uwr0zhb7c18bk10kej4csmhnc7ib6q4oc0pmfqardsex1tcezz1ulnn2j2peu79y9ciu818frw3igbbkdxs2lfoc1smru7fyi9vqgs3ra1thmnto9d0u0ue3s1u7yj9md1g05r0bwjbfyg20x7xk7r0gqh\"\n  }, {\n    \"name\" : \"Mark Mohr IV\",\n    \"type\" : \"due00cc6tc9yepc7ejfcb9tslpe5bwr9ywdnagtrx4x61bdpz6kfhegyk5hn1hqffyh84rhs19j00wvw8nt3wzm79jcjuvzt6bkrx47hkm\"\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "a927274a-4d56-49fd-b50e-d37506344b10",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:58.039524Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "(none)",
+          "schema" : {
+            "default" : {
+              "fields" : [ {
+                "name" : "orderType",
+                "type" : "string"
+              }, {
+                "name" : "state",
+                "type" : "string"
+              } ],
+              "useEmail" : true
+            },
+            "properties" : {
+              "fields" : {
+                "default" : [ {
+                  "name" : "orderType",
+                  "type" : "string"
+                }, {
+                  "name" : "state",
+                  "type" : "string"
+                } ],
+                "description" : "Order Configuration criteria",
+                "items" : {
+                  "default" : {
+                    "name" : "orderType",
+                    "type" : "string"
+                  },
+                  "properties" : {
+                    "name" : {
+                      "default" : "orderType",
+                      "description" : "Criteria name",
+                      "title" : "name",
+                      "type" : "string"
+                    },
+                    "type" : {
+                      "default" : "string",
+                      "description" : "Criteria type",
+                      "title" : "type",
+                      "type" : "string"
+                    }
+                  },
+                  "required" : [ "name", "type" ],
+                  "type" : "object"
+                },
+                "title" : "fields",
+                "type" : "array"
+              },
+              "useEmail" : {
+                "default" : true,
+                "description" : "If the custom price should use the user's e-mail to validate it",
+                "title" : "useEmail",
+                "type" : "boolean"
+              }
+            },
+            "required" : [ "fields" ],
+            "title" : "Request body",
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 1
+  }, {
+    "id" : "130149be-d0b6-479d-bc3f-a144ad331416",
+    "name" : "Get custom prices schema",
+    "request" : {
+      "urlPath" : "/_v/custom-prices/session/schema",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"useEmail\" : true,\n  \"fields\" : [ {\n    \"name\" : \"Allyn Hagenes\",\n    \"type\" : \"w4x1f8182do1309dvp98szl8bfjunxepqkrmrt2uluaenuqczht4yydav0000d4pmciwfba2v9hiw9f6gebcawehgg1zr1ox0ndmwdwzgkxfv2fz890zovbupfdxyjizkrk69z6q74u37zritd6tph5z0x9flppgpqzr6txvhs4l52v35obyk5k0\"\n  }, {\n    \"name\" : \"Basil Emmerich\",\n    \"type\" : \"rposlclwiswngg78tc0t377rc50iiz1g5w7k1axvbmkmd97u2l52p9tr5ljxldjx1ouj1xdj4rzx7zw6ou0289ywvpxtfz9ha3jjpvbcmnjf1ak47j63hj20hdfij0jd1jvlpemoka8csaizo3nbcg\"\n  }, {\n    \"name\" : \"Lona Moen\",\n    \"type\" : \"8rxkmrvnnp1tdn3fwelpfv4byzab51fq16t99990xlcliqu210ekjwj1pz5ii8xe6sormt33r4kkfe0cfzhjmdznf3cqc64w71jo616s5bel365qv7xiqob5w5l6rldjr4mif7c8dqcyeeuvlb096ogvb9lwbzmf3yxq79c2do7h\"\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "130149be-d0b6-479d-bc3f-a144ad331416",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:58.039239Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "(none)",
+          "schema" : {
+            "default" : {
+              "fields" : [ {
+                "name" : "orderType",
+                "type" : "string"
+              }, {
+                "name" : "state",
+                "type" : "string"
+              } ],
+              "useEmail" : true
+            },
+            "properties" : {
+              "fields" : {
+                "default" : [ {
+                  "name" : "orderType",
+                  "type" : "string"
+                }, {
+                  "name" : "state",
+                  "type" : "string"
+                } ],
+                "description" : "Order Configuration criteria",
+                "items" : {
+                  "default" : {
+                    "name" : "orderType",
+                    "type" : "string"
+                  },
+                  "properties" : {
+                    "name" : {
+                      "default" : "orderType",
+                      "description" : "Criteria name",
+                      "title" : "name",
+                      "type" : "string"
+                    },
+                    "type" : {
+                      "default" : "string",
+                      "description" : "Criteria type",
+                      "title" : "type",
+                      "type" : "string"
+                    }
+                  },
+                  "required" : [ "name", "type" ],
+                  "type" : "object"
+                },
+                "title" : "fields",
+                "type" : "array"
+              },
+              "useEmail" : {
+                "default" : true,
+                "description" : "If the custom price should use the user's e-mail to validate it",
+                "title" : "useEmail",
+                "type" : "boolean"
+              }
+            },
+            "required" : [ "fields" ],
+            "title" : "Request body",
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 2
+  }, {
+    "id" : "eaaca2e0-8471-405e-b093-433a19d0d0ba",
+    "name" : "Update price association by ID",
+    "request" : {
+      "urlPath" : "/_v/custom-prices/rules/1152558650648607679",
+      "method" : "PUT"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"orderType\" : \"c1kl46v8abgln7lwgzmm029k0nb0cqdtr4guwtl410kpsqk2hpxmm8mdjkejvhqp\",\n  \"id\" : 8287761929496551038,\n  \"state\" : \"Arizona\",\n  \"pricetable\" : \"bxdiwbmv5bbmlv94g3fzxkst6svj550q8do1ryrdbfrerws8jejrsfk729kri9tsl\",\n  \"email\" : { }\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "eaaca2e0-8471-405e-b093-433a19d0d0ba",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:58.038907Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "(none)",
+          "schema" : {
+            "default" : { },
+            "properties" : {
+              "email" : {
+                "default" : "",
+                "description" : "User's email",
+                "title" : "email"
+              },
+              "id" : {
+                "default" : "",
+                "description" : "Price association ID",
+                "title" : "id",
+                "type" : "integer"
+              },
+              "orderType" : {
+                "default" : "",
+                "description" : "Order type",
+                "title" : "orderType",
+                "type" : "string"
+              },
+              "pricetable" : {
+                "default" : "",
+                "description" : "Name of the Price Table associated with the scenario",
+                "title" : "pricetable",
+                "type" : "string"
+              },
+              "state" : {
+                "default" : "",
+                "description" : "Delivery location",
+                "title" : "state",
+                "type" : "string"
+              }
+            },
+            "required" : [ "id", "pricetable" ],
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 3
+  }, {
+    "id" : "051edea3-2ba0-44f2-ae2a-62732f8a1e50",
+    "name" : "Get price association by ID",
+    "request" : {
+      "urlPath" : "/_v/custom-prices/rules/973102677480450032",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"orderType\" : \"70q2y6xv45e1wu2ijo61nth0pcv58pb5rgv9tk0bdt6l0lxxr45yqys6bum1d2o5h2x52mt1tjwvclrow4joqd4cix4c0l9nhhgz27k0k3cdj6g1w311jyvnzs7qw\",\n  \"id\" : 2705755219519077506,\n  \"state\" : \"Minnesota\",\n  \"pricetable\" : \"0gqg6a7xnbe5s05zv2bxmm0\",\n  \"email\" : { }\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "051edea3-2ba0-44f2-ae2a-62732f8a1e50",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:58.038756Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "(none)",
+          "schema" : {
+            "default" : { },
+            "properties" : {
+              "email" : {
+                "default" : "",
+                "description" : "User's email",
+                "title" : "email"
+              },
+              "id" : {
+                "default" : "",
+                "description" : "Price association ID",
+                "title" : "id",
+                "type" : "integer"
+              },
+              "orderType" : {
+                "default" : "",
+                "description" : "Order type",
+                "title" : "orderType",
+                "type" : "string"
+              },
+              "pricetable" : {
+                "default" : "",
+                "description" : "Name of the Price Table associated with the scenario",
+                "title" : "pricetable",
+                "type" : "string"
+              },
+              "state" : {
+                "default" : "",
+                "description" : "Delivery location",
+                "title" : "state",
+                "type" : "string"
+              }
+            },
+            "required" : [ "id", "pricetable" ],
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 4
+  }, {
+    "id" : "33ef00d5-1519-4f1d-9174-5e78b9ffaff8",
+    "name" : "Disassociate price association by ID",
+    "request" : {
+      "urlPath" : "/_v/custom-prices/rules/4755567912041367125",
+      "method" : "DELETE"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "\"d5o1zupf1pwpwigq4hshvf772wqvnq238arhm7ec\"",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "33ef00d5-1519-4f1d-9174-5e78b9ffaff8",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:58.038587Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "(none)",
+          "schema" : {
+            "default" : "Rule deleted with success: custom_prices-5dc4f3d6-dda6-11ea-835b-12d97a7637bf",
+            "type" : "string"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 5
+  }, {
+    "id" : "ad6d4e61-d39c-472a-b410-9cd597e1ec9c",
+    "name" : "Create price association",
+    "request" : {
+      "urlPath" : "/_v/custom-prices/rules",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"orderType\" : \"zs55cubjsjfb\",\n  \"id\" : 4079871395979525942,\n  \"state\" : \"New Mexico\",\n  \"pricetable\" : \"wak3exzyxc0cgj0d5ws9h\",\n  \"email\" : { }\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "ad6d4e61-d39c-472a-b410-9cd597e1ec9c",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:58.038483Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "(none)",
+          "schema" : {
+            "default" : { },
+            "properties" : {
+              "email" : {
+                "default" : "",
+                "description" : "User's email",
+                "title" : "email"
+              },
+              "id" : {
+                "default" : "",
+                "description" : "Price association ID",
+                "title" : "id",
+                "type" : "integer"
+              },
+              "orderType" : {
+                "default" : "",
+                "description" : "Order type",
+                "title" : "orderType",
+                "type" : "string"
+              },
+              "pricetable" : {
+                "default" : "",
+                "description" : "Name of the Price Table associated with the scenario",
+                "title" : "pricetable",
+                "type" : "string"
+              },
+              "state" : {
+                "default" : "",
+                "description" : "Delivery location",
+                "title" : "state",
+                "type" : "string"
+              }
+            },
+            "required" : [ "id", "pricetable" ],
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 6
+  } ]
+}

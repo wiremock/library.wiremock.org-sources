@@ -1,0 +1,1430 @@
+{
+  "mappings" : [ {
+    "id" : "a2dd6e3d-32db-487e-83e7-1e0ef573477f",
+    "name" : "",
+    "request" : {
+      "urlPath" : "/v1/UsageRecords",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"meta\" : {\n    \"first_page_url\" : \"https://web.example.mocklab.io/723585\",\n    \"next_page_url\" : \"https://web.example.mocklab.io/378714\",\n    \"previous_page_url\" : \"https://web.example.mocklab.io/565370\",\n    \"page\" : 7147622815195606767,\n    \"key\" : \"sipkiqmlu9v8zqidmw0p32lyor18wtgm7ocbfgqh773ck1i7iewn\",\n    \"url\" : \"https://web.example.mocklab.io/527108\",\n    \"page_size\" : 5122042011370387875\n  },\n  \"usage_records\" : [ {\n    \"period\" : { },\n    \"data\" : { },\n    \"account_sid\" : \"AC319b4F5fB4Bbcc6e7Eb3D66262f0DED3\",\n    \"commands\" : { }\n  }, {\n    \"period\" : { },\n    \"data\" : { },\n    \"account_sid\" : \"ACc0731C0F69Eb1304abFaEABbaFc9c4dF\",\n    \"commands\" : { }\n  }, {\n    \"period\" : { },\n    \"data\" : { },\n    \"account_sid\" : \"ACf2bbB9c99aBe37FD48dDa1577d14aed7\",\n    \"commands\" : { }\n  }, {\n    \"period\" : { },\n    \"data\" : { },\n    \"account_sid\" : \"AC658Dda9Ab3fD3d21bbdecBaab3AF03C9\",\n    \"commands\" : { }\n  }, {\n    \"period\" : { },\n    \"data\" : { },\n    \"account_sid\" : \"ACf383383d07b66F2bB33bfB2EcbbdD5D2\",\n    \"commands\" : { }\n  }, {\n    \"period\" : { },\n    \"data\" : { },\n    \"account_sid\" : \"ACd4D6b3b3AcDcdb0D56D92Fe599ed9DaA\",\n    \"commands\" : { }\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "a2dd6e3d-32db-487e-83e7-1e0ef573477f",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:25.19739Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "ListAccountUsageRecord",
+          "schema" : {
+            "properties" : {
+              "meta" : {
+                "properties" : {
+                  "first_page_url" : {
+                    "format" : "uri",
+                    "type" : "string"
+                  },
+                  "key" : {
+                    "type" : "string"
+                  },
+                  "next_page_url" : {
+                    "format" : "uri",
+                    "nullable" : true,
+                    "type" : "string"
+                  },
+                  "page" : {
+                    "type" : "integer"
+                  },
+                  "page_size" : {
+                    "type" : "integer"
+                  },
+                  "previous_page_url" : {
+                    "format" : "uri",
+                    "nullable" : true,
+                    "type" : "string"
+                  },
+                  "url" : {
+                    "format" : "uri",
+                    "type" : "string"
+                  }
+                },
+                "type" : "object"
+              },
+              "usage_records" : {
+                "items" : {
+                  "$ref" : "#/components/schemas/wireless.v1.account_usage_record"
+                },
+                "type" : "array"
+              }
+            },
+            "title" : "ListAccountUsageRecordResponse",
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 0
+  }, {
+    "id" : "13297d60-cd0c-4710-a99d-a32b755f8455",
+    "name" : "",
+    "request" : {
+      "urlPath" : "/v1/Sims/c522/UsageRecords",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"meta\" : {\n    \"first_page_url\" : \"https://web.example.mocklab.io/481695\",\n    \"next_page_url\" : \"https://web.example.mocklab.io/461787\",\n    \"previous_page_url\" : \"https://web.example.mocklab.io/381544\",\n    \"page\" : 413881867268887217,\n    \"key\" : \"2ba6a6ug7dsl1z2job399nv991lwzpdly0f95qz183i3g0paue1bmwk5rt093iycwi5bpwo4sy6fuz9gqjn5msepjt2nnjysyg33ynhy\",\n    \"url\" : \"https://web.example.mocklab.io/905882\",\n    \"page_size\" : 3651089483961703860\n  },\n  \"usage_records\" : [ {\n    \"sim_sid\" : \"191e\",\n    \"period\" : { },\n    \"data\" : { },\n    \"account_sid\" : \"AC4dF0f1eaBCa0421f6bB0F63b01CDAD36\",\n    \"commands\" : { }\n  }, {\n    \"sim_sid\" : \"244b\",\n    \"period\" : { },\n    \"data\" : { },\n    \"account_sid\" : \"AC0E028962ACaC12cFCeef15EBEcb0eB53\",\n    \"commands\" : { }\n  }, {\n    \"sim_sid\" : \"m633\",\n    \"period\" : { },\n    \"data\" : { },\n    \"account_sid\" : \"AC46511f61A9eEb3FFcda3D6Bd31Aa9483\",\n    \"commands\" : { }\n  }, {\n    \"sim_sid\" : \"8p51\",\n    \"period\" : { },\n    \"data\" : { },\n    \"account_sid\" : \"ACC732fcdb10536A34E585CBEECf455285\",\n    \"commands\" : { }\n  }, {\n    \"sim_sid\" : \"3z36\",\n    \"period\" : { },\n    \"data\" : { },\n    \"account_sid\" : \"AC8B7E7314DC92B8dc1B7DddeCcDaAb59F\",\n    \"commands\" : { }\n  }, {\n    \"sim_sid\" : \"wg2u\",\n    \"period\" : { },\n    \"data\" : { },\n    \"account_sid\" : \"ACbe2Fd0ebD7Aa5DeaeFd14C2B1B7E1953\",\n    \"commands\" : { }\n  }, {\n    \"sim_sid\" : \"9gt9\",\n    \"period\" : { },\n    \"data\" : { },\n    \"account_sid\" : \"ACF9FfBb65ce910AF98F7d8aed04a6c6b5\",\n    \"commands\" : { }\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "13297d60-cd0c-4710-a99d-a32b755f8455",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:25.19687Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "ListUsageRecord",
+          "schema" : {
+            "properties" : {
+              "meta" : {
+                "properties" : {
+                  "first_page_url" : {
+                    "format" : "uri",
+                    "type" : "string"
+                  },
+                  "key" : {
+                    "type" : "string"
+                  },
+                  "next_page_url" : {
+                    "format" : "uri",
+                    "nullable" : true,
+                    "type" : "string"
+                  },
+                  "page" : {
+                    "type" : "integer"
+                  },
+                  "page_size" : {
+                    "type" : "integer"
+                  },
+                  "previous_page_url" : {
+                    "format" : "uri",
+                    "nullable" : true,
+                    "type" : "string"
+                  },
+                  "url" : {
+                    "format" : "uri",
+                    "type" : "string"
+                  }
+                },
+                "type" : "object"
+              },
+              "usage_records" : {
+                "items" : {
+                  "$ref" : "#/components/schemas/wireless.v1.sim.usage_record"
+                },
+                "type" : "array"
+              }
+            },
+            "title" : "ListUsageRecordResponse",
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 1
+  }, {
+    "id" : "0dc7a60f-bb3c-4037-bc3b-e464c0fee337",
+    "name" : "",
+    "request" : {
+      "urlPath" : "/v1/Sims/s37m/DataSessions",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"meta\" : {\n    \"first_page_url\" : \"https://web.example.mocklab.io/498066\",\n    \"next_page_url\" : \"https://web.example.mocklab.io/433447\",\n    \"previous_page_url\" : \"https://web.example.mocklab.io/415723\",\n    \"page\" : 8909446354021582429,\n    \"key\" : \"tyy03o8mn0tbexcr3infggi2xlxjx3nkncbiqnliadlqz6bp2fevuhx9w75\",\n    \"url\" : \"https://web.example.mocklab.io/108639\",\n    \"page_size\" : 728250656904049509\n  },\n  \"data_sessions\" : [ {\n    \"sim_sid\" : \"74ej\",\n    \"last_updated\" : \"2022-08-25T20:14:09.192Z\",\n    \"radio_link\" : \"qqinpgueg3d2xait2\",\n    \"cell_location_estimate\" : { },\n    \"start\" : \"2022-04-12T03:29:49.192Z\",\n    \"operator_mnc\" : \"7k9g2cgjheqytq4ev7azg3wgrjlr63tdyyaapkw43tjel4z6tgac6jy2do\",\n    \"sid\" : \"enz8\",\n    \"operator_name\" : \"Mrs. Adalberto Olson\",\n    \"operator_mcc\" : \"pc1dmnkhmyz\",\n    \"account_sid\" : \"ACe3A8cfbD2efadFcD7Ee2877361c2CDD3\",\n    \"imei\" : \"7fcfsfqr6noibhoab8cridynep6e42cggewwqnshv9idlujp8jfz79mzbbwp2gv175rd5obw7850hh2q9cqql0ku8gzj31ku717mwq9nix8t5lfni49666165tn74eei9h57gx1bsbiiycqi62fc5zwlomcuf8fhc\",\n    \"end\" : \"2022-10-31T03:34:27.192Z\",\n    \"operator_country\" : \"Sudan\",\n    \"packets_uploaded\" : 7004917962416722027,\n    \"cell_id\" : \"53x6\",\n    \"packets_downloaded\" : 7294079922666896541\n  }, {\n    \"sim_sid\" : \"0v8u\",\n    \"last_updated\" : \"2024-02-08T04:45:23.193Z\",\n    \"radio_link\" : \"ifrodxfcqlephmjhty29a63c71tyl0knidonuljtsk6opnlg5\",\n    \"cell_location_estimate\" : { },\n    \"start\" : \"2023-05-22T19:29:26.193Z\",\n    \"operator_mnc\" : \"3l16hn4yi69709xi1troo20e5at6tnw091ofw5p0gp1mary9vuk15oaqaixgf2el4mp0scyrdio9ecl5x4e3od7kj1r21pqdxok\",\n    \"sid\" : \"jb58\",\n    \"operator_name\" : \"Wilson Brekke\",\n    \"operator_mcc\" : \"i5ak8sn06bd3tur9wo1makgptc6x3iksplkwxza455z907a03e6hi0y\",\n    \"account_sid\" : \"AC7B73b8637AADFCB344cFE79B442Ee9a8\",\n    \"imei\" : \"ttdz5sb7tgbbveorwcoivgqknm6iyntg2nlwz3ewgh12skb3deq9gqcjbznbt81ooe9v1wjmgu6nm0xb9vs4rel67vlm60tdqpnrph2nttvjjioi6q3ee9dhb9ywlwtf850w1yxec5sy0xu0brr0vusdioj8pklu7\",\n    \"end\" : \"2022-07-04T23:04:08.193Z\",\n    \"operator_country\" : \"Kazakhstan\",\n    \"packets_uploaded\" : 8464107198785318168,\n    \"cell_id\" : \"gq6a\",\n    \"packets_downloaded\" : 208180064033514351\n  }, {\n    \"sim_sid\" : \"hl10\",\n    \"last_updated\" : \"2023-08-13T16:21:47.193Z\",\n    \"radio_link\" : \"xu81tuw84g5s5bgbm0udyhxd6x1uzwc6cxviefppwfd4od4owqwcbelqskfr2uhr1717548z8wh0v0afihkod51dcyrjp7mrdhf09mlchpex4t4maj\",\n    \"cell_location_estimate\" : { },\n    \"start\" : \"2023-08-19T15:02:58.193Z\",\n    \"operator_mnc\" : \"12sumjno2lem1s3bjk5hmu2k80c875r3xlm77fqjihccwoa0huo068tjn997linizjopycju1h4xvjkbope2uuc0bpy5pf8gb8rs47ll3giz007p50rzlbua02a8dtwxs430jv0grgeogfu5jxzzlzvtg12nnvdo6yjps8kqdrz24du9fr9\",\n    \"sid\" : \"6oq9\",\n    \"operator_name\" : \"Ms. Tamika Kunde\",\n    \"operator_mcc\" : \"z39ov9x1fkwnn4sbby0fdfms7zqbqr2slz47irx5q9y8o5wkz9n53z8sip9unoh4sxgmsaashl72gu4j8bpidemlhvh8hb6pqxxpc1xgb3udchm6c5yng6wmyqggoqrrpuo7y7yisf8kso70wuf3zjd3w9xzdfxuv8k971h7rus8f1z6o6bkbj2gfstdwgj2nc5jy4l\",\n    \"account_sid\" : \"AC8db7AE5C2Ea6de223Fb1Ac2Fd8Bd36fE\",\n    \"imei\" : \"hfq0ftocu3tfscrnff0qxxdrr0oqtpfkffw523rn3bzoxzt3jccgciyqas8r2yv0p2bhh3ik\",\n    \"end\" : \"2023-05-21T20:14:04.193Z\",\n    \"operator_country\" : \"Kuwait\",\n    \"packets_uploaded\" : 7770049886262195040,\n    \"cell_id\" : \"cm68\",\n    \"packets_downloaded\" : 8059704677808769819\n  }, {\n    \"sim_sid\" : \"3f91\",\n    \"last_updated\" : \"2023-06-23T10:37:51.193Z\",\n    \"radio_link\" : \"spltizvk8a87knjzk80ouzq6swwafqryz2ie61mc52ibfhccbqnivhw0z2gpblk\",\n    \"cell_location_estimate\" : { },\n    \"start\" : \"2023-03-30T19:54:46.193Z\",\n    \"operator_mnc\" : \"6roem8jnxmtosipml\",\n    \"sid\" : \"w9dx\",\n    \"operator_name\" : \"Dick Rice\",\n    \"operator_mcc\" : \"l4tnnedtyd\",\n    \"account_sid\" : \"ACF802d00672C7D8FFF7695a2f28042dD5\",\n    \"imei\" : \"cu0eaarrgha92gexh1fe6zgr7lm2popisrru3xlxv6\",\n    \"end\" : \"2022-08-01T15:06:43.194Z\",\n    \"operator_country\" : \"Brazil\",\n    \"packets_uploaded\" : 5829995118400440586,\n    \"cell_id\" : \"65ex\",\n    \"packets_downloaded\" : 5430368270543518151\n  }, {\n    \"sim_sid\" : \"k5lo\",\n    \"last_updated\" : \"2023-04-02T08:18:30.194Z\",\n    \"radio_link\" : \"5ex8f89hnzt881olurjy1nvqsxt2eu7fp279kxslf817miruu2ccdclihck1zy60u1wifb27lblb2arjh69189cqm6hjcvv9dwj3njj3qq1g\",\n    \"cell_location_estimate\" : { },\n    \"start\" : \"2022-07-29T15:01:53.194Z\",\n    \"operator_mnc\" : \"1s42ktzvgndofy8a2xockffjfvh13rrxnrq8f611o7ojfyjt1jn1jkr4fyvb69usic3mjpwudvqe3qkkbca8j5tre62c7odcjnlnnef379vxmy6z2atzb\",\n    \"sid\" : \"2txg\",\n    \"operator_name\" : \"Cherri Cruickshank\",\n    \"operator_mcc\" : \"9a53ngdp2z2m7yyj0rl2j8amdcyf3u5pl3mzysjzlua\",\n    \"account_sid\" : \"AC73FF1E32a6F5E3F2Bc0bBf93e5E1F8e9\",\n    \"imei\" : \"fipcm7p4yrhbxg6piz36zyghe2mgpradjpsod42oqs1grys2u6wmthxuftrvwcn4fapqarnfy415w3pvzulo3tngvgdnwvgh3hrwewl52zja48rdilm3p9h8ir1y66kpresxco3n\",\n    \"end\" : \"2022-07-08T09:35:42.194Z\",\n    \"operator_country\" : \"Turkmenistan\",\n    \"packets_uploaded\" : 1054002806196501927,\n    \"cell_id\" : \"p408\",\n    \"packets_downloaded\" : 6863448289842394824\n  }, {\n    \"sim_sid\" : \"577g\",\n    \"last_updated\" : \"2023-11-30T14:40:41.194Z\",\n    \"radio_link\" : \"a59q8o41nfnz6kg1z\",\n    \"cell_location_estimate\" : { },\n    \"start\" : \"2023-05-27T12:52:32.194Z\",\n    \"operator_mnc\" : \"tn5kbnifgtgajkadr44dgj24gh4zenljbutztav2vxrtrvdn87uggfthnt36pm8oxi7q7mgumn0kffta9odwu5a16dcrbxazymfslgpyby9o4x33uw3fxz1\",\n    \"sid\" : \"b5a8\",\n    \"operator_name\" : \"Rita Brekke\",\n    \"operator_mcc\" : \"6j52dd986pw088iawu0cq9xeip2dvjysg9ngd12wlis1u0pf7upevrmvfap8ywe8ldvzky2fwuyf7yz1vjyiq4dle2lr3tp793urbcs9klg7iz6ukg8eqospfa2hwil04kz7qz\",\n    \"account_sid\" : \"ACF6EbbCCD2A852c70FE9cecfaA4b0d9F4\",\n    \"imei\" : \"x2c2bix9tvjpu5j6lhue76tkdq36rcke9001nmexod39n5nbxc5irq411j3dl6b3m5wasws49qw3zz1w00r4bq641qa3451u90dz4vwz94yzaf5mb0wis9gc1r550sgs5nue2boxzhjxsec9\",\n    \"end\" : \"2022-11-11T22:35:54.194Z\",\n    \"operator_country\" : \"Kuwait\",\n    \"packets_uploaded\" : 8106299323522395420,\n    \"cell_id\" : \"88pz\",\n    \"packets_downloaded\" : 3044334627958651110\n  }, {\n    \"sim_sid\" : \"3wnw\",\n    \"last_updated\" : \"2024-03-13T03:41:33.195Z\",\n    \"radio_link\" : \"h5w81lh3rmgveve2v6u9lydqmwdvmwt37teisbhga0ev8dtkuk7lq78\",\n    \"cell_location_estimate\" : { },\n    \"start\" : \"2024-02-03T19:06:31.195Z\",\n    \"operator_mnc\" : \"rhyk0eyxdb9nd465ya1ju20xx8m3t2lmrgitz8fjkulkl24fovlvmozeomt79500wgk8sjhkoohx1vlmgfd7uqddd9yie9ido2gjkdk1o536dvqhukidullhyd0m9q88clmsem3h1dhnwuqlekjjnwgztmjhdcamwjq9vwil7kyoepvm7wk3oz9\",\n    \"sid\" : \"8e25\",\n    \"operator_name\" : \"Lita MacGyver\",\n    \"operator_mcc\" : \"n06l58naus5xo4538n8al7itmht1loud7kvdt3sy10gy5gxaxmouhaqouvapizs1n8qe50rk85pdg7mc1nms\",\n    \"account_sid\" : \"AC93Ee09CC946e7bF3Bb607C52c9aCC4DF\",\n    \"imei\" : \"efgffuz3sh8acg5yw71lkk2o81hf2f3924d3a6gswxoxl7ukh4nfxwol95pg0q7fhe\",\n    \"end\" : \"2022-05-22T21:33:41.195Z\",\n    \"operator_country\" : \"Philippines\",\n    \"packets_uploaded\" : 7517944778295605657,\n    \"cell_id\" : \"xj8w\",\n    \"packets_downloaded\" : 9113098598515621866\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "0dc7a60f-bb3c-4037-bc3b-e464c0fee337",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:25.195738Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "ListDataSession",
+          "schema" : {
+            "properties" : {
+              "data_sessions" : {
+                "items" : {
+                  "$ref" : "#/components/schemas/wireless.v1.sim.data_session"
+                },
+                "type" : "array"
+              },
+              "meta" : {
+                "properties" : {
+                  "first_page_url" : {
+                    "format" : "uri",
+                    "type" : "string"
+                  },
+                  "key" : {
+                    "type" : "string"
+                  },
+                  "next_page_url" : {
+                    "format" : "uri",
+                    "nullable" : true,
+                    "type" : "string"
+                  },
+                  "page" : {
+                    "type" : "integer"
+                  },
+                  "page_size" : {
+                    "type" : "integer"
+                  },
+                  "previous_page_url" : {
+                    "format" : "uri",
+                    "nullable" : true,
+                    "type" : "string"
+                  },
+                  "url" : {
+                    "format" : "uri",
+                    "type" : "string"
+                  }
+                },
+                "type" : "object"
+              }
+            },
+            "title" : "ListDataSessionResponse",
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 2
+  }, {
+    "id" : "0ab3a112-08c0-48a9-b119-8f75412b7005",
+    "name" : "Updates the given properties of a Sim resource on your Account.",
+    "request" : {
+      "urlPath" : "/v1/Sims/b4l7",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"voice_method\" : \"HEAD\",\n  \"friendly_name\" : \"Sadie Torp\",\n  \"date_updated\" : \"2023-02-01T06:47:04.191Z\",\n  \"voice_url\" : \"https://web.example.mocklab.io/738212\",\n  \"date_created\" : \"2023-08-08T09:44:10.191Z\",\n  \"sms_url\" : \"https://web.example.mocklab.io/438099\",\n  \"sms_fallback_method\" : \"DELETE\",\n  \"voice_fallback_method\" : \"GET\",\n  \"ip_address\" : \"bbd97y8k985ei8q3wkkl0nbl55pssc797d36pc7bksg88zn6jf4u7jt9cc2s1kz4ntzn66gnsogj3cbndt8s5lipbiraprso2fcnle3gicwp97mvgdsmpvst9k9uhnu1r1fhhror4v10cx8lyxfa9cpsyhoo8vhqv5r6513r1ya21o\",\n  \"commands_callback_method\" : \"PATCH\",\n  \"commands_callback_url\" : \"https://web.example.mocklab.io/880985\",\n  \"url\" : \"https://web.example.mocklab.io/739533\",\n  \"sid\" : \"DEEC2C9c776D225d1D0925b811a3EdC091\",\n  \"iccid\" : \"501m\",\n  \"unique_name\" : \"Kendrick Zulauf\",\n  \"voice_fallback_url\" : \"https://web.example.mocklab.io/524739\",\n  \"sms_fallback_url\" : \"https://web.example.mocklab.io/096818\",\n  \"account_sid\" : \"AC7e26C9B52bd7A1bAc1Bff103CaE765C3\",\n  \"rate_plan_sid\" : \"WP971E326dafDf4ceEf3Fdf057bCD3E9AC\",\n  \"sms_method\" : \"PATCH\",\n  \"e_id\" : \"0e4d\",\n  \"links\" : { },\n  \"reset_status\" : \"resetting\",\n  \"status\" : \"deactivated\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "0ab3a112-08c0-48a9-b119-8f75412b7005",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:25.192263Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "UpdateSim",
+          "schema" : {
+            "properties" : {
+              "account_sid" : {
+                "description" : "The SID of the [Account](https://www.twilio.com/docs/iam/api/account) to which the Sim resource belongs.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^AC[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "commands_callback_method" : {
+                "description" : "The HTTP method we use to call `commands_callback_url`.  Can be: `POST` or `GET`. Default is `POST`.",
+                "enum" : [ "HEAD", "GET", "POST", "PATCH", "PUT", "DELETE" ],
+                "format" : "http-method",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "commands_callback_url" : {
+                "description" : "The URL we call using the `commands_callback_method` when the SIM originates a machine-to-machine [Command](https://www.twilio.com/docs/wireless/api/command-resource). Your server should respond with an HTTP status code in the 200 range; any response body will be ignored.",
+                "format" : "uri",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "date_created" : {
+                "description" : "The date and time in GMT when the resource was created specified in [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) format.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "date_updated" : {
+                "description" : "The date and time in GMT when the Sim resource was last updated specified in [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) format.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "e_id" : {
+                "description" : "Deprecated.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "friendly_name" : {
+                "description" : "The string that you assigned to describe the Sim resource.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "iccid" : {
+                "description" : "The [ICCID](https://en.wikipedia.org/wiki/SIM_card#ICCID) associated with the SIM.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "ip_address" : {
+                "description" : "Deprecated.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "links" : {
+                "description" : "The URLs of related subresources.",
+                "format" : "uri-map",
+                "nullable" : true,
+                "type" : "object"
+              },
+              "rate_plan_sid" : {
+                "description" : "The SID of the [RatePlan resource](https://www.twilio.com/docs/wireless/api/rateplan-resource) to which the Sim resource is assigned.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^WP[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "reset_status" : {
+                "$ref" : "#/components/schemas/sim_enum_reset_status"
+              },
+              "sid" : {
+                "description" : "The unique string that we created to identify the Sim resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^DE[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "sms_fallback_method" : {
+                "description" : "Deprecated.",
+                "enum" : [ "HEAD", "GET", "POST", "PATCH", "PUT", "DELETE" ],
+                "format" : "http-method",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "sms_fallback_url" : {
+                "description" : "Deprecated.",
+                "format" : "uri",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "sms_method" : {
+                "description" : "Deprecated.",
+                "enum" : [ "HEAD", "GET", "POST", "PATCH", "PUT", "DELETE" ],
+                "format" : "http-method",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "sms_url" : {
+                "description" : "Deprecated.",
+                "format" : "uri",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "status" : {
+                "$ref" : "#/components/schemas/sim_enum_status"
+              },
+              "unique_name" : {
+                "description" : "An application-defined string that uniquely identifies the resource. It can be used in place of the resource's `sid` in the URL to address the resource.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "url" : {
+                "description" : "The absolute URL of the resource.",
+                "format" : "uri",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "voice_fallback_method" : {
+                "description" : "Deprecated. The HTTP method we use to call `voice_fallback_url`. Can be: `GET` or `POST`. Default is `POST`.",
+                "enum" : [ "HEAD", "GET", "POST", "PATCH", "PUT", "DELETE" ],
+                "format" : "http-method",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "voice_fallback_url" : {
+                "description" : "Deprecated. The URL we call using the `voice_fallback_method` when an error occurs while retrieving or executing the TwiML requested from `voice_url`.",
+                "format" : "uri",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "voice_method" : {
+                "description" : "Deprecated. The HTTP method we use to call `voice_url`. Can be: `GET` or `POST`. Default is `POST`.",
+                "enum" : [ "HEAD", "GET", "POST", "PATCH", "PUT", "DELETE" ],
+                "format" : "http-method",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "voice_url" : {
+                "description" : "Deprecated. The URL we call using the `voice_method` when the SIM-connected device makes a voice call.",
+                "format" : "uri",
+                "nullable" : true,
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 3
+  }, {
+    "id" : "d50e048b-4d7f-490e-a058-1e8bc5844724",
+    "name" : "Fetch a Sim resource on your Account.",
+    "request" : {
+      "urlPath" : "/v1/Sims/f08e",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"voice_method\" : \"PUT\",\n  \"friendly_name\" : \"Salome Lindgren\",\n  \"date_updated\" : \"2022-11-29T13:32:58.19Z\",\n  \"voice_url\" : \"https://web.example.mocklab.io/149101\",\n  \"date_created\" : \"2022-10-08T00:50:04.19Z\",\n  \"sms_url\" : \"https://web.example.mocklab.io/688021\",\n  \"sms_fallback_method\" : \"PUT\",\n  \"voice_fallback_method\" : \"POST\",\n  \"ip_address\" : \"7bmqx0l9in584219r5ttltz07zyay4s1j2y34q4p3mmukvy9in0ybo3f3110knxmk8d4ikhtew89gka356x8ihi9adfhrruyptnaztvtfyblolp3mmyxzb4iqmrx9ibmnxcrkhfnxwtl5f7kjikg1qvtppssyka57ndw8odhuirfi1n\",\n  \"commands_callback_method\" : \"POST\",\n  \"commands_callback_url\" : \"https://web.example.mocklab.io/403430\",\n  \"url\" : \"https://web.example.mocklab.io/882854\",\n  \"sid\" : \"DE5E6bE2361Ea3BFCE2ae573a7D05574cE\",\n  \"iccid\" : \"ed67\",\n  \"unique_name\" : \"Aurora Willms MD\",\n  \"voice_fallback_url\" : \"https://web.example.mocklab.io/455434\",\n  \"sms_fallback_url\" : \"https://web.example.mocklab.io/166496\",\n  \"account_sid\" : \"ACFd257A4Ea1E671876EC6aafaACFe2103\",\n  \"rate_plan_sid\" : \"WPf8FA15b9Be91f63167a7C0782F6cDEcf\",\n  \"sms_method\" : \"DELETE\",\n  \"e_id\" : \"9he4\",\n  \"links\" : { },\n  \"reset_status\" : \"resetting\",\n  \"status\" : \"updating\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "d50e048b-4d7f-490e-a058-1e8bc5844724",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:25.191104Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "FetchSim",
+          "schema" : {
+            "properties" : {
+              "account_sid" : {
+                "description" : "The SID of the [Account](https://www.twilio.com/docs/iam/api/account) to which the Sim resource belongs.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^AC[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "commands_callback_method" : {
+                "description" : "The HTTP method we use to call `commands_callback_url`.  Can be: `POST` or `GET`. Default is `POST`.",
+                "enum" : [ "HEAD", "GET", "POST", "PATCH", "PUT", "DELETE" ],
+                "format" : "http-method",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "commands_callback_url" : {
+                "description" : "The URL we call using the `commands_callback_method` when the SIM originates a machine-to-machine [Command](https://www.twilio.com/docs/wireless/api/command-resource). Your server should respond with an HTTP status code in the 200 range; any response body will be ignored.",
+                "format" : "uri",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "date_created" : {
+                "description" : "The date and time in GMT when the resource was created specified in [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) format.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "date_updated" : {
+                "description" : "The date and time in GMT when the Sim resource was last updated specified in [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) format.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "e_id" : {
+                "description" : "Deprecated.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "friendly_name" : {
+                "description" : "The string that you assigned to describe the Sim resource.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "iccid" : {
+                "description" : "The [ICCID](https://en.wikipedia.org/wiki/SIM_card#ICCID) associated with the SIM.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "ip_address" : {
+                "description" : "Deprecated.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "links" : {
+                "description" : "The URLs of related subresources.",
+                "format" : "uri-map",
+                "nullable" : true,
+                "type" : "object"
+              },
+              "rate_plan_sid" : {
+                "description" : "The SID of the [RatePlan resource](https://www.twilio.com/docs/wireless/api/rateplan-resource) to which the Sim resource is assigned.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^WP[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "reset_status" : {
+                "$ref" : "#/components/schemas/sim_enum_reset_status"
+              },
+              "sid" : {
+                "description" : "The unique string that we created to identify the Sim resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^DE[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "sms_fallback_method" : {
+                "description" : "Deprecated.",
+                "enum" : [ "HEAD", "GET", "POST", "PATCH", "PUT", "DELETE" ],
+                "format" : "http-method",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "sms_fallback_url" : {
+                "description" : "Deprecated.",
+                "format" : "uri",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "sms_method" : {
+                "description" : "Deprecated.",
+                "enum" : [ "HEAD", "GET", "POST", "PATCH", "PUT", "DELETE" ],
+                "format" : "http-method",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "sms_url" : {
+                "description" : "Deprecated.",
+                "format" : "uri",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "status" : {
+                "$ref" : "#/components/schemas/sim_enum_status"
+              },
+              "unique_name" : {
+                "description" : "An application-defined string that uniquely identifies the resource. It can be used in place of the resource's `sid` in the URL to address the resource.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "url" : {
+                "description" : "The absolute URL of the resource.",
+                "format" : "uri",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "voice_fallback_method" : {
+                "description" : "Deprecated. The HTTP method we use to call `voice_fallback_url`. Can be: `GET` or `POST`. Default is `POST`.",
+                "enum" : [ "HEAD", "GET", "POST", "PATCH", "PUT", "DELETE" ],
+                "format" : "http-method",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "voice_fallback_url" : {
+                "description" : "Deprecated. The URL we call using the `voice_fallback_method` when an error occurs while retrieving or executing the TwiML requested from `voice_url`.",
+                "format" : "uri",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "voice_method" : {
+                "description" : "Deprecated. The HTTP method we use to call `voice_url`. Can be: `GET` or `POST`. Default is `POST`.",
+                "enum" : [ "HEAD", "GET", "POST", "PATCH", "PUT", "DELETE" ],
+                "format" : "http-method",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "voice_url" : {
+                "description" : "Deprecated. The URL we call using the `voice_method` when the SIM-connected device makes a voice call.",
+                "format" : "uri",
+                "nullable" : true,
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 4
+  }, {
+    "id" : "913cd0cf-27f7-40f6-89bc-152478788572",
+    "name" : "Delete a Sim resource on your Account. - 204",
+    "request" : {
+      "urlPath" : "/v1/Sims/8791",
+      "method" : "DELETE"
+    },
+    "response" : {
+      "status" : 204
+    },
+    "uuid" : "913cd0cf-27f7-40f6-89bc-152478788572",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:25.189987Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "DeleteSim"
+        }
+      }
+    },
+    "insertionIndex" : 5
+  }, {
+    "id" : "44eb0c10-79a2-4763-ad46-75d46a4106b6",
+    "name" : "Retrieve a list of Sim resources on your Account.",
+    "request" : {
+      "urlPath" : "/v1/Sims",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"meta\" : {\n    \"first_page_url\" : \"https://web.example.mocklab.io/183607\",\n    \"next_page_url\" : \"https://web.example.mocklab.io/870539\",\n    \"previous_page_url\" : \"https://web.example.mocklab.io/449909\",\n    \"page\" : 3840988490463208602,\n    \"key\" : \"2gjeqgx60ugexf99yb487yvpxlc0aizzeyh69fnkweqay34h9spsdg1wxl1nsa4kni7dyuh19qvx\",\n    \"url\" : \"https://web.example.mocklab.io/283427\",\n    \"page_size\" : 6772506129682279039\n  },\n  \"sims\" : [ {\n    \"voice_method\" : \"POST\",\n    \"friendly_name\" : \"Rene Wolff\",\n    \"date_updated\" : \"2022-06-03T17:20:51.188Z\",\n    \"voice_url\" : \"https://web.example.mocklab.io/493165\",\n    \"date_created\" : \"2023-04-15T21:46:13.189Z\",\n    \"sms_url\" : \"https://web.example.mocklab.io/238817\",\n    \"sms_fallback_method\" : \"POST\",\n    \"voice_fallback_method\" : \"PATCH\",\n    \"ip_address\" : \"78clz51zeitm71537\",\n    \"commands_callback_method\" : \"PATCH\",\n    \"commands_callback_url\" : \"https://web.example.mocklab.io/725880\",\n    \"url\" : \"https://web.example.mocklab.io/349534\",\n    \"sid\" : \"DE3E1DadA6587Bea8FA1DF77A4B42F7EFF\",\n    \"iccid\" : \"ims5\",\n    \"unique_name\" : \"Cinthia Murphy V\",\n    \"voice_fallback_url\" : \"https://web.example.mocklab.io/626952\",\n    \"sms_fallback_url\" : \"https://web.example.mocklab.io/628315\",\n    \"account_sid\" : \"AC6606fA1B62274CC3bBDFfA369622ec49\",\n    \"rate_plan_sid\" : \"WP2b5C34c351D8CDC190D8E5AEA333Fad9\",\n    \"sms_method\" : \"PATCH\",\n    \"e_id\" : \"85la\",\n    \"links\" : { },\n    \"reset_status\" : \"resetting\",\n    \"status\" : \"updating\"\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "44eb0c10-79a2-4763-ad46-75d46a4106b6",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:25.18988Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "ListSim",
+          "schema" : {
+            "properties" : {
+              "meta" : {
+                "properties" : {
+                  "first_page_url" : {
+                    "format" : "uri",
+                    "type" : "string"
+                  },
+                  "key" : {
+                    "type" : "string"
+                  },
+                  "next_page_url" : {
+                    "format" : "uri",
+                    "nullable" : true,
+                    "type" : "string"
+                  },
+                  "page" : {
+                    "type" : "integer"
+                  },
+                  "page_size" : {
+                    "type" : "integer"
+                  },
+                  "previous_page_url" : {
+                    "format" : "uri",
+                    "nullable" : true,
+                    "type" : "string"
+                  },
+                  "url" : {
+                    "format" : "uri",
+                    "type" : "string"
+                  }
+                },
+                "type" : "object"
+              },
+              "sims" : {
+                "items" : {
+                  "$ref" : "#/components/schemas/wireless.v1.sim"
+                },
+                "type" : "array"
+              }
+            },
+            "title" : "ListSimResponse",
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 6
+  }, {
+    "id" : "20cdf617-3d99-4332-b4dd-ffbcb12825a3",
+    "name" : "",
+    "request" : {
+      "urlPath" : "/v1/RatePlans/h46z",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"friendly_name\" : \"Mrs. Walter Kshlerin\",\n  \"date_updated\" : \"2023-05-03T17:09:39.187Z\",\n  \"data_limit\" : 8254298474804042734,\n  \"international_roaming_data_limit\" : 3887763902288057409,\n  \"national_roaming_enabled\" : true,\n  \"date_created\" : \"2023-03-25T04:43:10.187Z\",\n  \"data_metering\" : \"c7z6do12mexpzoo20m5bkjwljqmgi59572me9rbqpk4yalx4g72ezrfv4a331nhsd34u7oln4mjbx2w03h3midw8tb1v0x3306iropupdv1k3aennapv52j47htll7f\",\n  \"voice_enabled\" : true,\n  \"data_enabled\" : true,\n  \"international_roaming\" : [ \"6y0ozzlwxad3lxk8112fea6wqmxqau0s0jc3erk5z3eq\", \"3vjyve2aggan9mld0e6ly5e9o9yd6gh3282fos2hjtcbr39oy3779p1me7hq5ozgkbiay8uoopxrb3es6wsy91rlepimw9tomwlx8iefho67nipsoltituf16x3gpjyqceqn3qohnplsihmhnazb9zmugdyn877uuuholh67ix0khy0ulm0464otdii9wgv580qg19\", \"vdxu7u57wum3dh5at0xewlnignac0qu7abe7ssoz6mhh\", \"o4tej3c48pdlsonlvxxd6n36zkayny\", \"e6oy4afjx2s1teif7w7kpz5uzp94j5l739706r50ia8gk09gzv3cmxybv8mwdxje3h1fsed1vpz6f78qrqnbt2rtilkou47z9oev1u5xgji530mkhq4hl9ms73on94pjzxk72ub8q23l7\" ],\n  \"url\" : \"https://web.example.mocklab.io/454391\",\n  \"sid\" : \"WP31ffDC6fB5fC0CCAd0c92c733Ab32335\",\n  \"unique_name\" : \"Tisa Wyman\",\n  \"messaging_enabled\" : false,\n  \"national_roaming_data_limit\" : 4270455330478144154,\n  \"account_sid\" : \"AC0B23fC14e0aa18DeFdB85ba8e25D3749\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "20cdf617-3d99-4332-b4dd-ffbcb12825a3",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:25.188404Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "UpdateRatePlan",
+          "schema" : {
+            "properties" : {
+              "account_sid" : {
+                "description" : "The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the RatePlan resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^AC[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "data_enabled" : {
+                "description" : "Whether SIMs can use GPRS/3G/4G/LTE data connectivity.",
+                "nullable" : true,
+                "type" : "boolean"
+              },
+              "data_limit" : {
+                "description" : "The total data usage (download and upload combined) in Megabytes that the Network allows during one month on the home network (T-Mobile USA). The metering period begins the day of activation and ends on the same day in the following month. Can be up to 2TB.",
+                "nullable" : true,
+                "type" : "integer"
+              },
+              "data_metering" : {
+                "description" : "The model used to meter data usage. Can be: `payg` and `quota-1`, `quota-10`, and `quota-50`. Learn more about the available [data metering models](https://www.twilio.com/docs/wireless/api/rateplan-resource#payg-vs-quota-data-plans).",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "date_created" : {
+                "description" : "The date and time in GMT when the resource was created specified in [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) format.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "date_updated" : {
+                "description" : "The date and time in GMT when the resource was last updated specified in [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) format.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "friendly_name" : {
+                "description" : "The string that you assigned to describe the resource.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "international_roaming" : {
+                "description" : "The list of services that SIMs capable of using GPRS/3G/4G/LTE data connectivity can use outside of the United States. Can contain: `data` and `messaging`.",
+                "items" : {
+                  "type" : "string"
+                },
+                "nullable" : true,
+                "type" : "array"
+              },
+              "international_roaming_data_limit" : {
+                "description" : "The total data usage (download and upload combined) in Megabytes that the Network allows during one month when roaming outside the United States. Can be up to 2TB.",
+                "nullable" : true,
+                "type" : "integer"
+              },
+              "messaging_enabled" : {
+                "description" : "Whether SIMs can make, send, and receive SMS using [Commands](https://www.twilio.com/docs/wireless/api/command-resource).",
+                "nullable" : true,
+                "type" : "boolean"
+              },
+              "national_roaming_data_limit" : {
+                "description" : "The total data usage (download and upload combined) in Megabytes that the Network allows during one month on non-home networks in the United States. The metering period begins the day of activation and ends on the same day in the following month. Can be up to 2TB.",
+                "nullable" : true,
+                "type" : "integer"
+              },
+              "national_roaming_enabled" : {
+                "description" : "Whether SIMs can roam on networks other than the home network (T-Mobile USA) in the United States. See [national roaming](https://www.twilio.com/docs/wireless/api/rateplan-resource#national-roaming).",
+                "nullable" : true,
+                "type" : "boolean"
+              },
+              "sid" : {
+                "description" : "The unique string that we created to identify the RatePlan resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^WP[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "unique_name" : {
+                "description" : "An application-defined string that uniquely identifies the resource. It can be used in place of the resource's `sid` in the URL to address the resource.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "url" : {
+                "description" : "The absolute URL of the resource.",
+                "format" : "uri",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "voice_enabled" : {
+                "description" : "Deprecated. Whether SIMs can make and receive voice calls.",
+                "nullable" : true,
+                "type" : "boolean"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 7
+  }, {
+    "id" : "21a4792e-4d4a-4e3d-9b95-eb3e94171cdf",
+    "name" : "",
+    "request" : {
+      "urlPath" : "/v1/RatePlans/7fm0",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"friendly_name\" : \"Kip Marvin\",\n  \"date_updated\" : \"2023-04-23T00:25:41.187Z\",\n  \"data_limit\" : 8625087422930607313,\n  \"international_roaming_data_limit\" : 8885957349056504005,\n  \"national_roaming_enabled\" : true,\n  \"date_created\" : \"2023-01-05T15:49:37.187Z\",\n  \"data_metering\" : \"5oe63hxanj3xko4rz0yw0umoctfwtt6mngyjccy6sf56va6ar4kxejt4x9otcw1hbcjqx3lwjbwo7cc8n9diud54bnp9af26k8cpe6ebxlct105gjlblt\",\n  \"voice_enabled\" : true,\n  \"data_enabled\" : true,\n  \"international_roaming\" : [ \"ysau3t09e4l7np8wcfe9xq84z5qno8c7dyh44w82d6hiz4pn7hy0a0p6tvt0bdtbyludax063h0lm0mtf2tjy1g1ptsp2qs464or6jc89vkazrlyoxny21l42bfcm8ibpk\", \"ubc7otowdq4szlsiwmqjle83cszmqpen0d5nv9rniaabkwfzvw40dw78l0q0yer3dvvv0aujgung3072znvkwjnt9qphzqwaddrcve\", \"uj9uthszhbes3f26i6eqi4lirb8r2t7fy3lwbawbxv4w84w3pyc48e5wwkak5y3n9shrrd2dwrf6zjkzcua9y7tarnmo9hg3afrbcygs7cpd5920dtekrh0v793n50l7\", \"hpelnxd688n3kx67peyj3n9jyjhb5fgttmekvyshzwoqy6qsbuy1qk7j1vo15cujlnrumbyj0krg4ha5zs4cuvuw81fc6p1kur0zoonvu58ma92amkd8\", \"lmkt7pw3f9m1r73yqxmqrqxsdzy99z39wwu0cxciala0ud8va3e743s5oii2bntoa6ig6pcupdksfpya4t2vduy958n3xe3s4fzc3w9n1hpez98\" ],\n  \"url\" : \"https://web.example.mocklab.io/539461\",\n  \"sid\" : \"WPfB289DD76Bbc69cd2BdCe37CA12E6eb3\",\n  \"unique_name\" : \"Kent Johnson\",\n  \"messaging_enabled\" : true,\n  \"national_roaming_data_limit\" : 415759445437407649,\n  \"account_sid\" : \"AC06Ab0F5632e8feF7905D81AEA8f7EaBF\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "21a4792e-4d4a-4e3d-9b95-eb3e94171cdf",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:25.187896Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "FetchRatePlan",
+          "schema" : {
+            "properties" : {
+              "account_sid" : {
+                "description" : "The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the RatePlan resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^AC[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "data_enabled" : {
+                "description" : "Whether SIMs can use GPRS/3G/4G/LTE data connectivity.",
+                "nullable" : true,
+                "type" : "boolean"
+              },
+              "data_limit" : {
+                "description" : "The total data usage (download and upload combined) in Megabytes that the Network allows during one month on the home network (T-Mobile USA). The metering period begins the day of activation and ends on the same day in the following month. Can be up to 2TB.",
+                "nullable" : true,
+                "type" : "integer"
+              },
+              "data_metering" : {
+                "description" : "The model used to meter data usage. Can be: `payg` and `quota-1`, `quota-10`, and `quota-50`. Learn more about the available [data metering models](https://www.twilio.com/docs/wireless/api/rateplan-resource#payg-vs-quota-data-plans).",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "date_created" : {
+                "description" : "The date and time in GMT when the resource was created specified in [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) format.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "date_updated" : {
+                "description" : "The date and time in GMT when the resource was last updated specified in [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) format.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "friendly_name" : {
+                "description" : "The string that you assigned to describe the resource.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "international_roaming" : {
+                "description" : "The list of services that SIMs capable of using GPRS/3G/4G/LTE data connectivity can use outside of the United States. Can contain: `data` and `messaging`.",
+                "items" : {
+                  "type" : "string"
+                },
+                "nullable" : true,
+                "type" : "array"
+              },
+              "international_roaming_data_limit" : {
+                "description" : "The total data usage (download and upload combined) in Megabytes that the Network allows during one month when roaming outside the United States. Can be up to 2TB.",
+                "nullable" : true,
+                "type" : "integer"
+              },
+              "messaging_enabled" : {
+                "description" : "Whether SIMs can make, send, and receive SMS using [Commands](https://www.twilio.com/docs/wireless/api/command-resource).",
+                "nullable" : true,
+                "type" : "boolean"
+              },
+              "national_roaming_data_limit" : {
+                "description" : "The total data usage (download and upload combined) in Megabytes that the Network allows during one month on non-home networks in the United States. The metering period begins the day of activation and ends on the same day in the following month. Can be up to 2TB.",
+                "nullable" : true,
+                "type" : "integer"
+              },
+              "national_roaming_enabled" : {
+                "description" : "Whether SIMs can roam on networks other than the home network (T-Mobile USA) in the United States. See [national roaming](https://www.twilio.com/docs/wireless/api/rateplan-resource#national-roaming).",
+                "nullable" : true,
+                "type" : "boolean"
+              },
+              "sid" : {
+                "description" : "The unique string that we created to identify the RatePlan resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^WP[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "unique_name" : {
+                "description" : "An application-defined string that uniquely identifies the resource. It can be used in place of the resource's `sid` in the URL to address the resource.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "url" : {
+                "description" : "The absolute URL of the resource.",
+                "format" : "uri",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "voice_enabled" : {
+                "description" : "Deprecated. Whether SIMs can make and receive voice calls.",
+                "nullable" : true,
+                "type" : "boolean"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 8
+  }, {
+    "id" : "3cf86f6e-808c-460a-9bef-d5ba72a149e0",
+    "name" : " - 204",
+    "request" : {
+      "urlPath" : "/v1/RatePlans/l229",
+      "method" : "DELETE"
+    },
+    "response" : {
+      "status" : 204
+    },
+    "uuid" : "3cf86f6e-808c-460a-9bef-d5ba72a149e0",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:25.187409Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "DeleteRatePlan"
+        }
+      }
+    },
+    "insertionIndex" : 9
+  }, {
+    "id" : "a67ebe72-124a-4638-961b-41cbed57e175",
+    "name" : "",
+    "request" : {
+      "urlPath" : "/v1/RatePlans",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 201,
+      "body" : "{\n  \"friendly_name\" : \"Ms. Preston Miller\",\n  \"date_updated\" : \"2023-10-14T17:03:22.186Z\",\n  \"data_limit\" : 624914110056314568,\n  \"international_roaming_data_limit\" : 3882883543745294387,\n  \"national_roaming_enabled\" : true,\n  \"date_created\" : \"2023-01-06T01:52:25.186Z\",\n  \"data_metering\" : \"h8aoalbf0n27hrhh361n19uwrab20hg99yp1ybqu7m1m6mrtlbe0gtczc0y1xmgmiq9ose7z29daoilgy5llhz1rxa8cmm5w5ztc9lmysi25cwm5gtqdczgt429fyy7q6vl5f4c2430mdq3dp3ysi67gf\",\n  \"voice_enabled\" : true,\n  \"data_enabled\" : false,\n  \"international_roaming\" : [ \"jsq4pqeniz3hxbdrzadz2se94i3wa1f52x3odtasdnk4akp7fhugwnl1lit2y6uj1ni7ov2308wr1thzx302fxpcwtdnow3t7uc58clzcftlwid9hwb94nbnh9vlhpf81e9ecd3x81105oatm4f5nnvputbi255jvr9e81ktl4xji2ip02wul5fjos4op3\", \"tvosz1kvok9w5n0y2ctugm7fkvo1b9ic6dhero9lfxtfwzig3om464k7cdoi17ort4j56pn9thitrgxbdz4tefjlt638xz2iy7z1b2xlr9b4ywa2jwg9yqksbwsesm6uevk6juip8gllgxbxt8mcb7c5bcjk36p5k8vfy5070srsaihdbr9q1u57l5ltt\", \"6dx3vvy6xfu42njpu73zrtaf9axqlukpx1hfcidt4q0xou9iwt8\" ],\n  \"url\" : \"https://web.example.mocklab.io/167556\",\n  \"sid\" : \"WPb0aeEDbAAbe96a8D5aFBc72a40dDA452\",\n  \"unique_name\" : \"Dr. Robbie Reynolds\",\n  \"messaging_enabled\" : true,\n  \"national_roaming_data_limit\" : 6592033300699083934,\n  \"account_sid\" : \"ACB9Cb51aEB3ac410E381ef9e4b80Da1F8\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "a67ebe72-124a-4638-961b-41cbed57e175",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:25.187283Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "CreateRatePlan",
+          "schema" : {
+            "properties" : {
+              "account_sid" : {
+                "description" : "The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the RatePlan resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^AC[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "data_enabled" : {
+                "description" : "Whether SIMs can use GPRS/3G/4G/LTE data connectivity.",
+                "nullable" : true,
+                "type" : "boolean"
+              },
+              "data_limit" : {
+                "description" : "The total data usage (download and upload combined) in Megabytes that the Network allows during one month on the home network (T-Mobile USA). The metering period begins the day of activation and ends on the same day in the following month. Can be up to 2TB.",
+                "nullable" : true,
+                "type" : "integer"
+              },
+              "data_metering" : {
+                "description" : "The model used to meter data usage. Can be: `payg` and `quota-1`, `quota-10`, and `quota-50`. Learn more about the available [data metering models](https://www.twilio.com/docs/wireless/api/rateplan-resource#payg-vs-quota-data-plans).",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "date_created" : {
+                "description" : "The date and time in GMT when the resource was created specified in [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) format.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "date_updated" : {
+                "description" : "The date and time in GMT when the resource was last updated specified in [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) format.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "friendly_name" : {
+                "description" : "The string that you assigned to describe the resource.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "international_roaming" : {
+                "description" : "The list of services that SIMs capable of using GPRS/3G/4G/LTE data connectivity can use outside of the United States. Can contain: `data` and `messaging`.",
+                "items" : {
+                  "type" : "string"
+                },
+                "nullable" : true,
+                "type" : "array"
+              },
+              "international_roaming_data_limit" : {
+                "description" : "The total data usage (download and upload combined) in Megabytes that the Network allows during one month when roaming outside the United States. Can be up to 2TB.",
+                "nullable" : true,
+                "type" : "integer"
+              },
+              "messaging_enabled" : {
+                "description" : "Whether SIMs can make, send, and receive SMS using [Commands](https://www.twilio.com/docs/wireless/api/command-resource).",
+                "nullable" : true,
+                "type" : "boolean"
+              },
+              "national_roaming_data_limit" : {
+                "description" : "The total data usage (download and upload combined) in Megabytes that the Network allows during one month on non-home networks in the United States. The metering period begins the day of activation and ends on the same day in the following month. Can be up to 2TB.",
+                "nullable" : true,
+                "type" : "integer"
+              },
+              "national_roaming_enabled" : {
+                "description" : "Whether SIMs can roam on networks other than the home network (T-Mobile USA) in the United States. See [national roaming](https://www.twilio.com/docs/wireless/api/rateplan-resource#national-roaming).",
+                "nullable" : true,
+                "type" : "boolean"
+              },
+              "sid" : {
+                "description" : "The unique string that we created to identify the RatePlan resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^WP[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "unique_name" : {
+                "description" : "An application-defined string that uniquely identifies the resource. It can be used in place of the resource's `sid` in the URL to address the resource.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "url" : {
+                "description" : "The absolute URL of the resource.",
+                "format" : "uri",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "voice_enabled" : {
+                "description" : "Deprecated. Whether SIMs can make and receive voice calls.",
+                "nullable" : true,
+                "type" : "boolean"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 10
+  }, {
+    "id" : "56610724-7341-4001-87e5-3615368edf16",
+    "name" : "",
+    "request" : {
+      "urlPath" : "/v1/RatePlans",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"rate_plans\" : [ {\n    \"friendly_name\" : \"Loise Sporer\",\n    \"date_updated\" : \"2023-09-13T15:11:24.185Z\",\n    \"data_limit\" : 7782340467699319361,\n    \"international_roaming_data_limit\" : 868844157252482936,\n    \"national_roaming_enabled\" : false,\n    \"date_created\" : \"2023-06-20T07:00:47.185Z\",\n    \"data_metering\" : \"1hwv4ht86vukbt3ayzutlel6wrmoxkvgj8jkssysp7shqqy88pfvtt8chy8i2myb2d6ssgc0fp0dzt72h516qf070l91egv92uh\",\n    \"voice_enabled\" : false,\n    \"data_enabled\" : false,\n    \"international_roaming\" : [ \"z1rc42rrhbitlqmxcgc4ul3lm0v1xwiogltan6yj8xdc8ata1xxeu20cvvqm8dd1xh1q\", \"po9k42wxr2np0s35szdkirddxhdshmu656bomuqekmpwkwmm0202uvy3gd6ixsfcvj3elbgs3k9isl6uk9qgk0ygjbqsbjia2qk1fwaxoy8yxwzdncv1jtrg7eg74sty\", \"8sa1ut5nv4m6g9wy1n9m798mofg8a2rfjsp1zqs04co4ql4znpjdm8evob3k4tr4gshlm8d2lmlfhebk4a57u178qomjs0v18zasr9gsg7oanjprqeuhy3t24ei4hpss5y4ngyhjjehug16e46nuvkm0o7a\", \"aklv6shrdy185972tf\", \"xuqhai4jqsj8zyhwachisn2zmn85nd0doma18s8mbfe9lb4lsc9ynmepjxwd0t4kb436qxawd8o1ms7w6c5xdrr1byxd95xufjndu2i217dvgegzeblov9wa8\", \"7uucui7idqf93fu4kt43ee29orqsq6szaj53xjl99etkbc4celbmynd6wls0zhq4wegirl1\", \"whfsnbyiu1d6smfnhon9ai908qkxywqmlbrt1ik9c7zt7ib97q1moeayoq\" ],\n    \"url\" : \"https://web.example.mocklab.io/892001\",\n    \"sid\" : \"WP19e74E37E6c8D954C7C2fe167BbcA0BD\",\n    \"unique_name\" : \"Jean Aufderhar\",\n    \"messaging_enabled\" : false,\n    \"national_roaming_data_limit\" : 3212574724164589040,\n    \"account_sid\" : \"AC2f661c94a4dCc27f7DB551FF577e78D9\"\n  }, {\n    \"friendly_name\" : \"Mr. Johana Schuster\",\n    \"date_updated\" : \"2024-02-04T17:09:19.186Z\",\n    \"data_limit\" : 2276795136206632811,\n    \"international_roaming_data_limit\" : 4557169493034395209,\n    \"national_roaming_enabled\" : true,\n    \"date_created\" : \"2023-07-27T10:23:25.186Z\",\n    \"data_metering\" : \"6m97df63rbczowp170oa3w3lklffy27sy2eiazffq9mxk9x542x031g22txd0xv74j14knuysp5cv4xu1i0rldmpe0tq64fnyzk65rzhrdsvpo004sc8offt0mso0rdv78bueca0hq0q9etygsyia8tbwkxpzdn5rk16yaqjkwbugt51xy5x0fagz0donn7jytaazs\",\n    \"voice_enabled\" : false,\n    \"data_enabled\" : false,\n    \"international_roaming\" : [ \"w7si7melw2cv5ogbfbfvbblm3c8t4r6g4zcylgb5kust55ht8ur9h17qtthrh67w8edmwsivqxww7o4189rb2n0yf80fdmupcbwwkpbxhg522mqvdu6z1wetw0i0sidq8zh\" ],\n    \"url\" : \"https://web.example.mocklab.io/167459\",\n    \"sid\" : \"WP4aF8278a271B0ad3b0DfADe25fbC7706\",\n    \"unique_name\" : \"Pasquale Morar\",\n    \"messaging_enabled\" : true,\n    \"national_roaming_data_limit\" : 2774011996872596130,\n    \"account_sid\" : \"ACB19Ff7e1F2EC827DEfBdCA18ceFFf685\"\n  } ],\n  \"meta\" : {\n    \"first_page_url\" : \"https://web.example.mocklab.io/560149\",\n    \"next_page_url\" : \"https://web.example.mocklab.io/777305\",\n    \"previous_page_url\" : \"https://web.example.mocklab.io/290337\",\n    \"page\" : 8143755692981758974,\n    \"key\" : \"p5nueyainx2yazjg34ds9vuy9wqulvpykkk685gjdvwaixe2updh2puvaey4tnc0500iky3qukmooty5fdql27ac0b3basvm9hvzxa4avkrwxtlrrl0shockkamtjbn9g44d7jej7ih2zjzn94fqfe7ze13fcq331lxfzixxraelk03m3ziek0g\",\n    \"url\" : \"https://web.example.mocklab.io/176320\",\n    \"page_size\" : 7916145981732420982\n  }\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "56610724-7341-4001-87e5-3615368edf16",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:25.186832Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "ListRatePlan",
+          "schema" : {
+            "properties" : {
+              "meta" : {
+                "properties" : {
+                  "first_page_url" : {
+                    "format" : "uri",
+                    "type" : "string"
+                  },
+                  "key" : {
+                    "type" : "string"
+                  },
+                  "next_page_url" : {
+                    "format" : "uri",
+                    "nullable" : true,
+                    "type" : "string"
+                  },
+                  "page" : {
+                    "type" : "integer"
+                  },
+                  "page_size" : {
+                    "type" : "integer"
+                  },
+                  "previous_page_url" : {
+                    "format" : "uri",
+                    "nullable" : true,
+                    "type" : "string"
+                  },
+                  "url" : {
+                    "format" : "uri",
+                    "type" : "string"
+                  }
+                },
+                "type" : "object"
+              },
+              "rate_plans" : {
+                "items" : {
+                  "$ref" : "#/components/schemas/wireless.v1.rate_plan"
+                },
+                "type" : "array"
+              }
+            },
+            "title" : "ListRatePlanResponse",
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 11
+  }, {
+    "id" : "0fa8c701-178d-4d9a-9720-9e1a6f9dfcde",
+    "name" : "Fetch a Command instance from your account.",
+    "request" : {
+      "urlPath" : "/v1/Commands/DCFaB4e990cc8217ae70abD56eDe3bC3F7",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"sim_sid\" : \"DE2E093A0Fca2d6c385fe7E657A35bCbDF\",\n  \"command_mode\" : \"binary\",\n  \"delivery_receipt_requested\" : false,\n  \"date_updated\" : \"2023-11-07T04:01:06.185Z\",\n  \"date_created\" : \"2022-04-25T18:41:01.185Z\",\n  \"account_sid\" : \"ACb6D3d8acDDCB3E4f3bfb1aAFD650c5Dd\",\n  \"transport\" : \"ip\",\n  \"command\" : \"1j2yui6rxuiurvk78p0p3qm9waitvla00wq8x4f13om2deqqltd2te72umwtnc8pwgis6ramc24wxut3tutifi8w333ekr6lp33te4af4fgp9d3390gtcg0seqx3jj9k80dr3u77uh63\",\n  \"url\" : \"https://web.example.mocklab.io/056356\",\n  \"direction\" : \"from_sim\",\n  \"sid\" : \"DCbe3C3A2a7f6dD9949aEE4848D51c3F10\",\n  \"status\" : \"received\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "0fa8c701-178d-4d9a-9720-9e1a6f9dfcde",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:25.185807Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "FetchCommand",
+          "schema" : {
+            "properties" : {
+              "account_sid" : {
+                "description" : "The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the Command resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^AC[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "command" : {
+                "description" : "The message being sent to or from the SIM. For text mode messages, this can be up to 160 characters. For binary mode messages, this is a series of up to 140 bytes of data encoded using base64.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "command_mode" : {
+                "$ref" : "#/components/schemas/command_enum_command_mode"
+              },
+              "date_created" : {
+                "description" : "The date and time in GMT when the resource was created specified in [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) format.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "date_updated" : {
+                "description" : "The date and time in GMT when the resource was last updated specified in [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) format.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "delivery_receipt_requested" : {
+                "description" : "Whether to request a delivery receipt.",
+                "nullable" : true,
+                "type" : "boolean"
+              },
+              "direction" : {
+                "$ref" : "#/components/schemas/command_enum_direction"
+              },
+              "sid" : {
+                "description" : "The unique string that we created to identify the Command resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^DC[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "sim_sid" : {
+                "description" : "The SID of the [Sim resource](https://www.twilio.com/docs/wireless/api/sim-resource) that the Command was sent to or from.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^DE[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "status" : {
+                "$ref" : "#/components/schemas/command_enum_status"
+              },
+              "transport" : {
+                "$ref" : "#/components/schemas/command_enum_transport"
+              },
+              "url" : {
+                "description" : "The absolute URL of the resource.",
+                "format" : "uri",
+                "nullable" : true,
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 12
+  }, {
+    "id" : "485375e2-df89-428a-9075-ac151f877bdd",
+    "name" : "Delete a Command instance from your account. - 204",
+    "request" : {
+      "urlPath" : "/v1/Commands/DCF3791851dF456f3f0db69AE01eD7bc43",
+      "method" : "DELETE"
+    },
+    "response" : {
+      "status" : 204
+    },
+    "uuid" : "485375e2-df89-428a-9075-ac151f877bdd",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:25.185549Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "DeleteCommand"
+        }
+      }
+    },
+    "insertionIndex" : 13
+  }, {
+    "id" : "55563c07-8b1b-440e-b944-1fc5aafc9142",
+    "name" : "Send a Command to a Sim.",
+    "request" : {
+      "urlPath" : "/v1/Commands",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 201,
+      "body" : "{\n  \"sim_sid\" : \"DE2722F5ecbBDBB9acCcdaebb71F3F0E6b\",\n  \"command_mode\" : \"text\",\n  \"delivery_receipt_requested\" : true,\n  \"date_updated\" : \"2023-08-30T14:00:24.185Z\",\n  \"date_created\" : \"2022-10-16T09:22:37.185Z\",\n  \"account_sid\" : \"AC2b8C36c36AFE1EbD7a6DcD335e6479Cf\",\n  \"transport\" : \"sms\",\n  \"command\" : \"xzb3ayebxbsmizr02y8wgltdy6nfqb8m4gqqy2ahw5tmvapzw8zqrq1ib1r0fbgsy67ty5ntu\",\n  \"url\" : \"https://web.example.mocklab.io/720454\",\n  \"direction\" : \"from_sim\",\n  \"sid\" : \"DCBa6Bc9290745a83cfbee3e8c0aeC84f7\",\n  \"status\" : \"received\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "55563c07-8b1b-440e-b944-1fc5aafc9142",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:25.185496Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "CreateCommand",
+          "schema" : {
+            "properties" : {
+              "account_sid" : {
+                "description" : "The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the Command resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^AC[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "command" : {
+                "description" : "The message being sent to or from the SIM. For text mode messages, this can be up to 160 characters. For binary mode messages, this is a series of up to 140 bytes of data encoded using base64.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "command_mode" : {
+                "$ref" : "#/components/schemas/command_enum_command_mode"
+              },
+              "date_created" : {
+                "description" : "The date and time in GMT when the resource was created specified in [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) format.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "date_updated" : {
+                "description" : "The date and time in GMT when the resource was last updated specified in [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) format.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "delivery_receipt_requested" : {
+                "description" : "Whether to request a delivery receipt.",
+                "nullable" : true,
+                "type" : "boolean"
+              },
+              "direction" : {
+                "$ref" : "#/components/schemas/command_enum_direction"
+              },
+              "sid" : {
+                "description" : "The unique string that we created to identify the Command resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^DC[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "sim_sid" : {
+                "description" : "The SID of the [Sim resource](https://www.twilio.com/docs/wireless/api/sim-resource) that the Command was sent to or from.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^DE[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "status" : {
+                "$ref" : "#/components/schemas/command_enum_status"
+              },
+              "transport" : {
+                "$ref" : "#/components/schemas/command_enum_transport"
+              },
+              "url" : {
+                "description" : "The absolute URL of the resource.",
+                "format" : "uri",
+                "nullable" : true,
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 14
+  }, {
+    "id" : "4edd8012-827c-457c-a0ad-6ee4f04dca9e",
+    "name" : "Retrieve a list of Commands from your account.",
+    "request" : {
+      "urlPath" : "/v1/Commands",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"meta\" : {\n    \"first_page_url\" : \"https://web.example.mocklab.io/067188\",\n    \"next_page_url\" : \"https://web.example.mocklab.io/638363\",\n    \"previous_page_url\" : \"https://web.example.mocklab.io/556121\",\n    \"page\" : 5990662003857850179,\n    \"key\" : \"1dxvav1e74rfhthsfrojc7shyff82v6bmhyxprd6xbaybpqie5tsmf1tpzarh33ue5lzyo1r7a0qnqc7szu8rtt0v6tt8mrluc9xko19dt17b4buqofr8l6ybrg318n952n1x4u\",\n    \"url\" : \"https://web.example.mocklab.io/138504\",\n    \"page_size\" : 6177290522129838925\n  },\n  \"commands\" : [ {\n    \"sim_sid\" : \"DE7f4A7212deedBdFc0b3466926BB6A3FF\",\n    \"command_mode\" : \"text\",\n    \"delivery_receipt_requested\" : false,\n    \"date_updated\" : \"2022-06-19T18:32:01.183Z\",\n    \"date_created\" : \"2023-11-09T07:48:45.183Z\",\n    \"account_sid\" : \"AC705435ED300F04a0A70bC3c6dDe00c36\",\n    \"transport\" : \"sms\",\n    \"command\" : \"28i9axirplpprolaje6fdi8tje7uq9gsy44u4emozuyu6vxk7819u2dqiv\",\n    \"url\" : \"https://web.example.mocklab.io/716502\",\n    \"direction\" : \"from_sim\",\n    \"sid\" : \"DCe5f2cB36BC74cf75db08bFfDC2faaBab\",\n    \"status\" : \"received\"\n  }, {\n    \"sim_sid\" : \"DEBaf61A4ebFA3FdD6Ee645da1BCbbfE8a\",\n    \"command_mode\" : \"binary\",\n    \"delivery_receipt_requested\" : false,\n    \"date_updated\" : \"2023-11-16T05:05:40.183Z\",\n    \"date_created\" : \"2023-11-27T06:28:50.183Z\",\n    \"account_sid\" : \"ACAbAa9fF57361d49EBb225eDb3C717d87\",\n    \"transport\" : \"sms\",\n    \"command\" : \"v2908zbu3qw1fn0ywdyyoxuwcbd8\",\n    \"url\" : \"https://web.example.mocklab.io/512238\",\n    \"direction\" : \"from_sim\",\n    \"sid\" : \"DCEeb45bC69Bf9Ce9538b71eD2fDC3FCfF\",\n    \"status\" : \"delivered\"\n  }, {\n    \"sim_sid\" : \"DEbbAACEdB8EeF92dd1c71c2E21C91Ee9F\",\n    \"command_mode\" : \"text\",\n    \"delivery_receipt_requested\" : false,\n    \"date_updated\" : \"2022-09-02T06:42:19.183Z\",\n    \"date_created\" : \"2022-10-25T08:30:29.183Z\",\n    \"account_sid\" : \"ACeF0cBd91F61Cc968bc00dc37fc35Ce5C\",\n    \"transport\" : \"ip\",\n    \"command\" : \"krwyh6c62q5ijnny9aqv6zyxgby5gkbc\",\n    \"url\" : \"https://web.example.mocklab.io/749188\",\n    \"direction\" : \"from_sim\",\n    \"sid\" : \"DC7ac07BEeDA53E1ED57d9f1d4144fC647\",\n    \"status\" : \"received\"\n  }, {\n    \"sim_sid\" : \"DEaaB4d0850dC72e2d80AddAe26aAabAF4\",\n    \"command_mode\" : \"text\",\n    \"delivery_receipt_requested\" : true,\n    \"date_updated\" : \"2023-03-20T11:09:45.184Z\",\n    \"date_created\" : \"2023-07-12T00:43:01.184Z\",\n    \"account_sid\" : \"AC393750667CE6cAFfe5eA718E10b5C4B9\",\n    \"transport\" : \"sms\",\n    \"command\" : \"joesmud3nfjh088v3h089o6jek0381mju98h0yrtoqr33c0xd9jrc7l29fb8elpup95woxvh6d4sotfuet0r6vgd7jai5z53fjnsazm0sgp7d9yjwqnmxkbo45c09rj4lw0v6w39oigq9a8j7o848jfjv400ada0rr1ntwvwzkvv\",\n    \"url\" : \"https://web.example.mocklab.io/462323\",\n    \"direction\" : \"to_sim\",\n    \"sid\" : \"DC7EC5DdbCB000Ff19ee3cd5c6fc5Be0dA\",\n    \"status\" : \"sent\"\n  }, {\n    \"sim_sid\" : \"DEf05D067B26EdCDDaEAfabdD4cE8fD7e0\",\n    \"command_mode\" : \"binary\",\n    \"delivery_receipt_requested\" : false,\n    \"date_updated\" : \"2024-02-08T21:03:23.184Z\",\n    \"date_created\" : \"2022-08-19T05:10:38.184Z\",\n    \"account_sid\" : \"AC0F61B60efEBa9Bf6eE8A9fd1F0131243\",\n    \"transport\" : \"ip\",\n    \"command\" : \"ceuf\",\n    \"url\" : \"https://web.example.mocklab.io/376220\",\n    \"direction\" : \"to_sim\",\n    \"sid\" : \"DCe9c357b5f93EF8Dce39b0C6fb116d2Df\",\n    \"status\" : \"received\"\n  }, {\n    \"sim_sid\" : \"DECD935BC3f5E519A12c79a79fdBdC3A16\",\n    \"command_mode\" : \"binary\",\n    \"delivery_receipt_requested\" : true,\n    \"date_updated\" : \"2022-05-10T22:23:24.184Z\",\n    \"date_created\" : \"2024-03-21T11:12:41.184Z\",\n    \"account_sid\" : \"ACAEc268bC2BB06D0F06262Ea76ECd1f16\",\n    \"transport\" : \"ip\",\n    \"command\" : \"zv8ukarphqrmdu0vkclidbhkzqv9dey1j4bsnypedv023zawd1v2tezw4b2ou2ndzam96zlanqmupvft26zcsf998p7lmmhkxdk49jixvjcd8lwjrt85dxrj2778iopppq2x5sqr2frkp6kwu4s07v66756ooy28qscx4jh4c\",\n    \"url\" : \"https://web.example.mocklab.io/427847\",\n    \"direction\" : \"from_sim\",\n    \"sid\" : \"DC60F474D6be046c1dF15B6EC5A4338FAb\",\n    \"status\" : \"delivered\"\n  }, {\n    \"sim_sid\" : \"DEc19D9Eb79560E19dFE5CFA1bFbD06Dd7\",\n    \"command_mode\" : \"text\",\n    \"delivery_receipt_requested\" : false,\n    \"date_updated\" : \"2023-08-02T00:54:12.184Z\",\n    \"date_created\" : \"2022-05-28T04:28:17.184Z\",\n    \"account_sid\" : \"AC8a18fFeC30b571E2BF46aFAd1FaB1B1c\",\n    \"transport\" : \"ip\",\n    \"command\" : \"3j4lolpvb2rn7nkh8mdjtsxsd73tn95k0bw132ia3crih7z2urvo5d2yv07zuv15om9shj9jbdylb89p8r0ra0o3hqu9kd68l9ff91iypwn5sfi0if0fn81d5je9elbsk6vmke1j36vyp2aeoegp4fur\",\n    \"url\" : \"https://web.example.mocklab.io/253642\",\n    \"direction\" : \"from_sim\",\n    \"sid\" : \"DCc6c7f2DF9B704b2b802E9FaA0bCa9978\",\n    \"status\" : \"received\"\n  }, {\n    \"sim_sid\" : \"DE8aDfF0fC9BcbfF1C7fEF25ccf78a322f\",\n    \"command_mode\" : \"binary\",\n    \"delivery_receipt_requested\" : false,\n    \"date_updated\" : \"2023-11-03T07:45:19.184Z\",\n    \"date_created\" : \"2022-05-21T21:10:29.184Z\",\n    \"account_sid\" : \"AC301CeAB5eE0D8642F95F3FD54A5d5AC3\",\n    \"transport\" : \"sms\",\n    \"command\" : \"mrfqlr2wgwztw\",\n    \"url\" : \"https://web.example.mocklab.io/589121\",\n    \"direction\" : \"to_sim\",\n    \"sid\" : \"DC3f6c6afBd4ef7BCD1E2a89fE8deE9bDc\",\n    \"status\" : \"queued\"\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "4edd8012-827c-457c-a0ad-6ee4f04dca9e",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:25.185171Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "ListCommand",
+          "schema" : {
+            "properties" : {
+              "commands" : {
+                "items" : {
+                  "$ref" : "#/components/schemas/wireless.v1.command"
+                },
+                "type" : "array"
+              },
+              "meta" : {
+                "properties" : {
+                  "first_page_url" : {
+                    "format" : "uri",
+                    "type" : "string"
+                  },
+                  "key" : {
+                    "type" : "string"
+                  },
+                  "next_page_url" : {
+                    "format" : "uri",
+                    "nullable" : true,
+                    "type" : "string"
+                  },
+                  "page" : {
+                    "type" : "integer"
+                  },
+                  "page_size" : {
+                    "type" : "integer"
+                  },
+                  "previous_page_url" : {
+                    "format" : "uri",
+                    "nullable" : true,
+                    "type" : "string"
+                  },
+                  "url" : {
+                    "format" : "uri",
+                    "type" : "string"
+                  }
+                },
+                "type" : "object"
+              }
+            },
+            "title" : "ListCommandResponse",
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 15
+  } ]
+}

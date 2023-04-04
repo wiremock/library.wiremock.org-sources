@@ -1,0 +1,234 @@
+{
+  "mappings" : [ {
+    "id" : "71a5e526-b6d6-4666-8586-b16999b1b08a",
+    "name" : "Get location data by account ID and location ID - 404",
+    "request" : {
+      "urlPath" : "/api/accounts/5.611995972392197E307/locations/1.4339462257651717E308",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 404
+    },
+    "uuid" : "71a5e526-b6d6-4666-8586-b16999b1b08a",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:33.408482Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "AccountCtrl.getLocationByID"
+        }
+      }
+    },
+    "insertionIndex" : 0
+  }, {
+    "id" : "516922e8-e295-4d51-a179-2ae373e8e21c",
+    "name" : "Get location data by account ID and location ID (application/json)",
+    "request" : {
+      "urlPath" : "/api/accounts/2.0908980979387073E307/locations/2.1363588828128342E305",
+      "method" : "GET",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/json"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"_embedded\" : {\n    \"data\" : {\n      \"address\" : {\n        \"country\" : \"US\",\n        \"city\" : \"Holmdel\",\n        \"address_1\" : \"123 Example Street\",\n        \"address_2\" : \"Apt. 456\",\n        \"state\" : \"NJ\",\n        \"postal_code\" : \"07733\",\n        \"time_zone\" : \"America/New York\"\n      },\n      \"name\" : \"Headquarters\",\n      \"id\" : 327910\n    }\n  },\n  \"_links\" : {\n    \"next\" : {\n      \"href\" : \"jhgvbjik78bqtkb0ebhjo6j77j4sal249p5ars5pnrcrcqwdq6043\"\n    },\n    \"last\" : {\n      \"href\" : \"c5r8fxk1gfz3mguat7nhho43x62430giwylj08my0nh1eord0rdtj44euuykqoln2ufpamgncfkffrlorvpy5xsm5v2uuv4ur0221igwceaqmpmlics9ueypu96fur2le4aj8lst2tt6vggbdkyuuw1y055vhph736mkpvzacmp2yayexue\"\n    },\n    \"prev\" : {\n      \"href\" : \"3nqmsmqn7pkd1z0ir1ssquufivzh06z6hpfu67z3ziqwhl3s5i6u2hclubjrdxuq7dyyh7jgqbqx4nrweje15s35tdgn92n6ucxh1rah4an9ggnsp89hvsyrkkvdi1f0\"\n    },\n    \"self\" : {\n      \"href\" : \"pnyb5e7dsok9wcap8cn4pfpt1almawgzqcwvqoo0u4l8fgc382xfyov6yubjex8yhskyps4xj0p3cefvqmw3vc2r8ov627mxxhfhl3346h1olwl38jcagt7tx5s5smimissx7jttffl1slwaavcnkm8b3xn\"\n    },\n    \"first\" : {\n      \"href\" : \"a3a9ww9kgk5xgc4fztnu1b758t21j60fqmyj8at15fbq4ba5qz3zp6qkktdck8zaw4yt2bsclarw0dqu9m46fso0lrq\"\n    }\n  },\n  \"page\" : 1,\n  \"total_pages\" : 10,\n  \"total_items\" : 100,\n  \"page_size\" : 100\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "516922e8-e295-4d51-a179-2ae373e8e21c",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:33.408448Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "AccountCtrl.getLocationByID",
+          "schema" : {
+            "properties" : {
+              "_embedded" : {
+                "$ref" : "#/components/schemas/LocationEmbeddedObject"
+              },
+              "_links" : {
+                "$ref" : "#/components/schemas/Links"
+              },
+              "page" : {
+                "description" : "Current page number",
+                "example" : 1,
+                "type" : "number"
+              },
+              "page_size" : {
+                "description" : "Number of records per page",
+                "example" : 100,
+                "type" : "number"
+              },
+              "total_items" : {
+                "description" : "Total number of records",
+                "example" : 100,
+                "type" : "number"
+              },
+              "total_pages" : {
+                "description" : "Total number of pages",
+                "example" : 10,
+                "type" : "number"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 1
+  }, {
+    "id" : "74f9a4e8-56d6-4722-b759-1c6e2143a451",
+    "name" : "Get account locations data by account ID",
+    "request" : {
+      "urlPath" : "/api/accounts/5.090374077822222E307/locations",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"_embedded\" : {\n    \"data\" : [ {\n      \"address\" : {\n        \"country\" : \"US\",\n        \"city\" : \"Holmdel\",\n        \"address_1\" : \"123 Example Street\",\n        \"address_2\" : \"Apt. 456\",\n        \"state\" : \"NJ\",\n        \"postal_code\" : \"07733\",\n        \"time_zone\" : \"America/New York\"\n      },\n      \"name\" : \"Headquarters\",\n      \"id\" : 327910\n    }, {\n      \"address\" : {\n        \"country\" : \"US\",\n        \"city\" : \"Holmdel\",\n        \"address_1\" : \"123 Example Street\",\n        \"address_2\" : \"Apt. 456\",\n        \"state\" : \"NJ\",\n        \"postal_code\" : \"07733\",\n        \"time_zone\" : \"America/New York\"\n      },\n      \"name\" : \"Headquarters\",\n      \"id\" : 327910\n    }, {\n      \"address\" : {\n        \"country\" : \"US\",\n        \"city\" : \"Holmdel\",\n        \"address_1\" : \"123 Example Street\",\n        \"address_2\" : \"Apt. 456\",\n        \"state\" : \"NJ\",\n        \"postal_code\" : \"07733\",\n        \"time_zone\" : \"America/New York\"\n      },\n      \"name\" : \"Headquarters\",\n      \"id\" : 327910\n    }, {\n      \"address\" : {\n        \"country\" : \"US\",\n        \"city\" : \"Holmdel\",\n        \"address_1\" : \"123 Example Street\",\n        \"address_2\" : \"Apt. 456\",\n        \"state\" : \"NJ\",\n        \"postal_code\" : \"07733\",\n        \"time_zone\" : \"America/New York\"\n      },\n      \"name\" : \"Headquarters\",\n      \"id\" : 327910\n    }, {\n      \"address\" : {\n        \"country\" : \"US\",\n        \"city\" : \"Holmdel\",\n        \"address_1\" : \"123 Example Street\",\n        \"address_2\" : \"Apt. 456\",\n        \"state\" : \"NJ\",\n        \"postal_code\" : \"07733\",\n        \"time_zone\" : \"America/New York\"\n      },\n      \"name\" : \"Headquarters\",\n      \"id\" : 327910\n    }, {\n      \"address\" : {\n        \"country\" : \"US\",\n        \"city\" : \"Holmdel\",\n        \"address_1\" : \"123 Example Street\",\n        \"address_2\" : \"Apt. 456\",\n        \"state\" : \"NJ\",\n        \"postal_code\" : \"07733\",\n        \"time_zone\" : \"America/New York\"\n      },\n      \"name\" : \"Headquarters\",\n      \"id\" : 327910\n    }, {\n      \"address\" : {\n        \"country\" : \"US\",\n        \"city\" : \"Holmdel\",\n        \"address_1\" : \"123 Example Street\",\n        \"address_2\" : \"Apt. 456\",\n        \"state\" : \"NJ\",\n        \"postal_code\" : \"07733\",\n        \"time_zone\" : \"America/New York\"\n      },\n      \"name\" : \"Headquarters\",\n      \"id\" : 327910\n    }, {\n      \"address\" : {\n        \"country\" : \"US\",\n        \"city\" : \"Holmdel\",\n        \"address_1\" : \"123 Example Street\",\n        \"address_2\" : \"Apt. 456\",\n        \"state\" : \"NJ\",\n        \"postal_code\" : \"07733\",\n        \"time_zone\" : \"America/New York\"\n      },\n      \"name\" : \"Headquarters\",\n      \"id\" : 327910\n    } ]\n  },\n  \"_links\" : {\n    \"next\" : {\n      \"href\" : \"9ynnsb4qpd21emty69jw9n9fkjgnjw5qneek3k3byd2h8qbxfc73s34szurm847mw4tb45\"\n    },\n    \"last\" : {\n      \"href\" : \"r7bwfqcciert9u0c9j6mm35bse522espeqczaii5x1nffchu33jnf6fxq6hgy29utlmriquu4et\"\n    },\n    \"prev\" : {\n      \"href\" : \"3gq2hrrixznnfixen\"\n    },\n    \"self\" : {\n      \"href\" : \"wkvk7imqdsqo4d77uku8xiwupl0u1hqkun9ve7yug4eqiwp082t7grfzzfdxxtlb68q8hp19nv3791m9ay5fwwu5i6veodpcnle0\"\n    },\n    \"first\" : {\n      \"href\" : \"cw7c83a35eme34t9hhf96aoz71u8g230akdqxr1twm2k2owc8s2kh5ocpl1jzqojufmqbiu99qtqaod7yodz7x6igf9ki8yjsddw2cb1mbweo50ydtw63n400zj6kp76036l1ae8uwebgv9dgnweyqkkltetekgmyf1kts5hlony\"\n    }\n  },\n  \"page\" : 1,\n  \"total_pages\" : 10,\n  \"total_items\" : 100,\n  \"page_size\" : 100\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "74f9a4e8-56d6-4722-b759-1c6e2143a451",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:33.408216Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "AccountCtrl.getLocationsByAccountID",
+          "schema" : {
+            "properties" : {
+              "_embedded" : {
+                "$ref" : "#/components/schemas/LocationsEmbeddedObject"
+              },
+              "_links" : {
+                "$ref" : "#/components/schemas/Links"
+              },
+              "page" : {
+                "example" : 1,
+                "type" : "number"
+              },
+              "page_size" : {
+                "example" : 100,
+                "type" : "number"
+              },
+              "total_items" : {
+                "example" : 100,
+                "type" : "number"
+              },
+              "total_pages" : {
+                "example" : 10,
+                "type" : "number"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 2
+  }, {
+    "id" : "58e33b0b-cf65-4f7b-b4e6-0acf1eff8df5",
+    "name" : "Get account data by ID - 404",
+    "request" : {
+      "urlPath" : "/api/accounts/5.558318664086596E307",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 404
+    },
+    "uuid" : "58e33b0b-cf65-4f7b-b4e6-0acf1eff8df5",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:33.407833Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "AccountCtrl.getAccountServicesByAccountID"
+        }
+      }
+    },
+    "insertionIndex" : 3
+  }, {
+    "id" : "ae03a867-edb4-46b7-bebb-771a69b1939f",
+    "name" : "Get account data by ID (application/json)",
+    "request" : {
+      "urlPath" : "/api/accounts/3.2412176067502334E307",
+      "method" : "GET",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/json"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"_embedded\" : {\n    \"data\" : {\n      \"address\" : {\n        \"country\" : \"US\",\n        \"city\" : \"Holmdel\",\n        \"address_1\" : \"123 Example Street\",\n        \"address_2\" : \"Apt. 456\",\n        \"state\" : \"NJ\",\n        \"postal_code\" : \"07733\"\n      },\n      \"name\" : \"Vonage\",\n      \"id\" : 571700,\n      \"status\" : \"ACTIVE\"\n    }\n  },\n  \"_links\" : {\n    \"next\" : {\n      \"href\" : \"tdy12jlofbaccdyabsie53tbcnrfnl4lb88618n3je2g3wm7kx59zazudk1847u9rks3kqquir5h4tfdsx4hogcrv1h9hck951mzw51drp2mx8yw1zmfziju9eu4gh89x224bh1hbdj8gpac9c1jsagbc60a3f0bi3wk7b\"\n    },\n    \"last\" : {\n      \"href\" : \"i73ws9ls\"\n    },\n    \"prev\" : {\n      \"href\" : \"gqd62085tr8tabiazdqqahjg0c7735qiwui1vob3l9d9k7jkii4rz5xpk1x7lbllz59c89tki3xfmkz2e7u6hgocuk5nthvvl63cpjh4mn96pzzw3d8c857v\"\n    },\n    \"self\" : {\n      \"href\" : \"wjcbs5g253mrp0m9fxi81qpa56b3epbgzioheq2bn8bag63mh14t5ty1fb2on4za5z6ypcviiyxk9irm952rfrrv4q5mcvk844del7a52f67nti0ryfilc1p9at69qmff6it1fz6kve6zq85grgh5gyzd065i9hzuwg\"\n    },\n    \"first\" : {\n      \"href\" : \"ey56a78wl86l4gbdizs6vo37554u38c7dkpjed2211zpzxkre4yzf7boqrnlyk8vomvduu5itqdzw21mkgwq8rudm1639y9xjhl3qiui6xpmmjvk8mskks539tpsjujtxrddvcwog98nlb4meig0j5rz7xwlpr1bjqlwotgx7hcdiag0h1mnjf5bsgad9e\"\n    }\n  },\n  \"page\" : 1,\n  \"total_pages\" : 10,\n  \"total_items\" : 100,\n  \"page_size\" : 100\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "ae03a867-edb4-46b7-bebb-771a69b1939f",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:33.407772Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "AccountCtrl.getAccountServicesByAccountID",
+          "schema" : {
+            "properties" : {
+              "_embedded" : {
+                "$ref" : "#/components/schemas/AccountEmbeddedObject"
+              },
+              "_links" : {
+                "$ref" : "#/components/schemas/Links"
+              },
+              "page" : {
+                "description" : "Current page number",
+                "example" : 1,
+                "type" : "number"
+              },
+              "page_size" : {
+                "description" : "Number of records per page",
+                "example" : 100,
+                "type" : "number"
+              },
+              "total_items" : {
+                "description" : "Total number of records",
+                "example" : 100,
+                "type" : "number"
+              },
+              "total_pages" : {
+                "description" : "Total number of pages",
+                "example" : 10,
+                "type" : "number"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 4
+  } ]
+}

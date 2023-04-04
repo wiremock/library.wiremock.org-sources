@@ -1,0 +1,3425 @@
+{
+  "mappings" : [ {
+    "id" : "76ba1086-2de3-4551-b99b-96446475d780",
+    "name" : "Fetch specific Evaluation Instance.",
+    "request" : {
+      "urlPath" : "/v1/TrustProducts/BUe98be12aa7e7beF643Ed52eAad9db55f/Evaluations/EL6ddCAdfD1d7EB2635faEF71abBfc58f8",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"policy_sid\" : \"RN528c8Df4790863DbE50fcb5ecd0E79FD\",\n  \"date_created\" : \"2023-06-26T05:56:35.095Z\",\n  \"account_sid\" : \"ACf7603f510b126c71Babf460b855f9ab6\",\n  \"trust_product_sid\" : \"BUeeb9bFFFde7ffaEB5c9Db9da31360Bd2\",\n  \"results\" : [ { } ],\n  \"url\" : \"https://web.example.mocklab.io/560587\",\n  \"sid\" : \"EL41BCEb2DA43F2014364B4EabceE05B2d\",\n  \"status\" : \"compliant\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "76ba1086-2de3-4551-b99b-96446475d780",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:24.095251Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "FetchTrustProductEvaluation",
+          "schema" : {
+            "properties" : {
+              "account_sid" : {
+                "description" : "The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the trust_product resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^AC[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "date_created" : {
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "policy_sid" : {
+                "description" : "The unique string of a policy that is associated to the trust_product resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^RN[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "results" : {
+                "description" : "The results of the Evaluation which includes the valid and invalid attributes.",
+                "nullable" : true,
+                "type" : "array"
+              },
+              "sid" : {
+                "description" : "The unique string that identifies the Evaluation resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^EL[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "status" : {
+                "$ref" : "#/components/schemas/trust_product_evaluation_enum_status"
+              },
+              "trust_product_sid" : {
+                "description" : "The unique string that we created to identify the trust_product resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^BU[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "url" : {
+                "format" : "uri",
+                "nullable" : true,
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 0
+  }, {
+    "id" : "f5634219-a3a9-47e4-935b-9cd1a445a461",
+    "name" : "Create a new Evaluation",
+    "request" : {
+      "urlPath" : "/v1/TrustProducts/BUa0d0C24a7fD625e2EAfEd902B9C09F10/Evaluations",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 201,
+      "body" : "{\n  \"policy_sid\" : \"RNFa1FCDadd41a841447aA7Bd0C6Db1f88\",\n  \"date_created\" : \"2023-02-12T16:56:45.094Z\",\n  \"account_sid\" : \"ACe5B54c778dA3825C16faCe1DaFcfcbFF\",\n  \"trust_product_sid\" : \"BU0C0A1598eaCdE805Fdfc2880b4CfE45E\",\n  \"results\" : [ { }, { }, { }, { }, { } ],\n  \"url\" : \"https://web.example.mocklab.io/588710\",\n  \"sid\" : \"EL4Cff7c70D90Ec6BCaCCAcE7BeD74aFE3\",\n  \"status\" : \"noncompliant\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "f5634219-a3a9-47e4-935b-9cd1a445a461",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:24.095038Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "CreateTrustProductEvaluation",
+          "schema" : {
+            "properties" : {
+              "account_sid" : {
+                "description" : "The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the trust_product resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^AC[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "date_created" : {
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "policy_sid" : {
+                "description" : "The unique string of a policy that is associated to the trust_product resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^RN[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "results" : {
+                "description" : "The results of the Evaluation which includes the valid and invalid attributes.",
+                "nullable" : true,
+                "type" : "array"
+              },
+              "sid" : {
+                "description" : "The unique string that identifies the Evaluation resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^EL[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "status" : {
+                "$ref" : "#/components/schemas/trust_product_evaluation_enum_status"
+              },
+              "trust_product_sid" : {
+                "description" : "The unique string that we created to identify the trust_product resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^BU[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "url" : {
+                "format" : "uri",
+                "nullable" : true,
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 1
+  }, {
+    "id" : "643af592-9d55-4883-b4c9-e0e943731b43",
+    "name" : "Retrieve a list of Evaluations associated to the trust_product resource.",
+    "request" : {
+      "urlPath" : "/v1/TrustProducts/BU5EcEcE0F39cE1b2A6A2bCFDDA0f02D9E/Evaluations",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"meta\" : {\n    \"first_page_url\" : \"https://web.example.mocklab.io/556246\",\n    \"next_page_url\" : \"https://web.example.mocklab.io/497233\",\n    \"previous_page_url\" : \"https://web.example.mocklab.io/660650\",\n    \"page\" : 7781456674042500928,\n    \"key\" : \"5pnj9ooscpnxcn2tk9nn0y3x1qmm7yyvahn80d4bet1q45i9yctwwfvfeif130si9cq7za1tnxenlrvi0weev5q9g02kzwm4ruft73jxr6b2cizxmlo010g1g4\",\n    \"url\" : \"https://web.example.mocklab.io/432021\",\n    \"page_size\" : 5099430178093126418\n  },\n  \"results\" : [ {\n    \"policy_sid\" : \"RNd339bd1FC6827fcC071cC3FEf57aa3E9\",\n    \"date_created\" : \"2024-02-25T22:31:23.093Z\",\n    \"account_sid\" : \"ACb2f4E8dbDa2c02C9a1e624eBBdAEB7CE\",\n    \"trust_product_sid\" : \"BU301f8edfB3C9Da3ed8aABDcacA4ad31C\",\n    \"results\" : [ { }, { }, { }, { }, { }, { }, { } ],\n    \"url\" : \"https://web.example.mocklab.io/215779\",\n    \"sid\" : \"ELAb99154DBDdfd6aEfBf7eF74Ef4A0aba\",\n    \"status\" : \"compliant\"\n  }, {\n    \"policy_sid\" : \"RNC5dA855DeAF4BFeDC2bCf92F8D008b44\",\n    \"date_created\" : \"2023-02-16T12:23:34.093Z\",\n    \"account_sid\" : \"ACF1291Ea26F496bF60C7841381ebba0C1\",\n    \"trust_product_sid\" : \"BU94CA1cFb45e99B0Ba6cb6DFEd26E48ad\",\n    \"results\" : [ { }, { }, { } ],\n    \"url\" : \"https://web.example.mocklab.io/454840\",\n    \"sid\" : \"EL96FD2DebD2e23c2AdaFC1098fedDEBdd\",\n    \"status\" : \"compliant\"\n  }, {\n    \"policy_sid\" : \"RN6A9E94ED79D9D5fE77201D7A5Ffdf70B\",\n    \"date_created\" : \"2024-01-16T20:32:50.094Z\",\n    \"account_sid\" : \"ACBdF964C07c5D9DD30aeF46D7950C5BD3\",\n    \"trust_product_sid\" : \"BUC9Ede40E3C38a9C81eCE9ee4DFa56ba9\",\n    \"results\" : [ { }, { }, { }, { }, { }, { }, { }, { } ],\n    \"url\" : \"https://web.example.mocklab.io/896311\",\n    \"sid\" : \"ELbF8c7De1Aa2ff2C57f5f9EE1165EC35D\",\n    \"status\" : \"noncompliant\"\n  }, {\n    \"policy_sid\" : \"RN20e7C2eE08b785F832dFE803Ba683BE6\",\n    \"date_created\" : \"2022-05-16T18:02:27.094Z\",\n    \"account_sid\" : \"AC4E9AdfC9DafaaA7becDFeDB92b8630F8\",\n    \"trust_product_sid\" : \"BU61Ad68bCd3F6fdFfAFcc43a2b76dde45\",\n    \"results\" : [ { }, { }, { } ],\n    \"url\" : \"https://web.example.mocklab.io/812928\",\n    \"sid\" : \"EL8A608F8B5CdCbB3C1BEfEc3bdcaAc0D5\",\n    \"status\" : \"noncompliant\"\n  }, {\n    \"policy_sid\" : \"RN97AD4B3D46C698A3E251Cc6DfA78a7EA\",\n    \"date_created\" : \"2022-05-14T10:56:17.094Z\",\n    \"account_sid\" : \"AC42a3E04ed43fE9b5b92d4E4A40CfAf1E\",\n    \"trust_product_sid\" : \"BU0CedD4fed00caBFad3487cCaF42d59B4\",\n    \"results\" : [ { }, { }, { } ],\n    \"url\" : \"https://web.example.mocklab.io/072215\",\n    \"sid\" : \"ELfaee280934fadeb2dC0dcC1bCCE92CA5\",\n    \"status\" : \"compliant\"\n  }, {\n    \"policy_sid\" : \"RN55e619B7c18ECE85479A31cCeedAc5ED\",\n    \"date_created\" : \"2022-09-25T19:17:18.094Z\",\n    \"account_sid\" : \"AC80EBd4AF17fF0f8A81B44E35CE1dECe1\",\n    \"trust_product_sid\" : \"BU4342EEa4647Ad8CaB48ef830Bed23a62\",\n    \"results\" : [ { }, { }, { }, { }, { }, { } ],\n    \"url\" : \"https://web.example.mocklab.io/328900\",\n    \"sid\" : \"ELeDcEeCaF4e880940E2A7b9E8aaee7e73\",\n    \"status\" : \"noncompliant\"\n  }, {\n    \"policy_sid\" : \"RNc9cA7290F63AaF2Ca77CFCb697ceC4a2\",\n    \"date_created\" : \"2022-08-15T11:14:12.094Z\",\n    \"account_sid\" : \"AC0d0dafA43dbE66aFD3Bc34a6c3958E72\",\n    \"trust_product_sid\" : \"BU705933147ebE3CeDe0bb5D9A3AA14220\",\n    \"results\" : [ { }, { } ],\n    \"url\" : \"https://web.example.mocklab.io/780467\",\n    \"sid\" : \"EL2e1c6EF9Afc611dD3Debf0a06ac2abb1\",\n    \"status\" : \"compliant\"\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "643af592-9d55-4883-b4c9-e0e943731b43",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:24.094777Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "ListTrustProductEvaluation",
+          "schema" : {
+            "properties" : {
+              "meta" : {
+                "properties" : {
+                  "first_page_url" : {
+                    "format" : "uri",
+                    "type" : "string"
+                  },
+                  "key" : {
+                    "type" : "string"
+                  },
+                  "next_page_url" : {
+                    "format" : "uri",
+                    "nullable" : true,
+                    "type" : "string"
+                  },
+                  "page" : {
+                    "type" : "integer"
+                  },
+                  "page_size" : {
+                    "type" : "integer"
+                  },
+                  "previous_page_url" : {
+                    "format" : "uri",
+                    "nullable" : true,
+                    "type" : "string"
+                  },
+                  "url" : {
+                    "format" : "uri",
+                    "type" : "string"
+                  }
+                },
+                "type" : "object"
+              },
+              "results" : {
+                "items" : {
+                  "$ref" : "#/components/schemas/trusthub.v1.trust_product.trust_product_evaluation"
+                },
+                "type" : "array"
+              }
+            },
+            "title" : "ListTrustProductEvaluationResponse",
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 2
+  }, {
+    "id" : "d24ff1c6-5891-4e71-a52a-a319944c4ecb",
+    "name" : "Fetch specific Assigned Item Instance.",
+    "request" : {
+      "urlPath" : "/v1/TrustProducts/BUFD4a6ccF3cF85D2F381DebDc461Fbffa/EntityAssignments/BV200514300fd9c63Cdbca1dDAFD2C118A",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"object_sid\" : \"AA3E8c30bDDfCccBEfab38D0b51f90947e\",\n  \"date_created\" : \"2024-02-05T13:37:30.093Z\",\n  \"account_sid\" : \"AC72C7A403C8bA568B69D1EFB4c0aAc4E5\",\n  \"trust_product_sid\" : \"BU70e14FFae562264dF3aD9DE34DCe0Bb5\",\n  \"url\" : \"https://web.example.mocklab.io/573261\",\n  \"sid\" : \"BVcc9DC9DECFA0aec8e30A7F79ebBdb4Fd\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "d24ff1c6-5891-4e71-a52a-a319944c4ecb",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:24.09342Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "FetchTrustProductEntityAssignment",
+          "schema" : {
+            "properties" : {
+              "account_sid" : {
+                "description" : "The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the Item Assignment resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^AC[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "date_created" : {
+                "description" : "The date and time in GMT when the resource was created specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "object_sid" : {
+                "description" : "The SID of an object bag that holds information of the different items.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^[a-zA-Z]{2}[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "sid" : {
+                "description" : "The unique string that we created to identify the Item Assignment resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^BV[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "trust_product_sid" : {
+                "description" : "The unique string that we created to identify the TrustProduct resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^BU[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "url" : {
+                "description" : "The absolute URL of the Identity resource.",
+                "format" : "uri",
+                "nullable" : true,
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 3
+  }, {
+    "id" : "13235aaf-0ac0-42c1-a1b6-37bbf2a23357",
+    "name" : "Remove an Assignment Item Instance. - 204",
+    "request" : {
+      "urlPath" : "/v1/TrustProducts/BUEf8cfB7F4eDA0F2CaBeE6ADc1e32BDb5/EntityAssignments/BVAB7F57dedf3fedece28eCDC10E3bb39F",
+      "method" : "DELETE"
+    },
+    "response" : {
+      "status" : 204
+    },
+    "uuid" : "13235aaf-0ac0-42c1-a1b6-37bbf2a23357",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:24.093243Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "DeleteTrustProductEntityAssignment"
+        }
+      }
+    },
+    "insertionIndex" : 4
+  }, {
+    "id" : "44f88e58-c579-4d25-a274-ca6c578051ff",
+    "name" : "Create a new Assigned Item.",
+    "request" : {
+      "urlPath" : "/v1/TrustProducts/BUeD8A2bEBDc992Feea7fB353AA7B54CDb/EntityAssignments",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 201,
+      "body" : "{\n  \"object_sid\" : \"dze37c4acb7991f42BcCeE8C0ba33af8cc\",\n  \"date_created\" : \"2023-07-29T12:07:08.093Z\",\n  \"account_sid\" : \"ACDBCAa4B206C4A4ed90192cbe9d99b1f0\",\n  \"trust_product_sid\" : \"BUcebBCd06245Be441C8e71acBFdC7D883\",\n  \"url\" : \"https://web.example.mocklab.io/172464\",\n  \"sid\" : \"BV6b079D0d0D1Cc5aaCCa46Ff7be9cEdB1\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "44f88e58-c579-4d25-a274-ca6c578051ff",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:24.093198Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "CreateTrustProductEntityAssignment",
+          "schema" : {
+            "properties" : {
+              "account_sid" : {
+                "description" : "The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the Item Assignment resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^AC[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "date_created" : {
+                "description" : "The date and time in GMT when the resource was created specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "object_sid" : {
+                "description" : "The SID of an object bag that holds information of the different items.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^[a-zA-Z]{2}[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "sid" : {
+                "description" : "The unique string that we created to identify the Item Assignment resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^BV[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "trust_product_sid" : {
+                "description" : "The unique string that we created to identify the TrustProduct resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^BU[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "url" : {
+                "description" : "The absolute URL of the Identity resource.",
+                "format" : "uri",
+                "nullable" : true,
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 5
+  }, {
+    "id" : "56d742b1-e1a8-465c-8435-949d5804ba68",
+    "name" : "Retrieve a list of all Assigned Items for an account.",
+    "request" : {
+      "urlPath" : "/v1/TrustProducts/BUAf54Dbb4DEA8fE33bFe0EaBec1aD4a4D/EntityAssignments",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"meta\" : {\n    \"first_page_url\" : \"https://web.example.mocklab.io/868046\",\n    \"next_page_url\" : \"https://web.example.mocklab.io/750387\",\n    \"previous_page_url\" : \"https://web.example.mocklab.io/660275\",\n    \"page\" : 947032382287155577,\n    \"key\" : \"7aioxe30pkgg3y35aiqz4hqx0p3qma9zywqd9f7r55cpvhd08xre6x4md3f5yos0eh8243gyf9lu8z1wgthak22t5n9qokfkc9inz3smu5idtu8dohsc85gnd8inwufoi73whplb4p7cml1xqr4pa5\",\n    \"url\" : \"https://web.example.mocklab.io/585368\",\n    \"page_size\" : 590913740106942433\n  },\n  \"results\" : [ {\n    \"object_sid\" : \"mD0EDABEED8C3F892ca460Be7B952fEAEC\",\n    \"date_created\" : \"2023-04-13T11:06:28.092Z\",\n    \"account_sid\" : \"AC6CaB2C00F82CEaa4aE84D701Ce9d6aFB\",\n    \"trust_product_sid\" : \"BU9bF7E6cb33361b5061BCa5bfE6e5C515\",\n    \"url\" : \"https://web.example.mocklab.io/596406\",\n    \"sid\" : \"BVD1E6AEB601dad4e62Af700f50AeA3cad\"\n  }, {\n    \"object_sid\" : \"lc788cF6a8c7a3d0309dfcD9C5a6e2d35D\",\n    \"date_created\" : \"2024-01-25T05:36:39.092Z\",\n    \"account_sid\" : \"AC2EEeBab0816Ad628BCC8176B8D87E88f\",\n    \"trust_product_sid\" : \"BU5dc6A43EcE7DDbaf57e4e7cdEB65f350\",\n    \"url\" : \"https://web.example.mocklab.io/412121\",\n    \"sid\" : \"BVEACDA6a5Ad69A312156D076F4b180DBd\"\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "56d742b1-e1a8-465c-8435-949d5804ba68",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:24.092981Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "ListTrustProductEntityAssignment",
+          "schema" : {
+            "properties" : {
+              "meta" : {
+                "properties" : {
+                  "first_page_url" : {
+                    "format" : "uri",
+                    "type" : "string"
+                  },
+                  "key" : {
+                    "type" : "string"
+                  },
+                  "next_page_url" : {
+                    "format" : "uri",
+                    "nullable" : true,
+                    "type" : "string"
+                  },
+                  "page" : {
+                    "type" : "integer"
+                  },
+                  "page_size" : {
+                    "type" : "integer"
+                  },
+                  "previous_page_url" : {
+                    "format" : "uri",
+                    "nullable" : true,
+                    "type" : "string"
+                  },
+                  "url" : {
+                    "format" : "uri",
+                    "type" : "string"
+                  }
+                },
+                "type" : "object"
+              },
+              "results" : {
+                "items" : {
+                  "$ref" : "#/components/schemas/trusthub.v1.trust_product.trust_product_entity_assignment"
+                },
+                "type" : "array"
+              }
+            },
+            "title" : "ListTrustProductEntityAssignmentResponse",
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 6
+  }, {
+    "id" : "a4bbee40-b612-4ee5-b087-c2ed7cdf547f",
+    "name" : "Fetch specific Assigned Item Instance.",
+    "request" : {
+      "urlPath" : "/v1/TrustProducts/BU73FBC124047aec1f8CaE8c18c3faa9aD/ChannelEndpointAssignments/RAeEbdf0a1e5BC8B2bfed42e5D6B2917aE",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"channel_endpoint_sid\" : \"XHd68ed77bdbEE652D95f085CabaF2dF3D\",\n  \"date_created\" : \"2023-07-31T15:04:57.092Z\",\n  \"account_sid\" : \"AC86c7D5e00DF3b97d1d3838835f6AD49f\",\n  \"trust_product_sid\" : \"BU8Ee82aF312bFf754Ef0fe1f5fCabCcd9\",\n  \"channel_endpoint_type\" : \"8vlqn4cxgt6ys54c63v0s439jxr7cqf1z28xarqogtsf4npkolbbvakabryjppw5qw7xi8foch6yygr2p995l0nptvwj55b19ap6\",\n  \"url\" : \"https://web.example.mocklab.io/249934\",\n  \"sid\" : \"RAE704772F94cAf4b29f612d589Fe6AFaf\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "a4bbee40-b612-4ee5-b087-c2ed7cdf547f",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:24.09233Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "FetchTrustProductChannelEndpointAssignment",
+          "schema" : {
+            "properties" : {
+              "account_sid" : {
+                "description" : "The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the Item Assignment resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^AC[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "channel_endpoint_sid" : {
+                "description" : "The SID of an channel endpoint",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^[a-zA-Z]{2}[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "channel_endpoint_type" : {
+                "description" : "The type of channel endpoint. eg: phone-number",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "date_created" : {
+                "description" : "The date and time in GMT when the resource was created specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "sid" : {
+                "description" : "The unique string that we created to identify the Item Assignment resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^RA[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "trust_product_sid" : {
+                "description" : "The unique string that we created to identify the CustomerProfile resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^BU[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "url" : {
+                "description" : "The absolute URL of the Identity resource.",
+                "format" : "uri",
+                "nullable" : true,
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 7
+  }, {
+    "id" : "fe212fd2-019f-4fe4-a6d0-2e15429e4d7d",
+    "name" : "Remove an Assignment Item Instance. - 204",
+    "request" : {
+      "urlPath" : "/v1/TrustProducts/BU5AC4828eE2d213a95C3bba6acae2f4a3/ChannelEndpointAssignments/RAa3122D2DFD6ebbF29dF03fAa0c644B28",
+      "method" : "DELETE"
+    },
+    "response" : {
+      "status" : 204
+    },
+    "uuid" : "fe212fd2-019f-4fe4-a6d0-2e15429e4d7d",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:24.092131Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "DeleteTrustProductChannelEndpointAssignment"
+        }
+      }
+    },
+    "insertionIndex" : 8
+  }, {
+    "id" : "3ca0532b-5892-46f3-b7a9-26150d20146b",
+    "name" : "Create a new Assigned Item.",
+    "request" : {
+      "urlPath" : "/v1/TrustProducts/BU257A47Cb03bee3aDa2e7A5D7ADf8aAeA/ChannelEndpointAssignments",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 201,
+      "body" : "{\n  \"channel_endpoint_sid\" : \"BqdC27bF082cAF93edf4fFbCcE36122eCD\",\n  \"date_created\" : \"2024-01-12T15:48:13.091Z\",\n  \"account_sid\" : \"ACE4363E25558A9740379B1EA54Ce31Bee\",\n  \"trust_product_sid\" : \"BUd6bec57D3E74CD72E7d07dECd3cb7F0A\",\n  \"channel_endpoint_type\" : \"weyt0u21u1piq5s5cciojl1hceg5gmulvswxdzsivaymj8vled2f2jz58dzi4tqfw5fr8c6qz458v9h27j1ca5f6c932x1u4ixbegby5px2su01gvavxly7txomb79usigoarncklpdyca36r2o58ynqi\",\n  \"url\" : \"https://web.example.mocklab.io/777436\",\n  \"sid\" : \"RAa7B1EBfaEf981a97ddEe6F02eE5e84E0\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "3ca0532b-5892-46f3-b7a9-26150d20146b",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:24.092087Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "CreateTrustProductChannelEndpointAssignment",
+          "schema" : {
+            "properties" : {
+              "account_sid" : {
+                "description" : "The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the Item Assignment resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^AC[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "channel_endpoint_sid" : {
+                "description" : "The SID of an channel endpoint",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^[a-zA-Z]{2}[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "channel_endpoint_type" : {
+                "description" : "The type of channel endpoint. eg: phone-number",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "date_created" : {
+                "description" : "The date and time in GMT when the resource was created specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "sid" : {
+                "description" : "The unique string that we created to identify the Item Assignment resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^RA[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "trust_product_sid" : {
+                "description" : "The unique string that we created to identify the CustomerProfile resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^BU[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "url" : {
+                "description" : "The absolute URL of the Identity resource.",
+                "format" : "uri",
+                "nullable" : true,
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 9
+  }, {
+    "id" : "ebe02158-200a-40fb-b001-75f66e13bcd7",
+    "name" : "Retrieve a list of all Assigned Items for an account.",
+    "request" : {
+      "urlPath" : "/v1/TrustProducts/BUeDED98C732b1a0141C0DA4110C04b93A/ChannelEndpointAssignments",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"meta\" : {\n    \"first_page_url\" : \"https://web.example.mocklab.io/918445\",\n    \"next_page_url\" : \"https://web.example.mocklab.io/711262\",\n    \"previous_page_url\" : \"https://web.example.mocklab.io/161574\",\n    \"page\" : 3265299323666822632,\n    \"key\" : \"9j1djlip17auz\",\n    \"url\" : \"https://web.example.mocklab.io/019199\",\n    \"page_size\" : 1545193973073208622\n  },\n  \"results\" : [ {\n    \"channel_endpoint_sid\" : \"kMeDf8A78fB92bC434a53E5b31782cdFf8\",\n    \"date_created\" : \"2022-11-18T20:02:21.09Z\",\n    \"account_sid\" : \"ACc5D7b9A75F5D2B1Be406dfdFEfaAD813\",\n    \"trust_product_sid\" : \"BUB1fECe3A0951c580d1ecad0eb3DFE4EC\",\n    \"channel_endpoint_type\" : \"nko32ghpx25ybqkek29tq687mfulf306o3j071h16ud33sdztphihl5undr05ljx3f0ad2std345pnuqlg4qktewhj58wa7r2pft9j\",\n    \"url\" : \"https://web.example.mocklab.io/639417\",\n    \"sid\" : \"RAD65fC6E02a52f83faCC4Fb2Bf8151a51\"\n  }, {\n    \"channel_endpoint_sid\" : \"dKF4e49A1FFcbeA2a7Ed7aEBcb9E95C2aB\",\n    \"date_created\" : \"2023-06-22T13:29:16.09Z\",\n    \"account_sid\" : \"AC43b0Ac8fF57b068Af7E5C3f5821f750f\",\n    \"trust_product_sid\" : \"BUd3FDaEeBA2f4CddEDBdbadaD25d90138\",\n    \"channel_endpoint_type\" : \"ihtmjpvsnxv6846jtdwhhrvz4vs7idnw\",\n    \"url\" : \"https://web.example.mocklab.io/431524\",\n    \"sid\" : \"RA4D4851d8a6b8d1b70590e59bf1eb4Ed6\"\n  }, {\n    \"channel_endpoint_sid\" : \"Yh19Dc766CbCDbde5a56D5Cc8ABca55fdc\",\n    \"date_created\" : \"2023-03-24T11:34:33.091Z\",\n    \"account_sid\" : \"ACab2cF69D11BE223b02fCffb2c9974FE0\",\n    \"trust_product_sid\" : \"BUb9Fc27bedB3dDCdDed1BcDa9d30599C5\",\n    \"channel_endpoint_type\" : \"wlkrnzrgnt7auzjydotlg74g6nrtcv1yabhlilmdmhd9uso73rn1vougox5k465xj78rtj8e8nhm3eoghxh33oltg15c6datvpqqcaptz9140rkawkfk53xs6\",\n    \"url\" : \"https://web.example.mocklab.io/482268\",\n    \"sid\" : \"RA4111cd16a88F7FB26c9Afd925fCD2FbC\"\n  }, {\n    \"channel_endpoint_sid\" : \"ffa98BC0124EeBF67bC1df54D4CB3ABDdE\",\n    \"date_created\" : \"2024-01-09T12:31:05.091Z\",\n    \"account_sid\" : \"ACe29510CaCB55CF1f45303fb5EEa8De19\",\n    \"trust_product_sid\" : \"BU9b23abDad3Dfd4ebEf51efDc5ACBa96D\",\n    \"channel_endpoint_type\" : \"m8d5j0ld5w8rmv433u7z0dse0c1msf91ccaoctl3qzztyk576u4kktwd5j681s7nx8k1thpk8e7bdarkk0sz63kdtp33oglf4wbh5u0twjexl641cvju53bnqxv8d8kuf7rpkzm0t326pyvibfxu\",\n    \"url\" : \"https://web.example.mocklab.io/766594\",\n    \"sid\" : \"RAC1Dd5371Fa027Fd40df9FE5b6C1F444a\"\n  }, {\n    \"channel_endpoint_sid\" : \"DRfCC3b2fc2Edfed2DEC71F09dAe7a4FBa\",\n    \"date_created\" : \"2023-11-06T01:26:47.091Z\",\n    \"account_sid\" : \"AC97d31f9949d6dddDFF1FCB1EC3Ce0E83\",\n    \"trust_product_sid\" : \"BUB2Fbf27cec1ff6E6bB9147B5e7Dd9c4A\",\n    \"channel_endpoint_type\" : \"692pzbaecg1rv56ze4gjbtio6nvwcb90im5yy7p2ab6jlppooii5yud09th56cea3o3hr0xg2kbirzqnlf5jydfhfmxf5k85g1vqvye0vff0xfa6je4z76\",\n    \"url\" : \"https://web.example.mocklab.io/554252\",\n    \"sid\" : \"RA2D61ce08EF4EdefFc9eE6270e72daaA3\"\n  }, {\n    \"channel_endpoint_sid\" : \"oya65E7bc3E2Bd1FeBbCfe33Ba5BA3FA5E\",\n    \"date_created\" : \"2022-11-04T11:17:48.091Z\",\n    \"account_sid\" : \"AC51DaC9d0FBcEb95AFa8B95Efb5FED94A\",\n    \"trust_product_sid\" : \"BU3D9399CFa1dF45965d7B24Ce5eec6eD4\",\n    \"channel_endpoint_type\" : \"7fuyfi6hqb58eq2li15yasq1y3rowj20vpilvqt7u53twktz1nckwrlqo5r0q3s9l4qfsl5kyxpywx3ai5lewmg32ghu7tgdo1t3098kfzhqkgl80xsp28wuc\",\n    \"url\" : \"https://web.example.mocklab.io/746381\",\n    \"sid\" : \"RAF14FFFFaEa29c315e33DF45a98dbFE1e\"\n  }, {\n    \"channel_endpoint_sid\" : \"wH25871fe7A8D12a2e5012AD2F3Bb2F9ca\",\n    \"date_created\" : \"2022-05-10T11:24:24.091Z\",\n    \"account_sid\" : \"AC3EF2a41F694dE89F0c0F1ABbA8AC3D5d\",\n    \"trust_product_sid\" : \"BU9ad457804b7aef78dA6A259fe20Cfb5a\",\n    \"channel_endpoint_type\" : \"d0u0edegt1cilnbf1mqxdzqfz8lu2ilbi2qiue9kknmw\",\n    \"url\" : \"https://web.example.mocklab.io/670572\",\n    \"sid\" : \"RA44b44eEFA26001eAbC48d4AcBF5F2ee3\"\n  }, {\n    \"channel_endpoint_sid\" : \"Pu2Bce157A57E4c783Cae45E1B0bAC80fD\",\n    \"date_created\" : \"2022-10-19T06:57:49.091Z\",\n    \"account_sid\" : \"ACb2cFAFdE3a8efAc3c99C96Ad4A9f533F\",\n    \"trust_product_sid\" : \"BUc1ecE7d2f0B2faeEdaB6BDc21fCa6Cb7\",\n    \"channel_endpoint_type\" : \"kd2ha9r9p23ze24lcv83tchoxkreysheptij0ngdqdgnbwuyl3a6suc5l0wz8b3hzawm3petdd7xqdt49m0dqu2dxjjic2t3a47gd9desse3q3e757\",\n    \"url\" : \"https://web.example.mocklab.io/245679\",\n    \"sid\" : \"RA54f92fe7459ebeE3501fdE37c6bdbCCe\"\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "ebe02158-200a-40fb-b001-75f66e13bcd7",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:24.091813Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "ListTrustProductChannelEndpointAssignment",
+          "schema" : {
+            "properties" : {
+              "meta" : {
+                "properties" : {
+                  "first_page_url" : {
+                    "format" : "uri",
+                    "type" : "string"
+                  },
+                  "key" : {
+                    "type" : "string"
+                  },
+                  "next_page_url" : {
+                    "format" : "uri",
+                    "nullable" : true,
+                    "type" : "string"
+                  },
+                  "page" : {
+                    "type" : "integer"
+                  },
+                  "page_size" : {
+                    "type" : "integer"
+                  },
+                  "previous_page_url" : {
+                    "format" : "uri",
+                    "nullable" : true,
+                    "type" : "string"
+                  },
+                  "url" : {
+                    "format" : "uri",
+                    "type" : "string"
+                  }
+                },
+                "type" : "object"
+              },
+              "results" : {
+                "items" : {
+                  "$ref" : "#/components/schemas/trusthub.v1.trust_product.trust_product_channel_endpoint_assignment"
+                },
+                "type" : "array"
+              }
+            },
+            "title" : "ListTrustProductChannelEndpointAssignmentResponse",
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 10
+  }, {
+    "id" : "bd3e49f4-17a4-463d-a264-86bbb8533b8d",
+    "name" : "Updates a Customer-Profile in an account.",
+    "request" : {
+      "urlPath" : "/v1/TrustProducts/BU8adf95Bc6AECC3E2CB7ECD6B0B69A936",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"policy_sid\" : \"RNa8D0ABc3e4C0Ff2CDafA9Aed4cF4b526\",\n  \"friendly_name\" : \"Jack Heller\",\n  \"date_updated\" : \"2023-08-31T23:36:50.09Z\",\n  \"valid_until\" : \"2022-06-17T21:45:27.09Z\",\n  \"date_created\" : \"2023-11-29T08:49:09.09Z\",\n  \"account_sid\" : \"ACB30fc9bEd6e34fcAC04E4B0e85Bb4AC6\",\n  \"links\" : { },\n  \"status_callback\" : \"ylqj40arqvq5phjs7rixwc245c5msts7eqivhphjf11181r0spqfsq0d3l38ixob6t2o2mxn72lk7rhd3q09iv6xgmeqw91yw6zs30q74l6rspl8ivk7bubz287xonx\",\n  \"email\" : \"a8eg7rzpno560mxlngxcving03jnl12un6d0cc6pdzay0oreaao8th8cua8ox2inacr5husm1kodune5ppyjpivrlph1qp816qlby8oooxw6qgffkq2xcq2idmgv5ozf1bglo2v4end1nepf3hh6iclcm630528e1ojhqo4ekev5996x\",\n  \"url\" : \"https://web.example.mocklab.io/616150\",\n  \"sid\" : \"BU9b06b874Db6aaa6d8679dAABe539A9ef\",\n  \"status\" : \"pending-review\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "bd3e49f4-17a4-463d-a264-86bbb8533b8d",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:24.090428Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "UpdateTrustProduct",
+          "schema" : {
+            "properties" : {
+              "account_sid" : {
+                "description" : "The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the Customer-Profile resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^AC[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "date_created" : {
+                "description" : "The date and time in GMT when the resource was created specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "date_updated" : {
+                "description" : "The date and time in GMT when the resource was last updated specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "email" : {
+                "description" : "The email address that will receive updates when the Customer-Profile resource changes status.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "friendly_name" : {
+                "description" : "The string that you assigned to describe the resource.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "links" : {
+                "description" : "The URLs of the Assigned Items of the Customer-Profile resource.",
+                "format" : "uri-map",
+                "nullable" : true,
+                "type" : "object"
+              },
+              "policy_sid" : {
+                "description" : "The unique string of a policy that is associated to the Customer-Profile resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^RN[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "sid" : {
+                "description" : "The unique string that we created to identify the Customer-Profile resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^BU[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "status" : {
+                "$ref" : "#/components/schemas/trust_product_enum_status"
+              },
+              "status_callback" : {
+                "description" : "The URL we call to inform your application of status changes.",
+                "format" : "uri",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "url" : {
+                "description" : "The absolute URL of the Customer-Profile resource.",
+                "format" : "uri",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "valid_until" : {
+                "description" : "The date and time in GMT in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format when the resource will be valid until.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 11
+  }, {
+    "id" : "78d26d4b-02c4-45d2-9f2e-82722bc54657",
+    "name" : "Fetch a specific Customer-Profile instance.",
+    "request" : {
+      "urlPath" : "/v1/TrustProducts/BU5dC3d3e8E80Fd92adE0BFfFAf62FfaC6",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"policy_sid\" : \"RN85Fa5F8ad8fb3b7fd2B27BB9aeDd3C75\",\n  \"friendly_name\" : \"Mr. Miguel Glover\",\n  \"date_updated\" : \"2022-09-06T03:50:27.089Z\",\n  \"valid_until\" : \"2023-04-01T13:21:29.089Z\",\n  \"date_created\" : \"2024-02-15T07:00:27.089Z\",\n  \"account_sid\" : \"ACDe41aced79c5C29c2b17b0aff293CB01\",\n  \"links\" : { },\n  \"status_callback\" : \"scwc7wjang4xyq972ff2jqvi5xz7fq5462zsiijd7j5q0jl32yurnrm7itfycn17tc0z1nt8xtrstp3h127y9ejpaz68juap4n1n73on17kk77b4mrhjpt97b28dhv8ud65i531rfhy865nd\",\n  \"email\" : \"1491w01lpr1f7793pj7hq4s49kgekf0ff562pmwo44nsj6y6xycl4xzvggf0vfnmmibva43aobwse3xvwva50tojajg232f3y8q\",\n  \"url\" : \"https://web.example.mocklab.io/178814\",\n  \"sid\" : \"BUe94F8AAFEaB6f423cD94706d1bBed0bc\",\n  \"status\" : \"twilio-approved\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "78d26d4b-02c4-45d2-9f2e-82722bc54657",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:24.090145Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "FetchTrustProduct",
+          "schema" : {
+            "properties" : {
+              "account_sid" : {
+                "description" : "The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the Customer-Profile resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^AC[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "date_created" : {
+                "description" : "The date and time in GMT when the resource was created specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "date_updated" : {
+                "description" : "The date and time in GMT when the resource was last updated specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "email" : {
+                "description" : "The email address that will receive updates when the Customer-Profile resource changes status.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "friendly_name" : {
+                "description" : "The string that you assigned to describe the resource.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "links" : {
+                "description" : "The URLs of the Assigned Items of the Customer-Profile resource.",
+                "format" : "uri-map",
+                "nullable" : true,
+                "type" : "object"
+              },
+              "policy_sid" : {
+                "description" : "The unique string of a policy that is associated to the Customer-Profile resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^RN[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "sid" : {
+                "description" : "The unique string that we created to identify the Customer-Profile resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^BU[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "status" : {
+                "$ref" : "#/components/schemas/trust_product_enum_status"
+              },
+              "status_callback" : {
+                "description" : "The URL we call to inform your application of status changes.",
+                "format" : "uri",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "url" : {
+                "description" : "The absolute URL of the Customer-Profile resource.",
+                "format" : "uri",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "valid_until" : {
+                "description" : "The date and time in GMT in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format when the resource will be valid until.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 12
+  }, {
+    "id" : "4ed23037-1219-4079-90c6-88968837dc21",
+    "name" : "Delete a specific Customer-Profile. - 204",
+    "request" : {
+      "urlPath" : "/v1/TrustProducts/BU41FbDaC7FB5fb2f7Be81fAfBF966d1F3",
+      "method" : "DELETE"
+    },
+    "response" : {
+      "status" : 204
+    },
+    "uuid" : "4ed23037-1219-4079-90c6-88968837dc21",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:24.089864Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "DeleteTrustProduct"
+        }
+      }
+    },
+    "insertionIndex" : 13
+  }, {
+    "id" : "70fb1a71-6320-465e-babd-1760bc19c3e4",
+    "name" : "Create a new Customer-Profile.",
+    "request" : {
+      "urlPath" : "/v1/TrustProducts",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 201,
+      "body" : "{\n  \"policy_sid\" : \"RN342d939fAAaCc48FaB421d7311833B28\",\n  \"friendly_name\" : \"Sierra Blanda\",\n  \"date_updated\" : \"2023-08-28T07:12:19.089Z\",\n  \"valid_until\" : \"2022-07-11T13:11:58.089Z\",\n  \"date_created\" : \"2022-06-27T08:49:32.089Z\",\n  \"account_sid\" : \"AC9aD7175856CdEC1e53Bc76Cc0d40AdD5\",\n  \"links\" : { },\n  \"status_callback\" : \"gq7dgetq6vak3wyxw9njaky0ym5b521m3krnrzumb109u24vedkvlyrcjr3i3m18bfqh2k372hlaeqvia014mcd6pzp7vn51lf27easzjil18x0mjdt3l036bjkw3k4a9bt15xy0o5gof9m0ft28i3e\",\n  \"email\" : \"c2cebb460kw1xlvgd0oos0eo1hyurnd3zprquvs6jz1f898kqy5srb8noo4hsvp1srzg1xwwsm90gllyzp6o7ikq8sbsocwkmvlrgiwcrwor9kjjr7mzpm9879y8y2e8x1d3qicqwxsgujazit5yl6smrnd8n6rwt19k0gwxox0f09a94skj\",\n  \"url\" : \"https://web.example.mocklab.io/651421\",\n  \"sid\" : \"BU5Ed61AD82AE3A2f97Bf4CF7acA4d9DdC\",\n  \"status\" : \"draft\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "70fb1a71-6320-465e-babd-1760bc19c3e4",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:24.089817Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "CreateTrustProduct",
+          "schema" : {
+            "properties" : {
+              "account_sid" : {
+                "description" : "The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the Customer-Profile resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^AC[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "date_created" : {
+                "description" : "The date and time in GMT when the resource was created specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "date_updated" : {
+                "description" : "The date and time in GMT when the resource was last updated specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "email" : {
+                "description" : "The email address that will receive updates when the Customer-Profile resource changes status.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "friendly_name" : {
+                "description" : "The string that you assigned to describe the resource.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "links" : {
+                "description" : "The URLs of the Assigned Items of the Customer-Profile resource.",
+                "format" : "uri-map",
+                "nullable" : true,
+                "type" : "object"
+              },
+              "policy_sid" : {
+                "description" : "The unique string of a policy that is associated to the Customer-Profile resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^RN[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "sid" : {
+                "description" : "The unique string that we created to identify the Customer-Profile resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^BU[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "status" : {
+                "$ref" : "#/components/schemas/trust_product_enum_status"
+              },
+              "status_callback" : {
+                "description" : "The URL we call to inform your application of status changes.",
+                "format" : "uri",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "url" : {
+                "description" : "The absolute URL of the Customer-Profile resource.",
+                "format" : "uri",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "valid_until" : {
+                "description" : "The date and time in GMT in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format when the resource will be valid until.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 14
+  }, {
+    "id" : "5245103a-fb1b-4276-add6-cc1cb8c4ebaf",
+    "name" : "Retrieve a list of all Customer-Profiles for an account.",
+    "request" : {
+      "urlPath" : "/v1/TrustProducts",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"meta\" : {\n    \"first_page_url\" : \"https://web.example.mocklab.io/890359\",\n    \"next_page_url\" : \"https://web.example.mocklab.io/344498\",\n    \"previous_page_url\" : \"https://web.example.mocklab.io/202538\",\n    \"page\" : 1718839761313884407,\n    \"key\" : \"nywew596fjozd14swlzau06o8szditqxdwvbfsnajlmmwamrwinhtz46kovxjeirg69hd1senpknrru14q83q8hppwpohlq869a8p65l6ifum9jpohf7fa0ibwykhyxvf1fkpyas9933g30stbk3qd4rrzejfyy8dtw8\",\n    \"url\" : \"https://web.example.mocklab.io/367216\",\n    \"page_size\" : 7167121634627178406\n  },\n  \"results\" : [ {\n    \"policy_sid\" : \"RN410D07aF1d4d55331C1c8d0540Ab98e6\",\n    \"friendly_name\" : \"Nathanial Dietrich\",\n    \"date_updated\" : \"2023-04-19T15:24:10.088Z\",\n    \"valid_until\" : \"2023-08-15T22:09:10.088Z\",\n    \"date_created\" : \"2023-10-09T12:46:52.088Z\",\n    \"account_sid\" : \"AC9ff0DC386Bd5BAEb8032fd840bd6c884\",\n    \"links\" : { },\n    \"status_callback\" : \"96gkwzpse0pgxyk94puexm89f8kxpd13r1qljy22jz3ntuow3e4mzqkmogwo32i5oz4vb0668ll09er3433zwr0\",\n    \"email\" : \"fdyvmssz6ltirshg6now9jjtdqfia5eef9ya2uodrcef2fanjfra6adw8o1ulpzvs1x9e257ese8m9szzsye6jmaouslkxvngt57qay2s91e44b5qx10gk8jp4srhdabl\",\n    \"url\" : \"https://web.example.mocklab.io/528800\",\n    \"sid\" : \"BUc4aBB9D1a4FdeEEe13bDD6b4aD6f2f4c\",\n    \"status\" : \"twilio-approved\"\n  }, {\n    \"policy_sid\" : \"RND418Df9Fe7AFc5D91FcE02866ab8b4F8\",\n    \"friendly_name\" : \"Mrs. Dorthey Ratke\",\n    \"date_updated\" : \"2022-05-26T17:37:00.088Z\",\n    \"valid_until\" : \"2022-05-07T06:12:59.088Z\",\n    \"date_created\" : \"2023-08-08T12:52:16.088Z\",\n    \"account_sid\" : \"ACe15fBc6a9Af42BaE7E79C6945cfB37ed\",\n    \"links\" : { },\n    \"status_callback\" : \"tc62b5j4tjnxxw2fvyf7k3bset2v82wrj0e4x26zt3lso9tg33gfbwotayslb27iifcem3vyvng5sumradtcrel4fugmll3t6gmpyz1uvv6j80ue0bkgpdeykbu15ikru9vfybhjxb9a56cksy0d7piioie0b6ppwcjh9xv8h2sty\",\n    \"email\" : \"fdid7t1yqtgd2xxirym73sb5meucz8kf8905qf5g0hdwa3k4rh4iwu2hsgzdkxfyowq8g39zm1jg640l0lszxod9vnjkzf1dfexji4e8wtiv2gy5tmyt8d98p9qhlajygsji77rwy92sqv5kzdy8wz84o1g9ddcgk0abfz9hj6z4voe5eggt93a\",\n    \"url\" : \"https://web.example.mocklab.io/923566\",\n    \"sid\" : \"BUCd3edAFB2DEDeed8E8e552E4AAFD97Ae\",\n    \"status\" : \"twilio-approved\"\n  }, {\n    \"policy_sid\" : \"RNFDeBECA9dF9d814340B428eB937Bd9C0\",\n    \"friendly_name\" : \"Maybelle Miller\",\n    \"date_updated\" : \"2023-11-12T18:08:57.088Z\",\n    \"valid_until\" : \"2022-11-06T16:35:21.088Z\",\n    \"date_created\" : \"2023-12-04T11:11:03.088Z\",\n    \"account_sid\" : \"AC451fdcC49B71528F4100aCEBd0aC749c\",\n    \"links\" : { },\n    \"status_callback\" : \"tb00cae4jt3hr4gdlnps5j7j3qmi9g2i3h0zbkjlt1iuf39orrbde27xas03wavtqmb670bhtdss21jztqjvjpwsdkj73lmsbb846ryn0etb8eo5her7wgqisqb6gmz593gbmw449kybgyu25kriswpe3gmg57mgsreawi\",\n    \"email\" : \"t3h5jg61ungede37g8nxdbast4pj80qlzh6cu3gcx53i5bormd0wjgw3m5enp0uuiejvg\",\n    \"url\" : \"https://web.example.mocklab.io/370806\",\n    \"sid\" : \"BUaA2ab150ad80e63eF2F2FF5bCE545dcd\",\n    \"status\" : \"twilio-rejected\"\n  }, {\n    \"policy_sid\" : \"RNebCE6a9e12AabDD970FdD5E2Cd93BEFF\",\n    \"friendly_name\" : \"Berna Nicolas\",\n    \"date_updated\" : \"2022-04-22T08:09:35.088Z\",\n    \"valid_until\" : \"2022-04-04T18:10:13.088Z\",\n    \"date_created\" : \"2023-10-08T05:35:58.088Z\",\n    \"account_sid\" : \"AC89EbF3f4073c3e4EbA3bc74d0FFaBA43\",\n    \"links\" : { },\n    \"status_callback\" : \"dyahli7vsxdj5d5ts18mg1zqhifpr3gj97zl50zqdq4evduvibxtken4wj0qx03aesxx2ldbs3juf4nkjonvv7dmcl6mwr7a1h75c0r311ez2f84kitiitgc4zi50e2skx6xth0h5bctb4d\",\n    \"email\" : \"8o6euu6jovxch5i91feqk0kystis716o1y304s2demt59138ylz6xvno4d5vm6h\",\n    \"url\" : \"https://web.example.mocklab.io/950046\",\n    \"sid\" : \"BUC116bcfD2F2Ec7BBfF258C646e479F7d\",\n    \"status\" : \"twilio-rejected\"\n  }, {\n    \"policy_sid\" : \"RNEf442AC0a6AEaDbeeb54CDaeD1a03796\",\n    \"friendly_name\" : \"Mrs. Nickie Braun\",\n    \"date_updated\" : \"2022-04-12T14:14:54.089Z\",\n    \"valid_until\" : \"2023-07-03T23:20:51.089Z\",\n    \"date_created\" : \"2023-02-10T09:49:02.089Z\",\n    \"account_sid\" : \"ACC7A7FbA68Ec12F4443FF8AF9FbA1C48A\",\n    \"links\" : { },\n    \"status_callback\" : \"hbxnmssojuey739uax\",\n    \"email\" : \"8ngu4vthvmpmfjk4lypjmz90lz6d5n8ce1r02k9cu7mh7iqebcqf9jrpem05\",\n    \"url\" : \"https://web.example.mocklab.io/878092\",\n    \"sid\" : \"BUF07cE586AEf41952eAC261D5677146fe\",\n    \"status\" : \"twilio-rejected\"\n  }, {\n    \"policy_sid\" : \"RN21E489CF797B2D3fCCC0F155dbD25308\",\n    \"friendly_name\" : \"Chadwick Muller\",\n    \"date_updated\" : \"2023-07-30T23:35:03.089Z\",\n    \"valid_until\" : \"2024-03-17T08:42:21.089Z\",\n    \"date_created\" : \"2023-08-14T09:25:06.089Z\",\n    \"account_sid\" : \"ACf371bEF6f53c4EA551ce6A0167D2A19f\",\n    \"links\" : { },\n    \"status_callback\" : \"mz3q5657hgww2calvyiw82tmf52tzqdcqpesdvu\",\n    \"email\" : \"u4jok07bekq9gdzipap2l2pfp41j8pf3jwgojap2cvcfxtsz8sqf0osqd0w4q8qmgyfnnha3ve95p0dehnvx6urddn38\",\n    \"url\" : \"https://web.example.mocklab.io/727391\",\n    \"sid\" : \"BU85650C2Ec5b76Fba569cA87aD635582D\",\n    \"status\" : \"twilio-approved\"\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "5245103a-fb1b-4276-add6-cc1cb8c4ebaf",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:24.089501Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "ListTrustProduct",
+          "schema" : {
+            "properties" : {
+              "meta" : {
+                "properties" : {
+                  "first_page_url" : {
+                    "format" : "uri",
+                    "type" : "string"
+                  },
+                  "key" : {
+                    "type" : "string"
+                  },
+                  "next_page_url" : {
+                    "format" : "uri",
+                    "nullable" : true,
+                    "type" : "string"
+                  },
+                  "page" : {
+                    "type" : "integer"
+                  },
+                  "page_size" : {
+                    "type" : "integer"
+                  },
+                  "previous_page_url" : {
+                    "format" : "uri",
+                    "nullable" : true,
+                    "type" : "string"
+                  },
+                  "url" : {
+                    "format" : "uri",
+                    "type" : "string"
+                  }
+                },
+                "type" : "object"
+              },
+              "results" : {
+                "items" : {
+                  "$ref" : "#/components/schemas/trusthub.v1.trust_product"
+                },
+                "type" : "array"
+              }
+            },
+            "title" : "ListTrustProductResponse",
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 15
+  }, {
+    "id" : "f9310912-d6c4-4874-b0ca-ac5c36975083",
+    "name" : "Update an existing Supporting Document.",
+    "request" : {
+      "urlPath" : "/v1/SupportingDocuments/RDeDE034cFBE451BBDd376C1CaBAFCADA1",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"friendly_name\" : \"Normand Jaskolski\",\n  \"date_updated\" : \"2022-04-21T08:46:16.087Z\",\n  \"mime_type\" : \"aj4xy6v3otqkh40pn96yalz9zf52s0fk87ni415hr115fau2l58krat4sko0kxvvm1kih6bajgut5z2gsii38w6x8e58pfwh45jl81vr0mfhbzn\",\n  \"date_created\" : \"2022-04-20T17:45:28.087Z\",\n  \"account_sid\" : \"AC4f5caedd3cCC6B7F302d1D8bFFe36841\",\n  \"attributes\" : { },\n  \"type\" : \"4lpcz1uuy8blmm2hurs8h71yk4vsmfn5c3fzjbm0nphvasorjgt2ivlie8pn5njuzzvo1kxghmpap3zndxtmv86qhagfka6bt7tsqet8czkmazzxlkxw8q5knvwp\",\n  \"url\" : \"https://web.example.mocklab.io/739346\",\n  \"sid\" : \"RDA5F6c17641B93eC1bc4650FC76e2DfA3\",\n  \"status\" : \"expired\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "f9310912-d6c4-4874-b0ca-ac5c36975083",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:24.087929Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "UpdateSupportingDocument",
+          "schema" : {
+            "properties" : {
+              "account_sid" : {
+                "description" : "The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the Document resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^AC[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "attributes" : {
+                "description" : "The set of parameters that are the attributes of the Supporting Documents resource which are listed in the Supporting Document Types.",
+                "nullable" : true
+              },
+              "date_created" : {
+                "description" : "The date and time in GMT when the resource was created specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "date_updated" : {
+                "description" : "The date and time in GMT when the resource was last updated specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "friendly_name" : {
+                "description" : "The string that you assigned to describe the resource.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "mime_type" : {
+                "description" : "The image type uploaded in the Supporting Document container.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "sid" : {
+                "description" : "The unique string created by Twilio to identify the Supporting Document resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^RD[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "status" : {
+                "$ref" : "#/components/schemas/supporting_document_enum_status"
+              },
+              "type" : {
+                "description" : "The type of the Supporting Document.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "url" : {
+                "description" : "The absolute URL of the Supporting Document resource.",
+                "format" : "uri",
+                "nullable" : true,
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 16
+  }, {
+    "id" : "ba98ec9b-1207-446f-a7a4-31c367b77faf",
+    "name" : "Fetch specific Supporting Document Instance.",
+    "request" : {
+      "urlPath" : "/v1/SupportingDocuments/RD5f9bdDfCC9D6Eca29BFFD47E4f4Ed28d",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"friendly_name\" : \"Yevette Bosco II\",\n  \"date_updated\" : \"2024-01-08T16:17:19.087Z\",\n  \"mime_type\" : \"2rierkes0ribfgwdrtyiwpxg4hrvl78l82g598gexz2gx5ymcvfv\",\n  \"date_created\" : \"2023-08-20T21:20:04.087Z\",\n  \"account_sid\" : \"AC6FFcF7C1404D4CecBadAC94B34b53C1c\",\n  \"attributes\" : { },\n  \"type\" : \"bnwatjja5jfy0v6adp49rgjui6\",\n  \"url\" : \"https://web.example.mocklab.io/753863\",\n  \"sid\" : \"RD590aDd3DDEe2F0d167Ee056bfBaC71AA\",\n  \"status\" : \"approved\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "ba98ec9b-1207-446f-a7a4-31c367b77faf",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:24.087629Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "FetchSupportingDocument",
+          "schema" : {
+            "properties" : {
+              "account_sid" : {
+                "description" : "The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the Document resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^AC[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "attributes" : {
+                "description" : "The set of parameters that are the attributes of the Supporting Documents resource which are listed in the Supporting Document Types.",
+                "nullable" : true
+              },
+              "date_created" : {
+                "description" : "The date and time in GMT when the resource was created specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "date_updated" : {
+                "description" : "The date and time in GMT when the resource was last updated specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "friendly_name" : {
+                "description" : "The string that you assigned to describe the resource.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "mime_type" : {
+                "description" : "The image type uploaded in the Supporting Document container.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "sid" : {
+                "description" : "The unique string created by Twilio to identify the Supporting Document resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^RD[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "status" : {
+                "$ref" : "#/components/schemas/supporting_document_enum_status"
+              },
+              "type" : {
+                "description" : "The type of the Supporting Document.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "url" : {
+                "description" : "The absolute URL of the Supporting Document resource.",
+                "format" : "uri",
+                "nullable" : true,
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 17
+  }, {
+    "id" : "dbe93a1a-a63d-4f6e-9c28-29602f1a8032",
+    "name" : "Delete a specific Supporting Document. - 204",
+    "request" : {
+      "urlPath" : "/v1/SupportingDocuments/RDf615CbE6675b0eBD316538aA49eCbf1A",
+      "method" : "DELETE"
+    },
+    "response" : {
+      "status" : 204
+    },
+    "uuid" : "dbe93a1a-a63d-4f6e-9c28-29602f1a8032",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:24.087371Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "DeleteSupportingDocument"
+        }
+      }
+    },
+    "insertionIndex" : 18
+  }, {
+    "id" : "68509ec1-174f-4bcb-b16c-1f0308e53265",
+    "name" : "Create a new Supporting Document.",
+    "request" : {
+      "urlPath" : "/v1/SupportingDocuments",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 201,
+      "body" : "{\n  \"friendly_name\" : \"Maia Schoen\",\n  \"date_updated\" : \"2023-09-21T04:13:40.087Z\",\n  \"mime_type\" : \"e8zdtewr3opx4qczb4f8kyltgfefeyc4bm2wpwxdkne7i94bhxjqjjmzhhuzc4fnfs4kmh3y9tz15ryyjfkuniq9vpb0a858sksbkqp61oeaufn9ln0pvq4beba6o74zwg30jylhtfej5zdsfbu55j6bfgr55tf3hy486qmebiku13\",\n  \"date_created\" : \"2022-06-15T13:05:00.087Z\",\n  \"account_sid\" : \"ACe5e86F1C2E6Ccb7ff6B8aecFa2114F3C\",\n  \"attributes\" : { },\n  \"type\" : \"78kmc25xo5evh8p3gjm1wexjjskcq8dks9mhdovd2u5c1om1rjsglsjsvbckmy7s61qmwie6l77462a107zlidhrz30mepudogjnnecldngxxa0jk987xpfel0uap4maihuqnkslrzntq9y4eridqshlffj84fvns175gu9rez4lcafry5ucr78vc0ekb\",\n  \"url\" : \"https://web.example.mocklab.io/685644\",\n  \"sid\" : \"RD4571Cc7372C630a143D7f98bEc9F8Df1\",\n  \"status\" : \"expired\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "68509ec1-174f-4bcb-b16c-1f0308e53265",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:24.087332Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "CreateSupportingDocument",
+          "schema" : {
+            "properties" : {
+              "account_sid" : {
+                "description" : "The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the Document resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^AC[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "attributes" : {
+                "description" : "The set of parameters that are the attributes of the Supporting Documents resource which are listed in the Supporting Document Types.",
+                "nullable" : true
+              },
+              "date_created" : {
+                "description" : "The date and time in GMT when the resource was created specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "date_updated" : {
+                "description" : "The date and time in GMT when the resource was last updated specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "friendly_name" : {
+                "description" : "The string that you assigned to describe the resource.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "mime_type" : {
+                "description" : "The image type uploaded in the Supporting Document container.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "sid" : {
+                "description" : "The unique string created by Twilio to identify the Supporting Document resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^RD[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "status" : {
+                "$ref" : "#/components/schemas/supporting_document_enum_status"
+              },
+              "type" : {
+                "description" : "The type of the Supporting Document.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "url" : {
+                "description" : "The absolute URL of the Supporting Document resource.",
+                "format" : "uri",
+                "nullable" : true,
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 19
+  }, {
+    "id" : "39db120e-7ad3-4eb4-bb14-5497ed2da672",
+    "name" : "Retrieve a list of all Supporting Document for an account.",
+    "request" : {
+      "urlPath" : "/v1/SupportingDocuments",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"meta\" : {\n    \"first_page_url\" : \"https://web.example.mocklab.io/809733\",\n    \"next_page_url\" : \"https://web.example.mocklab.io/863094\",\n    \"previous_page_url\" : \"https://web.example.mocklab.io/293765\",\n    \"page\" : 4395235161212363856,\n    \"key\" : \"xnc8chl4cjh6p2avwdj7t7bzqe9lqgd7zhl3tbfw36wvr8il5l1g4tkev38506f9sgzon2knlu8bi06n3g3u3emltsjyrhz4sb2ejyhowxv2dm3cqahf93qp11y4qcu5zouncc9cvpzcdbxtdqdga305\",\n    \"url\" : \"https://web.example.mocklab.io/934910\",\n    \"page_size\" : 2123480563634561431\n  },\n  \"results\" : [ {\n    \"friendly_name\" : \"Ms. Andre Kautzer\",\n    \"date_updated\" : \"2024-02-19T10:18:25.085Z\",\n    \"mime_type\" : \"be9j6xenv7h7wzh5kdbr66qzyk5l7m5ywg5juhii6icxlxru4ariueqv9h80w2t7gv137ax7m0gs30x313nz4coiufx6xsn0varxvanmyj36mus2gz40cucl6dw20cfuafkn8p4au4n5mtzg4hy7ijk8gm8kazi51tzos\",\n    \"date_created\" : \"2022-04-30T15:28:16.085Z\",\n    \"account_sid\" : \"AC0E1f1d9826Bb90CFf6Df57c7Ced194Ec\",\n    \"attributes\" : { },\n    \"type\" : \"pryu9avy7wfyb1g2o353yqb0fx00nvgcpvzaqqg7jabij9aqmoj6r2all5jxpre9fej2im8uwlm4yq9kart8rs6y2zadnl7melca46dihgnr4rl1ouigjjo9scv86znbbfmbr6i6rkkgt1ubvk3nz854efore76kk87xcdz8\",\n    \"url\" : \"https://web.example.mocklab.io/762481\",\n    \"sid\" : \"RD3600d28B0425f33Eac7207AeE7b9fc32\",\n    \"status\" : \"expired\"\n  }, {\n    \"friendly_name\" : \"Freda Maggio\",\n    \"date_updated\" : \"2022-08-12T17:49:05.085Z\",\n    \"mime_type\" : \"kdz06pe7b8p6ifs70nkectkp48j8wjwanym2rk7dm03pnwp6mkm5q4jek4f4hwut5o0sakxi5ldznz5mpnuqipygzbx3iqpu2puka3pbsfsiq0oa5znkn419z1yvbzc76i0gscjfzqwawydo7yejrvn766xyublq20kbb1b43qrqkaeh93efn322bimw8jbgc\",\n    \"date_created\" : \"2023-02-13T11:37:51.085Z\",\n    \"account_sid\" : \"ACf9608dAC42D457eff9d1Afdc4cDD06d7\",\n    \"attributes\" : { },\n    \"type\" : \"a34gwllq2r8jwclb6md65ccjqu8lkqaoxro7s1qieztro1emtivldzpb5nmpiaxfyld52nzi66knl2zxlvs5wem131zb48ullhmos922d9h0dzoexobe3jt4l9sb6dl6j4san91v4ujp2vmk6ttmkw5ixaxz4i2qw5rbfgnzmfzjy7wj3nhug2u22ktg6ayta4e\",\n    \"url\" : \"https://web.example.mocklab.io/781402\",\n    \"sid\" : \"RDf7fA5da235C05FDAE77734BfBC11CaF0\",\n    \"status\" : \"approved\"\n  }, {\n    \"friendly_name\" : \"Floria Terry\",\n    \"date_updated\" : \"2022-04-27T00:15:16.086Z\",\n    \"mime_type\" : \"87775m\",\n    \"date_created\" : \"2022-10-25T10:14:00.086Z\",\n    \"account_sid\" : \"AC0Ed8eB5fa6a6b01dfcDaD9b2cD91cE9c\",\n    \"attributes\" : { },\n    \"type\" : \"2jw7cnk46jctrom1ttcz318yzclir2a2cyw4nmvtwdxrupnxc3q6ifhpkeadcoudfgtvw0oetkqb4a4tb8g5hjnpksbzkhc7qulne28znqadks0mg46nvc\",\n    \"url\" : \"https://web.example.mocklab.io/512715\",\n    \"sid\" : \"RD3f5B6b9C2c5dABedce8C6ab1ADe1F392\",\n    \"status\" : \"draft\"\n  }, {\n    \"friendly_name\" : \"Mrs. Carmon Kihn\",\n    \"date_updated\" : \"2024-03-03T06:18:28.086Z\",\n    \"mime_type\" : \"zmwkm63o0owavo9khor23ouaw90gykq33jvijegwn0h9qbwtk2ganuq96gxme71b9ack9mdstvavvw186s7uxqwc9d4i7yfad\",\n    \"date_created\" : \"2023-07-17T09:33:27.086Z\",\n    \"account_sid\" : \"AC6b6bb14e23cee50DacEf7D5c862e62Ac\",\n    \"attributes\" : { },\n    \"type\" : \"d0f664jxgxcptiyj5ech2ojnhv3et0xf1uc3ium2v1wi\",\n    \"url\" : \"https://web.example.mocklab.io/065481\",\n    \"sid\" : \"RD221afEcDA68B66C1f8cb5Cc4d6F33F87\",\n    \"status\" : \"pending-review\"\n  }, {\n    \"friendly_name\" : \"Lashanda Kulas\",\n    \"date_updated\" : \"2023-05-15T04:51:27.086Z\",\n    \"mime_type\" : \"mrumrr99iclomg5scvmg3wu7vutebhzbkzeon29d20vgtyz08zpaewl4g6rjegfzfjvyoxkryoen981tsoxmezgcec88cncv1rwa509u46qzukyeokfm9odn9\",\n    \"date_created\" : \"2022-07-12T17:21:35.086Z\",\n    \"account_sid\" : \"AC8827cE5d0CB43B9A88EeF2ccDd3F1B3a\",\n    \"attributes\" : { },\n    \"type\" : \"made65usebibkwvd9zhpbtck5u7ynyeymihbomcwdtf89ozrif4kitb3anjiecb5wg3d9fsj3m3xm1aka8u\",\n    \"url\" : \"https://web.example.mocklab.io/700419\",\n    \"sid\" : \"RD3ec3b82baFCaa5a94b3fe3C8Dab33F8B\",\n    \"status\" : \"approved\"\n  }, {\n    \"friendly_name\" : \"Alberto Torp\",\n    \"date_updated\" : \"2022-06-23T05:47:21.086Z\",\n    \"mime_type\" : \"2s6rz30ssfb2qnyo165q5c3a8dgk306j3g2xlxlr195ewjqmx0h8opw7blo088s4be7ktld3rm7v6iex3qfdbm9bkqi3ow\",\n    \"date_created\" : \"2022-05-12T22:07:06.086Z\",\n    \"account_sid\" : \"ACd5faEC3ea8098e68A4352FED4aEDdcbF\",\n    \"attributes\" : { },\n    \"type\" : \"8xixiep8d2p3ppnak7omd06q4c2wrgfezc0wfaynbgfs9an3c7lqhi0y30dmw5sbatlogao\",\n    \"url\" : \"https://web.example.mocklab.io/661500\",\n    \"sid\" : \"RDAD1Db028f5Aa1bad3EeFDFb5bbd11C7D\",\n    \"status\" : \"provisionally-approved\"\n  }, {\n    \"friendly_name\" : \"Derrick Durgan\",\n    \"date_updated\" : \"2023-03-16T17:33:23.086Z\",\n    \"mime_type\" : \"g4p66gfdi553glut8s58liku6kz2un39vea2rnw9fdmfypz6h3c1yda8akn6riyiwgkokffxvq27zt4grhu6nccgjvgrufufb5jo3ah2zol6t\",\n    \"date_created\" : \"2023-03-10T08:35:30.086Z\",\n    \"account_sid\" : \"ACB7C8fCaEcbEc75e4F4DFc5FC6c5eDf05\",\n    \"attributes\" : { },\n    \"type\" : \"6ou2u4bbnt4oj3pv2i8lfxwvtncjpc9wms805jrmetuv6iavbi2wr7yb7c17re66gt\",\n    \"url\" : \"https://web.example.mocklab.io/069346\",\n    \"sid\" : \"RDf1d950AaEf4f9DAcb0D77111B0fF63e4\",\n    \"status\" : \"expired\"\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "39db120e-7ad3-4eb4-bb14-5497ed2da672",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:24.087038Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "ListSupportingDocument",
+          "schema" : {
+            "properties" : {
+              "meta" : {
+                "properties" : {
+                  "first_page_url" : {
+                    "format" : "uri",
+                    "type" : "string"
+                  },
+                  "key" : {
+                    "type" : "string"
+                  },
+                  "next_page_url" : {
+                    "format" : "uri",
+                    "nullable" : true,
+                    "type" : "string"
+                  },
+                  "page" : {
+                    "type" : "integer"
+                  },
+                  "page_size" : {
+                    "type" : "integer"
+                  },
+                  "previous_page_url" : {
+                    "format" : "uri",
+                    "nullable" : true,
+                    "type" : "string"
+                  },
+                  "url" : {
+                    "format" : "uri",
+                    "type" : "string"
+                  }
+                },
+                "type" : "object"
+              },
+              "results" : {
+                "items" : {
+                  "$ref" : "#/components/schemas/trusthub.v1.supporting_document"
+                },
+                "type" : "array"
+              }
+            },
+            "title" : "ListSupportingDocumentResponse",
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 20
+  }, {
+    "id" : "38015ba0-2edb-495b-9485-e7d51d195bd0",
+    "name" : "Fetch a specific Supporting Document Type Instance.",
+    "request" : {
+      "urlPath" : "/v1/SupportingDocumentTypes/p32j",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"friendly_name\" : \"Mr. Wiley Moen\",\n  \"fields\" : [ { }, { }, { }, { } ],\n  \"machine_name\" : \"Ms. Jospeh Legros\",\n  \"url\" : \"https://web.example.mocklab.io/407529\",\n  \"sid\" : \"OYB6Ce49bBe1824b35e4b852aB1e6Dac32\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "38015ba0-2edb-495b-9485-e7d51d195bd0",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:24.085381Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "FetchSupportingDocumentType",
+          "schema" : {
+            "properties" : {
+              "fields" : {
+                "description" : "The required information for creating a Supporting Document. The required fields will change as regulatory needs change and will differ for businesses and individuals.",
+                "nullable" : true,
+                "type" : "array"
+              },
+              "friendly_name" : {
+                "description" : "A human-readable description of the Supporting Document Type resource.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "machine_name" : {
+                "description" : "The machine-readable description of the Supporting Document Type resource.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "sid" : {
+                "description" : "The unique string that identifies the Supporting Document Type resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^OY[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "url" : {
+                "description" : "The absolute URL of the Supporting Document Type resource.",
+                "format" : "uri",
+                "nullable" : true,
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 21
+  }, {
+    "id" : "949ee7eb-5639-4d0c-9b78-77e1fe800036",
+    "name" : "Retrieve a list of all Supporting Document Types.",
+    "request" : {
+      "urlPath" : "/v1/SupportingDocumentTypes",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"supporting_document_types\" : [ {\n    \"friendly_name\" : \"Delta Swift\",\n    \"fields\" : [ { }, { }, { } ],\n    \"machine_name\" : \"Calvin Cassin I\",\n    \"url\" : \"https://web.example.mocklab.io/522673\",\n    \"sid\" : \"OYEaB6c7010B8B3dEFD532fcDDa1D12b9c\"\n  }, {\n    \"friendly_name\" : \"Thurman Tillman\",\n    \"fields\" : [ { }, { }, { }, { }, { }, { }, { } ],\n    \"machine_name\" : \"Justa DuBuque II\",\n    \"url\" : \"https://web.example.mocklab.io/564844\",\n    \"sid\" : \"OYcc7Fc04bba6BDE8E339A2F12D2B24dda\"\n  }, {\n    \"friendly_name\" : \"Dante Runte\",\n    \"fields\" : [ { }, { }, { }, { }, { }, { }, { } ],\n    \"machine_name\" : \"Meggan Dare\",\n    \"url\" : \"https://web.example.mocklab.io/264813\",\n    \"sid\" : \"OYF7deD6ADd2Ab0A8b219E6301cAA2A7a6\"\n  }, {\n    \"friendly_name\" : \"Salina Rolfson\",\n    \"fields\" : [ { }, { }, { }, { }, { }, { }, { } ],\n    \"machine_name\" : \"Emilio Heller\",\n    \"url\" : \"https://web.example.mocklab.io/108447\",\n    \"sid\" : \"OY79A0fC6F0aD9BAd6ed555d1cba3aeDBe\"\n  }, {\n    \"friendly_name\" : \"Piper Morar\",\n    \"fields\" : [ { }, { }, { }, { } ],\n    \"machine_name\" : \"Walker Ruecker\",\n    \"url\" : \"https://web.example.mocklab.io/387497\",\n    \"sid\" : \"OYDebdDf3D7dC7B33bEefBD79fa9F13dD7\"\n  }, {\n    \"friendly_name\" : \"Pearlie McGlynn\",\n    \"fields\" : [ { }, { }, { } ],\n    \"machine_name\" : \"Chante Heller PhD\",\n    \"url\" : \"https://web.example.mocklab.io/847667\",\n    \"sid\" : \"OY67033162347fF2EBB0D312ECfA28a975\"\n  } ],\n  \"meta\" : {\n    \"first_page_url\" : \"https://web.example.mocklab.io/817741\",\n    \"next_page_url\" : \"https://web.example.mocklab.io/722454\",\n    \"previous_page_url\" : \"https://web.example.mocklab.io/218477\",\n    \"page\" : 2515857631160741113,\n    \"key\" : \"af7wq2jybphwfp9n96hxglpfsxcpok71baaxt9kojk2z71h6or7ydpp0spno998nlsk7ujbw1y4cn98dkbvby2hhj7to4xuf6t6jd0lrq8co2pvmn1w8wcei9aulob64a04ty\",\n    \"url\" : \"https://web.example.mocklab.io/413458\",\n    \"page_size\" : 934514120188170925\n  }\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "949ee7eb-5639-4d0c-9b78-77e1fe800036",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:24.085046Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "ListSupportingDocumentType",
+          "schema" : {
+            "properties" : {
+              "meta" : {
+                "properties" : {
+                  "first_page_url" : {
+                    "format" : "uri",
+                    "type" : "string"
+                  },
+                  "key" : {
+                    "type" : "string"
+                  },
+                  "next_page_url" : {
+                    "format" : "uri",
+                    "nullable" : true,
+                    "type" : "string"
+                  },
+                  "page" : {
+                    "type" : "integer"
+                  },
+                  "page_size" : {
+                    "type" : "integer"
+                  },
+                  "previous_page_url" : {
+                    "format" : "uri",
+                    "nullable" : true,
+                    "type" : "string"
+                  },
+                  "url" : {
+                    "format" : "uri",
+                    "type" : "string"
+                  }
+                },
+                "type" : "object"
+              },
+              "supporting_document_types" : {
+                "items" : {
+                  "$ref" : "#/components/schemas/trusthub.v1.supporting_document_type"
+                },
+                "type" : "array"
+              }
+            },
+            "title" : "ListSupportingDocumentTypeResponse",
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 22
+  }, {
+    "id" : "448680f7-ed5e-4198-8b0e-4ea721b8459f",
+    "name" : "Fetch specific Policy Instance.",
+    "request" : {
+      "urlPath" : "/v1/Policies/RN9EafF848DcdBcbcDFe623a155bd0EAda",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"friendly_name\" : \"Fausto Renner\",\n  \"requirements\" : { },\n  \"url\" : \"https://web.example.mocklab.io/407546\",\n  \"sid\" : \"RNfd64bA6E092A07a751551bb9C0473c8F\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "448680f7-ed5e-4198-8b0e-4ea721b8459f",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:24.083577Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "FetchPolicies",
+          "schema" : {
+            "properties" : {
+              "friendly_name" : {
+                "description" : "A human-readable description that is assigned to describe the Policy resource. Examples can include Primary Customer profile policy",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "requirements" : {
+                "description" : "The SID of an object that holds the policy information",
+                "nullable" : true
+              },
+              "sid" : {
+                "description" : "The unique string that identifies the Policy resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^RN[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "url" : {
+                "description" : "The absolute URL of the Policy resource.",
+                "format" : "uri",
+                "nullable" : true,
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 23
+  }, {
+    "id" : "4fc6cf18-aa29-4e4a-a7d6-9f5a634c4998",
+    "name" : "Retrieve a list of all Policys.",
+    "request" : {
+      "urlPath" : "/v1/Policies",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"meta\" : {\n    \"first_page_url\" : \"https://web.example.mocklab.io/737968\",\n    \"next_page_url\" : \"https://web.example.mocklab.io/972287\",\n    \"previous_page_url\" : \"https://web.example.mocklab.io/848200\",\n    \"page\" : 543325686065939607,\n    \"key\" : \"lv2nfkpgxryl8ds6rabeibpuye14xes00oly\",\n    \"url\" : \"https://web.example.mocklab.io/165066\",\n    \"page_size\" : 3557174618283544244\n  },\n  \"results\" : [ {\n    \"friendly_name\" : \"Nilda Gottlieb MD\",\n    \"requirements\" : { },\n    \"url\" : \"https://web.example.mocklab.io/690498\",\n    \"sid\" : \"RNef3d3FabFf34bf370A14891537db1Eac\"\n  }, {\n    \"friendly_name\" : \"Svetlana Doyle\",\n    \"requirements\" : { },\n    \"url\" : \"https://web.example.mocklab.io/672106\",\n    \"sid\" : \"RNAd19E32012fFEF02BDdD4208c6aD165b\"\n  }, {\n    \"friendly_name\" : \"Mr. Britt Bayer\",\n    \"requirements\" : { },\n    \"url\" : \"https://web.example.mocklab.io/454545\",\n    \"sid\" : \"RN374DDEA1536C2cdD94A0dFEd85F619Fc\"\n  }, {\n    \"friendly_name\" : \"Dr. Johnathon Leuschke\",\n    \"requirements\" : { },\n    \"url\" : \"https://web.example.mocklab.io/858947\",\n    \"sid\" : \"RNC196BFa11c76B6fB6b2cBB92e01eEA61\"\n  }, {\n    \"friendly_name\" : \"Salome West\",\n    \"requirements\" : { },\n    \"url\" : \"https://web.example.mocklab.io/097907\",\n    \"sid\" : \"RNde0Ca7FcCadd6c3f2591ae1CF890aA83\"\n  }, {\n    \"friendly_name\" : \"Lucilla Ziemann\",\n    \"requirements\" : { },\n    \"url\" : \"https://web.example.mocklab.io/638473\",\n    \"sid\" : \"RNFFAaE6F3C90F2ec3Ec001FDebCce5A76\"\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "4fc6cf18-aa29-4e4a-a7d6-9f5a634c4998",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:24.083382Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "ListPolicies",
+          "schema" : {
+            "properties" : {
+              "meta" : {
+                "properties" : {
+                  "first_page_url" : {
+                    "format" : "uri",
+                    "type" : "string"
+                  },
+                  "key" : {
+                    "type" : "string"
+                  },
+                  "next_page_url" : {
+                    "format" : "uri",
+                    "nullable" : true,
+                    "type" : "string"
+                  },
+                  "page" : {
+                    "type" : "integer"
+                  },
+                  "page_size" : {
+                    "type" : "integer"
+                  },
+                  "previous_page_url" : {
+                    "format" : "uri",
+                    "nullable" : true,
+                    "type" : "string"
+                  },
+                  "url" : {
+                    "format" : "uri",
+                    "type" : "string"
+                  }
+                },
+                "type" : "object"
+              },
+              "results" : {
+                "items" : {
+                  "$ref" : "#/components/schemas/trusthub.v1.policies"
+                },
+                "type" : "array"
+              }
+            },
+            "title" : "ListPoliciesResponse",
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 24
+  }, {
+    "id" : "6d3de270-be47-42a7-af9f-8b1e23a2a4e6",
+    "name" : "Update an existing End User.",
+    "request" : {
+      "urlPath" : "/v1/EndUsers/ITC92667fcFA6cC48Dc4Bc8543a5dBeaB1",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"friendly_name\" : \"Dr. Randolph Klein\",\n  \"date_updated\" : \"2023-10-04T21:25:02.082Z\",\n  \"date_created\" : \"2022-10-12T12:55:06.082Z\",\n  \"account_sid\" : \"ACe0D16af83ae8FE2cFdFfC9cb19c8649f\",\n  \"attributes\" : { },\n  \"type\" : \"blcu7ko08fb\",\n  \"url\" : \"https://web.example.mocklab.io/076186\",\n  \"sid\" : \"ITD31375A1b2765512b39aE8B6c4204B7E\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "6d3de270-be47-42a7-af9f-8b1e23a2a4e6",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:24.082256Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "UpdateEndUser",
+          "schema" : {
+            "properties" : {
+              "account_sid" : {
+                "description" : "The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the End User resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^AC[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "attributes" : {
+                "description" : "The set of parameters that are the attributes of the End Users resource which are listed in the End User Types.",
+                "nullable" : true
+              },
+              "date_created" : {
+                "description" : "The date and time in GMT when the resource was created specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "date_updated" : {
+                "description" : "The date and time in GMT when the resource was last updated specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "friendly_name" : {
+                "description" : "The string that you assigned to describe the resource.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "sid" : {
+                "description" : "The unique string created by Twilio to identify the End User resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^IT[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "type" : {
+                "description" : "The type of end user of the Bundle resource - can be `individual` or `business`.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "url" : {
+                "description" : "The absolute URL of the End User resource.",
+                "format" : "uri",
+                "nullable" : true,
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 25
+  }, {
+    "id" : "e0803c4d-5202-46a7-91a1-fb2d22381014",
+    "name" : "Fetch specific End User Instance.",
+    "request" : {
+      "urlPath" : "/v1/EndUsers/ITaa0B2ad875e5E7f9eBBaC2Caa44ADDD6",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"friendly_name\" : \"Zack Stokes\",\n  \"date_updated\" : \"2024-03-01T07:29:09.081Z\",\n  \"date_created\" : \"2022-07-10T18:55:01.081Z\",\n  \"account_sid\" : \"AC8c5Dd4c9d0c6CDD975C90cd0E33fbbaD\",\n  \"attributes\" : { },\n  \"type\" : \"h160mgzaxskb5x9tp4if\",\n  \"url\" : \"https://web.example.mocklab.io/912848\",\n  \"sid\" : \"ITB11F247Cd39Edf47D0add883b936c5ef\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "e0803c4d-5202-46a7-91a1-fb2d22381014",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:24.082028Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "FetchEndUser",
+          "schema" : {
+            "properties" : {
+              "account_sid" : {
+                "description" : "The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the End User resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^AC[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "attributes" : {
+                "description" : "The set of parameters that are the attributes of the End Users resource which are listed in the End User Types.",
+                "nullable" : true
+              },
+              "date_created" : {
+                "description" : "The date and time in GMT when the resource was created specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "date_updated" : {
+                "description" : "The date and time in GMT when the resource was last updated specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "friendly_name" : {
+                "description" : "The string that you assigned to describe the resource.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "sid" : {
+                "description" : "The unique string created by Twilio to identify the End User resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^IT[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "type" : {
+                "description" : "The type of end user of the Bundle resource - can be `individual` or `business`.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "url" : {
+                "description" : "The absolute URL of the End User resource.",
+                "format" : "uri",
+                "nullable" : true,
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 26
+  }, {
+    "id" : "0066df2b-a22e-4351-96be-ac0686e95769",
+    "name" : "Delete a specific End User. - 204",
+    "request" : {
+      "urlPath" : "/v1/EndUsers/IT75bddACBe88eccaCEe23FE0DBea3CCff",
+      "method" : "DELETE"
+    },
+    "response" : {
+      "status" : 204
+    },
+    "uuid" : "0066df2b-a22e-4351-96be-ac0686e95769",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:24.081801Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "DeleteEndUser"
+        }
+      }
+    },
+    "insertionIndex" : 27
+  }, {
+    "id" : "48911dc2-2302-4879-9e30-2f713aad429a",
+    "name" : "Create a new End User.",
+    "request" : {
+      "urlPath" : "/v1/EndUsers",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 201,
+      "body" : "{\n  \"friendly_name\" : \"Rosena Kilback\",\n  \"date_updated\" : \"2023-01-09T20:31:55.081Z\",\n  \"date_created\" : \"2023-08-24T03:40:17.081Z\",\n  \"account_sid\" : \"AC50DdC5cDDf89F0e178fF97F5AEEeAAcd\",\n  \"attributes\" : { },\n  \"type\" : \"vlj3k3y5g2p1vqp11c0brizsexvzp29zcf19yhe7zvltv3bfkdoh6qa3mqf4k50xe8w8fgx7tp504t8nvs2qwwhlj6qhjvps3qycummpa03pmoh59dbivsardh43eswz1jxt45aky0yc60a64b1pa6fdsqls4h0jlc\",\n  \"url\" : \"https://web.example.mocklab.io/271167\",\n  \"sid\" : \"ITEBab9673eFCB55df0080c2C9CcbDbAd9\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "48911dc2-2302-4879-9e30-2f713aad429a",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:24.081762Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "CreateEndUser",
+          "schema" : {
+            "properties" : {
+              "account_sid" : {
+                "description" : "The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the End User resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^AC[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "attributes" : {
+                "description" : "The set of parameters that are the attributes of the End Users resource which are listed in the End User Types.",
+                "nullable" : true
+              },
+              "date_created" : {
+                "description" : "The date and time in GMT when the resource was created specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "date_updated" : {
+                "description" : "The date and time in GMT when the resource was last updated specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "friendly_name" : {
+                "description" : "The string that you assigned to describe the resource.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "sid" : {
+                "description" : "The unique string created by Twilio to identify the End User resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^IT[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "type" : {
+                "description" : "The type of end user of the Bundle resource - can be `individual` or `business`.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "url" : {
+                "description" : "The absolute URL of the End User resource.",
+                "format" : "uri",
+                "nullable" : true,
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 28
+  }, {
+    "id" : "5c3abdad-9c21-4aa7-8b70-720f4718b450",
+    "name" : "Retrieve a list of all End User for an account.",
+    "request" : {
+      "urlPath" : "/v1/EndUsers",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"meta\" : {\n    \"first_page_url\" : \"https://web.example.mocklab.io/821084\",\n    \"next_page_url\" : \"https://web.example.mocklab.io/752894\",\n    \"previous_page_url\" : \"https://web.example.mocklab.io/383614\",\n    \"page\" : 6427944821245443218,\n    \"key\" : \"1ffzzqkcwzt2m5pwcd3p7akp1\",\n    \"url\" : \"https://web.example.mocklab.io/495617\",\n    \"page_size\" : 6963665341722247889\n  },\n  \"results\" : [ {\n    \"friendly_name\" : \"Jetta Hoppe\",\n    \"date_updated\" : \"2023-02-22T05:27:56.08Z\",\n    \"date_created\" : \"2023-02-04T13:10:47.08Z\",\n    \"account_sid\" : \"AC00bbcfE27CD0421F5B2cCF4bBEf85886\",\n    \"attributes\" : { },\n    \"type\" : \"h2jso9hgy1iciicugk7w6zfww7oft3s58b3ai217vr4nhssjiyugrslwzasafzogy22m8ymw3t6d7vnbp0ppbk6kqom58ttr1x25y2go6nge6yz0jsw6546wn3g26yqdb7m1m57a1lln2lt0lx8jajt2oh\",\n    \"url\" : \"https://web.example.mocklab.io/625239\",\n    \"sid\" : \"ITDad3B4B8E8FcBEF4c28E4cbDf3A6B75f\"\n  }, {\n    \"friendly_name\" : \"Mrs. Martin Huels\",\n    \"date_updated\" : \"2023-07-04T14:16:06.08Z\",\n    \"date_created\" : \"2022-12-12T20:23:57.08Z\",\n    \"account_sid\" : \"ACE96aFAf7FB8780e5a0Ae8998ba5cB728\",\n    \"attributes\" : { },\n    \"type\" : \"ay28hznq3dscgpdkeb0aih33tkrm4\",\n    \"url\" : \"https://web.example.mocklab.io/509258\",\n    \"sid\" : \"ITd8C9Fef7EDcE11B0ea99F1Ead6EF89dF\"\n  }, {\n    \"friendly_name\" : \"Ms. Lindsey Leffler\",\n    \"date_updated\" : \"2022-12-02T22:27:48.08Z\",\n    \"date_created\" : \"2023-09-18T07:27:49.08Z\",\n    \"account_sid\" : \"AC3A535F84695EDB4D9f1e2a74FFaDBb7C\",\n    \"attributes\" : { },\n    \"type\" : \"agcyglssm79pg0vobs40gtn47bljqqe4bnkewydtm9f0tmlwim4fearzjk52186lxql5mj52wjewa8jcj6vz68lzcwda\",\n    \"url\" : \"https://web.example.mocklab.io/363891\",\n    \"sid\" : \"ITefADed86A1b4eCa2cAEd3544cCf8FD7b\"\n  }, {\n    \"friendly_name\" : \"Alison Strosin\",\n    \"date_updated\" : \"2023-05-29T23:17:38.08Z\",\n    \"date_created\" : \"2023-04-06T09:52:31.08Z\",\n    \"account_sid\" : \"AC3C8b82Bcec190EdB0D8e1AaAfA407448\",\n    \"attributes\" : { },\n    \"type\" : \"pyvvj9tt5\",\n    \"url\" : \"https://web.example.mocklab.io/631056\",\n    \"sid\" : \"ITeB793FE0b70F0eaE2c3dcb390a0568CF\"\n  }, {\n    \"friendly_name\" : \"Hayden Marvin\",\n    \"date_updated\" : \"2024-01-02T11:11:14.08Z\",\n    \"date_created\" : \"2022-08-31T11:10:53.08Z\",\n    \"account_sid\" : \"AC1FE19EBB2ECd04F4E54F70681ADbeFAe\",\n    \"attributes\" : { },\n    \"type\" : \"dhos2naolndga0d2v266rmlcggt6dldwazmy1q7b1whlw5msvi6cf8gmlqbm5g4tbe5qqtkq7kip8v0g91gqcxxvnokk4ufczr4zccvioi5osetpo4dw7biqho9e7jm36p3f2f7yqf9mpvnbt30qk8288jq8sj9updfwfqjac3n7bwwqrhenv300e\",\n    \"url\" : \"https://web.example.mocklab.io/773492\",\n    \"sid\" : \"IT9646eB0D0eEab964E7caBb0B10Bb96ea\"\n  }, {\n    \"friendly_name\" : \"Mrs. Harriet Langworth\",\n    \"date_updated\" : \"2024-03-16T18:06:40.08Z\",\n    \"date_created\" : \"2023-02-08T02:48:55.08Z\",\n    \"account_sid\" : \"ACf4eC590105bCBd2F7a11c0c5201f68ca\",\n    \"attributes\" : { },\n    \"type\" : \"ht6pp\",\n    \"url\" : \"https://web.example.mocklab.io/995942\",\n    \"sid\" : \"ITF6C6f2C8EAAd1d657e87cb74DF024fC5\"\n  }, {\n    \"friendly_name\" : \"Randi Krajcik I\",\n    \"date_updated\" : \"2023-11-21T15:37:03.081Z\",\n    \"date_created\" : \"2023-10-13T18:12:13.081Z\",\n    \"account_sid\" : \"ACc3b1b55BFAF4dDCAf875159e647C5cDB\",\n    \"attributes\" : { },\n    \"type\" : \"eueaiu6ecbnv0wop0rco00l471tmpye4f412b6k9xj5ah7souqh8o31u82s4l4jbjdl6w8oje3mp9hnw9to5ninlhpaadsqhqoqpqlc9euk9u0zp4tz0aa2jdis51dgmedjc5crkl0vqlivnfw0kem6r5z6jhpjuu0hzlv6y86w\",\n    \"url\" : \"https://web.example.mocklab.io/919423\",\n    \"sid\" : \"ITDbCb5fce2b53dBdDB05BfFc2B85023BC\"\n  }, {\n    \"friendly_name\" : \"Jarred Treutel PhD\",\n    \"date_updated\" : \"2023-03-29T11:17:24.081Z\",\n    \"date_created\" : \"2023-03-24T08:43:24.081Z\",\n    \"account_sid\" : \"ACBed19Fc265d9eCaBECb0e7C314dDD4F2\",\n    \"attributes\" : { },\n    \"type\" : \"ewyw11jisvvzdaw4t30dmpgxmw973kswmpu678f4yl8bo396lm95mw1p187893j3vspae4e7fn2jm6jalmryzlc7ohhzf251jevgk4m220gmzri3pyyzjh0xd34f491n0th84dg\",\n    \"url\" : \"https://web.example.mocklab.io/938477\",\n    \"sid\" : \"IT8a72fF3b462fF32Ddbf96De6d024bEEF\"\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "5c3abdad-9c21-4aa7-8b70-720f4718b450",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:24.081499Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "ListEndUser",
+          "schema" : {
+            "properties" : {
+              "meta" : {
+                "properties" : {
+                  "first_page_url" : {
+                    "format" : "uri",
+                    "type" : "string"
+                  },
+                  "key" : {
+                    "type" : "string"
+                  },
+                  "next_page_url" : {
+                    "format" : "uri",
+                    "nullable" : true,
+                    "type" : "string"
+                  },
+                  "page" : {
+                    "type" : "integer"
+                  },
+                  "page_size" : {
+                    "type" : "integer"
+                  },
+                  "previous_page_url" : {
+                    "format" : "uri",
+                    "nullable" : true,
+                    "type" : "string"
+                  },
+                  "url" : {
+                    "format" : "uri",
+                    "type" : "string"
+                  }
+                },
+                "type" : "object"
+              },
+              "results" : {
+                "items" : {
+                  "$ref" : "#/components/schemas/trusthub.v1.end_user"
+                },
+                "type" : "array"
+              }
+            },
+            "title" : "ListEndUserResponse",
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 29
+  }, {
+    "id" : "a882444a-ed9f-4f0b-bf3d-e2144562ede4",
+    "name" : "Fetch a specific End-User Type Instance.",
+    "request" : {
+      "urlPath" : "/v1/EndUserTypes/7je8",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"friendly_name\" : \"Fallon Aufderhar\",\n  \"fields\" : [ { }, { }, { }, { }, { }, { }, { }, { } ],\n  \"machine_name\" : \"Dennis Haley\",\n  \"url\" : \"https://web.example.mocklab.io/975141\",\n  \"sid\" : \"OYD25EBc894229DfFFC327131Dd958fec3\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "a882444a-ed9f-4f0b-bf3d-e2144562ede4",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:24.079798Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "FetchEndUserType",
+          "schema" : {
+            "properties" : {
+              "fields" : {
+                "description" : "The required information for creating an End-User. The required fields will change as regulatory needs change and will differ for businesses and individuals.",
+                "nullable" : true,
+                "type" : "array"
+              },
+              "friendly_name" : {
+                "description" : "A human-readable description that is assigned to describe the End-User Type resource. Examples can include first name, last name, email, business name, etc",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "machine_name" : {
+                "description" : "A machine-readable description of the End-User Type resource. Examples can include first_name, last_name, email, business_name, etc.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "sid" : {
+                "description" : "The unique string that identifies the End-User Type resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^OY[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "url" : {
+                "description" : "The absolute URL of the End-User Type resource.",
+                "format" : "uri",
+                "nullable" : true,
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 30
+  }, {
+    "id" : "df13e926-95d0-4b52-909d-cf543073cd7c",
+    "name" : "Retrieve a list of all End-User Types.",
+    "request" : {
+      "urlPath" : "/v1/EndUserTypes",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"meta\" : {\n    \"first_page_url\" : \"https://web.example.mocklab.io/462924\",\n    \"next_page_url\" : \"https://web.example.mocklab.io/826183\",\n    \"previous_page_url\" : \"https://web.example.mocklab.io/673038\",\n    \"page\" : 4617598164053916750,\n    \"key\" : \"10qzjqnoyxmu1vk5if41g0p1lg1blj60immi4rc8knrxdvf538z1fqky0ktukm0vkblsbznm5tz0gu60neffyoprg6qjgjszfgzvzs2r5onxlpgr6nfndeytwvu04kjt0tz5h8f7bca2dubtlxcpolpzsq2vlf3\",\n    \"url\" : \"https://web.example.mocklab.io/905783\",\n    \"page_size\" : 4080897071487444066\n  },\n  \"end_user_types\" : [ {\n    \"friendly_name\" : \"Graciela Jerde PhD\",\n    \"fields\" : [ { }, { }, { }, { }, { }, { } ],\n    \"machine_name\" : \"Azzie Bechtelar\",\n    \"url\" : \"https://web.example.mocklab.io/151239\",\n    \"sid\" : \"OY9E286343d5b6478c249eD6d3E139C462\"\n  }, {\n    \"friendly_name\" : \"Jeanne Welch\",\n    \"fields\" : [ { }, { }, { }, { }, { }, { }, { } ],\n    \"machine_name\" : \"Mrs. Tarsha Ferry\",\n    \"url\" : \"https://web.example.mocklab.io/510065\",\n    \"sid\" : \"OY4A57e8D0C57EceECe6c5dcBeeeFC2d35\"\n  }, {\n    \"friendly_name\" : \"Austin Rice\",\n    \"fields\" : [ { } ],\n    \"machine_name\" : \"Miss Barbar Barton\",\n    \"url\" : \"https://web.example.mocklab.io/406074\",\n    \"sid\" : \"OY04C8A62AcAE8a64C34c5f1ff0Bcc7d8B\"\n  }, {\n    \"friendly_name\" : \"Carline Gleason\",\n    \"fields\" : [ { }, { }, { }, { }, { }, { } ],\n    \"machine_name\" : \"Deana Hoeger\",\n    \"url\" : \"https://web.example.mocklab.io/444022\",\n    \"sid\" : \"OYBBAE7ce23decBc30dEbdA6cf9C6afeFf\"\n  }, {\n    \"friendly_name\" : \"Shaun Hartmann III\",\n    \"fields\" : [ { }, { }, { }, { } ],\n    \"machine_name\" : \"Joeann Hahn\",\n    \"url\" : \"https://web.example.mocklab.io/919055\",\n    \"sid\" : \"OY2fBED495BC06f8Ebf16Bc7ec9cF193ba\"\n  }, {\n    \"friendly_name\" : \"Awilda Oberbrunner\",\n    \"fields\" : [ { }, { }, { } ],\n    \"machine_name\" : \"Bruna Torphy Sr.\",\n    \"url\" : \"https://web.example.mocklab.io/604175\",\n    \"sid\" : \"OY81effdfaA0ff44D88BeFC4B91cF7642F\"\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "df13e926-95d0-4b52-909d-cf543073cd7c",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:24.07945Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "ListEndUserType",
+          "schema" : {
+            "properties" : {
+              "end_user_types" : {
+                "items" : {
+                  "$ref" : "#/components/schemas/trusthub.v1.end_user_type"
+                },
+                "type" : "array"
+              },
+              "meta" : {
+                "properties" : {
+                  "first_page_url" : {
+                    "format" : "uri",
+                    "type" : "string"
+                  },
+                  "key" : {
+                    "type" : "string"
+                  },
+                  "next_page_url" : {
+                    "format" : "uri",
+                    "nullable" : true,
+                    "type" : "string"
+                  },
+                  "page" : {
+                    "type" : "integer"
+                  },
+                  "page_size" : {
+                    "type" : "integer"
+                  },
+                  "previous_page_url" : {
+                    "format" : "uri",
+                    "nullable" : true,
+                    "type" : "string"
+                  },
+                  "url" : {
+                    "format" : "uri",
+                    "type" : "string"
+                  }
+                },
+                "type" : "object"
+              }
+            },
+            "title" : "ListEndUserTypeResponse",
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 31
+  }, {
+    "id" : "24785971-0408-486d-b722-ad773f73d19c",
+    "name" : "Updates a Customer-Profile in an account.",
+    "request" : {
+      "urlPath" : "/v1/CustomerProfiles/BUfb3afb8a12C111FcbE44493Bd817a425",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"policy_sid\" : \"RNfB0eAdaEbEF64688dAdf160baFdCB3c1\",\n  \"friendly_name\" : \"Dr. Ayesha Bogisich\",\n  \"date_updated\" : \"2022-07-13T11:11:52.077Z\",\n  \"valid_until\" : \"2023-03-30T00:34:07.077Z\",\n  \"date_created\" : \"2022-12-15T15:05:13.077Z\",\n  \"account_sid\" : \"ACaFDa4eF4CCB500ececfaddc565e1f32E\",\n  \"links\" : { },\n  \"status_callback\" : \"15np5r5ghn0tzpqysevg5ubp50yeu1e9bcfev7vuhz28btz6aa5r4lzl9sn7spr2eyox993d6umqpjc5u77fqurtllo5elgwhbjeffcydq5x530eps8g27robzh58mze0mjnvnwgp1qky921eup6yrvmygjj6e7sg893fo94yb62xhc3hxht8x7o\",\n  \"email\" : \"g1cwvbarwjpfpwskl5zl3rcivw1rn5587nl21727h4h1833owx36w1xai4qp3mexv7avmjsjrxkorepju2wl3g9s\",\n  \"url\" : \"https://web.example.mocklab.io/948298\",\n  \"sid\" : \"BUA781C2dbDF86904cF26913b38be85D6C\",\n  \"status\" : \"pending-review\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "24785971-0408-486d-b722-ad773f73d19c",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:24.077955Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "UpdateCustomerProfile",
+          "schema" : {
+            "properties" : {
+              "account_sid" : {
+                "description" : "The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the Customer-Profile resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^AC[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "date_created" : {
+                "description" : "The date and time in GMT when the resource was created specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "date_updated" : {
+                "description" : "The date and time in GMT when the resource was last updated specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "email" : {
+                "description" : "The email address that will receive updates when the Customer-Profile resource changes status.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "friendly_name" : {
+                "description" : "The string that you assigned to describe the resource.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "links" : {
+                "description" : "The URLs of the Assigned Items of the Customer-Profile resource.",
+                "format" : "uri-map",
+                "nullable" : true,
+                "type" : "object"
+              },
+              "policy_sid" : {
+                "description" : "The unique string of a policy that is associated to the Customer-Profile resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^RN[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "sid" : {
+                "description" : "The unique string that we created to identify the Customer-Profile resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^BU[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "status" : {
+                "$ref" : "#/components/schemas/customer_profile_enum_status"
+              },
+              "status_callback" : {
+                "description" : "The URL we call to inform your application of status changes.",
+                "format" : "uri",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "url" : {
+                "description" : "The absolute URL of the Customer-Profile resource.",
+                "format" : "uri",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "valid_until" : {
+                "description" : "The date and time in GMT in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format when the resource will be valid until.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 32
+  }, {
+    "id" : "cd43e8e0-6ee5-448a-aa9e-ce5501ed53e4",
+    "name" : "Fetch a specific Customer-Profile instance.",
+    "request" : {
+      "urlPath" : "/v1/CustomerProfiles/BU5EE10E0227a6CFBa822BEdECDB93ebe6",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"policy_sid\" : \"RNFEE8c05f032c33eDb69Aabd5A02bFf92\",\n  \"friendly_name\" : \"Miss Weston Hayes\",\n  \"date_updated\" : \"2023-11-10T01:15:36.077Z\",\n  \"valid_until\" : \"2022-11-17T02:26:02.077Z\",\n  \"date_created\" : \"2023-03-02T07:51:45.077Z\",\n  \"account_sid\" : \"ACebAF13CEA5211AbF7f9C191EcCeeEffb\",\n  \"links\" : { },\n  \"status_callback\" : \"31r6h8oajxixttrlba5bpl0x5cdvyma5lm5pv42xbyttqt4ehsteivsn7zpn1edvtpzpt6uoanaisp5k8izumipjzmwms4ifbvrjsmtm0ig31lq73xcw9i8dhnjv37\",\n  \"email\" : \"nqov46km54og11ajej4wclj64tpoyzp0emtn4buzs9oclldr2d745tycw78v73dk4wwn0dr7y5zuomrezk7fcvq7eiop2fb9t5l1is7iw55m1yx2l4uw0z7n27qjk7yd9c03hk1078fzyr\",\n  \"url\" : \"https://web.example.mocklab.io/522940\",\n  \"sid\" : \"BU260C2c3f6D519Eb2FED80Ec79044ACbF\",\n  \"status\" : \"in-review\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "cd43e8e0-6ee5-448a-aa9e-ce5501ed53e4",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:24.077666Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "FetchCustomerProfile",
+          "schema" : {
+            "properties" : {
+              "account_sid" : {
+                "description" : "The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the Customer-Profile resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^AC[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "date_created" : {
+                "description" : "The date and time in GMT when the resource was created specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "date_updated" : {
+                "description" : "The date and time in GMT when the resource was last updated specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "email" : {
+                "description" : "The email address that will receive updates when the Customer-Profile resource changes status.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "friendly_name" : {
+                "description" : "The string that you assigned to describe the resource.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "links" : {
+                "description" : "The URLs of the Assigned Items of the Customer-Profile resource.",
+                "format" : "uri-map",
+                "nullable" : true,
+                "type" : "object"
+              },
+              "policy_sid" : {
+                "description" : "The unique string of a policy that is associated to the Customer-Profile resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^RN[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "sid" : {
+                "description" : "The unique string that we created to identify the Customer-Profile resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^BU[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "status" : {
+                "$ref" : "#/components/schemas/customer_profile_enum_status"
+              },
+              "status_callback" : {
+                "description" : "The URL we call to inform your application of status changes.",
+                "format" : "uri",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "url" : {
+                "description" : "The absolute URL of the Customer-Profile resource.",
+                "format" : "uri",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "valid_until" : {
+                "description" : "The date and time in GMT in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format when the resource will be valid until.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 33
+  }, {
+    "id" : "ac1693a8-8e95-4c39-9ef9-5dfc03dc7ce8",
+    "name" : "Delete a specific Customer-Profile. - 204",
+    "request" : {
+      "urlPath" : "/v1/CustomerProfiles/BUE9D7eea6afC69745dFFF4F4BE3F2E37D",
+      "method" : "DELETE"
+    },
+    "response" : {
+      "status" : 204
+    },
+    "uuid" : "ac1693a8-8e95-4c39-9ef9-5dfc03dc7ce8",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:24.077286Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "DeleteCustomerProfile"
+        }
+      }
+    },
+    "insertionIndex" : 34
+  }, {
+    "id" : "d7050a4b-e8e2-4f75-b38f-33c4f0f31a8e",
+    "name" : "Fetch specific Evaluation Instance.",
+    "request" : {
+      "urlPath" : "/v1/CustomerProfiles/BU0369e1FCFfBc84a39B8dCBaBb5e9A586/Evaluations/ELced49BD90E93c981ebbbBd1f6FCAFf66",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"policy_sid\" : \"RNe29C34b0665E5aAEfdA39BaF7fA1e6Da\",\n  \"customer_profile_sid\" : \"BUB0eBD20F01c094936D3d217E928fF8bA\",\n  \"date_created\" : \"2022-11-10T01:57:01.076Z\",\n  \"account_sid\" : \"ACCEeFf57a4d92Ac9eAB0Da1dAcBF186cB\",\n  \"results\" : [ { } ],\n  \"url\" : \"https://web.example.mocklab.io/447497\",\n  \"sid\" : \"ELC26cfbD48A869F3a3A4b4DEa8eBfda29\",\n  \"status\" : \"compliant\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "d7050a4b-e8e2-4f75-b38f-33c4f0f31a8e",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:24.077176Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "FetchCustomerProfileEvaluation",
+          "schema" : {
+            "properties" : {
+              "account_sid" : {
+                "description" : "The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the customer_profile resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^AC[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "customer_profile_sid" : {
+                "description" : "The unique string that we created to identify the customer_profile resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^BU[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "date_created" : {
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "policy_sid" : {
+                "description" : "The unique string of a policy that is associated to the customer_profile resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^RN[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "results" : {
+                "description" : "The results of the Evaluation which includes the valid and invalid attributes.",
+                "nullable" : true,
+                "type" : "array"
+              },
+              "sid" : {
+                "description" : "The unique string that identifies the Evaluation resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^EL[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "status" : {
+                "$ref" : "#/components/schemas/customer_profile_evaluation_enum_status"
+              },
+              "url" : {
+                "format" : "uri",
+                "nullable" : true,
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 35
+  }, {
+    "id" : "162fdbce-ca0f-4f57-a8ee-44fc42857fbd",
+    "name" : "Create a new Evaluation",
+    "request" : {
+      "urlPath" : "/v1/CustomerProfiles/BUfC99F25b6eBeF601AF756eAB06197Ee4/Evaluations",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 201,
+      "body" : "{\n  \"policy_sid\" : \"RN3aFF2dB79fDdA1FD9CaE2cf4Ea5cCd70\",\n  \"customer_profile_sid\" : \"BU27Eee8D3EA8Be6E7acC321b7DDF6dA7C\",\n  \"date_created\" : \"2024-03-06T04:12:15.076Z\",\n  \"account_sid\" : \"ACa0D578D956b478E0CFC1Da1Ae6aBa4ab\",\n  \"results\" : [ { }, { }, { }, { } ],\n  \"url\" : \"https://web.example.mocklab.io/451461\",\n  \"sid\" : \"EL0C103cC595a3bc8F4dbaB512c3F106FB\",\n  \"status\" : \"noncompliant\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "162fdbce-ca0f-4f57-a8ee-44fc42857fbd",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:24.076951Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "CreateCustomerProfileEvaluation",
+          "schema" : {
+            "properties" : {
+              "account_sid" : {
+                "description" : "The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the customer_profile resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^AC[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "customer_profile_sid" : {
+                "description" : "The unique string that we created to identify the customer_profile resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^BU[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "date_created" : {
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "policy_sid" : {
+                "description" : "The unique string of a policy that is associated to the customer_profile resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^RN[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "results" : {
+                "description" : "The results of the Evaluation which includes the valid and invalid attributes.",
+                "nullable" : true,
+                "type" : "array"
+              },
+              "sid" : {
+                "description" : "The unique string that identifies the Evaluation resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^EL[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "status" : {
+                "$ref" : "#/components/schemas/customer_profile_evaluation_enum_status"
+              },
+              "url" : {
+                "format" : "uri",
+                "nullable" : true,
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 36
+  }, {
+    "id" : "d10fcc0d-b021-4c9e-a000-ab861cf98f9e",
+    "name" : "Retrieve a list of Evaluations associated to the customer_profile resource.",
+    "request" : {
+      "urlPath" : "/v1/CustomerProfiles/BUAE58c19F4f25aEd612b63Fef72A0Dfe5/Evaluations",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"meta\" : {\n    \"first_page_url\" : \"https://web.example.mocklab.io/466515\",\n    \"next_page_url\" : \"https://web.example.mocklab.io/010131\",\n    \"previous_page_url\" : \"https://web.example.mocklab.io/135947\",\n    \"page\" : 8668541273437297215,\n    \"key\" : \"ozwlc3272nn8g1vyatcot83ex53j1p2ks3n0l5ragut4owmqaubf8o0kcoxpsecfivy742htlafqw4dzfe3wp23ksz5bdaxjacp3u2ykth31jkx9zxlgm60ym6sqwbtast7dr50a1g67392uoign8qvxcsl8x3kk171jbf6vsm6eyl4\",\n    \"url\" : \"https://web.example.mocklab.io/224530\",\n    \"page_size\" : 20092777868986586\n  },\n  \"results\" : [ {\n    \"policy_sid\" : \"RN6aFef4F78aa0132dDDfeDcb1E4bEBdC4\",\n    \"customer_profile_sid\" : \"BUc5e3e4f5a9CB3C3B869A5CcFA8aB3490\",\n    \"date_created\" : \"2023-10-24T11:06:56.075Z\",\n    \"account_sid\" : \"ACA4b6EdaB2aCCCBbdBFB9E7Fc2432E4c1\",\n    \"results\" : [ { }, { }, { }, { }, { }, { } ],\n    \"url\" : \"https://web.example.mocklab.io/079174\",\n    \"sid\" : \"ELf194fe2E1Ea76a02b6C7e9Ea280fD733\",\n    \"status\" : \"noncompliant\"\n  }, {\n    \"policy_sid\" : \"RN99b66d73E2aDdDdF3cad9F626BBD5e8F\",\n    \"customer_profile_sid\" : \"BUdAAA5B8Db9F1b3eDE74DeaF0A5f7A99d\",\n    \"date_created\" : \"2022-07-05T16:37:58.076Z\",\n    \"account_sid\" : \"ACF3c15aA702b366432ba418f499c5ea6C\",\n    \"results\" : [ { }, { }, { }, { } ],\n    \"url\" : \"https://web.example.mocklab.io/699960\",\n    \"sid\" : \"EL59DeAB28c45f60b5DEf1CE4449dB68A1\",\n    \"status\" : \"compliant\"\n  }, {\n    \"policy_sid\" : \"RNfA36BBFf9f7600120B1F48e12DC94866\",\n    \"customer_profile_sid\" : \"BU00ffe22A73c65Bcb6eE29Dd2aeA5E8EE\",\n    \"date_created\" : \"2022-11-28T08:25:41.076Z\",\n    \"account_sid\" : \"ACCCDE58DD8ba1FDbf9D1EfEB73a0e09B4\",\n    \"results\" : [ { } ],\n    \"url\" : \"https://web.example.mocklab.io/258261\",\n    \"sid\" : \"EL3ADeBaBC63170ABfBbe0CB84b79Ad8dD\",\n    \"status\" : \"noncompliant\"\n  }, {\n    \"policy_sid\" : \"RNBA9ae6b3A7d2cA913b692dac4D1C8a4E\",\n    \"customer_profile_sid\" : \"BUb32355D8410DAcd121bcca413a3b3c8d\",\n    \"date_created\" : \"2022-07-25T12:00:13.076Z\",\n    \"account_sid\" : \"ACea7B1dbB5b5f1B7be6C85C44ebeDF32A\",\n    \"results\" : [ { }, { } ],\n    \"url\" : \"https://web.example.mocklab.io/741470\",\n    \"sid\" : \"EL39FcbbBD5F0B21d90CC9dC6621f28BBF\",\n    \"status\" : \"compliant\"\n  }, {\n    \"policy_sid\" : \"RNb2bf59FB2D39B4A6BC6e6c8fe105fEeD\",\n    \"customer_profile_sid\" : \"BU3086eED4eA9Ea587FfA5439e09eFdaAE\",\n    \"date_created\" : \"2022-11-01T06:36:49.076Z\",\n    \"account_sid\" : \"ACdA1ca6F3dD2BCfe3dc498b6dA0FF1A96\",\n    \"results\" : [ { } ],\n    \"url\" : \"https://web.example.mocklab.io/630907\",\n    \"sid\" : \"ELEE7F8Abc309aA5E0Debba85cdBEF7e3F\",\n    \"status\" : \"noncompliant\"\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "d10fcc0d-b021-4c9e-a000-ab861cf98f9e",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:24.076708Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "ListCustomerProfileEvaluation",
+          "schema" : {
+            "properties" : {
+              "meta" : {
+                "properties" : {
+                  "first_page_url" : {
+                    "format" : "uri",
+                    "type" : "string"
+                  },
+                  "key" : {
+                    "type" : "string"
+                  },
+                  "next_page_url" : {
+                    "format" : "uri",
+                    "nullable" : true,
+                    "type" : "string"
+                  },
+                  "page" : {
+                    "type" : "integer"
+                  },
+                  "page_size" : {
+                    "type" : "integer"
+                  },
+                  "previous_page_url" : {
+                    "format" : "uri",
+                    "nullable" : true,
+                    "type" : "string"
+                  },
+                  "url" : {
+                    "format" : "uri",
+                    "type" : "string"
+                  }
+                },
+                "type" : "object"
+              },
+              "results" : {
+                "items" : {
+                  "$ref" : "#/components/schemas/trusthub.v1.customer_profile.customer_profile_evaluation"
+                },
+                "type" : "array"
+              }
+            },
+            "title" : "ListCustomerProfileEvaluationResponse",
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 37
+  }, {
+    "id" : "28ccf499-a055-4d5f-8a78-53cdef93d6df",
+    "name" : "Fetch specific Assigned Item Instance.",
+    "request" : {
+      "urlPath" : "/v1/CustomerProfiles/BUb9259d2EaD8850C2b3D96b8Bca3EaDd7/EntityAssignments/BVddD81B0Ff3Fdb0B03CED66eaa70AFBC5",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"customer_profile_sid\" : \"BUdcBC51BAF2a8B252DFfBA766DF351C11\",\n  \"object_sid\" : \"vB7dfC12E0bBc5ccD2eB4b41F1d13EAbfd\",\n  \"date_created\" : \"2023-10-04T12:18:51.075Z\",\n  \"account_sid\" : \"ACA64bB1bA5CdB51F6B0D34DAd85dEacF7\",\n  \"url\" : \"https://web.example.mocklab.io/880230\",\n  \"sid\" : \"BVC6FdfeE2e5f1Cbe07BBF8e9A6D72Ae42\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "28ccf499-a055-4d5f-8a78-53cdef93d6df",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:24.075612Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "FetchCustomerProfileEntityAssignment",
+          "schema" : {
+            "properties" : {
+              "account_sid" : {
+                "description" : "The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the Item Assignment resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^AC[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "customer_profile_sid" : {
+                "description" : "The unique string that we created to identify the CustomerProfile resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^BU[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "date_created" : {
+                "description" : "The date and time in GMT when the resource was created specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "object_sid" : {
+                "description" : "The SID of an object bag that holds information of the different items.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^[a-zA-Z]{2}[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "sid" : {
+                "description" : "The unique string that we created to identify the Item Assignment resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^BV[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "url" : {
+                "description" : "The absolute URL of the Identity resource.",
+                "format" : "uri",
+                "nullable" : true,
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 38
+  }, {
+    "id" : "2dc5da85-7a4d-42b4-adb7-55caaeb77c2e",
+    "name" : "Remove an Assignment Item Instance. - 204",
+    "request" : {
+      "urlPath" : "/v1/CustomerProfiles/BU22fdC773dDcf9AD93e745b521FB813EB/EntityAssignments/BV9bcdB6FBA6a28EFFAACCEDAA4Aa578BF",
+      "method" : "DELETE"
+    },
+    "response" : {
+      "status" : 204
+    },
+    "uuid" : "2dc5da85-7a4d-42b4-adb7-55caaeb77c2e",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:24.075434Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "DeleteCustomerProfileEntityAssignment"
+        }
+      }
+    },
+    "insertionIndex" : 39
+  }, {
+    "id" : "5a3ab471-8d66-48c8-adc9-93906ef1412c",
+    "name" : "Create a new Assigned Item.",
+    "request" : {
+      "urlPath" : "/v1/CustomerProfiles/BUBcCB3fDfd8FE7d0c8BE74D183eA8fDD4/EntityAssignments",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 201,
+      "body" : "{\n  \"customer_profile_sid\" : \"BUEC48aACFBB96b01baBb9485194AACDac\",\n  \"object_sid\" : \"IiAB7F09BE454bABAA489cedf55Bd65b3B\",\n  \"date_created\" : \"2023-06-01T19:40:41.075Z\",\n  \"account_sid\" : \"ACE2FBC3E89cCcCea582585bbE54b99Eee\",\n  \"url\" : \"https://web.example.mocklab.io/621479\",\n  \"sid\" : \"BV6A819C2EbfF362D9D584edc2abE4d82E\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "5a3ab471-8d66-48c8-adc9-93906ef1412c",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:24.07539Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "CreateCustomerProfileEntityAssignment",
+          "schema" : {
+            "properties" : {
+              "account_sid" : {
+                "description" : "The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the Item Assignment resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^AC[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "customer_profile_sid" : {
+                "description" : "The unique string that we created to identify the CustomerProfile resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^BU[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "date_created" : {
+                "description" : "The date and time in GMT when the resource was created specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "object_sid" : {
+                "description" : "The SID of an object bag that holds information of the different items.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^[a-zA-Z]{2}[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "sid" : {
+                "description" : "The unique string that we created to identify the Item Assignment resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^BV[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "url" : {
+                "description" : "The absolute URL of the Identity resource.",
+                "format" : "uri",
+                "nullable" : true,
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 40
+  }, {
+    "id" : "be7bf6bc-07a5-4dc9-b441-cdc14afb8384",
+    "name" : "Retrieve a list of all Assigned Items for an account.",
+    "request" : {
+      "urlPath" : "/v1/CustomerProfiles/BU7B9B3eFE723150AeffeF0F3206Fbc433/EntityAssignments",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"meta\" : {\n    \"first_page_url\" : \"https://web.example.mocklab.io/400061\",\n    \"next_page_url\" : \"https://web.example.mocklab.io/715686\",\n    \"previous_page_url\" : \"https://web.example.mocklab.io/626370\",\n    \"page\" : 3622062022342912778,\n    \"key\" : \"woyvozus5jhjyg7swxqeyrwaia1m52pzu6c6f9azlxu8od6k44mb20qbaaqly3tikniymyga70bapnk1icu20jod7slbtaiw0buxs7z5r6l1b1hdo50jgaajb7ik70w19qm0auwlto2x2b16cur68nf2ok1ojb26ev103xmuhmci1tzgc\",\n    \"url\" : \"https://web.example.mocklab.io/258174\",\n    \"page_size\" : 5501903711331566220\n  },\n  \"results\" : [ {\n    \"customer_profile_sid\" : \"BUA2AA542Ee774B03fBb71a942c0aae4f9\",\n    \"object_sid\" : \"BDE6cABBe8D0A4Ed458DA7f1386DCC7498\",\n    \"date_created\" : \"2022-10-08T20:14:24.074Z\",\n    \"account_sid\" : \"AC103d7b379dFcFA9A84b02FECdEb4a6C7\",\n    \"url\" : \"https://web.example.mocklab.io/776543\",\n    \"sid\" : \"BVA2BDb1DbfF5FF4f48B01DfCECE4ffC2B\"\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "be7bf6bc-07a5-4dc9-b441-cdc14afb8384",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:24.07519Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "ListCustomerProfileEntityAssignment",
+          "schema" : {
+            "properties" : {
+              "meta" : {
+                "properties" : {
+                  "first_page_url" : {
+                    "format" : "uri",
+                    "type" : "string"
+                  },
+                  "key" : {
+                    "type" : "string"
+                  },
+                  "next_page_url" : {
+                    "format" : "uri",
+                    "nullable" : true,
+                    "type" : "string"
+                  },
+                  "page" : {
+                    "type" : "integer"
+                  },
+                  "page_size" : {
+                    "type" : "integer"
+                  },
+                  "previous_page_url" : {
+                    "format" : "uri",
+                    "nullable" : true,
+                    "type" : "string"
+                  },
+                  "url" : {
+                    "format" : "uri",
+                    "type" : "string"
+                  }
+                },
+                "type" : "object"
+              },
+              "results" : {
+                "items" : {
+                  "$ref" : "#/components/schemas/trusthub.v1.customer_profile.customer_profile_entity_assignment"
+                },
+                "type" : "array"
+              }
+            },
+            "title" : "ListCustomerProfileEntityAssignmentResponse",
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 41
+  }, {
+    "id" : "b91ff817-3ef3-4c06-9c29-bc99a24f6186",
+    "name" : "Fetch specific Assigned Item Instance.",
+    "request" : {
+      "urlPath" : "/v1/CustomerProfiles/BUaFD9a30f664E4b3963Aab604B7aA8c0A/ChannelEndpointAssignments/RA5C78D55eC31fcbB7AEA54EfaDCC9fF6a",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"channel_endpoint_sid\" : \"iQ57eC3d3D70A575e053f60d5D1fA199D7\",\n  \"customer_profile_sid\" : \"BUB0f976F65AE5Efa4852Fcdc21E9be43e\",\n  \"date_created\" : \"2022-06-07T14:07:04.074Z\",\n  \"account_sid\" : \"AC5Aba5c1D7cE81Ab0f324CBBEc75aBAa4\",\n  \"channel_endpoint_type\" : \"rsfqi401maev80wicnb8yoe88sw8b20vre3ne83j9qdcazuyu5qqj2wiusih6ml5drrrcplmbekxv1cn4wj5wbn7tsnfretn8d2q5vjfw57hksmnmrcsprdfszt30xjpul3jo2xcznexwldok6v8ql7ah6mb0s8vxo829hmqt19cfzhsdd6gc2\",\n  \"url\" : \"https://web.example.mocklab.io/694716\",\n  \"sid\" : \"RA0cb2c20bd7BEC95dB1f596F4A0BCD0eA\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "b91ff817-3ef3-4c06-9c29-bc99a24f6186",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:24.07464Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "FetchCustomerProfileChannelEndpointAssignment",
+          "schema" : {
+            "properties" : {
+              "account_sid" : {
+                "description" : "The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the Item Assignment resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^AC[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "channel_endpoint_sid" : {
+                "description" : "The SID of an channel endpoint",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^[a-zA-Z]{2}[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "channel_endpoint_type" : {
+                "description" : "The type of channel endpoint. eg: phone-number",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "customer_profile_sid" : {
+                "description" : "The unique string that we created to identify the CustomerProfile resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^BU[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "date_created" : {
+                "description" : "The date and time in GMT when the resource was created specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "sid" : {
+                "description" : "The unique string that we created to identify the Item Assignment resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^RA[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "url" : {
+                "description" : "The absolute URL of the Identity resource.",
+                "format" : "uri",
+                "nullable" : true,
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 42
+  }, {
+    "id" : "f65a9321-91af-4e04-b8b2-c4041b8dfe1f",
+    "name" : "Remove an Assignment Item Instance. - 204",
+    "request" : {
+      "urlPath" : "/v1/CustomerProfiles/BUB3CEe43cA50Bb0B09c2de83A3a59db6C/ChannelEndpointAssignments/RAcbFBaCdB7F4cf5e6bA17cDcC05193BCf",
+      "method" : "DELETE"
+    },
+    "response" : {
+      "status" : 204
+    },
+    "uuid" : "f65a9321-91af-4e04-b8b2-c4041b8dfe1f",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:24.074437Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "DeleteCustomerProfileChannelEndpointAssignment"
+        }
+      }
+    },
+    "insertionIndex" : 43
+  }, {
+    "id" : "22432ef1-029b-46bf-a119-4d2f0b85d0a2",
+    "name" : "Create a new Assigned Item.",
+    "request" : {
+      "urlPath" : "/v1/CustomerProfiles/BU327cEDfEc870a199CC6623331eE47B9F/ChannelEndpointAssignments",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 201,
+      "body" : "{\n  \"channel_endpoint_sid\" : \"UAeFd4BeAc02deAaFFe94e2c5f48AaCB40\",\n  \"customer_profile_sid\" : \"BUe72aBFc0Dd633caf4972eeCC9fEe7c3f\",\n  \"date_created\" : \"2022-08-18T01:29:09.074Z\",\n  \"account_sid\" : \"ACbD63B850Ed768BA8a2a31e96005cF871\",\n  \"channel_endpoint_type\" : \"pps758lba8l2h4cs9t98qq70jtqc9i3a8khkk6c7ahg373b3un43eh7h2obe09\",\n  \"url\" : \"https://web.example.mocklab.io/395828\",\n  \"sid\" : \"RAD5AFFA2D5ca61cfDEC193F310D0ad2C5\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "22432ef1-029b-46bf-a119-4d2f0b85d0a2",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:24.074389Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "CreateCustomerProfileChannelEndpointAssignment",
+          "schema" : {
+            "properties" : {
+              "account_sid" : {
+                "description" : "The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the Item Assignment resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^AC[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "channel_endpoint_sid" : {
+                "description" : "The SID of an channel endpoint",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^[a-zA-Z]{2}[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "channel_endpoint_type" : {
+                "description" : "The type of channel endpoint. eg: phone-number",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "customer_profile_sid" : {
+                "description" : "The unique string that we created to identify the CustomerProfile resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^BU[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "date_created" : {
+                "description" : "The date and time in GMT when the resource was created specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "sid" : {
+                "description" : "The unique string that we created to identify the Item Assignment resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^RA[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "url" : {
+                "description" : "The absolute URL of the Identity resource.",
+                "format" : "uri",
+                "nullable" : true,
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 44
+  }, {
+    "id" : "ad2db4fe-68ef-42ca-bca8-1cedbf40db7f",
+    "name" : "Retrieve a list of all Assigned Items for an account.",
+    "request" : {
+      "urlPath" : "/v1/CustomerProfiles/BU8A27e4F0dCAd09EdBcd091caF9f01CDf/ChannelEndpointAssignments",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"meta\" : {\n    \"first_page_url\" : \"https://web.example.mocklab.io/801310\",\n    \"next_page_url\" : \"https://web.example.mocklab.io/330085\",\n    \"previous_page_url\" : \"https://web.example.mocklab.io/287057\",\n    \"page\" : 7210454733901687487,\n    \"key\" : \"06wid1y26spey8j9v0je3ri4naqzuy3tuizn0k5b4urzlxsg661tjdk63f31m4nsgb99lm6gphznjqgoxrbfa9e7ka58bq5qo581z0epzr363g05ij91gaodp4b7o1sz08\",\n    \"url\" : \"https://web.example.mocklab.io/334336\",\n    \"page_size\" : 6686357255754248329\n  },\n  \"results\" : [ {\n    \"channel_endpoint_sid\" : \"wA1C52b27EF6c4E6306DFcbA5666e96bd4\",\n    \"customer_profile_sid\" : \"BU577DebAA5b76FE9d29D78b1d63AD8706\",\n    \"date_created\" : \"2023-02-26T16:15:07.073Z\",\n    \"account_sid\" : \"ACcd4B57FDFc7dE8Ef81cFBadabA724b2c\",\n    \"channel_endpoint_type\" : \"tci6mkst0l1mk2w8m2l9hemd6uagg0hcalz0f4mzs2mt7nsd7z7z9tv1axltoa9qbijsgnkpp6834f14yduicob35tyk4lve4beuykdwuwqn7r23fhfjeow7vsmf2m4\",\n    \"url\" : \"https://web.example.mocklab.io/340174\",\n    \"sid\" : \"RA2F4C4DFBe4a6A703e4c0C8E03A8EdB02\"\n  }, {\n    \"channel_endpoint_sid\" : \"GtDEAE7bbC0ABEAcC2ABebCCBC4c0D5982\",\n    \"customer_profile_sid\" : \"BU5CF42F5e65BFfca5487A438BE576e192\",\n    \"date_created\" : \"2023-05-10T22:00:57.073Z\",\n    \"account_sid\" : \"ACFccc5575FFbFB52AE4f6a270cAa39569\",\n    \"channel_endpoint_type\" : \"c6m7uiy7spsw58gw0vs7tuufb97gd1ggdmcgm0gn2zwrcbrvdk2sqvmhyqb24rpn3xjqke47qp1di4snl67desugsdnwmloh76qmg3ozha4034wgh1agyc8dgrqywr2eg7ammguqe8he3q2xck46jsj88qas7el137n\",\n    \"url\" : \"https://web.example.mocklab.io/375131\",\n    \"sid\" : \"RAAdCd1e7F52EA25d5F8Bed0868AbEFFf7\"\n  }, {\n    \"channel_endpoint_sid\" : \"uS6ecaa6eEf6c5f88DFeb80fAb3cFcb3f6\",\n    \"customer_profile_sid\" : \"BU201A93ceaf764C75efDBaadc5Abc1F07\",\n    \"date_created\" : \"2023-08-15T05:55:30.073Z\",\n    \"account_sid\" : \"AC42AFd7a2d04e4E0C152E76D99EbA6f4C\",\n    \"channel_endpoint_type\" : \"ffr0ik8wsmpe9ksmyxz8itklpd8ux8cutqiqpfiwnqpuzcnty5leuuukr4joh4q35o462z44l945i6miyuwph9xqpwsp28n86g91lfddxsnvnay4uqckdzh45miqtsbdd2paf8q80m6psfn9tzt89kbcpxztpc12mi0dq66v6qqyoyb\",\n    \"url\" : \"https://web.example.mocklab.io/784165\",\n    \"sid\" : \"RAEEBcbFefd3ada39b6FfC44D10aB4d515\"\n  }, {\n    \"channel_endpoint_sid\" : \"TXD19B4F2e6BA4946eae46F9E6aFDeaa37\",\n    \"customer_profile_sid\" : \"BUD240dAeCD74271e3E2FbDFa5A8E6c32b\",\n    \"date_created\" : \"2022-10-13T15:23:55.073Z\",\n    \"account_sid\" : \"ACFd741232520C6ac0B4900B63Eb0efD76\",\n    \"channel_endpoint_type\" : \"jrorzk83kg16d7ugeyc6tpo332wcokfq9d07b0l\",\n    \"url\" : \"https://web.example.mocklab.io/833060\",\n    \"sid\" : \"RAD3e03DDfbaCa285527eeB3dcC4E3F30b\"\n  }, {\n    \"channel_endpoint_sid\" : \"ttC014Cf2dCC14E1e0c0c4c1870B86Bf6e\",\n    \"customer_profile_sid\" : \"BUaa04af4C51aD9Fc5c2d2b3DFBD2977AE\",\n    \"date_created\" : \"2023-01-17T11:53:28.073Z\",\n    \"account_sid\" : \"ACE42DEFbaa4FaDc3B43394fDb6123fe19\",\n    \"channel_endpoint_type\" : \"tuotgp07d31bcm3riwz95zntkwzrogtlnff889jjc8nrc37z10hu9c53r16ejnczosc72xlv0dta3klxhy6lus94xgeojkydskiw31kl8zoyxb4c3iyrf5f8xlv6fs2303ect8zkx0brdecepi7gzwkyf90cpj393yg14sioavgq\",\n    \"url\" : \"https://web.example.mocklab.io/818439\",\n    \"sid\" : \"RAC05FfDdce11A0c0d95B14BaCBC1cDC8a\"\n  }, {\n    \"channel_endpoint_sid\" : \"qTE85a43979de19b3B15be1cEF6FC7dAF5\",\n    \"customer_profile_sid\" : \"BU9b6b3Aca95Bbdf42D4B9e45CEfCC3283\",\n    \"date_created\" : \"2023-04-15T20:28:25.073Z\",\n    \"account_sid\" : \"ACDD30CbD24FAd0b8a95Be8663AcAcA16D\",\n    \"channel_endpoint_type\" : \"xs62ooequoh6eris6bicn75tpq6o966rtzaxunq6dvq7nwdovfpqueykvpj19mq9lmtawwt5\",\n    \"url\" : \"https://web.example.mocklab.io/940674\",\n    \"sid\" : \"RA1AdCEfA14a683eCeA65Ed5fCB8EeCb1d\"\n  }, {\n    \"channel_endpoint_sid\" : \"bd3C2276fEA5FB9eF9fe559eFbDEE3Af5a\",\n    \"customer_profile_sid\" : \"BU9FbA81bd8D5f8BEDDc31aFF088A611Aa\",\n    \"date_created\" : \"2022-04-29T14:04:10.073Z\",\n    \"account_sid\" : \"ACA08439f9Ea545f79328be5C2bAA3B4Fb\",\n    \"channel_endpoint_type\" : \"dwjc006l7mabpis5os7d60wyoi3hdx520fmk3iw10ivj64l513qi7p4pfows4w93ciuqfzsj3wezhhkzt84vkbjqn21ato8j5mrr6v8ybfuvrq1zofo0c6xz67149fvcfyjqhit12rza0b0l2tyjwmy3xgp5vb65yywoecufn1qp3\",\n    \"url\" : \"https://web.example.mocklab.io/414423\",\n    \"sid\" : \"RAAD7bcAbcDbEddbcFBE434019cAfBDA2f\"\n  }, {\n    \"channel_endpoint_sid\" : \"ZR2CfAAaAA54aBE19cfc896fB0aFabC39E\",\n    \"customer_profile_sid\" : \"BUd5B586a4b7817bcc85fc03b9bCcC6d76\",\n    \"date_created\" : \"2023-02-26T01:07:00.073Z\",\n    \"account_sid\" : \"ACBCea1eBc1E280Cfb1D3dC8dCAcb75e12\",\n    \"channel_endpoint_type\" : \"wdt6vpc51t5za5ys445r3qdtuoqnbi9n3duf5d3c5geuxlidwxzz3co65uitv4o69hm0spffttn8zupnp5ulfwb7fb55vpskvl9jd255izsvzlzm836b6n63b2ec1b9ljx86wg6fe5ynum8ygepnd9c41ly5r3acr5\",\n    \"url\" : \"https://web.example.mocklab.io/495319\",\n    \"sid\" : \"RA96F6f9dB3FEE8ADef612DA9BCa58Fab1\"\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "ad2db4fe-68ef-42ca-bca8-1cedbf40db7f",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:24.074161Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "ListCustomerProfileChannelEndpointAssignment",
+          "schema" : {
+            "properties" : {
+              "meta" : {
+                "properties" : {
+                  "first_page_url" : {
+                    "format" : "uri",
+                    "type" : "string"
+                  },
+                  "key" : {
+                    "type" : "string"
+                  },
+                  "next_page_url" : {
+                    "format" : "uri",
+                    "nullable" : true,
+                    "type" : "string"
+                  },
+                  "page" : {
+                    "type" : "integer"
+                  },
+                  "page_size" : {
+                    "type" : "integer"
+                  },
+                  "previous_page_url" : {
+                    "format" : "uri",
+                    "nullable" : true,
+                    "type" : "string"
+                  },
+                  "url" : {
+                    "format" : "uri",
+                    "type" : "string"
+                  }
+                },
+                "type" : "object"
+              },
+              "results" : {
+                "items" : {
+                  "$ref" : "#/components/schemas/trusthub.v1.customer_profile.customer_profile_channel_endpoint_assignment"
+                },
+                "type" : "array"
+              }
+            },
+            "title" : "ListCustomerProfileChannelEndpointAssignmentResponse",
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 45
+  }, {
+    "id" : "6578ad0b-08fe-4f40-b98f-e0c99f98b7dc",
+    "name" : "Create a new Customer-Profile.",
+    "request" : {
+      "urlPath" : "/v1/CustomerProfiles",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 201,
+      "body" : "{\n  \"policy_sid\" : \"RN1331bc62128D7BF1Cb0835F6Eb0CAccd\",\n  \"friendly_name\" : \"Jamey West\",\n  \"date_updated\" : \"2022-05-31T23:26:34.072Z\",\n  \"valid_until\" : \"2022-05-23T03:32:54.072Z\",\n  \"date_created\" : \"2024-02-28T09:52:06.072Z\",\n  \"account_sid\" : \"AC86858341a1f8A7Fc49cCb2aFa4ecFfc3\",\n  \"links\" : { },\n  \"status_callback\" : \"tr6lx29k1rmgwtuabenzl9pl4fvpph9t8yuav2j05zr5r7qoxbtsg3ca4nm8a72ykyrvnyjhrohuxtl5ruxx655lp35o6yvslu02x8ns76xr235k844nooxcphfncw3\",\n  \"email\" : \"vukji3jitglbgky68xku2d8jqmug44y399nw0n7f5quugkkbvf679f9o7ymd5o1oez1l2omvc0qjc2293q0y6jnriyyut5jgqrhvztrh89d65acbcpbgxrhzr59vndel1e3ugrkcbxjey41huo99wx09y08os9f1cz7mc37xj5lkzvf\",\n  \"url\" : \"https://web.example.mocklab.io/112106\",\n  \"sid\" : \"BU4b6eFaee94AD51670f8D7955Df0Fd217\",\n  \"status\" : \"twilio-approved\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "6578ad0b-08fe-4f40-b98f-e0c99f98b7dc",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:24.072739Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "CreateCustomerProfile",
+          "schema" : {
+            "properties" : {
+              "account_sid" : {
+                "description" : "The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the Customer-Profile resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^AC[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "date_created" : {
+                "description" : "The date and time in GMT when the resource was created specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "date_updated" : {
+                "description" : "The date and time in GMT when the resource was last updated specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "email" : {
+                "description" : "The email address that will receive updates when the Customer-Profile resource changes status.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "friendly_name" : {
+                "description" : "The string that you assigned to describe the resource.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "links" : {
+                "description" : "The URLs of the Assigned Items of the Customer-Profile resource.",
+                "format" : "uri-map",
+                "nullable" : true,
+                "type" : "object"
+              },
+              "policy_sid" : {
+                "description" : "The unique string of a policy that is associated to the Customer-Profile resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^RN[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "sid" : {
+                "description" : "The unique string that we created to identify the Customer-Profile resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^BU[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "status" : {
+                "$ref" : "#/components/schemas/customer_profile_enum_status"
+              },
+              "status_callback" : {
+                "description" : "The URL we call to inform your application of status changes.",
+                "format" : "uri",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "url" : {
+                "description" : "The absolute URL of the Customer-Profile resource.",
+                "format" : "uri",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "valid_until" : {
+                "description" : "The date and time in GMT in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format when the resource will be valid until.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 46
+  }, {
+    "id" : "3f76b499-b63e-4e51-8b49-bc72da7d9163",
+    "name" : "Retrieve a list of all Customer-Profiles for an account.",
+    "request" : {
+      "urlPath" : "/v1/CustomerProfiles",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"meta\" : {\n    \"first_page_url\" : \"https://web.example.mocklab.io/279658\",\n    \"next_page_url\" : \"https://web.example.mocklab.io/162863\",\n    \"previous_page_url\" : \"https://web.example.mocklab.io/599721\",\n    \"page\" : 3284614462029775602,\n    \"key\" : \"ctm81ra35lcsv9cq8jgojwdkpp6ojcs9e75w9nmyyh0qazynjttp7y6mv7tuwk3qrbhnzismi3ly\",\n    \"url\" : \"https://web.example.mocklab.io/194981\",\n    \"page_size\" : 1644472534630138043\n  },\n  \"results\" : [ {\n    \"policy_sid\" : \"RN5BeEb502fdAb7f4F505dFADB65b824c9\",\n    \"friendly_name\" : \"Meredith Wiegand\",\n    \"date_updated\" : \"2023-06-17T03:16:52.071Z\",\n    \"valid_until\" : \"2023-12-27T14:26:17.071Z\",\n    \"date_created\" : \"2023-05-29T17:19:13.071Z\",\n    \"account_sid\" : \"AC5f67989E5D2C835d7fa3eB93348f21Ff\",\n    \"links\" : { },\n    \"status_callback\" : \"pt9xeybdluvukfvho37dhbt2cdftkh4a2w0m0frpyquk45zdv8v7frxa5gl0j5eupfyuzyo55cc66o8tyj3nrx4bbiwu5d3w9n1z2h6dfzt95tnjdcih1qhbe03zi5wisn6bptj6wpxx54fmz0mhar8hexwfykcsfgxvszm6njsx7m4fyv5u5yedy\",\n    \"email\" : \"l6lfsasujzglu55ej8u\",\n    \"url\" : \"https://web.example.mocklab.io/600273\",\n    \"sid\" : \"BU3Fb69b595a105c1B4F8C4e63c747b7cF\",\n    \"status\" : \"pending-review\"\n  }, {\n    \"policy_sid\" : \"RNCe33bDa8ea3750498330a8C65d8fFbE2\",\n    \"friendly_name\" : \"Stephen Oberbrunner\",\n    \"date_updated\" : \"2023-05-11T22:42:29.071Z\",\n    \"valid_until\" : \"2022-07-19T20:02:33.071Z\",\n    \"date_created\" : \"2023-10-03T16:49:16.071Z\",\n    \"account_sid\" : \"ACa9bd17e280C413Eff4EDD1e69BC2d4B4\",\n    \"links\" : { },\n    \"status_callback\" : \"1bnhgg7ngfspxop1efol3j3d2827s0mz6gotv9m063fl98fdxex4xgg3jdh97svmlaeh5smo25wukxb9ttltgwly4htevnkraim868oyp9bz772wdv4cftpx66l5\",\n    \"email\" : \"48soi68vrwhm8jp9hxp3c0hak88nvij9qwq1r4b02iox5ulx5av\",\n    \"url\" : \"https://web.example.mocklab.io/771033\",\n    \"sid\" : \"BU8EBc1E4f90A6dBb3B22ec07bc4ad8BF9\",\n    \"status\" : \"pending-review\"\n  }, {\n    \"policy_sid\" : \"RN59EDDfFB8Db5c7F1Bb5F3C1bbDe6CbA1\",\n    \"friendly_name\" : \"Mr. Perry Franecki\",\n    \"date_updated\" : \"2022-05-19T14:57:37.071Z\",\n    \"valid_until\" : \"2022-04-27T10:43:39.071Z\",\n    \"date_created\" : \"2023-07-23T16:30:11.071Z\",\n    \"account_sid\" : \"ACAbb95c050FEe50E2D5a77d1FADB68f0e\",\n    \"links\" : { },\n    \"status_callback\" : \"4ulff\",\n    \"email\" : \"wfahub8457upndb8vvrvzn8x5lrpsm0616wuj6vbkp5ejm2ji7aum0hhqhcmxmx5gr1rcpaixkpln2ime5fn9tkzdp87ds5y286xr7qzmylpqvnyiytjlwt6llas54kh15mol4l86wigug1ubhpqq472mwml4r6zcsy4lwct9tj0hw4yw7m\",\n    \"url\" : \"https://web.example.mocklab.io/740602\",\n    \"sid\" : \"BUD5Ffa5056827Cf30F0240A85FD23a16f\",\n    \"status\" : \"pending-review\"\n  }, {\n    \"policy_sid\" : \"RNC48fD31bcB3fA2b29daDeFa4EdDDf17b\",\n    \"friendly_name\" : \"Francisco Kris\",\n    \"date_updated\" : \"2023-06-06T12:45:01.071Z\",\n    \"valid_until\" : \"2022-09-15T07:33:18.071Z\",\n    \"date_created\" : \"2022-06-13T19:28:26.071Z\",\n    \"account_sid\" : \"AC644246cE7DFdfcBbA925567FD58965Dc\",\n    \"links\" : { },\n    \"status_callback\" : \"dnxcvl3wzlg9j2m9u4ppp1gst8h2pas34yqorfn89zh8vwc5bskg4lqsp4wo0lr8xl624ggmnaqj\",\n    \"email\" : \"ebqrhdcav4c306pofu2s9xmptfkjnq3cfkvcnbzfda0deqkzfa1dvdg03ndpmjezsc0idumpc08fypwy2cgxyt19ktt30h309wzh\",\n    \"url\" : \"https://web.example.mocklab.io/862975\",\n    \"sid\" : \"BUcf600bf7Bf3f042f9CD380022eC89138\",\n    \"status\" : \"in-review\"\n  }, {\n    \"policy_sid\" : \"RN0c31dba04a3eb4efb43FAA5Fae262331\",\n    \"friendly_name\" : \"Yukiko Jenkins\",\n    \"date_updated\" : \"2023-10-13T16:16:14.071Z\",\n    \"valid_until\" : \"2023-12-02T11:45:09.071Z\",\n    \"date_created\" : \"2022-10-08T07:34:49.071Z\",\n    \"account_sid\" : \"AC8F4caDeC2CfcBCE27C451dAEBE9d239c\",\n    \"links\" : { },\n    \"status_callback\" : \"xf3tbq7yhynzpbza7ggsy7s8stg8ow2g5p6ppiodd9bfwjghclzj493uothlz0x0zmdm8z906r58xlngn2nnp1r9oekwq8orp4sngo20pw7acw6j96dexs2cqfzeqvqbnc759x\",\n    \"email\" : \"vw44o9jkn494u0x3dqqzhurjwy6i5gwgrvarje0wr52099ovgeow3j4q0vtixbexptyflwd7ja7itb3b7n33j75ut4le2q2xb9kr77w6v6oh6rpfg8tx0e7wd0jmb5grrcg3tnej3p3ifqzzy58lboa2moulmksbrxjpesbgjsa5s\",\n    \"url\" : \"https://web.example.mocklab.io/550206\",\n    \"sid\" : \"BU61A7f21Dc6C6B61EaEF7718b9dd0b31d\",\n    \"status\" : \"twilio-rejected\"\n  }, {\n    \"policy_sid\" : \"RN359F23Ba7080D6AbCE610b7AA1b17AFA\",\n    \"friendly_name\" : \"Aldo Willms\",\n    \"date_updated\" : \"2022-06-01T06:40:25.072Z\",\n    \"valid_until\" : \"2022-05-04T20:52:50.072Z\",\n    \"date_created\" : \"2022-12-03T21:16:50.072Z\",\n    \"account_sid\" : \"AC5Ebf974ed351354fD7c033aF39d2add1\",\n    \"links\" : { },\n    \"status_callback\" : \"mmu2oyulazvjd7ns6iaqt9fwxxoyqb32drh9ov94bs3zb53bftq1p7subh76mlv1spjcmz17\",\n    \"email\" : \"0zi1omqwbocr4y2vglt0oopl5j2wfyagmm4zn0wpzwjbeou89fledpp1shrij2hvfbg8q2wdukvt\",\n    \"url\" : \"https://web.example.mocklab.io/309374\",\n    \"sid\" : \"BUFFA46F0BaBB6b49Dfb32Faf04f2Fbf08\",\n    \"status\" : \"twilio-rejected\"\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "3f76b499-b63e-4e51-8b49-bc72da7d9163",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:24.072385Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "ListCustomerProfile",
+          "schema" : {
+            "properties" : {
+              "meta" : {
+                "properties" : {
+                  "first_page_url" : {
+                    "format" : "uri",
+                    "type" : "string"
+                  },
+                  "key" : {
+                    "type" : "string"
+                  },
+                  "next_page_url" : {
+                    "format" : "uri",
+                    "nullable" : true,
+                    "type" : "string"
+                  },
+                  "page" : {
+                    "type" : "integer"
+                  },
+                  "page_size" : {
+                    "type" : "integer"
+                  },
+                  "previous_page_url" : {
+                    "format" : "uri",
+                    "nullable" : true,
+                    "type" : "string"
+                  },
+                  "url" : {
+                    "format" : "uri",
+                    "type" : "string"
+                  }
+                },
+                "type" : "object"
+              },
+              "results" : {
+                "items" : {
+                  "$ref" : "#/components/schemas/trusthub.v1.customer_profile"
+                },
+                "type" : "array"
+              }
+            },
+            "title" : "ListCustomerProfileResponse",
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 47
+  } ]
+}

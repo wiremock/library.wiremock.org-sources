@@ -1,0 +1,779 @@
+{
+  "mappings" : [ {
+    "id" : "40bcadb4-5cd0-48ed-a776-4fb2cfecf792",
+    "name" : "Modify the properties of a given Account",
+    "request" : {
+      "urlPath" : "/v1/Credentials/PublicKeys/CRCccAe8BDb9aCaCB2eD1dAB49FbbCf618",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"friendly_name\" : \"Jacques Stehr II\",\n  \"date_updated\" : \"2022-05-09T00:02:19.214Z\",\n  \"date_created\" : \"2022-09-03T16:34:16.214Z\",\n  \"account_sid\" : \"ACF11a0F38D81DFfC4CDe1092Cbdf6D97A\",\n  \"url\" : \"https://web.example.mocklab.io/364530\",\n  \"sid\" : \"CR9ea1dEA31a869b598c12582D5fB876D9\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "40bcadb4-5cd0-48ed-a776-4fb2cfecf792",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:09.214684Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "UpdateCredentialPublicKey",
+          "schema" : {
+            "properties" : {
+              "account_sid" : {
+                "description" : "The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the Credential that the PublicKey resource belongs to.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^AC[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "date_created" : {
+                "description" : "The date and time in GMT when the resource was created specified in [RFC 2822](https://www.ietf.org/rfc/rfc2822.txt) format.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "date_updated" : {
+                "description" : "The date and time in GMT when the resource was last updated specified in [RFC 2822](https://www.ietf.org/rfc/rfc2822.txt) format.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "friendly_name" : {
+                "description" : "The string that you assigned to describe the resource.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "sid" : {
+                "description" : "The unique string that that we created to identify the PublicKey resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^CR[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "url" : {
+                "description" : "The URI for this resource, relative to `https://accounts.twilio.com`",
+                "format" : "uri",
+                "nullable" : true,
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 0
+  }, {
+    "id" : "4e1bbd1c-d0f6-456b-b77c-bdf98f27db0a",
+    "name" : "Fetch the public key specified by the provided Credential Sid",
+    "request" : {
+      "urlPath" : "/v1/Credentials/PublicKeys/CRFA91CfA379516d387c9cb63944D0bAda",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"friendly_name\" : \"Dr. Edison Cassin\",\n  \"date_updated\" : \"2023-04-12T11:34:08.214Z\",\n  \"date_created\" : \"2022-10-17T05:16:11.214Z\",\n  \"account_sid\" : \"ACcdbc7fb9F6CBEBdD7Cb071fDa2b34D6C\",\n  \"url\" : \"https://web.example.mocklab.io/459586\",\n  \"sid\" : \"CR44eB8D5295663C70AeF3A803C14EfFD6\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "4e1bbd1c-d0f6-456b-b77c-bdf98f27db0a",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:09.214442Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "FetchCredentialPublicKey",
+          "schema" : {
+            "properties" : {
+              "account_sid" : {
+                "description" : "The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the Credential that the PublicKey resource belongs to.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^AC[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "date_created" : {
+                "description" : "The date and time in GMT when the resource was created specified in [RFC 2822](https://www.ietf.org/rfc/rfc2822.txt) format.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "date_updated" : {
+                "description" : "The date and time in GMT when the resource was last updated specified in [RFC 2822](https://www.ietf.org/rfc/rfc2822.txt) format.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "friendly_name" : {
+                "description" : "The string that you assigned to describe the resource.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "sid" : {
+                "description" : "The unique string that that we created to identify the PublicKey resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^CR[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "url" : {
+                "description" : "The URI for this resource, relative to `https://accounts.twilio.com`",
+                "format" : "uri",
+                "nullable" : true,
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 1
+  }, {
+    "id" : "3affccef-c6fd-4fb3-94f4-f5216016d425",
+    "name" : "Delete a Credential from your account - 204",
+    "request" : {
+      "urlPath" : "/v1/Credentials/PublicKeys/CRb8DB1Db01Eb3dd7CaABA4471e24CC259",
+      "method" : "DELETE"
+    },
+    "response" : {
+      "status" : 204
+    },
+    "uuid" : "3affccef-c6fd-4fb3-94f4-f5216016d425",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:09.214232Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "DeleteCredentialPublicKey"
+        }
+      }
+    },
+    "insertionIndex" : 2
+  }, {
+    "id" : "4b20de31-2ba5-41e0-b5ec-4afa620090f5",
+    "name" : "Create a new Public Key Credential",
+    "request" : {
+      "urlPath" : "/v1/Credentials/PublicKeys",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 201,
+      "body" : "{\n  \"friendly_name\" : \"Benedict Hahn\",\n  \"date_updated\" : \"2022-04-24T07:19:13.214Z\",\n  \"date_created\" : \"2022-07-06T19:19:14.214Z\",\n  \"account_sid\" : \"AC6BAB17b727E82976fF8E7dCEFc0dFCC5\",\n  \"url\" : \"https://web.example.mocklab.io/424028\",\n  \"sid\" : \"CRE66b296D8dD4Ffc9ABa1AEeCB0A7DAc6\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "4b20de31-2ba5-41e0-b5ec-4afa620090f5",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:09.214194Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "CreateCredentialPublicKey",
+          "schema" : {
+            "properties" : {
+              "account_sid" : {
+                "description" : "The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the Credential that the PublicKey resource belongs to.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^AC[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "date_created" : {
+                "description" : "The date and time in GMT when the resource was created specified in [RFC 2822](https://www.ietf.org/rfc/rfc2822.txt) format.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "date_updated" : {
+                "description" : "The date and time in GMT when the resource was last updated specified in [RFC 2822](https://www.ietf.org/rfc/rfc2822.txt) format.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "friendly_name" : {
+                "description" : "The string that you assigned to describe the resource.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "sid" : {
+                "description" : "The unique string that that we created to identify the PublicKey resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^CR[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "url" : {
+                "description" : "The URI for this resource, relative to `https://accounts.twilio.com`",
+                "format" : "uri",
+                "nullable" : true,
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 3
+  }, {
+    "id" : "415fce2e-6a7b-44cd-b9db-e93c3823d542",
+    "name" : "Retrieves a collection of Public Key Credentials belonging to the account used t...",
+    "request" : {
+      "urlPath" : "/v1/Credentials/PublicKeys",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"credentials\" : [ {\n    \"friendly_name\" : \"April Hettinger Jr.\",\n    \"date_updated\" : \"2023-09-20T15:41:08.213Z\",\n    \"date_created\" : \"2023-04-19T17:06:26.213Z\",\n    \"account_sid\" : \"ACEbC0ee54Feb8Ddac1D0CebF0D9FC36Fe\",\n    \"url\" : \"https://web.example.mocklab.io/119487\",\n    \"sid\" : \"CRFAaAed9Ac0E7D3e305FDbadbB3e0DD11\"\n  }, {\n    \"friendly_name\" : \"Tana King\",\n    \"date_updated\" : \"2022-05-28T21:10:20.213Z\",\n    \"date_created\" : \"2022-04-19T23:52:15.213Z\",\n    \"account_sid\" : \"ACbaCfd577ab79bdFd15Aa71E82E4AeF36\",\n    \"url\" : \"https://web.example.mocklab.io/565245\",\n    \"sid\" : \"CR23F6Ea0255F94DcfBcb9B9eead0d253E\"\n  } ],\n  \"meta\" : {\n    \"first_page_url\" : \"https://web.example.mocklab.io/917361\",\n    \"next_page_url\" : \"https://web.example.mocklab.io/984893\",\n    \"previous_page_url\" : \"https://web.example.mocklab.io/692035\",\n    \"page\" : 7977370281171872802,\n    \"key\" : \"jvzg4t264vmcikm88iwqfswp8hzmefq7nif7a4h6oi4x8tcohazkr3141gov67m1jwik9g81sllgzs79tk71\",\n    \"url\" : \"https://web.example.mocklab.io/288419\",\n    \"page_size\" : 5896518275112531466\n  }\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "415fce2e-6a7b-44cd-b9db-e93c3823d542",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:09.213963Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "ListCredentialPublicKey",
+          "schema" : {
+            "properties" : {
+              "credentials" : {
+                "items" : {
+                  "$ref" : "#/components/schemas/accounts.v1.credential.credential_public_key"
+                },
+                "type" : "array"
+              },
+              "meta" : {
+                "properties" : {
+                  "first_page_url" : {
+                    "format" : "uri",
+                    "type" : "string"
+                  },
+                  "key" : {
+                    "type" : "string"
+                  },
+                  "next_page_url" : {
+                    "format" : "uri",
+                    "nullable" : true,
+                    "type" : "string"
+                  },
+                  "page" : {
+                    "type" : "integer"
+                  },
+                  "page_size" : {
+                    "type" : "integer"
+                  },
+                  "previous_page_url" : {
+                    "format" : "uri",
+                    "nullable" : true,
+                    "type" : "string"
+                  },
+                  "url" : {
+                    "format" : "uri",
+                    "type" : "string"
+                  }
+                },
+                "type" : "object"
+              }
+            },
+            "title" : "ListCredentialPublicKeyResponse",
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 4
+  }, {
+    "id" : "c8a85e93-777a-4b6e-b541-31ea1bf2d8ee",
+    "name" : "Modify the properties of a given Account",
+    "request" : {
+      "urlPath" : "/v1/Credentials/AWS/CRFF0f2bACC9ed5AEC611DCE433FdCb971",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"friendly_name\" : \"Cedrick Cassin\",\n  \"date_updated\" : \"2023-09-20T18:24:52.213Z\",\n  \"date_created\" : \"2023-01-08T08:58:46.213Z\",\n  \"account_sid\" : \"ACc8f5f1D5Af46cBd0C13EE1c0cf0Aa77b\",\n  \"url\" : \"https://web.example.mocklab.io/739320\",\n  \"sid\" : \"CRd4687cFe0EDA94dC293A3aC58eafA30a\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "c8a85e93-777a-4b6e-b541-31ea1bf2d8ee",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:09.213258Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "UpdateCredentialAws",
+          "schema" : {
+            "properties" : {
+              "account_sid" : {
+                "description" : "The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the AWS resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^AC[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "date_created" : {
+                "description" : "The date and time in GMT when the resource was created specified in [RFC 2822](https://www.ietf.org/rfc/rfc2822.txt) format.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "date_updated" : {
+                "description" : "The date and time in GMT when the resource was last updated specified in [RFC 2822](https://www.ietf.org/rfc/rfc2822.txt) format.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "friendly_name" : {
+                "description" : "The string that you assigned to describe the resource.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "sid" : {
+                "description" : "The unique string that we created to identify the AWS resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^CR[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "url" : {
+                "description" : "The URI for this resource, relative to `https://accounts.twilio.com`",
+                "format" : "uri",
+                "nullable" : true,
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 5
+  }, {
+    "id" : "2609fc91-bf8d-475d-baaf-019fec147ede",
+    "name" : "Fetch the AWS credentials specified by the provided Credential Sid",
+    "request" : {
+      "urlPath" : "/v1/Credentials/AWS/CR3A4bcCC97dD8DEBbFdec5FAfB71C3b6A",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"friendly_name\" : \"Tabitha Durgan\",\n  \"date_updated\" : \"2023-04-13T07:41:03.212Z\",\n  \"date_created\" : \"2022-06-28T09:32:44.212Z\",\n  \"account_sid\" : \"ACcC8a8dEaE75341EE32B9f34d3ad54E2A\",\n  \"url\" : \"https://web.example.mocklab.io/101249\",\n  \"sid\" : \"CR1398f8FcF3AdcD82b8EFdfE968d1c6bb\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "2609fc91-bf8d-475d-baaf-019fec147ede",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:09.213058Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "FetchCredentialAws",
+          "schema" : {
+            "properties" : {
+              "account_sid" : {
+                "description" : "The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the AWS resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^AC[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "date_created" : {
+                "description" : "The date and time in GMT when the resource was created specified in [RFC 2822](https://www.ietf.org/rfc/rfc2822.txt) format.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "date_updated" : {
+                "description" : "The date and time in GMT when the resource was last updated specified in [RFC 2822](https://www.ietf.org/rfc/rfc2822.txt) format.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "friendly_name" : {
+                "description" : "The string that you assigned to describe the resource.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "sid" : {
+                "description" : "The unique string that we created to identify the AWS resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^CR[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "url" : {
+                "description" : "The URI for this resource, relative to `https://accounts.twilio.com`",
+                "format" : "uri",
+                "nullable" : true,
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 6
+  }, {
+    "id" : "252156dc-7408-4d6c-9db4-bc9a98707de0",
+    "name" : "Delete a Credential from your account - 204",
+    "request" : {
+      "urlPath" : "/v1/Credentials/AWS/CR24eEa429AeDD7823bc2f6d06d3e7A3Bd",
+      "method" : "DELETE"
+    },
+    "response" : {
+      "status" : 204
+    },
+    "uuid" : "252156dc-7408-4d6c-9db4-bc9a98707de0",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:09.212854Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "DeleteCredentialAws"
+        }
+      }
+    },
+    "insertionIndex" : 7
+  }, {
+    "id" : "0c8b4577-5dfc-4797-90dc-5b81fa7a908e",
+    "name" : "Create a new AWS Credential",
+    "request" : {
+      "urlPath" : "/v1/Credentials/AWS",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 201,
+      "body" : "{\n  \"friendly_name\" : \"Norma Schowalter\",\n  \"date_updated\" : \"2023-04-03T23:30:15.212Z\",\n  \"date_created\" : \"2022-06-09T13:46:51.212Z\",\n  \"account_sid\" : \"AC57BedAdE902A9133cbEFD205beE5EBaF\",\n  \"url\" : \"https://web.example.mocklab.io/269908\",\n  \"sid\" : \"CR11d4C1c05f4fEf21Bfd0baFD5BBd24de\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "0c8b4577-5dfc-4797-90dc-5b81fa7a908e",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:09.212814Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "CreateCredentialAws",
+          "schema" : {
+            "properties" : {
+              "account_sid" : {
+                "description" : "The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the AWS resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^AC[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "date_created" : {
+                "description" : "The date and time in GMT when the resource was created specified in [RFC 2822](https://www.ietf.org/rfc/rfc2822.txt) format.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "date_updated" : {
+                "description" : "The date and time in GMT when the resource was last updated specified in [RFC 2822](https://www.ietf.org/rfc/rfc2822.txt) format.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "friendly_name" : {
+                "description" : "The string that you assigned to describe the resource.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "sid" : {
+                "description" : "The unique string that we created to identify the AWS resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^CR[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "url" : {
+                "description" : "The URI for this resource, relative to `https://accounts.twilio.com`",
+                "format" : "uri",
+                "nullable" : true,
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 8
+  }, {
+    "id" : "6e8f880f-7361-46d6-a818-46546b0205ff",
+    "name" : "Retrieves a collection of AWS Credentials belonging to the account used to make ...",
+    "request" : {
+      "urlPath" : "/v1/Credentials/AWS",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"credentials\" : [ {\n    \"friendly_name\" : \"Leisa Spencer\",\n    \"date_updated\" : \"2023-01-20T21:14:36.211Z\",\n    \"date_created\" : \"2024-02-27T18:55:34.211Z\",\n    \"account_sid\" : \"AC5534Aac220f1078c2EeFA18BcB6b8Cff\",\n    \"url\" : \"https://web.example.mocklab.io/711207\",\n    \"sid\" : \"CR0650fEeCbDDf35ceF380fFb70f9db3Cc\"\n  }, {\n    \"friendly_name\" : \"Mrs. Mafalda Block\",\n    \"date_updated\" : \"2023-06-21T20:07:40.211Z\",\n    \"date_created\" : \"2023-08-27T15:38:53.211Z\",\n    \"account_sid\" : \"ACaE2de1ea4945a6E16DFfce5Aa3Ed93A5\",\n    \"url\" : \"https://web.example.mocklab.io/562587\",\n    \"sid\" : \"CRd0c6B8BfC6fc5DE84b2CA401BAbCa1B9\"\n  }, {\n    \"friendly_name\" : \"Danelle Hilll\",\n    \"date_updated\" : \"2023-01-03T02:22:36.212Z\",\n    \"date_created\" : \"2023-04-03T18:13:04.212Z\",\n    \"account_sid\" : \"AC4ddD2aFEb7Aa732351E0bCa7AaDDcFCa\",\n    \"url\" : \"https://web.example.mocklab.io/003917\",\n    \"sid\" : \"CRCCb4dCF9705Ae39Ff3943a36BE2E47dd\"\n  } ],\n  \"meta\" : {\n    \"first_page_url\" : \"https://web.example.mocklab.io/779315\",\n    \"next_page_url\" : \"https://web.example.mocklab.io/029501\",\n    \"previous_page_url\" : \"https://web.example.mocklab.io/042482\",\n    \"page\" : 2046499562235170860,\n    \"key\" : \"3b4vag6yxinoo\",\n    \"url\" : \"https://web.example.mocklab.io/434080\",\n    \"page_size\" : 7796546140491164944\n  }\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "6e8f880f-7361-46d6-a818-46546b0205ff",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:09.212576Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "ListCredentialAws",
+          "schema" : {
+            "properties" : {
+              "credentials" : {
+                "items" : {
+                  "$ref" : "#/components/schemas/accounts.v1.credential.credential_aws"
+                },
+                "type" : "array"
+              },
+              "meta" : {
+                "properties" : {
+                  "first_page_url" : {
+                    "format" : "uri",
+                    "type" : "string"
+                  },
+                  "key" : {
+                    "type" : "string"
+                  },
+                  "next_page_url" : {
+                    "format" : "uri",
+                    "nullable" : true,
+                    "type" : "string"
+                  },
+                  "page" : {
+                    "type" : "integer"
+                  },
+                  "page_size" : {
+                    "type" : "integer"
+                  },
+                  "previous_page_url" : {
+                    "format" : "uri",
+                    "nullable" : true,
+                    "type" : "string"
+                  },
+                  "url" : {
+                    "format" : "uri",
+                    "type" : "string"
+                  }
+                },
+                "type" : "object"
+              }
+            },
+            "title" : "ListCredentialAwsResponse",
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 9
+  }, {
+    "id" : "fddb7a5f-d33d-4c2c-ae8b-babb09957414",
+    "name" : "Create a new secondary Auth Token",
+    "request" : {
+      "urlPath" : "/v1/AuthTokens/Secondary",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 201,
+      "body" : "{\n  \"date_updated\" : \"2022-04-03T01:23:54.211Z\",\n  \"date_created\" : \"2022-12-22T18:11:35.211Z\",\n  \"account_sid\" : \"ACA262BA0fCaDcDB9e054bbAdEb8430D6b\",\n  \"secondary_auth_token\" : \"w0h5wdprhk5x3kmatuzbpsen7jdujfh3tj40hfrvgrwtb06fq2dehsamy2970d3v9xzsp9bx0t3o5sa0iy6hp\",\n  \"url\" : \"https://web.example.mocklab.io/181411\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "fddb7a5f-d33d-4c2c-ae8b-babb09957414",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:09.211693Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "CreateSecondaryAuthToken",
+          "schema" : {
+            "properties" : {
+              "account_sid" : {
+                "description" : "The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that the secondary Auth Token was created for.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^AC[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "date_created" : {
+                "description" : "The date and time in UTC when the resource was created specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "date_updated" : {
+                "description" : "The date and time in UTC when the resource was last updated specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "secondary_auth_token" : {
+                "description" : "The generated secondary Auth Token that can be used to authenticate future API requests.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "url" : {
+                "description" : "The URI for this resource, relative to `https://accounts.twilio.com`",
+                "format" : "uri",
+                "nullable" : true,
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 10
+  }, {
+    "id" : "7576ec13-05ef-4676-9f36-d98c9d9f1b14",
+    "name" : "Delete the secondary Auth Token from your account - 204",
+    "request" : {
+      "urlPath" : "/v1/AuthTokens/Secondary",
+      "method" : "DELETE"
+    },
+    "response" : {
+      "status" : 204
+    },
+    "uuid" : "7576ec13-05ef-4676-9f36-d98c9d9f1b14",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:09.211488Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "DeleteSecondaryAuthToken"
+        }
+      }
+    },
+    "insertionIndex" : 11
+  }, {
+    "id" : "4e157848-c972-4326-b18c-96aacc04f56e",
+    "name" : "Promote the secondary Auth Token to primary. After promoting the new token, all ...",
+    "request" : {
+      "urlPath" : "/v1/AuthTokens/Promote",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"date_updated\" : \"2022-10-12T10:07:46.211Z\",\n  \"date_created\" : \"2023-07-24T22:44:19.211Z\",\n  \"account_sid\" : \"ACffb47bf4E0fFE8Ec53638f9079fA7EBd\",\n  \"auth_token\" : \"kdbb0z5j3ko42asq70ko2yb9136iczfu3bljgk4n8kkuipmuygnjx2yeu9lglpc4kyq9ifobqx89kabgrm3arohpeeu1iu91h5ev2h2ys4wctl2\",\n  \"url\" : \"https://web.example.mocklab.io/959873\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "4e157848-c972-4326-b18c-96aacc04f56e",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:09.21145Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "UpdateAuthTokenPromotion",
+          "schema" : {
+            "properties" : {
+              "account_sid" : {
+                "description" : "The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that the secondary Auth Token was created for.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^AC[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "auth_token" : {
+                "description" : "The promoted Auth Token that must be used to authenticate future API requests.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "date_created" : {
+                "description" : "The date and time in UTC when the resource was created specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "date_updated" : {
+                "description" : "The date and time in GMT when the resource was last updated specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "url" : {
+                "description" : "The URI for this resource, relative to `https://accounts.twilio.com`",
+                "format" : "uri",
+                "nullable" : true,
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 12
+  } ]
+}

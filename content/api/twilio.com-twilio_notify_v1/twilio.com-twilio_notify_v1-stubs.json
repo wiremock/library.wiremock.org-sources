@@ -1,0 +1,1383 @@
+{
+  "mappings" : [ {
+    "id" : "bce30d54-9eda-40c8-a29d-e33d6126c872",
+    "name" : "",
+    "request" : {
+      "urlPath" : "/v1/Services/IS51B23bb0E9854aF03eD3E7E6b832dFE8",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"friendly_name\" : \"Tanesha Erdman\",\n  \"alexa_skill_id\" : \"k799\",\n  \"date_updated\" : \"2022-07-17T21:29:39.654Z\",\n  \"default_apn_notification_protocol_version\" : \"mgp7187blexfvjeuhqen6l45nydhbbh4oms890y6lqoq9oz2b6fs70psyy6bvtwuieka9oul5ognhmyg1639me5dsjvdaj\",\n  \"default_fcm_notification_protocol_version\" : \"dz1d2m34v579gaave524680\",\n  \"gcm_credential_sid\" : \"CR43f87b84deAE0477A0F1de5BBbA24bBA\",\n  \"date_created\" : \"2022-06-12T19:21:35.654Z\",\n  \"fcm_credential_sid\" : \"CR4E3Dde00d79fb1Bd22D2C5E9bAcf8E92\",\n  \"default_gcm_notification_protocol_version\" : \"4f1e3oq9bbfp9wruzhctsi61nez\",\n  \"url\" : \"https://web.example.mocklab.io/018447\",\n  \"sid\" : \"ISeB8494b3f19D77C3C8eea6c689E59e9D\",\n  \"default_alexa_notification_protocol_version\" : \"nmpszlidkznrps2p6jd4du3gp17xvp2wamtx66obuuqzzslqpvpueyht5k115kc4nmm4yej86dkd3cejlkp09gefjch3kaubexf2auzk2dezlgqcc9ueb3ha93m26vw3bqpubekm4cr0k2zt8gb5wkg51vlefu1qmfy8ptdrirgtl32u\",\n  \"facebook_messenger_page_id\" : \"sh49\",\n  \"delivery_callback_enabled\" : true,\n  \"messaging_service_sid\" : \"MGDf6364Ccc86A36bFac24e7aeDa33Fb0F\",\n  \"delivery_callback_url\" : \"https://web.example.mocklab.io/337200\",\n  \"account_sid\" : \"ACccEd3af518FCDcBA931F0DDa4784cAe9\",\n  \"links\" : { },\n  \"log_enabled\" : false,\n  \"apn_credential_sid\" : \"CRBfFDAf82B269B9dd1eb9A67D53F5cC8b\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "bce30d54-9eda-40c8-a29d-e33d6126c872",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:19.655088Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "UpdateService",
+          "schema" : {
+            "properties" : {
+              "account_sid" : {
+                "description" : "The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the Service resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^AC[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "alexa_skill_id" : {
+                "description" : "Deprecated.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "apn_credential_sid" : {
+                "description" : "The SID of the [Credential](https://www.twilio.com/docs/notify/api/credential-resource) to use for APN Bindings.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^CR[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "date_created" : {
+                "description" : "The date and time in GMT when the resource was created specified in [RFC 2822](https://www.ietf.org/rfc/rfc2822.txt) format.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "date_updated" : {
+                "description" : "The date and time in GMT when the resource was last updated specified in [RFC 2822](https://www.ietf.org/rfc/rfc2822.txt) format.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "default_alexa_notification_protocol_version" : {
+                "description" : "Deprecated.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "default_apn_notification_protocol_version" : {
+                "description" : "The protocol version to use for sending APNS notifications. Can be overridden on a Binding by Binding basis when creating a [Binding](https://www.twilio.com/docs/notify/api/binding-resource) resource.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "default_fcm_notification_protocol_version" : {
+                "description" : "The protocol version to use for sending FCM notifications. Can be overridden on a Binding by Binding basis when creating a [Binding](https://www.twilio.com/docs/notify/api/binding-resource) resource.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "default_gcm_notification_protocol_version" : {
+                "description" : "The protocol version to use for sending GCM notifications. Can be overridden on a Binding by Binding basis when creating a [Binding](https://www.twilio.com/docs/notify/api/binding-resource) resource.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "delivery_callback_enabled" : {
+                "description" : "Callback configuration that enables delivery callbacks, default false",
+                "nullable" : true,
+                "type" : "boolean"
+              },
+              "delivery_callback_url" : {
+                "description" : "URL to send delivery status callback.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "facebook_messenger_page_id" : {
+                "description" : "Deprecated.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "fcm_credential_sid" : {
+                "description" : "The SID of the [Credential](https://www.twilio.com/docs/notify/api/credential-resource) to use for FCM Bindings.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^CR[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "friendly_name" : {
+                "description" : "The string that you assigned to describe the resource.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "gcm_credential_sid" : {
+                "description" : "The SID of the [Credential](https://www.twilio.com/docs/notify/api/credential-resource) to use for GCM Bindings.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^CR[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "links" : {
+                "description" : "The URLs of the Binding, Notification, Segment, and User resources related to the service.",
+                "format" : "uri-map",
+                "nullable" : true,
+                "type" : "object"
+              },
+              "log_enabled" : {
+                "description" : "Whether to log notifications. Can be: `true` or `false` and the default is `true`.",
+                "nullable" : true,
+                "type" : "boolean"
+              },
+              "messaging_service_sid" : {
+                "description" : "The SID of the [Messaging Service](https://www.twilio.com/docs/sms/send-messages#messaging-services) to use for SMS Bindings. In order to send SMS notifications this parameter has to be set.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^MG[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "sid" : {
+                "description" : "The unique string that we created to identify the Service resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^IS[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "url" : {
+                "description" : "The absolute URL of the Service resource.",
+                "format" : "uri",
+                "nullable" : true,
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 0
+  }, {
+    "id" : "a7ba54ec-4c13-4a9a-8263-8a64d9a7acfe",
+    "name" : "",
+    "request" : {
+      "urlPath" : "/v1/Services/IS7AB5adAd01d4ac5e239Fd59BE80f78Ea",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"friendly_name\" : \"Ben Champlin\",\n  \"alexa_skill_id\" : \"48vn\",\n  \"date_updated\" : \"2023-05-07T00:39:09.653Z\",\n  \"default_apn_notification_protocol_version\" : \"82ao2j95hip8jnsjff0cfvvaaka10yaozwp8617y5dluf5wkky257idg5mae8l13bkcfvvehbnhs5ejfk1unf01pk5bhqrzfsihsb6bhcwc0boo94w6pg1apjxidxe7ng\",\n  \"default_fcm_notification_protocol_version\" : \"fpwnnh8manpvnui73a2sk0uxbm4i4xgr0356v031c4pim27xxp5cyk6y7947vz4tic40yiafj27h5fs74x8tcisinz0e8ocptdrs1kkw0wikh1m\",\n  \"gcm_credential_sid\" : \"CRFF3Ebf49d6aDaf08468CBF2D2b442e6a\",\n  \"date_created\" : \"2024-03-15T22:42:22.653Z\",\n  \"fcm_credential_sid\" : \"CR4Eb4fDdC89ebA0eFaA0aeD1d002BBa4b\",\n  \"default_gcm_notification_protocol_version\" : \"8ykslr2zx2m4lye0vry9hbtajx2wmh1zgsbqkeqg1if8ovnc3ypu1fykxhr2u08mhmq8lj3sp2ut13ekz23y5ezjrm4gqlk8827rsi5sj23590b9m30ast3gx6dzjtzt4hlghmsnzed3pha2kxjh87fr9zuxmmzginn6hftmqmh0vjfof\",\n  \"url\" : \"https://web.example.mocklab.io/226923\",\n  \"sid\" : \"IS2413f7cDAdcfE5d94F1B26173bF98602\",\n  \"default_alexa_notification_protocol_version\" : \"gw1ecfygfz5qzk2bxbhrrit6xcq9lsol36c7s1yuxjte0mouyzqdc3d4kmh84kbjeehq7hkiigxc2328cpoluy2ssquqez874lttip\",\n  \"facebook_messenger_page_id\" : \"316o\",\n  \"delivery_callback_enabled\" : false,\n  \"messaging_service_sid\" : \"MG82Bcb76FedFfBd8B52Ee07EFC1C9CE63\",\n  \"delivery_callback_url\" : \"https://web.example.mocklab.io/241325\",\n  \"account_sid\" : \"AC2c9fD24f0FFC16c46f736Ced6cA7F934\",\n  \"links\" : { },\n  \"log_enabled\" : false,\n  \"apn_credential_sid\" : \"CR8a932dD8F029C043acc1250fe505aB7B\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "a7ba54ec-4c13-4a9a-8263-8a64d9a7acfe",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:19.654413Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "FetchService",
+          "schema" : {
+            "properties" : {
+              "account_sid" : {
+                "description" : "The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the Service resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^AC[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "alexa_skill_id" : {
+                "description" : "Deprecated.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "apn_credential_sid" : {
+                "description" : "The SID of the [Credential](https://www.twilio.com/docs/notify/api/credential-resource) to use for APN Bindings.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^CR[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "date_created" : {
+                "description" : "The date and time in GMT when the resource was created specified in [RFC 2822](https://www.ietf.org/rfc/rfc2822.txt) format.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "date_updated" : {
+                "description" : "The date and time in GMT when the resource was last updated specified in [RFC 2822](https://www.ietf.org/rfc/rfc2822.txt) format.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "default_alexa_notification_protocol_version" : {
+                "description" : "Deprecated.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "default_apn_notification_protocol_version" : {
+                "description" : "The protocol version to use for sending APNS notifications. Can be overridden on a Binding by Binding basis when creating a [Binding](https://www.twilio.com/docs/notify/api/binding-resource) resource.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "default_fcm_notification_protocol_version" : {
+                "description" : "The protocol version to use for sending FCM notifications. Can be overridden on a Binding by Binding basis when creating a [Binding](https://www.twilio.com/docs/notify/api/binding-resource) resource.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "default_gcm_notification_protocol_version" : {
+                "description" : "The protocol version to use for sending GCM notifications. Can be overridden on a Binding by Binding basis when creating a [Binding](https://www.twilio.com/docs/notify/api/binding-resource) resource.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "delivery_callback_enabled" : {
+                "description" : "Callback configuration that enables delivery callbacks, default false",
+                "nullable" : true,
+                "type" : "boolean"
+              },
+              "delivery_callback_url" : {
+                "description" : "URL to send delivery status callback.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "facebook_messenger_page_id" : {
+                "description" : "Deprecated.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "fcm_credential_sid" : {
+                "description" : "The SID of the [Credential](https://www.twilio.com/docs/notify/api/credential-resource) to use for FCM Bindings.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^CR[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "friendly_name" : {
+                "description" : "The string that you assigned to describe the resource.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "gcm_credential_sid" : {
+                "description" : "The SID of the [Credential](https://www.twilio.com/docs/notify/api/credential-resource) to use for GCM Bindings.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^CR[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "links" : {
+                "description" : "The URLs of the Binding, Notification, Segment, and User resources related to the service.",
+                "format" : "uri-map",
+                "nullable" : true,
+                "type" : "object"
+              },
+              "log_enabled" : {
+                "description" : "Whether to log notifications. Can be: `true` or `false` and the default is `true`.",
+                "nullable" : true,
+                "type" : "boolean"
+              },
+              "messaging_service_sid" : {
+                "description" : "The SID of the [Messaging Service](https://www.twilio.com/docs/sms/send-messages#messaging-services) to use for SMS Bindings. In order to send SMS notifications this parameter has to be set.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^MG[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "sid" : {
+                "description" : "The unique string that we created to identify the Service resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^IS[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "url" : {
+                "description" : "The absolute URL of the Service resource.",
+                "format" : "uri",
+                "nullable" : true,
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 1
+  }, {
+    "id" : "29c739cc-5e3c-4c67-970f-713d428e675f",
+    "name" : " - 204",
+    "request" : {
+      "urlPath" : "/v1/Services/IS77A12e9c9aC29D6b6a6Fb5afCED85Dba",
+      "method" : "DELETE"
+    },
+    "response" : {
+      "status" : 204
+    },
+    "uuid" : "29c739cc-5e3c-4c67-970f-713d428e675f",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:19.653613Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "DeleteService"
+        }
+      }
+    },
+    "insertionIndex" : 2
+  }, {
+    "id" : "ade12d6c-0a8e-4f4d-a807-43cb0fb53cc3",
+    "name" : "",
+    "request" : {
+      "urlPath" : "/v1/Services/ISEfb463B2e43F8E5Dbf95A37DDE4bD0b6/Notifications",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 201,
+      "body" : "{\n  \"data\" : { },\n  \"date_created\" : \"2023-07-28T12:03:19.653Z\",\n  \"sound\" : \"chu0b3u781efjq9b22l15lzi6pdve803en3vyj0anmuew6hkflnfy1nwjgsuc4z9boimmbnpr3o7w7hs2ec0jb12\",\n  \"facebook_messenger\" : { },\n  \"alexa\" : { },\n  \"body\" : \"Ad ipsum accusamus praesentium rerum. Enim dignissimos ut corrupti deserunt exercitationem odit. Expedita nulla deserunt reiciendis consequuntur minima iste repellendus. Repellat earum optio rerum ut \",\n  \"priority\" : \"high\",\n  \"title\" : \"Voluptatem tempora eius et tempore suscipit autem ut.\",\n  \"ttl\" : 6352184428668950151,\n  \"segments\" : [ \"9gcatxm0jcrk16bhc24lh0ca9ah5wmgnhlwxwwvgse4nvyvh5z1z9qk28rr5jzoqoqv71erd1end9tjnbyug5ww0we1u9udoh7rqi6xqiapezguv5qjina91i80sk2rm1s5w509wurz2liwkf1vlxxddt5gjqzysslh8o\", \"abpjlb4d0enpwyqvrx0iin8s6ps6zgbs5925q4y1amok3zd0c29vk5kbrfh86u38pl8\" ],\n  \"sid\" : \"NTcBF39e5a6Df6Fd6fC0Fd9FaA244EEDAB\",\n  \"tags\" : [ \"7shsg8ukyj20e64mif31f0z7x66l9fkn7nug07t7ppjwcs48l3uf5bdkuujg\", \"d3vf5wpympvjfd1ro0eiy1gxwwat9a8bny80z5aytl34n0ff0w1v2uoytgzcsvf3efl1ae3sstvexb3rzftx9xbz9c0x6ndgiqmm2wt9ujxp904vku7d3m45olz71aqzq2i7wi25d5rxfrzbslbwky8srod7vlf0rh\", \"isfuguyd2ycq8urejs146wkw0o4w281recrlhdvqfvvg92pknxch488efa61k1dlwyziuasi6gog4m\", \"yevgpj1pmlvd98m88yie432cp1qbutdie150fphy5stw3oha7usasd8t6i3219kklfdpqb1c5ofwww9hokeoocnd5udppzf281mdkxpz1wipcmrf2fj9o5xou08ztwcxnqh7zahr59x5bwp7tz9gzkliysj8j10vse91402wil2103xl2k2ef1\", \"nciab0jmdjfcw15zk76c3fsw10mspfakcyu4fd3j58et5xd0yverwao8jpz4sy2e9ucsmrnuiqapjplbxinjuq978m22esgsx2sg5nfifyl2u2itfsson8sebnerz0g3syootf5x1tob6unu9g762n\" ],\n  \"gcm\" : { },\n  \"service_sid\" : \"ISBEeB52aa7C5717431Ae3746f6f75AC36\",\n  \"fcm\" : { },\n  \"identities\" : [ \"ehx0xncs6679skz2ee99ug5y6xka5p0boole3dpcehu508svf6uoo2h9abgn63gyti431117q4rcyxpth7re3fep0ztjllev1bx6mp49r2008o5rko9afvol4svre36egy4pnai6bs5tee59giiuiijgi7yzrcfgyfpdb\", \"5aa90d52kbb7p0605opy4ssqwmjnpvhirc5y3h6ldg8fn9i5rm9hq4nchvegr77h5bekiawku14pxg1ym5xmqrjwwghlqzcuxpqycjiq7wopzucgxgpr8dnc4vaopf6hpaop2afew0b27pbtavet2id2vos8uyrrodklna6a5q2pu6ufsbarz93pjew\" ],\n  \"sms\" : { },\n  \"account_sid\" : \"ACB08fDF3cbe114CD63caDfFe9Fa34d459\",\n  \"action\" : \"i2hh9poug72s0xe7e3nqicaryqkkdsfzngaenfdxndf9wiq7324qx2c3vjhjx1lr0ovjs\",\n  \"apn\" : { }\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "ade12d6c-0a8e-4f4d-a807-43cb0fb53cc3",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:19.653566Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "CreateNotification",
+          "schema" : {
+            "properties" : {
+              "account_sid" : {
+                "description" : "The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the Notification resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^AC[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "action" : {
+                "description" : "The actions to display for the notification. For APNS, translates to the `aps.category` value. For GCM, translates to the `data.twi_action` value. For SMS, this parameter is not supported and is omitted from deliveries to those channels.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "alexa" : {
+                "description" : "Deprecated.",
+                "nullable" : true
+              },
+              "apn" : {
+                "description" : "The APNS-specific payload that overrides corresponding attributes in the generic payload for APNS Bindings. This property maps to the APNS `Payload` item, therefore the `aps` key must be used to change standard attributes. Adds custom key-value pairs to the root of the dictionary. See the [APNS documentation](https://developer.apple.com/library/content/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/CommunicatingwithAPNs.html) for more details. We reserve keys that start with `twi_` for future use. Custom keys that start with `twi_` are not allowed.",
+                "nullable" : true
+              },
+              "body" : {
+                "description" : "The notification text. For FCM and GCM, translates to `data.twi_body`. For APNS, translates to `aps.alert.body`. For SMS, translates to `body`. SMS requires either this `body` value, or `media_urls` attribute defined in the `sms` parameter of the notification.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "data" : {
+                "description" : "The custom key-value pairs of the notification's payload. For FCM and GCM, this value translates to `data` in the FCM and GCM payloads. FCM and GCM [reserve certain keys](https://firebase.google.com/docs/cloud-messaging/http-server-ref) that cannot be used in those channels. For APNS, attributes of `data` are inserted into the APNS payload as custom properties outside of the `aps` dictionary. In all channels, we reserve keys that start with `twi_` for future use. Custom keys that start with `twi_` are not allowed and are rejected as 400 Bad request with no delivery attempted. For SMS, this parameter is not supported and is omitted from deliveries to those channels.",
+                "nullable" : true
+              },
+              "date_created" : {
+                "description" : "The date and time in GMT when the resource was created specified in [RFC 2822](https://www.ietf.org/rfc/rfc2822.txt) format.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "facebook_messenger" : {
+                "description" : "Deprecated.",
+                "nullable" : true
+              },
+              "fcm" : {
+                "description" : "The FCM-specific payload that overrides corresponding attributes in the generic payload for FCM Bindings. This property maps to the root JSON dictionary. See the [FCM documentation](https://firebase.google.com/docs/cloud-messaging/http-server-ref#downstream) for more details. Target parameters `to`, `registration_ids`, `condition`, and `notification_key` are not allowed in this parameter. We reserve keys that start with `twi_` for future use. Custom keys that start with `twi_` are not allowed. FCM also [reserves certain keys](https://firebase.google.com/docs/cloud-messaging/http-server-ref), which cannot be used in that channel.",
+                "nullable" : true
+              },
+              "gcm" : {
+                "description" : "The GCM-specific payload that overrides corresponding attributes in the generic payload for GCM Bindings.  This property maps to the root JSON dictionary. Target parameters `to`, `registration_ids`, and `notification_key` are not allowed. We reserve keys that start with `twi_` for future use. Custom keys that start with `twi_` are not allowed.",
+                "nullable" : true
+              },
+              "identities" : {
+                "description" : "The list of `identity` values of the Users to notify. We will attempt to deliver notifications only to Bindings with an identity in this list.",
+                "items" : {
+                  "type" : "string"
+                },
+                "nullable" : true,
+                "type" : "array"
+              },
+              "priority" : {
+                "$ref" : "#/components/schemas/notification_enum_priority"
+              },
+              "segments" : {
+                "description" : "The list of Segments to notify. The [Segment](https://www.twilio.com/docs/notify/api/segment-resource) resource is deprecated. Use the `tags` property, instead.",
+                "items" : {
+                  "type" : "string"
+                },
+                "nullable" : true,
+                "type" : "array"
+              },
+              "service_sid" : {
+                "description" : "The SID of the [Service](https://www.twilio.com/docs/notify/api/service-resource) the resource is associated with.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^IS[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "sid" : {
+                "description" : "The unique string that we created to identify the Notification resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^NT[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "sms" : {
+                "description" : "The SMS-specific payload that overrides corresponding attributes in the generic payload for SMS Bindings.  Each attribute in this value maps to the corresponding `form` parameter of the Twilio [Message](https://www.twilio.com/docs/sms/api/message-resource) resource.  These parameters of the Message resource are supported in snake case format: `body`, `media_urls`, `status_callback`, and `max_price`.  The `status_callback` parameter overrides the corresponding parameter in the messaging service, if configured. The `media_urls` property expects a JSON array.",
+                "nullable" : true
+              },
+              "sound" : {
+                "description" : "The name of the sound to be played for the notification. For FCM and GCM, this Translates to `data.twi_sound`.  For APNS, this translates to `aps.sound`.  SMS does not support this property.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "tags" : {
+                "description" : "The tags that select the Bindings to notify. Notifications will be attempted only to Bindings that have all of the tags listed in this property.",
+                "items" : {
+                  "type" : "string"
+                },
+                "nullable" : true,
+                "type" : "array"
+              },
+              "title" : {
+                "description" : "The notification title. For FCM and GCM, this translates to the `data.twi_title` value. For APNS, this translates to the `aps.alert.title` value. SMS does not support this property. This field is not visible on iOS phones and tablets but appears on Apple Watch and Android devices.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "ttl" : {
+                "description" : "How long, in seconds, the notification is valid. Can be an integer between 0 and 2,419,200, which is 4 weeks, the default and the maximum supported time to live (TTL). Delivery should be attempted if the device is offline until the TTL elapses. Zero means that the notification delivery is attempted immediately, only once, and is not stored for future delivery. SMS does not support this property.",
+                "nullable" : true,
+                "type" : "integer"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 3
+  }, {
+    "id" : "fdd0fb40-0f29-40d0-9263-1e79890b6bae",
+    "name" : "",
+    "request" : {
+      "urlPath" : "/v1/Services/ISb8C6844b7aFb78fdbAc3b3434ebaB3ef/Bindings/BS8b2f5EE3Fd8AF67CeEcFd78EcDEF616c",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"credential_sid\" : \"CR1AC9869cf245d1c6ae718FCb0aFad04c\",\n  \"binding_type\" : \"hiqfg36pea1qsc0o1meuyqh7okc09ssiqtxr9h9gzkw073bsqcbmnw5s061mtgz174a7\",\n  \"address\" : \"3hqswvn8u3dsxjyb97yc4k5ixb9s0ncqqohgdwk80olvtept5j4y6sqwwn1sp0ktn1qsccjdyf0zl27x0qp6w1rulvcuws1kag8kesbh655gwvvh8h5739wd6sviw3m9rjfoejmvtlwyzpzgse4hm6hv8hvmq1lzi5kvpva0n4mgto5lvofapxdq06cgm2c6v3\",\n  \"date_updated\" : \"2024-01-05T16:06:31.652Z\",\n  \"date_created\" : \"2023-10-15T15:00:05.652Z\",\n  \"url\" : \"https://web.example.mocklab.io/015151\",\n  \"sid\" : \"BS2ec83BdF6e1F6C3055dFa0cDF7bEacCf\",\n  \"tags\" : [ \"zhh13tufkioqz5du57n5h2dly6dn6hotdemhh9wi69w9m20k6p4jcresjq7osv9gwtzvm\", \"tpspl80c6eqaknphs5cqb4sa4x83phctiz6wy2ejqmfjkmbaxvpo37ycbwj0fmd2ogj7qwtxl9\", \"0fnk7vi6koadokwo51mz2pb2gmcq1o0jg3dcqc0bs92o79it9bg49hzlbtfou0kjm30lyh95br8i3ff5u6wdf87o3fkyuofriz762bxdl17icy37a3il7a8i7r9ot0noo76pzxsjhsrfjvgzf2b\", \"203xsqyw2eqzebkof3mjjvc0s6iub7fo4ud4i1mmikgn0fu9agf0err3j44lcc349k5wv0qo66xdxjphfv3nde0mdjcs24z0ilfwlaes344lps2m9rb9g60nxdg2dgdkmpycqx2h4zubwuzi4g3dv0igcig7daq4ddv5gbe\", \"397cwd3dxf7174imx79ps3i6e6ducdmnxrbrclm7twlrdbovlcbo6gw827ykyallw9vvsxxiom7nhfhygvriyw3ucrr7oy1vhqsgpy2fe1jp9xufs0tng3zrjeqdpashsfs2azqxmxzlwzignq5r5jsjykd4t9489ctpnk4demtrkzmbv3nacuxf7k36p3h\" ],\n  \"service_sid\" : \"ISaDaebDa522fBF7beFCe342BF8C2Ded0D\",\n  \"endpoint\" : \"8t69h66tvjmja8fqygxgkh0lyt92k7ae0ak8f9m4hvf7migi37r2xs4sy6a8suzcjkuj3ou3j18g7727c16zusasrfxiizr4rjz7qaalklak3dh4mxb305td1zv4ar6r76ckk\",\n  \"identity\" : \"wx8pmlpvsme63ejysj36o7futevulxpy82mnoddopiw5f0r9nq5tuthz53t9qjqzg5p5m1ekrw3le7009tlb68mkygynj0f19iv3idw7uea6vgqm1lznebp1tfhst5g5m1tl7u6lvm7xtmx1k8md9nawta0lylrjgtvwp08dudckq66z67z5z6ivzy\",\n  \"notification_protocol_version\" : \"4tmhzgirotouu36ugmp4jilptlxs1m9obpvoyhomr6s3d4opi5801dwmw85q63bxv050dwmn0dpiktrtqo2ih6i\",\n  \"account_sid\" : \"ACFcBcFC83d2dfc4cb0F94aC9AE54D7e08\",\n  \"links\" : { }\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "fdd0fb40-0f29-40d0-9263-1e79890b6bae",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:19.652977Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "FetchBinding",
+          "schema" : {
+            "properties" : {
+              "account_sid" : {
+                "description" : "The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the Binding resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^AC[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "address" : {
+                "description" : "The channel-specific address. For APNS, the device token. For FCM and GCM, the registration token. For SMS, a phone number in E.164 format. For Facebook Messenger, the Messenger ID of the user or a phone number in E.164 format.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "binding_type" : {
+                "description" : "The transport technology to use for the Binding. Can be: `apn`, `fcm`, `gcm`, `sms`, or `facebook-messenger`.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "credential_sid" : {
+                "description" : "The SID of the [Credential](https://www.twilio.com/docs/notify/api/credential-resource) resource to be used to send notifications to this Binding. If present, this overrides the Credential specified in the Service resource. Applicable only to `apn`, `fcm`, and `gcm` type Bindings.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^CR[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "date_created" : {
+                "description" : "The date and time in GMT when the resource was created specified in [RFC 2822](https://www.ietf.org/rfc/rfc2822.txt) format.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "date_updated" : {
+                "description" : "The date and time in GMT when the resource was last updated specified in [RFC 2822](https://www.ietf.org/rfc/rfc2822.txt) format.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "endpoint" : {
+                "description" : "Deprecated.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "identity" : {
+                "description" : "The `identity` value that uniquely identifies the resource's [User](https://www.twilio.com/docs/chat/rest/user-resource) within the [Service](https://www.twilio.com/docs/notify/api/service-resource). Up to 20 Bindings can be created for the same Identity in a given Service.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "links" : {
+                "description" : "The URLs of related resources.",
+                "format" : "uri-map",
+                "nullable" : true,
+                "type" : "object"
+              },
+              "notification_protocol_version" : {
+                "description" : "The protocol version to use to send the notification. This defaults to the value of `default_xxxx_notification_protocol_version` in the [Service](https://www.twilio.com/docs/notify/api/service-resource) for the protocol. The current version is `\"3\"` for `apn`, `fcm`, and `gcm` type Bindings. The parameter is not applicable to `sms` and `facebook-messenger` type Bindings as the data format is fixed.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "service_sid" : {
+                "description" : "The SID of the [Service](https://www.twilio.com/docs/notify/api/service-resource) the resource is associated with.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^IS[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "sid" : {
+                "description" : "The unique string that we created to identify the Binding resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^BS[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "tags" : {
+                "description" : "The list of tags associated with this Binding. Tags can be used to select the Bindings to use when sending a notification. Maximum 20 tags are allowed.",
+                "items" : {
+                  "type" : "string"
+                },
+                "nullable" : true,
+                "type" : "array"
+              },
+              "url" : {
+                "description" : "The absolute URL of the Binding resource.",
+                "format" : "uri",
+                "nullable" : true,
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 4
+  }, {
+    "id" : "6043a2a8-010e-464a-b2f6-8d863ab8fa35",
+    "name" : " - 204",
+    "request" : {
+      "urlPath" : "/v1/Services/ISCBD27717cb24A2EFd10ca2eB0d0Fd468/Bindings/BSD1cBfB4Ac3CAfbfD78eeAD14d582Cf65",
+      "method" : "DELETE"
+    },
+    "response" : {
+      "status" : 204
+    },
+    "uuid" : "6043a2a8-010e-464a-b2f6-8d863ab8fa35",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:19.652612Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "DeleteBinding"
+        }
+      }
+    },
+    "insertionIndex" : 5
+  }, {
+    "id" : "a6aa606b-120e-41ed-94e4-ffb175d56658",
+    "name" : "",
+    "request" : {
+      "urlPath" : "/v1/Services/ISfD6f2cc2a13fFafcFAf3AB977beB5b35/Bindings",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 201,
+      "body" : "{\n  \"credential_sid\" : \"CR173c9cfA3DAA5136b695c4fE61d5Ef6a\",\n  \"binding_type\" : \"st5ydkudsl1h6z0atb3jg3etvaph0g9ogbs1ny0cc3kbfwci030ld6yh0u9b4vloj58jljymjhb1ymet3w6vpugxezf20la7vi03fkibd4sbv8ykuxkezwdje7y3rpmvi65ljcqqvu63qjsaykqdk4idjdewmvitnht2rgr8w0\",\n  \"address\" : \"l5psfc04fujcwe5ezco5g3uy56s65c4an978a5j3lsry0khumw1fil8pkf0kl9zd3uscr9xg60bij1hu3mfmjff1zul58fte4ebsubazs8zq59otgxdwotv1e841xbox2u5ka23hxhirhxc3segz\",\n  \"date_updated\" : \"2023-11-18T13:31:23.652Z\",\n  \"date_created\" : \"2023-04-03T17:26:10.652Z\",\n  \"url\" : \"https://web.example.mocklab.io/830999\",\n  \"sid\" : \"BS0AFDdE1c69b78FdCcfc205f8A1Af1E81\",\n  \"tags\" : [ \"8rkkzwoaifswmwkek1japxozexejxqsf0aaddsqhzpkhdcdqliqftotdyn8a56k33zalrzsrgc2qms3jnc8yfxlorskmc83p3zk2zerwnjlyceg3g4owc6gvyqyr6tu5qap2ucrjata5h36npwvmw2ew5241dxkmj1ghr5kezcf3yt7q757x2r7ly8xdzbj1nmipsri7\" ],\n  \"service_sid\" : \"IS8A93DFC72fd650afCeb25AF4f4ea427d\",\n  \"endpoint\" : \"owagjdr4n2c1z8mmzinv0alnel6qt2tvwfqsgbrmew250p5jewgh3f5w80uukrwuzci5rnsvw5eubwxigy0mavhqi\",\n  \"identity\" : \"6pmrj23wal5ihmljwk4oauqwrq43zgyv4noq7jaaoznurlzjbt60mb1aci73p59pucfgc5vdw4ljma8xp6z81b9bsi31fz9gkn0c18ymsakzgm1tphouq688jlsdxdrnjda3o4rkrrbbvrcbz0x0\",\n  \"notification_protocol_version\" : \"tb9zujklo6dgt5zbt4oc5vq4vuqfqri98emvj7acsxenbbp6jr855845h101x9vysepba0k7tvq30xxtseoc9vtzjevs28r9747p4o0qrzd7pe7x29wculkn7v0qogvnmkqftuok6yzj9ia2zvg07w\",\n  \"account_sid\" : \"AC7aBEAFFf2dCd2cfE768db4D5F6fd3aa0\",\n  \"links\" : { }\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "a6aa606b-120e-41ed-94e4-ffb175d56658",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:19.65256Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "CreateBinding",
+          "schema" : {
+            "properties" : {
+              "account_sid" : {
+                "description" : "The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the Binding resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^AC[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "address" : {
+                "description" : "The channel-specific address. For APNS, the device token. For FCM and GCM, the registration token. For SMS, a phone number in E.164 format. For Facebook Messenger, the Messenger ID of the user or a phone number in E.164 format.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "binding_type" : {
+                "description" : "The transport technology to use for the Binding. Can be: `apn`, `fcm`, `gcm`, `sms`, or `facebook-messenger`.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "credential_sid" : {
+                "description" : "The SID of the [Credential](https://www.twilio.com/docs/notify/api/credential-resource) resource to be used to send notifications to this Binding. If present, this overrides the Credential specified in the Service resource. Applicable only to `apn`, `fcm`, and `gcm` type Bindings.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^CR[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "date_created" : {
+                "description" : "The date and time in GMT when the resource was created specified in [RFC 2822](https://www.ietf.org/rfc/rfc2822.txt) format.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "date_updated" : {
+                "description" : "The date and time in GMT when the resource was last updated specified in [RFC 2822](https://www.ietf.org/rfc/rfc2822.txt) format.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "endpoint" : {
+                "description" : "Deprecated.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "identity" : {
+                "description" : "The `identity` value that uniquely identifies the resource's [User](https://www.twilio.com/docs/chat/rest/user-resource) within the [Service](https://www.twilio.com/docs/notify/api/service-resource). Up to 20 Bindings can be created for the same Identity in a given Service.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "links" : {
+                "description" : "The URLs of related resources.",
+                "format" : "uri-map",
+                "nullable" : true,
+                "type" : "object"
+              },
+              "notification_protocol_version" : {
+                "description" : "The protocol version to use to send the notification. This defaults to the value of `default_xxxx_notification_protocol_version` in the [Service](https://www.twilio.com/docs/notify/api/service-resource) for the protocol. The current version is `\"3\"` for `apn`, `fcm`, and `gcm` type Bindings. The parameter is not applicable to `sms` and `facebook-messenger` type Bindings as the data format is fixed.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "service_sid" : {
+                "description" : "The SID of the [Service](https://www.twilio.com/docs/notify/api/service-resource) the resource is associated with.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^IS[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "sid" : {
+                "description" : "The unique string that we created to identify the Binding resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^BS[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "tags" : {
+                "description" : "The list of tags associated with this Binding. Tags can be used to select the Bindings to use when sending a notification. Maximum 20 tags are allowed.",
+                "items" : {
+                  "type" : "string"
+                },
+                "nullable" : true,
+                "type" : "array"
+              },
+              "url" : {
+                "description" : "The absolute URL of the Binding resource.",
+                "format" : "uri",
+                "nullable" : true,
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 6
+  }, {
+    "id" : "98640dc7-b871-4f74-88be-e9127ea4bc90",
+    "name" : "",
+    "request" : {
+      "urlPath" : "/v1/Services/IS97b1aD0e3bBCBEfEbeCcFEBCcbA7B269/Bindings",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"meta\" : {\n    \"first_page_url\" : \"https://web.example.mocklab.io/925570\",\n    \"next_page_url\" : \"https://web.example.mocklab.io/659726\",\n    \"previous_page_url\" : \"https://web.example.mocklab.io/852469\",\n    \"page\" : 1524945658053183267,\n    \"key\" : \"kbjx87ija2fnhrsbgayrkv8onc75sq3d761\",\n    \"url\" : \"https://web.example.mocklab.io/601557\",\n    \"page_size\" : 2350195160428956837\n  },\n  \"bindings\" : [ {\n    \"credential_sid\" : \"CRDCf5cAf57DFacFB9244f413127C85Ca4\",\n    \"binding_type\" : \"nfkcinkjui1u7bdgu6xqylxvy8nv2okubeq9ew9gt75bdr4f06ybqxkt4hbrdsjzgb884mtijoqqqdgf2pcpfe6huva35x088uwh4g\",\n    \"address\" : \"v04jwqu8hgl6tqdjlzcw9nxtp2mespudxll1n1a6fns4aggyw7f0tzcgy49yx5vruxk0dk1d1e5wy6lokdqq15572phamn82nlw31f9xs1pxltv0u0hn1tsh5omto4sszg2jmp0ev1rz3pe6ys\",\n    \"date_updated\" : \"2023-07-22T23:15:50.65Z\",\n    \"date_created\" : \"2023-11-09T02:09:16.65Z\",\n    \"url\" : \"https://web.example.mocklab.io/285837\",\n    \"sid\" : \"BS4bdaA58Fb4aa8E5B846C93E169C02DA3\",\n    \"tags\" : [ \"dmntv08kydz84nac9i1oo52uqcr9xaxa2kgd3puoglizttji\", \"nytcdw0lfv52a9az\", \"fow0wi6bao8sd4alsvlnpyzt2060qr8xrzkswae60q6vye7tyr299kifl12594cxxyqgpsmck7ef7\", \"tchde6yobor9bu0duzg9hk2xws6cy5p00i9wj0j58a2q1r1s7px9rx2tmwlz4me6p2knfkuck\", \"hi9rp62cb2fk8kwt7xb8msrvz8tqi50dq5zjsjys\", \"0knpts82mc6ggwxkydlm36b7dj457zgdaxkbqz0nn8sj28b2cb5frry\", \"phuop6nf6dtvkha6jhodkjrrezbsmx8mz2x8dc\" ],\n    \"service_sid\" : \"ISc28fecFCFCff3aEB157Fba4c9C66A67b\",\n    \"endpoint\" : \"2mjfb2279ni3y9r2jk7xme75xafrwmjeu5pxtfkrcz0xd4t7wnb0vtfpq1fhu1bud232t2z9ru38ctt86gstskl54\",\n    \"identity\" : \"er3axia22fl77ox4ig129jtgjw470aoy8jegacn24a1lulq878bjhcgghaojj8v1kgr9qqz8m79nibcbhj6dybbkt8585it51isly73nlrdh742951toi7ock2\",\n    \"notification_protocol_version\" : \"b6u10klj8nip5fqu03txolusa6vggaenuxwp4fhl7ljfdhcwwnxufifz64tpnpeo7jbfor9des0o5indc9z0s7ndc4nkt12pn1ul7tmu1e2mpuzshn8z6rqbce3il2dcqupbdt4u35qdekymbr6jd4f56u7y7bnrghk8uims\",\n    \"account_sid\" : \"ACA71a4cA3c2a8FeDcF5ae7dfc0AF3DeE8\",\n    \"links\" : { }\n  }, {\n    \"credential_sid\" : \"CRdd79CF33f2FAEcD1B4c0a26AE7DdA09F\",\n    \"binding_type\" : \"8yz3rf34av1h9e2feifdu8onucvr2zya5u9ktsjfq0x6i5ezluadi29oibynfj9wi1q4j0mebu9utgtokxemp3ebs5c96759i43gouu18x5b753pm2sls6\",\n    \"address\" : \"dmkdkbb7i63gw9eud397l31sdoc9saiug5of99r7ryrc860fvg7\",\n    \"date_updated\" : \"2024-03-25T10:46:41.651Z\",\n    \"date_created\" : \"2024-02-01T06:03:10.651Z\",\n    \"url\" : \"https://web.example.mocklab.io/402987\",\n    \"sid\" : \"BSEb8E950BAC6ce05b379AA0D7d6D38bAe\",\n    \"tags\" : [ \"zouy7iqr6qfboh0ue27vpwaa0pwuuge7b3m2so2ud6y77w\", \"en2t6i80q6h7ml4b4goznjrpsig8uizdhewlhqs9lms9qo2z6tuz7e9c1d6y2cbkbdn24xy3ot5k6xogesepp8km5of0n1gmuml354zhl1nlmpmchrk2a6lqk3fkew8wpglc4uft7v6b1v81lcl9tvqe\", \"zfy1djl4rft9buye9jhsb5rctahm5mt8awnrvt3lf9788bk8617a66mls4lux2v4de23itckn0ebcbrdz1vxzvvbh19bij4cjpph7nh2qoo0b2vmawzzget5kuihf8crj1i9q5lqezl48i0jetai\", \"vi3rfyhafhb4rzkg4r1iwzinvn7fg1ga\", \"fiu35mtyt1d0mky3dri1xaq4ruzp9be1gh11x1g8s0srlond16e09vtkiqfbc8y7womduizbdr75puxrzeqjz9pa0l6m6x2gpnfzflipq3atjknvj80dses352z944l4l5b38qdkk6xg6g789ffrnb8l66elab6bue68q5sb3v\", \"l5679al8re9rnvxt88nfe6tz053apccmm8kwxmzz8w97o7rnmmzy170am3bts0el\" ],\n    \"service_sid\" : \"ISDea0d862d632A8167b6488Ce9DFdE14a\",\n    \"endpoint\" : \"nj1h9i19339wfdoy0qy3sp4mkzvwwnmzrqv3o3v05oe\",\n    \"identity\" : \"o4vapshtwxdwnrchypgtqfuto290p3y4k1zt9xylknmihm5771ryitar0wbxd88t0ppomdargyaf5q735e1pvp8xqdq9bsuyuo4sadn9ptdo0a2uxkmiry5ljrm9pir75j5d8d4h2k70eg2azs8vvevla46wkgz8yh8efx\",\n    \"notification_protocol_version\" : \"tof3jnjsga55r9k956xsp6aw04dlu2i8jbblxjo3h27x999yi4zu3hg06uo1u9zozhckeptet9sfzljaluwkachphaoyw67gb\",\n    \"account_sid\" : \"AC6CEdD2E5Bde89Dc6EFAe425A0f9D5Eb0\",\n    \"links\" : { }\n  }, {\n    \"credential_sid\" : \"CRaDEEBB1455a4694F4E6DeDC43c05a9A3\",\n    \"binding_type\" : \"wsovdamvmxafxws3aj5y8f36xzxqmi1y6fv8u8n4poenu0yp7b0l0bwix8s3xtyle6opur\",\n    \"address\" : \"qm8nd0enh7pq686qzw8ji99sql2e0pt5stl8i818f42s5g7sgivodoqhsu5fdrkacambzsxpmn82x1mcl7wqgt2kd1ketgsyoglg3o9355gqafm1sw4bih468ketghjlbdbn7gbydaua0fpswlz8u\",\n    \"date_updated\" : \"2024-03-04T08:17:56.651Z\",\n    \"date_created\" : \"2023-08-26T11:44:43.651Z\",\n    \"url\" : \"https://web.example.mocklab.io/130810\",\n    \"sid\" : \"BS2162bBdfF4C85aCd997cdd8c6a33ddc8\",\n    \"tags\" : [ \"u1cgswpaoot6r386unofbn93oasgwlbr517x9h\", \"jboa7s0oy05q8kk8rwsp3l7x\", \"u8ie0uyg5e\", \"gsinu6zx11b0u43org9ka5run1\" ],\n    \"service_sid\" : \"ISce89AbCbe093d6B99E7BE6bdf7FdEC9f\",\n    \"endpoint\" : \"iur1pf3brj2j28qnjwiohyxj0bze40wmianpdbct50mr6dhrs0z9oiz1ucbo9a6zprbt8snslrzt9g39j77dcxl6waaqs8eyxdftlry0uo68s6qwl1pucgdx1bdzt30eloc127zcoraw32w1s\",\n    \"identity\" : \"rkveizmexyvjisc3vqsziq8yxkvgbez5zt6qwfp7jshsqm7yqcu5so9v0wus2mf22t8ogsqyhnq8x5tl23tkpjt1hinq993ojs8hsw7561zs9o17xv3rth482p1hcq743a28szpy6nr3rgethw2v4r20tr\",\n    \"notification_protocol_version\" : \"rqib6y168vyqzahjlclu7bwv8fldwlnb67b883d6my4tptwqvfabhz3hl819xjw9gswy8iojqfw67bvjrdtvspfe06h0op623r657uzdzuwngbi6lq2tggc2zzg218n82347wf80xy73uqdvi92pgaq99kfvgs5lhwfqgvk0kpe33vohwc0fp7lyuy\",\n    \"account_sid\" : \"AC89Da23973a4ebFC9bb1A28aE4b9B4F5C\",\n    \"links\" : { }\n  }, {\n    \"credential_sid\" : \"CRC550d535EE9a7EbCEbFe6D36a3Bfe45D\",\n    \"binding_type\" : \"e87wrqzbswfdrmgwfxjwcweexwu6tmgzflj316xe9d0l1\",\n    \"address\" : \"iifk1qgft0g1freo7i2jxodzk6yvqjtcvlu878rlflsjwtzzfo3ckt6xi40b5bw17u2qpej05dony4uwk5j\",\n    \"date_updated\" : \"2023-03-18T08:54:18.651Z\",\n    \"date_created\" : \"2023-10-11T13:29:36.651Z\",\n    \"url\" : \"https://web.example.mocklab.io/934194\",\n    \"sid\" : \"BS3E01E1e1bBf0bD3ac2F2cb87DF35fA15\",\n    \"tags\" : [ \"4os6nrc9jpeoyzh732cji92w5wczode\", \"p02ev69wf\" ],\n    \"service_sid\" : \"ISe3bF853e120Daf8E0AAFe4F8Ba9B0B96\",\n    \"endpoint\" : \"7ll5sea0oo74g3esvjl3vvu7d1nn2yghltieuk5kwrlbfxf1vbj320tsq718cz47e9uyasqvs21s0nv9azbz16aa2z73bj6rafz3ocmso0alpuzx60da78\",\n    \"identity\" : \"9n258kxjsxk4o85jk1i106hk0mjjovw3yqqht8vnccjeow7mvb9p8okexselnix1wo82t2ldv346e4d4qprp6z582838g6ivr70ptve840c0kadwzf9v5ig\",\n    \"notification_protocol_version\" : \"emn1cukhg7qqnfk0wprs3ipb12ghad1dw0hibz4o35ktrtlrtr76bhqabnuvy8yncjyex9pcqyyr6433eptd3avcn6xfxeerb5tppv55fawpk6qqmobcc6v1f9nh4vggegg14lpz3hqn15hyjuzv5ov5z6urdxd58qi541gilgc4utkwrgkr6lestjo77iw\",\n    \"account_sid\" : \"ACA9BF8CeebCd14E7CCb3d2b779d5e6340\",\n    \"links\" : { }\n  }, {\n    \"credential_sid\" : \"CRe716cB0AC867dc2f7d691fBcE47f265f\",\n    \"binding_type\" : \"asekesujaobt0ulw1f7hx202ed2vrhxncngb1ihr9fnqd3ahmaus4woo9m1p3v5jxzl0x6m1iijmlf9pgkif2vyavbj6vuhv959hy0wvcizrn2jezeewz5965saorq9j74golg7zl9iyyc3qur0404an22blfrmwoh6rg20tu\",\n    \"address\" : \"8nu0wsc9f1fl94m8lvqzxiwfuobmb0g2jnpgypa2z0ymscdnjkc1tmr1vbrzwe0d6jpds46uh48bcwbmjwa5byhsaifrwi09k85ibes9jmnfhon11hf8cz3og7nyob9bq8fzqvi720df8r67t1yde4014ojxrtjzck2tt2j4hc8hg602ugphnekmg\",\n    \"date_updated\" : \"2023-10-05T07:22:36.651Z\",\n    \"date_created\" : \"2022-08-14T13:09:20.651Z\",\n    \"url\" : \"https://web.example.mocklab.io/110097\",\n    \"sid\" : \"BSF314EBF42212FEAb15BF64f0E6d803AA\",\n    \"tags\" : [ \"9p5o5ulf4tsr8ox5z78c5q7kl98dfoa80ls6b6wptfjpg2\", \"jd505i13f06st6xl4y73e5312o774100z8dq7to\", \"30qt6tr9dybup5goj2jf49rqe8j3tf3rz7dydxwgsi2j10s5ika7l840e58nwhi4tmxh9v722tfsiyreg2bzg2izye8dzoza8fo78vdzd14gr7h45v1v14dnmjfpc4sf95yk88trjwpg5vi9yrtprunf359\", \"w9vev3yvxcadnjwz4g13q6nllrnyu8nnkblju7wdhbojvi81zn8ac9rewu3p1i677rtx9b5zujp8crj4r2r898116jvzorb192gnsxxc61eeheey0uehex8pa41lgt92afdbi7b0zz65fnt9jy5keqnul4l3cyx8mnsi7rwbkk5i9tz82qdtz9fghkttmzfde1\", \"hiiwg25xzhwn01arzxs9lezum4dqrlvl7uznz9d2u2r9qx3z9e1cctpoy51ee43pqcuv0xuebn9lb7vbubu37jro504rir\", \"1l33j2drqd0af8x00kahb6re130xkhu4bxzi0xu6sucboky5gz1s2v098wseqv4dycx7u8m\" ],\n    \"service_sid\" : \"ISf1CAd7FD6094EE62B167e98D4bCBddae\",\n    \"endpoint\" : \"oe4xhzv5bq0tyzrkca2fklf1xvz833hxkyavs3g9nsd29nvl4lqjl8fg\",\n    \"identity\" : \"23cp02kdve5w7aux3qz19g0776dillmpsznjinmezedjglgsq2f77h1nib1cl0io4daxosvzqdayj0qh5j6ewa6a2ewlg07vzxp2kn30lrlq4vnb1sjabg53kps0oyi99ouvxhehrl2231hu91v8a7up7aj63e82cwzz6a4js\",\n    \"notification_protocol_version\" : \"f9vjat234jd2dwqmwr6g5xmbzd2qaypihz12ezkku6xl0kdgfh9jztknijz04lhykz\",\n    \"account_sid\" : \"AC2Dda69Ce42CdE1e7A5a1dA8bB1fef037\",\n    \"links\" : { }\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "98640dc7-b871-4f74-88be-e9127ea4bc90",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:19.652153Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "ListBinding",
+          "schema" : {
+            "properties" : {
+              "bindings" : {
+                "items" : {
+                  "$ref" : "#/components/schemas/notify.v1.service.binding"
+                },
+                "type" : "array"
+              },
+              "meta" : {
+                "properties" : {
+                  "first_page_url" : {
+                    "format" : "uri",
+                    "type" : "string"
+                  },
+                  "key" : {
+                    "type" : "string"
+                  },
+                  "next_page_url" : {
+                    "format" : "uri",
+                    "nullable" : true,
+                    "type" : "string"
+                  },
+                  "page" : {
+                    "type" : "integer"
+                  },
+                  "page_size" : {
+                    "type" : "integer"
+                  },
+                  "previous_page_url" : {
+                    "format" : "uri",
+                    "nullable" : true,
+                    "type" : "string"
+                  },
+                  "url" : {
+                    "format" : "uri",
+                    "type" : "string"
+                  }
+                },
+                "type" : "object"
+              }
+            },
+            "title" : "ListBindingResponse",
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 7
+  }, {
+    "id" : "b91e1044-a770-41b6-8b75-6977a72e3e5e",
+    "name" : "",
+    "request" : {
+      "urlPath" : "/v1/Services",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 201,
+      "body" : "{\n  \"friendly_name\" : \"Rosalie Keeling\",\n  \"alexa_skill_id\" : \"1nh6\",\n  \"date_updated\" : \"2022-06-28T21:46:14.649Z\",\n  \"default_apn_notification_protocol_version\" : \"y3c03590yr6fg6myprwirbb52kf5axlsst2ikdx7lh11nh2qmt1ubi8lck1kp9zzewijx885gsg7s4359ee\",\n  \"default_fcm_notification_protocol_version\" : \"jfy0nwehd7pez1mbxb0p2iyv1dnnm39wow9hsygr49sh9nx0rifas0287euwkut9s6lyz677n9urz9mrqxegy7xq531sbr8dsfcqt8ewf9olxth24wmugye5xuu6fwfwcd991dev8jt7tp9pzqden1e6kt72h3xpcpljn47jbst6psbxl957e5k5ac\",\n  \"gcm_credential_sid\" : \"CR17Ca60Dbd1c6dD97BbCbeDdc8b9a494B\",\n  \"date_created\" : \"2022-05-05T19:59:43.649Z\",\n  \"fcm_credential_sid\" : \"CR830C90B5A9e3aAC58caB8Ad5013712BD\",\n  \"default_gcm_notification_protocol_version\" : \"8luysub5wh6qc6l0x6ip8to28ff5c3bpza8iujvg68bbytr110kcaa36mujnbolu1kp5dwq3z4vjme57c2drkhuwbtwux4s6lz08y1bhx3215n6a98zlk5adkk65drlhpzpacenkafgilwfy\",\n  \"url\" : \"https://web.example.mocklab.io/258920\",\n  \"sid\" : \"ISDf3adDADf0828050A528e634ee36e18e\",\n  \"default_alexa_notification_protocol_version\" : \"gx69lu2baifnbconivzgzg9kwgbb8u9sc31wevbzilhga1yw51z7oi2lhgzkqkar2fwc7vdkdr2rz0uzcbhpnrabgs6dfyvb4w1hyop6sbfwezm44pnyipm30pzbhm1f029r60manm0afwb0xauhknd3q6hzverjynhyzp4ztbhbrlz1aam4dhgy6cyg\",\n  \"facebook_messenger_page_id\" : \"3ozm\",\n  \"delivery_callback_enabled\" : true,\n  \"messaging_service_sid\" : \"MGde0078Be68a3d228A838aAb1C6AFcb46\",\n  \"delivery_callback_url\" : \"https://web.example.mocklab.io/112252\",\n  \"account_sid\" : \"AC216aAAcf8d7E73Ef6Ec6BDCFe84fFAaa\",\n  \"links\" : { },\n  \"log_enabled\" : false,\n  \"apn_credential_sid\" : \"CRFeEBD23e4bFa0d97A3104AbbaEa41447\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "b91e1044-a770-41b6-8b75-6977a72e3e5e",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:19.650503Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "CreateService",
+          "schema" : {
+            "properties" : {
+              "account_sid" : {
+                "description" : "The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the Service resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^AC[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "alexa_skill_id" : {
+                "description" : "Deprecated.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "apn_credential_sid" : {
+                "description" : "The SID of the [Credential](https://www.twilio.com/docs/notify/api/credential-resource) to use for APN Bindings.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^CR[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "date_created" : {
+                "description" : "The date and time in GMT when the resource was created specified in [RFC 2822](https://www.ietf.org/rfc/rfc2822.txt) format.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "date_updated" : {
+                "description" : "The date and time in GMT when the resource was last updated specified in [RFC 2822](https://www.ietf.org/rfc/rfc2822.txt) format.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "default_alexa_notification_protocol_version" : {
+                "description" : "Deprecated.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "default_apn_notification_protocol_version" : {
+                "description" : "The protocol version to use for sending APNS notifications. Can be overridden on a Binding by Binding basis when creating a [Binding](https://www.twilio.com/docs/notify/api/binding-resource) resource.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "default_fcm_notification_protocol_version" : {
+                "description" : "The protocol version to use for sending FCM notifications. Can be overridden on a Binding by Binding basis when creating a [Binding](https://www.twilio.com/docs/notify/api/binding-resource) resource.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "default_gcm_notification_protocol_version" : {
+                "description" : "The protocol version to use for sending GCM notifications. Can be overridden on a Binding by Binding basis when creating a [Binding](https://www.twilio.com/docs/notify/api/binding-resource) resource.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "delivery_callback_enabled" : {
+                "description" : "Callback configuration that enables delivery callbacks, default false",
+                "nullable" : true,
+                "type" : "boolean"
+              },
+              "delivery_callback_url" : {
+                "description" : "URL to send delivery status callback.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "facebook_messenger_page_id" : {
+                "description" : "Deprecated.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "fcm_credential_sid" : {
+                "description" : "The SID of the [Credential](https://www.twilio.com/docs/notify/api/credential-resource) to use for FCM Bindings.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^CR[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "friendly_name" : {
+                "description" : "The string that you assigned to describe the resource.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "gcm_credential_sid" : {
+                "description" : "The SID of the [Credential](https://www.twilio.com/docs/notify/api/credential-resource) to use for GCM Bindings.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^CR[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "links" : {
+                "description" : "The URLs of the Binding, Notification, Segment, and User resources related to the service.",
+                "format" : "uri-map",
+                "nullable" : true,
+                "type" : "object"
+              },
+              "log_enabled" : {
+                "description" : "Whether to log notifications. Can be: `true` or `false` and the default is `true`.",
+                "nullable" : true,
+                "type" : "boolean"
+              },
+              "messaging_service_sid" : {
+                "description" : "The SID of the [Messaging Service](https://www.twilio.com/docs/sms/send-messages#messaging-services) to use for SMS Bindings. In order to send SMS notifications this parameter has to be set.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^MG[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "sid" : {
+                "description" : "The unique string that we created to identify the Service resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^IS[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "url" : {
+                "description" : "The absolute URL of the Service resource.",
+                "format" : "uri",
+                "nullable" : true,
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 8
+  }, {
+    "id" : "5b56c8a1-9089-4591-9405-27326a617ff8",
+    "name" : "",
+    "request" : {
+      "urlPath" : "/v1/Services",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"meta\" : {\n    \"first_page_url\" : \"https://web.example.mocklab.io/734457\",\n    \"next_page_url\" : \"https://web.example.mocklab.io/104888\",\n    \"previous_page_url\" : \"https://web.example.mocklab.io/478267\",\n    \"page\" : 7134838030511963656,\n    \"key\" : \"pneba8fgpxlg3ijrxnyrky99fkyq88u3ua\",\n    \"url\" : \"https://web.example.mocklab.io/311976\",\n    \"page_size\" : 3073609402470493872\n  },\n  \"services\" : [ {\n    \"friendly_name\" : \"Jenice Abernathy\",\n    \"alexa_skill_id\" : \"ig2f\",\n    \"date_updated\" : \"2022-11-15T03:18:14.647Z\",\n    \"default_apn_notification_protocol_version\" : \"ybqccs1y3sbbomch5jffnfguyczrkhnxhzj1l5s63rwktv773zpcg7obo03tfrwmf0r03j5ikcpbo3sf1f09kkbv40ufnf2jzry7hjfv8cxo\",\n    \"default_fcm_notification_protocol_version\" : \"fguz2cuk3scteqjifcxrhnk1zaiwdzvdl2pyh2dr2pl0gn7htij1cchoaeugjqtvvpn4x08nicp3bgvn1z28p3f3oq0e9rtidhsxlpux21xe0irc66u8gfep4xjv1rbujuwl9h3\",\n    \"gcm_credential_sid\" : \"CR3062BCd617eAf2E02eAE313ce58edFc9\",\n    \"date_created\" : \"2023-10-01T15:19:22.647Z\",\n    \"fcm_credential_sid\" : \"CR7abB0D8E8dfaB9c9bCe80c8EBe37cdF9\",\n    \"default_gcm_notification_protocol_version\" : \"i7koskhu386xei2mo6irganbaypcxm5t6xp637co9h96191uxqep89dxvh5e4uult01y9on4b3btkby8swa39jjswsnogl42trnby5oe8rtfviyxmt7cu94zpyavupqhxmg1t3qahc3cxzbmqz9l500q4vfy2wwgy\",\n    \"url\" : \"https://web.example.mocklab.io/858719\",\n    \"sid\" : \"IScaaff1e26b6cAaE0FAFdea42ee108BCa\",\n    \"default_alexa_notification_protocol_version\" : \"77w8di1berpwpzmxdv8oilzoug94yjmdjqee7kefhbr9aykxt0rdqhzey699rgez8ehoxsy\",\n    \"facebook_messenger_page_id\" : \"15b0\",\n    \"delivery_callback_enabled\" : true,\n    \"messaging_service_sid\" : \"MG7a1ead37DfdEA9BA897D08a60CD413aF\",\n    \"delivery_callback_url\" : \"https://web.example.mocklab.io/463717\",\n    \"account_sid\" : \"ACA612EEbc2ffAe9bFC07Cafef5c4A4F82\",\n    \"links\" : { },\n    \"log_enabled\" : true,\n    \"apn_credential_sid\" : \"CRF2BCeEcA061cE69708CAed56038272CD\"\n  }, {\n    \"friendly_name\" : \"Chong Volkman\",\n    \"alexa_skill_id\" : \"59oz\",\n    \"date_updated\" : \"2023-05-08T07:24:23.647Z\",\n    \"default_apn_notification_protocol_version\" : \"6mkp0ujit0xbd1yxuxfdh8vih6nmyhlftoqydxtujz8y7fdmqpuwdw2hwawuchm4qgzcw2iwb2nopylcym201q6ijoenixaxl6jdubnufjy2ds9l9ejb138e3vv665w6ymq1iojp5ouj27mbhftnta4\",\n    \"default_fcm_notification_protocol_version\" : \"zk4cgznah8nlsvhlc3oz3bzc3u8pxwt1imifpfu1lutagozc60czxixr95ocwpwvfn2xokg4a6cgmf8jgz6cqpfz1m3e\",\n    \"gcm_credential_sid\" : \"CR86E562d9bBf764aEcEBfdf40F9c2F734\",\n    \"date_created\" : \"2023-05-18T07:33:47.647Z\",\n    \"fcm_credential_sid\" : \"CRDfEFa2dAC44B1d2A0eB7Cef5bab9cC0c\",\n    \"default_gcm_notification_protocol_version\" : \"ncx5c7schwarwg9e0geibyejfj4k\",\n    \"url\" : \"https://web.example.mocklab.io/390734\",\n    \"sid\" : \"ISc976A0b12AcdCC2BE926D86A1Da8eaCA\",\n    \"default_alexa_notification_protocol_version\" : \"gtxb9jvez6j4a1282sopmuxt4hzoqceeqdao7y41rzre9peqsh7073j5da9p96u6ml35o2d6e0tk1k5qjjr4aflhk03dq3kftroqtwji5l8mxac0jviuxwpcw5o7ueepylt29cyzg3j9dauekoatioz0v1\",\n    \"facebook_messenger_page_id\" : \"fwl7\",\n    \"delivery_callback_enabled\" : true,\n    \"messaging_service_sid\" : \"MGEBadBCCaAc977cEd8D4FF440aEb3d5Fd\",\n    \"delivery_callback_url\" : \"https://web.example.mocklab.io/789470\",\n    \"account_sid\" : \"ACEBb7ee0a80E92CCb5e811ae91BAeAA9B\",\n    \"links\" : { },\n    \"log_enabled\" : false,\n    \"apn_credential_sid\" : \"CR31a46FC9b26Bc6eAF8eCDe2FEb7A8C8b\"\n  }, {\n    \"friendly_name\" : \"Beaulah Schneider II\",\n    \"alexa_skill_id\" : \"5o2q\",\n    \"date_updated\" : \"2024-02-20T00:12:06.647Z\",\n    \"default_apn_notification_protocol_version\" : \"swst5tlj9m8bh33tjikmj5f1exaigsq8s38liespmql3kwd08g5yit2qy073v0bu3lafxi8aupmnwpp75rxv4ykcvl4mmz07za67g9k59kpp270mm3ycds52dgjyw5gxai0qfk6jnoxzi6gpngbywpo91xcvzp\",\n    \"default_fcm_notification_protocol_version\" : \"31mb9ww5tj6ghxc9po7ttfeofdetkm6ilklhyw0mnndxw4f5z01ixe18e5h4yvosc0vvbb4rs99c2872l8xy66rq6xnvu76pmoluq64nc4q4thnr4aid5kat0p72w5fb7gvmoz42cpjiz9tgvaxn7y\",\n    \"gcm_credential_sid\" : \"CRa5072E9Ebe1FBD6CaBc150b87332E32E\",\n    \"date_created\" : \"2022-08-25T20:26:50.648Z\",\n    \"fcm_credential_sid\" : \"CRF01f7BF83C82F5CCc38f86Edc0C9b9Bd\",\n    \"default_gcm_notification_protocol_version\" : \"j9shmc8vjb02rtrpsfg6fzwq3ny8ggqkpbbxxrhmm1pyy40e3vkk9my7eupqlqhmu3grfm2eb5f23pltyss3fjafiirdwz6zwl4cqrebbtxmwrvec5df1rc9zjiqwwx1wtgfo7atmky9c3daia4af2f\",\n    \"url\" : \"https://web.example.mocklab.io/235392\",\n    \"sid\" : \"ISCa39D1FDe057b37c31E00Db93ABdEA0B\",\n    \"default_alexa_notification_protocol_version\" : \"fpz46xkcat5ve0xea0ho48ddqabv6adv7pe1omy6sjroogxgk63bcj09nen07q2y9nzsghmbhljbsiw6\",\n    \"facebook_messenger_page_id\" : \"pm15\",\n    \"delivery_callback_enabled\" : true,\n    \"messaging_service_sid\" : \"MGcDdfFD7BBFdb1Fe50379c68abFdeAA60\",\n    \"delivery_callback_url\" : \"https://web.example.mocklab.io/090029\",\n    \"account_sid\" : \"AC4Ac8d5AfD5Deecb84cFdC39cce000eE3\",\n    \"links\" : { },\n    \"log_enabled\" : true,\n    \"apn_credential_sid\" : \"CR2B8E1dCA1DBdD343E3fAAA54b09b23e6\"\n  }, {\n    \"friendly_name\" : \"Clorinda O'Hara\",\n    \"alexa_skill_id\" : \"gyjb\",\n    \"date_updated\" : \"2023-03-27T15:38:09.648Z\",\n    \"default_apn_notification_protocol_version\" : \"e9vdyahgcq32ttmmt2x26suxzxm5v41dddjq1nad477lwg4jvucoxbnyv56fbzvbbgyhpmmika7fismpl74qltt5fib79yzue\",\n    \"default_fcm_notification_protocol_version\" : \"tdzmlpp7lmfwgy1u8o6jyx\",\n    \"gcm_credential_sid\" : \"CRDeBbF9377B85ba63Ca64eD553C5E15ff\",\n    \"date_created\" : \"2023-05-09T19:42:43.648Z\",\n    \"fcm_credential_sid\" : \"CR7241cf256Cb5Fff7Ca67531aBa5B737B\",\n    \"default_gcm_notification_protocol_version\" : \"908w092rz5r3ovci8kqcourqdw7j1p5dy8xhmj0hov7qdn1mp284vkrfyihqi5m5ex15i3aexxiaqmnihoux6z9tdc5zo0j3ag2ll5lu8tktr\",\n    \"url\" : \"https://web.example.mocklab.io/514936\",\n    \"sid\" : \"IS63BAdeC492A1C2ca6e84FbcC5127bb5A\",\n    \"default_alexa_notification_protocol_version\" : \"sh42146rmwu2ize8xu0ag5ejowmybkdusfnbkce4z2ukukpr5vzwp5afz5t0llbhzrn7ktr4376ldu6ti82utvps8degpglo7ymlhk8fid8dd\",\n    \"facebook_messenger_page_id\" : \"s5i0\",\n    \"delivery_callback_enabled\" : false,\n    \"messaging_service_sid\" : \"MG806F2B268C32Ac5a6A5EDfeDDC8BcBeD\",\n    \"delivery_callback_url\" : \"https://web.example.mocklab.io/377576\",\n    \"account_sid\" : \"AC43be59BF1E3eCb3822a8712603d6DDA1\",\n    \"links\" : { },\n    \"log_enabled\" : false,\n    \"apn_credential_sid\" : \"CR03A8bcbCa32CD4a48c0a56D8B849fA29\"\n  }, {\n    \"friendly_name\" : \"Noel Ondricka\",\n    \"alexa_skill_id\" : \"296e\",\n    \"date_updated\" : \"2022-06-19T07:50:53.648Z\",\n    \"default_apn_notification_protocol_version\" : \"6u84959c15yi8vs1hy0vudb3f63hgfdlnwjo8fl9e4j8s97v4nhpzgbmiowi5ud3rz0d\",\n    \"default_fcm_notification_protocol_version\" : \"w5mlqc948t9uo3qsxgjrapq9ypv7jt7ca746r1xjmqtfhwkt6x53pjkovyninql16zbj66343lvptyq6zw\",\n    \"gcm_credential_sid\" : \"CRcd2CEcB260db8493cA7ce2Aebfa8863e\",\n    \"date_created\" : \"2023-11-10T09:19:54.648Z\",\n    \"fcm_credential_sid\" : \"CR3C2Db71bAAAf2a9d218aF0e6A2ad157E\",\n    \"default_gcm_notification_protocol_version\" : \"rt7i04rrmiqfytjzanpmfnvpcx78tsdnvp7ggm2qbnvou1788pspuvygdz3m4icts64iwlaz6wfx0vhbxa43cy0q8lk8h9yuvcnckle393d7a3d3f9s2cgombrishf8yvm4t9ab4msz2id2swbziel6kzw47tqtq6kfmtokkemgmypcr87\",\n    \"url\" : \"https://web.example.mocklab.io/076215\",\n    \"sid\" : \"ISFDA28dc9A605d7DE1cCB3a84C06B7Cab\",\n    \"default_alexa_notification_protocol_version\" : \"l0dkdosnvs4ff98vavw05wu05u5qt3on680rumvicqjptjqko55r1h12z8cizqaytxm7ebe8x5i1ogafiqlp2aqm7uxrjr3wrfbnk6eq5umb2m61oly57pd7gndzgu3gjtcpytdj4wn73s70fnc\",\n    \"facebook_messenger_page_id\" : \"wll1\",\n    \"delivery_callback_enabled\" : false,\n    \"messaging_service_sid\" : \"MG2Ca780b137ee3009AaEBbB19e54B4c9d\",\n    \"delivery_callback_url\" : \"https://web.example.mocklab.io/688434\",\n    \"account_sid\" : \"ACeDF75A4e8d207138F063BAFA4caDBa08\",\n    \"links\" : { },\n    \"log_enabled\" : true,\n    \"apn_credential_sid\" : \"CR62Ebbe308b29A5951Ebd70DcB4E9Bbb2\"\n  }, {\n    \"friendly_name\" : \"Kristeen Haley\",\n    \"alexa_skill_id\" : \"09xj\",\n    \"date_updated\" : \"2024-01-15T18:46:06.649Z\",\n    \"default_apn_notification_protocol_version\" : \"22c89qkswcrgxgesuxdgeoscxhcwr4xbxwncor2o7xy3rlptoeo9vzo6jx\",\n    \"default_fcm_notification_protocol_version\" : \"h54k930q168zkmcrpdhmvicmhds9r7ta9ithh5tmc6nmamw133dzdtw2de5lq4yfthpsaz4xsy7c2x\",\n    \"gcm_credential_sid\" : \"CRc9AFB5dD0B27D3e8ed10Ce28D201F9A2\",\n    \"date_created\" : \"2023-05-07T15:15:55.649Z\",\n    \"fcm_credential_sid\" : \"CRb1Eacf0F05D2ba91e433DbEb1A2d225D\",\n    \"default_gcm_notification_protocol_version\" : \"cy9iqja146ovuydm1mwz0pv47iofbfxqdqlehb5exljdij28jz0vxq1c3zd1s2on2\",\n    \"url\" : \"https://web.example.mocklab.io/672118\",\n    \"sid\" : \"IS0c2cCb80ac09c3485f13f5237Eebae6f\",\n    \"default_alexa_notification_protocol_version\" : \"upgf1xmrlyw5c4u3xdi0nknkk46ectug80jiji24pk323i\",\n    \"facebook_messenger_page_id\" : \"qk02\",\n    \"delivery_callback_enabled\" : true,\n    \"messaging_service_sid\" : \"MGFe9fDaA1BC860C57E2B0D29B24139a8f\",\n    \"delivery_callback_url\" : \"https://web.example.mocklab.io/187074\",\n    \"account_sid\" : \"AC5F7CEbec15bEe51f1E5ACB578b3eFa0e\",\n    \"links\" : { },\n    \"log_enabled\" : false,\n    \"apn_credential_sid\" : \"CRaECbAF5c5FCEcA30c8dDaDc0faC6aE3b\"\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "5b56c8a1-9089-4591-9405-27326a617ff8",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:19.649797Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "ListService",
+          "schema" : {
+            "properties" : {
+              "meta" : {
+                "properties" : {
+                  "first_page_url" : {
+                    "format" : "uri",
+                    "type" : "string"
+                  },
+                  "key" : {
+                    "type" : "string"
+                  },
+                  "next_page_url" : {
+                    "format" : "uri",
+                    "nullable" : true,
+                    "type" : "string"
+                  },
+                  "page" : {
+                    "type" : "integer"
+                  },
+                  "page_size" : {
+                    "type" : "integer"
+                  },
+                  "previous_page_url" : {
+                    "format" : "uri",
+                    "nullable" : true,
+                    "type" : "string"
+                  },
+                  "url" : {
+                    "format" : "uri",
+                    "type" : "string"
+                  }
+                },
+                "type" : "object"
+              },
+              "services" : {
+                "items" : {
+                  "$ref" : "#/components/schemas/notify.v1.service"
+                },
+                "type" : "array"
+              }
+            },
+            "title" : "ListServiceResponse",
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 9
+  }, {
+    "id" : "c8c05c2a-1b4f-493c-9efe-2545fa207974",
+    "name" : "",
+    "request" : {
+      "urlPath" : "/v1/Credentials/CRBf37dD68AF24bfbAe11057BCE6E1CDfA",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"friendly_name\" : \"Ms. Billy Schinner\",\n  \"date_updated\" : \"2022-03-29T01:48:41.646Z\",\n  \"date_created\" : \"2022-12-14T01:22:57.646Z\",\n  \"sandbox\" : \"ge9qx3loct8fjl71iuszx8cwa31p645i32pe3p2wcl1pnujvkl4d3y1wl4inqrqi752aqpkducko0h23n5b0ksjgrj4juz4jomxo9quggvees7o5th3nnpxjo834mvjwgmpq2ktgxe2chmexpqhvhxu902u\",\n  \"account_sid\" : \"ACfac1AC3Ba6fF3FAA1FCB9D00DFF73da2\",\n  \"type\" : \"apn\",\n  \"url\" : \"https://web.example.mocklab.io/297685\",\n  \"sid\" : \"CREDbF1fbDF0e83b9C56e32dF5aCaEd957\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "c8c05c2a-1b4f-493c-9efe-2545fa207974",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:19.646547Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "UpdateCredential",
+          "schema" : {
+            "properties" : {
+              "account_sid" : {
+                "description" : "The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the Credential resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^AC[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "date_created" : {
+                "description" : "The date and time in GMT when the resource was created specified in [RFC 2822](https://www.ietf.org/rfc/rfc2822.txt) format.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "date_updated" : {
+                "description" : "The date and time in GMT when the resource was last updated specified in [RFC 2822](https://www.ietf.org/rfc/rfc2822.txt) format.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "friendly_name" : {
+                "description" : "The string that you assigned to describe the resource.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "sandbox" : {
+                "description" : "[APN only] Whether to send the credential to sandbox APNs. Can be `true` to send to sandbox APNs or `false` to send to production.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "sid" : {
+                "description" : "The unique string that we created to identify the Credential resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^CR[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "type" : {
+                "$ref" : "#/components/schemas/credential_enum_push_service"
+              },
+              "url" : {
+                "description" : "The absolute URL of the Credential resource.",
+                "format" : "uri",
+                "nullable" : true,
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 10
+  }, {
+    "id" : "5a63d4d2-2999-4879-a289-b43f6ddbba7b",
+    "name" : "",
+    "request" : {
+      "urlPath" : "/v1/Credentials/CRB8DC274672cc9cfd514aB16aA716bEeD",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"friendly_name\" : \"Dr. Norris Dietrich\",\n  \"date_updated\" : \"2023-03-17T17:05:28.646Z\",\n  \"date_created\" : \"2024-03-01T20:04:39.646Z\",\n  \"sandbox\" : \"trr6zt1sl5mi9zcccu3jz2gt9w5b9xz7a73btybume064y5o1yk99tl1bn1qr18iobyu3kkdt8zxsxzxwy9mlggzww7ya6wl5e0bmpywxu161eynkhpw0v1kf4rm88rvi9xuevb7edce9622jctdxqv6yep3hzw0gjue2bk6sofd5ky\",\n  \"account_sid\" : \"ACd2BbD37DBf7c5E9EfEC4FEE5b81CDaBc\",\n  \"type\" : \"gcm\",\n  \"url\" : \"https://web.example.mocklab.io/924850\",\n  \"sid\" : \"CR657FF4aAb2e89fbFff1D6CC4BC1a8fAe\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "5a63d4d2-2999-4879-a289-b43f6ddbba7b",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:19.6463Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "FetchCredential",
+          "schema" : {
+            "properties" : {
+              "account_sid" : {
+                "description" : "The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the Credential resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^AC[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "date_created" : {
+                "description" : "The date and time in GMT when the resource was created specified in [RFC 2822](https://www.ietf.org/rfc/rfc2822.txt) format.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "date_updated" : {
+                "description" : "The date and time in GMT when the resource was last updated specified in [RFC 2822](https://www.ietf.org/rfc/rfc2822.txt) format.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "friendly_name" : {
+                "description" : "The string that you assigned to describe the resource.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "sandbox" : {
+                "description" : "[APN only] Whether to send the credential to sandbox APNs. Can be `true` to send to sandbox APNs or `false` to send to production.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "sid" : {
+                "description" : "The unique string that we created to identify the Credential resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^CR[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "type" : {
+                "$ref" : "#/components/schemas/credential_enum_push_service"
+              },
+              "url" : {
+                "description" : "The absolute URL of the Credential resource.",
+                "format" : "uri",
+                "nullable" : true,
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 11
+  }, {
+    "id" : "dc79c5b4-8aaa-4785-bc06-48c03031eb57",
+    "name" : " - 204",
+    "request" : {
+      "urlPath" : "/v1/Credentials/CR3efDD2a4dC6eE6dC7e114efCf52c7dCb",
+      "method" : "DELETE"
+    },
+    "response" : {
+      "status" : 204
+    },
+    "uuid" : "dc79c5b4-8aaa-4785-bc06-48c03031eb57",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:19.646054Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "DeleteCredential"
+        }
+      }
+    },
+    "insertionIndex" : 12
+  }, {
+    "id" : "82ff1102-f4be-4d80-8949-281c4af8c8d0",
+    "name" : "",
+    "request" : {
+      "urlPath" : "/v1/Credentials",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 201,
+      "body" : "{\n  \"friendly_name\" : \"Kirk Kunde IV\",\n  \"date_updated\" : \"2023-10-24T11:45:41.645Z\",\n  \"date_created\" : \"2023-04-23T15:02:30.645Z\",\n  \"sandbox\" : \"jlkdora1ddb3ut75trkc8aomffbqz9u2cekfwj3ep5vkscg0patptpqr9727xvye\",\n  \"account_sid\" : \"ACe4da18F4eF73C6B5e3ce43d0C7BD863A\",\n  \"type\" : \"fcm\",\n  \"url\" : \"https://web.example.mocklab.io/318750\",\n  \"sid\" : \"CRaca5Fa11e2DfBfBeaCFeE5B87a8d2a48\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "82ff1102-f4be-4d80-8949-281c4af8c8d0",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:19.646004Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "CreateCredential",
+          "schema" : {
+            "properties" : {
+              "account_sid" : {
+                "description" : "The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the Credential resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^AC[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "date_created" : {
+                "description" : "The date and time in GMT when the resource was created specified in [RFC 2822](https://www.ietf.org/rfc/rfc2822.txt) format.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "date_updated" : {
+                "description" : "The date and time in GMT when the resource was last updated specified in [RFC 2822](https://www.ietf.org/rfc/rfc2822.txt) format.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "friendly_name" : {
+                "description" : "The string that you assigned to describe the resource.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "sandbox" : {
+                "description" : "[APN only] Whether to send the credential to sandbox APNs. Can be `true` to send to sandbox APNs or `false` to send to production.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "sid" : {
+                "description" : "The unique string that we created to identify the Credential resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^CR[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "type" : {
+                "$ref" : "#/components/schemas/credential_enum_push_service"
+              },
+              "url" : {
+                "description" : "The absolute URL of the Credential resource.",
+                "format" : "uri",
+                "nullable" : true,
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 13
+  }, {
+    "id" : "f6324ee0-f186-4a16-9dbf-ba1e92b0e618",
+    "name" : "",
+    "request" : {
+      "urlPath" : "/v1/Credentials",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"credentials\" : [ {\n    \"friendly_name\" : \"Dr. Neva Stanton\",\n    \"date_updated\" : \"2022-11-19T00:13:36.644Z\",\n    \"date_created\" : \"2024-02-19T21:46:59.644Z\",\n    \"sandbox\" : \"b2p4xqyo5eng6we6e0sw2j7tak3ezmm0r8kc8zgsynn3rxf8h5zpz5u78otftxfnqckf9v6gmn4r7iwnox98s3ebktzmg12ezi5mqqa4mif71vl34mi8nf49dncseoysyma4lz28u0\",\n    \"account_sid\" : \"AC5Eb42CFCeEad5c741CE0eECfa9CE9b6C\",\n    \"type\" : \"apn\",\n    \"url\" : \"https://web.example.mocklab.io/244615\",\n    \"sid\" : \"CR74BA9A2CD504b225A3Beb76D0fbDA7d7\"\n  }, {\n    \"friendly_name\" : \"Mr. Sharice Greenholt\",\n    \"date_updated\" : \"2023-04-19T21:54:39.644Z\",\n    \"date_created\" : \"2022-06-15T16:00:36.644Z\",\n    \"sandbox\" : \"jj4qid92z0lj8w\",\n    \"account_sid\" : \"ACFdFFE3d2955eFE764E2AFFdabEc9c2a1\",\n    \"type\" : \"fcm\",\n    \"url\" : \"https://web.example.mocklab.io/890825\",\n    \"sid\" : \"CRDDF33544A2E08c5D1A49927fE6f3215e\"\n  }, {\n    \"friendly_name\" : \"Adelina Frami\",\n    \"date_updated\" : \"2023-02-18T22:21:46.644Z\",\n    \"date_created\" : \"2022-11-01T14:28:54.644Z\",\n    \"sandbox\" : \"mt2t22rr8yst7ox988q2btd1qqer8icx4e5hx3jei11kf6phu0rks7g0xve9nj7g7ethu39fiopbmjsdoadvel748mnuz5sh46x59hee1odzs80s5xj93gbcrwazsh70ymrxp9qket4oov33\",\n    \"account_sid\" : \"ACeB88cFf32dDA0F8A1DCE73Ea33ccd34e\",\n    \"type\" : \"fcm\",\n    \"url\" : \"https://web.example.mocklab.io/149298\",\n    \"sid\" : \"CR4ABE86DE2ffec46870B53cF012e38ed4\"\n  } ],\n  \"meta\" : {\n    \"first_page_url\" : \"https://web.example.mocklab.io/812287\",\n    \"next_page_url\" : \"https://web.example.mocklab.io/148320\",\n    \"previous_page_url\" : \"https://web.example.mocklab.io/366073\",\n    \"page\" : 5531594964168906723,\n    \"key\" : \"bwil62yecuwgetljs2e4zeuumoqoszrklb0w783xbv71xc1uxdrx4gd1vwnjuak72var1nuszc3z7lfd7nqulx45u0ythhhpa33c9vqzrzb94f0\",\n    \"url\" : \"https://web.example.mocklab.io/417211\",\n    \"page_size\" : 1741202756623919150\n  }\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "f6324ee0-f186-4a16-9dbf-ba1e92b0e618",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:19.645673Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "ListCredential",
+          "schema" : {
+            "properties" : {
+              "credentials" : {
+                "items" : {
+                  "$ref" : "#/components/schemas/notify.v1.credential"
+                },
+                "type" : "array"
+              },
+              "meta" : {
+                "properties" : {
+                  "first_page_url" : {
+                    "format" : "uri",
+                    "type" : "string"
+                  },
+                  "key" : {
+                    "type" : "string"
+                  },
+                  "next_page_url" : {
+                    "format" : "uri",
+                    "nullable" : true,
+                    "type" : "string"
+                  },
+                  "page" : {
+                    "type" : "integer"
+                  },
+                  "page_size" : {
+                    "type" : "integer"
+                  },
+                  "previous_page_url" : {
+                    "format" : "uri",
+                    "nullable" : true,
+                    "type" : "string"
+                  },
+                  "url" : {
+                    "format" : "uri",
+                    "type" : "string"
+                  }
+                },
+                "type" : "object"
+              }
+            },
+            "title" : "ListCredentialResponse",
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 14
+  } ]
+}

@@ -1,0 +1,564 @@
+{
+  "mappings" : [ {
+    "id" : "c6be3710-8167-42e7-b213-4a85c3e32882",
+    "name" : "",
+    "request" : {
+      "urlPath" : "/v1/Exports/suc1dm1i3lbwaor3olm3bt7bpml0mx28i46ah2b28fp69r6l7k31z378fdqj9jxano9l3n4lab5ks8xtrdkvfdnti4a001/Jobs",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 201,
+      "body" : "{\n  \"end_day\" : \"fo66nwlnxbwvmi2wp07842m96ggkzqk7iwya53ypzqe5u0twtofv7rivilr30deusr0lew6sdt7eu9rax14avl7rbl74j1t8ovrdv04niufillwme\",\n  \"friendly_name\" : \"Chantay Ferry\",\n  \"webhook_method\" : \"dwl7urnecrgq5d6z1qbaccpt7k90bmxsbd0u\",\n  \"estimated_completion_time\" : \"2022-05-03T08:21:09.761351Z\",\n  \"webhook_url\" : \"https://web.example.mocklab.io/128593\",\n  \"start_day\" : \"4ftvsyosl\",\n  \"resource_type\" : \"yhavmer3fkn1w9dilf228cijwxwzkolhyiizih269n63zgw2lqvp185ubkgio2kjiv6tg75qirx4xmoorjmg50z86ucqx2zukga2j3afklu8d1zkxuskkinmxgrcxo5o6qmacjze8g017fru100wbw2jg69o\",\n  \"details\" : { },\n  \"job_sid\" : \"JSE019648aCecdf3Da0bAd58b528845fB1\",\n  \"email\" : \"0te6htic6mrpoy5g8w57rf6vs9g930h07el0d2kb1vr6rg5tehh8tp5ef59hli62fjrrvf1u56naoa46gldeztoquhk5jj8znbqra3k548t4weask8heo78h0dn5dmgzw3fpyvugw7j0uyk30al\",\n  \"job_queue_position\" : \"wtpnff555uj7xq832c6cbp8ygy4rz0yymjr3inlgkbun9ylvr3kd0ccpnzz3ta8ifmmixn21stzohewn6pdx2hoxlwfqaeuv4s63odh159vu7a2bityzfxvihrvdqblfli07g9qg2ekmv6rnhvtfb7iohyubu6scahqgsto\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "c6be3710-8167-42e7-b213-4a85c3e32882",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:09.761615Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "CreateExportCustomJob",
+          "schema" : {
+            "properties" : {
+              "details" : {
+                "description" : "The details of a job which is an object that contains an array of status grouped by `status` state.  Each `status` object has a `status` string, a count which is the number of days in that `status`, and list of days in that `status`. The day strings are in the format yyyy-MM-dd. As an example, a currently running job may have a status object for COMPLETED and a `status` object for SUBMITTED each with its own count and list of days.",
+                "nullable" : true
+              },
+              "email" : {
+                "description" : "The optional email to send the completion notification to",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "end_day" : {
+                "description" : "The end day for the export specified when creating the job",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "estimated_completion_time" : {
+                "description" : "this is the time estimated until your job is complete. This is calculated each time you request the job list. The time is calculated based on the current rate of job completion (which may vary) and your job queue position",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "friendly_name" : {
+                "description" : "The friendly name specified when creating the job",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "job_queue_position" : {
+                "description" : "This is the job position from the 1st in line. Your queue position will never increase. As jobs ahead of yours in the queue are processed, the queue position number will decrease",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "job_sid" : {
+                "description" : "The unique job_sid returned when the custom export was created",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^JS[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "resource_type" : {
+                "description" : "The type of communication – Messages, Calls, Conferences, and Participants",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "start_day" : {
+                "description" : "The start day for the custom export specified when creating the job",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "webhook_method" : {
+                "description" : "This is the method used to call the webhook on completion of the job. If this is supplied, `WebhookUrl` must also be supplied.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "webhook_url" : {
+                "description" : "The optional webhook url called on completion of the job. If this is supplied, `WebhookMethod` must also be supplied.",
+                "nullable" : true,
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 0
+  }, {
+    "id" : "16d5df3c-c304-4fe4-9d7a-736ca5b23303",
+    "name" : "",
+    "request" : {
+      "urlPath" : "/v1/Exports/p6my6tvn247406ilxtj58369cyololbcebzlz4vfoea59y6fy169jv4qijuutgqgxvmg1texg65veuijbjy4uf4mly6maxge17kbx1fdyafaxgqroe7oonkjb8fh06bxbvoefnw8qvoq/Jobs",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"meta\" : {\n    \"first_page_url\" : \"https://web.example.mocklab.io/722930\",\n    \"next_page_url\" : \"https://web.example.mocklab.io/030782\",\n    \"previous_page_url\" : \"https://web.example.mocklab.io/893035\",\n    \"page\" : 1755600806342436229,\n    \"key\" : \"5g6lwdm2ukavukc30y2515il74kup01nb4ilkd9l1nosg21jxmttp9mg4nnzh8in24eyxky9j3juzoesyaanvj95e8t0jqre124ip2hlqm159j5rmnv3dzgp4jlfvqlluf6jc3l57mclkafr0lmp63zjhbjh6lw48qvf6kjaloa6wt3\",\n    \"url\" : \"https://web.example.mocklab.io/841523\",\n    \"page_size\" : 4869001422977161944\n  },\n  \"jobs\" : [ {\n    \"end_day\" : \"83z3a5g9batgbun2v6wsrswfjm5wspeyu2pozwfo72tcsdmwup4k7t6k8lnenctdlvwkitd5l9scaq5wa54mpm9p75b6p01zdr9fh\",\n    \"friendly_name\" : \"Percy Boyle I\",\n    \"webhook_method\" : \"h9bcjpxap1xd4g6asqvqp3hky3\",\n    \"estimated_completion_time\" : \"2022-04-12T09:03:09.759674Z\",\n    \"webhook_url\" : \"https://web.example.mocklab.io/375408\",\n    \"start_day\" : \"cg69l1p0r2iohie8gvuff0ztha9svjdk86qrky7pu1zzaddj\",\n    \"resource_type\" : \"3yb4zpchoq2ns5rqyg1qpljtah2wqt6430bfajgvxtfai2rfsi89akqlcpt8acf8wrj8ukm64vlkwfvvohhccfsm43zh786pkqqmef3grl0w583u9chzqwsq3a7mgfjffj6yjq64yqcfx1xk8budgyn7s2v4njhnr2h0ycznra4d0u3e9kwgapvc4guv8qk\",\n    \"details\" : { },\n    \"job_sid\" : \"JS99cd45f788959532B19A47a2d5367368\",\n    \"email\" : \"p5jq9og1d8iejw9te9mj1yw93o9iiqr9ow9o4o4w2yn92f2cy1w0nyk75aqb5ikm0vnunk5emysxceww18bsrbauso2l5hcu4b5tso1b1jik394hhe4wrdqblljebpz4902y86qwg2dxxc4d5arm8cgt6vwf74ec9lr7vrzk6m4r7o1zd5zn95x\",\n    \"job_queue_position\" : \"hp1q7slbartz1ytvepykey6w50qsob3mnl5i3bgucpprtvcy9tgsalompl5y4zhnoaijkgxkrlvjvk5eqz\"\n  }, {\n    \"end_day\" : \"hqjuacc7n\",\n    \"friendly_name\" : \"Willie Fritsch\",\n    \"webhook_method\" : \"csjicpshsai3bofj2l03ta0tren4ot67zw18541flex6t9kldspjwzrjs9synl860p6bbtv2jtgf990h6x32a999ntqv22e0co6by0n7z6fl8oa4vbivn6zxjcqc105r7t1vuwk1whqaoy3o0wp4jr95pho08v1jtbyh8bj8k00837ev7kq7bx948us9\",\n    \"estimated_completion_time\" : \"2023-02-06T08:52:09.759907Z\",\n    \"webhook_url\" : \"https://web.example.mocklab.io/083335\",\n    \"start_day\" : \"wqxawzm7axmbtxsvvgownoq3gc8gnj0iuh7y1arl34zjjcomiw184cdi6nive56livhi03l67zyhk1mt41tvt7rrlnnl2b4eslko1usba6qi8d26ib4dny8i0\",\n    \"resource_type\" : \"w3wxhv0rjr6wzxsdobkjfoumaefl3xb566a0o1qa4hczhlq9p0odxz0w\",\n    \"details\" : { },\n    \"job_sid\" : \"JS155BBF1eE02fa07DB8eA6e6f66ad72d6\",\n    \"email\" : \"eltrwdrkatudqyxdquhksmkg9mdwfgmn4j14vmc4ehfkjo3a5r2f6qufmrl9rtt1gbgr\",\n    \"job_queue_position\" : \"fb54wbp1deko8ba159cp78x7a1w5wonas1fumr0uke6ixjqdz6ad5v8gzr2enavh06nnwoo0pa90hd8bkk89\"\n  }, {\n    \"end_day\" : \"ik0nl36fw8qoz4zvzw57hxg5egbetx6le7bvmhz3uh9osikrthvok8nogiovy0c46xlp5im209if7vdude3wrsngw2tp1d40ia0tmyfkzhcd2t956rt8bxncj75c1ka6apuzdtzbalumki8b19dsnrv0oavv2l8lt7l2mo95yc21hwj4hsf4rro8sq0o4s8dgofbql6x\",\n    \"friendly_name\" : \"Mrs. Buford Schiller\",\n    \"webhook_method\" : \"qrmvylmcq08j37hjnt95hnoy8jdy6wupqsbtqzc8qtmuff\",\n    \"estimated_completion_time\" : \"2022-07-20T05:43:09.760119Z\",\n    \"webhook_url\" : \"https://web.example.mocklab.io/024560\",\n    \"start_day\" : \"f1n0iunizu2nozut1glhp5bwquuo\",\n    \"resource_type\" : \"w76mn9u7l3pduzqx4bp\",\n    \"details\" : { },\n    \"job_sid\" : \"JS89372415dA366B6113BAd00aFa8c0aB7\",\n    \"email\" : \"p7ulcvfh8rra782ng7a22q58gk2qbzhd3o6xwmebznkk4s327r594w5vl1f27v8j4vdlvqkv7ihbrxcwbj1bz0yel3hitjsnll2ybb0bj4141w131880zzbry7wxpvad0pdcdlfdeex7ca1t3sgr5pd\",\n    \"job_queue_position\" : \"ky33ml02ux581zk7y3\"\n  }, {\n    \"end_day\" : \"domkwll9u8qkhpj\",\n    \"friendly_name\" : \"Isiah Dach\",\n    \"webhook_method\" : \"3s2yqj92njgjgmrptdkzqgacinrh6dq3vw6yuzp4kkrkiwhubwgxlmj8enumnpfsc0fxv9d34iah66xxs273v9v73lwwsbjq210b62\",\n    \"estimated_completion_time\" : \"2022-12-03T05:38:09.760321Z\",\n    \"webhook_url\" : \"https://web.example.mocklab.io/600056\",\n    \"start_day\" : \"2gpr4v4qx0gu6jpnu6xq2kx2l105m3688gr\",\n    \"resource_type\" : \"r5hwh93u8x41f4piuqflnfmi1m9l8cpftfkfvoovjz9fsh4fkyzt5nygfnv1btp60d6c510qs4c97lvx5l8hkyaih1nuxsjk8d44nrqk4ruuaj8\",\n    \"details\" : { },\n    \"job_sid\" : \"JScCcdF3B80A88BDf32F74b35Ce1A07d8a\",\n    \"email\" : \"tlfdg0ky5tacqk3vkfd\",\n    \"job_queue_position\" : \"0wga7vc7tx15phrne8h1qxyrdyi94cb598zm89idnqq8yt32da8mjms8xdx6wqh146j2eoy4cgl403xwcfjm2ptstfu6ex3ogvuq70hq83bg87fayvabbnsypl2s4o4md9qqhqht2w4d9y0poxxyqlqv62kdxe485sotv858fejvv2p2qx7r0tm2gzvh5twtuwgot\"\n  }, {\n    \"end_day\" : \"q7dkeuhhhlcqd7v7mo47q\",\n    \"friendly_name\" : \"Ricki Hansen\",\n    \"webhook_method\" : \"cm992bddls7n7gw1f8kuyd97sqv1rmni3y376zoansnto5un1peqto6bxer7ot4ux16mh7xl00xkrkryobkdp6g0ovx4koz86b0tv0lotv3pig4hwtf2jfvh5ho2b7kdizk2tizm651sx6pfhvumur7lntd601mbhlbn2xdvkvlchjazvu9xuiblw6bvg\",\n    \"estimated_completion_time\" : \"2022-12-31T05:25:09.760541Z\",\n    \"webhook_url\" : \"https://web.example.mocklab.io/656865\",\n    \"start_day\" : \"kglgjgvx7m10m9cjlvhyt\",\n    \"resource_type\" : \"pn5ffmluhc05v1q1xa33itpxlppoe39puxz2ekjcxxr0zkk357z33et38nvmwo6hmhq3ddrnaadejtdeartj9dxvmb11l17sxex3onsead0i1jn20euiue02y6utsdkz3xx4b9d6vyouj\",\n    \"details\" : { },\n    \"job_sid\" : \"JSca79aCccb5aCEecFecaEc0bC59d00Dc9\",\n    \"email\" : \"wcou8qplmqw5vag45s009udxyevf07qifflgxmm8j4\",\n    \"job_queue_position\" : \"xeba6rdfqyebar652rc4e7lj7gxkvd0q8w8xw6qsm6il5ygv6vsxpjgr5om0du4jqa46mzsg\"\n  }, {\n    \"end_day\" : \"f1ke07r2ktj3332hqib6pka6g8kt135hzjm79yrtp616p5a33wejxzeevsk6a0pvy6fos5snvz028dv1uraa4s8bmlqyublxfsce89sgvaroqaa60pkjywl4440ea7nq3kojlex7dg8y68dr9zgufybyub002dlwhp1xreflk6xussqgwhenn64d37vin3mcylpqu\",\n    \"friendly_name\" : \"Wyatt Osinski\",\n    \"webhook_method\" : \"7jber50bh2ggs7q6zrx6854gsy6zea6vnv7y4q97ezfp6xyl67gkkpf0qex1saf454ewt7yp4be65ny7dtkwnfy92hpmpcrnbaf2qv\",\n    \"estimated_completion_time\" : \"2022-07-11T09:19:09.76075Z\",\n    \"webhook_url\" : \"https://web.example.mocklab.io/048061\",\n    \"start_day\" : \"xe96vll8ue6tafys1ubpnyc8hywc51bqxqjx6ms4lg\",\n    \"resource_type\" : \"3vioc2qycejqgwswik342aw8rnapydfans5v12m\",\n    \"details\" : { },\n    \"job_sid\" : \"JSFf6B6CCb45de5c7Dac0fAbEa226FA4E7\",\n    \"email\" : \"5kx4uqdh8xpkvarbyid7kl1wtdc45yezmonlwdocii5e15swod8xn9nahaae9cqp6lg1ifqm1kalvkkcryc8922jjjmqc10vtnwtwk0dgkinv3d2ktldol7t\",\n    \"job_queue_position\" : \"4a4xzi61qg93qtgkjddnpw3v5fjz7v74gfyy8npz5s0dgvevyzts0ogw8a4fjyrof36vii2v6g8gw4al42dmafasj3i1fqps7qnblpxpznwuhwhwjuxcvw785641jxrwgomxs2yfy7alx9z3di08m9hq27mfzl2ho0zmsgx3zt63eggfpjbckxfxy95vudardugf\"\n  }, {\n    \"end_day\" : \"ocr6pkbgn9trlqjjypsx8v2bfhy\",\n    \"friendly_name\" : \"Cassie Legros\",\n    \"webhook_method\" : \"f2prqy0rje570movo2qyzrh6jms6zcocxpksz2na7v3oza080aomqr2lljtsc6u3b3ukh8q5opm0noxr9w71kn5e2ahr1amm6hj574dd1jgettqm9z3tgo156k8\",\n    \"estimated_completion_time\" : \"2022-05-18T08:54:09.760956Z\",\n    \"webhook_url\" : \"https://web.example.mocklab.io/146670\",\n    \"start_day\" : \"hkc4ww9v1i5lhz4ye8u48jxshc01fdeoscv1u3g3dm3p8aduc9bu93suww9kyks4yw75qd9so3318lt33hspqof2sjq53rf0az6v99wyvt3406sliy1ng1v6altvuhorxv68ncywdgl9j07qxdx2sig\",\n    \"resource_type\" : \"6jldtx6vm2rebqiybiowgbk84im01rxlh86cfd1wk2r2qcrurub6z1atrwriy2pfm0214q3leyi2eqryvst43r84g08tpbuoq03o8bz8jgbhtjuhr8umoij6a4y9u9sl4x2q8pdfn63jdbs9t680fa2ziqu65xrphxrd2ihe4lm5g3azedd6qxdmcnxd\",\n    \"details\" : { },\n    \"job_sid\" : \"JS297832DBEAEee2aB80CD1e0Cc091ACc8\",\n    \"email\" : \"4854mr1ojmr85hq6i5japjbp3ka9qhov39o6mckr6fvtxni6tyvos5igij4lozo9brm14hom2u3p2x1j2ifxy1ad5zmhywnaratp6ls150au2l31exq6z3ir7b2advmewuzjz5xspkf785p4yri6fquvmnmvodc1qkqmolq7ft\",\n    \"job_queue_position\" : \"7k2rizkdnr26npwknrv3l9ikuhsefid9tbma8uosirdl6cju0m2eg5d6kucdq9pxrbkly\"\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "16d5df3c-c304-4fe4-9d7a-736ca5b23303",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:09.761249Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "ListExportCustomJob",
+          "schema" : {
+            "properties" : {
+              "jobs" : {
+                "items" : {
+                  "$ref" : "#/components/schemas/bulkexports.v1.export.export_custom_job"
+                },
+                "type" : "array"
+              },
+              "meta" : {
+                "properties" : {
+                  "first_page_url" : {
+                    "format" : "uri",
+                    "type" : "string"
+                  },
+                  "key" : {
+                    "type" : "string"
+                  },
+                  "next_page_url" : {
+                    "format" : "uri",
+                    "nullable" : true,
+                    "type" : "string"
+                  },
+                  "page" : {
+                    "type" : "integer"
+                  },
+                  "page_size" : {
+                    "type" : "integer"
+                  },
+                  "previous_page_url" : {
+                    "format" : "uri",
+                    "nullable" : true,
+                    "type" : "string"
+                  },
+                  "url" : {
+                    "format" : "uri",
+                    "type" : "string"
+                  }
+                },
+                "type" : "object"
+              }
+            },
+            "title" : "ListExportCustomJobResponse",
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 1
+  }, {
+    "id" : "7fa29250-0416-46c0-87cb-7a06c556dd1a",
+    "name" : "Fetch a specific Day.",
+    "request" : {
+      "urlPath" : "/v1/Exports/kx0stb0zkjv30pum0y0t40yswwg38uxsxizgywn4w1oceianwaj6vjqft20m30ob1y6rddpuoj7yiq6xxysd27v8s1jolfxxr43i4wuvrgnhstao23khnjh4wt6wzkpr0sr1cbqdt4xwrx2hnnzvf8c1qb4za7ezzad/Days/m2983yrbu4f6b4kqik9dp6t90bwtgaylubedjrcoz95ep08bqpdf7sloi21mykmmbhqd0nwh3oi7rb8stohyx2mmtwjlwcrs95c578znlueur9703krgb4ce0xvkb6i48elhoslshyy",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 307,
+      "body" : "{\n  \"redirect_to\" : \"mzsdulo83tbsaoshgo0awhz3xj7aekv45utxfshapmur2rsohbo6emnhmwhoq73mm25uyg5hm7hd4v06buk78xhy0tq0s\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "7fa29250-0416-46c0-87cb-7a06c556dd1a",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:09.759242Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "FetchDay",
+          "schema" : {
+            "properties" : {
+              "redirect_to" : {
+                "format" : "uri",
+                "nullable" : true,
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 2
+  }, {
+    "id" : "b2f8ce18-6265-4750-bb0b-0afa0cc80b1d",
+    "name" : "Retrieve a list of all Days for a resource.",
+    "request" : {
+      "urlPath" : "/v1/Exports/g0h4giq9tquvqs7cv6kdtzs5wungpj/Days",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"meta\" : {\n    \"first_page_url\" : \"https://web.example.mocklab.io/200337\",\n    \"next_page_url\" : \"https://web.example.mocklab.io/463804\",\n    \"previous_page_url\" : \"https://web.example.mocklab.io/352680\",\n    \"page\" : 419205238778110743,\n    \"key\" : \"rsl5qxy6ydjku56vidx571mdwi6vamohe8dv6n2rbmez76tlvl1avqpkdvw9si147xxzuo5g1wbesngznbwbgqis2ee9kpsyjg725ec0heusltw2yiqgmb45e8njvgiq9gy3k02fvd7ua5w4bqezlevcq5dakdmxrv5s5q8uyguz75p33taya3kze\",\n    \"url\" : \"https://web.example.mocklab.io/797503\",\n    \"page_size\" : 597846046109225689\n  },\n  \"days\" : [ {\n    \"friendly_name\" : \"Eugenio McKenzie\",\n    \"size\" : 237318137294322290,\n    \"resource_type\" : \"ctej6hy7joaerjts9nrchczid6ug5u5h0vepzysx8zzy3pom5q3p6l4an18nu3fzxbij54rcf6vw26x4gx1lw1\",\n    \"create_date\" : \"2022-11-30T07:50:09.758253Z\",\n    \"day\" : \"9ltsf8kovrnk6k72rs5ccyxup4n5j4ejtokwqzvicc7lapsrn13ogvmm7npenkdal0z8lb0ha2ss6l56dpwht8ktlef7ggpiuli85dopwv7wtn2zy44574jzae\"\n  }, {\n    \"friendly_name\" : \"Lester Adams DDS\",\n    \"size\" : 255270090411918885,\n    \"resource_type\" : \"cr5q2kuis52q2jip4cqhitsqnbss\",\n    \"create_date\" : \"2022-05-29T06:01:09.758352Z\",\n    \"day\" : \"xujugioo9xvld1ys8duo52xu1kdl5221ljrgz3x4icfrlq1sr38x0p8yi\"\n  }, {\n    \"friendly_name\" : \"Merilyn Jacobson\",\n    \"size\" : 6883359207360353954,\n    \"resource_type\" : \"msvhwrb4jugnyjcg561lhnx34fpv3177o8m010k23zyqch4o07xh8mw6uw55d19u4z8msahfvwltjam3\",\n    \"create_date\" : \"2023-01-06T07:19:09.758447Z\",\n    \"day\" : \"ig6ji59au2vojgd9u9u6w8pz86b8xdro3wyb4bqgqmqpgidb91obq3u3qhzjutck7cr2w0nyxbc7glxb0q26gfkig7\"\n  }, {\n    \"friendly_name\" : \"Augustine Rohan\",\n    \"size\" : 6880086451586032110,\n    \"resource_type\" : \"97fq6titv2ufujx7j\",\n    \"create_date\" : \"2022-08-08T08:10:09.758545Z\",\n    \"day\" : \"mfbe5tub5tfpd7yzckwo6qnxsdkaj7grxhcn12k8aubbkv13jwl1g2aa682cynvz4fih221ai3k6hwx1u1msqgj52koliedsmgamynrhbk1q1a2ps769kfnsdo063wy4vl05bf9dtu4wo50eqymdad\"\n  }, {\n    \"friendly_name\" : \"Timmy Wolff IV\",\n    \"size\" : 4511485978219128769,\n    \"resource_type\" : \"h332x83ybwggqbl6jaslg8t4i5wnouib4a8dlpq57yj7umi5w4am3bkaudle7m34osl2wra47sg7\",\n    \"create_date\" : \"2022-04-17T08:36:09.758643Z\",\n    \"day\" : \"lc8ymnat7qc25s744gg0kkrgasb5wu6qukiw615n3p6q63h3e8mnaellpty2yvtwm6x4kl7b7ckdfun1qm2t16oxgzt0ux1o2o7eklz\"\n  }, {\n    \"friendly_name\" : \"Isidro Ortiz\",\n    \"size\" : 3534944708750664180,\n    \"resource_type\" : \"l0yo57uqjueulm6tb3csiw45rzpzk2edt1ekow1keyrsugamtnrnxoewiv1hjcgs5iimwdra2uavszevhha2xf5ldt8tlx3ce2c32m07drad366gshnlvkynsx3340\",\n    \"create_date\" : \"2022-11-15T06:14:09.758742Z\",\n    \"day\" : \"p2xha9qwg48sh1xt94j0vx768hx2dv16bzeqk3\"\n  }, {\n    \"friendly_name\" : \"Heath Bergstrom\",\n    \"size\" : 1033840494938944394,\n    \"resource_type\" : \"4bk9ldu0f9xm21x4e5hnmsvjlj4fuk179zmbra9ffw8padd130awx6d3tybwsz5ppqwhltkns6okb06x31eva7qofgkj1mooftahu241goks19coli0f8shdyod9g6m0hb06uo89jzqkmlwqb1vo3tnp7zdh5n9op\",\n    \"create_date\" : \"2023-03-03T08:37:09.758837Z\",\n    \"day\" : \"inyq836b74o0cjrpwpkg\"\n  }, {\n    \"friendly_name\" : \"Boyd Lebsack\",\n    \"size\" : 113328230040804295,\n    \"resource_type\" : \"5771lq04e58f1uc9svlhpfa6q7q5wgq0v5tms4rwau31z5upm9ktliripa63o37jkwqoe1af1ovwgkeloa0m2rl5mhmh8jvtokjf76lqssbltzetyxufc060s7sj\",\n    \"create_date\" : \"2022-09-14T07:34:09.758938Z\",\n    \"day\" : \"p9ub3nxplmpix64njeqpmn29wwl710y9pm7\"\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "b2f8ce18-6265-4750-bb0b-0afa0cc80b1d",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:09.759116Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "ListDay",
+          "schema" : {
+            "properties" : {
+              "days" : {
+                "items" : {
+                  "$ref" : "#/components/schemas/bulkexports.v1.export.day"
+                },
+                "type" : "array"
+              },
+              "meta" : {
+                "properties" : {
+                  "first_page_url" : {
+                    "format" : "uri",
+                    "type" : "string"
+                  },
+                  "key" : {
+                    "type" : "string"
+                  },
+                  "next_page_url" : {
+                    "format" : "uri",
+                    "nullable" : true,
+                    "type" : "string"
+                  },
+                  "page" : {
+                    "type" : "integer"
+                  },
+                  "page_size" : {
+                    "type" : "integer"
+                  },
+                  "previous_page_url" : {
+                    "format" : "uri",
+                    "nullable" : true,
+                    "type" : "string"
+                  },
+                  "url" : {
+                    "format" : "uri",
+                    "type" : "string"
+                  }
+                },
+                "type" : "object"
+              }
+            },
+            "title" : "ListDayResponse",
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 3
+  }, {
+    "id" : "6f3f9bbd-1dca-4258-8710-5555481458b1",
+    "name" : "Update a specific Export Configuration.",
+    "request" : {
+      "urlPath" : "/v1/Exports/ypkc1gys5v7xkuanflf7zoxmu05ko4z3wl8t46bn4vi6wl8gfnsgkctkrl19xyx59h2s8ovskdg8czqzobpr7xepjpi4puhn2v0zbxyudhhyhqt1quzztvwmqxla8ln6nxch7l4mumrcrdjue9ecwyryziqamuvh3czfzpeos6suu1vavu2b5jo/Configuration",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"webhook_method\" : \"qxof0hfh7tx0923v81foo1vydazlm324mdbblhagp16uk72alxo660uvo83z2me7p7mw5pftevid24g3m97q0e18kzzf70f8taz8k9dwaj0onvw0zoy7j5wm\",\n  \"webhook_url\" : \"https://web.example.mocklab.io/379740\",\n  \"resource_type\" : \"hzgww\",\n  \"enabled\" : true,\n  \"url\" : \"https://web.example.mocklab.io/187293\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "6f3f9bbd-1dca-4258-8710-5555481458b1",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:09.757842Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "UpdateExportConfiguration",
+          "schema" : {
+            "properties" : {
+              "enabled" : {
+                "description" : "If true, Twilio will automatically generate every day's file when the day is over.",
+                "nullable" : true,
+                "type" : "boolean"
+              },
+              "resource_type" : {
+                "description" : "The type of communication – Messages, Calls, Conferences, and Participants",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "url" : {
+                "description" : "The URL of this resource.",
+                "format" : "uri",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "webhook_method" : {
+                "description" : "Sets whether Twilio should call a webhook URL when the automatic generation is complete, using GET or POST. The actual destination is set in the webhook_url",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "webhook_url" : {
+                "description" : "Stores the URL destination for the method specified in webhook_method.",
+                "format" : "uri",
+                "nullable" : true,
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 4
+  }, {
+    "id" : "e417ddde-24eb-4267-b581-afb61c10204a",
+    "name" : "Fetch a specific Export Configuration.",
+    "request" : {
+      "urlPath" : "/v1/Exports/1cokuea3okt6tr0acn/Configuration",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"webhook_method\" : \"u4y1j6\",\n  \"webhook_url\" : \"https://web.example.mocklab.io/886869\",\n  \"resource_type\" : \"eaqmucedm2kbtukambhlt3xirwuk23dh6dzz5t69puu9vytcht2epdhoi6t8pa64\",\n  \"enabled\" : false,\n  \"url\" : \"https://web.example.mocklab.io/612399\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "e417ddde-24eb-4267-b581-afb61c10204a",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:09.757613Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "FetchExportConfiguration",
+          "schema" : {
+            "properties" : {
+              "enabled" : {
+                "description" : "If true, Twilio will automatically generate every day's file when the day is over.",
+                "nullable" : true,
+                "type" : "boolean"
+              },
+              "resource_type" : {
+                "description" : "The type of communication – Messages, Calls, Conferences, and Participants",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "url" : {
+                "description" : "The URL of this resource.",
+                "format" : "uri",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "webhook_method" : {
+                "description" : "Sets whether Twilio should call a webhook URL when the automatic generation is complete, using GET or POST. The actual destination is set in the webhook_url",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "webhook_url" : {
+                "description" : "Stores the URL destination for the method specified in webhook_method.",
+                "format" : "uri",
+                "nullable" : true,
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 5
+  }, {
+    "id" : "1d33d903-c88f-4407-9ed0-ca5c117f31a0",
+    "name" : "Fetch a specific Export.",
+    "request" : {
+      "urlPath" : "/v1/Exports/6sc7k7ojhsgo03vmxtsju4fr1egnb3zdw81olmmxwowusnhfzgar1ji88v672dam4by4oqchhj1vjczl6ftfx1fbstm372knmzd2xutlti",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"resource_type\" : \"7xpczu1ti46p31x4lvwvgvj7fzuuldxsihgm2f5pg5b5to3kv4q7pvbgl4hvx24j9o8gdz6c32rbk6kc3v4tgwim27rzogc5jc50dhsqvxhycpgwt5xm1519qql73rw09ozfp69vbdxf9yao0\",\n  \"links\" : { },\n  \"url\" : \"https://web.example.mocklab.io/224481\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "1d33d903-c88f-4407-9ed0-ca5c117f31a0",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:09.757352Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "FetchExport",
+          "schema" : {
+            "properties" : {
+              "links" : {
+                "description" : "Contains a dictionary of URL links to nested resources of this Export.",
+                "format" : "uri-map",
+                "nullable" : true,
+                "type" : "object"
+              },
+              "resource_type" : {
+                "description" : "The type of communication – Messages, Calls, Conferences, and Participants",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "url" : {
+                "description" : "The URL of this resource.",
+                "format" : "uri",
+                "nullable" : true,
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 6
+  }, {
+    "id" : "8fa036a6-7172-4240-8e5a-98fdbe514470",
+    "name" : "",
+    "request" : {
+      "urlPath" : "/v1/Exports/Jobs/JS254574aA9838BBEfC48fFd850D39c20B",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"end_day\" : \"9odp7p8ixoyrnu3zto5xka8wn1gc9bmpnraxb1ptxrodf131o30lya470zxsfg2998gaomp2h0rt1mwumbtjz1yndqr8ymp8zvlefjiq4dz1pxfmuuwrnim4m1hf8agvqoq36cvg7dv3rweelh45255dma1lf2mhi6bcay55t74i32weit2epfa7pzdq99ngevfxb\",\n  \"friendly_name\" : \"Leonora Rosenbaum\",\n  \"webhook_method\" : \"fu7flzv74r8pptzcven3i71k8lqyvqn06y5ewcf5pt5py4v614jhzskkfiwxtm097v74fei1miw71pvsz51nf9s5g3d02qo070vvge90fh9djd8\",\n  \"estimated_completion_time\" : \"2022-08-16T07:49:09.75674Z\",\n  \"webhook_url\" : \"https://web.example.mocklab.io/451790\",\n  \"start_day\" : \"fkk51oedp9g5g2uu5wv8iqo9qriziy06qxnt95lrtm16x010oq0p2v3m3iukkfotjgrcniqb0ypbxfntrvwsv926hq3nkilpegkkszx6ub7hdjc1u3r1d1trcjfxhgqmimyvnv52j0gg\",\n  \"resource_type\" : \"tfyvom2594afe1e8gewnslceicgxxodifom3n9e78qu6cxk7ipe\",\n  \"details\" : { },\n  \"job_sid\" : \"JSBFe31aD04c70E508A7C3DEdF2FE3DAdB\",\n  \"email\" : \"g3ec\",\n  \"job_queue_position\" : \"jh7jkhd22m5xuhi5z\",\n  \"url\" : \"https://web.example.mocklab.io/135385\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "8fa036a6-7172-4240-8e5a-98fdbe514470",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:09.75716Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "FetchJob",
+          "schema" : {
+            "properties" : {
+              "details" : {
+                "description" : "The details of a job which is an object that contains an array of status grouped by `status` state.  Each `status` object has a `status` string, a count which is the number of days in that `status`, and list of days in that `status`. The day strings are in the format yyyy-MM-dd. As an example, a currently running job may have a status object for COMPLETED and a `status` object for SUBMITTED each with its own count and list of days.",
+                "nullable" : true
+              },
+              "email" : {
+                "description" : "The optional email to send the completion notification to",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "end_day" : {
+                "description" : "The end time for the export specified when creating the job",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "estimated_completion_time" : {
+                "description" : "this is the time estimated until your job is complete. This is calculated each time you request the job list. The time is calculated based on the current rate of job completion (which may vary) and your job queue position",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "friendly_name" : {
+                "description" : "The friendly name specified when creating the job",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "job_queue_position" : {
+                "description" : "This is the job position from the 1st in line. Your queue position will never increase. As jobs ahead of yours in the queue are processed, the queue position number will decrease",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "job_sid" : {
+                "description" : "The job_sid returned when the export was created",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^JS[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "resource_type" : {
+                "description" : "The type of communication – Messages, Calls, Conferences, and Participants",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "start_day" : {
+                "description" : "The start time for the export specified when creating the job",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "url" : {
+                "format" : "uri",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "webhook_method" : {
+                "description" : "This is the method used to call the webhook",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "webhook_url" : {
+                "description" : "The optional webhook url called on completion",
+                "nullable" : true,
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 7
+  }, {
+    "id" : "5484d5d2-20cb-4c83-b76f-8e538ec5bf46",
+    "name" : " - 204",
+    "request" : {
+      "urlPath" : "/v1/Exports/Jobs/JSCafDCbCa4b985eE7e8aC0B2dAa94f392",
+      "method" : "DELETE"
+    },
+    "response" : {
+      "status" : 204
+    },
+    "uuid" : "5484d5d2-20cb-4c83-b76f-8e538ec5bf46",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:09.756598Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "DeleteJob"
+        }
+      }
+    },
+    "insertionIndex" : 8
+  } ]
+}

@@ -1,0 +1,322 @@
+{
+  "mappings" : [ {
+    "id" : "bcfcd7cb-2f24-45ca-b427-2f9664153d0e",
+    "name" : "Get hourly forecasts by coordinates - 422",
+    "request" : {
+      "urlPath" : "/forecast",
+      "method" : "GET",
+      "queryParameters" : {
+        "lng" : {
+          "equalTo" : "1.2450202372422386E307"
+        },
+        "lat" : {
+          "equalTo" : "1.7573320819497716E308"
+        }
+      }
+    },
+    "response" : {
+      "status" : 422
+    },
+    "uuid" : "bcfcd7cb-2f24-45ca-b427-2f9664153d0e",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:15.646404Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "getForecast"
+        }
+      }
+    },
+    "insertionIndex" : 0
+  }, {
+    "id" : "56cf8bd0-779a-44b1-8d0d-95bf09a00931",
+    "name" : "Get hourly forecasts by coordinates - 403",
+    "request" : {
+      "urlPath" : "/forecast",
+      "method" : "GET",
+      "queryParameters" : {
+        "lng" : {
+          "equalTo" : "9.867571206152651E307"
+        },
+        "lat" : {
+          "equalTo" : "4.094814480532281E307"
+        }
+      }
+    },
+    "response" : {
+      "status" : 403
+    },
+    "uuid" : "56cf8bd0-779a-44b1-8d0d-95bf09a00931",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:15.646339Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "getForecast"
+        }
+      }
+    },
+    "insertionIndex" : 1
+  }, {
+    "id" : "0deb9bc8-a78a-4be6-af42-2fa41ee94ec2",
+    "name" : "Get hourly forecasts by coordinates (application/json)",
+    "request" : {
+      "urlPath" : "/forecast",
+      "method" : "GET",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/json"
+        }
+      },
+      "queryParameters" : {
+        "lng" : {
+          "equalTo" : "7.458760209541985E307"
+        },
+        "lat" : {
+          "equalTo" : "1.3300452306302775E308"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"hours\" : [ {\n    \"wavePeriod\" : [ {\n      \"source\" : \"fcoo\",\n      \"value\" : \"3.63850457084894\"\n    }, {\n      \"source\" : \"fcoo\",\n      \"value\" : \"3.63850457084894\"\n    }, {\n      \"source\" : \"fcoo\",\n      \"value\" : \"3.63850457084894\"\n    }, {\n      \"source\" : \"fcoo\",\n      \"value\" : \"3.63850457084894\"\n    }, {\n      \"source\" : \"fcoo\",\n      \"value\" : \"3.63850457084894\"\n    } ],\n    \"airTemperature\" : [ {\n      \"source\" : \"smhi\",\n      \"value\" : \"-2.6\"\n    }, {\n      \"source\" : \"smhi\",\n      \"value\" : \"-2.6\"\n    }, {\n      \"source\" : \"smhi\",\n      \"value\" : \"-2.6\"\n    } ],\n    \"swellHeight\" : [ {\n      \"source\" : \"nooa\",\n      \"value\" : \"2.94\"\n    }, {\n      \"source\" : \"nooa\",\n      \"value\" : \"2.94\"\n    }, {\n      \"source\" : \"nooa\",\n      \"value\" : \"2.94\"\n    }, {\n      \"source\" : \"nooa\",\n      \"value\" : \"2.94\"\n    }, {\n      \"source\" : \"nooa\",\n      \"value\" : \"2.94\"\n    }, {\n      \"source\" : \"nooa\",\n      \"value\" : \"2.94\"\n    } ],\n    \"swellPeriod\" : [ {\n      \"source\" : \"nooa\",\n      \"value\" : \"15.88\"\n    }, {\n      \"source\" : \"nooa\",\n      \"value\" : \"15.88\"\n    }, {\n      \"source\" : \"nooa\",\n      \"value\" : \"15.88\"\n    }, {\n      \"source\" : \"nooa\",\n      \"value\" : \"15.88\"\n    }, {\n      \"source\" : \"nooa\",\n      \"value\" : \"15.88\"\n    }, {\n      \"source\" : \"nooa\",\n      \"value\" : \"15.88\"\n    } ],\n    \"swellDirection\" : [ {\n      \"source\" : \"nooa\",\n      \"value\" : \"164.35\"\n    }, {\n      \"source\" : \"nooa\",\n      \"value\" : \"164.35\"\n    }, {\n      \"source\" : \"nooa\",\n      \"value\" : \"164.35\"\n    }, {\n      \"source\" : \"nooa\",\n      \"value\" : \"164.35\"\n    }, {\n      \"source\" : \"nooa\",\n      \"value\" : \"164.35\"\n    } ],\n    \"waterTemperature\" : [ {\n      \"source\" : \"fcoo\",\n      \"value\" : \"9\"\n    }, {\n      \"source\" : \"fcoo\",\n      \"value\" : \"9\"\n    }, {\n      \"source\" : \"fcoo\",\n      \"value\" : \"9\"\n    } ],\n    \"time\" : \"2018-01-19T17:00:00+00:00\",\n    \"waveDirection\" : [ {\n      \"source\" : \"fcoo\",\n      \"value\" : 121.35698599493828\n    }, {\n      \"source\" : \"fcoo\",\n      \"value\" : 121.35698599493828\n    }, {\n      \"source\" : \"fcoo\",\n      \"value\" : 121.35698599493828\n    }, {\n      \"source\" : \"fcoo\",\n      \"value\" : 121.35698599493828\n    }, {\n      \"source\" : \"fcoo\",\n      \"value\" : 121.35698599493828\n    }, {\n      \"source\" : \"fcoo\",\n      \"value\" : 121.35698599493828\n    } ],\n    \"windDirection\" : [ {\n      \"source\" : \"smhi\",\n      \"value\" : \"36.0\"\n    }, {\n      \"source\" : \"smhi\",\n      \"value\" : \"36.0\"\n    }, {\n      \"source\" : \"smhi\",\n      \"value\" : \"36.0\"\n    }, {\n      \"source\" : \"smhi\",\n      \"value\" : \"36.0\"\n    } ],\n    \"windSpeed\" : [ {\n      \"source\" : \"smhi\",\n      \"value\" : \"36.0\"\n    }, {\n      \"source\" : \"smhi\",\n      \"value\" : \"36.0\"\n    }, {\n      \"source\" : \"smhi\",\n      \"value\" : \"36.0\"\n    }, {\n      \"source\" : \"smhi\",\n      \"value\" : \"36.0\"\n    }, {\n      \"source\" : \"smhi\",\n      \"value\" : \"36.0\"\n    } ],\n    \"waveHeight\" : [ {\n      \"source\" : \"fmi\",\n      \"value\" : \"0.5969999991357327\"\n    }, {\n      \"source\" : \"fmi\",\n      \"value\" : \"0.5969999991357327\"\n    }, {\n      \"source\" : \"fmi\",\n      \"value\" : \"0.5969999991357327\"\n    } ]\n  }, {\n    \"wavePeriod\" : [ {\n      \"source\" : \"fcoo\",\n      \"value\" : \"3.63850457084894\"\n    }, {\n      \"source\" : \"fcoo\",\n      \"value\" : \"3.63850457084894\"\n    }, {\n      \"source\" : \"fcoo\",\n      \"value\" : \"3.63850457084894\"\n    }, {\n      \"source\" : \"fcoo\",\n      \"value\" : \"3.63850457084894\"\n    }, {\n      \"source\" : \"fcoo\",\n      \"value\" : \"3.63850457084894\"\n    }, {\n      \"source\" : \"fcoo\",\n      \"value\" : \"3.63850457084894\"\n    } ],\n    \"airTemperature\" : [ {\n      \"source\" : \"smhi\",\n      \"value\" : \"-2.6\"\n    }, {\n      \"source\" : \"smhi\",\n      \"value\" : \"-2.6\"\n    }, {\n      \"source\" : \"smhi\",\n      \"value\" : \"-2.6\"\n    }, {\n      \"source\" : \"smhi\",\n      \"value\" : \"-2.6\"\n    }, {\n      \"source\" : \"smhi\",\n      \"value\" : \"-2.6\"\n    }, {\n      \"source\" : \"smhi\",\n      \"value\" : \"-2.6\"\n    }, {\n      \"source\" : \"smhi\",\n      \"value\" : \"-2.6\"\n    } ],\n    \"swellHeight\" : [ {\n      \"source\" : \"nooa\",\n      \"value\" : \"2.94\"\n    }, {\n      \"source\" : \"nooa\",\n      \"value\" : \"2.94\"\n    }, {\n      \"source\" : \"nooa\",\n      \"value\" : \"2.94\"\n    }, {\n      \"source\" : \"nooa\",\n      \"value\" : \"2.94\"\n    } ],\n    \"swellPeriod\" : [ {\n      \"source\" : \"nooa\",\n      \"value\" : \"15.88\"\n    }, {\n      \"source\" : \"nooa\",\n      \"value\" : \"15.88\"\n    } ],\n    \"swellDirection\" : [ {\n      \"source\" : \"nooa\",\n      \"value\" : \"164.35\"\n    }, {\n      \"source\" : \"nooa\",\n      \"value\" : \"164.35\"\n    } ],\n    \"waterTemperature\" : [ {\n      \"source\" : \"fcoo\",\n      \"value\" : \"9\"\n    }, {\n      \"source\" : \"fcoo\",\n      \"value\" : \"9\"\n    }, {\n      \"source\" : \"fcoo\",\n      \"value\" : \"9\"\n    }, {\n      \"source\" : \"fcoo\",\n      \"value\" : \"9\"\n    }, {\n      \"source\" : \"fcoo\",\n      \"value\" : \"9\"\n    }, {\n      \"source\" : \"fcoo\",\n      \"value\" : \"9\"\n    }, {\n      \"source\" : \"fcoo\",\n      \"value\" : \"9\"\n    } ],\n    \"time\" : \"2018-01-19T17:00:00+00:00\",\n    \"waveDirection\" : [ {\n      \"source\" : \"fcoo\",\n      \"value\" : 121.35698599493828\n    }, {\n      \"source\" : \"fcoo\",\n      \"value\" : 121.35698599493828\n    }, {\n      \"source\" : \"fcoo\",\n      \"value\" : 121.35698599493828\n    }, {\n      \"source\" : \"fcoo\",\n      \"value\" : 121.35698599493828\n    }, {\n      \"source\" : \"fcoo\",\n      \"value\" : 121.35698599493828\n    }, {\n      \"source\" : \"fcoo\",\n      \"value\" : 121.35698599493828\n    } ],\n    \"windDirection\" : [ {\n      \"source\" : \"smhi\",\n      \"value\" : \"36.0\"\n    }, {\n      \"source\" : \"smhi\",\n      \"value\" : \"36.0\"\n    }, {\n      \"source\" : \"smhi\",\n      \"value\" : \"36.0\"\n    }, {\n      \"source\" : \"smhi\",\n      \"value\" : \"36.0\"\n    }, {\n      \"source\" : \"smhi\",\n      \"value\" : \"36.0\"\n    }, {\n      \"source\" : \"smhi\",\n      \"value\" : \"36.0\"\n    }, {\n      \"source\" : \"smhi\",\n      \"value\" : \"36.0\"\n    }, {\n      \"source\" : \"smhi\",\n      \"value\" : \"36.0\"\n    } ],\n    \"windSpeed\" : [ {\n      \"source\" : \"smhi\",\n      \"value\" : \"36.0\"\n    } ],\n    \"waveHeight\" : [ {\n      \"source\" : \"fmi\",\n      \"value\" : \"0.5969999991357327\"\n    } ]\n  }, {\n    \"wavePeriod\" : [ {\n      \"source\" : \"fcoo\",\n      \"value\" : \"3.63850457084894\"\n    }, {\n      \"source\" : \"fcoo\",\n      \"value\" : \"3.63850457084894\"\n    }, {\n      \"source\" : \"fcoo\",\n      \"value\" : \"3.63850457084894\"\n    } ],\n    \"airTemperature\" : [ {\n      \"source\" : \"smhi\",\n      \"value\" : \"-2.6\"\n    }, {\n      \"source\" : \"smhi\",\n      \"value\" : \"-2.6\"\n    }, {\n      \"source\" : \"smhi\",\n      \"value\" : \"-2.6\"\n    }, {\n      \"source\" : \"smhi\",\n      \"value\" : \"-2.6\"\n    }, {\n      \"source\" : \"smhi\",\n      \"value\" : \"-2.6\"\n    } ],\n    \"swellHeight\" : [ {\n      \"source\" : \"nooa\",\n      \"value\" : \"2.94\"\n    }, {\n      \"source\" : \"nooa\",\n      \"value\" : \"2.94\"\n    }, {\n      \"source\" : \"nooa\",\n      \"value\" : \"2.94\"\n    }, {\n      \"source\" : \"nooa\",\n      \"value\" : \"2.94\"\n    } ],\n    \"swellPeriod\" : [ {\n      \"source\" : \"nooa\",\n      \"value\" : \"15.88\"\n    }, {\n      \"source\" : \"nooa\",\n      \"value\" : \"15.88\"\n    }, {\n      \"source\" : \"nooa\",\n      \"value\" : \"15.88\"\n    }, {\n      \"source\" : \"nooa\",\n      \"value\" : \"15.88\"\n    }, {\n      \"source\" : \"nooa\",\n      \"value\" : \"15.88\"\n    }, {\n      \"source\" : \"nooa\",\n      \"value\" : \"15.88\"\n    }, {\n      \"source\" : \"nooa\",\n      \"value\" : \"15.88\"\n    }, {\n      \"source\" : \"nooa\",\n      \"value\" : \"15.88\"\n    } ],\n    \"swellDirection\" : [ {\n      \"source\" : \"nooa\",\n      \"value\" : \"164.35\"\n    }, {\n      \"source\" : \"nooa\",\n      \"value\" : \"164.35\"\n    }, {\n      \"source\" : \"nooa\",\n      \"value\" : \"164.35\"\n    }, {\n      \"source\" : \"nooa\",\n      \"value\" : \"164.35\"\n    }, {\n      \"source\" : \"nooa\",\n      \"value\" : \"164.35\"\n    } ],\n    \"waterTemperature\" : [ {\n      \"source\" : \"fcoo\",\n      \"value\" : \"9\"\n    }, {\n      \"source\" : \"fcoo\",\n      \"value\" : \"9\"\n    } ],\n    \"time\" : \"2018-01-19T17:00:00+00:00\",\n    \"waveDirection\" : [ {\n      \"source\" : \"fcoo\",\n      \"value\" : 121.35698599493828\n    }, {\n      \"source\" : \"fcoo\",\n      \"value\" : 121.35698599493828\n    }, {\n      \"source\" : \"fcoo\",\n      \"value\" : 121.35698599493828\n    }, {\n      \"source\" : \"fcoo\",\n      \"value\" : 121.35698599493828\n    }, {\n      \"source\" : \"fcoo\",\n      \"value\" : 121.35698599493828\n    }, {\n      \"source\" : \"fcoo\",\n      \"value\" : 121.35698599493828\n    }, {\n      \"source\" : \"fcoo\",\n      \"value\" : 121.35698599493828\n    }, {\n      \"source\" : \"fcoo\",\n      \"value\" : 121.35698599493828\n    } ],\n    \"windDirection\" : [ {\n      \"source\" : \"smhi\",\n      \"value\" : \"36.0\"\n    } ],\n    \"windSpeed\" : [ {\n      \"source\" : \"smhi\",\n      \"value\" : \"36.0\"\n    }, {\n      \"source\" : \"smhi\",\n      \"value\" : \"36.0\"\n    }, {\n      \"source\" : \"smhi\",\n      \"value\" : \"36.0\"\n    }, {\n      \"source\" : \"smhi\",\n      \"value\" : \"36.0\"\n    } ],\n    \"waveHeight\" : [ {\n      \"source\" : \"fmi\",\n      \"value\" : \"0.5969999991357327\"\n    }, {\n      \"source\" : \"fmi\",\n      \"value\" : \"0.5969999991357327\"\n    }, {\n      \"source\" : \"fmi\",\n      \"value\" : \"0.5969999991357327\"\n    }, {\n      \"source\" : \"fmi\",\n      \"value\" : \"0.5969999991357327\"\n    }, {\n      \"source\" : \"fmi\",\n      \"value\" : \"0.5969999991357327\"\n    }, {\n      \"source\" : \"fmi\",\n      \"value\" : \"0.5969999991357327\"\n    }, {\n      \"source\" : \"fmi\",\n      \"value\" : \"0.5969999991357327\"\n    } ]\n  } ],\n  \"meta\" : {\n    \"requestCount\" : 5,\n    \"lng\" : 17.80814,\n    \"dailyQuota\" : 100,\n    \"lat\" : 58.7984\n  }\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "0deb9bc8-a78a-4be6-af42-2fa41ee94ec2",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:15.646187Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "getForecast",
+          "schema" : {
+            "type" : "object",
+            "properties" : {
+              "hours" : {
+                "type" : "array",
+                "description" : "Every hour with forecast data is represented with an object in this array",
+                "items" : {
+                  "type" : "object",
+                  "properties" : {
+                    "airTemperature" : {
+                      "type" : "array",
+                      "items" : {
+                        "type" : "object",
+                        "properties" : {
+                          "source" : {
+                            "type" : "string",
+                            "example" : "smhi"
+                          },
+                          "value" : {
+                            "type" : "string",
+                            "example" : "-2.6"
+                          }
+                        },
+                        "description" : "Air temperature given in celsius"
+                      }
+                    },
+                    "swellDirection" : {
+                      "type" : "array",
+                      "items" : {
+                        "type" : "object",
+                        "properties" : {
+                          "source" : {
+                            "type" : "string",
+                            "example" : "nooa"
+                          },
+                          "value" : {
+                            "type" : "string",
+                            "example" : "164.35"
+                          }
+                        },
+                        "description" : "Direction given in degrees where 0 goes from North to South"
+                      }
+                    },
+                    "swellHeight" : {
+                      "type" : "array",
+                      "items" : {
+                        "type" : "object",
+                        "properties" : {
+                          "source" : {
+                            "type" : "string",
+                            "example" : "nooa"
+                          },
+                          "value" : {
+                            "type" : "string",
+                            "example" : "2.94"
+                          }
+                        },
+                        "description" : "Swell height given in meters"
+                      }
+                    },
+                    "swellPeriod" : {
+                      "type" : "array",
+                      "items" : {
+                        "type" : "object",
+                        "properties" : {
+                          "source" : {
+                            "type" : "string",
+                            "example" : "nooa"
+                          },
+                          "value" : {
+                            "type" : "string",
+                            "example" : "15.88"
+                          }
+                        },
+                        "description" : "Swell period given in seconds"
+                      }
+                    },
+                    "time" : {
+                      "type" : "string",
+                      "description" : "Timestamp in utc for the hour represented",
+                      "example" : "2018-01-19T17:00:00+00:00"
+                    },
+                    "waterTemperature" : {
+                      "type" : "array",
+                      "items" : {
+                        "type" : "object",
+                        "properties" : {
+                          "source" : {
+                            "type" : "string",
+                            "example" : "fcoo"
+                          },
+                          "value" : {
+                            "type" : "string",
+                            "example" : "9"
+                          }
+                        },
+                        "description" : "Water temperature given in celsius"
+                      }
+                    },
+                    "waveDirection" : {
+                      "type" : "array",
+                      "items" : {
+                        "type" : "object",
+                        "properties" : {
+                          "source" : {
+                            "type" : "string",
+                            "example" : "fcoo"
+                          },
+                          "value" : {
+                            "type" : "number",
+                            "example" : 121.35698599493828
+                          }
+                        },
+                        "description" : "Direction given in degrees where 0 goes from North to South"
+                      }
+                    },
+                    "waveHeight" : {
+                      "type" : "array",
+                      "items" : {
+                        "type" : "object",
+                        "properties" : {
+                          "source" : {
+                            "type" : "string",
+                            "example" : "fmi"
+                          },
+                          "value" : {
+                            "type" : "string",
+                            "example" : "0.5969999991357327"
+                          }
+                        },
+                        "description" : "Wave height given in metres"
+                      }
+                    },
+                    "wavePeriod" : {
+                      "type" : "array",
+                      "items" : {
+                        "type" : "object",
+                        "properties" : {
+                          "source" : {
+                            "type" : "string",
+                            "example" : "fcoo"
+                          },
+                          "value" : {
+                            "type" : "string",
+                            "example" : "3.63850457084894"
+                          }
+                        }
+                      }
+                    },
+                    "windDirection" : {
+                      "type" : "array",
+                      "items" : {
+                        "type" : "object",
+                        "properties" : {
+                          "source" : {
+                            "type" : "string",
+                            "example" : "smhi"
+                          },
+                          "value" : {
+                            "type" : "string",
+                            "example" : "36.0"
+                          }
+                        },
+                        "description" : "Wind direction given in degrees where 0 goes from North to South"
+                      }
+                    },
+                    "windSpeed" : {
+                      "type" : "array",
+                      "items" : {
+                        "type" : "object",
+                        "properties" : {
+                          "source" : {
+                            "type" : "string",
+                            "example" : "smhi"
+                          },
+                          "value" : {
+                            "type" : "string",
+                            "example" : "36.0"
+                          }
+                        },
+                        "description" : "Wind speed given in meters per second"
+                      }
+                    }
+                  },
+                  "description" : "Hourly forecast information"
+                }
+              },
+              "meta" : {
+                "type" : "object",
+                "properties" : {
+                  "dailyQuota" : {
+                    "type" : "integer",
+                    "description" : "The number of successful requests you can do on one day",
+                    "example" : 100
+                  },
+                  "lat" : {
+                    "type" : "number",
+                    "description" : "The latitude the response is showing forecast data for",
+                    "example" : 58.7984
+                  },
+                  "lng" : {
+                    "type" : "number",
+                    "description" : "The longitude the response is showing forecast data for",
+                    "example" : 17.80814
+                  },
+                  "requestCount" : {
+                    "type" : "integer",
+                    "description" : "The number of successful requests made this day.",
+                    "example" : 5
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "insertionIndex" : 2
+  } ]
+}

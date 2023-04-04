@@ -1,0 +1,3397 @@
+{
+  "mappings" : [ {
+    "id" : "3d87859b-b730-4643-b7e1-ec9ac0439f47",
+    "name" : "",
+    "request" : {
+      "urlPath" : "/v1/Services/ISe395b96ca07BAce1857C4b0546C7F697",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"friendly_name\" : \"Tess Bergstrom\",\n  \"webhook_method\" : \"g2o0xvry0yg9iw6l5ci95i0ub1zavemwwae6014kmxfwjfjr711ht1vq0e4dpt1vr7399alaatnsg2h2qrq0xpof9ys8a6nzfkkh6qjrmjbykt01mx4eirvhdueyso4mmj9ilis0pzcqp5gphpn7c50xte3h3t0w\",\n  \"date_updated\" : \"2023-12-03T05:17:28.036Z\",\n  \"default_channel_role_sid\" : \"RLE79266fdEbE92AaAAc3B0f2f59FeeC97\",\n  \"date_created\" : \"2023-08-09T12:05:47.036Z\",\n  \"post_webhook_url\" : \"https://web.example.mocklab.io/263866\",\n  \"read_status_enabled\" : false,\n  \"url\" : \"https://web.example.mocklab.io/967071\",\n  \"pre_webhook_url\" : \"https://web.example.mocklab.io/841631\",\n  \"sid\" : \"ISbc57B77E7C3BbF45BCF05c1b3F0Efceb\",\n  \"reachability_enabled\" : false,\n  \"webhooks\" : { },\n  \"consumption_report_interval\" : 8221816648165182640,\n  \"default_service_role_sid\" : \"RL9F104a08fB4BF0f1D28043b2fAC8dDB8\",\n  \"account_sid\" : \"ACFEC82e4F92aFC4FcCD3d44Aa3D8c1E7C\",\n  \"default_channel_creator_role_sid\" : \"RL9bb2bbB0ECC68B43E40ACD0cBfC75Bad\",\n  \"links\" : { },\n  \"typing_indicator_timeout\" : 7858892533695554012,\n  \"webhook_filters\" : [ \"u5rtijvv8uwbqtaon25rkn8r9f0jhs4mu2x23x25j8dke1qx42ioub0myy0fb5pf5tdbfoc661hnjsleumeza2dmte9uwtzp7rfavc9eelxnx00\", \"rs81c6kzd4sr5u9mpxtvc08vwyetr7bury3lifyl1tv69jc76xyvl0yzoi53szxtizuma2lkmsv00n5xpiog1uowzoj\", \"qskrthnsbr46js2jan2uhwck8mfqq8sumh2x692v28evxt46dp07xjw64x4aghbtl11r9sdmdhyotzwwp82rkgr0jd96bppdfk91d4lnwnaftyofioz9vfhkktr944tll6g4sf90ss4sjqq46anuiowgzyykhpt5ykk41mx7w7wm4elkalk9hyhyhyxfzuhdjp6kv\", \"xce6rue4w483a52xbgwjxm2hjbplwenmfv8c0bmr28pkeuor8lku5giq4fpxreihn34tt7kib85ohyxft0k1ju3pb2ebl8nz5ul08hwawab7pu2w2pggpx433jrdom8lz\", \"0ff7p03o878xza9mfrkjynzo0lqf6o1b3aj476gwxc4thx54f63eo75hax78o3axkqz7toncetubchwjs5pek\", \"26jvg7vmsbp859pdzw0bxau6ayh55asahrgven64uhz1ddo78vtj8aqvziqe07ot9dzvqg9hd9saw8xynibkzjdac84hgxwa5psetdcb8xonb70a44tynjujgaft2tj10z3wfblz5jbc1cxavrrc7kmxi1zo1qiv3bho6oe8i0956xnjstp0rm9k8\", \"11ogovmoanyowiempkpzb0l7y07gouwwdd7zecqyha8jwqc1zpzjxb4kw3la1j6uqoiwumtdfka1r0v29efrg0oxjycqbzrzegv80gs4j6kjmjy1b43jvcmxymdr7ze9jfv717fdzyt00c2e95t0jy27281lka36qwbv0mle16z41reo\", \"s7ah7fmavmkasbskm51kekdxwjvhmhw0dlc9c993hsyk58uv88c4axgmhcrumkr7nyuhfjkmqli89yaii2arxg05hljxqu9z1ckez1s4c8a562w9ml5rma0fywl0yk69gkevsbgdvn4n222b\" ],\n  \"limits\" : { },\n  \"notifications\" : { }\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "3d87859b-b730-4643-b7e1-ec9ac0439f47",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:10.036588Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "UpdateService",
+          "schema" : {
+            "properties" : {
+              "account_sid" : {
+                "description" : "The SID of the [Account](https://www.twilio.com/docs/api/rest/account) that created the Service resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^AC[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "consumption_report_interval" : {
+                "description" : "DEPRECATED. The interval in seconds between consumption reports submission batches from client endpoints.",
+                "nullable" : true,
+                "type" : "integer"
+              },
+              "date_created" : {
+                "description" : "The date and time in GMT when the resource was created specified in [RFC 2822](http://www.ietf.org/rfc/rfc2822.txt) format.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "date_updated" : {
+                "description" : "The date and time in GMT when the resource was last updated specified in [RFC 2822](http://www.ietf.org/rfc/rfc2822.txt) format.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "default_channel_creator_role_sid" : {
+                "description" : "The channel role assigned to a channel creator when they join a new channel. See the [Roles endpoint](https://www.twilio.com/docs/chat/api/roles) for more details.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^RL[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "default_channel_role_sid" : {
+                "description" : "The channel role assigned to users when they are added to a channel. See the [Roles endpoint](https://www.twilio.com/docs/chat/api/roles) for more details.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^RL[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "default_service_role_sid" : {
+                "description" : "The service role assigned to users when they are added to the service. See the [Roles endpoint](https://www.twilio.com/docs/chat/api/roles) for more details.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^RL[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "friendly_name" : {
+                "description" : "The string that you assigned to describe the resource.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "limits" : {
+                "description" : "An object that describes the limits of the service instance. The `limits` object contains  `channel_members` to describe the members/channel limit and `user_channels` to describe the channels/user limit. `channel_members` can be 1,000 or less, with a default of 250. `user_channels` can be 1,000 or less, with a default value of 100.",
+                "nullable" : true
+              },
+              "links" : {
+                "description" : "The absolute URLs of the Service's [Channels](https://www.twilio.com/docs/chat/api/channels), [Roles](https://www.twilio.com/docs/chat/api/roles), and [Users](https://www.twilio.com/docs/chat/api/users).",
+                "format" : "uri-map",
+                "nullable" : true,
+                "type" : "object"
+              },
+              "notifications" : {
+                "description" : "The notification configuration for the Service instance. See [Push Notification Configuration](https://www.twilio.com/docs/chat/push-notification-configuration) for more information.",
+                "nullable" : true
+              },
+              "post_webhook_url" : {
+                "description" : "The URL for post-event webhooks, which are called by using the `webhook_method`. See [Webhook Events](https://www.twilio.com/docs/api/chat/webhooks) for more details.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "pre_webhook_url" : {
+                "description" : "The URL for pre-event webhooks, which are called by using the `webhook_method`. See [Webhook Events](https://www.twilio.com/docs/api/chat/webhooks) for more details.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "reachability_enabled" : {
+                "description" : "Whether the [Reachability Indicator](https://www.twilio.com/docs/chat/reachability-indicator) is enabled for this Service instance. The default is `false`.",
+                "nullable" : true,
+                "type" : "boolean"
+              },
+              "read_status_enabled" : {
+                "description" : "Whether the [Message Consumption Horizon](https://www.twilio.com/docs/chat/consumption-horizon) feature is enabled. The default is `true`.",
+                "nullable" : true,
+                "type" : "boolean"
+              },
+              "sid" : {
+                "description" : "The unique string that we created to identify the Service resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^IS[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "typing_indicator_timeout" : {
+                "description" : "How long in seconds after a `started typing` event until clients should assume that user is no longer typing, even if no `ended typing` message was received.  The default is 5 seconds.",
+                "nullable" : true,
+                "type" : "integer"
+              },
+              "url" : {
+                "description" : "The absolute URL of the Service resource.",
+                "format" : "uri",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "webhook_filters" : {
+                "description" : "The list of WebHook events that are enabled for this Service instance. See [Webhook Events](https://www.twilio.com/docs/chat/webhook-events) for more details.",
+                "items" : {
+                  "type" : "string"
+                },
+                "nullable" : true,
+                "type" : "array"
+              },
+              "webhook_method" : {
+                "description" : "The HTTP method to use for calls to the `pre_webhook_url` and `post_webhook_url` webhooks.  Can be: `POST` or `GET` and the default is `POST`. See [Webhook Events](https://www.twilio.com/docs/chat/webhook-events) for more details.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "webhooks" : {
+                "description" : "An object that contains information about the webhooks configured for this service.",
+                "nullable" : true
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 0
+  }, {
+    "id" : "b20787e2-cfda-43da-adba-163240ec4b69",
+    "name" : "",
+    "request" : {
+      "urlPath" : "/v1/Services/ISBD756eDEBFdacfFAa0fBbb8DF0Bfb4Fe",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"friendly_name\" : \"Miss Lashawnda Prohaska\",\n  \"webhook_method\" : \"4lzspaw7n86f4j91f2jciw82wxtv3pdbsgwta1sqg1cs6zcz4dfyrapy9jq5st4aikp18en8dk9fbmn1pn7wbzozwkgb5kxrc9gys9mszlx2ecris025nbl4st23f01q8r02tclaove3jv8j7r0fyr7d7ukrdkzibp57j138hcp\",\n  \"date_updated\" : \"2022-12-09T04:10:00.035Z\",\n  \"default_channel_role_sid\" : \"RL429CF2caE0EEdF2C3DFd1D1Ed8aEeFc8\",\n  \"date_created\" : \"2023-05-04T12:21:13.035Z\",\n  \"post_webhook_url\" : \"https://web.example.mocklab.io/166676\",\n  \"read_status_enabled\" : true,\n  \"url\" : \"https://web.example.mocklab.io/636783\",\n  \"pre_webhook_url\" : \"https://web.example.mocklab.io/852590\",\n  \"sid\" : \"ISd5E062DF5F54Cc1D6d9Dc98b8b6fdCcb\",\n  \"reachability_enabled\" : false,\n  \"webhooks\" : { },\n  \"consumption_report_interval\" : 8999793014056833795,\n  \"default_service_role_sid\" : \"RL74B32004A40E7aB5Eb2b48A3dffdfdb9\",\n  \"account_sid\" : \"ACb9F9b15eF3e4Fc50d4FD3C48b01859f5\",\n  \"default_channel_creator_role_sid\" : \"RL99143e7dAcb81fC5CFb3EfccBe2e250d\",\n  \"links\" : { },\n  \"typing_indicator_timeout\" : 4801292455152785972,\n  \"webhook_filters\" : [ \"oh3w\", \"5kdgpy0x84ickm1lpl18w99q6zvdrbnv8q4g0bihq8gegoyfjjvwn2kizlp97fu8iqm4nwo60iuxwbfw3o6kvoppjng0hmqywavrl80\", \"r8cjlr87a7dj4b6nvdazoz9gvxgq8u39zdpyqnsk9an14wtfce3l74p7kwzxgrzxrvgfu78ec8zdpypovjvylcj9375gf8ykq46aejydg9thz2sbfsej9uh1wuvt1b9foqmaibx4j5ofxmhj84j\" ],\n  \"limits\" : { },\n  \"notifications\" : { }\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "b20787e2-cfda-43da-adba-163240ec4b69",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:10.036054Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "FetchService",
+          "schema" : {
+            "properties" : {
+              "account_sid" : {
+                "description" : "The SID of the [Account](https://www.twilio.com/docs/api/rest/account) that created the Service resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^AC[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "consumption_report_interval" : {
+                "description" : "DEPRECATED. The interval in seconds between consumption reports submission batches from client endpoints.",
+                "nullable" : true,
+                "type" : "integer"
+              },
+              "date_created" : {
+                "description" : "The date and time in GMT when the resource was created specified in [RFC 2822](http://www.ietf.org/rfc/rfc2822.txt) format.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "date_updated" : {
+                "description" : "The date and time in GMT when the resource was last updated specified in [RFC 2822](http://www.ietf.org/rfc/rfc2822.txt) format.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "default_channel_creator_role_sid" : {
+                "description" : "The channel role assigned to a channel creator when they join a new channel. See the [Roles endpoint](https://www.twilio.com/docs/chat/api/roles) for more details.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^RL[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "default_channel_role_sid" : {
+                "description" : "The channel role assigned to users when they are added to a channel. See the [Roles endpoint](https://www.twilio.com/docs/chat/api/roles) for more details.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^RL[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "default_service_role_sid" : {
+                "description" : "The service role assigned to users when they are added to the service. See the [Roles endpoint](https://www.twilio.com/docs/chat/api/roles) for more details.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^RL[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "friendly_name" : {
+                "description" : "The string that you assigned to describe the resource.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "limits" : {
+                "description" : "An object that describes the limits of the service instance. The `limits` object contains  `channel_members` to describe the members/channel limit and `user_channels` to describe the channels/user limit. `channel_members` can be 1,000 or less, with a default of 250. `user_channels` can be 1,000 or less, with a default value of 100.",
+                "nullable" : true
+              },
+              "links" : {
+                "description" : "The absolute URLs of the Service's [Channels](https://www.twilio.com/docs/chat/api/channels), [Roles](https://www.twilio.com/docs/chat/api/roles), and [Users](https://www.twilio.com/docs/chat/api/users).",
+                "format" : "uri-map",
+                "nullable" : true,
+                "type" : "object"
+              },
+              "notifications" : {
+                "description" : "The notification configuration for the Service instance. See [Push Notification Configuration](https://www.twilio.com/docs/chat/push-notification-configuration) for more information.",
+                "nullable" : true
+              },
+              "post_webhook_url" : {
+                "description" : "The URL for post-event webhooks, which are called by using the `webhook_method`. See [Webhook Events](https://www.twilio.com/docs/api/chat/webhooks) for more details.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "pre_webhook_url" : {
+                "description" : "The URL for pre-event webhooks, which are called by using the `webhook_method`. See [Webhook Events](https://www.twilio.com/docs/api/chat/webhooks) for more details.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "reachability_enabled" : {
+                "description" : "Whether the [Reachability Indicator](https://www.twilio.com/docs/chat/reachability-indicator) is enabled for this Service instance. The default is `false`.",
+                "nullable" : true,
+                "type" : "boolean"
+              },
+              "read_status_enabled" : {
+                "description" : "Whether the [Message Consumption Horizon](https://www.twilio.com/docs/chat/consumption-horizon) feature is enabled. The default is `true`.",
+                "nullable" : true,
+                "type" : "boolean"
+              },
+              "sid" : {
+                "description" : "The unique string that we created to identify the Service resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^IS[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "typing_indicator_timeout" : {
+                "description" : "How long in seconds after a `started typing` event until clients should assume that user is no longer typing, even if no `ended typing` message was received.  The default is 5 seconds.",
+                "nullable" : true,
+                "type" : "integer"
+              },
+              "url" : {
+                "description" : "The absolute URL of the Service resource.",
+                "format" : "uri",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "webhook_filters" : {
+                "description" : "The list of WebHook events that are enabled for this Service instance. See [Webhook Events](https://www.twilio.com/docs/chat/webhook-events) for more details.",
+                "items" : {
+                  "type" : "string"
+                },
+                "nullable" : true,
+                "type" : "array"
+              },
+              "webhook_method" : {
+                "description" : "The HTTP method to use for calls to the `pre_webhook_url` and `post_webhook_url` webhooks.  Can be: `POST` or `GET` and the default is `POST`. See [Webhook Events](https://www.twilio.com/docs/chat/webhook-events) for more details.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "webhooks" : {
+                "description" : "An object that contains information about the webhooks configured for this service.",
+                "nullable" : true
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 1
+  }, {
+    "id" : "e5024af4-2781-43bf-8827-976824538513",
+    "name" : " - 204",
+    "request" : {
+      "urlPath" : "/v1/Services/IS6cfee736CC12eD5EC4EEcBe550743BE3",
+      "method" : "DELETE"
+    },
+    "response" : {
+      "status" : 204
+    },
+    "uuid" : "e5024af4-2781-43bf-8827-976824538513",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:10.035411Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "DeleteService"
+        }
+      }
+    },
+    "insertionIndex" : 2
+  }, {
+    "id" : "ea39a2dc-7c5f-4b69-8761-3e3f76896746",
+    "name" : "List all Channels for a given User.",
+    "request" : {
+      "urlPath" : "/v1/Services/ISa319f87c4f4eD9ce0127c1dBD2A0C473/Users/w98t/Channels",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"channels\" : [ {\n    \"service_sid\" : \"IS36C41cEFEaf01DB5912aa6e5DCd18aA2\",\n    \"account_sid\" : \"ACc8AA5EDb3AD0E1fc3B2CF7fC5Fb956b9\",\n    \"last_consumed_message_index\" : 6154871147653005191,\n    \"links\" : { },\n    \"member_sid\" : \"MB139DDAAbA4c501A5029C5e3Ff27e59Ab\",\n    \"unread_messages_count\" : 2591113469127630995,\n    \"channel_sid\" : \"CH7abcfdD39c94bEc9f30Ff8D3C91Dfdb2\",\n    \"status\" : \"not_participating\"\n  } ],\n  \"meta\" : {\n    \"first_page_url\" : \"https://web.example.mocklab.io/962519\",\n    \"next_page_url\" : \"https://web.example.mocklab.io/463704\",\n    \"previous_page_url\" : \"https://web.example.mocklab.io/403718\",\n    \"page\" : 8309649374030157391,\n    \"key\" : \"j8705m1fzsenkelrzg3jthr1d3s6kjd6knk0d9qja04ibrur360z9tip8ri6r0p9krr5800k5ur5htfir655hkg9vbg\",\n    \"url\" : \"https://web.example.mocklab.io/573416\",\n    \"page_size\" : 8590067193547228491\n  }\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "ea39a2dc-7c5f-4b69-8761-3e3f76896746",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:10.035376Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "ListUserChannel",
+          "schema" : {
+            "properties" : {
+              "channels" : {
+                "items" : {
+                  "$ref" : "#/components/schemas/chat.v1.service.user.user_channel"
+                },
+                "type" : "array"
+              },
+              "meta" : {
+                "properties" : {
+                  "first_page_url" : {
+                    "format" : "uri",
+                    "type" : "string"
+                  },
+                  "key" : {
+                    "type" : "string"
+                  },
+                  "next_page_url" : {
+                    "format" : "uri",
+                    "nullable" : true,
+                    "type" : "string"
+                  },
+                  "page" : {
+                    "type" : "integer"
+                  },
+                  "page_size" : {
+                    "type" : "integer"
+                  },
+                  "previous_page_url" : {
+                    "format" : "uri",
+                    "nullable" : true,
+                    "type" : "string"
+                  },
+                  "url" : {
+                    "format" : "uri",
+                    "type" : "string"
+                  }
+                },
+                "type" : "object"
+              }
+            },
+            "title" : "ListUserChannelResponse",
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 3
+  }, {
+    "id" : "07dac961-b829-4aff-ba92-e85dd9e51b1e",
+    "name" : "",
+    "request" : {
+      "urlPath" : "/v1/Services/IS6eA365E65aCDe69335D66Bf505acA7d6/Users/0qzj",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"friendly_name\" : \"Bari Wilderman\",\n  \"date_updated\" : \"2022-10-31T04:02:01.034Z\",\n  \"role_sid\" : \"RL8F9CE26D8c5CAae7eaEe0eDaDac2AF2A\",\n  \"date_created\" : \"2023-04-27T05:16:22.034Z\",\n  \"joined_channels_count\" : 8304351716270631789,\n  \"url\" : \"https://web.example.mocklab.io/264914\",\n  \"sid\" : \"US5bA5813fc8b5dC95EEdaba526eDE1B68\",\n  \"service_sid\" : \"IS2d2ee6EcFcc00B4F3EA3fEEF60F7f1BF\",\n  \"identity\" : \"rb3i2lfkys0a1mj7ct3p6fs32yho3yisqm4dvgtkt6lyeq00exn798\",\n  \"is_notifiable\" : true,\n  \"account_sid\" : \"ACAB4cbA8cd98d82B54B33e4Eb774ecE1C\",\n  \"attributes\" : \"e9uep30gl7xauufs7la72iuif4o6hunj2ct4pzp8m7b3pcqp36apqv3evq2cj5jtv8no25tqml9g9xltau\",\n  \"links\" : { },\n  \"is_online\" : false\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "07dac961-b829-4aff-ba92-e85dd9e51b1e",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:10.034779Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "UpdateUser",
+          "schema" : {
+            "properties" : {
+              "account_sid" : {
+                "description" : "The SID of the [Account](https://www.twilio.com/docs/api/rest/account) that created the User resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^AC[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "attributes" : {
+                "description" : "The JSON string that stores application-specific data. **Note** If this property has been assigned a value, it's only  displayed in a FETCH action that returns a single resource; otherwise, it's null. If the attributes have not been set, `{}` is returned.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "date_created" : {
+                "description" : "The date and time in GMT when the resource was created specified in [RFC 2822](http://www.ietf.org/rfc/rfc2822.txt) format.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "date_updated" : {
+                "description" : "The date and time in GMT when the resource was last updated specified in [RFC 2822](http://www.ietf.org/rfc/rfc2822.txt) format.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "friendly_name" : {
+                "description" : "The string that you assigned to describe the resource.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "identity" : {
+                "description" : "The application-defined string that uniquely identifies the resource's User within the [Service](https://www.twilio.com/docs/api/chat/rest/services). This value is often a username or an email address. See [access tokens](https://www.twilio.com/docs/api/chat/guides/create-tokens) for more info.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "is_notifiable" : {
+                "description" : "Whether the User has a potentially valid Push Notification registration (APN or GCM) for the Service instance. If at least one registration exists, `true`; otherwise `false`. This value is only returned by Fetch actions that return a single resource and `null` is always returned by a Read action. This value is `null` if the Service's `reachability_enabled` is `false`, and if the User has never had a notification registration, even if the Service's `reachability_enabled` is `true`.",
+                "nullable" : true,
+                "type" : "boolean"
+              },
+              "is_online" : {
+                "description" : "Whether the User is actively connected to the Service instance and online. This value is only returned by Fetch actions that return a single resource and `null` is always returned by a Read action. This value is `null` if the Service's `reachability_enabled` is `false`, if the User has never been online for the Service instance, even if the Service's `reachability_enabled` is `true`.",
+                "nullable" : true,
+                "type" : "boolean"
+              },
+              "joined_channels_count" : {
+                "description" : "The number of Channels this User is a Member of.",
+                "nullable" : true,
+                "type" : "integer"
+              },
+              "links" : {
+                "description" : "The absolute URLs of the [Channel](https://www.twilio.com/docs/chat/api/channels) and [Binding](https://www.twilio.com/docs/chat/rest/bindings-resource) resources related to the user.",
+                "format" : "uri-map",
+                "nullable" : true,
+                "type" : "object"
+              },
+              "role_sid" : {
+                "description" : "The SID of the [Role](https://www.twilio.com/docs/api/chat/rest/roles) assigned to the user.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^RL[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "service_sid" : {
+                "description" : "The SID of the [Service](https://www.twilio.com/docs/api/chat/rest/services) the resource is associated with.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^IS[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "sid" : {
+                "description" : "The unique string that we created to identify the User resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^US[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "url" : {
+                "description" : "The absolute URL of the User resource.",
+                "format" : "uri",
+                "nullable" : true,
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 4
+  }, {
+    "id" : "b2cbeee3-4ce5-4d58-8903-30366963518d",
+    "name" : "",
+    "request" : {
+      "urlPath" : "/v1/Services/ISEDfBd8cDb32fbc5cbdc11FdD20CF4fE4/Users/y198",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"friendly_name\" : \"Lawerence Olson\",\n  \"date_updated\" : \"2024-02-07T15:29:12.034Z\",\n  \"role_sid\" : \"RL20bFCE6BA26A81C9eE19cbA9f4a31BD0\",\n  \"date_created\" : \"2022-08-23T05:40:36.034Z\",\n  \"joined_channels_count\" : 4993863551047615930,\n  \"url\" : \"https://web.example.mocklab.io/179640\",\n  \"sid\" : \"USEd51cDd94d9fcd083dE0c9fc071cBc0b\",\n  \"service_sid\" : \"ISedEdcFC83d88f19C13ffD4fd096bc3cd\",\n  \"identity\" : \"f8ur5cywl6a0r1fmtplnms51h7jzw85n03mhme5so8mci2rj1hdcqwyewzzdnkfgc2fzac2bv24sxrisxlgv2mrvsz4png3\",\n  \"is_notifiable\" : false,\n  \"account_sid\" : \"ACBafbAf536c0fd79Ff01e688CfCD2a146\",\n  \"attributes\" : \"xdsvmagro1awoi4xle1445jjm7rhgujqflarc4w97pls4forbainxb5mhl6mldhrha7almgxrf9supx53pjvsmz8qnnm\",\n  \"links\" : { },\n  \"is_online\" : true\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "b2cbeee3-4ce5-4d58-8903-30366963518d",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:10.0344Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "FetchUser",
+          "schema" : {
+            "properties" : {
+              "account_sid" : {
+                "description" : "The SID of the [Account](https://www.twilio.com/docs/api/rest/account) that created the User resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^AC[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "attributes" : {
+                "description" : "The JSON string that stores application-specific data. **Note** If this property has been assigned a value, it's only  displayed in a FETCH action that returns a single resource; otherwise, it's null. If the attributes have not been set, `{}` is returned.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "date_created" : {
+                "description" : "The date and time in GMT when the resource was created specified in [RFC 2822](http://www.ietf.org/rfc/rfc2822.txt) format.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "date_updated" : {
+                "description" : "The date and time in GMT when the resource was last updated specified in [RFC 2822](http://www.ietf.org/rfc/rfc2822.txt) format.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "friendly_name" : {
+                "description" : "The string that you assigned to describe the resource.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "identity" : {
+                "description" : "The application-defined string that uniquely identifies the resource's User within the [Service](https://www.twilio.com/docs/api/chat/rest/services). This value is often a username or an email address. See [access tokens](https://www.twilio.com/docs/api/chat/guides/create-tokens) for more info.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "is_notifiable" : {
+                "description" : "Whether the User has a potentially valid Push Notification registration (APN or GCM) for the Service instance. If at least one registration exists, `true`; otherwise `false`. This value is only returned by Fetch actions that return a single resource and `null` is always returned by a Read action. This value is `null` if the Service's `reachability_enabled` is `false`, and if the User has never had a notification registration, even if the Service's `reachability_enabled` is `true`.",
+                "nullable" : true,
+                "type" : "boolean"
+              },
+              "is_online" : {
+                "description" : "Whether the User is actively connected to the Service instance and online. This value is only returned by Fetch actions that return a single resource and `null` is always returned by a Read action. This value is `null` if the Service's `reachability_enabled` is `false`, if the User has never been online for the Service instance, even if the Service's `reachability_enabled` is `true`.",
+                "nullable" : true,
+                "type" : "boolean"
+              },
+              "joined_channels_count" : {
+                "description" : "The number of Channels this User is a Member of.",
+                "nullable" : true,
+                "type" : "integer"
+              },
+              "links" : {
+                "description" : "The absolute URLs of the [Channel](https://www.twilio.com/docs/chat/api/channels) and [Binding](https://www.twilio.com/docs/chat/rest/bindings-resource) resources related to the user.",
+                "format" : "uri-map",
+                "nullable" : true,
+                "type" : "object"
+              },
+              "role_sid" : {
+                "description" : "The SID of the [Role](https://www.twilio.com/docs/api/chat/rest/roles) assigned to the user.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^RL[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "service_sid" : {
+                "description" : "The SID of the [Service](https://www.twilio.com/docs/api/chat/rest/services) the resource is associated with.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^IS[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "sid" : {
+                "description" : "The unique string that we created to identify the User resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^US[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "url" : {
+                "description" : "The absolute URL of the User resource.",
+                "format" : "uri",
+                "nullable" : true,
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 5
+  }, {
+    "id" : "8e464307-102f-499c-a1a6-bb6820923deb",
+    "name" : " - 204",
+    "request" : {
+      "urlPath" : "/v1/Services/ISf1e2feFe8e13b896Fb3BDBb59fCf366B/Users/0zy8",
+      "method" : "DELETE"
+    },
+    "response" : {
+      "status" : 204
+    },
+    "uuid" : "8e464307-102f-499c-a1a6-bb6820923deb",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:10.034014Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "DeleteUser"
+        }
+      }
+    },
+    "insertionIndex" : 6
+  }, {
+    "id" : "ab56b884-f992-4f57-a48a-42b8ca62aaf6",
+    "name" : "",
+    "request" : {
+      "urlPath" : "/v1/Services/IS34FE08fDd0713B9c5EF6A354d8cd5aEB/Users",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 201,
+      "body" : "{\n  \"friendly_name\" : \"Malvina Senger\",\n  \"date_updated\" : \"2023-05-04T14:57:34.033Z\",\n  \"role_sid\" : \"RLA7Eb7Cf0Df15e0413ad7A6EbDe78F9fd\",\n  \"date_created\" : \"2023-09-19T01:00:45.033Z\",\n  \"joined_channels_count\" : 1057712751128350302,\n  \"url\" : \"https://web.example.mocklab.io/355692\",\n  \"sid\" : \"USBa47F56B66fd1a8dCfD319aA7E3a7dA4\",\n  \"service_sid\" : \"ISCBDD1B3EacdfaC56e088ABf8EC16D8Ec\",\n  \"identity\" : \"l54vo2hu7qnlcd0klptcfxq977y9o9igpx1vf\",\n  \"is_notifiable\" : false,\n  \"account_sid\" : \"ACF493A915D85fdf17dCADA2e5Ee2b4B23\",\n  \"attributes\" : \"9oa9gzk81x04wjlx0j059fbhg7a32pnmder7uofrgaa5jdlph95kd3\",\n  \"links\" : { },\n  \"is_online\" : false\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "ab56b884-f992-4f57-a48a-42b8ca62aaf6",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:10.0339Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "CreateUser",
+          "schema" : {
+            "properties" : {
+              "account_sid" : {
+                "description" : "The SID of the [Account](https://www.twilio.com/docs/api/rest/account) that created the User resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^AC[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "attributes" : {
+                "description" : "The JSON string that stores application-specific data. **Note** If this property has been assigned a value, it's only  displayed in a FETCH action that returns a single resource; otherwise, it's null. If the attributes have not been set, `{}` is returned.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "date_created" : {
+                "description" : "The date and time in GMT when the resource was created specified in [RFC 2822](http://www.ietf.org/rfc/rfc2822.txt) format.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "date_updated" : {
+                "description" : "The date and time in GMT when the resource was last updated specified in [RFC 2822](http://www.ietf.org/rfc/rfc2822.txt) format.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "friendly_name" : {
+                "description" : "The string that you assigned to describe the resource.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "identity" : {
+                "description" : "The application-defined string that uniquely identifies the resource's User within the [Service](https://www.twilio.com/docs/api/chat/rest/services). This value is often a username or an email address. See [access tokens](https://www.twilio.com/docs/api/chat/guides/create-tokens) for more info.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "is_notifiable" : {
+                "description" : "Whether the User has a potentially valid Push Notification registration (APN or GCM) for the Service instance. If at least one registration exists, `true`; otherwise `false`. This value is only returned by Fetch actions that return a single resource and `null` is always returned by a Read action. This value is `null` if the Service's `reachability_enabled` is `false`, and if the User has never had a notification registration, even if the Service's `reachability_enabled` is `true`.",
+                "nullable" : true,
+                "type" : "boolean"
+              },
+              "is_online" : {
+                "description" : "Whether the User is actively connected to the Service instance and online. This value is only returned by Fetch actions that return a single resource and `null` is always returned by a Read action. This value is `null` if the Service's `reachability_enabled` is `false`, if the User has never been online for the Service instance, even if the Service's `reachability_enabled` is `true`.",
+                "nullable" : true,
+                "type" : "boolean"
+              },
+              "joined_channels_count" : {
+                "description" : "The number of Channels this User is a Member of.",
+                "nullable" : true,
+                "type" : "integer"
+              },
+              "links" : {
+                "description" : "The absolute URLs of the [Channel](https://www.twilio.com/docs/chat/api/channels) and [Binding](https://www.twilio.com/docs/chat/rest/bindings-resource) resources related to the user.",
+                "format" : "uri-map",
+                "nullable" : true,
+                "type" : "object"
+              },
+              "role_sid" : {
+                "description" : "The SID of the [Role](https://www.twilio.com/docs/api/chat/rest/roles) assigned to the user.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^RL[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "service_sid" : {
+                "description" : "The SID of the [Service](https://www.twilio.com/docs/api/chat/rest/services) the resource is associated with.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^IS[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "sid" : {
+                "description" : "The unique string that we created to identify the User resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^US[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "url" : {
+                "description" : "The absolute URL of the User resource.",
+                "format" : "uri",
+                "nullable" : true,
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 7
+  }, {
+    "id" : "8a3af186-ddc9-4b7b-bb35-b850a26eef21",
+    "name" : "",
+    "request" : {
+      "urlPath" : "/v1/Services/ISFe6Ea5c43DBC52fb36FE2823e38Ec3fB/Users",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"meta\" : {\n    \"first_page_url\" : \"https://web.example.mocklab.io/636650\",\n    \"next_page_url\" : \"https://web.example.mocklab.io/198751\",\n    \"previous_page_url\" : \"https://web.example.mocklab.io/797024\",\n    \"page\" : 960693355086530878,\n    \"key\" : \"m0mn2z8wdbxtycog6njvs0j3mnwjchpjnvjg6pn7hpah8745ed1u04l94ak7bnibjanqusv8ptd05crmkmw80j131o9ngo7p0uu6w1xsgu9aif8lh5wy1l99hhwvjapzypr3a50djkwqwkzww6g00u46x9c8jj7bj53ae3o5s0exdyt5iugh7magkpi1\",\n    \"url\" : \"https://web.example.mocklab.io/107737\",\n    \"page_size\" : 83510288388135436\n  },\n  \"users\" : [ {\n    \"friendly_name\" : \"Rosalia Price\",\n    \"date_updated\" : \"2023-06-20T05:58:58.032Z\",\n    \"role_sid\" : \"RLDaA4Cfa892Ead07e2c46aB9BEdfd2D3d\",\n    \"date_created\" : \"2023-06-18T11:21:47.032Z\",\n    \"joined_channels_count\" : 8237283149899718287,\n    \"url\" : \"https://web.example.mocklab.io/239725\",\n    \"sid\" : \"US9EE6265BC9BAdBfD9ba3e3EC3D887ff6\",\n    \"service_sid\" : \"IS9dbCb3d7bCA622A958d9e13D8ff30626\",\n    \"identity\" : \"9x20t37j0vfntrliakjpqgqqdd725xok7e6xyrp48aahiikqz0vsw5ygn286u96q\",\n    \"is_notifiable\" : false,\n    \"account_sid\" : \"AC3C2Aa6bAb0B3b6a7333D2EAA9CE67627\",\n    \"attributes\" : \"eaat0xpex6t4n6xcjviv2y1x0brvp3tfp90mo7tc7rrvyv7ufs9p0kde5v4sp0eoba09ka3c8w4ljlbj73wq4slsz229ww2mai3614q0dlkbpfhfbe44blcmfyikiiam4y5av5pi\",\n    \"links\" : { },\n    \"is_online\" : false\n  }, {\n    \"friendly_name\" : \"Phung Cummings I\",\n    \"date_updated\" : \"2022-06-27T08:09:33.033Z\",\n    \"role_sid\" : \"RLE35b6e8F0dcdae64c5d553d6FdE11Ea1\",\n    \"date_created\" : \"2023-06-25T23:39:39.033Z\",\n    \"joined_channels_count\" : 4247504512014724650,\n    \"url\" : \"https://web.example.mocklab.io/782262\",\n    \"sid\" : \"USeA6f7C38Ee6eC150a047203769F46606\",\n    \"service_sid\" : \"IS7eb8A8E6e4cC1B9EFa2Bd6038e4d2af4\",\n    \"identity\" : \"brmx6pg6z9zgjrk708zaji8wveww97ol8qwkuz5e505vej4dkq1\",\n    \"is_notifiable\" : false,\n    \"account_sid\" : \"ACb47aDEA13DaA3EFDE0eBbc9CA5A54bFc\",\n    \"attributes\" : \"yspawga6m5ws586x8smenopf55gj1zgayxe6uukn178mkvfdw5edh599j2k3w0qxevmmss2yk8ko3yoschniwwdm8769mnvcpl58eljfwe4r0i1trjpgm8fbrftp2t60zta6wpftcqcluei5nxzqmpugdke3qx3\",\n    \"links\" : { },\n    \"is_online\" : false\n  }, {\n    \"friendly_name\" : \"Alvaro Kohler\",\n    \"date_updated\" : \"2024-03-17T17:22:49.033Z\",\n    \"role_sid\" : \"RL1b2C5deFfFDF91cFba639CaFfc6baabd\",\n    \"date_created\" : \"2024-03-20T02:17:19.033Z\",\n    \"joined_channels_count\" : 3445079400469912540,\n    \"url\" : \"https://web.example.mocklab.io/536531\",\n    \"sid\" : \"USeF28286Ff3Ba4743c37f24Acd6acCACc\",\n    \"service_sid\" : \"ISeBBCb1eb1acdfb8bBb4Fc83e9F5353a4\",\n    \"identity\" : \"zuqm4a8ykinjevbdgm55hl\",\n    \"is_notifiable\" : false,\n    \"account_sid\" : \"AC02d0eaCaA1C4F6A09198B669e2Fd3f8c\",\n    \"attributes\" : \"zp7ho8mjrg05cc80bzj6t2jxcye\",\n    \"links\" : { },\n    \"is_online\" : true\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "8a3af186-ddc9-4b7b-bb35-b850a26eef21",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:10.033542Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "ListUser",
+          "schema" : {
+            "properties" : {
+              "meta" : {
+                "properties" : {
+                  "first_page_url" : {
+                    "format" : "uri",
+                    "type" : "string"
+                  },
+                  "key" : {
+                    "type" : "string"
+                  },
+                  "next_page_url" : {
+                    "format" : "uri",
+                    "nullable" : true,
+                    "type" : "string"
+                  },
+                  "page" : {
+                    "type" : "integer"
+                  },
+                  "page_size" : {
+                    "type" : "integer"
+                  },
+                  "previous_page_url" : {
+                    "format" : "uri",
+                    "nullable" : true,
+                    "type" : "string"
+                  },
+                  "url" : {
+                    "format" : "uri",
+                    "type" : "string"
+                  }
+                },
+                "type" : "object"
+              },
+              "users" : {
+                "items" : {
+                  "$ref" : "#/components/schemas/chat.v1.service.user"
+                },
+                "type" : "array"
+              }
+            },
+            "title" : "ListUserResponse",
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 8
+  }, {
+    "id" : "373d71c4-1dfc-4cec-84ca-fe47f97ed7ed",
+    "name" : "",
+    "request" : {
+      "urlPath" : "/v1/Services/ISfC3dcaB6BEd87dEdfE031c3Ee4d5C8cD/Roles/RLa9f003fA82Dba85F3cc71bB5F364db1C",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"service_sid\" : \"ISc7daf0cfd00e0ad14D2fbAF082d7Ed58\",\n  \"friendly_name\" : \"Ms. Lakesha Sauer\",\n  \"date_updated\" : \"2023-02-13T19:23:17.032Z\",\n  \"date_created\" : \"2023-02-18T06:13:58.032Z\",\n  \"permissions\" : [ \"hu6wvx06m8dhrqdplvdybbste4htowwgjfk213wgeprbkt5w3mj4isyhcntkwhelll4x6zmrnsr7s2t16k0xh8qc2j5xqrt3vgwstwznelo0gltosm8wtwudeu0ee9zsllogjrvkpsuao3pkk22dyv3q6un2ngqx86w7sga1admxwf9eqpqc0y9h8idy9nbtmgdv760\", \"wrsv3fv7oukhwo4evxd7tjvu0vsjbkecdrnfio1ezm0te8flw5vsqh8a3hbf4j57fzlfigd0\", \"v1n24jaqji69k0s\", \"2xw0tkquq\", \"cwlq11wj27a7n3iwa82e5xkgcldk46rn66fj3c3w4cejbb924abl6gpxy7gsrx6814bpw14esdpwlixzdpgij00ad8hui42y5munao5n2jdiz0k4daulwsc0jv4gm5xuyrf0y69eq1vgjh7o518eck1a\", \"yo2xt47ttumi9lndww1dvhjfwpq\", \"iag002svaq8bnzuiyge69ws5mzgnr\" ],\n  \"account_sid\" : \"AC2eed672eDeD2CBAE6dEbA24e44FeA59d\",\n  \"type\" : \"deployment\",\n  \"url\" : \"https://web.example.mocklab.io/253388\",\n  \"sid\" : \"RL4cE66C6D3df28FDE13Ebd45D69AA6Bb1\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "373d71c4-1dfc-4cec-84ca-fe47f97ed7ed",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:10.032534Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "UpdateRole",
+          "schema" : {
+            "properties" : {
+              "account_sid" : {
+                "description" : "The SID of the [Account](https://www.twilio.com/docs/api/rest/account) that created the Role resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^AC[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "date_created" : {
+                "description" : "The date and time in GMT when the resource was created specified in [RFC 2822](http://www.ietf.org/rfc/rfc2822.txt) format.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "date_updated" : {
+                "description" : "The date and time in GMT when the resource was last updated specified in [RFC 2822](http://www.ietf.org/rfc/rfc2822.txt) format.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "friendly_name" : {
+                "description" : "The string that you assigned to describe the resource.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "permissions" : {
+                "description" : "An array of the permissions the role has been granted, formatted as a JSON string.",
+                "items" : {
+                  "type" : "string"
+                },
+                "nullable" : true,
+                "type" : "array"
+              },
+              "service_sid" : {
+                "description" : "The SID of the [Service](https://www.twilio.com/docs/api/chat/rest/services) the resource is associated with.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^IS[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "sid" : {
+                "description" : "The unique string that we created to identify the Role resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^RL[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "type" : {
+                "$ref" : "#/components/schemas/role_enum_role_type"
+              },
+              "url" : {
+                "description" : "The absolute URL of the Role resource.",
+                "format" : "uri",
+                "nullable" : true,
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 9
+  }, {
+    "id" : "1f7b653f-8b88-4d36-89a6-e99732e64abe",
+    "name" : "",
+    "request" : {
+      "urlPath" : "/v1/Services/ISb9133ca5e9Ac5eeF66490e3a88aEEbfE/Roles/RL2cD3cF865E2cEAE8e9dECbd33F2C1D2f",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"service_sid\" : \"ISAAA6CCFc9d5cdaADF986Adcd8B8B40cf\",\n  \"friendly_name\" : \"Maryam Quitzon\",\n  \"date_updated\" : \"2023-01-11T13:03:15.032Z\",\n  \"date_created\" : \"2023-06-15T04:12:24.032Z\",\n  \"permissions\" : [ \"ehq4dlnpbm7ymlo02brrzv014csoxms6x6c6l9vve2y9pw9gu\", \"epa5\", \"nnfns8ljrvnn7onnvad2dvf8sjdc4yms0473ube9v4s2r39ow1s70j5\" ],\n  \"account_sid\" : \"ACDa1cEa06b70e26aAdAc3AaFCAA244b2F\",\n  \"type\" : \"deployment\",\n  \"url\" : \"https://web.example.mocklab.io/062285\",\n  \"sid\" : \"RLB14A58CfeFbE8E64D6bEaB5eBF96cA4c\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "1f7b653f-8b88-4d36-89a6-e99732e64abe",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:10.032254Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "FetchRole",
+          "schema" : {
+            "properties" : {
+              "account_sid" : {
+                "description" : "The SID of the [Account](https://www.twilio.com/docs/api/rest/account) that created the Role resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^AC[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "date_created" : {
+                "description" : "The date and time in GMT when the resource was created specified in [RFC 2822](http://www.ietf.org/rfc/rfc2822.txt) format.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "date_updated" : {
+                "description" : "The date and time in GMT when the resource was last updated specified in [RFC 2822](http://www.ietf.org/rfc/rfc2822.txt) format.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "friendly_name" : {
+                "description" : "The string that you assigned to describe the resource.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "permissions" : {
+                "description" : "An array of the permissions the role has been granted, formatted as a JSON string.",
+                "items" : {
+                  "type" : "string"
+                },
+                "nullable" : true,
+                "type" : "array"
+              },
+              "service_sid" : {
+                "description" : "The SID of the [Service](https://www.twilio.com/docs/api/chat/rest/services) the resource is associated with.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^IS[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "sid" : {
+                "description" : "The unique string that we created to identify the Role resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^RL[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "type" : {
+                "$ref" : "#/components/schemas/role_enum_role_type"
+              },
+              "url" : {
+                "description" : "The absolute URL of the Role resource.",
+                "format" : "uri",
+                "nullable" : true,
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 10
+  }, {
+    "id" : "65af11af-b848-4cc6-82f4-1fffeeaac38f",
+    "name" : " - 204",
+    "request" : {
+      "urlPath" : "/v1/Services/ISaD4AF29ef8E36F736CDEeafB580Fa0C3/Roles/RL98Aa4FfdEfbA0612f144b7B279E0E857",
+      "method" : "DELETE"
+    },
+    "response" : {
+      "status" : 204
+    },
+    "uuid" : "65af11af-b848-4cc6-82f4-1fffeeaac38f",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:10.032Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "DeleteRole"
+        }
+      }
+    },
+    "insertionIndex" : 11
+  }, {
+    "id" : "0d9c61bc-4653-45ad-b1dc-4c19d2bfb454",
+    "name" : "",
+    "request" : {
+      "urlPath" : "/v1/Services/ISEBfFdeAd2747343feF0782E1a0d1BFF4/Roles",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 201,
+      "body" : "{\n  \"service_sid\" : \"ISF011dbE00CB08c4eE1baaf46CB69DCAA\",\n  \"friendly_name\" : \"Shanti Goyette\",\n  \"date_updated\" : \"2023-09-24T12:09:16.031Z\",\n  \"date_created\" : \"2023-01-11T01:51:20.031Z\",\n  \"permissions\" : [ \"lr7wsd9s3h11rbl87004jhgros1ovcqoctfacb4pk42530odmdaoah9byje7o8isjaml0ud1p4f7an5qz807znezky1anf6uj8cmuer6giw8tjxt22basdufh4p9rahpz2pkjeqid\", \"b94yvyp4jztrbffnhax1p36rdnub4emlpfxxuif3067xh6sbwha2itw765sd0nuax\", \"vrqyknzjb7pcl28w9kh9k93k16hoy7jd5s6yqbldugu2wn20kv532xux8ksgo01g92r2135811smlm5yi8zk6694omms\", \"8uvmgpuhd16907hwyhi86f6u7ady2l95icr1humnmig7li5lvxnf1vlkwjc3l2zlnrbtuzrecpv03erfi8nmk2q4ba3tzaq70kw8u8xkygrl63jzt7t5ej2e\" ],\n  \"account_sid\" : \"ACDCDf4cFf1FB1eA03905DaFe9AfC0a965\",\n  \"type\" : \"deployment\",\n  \"url\" : \"https://web.example.mocklab.io/233601\",\n  \"sid\" : \"RL86ac81f4aF8d1Bc508f2EF07dBf8fFfC\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "0d9c61bc-4653-45ad-b1dc-4c19d2bfb454",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:10.031956Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "CreateRole",
+          "schema" : {
+            "properties" : {
+              "account_sid" : {
+                "description" : "The SID of the [Account](https://www.twilio.com/docs/api/rest/account) that created the Role resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^AC[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "date_created" : {
+                "description" : "The date and time in GMT when the resource was created specified in [RFC 2822](http://www.ietf.org/rfc/rfc2822.txt) format.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "date_updated" : {
+                "description" : "The date and time in GMT when the resource was last updated specified in [RFC 2822](http://www.ietf.org/rfc/rfc2822.txt) format.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "friendly_name" : {
+                "description" : "The string that you assigned to describe the resource.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "permissions" : {
+                "description" : "An array of the permissions the role has been granted, formatted as a JSON string.",
+                "items" : {
+                  "type" : "string"
+                },
+                "nullable" : true,
+                "type" : "array"
+              },
+              "service_sid" : {
+                "description" : "The SID of the [Service](https://www.twilio.com/docs/api/chat/rest/services) the resource is associated with.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^IS[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "sid" : {
+                "description" : "The unique string that we created to identify the Role resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^RL[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "type" : {
+                "$ref" : "#/components/schemas/role_enum_role_type"
+              },
+              "url" : {
+                "description" : "The absolute URL of the Role resource.",
+                "format" : "uri",
+                "nullable" : true,
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 12
+  }, {
+    "id" : "6299568c-8520-4e57-8dc4-afa6827eb015",
+    "name" : "",
+    "request" : {
+      "urlPath" : "/v1/Services/ISebcE6aBD6Cde03EdC4Bb3C8a46f3bEdd/Roles",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"meta\" : {\n    \"first_page_url\" : \"https://web.example.mocklab.io/593908\",\n    \"next_page_url\" : \"https://web.example.mocklab.io/486786\",\n    \"previous_page_url\" : \"https://web.example.mocklab.io/861942\",\n    \"page\" : 7193639250438664284,\n    \"key\" : \"ftcrlxci7e9itgpva0qdmd4w9xxl3wtylrsdzqc5\",\n    \"url\" : \"https://web.example.mocklab.io/685185\",\n    \"page_size\" : 970868654060327176\n  },\n  \"roles\" : [ {\n    \"service_sid\" : \"IS7fdEB1bBC4363deDa21eCcbA4621FBC9\",\n    \"friendly_name\" : \"Ollie Cassin III\",\n    \"date_updated\" : \"2023-01-26T20:33:40.03Z\",\n    \"date_created\" : \"2022-10-26T12:34:05.03Z\",\n    \"permissions\" : [ \"fgnq7wy8kbokclmz2nz0i4ajcjul9nusdl3k5b7806ra6zq9m4dltms6py72ugle9vakmwu6c7bz4s5b24i6639xzezdmto9a3\", \"jj1my1hjw3rvaowjdv5lzg0s005by71vho2ef8c6xlavpi2csswoir14rqd35ymjme4m9tjkhpszdf1rarv\", \"7gwjfoli3nx3zrjuaik5krxcuj9o8un1nzft6ydjrei9igk2hjifsk8pumhgi8u4q4g1h\", \"nk2q6ewrpjo4j8vm43p7w0m9e98dtgne86xg2tsw841843gdq2upu3eom09qdj\" ],\n    \"account_sid\" : \"ACD28bc2B5fBA88EeeeDA3eD7Eaf7CcF0D\",\n    \"type\" : \"deployment\",\n    \"url\" : \"https://web.example.mocklab.io/327999\",\n    \"sid\" : \"RLF4FC667DAf6cCA2A4ebDAC643f2777Ff\"\n  }, {\n    \"service_sid\" : \"IS494c7De61b15B47047dfACaD4cABaed2\",\n    \"friendly_name\" : \"Cathie DuBuque\",\n    \"date_updated\" : \"2022-08-07T07:31:56.03Z\",\n    \"date_created\" : \"2024-03-11T15:39:17.03Z\",\n    \"permissions\" : [ \"p0toyoja7qwmaqdjymsa7ac12pug0cepk2zeaqslku0a7l9p2nm03q6mihldplq520mag\", \"ocs6onkwy3jb1ony1t190rzocbaho22q8fai2tocbivdn89yjdcexwrf2k8sct6zlqrto09nj25obugt81m0p3540osvbg9z8alwudejdg3jjq44u\", \"irp11tesasug91hbzwt9vcj\", \"bnv5q3tvycw21crukiqw3o7iw9\", \"z3jkggktibeab25luwjn4pyfjyo1sdvx7y289qdcidtlhbxp9ss\", \"vqkctb0vexw05jcni618\" ],\n    \"account_sid\" : \"ACde49af3810a2EDb553Fa1FA3c26A1a3c\",\n    \"type\" : \"deployment\",\n    \"url\" : \"https://web.example.mocklab.io/724211\",\n    \"sid\" : \"RL802AF8EF70C2EFd518A4c7a4DDB5d0Dc\"\n  }, {\n    \"service_sid\" : \"IS3B36fBBF0Da8dAFECcbe4dAFbf36C22B\",\n    \"friendly_name\" : \"Ms. Patricia Stamm\",\n    \"date_updated\" : \"2022-04-02T15:00:31.031Z\",\n    \"date_created\" : \"2023-12-12T11:57:55.031Z\",\n    \"permissions\" : [ \"3vkdk6zey3ujjlt428pzquj62elealb7wo6w0x7n9zk62d5ti0kk18yyfguwey9rzbpoyw2j99fo80piyagt3qmi2bg3y7tti2x3xpl5sxdpzo6607yqsnxfylvyu04h3xnge789nf40afsai6z\", \"6k2r2kuoyy44smcnszx8kzziqxg0zm0l1g0in0b5xm22vnxxznvvvhl2xo4ppvfhtdcvxwi1i5gjdlentulqtoy0wn5qsfgja45gs0ndxppqlsvr58ok6t547ieg6yqsgfxjg77utgts7rzrxuul6kz16uhidzd1acvsmuyifhgfwfr4bn8e\" ],\n    \"account_sid\" : \"ACBb470D2DEAF9AFeE29FCB35d71CE4d1E\",\n    \"type\" : \"channel\",\n    \"url\" : \"https://web.example.mocklab.io/867442\",\n    \"sid\" : \"RL00C814bFcdf3affE78dC9dbCb1cfaBe9\"\n  }, {\n    \"service_sid\" : \"ISa2a36aee5DcE6EAE338c1238fbA5bBf1\",\n    \"friendly_name\" : \"Mrs. Chuck Wiegand\",\n    \"date_updated\" : \"2022-04-09T22:04:31.031Z\",\n    \"date_created\" : \"2023-08-06T08:27:58.031Z\",\n    \"permissions\" : [ \"b7yds8366563dhwv2eyon02mdtjc52h69rssxwu7lgzi7g5xmiexjydv3lncmtqhkfbxsmucknyvb1xzue5ib4gpaky749gvwlfru1o90m2eb1e9hveujp29q9hfqpesfqba1tm10hd4mqaxfdmpii\", \"79it2r26ond4bt0tf7t2s7ns3kpsydgbeqj3epq8pqju8oy8wfm8oa1hk15ie5m5cducf1z1njwd5l5meuwildys8n3vv6ohzazp785i6zgo9mqam12pdoe8juztygag6wbgih0iut73krtu880uvco1xufpf3re4t\", \"j0ofvrba1qr3k0x77pjtpnrvvs21xh7wcvgcbuvp6u6jo9dthbt\", \"5kgz4toex3v64jl5a3jwm3ws2vy2iphsomxufchi225zavcqcpjg667xkzdlblxgatgw1zkbnezlv4yfjlw1e7ez55vu5syv7n81ojwg07p27r0tfwzc9vd376j6zghpvm3qlgr4tl48lbowl074xqk482lf2aoaf512f9s4a\" ],\n    \"account_sid\" : \"AC3EF6dA449D2F44a4E80CB7825cDd98C4\",\n    \"type\" : \"channel\",\n    \"url\" : \"https://web.example.mocklab.io/026014\",\n    \"sid\" : \"RL1c00e73FC144cFa10FBBfEdaEC74cBC9\"\n  }, {\n    \"service_sid\" : \"ISd4bb931AFc6b86af13Fe16b2CE2fcc46\",\n    \"friendly_name\" : \"Miss Bo Schamberger\",\n    \"date_updated\" : \"2023-06-15T08:13:33.031Z\",\n    \"date_created\" : \"2023-02-07T08:07:09.031Z\",\n    \"permissions\" : [ \"92hqvgwys0j0vrm1txcjrnx0nieg4ur86o3\", \"sudd5y58yncmh67avcpalpljzgiw61884j74pvql5y2jhdy2okluwqe61njnyw5c2fgeykww3lswqeyqdg8e4seu84u3l2\", \"9urku2kzbchvar8e7newvilkcjobywdsyqmy2zv8labq1ideilk61rs66j4mofxlsnnlhxb3j8ec3vdh\", \"6g0vzrk77kylr37gcsst57w\", \"2zhwv\", \"gviuxqsme8wveoiqkkpcylecu5xjizkyj2mx57pa0l98r7elid0jzx663d082dmjd2upn6pus4ni\" ],\n    \"account_sid\" : \"AC603aFA5FA41CDef1f5A2EfCAEfc440Db\",\n    \"type\" : \"channel\",\n    \"url\" : \"https://web.example.mocklab.io/820036\",\n    \"sid\" : \"RLe258b0a8036f2D251bae9d34a9cFbAce\"\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "6299568c-8520-4e57-8dc4-afa6827eb015",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:10.031642Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "ListRole",
+          "schema" : {
+            "properties" : {
+              "meta" : {
+                "properties" : {
+                  "first_page_url" : {
+                    "format" : "uri",
+                    "type" : "string"
+                  },
+                  "key" : {
+                    "type" : "string"
+                  },
+                  "next_page_url" : {
+                    "format" : "uri",
+                    "nullable" : true,
+                    "type" : "string"
+                  },
+                  "page" : {
+                    "type" : "integer"
+                  },
+                  "page_size" : {
+                    "type" : "integer"
+                  },
+                  "previous_page_url" : {
+                    "format" : "uri",
+                    "nullable" : true,
+                    "type" : "string"
+                  },
+                  "url" : {
+                    "format" : "uri",
+                    "type" : "string"
+                  }
+                },
+                "type" : "object"
+              },
+              "roles" : {
+                "items" : {
+                  "$ref" : "#/components/schemas/chat.v1.service.role"
+                },
+                "type" : "array"
+              }
+            },
+            "title" : "ListRoleResponse",
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 13
+  }, {
+    "id" : "623d5e2c-853d-4e3e-abe4-39daf725cc8e",
+    "name" : "",
+    "request" : {
+      "urlPath" : "/v1/Services/IS7EC2bc073e1AeF48b95F2F5Eb3f2F5d8/Channels/dfi1",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"friendly_name\" : \"Johnetta Bergnaum\",\n  \"date_updated\" : \"2022-10-12T19:36:48.029Z\",\n  \"date_created\" : \"2023-09-05T15:32:27.029Z\",\n  \"type\" : \"public\",\n  \"created_by\" : \"65wykw8ddw1slnb0ctssw3zukh26z0cybjiqmu15okp5s6mzs1keq5hixx6uhmub0v5w6s0u4n3a1d8euaa9gr3qtx2j7j5t1efgogy256txusxwi3yfzrtf73odbtykpfda\",\n  \"url\" : \"https://web.example.mocklab.io/596023\",\n  \"sid\" : \"CHffAfCe4a96F22e63d0c9eB1fC20a06bd\",\n  \"service_sid\" : \"ISDcB2FfbcFaA55339299Be4dc4bBF5B6E\",\n  \"messages_count\" : 8937074215523943847,\n  \"unique_name\" : \"Antonio Hamill V\",\n  \"account_sid\" : \"AC7BC3e59A8BBBFD4a8a8a6d9b1CBf679d\",\n  \"attributes\" : \"72mdxf3ksm0h0\",\n  \"links\" : { },\n  \"members_count\" : 6666746935499645553\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "623d5e2c-853d-4e3e-abe4-39daf725cc8e",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:10.030183Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "UpdateChannel",
+          "schema" : {
+            "properties" : {
+              "account_sid" : {
+                "description" : "The SID of the [Account](https://www.twilio.com/docs/api/rest/account) that created the Channel resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^AC[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "attributes" : {
+                "description" : "The JSON string that stores application-specific data. **Note** If this property has been assigned a value, it's only  displayed in a FETCH action that returns a single resource; otherwise, it's null. If the attributes have not been set, `{}` is returned.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "created_by" : {
+                "description" : "The `identity` of the User that created the channel. If the Channel was created by using the API, the value is `system`.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "date_created" : {
+                "description" : "The date and time in GMT when the resource was created specified in [RFC 2822](http://www.ietf.org/rfc/rfc2822.txt) format.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "date_updated" : {
+                "description" : "The date and time in GMT when the resource was last updated specified in [RFC 2822](http://www.ietf.org/rfc/rfc2822.txt) format.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "friendly_name" : {
+                "description" : "The string that you assigned to describe the resource.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "links" : {
+                "description" : "The absolute URLs of the [Members](https://www.twilio.com/docs/chat/api/members), [Messages](https://www.twilio.com/docs/chat/api/messages) , [Invites](https://www.twilio.com/docs/chat/api/invites) and, if it exists, the last [Message](https://www.twilio.com/docs/chat/api/messages) for the Channel.",
+                "format" : "uri-map",
+                "nullable" : true,
+                "type" : "object"
+              },
+              "members_count" : {
+                "description" : "The number of Members in the Channel.",
+                "nullable" : true,
+                "type" : "integer"
+              },
+              "messages_count" : {
+                "description" : "The number of Messages in the Channel.",
+                "nullable" : true,
+                "type" : "integer"
+              },
+              "service_sid" : {
+                "description" : "The SID of the [Service](https://www.twilio.com/docs/api/chat/rest/services) the resource is associated with.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^IS[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "sid" : {
+                "description" : "The unique string that we created to identify the Channel resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^CH[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "type" : {
+                "$ref" : "#/components/schemas/channel_enum_channel_type"
+              },
+              "unique_name" : {
+                "description" : "An application-defined string that uniquely identifies the resource. It can be used to address the resource in place of the resource's `sid` in the URL.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "url" : {
+                "description" : "The absolute URL of the Channel resource.",
+                "format" : "uri",
+                "nullable" : true,
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 14
+  }, {
+    "id" : "255a9537-fa40-42bc-a892-93c8fe24d01c",
+    "name" : "",
+    "request" : {
+      "urlPath" : "/v1/Services/IS13cCcDaaFFcef364E12BC8aDc88974bE/Channels/vmo2",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"friendly_name\" : \"Mauricio Herzog\",\n  \"date_updated\" : \"2022-12-08T10:45:24.029Z\",\n  \"date_created\" : \"2022-11-26T21:15:47.029Z\",\n  \"type\" : \"private\",\n  \"created_by\" : \"2hkexvm5crwrrv3e7sx35xdwdkx1038pr9q37gl4rblxd0ohe31l3zgp0jbqxu3z489kbcs5n2txamjydslaqn55m0yuicqgwna1h4w2zecyhxrpvxw94dksqwmy15suggd794444ee1sxcyy\",\n  \"url\" : \"https://web.example.mocklab.io/646988\",\n  \"sid\" : \"CHdDC9EA28F62b13deB9BADCedA187FEFC\",\n  \"service_sid\" : \"ISa5Efa8C0FEEE2FFD48bE5812dccF80AB\",\n  \"messages_count\" : 2112410155462416908,\n  \"unique_name\" : \"Granville Dickinson\",\n  \"account_sid\" : \"ACa9F2FeE4BCeC33cBdf1EddfA0856fF7E\",\n  \"attributes\" : \"qjs89d4cd8xt4uhbt6f2zq5fgay3pemu3j3u4\",\n  \"links\" : { },\n  \"members_count\" : 2980275000657551057\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "255a9537-fa40-42bc-a892-93c8fe24d01c",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:10.029739Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "FetchChannel",
+          "schema" : {
+            "properties" : {
+              "account_sid" : {
+                "description" : "The SID of the [Account](https://www.twilio.com/docs/api/rest/account) that created the Channel resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^AC[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "attributes" : {
+                "description" : "The JSON string that stores application-specific data. **Note** If this property has been assigned a value, it's only  displayed in a FETCH action that returns a single resource; otherwise, it's null. If the attributes have not been set, `{}` is returned.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "created_by" : {
+                "description" : "The `identity` of the User that created the channel. If the Channel was created by using the API, the value is `system`.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "date_created" : {
+                "description" : "The date and time in GMT when the resource was created specified in [RFC 2822](http://www.ietf.org/rfc/rfc2822.txt) format.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "date_updated" : {
+                "description" : "The date and time in GMT when the resource was last updated specified in [RFC 2822](http://www.ietf.org/rfc/rfc2822.txt) format.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "friendly_name" : {
+                "description" : "The string that you assigned to describe the resource.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "links" : {
+                "description" : "The absolute URLs of the [Members](https://www.twilio.com/docs/chat/api/members), [Messages](https://www.twilio.com/docs/chat/api/messages) , [Invites](https://www.twilio.com/docs/chat/api/invites) and, if it exists, the last [Message](https://www.twilio.com/docs/chat/api/messages) for the Channel.",
+                "format" : "uri-map",
+                "nullable" : true,
+                "type" : "object"
+              },
+              "members_count" : {
+                "description" : "The number of Members in the Channel.",
+                "nullable" : true,
+                "type" : "integer"
+              },
+              "messages_count" : {
+                "description" : "The number of Messages in the Channel.",
+                "nullable" : true,
+                "type" : "integer"
+              },
+              "service_sid" : {
+                "description" : "The SID of the [Service](https://www.twilio.com/docs/api/chat/rest/services) the resource is associated with.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^IS[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "sid" : {
+                "description" : "The unique string that we created to identify the Channel resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^CH[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "type" : {
+                "$ref" : "#/components/schemas/channel_enum_channel_type"
+              },
+              "unique_name" : {
+                "description" : "An application-defined string that uniquely identifies the resource. It can be used to address the resource in place of the resource's `sid` in the URL.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "url" : {
+                "description" : "The absolute URL of the Channel resource.",
+                "format" : "uri",
+                "nullable" : true,
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 15
+  }, {
+    "id" : "d7165266-9f25-4f7d-bd9e-a6fb9d098207",
+    "name" : " - 204",
+    "request" : {
+      "urlPath" : "/v1/Services/ISc5B44c15D7164018C43eAca46a508BC9/Channels/q455",
+      "method" : "DELETE"
+    },
+    "response" : {
+      "status" : 204
+    },
+    "uuid" : "d7165266-9f25-4f7d-bd9e-a6fb9d098207",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:10.029192Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "DeleteChannel"
+        }
+      }
+    },
+    "insertionIndex" : 16
+  }, {
+    "id" : "9d900ec4-719b-4aeb-8c93-3e68407be78d",
+    "name" : "",
+    "request" : {
+      "urlPath" : "/v1/Services/ISc6fDA05875D65ce340bFCBFdBDcC8733/Channels/CH16DfDD0DB2d19fc3EB5D5696e3C5eA9E/Messages/IMa4EE31BA2BDa6DfE24FEdD8BAffc22dC",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"date_updated\" : \"2022-05-23T18:02:38.028Z\",\n  \"date_created\" : \"2022-05-05T20:22:00.028Z\",\n  \"index\" : 2982066394246843356,\n  \"was_edited\" : false,\n  \"body\" : \"Error deleniti sed. Molestiae consequatur non labore tempora laboriosam omnis quis. Occaecati aut sed doloremque. Repellat est ut tempore. Perspiciatis vitae dolorem natus qui beatae est.\",\n  \"channel_sid\" : \"CHF9Fb03Ea857dB6A7CfBFcDbbf29CDDa4\",\n  \"url\" : \"https://web.example.mocklab.io/900455\",\n  \"sid\" : \"IMF4B8EFcd6B744eE70F8E9d6D12cF4FBD\",\n  \"service_sid\" : \"IS43Cd5DAbF6a7E04399Ced787B170Fc66\",\n  \"account_sid\" : \"ACC71B577De6fbDfcFdd04290a0a529c01\",\n  \"attributes\" : \"t5bzjmeqdpuuh0aykiv2hrd5ik09ldcglw56vm0cgiusgebwufy3npvj1zwaxxc41vv343bdn0bff97a5lv2d51o29i62c9msih4cwsxbqoh3uhh8iqrbg2qx1zgobmgep1tdhnu3i2k79f6d0688t0urdj16epon8p5voka3vcjdlvrgpvz5lxcq0csdo\",\n  \"from\" : \"6056c43w4kbaxqkvybre2rudxaek39pyf2c1ey4c85am8bd5ntfpaefsx26n06f2hextdns7psz9tstk7njnpb20gdaaal2qgj9u9geqj5sewjkdygz5jl1rjxcmkv7s816x3p7pgo3tl17abkzmhx43e1qmugdhdc222ta8y2azl\",\n  \"to\" : \"CH99ce62c6cF9Ac4Dceb7Aafdf58D8c51c\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "9d900ec4-719b-4aeb-8c93-3e68407be78d",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:10.029062Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "UpdateMessage",
+          "schema" : {
+            "properties" : {
+              "account_sid" : {
+                "description" : "The SID of the [Account](https://www.twilio.com/docs/api/rest/account) that created the Message resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^AC[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "attributes" : {
+                "description" : "The JSON string that stores application-specific data. **Note** If this property has been assigned a value, it's only  displayed in a FETCH action that returns a single resource; otherwise, it's null. If the attributes have not been set, `{}` is returned.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "body" : {
+                "description" : "The content of the message.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "channel_sid" : {
+                "description" : "The unique ID of the [Channel](https://www.twilio.com/docs/api/chat/rest/channels) the Message resource belongs to.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^CH[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "date_created" : {
+                "description" : "The date and time in GMT when the resource was created specified in [RFC 2822](http://www.ietf.org/rfc/rfc2822.txt) format.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "date_updated" : {
+                "description" : "The date and time in GMT when the resource was last updated specified in [RFC 2822](http://www.ietf.org/rfc/rfc2822.txt) format.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "from" : {
+                "description" : "The [identity](https://www.twilio.com/docs/api/chat/guides/identity) of the message's author. The default value is `system`.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "index" : {
+                "description" : "The index of the message within the [Channel](https://www.twilio.com/docs/chat/api/channels).",
+                "nullable" : true,
+                "type" : "integer"
+              },
+              "service_sid" : {
+                "description" : "The SID of the [Service](https://www.twilio.com/docs/api/chat/rest/services) the resource is associated with.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^IS[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "sid" : {
+                "description" : "The unique string that we created to identify the Message resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^IM[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "to" : {
+                "description" : "The SID of the [Channel](https://www.twilio.com/docs/chat/api/channels) that the message was sent to.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^CH[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "url" : {
+                "description" : "The absolute URL of the Message resource.",
+                "format" : "uri",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "was_edited" : {
+                "description" : "Whether the message has been edited since it was created.",
+                "nullable" : true,
+                "type" : "boolean"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 17
+  }, {
+    "id" : "c2c2de92-454d-4f37-b8af-b6a48cea7fab",
+    "name" : "",
+    "request" : {
+      "urlPath" : "/v1/Services/IS1E2dE50a4DeE85b862A02cDca7562eec/Channels/CHbd39F9d1bF5e7eE614486f6b0da2FbBC/Messages/IM0F49dd44a7d293eFf337eCED65ebb9d0",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"date_updated\" : \"2022-12-07T23:32:47.028Z\",\n  \"date_created\" : \"2022-10-08T11:21:02.028Z\",\n  \"index\" : 5707087714629787687,\n  \"was_edited\" : false,\n  \"body\" : \"Libero optio quis nemo mollitia. Magnam aut quam voluptatem. Nesciunt id illum molestias quod autem. Sed similique ducimus dolorem dicta quam expedita.\",\n  \"channel_sid\" : \"CHbd79e53C7C603cDeFCab2D77c4C0aEa1\",\n  \"url\" : \"https://web.example.mocklab.io/961606\",\n  \"sid\" : \"IM7CBB93e8555bDD83Bb4a7de7BdB4ab3f\",\n  \"service_sid\" : \"IScdd6e754a8cc15EFB1CEEb9ac49454E3\",\n  \"account_sid\" : \"ACacd8B4c01eeB73dbF33d4d3C359Da869\",\n  \"attributes\" : \"tzpd77r3sixp578gvcw36f9ei23s9p597him0vztussizgq852pntdsya4u4o0g42w1dgkp1hnrikf2jamn6ex5uliyopniwdj3pymo7x0i4arg1d0mkj9yrgq4982150en7c04rfuk93acfehhu6kecmvgz1p4nwq6qo45xi52o82m7585g5dtwvy\",\n  \"from\" : \"bipm8ttuulo24xbpchedvyss9lam102nrs2hfvwbne3mxfrl3gj4g0lhkbsiv2urelsxn1b1xq8z51tzw031w3855sjeaeuc567t663pjfpe05s36ujdpcetlyil19l18qt66sn1l4sfl98telnkiz1vfzmgebnxex0jw9rmwa9lq5xmqlydi\",\n  \"to\" : \"CH36Fe8fbe1b794adcccAc1cCb906D23A4\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "c2c2de92-454d-4f37-b8af-b6a48cea7fab",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:10.028724Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "FetchMessage",
+          "schema" : {
+            "properties" : {
+              "account_sid" : {
+                "description" : "The SID of the [Account](https://www.twilio.com/docs/api/rest/account) that created the Message resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^AC[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "attributes" : {
+                "description" : "The JSON string that stores application-specific data. **Note** If this property has been assigned a value, it's only  displayed in a FETCH action that returns a single resource; otherwise, it's null. If the attributes have not been set, `{}` is returned.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "body" : {
+                "description" : "The content of the message.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "channel_sid" : {
+                "description" : "The unique ID of the [Channel](https://www.twilio.com/docs/api/chat/rest/channels) the Message resource belongs to.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^CH[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "date_created" : {
+                "description" : "The date and time in GMT when the resource was created specified in [RFC 2822](http://www.ietf.org/rfc/rfc2822.txt) format.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "date_updated" : {
+                "description" : "The date and time in GMT when the resource was last updated specified in [RFC 2822](http://www.ietf.org/rfc/rfc2822.txt) format.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "from" : {
+                "description" : "The [identity](https://www.twilio.com/docs/api/chat/guides/identity) of the message's author. The default value is `system`.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "index" : {
+                "description" : "The index of the message within the [Channel](https://www.twilio.com/docs/chat/api/channels).",
+                "nullable" : true,
+                "type" : "integer"
+              },
+              "service_sid" : {
+                "description" : "The SID of the [Service](https://www.twilio.com/docs/api/chat/rest/services) the resource is associated with.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^IS[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "sid" : {
+                "description" : "The unique string that we created to identify the Message resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^IM[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "to" : {
+                "description" : "The SID of the [Channel](https://www.twilio.com/docs/chat/api/channels) that the message was sent to.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^CH[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "url" : {
+                "description" : "The absolute URL of the Message resource.",
+                "format" : "uri",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "was_edited" : {
+                "description" : "Whether the message has been edited since it was created.",
+                "nullable" : true,
+                "type" : "boolean"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 18
+  }, {
+    "id" : "e2b9d267-8578-422d-812a-d605a65e6d8a",
+    "name" : " - 204",
+    "request" : {
+      "urlPath" : "/v1/Services/IS5BAe6bdBC59bc328F535dddFC7c9ea30/Channels/CHaA41f4E5e6fFF63B57EfaEa53f492fB4/Messages/IM268bC09d9D7AFeeFc00FcabCd25a2010",
+      "method" : "DELETE"
+    },
+    "response" : {
+      "status" : 204
+    },
+    "uuid" : "e2b9d267-8578-422d-812a-d605a65e6d8a",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:10.02832Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "DeleteMessage"
+        }
+      }
+    },
+    "insertionIndex" : 19
+  }, {
+    "id" : "5902039a-f2aa-42e6-85bb-dcf285b7bf64",
+    "name" : "",
+    "request" : {
+      "urlPath" : "/v1/Services/ISCedbD1e513fa3fd3b8953cdfba29AacA/Channels/CHCABD587342A28Cae41B2a36588447544/Messages",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 201,
+      "body" : "{\n  \"date_updated\" : \"2023-11-22T19:45:35.027Z\",\n  \"date_created\" : \"2023-04-06T18:06:13.027Z\",\n  \"index\" : 5429841868282902721,\n  \"was_edited\" : true,\n  \"body\" : \"Quo commodi itaque eos dolor dolore totam. Officiis qui quis et. Sed est repellat.\",\n  \"channel_sid\" : \"CH4cABD5cE1f51bAB9ea45dD2Af68cDc53\",\n  \"url\" : \"https://web.example.mocklab.io/830668\",\n  \"sid\" : \"IMa143628fAe0ACD4da11b38DD4461F6dD\",\n  \"service_sid\" : \"IScbBBCCbF536d2f224bDF06d1588c8fbB\",\n  \"account_sid\" : \"ACBa5f025dc251FAeF1Fbe9bdaffa4b61C\",\n  \"attributes\" : \"95va0oqoe41m6g7rs8h48mqarqak3vo21384ifv6z88ayur1vmb8czgb2qwboc531u1sq3gn6tqqvlxzynr1a7izh9zrcceymp\",\n  \"from\" : \"qwbezsqviji647elyo93mtew373j0bpkd8vlrjsvtji77t5j3op3eiq8uj69e0du850akridt85i152wkad3mvz2rrhfhljnam6mv94i4bmstkqk7srb1rvs\",\n  \"to\" : \"CHdd9dDb3974B87E06F1CAdDbFDFeDd8fA\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "5902039a-f2aa-42e6-85bb-dcf285b7bf64",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:10.028243Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "CreateMessage",
+          "schema" : {
+            "properties" : {
+              "account_sid" : {
+                "description" : "The SID of the [Account](https://www.twilio.com/docs/api/rest/account) that created the Message resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^AC[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "attributes" : {
+                "description" : "The JSON string that stores application-specific data. **Note** If this property has been assigned a value, it's only  displayed in a FETCH action that returns a single resource; otherwise, it's null. If the attributes have not been set, `{}` is returned.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "body" : {
+                "description" : "The content of the message.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "channel_sid" : {
+                "description" : "The unique ID of the [Channel](https://www.twilio.com/docs/api/chat/rest/channels) the Message resource belongs to.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^CH[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "date_created" : {
+                "description" : "The date and time in GMT when the resource was created specified in [RFC 2822](http://www.ietf.org/rfc/rfc2822.txt) format.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "date_updated" : {
+                "description" : "The date and time in GMT when the resource was last updated specified in [RFC 2822](http://www.ietf.org/rfc/rfc2822.txt) format.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "from" : {
+                "description" : "The [identity](https://www.twilio.com/docs/api/chat/guides/identity) of the message's author. The default value is `system`.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "index" : {
+                "description" : "The index of the message within the [Channel](https://www.twilio.com/docs/chat/api/channels).",
+                "nullable" : true,
+                "type" : "integer"
+              },
+              "service_sid" : {
+                "description" : "The SID of the [Service](https://www.twilio.com/docs/api/chat/rest/services) the resource is associated with.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^IS[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "sid" : {
+                "description" : "The unique string that we created to identify the Message resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^IM[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "to" : {
+                "description" : "The SID of the [Channel](https://www.twilio.com/docs/chat/api/channels) that the message was sent to.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^CH[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "url" : {
+                "description" : "The absolute URL of the Message resource.",
+                "format" : "uri",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "was_edited" : {
+                "description" : "Whether the message has been edited since it was created.",
+                "nullable" : true,
+                "type" : "boolean"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 20
+  }, {
+    "id" : "8ba079ec-7564-45c4-b6ae-6b4c62c296fb",
+    "name" : "",
+    "request" : {
+      "urlPath" : "/v1/Services/ISdB11bACdADA7a2C9C60ca18dB4ef7680/Channels/CH39e48E00d1ad12725f11B9FAaf11ac57/Messages",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"meta\" : {\n    \"first_page_url\" : \"https://web.example.mocklab.io/857294\",\n    \"next_page_url\" : \"https://web.example.mocklab.io/077418\",\n    \"previous_page_url\" : \"https://web.example.mocklab.io/030268\",\n    \"page\" : 8359671663775840183,\n    \"key\" : \"eobkinh5igrucf2m9pm9ucm5q2nvv6uphn3tiz7u9i2mqpelqho50sgovqo6ody7w5opg4pf5qewef7nd2vcui0j3nwc98qr49caqxcqu13flzu5nid0223ijqn5m78s5qkv\",\n    \"url\" : \"https://web.example.mocklab.io/525892\",\n    \"page_size\" : 9106153703958460952\n  },\n  \"messages\" : [ {\n    \"date_updated\" : \"2023-05-01T19:46:32.026Z\",\n    \"date_created\" : \"2022-09-05T19:33:43.026Z\",\n    \"index\" : 6994521670962911094,\n    \"was_edited\" : true,\n    \"body\" : \"Illum molestias laudantium molestias facilis beatae culpa laboriosam. Distinctio totam optio libero neque qui. Quo temporibus et quae tempora quo.\",\n    \"channel_sid\" : \"CH9Be7A7EB9bFee21F71c50e6092eF2cFe\",\n    \"url\" : \"https://web.example.mocklab.io/258806\",\n    \"sid\" : \"IM776E4E9Cd5eA63B97fbFf859D24bC5D5\",\n    \"service_sid\" : \"ISD6f25DC5c4Cc0cFb3F5AC5be2Bd0D3bD\",\n    \"account_sid\" : \"ACb103f5E15A6e22f67146dbe0A682dfee\",\n    \"attributes\" : \"uor74ci5fw9v690ixeswx8go3ynidctazg1dn\",\n    \"from\" : \"hgaki762lg1oaz9v84i3gggb1qzq2iu4tpfiv0w39izopggi7w9fjcfjs14essphugc56nl7fridn15u80iqi79pfi33y7hwtvrmmne484op8j1iievxy\",\n    \"to\" : \"CH0c9bFAEc34Db21AB6c45A33E0Ec8Fc0c\"\n  }, {\n    \"date_updated\" : \"2023-04-22T07:21:36.026Z\",\n    \"date_created\" : \"2022-08-14T05:22:37.026Z\",\n    \"index\" : 3011108455732966580,\n    \"was_edited\" : false,\n    \"body\" : \"Repellat et fugiat ad et sed. Distinctio vero enim iure hic. Dolores fugit at laborum veritatis quas. Consequatur tempora voluptatem est deserunt. Cumque omnis fugiat iste.\",\n    \"channel_sid\" : \"CHc2c6C99EBBabefdDdBBdA6Abb2b64b19\",\n    \"url\" : \"https://web.example.mocklab.io/951474\",\n    \"sid\" : \"IMEFCb4380F5fD18e04B35DD9dA1c981bE\",\n    \"service_sid\" : \"IS29f18652cE8AADc20A3C31CB3aaeBBd5\",\n    \"account_sid\" : \"ACF5e14Abf29F3E3B24E80d54d9FF65BA6\",\n    \"attributes\" : \"ratab4lbgaqlonsgl5tczq0lna07atzeookr3f23vhbe0vu4zwlsmzaqnbxbvn380lm4h2ui41c3vpexapyaouch8z8dpex5b30npmgm4iaogthn6opten3t06lyrfjd5h5ub6zt0o8h0y3ukhml4zs8itp\",\n    \"from\" : \"xh3o0x9l4etvvhodzwe23zg1d7fjp5ymdxqb6kdcuc4kpyirr7miv4wiupdyqayw3gop5dyt8ru1s4h9vjue58jwthpmb1p36uw5kbvxk149k6\",\n    \"to\" : \"CH0BE876Edf1a5f1C7E822533E7412aFE7\"\n  }, {\n    \"date_updated\" : \"2023-09-02T01:52:33.026Z\",\n    \"date_created\" : \"2022-07-30T00:21:19.026Z\",\n    \"index\" : 4310214325281695217,\n    \"was_edited\" : false,\n    \"body\" : \"Consectetur voluptas qui velit distinctio quae. Doloremque itaque dolore nisi. Excepturi sit recusandae.\",\n    \"channel_sid\" : \"CH5f6B2adfc89Bb279cB801ddDE1f8c6Ff\",\n    \"url\" : \"https://web.example.mocklab.io/555664\",\n    \"sid\" : \"IMEd1Be04B75c1B5EB5A7Eb6edEB3DED9D\",\n    \"service_sid\" : \"IS95fDd3fAdbae03BD2Cb9dDC32C2E44dB\",\n    \"account_sid\" : \"ACa1bd33f71F0a5B0C1E71a0FB568E6673\",\n    \"attributes\" : \"k9zmwpwd6stt5b121lw80j7h7xp8qz2rhschu6he4fsov1o53aybcyvofxxyqolyl8vq5ge5rdi0evqu3ekci29jlx739w5ed2tj30apa55\",\n    \"from\" : \"i62yodoclrjoukuonontuwmh3bi0816h3rjpm2zubzm26o5mdouiz9abkfuol2s8v9xk7ht194zsp38is0z4c6j49r4zzwk6grm3ma20hw1gs43zb7e5ivlrg3nhoiazkn1b43e5imw9z05nv50dljruz3oiaxal9grzo3\",\n    \"to\" : \"CHB6Ac95fcFE9Cd826EcC9bed5fecf1C26\"\n  }, {\n    \"date_updated\" : \"2022-07-15T06:00:44.026Z\",\n    \"date_created\" : \"2023-01-23T10:55:35.026Z\",\n    \"index\" : 8665184136184577585,\n    \"was_edited\" : true,\n    \"body\" : \"Atque ut laborum dolorem numquam. Iusto ipsum dolorum dolores. Facilis explicabo a.\",\n    \"channel_sid\" : \"CHD7Fe2B3bE871BE1518b9DfBe18b639F1\",\n    \"url\" : \"https://web.example.mocklab.io/194951\",\n    \"sid\" : \"IM738Fda74a83D20C25Cb9bBFeB43f3beB\",\n    \"service_sid\" : \"ISE0cab4cFE576bDb5BBeE0c007c1FA5b2\",\n    \"account_sid\" : \"AC140a6e0ec1e8cdd49d159bf755f22Cad\",\n    \"attributes\" : \"t8zlxeynfva7odhx91nqjquar3b4uvddg7oropxto4x7rwck2t7wr5t1tu3e4bnts9su6ahdj63fqyxyt0b64gzje44o828rksybrb14ra5dht8r70kbitcumqgbyaa1gsb6ntjgxubpkq5sfryg8c4xmv5avhc8t7jyx\",\n    \"from\" : \"kzv7f5danqucj2sxgjsbdj5bakf3daubasqq2mhpbfvi362j2fda58705zel1rwj6xzt51dxunkxgoducja684y7tchros6frkhcochc0knqut925tz88j\",\n    \"to\" : \"CHA32F718109dee5eCa083d8e2db5ee50d\"\n  }, {\n    \"date_updated\" : \"2024-01-11T08:55:13.026Z\",\n    \"date_created\" : \"2022-11-11T04:55:24.026Z\",\n    \"index\" : 9046125329154379785,\n    \"was_edited\" : false,\n    \"body\" : \"Dicta incidunt aperiam pariatur. Pariatur quis iusto numquam et explicabo. Saepe vero a porro rerum. Alias dolor veniam officiis doloribus. Facere iusto error adipisci accusantium illum deleniti.\",\n    \"channel_sid\" : \"CH80CbC41eD23d5bE5CdFFfCfAda3E8Fd3\",\n    \"url\" : \"https://web.example.mocklab.io/437472\",\n    \"sid\" : \"IM0ACB2a221FabEE9b35da2bf6Fec1aFD4\",\n    \"service_sid\" : \"IS4C1bD77C4Dd15EBDFd1dac25B0eC6f3d\",\n    \"account_sid\" : \"AC83Df4d76bCC6695ffCc070a3E34CCaCE\",\n    \"attributes\" : \"ltrz746rwgl\",\n    \"from\" : \"rzwc9iee0oy9x5h28ad0rqhioglrkmafbngjfojm0956xs3aqvxe7i3xidx4s8njoekxtrmh3kcz6eoun0u4wndlf382nu91blwhbpo70eccwy8bojx7oqzi592t5up9nmgnpkk8kat8jqzjsqiyditgnsn3tq5jo4nx2xpkqkmf7gewkk5ecpf7eyixxjzf7rakco\",\n    \"to\" : \"CHF3fEf4BBe6c4B4895d5aC0475A1cc3bA\"\n  }, {\n    \"date_updated\" : \"2023-04-22T09:06:32.027Z\",\n    \"date_created\" : \"2023-11-09T15:35:11.027Z\",\n    \"index\" : 9184767186133862641,\n    \"was_edited\" : false,\n    \"body\" : \"Alias vero et. Ducimus quod rerum numquam voluptas aut consequatur. Et aliquam aperiam nobis beatae rerum. Et repudiandae ut quia harum et. Velit unde aut quibusdam.\",\n    \"channel_sid\" : \"CH0b94bE54ceCF46a3A1FA2a703dFf32C2\",\n    \"url\" : \"https://web.example.mocklab.io/137056\",\n    \"sid\" : \"IM54074E6c40aE5D0132148ADCfA3B3Ce1\",\n    \"service_sid\" : \"IS58F181092B1FC297eCA1DdF32A54F28D\",\n    \"account_sid\" : \"ACC1b01cA47aaa38Ed4Fd6d65BADe8BE00\",\n    \"attributes\" : \"wga8ysr4f3ly90oag6teoj9kjfrl6q3o0i7hicolv82yo0jf9rhn24bg83tc4an3aspfszo9q8r5mxhmsfmvkmtm\",\n    \"from\" : \"czkxti8yr1vqja2pbzg7hz92k4itx5ufq8yb91a4s9gc0hx1ovqroj1vjgqq3nh7shmy085cq3c81ey8gyhe0ekwq4gubgtba6pi28hed1s2x51ryap9hkm4kzfk9p905zrcbkqm2y3zu534ieu3ydb99tc1xy9rgtncmi01tn6reg39tjbpx0061ve4jnd6sr\",\n    \"to\" : \"CH02b84c8EDFDD4DB30E8D96962A2ACFb3\"\n  }, {\n    \"date_updated\" : \"2023-09-21T11:37:15.027Z\",\n    \"date_created\" : \"2022-10-14T22:20:35.027Z\",\n    \"index\" : 3555748402860244980,\n    \"was_edited\" : false,\n    \"body\" : \"Dolorem omnis sit soluta. Voluptate quidem accusamus eligendi accusamus. Voluptatem ea dolorem quis.\",\n    \"channel_sid\" : \"CH36EBBe1C5cc4AB06cDf58bfCb02E42AB\",\n    \"url\" : \"https://web.example.mocklab.io/585853\",\n    \"sid\" : \"IMcCEe9b36d323aA0E3a2E15b5DBfF155D\",\n    \"service_sid\" : \"ISDF3fc4A2FC35E1c4ED2bd7F0cc68E7A7\",\n    \"account_sid\" : \"AC9CEB3CAbBBE03edf5bBecEDaDB65A3d1\",\n    \"attributes\" : \"x3x8khr2hhgwf9j6vwhavirpe1xpof6b9u1okvj8m2abxeez5rn864grgsrais5stuu9ay9ix6yvi1\",\n    \"from\" : \"eoxbb1fcuwbkst77gs9dxihmys91hp7fa5akvkuxt4ygib5pn5xuefjjl63wkft0ssuqmj9fkit\",\n    \"to\" : \"CH6CbA1b8Dedd76B4edcde05C770ecBAc4\"\n  }, {\n    \"date_updated\" : \"2022-09-08T20:28:57.027Z\",\n    \"date_created\" : \"2023-09-26T17:38:18.027Z\",\n    \"index\" : 8033520250455922437,\n    \"was_edited\" : true,\n    \"body\" : \"Sit non qui. Illum culpa et totam harum adipisci possimus. Nostrum rerum ea harum ducimus exercitationem magni ut. Reiciendis nobis molestiae dolores velit neque deserunt. Officiis qui fugiat ea moles\",\n    \"channel_sid\" : \"CHFb9B2D7C78bd90E10C0b04F8c1ec788A\",\n    \"url\" : \"https://web.example.mocklab.io/988353\",\n    \"sid\" : \"IM2db7A0fb4BE6daF2FBa5d11D410f9a1c\",\n    \"service_sid\" : \"IS8dFA09afadcCaeFe6Ae0A1e1b73BBa5B\",\n    \"account_sid\" : \"ACbbE55ec42CCa3dCfa9ec50eAC2Fa1CF7\",\n    \"attributes\" : \"rk98lmbwrw8aujheup8zlt0\",\n    \"from\" : \"36zwo1v3jusr7n6bx634ajkbk6uwlv3g7k\",\n    \"to\" : \"CHeAbFb3a3f89EB4EEd9acE0acbF947d1f\"\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "8ba079ec-7564-45c4-b6ae-6b4c62c296fb",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:10.027881Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "ListMessage",
+          "schema" : {
+            "properties" : {
+              "messages" : {
+                "items" : {
+                  "$ref" : "#/components/schemas/chat.v1.service.channel.message"
+                },
+                "type" : "array"
+              },
+              "meta" : {
+                "properties" : {
+                  "first_page_url" : {
+                    "format" : "uri",
+                    "type" : "string"
+                  },
+                  "key" : {
+                    "type" : "string"
+                  },
+                  "next_page_url" : {
+                    "format" : "uri",
+                    "nullable" : true,
+                    "type" : "string"
+                  },
+                  "page" : {
+                    "type" : "integer"
+                  },
+                  "page_size" : {
+                    "type" : "integer"
+                  },
+                  "previous_page_url" : {
+                    "format" : "uri",
+                    "nullable" : true,
+                    "type" : "string"
+                  },
+                  "url" : {
+                    "format" : "uri",
+                    "type" : "string"
+                  }
+                },
+                "type" : "object"
+              }
+            },
+            "title" : "ListMessageResponse",
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 21
+  }, {
+    "id" : "0877130d-628d-4450-87c2-8f0f748f0533",
+    "name" : "",
+    "request" : {
+      "urlPath" : "/v1/Services/IS2617e0dEddF0dC0647dF0a6F8379d867/Channels/3738/Members/MB1Dd4CAEe5847DC9B055D4BaC7B1DDF7d",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"last_consumption_timestamp\" : \"2023-08-03T04:20:14.025Z\",\n  \"service_sid\" : \"IS9eBE0c0784f9b7C3EDd0F2c0AcE2BBf3\",\n  \"date_updated\" : \"2023-02-08T03:53:00.025Z\",\n  \"role_sid\" : \"RLc9f5CAfD9BC03ef0c3CA8Ba184e2F09F\",\n  \"date_created\" : \"2023-07-02T22:17:13.025Z\",\n  \"identity\" : \"04f48f6defp4aeaar30t0g3a2zupbtjj14zt35s0pa1xy2\",\n  \"account_sid\" : \"AC1CbB3D45C15cEA4ED39c81ff4131FaFb\",\n  \"last_consumed_message_index\" : 487418633381859272,\n  \"channel_sid\" : \"CHDC2C91FDDAcea556FA1F6d9b2E9440CE\",\n  \"url\" : \"https://web.example.mocklab.io/530902\",\n  \"sid\" : \"MBDdA1fBa9972EcCa6A85C7D3f56d89D83\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "0877130d-628d-4450-87c2-8f0f748f0533",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:10.025772Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "UpdateMember",
+          "schema" : {
+            "properties" : {
+              "account_sid" : {
+                "description" : "The SID of the [Account](https://www.twilio.com/docs/api/rest/account) that created the Member resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^AC[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "channel_sid" : {
+                "description" : "The unique ID of the [Channel](https://www.twilio.com/docs/api/chat/rest/channels) for the member.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^CH[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "date_created" : {
+                "description" : "The date and time in GMT when the resource was created specified in [RFC 2822](http://www.ietf.org/rfc/rfc2822.txt) format.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "date_updated" : {
+                "description" : "The date and time in GMT when the resource was last updated specified in [RFC 2822](http://www.ietf.org/rfc/rfc2822.txt) format.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "identity" : {
+                "description" : "The application-defined string that uniquely identifies the resource's [User](https://www.twilio.com/docs/api/chat/rest/users) within the [Service](https://www.twilio.com/docs/api/chat/rest/services). See [access tokens](https://www.twilio.com/docs/api/chat/guides/create-tokens) for more info.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "last_consumed_message_index" : {
+                "description" : "The index of the last [Message](https://www.twilio.com/docs/api/chat/rest/messages) in the [Channel](https://www.twilio.com/docs/api/chat/rest/channels) that the Member has read.",
+                "nullable" : true,
+                "type" : "integer"
+              },
+              "last_consumption_timestamp" : {
+                "description" : "The ISO 8601 timestamp string that represents the date-time of the last [Message](https://www.twilio.com/docs/api/chat/rest/messages) read event for the Member within the [Channel](https://www.twilio.com/docs/api/chat/rest/channels).",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "role_sid" : {
+                "description" : "The SID of the [Role](https://www.twilio.com/docs/api/chat/rest/roles) assigned to the member.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^RL[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "service_sid" : {
+                "description" : "The SID of the [Service](https://www.twilio.com/docs/api/chat/rest/services) the resource is associated with.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^IS[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "sid" : {
+                "description" : "The unique string that we created to identify the Member resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^MB[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "url" : {
+                "description" : "The absolute URL of the Member resource.",
+                "format" : "uri",
+                "nullable" : true,
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 22
+  }, {
+    "id" : "9bade56c-9b91-49e5-ad88-67f7983683b9",
+    "name" : "",
+    "request" : {
+      "urlPath" : "/v1/Services/ISb13DDf59ebfEEbbCfFa4cd7e5cf92d10/Channels/22ux/Members/MB4cc82FAE3bD538c291BaC2DD9dbC1b8C",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"last_consumption_timestamp\" : \"2023-10-12T04:59:05.025Z\",\n  \"service_sid\" : \"ISBD2C16d4c8bfFfC2Cc43CCa094509cf2\",\n  \"date_updated\" : \"2023-06-25T22:15:31.025Z\",\n  \"role_sid\" : \"RLFFB55C01deb40D03F06b4bD7dFec3572\",\n  \"date_created\" : \"2022-12-31T19:29:35.025Z\",\n  \"identity\" : \"j1n1as3inv6wnt46sd139c8kdmjdmy888gzdf4tdjvh6ot\",\n  \"account_sid\" : \"AC2bC24e74dE24eC649B51C4eA0a2abC98\",\n  \"last_consumed_message_index\" : 4657099472517619996,\n  \"channel_sid\" : \"CHfC4E93A2e8a0f5CcBaAfc1FbefC1CA8d\",\n  \"url\" : \"https://web.example.mocklab.io/704885\",\n  \"sid\" : \"MBDa48e79a51fb2B59BdDcB78031b6D97e\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "9bade56c-9b91-49e5-ad88-67f7983683b9",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:10.025468Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "FetchMember",
+          "schema" : {
+            "properties" : {
+              "account_sid" : {
+                "description" : "The SID of the [Account](https://www.twilio.com/docs/api/rest/account) that created the Member resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^AC[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "channel_sid" : {
+                "description" : "The unique ID of the [Channel](https://www.twilio.com/docs/api/chat/rest/channels) for the member.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^CH[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "date_created" : {
+                "description" : "The date and time in GMT when the resource was created specified in [RFC 2822](http://www.ietf.org/rfc/rfc2822.txt) format.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "date_updated" : {
+                "description" : "The date and time in GMT when the resource was last updated specified in [RFC 2822](http://www.ietf.org/rfc/rfc2822.txt) format.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "identity" : {
+                "description" : "The application-defined string that uniquely identifies the resource's [User](https://www.twilio.com/docs/api/chat/rest/users) within the [Service](https://www.twilio.com/docs/api/chat/rest/services). See [access tokens](https://www.twilio.com/docs/api/chat/guides/create-tokens) for more info.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "last_consumed_message_index" : {
+                "description" : "The index of the last [Message](https://www.twilio.com/docs/api/chat/rest/messages) in the [Channel](https://www.twilio.com/docs/api/chat/rest/channels) that the Member has read.",
+                "nullable" : true,
+                "type" : "integer"
+              },
+              "last_consumption_timestamp" : {
+                "description" : "The ISO 8601 timestamp string that represents the date-time of the last [Message](https://www.twilio.com/docs/api/chat/rest/messages) read event for the Member within the [Channel](https://www.twilio.com/docs/api/chat/rest/channels).",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "role_sid" : {
+                "description" : "The SID of the [Role](https://www.twilio.com/docs/api/chat/rest/roles) assigned to the member.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^RL[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "service_sid" : {
+                "description" : "The SID of the [Service](https://www.twilio.com/docs/api/chat/rest/services) the resource is associated with.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^IS[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "sid" : {
+                "description" : "The unique string that we created to identify the Member resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^MB[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "url" : {
+                "description" : "The absolute URL of the Member resource.",
+                "format" : "uri",
+                "nullable" : true,
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 23
+  }, {
+    "id" : "81c05831-a3a6-46e2-a1b9-1efe7d367e61",
+    "name" : " - 204",
+    "request" : {
+      "urlPath" : "/v1/Services/IS7e047B422C8f49B45018A50a5fEcC5c5/Channels/8nrw/Members/MB3C42Fa049b5aec8e8917F128d2E6a5F5",
+      "method" : "DELETE"
+    },
+    "response" : {
+      "status" : 204
+    },
+    "uuid" : "81c05831-a3a6-46e2-a1b9-1efe7d367e61",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:10.025166Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "DeleteMember"
+        }
+      }
+    },
+    "insertionIndex" : 24
+  }, {
+    "id" : "bf1b58d7-a593-4586-8dab-2fe5440325fc",
+    "name" : "",
+    "request" : {
+      "urlPath" : "/v1/Services/IS4cd5FafED2af0C6192afec6a50F8E0e7/Channels/45v4/Members",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 201,
+      "body" : "{\n  \"last_consumption_timestamp\" : \"2023-01-12T14:23:30.024Z\",\n  \"service_sid\" : \"ISb0b79b22CBdC83EA483F0bBBdFA38F5a\",\n  \"date_updated\" : \"2022-10-22T07:43:18.024Z\",\n  \"role_sid\" : \"RLaF22CeA26ccD1a1d5Ae3a63BFDcB53dd\",\n  \"date_created\" : \"2023-01-16T21:21:00.024Z\",\n  \"identity\" : \"x3zu7y46m98dxc4nnb1wbt8g9unxfetdhtsnrv71wqywkqi8ktifngoh5umtakkzx5axzdblzyyelyez7op20l247nrilqm8nv4uqetxasj32f4f\",\n  \"account_sid\" : \"AC08CeD1Ff9BdD3644cBd5Ccc9a3fFDAAF\",\n  \"last_consumed_message_index\" : 8879504391733372164,\n  \"channel_sid\" : \"CH294EAfbB0E0A48bCb9dAdA490c56DCf9\",\n  \"url\" : \"https://web.example.mocklab.io/652780\",\n  \"sid\" : \"MBA6244d6F620CFfAa6eef704Be93189EC\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "bf1b58d7-a593-4586-8dab-2fe5440325fc",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:10.025054Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "CreateMember",
+          "schema" : {
+            "properties" : {
+              "account_sid" : {
+                "description" : "The SID of the [Account](https://www.twilio.com/docs/api/rest/account) that created the Member resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^AC[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "channel_sid" : {
+                "description" : "The unique ID of the [Channel](https://www.twilio.com/docs/api/chat/rest/channels) for the member.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^CH[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "date_created" : {
+                "description" : "The date and time in GMT when the resource was created specified in [RFC 2822](http://www.ietf.org/rfc/rfc2822.txt) format.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "date_updated" : {
+                "description" : "The date and time in GMT when the resource was last updated specified in [RFC 2822](http://www.ietf.org/rfc/rfc2822.txt) format.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "identity" : {
+                "description" : "The application-defined string that uniquely identifies the resource's [User](https://www.twilio.com/docs/api/chat/rest/users) within the [Service](https://www.twilio.com/docs/api/chat/rest/services). See [access tokens](https://www.twilio.com/docs/api/chat/guides/create-tokens) for more info.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "last_consumed_message_index" : {
+                "description" : "The index of the last [Message](https://www.twilio.com/docs/api/chat/rest/messages) in the [Channel](https://www.twilio.com/docs/api/chat/rest/channels) that the Member has read.",
+                "nullable" : true,
+                "type" : "integer"
+              },
+              "last_consumption_timestamp" : {
+                "description" : "The ISO 8601 timestamp string that represents the date-time of the last [Message](https://www.twilio.com/docs/api/chat/rest/messages) read event for the Member within the [Channel](https://www.twilio.com/docs/api/chat/rest/channels).",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "role_sid" : {
+                "description" : "The SID of the [Role](https://www.twilio.com/docs/api/chat/rest/roles) assigned to the member.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^RL[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "service_sid" : {
+                "description" : "The SID of the [Service](https://www.twilio.com/docs/api/chat/rest/services) the resource is associated with.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^IS[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "sid" : {
+                "description" : "The unique string that we created to identify the Member resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^MB[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "url" : {
+                "description" : "The absolute URL of the Member resource.",
+                "format" : "uri",
+                "nullable" : true,
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 25
+  }, {
+    "id" : "1369907e-aa73-4a4a-937d-d29d2f044bd9",
+    "name" : "",
+    "request" : {
+      "urlPath" : "/v1/Services/IS18D1aE1fB0DBaDe7Eb67D98a1A33F39b/Channels/745e/Members",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"meta\" : {\n    \"first_page_url\" : \"https://web.example.mocklab.io/635842\",\n    \"next_page_url\" : \"https://web.example.mocklab.io/674584\",\n    \"previous_page_url\" : \"https://web.example.mocklab.io/685071\",\n    \"page\" : 6245502784611926699,\n    \"key\" : \"ce7tag2nexb5j22n2zqbrsea71nqmsecsb23t2onncltpfu029y1erkgxgfmu7hg0y469zw53x22lc5fqez1dejuh8mmfjk0ezm17iurzw7hngmd7jdxfik6qszlcwk4zl65ibpvbuwib315589j712ytdph4e4cacheydtsyrtp15v3v0hvv8qe12\",\n    \"url\" : \"https://web.example.mocklab.io/589673\",\n    \"page_size\" : 4057686210981080163\n  },\n  \"members\" : [ {\n    \"last_consumption_timestamp\" : \"2023-04-05T10:11:36.024Z\",\n    \"service_sid\" : \"ISaBfa7EEDC90AEb7ff4ea36B004dBc8aA\",\n    \"date_updated\" : \"2023-02-21T03:56:50.024Z\",\n    \"role_sid\" : \"RLABE1cEb6De769c1f8Ca632bC232EAE38\",\n    \"date_created\" : \"2023-05-31T17:53:45.024Z\",\n    \"identity\" : \"n0rb9bi0k47h7cj5dgarfs0mzde55dyfywtspi9qykfgq5ns9y74uyjzt927wnugshy2cr5cad3s6po8h310y5jy50k4djtjgzmpy4cty8ojdiqctr137heu7jo4ot31qde5r07pmttj4ftl2hexxezodqk5020pa4tmy37xsz31zs9qficejwm\",\n    \"account_sid\" : \"ACeaE3CAb828fD1aaCf1fBAcC1ad4A1C56\",\n    \"last_consumed_message_index\" : 6733771005156230591,\n    \"channel_sid\" : \"CH537Ec4B9a5fb50C8999667F9acadC8BB\",\n    \"url\" : \"https://web.example.mocklab.io/923654\",\n    \"sid\" : \"MB9fCdaAab2ccCFBcc95677aAD9bBB9bFC\"\n  }, {\n    \"last_consumption_timestamp\" : \"2023-03-25T05:26:35.024Z\",\n    \"service_sid\" : \"ISBf15F7cfDb91cc5Db13dA3DBBF31Ce20\",\n    \"date_updated\" : \"2024-03-14T03:29:37.024Z\",\n    \"role_sid\" : \"RLA89ceeB0342Cb4Dc4EFdf672E358EAF6\",\n    \"date_created\" : \"2022-05-14T12:06:59.024Z\",\n    \"identity\" : \"9yu9dkdv1oalzxnh51l5alb6a2izqmq9ybnnprvpzu3tj02mwvd3ep9o6m72z2lpku3cbaxvvu10iydlv0aj7g0lz45fdaywkcavju6n7iqzgh02hyfuspg4ez6ok9p0ifvkiibsl9bt2dpt84qu9uefhvtsp0j3mcok2nf5mckbrjtu6627mgxg81xobfkzckou9\",\n    \"account_sid\" : \"AC1B26Ea791Fc12BD1CA80f4fEeaF3b3bB\",\n    \"last_consumed_message_index\" : 1219041747272236918,\n    \"channel_sid\" : \"CHA5aF955bDda4EFE89C810Bd0EE9925DE\",\n    \"url\" : \"https://web.example.mocklab.io/252672\",\n    \"sid\" : \"MBEBeBA84E5AbDecfAA0A8A7D0f12c70ba\"\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "1369907e-aa73-4a4a-937d-d29d2f044bd9",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:10.024711Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "ListMember",
+          "schema" : {
+            "properties" : {
+              "members" : {
+                "items" : {
+                  "$ref" : "#/components/schemas/chat.v1.service.channel.member"
+                },
+                "type" : "array"
+              },
+              "meta" : {
+                "properties" : {
+                  "first_page_url" : {
+                    "format" : "uri",
+                    "type" : "string"
+                  },
+                  "key" : {
+                    "type" : "string"
+                  },
+                  "next_page_url" : {
+                    "format" : "uri",
+                    "nullable" : true,
+                    "type" : "string"
+                  },
+                  "page" : {
+                    "type" : "integer"
+                  },
+                  "page_size" : {
+                    "type" : "integer"
+                  },
+                  "previous_page_url" : {
+                    "format" : "uri",
+                    "nullable" : true,
+                    "type" : "string"
+                  },
+                  "url" : {
+                    "format" : "uri",
+                    "type" : "string"
+                  }
+                },
+                "type" : "object"
+              }
+            },
+            "title" : "ListMemberResponse",
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 26
+  }, {
+    "id" : "e6d677ca-0b9c-4d9b-94d8-73515bc4a5be",
+    "name" : "",
+    "request" : {
+      "urlPath" : "/v1/Services/ISFA689CBBfdC1C3570aCC0Dea6aF7de22/Channels/xavv/Invites/INad613E8f381537baF0CAe7129ba5ec6D",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"service_sid\" : \"IS2d3EBA38220BEECA78aac1fcFcBd37Ff\",\n  \"date_updated\" : \"2024-02-10T11:09:24.023Z\",\n  \"role_sid\" : \"RL18d356670CfCD9e2e67B19C7fa2e70dD\",\n  \"date_created\" : \"2023-08-09T15:31:21.023Z\",\n  \"identity\" : \"vuzgfwyhi4oxx3qksf5on1tbngw0bhwwoqhqgbweyxo40oinvfi5kq6q4bnhhdf45zw7xus1yvu30wlybtd0z7qa\",\n  \"account_sid\" : \"ACFcFEF8E91bAb3835AFFAdFDB9f86B9a3\",\n  \"created_by\" : \"56n2oskdauz0xp\",\n  \"channel_sid\" : \"CH36682697FCee21acAAe91DaA470e83c8\",\n  \"url\" : \"https://web.example.mocklab.io/453698\",\n  \"sid\" : \"IN6e50E99FeB615D21cfDfaDeBFA73eCaC\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "e6d677ca-0b9c-4d9b-94d8-73515bc4a5be",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:10.023889Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "FetchInvite",
+          "schema" : {
+            "properties" : {
+              "account_sid" : {
+                "description" : "The SID of the [Account](https://www.twilio.com/docs/api/rest/account) that created the Invite resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^AC[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "channel_sid" : {
+                "description" : "The SID of the [Channel](https://www.twilio.com/docs/api/chat/rest/channels) the resource belongs to.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^CH[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "created_by" : {
+                "description" : "The `identity` of the User that created the invite.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "date_created" : {
+                "description" : "The date and time in GMT when the resource was created specified in [RFC 2822](http://www.ietf.org/rfc/rfc2822.txt) format.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "date_updated" : {
+                "description" : "The date and time in GMT when the resource was last updated specified in [RFC 2822](http://www.ietf.org/rfc/rfc2822.txt) format.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "identity" : {
+                "description" : "The application-defined string that uniquely identifies the resource's [User](https://www.twilio.com/docs/api/chat/rest/users) within the [Service](https://www.twilio.com/docs/api/chat/rest/services). See [access tokens](https://www.twilio.com/docs/api/chat/guides/create-tokens) for more info.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "role_sid" : {
+                "description" : "The SID of the [Role](https://www.twilio.com/docs/api/chat/rest/roles) assigned to the resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^RL[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "service_sid" : {
+                "description" : "The SID of the [Service](https://www.twilio.com/docs/api/chat/rest/services) the resource is associated with.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^IS[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "sid" : {
+                "description" : "The unique string that we created to identify the Invite resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^IN[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "url" : {
+                "description" : "The absolute URL of the Invite resource.",
+                "format" : "uri",
+                "nullable" : true,
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 27
+  }, {
+    "id" : "5708a68a-7ad7-4f5c-aadc-e53cd3e691ed",
+    "name" : " - 204",
+    "request" : {
+      "urlPath" : "/v1/Services/IS4B862caD5A261ADc7ceB0b5D2C44aE07/Channels/tk1g/Invites/IN155cBe19A828ad3D42eb11D46a43623a",
+      "method" : "DELETE"
+    },
+    "response" : {
+      "status" : 204
+    },
+    "uuid" : "5708a68a-7ad7-4f5c-aadc-e53cd3e691ed",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:10.023574Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "DeleteInvite"
+        }
+      }
+    },
+    "insertionIndex" : 28
+  }, {
+    "id" : "35270c89-f032-4d3a-b83f-0180f9eed960",
+    "name" : "",
+    "request" : {
+      "urlPath" : "/v1/Services/ISB8d6BCF9DF30BA3257Ca6Af9e5DDCb3E/Channels/86ps/Invites",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 201,
+      "body" : "{\n  \"service_sid\" : \"ISb95E5bCdbCAeC8Db6c2C5F80408Fc68F\",\n  \"date_updated\" : \"2023-07-14T06:31:52.023Z\",\n  \"role_sid\" : \"RLD5DCa2c9bBC75AABbFDD3Ad76E3D5F6b\",\n  \"date_created\" : \"2024-02-17T09:29:52.023Z\",\n  \"identity\" : \"fj1o9dz0ugawu54tdjdd6tuysoivcyyu3sbkcqpgukfrgu6m2xzfi9q1jmdphfulx4h9ozmj5eodck31fsov7km3isr7d3huh44jw5arigrxa3nnfim7jh2tb8ot\",\n  \"account_sid\" : \"ACfbCc200d4590A3791CDbfBFa48c2eFC9\",\n  \"created_by\" : \"kysthaxln94w674s3e8y4qhqac6w3tr7t82gi8638h9hmymhgg0wctz8gz1ypq\",\n  \"channel_sid\" : \"CH1acc5aeE2FDc95ff0c45a77b03C4aAa8\",\n  \"url\" : \"https://web.example.mocklab.io/514304\",\n  \"sid\" : \"IN37fE89609ca9Ccc0afaaB7B49E068126\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "35270c89-f032-4d3a-b83f-0180f9eed960",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:10.023458Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "CreateInvite",
+          "schema" : {
+            "properties" : {
+              "account_sid" : {
+                "description" : "The SID of the [Account](https://www.twilio.com/docs/api/rest/account) that created the Invite resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^AC[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "channel_sid" : {
+                "description" : "The SID of the [Channel](https://www.twilio.com/docs/api/chat/rest/channels) the resource belongs to.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^CH[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "created_by" : {
+                "description" : "The `identity` of the User that created the invite.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "date_created" : {
+                "description" : "The date and time in GMT when the resource was created specified in [RFC 2822](http://www.ietf.org/rfc/rfc2822.txt) format.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "date_updated" : {
+                "description" : "The date and time in GMT when the resource was last updated specified in [RFC 2822](http://www.ietf.org/rfc/rfc2822.txt) format.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "identity" : {
+                "description" : "The application-defined string that uniquely identifies the resource's [User](https://www.twilio.com/docs/api/chat/rest/users) within the [Service](https://www.twilio.com/docs/api/chat/rest/services). See [access tokens](https://www.twilio.com/docs/api/chat/guides/create-tokens) for more info.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "role_sid" : {
+                "description" : "The SID of the [Role](https://www.twilio.com/docs/api/chat/rest/roles) assigned to the resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^RL[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "service_sid" : {
+                "description" : "The SID of the [Service](https://www.twilio.com/docs/api/chat/rest/services) the resource is associated with.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^IS[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "sid" : {
+                "description" : "The unique string that we created to identify the Invite resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^IN[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "url" : {
+                "description" : "The absolute URL of the Invite resource.",
+                "format" : "uri",
+                "nullable" : true,
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 29
+  }, {
+    "id" : "3285253c-061c-4fe7-ac84-2ca409af80de",
+    "name" : "",
+    "request" : {
+      "urlPath" : "/v1/Services/ISE54Ce0e0BBE22E174FcC67BA9Ff4cAD7/Channels/56e8/Invites",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"meta\" : {\n    \"first_page_url\" : \"https://web.example.mocklab.io/518683\",\n    \"next_page_url\" : \"https://web.example.mocklab.io/655436\",\n    \"previous_page_url\" : \"https://web.example.mocklab.io/563301\",\n    \"page\" : 8312436254650471948,\n    \"key\" : \"1aw8dij55yi2vjehqvv6s7xyhn8h2x0l43x5wah480wfsx7laa3orx96slrsplrwqanuoe2fbjhx7t27jzptyg8exdfue9u28yjnfy3zf1ts55dvaeklhh9kwb0ovr7ldsx2bmtkj0n92ze1i1e3\",\n    \"url\" : \"https://web.example.mocklab.io/519507\",\n    \"page_size\" : 7520414412822540390\n  },\n  \"invites\" : [ {\n    \"service_sid\" : \"ISe33AbBF53D3A2fDd2CfF9EAEAd1ad61e\",\n    \"date_updated\" : \"2022-07-23T14:24:30.022Z\",\n    \"role_sid\" : \"RL9C5ED1c7feC0A5B637e92be5A9BbBfC4\",\n    \"date_created\" : \"2023-11-22T21:23:32.022Z\",\n    \"identity\" : \"jkm3jun6ht2ftop8qqbpahdwo2x1vmv9l5f3n9wm46nv6932wbhjq5aozbkypeyerxcdcry3lftd52k3xk6md617mujcjk97se1mzs0asqp8ab2h56tqgkcd2ql8d4g0lna9js0xdfe\",\n    \"account_sid\" : \"AC08Dd025E1c3dDeF38cCB8A9cCa801c85\",\n    \"created_by\" : \"vprsp0rgph9c2yjrwvcpr0g6t9kanda3viliiflxlijymh1ljzxptrjcb8l2u63rhqr44ln219j5jwqh9v6mfcw5m5pcykijqoymudk3k18wuj421s4hopesn0cxpkfi1cy329k47n7kb1agotudofd09v701y2si6y43fn9p9wkm8oywq\",\n    \"channel_sid\" : \"CH1eBA0Ee73dEfF6aEB56fF2aF4df97dFa\",\n    \"url\" : \"https://web.example.mocklab.io/813993\",\n    \"sid\" : \"INfE7c9E176AFDf80BFf752F10fD1aa7F1\"\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "3285253c-061c-4fe7-ac84-2ca409af80de",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:10.023089Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "ListInvite",
+          "schema" : {
+            "properties" : {
+              "invites" : {
+                "items" : {
+                  "$ref" : "#/components/schemas/chat.v1.service.channel.invite"
+                },
+                "type" : "array"
+              },
+              "meta" : {
+                "properties" : {
+                  "first_page_url" : {
+                    "format" : "uri",
+                    "type" : "string"
+                  },
+                  "key" : {
+                    "type" : "string"
+                  },
+                  "next_page_url" : {
+                    "format" : "uri",
+                    "nullable" : true,
+                    "type" : "string"
+                  },
+                  "page" : {
+                    "type" : "integer"
+                  },
+                  "page_size" : {
+                    "type" : "integer"
+                  },
+                  "previous_page_url" : {
+                    "format" : "uri",
+                    "nullable" : true,
+                    "type" : "string"
+                  },
+                  "url" : {
+                    "format" : "uri",
+                    "type" : "string"
+                  }
+                },
+                "type" : "object"
+              }
+            },
+            "title" : "ListInviteResponse",
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 30
+  }, {
+    "id" : "e78c1bb1-6a7b-44e8-8fef-304265d92820",
+    "name" : "",
+    "request" : {
+      "urlPath" : "/v1/Services/IS3E712Ca5F6a562cE37cb9FBBCCD7a4a1/Channels",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 201,
+      "body" : "{\n  \"friendly_name\" : \"Lenna Pouros\",\n  \"date_updated\" : \"2022-07-25T05:19:47.022Z\",\n  \"date_created\" : \"2022-05-11T23:44:20.022Z\",\n  \"type\" : \"public\",\n  \"created_by\" : \"xyfjgt3yjo9sh87xpqwukxmwddb8fbtewwa8q4xtihr0otuz6l8uaqdenuiykwmhnqngtdu3frx0vpqt5m0ksw1s9ifeertmo7z4n1nr7dea4b5y40do2q67vs9ugz6\",\n  \"url\" : \"https://web.example.mocklab.io/752390\",\n  \"sid\" : \"CHcfea4FbD89591baf1AAD1bFaa21febB5\",\n  \"service_sid\" : \"ISd453272B91bC93E921cFD48DA67dCBfF\",\n  \"messages_count\" : 5962386002779813855,\n  \"unique_name\" : \"Dr. Mose Keeling\",\n  \"account_sid\" : \"ACB0CD2dDEc99Bdb4Cd5c539FbB18CB4ce\",\n  \"attributes\" : \"4zc1zcropj0wn7627t11hrjovgfbdxuqcdz7ixeznb9f6c31yytecbvc44sdciem0atuf1kg237dpynb0zrq0gfsulwrn9488dggewv0\",\n  \"links\" : { },\n  \"members_count\" : 2742690489127677606\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "e78c1bb1-6a7b-44e8-8fef-304265d92820",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:10.022372Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "CreateChannel",
+          "schema" : {
+            "properties" : {
+              "account_sid" : {
+                "description" : "The SID of the [Account](https://www.twilio.com/docs/api/rest/account) that created the Channel resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^AC[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "attributes" : {
+                "description" : "The JSON string that stores application-specific data. **Note** If this property has been assigned a value, it's only  displayed in a FETCH action that returns a single resource; otherwise, it's null. If the attributes have not been set, `{}` is returned.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "created_by" : {
+                "description" : "The `identity` of the User that created the channel. If the Channel was created by using the API, the value is `system`.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "date_created" : {
+                "description" : "The date and time in GMT when the resource was created specified in [RFC 2822](http://www.ietf.org/rfc/rfc2822.txt) format.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "date_updated" : {
+                "description" : "The date and time in GMT when the resource was last updated specified in [RFC 2822](http://www.ietf.org/rfc/rfc2822.txt) format.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "friendly_name" : {
+                "description" : "The string that you assigned to describe the resource.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "links" : {
+                "description" : "The absolute URLs of the [Members](https://www.twilio.com/docs/chat/api/members), [Messages](https://www.twilio.com/docs/chat/api/messages) , [Invites](https://www.twilio.com/docs/chat/api/invites) and, if it exists, the last [Message](https://www.twilio.com/docs/chat/api/messages) for the Channel.",
+                "format" : "uri-map",
+                "nullable" : true,
+                "type" : "object"
+              },
+              "members_count" : {
+                "description" : "The number of Members in the Channel.",
+                "nullable" : true,
+                "type" : "integer"
+              },
+              "messages_count" : {
+                "description" : "The number of Messages in the Channel.",
+                "nullable" : true,
+                "type" : "integer"
+              },
+              "service_sid" : {
+                "description" : "The SID of the [Service](https://www.twilio.com/docs/api/chat/rest/services) the resource is associated with.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^IS[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "sid" : {
+                "description" : "The unique string that we created to identify the Channel resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^CH[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "type" : {
+                "$ref" : "#/components/schemas/channel_enum_channel_type"
+              },
+              "unique_name" : {
+                "description" : "An application-defined string that uniquely identifies the resource. It can be used to address the resource in place of the resource's `sid` in the URL.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "url" : {
+                "description" : "The absolute URL of the Channel resource.",
+                "format" : "uri",
+                "nullable" : true,
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 31
+  }, {
+    "id" : "3a418d1b-0ec0-47b8-b9c5-9a989dc1b65d",
+    "name" : "",
+    "request" : {
+      "urlPath" : "/v1/Services/ISE5efDd9923fFF1C2035e9DF7Af8c39e8/Channels",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"channels\" : [ {\n    \"friendly_name\" : \"Aurelia Orn\",\n    \"date_updated\" : \"2024-03-03T00:24:13.02Z\",\n    \"date_created\" : \"2022-07-25T16:36:28.02Z\",\n    \"type\" : \"public\",\n    \"created_by\" : \"jjgs4syvbxjiboy3uzq6ai4mwkj4ddtnuq3p8d44uj6vncrkrzke2xgjcs0csf2ic7s41yfg8hij9alp536ictjatpice5bev0oyizbylvw\",\n    \"url\" : \"https://web.example.mocklab.io/560335\",\n    \"sid\" : \"CH84edF70eBC1E6a1cB76cedBBABefffEf\",\n    \"service_sid\" : \"IS8207A21aE36Dabb6ed8cDf1ACD604ad8\",\n    \"messages_count\" : 393833550641700851,\n    \"unique_name\" : \"Mitchel Heaney\",\n    \"account_sid\" : \"ACB42FffAa671acFbDb9307dC26995B8fB\",\n    \"attributes\" : \"ly7fn1tln6oi58fiesrxa6wxt6vfcy6qxpkf2rh3mcxyt390112rbunxt838fxfxk4etauqe6qxtm46122pmi95hj7nsdplk0xb6y2mnogvxygy424jet3bc5kwtnpwso1cdgro56ek9vl5ujqhziwy6qvmgcm4go3fs65852fv96lfa\",\n    \"links\" : { },\n    \"members_count\" : 5318226243411204864\n  }, {\n    \"friendly_name\" : \"Kandy Bechtelar\",\n    \"date_updated\" : \"2023-02-09T18:40:27.021Z\",\n    \"date_created\" : \"2022-12-01T20:53:47.021Z\",\n    \"type\" : \"public\",\n    \"created_by\" : \"ddmna32jdjw34rfm73e31ytdxq3ygpbi4i3sdx3do1jy1rvabsr9korz3x3wxg8oq6qsdgipppgpj2m4ql1st9s9r1ikqr2jld7vlkmyf6f00u4h2mmbutx7z3nee2xzt31kzep922aaq9909he091j3uugijy5ipr5\",\n    \"url\" : \"https://web.example.mocklab.io/978568\",\n    \"sid\" : \"CHdA6fCdf000d5F2C3E7aC7D476934dDc0\",\n    \"service_sid\" : \"ISDB4f046Aa323dB7F4E647aa4D370CdC1\",\n    \"messages_count\" : 6681185452961165167,\n    \"unique_name\" : \"Cammie Windler\",\n    \"account_sid\" : \"AC44A03eC8bD45BA703634aB97580E91AC\",\n    \"attributes\" : \"zez5xuw7b509crkbo32wpe92bmbvo9gp1aztywc3h7dmacew5nrx6s8ltvhw1x5rasa8fbf7kksstjf8sskpsc4up5zky84nqpylk6ky6x70800xzylvokgsz5rt8ss9h9\",\n    \"links\" : { },\n    \"members_count\" : 3747540359161600427\n  }, {\n    \"friendly_name\" : \"Mao Klocko\",\n    \"date_updated\" : \"2023-07-21T07:23:48.021Z\",\n    \"date_created\" : \"2022-08-28T05:11:24.021Z\",\n    \"type\" : \"private\",\n    \"created_by\" : \"kqzlykx9aymgo9jgyx9p2emxjhrbj8rumzy612jr2o8jvmkv6ecepo3kre3d756yg3pfb8x4uyfiqoe9o0pj4smk62ze2l00gcmahzyklt9daf1cd3ld1u7ut9b070gds0b9i9bchotj1bvrd5w\",\n    \"url\" : \"https://web.example.mocklab.io/142840\",\n    \"sid\" : \"CHa760FF1dDBBfcfec5Ad01bB6eE80EEaA\",\n    \"service_sid\" : \"ISbcee5Cba9EAeAA3E5EDa957bAbC9fEb2\",\n    \"messages_count\" : 8102401238383709709,\n    \"unique_name\" : \"Mikel Yost\",\n    \"account_sid\" : \"ACEFfAfB26deCE65cE789EBaFDA0A21feC\",\n    \"attributes\" : \"dt6g09tdj6j9678zzptd8nvgbcjw1q3bkarabudipp3xidnuerxaaahpo6vddhvy75j3ie9hvuo9vv6oev2wbo7awfxd4be91o2ndiopt4wl5h95jf4fmi0n70lai33w3h83hd2rpxcmog9tetikzel7opuybqnx8yopkvsmhwgakv1bbi6t1ckfzyp0f3cilw3zzgh\",\n    \"links\" : { },\n    \"members_count\" : 3904867840233669407\n  } ],\n  \"meta\" : {\n    \"first_page_url\" : \"https://web.example.mocklab.io/236011\",\n    \"next_page_url\" : \"https://web.example.mocklab.io/036551\",\n    \"previous_page_url\" : \"https://web.example.mocklab.io/508258\",\n    \"page\" : 3866008394216577293,\n    \"key\" : \"cv1kypub37ouqolohw13xdthocekzkly3w3aj7ka7\",\n    \"url\" : \"https://web.example.mocklab.io/326623\",\n    \"page_size\" : 1385136774480585481\n  }\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "3a418d1b-0ec0-47b8-b9c5-9a989dc1b65d",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:10.021981Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "ListChannel",
+          "schema" : {
+            "properties" : {
+              "channels" : {
+                "items" : {
+                  "$ref" : "#/components/schemas/chat.v1.service.channel"
+                },
+                "type" : "array"
+              },
+              "meta" : {
+                "properties" : {
+                  "first_page_url" : {
+                    "format" : "uri",
+                    "type" : "string"
+                  },
+                  "key" : {
+                    "type" : "string"
+                  },
+                  "next_page_url" : {
+                    "format" : "uri",
+                    "nullable" : true,
+                    "type" : "string"
+                  },
+                  "page" : {
+                    "type" : "integer"
+                  },
+                  "page_size" : {
+                    "type" : "integer"
+                  },
+                  "previous_page_url" : {
+                    "format" : "uri",
+                    "nullable" : true,
+                    "type" : "string"
+                  },
+                  "url" : {
+                    "format" : "uri",
+                    "type" : "string"
+                  }
+                },
+                "type" : "object"
+              }
+            },
+            "title" : "ListChannelResponse",
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 32
+  }, {
+    "id" : "0a4fd53a-3dee-4de2-b1e6-6c2c16f81f36",
+    "name" : "",
+    "request" : {
+      "urlPath" : "/v1/Services",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 201,
+      "body" : "{\n  \"friendly_name\" : \"Chelsie Yost PhD\",\n  \"webhook_method\" : \"fgoxhn8edjaq7gmynmnpbaxae\",\n  \"date_updated\" : \"2023-02-23T12:36:59.02Z\",\n  \"default_channel_role_sid\" : \"RLA1CA2BF78ef0aFAfE5F7fC17F7eF520d\",\n  \"date_created\" : \"2024-01-19T05:31:26.02Z\",\n  \"post_webhook_url\" : \"https://web.example.mocklab.io/621563\",\n  \"read_status_enabled\" : true,\n  \"url\" : \"https://web.example.mocklab.io/866747\",\n  \"pre_webhook_url\" : \"https://web.example.mocklab.io/699304\",\n  \"sid\" : \"ISF22739287d1691293cD1DFaE8cB8931A\",\n  \"reachability_enabled\" : true,\n  \"webhooks\" : { },\n  \"consumption_report_interval\" : 4040004841987371043,\n  \"default_service_role_sid\" : \"RL8bb35fBF3fAd1645e9ECF9Ac415E80f8\",\n  \"account_sid\" : \"ACfF7e1c7afd14b979dd4525CEffa45Ba8\",\n  \"default_channel_creator_role_sid\" : \"RLC8A6ffFe9Ee3Ce91cF457d8Cfd12B61D\",\n  \"links\" : { },\n  \"typing_indicator_timeout\" : 8880673238715580190,\n  \"webhook_filters\" : [ \"2dw8y65pwvwmrkzsjx45b0\", \"s9o4o1o0enc4xsbv4vy31mh8ql0eo0tdiffq3xkn3rcn0i2lt8ppc4stl4u5zti5fuedkzzj2x98frhtbnlhsv8s8zf1rnodw6dvz31bplk7pu0al9p7889f5tob\", \"hii5vlip5k5l45qd2bb1cxy9hxazphayp90d2q8zxzgbtr49hkf89sgqglzdxbswiu\", \"00wrei2m0791rv9hfbc1a2rbw09d8dz3uws9su02cqpd5otlq\", \"l8on4rw6p2j1ad46159nsjc78rdfgb793\", \"2v5kl55rfr10\" ],\n  \"limits\" : { },\n  \"notifications\" : { }\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "0a4fd53a-3dee-4de2-b1e6-6c2c16f81f36",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:10.020789Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "CreateService",
+          "schema" : {
+            "properties" : {
+              "account_sid" : {
+                "description" : "The SID of the [Account](https://www.twilio.com/docs/api/rest/account) that created the Service resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^AC[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "consumption_report_interval" : {
+                "description" : "DEPRECATED. The interval in seconds between consumption reports submission batches from client endpoints.",
+                "nullable" : true,
+                "type" : "integer"
+              },
+              "date_created" : {
+                "description" : "The date and time in GMT when the resource was created specified in [RFC 2822](http://www.ietf.org/rfc/rfc2822.txt) format.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "date_updated" : {
+                "description" : "The date and time in GMT when the resource was last updated specified in [RFC 2822](http://www.ietf.org/rfc/rfc2822.txt) format.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "default_channel_creator_role_sid" : {
+                "description" : "The channel role assigned to a channel creator when they join a new channel. See the [Roles endpoint](https://www.twilio.com/docs/chat/api/roles) for more details.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^RL[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "default_channel_role_sid" : {
+                "description" : "The channel role assigned to users when they are added to a channel. See the [Roles endpoint](https://www.twilio.com/docs/chat/api/roles) for more details.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^RL[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "default_service_role_sid" : {
+                "description" : "The service role assigned to users when they are added to the service. See the [Roles endpoint](https://www.twilio.com/docs/chat/api/roles) for more details.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^RL[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "friendly_name" : {
+                "description" : "The string that you assigned to describe the resource.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "limits" : {
+                "description" : "An object that describes the limits of the service instance. The `limits` object contains  `channel_members` to describe the members/channel limit and `user_channels` to describe the channels/user limit. `channel_members` can be 1,000 or less, with a default of 250. `user_channels` can be 1,000 or less, with a default value of 100.",
+                "nullable" : true
+              },
+              "links" : {
+                "description" : "The absolute URLs of the Service's [Channels](https://www.twilio.com/docs/chat/api/channels), [Roles](https://www.twilio.com/docs/chat/api/roles), and [Users](https://www.twilio.com/docs/chat/api/users).",
+                "format" : "uri-map",
+                "nullable" : true,
+                "type" : "object"
+              },
+              "notifications" : {
+                "description" : "The notification configuration for the Service instance. See [Push Notification Configuration](https://www.twilio.com/docs/chat/push-notification-configuration) for more information.",
+                "nullable" : true
+              },
+              "post_webhook_url" : {
+                "description" : "The URL for post-event webhooks, which are called by using the `webhook_method`. See [Webhook Events](https://www.twilio.com/docs/api/chat/webhooks) for more details.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "pre_webhook_url" : {
+                "description" : "The URL for pre-event webhooks, which are called by using the `webhook_method`. See [Webhook Events](https://www.twilio.com/docs/api/chat/webhooks) for more details.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "reachability_enabled" : {
+                "description" : "Whether the [Reachability Indicator](https://www.twilio.com/docs/chat/reachability-indicator) is enabled for this Service instance. The default is `false`.",
+                "nullable" : true,
+                "type" : "boolean"
+              },
+              "read_status_enabled" : {
+                "description" : "Whether the [Message Consumption Horizon](https://www.twilio.com/docs/chat/consumption-horizon) feature is enabled. The default is `true`.",
+                "nullable" : true,
+                "type" : "boolean"
+              },
+              "sid" : {
+                "description" : "The unique string that we created to identify the Service resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^IS[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "typing_indicator_timeout" : {
+                "description" : "How long in seconds after a `started typing` event until clients should assume that user is no longer typing, even if no `ended typing` message was received.  The default is 5 seconds.",
+                "nullable" : true,
+                "type" : "integer"
+              },
+              "url" : {
+                "description" : "The absolute URL of the Service resource.",
+                "format" : "uri",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "webhook_filters" : {
+                "description" : "The list of WebHook events that are enabled for this Service instance. See [Webhook Events](https://www.twilio.com/docs/chat/webhook-events) for more details.",
+                "items" : {
+                  "type" : "string"
+                },
+                "nullable" : true,
+                "type" : "array"
+              },
+              "webhook_method" : {
+                "description" : "The HTTP method to use for calls to the `pre_webhook_url` and `post_webhook_url` webhooks.  Can be: `POST` or `GET` and the default is `POST`. See [Webhook Events](https://www.twilio.com/docs/chat/webhook-events) for more details.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "webhooks" : {
+                "description" : "An object that contains information about the webhooks configured for this service.",
+                "nullable" : true
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 33
+  }, {
+    "id" : "f245090e-0369-4fcd-8059-dfd73a2c6427",
+    "name" : "",
+    "request" : {
+      "urlPath" : "/v1/Services",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"meta\" : {\n    \"first_page_url\" : \"https://web.example.mocklab.io/954421\",\n    \"next_page_url\" : \"https://web.example.mocklab.io/117537\",\n    \"previous_page_url\" : \"https://web.example.mocklab.io/435479\",\n    \"page\" : 8853072748980281960,\n    \"key\" : \"egi41pdtjhxusskh3lufsgq8hq0f06mmq6vo1jtpjmz\",\n    \"url\" : \"https://web.example.mocklab.io/381786\",\n    \"page_size\" : 8977947122106356443\n  },\n  \"services\" : [ {\n    \"friendly_name\" : \"Maude Turcotte\",\n    \"webhook_method\" : \"lsokt30goioo0jba2uk1os5qi71ni7sm4hn3n9dis3mrgat01gtx6b634u7zasqoj2bkgat7cklqpywqy01xe82q1vdiclf33m7w40c07ay0usoguqsirv2e5if1po21oi13v2z0nc1ivef\",\n    \"date_updated\" : \"2022-09-21T14:57:48.019Z\",\n    \"default_channel_role_sid\" : \"RLb9f3C0025924caeAEf2a2d81ACef7ceB\",\n    \"date_created\" : \"2024-01-21T00:52:25.019Z\",\n    \"post_webhook_url\" : \"https://web.example.mocklab.io/915852\",\n    \"read_status_enabled\" : true,\n    \"url\" : \"https://web.example.mocklab.io/171721\",\n    \"pre_webhook_url\" : \"https://web.example.mocklab.io/907748\",\n    \"sid\" : \"IS2CdcF7B3ab0dACFD90A6e288f7FFEe38\",\n    \"reachability_enabled\" : true,\n    \"webhooks\" : { },\n    \"consumption_report_interval\" : 4188512184168156853,\n    \"default_service_role_sid\" : \"RL1a7f6F85FD58c57Cd71DcA31F9FcaeFd\",\n    \"account_sid\" : \"AC350C9ca6AA5a0fcF54f7E4120ed5c6fd\",\n    \"default_channel_creator_role_sid\" : \"RLe695FEB12dbf10c2E6482f1eDd63CFcf\",\n    \"links\" : { },\n    \"typing_indicator_timeout\" : 5974351934209747936,\n    \"webhook_filters\" : [ \"czr31tcsrba10rnkeh6u92ez5439l9mtcrfgtnpkqft\", \"3i6wak9o42nm3u15axuweb3t8ry7gtht0ow8d4d8rohmt4wobuvq00ud\" ],\n    \"limits\" : { },\n    \"notifications\" : { }\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "f245090e-0369-4fcd-8059-dfd73a2c6427",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:10.020178Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "ListService",
+          "schema" : {
+            "properties" : {
+              "meta" : {
+                "properties" : {
+                  "first_page_url" : {
+                    "format" : "uri",
+                    "type" : "string"
+                  },
+                  "key" : {
+                    "type" : "string"
+                  },
+                  "next_page_url" : {
+                    "format" : "uri",
+                    "nullable" : true,
+                    "type" : "string"
+                  },
+                  "page" : {
+                    "type" : "integer"
+                  },
+                  "page_size" : {
+                    "type" : "integer"
+                  },
+                  "previous_page_url" : {
+                    "format" : "uri",
+                    "nullable" : true,
+                    "type" : "string"
+                  },
+                  "url" : {
+                    "format" : "uri",
+                    "type" : "string"
+                  }
+                },
+                "type" : "object"
+              },
+              "services" : {
+                "items" : {
+                  "$ref" : "#/components/schemas/chat.v1.service"
+                },
+                "type" : "array"
+              }
+            },
+            "title" : "ListServiceResponse",
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 34
+  }, {
+    "id" : "3ea53c7e-b447-48f9-9020-f58250e78794",
+    "name" : "",
+    "request" : {
+      "urlPath" : "/v1/Credentials/CR7A9768856Eeb297Df3ddd8B052Cd3112",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"friendly_name\" : \"Genevie Smith\",\n  \"date_updated\" : \"2022-04-11T02:15:03.019Z\",\n  \"date_created\" : \"2023-09-23T10:39:59.019Z\",\n  \"sandbox\" : \"cof0dw7q1wagjwlmtshs9aqx7m59cisufxjs3vaks8ifuuqk5vgr30ovdb1jxjadoplnp1gyqkodf0bg9ut8g30q1u9b3j72o4fux1pw4q75iilsdl\",\n  \"account_sid\" : \"AC2173acaAae415a5EdBCffE3ED7Cf6eFd\",\n  \"type\" : \"apn\",\n  \"url\" : \"https://web.example.mocklab.io/491008\",\n  \"sid\" : \"CRe7bf25FaBD2Cd15D68c7b0DFa687FDFB\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "3ea53c7e-b447-48f9-9020-f58250e78794",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:10.019344Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "UpdateCredential",
+          "schema" : {
+            "properties" : {
+              "account_sid" : {
+                "description" : "The SID of the [Account](https://www.twilio.com/docs/api/rest/account) that created the Credential resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^AC[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "date_created" : {
+                "description" : "The date and time in GMT when the resource was created specified in [RFC 2822](http://www.ietf.org/rfc/rfc2822.txt) format.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "date_updated" : {
+                "description" : "The date and time in GMT when the resource was last updated specified in [RFC 2822](http://www.ietf.org/rfc/rfc2822.txt) format.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "friendly_name" : {
+                "description" : "The string that you assigned to describe the resource.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "sandbox" : {
+                "description" : "[APN only] Whether to send the credential to sandbox APNs. Can be `true` to send to sandbox APNs or `false` to send to production.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "sid" : {
+                "description" : "The unique string that we created to identify the Credential resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^CR[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "type" : {
+                "$ref" : "#/components/schemas/credential_enum_push_service"
+              },
+              "url" : {
+                "description" : "The absolute URL of the Credential resource.",
+                "format" : "uri",
+                "nullable" : true,
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 35
+  }, {
+    "id" : "7c7a24d7-4de4-44e9-abf6-b0f99661c63c",
+    "name" : "",
+    "request" : {
+      "urlPath" : "/v1/Credentials/CRfD2B9b05E16bCa6196cA9f40B0904419",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"friendly_name\" : \"Pierre Muller\",\n  \"date_updated\" : \"2023-11-16T15:04:05.018Z\",\n  \"date_created\" : \"2023-10-09T15:04:07.018Z\",\n  \"sandbox\" : \"j9ftgmnruljljisdafiba7fkyfzn1emi9lpwwcnnq8su2yx21hv6gwvnr3bd382phhe\",\n  \"account_sid\" : \"AC42D85bDCDac7E80F60A7B0fcfE43787E\",\n  \"type\" : \"apn\",\n  \"url\" : \"https://web.example.mocklab.io/010188\",\n  \"sid\" : \"CRFFeDd6B7d9A784644F2E2E7C4AdFBF81\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "7c7a24d7-4de4-44e9-abf6-b0f99661c63c",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:10.019114Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "FetchCredential",
+          "schema" : {
+            "properties" : {
+              "account_sid" : {
+                "description" : "The SID of the [Account](https://www.twilio.com/docs/api/rest/account) that created the Credential resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^AC[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "date_created" : {
+                "description" : "The date and time in GMT when the resource was created specified in [RFC 2822](http://www.ietf.org/rfc/rfc2822.txt) format.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "date_updated" : {
+                "description" : "The date and time in GMT when the resource was last updated specified in [RFC 2822](http://www.ietf.org/rfc/rfc2822.txt) format.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "friendly_name" : {
+                "description" : "The string that you assigned to describe the resource.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "sandbox" : {
+                "description" : "[APN only] Whether to send the credential to sandbox APNs. Can be `true` to send to sandbox APNs or `false` to send to production.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "sid" : {
+                "description" : "The unique string that we created to identify the Credential resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^CR[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "type" : {
+                "$ref" : "#/components/schemas/credential_enum_push_service"
+              },
+              "url" : {
+                "description" : "The absolute URL of the Credential resource.",
+                "format" : "uri",
+                "nullable" : true,
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 36
+  }, {
+    "id" : "4f08c8aa-7384-4920-8216-0bd9f2f21b78",
+    "name" : " - 204",
+    "request" : {
+      "urlPath" : "/v1/Credentials/CRA84ADA8605Cc6aC26ee9c0099066ee43",
+      "method" : "DELETE"
+    },
+    "response" : {
+      "status" : 204
+    },
+    "uuid" : "4f08c8aa-7384-4920-8216-0bd9f2f21b78",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:10.018868Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "DeleteCredential"
+        }
+      }
+    },
+    "insertionIndex" : 37
+  }, {
+    "id" : "7b905b85-caba-4f4c-95bb-2d7a4f0baa70",
+    "name" : "",
+    "request" : {
+      "urlPath" : "/v1/Credentials",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 201,
+      "body" : "{\n  \"friendly_name\" : \"Trudy Nader IV\",\n  \"date_updated\" : \"2022-08-12T14:13:37.018Z\",\n  \"date_created\" : \"2022-08-30T06:21:09.018Z\",\n  \"sandbox\" : \"sdvvy3ylzffzfbnfr5utgh22u2hv18f3v0qb2gpmf5v0o5d8ero1cvu35gnjsobdb2vbdnafyjje949bwaa6gm1qwo73d7tygj0vcqps6hs43kwv99qy6u8r2p1e1crn\",\n  \"account_sid\" : \"ACaCe2a60f1E2FEAD2BFE64e8a9d64A1eb\",\n  \"type\" : \"fcm\",\n  \"url\" : \"https://web.example.mocklab.io/195116\",\n  \"sid\" : \"CRfA43a1CdD18F0D10fa72038A8bfbae7e\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "7b905b85-caba-4f4c-95bb-2d7a4f0baa70",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:10.018817Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "CreateCredential",
+          "schema" : {
+            "properties" : {
+              "account_sid" : {
+                "description" : "The SID of the [Account](https://www.twilio.com/docs/api/rest/account) that created the Credential resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^AC[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "date_created" : {
+                "description" : "The date and time in GMT when the resource was created specified in [RFC 2822](http://www.ietf.org/rfc/rfc2822.txt) format.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "date_updated" : {
+                "description" : "The date and time in GMT when the resource was last updated specified in [RFC 2822](http://www.ietf.org/rfc/rfc2822.txt) format.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "friendly_name" : {
+                "description" : "The string that you assigned to describe the resource.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "sandbox" : {
+                "description" : "[APN only] Whether to send the credential to sandbox APNs. Can be `true` to send to sandbox APNs or `false` to send to production.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "sid" : {
+                "description" : "The unique string that we created to identify the Credential resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^CR[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "type" : {
+                "$ref" : "#/components/schemas/credential_enum_push_service"
+              },
+              "url" : {
+                "description" : "The absolute URL of the Credential resource.",
+                "format" : "uri",
+                "nullable" : true,
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 38
+  }, {
+    "id" : "f01882cf-2e43-4a2f-85b1-0d4f6b9297a6",
+    "name" : "",
+    "request" : {
+      "urlPath" : "/v1/Credentials",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"credentials\" : [ {\n    \"friendly_name\" : \"Sylvester Tromp PhD\",\n    \"date_updated\" : \"2023-08-19T02:22:49.017Z\",\n    \"date_created\" : \"2022-05-06T19:04:58.017Z\",\n    \"sandbox\" : \"94zyzn4257ghmq55fu4dmh7uqt4eij853jac4i45lglf416n5o0sb6ehom5rn5shxllnrz5dm2ftpcf1ozac1g3od04x9tetnubjkbtoc6qo1eby1aez34c49wfc8bdg15ym8f0hnjabctyuo20utgl8vmxfww1fafs2\",\n    \"account_sid\" : \"ACa99AdCAe9Ad97eDC36a8aB19C22355d5\",\n    \"type\" : \"apn\",\n    \"url\" : \"https://web.example.mocklab.io/899356\",\n    \"sid\" : \"CRC6e2Bd87a5F0c6ffA677e6aeAf3CfFFa\"\n  }, {\n    \"friendly_name\" : \"Norberto Muller\",\n    \"date_updated\" : \"2023-11-13T00:54:55.017Z\",\n    \"date_created\" : \"2022-07-30T11:36:40.017Z\",\n    \"sandbox\" : \"q4ex6uoqtbfvp1idpzreersgx468zl0wntet2d95ngo0foey9z7vyfmrpezmlld3mxz87m1evhs2b8\",\n    \"account_sid\" : \"AC4C93C4187B6c57eCBc156c3d1E64B98b\",\n    \"type\" : \"fcm\",\n    \"url\" : \"https://web.example.mocklab.io/887999\",\n    \"sid\" : \"CRABAFBeF23C708CFD52967Abb98ED5Eec\"\n  }, {\n    \"friendly_name\" : \"Curtis Halvorson\",\n    \"date_updated\" : \"2023-11-24T10:49:57.017Z\",\n    \"date_created\" : \"2023-12-08T16:08:14.017Z\",\n    \"sandbox\" : \"tfkwgorc55d1hp04ivy8b99dm0fljl9013jf40rsalxwep7t3mttdkqc3kb259ckw60dkesvbi90tdlecaxd9ot8wmstmnuvlfkeahbwual6mi175zta893cbeqcz3wrkwp4sia852jckzej7d24mok5ffqlfu29pkidis6nzqd5o5qv5gb5vh8bo3nw8sss5fdo\",\n    \"account_sid\" : \"ACeAe90f07bb5f90CFEC244e1259Be8fE3\",\n    \"type\" : \"gcm\",\n    \"url\" : \"https://web.example.mocklab.io/860281\",\n    \"sid\" : \"CR1ADB889AbfB5aaB0206C07a6fCe7bBAA\"\n  }, {\n    \"friendly_name\" : \"Natacha Powlowski\",\n    \"date_updated\" : \"2023-05-30T15:52:54.017Z\",\n    \"date_created\" : \"2023-11-28T09:42:24.017Z\",\n    \"sandbox\" : \"1bg6wq2q\",\n    \"account_sid\" : \"AC5ab2FBabfB56E4dbE2Cf5eEcA2aAe8aB\",\n    \"type\" : \"fcm\",\n    \"url\" : \"https://web.example.mocklab.io/165499\",\n    \"sid\" : \"CR4C1be6Be275B689ff5A545aEd4D06f7f\"\n  }, {\n    \"friendly_name\" : \"Truman Pfeffer\",\n    \"date_updated\" : \"2024-01-27T06:27:00.017Z\",\n    \"date_created\" : \"2023-02-16T06:08:09.017Z\",\n    \"sandbox\" : \"nv0urkrhjqy55e4rcsbfj4idhr9cz01u8zmv2cznp98b6pdcqdayxp702kbux2q5suoy7ksdep6dxqu19krn6tn1xkbmn3vy3yludkcbgm5kn0985xpe3brtqfa02zaadxpw12ikaohmw43fy48tfsb66pn4pk1pmx9tzvmpc\",\n    \"account_sid\" : \"ACdA9D3A8aE9e34C056DAbB0e3bD29D4c4\",\n    \"type\" : \"apn\",\n    \"url\" : \"https://web.example.mocklab.io/532007\",\n    \"sid\" : \"CRcd4C3A1a4Dbe5c6Edb0c0915E65BA034\"\n  } ],\n  \"meta\" : {\n    \"first_page_url\" : \"https://web.example.mocklab.io/894227\",\n    \"next_page_url\" : \"https://web.example.mocklab.io/015172\",\n    \"previous_page_url\" : \"https://web.example.mocklab.io/260291\",\n    \"page\" : 5034403400757878197,\n    \"key\" : \"4idvo2n0g9k3d3odf9xpaxgyjs57p539sjnsxcaev6e\",\n    \"url\" : \"https://web.example.mocklab.io/457800\",\n    \"page_size\" : 5144487691378893078\n  }\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "f01882cf-2e43-4a2f-85b1-0d4f6b9297a6",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:10.018515Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "ListCredential",
+          "schema" : {
+            "properties" : {
+              "credentials" : {
+                "items" : {
+                  "$ref" : "#/components/schemas/chat.v1.credential"
+                },
+                "type" : "array"
+              },
+              "meta" : {
+                "properties" : {
+                  "first_page_url" : {
+                    "format" : "uri",
+                    "type" : "string"
+                  },
+                  "key" : {
+                    "type" : "string"
+                  },
+                  "next_page_url" : {
+                    "format" : "uri",
+                    "nullable" : true,
+                    "type" : "string"
+                  },
+                  "page" : {
+                    "type" : "integer"
+                  },
+                  "page_size" : {
+                    "type" : "integer"
+                  },
+                  "previous_page_url" : {
+                    "format" : "uri",
+                    "nullable" : true,
+                    "type" : "string"
+                  },
+                  "url" : {
+                    "format" : "uri",
+                    "type" : "string"
+                  }
+                },
+                "type" : "object"
+              }
+            },
+            "title" : "ListCredentialResponse",
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 39
+  } ]
+}

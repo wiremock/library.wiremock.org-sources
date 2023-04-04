@@ -1,0 +1,2676 @@
+{
+  "mappings" : [ {
+    "id" : "28e044b5-5b0b-4689-ac51-526b4bc4fe35",
+    "name" : "List UsageRecords",
+    "request" : {
+      "urlPath" : "/v1/UsageRecords",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"meta\" : {\n    \"first_page_url\" : \"https://web.example.mocklab.io/030424\",\n    \"next_page_url\" : \"https://web.example.mocklab.io/052041\",\n    \"previous_page_url\" : \"https://web.example.mocklab.io/580364\",\n    \"page\" : 6157926252134049708,\n    \"key\" : \"mgainkx4j69tjljdsvzpk0yp1wv49o16kh9ajruzhy8in24phkmykmdzk04yke8v9up5wilibv722hhnerb00vpsijnq8j36czzv3yq5sx\",\n    \"url\" : \"https://web.example.mocklab.io/182322\",\n    \"page_size\" : 5016290589107236238\n  },\n  \"usage_records\" : [ {\n    \"data_total_billed\" : 1.2804709098767522E308,\n    \"sim_sid\" : \"HS8ff8fD05BDb3CefCFe86CE6D0dC769DD\",\n    \"iso_country\" : \"Gabon\",\n    \"period\" : { },\n    \"data_upload\" : 1242115212017243974,\n    \"network_sid\" : \"HWbd8F01f20dB57D59eEccc3b6ACcDB3aC\",\n    \"billed_unit\" : \"6gh05xopwl6yg8t0d6ubgcdyomxuw6rzsxwb8p6oebb572ud0m8rr7um129l0emjmzdf5dzais3mcxaiekpzpgg0p1ihc50f034gyoep3sm249hduqzrnbmcp9kq0369wc\",\n    \"account_sid\" : \"ACf9f788BdCE4B2acc9b824d34CE1AE7Ed\",\n    \"data_total\" : 2294532998717523625,\n    \"fleet_sid\" : \"HFD320c47Cc7B6ad81c05dc7F7c7dD034d\",\n    \"data_download\" : 5274789443723650950\n  }, {\n    \"data_total_billed\" : 3.085479821035052E307,\n    \"sim_sid\" : \"HS10E1Ad2d7Fbcf96cc3eD7C06fA9fF739\",\n    \"iso_country\" : \"Albania\",\n    \"period\" : { },\n    \"data_upload\" : 8068094327597877274,\n    \"network_sid\" : \"HWb169a68fddbadc52AAECe3FdDc50d23C\",\n    \"billed_unit\" : \"vinwt8p01qnazrl38pmy943v19hwqq27x5knvszsioay8beaqc7zgt8057ibznsfx62f1v4ydgn4lm8zwr44dzjc1342ipyruoylyh6av0ml4lif924fk14xd4e5096w4dnsrxnkm70rrzaa6l72kwr9lqg81u25wgq0kvdfkpo4q9yvpta4\",\n    \"account_sid\" : \"AC2d6be5fBb43bFc1e3e61D17AbA34e4DF\",\n    \"data_total\" : 5878697213111550445,\n    \"fleet_sid\" : \"HFfB97327c91463dcF7ad54D51be1edFaB\",\n    \"data_download\" : 856697355561484051\n  }, {\n    \"data_total_billed\" : 1.6830344163332185E308,\n    \"sim_sid\" : \"HS6dF40F2eD6E19C725Fc3Fe7cC23f817a\",\n    \"iso_country\" : \"United Kingdom of Great Britain and Northern Ireland\",\n    \"period\" : { },\n    \"data_upload\" : 6745308128919560686,\n    \"network_sid\" : \"HWAd94babB51FCB754d090Aa7e6CdBb24e\",\n    \"billed_unit\" : \"wgzf3\",\n    \"account_sid\" : \"AC269fC9acF20c3A2fcF3C7F22e66219ca\",\n    \"data_total\" : 3562958439740260490,\n    \"fleet_sid\" : \"HFaDec90E8bdD4f59dCCC9fE42EaCaa572\",\n    \"data_download\" : 4764325098226674059\n  }, {\n    \"data_total_billed\" : 1.014510183752287E308,\n    \"sim_sid\" : \"HS607dC3c1aCFb9349D25512BeDE2A7641\",\n    \"iso_country\" : \"Panama\",\n    \"period\" : { },\n    \"data_upload\" : 6350183579881506538,\n    \"network_sid\" : \"HWB5f152E6fbCe9cd35e9a3cdB4Fa8797e\",\n    \"billed_unit\" : \"gyjdoge397vb16\",\n    \"account_sid\" : \"ACfEc2Bac90DFEFE7F27c9b0adE7F8b8EE\",\n    \"data_total\" : 3294663330658695406,\n    \"fleet_sid\" : \"HFDADd2a8a0A90631e48a00531E54f2fb8\",\n    \"data_download\" : 4972323256918960429\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "28e044b5-5b0b-4689-ac51-526b4bc4fe35",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:22.843336Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "ListUsageRecord",
+          "schema" : {
+            "properties" : {
+              "meta" : {
+                "properties" : {
+                  "first_page_url" : {
+                    "format" : "uri",
+                    "type" : "string"
+                  },
+                  "key" : {
+                    "type" : "string"
+                  },
+                  "next_page_url" : {
+                    "format" : "uri",
+                    "nullable" : true,
+                    "type" : "string"
+                  },
+                  "page" : {
+                    "type" : "integer"
+                  },
+                  "page_size" : {
+                    "type" : "integer"
+                  },
+                  "previous_page_url" : {
+                    "format" : "uri",
+                    "nullable" : true,
+                    "type" : "string"
+                  },
+                  "url" : {
+                    "format" : "uri",
+                    "type" : "string"
+                  }
+                },
+                "type" : "object"
+              },
+              "usage_records" : {
+                "items" : {
+                  "$ref" : "#/components/schemas/supersim.v1.usage_record"
+                },
+                "type" : "array"
+              }
+            },
+            "title" : "ListUsageRecordResponse",
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 0
+  }, {
+    "id" : "be46b3cd-6089-4098-95f9-ce3e42efecfa",
+    "name" : "Fetch SMS Command instance from your account.",
+    "request" : {
+      "urlPath" : "/v1/SmsCommands/HCdBC4D0E13cBf1cDBE4D35db558fbC5bD",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"sim_sid\" : \"HSdDFDa7CAeDbbb1E706c20ABfeAd8B0db\",\n  \"date_updated\" : \"2023-05-09T06:09:14.842Z\",\n  \"payload\" : \"km42igcom\",\n  \"date_created\" : \"2023-11-10T02:53:20.842Z\",\n  \"account_sid\" : \"ACd3d307dcfc2883A7ECffaB80b8aFbF68\",\n  \"url\" : \"https://web.example.mocklab.io/620408\",\n  \"direction\" : \"from_sim\",\n  \"sid\" : \"HC5A0eaEFD63F53Cea40cF9c1E02Ca9Eb3\",\n  \"status\" : \"queued\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "be46b3cd-6089-4098-95f9-ce3e42efecfa",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:22.842566Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "FetchSmsCommand",
+          "schema" : {
+            "properties" : {
+              "account_sid" : {
+                "description" : "The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the SMS Command resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^AC[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "date_created" : {
+                "description" : "The date and time in GMT when the resource was created specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "date_updated" : {
+                "description" : "The date and time in GMT when the resource was last updated specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "direction" : {
+                "$ref" : "#/components/schemas/sms_command_enum_direction"
+              },
+              "payload" : {
+                "description" : "The message body of the SMS Command sent to or from the SIM. For text mode messages, this can be up to 160 characters.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "sid" : {
+                "description" : "The unique string that we created to identify the SMS Command resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^HC[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "sim_sid" : {
+                "description" : "The SID of the [SIM](https://www.twilio.com/docs/iot/supersim/api/sim-resource) that this SMS Command was sent to or from.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^HS[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "status" : {
+                "$ref" : "#/components/schemas/sms_command_enum_status"
+              },
+              "url" : {
+                "description" : "The absolute URL of the SMS Command resource.",
+                "format" : "uri",
+                "nullable" : true,
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 1
+  }, {
+    "id" : "7763c441-e981-4224-b82a-fca996dfd89c",
+    "name" : "Send SMS Command to a Sim.",
+    "request" : {
+      "urlPath" : "/v1/SmsCommands",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 201,
+      "body" : "{\n  \"sim_sid\" : \"HSEf5937B2602bE80A94C6355e78Ff0c46\",\n  \"date_updated\" : \"2023-01-31T15:56:06.842Z\",\n  \"payload\" : \"2w0czmw01v9iufap5tz31i6w0mg2hdtqzzictj77ka2wco0szkz9zw0pftyry45ggb5lxfv3c2ekh6a9v4rmq45pcylnwe79g16z7s24wuxd8d6oou25omcscex6abp7vz51v362oimkjtz1vl9jz1eaa35926e8q4ug5b2l9azs41pwnl\",\n  \"date_created\" : \"2022-11-15T10:16:50.842Z\",\n  \"account_sid\" : \"ACBece4b486FeEc2bB3b1BebCC2FBcC2bD\",\n  \"url\" : \"https://web.example.mocklab.io/110353\",\n  \"direction\" : \"from_sim\",\n  \"sid\" : \"HCb8D7F9c5Dc8E0bEd42758Ff1585100DA\",\n  \"status\" : \"received\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "7763c441-e981-4224-b82a-fca996dfd89c",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:22.842358Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "CreateSmsCommand",
+          "schema" : {
+            "properties" : {
+              "account_sid" : {
+                "description" : "The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the SMS Command resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^AC[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "date_created" : {
+                "description" : "The date and time in GMT when the resource was created specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "date_updated" : {
+                "description" : "The date and time in GMT when the resource was last updated specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "direction" : {
+                "$ref" : "#/components/schemas/sms_command_enum_direction"
+              },
+              "payload" : {
+                "description" : "The message body of the SMS Command sent to or from the SIM. For text mode messages, this can be up to 160 characters.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "sid" : {
+                "description" : "The unique string that we created to identify the SMS Command resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^HC[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "sim_sid" : {
+                "description" : "The SID of the [SIM](https://www.twilio.com/docs/iot/supersim/api/sim-resource) that this SMS Command was sent to or from.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^HS[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "status" : {
+                "$ref" : "#/components/schemas/sms_command_enum_status"
+              },
+              "url" : {
+                "description" : "The absolute URL of the SMS Command resource.",
+                "format" : "uri",
+                "nullable" : true,
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 2
+  }, {
+    "id" : "f31c1831-28bf-4bb2-b0f2-f722119791b0",
+    "name" : "Retrieve a list of SMS Commands from your account.",
+    "request" : {
+      "urlPath" : "/v1/SmsCommands",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"meta\" : {\n    \"first_page_url\" : \"https://web.example.mocklab.io/419577\",\n    \"next_page_url\" : \"https://web.example.mocklab.io/511344\",\n    \"previous_page_url\" : \"https://web.example.mocklab.io/708094\",\n    \"page\" : 1166963754293995266,\n    \"key\" : \"qzcuog9zllj7hmb4yvrco0lojneqf97js2a8e9qsgr40o8aseriuyscrlthls8o4rp769z7896lmixdb5ilhvn8ju2ev55ua4cmgykndleu17pwd76qicywk0a7zii7e5ukykb1em76x31zz1zu\",\n    \"url\" : \"https://web.example.mocklab.io/181942\",\n    \"page_size\" : 8455699404522273517\n  },\n  \"sms_commands\" : [ {\n    \"sim_sid\" : \"HSeD0742BBCa202D9F17d5c80eFa43c620\",\n    \"date_updated\" : \"2023-12-22T23:17:35.841Z\",\n    \"payload\" : \"6h3vctwfxg\",\n    \"date_created\" : \"2023-11-09T12:56:23.841Z\",\n    \"account_sid\" : \"AC30bD0A3e4cA2bb466cA27b88275873eA\",\n    \"url\" : \"https://web.example.mocklab.io/157781\",\n    \"direction\" : \"to_sim\",\n    \"sid\" : \"HCFA6c08D94c4F13780e7CbF4d778A7F2E\",\n    \"status\" : \"queued\"\n  }, {\n    \"sim_sid\" : \"HSa618Fa6b4D0bF9E2baCECd612566bF94\",\n    \"date_updated\" : \"2023-07-14T06:15:30.841Z\",\n    \"payload\" : \"a2t46hu8h1evxfbze3w6icejle20y0aeo4vl35p33kr2szrj49az6258wwn44wbqtc29waejplevr39k8c\",\n    \"date_created\" : \"2024-02-14T11:20:42.841Z\",\n    \"account_sid\" : \"AC8DFf8FCdEdAC1aEfeA550b5f7Ea9091a\",\n    \"url\" : \"https://web.example.mocklab.io/012432\",\n    \"direction\" : \"to_sim\",\n    \"sid\" : \"HC9efabfBcBFdf30534D20A3e4CC988B4d\",\n    \"status\" : \"delivered\"\n  }, {\n    \"sim_sid\" : \"HSFf50FaaD1a3dCBfcfA3eFcFaBe7BCA1D\",\n    \"date_updated\" : \"2023-08-03T05:28:16.841Z\",\n    \"payload\" : \"44omcgn8at9gkbkj0tuwbno9s2vbcmexvn4irlbherfji49okt4q5ixz5r7livt5xdl6xkfkhtu9xrwj13s1w9943biy31kyi715yo3lsszkkogiide\",\n    \"date_created\" : \"2022-04-12T08:38:46.841Z\",\n    \"account_sid\" : \"ACFB1c79BCBa51403DfaCe10F4F4efc0D5\",\n    \"url\" : \"https://web.example.mocklab.io/984616\",\n    \"direction\" : \"from_sim\",\n    \"sid\" : \"HC05f4195F8550c663FB01B3cffDCeeEa7\",\n    \"status\" : \"delivered\"\n  }, {\n    \"sim_sid\" : \"HSe0bD0FAdAf2DaDaEc379E65A67dDBbf8\",\n    \"date_updated\" : \"2022-12-22T04:44:03.841Z\",\n    \"payload\" : \"6p29kvl5ksnakt0ccqm19u0jpvqg7sicvw4xvvvo379fr71fjko76l58gqqc7n1eua3vluwv8zs7avv45n4advw2jkpmysei8czgaapxqzxvhz0cak0yeiopu8t52w180djziedips4zgknhljji73\",\n    \"date_created\" : \"2023-02-26T12:27:53.841Z\",\n    \"account_sid\" : \"AC4b01edEeDB6D614C24EF56c4A037Ffe7\",\n    \"url\" : \"https://web.example.mocklab.io/657131\",\n    \"direction\" : \"from_sim\",\n    \"sid\" : \"HC07D7451b8dabdDBaDcac0314EdB3D2ED\",\n    \"status\" : \"queued\"\n  }, {\n    \"sim_sid\" : \"HSa3ac1A4FEBfa1b9fC42ef85FB80A3BEC\",\n    \"date_updated\" : \"2022-05-11T09:37:50.841Z\",\n    \"payload\" : \"h4zmky7wtmz878lmk987de6h40doy5xuicfyxpwa4lmthig58cq6pvj3fsy\",\n    \"date_created\" : \"2023-06-14T07:00:38.841Z\",\n    \"account_sid\" : \"ACa6f8292bc4aEa6011BC2B65d86e7fA6C\",\n    \"url\" : \"https://web.example.mocklab.io/309351\",\n    \"direction\" : \"from_sim\",\n    \"sid\" : \"HC2f9e143cBCcf7B0CD00511b4AE1df27F\",\n    \"status\" : \"failed\"\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "f31c1831-28bf-4bb2-b0f2-f722119791b0",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:22.842144Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "ListSmsCommand",
+          "schema" : {
+            "properties" : {
+              "meta" : {
+                "properties" : {
+                  "first_page_url" : {
+                    "format" : "uri",
+                    "type" : "string"
+                  },
+                  "key" : {
+                    "type" : "string"
+                  },
+                  "next_page_url" : {
+                    "format" : "uri",
+                    "nullable" : true,
+                    "type" : "string"
+                  },
+                  "page" : {
+                    "type" : "integer"
+                  },
+                  "page_size" : {
+                    "type" : "integer"
+                  },
+                  "previous_page_url" : {
+                    "format" : "uri",
+                    "nullable" : true,
+                    "type" : "string"
+                  },
+                  "url" : {
+                    "format" : "uri",
+                    "type" : "string"
+                  }
+                },
+                "type" : "object"
+              },
+              "sms_commands" : {
+                "items" : {
+                  "$ref" : "#/components/schemas/supersim.v1.sms_command"
+                },
+                "type" : "array"
+              }
+            },
+            "title" : "ListSmsCommandResponse",
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 3
+  }, {
+    "id" : "bb8b768d-6253-40c9-a968-25c795108ef1",
+    "name" : "Retrieve a list of IP Addresses for the given Super SIM.",
+    "request" : {
+      "urlPath" : "/v1/Sims/9068/IpAddresses",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"ip_addresses\" : [ {\n    \"ip_address_version\" : \"IPv6\",\n    \"ip_address\" : \"k9qyt7jm0f38cyat6o9ipk2cbfzg8t0l4x\"\n  }, {\n    \"ip_address_version\" : \"IPv6\",\n    \"ip_address\" : \"9sfesr89gn31soagw8mslv9ivtez50fm55fntj6h\"\n  }, {\n    \"ip_address_version\" : \"IPv6\",\n    \"ip_address\" : \"4p9sixh2u7c6edxmz8gh552iy1lw6wmeivko7cxn7k30swx6xgnbdjpg5dkwmkf8t6podg7znnvdj1gfybw542k3u96dmwq0eb76uaszh9vq81qr327jd0vbnxur0h9iwowe7hv9tx8f9488bf0\"\n  }, {\n    \"ip_address_version\" : \"IPv4\",\n    \"ip_address\" : \"cuoedgbm4etrlj4ak203ok5iop6d8jujobmjsiz2kjasnyum3dkg44fp3w3kll0ft413202m2potp78aup3b9ptm1104d5852stdva9x671qvga77\"\n  }, {\n    \"ip_address_version\" : \"IPv4\",\n    \"ip_address\" : \"liygy6p9yqf1t81hpr4egzbiu5p3fib27x8tcqnu2nadydopcayoij3sixhxpzghv6uonommc7vbuh5imreto3y0zjtg0jasxv9wd73jckqrobhfstdxqipt8j8r00o9grhdljpzf0ziqcexxb3c4cvhipr\"\n  }, {\n    \"ip_address_version\" : \"IPv4\",\n    \"ip_address\" : \"a9enumb8hhz84wl5r6x6k2sow24zm4nvqi4v0qs4vx4vh43jftelfsbmxm\"\n  }, {\n    \"ip_address_version\" : \"IPv6\",\n    \"ip_address\" : \"05m3lr3ocudqvg7ds278crcpkips68iwcuji3i47vor0l8m5gf8j5c7zf68d202hcw2u85phgv4l99chq7mxtumrrq02njse57jbdbkvj1lskb7abejrpa2way2ckk0xzbji8pth8sgd4lscr1xofz2kdqgexoh3q5c3wz93vum57wx71ez52\"\n  }, {\n    \"ip_address_version\" : \"IPv6\",\n    \"ip_address\" : \"tnz7ebi8eoo7hbhik0e4c1lgegib1teuqxcymisj\"\n  } ],\n  \"meta\" : {\n    \"first_page_url\" : \"https://web.example.mocklab.io/774322\",\n    \"next_page_url\" : \"https://web.example.mocklab.io/760172\",\n    \"previous_page_url\" : \"https://web.example.mocklab.io/895804\",\n    \"page\" : 1656971604922754895,\n    \"key\" : \"n885dmkw3ckr5ixz5efv2kia74pwajlacazqdzlre63ivuvfcqenpzaeouocren9e0fjo19pzygqtapmbg0xozeu31006oyt3c9v566xcdvmqrdpyruhgamzvkwifmhrayr7wrxvgeh3jt936w6eoj9gw80j5at6fhrrasmffx5hoh7n5q21\",\n    \"url\" : \"https://web.example.mocklab.io/691846\",\n    \"page_size\" : 5587717353147356705\n  }\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "bb8b768d-6253-40c9-a968-25c795108ef1",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:22.841126Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "ListSimIpAddress",
+          "schema" : {
+            "properties" : {
+              "ip_addresses" : {
+                "items" : {
+                  "$ref" : "#/components/schemas/supersim.v1.sim.sim_ip_address"
+                },
+                "type" : "array"
+              },
+              "meta" : {
+                "properties" : {
+                  "first_page_url" : {
+                    "format" : "uri",
+                    "type" : "string"
+                  },
+                  "key" : {
+                    "type" : "string"
+                  },
+                  "next_page_url" : {
+                    "format" : "uri",
+                    "nullable" : true,
+                    "type" : "string"
+                  },
+                  "page" : {
+                    "type" : "integer"
+                  },
+                  "page_size" : {
+                    "type" : "integer"
+                  },
+                  "previous_page_url" : {
+                    "format" : "uri",
+                    "nullable" : true,
+                    "type" : "string"
+                  },
+                  "url" : {
+                    "format" : "uri",
+                    "type" : "string"
+                  }
+                },
+                "type" : "object"
+              }
+            },
+            "title" : "ListSimIpAddressResponse",
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 4
+  }, {
+    "id" : "b384d113-0ab1-425c-8d57-25b697ab7097",
+    "name" : "Retrieve a list of Billing Periods for a Super SIM.",
+    "request" : {
+      "urlPath" : "/v1/Sims/62yy/BillingPeriods",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"billing_periods\" : [ {\n    \"sim_sid\" : \"HSFd0E2bd19FA1985CbC5568eB9E0Be6De\",\n    \"start_time\" : \"2024-01-15T02:05:23.839Z\",\n    \"date_updated\" : \"2022-09-18T20:57:37.839Z\",\n    \"date_created\" : \"2023-04-08T14:07:32.839Z\",\n    \"end_time\" : \"2022-08-21T21:55:48.839Z\",\n    \"account_sid\" : \"ACCED8beA3445ACafE0C8c3F3C8E48aC1A\",\n    \"period_type\" : \"ready\",\n    \"sid\" : \"HBC77AeB8E8BF0c0C8C2DfFbCB67A3244a\"\n  }, {\n    \"sim_sid\" : \"HS274D2DDE9f92c1D8b1deDdb8d06CB9fa\",\n    \"start_time\" : \"2022-06-03T01:11:27.839Z\",\n    \"date_updated\" : \"2022-05-29T16:48:00.839Z\",\n    \"date_created\" : \"2023-07-02T09:07:09.839Z\",\n    \"end_time\" : \"2023-11-02T19:36:02.839Z\",\n    \"account_sid\" : \"ACC15AE8a0cCBAeEd74C0a0Df04cA7dAF8\",\n    \"period_type\" : \"ready\",\n    \"sid\" : \"HBb6aB5A8ee8ffe7Ef3638Ce55cFF8d5EE\"\n  } ],\n  \"meta\" : {\n    \"first_page_url\" : \"https://web.example.mocklab.io/680672\",\n    \"next_page_url\" : \"https://web.example.mocklab.io/952897\",\n    \"previous_page_url\" : \"https://web.example.mocklab.io/100452\",\n    \"page\" : 7585755819049767096,\n    \"key\" : \"y4z6qf77cdyd0ehtqh1qndiwr2wy4fcnar36ctj889uq88hfwzy0c9yo5bjcs2wk704a10vgz0tt8x32pq7wdwt98qt1p9lay954s0ajns5f7fjav\",\n    \"url\" : \"https://web.example.mocklab.io/313083\",\n    \"page_size\" : 9012408224664331177\n  }\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "b384d113-0ab1-425c-8d57-25b697ab7097",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:22.84044Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "ListBillingPeriod",
+          "schema" : {
+            "properties" : {
+              "billing_periods" : {
+                "items" : {
+                  "$ref" : "#/components/schemas/supersim.v1.sim.billing_period"
+                },
+                "type" : "array"
+              },
+              "meta" : {
+                "properties" : {
+                  "first_page_url" : {
+                    "format" : "uri",
+                    "type" : "string"
+                  },
+                  "key" : {
+                    "type" : "string"
+                  },
+                  "next_page_url" : {
+                    "format" : "uri",
+                    "nullable" : true,
+                    "type" : "string"
+                  },
+                  "page" : {
+                    "type" : "integer"
+                  },
+                  "page_size" : {
+                    "type" : "integer"
+                  },
+                  "previous_page_url" : {
+                    "format" : "uri",
+                    "nullable" : true,
+                    "type" : "string"
+                  },
+                  "url" : {
+                    "format" : "uri",
+                    "type" : "string"
+                  }
+                },
+                "type" : "object"
+              }
+            },
+            "title" : "ListBillingPeriodResponse",
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 5
+  }, {
+    "id" : "c00f9c76-bd05-4f0c-8fb9-1b472f05a490",
+    "name" : "Updates the given properties of a Super SIM instance from your account.",
+    "request" : {
+      "urlPath" : "/v1/Sims/0nxy",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 202,
+      "body" : "{\n  \"iccid\" : \"1692\",\n  \"unique_name\" : \"Tuan Kozey\",\n  \"date_updated\" : \"2022-08-05T06:42:46.839Z\",\n  \"date_created\" : \"2022-11-03T19:23:15.839Z\",\n  \"account_sid\" : \"ACE9B41E8abfA1dc2e83dF0e17EB151F57\",\n  \"links\" : { },\n  \"fleet_sid\" : \"HFC6E9fFFbD0d1f32ABAce0B6b9efa80e6\",\n  \"url\" : \"https://web.example.mocklab.io/350960\",\n  \"sid\" : \"HS49DeB45B405721e0b64689BEdC8eED4e\",\n  \"status\" : \"ready\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "c00f9c76-bd05-4f0c-8fb9-1b472f05a490",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:22.839874Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "UpdateSim",
+          "schema" : {
+            "properties" : {
+              "account_sid" : {
+                "description" : "The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that the Super SIM belongs to.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^AC[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "date_created" : {
+                "description" : "The date and time in GMT when the resource was created specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "date_updated" : {
+                "description" : "The date and time in GMT when the resource was last updated specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "fleet_sid" : {
+                "description" : "The unique ID of the Fleet configured for this SIM.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^HF[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "iccid" : {
+                "description" : "The [ICCID](https://en.wikipedia.org/wiki/Subscriber_identity_module#ICCID) associated with the SIM.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "links" : {
+                "format" : "uri-map",
+                "nullable" : true,
+                "type" : "object"
+              },
+              "sid" : {
+                "description" : "The unique string that identifies the Sim resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^HS[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "status" : {
+                "$ref" : "#/components/schemas/sim_enum_status"
+              },
+              "unique_name" : {
+                "description" : "An application-defined string that uniquely identifies the resource. It can be used in place of the resource's `sid` in the URL to address the resource.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "url" : {
+                "description" : "The absolute URL of the Sim Resource.",
+                "format" : "uri",
+                "nullable" : true,
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 6
+  }, {
+    "id" : "1be3e1d2-bcca-4f41-ae7e-c3a79bd5e02b",
+    "name" : "Updates the given properties of a Super SIM instance from your account.",
+    "request" : {
+      "urlPath" : "/v1/Sims/r43g",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"iccid\" : \"fh2z\",\n  \"unique_name\" : \"Mrs. Coreen Kreiger\",\n  \"date_updated\" : \"2022-07-27T02:41:02.839Z\",\n  \"date_created\" : \"2023-03-22T16:30:12.839Z\",\n  \"account_sid\" : \"ACbAd0E7CbC319bDE4d2a74Cce02A1cBaF\",\n  \"links\" : { },\n  \"fleet_sid\" : \"HFAee5BF8d2a2A4082CFaa51A7EDDa4e2D\",\n  \"url\" : \"https://web.example.mocklab.io/568290\",\n  \"sid\" : \"HSa5435c4357ecc8aF7d2bA1e9bDFBA200\",\n  \"status\" : \"inactive\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "1be3e1d2-bcca-4f41-ae7e-c3a79bd5e02b",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:22.83951Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "UpdateSim",
+          "schema" : {
+            "properties" : {
+              "account_sid" : {
+                "description" : "The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that the Super SIM belongs to.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^AC[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "date_created" : {
+                "description" : "The date and time in GMT when the resource was created specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "date_updated" : {
+                "description" : "The date and time in GMT when the resource was last updated specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "fleet_sid" : {
+                "description" : "The unique ID of the Fleet configured for this SIM.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^HF[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "iccid" : {
+                "description" : "The [ICCID](https://en.wikipedia.org/wiki/Subscriber_identity_module#ICCID) associated with the SIM.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "links" : {
+                "format" : "uri-map",
+                "nullable" : true,
+                "type" : "object"
+              },
+              "sid" : {
+                "description" : "The unique string that identifies the Sim resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^HS[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "status" : {
+                "$ref" : "#/components/schemas/sim_enum_status"
+              },
+              "unique_name" : {
+                "description" : "An application-defined string that uniquely identifies the resource. It can be used in place of the resource's `sid` in the URL to address the resource.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "url" : {
+                "description" : "The absolute URL of the Sim Resource.",
+                "format" : "uri",
+                "nullable" : true,
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 7
+  }, {
+    "id" : "6ff2bcf9-74d6-4740-b49c-d2c3eb99c836",
+    "name" : "Fetch a Super SIM instance from your account.",
+    "request" : {
+      "urlPath" : "/v1/Sims/5dn3",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"iccid\" : \"e71t\",\n  \"unique_name\" : \"Nathaniel Waters\",\n  \"date_updated\" : \"2023-12-16T04:21:53.838Z\",\n  \"date_created\" : \"2023-06-23T00:19:10.838Z\",\n  \"account_sid\" : \"ACdadFfA05C06833ea35E6d922d6AA5a87\",\n  \"links\" : { },\n  \"fleet_sid\" : \"HF41dFc1C3F5c5fDE9DEfCfb1B0E4917cC\",\n  \"url\" : \"https://web.example.mocklab.io/183165\",\n  \"sid\" : \"HSabf3ea8D9D4Dce0DcF05EA0E0f6e5e8B\",\n  \"status\" : \"active\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "6ff2bcf9-74d6-4740-b49c-d2c3eb99c836",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:22.839153Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "FetchSim",
+          "schema" : {
+            "properties" : {
+              "account_sid" : {
+                "description" : "The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that the Super SIM belongs to.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^AC[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "date_created" : {
+                "description" : "The date and time in GMT when the resource was created specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "date_updated" : {
+                "description" : "The date and time in GMT when the resource was last updated specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "fleet_sid" : {
+                "description" : "The unique ID of the Fleet configured for this SIM.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^HF[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "iccid" : {
+                "description" : "The [ICCID](https://en.wikipedia.org/wiki/Subscriber_identity_module#ICCID) associated with the SIM.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "links" : {
+                "format" : "uri-map",
+                "nullable" : true,
+                "type" : "object"
+              },
+              "sid" : {
+                "description" : "The unique string that identifies the Sim resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^HS[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "status" : {
+                "$ref" : "#/components/schemas/sim_enum_status"
+              },
+              "unique_name" : {
+                "description" : "An application-defined string that uniquely identifies the resource. It can be used in place of the resource's `sid` in the URL to address the resource.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "url" : {
+                "description" : "The absolute URL of the Sim Resource.",
+                "format" : "uri",
+                "nullable" : true,
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 8
+  }, {
+    "id" : "6d1d6e5a-88dd-464c-b2e1-1087b6425248",
+    "name" : "Register a Super SIM to your Account",
+    "request" : {
+      "urlPath" : "/v1/Sims",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 201,
+      "body" : "{\n  \"iccid\" : \"325x\",\n  \"unique_name\" : \"Tracey DuBuque\",\n  \"date_updated\" : \"2023-01-13T19:32:31.838Z\",\n  \"date_created\" : \"2023-05-20T05:08:11.838Z\",\n  \"account_sid\" : \"AC2EFf1e152E3b5D582BfF17F1045cC3de\",\n  \"links\" : { },\n  \"fleet_sid\" : \"HFdaCF1dDB6fa45a830F5Ef0BeACDCAdAd\",\n  \"url\" : \"https://web.example.mocklab.io/598547\",\n  \"sid\" : \"HS0dc89ba808a4ca651C41F870c5d80C5F\",\n  \"status\" : \"active\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "6d1d6e5a-88dd-464c-b2e1-1087b6425248",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:22.838788Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "CreateSim",
+          "schema" : {
+            "properties" : {
+              "account_sid" : {
+                "description" : "The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that the Super SIM belongs to.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^AC[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "date_created" : {
+                "description" : "The date and time in GMT when the resource was created specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "date_updated" : {
+                "description" : "The date and time in GMT when the resource was last updated specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "fleet_sid" : {
+                "description" : "The unique ID of the Fleet configured for this SIM.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^HF[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "iccid" : {
+                "description" : "The [ICCID](https://en.wikipedia.org/wiki/Subscriber_identity_module#ICCID) associated with the SIM.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "links" : {
+                "format" : "uri-map",
+                "nullable" : true,
+                "type" : "object"
+              },
+              "sid" : {
+                "description" : "The unique string that identifies the Sim resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^HS[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "status" : {
+                "$ref" : "#/components/schemas/sim_enum_status"
+              },
+              "unique_name" : {
+                "description" : "An application-defined string that uniquely identifies the resource. It can be used in place of the resource's `sid` in the URL to address the resource.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "url" : {
+                "description" : "The absolute URL of the Sim Resource.",
+                "format" : "uri",
+                "nullable" : true,
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 9
+  }, {
+    "id" : "9273d58a-4bbe-409e-b44c-507222eab556",
+    "name" : "Retrieve a list of Super SIMs from your account.",
+    "request" : {
+      "urlPath" : "/v1/Sims",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"meta\" : {\n    \"first_page_url\" : \"https://web.example.mocklab.io/872093\",\n    \"next_page_url\" : \"https://web.example.mocklab.io/719235\",\n    \"previous_page_url\" : \"https://web.example.mocklab.io/418693\",\n    \"page\" : 5952040970132799824,\n    \"key\" : \"g923b7voeixnm72gstr1qvlhjriwl141lexlusfod2k2dh606vw0pblb6abb6dxixxai3swqvdg1o49a0gths1xm7q8glcvjuh03ip86s7fx30awbw5nc9tsl\",\n    \"url\" : \"https://web.example.mocklab.io/773848\",\n    \"page_size\" : 4382313530018405917\n  },\n  \"sims\" : [ {\n    \"iccid\" : \"363r\",\n    \"unique_name\" : \"Yang O'Hara\",\n    \"date_updated\" : \"2023-03-31T08:17:41.837Z\",\n    \"date_created\" : \"2022-04-12T00:44:22.837Z\",\n    \"account_sid\" : \"AC7F4Dd73ad0902F62ec83977f3aEC17D6\",\n    \"links\" : { },\n    \"fleet_sid\" : \"HF4eD0ed5D9FB1b5fdCCDF9d9Fdd70CBca\",\n    \"url\" : \"https://web.example.mocklab.io/274755\",\n    \"sid\" : \"HSbF3a0B88126fbe786Cb6e5d32cF9dD74\",\n    \"status\" : \"scheduled\"\n  }, {\n    \"iccid\" : \"8qh0\",\n    \"unique_name\" : \"Tonie Fay\",\n    \"date_updated\" : \"2022-11-10T21:54:03.837Z\",\n    \"date_created\" : \"2022-04-01T07:24:15.837Z\",\n    \"account_sid\" : \"AC7fa715f42adeBCB7A672B6572B3cdB0D\",\n    \"links\" : { },\n    \"fleet_sid\" : \"HFDf2b6Ab48e11c51AB6CEFDBBf9aDE9D6\",\n    \"url\" : \"https://web.example.mocklab.io/124129\",\n    \"sid\" : \"HS3E757F0f24da7DBEf5BdEDA6CE1586EB\",\n    \"status\" : \"scheduled\"\n  }, {\n    \"iccid\" : \"c397\",\n    \"unique_name\" : \"Inga Homenick\",\n    \"date_updated\" : \"2022-12-26T05:14:50.837Z\",\n    \"date_created\" : \"2023-08-26T11:13:34.837Z\",\n    \"account_sid\" : \"AC07F5dEA62ca65dC6BE1dF244Eaae3EDD\",\n    \"links\" : { },\n    \"fleet_sid\" : \"HF365b9fb6Ac8A36CA148c5e7c9C52f6F8\",\n    \"url\" : \"https://web.example.mocklab.io/983732\",\n    \"sid\" : \"HSC7CD0ce0D559D79B6aAD7bbBb9F16Fb0\",\n    \"status\" : \"new\"\n  }, {\n    \"iccid\" : \"gg32\",\n    \"unique_name\" : \"Madelyn Dickens\",\n    \"date_updated\" : \"2022-06-05T05:19:32.837Z\",\n    \"date_created\" : \"2024-03-26T15:10:39.837Z\",\n    \"account_sid\" : \"AC8D8Ac18EB26Fc9aa44C982AfAaF97cb8\",\n    \"links\" : { },\n    \"fleet_sid\" : \"HFd10544fDcd603fe2C446a4A88FB0AAf4\",\n    \"url\" : \"https://web.example.mocklab.io/093023\",\n    \"sid\" : \"HSaEaBE2C8D506fb4F81cfBC44A93F0f93\",\n    \"status\" : \"scheduled\"\n  }, {\n    \"iccid\" : \"w91y\",\n    \"unique_name\" : \"Roma Halvorson IV\",\n    \"date_updated\" : \"2024-01-01T09:14:21.838Z\",\n    \"date_created\" : \"2023-11-10T01:19:22.838Z\",\n    \"account_sid\" : \"AC4DFF9a3b4101C9CAfbb38c5fe60A9EC3\",\n    \"links\" : { },\n    \"fleet_sid\" : \"HFFC8DB03DD1c1Cd6313a2F1137B79db8e\",\n    \"url\" : \"https://web.example.mocklab.io/304476\",\n    \"sid\" : \"HS0d8Fdc2FE0CDd503AEc0F0F8B313f221\",\n    \"status\" : \"ready\"\n  }, {\n    \"iccid\" : \"47ly\",\n    \"unique_name\" : \"Leslie Heller\",\n    \"date_updated\" : \"2022-04-18T18:25:31.838Z\",\n    \"date_created\" : \"2023-10-09T03:04:11.838Z\",\n    \"account_sid\" : \"AC7fECDdbEF2124D2A28FBb24f01bcFAE8\",\n    \"links\" : { },\n    \"fleet_sid\" : \"HF7Ec89Baa8d13b00Db39beF57dD05335d\",\n    \"url\" : \"https://web.example.mocklab.io/626548\",\n    \"sid\" : \"HSA000bDFD1d6F8C6f0Fc2Ac2eCBc847A1\",\n    \"status\" : \"active\"\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "9273d58a-4bbe-409e-b44c-507222eab556",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:22.838478Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "ListSim",
+          "schema" : {
+            "properties" : {
+              "meta" : {
+                "properties" : {
+                  "first_page_url" : {
+                    "format" : "uri",
+                    "type" : "string"
+                  },
+                  "key" : {
+                    "type" : "string"
+                  },
+                  "next_page_url" : {
+                    "format" : "uri",
+                    "nullable" : true,
+                    "type" : "string"
+                  },
+                  "page" : {
+                    "type" : "integer"
+                  },
+                  "page_size" : {
+                    "type" : "integer"
+                  },
+                  "previous_page_url" : {
+                    "format" : "uri",
+                    "nullable" : true,
+                    "type" : "string"
+                  },
+                  "url" : {
+                    "format" : "uri",
+                    "type" : "string"
+                  }
+                },
+                "type" : "object"
+              },
+              "sims" : {
+                "items" : {
+                  "$ref" : "#/components/schemas/supersim.v1.sim"
+                },
+                "type" : "array"
+              }
+            },
+            "title" : "ListSimResponse",
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 10
+  }, {
+    "id" : "3c050764-73ab-4f7e-922e-b7eeabab3dde",
+    "name" : "Retrieve a list of Settings Updates.",
+    "request" : {
+      "urlPath" : "/v1/SettingsUpdates",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"meta\" : {\n    \"first_page_url\" : \"https://web.example.mocklab.io/151737\",\n    \"next_page_url\" : \"https://web.example.mocklab.io/891936\",\n    \"previous_page_url\" : \"https://web.example.mocklab.io/842771\",\n    \"page\" : 5514000191744364030,\n    \"key\" : \"uy98zuma4gkqrhdj08nj3pi6yg8kfbbentr9czmylxkh4yv55iomrws67cmmdjyw2e3b3uayuxlzsi7xjnlndg1hyxi078lvcxjtvnhtbbleph67usz80n1j2201hi8ph85ktukkskdrt077u0nv5z1tcnf7r2so4yq\",\n    \"url\" : \"https://web.example.mocklab.io/426695\",\n    \"page_size\" : 1617068153760015335\n  },\n  \"settings_updates\" : [ {\n    \"sim_sid\" : \"HSF38ee207E8d32F3DD5656F4df2833b0F\",\n    \"iccid\" : \"777q\",\n    \"date_updated\" : \"2023-05-14T13:22:00.836Z\",\n    \"date_created\" : \"2024-01-01T09:45:04.836Z\",\n    \"date_completed\" : \"2022-09-07T00:47:57.836Z\",\n    \"packages\" : [ { }, { }, { }, { }, { }, { }, { } ],\n    \"sid\" : \"OB687fc973Ae62ACbefBFB2eD94d4C3e1A\",\n    \"status\" : \"in-progress\"\n  }, {\n    \"sim_sid\" : \"HSFDD0C7890EbeEB1C94079cC8F9B3cA7d\",\n    \"iccid\" : \"zja5\",\n    \"date_updated\" : \"2023-03-11T04:59:23.836Z\",\n    \"date_created\" : \"2022-12-07T14:30:11.836Z\",\n    \"date_completed\" : \"2023-08-19T10:34:25.836Z\",\n    \"packages\" : [ { }, { }, { } ],\n    \"sid\" : \"OBDB8D13F0fdBd3bd3BCfD5cafFf95D447\",\n    \"status\" : \"successful\"\n  }, {\n    \"sim_sid\" : \"HS8AA4c6ccaCb2AB7f2dFc1bFe0Bd1Ae19\",\n    \"iccid\" : \"f84w\",\n    \"date_updated\" : \"2023-07-04T16:22:36.836Z\",\n    \"date_created\" : \"2023-04-16T12:07:30.836Z\",\n    \"date_completed\" : \"2022-09-24T16:50:21.836Z\",\n    \"packages\" : [ { }, { }, { }, { }, { }, { }, { }, { } ],\n    \"sid\" : \"OBB3006FFD5BD2A52FDC2c01e7BD7312fd\",\n    \"status\" : \"in-progress\"\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "3c050764-73ab-4f7e-922e-b7eeabab3dde",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:22.836771Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "ListSettingsUpdate",
+          "schema" : {
+            "properties" : {
+              "meta" : {
+                "properties" : {
+                  "first_page_url" : {
+                    "format" : "uri",
+                    "type" : "string"
+                  },
+                  "key" : {
+                    "type" : "string"
+                  },
+                  "next_page_url" : {
+                    "format" : "uri",
+                    "nullable" : true,
+                    "type" : "string"
+                  },
+                  "page" : {
+                    "type" : "integer"
+                  },
+                  "page_size" : {
+                    "type" : "integer"
+                  },
+                  "previous_page_url" : {
+                    "format" : "uri",
+                    "nullable" : true,
+                    "type" : "string"
+                  },
+                  "url" : {
+                    "format" : "uri",
+                    "type" : "string"
+                  }
+                },
+                "type" : "object"
+              },
+              "settings_updates" : {
+                "items" : {
+                  "$ref" : "#/components/schemas/supersim.v1.settings_update"
+                },
+                "type" : "array"
+              }
+            },
+            "title" : "ListSettingsUpdateResponse",
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 11
+  }, {
+    "id" : "48bf9c24-c774-4de9-b2ab-0c8a6b4d282a",
+    "name" : "Fetch a Network resource.",
+    "request" : {
+      "urlPath" : "/v1/Networks/HW441e0BC8dea6CD9c330f59AFA16d5b8D",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"friendly_name\" : \"Ernie Anderson\",\n  \"iso_country\" : \"Zambia\",\n  \"identifiers\" : [ { }, { }, { }, { } ],\n  \"url\" : \"https://web.example.mocklab.io/746095\",\n  \"sid\" : \"HW94eFaA8bd6B5C27Df190BbfB32Ac2B18\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "48bf9c24-c774-4de9-b2ab-0c8a6b4d282a",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:22.836037Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "FetchNetwork",
+          "schema" : {
+            "properties" : {
+              "friendly_name" : {
+                "description" : "A human readable identifier of this resource.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "identifiers" : {
+                "description" : "Array of objects identifying the [MCC-MNCs](https://en.wikipedia.org/wiki/Mobile_country_code) that are included in the Network resource.",
+                "nullable" : true,
+                "type" : "array"
+              },
+              "iso_country" : {
+                "description" : "The [ISO country code](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) of the Network resource.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "sid" : {
+                "description" : "The unique string that we created to identify the Network resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^HW[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "url" : {
+                "description" : "The absolute URL of the Network resource.",
+                "format" : "uri",
+                "nullable" : true,
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 12
+  }, {
+    "id" : "0d018a43-4b58-49ad-b359-dd43444f29ac",
+    "name" : "Retrieve a list of Network resources.",
+    "request" : {
+      "urlPath" : "/v1/Networks",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"meta\" : {\n    \"first_page_url\" : \"https://web.example.mocklab.io/727117\",\n    \"next_page_url\" : \"https://web.example.mocklab.io/507646\",\n    \"previous_page_url\" : \"https://web.example.mocklab.io/063466\",\n    \"page\" : 8013435290831235539,\n    \"key\" : \"aiahlm8ho5hn6jjtcke1nkh2n9zj8820wa9h7eelq5r0jmml3kt0ad8gnculg32ghchs6ee54hr8kygnb4z3q95g51883m6spvq4pzeurrkj6sfqkg7q7z6j29hg9zekpo7jjrckmvbxdmxrzj69v7qsgj2paoub7bpjdgbm\",\n    \"url\" : \"https://web.example.mocklab.io/606724\",\n    \"page_size\" : 6671725850940491369\n  },\n  \"networks\" : [ {\n    \"friendly_name\" : \"Ms. Marilynn Littel\",\n    \"iso_country\" : \"Korea, Republic of\",\n    \"identifiers\" : [ { }, { }, { }, { }, { }, { } ],\n    \"url\" : \"https://web.example.mocklab.io/553054\",\n    \"sid\" : \"HWC499a85DcdEA24994A07F21BAB7D81F4\"\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "0d018a43-4b58-49ad-b359-dd43444f29ac",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:22.835829Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "ListNetwork",
+          "schema" : {
+            "properties" : {
+              "meta" : {
+                "properties" : {
+                  "first_page_url" : {
+                    "format" : "uri",
+                    "type" : "string"
+                  },
+                  "key" : {
+                    "type" : "string"
+                  },
+                  "next_page_url" : {
+                    "format" : "uri",
+                    "nullable" : true,
+                    "type" : "string"
+                  },
+                  "page" : {
+                    "type" : "integer"
+                  },
+                  "page_size" : {
+                    "type" : "integer"
+                  },
+                  "previous_page_url" : {
+                    "format" : "uri",
+                    "nullable" : true,
+                    "type" : "string"
+                  },
+                  "url" : {
+                    "format" : "uri",
+                    "type" : "string"
+                  }
+                },
+                "type" : "object"
+              },
+              "networks" : {
+                "items" : {
+                  "$ref" : "#/components/schemas/supersim.v1.network"
+                },
+                "type" : "array"
+              }
+            },
+            "title" : "ListNetworkResponse",
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 13
+  }, {
+    "id" : "4b6206e1-5888-4e85-9951-2bdda718fbaa",
+    "name" : "Updates the given properties of a Network Access Profile in your account.",
+    "request" : {
+      "urlPath" : "/v1/NetworkAccessProfiles/19oi",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"unique_name\" : \"Deshawn Kulas\",\n  \"date_updated\" : \"2022-11-05T06:58:26.835Z\",\n  \"date_created\" : \"2023-12-08T22:18:51.835Z\",\n  \"account_sid\" : \"ACd6897DA76b8EfED931D4Eb199CbB0cFb\",\n  \"links\" : { },\n  \"url\" : \"https://web.example.mocklab.io/414898\",\n  \"sid\" : \"HA0cfc2fb16a0DdDB895Ea52DE950DBa58\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "4b6206e1-5888-4e85-9951-2bdda718fbaa",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:22.835323Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "UpdateNetworkAccessProfile",
+          "schema" : {
+            "properties" : {
+              "account_sid" : {
+                "description" : "The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that the Network Access Profile belongs to.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^AC[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "date_created" : {
+                "description" : "The date and time in GMT when the resource was created specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "date_updated" : {
+                "description" : "The date and time in GMT when the resource was last updated specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "links" : {
+                "format" : "uri-map",
+                "nullable" : true,
+                "type" : "object"
+              },
+              "sid" : {
+                "description" : "The unique string that identifies the Network Access Profile resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^HA[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "unique_name" : {
+                "description" : "An application-defined string that uniquely identifies the resource. It can be used in place of the resource's `sid` in the URL to address the resource.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "url" : {
+                "description" : "The absolute URL of the Network Access Profile resource.",
+                "format" : "uri",
+                "nullable" : true,
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 14
+  }, {
+    "id" : "20c27be4-8089-45f1-9ddd-984dd9344203",
+    "name" : "Fetch a Network Access Profile instance from your account.",
+    "request" : {
+      "urlPath" : "/v1/NetworkAccessProfiles/b1wy",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"unique_name\" : \"William Hermiston\",\n  \"date_updated\" : \"2022-05-15T16:49:53.834Z\",\n  \"date_created\" : \"2022-12-29T13:43:15.834Z\",\n  \"account_sid\" : \"AC4E42Ab33AeA7f3CFCEcBF69b797Df85D\",\n  \"links\" : { },\n  \"url\" : \"https://web.example.mocklab.io/259073\",\n  \"sid\" : \"HA4E418ABb2a39Ff2Aa83A4fBdFcbc3b4d\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "20c27be4-8089-45f1-9ddd-984dd9344203",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:22.835049Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "FetchNetworkAccessProfile",
+          "schema" : {
+            "properties" : {
+              "account_sid" : {
+                "description" : "The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that the Network Access Profile belongs to.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^AC[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "date_created" : {
+                "description" : "The date and time in GMT when the resource was created specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "date_updated" : {
+                "description" : "The date and time in GMT when the resource was last updated specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "links" : {
+                "format" : "uri-map",
+                "nullable" : true,
+                "type" : "object"
+              },
+              "sid" : {
+                "description" : "The unique string that identifies the Network Access Profile resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^HA[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "unique_name" : {
+                "description" : "An application-defined string that uniquely identifies the resource. It can be used in place of the resource's `sid` in the URL to address the resource.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "url" : {
+                "description" : "The absolute URL of the Network Access Profile resource.",
+                "format" : "uri",
+                "nullable" : true,
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 15
+  }, {
+    "id" : "5b2e0aeb-4e61-4dce-9f93-876a9c6b6218",
+    "name" : "Fetch a Network Access Profile resource's Network resource.",
+    "request" : {
+      "urlPath" : "/v1/NetworkAccessProfiles/r29u/Networks/HWc9Ca02e9fcD56038938EebbDeCFf4E82",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"friendly_name\" : \"Edgar Torp\",\n  \"iso_country\" : \"Mali\",\n  \"identifiers\" : [ { } ],\n  \"network_access_profile_sid\" : \"HA5BbECc8a99A9CA843e8cDcD1BBFbB4D0\",\n  \"url\" : \"https://web.example.mocklab.io/963835\",\n  \"sid\" : \"HW386ECB9eC90D2dBEDe5bc8be7fA9c19f\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "5b2e0aeb-4e61-4dce-9f93-876a9c6b6218",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:22.834785Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "FetchNetworkAccessProfileNetwork",
+          "schema" : {
+            "properties" : {
+              "friendly_name" : {
+                "description" : "A human readable identifier of the Network this resource refers to.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "identifiers" : {
+                "description" : "Array of objects identifying the [MCC-MNCs](https://en.wikipedia.org/wiki/Mobile_country_code) that are included in the Network resource.",
+                "nullable" : true,
+                "type" : "array"
+              },
+              "iso_country" : {
+                "description" : "The [ISO country code](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) of the Network resource.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "network_access_profile_sid" : {
+                "description" : "The unique string that identifies the Network resource's Network Access Profile resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^HA[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "sid" : {
+                "description" : "The unique string that identifies the Network resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^HW[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "url" : {
+                "description" : "The absolute URL of the Network resource.",
+                "format" : "uri",
+                "nullable" : true,
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 16
+  }, {
+    "id" : "cae8911e-1afc-4497-8b52-b7789b69e5d6",
+    "name" : "Remove a Network resource from the Network Access Profile resource's. - 204",
+    "request" : {
+      "urlPath" : "/v1/NetworkAccessProfiles/HAaACa70599989277CdD0CAa24491E7a8c/Networks/HWcC943D76d8C2accCeEB6d8b60a19F38B",
+      "method" : "DELETE"
+    },
+    "response" : {
+      "status" : 204
+    },
+    "uuid" : "cae8911e-1afc-4497-8b52-b7789b69e5d6",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:22.834513Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "DeleteNetworkAccessProfileNetwork"
+        }
+      }
+    },
+    "insertionIndex" : 17
+  }, {
+    "id" : "6569d5f9-dbaa-4b51-bbbd-7f433b57decd",
+    "name" : "Add a Network resource to the Network Access Profile resource.",
+    "request" : {
+      "urlPath" : "/v1/NetworkAccessProfiles/e3xm/Networks",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 201,
+      "body" : "{\n  \"friendly_name\" : \"Erma Wolff\",\n  \"iso_country\" : \"Bangladesh\",\n  \"identifiers\" : [ { }, { }, { }, { }, { }, { }, { } ],\n  \"network_access_profile_sid\" : \"HA6ceeaE72cEfbEDdFdcE2DC08F6Ac0ceE\",\n  \"url\" : \"https://web.example.mocklab.io/091562\",\n  \"sid\" : \"HWFebaEDF75Bd50F7030a0660BcC0E7a29\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "6569d5f9-dbaa-4b51-bbbd-7f433b57decd",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:22.834471Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "CreateNetworkAccessProfileNetwork",
+          "schema" : {
+            "properties" : {
+              "friendly_name" : {
+                "description" : "A human readable identifier of the Network this resource refers to.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "identifiers" : {
+                "description" : "Array of objects identifying the [MCC-MNCs](https://en.wikipedia.org/wiki/Mobile_country_code) that are included in the Network resource.",
+                "nullable" : true,
+                "type" : "array"
+              },
+              "iso_country" : {
+                "description" : "The [ISO country code](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) of the Network resource.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "network_access_profile_sid" : {
+                "description" : "The unique string that identifies the Network resource's Network Access Profile resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^HA[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "sid" : {
+                "description" : "The unique string that identifies the Network resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^HW[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "url" : {
+                "description" : "The absolute URL of the Network resource.",
+                "format" : "uri",
+                "nullable" : true,
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 18
+  }, {
+    "id" : "db917799-9853-4082-92a4-52a831feed9d",
+    "name" : "Retrieve a list of Network Access Profile resource's Network resource.",
+    "request" : {
+      "urlPath" : "/v1/NetworkAccessProfiles/e7j2/Networks",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"meta\" : {\n    \"first_page_url\" : \"https://web.example.mocklab.io/411076\",\n    \"next_page_url\" : \"https://web.example.mocklab.io/473204\",\n    \"previous_page_url\" : \"https://web.example.mocklab.io/138898\",\n    \"page\" : 3050779665228715307,\n    \"key\" : \"7z1swujqj29571r9yp6n6yfj14vd3ion\",\n    \"url\" : \"https://web.example.mocklab.io/045279\",\n    \"page_size\" : 2783895796132482391\n  },\n  \"networks\" : [ {\n    \"friendly_name\" : \"Sunni Abernathy\",\n    \"iso_country\" : \"Belgium\",\n    \"identifiers\" : [ { }, { }, { }, { }, { }, { } ],\n    \"network_access_profile_sid\" : \"HA2ece6b8078E5e6e81bD3831aA4E1aC6E\",\n    \"url\" : \"https://web.example.mocklab.io/592544\",\n    \"sid\" : \"HWD03dD16Cb22fFCcDe01BEc391231e86c\"\n  }, {\n    \"friendly_name\" : \"Ms. Tyler Rau\",\n    \"iso_country\" : \"Mali\",\n    \"identifiers\" : [ { }, { }, { }, { }, { }, { } ],\n    \"network_access_profile_sid\" : \"HAd0347Cf84Edc0e956a4cEC951FcC24cb\",\n    \"url\" : \"https://web.example.mocklab.io/919145\",\n    \"sid\" : \"HWe606c9d986CBD50DE0A5F8b711DFFABb\"\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "db917799-9853-4082-92a4-52a831feed9d",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:22.834177Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "ListNetworkAccessProfileNetwork",
+          "schema" : {
+            "properties" : {
+              "meta" : {
+                "properties" : {
+                  "first_page_url" : {
+                    "format" : "uri",
+                    "type" : "string"
+                  },
+                  "key" : {
+                    "type" : "string"
+                  },
+                  "next_page_url" : {
+                    "format" : "uri",
+                    "nullable" : true,
+                    "type" : "string"
+                  },
+                  "page" : {
+                    "type" : "integer"
+                  },
+                  "page_size" : {
+                    "type" : "integer"
+                  },
+                  "previous_page_url" : {
+                    "format" : "uri",
+                    "nullable" : true,
+                    "type" : "string"
+                  },
+                  "url" : {
+                    "format" : "uri",
+                    "type" : "string"
+                  }
+                },
+                "type" : "object"
+              },
+              "networks" : {
+                "items" : {
+                  "$ref" : "#/components/schemas/supersim.v1.network_access_profile.network_access_profile_network"
+                },
+                "type" : "array"
+              }
+            },
+            "title" : "ListNetworkAccessProfileNetworkResponse",
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 19
+  }, {
+    "id" : "16565b3f-9e6d-4e1e-a7cd-1bf9c16ba54f",
+    "name" : "Create a new Network Access Profile",
+    "request" : {
+      "urlPath" : "/v1/NetworkAccessProfiles",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 201,
+      "body" : "{\n  \"unique_name\" : \"Agripina Dicki\",\n  \"date_updated\" : \"2022-07-25T09:44:51.833Z\",\n  \"date_created\" : \"2022-06-28T20:19:41.833Z\",\n  \"account_sid\" : \"ACa588bfEb3346b9a94088DB297cAf6dc2\",\n  \"links\" : { },\n  \"url\" : \"https://web.example.mocklab.io/534482\",\n  \"sid\" : \"HAb68aB6F3DDBF0AE0dc86dbea24E6d27a\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "16565b3f-9e6d-4e1e-a7cd-1bf9c16ba54f",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:22.833441Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "CreateNetworkAccessProfile",
+          "schema" : {
+            "properties" : {
+              "account_sid" : {
+                "description" : "The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that the Network Access Profile belongs to.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^AC[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "date_created" : {
+                "description" : "The date and time in GMT when the resource was created specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "date_updated" : {
+                "description" : "The date and time in GMT when the resource was last updated specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "links" : {
+                "format" : "uri-map",
+                "nullable" : true,
+                "type" : "object"
+              },
+              "sid" : {
+                "description" : "The unique string that identifies the Network Access Profile resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^HA[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "unique_name" : {
+                "description" : "An application-defined string that uniquely identifies the resource. It can be used in place of the resource's `sid` in the URL to address the resource.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "url" : {
+                "description" : "The absolute URL of the Network Access Profile resource.",
+                "format" : "uri",
+                "nullable" : true,
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 20
+  }, {
+    "id" : "3f15464f-a346-4173-95e2-af798051a816",
+    "name" : "Retrieve a list of Network Access Profiles from your account.",
+    "request" : {
+      "urlPath" : "/v1/NetworkAccessProfiles",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"network_access_profiles\" : [ {\n    \"unique_name\" : \"Karena Bahringer\",\n    \"date_updated\" : \"2022-12-26T11:09:45.832Z\",\n    \"date_created\" : \"2023-12-14T10:47:12.832Z\",\n    \"account_sid\" : \"ACfDaba40f7DC2c86A5C7573F7eFdBc712\",\n    \"links\" : { },\n    \"url\" : \"https://web.example.mocklab.io/633722\",\n    \"sid\" : \"HAFE42d2fcABF3059E0dfA06BcF02c6Ceb\"\n  }, {\n    \"unique_name\" : \"Thresa Robel\",\n    \"date_updated\" : \"2023-08-23T01:20:29.832Z\",\n    \"date_created\" : \"2022-12-03T01:42:00.832Z\",\n    \"account_sid\" : \"AC8C5fC777e4d6b326CFfbC80dAfbeCfA8\",\n    \"links\" : { },\n    \"url\" : \"https://web.example.mocklab.io/536546\",\n    \"sid\" : \"HA75cedcd1e362AB9d92c71D8B0d8EF43a\"\n  }, {\n    \"unique_name\" : \"Alva Ruecker\",\n    \"date_updated\" : \"2023-11-22T22:47:13.832Z\",\n    \"date_created\" : \"2022-05-08T04:09:15.832Z\",\n    \"account_sid\" : \"AC30E64F040e916597Df774f5BEbAffDBB\",\n    \"links\" : { },\n    \"url\" : \"https://web.example.mocklab.io/928465\",\n    \"sid\" : \"HA9593eA3AeEDc19Bf1BbeAaea0Fd30BE6\"\n  }, {\n    \"unique_name\" : \"Dwayne Yost\",\n    \"date_updated\" : \"2022-11-11T02:54:25.832Z\",\n    \"date_created\" : \"2024-01-09T10:00:07.832Z\",\n    \"account_sid\" : \"AC8b0CCFeefD7A2ee0aCE041b8CfbCCE2E\",\n    \"links\" : { },\n    \"url\" : \"https://web.example.mocklab.io/964831\",\n    \"sid\" : \"HA1DF6150E51EA1df2d5ED6CBE31E1bF94\"\n  } ],\n  \"meta\" : {\n    \"first_page_url\" : \"https://web.example.mocklab.io/663979\",\n    \"next_page_url\" : \"https://web.example.mocklab.io/155764\",\n    \"previous_page_url\" : \"https://web.example.mocklab.io/486900\",\n    \"page\" : 4683655953380192039,\n    \"key\" : \"7cbxbo2p83et5kmpuwcfzyu54l8k5kzie2lyh9ipgmnk7jxhymqwcqtaszwfhvng58zveahkt5urp4wi55jl19x5v87j2e28ctniyvcuklfaqqgzepqb0qrsr7f99osblyco1sm\",\n    \"url\" : \"https://web.example.mocklab.io/037901\",\n    \"page_size\" : 104556821430743134\n  }\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "3f15464f-a346-4173-95e2-af798051a816",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:22.83323Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "ListNetworkAccessProfile",
+          "schema" : {
+            "properties" : {
+              "meta" : {
+                "properties" : {
+                  "first_page_url" : {
+                    "format" : "uri",
+                    "type" : "string"
+                  },
+                  "key" : {
+                    "type" : "string"
+                  },
+                  "next_page_url" : {
+                    "format" : "uri",
+                    "nullable" : true,
+                    "type" : "string"
+                  },
+                  "page" : {
+                    "type" : "integer"
+                  },
+                  "page_size" : {
+                    "type" : "integer"
+                  },
+                  "previous_page_url" : {
+                    "format" : "uri",
+                    "nullable" : true,
+                    "type" : "string"
+                  },
+                  "url" : {
+                    "format" : "uri",
+                    "type" : "string"
+                  }
+                },
+                "type" : "object"
+              },
+              "network_access_profiles" : {
+                "items" : {
+                  "$ref" : "#/components/schemas/supersim.v1.network_access_profile"
+                },
+                "type" : "array"
+              }
+            },
+            "title" : "ListNetworkAccessProfileResponse",
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 21
+  }, {
+    "id" : "f9e72110-7c75-4e7f-963f-8d372740cb18",
+    "name" : "Fetch IP Command instance from your account.",
+    "request" : {
+      "urlPath" : "/v1/IpCommands/HG07c293D9EaD69cCaFd81eEaFaC92C32c",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"sim_sid\" : \"HSe67E00DD2AF31741C6746E31734AA6D0\",\n  \"payload_type\" : \"binary\",\n  \"date_updated\" : \"2023-02-25T03:13:08.831Z\",\n  \"date_created\" : \"2023-02-01T23:52:43.831Z\",\n  \"device_port\" : 5912336901649496504,\n  \"url\" : \"https://web.example.mocklab.io/133909\",\n  \"sid\" : \"HGae838efBbcfB67D3AC35D463bEf275d8\",\n  \"sim_iccid\" : \"8x4g\",\n  \"device_ip\" : \"31xs4utl3acdedw4s61rf01u2lf3p65l51jzdzdvzbn04rg8z3l3bvbtcmzufln4tpu1xqm4rpef6o6ff1vc4us87pnzah6s53lv8ygireujt8ulf5bbm4f6gm5m\",\n  \"payload\" : \"h17cnjqsbf4z0n0qiyzwivhb4f40h3vwl40m8ggmdypjz2y4ca0cdh1i1f5lsuki6oerz9vmyg0re6sm\",\n  \"account_sid\" : \"AC075704d7C37b8da1B95d6A71303fb0e0\",\n  \"direction\" : \"from_sim\",\n  \"status\" : \"failed\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "f9e72110-7c75-4e7f-963f-8d372740cb18",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:22.832286Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "FetchIpCommand",
+          "schema" : {
+            "properties" : {
+              "account_sid" : {
+                "description" : "The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the IP Command resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^AC[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "date_created" : {
+                "description" : "The date and time in GMT when the resource was created specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "date_updated" : {
+                "description" : "The date and time in GMT when the resource was last updated specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "device_ip" : {
+                "description" : "The IP address of the device that the IP Command was sent to or received from. For an IP Command sent to a Super SIM, `device_ip` starts out as `null`, and once the IP Command is “sent”, the `device_ip` will be filled out. An IP Command sent from a Super SIM have its `device_ip` always set.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "device_port" : {
+                "description" : "For an IP Command sent to a Super SIM, it would be the destination port of the IP message. For an IP Command sent from a Super SIM, it would be the source port of the IP message.",
+                "nullable" : true,
+                "type" : "integer"
+              },
+              "direction" : {
+                "$ref" : "#/components/schemas/ip_command_enum_direction"
+              },
+              "payload" : {
+                "description" : "The payload that is carried in the IP/UDP message. The payload can be encoded in either text or binary format. For text payload, UTF-8 encoding must be used.\n\nFor an IP Command sent to a Super SIM, the payload is appended to the IP/UDP message “as is”. The payload should not exceed 1300 bytes.\n\nFor an IP Command sent from a Super SIM, the payload from the received IP/UDP message is extracted and sent in binary encoding. For an IP Command sent from a Super SIM, the payload should not exceed 1300 bytes. If it is larger than 1300 bytes, there might be fragmentation on the upstream and the message may appear truncated.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "payload_type" : {
+                "$ref" : "#/components/schemas/ip_command_enum_payload_type"
+              },
+              "sid" : {
+                "description" : "The unique string that we created to identify the IP Command resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^HG[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "sim_iccid" : {
+                "description" : "The [ICCID](https://en.wikipedia.org/wiki/Subscriber_identity_module#ICCID) of the [Super SIM](https://www.twilio.com/docs/iot/supersim/api/sim-resource) that this IP Command was sent to or from.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "sim_sid" : {
+                "description" : "The SID of the [Super SIM](https://www.twilio.com/docs/iot/supersim/api/sim-resource) that this IP Command was sent to or from.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^HS[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "status" : {
+                "$ref" : "#/components/schemas/ip_command_enum_status"
+              },
+              "url" : {
+                "description" : "The absolute URL of the IP Command resource.",
+                "format" : "uri",
+                "nullable" : true,
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 22
+  }, {
+    "id" : "381afdb8-fbb2-4531-ab76-5cba739e4b83",
+    "name" : "Send an IP Command to a Super SIM.",
+    "request" : {
+      "urlPath" : "/v1/IpCommands",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 201,
+      "body" : "{\n  \"sim_sid\" : \"HS5328B10f259Ffdc45B3Bc12D4Cf1d45E\",\n  \"payload_type\" : \"binary\",\n  \"date_updated\" : \"2023-08-29T12:09:34.831Z\",\n  \"date_created\" : \"2023-01-23T17:22:30.831Z\",\n  \"device_port\" : 3900718428621271117,\n  \"url\" : \"https://web.example.mocklab.io/735516\",\n  \"sid\" : \"HGFaa008a6D1b6e5A6FDFf15f7064D5cAF\",\n  \"sim_iccid\" : \"8s60\",\n  \"device_ip\" : \"1uqjvo7enzsqtsk5h6d8vk9l6g4pv1p1vhfza1g0jrtyhb1w8yk6wv0vsbf1vplcsbt3r8ikrv7jp\",\n  \"payload\" : \"8845tq0du5kdhgo76kb1gielhggw4wwfd6isuabka91rwumm5msldxyoowrzyga3ax5hx8autrzd1ihnh7ade30d\",\n  \"account_sid\" : \"ACdd346Ac8508Ab5eE2d8Fca9e438dD3c9\",\n  \"direction\" : \"to_sim\",\n  \"status\" : \"sent\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "381afdb8-fbb2-4531-ab76-5cba739e4b83",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:22.83195Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "CreateIpCommand",
+          "schema" : {
+            "properties" : {
+              "account_sid" : {
+                "description" : "The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the IP Command resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^AC[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "date_created" : {
+                "description" : "The date and time in GMT when the resource was created specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "date_updated" : {
+                "description" : "The date and time in GMT when the resource was last updated specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "device_ip" : {
+                "description" : "The IP address of the device that the IP Command was sent to or received from. For an IP Command sent to a Super SIM, `device_ip` starts out as `null`, and once the IP Command is “sent”, the `device_ip` will be filled out. An IP Command sent from a Super SIM have its `device_ip` always set.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "device_port" : {
+                "description" : "For an IP Command sent to a Super SIM, it would be the destination port of the IP message. For an IP Command sent from a Super SIM, it would be the source port of the IP message.",
+                "nullable" : true,
+                "type" : "integer"
+              },
+              "direction" : {
+                "$ref" : "#/components/schemas/ip_command_enum_direction"
+              },
+              "payload" : {
+                "description" : "The payload that is carried in the IP/UDP message. The payload can be encoded in either text or binary format. For text payload, UTF-8 encoding must be used.\n\nFor an IP Command sent to a Super SIM, the payload is appended to the IP/UDP message “as is”. The payload should not exceed 1300 bytes.\n\nFor an IP Command sent from a Super SIM, the payload from the received IP/UDP message is extracted and sent in binary encoding. For an IP Command sent from a Super SIM, the payload should not exceed 1300 bytes. If it is larger than 1300 bytes, there might be fragmentation on the upstream and the message may appear truncated.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "payload_type" : {
+                "$ref" : "#/components/schemas/ip_command_enum_payload_type"
+              },
+              "sid" : {
+                "description" : "The unique string that we created to identify the IP Command resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^HG[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "sim_iccid" : {
+                "description" : "The [ICCID](https://en.wikipedia.org/wiki/Subscriber_identity_module#ICCID) of the [Super SIM](https://www.twilio.com/docs/iot/supersim/api/sim-resource) that this IP Command was sent to or from.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "sim_sid" : {
+                "description" : "The SID of the [Super SIM](https://www.twilio.com/docs/iot/supersim/api/sim-resource) that this IP Command was sent to or from.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^HS[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "status" : {
+                "$ref" : "#/components/schemas/ip_command_enum_status"
+              },
+              "url" : {
+                "description" : "The absolute URL of the IP Command resource.",
+                "format" : "uri",
+                "nullable" : true,
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 23
+  }, {
+    "id" : "700fcaaa-b703-4dd8-a035-95c298f6e257",
+    "name" : "Retrieve a list of IP Commands from your account.",
+    "request" : {
+      "urlPath" : "/v1/IpCommands",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"meta\" : {\n    \"first_page_url\" : \"https://web.example.mocklab.io/951244\",\n    \"next_page_url\" : \"https://web.example.mocklab.io/681927\",\n    \"previous_page_url\" : \"https://web.example.mocklab.io/464643\",\n    \"page\" : 1428594671811843188,\n    \"key\" : \"tfz0nqh0k1anny15fiae6j8t73f9g5orzzmeflxa0c6lvzb5f8laud4kfdmsyx0jq36p0iy5pyl3trqzjhksj1b\",\n    \"url\" : \"https://web.example.mocklab.io/504791\",\n    \"page_size\" : 6723777823224019228\n  },\n  \"ip_commands\" : [ {\n    \"sim_sid\" : \"HS7C6AeE817aAEf5CFd3C99bA997FaaA3C\",\n    \"payload_type\" : \"binary\",\n    \"date_updated\" : \"2024-02-15T05:24:24.83Z\",\n    \"date_created\" : \"2023-08-09T04:49:27.83Z\",\n    \"device_port\" : 6784348542710994777,\n    \"url\" : \"https://web.example.mocklab.io/110252\",\n    \"sid\" : \"HG6BCF4408BEdD5Bd4194eFe1497DC5d00\",\n    \"sim_iccid\" : \"jnr9\",\n    \"device_ip\" : \"usw6h3jndsxdbr4mi9gjy40ncz2q16ucpghmxpz2wb6gjk2uslbim7ebob5g36xp2m105f8duxf7djb6hjzp8sbw49589knspvuoq8umbkwkkt5tb5ko97ny6aqhn0u9u8unw5d2j3cphl1clgwntfup6wh7h7tfy354vtpweaviklnb3\",\n    \"payload\" : \"anu9fko2z47xqfoqwwxh3ynwxoqdzkdh0la5761vxbxlvg7o3l001kh6\",\n    \"account_sid\" : \"AC4F6f23c300ccAEDaA8677D85b15dbab6\",\n    \"direction\" : \"from_sim\",\n    \"status\" : \"sent\"\n  }, {\n    \"sim_sid\" : \"HSEa44dbdBeeF5C1BA124F3cddfB01B980\",\n    \"payload_type\" : \"text\",\n    \"date_updated\" : \"2023-03-06T13:00:57.83Z\",\n    \"date_created\" : \"2023-02-04T17:39:30.83Z\",\n    \"device_port\" : 378160620648063288,\n    \"url\" : \"https://web.example.mocklab.io/844832\",\n    \"sid\" : \"HG2FCaE5deCCd686598EDC86fD4D321e96\",\n    \"sim_iccid\" : \"lw6c\",\n    \"device_ip\" : \"mpehdl9thq59mvqs6ijn3nw8tbo7g4oh78mcx2umd8et5flvb5qdtd01v2g2v5d195zt51ycrtysd3p1vlpho71zqyoutoxplxlf5repr5wtuu2qv9galulvk84l29w39upic3d75lsww9g568m18he8fqhx5fqh792zsid79jviq\",\n    \"payload\" : \"h1eofi4fgabdjl35pto9men0eo7so0qhogjrsawop\",\n    \"account_sid\" : \"ACb2e87deD9a62d9e7E3fFF0Ef7ceACdDA\",\n    \"direction\" : \"from_sim\",\n    \"status\" : \"failed\"\n  }, {\n    \"sim_sid\" : \"HS5BB487fB5bbF6d8f1BE1fC1a2588Cd50\",\n    \"payload_type\" : \"binary\",\n    \"date_updated\" : \"2022-04-21T23:48:22.831Z\",\n    \"date_created\" : \"2023-05-05T15:10:39.831Z\",\n    \"device_port\" : 1407967644656767719,\n    \"url\" : \"https://web.example.mocklab.io/256692\",\n    \"sid\" : \"HG8Dd03a3D55c25aCc6bAafCBa63BF678b\",\n    \"sim_iccid\" : \"8dai\",\n    \"device_ip\" : \"hy2aa8pbfmljlutv1rnvnmplgfizqe7xtf4crwpua76iur\",\n    \"payload\" : \"nplyompx3y8kjtn5v87j2qmrf1fm\",\n    \"account_sid\" : \"AC9Fc5AB2e4e0bF06510ceB6598f6d35B8\",\n    \"direction\" : \"to_sim\",\n    \"status\" : \"queued\"\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "700fcaaa-b703-4dd8-a035-95c298f6e257",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:22.831586Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "ListIpCommand",
+          "schema" : {
+            "properties" : {
+              "ip_commands" : {
+                "items" : {
+                  "$ref" : "#/components/schemas/supersim.v1.ip_command"
+                },
+                "type" : "array"
+              },
+              "meta" : {
+                "properties" : {
+                  "first_page_url" : {
+                    "format" : "uri",
+                    "type" : "string"
+                  },
+                  "key" : {
+                    "type" : "string"
+                  },
+                  "next_page_url" : {
+                    "format" : "uri",
+                    "nullable" : true,
+                    "type" : "string"
+                  },
+                  "page" : {
+                    "type" : "integer"
+                  },
+                  "page_size" : {
+                    "type" : "integer"
+                  },
+                  "previous_page_url" : {
+                    "format" : "uri",
+                    "nullable" : true,
+                    "type" : "string"
+                  },
+                  "url" : {
+                    "format" : "uri",
+                    "type" : "string"
+                  }
+                },
+                "type" : "object"
+              }
+            },
+            "title" : "ListIpCommandResponse",
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 24
+  }, {
+    "id" : "c2079902-83fb-4e0c-9394-b8fa1ae16805",
+    "name" : "Updates the given properties of a Super SIM Fleet instance from your account.",
+    "request" : {
+      "urlPath" : "/v1/Fleets/78b5",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"ip_commands_url\" : \"https://web.example.mocklab.io/546661\",\n  \"sms_commands_url\" : \"https://web.example.mocklab.io/584872\",\n  \"date_updated\" : \"2024-02-21T19:33:33.829Z\",\n  \"data_limit\" : 7718654536926319409,\n  \"sms_commands_method\" : \"GET\",\n  \"date_created\" : \"2022-05-20T18:18:29.829Z\",\n  \"sms_commands_enabled\" : false,\n  \"ip_commands_method\" : \"POST\",\n  \"data_metering\" : \"payg\",\n  \"data_enabled\" : true,\n  \"network_access_profile_sid\" : \"HA3C5c4CCAB12BBb57b6FdDdA1Bed0ec8a\",\n  \"url\" : \"https://web.example.mocklab.io/185731\",\n  \"sid\" : \"HF489bddAeE586A3A1cb78EAc904ccb0Fb\",\n  \"unique_name\" : \"Marta Bergstrom\",\n  \"account_sid\" : \"AC7E8ADEeAA49Ae7A79ccfD5beeF52Eb31\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "c2079902-83fb-4e0c-9394-b8fa1ae16805",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:22.830342Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "UpdateFleet",
+          "schema" : {
+            "properties" : {
+              "account_sid" : {
+                "description" : "The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the Fleet resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^AC[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "data_enabled" : {
+                "description" : "Defines whether SIMs in the Fleet are capable of using 2G/3G/4G/LTE/CAT-M data connectivity. Defaults to `true`.",
+                "nullable" : true,
+                "type" : "boolean"
+              },
+              "data_limit" : {
+                "description" : "The total data usage (download and upload combined) in Megabytes that each Super SIM assigned to the Fleet can consume during a billing period (normally one month). Value must be between 1MB (1) and 2TB (2,000,000). Defaults to 1GB (1,000).",
+                "nullable" : true,
+                "type" : "integer"
+              },
+              "data_metering" : {
+                "$ref" : "#/components/schemas/fleet_enum_data_metering"
+              },
+              "date_created" : {
+                "description" : "The date and time in GMT when the resource was created specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "date_updated" : {
+                "description" : "The date and time in GMT when the resource was last updated specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "ip_commands_method" : {
+                "description" : "A string representing the HTTP method to use when making a request to `ip_commands_url`. Can be one of `POST` or `GET`. Defaults to `POST`.",
+                "enum" : [ "HEAD", "GET", "POST", "PATCH", "PUT", "DELETE" ],
+                "format" : "http-method",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "ip_commands_url" : {
+                "description" : "The URL that will receive a webhook when a Super SIM in the Fleet is used to send an IP Command from your device to a special IP address. Your server should respond with an HTTP status code in the 200 range; any response body will be ignored.",
+                "format" : "uri",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "network_access_profile_sid" : {
+                "description" : "The SID of the Network Access Profile that controls which cellular networks the Fleet's SIMs can connect to.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^HA[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "sid" : {
+                "description" : "The unique string that we created to identify the Fleet resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^HF[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "sms_commands_enabled" : {
+                "description" : "Defines whether SIMs in the Fleet are capable of sending and receiving machine-to-machine SMS via Commands. Defaults to `true`.",
+                "nullable" : true,
+                "type" : "boolean"
+              },
+              "sms_commands_method" : {
+                "description" : "A string representing the HTTP method to use when making a request to `sms_commands_url`. Can be one of `POST` or `GET`. Defaults to `POST`.",
+                "enum" : [ "HEAD", "GET", "POST", "PATCH", "PUT", "DELETE" ],
+                "format" : "http-method",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "sms_commands_url" : {
+                "description" : "The URL that will receive a webhook when a Super SIM in the Fleet is used to send an SMS from your device to the SMS Commands number. Your server should respond with an HTTP status code in the 200 range; any response body will be ignored.",
+                "format" : "uri",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "unique_name" : {
+                "description" : "An application-defined string that uniquely identifies the resource. It can be used in place of the resource's `sid` in the URL to address the resource.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "url" : {
+                "description" : "The absolute URL of the Fleet resource.",
+                "format" : "uri",
+                "nullable" : true,
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 25
+  }, {
+    "id" : "116233cd-cc34-4809-bdef-864ef3e3d9ab",
+    "name" : "Fetch a Fleet instance from your account.",
+    "request" : {
+      "urlPath" : "/v1/Fleets/l4f2",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"ip_commands_url\" : \"https://web.example.mocklab.io/164655\",\n  \"sms_commands_url\" : \"https://web.example.mocklab.io/579951\",\n  \"date_updated\" : \"2023-12-17T09:30:47.803Z\",\n  \"data_limit\" : 2864804472741506011,\n  \"sms_commands_method\" : \"DELETE\",\n  \"date_created\" : \"2023-04-04T02:49:32.803Z\",\n  \"sms_commands_enabled\" : true,\n  \"ip_commands_method\" : \"HEAD\",\n  \"data_metering\" : \"payg\",\n  \"data_enabled\" : false,\n  \"network_access_profile_sid\" : \"HAd78B436Febe8f9efDABeCF93bbB0181B\",\n  \"url\" : \"https://web.example.mocklab.io/039724\",\n  \"sid\" : \"HF5ACeaC8956f78ba9d40e7dA6abD82fC9\",\n  \"unique_name\" : \"Ms. Lemuel Rutherford\",\n  \"account_sid\" : \"AC3f6890d055DEEab3c0b603999E3B3aE1\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "116233cd-cc34-4809-bdef-864ef3e3d9ab",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:22.803956Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "FetchFleet",
+          "schema" : {
+            "properties" : {
+              "account_sid" : {
+                "description" : "The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the Fleet resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^AC[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "data_enabled" : {
+                "description" : "Defines whether SIMs in the Fleet are capable of using 2G/3G/4G/LTE/CAT-M data connectivity. Defaults to `true`.",
+                "nullable" : true,
+                "type" : "boolean"
+              },
+              "data_limit" : {
+                "description" : "The total data usage (download and upload combined) in Megabytes that each Super SIM assigned to the Fleet can consume during a billing period (normally one month). Value must be between 1MB (1) and 2TB (2,000,000). Defaults to 1GB (1,000).",
+                "nullable" : true,
+                "type" : "integer"
+              },
+              "data_metering" : {
+                "$ref" : "#/components/schemas/fleet_enum_data_metering"
+              },
+              "date_created" : {
+                "description" : "The date and time in GMT when the resource was created specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "date_updated" : {
+                "description" : "The date and time in GMT when the resource was last updated specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "ip_commands_method" : {
+                "description" : "A string representing the HTTP method to use when making a request to `ip_commands_url`. Can be one of `POST` or `GET`. Defaults to `POST`.",
+                "enum" : [ "HEAD", "GET", "POST", "PATCH", "PUT", "DELETE" ],
+                "format" : "http-method",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "ip_commands_url" : {
+                "description" : "The URL that will receive a webhook when a Super SIM in the Fleet is used to send an IP Command from your device to a special IP address. Your server should respond with an HTTP status code in the 200 range; any response body will be ignored.",
+                "format" : "uri",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "network_access_profile_sid" : {
+                "description" : "The SID of the Network Access Profile that controls which cellular networks the Fleet's SIMs can connect to.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^HA[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "sid" : {
+                "description" : "The unique string that we created to identify the Fleet resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^HF[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "sms_commands_enabled" : {
+                "description" : "Defines whether SIMs in the Fleet are capable of sending and receiving machine-to-machine SMS via Commands. Defaults to `true`.",
+                "nullable" : true,
+                "type" : "boolean"
+              },
+              "sms_commands_method" : {
+                "description" : "A string representing the HTTP method to use when making a request to `sms_commands_url`. Can be one of `POST` or `GET`. Defaults to `POST`.",
+                "enum" : [ "HEAD", "GET", "POST", "PATCH", "PUT", "DELETE" ],
+                "format" : "http-method",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "sms_commands_url" : {
+                "description" : "The URL that will receive a webhook when a Super SIM in the Fleet is used to send an SMS from your device to the SMS Commands number. Your server should respond with an HTTP status code in the 200 range; any response body will be ignored.",
+                "format" : "uri",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "unique_name" : {
+                "description" : "An application-defined string that uniquely identifies the resource. It can be used in place of the resource's `sid` in the URL to address the resource.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "url" : {
+                "description" : "The absolute URL of the Fleet resource.",
+                "format" : "uri",
+                "nullable" : true,
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 26
+  }, {
+    "id" : "05fb4678-3954-4c32-ab59-b1280fdc4fde",
+    "name" : "Create a Fleet",
+    "request" : {
+      "urlPath" : "/v1/Fleets",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 201,
+      "body" : "{\n  \"ip_commands_url\" : \"https://web.example.mocklab.io/257845\",\n  \"sms_commands_url\" : \"https://web.example.mocklab.io/775216\",\n  \"date_updated\" : \"2023-09-03T17:35:44.803Z\",\n  \"data_limit\" : 799162294510186435,\n  \"sms_commands_method\" : \"DELETE\",\n  \"date_created\" : \"2023-07-14T19:38:23.803Z\",\n  \"sms_commands_enabled\" : false,\n  \"ip_commands_method\" : \"PUT\",\n  \"data_metering\" : \"payg\",\n  \"data_enabled\" : false,\n  \"network_access_profile_sid\" : \"HABb6a5E302D51f71f1CEED83b0B1eea6b\",\n  \"url\" : \"https://web.example.mocklab.io/234522\",\n  \"sid\" : \"HF0Ef56F6999bFdFC90E2b3b81d7FE9aF2\",\n  \"unique_name\" : \"Freddie Torphy\",\n  \"account_sid\" : \"AC7eEee87Efc16dF93adc7b0DC4F0CA85B\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "05fb4678-3954-4c32-ab59-b1280fdc4fde",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:22.803434Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "CreateFleet",
+          "schema" : {
+            "properties" : {
+              "account_sid" : {
+                "description" : "The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the Fleet resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^AC[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "data_enabled" : {
+                "description" : "Defines whether SIMs in the Fleet are capable of using 2G/3G/4G/LTE/CAT-M data connectivity. Defaults to `true`.",
+                "nullable" : true,
+                "type" : "boolean"
+              },
+              "data_limit" : {
+                "description" : "The total data usage (download and upload combined) in Megabytes that each Super SIM assigned to the Fleet can consume during a billing period (normally one month). Value must be between 1MB (1) and 2TB (2,000,000). Defaults to 1GB (1,000).",
+                "nullable" : true,
+                "type" : "integer"
+              },
+              "data_metering" : {
+                "$ref" : "#/components/schemas/fleet_enum_data_metering"
+              },
+              "date_created" : {
+                "description" : "The date and time in GMT when the resource was created specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "date_updated" : {
+                "description" : "The date and time in GMT when the resource was last updated specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "ip_commands_method" : {
+                "description" : "A string representing the HTTP method to use when making a request to `ip_commands_url`. Can be one of `POST` or `GET`. Defaults to `POST`.",
+                "enum" : [ "HEAD", "GET", "POST", "PATCH", "PUT", "DELETE" ],
+                "format" : "http-method",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "ip_commands_url" : {
+                "description" : "The URL that will receive a webhook when a Super SIM in the Fleet is used to send an IP Command from your device to a special IP address. Your server should respond with an HTTP status code in the 200 range; any response body will be ignored.",
+                "format" : "uri",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "network_access_profile_sid" : {
+                "description" : "The SID of the Network Access Profile that controls which cellular networks the Fleet's SIMs can connect to.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^HA[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "sid" : {
+                "description" : "The unique string that we created to identify the Fleet resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^HF[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "sms_commands_enabled" : {
+                "description" : "Defines whether SIMs in the Fleet are capable of sending and receiving machine-to-machine SMS via Commands. Defaults to `true`.",
+                "nullable" : true,
+                "type" : "boolean"
+              },
+              "sms_commands_method" : {
+                "description" : "A string representing the HTTP method to use when making a request to `sms_commands_url`. Can be one of `POST` or `GET`. Defaults to `POST`.",
+                "enum" : [ "HEAD", "GET", "POST", "PATCH", "PUT", "DELETE" ],
+                "format" : "http-method",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "sms_commands_url" : {
+                "description" : "The URL that will receive a webhook when a Super SIM in the Fleet is used to send an SMS from your device to the SMS Commands number. Your server should respond with an HTTP status code in the 200 range; any response body will be ignored.",
+                "format" : "uri",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "unique_name" : {
+                "description" : "An application-defined string that uniquely identifies the resource. It can be used in place of the resource's `sid` in the URL to address the resource.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "url" : {
+                "description" : "The absolute URL of the Fleet resource.",
+                "format" : "uri",
+                "nullable" : true,
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 27
+  }, {
+    "id" : "00c67978-e9f7-449e-a82d-c1972f278738",
+    "name" : "Retrieve a list of Fleets from your account.",
+    "request" : {
+      "urlPath" : "/v1/Fleets",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"meta\" : {\n    \"first_page_url\" : \"https://web.example.mocklab.io/127707\",\n    \"next_page_url\" : \"https://web.example.mocklab.io/667826\",\n    \"previous_page_url\" : \"https://web.example.mocklab.io/886268\",\n    \"page\" : 7510570738459318388,\n    \"key\" : \"rb1lsppfygv2urtdzde09ohwmb0wroam977n0vonwemdyuz4374ak0a9v284avzo5gx62qlepbf0u586j409je42h1ggjs9bqmdwns7qka7clm4zro8z32l70wdlq943y9udnm8dv3p1wbyn\",\n    \"url\" : \"https://web.example.mocklab.io/979207\",\n    \"page_size\" : 4285424182794106708\n  },\n  \"fleets\" : [ {\n    \"ip_commands_url\" : \"https://web.example.mocklab.io/893612\",\n    \"sms_commands_url\" : \"https://web.example.mocklab.io/332557\",\n    \"date_updated\" : \"2024-01-05T19:55:18.8Z\",\n    \"data_limit\" : 4806812813824498214,\n    \"sms_commands_method\" : \"PUT\",\n    \"date_created\" : \"2022-08-19T20:50:21.8Z\",\n    \"sms_commands_enabled\" : false,\n    \"ip_commands_method\" : \"DELETE\",\n    \"data_metering\" : \"payg\",\n    \"data_enabled\" : false,\n    \"network_access_profile_sid\" : \"HA378533De35fd3A50b2BEffB57cd3f61b\",\n    \"url\" : \"https://web.example.mocklab.io/461279\",\n    \"sid\" : \"HFB7a84DB696cF4C9E7FfB8ea7DCcfE4A3\",\n    \"unique_name\" : \"Ms. Lamar Hayes\",\n    \"account_sid\" : \"AC68DF50f27469a1dCA9094297dd73550b\"\n  }, {\n    \"ip_commands_url\" : \"https://web.example.mocklab.io/915714\",\n    \"sms_commands_url\" : \"https://web.example.mocklab.io/614170\",\n    \"date_updated\" : \"2024-02-22T16:33:20.801Z\",\n    \"data_limit\" : 5135774144147467692,\n    \"sms_commands_method\" : \"PATCH\",\n    \"date_created\" : \"2023-09-11T04:57:21.801Z\",\n    \"sms_commands_enabled\" : true,\n    \"ip_commands_method\" : \"HEAD\",\n    \"data_metering\" : \"payg\",\n    \"data_enabled\" : true,\n    \"network_access_profile_sid\" : \"HAff6Ff3D6b4a2Acd8Ee9F3226CEf3AaaA\",\n    \"url\" : \"https://web.example.mocklab.io/546570\",\n    \"sid\" : \"HF63C6D6FFb397bB9DDD59b8de211f5F3F\",\n    \"unique_name\" : \"Phung Nader II\",\n    \"account_sid\" : \"AC7ACE54aaaf9508DDf03EbBeFAb1e6Dd5\"\n  }, {\n    \"ip_commands_url\" : \"https://web.example.mocklab.io/921076\",\n    \"sms_commands_url\" : \"https://web.example.mocklab.io/086324\",\n    \"date_updated\" : \"2023-01-14T00:17:23.801Z\",\n    \"data_limit\" : 4577944610162836170,\n    \"sms_commands_method\" : \"HEAD\",\n    \"date_created\" : \"2023-09-03T18:43:43.801Z\",\n    \"sms_commands_enabled\" : true,\n    \"ip_commands_method\" : \"DELETE\",\n    \"data_metering\" : \"payg\",\n    \"data_enabled\" : true,\n    \"network_access_profile_sid\" : \"HAA7Fb4A72e4e7e56fCC7dDebE4Adddd10\",\n    \"url\" : \"https://web.example.mocklab.io/273648\",\n    \"sid\" : \"HFBb2f8269fF98aAC6EB9Ddca11D8D4De8\",\n    \"unique_name\" : \"Lesha Yost\",\n    \"account_sid\" : \"ACE0ebbaa5cb0d54CfB1Fd911b0391d98C\"\n  }, {\n    \"ip_commands_url\" : \"https://web.example.mocklab.io/534702\",\n    \"sms_commands_url\" : \"https://web.example.mocklab.io/086575\",\n    \"date_updated\" : \"2023-04-09T03:58:07.801Z\",\n    \"data_limit\" : 3198936900604307666,\n    \"sms_commands_method\" : \"DELETE\",\n    \"date_created\" : \"2022-07-19T19:57:27.801Z\",\n    \"sms_commands_enabled\" : false,\n    \"ip_commands_method\" : \"POST\",\n    \"data_metering\" : \"payg\",\n    \"data_enabled\" : true,\n    \"network_access_profile_sid\" : \"HA9eD4CDFb9c2fBDf9Bda47e6df6cEc0F7\",\n    \"url\" : \"https://web.example.mocklab.io/769964\",\n    \"sid\" : \"HF7CaF3a6Debbbabaf906c113D8Dfa83EE\",\n    \"unique_name\" : \"Mr. Merry Hickle\",\n    \"account_sid\" : \"AC40e6ba07D6Ee78bFAab5dfD1DCa500df\"\n  }, {\n    \"ip_commands_url\" : \"https://web.example.mocklab.io/422067\",\n    \"sms_commands_url\" : \"https://web.example.mocklab.io/162101\",\n    \"date_updated\" : \"2022-11-14T17:44:30.802Z\",\n    \"data_limit\" : 2685605863533791828,\n    \"sms_commands_method\" : \"PUT\",\n    \"date_created\" : \"2023-10-28T23:55:45.802Z\",\n    \"sms_commands_enabled\" : true,\n    \"ip_commands_method\" : \"GET\",\n    \"data_metering\" : \"payg\",\n    \"data_enabled\" : false,\n    \"network_access_profile_sid\" : \"HA564209D19DCF31D157d07E9Bc0F8fBfB\",\n    \"url\" : \"https://web.example.mocklab.io/887662\",\n    \"sid\" : \"HFF7f3f15344eBe1d88f1CdbBCBfc72Dcb\",\n    \"unique_name\" : \"Malena Kautzer\",\n    \"account_sid\" : \"ACdBAFBBe0ed7eA02D32bEdD6D9D8b4fF7\"\n  }, {\n    \"ip_commands_url\" : \"https://web.example.mocklab.io/631806\",\n    \"sms_commands_url\" : \"https://web.example.mocklab.io/872362\",\n    \"date_updated\" : \"2023-06-16T04:16:23.802Z\",\n    \"data_limit\" : 4190414990675614843,\n    \"sms_commands_method\" : \"PUT\",\n    \"date_created\" : \"2023-06-09T18:56:39.802Z\",\n    \"sms_commands_enabled\" : false,\n    \"ip_commands_method\" : \"PUT\",\n    \"data_metering\" : \"payg\",\n    \"data_enabled\" : true,\n    \"network_access_profile_sid\" : \"HAeFfb5892b8fCACFccD1C2f4Ed7Dd40b7\",\n    \"url\" : \"https://web.example.mocklab.io/557696\",\n    \"sid\" : \"HF256CFDd48cCED88dcdddAa43C7329FDc\",\n    \"unique_name\" : \"Vance Kuhlman III\",\n    \"account_sid\" : \"ACbbBe46CAed67E7faA89F2cc2FCD78eBC\"\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "00c67978-e9f7-449e-a82d-c1972f278738",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:22.802913Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "ListFleet",
+          "schema" : {
+            "properties" : {
+              "fleets" : {
+                "items" : {
+                  "$ref" : "#/components/schemas/supersim.v1.fleet"
+                },
+                "type" : "array"
+              },
+              "meta" : {
+                "properties" : {
+                  "first_page_url" : {
+                    "format" : "uri",
+                    "type" : "string"
+                  },
+                  "key" : {
+                    "type" : "string"
+                  },
+                  "next_page_url" : {
+                    "format" : "uri",
+                    "nullable" : true,
+                    "type" : "string"
+                  },
+                  "page" : {
+                    "type" : "integer"
+                  },
+                  "page_size" : {
+                    "type" : "integer"
+                  },
+                  "previous_page_url" : {
+                    "format" : "uri",
+                    "nullable" : true,
+                    "type" : "string"
+                  },
+                  "url" : {
+                    "format" : "uri",
+                    "type" : "string"
+                  }
+                },
+                "type" : "object"
+              }
+            },
+            "title" : "ListFleetResponse",
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 28
+  }, {
+    "id" : "ad45764b-182a-4047-83a4-5bab9dc0f5e7",
+    "name" : "Fetch an eSIM Profile.",
+    "request" : {
+      "urlPath" : "/v1/ESimProfiles/5938",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"error_message\" : \"Omnis voluptates numquam. Quibusdam ad possimus autem minima. Cum repellat cupiditate eum blanditiis.\",\n  \"matching_id\" : \"wx07\",\n  \"sim_sid\" : \"HS7Ca6dC0f72867cDeeBc2c91743Cbac18\",\n  \"eid\" : \"47q5\",\n  \"date_updated\" : \"2023-07-14T12:37:44.799Z\",\n  \"activation_code\" : \"y9p4q5t4ov3mmxiwvr7y45loj3kxa7tsg91w4zbgfg4khbaejdxllbyuj3q7amj15y6bdehu2jnivcf31yqfddqp9iktqpkf84szi3zakohe3zp84a6upmbht1mpjl04rjrlth\",\n  \"date_created\" : \"2022-05-11T12:19:45.799Z\",\n  \"url\" : \"https://web.example.mocklab.io/845296\",\n  \"sid\" : \"HP33FAB456c62aC50f6aF2E7Df5C27cC1b\",\n  \"iccid\" : \"js29\",\n  \"smdp_plus_address\" : \"ylgl9x141ktsnszb7ny5j5zwtybcr8zv0mcd5f1am2o1qn19f2qqz3sjda3w3tdwn5d8am4ypc6h0rltmpylekhajf0pv21xfatqbyosp1ixflpcmqqg7cur1\",\n  \"account_sid\" : \"AC69A591fb0916273EF1E629ceE918B6D8\",\n  \"error_code\" : \"t5in8wrvybqn4f9tvmid4t6e9z8bx8qoz703eavifh8jleto1w9ctht7920tmfnrt1eo8eap9enpzr3bwfu3tptd9k6tuw\",\n  \"status\" : \"downloaded\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "ad45764b-182a-4047-83a4-5bab9dc0f5e7",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:22.800333Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "FetchEsimProfile",
+          "schema" : {
+            "properties" : {
+              "account_sid" : {
+                "description" : "The SID of the [Account](https://www.twilio.com/docs/iam/api/account) to which the eSIM Profile resource belongs.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^AC[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "activation_code" : {
+                "description" : "Combined machine-readable activation code for acquiring an eSIM Profile with the Activation Code download method. Can be used in a QR code to download an eSIM profile.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "date_created" : {
+                "description" : "The date and time in GMT when the resource was created specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "date_updated" : {
+                "description" : "The date and time in GMT when the resource was last updated specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "eid" : {
+                "description" : "Identifier of the eUICC that can claim the eSIM Profile.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "error_code" : {
+                "description" : "Code indicating the failure if the download of the SIM Profile failed and the eSIM Profile is in `failed` state.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "error_message" : {
+                "description" : "Error message describing the failure if the download of the SIM Profile failed and the eSIM Profile is in `failed` state.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "iccid" : {
+                "description" : "The [ICCID](https://en.wikipedia.org/wiki/Subscriber_identity_module#ICCID) associated with the Sim resource.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "matching_id" : {
+                "description" : "Unique identifier of the eSIM profile that can be used to identify and download the eSIM profile from the SM-DP+ server. Populated if `generate_matching_id` is set to `true` when creating the eSIM profile reservation.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "sid" : {
+                "description" : "The unique string that we created to identify the eSIM Profile resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^HP[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "sim_sid" : {
+                "description" : "The SID of the [Sim](https://www.twilio.com/docs/wireless/api/sim-resource) resource that this eSIM Profile controls.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^HS[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "smdp_plus_address" : {
+                "description" : "Address of the SM-DP+ server from which the Profile will be downloaded. The URL will appear once the eSIM Profile reaches the status `available`.",
+                "format" : "uri",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "status" : {
+                "$ref" : "#/components/schemas/esim_profile_enum_status"
+              },
+              "url" : {
+                "description" : "The absolute URL of the eSIM Profile resource.",
+                "format" : "uri",
+                "nullable" : true,
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 29
+  }, {
+    "id" : "138e9d4b-6b0f-4f45-bcc4-5161960c49f9",
+    "name" : "Order an eSIM Profile.",
+    "request" : {
+      "urlPath" : "/v1/ESimProfiles",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 201,
+      "body" : "{\n  \"error_message\" : \"Velit velit distinctio deserunt voluptatum repellat harum sed. Fuga nobis facere impedit sunt aperiam in alias. Iste sed maiores enim vitae. Voluptatum quam architecto quidem vel provident consequatur\",\n  \"matching_id\" : \"1a11\",\n  \"sim_sid\" : \"HS3Cd6FAd6f0e8cb35d7cdCa19E2635b73\",\n  \"eid\" : \"7bv5\",\n  \"date_updated\" : \"2023-01-28T21:08:35.799Z\",\n  \"activation_code\" : \"ega02pc5uktplphrj9ivlwy8z6yz4ctpwrxodjtkahq1ownc0fieuc5dewnmxewtyl6luef8pdggbhgb07ygsn3a59i2zjfm1s69a6yjsxdxu7u22\",\n  \"date_created\" : \"2023-05-07T13:58:42.799Z\",\n  \"url\" : \"https://web.example.mocklab.io/040290\",\n  \"sid\" : \"HPE649c8a5CF8fc69fa5CEd26fC0f0506D\",\n  \"iccid\" : \"65h2\",\n  \"smdp_plus_address\" : \"kezxd80jsm9vtz9b6m3b0n1p00akdi78ftzg61xo\",\n  \"account_sid\" : \"ACCfd9fD9ED93EE8A74df0064DEca03a10\",\n  \"error_code\" : \"cgj01je2bm3qw5x95r3vlkvpsw9z\",\n  \"status\" : \"reserving\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "138e9d4b-6b0f-4f45-bcc4-5161960c49f9",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:22.79976Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "CreateEsimProfile",
+          "schema" : {
+            "properties" : {
+              "account_sid" : {
+                "description" : "The SID of the [Account](https://www.twilio.com/docs/iam/api/account) to which the eSIM Profile resource belongs.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^AC[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "activation_code" : {
+                "description" : "Combined machine-readable activation code for acquiring an eSIM Profile with the Activation Code download method. Can be used in a QR code to download an eSIM profile.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "date_created" : {
+                "description" : "The date and time in GMT when the resource was created specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "date_updated" : {
+                "description" : "The date and time in GMT when the resource was last updated specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.",
+                "format" : "date-time",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "eid" : {
+                "description" : "Identifier of the eUICC that can claim the eSIM Profile.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "error_code" : {
+                "description" : "Code indicating the failure if the download of the SIM Profile failed and the eSIM Profile is in `failed` state.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "error_message" : {
+                "description" : "Error message describing the failure if the download of the SIM Profile failed and the eSIM Profile is in `failed` state.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "iccid" : {
+                "description" : "The [ICCID](https://en.wikipedia.org/wiki/Subscriber_identity_module#ICCID) associated with the Sim resource.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "matching_id" : {
+                "description" : "Unique identifier of the eSIM profile that can be used to identify and download the eSIM profile from the SM-DP+ server. Populated if `generate_matching_id` is set to `true` when creating the eSIM profile reservation.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "sid" : {
+                "description" : "The unique string that we created to identify the eSIM Profile resource.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^HP[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "sim_sid" : {
+                "description" : "The SID of the [Sim](https://www.twilio.com/docs/wireless/api/sim-resource) resource that this eSIM Profile controls.",
+                "maxLength" : 34,
+                "minLength" : 34,
+                "nullable" : true,
+                "pattern" : "^HS[0-9a-fA-F]{32}$",
+                "type" : "string"
+              },
+              "smdp_plus_address" : {
+                "description" : "Address of the SM-DP+ server from which the Profile will be downloaded. The URL will appear once the eSIM Profile reaches the status `available`.",
+                "format" : "uri",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "status" : {
+                "$ref" : "#/components/schemas/esim_profile_enum_status"
+              },
+              "url" : {
+                "description" : "The absolute URL of the eSIM Profile resource.",
+                "format" : "uri",
+                "nullable" : true,
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 30
+  }, {
+    "id" : "501b8475-51c1-4452-871a-5b15f69f6676",
+    "name" : "Retrieve a list of eSIM Profiles.",
+    "request" : {
+      "urlPath" : "/v1/ESimProfiles",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"meta\" : {\n    \"first_page_url\" : \"https://web.example.mocklab.io/567637\",\n    \"next_page_url\" : \"https://web.example.mocklab.io/622658\",\n    \"previous_page_url\" : \"https://web.example.mocklab.io/424237\",\n    \"page\" : 8035920843172833613,\n    \"key\" : \"ubv87gkfpng6ysk6inndrqca10av9inpgl4uhh3yl8kjmme8qqqg3nlt0dvs5folcx8wm68hcl3pbica0ho7eywpl7xpfr4qbruzv4owsuhxs01k60jzmw7bkzwxw7xqhg7q70vprlnr57ia1g6frdz5u8ttk737icxb6w91nks\",\n    \"url\" : \"https://web.example.mocklab.io/946720\",\n    \"page_size\" : 5984217588985801620\n  },\n  \"esim_profiles\" : [ {\n    \"error_message\" : \"Qui esse veniam. Labore vel quam minus ratione corporis. Eos in aut sit adipisci. Omnis consequuntur quod laborum eius et. Quo quas fugit aliquid dolorem vel.\",\n    \"matching_id\" : \"1f82\",\n    \"sim_sid\" : \"HSaf0cfEEb1dFE99E320DCF6339389C6Fa\",\n    \"eid\" : \"r9v1\",\n    \"date_updated\" : \"2022-09-14T07:47:42.796Z\",\n    \"activation_code\" : \"54brmqyn01fyycn84rho9nbaonv6ly2l1ww7ub10aeopq57qc8o1ibja1jpmxh9fqwhuh50kz9rv3j6wu72vg41ndte80k6brbc0bzq7sb8dtjr7roa9z7pp610b8pa1xikoh186sjzfevf2vq647g5h5ol4buomos4nh3twxz8sz9siymsxh4ki1aurodl\",\n    \"date_created\" : \"2023-03-14T21:45:15.796Z\",\n    \"url\" : \"https://web.example.mocklab.io/444114\",\n    \"sid\" : \"HP5ceBfc776f18e7649B7f14baa5dFEa38\",\n    \"iccid\" : \"uw9z\",\n    \"smdp_plus_address\" : \"8akwzn3ahykcdh3cs5bexvjkxz31n59j2kte305eys7d2l5fp668z8rkmmtpmfypvsvd06gnc84t0ixdr6gqu42rppaiggayv61rsg8xerak3ovznmw341sgi5yoog373lombq97s5yyanqwg2jt71h422muo\",\n    \"account_sid\" : \"AC305C4ddB0f7d575fADC0280b81B7B737\",\n    \"error_code\" : \"pc3v5231pvu16hznssxh2r45vdfu69l5frk7f2sgemgwcj8c1szxe7zoiev91r1yx1bouuhl0pstt9huolkwu0zbvx4wx3l3iev64pi7albnt8rbscc9qfq9vuqfaazsyrtgfdn9klwjwczd60l96nvdxi0p0ndhufdao\",\n    \"status\" : \"reserving\"\n  }, {\n    \"error_message\" : \"Voluptatem porro et praesentium praesentium recusandae. Unde excepturi ullam quasi. Reprehenderit aliquid doloribus. Minima officia alias aliquam cumque animi.\",\n    \"matching_id\" : \"fsfj\",\n    \"sim_sid\" : \"HSf935F2FA9A5abbCe3e2aB2AACa7FdBCA\",\n    \"eid\" : \"ev47\",\n    \"date_updated\" : \"2022-12-05T17:53:49.796Z\",\n    \"activation_code\" : \"yb906b5myav03qgprk4kikudrw2s2qfqkzqgnj68h3wvc17p8qeawgvy3rctvyod9fbrlzfobhwwf37k5\",\n    \"date_created\" : \"2023-06-14T12:18:18.796Z\",\n    \"url\" : \"https://web.example.mocklab.io/500210\",\n    \"sid\" : \"HPd784936aa2b1bbce2F47327CC53BEae1\",\n    \"iccid\" : \"v07i\",\n    \"smdp_plus_address\" : \"a0vklobb8g86gjim73na4vol1z812pzjvp7ueonfqqhuwammwn\",\n    \"account_sid\" : \"ACCaB57CDcfeaf4ce7d9DDa866c19EF7ED\",\n    \"error_code\" : \"hnsup9l5j0g9dgju9el86p4pqnssgrd8yv9z8iq2ynn2luhpmtab8sm8su7z2zvi72g92081s4mh5mxn830xneo8pdrf98edsz2sab3i2q9ek4c15vrnnnxca31r2c5qq7zpyfj6qpfy0os\",\n    \"status\" : \"installed\"\n  }, {\n    \"error_message\" : \"Quis iste minima non. Sequi consequatur in nobis sit distinctio ut fugit. Qui non dolorum ab hic et. Atque et nostrum quidem voluptas doloremque.\",\n    \"matching_id\" : \"2r03\",\n    \"sim_sid\" : \"HS8eD2d02FaA8AE8bf2327A5eBe89a037c\",\n    \"eid\" : \"f3ol\",\n    \"date_updated\" : \"2022-05-23T17:52:30.797Z\",\n    \"activation_code\" : \"qcc7wt0ullk8ges5y9h9rvzpydfyyidyoj3lnm2daql6cebtfor8mu0km973o3o99rlqjbrsvimko88jn3i8e4qlg3ee7ffn7myx6ujt2y\",\n    \"date_created\" : \"2022-04-28T15:39:24.797Z\",\n    \"url\" : \"https://web.example.mocklab.io/696555\",\n    \"sid\" : \"HPB1Aa62B641A2672BCAd3b5153Cb4aC4F\",\n    \"iccid\" : \"hhz7\",\n    \"smdp_plus_address\" : \"7c4u\",\n    \"account_sid\" : \"ACbbbc80473Aaf3ed76f52351985eE14f9\",\n    \"error_code\" : \"mtrebva3fxr1l3ra6yez1s6kb2w1w2o7wjn1vj8ei5roavwi4qrrsxu\",\n    \"status\" : \"available\"\n  }, {\n    \"error_message\" : \"Rerum rerum nisi aspernatur neque laboriosam repellendus quae. In maiores et corporis. Sit quia error nesciunt dolorum porro aspernatur aut. Nostrum debitis temporibus facilis magni officiis.\",\n    \"matching_id\" : \"660x\",\n    \"sim_sid\" : \"HS41E01b1cBD0710F9b737881fFaBdecAd\",\n    \"eid\" : \"dhs9\",\n    \"date_updated\" : \"2024-02-08T03:35:13.797Z\",\n    \"activation_code\" : \"4hmrpfejd4p0iquptumy8cjaw26ypz11d4h7jab1ibie3z2k4v0\",\n    \"date_created\" : \"2022-10-29T13:28:33.797Z\",\n    \"url\" : \"https://web.example.mocklab.io/806664\",\n    \"sid\" : \"HPAa8BED900997841AdCEdf01b7176c1A5\",\n    \"iccid\" : \"63t2\",\n    \"smdp_plus_address\" : \"528gouxj9ohzpyq4qos3vkn6q3h6b2uzg5ppz1gqt49gzwzdbw86af02kvwwa26s7p5jrwdoqe0wk2szmkogczfw2w02ifgkgam28zx3pnduzt81kf02t9t4stpdmscupcijjx\",\n    \"account_sid\" : \"AC6f1CcD667b357aaE79677a638aBb6f09\",\n    \"error_code\" : \"qdnwp5sqxnhf7vonb0z5hgeuavsp6yoxfonub29qqtq9foohqarphpws4p71\",\n    \"status\" : \"installed\"\n  }, {\n    \"error_message\" : \"Eius rerum quaerat impedit in necessitatibus qui. Dolor placeat doloribus vel et ut dolorem. Unde eaque modi autem quis illum. Earum fugit et a.\",\n    \"matching_id\" : \"hc99\",\n    \"sim_sid\" : \"HSDE0Cb79E8abCceBB07B2eAcbeAdEE6Bb\",\n    \"eid\" : \"e4r5\",\n    \"date_updated\" : \"2022-07-14T19:47:38.798Z\",\n    \"activation_code\" : \"oq6c42pe6dyx03i44tv9wcnsticnxat1nv1fbgv4jl7hu795wj07rywm9sp7elhlcqli6ed2zytdminz8kgr4svm6bmtm2bdsjq0vqacrdh2oe21pyixl3nrlcqlzxrk3ibu4x\",\n    \"date_created\" : \"2023-04-09T00:44:13.798Z\",\n    \"url\" : \"https://web.example.mocklab.io/591004\",\n    \"sid\" : \"HPc8Efaac3EbD481aAcc2c9a7cDb2F0CE8\",\n    \"iccid\" : \"ns10\",\n    \"smdp_plus_address\" : \"y61vryxc2rwbp4cy4fd8nwug9k22jvvsuobnm09gg6guqubmyxbqihtg47nm3xgconxum10g5mzw2dd669d4wtwlt5mwnr8aaqecnnw07cjv4em3vcy7mbjg4rkl0kqf34ymr6iv1yzi105t1ovk8fl527wgehhr\",\n    \"account_sid\" : \"ACd5BD7EbE6B7a8Ea2b5CBE1Dcf6fb9160\",\n    \"error_code\" : \"67dhqrrdzyc32klakixhty1dqnb9y8k089r4ookepzvzm7nypzqjrvp0sc6zv7e9q6y2k7q13z7v6qy9ztqb3dtwz84j3m8r6rcs9zrq0b5ov7fy6\",\n    \"status\" : \"new\"\n  }, {\n    \"error_message\" : \"Natus similique molestiae voluptate. Sed exercitationem nihil dolore itaque minima. Animi recusandae a. Atque accusantium ut quia ipsum voluptatem. Amet quia fugiat a nulla.\",\n    \"matching_id\" : \"a8z7\",\n    \"sim_sid\" : \"HS6CC5c0360eEb3cb58eaC82d62BDEB797\",\n    \"eid\" : \"bxh3\",\n    \"date_updated\" : \"2022-10-26T09:11:19.798Z\",\n    \"activation_code\" : \"00ybtoucohkd0y1lt7kh6opnyz2k5vsk69wo1ljmgb9pbhpuaiqlgwm6blkgif5kr7k2g9a2eb4y\",\n    \"date_created\" : \"2023-03-31T14:05:10.798Z\",\n    \"url\" : \"https://web.example.mocklab.io/407115\",\n    \"sid\" : \"HP85BC60b96Fe69694DbBfdee6d21E2612\",\n    \"iccid\" : \"ylkm\",\n    \"smdp_plus_address\" : \"v4fhmw7aqenggd5wktox1s617lun23apfkii3pyaq3jbyst0\",\n    \"account_sid\" : \"AC4d8a3f7dEc09034E4b8E1a9F21A7903A\",\n    \"error_code\" : \"dveaa3l5st90jkllpx7i905kl1o3x5ywpx\",\n    \"status\" : \"reserving\"\n  }, {\n    \"error_message\" : \"Suscipit beatae voluptatum quia. Dolor vero quia. Asperiores omnis optio excepturi quod.\",\n    \"matching_id\" : \"70gf\",\n    \"sim_sid\" : \"HS4cc6ccD6eed1aDcF2BFCD0CB32D8c3f2\",\n    \"eid\" : \"z6sp\",\n    \"date_updated\" : \"2023-03-03T08:55:58.798Z\",\n    \"activation_code\" : \"pfg8o4c9joz4gwmf4jjnlwrrq0emeruhlwxks7m0ssrsqqd239la3zb7ox9i5elrc84zma0otflpse9uft6c2rxl9046ybjiz8wc29rynb6o5a2s1h680t9zg285r3hp9eidz4pwl8ux0bthwzrnipvnuegcma1cylm676k\",\n    \"date_created\" : \"2022-10-20T18:59:42.798Z\",\n    \"url\" : \"https://web.example.mocklab.io/936094\",\n    \"sid\" : \"HP96060c0b1aB2b28CAA0dBA1E6eC69F8B\",\n    \"iccid\" : \"rv6f\",\n    \"smdp_plus_address\" : \"hhkidpb2mffymqh04i5aa7x175prftjxksmfisdxxj2nux8foe6jy01jv3akp22r6e059z57i3qfmgphied8xuyldu6vzkbuwfdiq5j7zf29cb3i9n2d99zsevl2ztaiyp34pm8p06s7imfya1h298d215mrswivz7cwah4h\",\n    \"account_sid\" : \"AC6bB4bfC45Ebf4ba6cBF29893920739BB\",\n    \"error_code\" : \"wehakg9w6yje4lm7si2gn5y8tz4kqlzmj7e2sfpq26qviljaeqfqkz6l1v91bwr8oofr7k7gxgu80sekjddpf473e8pbcsgsuqn43fz4dsnt4upr04x0stzqs5fjz8ty6enm67x7xbwxgmbx02a3398umbcw6x8y7gzw15ydm4al6ikc73x\",\n    \"status\" : \"available\"\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "501b8475-51c1-4452-871a-5b15f69f6676",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:22.799171Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "ListEsimProfile",
+          "schema" : {
+            "properties" : {
+              "esim_profiles" : {
+                "items" : {
+                  "$ref" : "#/components/schemas/supersim.v1.esim_profile"
+                },
+                "type" : "array"
+              },
+              "meta" : {
+                "properties" : {
+                  "first_page_url" : {
+                    "format" : "uri",
+                    "type" : "string"
+                  },
+                  "key" : {
+                    "type" : "string"
+                  },
+                  "next_page_url" : {
+                    "format" : "uri",
+                    "nullable" : true,
+                    "type" : "string"
+                  },
+                  "page" : {
+                    "type" : "integer"
+                  },
+                  "page_size" : {
+                    "type" : "integer"
+                  },
+                  "previous_page_url" : {
+                    "format" : "uri",
+                    "nullable" : true,
+                    "type" : "string"
+                  },
+                  "url" : {
+                    "format" : "uri",
+                    "type" : "string"
+                  }
+                },
+                "type" : "object"
+              }
+            },
+            "title" : "ListEsimProfileResponse",
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 31
+  } ]
+}
