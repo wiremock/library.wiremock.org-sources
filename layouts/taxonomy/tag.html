@@ -20,6 +20,6 @@
     </div>
   </section>
   {{ with .Site.Params.cta }}
-    {{ partial "cta.html" . }}
+    {{ partialCached "cta.html" . }}
   {{ end }}
 {{ end }}

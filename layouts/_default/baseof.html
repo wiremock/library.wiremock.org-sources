@@ -5,11 +5,11 @@
 </head>
 <body>
     {{ if .Site.Params.banner.text }}
-        {{ partial "banner.html" . }}
+        {{ partialCached "banner.html" . }}
     {{ end }}
-    {{ partial "navbar.html" . }}
+    {{ partialCached "navbar.html" . }}
     {{ block "main" . }}{{ end }}
-    {{ partial "footer.html" . }}
+    {{ partialCached "footer.html" . }}
 </body>
 </html>
 
