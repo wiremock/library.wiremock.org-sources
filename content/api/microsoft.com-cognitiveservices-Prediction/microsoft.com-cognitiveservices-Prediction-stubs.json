@@ -1,0 +1,1803 @@
+{
+  "mappings" : [ {
+    "id" : "edffd5f8-f55c-4c85-838a-f0375fccfff2",
+    "name" : "Detect objects in an image url without saving the result. (text/xml)",
+    "request" : {
+      "urlPath" : "/3c38a7f5-aa28-4148-bb41-2cfe9a987648/detect/iterations/Walton+Streich/url/nostore",
+      "method" : "POST",
+      "headers" : {
+        "Accept" : {
+          "contains" : "text/xml"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"created\" : \"2024-02-03T19:36:14.614Z\",\n  \"iteration\" : \"b156ab31-14b3-4f47-bcfc-99cf9f0cb883\",\n  \"project\" : \"a905bfee-d00c-4f80-90e0-a3dbd02146a6\",\n  \"id\" : \"19356c0f-f54c-460a-910c-4d8b5e217086\",\n  \"predictions\" : [ {\n    \"boundingBox\" : {\n      \"top\" : 1.862448315020348E38,\n      \"left\" : 2.606639282485128E38,\n      \"width\" : 2.3353091046128487E38,\n      \"height\" : 3.641034799999548E37\n    },\n    \"tagId\" : \"810fdba0-7dc7-413c-9997-5e8cf3bcc4f0\",\n    \"probability\" : 1.437234726277612E38,\n    \"tagName\" : \"Mr. Nelson Sawayn\"\n  }, {\n    \"boundingBox\" : {\n      \"top\" : 2.872056824744572E38,\n      \"left\" : 3.115413980290573E38,\n      \"width\" : 8.31567608077208E37,\n      \"height\" : 2.9911760382254084E38\n    },\n    \"tagId\" : \"92eae3f9-26e4-4993-ae47-bb919125ff83\",\n    \"probability\" : 5.071642131427635E37,\n    \"tagName\" : \"Freeman Monahan\"\n  }, {\n    \"boundingBox\" : {\n      \"top\" : 3.1241241510972694E38,\n      \"left\" : 1.4906599726943896E38,\n      \"width\" : 2.638366811316015E38,\n      \"height\" : 2.8086782872249625E38\n    },\n    \"tagId\" : \"80964403-1c12-441d-aead-f2c37a781981\",\n    \"probability\" : 1.0283181868142764E38,\n    \"tagName\" : \"Jude Moore\"\n  }, {\n    \"boundingBox\" : {\n      \"top\" : 1.2977242648971063E38,\n      \"left\" : 2.7086747165123728E38,\n      \"width\" : 1.5426921047879308E38,\n      \"height\" : 1.3868941222438839E38\n    },\n    \"tagId\" : \"6083f3f6-7a18-4a60-bae4-2b2e9e2bafcc\",\n    \"probability\" : 2.7332378181653673E38,\n    \"tagName\" : \"Clint Schroeder\"\n  }, {\n    \"boundingBox\" : {\n      \"top\" : 2.901759280730035E38,\n      \"left\" : 1.2520462753050538E38,\n      \"width\" : 6.715734540588837E37,\n      \"height\" : 1.865517590649902E38\n    },\n    \"tagId\" : \"c3ecd5b1-0925-474c-94c3-af27e148e95d\",\n    \"probability\" : 1.7025353986961426E38,\n    \"tagName\" : \"Katy Aufderhar\"\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "text/xml"
+      }
+    },
+    "uuid" : "edffd5f8-f55c-4c85-838a-f0375fccfff2",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:05.61489Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "DetectImageUrlWithNoStore",
+          "schema" : {
+            "description" : "Result of an image prediction request.",
+            "properties" : {
+              "created" : {
+                "description" : "Date this prediction was created.",
+                "format" : "date-time",
+                "nullable" : false,
+                "readOnly" : true,
+                "type" : "string"
+              },
+              "id" : {
+                "description" : "Prediction Id.",
+                "format" : "uuid",
+                "nullable" : false,
+                "readOnly" : true,
+                "type" : "string"
+              },
+              "iteration" : {
+                "description" : "Iteration Id.",
+                "format" : "uuid",
+                "nullable" : false,
+                "readOnly" : true,
+                "type" : "string"
+              },
+              "predictions" : {
+                "description" : "List of predictions.",
+                "items" : {
+                  "$ref" : "#/components/schemas/Prediction"
+                },
+                "readOnly" : true,
+                "type" : "array"
+              },
+              "project" : {
+                "description" : "Project Id.",
+                "format" : "uuid",
+                "nullable" : false,
+                "readOnly" : true,
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 0
+  }, {
+    "id" : "cad4380e-799f-4911-b452-948292f89336",
+    "name" : "Detect objects in an image url without saving the result. (application/xml)",
+    "request" : {
+      "urlPath" : "/f2ecf92a-84ba-4200-b2e4-70d3e6c2b6d1/detect/iterations/Sarina+Rippin+DVM/url/nostore",
+      "method" : "POST",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/xml"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"created\" : \"2023-04-06T09:02:35.614Z\",\n  \"iteration\" : \"f00c3d31-c5ec-4ab1-890a-da40ce7136ba\",\n  \"project\" : \"b4c989d2-3660-425c-bb24-4656abb35b34\",\n  \"id\" : \"329d9b3f-516c-4a58-9e76-2a3672f5f5a2\",\n  \"predictions\" : [ {\n    \"boundingBox\" : {\n      \"top\" : 1.185480969948106E38,\n      \"left\" : 2.6641412839080295E38,\n      \"width\" : 2.7913882849894374E37,\n      \"height\" : 1.8909951157111326E38\n    },\n    \"tagId\" : \"10e4a16e-12d3-49d7-8b37-e777d18739f9\",\n    \"probability\" : 1.402273468208802E38,\n    \"tagName\" : \"Toi Rosenbaum II\"\n  }, {\n    \"boundingBox\" : {\n      \"top\" : 9.829927635269074E37,\n      \"left\" : 1.7938962952263227E38,\n      \"width\" : 3.2650036536109912E38,\n      \"height\" : 2.8255428904921255E38\n    },\n    \"tagId\" : \"b519adc3-a535-4453-8a22-5fb0add2c83e\",\n    \"probability\" : 2.221844999167526E38,\n    \"tagName\" : \"Ms. Rodrigo Dooley\"\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "application/xml"
+      }
+    },
+    "uuid" : "cad4380e-799f-4911-b452-948292f89336",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:05.614386Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "DetectImageUrlWithNoStore",
+          "schema" : {
+            "description" : "Result of an image prediction request.",
+            "properties" : {
+              "created" : {
+                "description" : "Date this prediction was created.",
+                "format" : "date-time",
+                "nullable" : false,
+                "readOnly" : true,
+                "type" : "string"
+              },
+              "id" : {
+                "description" : "Prediction Id.",
+                "format" : "uuid",
+                "nullable" : false,
+                "readOnly" : true,
+                "type" : "string"
+              },
+              "iteration" : {
+                "description" : "Iteration Id.",
+                "format" : "uuid",
+                "nullable" : false,
+                "readOnly" : true,
+                "type" : "string"
+              },
+              "predictions" : {
+                "description" : "List of predictions.",
+                "items" : {
+                  "$ref" : "#/components/schemas/Prediction"
+                },
+                "readOnly" : true,
+                "type" : "array"
+              },
+              "project" : {
+                "description" : "Project Id.",
+                "format" : "uuid",
+                "nullable" : false,
+                "readOnly" : true,
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 1
+  }, {
+    "id" : "df0566c1-792e-40ef-8ecf-6f5fa3d9585e",
+    "name" : "Detect objects in an image url without saving the result. (application/json)",
+    "request" : {
+      "urlPath" : "/cfcf3296-d89e-4258-b40d-f6bc32a859a6/detect/iterations/Sheridan+Predovic/url/nostore",
+      "method" : "POST",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/json"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"created\" : \"2022-07-05T05:42:01.613Z\",\n  \"iteration\" : \"a9a99e29-dda1-4372-b949-149ea4e9191d\",\n  \"project\" : \"4ed4ae2e-4d28-44ab-9a5a-7fcaaacce9f1\",\n  \"id\" : \"1370f1f9-5ec9-4df2-b7b8-b76f697c86f0\",\n  \"predictions\" : [ {\n    \"boundingBox\" : {\n      \"top\" : 2.602407687813241E37,\n      \"left\" : 4.981512090653509E37,\n      \"width\" : 1.0333805617642068E38,\n      \"height\" : 3.3420272053404654E38\n    },\n    \"tagId\" : \"87903dc5-5d4b-482f-a083-34d7dddbb28d\",\n    \"probability\" : 4.0335290735730715E37,\n    \"tagName\" : \"Galen Green III\"\n  }, {\n    \"boundingBox\" : {\n      \"top\" : 1.70850015345082E38,\n      \"left\" : 9.872513689102182E37,\n      \"width\" : 3.089817133879845E38,\n      \"height\" : 1.6195145766362795E38\n    },\n    \"tagId\" : \"b435e6fa-4f17-4820-b4d8-f476baeb5d47\",\n    \"probability\" : 5.046852108972318E37,\n    \"tagName\" : \"Herb Funk\"\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "df0566c1-792e-40ef-8ecf-6f5fa3d9585e",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:05.614115Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "DetectImageUrlWithNoStore",
+          "schema" : {
+            "description" : "Result of an image prediction request.",
+            "properties" : {
+              "created" : {
+                "description" : "Date this prediction was created.",
+                "format" : "date-time",
+                "nullable" : false,
+                "readOnly" : true,
+                "type" : "string"
+              },
+              "id" : {
+                "description" : "Prediction Id.",
+                "format" : "uuid",
+                "nullable" : false,
+                "readOnly" : true,
+                "type" : "string"
+              },
+              "iteration" : {
+                "description" : "Iteration Id.",
+                "format" : "uuid",
+                "nullable" : false,
+                "readOnly" : true,
+                "type" : "string"
+              },
+              "predictions" : {
+                "description" : "List of predictions.",
+                "items" : {
+                  "$ref" : "#/components/schemas/Prediction"
+                },
+                "readOnly" : true,
+                "type" : "array"
+              },
+              "project" : {
+                "description" : "Project Id.",
+                "format" : "uuid",
+                "nullable" : false,
+                "readOnly" : true,
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 2
+  }, {
+    "id" : "767a139e-ad92-4eec-9293-7c3da26f8e7a",
+    "name" : "Detect objects in an image url and saves the result. (text/xml)",
+    "request" : {
+      "urlPath" : "/2badfd39-6326-4a6c-a9bf-52b55ae14916/detect/iterations/Jamie+Bartell+MD/url",
+      "method" : "POST",
+      "headers" : {
+        "Accept" : {
+          "contains" : "text/xml"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"created\" : \"2022-07-10T05:48:34.613Z\",\n  \"iteration\" : \"fc20ac5a-fc49-452f-9993-17f24c615126\",\n  \"project\" : \"39be14e6-44e1-473d-ba94-2417d31484f6\",\n  \"id\" : \"3dea01eb-bf52-46d0-82c8-8959c3e6f14f\",\n  \"predictions\" : [ {\n    \"boundingBox\" : {\n      \"top\" : 2.3525510684022654E38,\n      \"left\" : 3.0166544409182766E38,\n      \"width\" : 3.354561297633119E37,\n      \"height\" : 2.6906897704412536E38\n    },\n    \"tagId\" : \"62263a0d-dd59-4634-bf38-d585b6753197\",\n    \"probability\" : 2.4958861648778064E38,\n    \"tagName\" : \"Porter O'Kon\"\n  }, {\n    \"boundingBox\" : {\n      \"top\" : 5.474649893123345E37,\n      \"left\" : 1.0788866914499268E38,\n      \"width\" : 9.312148716006908E37,\n      \"height\" : 1.7479700729143215E37\n    },\n    \"tagId\" : \"7089cb3f-596d-4639-b33e-f2c576a09ff8\",\n    \"probability\" : 1.5820199183327769E38,\n    \"tagName\" : \"Trang Emard\"\n  }, {\n    \"boundingBox\" : {\n      \"top\" : 7.708798059029026E37,\n      \"left\" : 1.8868529988875093E38,\n      \"width\" : 2.804208385281449E38,\n      \"height\" : 1.9235235214122066E38\n    },\n    \"tagId\" : \"39d10864-396c-4bc9-b9f1-cb91bb008b0c\",\n    \"probability\" : 3.1808415328269785E38,\n    \"tagName\" : \"Don Schmeler\"\n  }, {\n    \"boundingBox\" : {\n      \"top\" : 1.992452433761933E38,\n      \"left\" : 2.8161356127320633E38,\n      \"width\" : 2.7187351774338177E38,\n      \"height\" : 7.507170385211936E37\n    },\n    \"tagId\" : \"b3d33ad4-0c27-4a13-bd3c-2e556bbd0291\",\n    \"probability\" : 5.318975381700093E36,\n    \"tagName\" : \"Janene Spencer\"\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "text/xml"
+      }
+    },
+    "uuid" : "767a139e-ad92-4eec-9293-7c3da26f8e7a",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:05.613815Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "DetectImageUrl",
+          "schema" : {
+            "description" : "Result of an image prediction request.",
+            "properties" : {
+              "created" : {
+                "description" : "Date this prediction was created.",
+                "format" : "date-time",
+                "nullable" : false,
+                "readOnly" : true,
+                "type" : "string"
+              },
+              "id" : {
+                "description" : "Prediction Id.",
+                "format" : "uuid",
+                "nullable" : false,
+                "readOnly" : true,
+                "type" : "string"
+              },
+              "iteration" : {
+                "description" : "Iteration Id.",
+                "format" : "uuid",
+                "nullable" : false,
+                "readOnly" : true,
+                "type" : "string"
+              },
+              "predictions" : {
+                "description" : "List of predictions.",
+                "items" : {
+                  "$ref" : "#/components/schemas/Prediction"
+                },
+                "readOnly" : true,
+                "type" : "array"
+              },
+              "project" : {
+                "description" : "Project Id.",
+                "format" : "uuid",
+                "nullable" : false,
+                "readOnly" : true,
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 3
+  }, {
+    "id" : "3ff29602-1b17-4813-be57-36417082c898",
+    "name" : "Detect objects in an image url and saves the result. (application/xml)",
+    "request" : {
+      "urlPath" : "/c277768d-2164-456b-977e-bc76f0749b78/detect/iterations/Malena+Windler/url",
+      "method" : "POST",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/xml"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"created\" : \"2023-08-02T04:56:53.612Z\",\n  \"iteration\" : \"3e23e31c-ec4d-4da3-901b-b72dc524393b\",\n  \"project\" : \"cb0b2109-ab6a-4f56-a531-4da254bba7ac\",\n  \"id\" : \"98e4ec29-755d-415c-a66f-7cb263148543\",\n  \"predictions\" : [ {\n    \"boundingBox\" : {\n      \"top\" : 1.2343418613605628E38,\n      \"left\" : 1.5264096821417447E38,\n      \"width\" : 2.5194514064930657E38,\n      \"height\" : 3.1679086322103797E38\n    },\n    \"tagId\" : \"b7dcacab-42db-407b-81ca-e78b567af786\",\n    \"probability\" : 6.360847416135625E37,\n    \"tagName\" : \"Brandy Lueilwitz\"\n  }, {\n    \"boundingBox\" : {\n      \"top\" : 7.738897465628332E37,\n      \"left\" : 1.4072792292959048E38,\n      \"width\" : 2.4969738270076616E38,\n      \"height\" : 3.7427556898556698E37\n    },\n    \"tagId\" : \"645fe0fc-4920-47a7-9702-e22e17ba81f2\",\n    \"probability\" : 9.520329786657923E36,\n    \"tagName\" : \"Stacey Gislason\"\n  }, {\n    \"boundingBox\" : {\n      \"top\" : 3.1603724092771777E38,\n      \"left\" : 4.123838152827492E37,\n      \"width\" : 2.7311023003268517E38,\n      \"height\" : 2.3710248176022305E38\n    },\n    \"tagId\" : \"cce9165b-196c-439e-81a2-0b5d4cbff9fe\",\n    \"probability\" : 1.0861691276255704E38,\n    \"tagName\" : \"Justin Bechtelar\"\n  }, {\n    \"boundingBox\" : {\n      \"top\" : 6.1862269855776E37,\n      \"left\" : 2.328965196410344E38,\n      \"width\" : 1.2529627675092006E38,\n      \"height\" : 1.6322549989526711E38\n    },\n    \"tagId\" : \"1dd6b7f8-814d-4b7e-b656-4fad1b0c4e2e\",\n    \"probability\" : 5.607045720754261E37,\n    \"tagName\" : \"Hubert Kunze\"\n  }, {\n    \"boundingBox\" : {\n      \"top\" : 6.147201252156653E37,\n      \"left\" : 2.472248214196066E38,\n      \"width\" : 2.411155173136436E38,\n      \"height\" : 2.711681300690154E38\n    },\n    \"tagId\" : \"8b645bc2-cf9f-49aa-89f1-296e3e74737e\",\n    \"probability\" : 2.8991161631164406E38,\n    \"tagName\" : \"Jake Rosenbaum\"\n  }, {\n    \"boundingBox\" : {\n      \"top\" : 2.711564703796535E38,\n      \"left\" : 1.751498875611047E38,\n      \"width\" : 2.214598899798195E38,\n      \"height\" : 1.4727172894004755E38\n    },\n    \"tagId\" : \"3af8c4d7-3f72-4888-bf36-8453b6bc6c14\",\n    \"probability\" : 2.4184991978642872E38,\n    \"tagName\" : \"Camille Conn\"\n  }, {\n    \"boundingBox\" : {\n      \"top\" : 1.2795708565807153E38,\n      \"left\" : 9.053282325840438E37,\n      \"width\" : 2.438058836111304E38,\n      \"height\" : 1.8322751583234304E38\n    },\n    \"tagId\" : \"e5609fe5-346b-4d34-9978-062c094eb099\",\n    \"probability\" : 6.363594984403731E37,\n    \"tagName\" : \"Ms. Melanie Lemke\"\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "application/xml"
+      }
+    },
+    "uuid" : "3ff29602-1b17-4813-be57-36417082c898",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:05.613384Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "DetectImageUrl",
+          "schema" : {
+            "description" : "Result of an image prediction request.",
+            "properties" : {
+              "created" : {
+                "description" : "Date this prediction was created.",
+                "format" : "date-time",
+                "nullable" : false,
+                "readOnly" : true,
+                "type" : "string"
+              },
+              "id" : {
+                "description" : "Prediction Id.",
+                "format" : "uuid",
+                "nullable" : false,
+                "readOnly" : true,
+                "type" : "string"
+              },
+              "iteration" : {
+                "description" : "Iteration Id.",
+                "format" : "uuid",
+                "nullable" : false,
+                "readOnly" : true,
+                "type" : "string"
+              },
+              "predictions" : {
+                "description" : "List of predictions.",
+                "items" : {
+                  "$ref" : "#/components/schemas/Prediction"
+                },
+                "readOnly" : true,
+                "type" : "array"
+              },
+              "project" : {
+                "description" : "Project Id.",
+                "format" : "uuid",
+                "nullable" : false,
+                "readOnly" : true,
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 4
+  }, {
+    "id" : "18de6c1b-0d12-49c7-84cf-310e5d5d2a24",
+    "name" : "Detect objects in an image url and saves the result. (application/json)",
+    "request" : {
+      "urlPath" : "/8fba8fb8-fdd6-42b2-a237-a75b54eb6264/detect/iterations/Tonda+Quigley/url",
+      "method" : "POST",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/json"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"created\" : \"2024-03-12T23:10:59.612Z\",\n  \"iteration\" : \"128bd817-073e-4713-9a10-47c3cfc23654\",\n  \"project\" : \"6d033dcb-0169-4a56-9798-afb16327b274\",\n  \"id\" : \"0177904e-dacd-434b-afdf-978a2f93305a\",\n  \"predictions\" : [ {\n    \"boundingBox\" : {\n      \"top\" : 8.177912078569857E36,\n      \"left\" : 3.170826388995464E38,\n      \"width\" : 1.5828725280840433E38,\n      \"height\" : 1.2174441762418835E38\n    },\n    \"tagId\" : \"fc5624d1-201a-4589-9daa-0c09236b0437\",\n    \"probability\" : 2.7970896360978268E38,\n    \"tagName\" : \"Criselda Kuhic MD\"\n  }, {\n    \"boundingBox\" : {\n      \"top\" : 7.811201130560202E37,\n      \"left\" : 5.765901738853955E37,\n      \"width\" : 1.1608502207908803E38,\n      \"height\" : 1.734796455210859E38\n    },\n    \"tagId\" : \"7bd54e84-3162-4213-b58a-8c5249ff049c\",\n    \"probability\" : 3.265155063548184E38,\n    \"tagName\" : \"Dr. Rea Greenfelder\"\n  }, {\n    \"boundingBox\" : {\n      \"top\" : 1.9273323028674862E38,\n      \"left\" : 1.549048025534298E38,\n      \"width\" : 2.7801391019086956E38,\n      \"height\" : 2.5954086192670036E38\n    },\n    \"tagId\" : \"25312b37-b186-467d-8d4e-ae9ac85f8068\",\n    \"probability\" : 3.9987766797019636E37,\n    \"tagName\" : \"Patience Wilderman V\"\n  }, {\n    \"boundingBox\" : {\n      \"top\" : 8.904293443662732E37,\n      \"left\" : 4.40513472803708E37,\n      \"width\" : 1.093373462897673E38,\n      \"height\" : 1.8019678969561974E38\n    },\n    \"tagId\" : \"35170c65-3eed-4016-ae12-d6de4554be3d\",\n    \"probability\" : 1.7894406744701865E38,\n    \"tagName\" : \"Vaughn Gutkowski\"\n  }, {\n    \"boundingBox\" : {\n      \"top\" : 1.8968879584579453E38,\n      \"left\" : 2.9597973805761897E38,\n      \"width\" : 2.0987375381472773E38,\n      \"height\" : 3.048696175443384E38\n    },\n    \"tagId\" : \"fe948d7d-9ab2-4fe5-bdad-81d021d38c8d\",\n    \"probability\" : 1.31970695361771E38,\n    \"tagName\" : \"Pauline Leannon\"\n  }, {\n    \"boundingBox\" : {\n      \"top\" : 5.425444718323407E36,\n      \"left\" : 1.5393482683779143E38,\n      \"width\" : 7.368359144343817E37,\n      \"height\" : 6.419023099902936E37\n    },\n    \"tagId\" : \"b8839428-d0b5-49f8-adba-d6486e62e652\",\n    \"probability\" : 6.360785106494807E37,\n    \"tagName\" : \"Tyron Schaden\"\n  }, {\n    \"boundingBox\" : {\n      \"top\" : 3.812091461009385E37,\n      \"left\" : 2.0138902566463636E38,\n      \"width\" : 1.2483678679748234E38,\n      \"height\" : 2.960811120034267E38\n    },\n    \"tagId\" : \"c1293639-3315-4f2d-89d7-b9363fe289cb\",\n    \"probability\" : 2.1151119991222223E38,\n    \"tagName\" : \"Alexis Gibson\"\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "18de6c1b-0d12-49c7-84cf-310e5d5d2a24",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:05.612719Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "DetectImageUrl",
+          "schema" : {
+            "description" : "Result of an image prediction request.",
+            "properties" : {
+              "created" : {
+                "description" : "Date this prediction was created.",
+                "format" : "date-time",
+                "nullable" : false,
+                "readOnly" : true,
+                "type" : "string"
+              },
+              "id" : {
+                "description" : "Prediction Id.",
+                "format" : "uuid",
+                "nullable" : false,
+                "readOnly" : true,
+                "type" : "string"
+              },
+              "iteration" : {
+                "description" : "Iteration Id.",
+                "format" : "uuid",
+                "nullable" : false,
+                "readOnly" : true,
+                "type" : "string"
+              },
+              "predictions" : {
+                "description" : "List of predictions.",
+                "items" : {
+                  "$ref" : "#/components/schemas/Prediction"
+                },
+                "readOnly" : true,
+                "type" : "array"
+              },
+              "project" : {
+                "description" : "Project Id.",
+                "format" : "uuid",
+                "nullable" : false,
+                "readOnly" : true,
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 5
+  }, {
+    "id" : "e063de6d-c94a-4ca4-8a5b-e8882b3c80be",
+    "name" : "Detect objects in an image without saving the result. (text/xml)",
+    "request" : {
+      "urlPath" : "/7fce32e1-bc44-4093-a83b-d7e95088e4a3/detect/iterations/Dodie+Bogan/image/nostore",
+      "method" : "POST",
+      "headers" : {
+        "Accept" : {
+          "contains" : "text/xml"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"created\" : \"2024-02-19T14:05:44.611Z\",\n  \"iteration\" : \"c54d777f-6f4b-4579-ad42-97cf4e0f55d7\",\n  \"project\" : \"01f23ff0-3eff-48b9-a2b3-57be6c843660\",\n  \"id\" : \"43394058-6733-46b9-884e-91e3dcd44fc1\",\n  \"predictions\" : [ {\n    \"boundingBox\" : {\n      \"top\" : 5.376865965083044E37,\n      \"left\" : 2.8654461450814266E38,\n      \"width\" : 5.33696174606748E36,\n      \"height\" : 1.0359496318505994E38\n    },\n    \"tagId\" : \"712e0482-27e3-4fc5-82c3-174f31f74cb0\",\n    \"probability\" : 2.791424373098815E38,\n    \"tagName\" : \"Sage Miller\"\n  }, {\n    \"boundingBox\" : {\n      \"top\" : 1.5006629254005434E38,\n      \"left\" : 5.684470712813002E37,\n      \"width\" : 3.8098369562509664E36,\n      \"height\" : 1.886274100305661E37\n    },\n    \"tagId\" : \"e65a6fb1-76bd-4130-867a-f12aca43fef1\",\n    \"probability\" : 2.3138137779396086E38,\n    \"tagName\" : \"Patricia Wuckert Jr.\"\n  }, {\n    \"boundingBox\" : {\n      \"top\" : 2.1429307016174457E38,\n      \"left\" : 3.0167996873285793E38,\n      \"width\" : 4.731148546932234E37,\n      \"height\" : 3.2293980349471886E38\n    },\n    \"tagId\" : \"35c065e3-c882-4d46-8190-5fc7f0581166\",\n    \"probability\" : 3.3214615865229686E38,\n    \"tagName\" : \"Kristie Bruen\"\n  }, {\n    \"boundingBox\" : {\n      \"top\" : 2.4286503747185605E38,\n      \"left\" : 1.8384668755553568E38,\n      \"width\" : 7.431797429393416E37,\n      \"height\" : 1.842700694528136E38\n    },\n    \"tagId\" : \"0b981e9e-fa2d-4293-be1b-91de0a58f673\",\n    \"probability\" : 1.3569474629654936E37,\n    \"tagName\" : \"Garret Wuckert\"\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "text/xml"
+      }
+    },
+    "uuid" : "e063de6d-c94a-4ca4-8a5b-e8882b3c80be",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:05.61204Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "DetectImageWithNoStore",
+          "schema" : {
+            "description" : "Result of an image prediction request.",
+            "properties" : {
+              "created" : {
+                "description" : "Date this prediction was created.",
+                "format" : "date-time",
+                "nullable" : false,
+                "readOnly" : true,
+                "type" : "string"
+              },
+              "id" : {
+                "description" : "Prediction Id.",
+                "format" : "uuid",
+                "nullable" : false,
+                "readOnly" : true,
+                "type" : "string"
+              },
+              "iteration" : {
+                "description" : "Iteration Id.",
+                "format" : "uuid",
+                "nullable" : false,
+                "readOnly" : true,
+                "type" : "string"
+              },
+              "predictions" : {
+                "description" : "List of predictions.",
+                "items" : {
+                  "$ref" : "#/components/schemas/Prediction"
+                },
+                "readOnly" : true,
+                "type" : "array"
+              },
+              "project" : {
+                "description" : "Project Id.",
+                "format" : "uuid",
+                "nullable" : false,
+                "readOnly" : true,
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 6
+  }, {
+    "id" : "f690edc3-695b-451a-a08c-693a20237469",
+    "name" : "Detect objects in an image without saving the result. (application/xml)",
+    "request" : {
+      "urlPath" : "/c512d996-6ce0-4a69-9312-cc97dbcd80a6/detect/iterations/Curt+Weimann+DDS/image/nostore",
+      "method" : "POST",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/xml"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"created\" : \"2023-04-22T04:30:06.61Z\",\n  \"iteration\" : \"a6be6c7f-ca25-42e6-ab3a-5fe63ec0fe4e\",\n  \"project\" : \"81f950c1-1c60-402c-a8ab-c4f2df7cc826\",\n  \"id\" : \"7c150706-62c8-4187-8a00-bac49313d3da\",\n  \"predictions\" : [ {\n    \"boundingBox\" : {\n      \"top\" : 1.70926647221844E38,\n      \"left\" : 1.753386067188942E38,\n      \"width\" : 6.063059895591113E37,\n      \"height\" : 1.6763415980685412E38\n    },\n    \"tagId\" : \"eb3e2689-1433-4168-89dc-025c1597b55f\",\n    \"probability\" : 2.5770785463774924E38,\n    \"tagName\" : \"Daria Kohler DVM\"\n  }, {\n    \"boundingBox\" : {\n      \"top\" : 1.9968964298189444E38,\n      \"left\" : 1.92546381905631E38,\n      \"width\" : 6.678582255335998E37,\n      \"height\" : 1.5378441549339328E38\n    },\n    \"tagId\" : \"b1579aae-156f-471a-b89a-1898e43404e0\",\n    \"probability\" : 1.78559666647538E38,\n    \"tagName\" : \"Sona Marquardt\"\n  }, {\n    \"boundingBox\" : {\n      \"top\" : 2.8567408480786265E38,\n      \"left\" : 1.8227032075880874E38,\n      \"width\" : 2.959669754109223E38,\n      \"height\" : 6.611580598884812E37\n    },\n    \"tagId\" : \"b0a92d5a-a76f-4fca-a03c-96724ed5688c\",\n    \"probability\" : 2.2610791702798223E38,\n    \"tagName\" : \"Laurence Kutch\"\n  }, {\n    \"boundingBox\" : {\n      \"top\" : 4.684813248167349E37,\n      \"left\" : 1.1548732218327693E38,\n      \"width\" : 1.065596578709343E38,\n      \"height\" : 2.716823227494536E38\n    },\n    \"tagId\" : \"549935d9-f0f4-4053-a65b-48fa1d134dfc\",\n    \"probability\" : 2.5816608169431005E38,\n    \"tagName\" : \"Dante Upton\"\n  }, {\n    \"boundingBox\" : {\n      \"top\" : 2.1244289809993604E38,\n      \"left\" : 2.099274863076279E38,\n      \"width\" : 2.2663515678053708E38,\n      \"height\" : 1.621903969485604E38\n    },\n    \"tagId\" : \"2a6d3af8-97fe-4849-9167-7caff306bfc3\",\n    \"probability\" : 2.060676717705407E38,\n    \"tagName\" : \"Jimmie Hilpert\"\n  }, {\n    \"boundingBox\" : {\n      \"top\" : 1.1224592636994012E38,\n      \"left\" : 2.7566299001207647E38,\n      \"width\" : 6.975228603447906E36,\n      \"height\" : 2.316590720703101E38\n    },\n    \"tagId\" : \"4983238d-c24c-48c0-b3e2-63e104ec3cc5\",\n    \"probability\" : 8.182765792723636E36,\n    \"tagName\" : \"Maryam Ruecker III\"\n  }, {\n    \"boundingBox\" : {\n      \"top\" : 2.4425911318034564E38,\n      \"left\" : 2.132083530341084E37,\n      \"width\" : 5.682749275898275E37,\n      \"height\" : 1.7523919027354176E38\n    },\n    \"tagId\" : \"005f4274-f81c-4422-a3f2-41ed74155f48\",\n    \"probability\" : 3.3065859778724027E37,\n    \"tagName\" : \"Clark Bogisich\"\n  }, {\n    \"boundingBox\" : {\n      \"top\" : 2.889092203761115E38,\n      \"left\" : 1.488601393208408E38,\n      \"width\" : 1.2835312760142013E38,\n      \"height\" : 4.1845955585127707E37\n    },\n    \"tagId\" : \"a2f96767-7b49-4138-b079-fd5be1132186\",\n    \"probability\" : 2.2818488124528564E38,\n    \"tagName\" : \"Jeremy Cole\"\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "application/xml"
+      }
+    },
+    "uuid" : "f690edc3-695b-451a-a08c-693a20237469",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:05.611599Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "DetectImageWithNoStore",
+          "schema" : {
+            "description" : "Result of an image prediction request.",
+            "properties" : {
+              "created" : {
+                "description" : "Date this prediction was created.",
+                "format" : "date-time",
+                "nullable" : false,
+                "readOnly" : true,
+                "type" : "string"
+              },
+              "id" : {
+                "description" : "Prediction Id.",
+                "format" : "uuid",
+                "nullable" : false,
+                "readOnly" : true,
+                "type" : "string"
+              },
+              "iteration" : {
+                "description" : "Iteration Id.",
+                "format" : "uuid",
+                "nullable" : false,
+                "readOnly" : true,
+                "type" : "string"
+              },
+              "predictions" : {
+                "description" : "List of predictions.",
+                "items" : {
+                  "$ref" : "#/components/schemas/Prediction"
+                },
+                "readOnly" : true,
+                "type" : "array"
+              },
+              "project" : {
+                "description" : "Project Id.",
+                "format" : "uuid",
+                "nullable" : false,
+                "readOnly" : true,
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 7
+  }, {
+    "id" : "9855a6da-9d92-4ad2-9960-469cd73ed2ca",
+    "name" : "Detect objects in an image without saving the result. (application/json)",
+    "request" : {
+      "urlPath" : "/94207569-7236-4fe6-954c-f340d90e6f52/detect/iterations/Morton+Walter/image/nostore",
+      "method" : "POST",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/json"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"created\" : \"2023-01-15T01:11:02.61Z\",\n  \"iteration\" : \"0fce60a1-fd9b-4dde-9182-a71d382b01df\",\n  \"project\" : \"48345762-e66e-47d5-a8d1-7207543ac0b2\",\n  \"id\" : \"4936c4de-d471-4403-a580-78e0e59a326f\",\n  \"predictions\" : [ {\n    \"boundingBox\" : {\n      \"top\" : 3.3309861476737977E38,\n      \"left\" : 2.131872746627041E38,\n      \"width\" : 1.1776826339323776E38,\n      \"height\" : 1.4271340093826097E38\n    },\n    \"tagId\" : \"92f826d2-93b9-4445-945f-48064568882b\",\n    \"probability\" : 6.752197234171803E37,\n    \"tagName\" : \"Dale Emmerich\"\n  }, {\n    \"boundingBox\" : {\n      \"top\" : 1.1625818825402041E38,\n      \"left\" : 2.215386375854186E38,\n      \"width\" : 1.0974352286777438E37,\n      \"height\" : 1.6015214325155725E38\n    },\n    \"tagId\" : \"d9ed46ed-8990-4424-81e9-9ea2ca7fe58a\",\n    \"probability\" : 2.9614382731945225E38,\n    \"tagName\" : \"Maximo Cole\"\n  }, {\n    \"boundingBox\" : {\n      \"top\" : 3.1264991640505684E38,\n      \"left\" : 1.733558497353935E38,\n      \"width\" : 4.523695288544853E35,\n      \"height\" : 3.345123711517055E38\n    },\n    \"tagId\" : \"578c65a2-61c1-4d68-898b-4c8c467b3c22\",\n    \"probability\" : 1.3784114753070473E38,\n    \"tagName\" : \"Michale Kiehn\"\n  }, {\n    \"boundingBox\" : {\n      \"top\" : 4.956936139308361E37,\n      \"left\" : 2.9944031837709325E38,\n      \"width\" : 3.8004337880435643E37,\n      \"height\" : 1.0721475555619913E38\n    },\n    \"tagId\" : \"7c9ca246-bd45-4968-af2b-1793bc962aa6\",\n    \"probability\" : 2.18312333054108E38,\n    \"tagName\" : \"Brenton Schuster\"\n  }, {\n    \"boundingBox\" : {\n      \"top\" : 1.6866857758519992E38,\n      \"left\" : 1.3779893298132244E38,\n      \"width\" : 1.586497651810501E37,\n      \"height\" : 8.462314605230986E37\n    },\n    \"tagId\" : \"a70f9919-b874-43f3-9859-319c2da57ec5\",\n    \"probability\" : 2.189760723277896E38,\n    \"tagName\" : \"Lilliam Mann\"\n  }, {\n    \"boundingBox\" : {\n      \"top\" : 1.035666053161136E38,\n      \"left\" : 1.1044635322411174E38,\n      \"width\" : 1.0251306478100022E38,\n      \"height\" : 1.9017035615695307E38\n    },\n    \"tagId\" : \"760fb5a2-2f93-447f-aca0-53d615c200f7\",\n    \"probability\" : 3.125727777305164E38,\n    \"tagName\" : \"Katelyn Keeling\"\n  }, {\n    \"boundingBox\" : {\n      \"top\" : 1.2819084974891182E38,\n      \"left\" : 2.615804510391507E38,\n      \"width\" : 1.5120102950631645E38,\n      \"height\" : 2.3018055611458604E38\n    },\n    \"tagId\" : \"b425b375-8540-4b9d-8c48-963238ceaf45\",\n    \"probability\" : 1.5338841709711927E38,\n    \"tagName\" : \"Alfonzo Gleichner Jr.\"\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "9855a6da-9d92-4ad2-9960-469cd73ed2ca",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:05.610873Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "DetectImageWithNoStore",
+          "schema" : {
+            "description" : "Result of an image prediction request.",
+            "properties" : {
+              "created" : {
+                "description" : "Date this prediction was created.",
+                "format" : "date-time",
+                "nullable" : false,
+                "readOnly" : true,
+                "type" : "string"
+              },
+              "id" : {
+                "description" : "Prediction Id.",
+                "format" : "uuid",
+                "nullable" : false,
+                "readOnly" : true,
+                "type" : "string"
+              },
+              "iteration" : {
+                "description" : "Iteration Id.",
+                "format" : "uuid",
+                "nullable" : false,
+                "readOnly" : true,
+                "type" : "string"
+              },
+              "predictions" : {
+                "description" : "List of predictions.",
+                "items" : {
+                  "$ref" : "#/components/schemas/Prediction"
+                },
+                "readOnly" : true,
+                "type" : "array"
+              },
+              "project" : {
+                "description" : "Project Id.",
+                "format" : "uuid",
+                "nullable" : false,
+                "readOnly" : true,
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 8
+  }, {
+    "id" : "29a92fd4-d5fb-4fd6-84a6-04b73f20acec",
+    "name" : "Detect objects in an image and saves the result. (text/xml)",
+    "request" : {
+      "urlPath" : "/dd05bce8-1ae7-4d02-9aaa-33d8ec1fe5e7/detect/iterations/Dr.+Rosetta+Heaney/image",
+      "method" : "POST",
+      "headers" : {
+        "Accept" : {
+          "contains" : "text/xml"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"created\" : \"2023-10-17T22:18:20.609Z\",\n  \"iteration\" : \"7275ef04-192f-4faa-8dcd-e6669f2a1c57\",\n  \"project\" : \"166ac7f6-7e9b-4629-adc2-d7ff276a6e63\",\n  \"id\" : \"d0203764-5e62-4b6e-bc37-2a50142abe11\",\n  \"predictions\" : [ {\n    \"boundingBox\" : {\n      \"top\" : 3.2606405947720103E38,\n      \"left\" : 1.0623949041720924E38,\n      \"width\" : 1.8406614191893716E38,\n      \"height\" : 2.15630986988477E38\n    },\n    \"tagId\" : \"0df58f3f-8776-4f36-a15d-7823e260a26d\",\n    \"probability\" : 2.75559179205309E38,\n    \"tagName\" : \"Trinh Wisoky\"\n  }, {\n    \"boundingBox\" : {\n      \"top\" : 2.039837975941915E38,\n      \"left\" : 2.0320201684711596E37,\n      \"width\" : 1.124969934739609E38,\n      \"height\" : 2.115343078526566E37\n    },\n    \"tagId\" : \"c0c457cd-8b61-4e07-94ba-e2a8b4a66200\",\n    \"probability\" : 1.4069032847396665E38,\n    \"tagName\" : \"Tyree Mante\"\n  }, {\n    \"boundingBox\" : {\n      \"top\" : 3.0551362563274657E38,\n      \"left\" : 1.911155162324349E38,\n      \"width\" : 5.956401981408141E35,\n      \"height\" : 3.37754689484476E38\n    },\n    \"tagId\" : \"a22b5433-4558-42c6-a64e-60e381a2bcf6\",\n    \"probability\" : 3.0232613264805182E38,\n    \"tagName\" : \"Cammie Rutherford\"\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "text/xml"
+      }
+    },
+    "uuid" : "29a92fd4-d5fb-4fd6-84a6-04b73f20acec",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:05.610234Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "DetectImage",
+          "schema" : {
+            "description" : "Result of an image prediction request.",
+            "properties" : {
+              "created" : {
+                "description" : "Date this prediction was created.",
+                "format" : "date-time",
+                "nullable" : false,
+                "readOnly" : true,
+                "type" : "string"
+              },
+              "id" : {
+                "description" : "Prediction Id.",
+                "format" : "uuid",
+                "nullable" : false,
+                "readOnly" : true,
+                "type" : "string"
+              },
+              "iteration" : {
+                "description" : "Iteration Id.",
+                "format" : "uuid",
+                "nullable" : false,
+                "readOnly" : true,
+                "type" : "string"
+              },
+              "predictions" : {
+                "description" : "List of predictions.",
+                "items" : {
+                  "$ref" : "#/components/schemas/Prediction"
+                },
+                "readOnly" : true,
+                "type" : "array"
+              },
+              "project" : {
+                "description" : "Project Id.",
+                "format" : "uuid",
+                "nullable" : false,
+                "readOnly" : true,
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 9
+  }, {
+    "id" : "be8fc199-d734-438f-971d-ee0a11e9b427",
+    "name" : "Detect objects in an image and saves the result. (application/xml)",
+    "request" : {
+      "urlPath" : "/3babe670-f710-4cdd-8ca5-cae2957800f7/detect/iterations/Fletcher+Simonis/image",
+      "method" : "POST",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/xml"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"created\" : \"2023-02-18T21:58:48.609Z\",\n  \"iteration\" : \"a73dee09-7d6b-401f-863e-df9d8ec9c036\",\n  \"project\" : \"b9f63793-9de3-4046-ba2e-7c3b13c4b4dc\",\n  \"id\" : \"252e67a8-aa6c-489f-969f-155abd365e93\",\n  \"predictions\" : [ {\n    \"boundingBox\" : {\n      \"top\" : 2.5173708659548427E38,\n      \"left\" : 1.9804793306129792E38,\n      \"width\" : 1.8496211123801924E38,\n      \"height\" : 3.301872949251951E38\n    },\n    \"tagId\" : \"a9e14e47-a39b-4eb8-969b-ed372b743d85\",\n    \"probability\" : 2.2893662238975186E37,\n    \"tagName\" : \"Zenaida Upton\"\n  }, {\n    \"boundingBox\" : {\n      \"top\" : 1.2922668189588853E38,\n      \"left\" : 3.8212019554501025E37,\n      \"width\" : 2.4452708338353824E38,\n      \"height\" : 8.430032814465099E37\n    },\n    \"tagId\" : \"f7c91715-da3d-40fe-9665-0333c2b77b04\",\n    \"probability\" : 1.913679869527726E38,\n    \"tagName\" : \"Ehtel Feil III\"\n  }, {\n    \"boundingBox\" : {\n      \"top\" : 2.5986094813281096E38,\n      \"left\" : 2.798787672767413E38,\n      \"width\" : 3.230753630311093E38,\n      \"height\" : 2.197468784242084E38\n    },\n    \"tagId\" : \"248255ee-7fe6-4e25-93cd-294155919d87\",\n    \"probability\" : 1.0727480169564489E38,\n    \"tagName\" : \"Dr. Isadora Bayer\"\n  }, {\n    \"boundingBox\" : {\n      \"top\" : 2.0895357778925355E38,\n      \"left\" : 2.02325970371235E38,\n      \"width\" : 1.7369786581352383E38,\n      \"height\" : 2.2823469575916536E38\n    },\n    \"tagId\" : \"de6346c7-9a35-4bae-b9c3-591e5e70dd40\",\n    \"probability\" : 3.01495084375135E38,\n    \"tagName\" : \"Milly Stehr\"\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "application/xml"
+      }
+    },
+    "uuid" : "be8fc199-d734-438f-971d-ee0a11e9b427",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:05.609881Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "DetectImage",
+          "schema" : {
+            "description" : "Result of an image prediction request.",
+            "properties" : {
+              "created" : {
+                "description" : "Date this prediction was created.",
+                "format" : "date-time",
+                "nullable" : false,
+                "readOnly" : true,
+                "type" : "string"
+              },
+              "id" : {
+                "description" : "Prediction Id.",
+                "format" : "uuid",
+                "nullable" : false,
+                "readOnly" : true,
+                "type" : "string"
+              },
+              "iteration" : {
+                "description" : "Iteration Id.",
+                "format" : "uuid",
+                "nullable" : false,
+                "readOnly" : true,
+                "type" : "string"
+              },
+              "predictions" : {
+                "description" : "List of predictions.",
+                "items" : {
+                  "$ref" : "#/components/schemas/Prediction"
+                },
+                "readOnly" : true,
+                "type" : "array"
+              },
+              "project" : {
+                "description" : "Project Id.",
+                "format" : "uuid",
+                "nullable" : false,
+                "readOnly" : true,
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 10
+  }, {
+    "id" : "074288b9-48c7-4f31-b210-aa4eacdfeb3d",
+    "name" : "Detect objects in an image and saves the result. (application/json)",
+    "request" : {
+      "urlPath" : "/72c5d774-d4d1-4dd0-91ad-9bb2c83e97ef/detect/iterations/Reed+Sawayn+Sr./image",
+      "method" : "POST",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/json"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"created\" : \"2024-03-25T05:24:01.609Z\",\n  \"iteration\" : \"c1d5bd86-7221-4649-a827-d43833b33044\",\n  \"project\" : \"888f3fb1-d3a7-4045-99e7-5a8039ae8ae5\",\n  \"id\" : \"c8599a85-e561-4eb9-8005-f0d37a379feb\",\n  \"predictions\" : [ {\n    \"boundingBox\" : {\n      \"top\" : 1.416392094463473E38,\n      \"left\" : 2.719789574977874E38,\n      \"width\" : 2.7709524433649104E38,\n      \"height\" : 1.026773623869397E38\n    },\n    \"tagId\" : \"daed8996-a26c-40ae-934d-77e906c04cf1\",\n    \"probability\" : 1.8152211135854443E38,\n    \"tagName\" : \"Noriko Pacocha\"\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "074288b9-48c7-4f31-b210-aa4eacdfeb3d",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:05.609441Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "DetectImage",
+          "schema" : {
+            "description" : "Result of an image prediction request.",
+            "properties" : {
+              "created" : {
+                "description" : "Date this prediction was created.",
+                "format" : "date-time",
+                "nullable" : false,
+                "readOnly" : true,
+                "type" : "string"
+              },
+              "id" : {
+                "description" : "Prediction Id.",
+                "format" : "uuid",
+                "nullable" : false,
+                "readOnly" : true,
+                "type" : "string"
+              },
+              "iteration" : {
+                "description" : "Iteration Id.",
+                "format" : "uuid",
+                "nullable" : false,
+                "readOnly" : true,
+                "type" : "string"
+              },
+              "predictions" : {
+                "description" : "List of predictions.",
+                "items" : {
+                  "$ref" : "#/components/schemas/Prediction"
+                },
+                "readOnly" : true,
+                "type" : "array"
+              },
+              "project" : {
+                "description" : "Project Id.",
+                "format" : "uuid",
+                "nullable" : false,
+                "readOnly" : true,
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 11
+  }, {
+    "id" : "9cee30a4-3ba5-48cd-8acc-f48ddf9f3e83",
+    "name" : "Classify an image url without saving the result. (text/xml)",
+    "request" : {
+      "urlPath" : "/26de24aa-f6ae-4f06-a41d-4ef759ea8260/classify/iterations/Eleonor+Powlowski/url/nostore",
+      "method" : "POST",
+      "headers" : {
+        "Accept" : {
+          "contains" : "text/xml"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"created\" : \"2022-11-04T02:11:18.608Z\",\n  \"iteration\" : \"bfd76a9e-b6f5-412a-a7d4-63dfd23f9ae3\",\n  \"project\" : \"f9271730-db6d-4ad6-902e-9283a8c49111\",\n  \"id\" : \"4266009c-dd32-4fa1-baf5-c3a31c6ed25d\",\n  \"predictions\" : [ {\n    \"boundingBox\" : {\n      \"top\" : 2.209557305301122E38,\n      \"left\" : 6.499250680589511E37,\n      \"width\" : 2.413244523654574E38,\n      \"height\" : 3.1604780263765935E37\n    },\n    \"tagId\" : \"a828bd80-700a-4575-b100-92524089a71e\",\n    \"probability\" : 2.4099414158027347E38,\n    \"tagName\" : \"Jc Pollich\"\n  }, {\n    \"boundingBox\" : {\n      \"top\" : 9.487790509936086E37,\n      \"left\" : 9.269688959270235E37,\n      \"width\" : 2.9967798861120388E38,\n      \"height\" : 2.53887840026603E38\n    },\n    \"tagId\" : \"c52bc7ee-6eed-47e5-800c-1643b382bae3\",\n    \"probability\" : 1.784381289513331E37,\n    \"tagName\" : \"Celena Schaefer\"\n  }, {\n    \"boundingBox\" : {\n      \"top\" : 2.8909916086478562E38,\n      \"left\" : 1.7416220730418646E38,\n      \"width\" : 1.9178273939778632E38,\n      \"height\" : 3.114076374150453E38\n    },\n    \"tagId\" : \"08b1ee7a-5ac2-4f4c-907d-4a3989af1220\",\n    \"probability\" : 2.6779188247209685E38,\n    \"tagName\" : \"Mauricio Friesen IV\"\n  }, {\n    \"boundingBox\" : {\n      \"top\" : 3.143731006016024E38,\n      \"left\" : 3.2967160216390162E38,\n      \"width\" : 1.836054423933286E38,\n      \"height\" : 3.302942704732217E38\n    },\n    \"tagId\" : \"7eb89800-c362-43c2-91f0-b7a8893b99b0\",\n    \"probability\" : 1.2388059060266634E38,\n    \"tagName\" : \"Dusty Medhurst\"\n  }, {\n    \"boundingBox\" : {\n      \"top\" : 2.775592124276289E38,\n      \"left\" : 1.0589921212267342E38,\n      \"width\" : 1.4290904664117724E38,\n      \"height\" : 3.232190695145679E38\n    },\n    \"tagId\" : \"80b096fa-4824-432d-9a78-fee5008ef49e\",\n    \"probability\" : 1.2094180210213866E38,\n    \"tagName\" : \"Ivan Littel\"\n  }, {\n    \"boundingBox\" : {\n      \"top\" : 1.7627944080583024E38,\n      \"left\" : 2.739071603621833E38,\n      \"width\" : 1.683545244616156E38,\n      \"height\" : 1.5149900307450052E38\n    },\n    \"tagId\" : \"9e2e8659-ee01-47b7-a1fa-3d9d0f841671\",\n    \"probability\" : 2.8915589467134213E38,\n    \"tagName\" : \"Kendrick Brown\"\n  }, {\n    \"boundingBox\" : {\n      \"top\" : 2.74081666101559E38,\n      \"left\" : 8.80742705611482E37,\n      \"width\" : 1.4552045302158753E38,\n      \"height\" : 2.2084589080195846E38\n    },\n    \"tagId\" : \"0365a8d5-ede8-4efe-b74a-50b7a4451ba3\",\n    \"probability\" : 1.772212380452703E38,\n    \"tagName\" : \"Charley Gislason\"\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "text/xml"
+      }
+    },
+    "uuid" : "9cee30a4-3ba5-48cd-8acc-f48ddf9f3e83",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:05.609223Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "ClassifyImageUrlWithNoStore",
+          "schema" : {
+            "description" : "Result of an image prediction request.",
+            "properties" : {
+              "created" : {
+                "description" : "Date this prediction was created.",
+                "format" : "date-time",
+                "nullable" : false,
+                "readOnly" : true,
+                "type" : "string"
+              },
+              "id" : {
+                "description" : "Prediction Id.",
+                "format" : "uuid",
+                "nullable" : false,
+                "readOnly" : true,
+                "type" : "string"
+              },
+              "iteration" : {
+                "description" : "Iteration Id.",
+                "format" : "uuid",
+                "nullable" : false,
+                "readOnly" : true,
+                "type" : "string"
+              },
+              "predictions" : {
+                "description" : "List of predictions.",
+                "items" : {
+                  "$ref" : "#/components/schemas/Prediction"
+                },
+                "readOnly" : true,
+                "type" : "array"
+              },
+              "project" : {
+                "description" : "Project Id.",
+                "format" : "uuid",
+                "nullable" : false,
+                "readOnly" : true,
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 12
+  }, {
+    "id" : "a4513c3f-bc93-4f60-8674-7e471d677fba",
+    "name" : "Classify an image url without saving the result. (application/xml)",
+    "request" : {
+      "urlPath" : "/7f300a6b-fd60-434c-9c25-4bd13b48dc81/classify/iterations/Angel+Spencer/url/nostore",
+      "method" : "POST",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/xml"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"created\" : \"2022-08-21T09:58:33.607Z\",\n  \"iteration\" : \"64446219-a0a5-4824-bc9d-58fc3330692f\",\n  \"project\" : \"fbc9444e-c6a9-48e6-91dc-9c602b8afbdc\",\n  \"id\" : \"9c63b7e4-d90c-451d-8c73-d065e8ea64ce\",\n  \"predictions\" : [ {\n    \"boundingBox\" : {\n      \"top\" : 2.5584463194010808E36,\n      \"left\" : 6.728038408749407E37,\n      \"width\" : 7.622062626702478E37,\n      \"height\" : 2.3165236712329488E38\n    },\n    \"tagId\" : \"d476d805-f171-4635-acfe-d4799a8b14de\",\n    \"probability\" : 7.488798032028475E37,\n    \"tagName\" : \"Miss Taisha Leuschke\"\n  }, {\n    \"boundingBox\" : {\n      \"top\" : 2.5846557689059377E38,\n      \"left\" : 3.2388863964233102E38,\n      \"width\" : 2.8038223470080085E38,\n      \"height\" : 1.3477036758067597E38\n    },\n    \"tagId\" : \"41b39c98-03b6-4e85-8764-77678eb02e4c\",\n    \"probability\" : 8.04603098368116E36,\n    \"tagName\" : \"Marshall Dickinson V\"\n  }, {\n    \"boundingBox\" : {\n      \"top\" : 6.577459043323927E37,\n      \"left\" : 2.6092744274105913E38,\n      \"width\" : 6.088157359335239E37,\n      \"height\" : 2.7194581747360957E38\n    },\n    \"tagId\" : \"58c16731-eecf-4809-b8c4-1782e6d56e71\",\n    \"probability\" : 1.35758846418636E38,\n    \"tagName\" : \"Otelia Runolfsdottir\"\n  }, {\n    \"boundingBox\" : {\n      \"top\" : 3.5699271513529293E37,\n      \"left\" : 2.5429364406328983E37,\n      \"width\" : 1.0223818836044668E38,\n      \"height\" : 1.4915827361168999E38\n    },\n    \"tagId\" : \"e7df2600-45e9-4846-85be-77160ed03494\",\n    \"probability\" : 1.9258238802522488E38,\n    \"tagName\" : \"Jonathon Kunze I\"\n  }, {\n    \"boundingBox\" : {\n      \"top\" : 2.5600200239478178E38,\n      \"left\" : 1.4401703628358574E38,\n      \"width\" : 2.1053086582951636E38,\n      \"height\" : 6.781208410381668E37\n    },\n    \"tagId\" : \"4556d0dd-3a03-4807-9f30-3b3df0534510\",\n    \"probability\" : 1.4992772728108157E38,\n    \"tagName\" : \"Ursula Morar Sr.\"\n  }, {\n    \"boundingBox\" : {\n      \"top\" : 1.4039637651437735E37,\n      \"left\" : 2.5354272395064098E38,\n      \"width\" : 1.3079327290841588E38,\n      \"height\" : 2.5475258727748613E38\n    },\n    \"tagId\" : \"cc56da21-1673-4819-924d-3f84080186b7\",\n    \"probability\" : 8.972649046902457E37,\n    \"tagName\" : \"Orlando Crona\"\n  }, {\n    \"boundingBox\" : {\n      \"top\" : 1.8040570457062726E38,\n      \"left\" : 6.597970958555828E37,\n      \"width\" : 1.0474871732011076E38,\n      \"height\" : 2.241981423940108E38\n    },\n    \"tagId\" : \"4e47f1da-9097-4d7b-b48a-4ec979f9bd3e\",\n    \"probability\" : 1.3225605344018067E38,\n    \"tagName\" : \"Obdulia Thiel\"\n  }, {\n    \"boundingBox\" : {\n      \"top\" : 7.509559778219789E37,\n      \"left\" : 6.975369267708097E36,\n      \"width\" : 1.2613763103293854E38,\n      \"height\" : 9.302267578730067E37\n    },\n    \"tagId\" : \"02ad30b1-43f4-459e-8b80-69a89423a0fc\",\n    \"probability\" : 2.1533659726884316E38,\n    \"tagName\" : \"Raleigh Towne\"\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "application/xml"
+      }
+    },
+    "uuid" : "a4513c3f-bc93-4f60-8674-7e471d677fba",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:05.608553Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "ClassifyImageUrlWithNoStore",
+          "schema" : {
+            "description" : "Result of an image prediction request.",
+            "properties" : {
+              "created" : {
+                "description" : "Date this prediction was created.",
+                "format" : "date-time",
+                "nullable" : false,
+                "readOnly" : true,
+                "type" : "string"
+              },
+              "id" : {
+                "description" : "Prediction Id.",
+                "format" : "uuid",
+                "nullable" : false,
+                "readOnly" : true,
+                "type" : "string"
+              },
+              "iteration" : {
+                "description" : "Iteration Id.",
+                "format" : "uuid",
+                "nullable" : false,
+                "readOnly" : true,
+                "type" : "string"
+              },
+              "predictions" : {
+                "description" : "List of predictions.",
+                "items" : {
+                  "$ref" : "#/components/schemas/Prediction"
+                },
+                "readOnly" : true,
+                "type" : "array"
+              },
+              "project" : {
+                "description" : "Project Id.",
+                "format" : "uuid",
+                "nullable" : false,
+                "readOnly" : true,
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 13
+  }, {
+    "id" : "663b8482-a4e5-4e07-b1e8-2dba91a3cbbd",
+    "name" : "Classify an image url without saving the result. (application/json)",
+    "request" : {
+      "urlPath" : "/772a30a5-d922-4d6f-91d5-e3969737c090/classify/iterations/Wallace+Kutch/url/nostore",
+      "method" : "POST",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/json"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"created\" : \"2023-08-12T10:52:06.607Z\",\n  \"iteration\" : \"76d3eaf4-a974-49f0-bfc8-0f726a9ce986\",\n  \"project\" : \"1da22703-4dbb-4b75-93a3-db9e0279b49f\",\n  \"id\" : \"ee97eb56-475c-4344-bc5d-305e5d8a0be1\",\n  \"predictions\" : [ {\n    \"boundingBox\" : {\n      \"top\" : 2.5061378992816324E37,\n      \"left\" : 2.7562002388767908E38,\n      \"width\" : 5.202502850636457E37,\n      \"height\" : 4.670506073589501E37\n    },\n    \"tagId\" : \"ffdd7fef-ba33-4a4e-bd43-513dc42ba389\",\n    \"probability\" : 8.337887126349927E37,\n    \"tagName\" : \"Mr. Lannie Hyatt\"\n  }, {\n    \"boundingBox\" : {\n      \"top\" : 6.181068292391595E37,\n      \"left\" : 1.5859040697217869E38,\n      \"width\" : 6.54447839034235E37,\n      \"height\" : 1.419111630159212E38\n    },\n    \"tagId\" : \"44c210a4-d92a-4776-b189-a41a2bf63d73\",\n    \"probability\" : 1.0178850475238559E38,\n    \"tagName\" : \"Bianca Padberg\"\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "663b8482-a4e5-4e07-b1e8-2dba91a3cbbd",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:05.607802Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "ClassifyImageUrlWithNoStore",
+          "schema" : {
+            "description" : "Result of an image prediction request.",
+            "properties" : {
+              "created" : {
+                "description" : "Date this prediction was created.",
+                "format" : "date-time",
+                "nullable" : false,
+                "readOnly" : true,
+                "type" : "string"
+              },
+              "id" : {
+                "description" : "Prediction Id.",
+                "format" : "uuid",
+                "nullable" : false,
+                "readOnly" : true,
+                "type" : "string"
+              },
+              "iteration" : {
+                "description" : "Iteration Id.",
+                "format" : "uuid",
+                "nullable" : false,
+                "readOnly" : true,
+                "type" : "string"
+              },
+              "predictions" : {
+                "description" : "List of predictions.",
+                "items" : {
+                  "$ref" : "#/components/schemas/Prediction"
+                },
+                "readOnly" : true,
+                "type" : "array"
+              },
+              "project" : {
+                "description" : "Project Id.",
+                "format" : "uuid",
+                "nullable" : false,
+                "readOnly" : true,
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 14
+  }, {
+    "id" : "2be6b294-0384-4440-8d2c-352f16b5f8d4",
+    "name" : "Classify an image url and saves the result. (text/xml)",
+    "request" : {
+      "urlPath" : "/c2e68133-a172-42c1-a8d3-54557083e4fa/classify/iterations/Mammie+Murphy/url",
+      "method" : "POST",
+      "headers" : {
+        "Accept" : {
+          "contains" : "text/xml"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"created\" : \"2022-07-27T03:58:44.607Z\",\n  \"iteration\" : \"c423cbd9-e8fc-4d6b-b308-3c64d42569c3\",\n  \"project\" : \"667bf12b-ed08-4d53-bfc2-b291bbad6e3c\",\n  \"id\" : \"59113ece-7c25-45e1-aad8-4df59a29851a\",\n  \"predictions\" : [ {\n    \"boundingBox\" : {\n      \"top\" : 2.3932780887676625E38,\n      \"left\" : 2.9753354056884907E38,\n      \"width\" : 1.9425717588587824E38,\n      \"height\" : 1.6812033449848942E38\n    },\n    \"tagId\" : \"2503caa1-ac88-4d96-a85e-50c72d83a78b\",\n    \"probability\" : 2.4376867248694562E38,\n    \"tagName\" : \"Verline Emmerich\"\n  }, {\n    \"boundingBox\" : {\n      \"top\" : 3.354423331408882E37,\n      \"left\" : 1.3915221295086228E38,\n      \"width\" : 2.2477260055045655E38,\n      \"height\" : 2.6500720916405727E38\n    },\n    \"tagId\" : \"d622a1af-3488-45fb-a891-7d80e522f0cf\",\n    \"probability\" : 1.9281320749755744E38,\n    \"tagName\" : \"Lee Kiehn\"\n  }, {\n    \"boundingBox\" : {\n      \"top\" : 1.767357665583293E38,\n      \"left\" : 5.759422716485503E37,\n      \"width\" : 2.997165628182072E38,\n      \"height\" : 1.2111136209926953E38\n    },\n    \"tagId\" : \"7e0e78d3-74b5-4bbd-aebc-3287fe895eb2\",\n    \"probability\" : 2.7263192037808724E38,\n    \"tagName\" : \"Alexander Bahringer Jr.\"\n  }, {\n    \"boundingBox\" : {\n      \"top\" : 6.077485137466225E37,\n      \"left\" : 2.5787892060898524E38,\n      \"width\" : 3.1607371500950564E38,\n      \"height\" : 2.9725980807026985E37\n    },\n    \"tagId\" : \"2fc61cc1-9de0-442a-b994-5778dd4835fd\",\n    \"probability\" : 6.661579187787652E37,\n    \"tagName\" : \"Christopher Schmidt\"\n  }, {\n    \"boundingBox\" : {\n      \"top\" : 3.071625395702905E38,\n      \"left\" : 2.6504461390393525E38,\n      \"width\" : 2.7295412471722646E37,\n      \"height\" : 1.6347609700038846E38\n    },\n    \"tagId\" : \"6a492b7d-e2ac-4626-9f3c-478502f86127\",\n    \"probability\" : 3.379701154261548E38,\n    \"tagName\" : \"Dominique Rempel\"\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "text/xml"
+      }
+    },
+    "uuid" : "2be6b294-0384-4440-8d2c-352f16b5f8d4",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:05.607511Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "ClassifyImageUrl",
+          "schema" : {
+            "description" : "Result of an image prediction request.",
+            "properties" : {
+              "created" : {
+                "description" : "Date this prediction was created.",
+                "format" : "date-time",
+                "nullable" : false,
+                "readOnly" : true,
+                "type" : "string"
+              },
+              "id" : {
+                "description" : "Prediction Id.",
+                "format" : "uuid",
+                "nullable" : false,
+                "readOnly" : true,
+                "type" : "string"
+              },
+              "iteration" : {
+                "description" : "Iteration Id.",
+                "format" : "uuid",
+                "nullable" : false,
+                "readOnly" : true,
+                "type" : "string"
+              },
+              "predictions" : {
+                "description" : "List of predictions.",
+                "items" : {
+                  "$ref" : "#/components/schemas/Prediction"
+                },
+                "readOnly" : true,
+                "type" : "array"
+              },
+              "project" : {
+                "description" : "Project Id.",
+                "format" : "uuid",
+                "nullable" : false,
+                "readOnly" : true,
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 15
+  }, {
+    "id" : "6e513433-c199-4c26-94aa-b6434390070d",
+    "name" : "Classify an image url and saves the result. (application/xml)",
+    "request" : {
+      "urlPath" : "/e4d4f411-e886-44ad-9d73-e3b62e4f85bb/classify/iterations/Omega+Simonis/url",
+      "method" : "POST",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/xml"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"created\" : \"2022-11-29T23:54:03.606Z\",\n  \"iteration\" : \"ba54e955-7ee5-4654-8364-1baa61d8c16d\",\n  \"project\" : \"188ba31e-41f6-4395-b4d0-0d16bf865778\",\n  \"id\" : \"6821eb13-3c8f-458e-a942-baff13034743\",\n  \"predictions\" : [ {\n    \"boundingBox\" : {\n      \"top\" : 7.108774204615582E37,\n      \"left\" : 1.9464373127408072E38,\n      \"width\" : 2.9416456167788425E38,\n      \"height\" : 3.9264901173702834E37\n    },\n    \"tagId\" : \"158c5f16-c893-46b0-8151-90fdaaaf527e\",\n    \"probability\" : 1.591885038258553E38,\n    \"tagName\" : \"Georgia Cruickshank\"\n  }, {\n    \"boundingBox\" : {\n      \"top\" : 7.66044201541957E37,\n      \"left\" : 3.4936829023273085E37,\n      \"width\" : 3.0079676203759065E38,\n      \"height\" : 1.8057621400979413E38\n    },\n    \"tagId\" : \"3f4e2d7d-b561-4421-bae4-7c0bda583d38\",\n    \"probability\" : 7.200681261992023E37,\n    \"tagName\" : \"Jessie Balistreri\"\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "application/xml"
+      }
+    },
+    "uuid" : "6e513433-c199-4c26-94aa-b6434390070d",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:05.60701Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "ClassifyImageUrl",
+          "schema" : {
+            "description" : "Result of an image prediction request.",
+            "properties" : {
+              "created" : {
+                "description" : "Date this prediction was created.",
+                "format" : "date-time",
+                "nullable" : false,
+                "readOnly" : true,
+                "type" : "string"
+              },
+              "id" : {
+                "description" : "Prediction Id.",
+                "format" : "uuid",
+                "nullable" : false,
+                "readOnly" : true,
+                "type" : "string"
+              },
+              "iteration" : {
+                "description" : "Iteration Id.",
+                "format" : "uuid",
+                "nullable" : false,
+                "readOnly" : true,
+                "type" : "string"
+              },
+              "predictions" : {
+                "description" : "List of predictions.",
+                "items" : {
+                  "$ref" : "#/components/schemas/Prediction"
+                },
+                "readOnly" : true,
+                "type" : "array"
+              },
+              "project" : {
+                "description" : "Project Id.",
+                "format" : "uuid",
+                "nullable" : false,
+                "readOnly" : true,
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 16
+  }, {
+    "id" : "c894066b-c82d-4bcd-947f-11899b6451b4",
+    "name" : "Classify an image url and saves the result. (application/json)",
+    "request" : {
+      "urlPath" : "/b32035cc-bebc-4662-813e-5ffb5c8dc34b/classify/iterations/Colton+O%27Hara/url",
+      "method" : "POST",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/json"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"created\" : \"2023-12-28T12:46:30.606Z\",\n  \"iteration\" : \"57c654fe-d55e-4ec8-9944-782c23195bc7\",\n  \"project\" : \"c096800e-db90-4ce1-a1e1-8da7cc9ce545\",\n  \"id\" : \"5f6c4fe9-27ab-47e3-9870-26d8a61a8189\",\n  \"predictions\" : [ {\n    \"boundingBox\" : {\n      \"top\" : 2.3730601336158597E38,\n      \"left\" : 2.9076594894133113E38,\n      \"width\" : 3.1644654651429846E38,\n      \"height\" : 2.7580142312955943E37\n    },\n    \"tagId\" : \"1f0071fd-56ee-4fe6-8324-cd9a7f071fa8\",\n    \"probability\" : 1.6397070897485544E38,\n    \"tagName\" : \"Dodie Huels\"\n  }, {\n    \"boundingBox\" : {\n      \"top\" : 2.5802219923054497E38,\n      \"left\" : 2.5585956809689872E38,\n      \"width\" : 1.1450625293939147E38,\n      \"height\" : 5.503849571350208E37\n    },\n    \"tagId\" : \"eb121047-92b3-4850-ae84-c44fe0d07842\",\n    \"probability\" : 3.1143827076254786E38,\n    \"tagName\" : \"Natosha Kovacek\"\n  }, {\n    \"boundingBox\" : {\n      \"top\" : 2.2019495511978405E38,\n      \"left\" : 7.122508578781322E37,\n      \"width\" : 3.3990569973744862E38,\n      \"height\" : 1.3061930764300739E38\n    },\n    \"tagId\" : \"14ccbfdf-74fc-44d2-8283-14d71d439b70\",\n    \"probability\" : 1.1411899835589593E38,\n    \"tagName\" : \"Zena Corwin\"\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "c894066b-c82d-4bcd-947f-11899b6451b4",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:05.606729Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "ClassifyImageUrl",
+          "schema" : {
+            "description" : "Result of an image prediction request.",
+            "properties" : {
+              "created" : {
+                "description" : "Date this prediction was created.",
+                "format" : "date-time",
+                "nullable" : false,
+                "readOnly" : true,
+                "type" : "string"
+              },
+              "id" : {
+                "description" : "Prediction Id.",
+                "format" : "uuid",
+                "nullable" : false,
+                "readOnly" : true,
+                "type" : "string"
+              },
+              "iteration" : {
+                "description" : "Iteration Id.",
+                "format" : "uuid",
+                "nullable" : false,
+                "readOnly" : true,
+                "type" : "string"
+              },
+              "predictions" : {
+                "description" : "List of predictions.",
+                "items" : {
+                  "$ref" : "#/components/schemas/Prediction"
+                },
+                "readOnly" : true,
+                "type" : "array"
+              },
+              "project" : {
+                "description" : "Project Id.",
+                "format" : "uuid",
+                "nullable" : false,
+                "readOnly" : true,
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 17
+  }, {
+    "id" : "acbe5805-3d52-4f46-b954-11f7a3a610bc",
+    "name" : "Classify an image without saving the result. (text/xml)",
+    "request" : {
+      "urlPath" : "/7315fca9-dadf-4033-aef1-94eba83a2412/classify/iterations/Ms.+Marcelino+Windler/image/nostore",
+      "method" : "POST",
+      "headers" : {
+        "Accept" : {
+          "contains" : "text/xml"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"created\" : \"2023-02-25T15:45:33.606Z\",\n  \"iteration\" : \"480d263b-0ac3-4868-8695-c7f846e71c13\",\n  \"project\" : \"5b215acb-eb82-4e14-afef-c0750ed4332a\",\n  \"id\" : \"fbf05f0d-6b89-4ee5-a361-bb6794ffa7e6\",\n  \"predictions\" : [ {\n    \"boundingBox\" : {\n      \"top\" : 6.8179148052432085E37,\n      \"left\" : 2.109332910627995E38,\n      \"width\" : 2.280725969836118E38,\n      \"height\" : 2.8387472322306473E38\n    },\n    \"tagId\" : \"f8f5989a-1132-492a-ac6b-ae7630c2d5b7\",\n    \"probability\" : 1.338352600493049E37,\n    \"tagName\" : \"Mrs. Joshua Friesen\"\n  }, {\n    \"boundingBox\" : {\n      \"top\" : 2.1396410527959637E38,\n      \"left\" : 1.3211337138082433E38,\n      \"width\" : 2.5342153665766373E38,\n      \"height\" : 3.3118418401146945E38\n    },\n    \"tagId\" : \"7e0f0b3d-0a69-43e0-8d1a-a5d38a597cef\",\n    \"probability\" : 1.3718792304434355E38,\n    \"tagName\" : \"Lakendra Russel\"\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "text/xml"
+      }
+    },
+    "uuid" : "acbe5805-3d52-4f46-b954-11f7a3a610bc",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:05.606373Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "ClassifyImageWithNoStore",
+          "schema" : {
+            "description" : "Result of an image prediction request.",
+            "properties" : {
+              "created" : {
+                "description" : "Date this prediction was created.",
+                "format" : "date-time",
+                "nullable" : false,
+                "readOnly" : true,
+                "type" : "string"
+              },
+              "id" : {
+                "description" : "Prediction Id.",
+                "format" : "uuid",
+                "nullable" : false,
+                "readOnly" : true,
+                "type" : "string"
+              },
+              "iteration" : {
+                "description" : "Iteration Id.",
+                "format" : "uuid",
+                "nullable" : false,
+                "readOnly" : true,
+                "type" : "string"
+              },
+              "predictions" : {
+                "description" : "List of predictions.",
+                "items" : {
+                  "$ref" : "#/components/schemas/Prediction"
+                },
+                "readOnly" : true,
+                "type" : "array"
+              },
+              "project" : {
+                "description" : "Project Id.",
+                "format" : "uuid",
+                "nullable" : false,
+                "readOnly" : true,
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 18
+  }, {
+    "id" : "7e96ee1b-4d36-4dd9-b4d6-369cc4b06e86",
+    "name" : "Classify an image without saving the result. (application/xml)",
+    "request" : {
+      "urlPath" : "/5f08393b-c22d-4e1e-8852-a88ebf4fed1c/classify/iterations/Mikel+Yundt/image/nostore",
+      "method" : "POST",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/xml"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"created\" : \"2022-10-06T16:33:25.605Z\",\n  \"iteration\" : \"411aa189-938a-4d9a-932e-6d8ba66dcf78\",\n  \"project\" : \"a973d2a7-b235-4285-b736-34b4ff58fde1\",\n  \"id\" : \"082e5b74-66d7-48b2-898d-da1030d046be\",\n  \"predictions\" : [ {\n    \"boundingBox\" : {\n      \"top\" : 2.813971021424122E38,\n      \"left\" : 1.7578377169563128E37,\n      \"width\" : 3.6138422872629316E37,\n      \"height\" : 9.883478639940248E36\n    },\n    \"tagId\" : \"4860b81a-e1af-4f95-a5a5-bfe3a21232ab\",\n    \"probability\" : 1.747526212030695E37,\n    \"tagName\" : \"Margarite Stokes\"\n  }, {\n    \"boundingBox\" : {\n      \"top\" : 2.2977591070186914E38,\n      \"left\" : 1.762926019515937E38,\n      \"width\" : 1.223821201994811E38,\n      \"height\" : 2.726701888715808E38\n    },\n    \"tagId\" : \"9c61a762-fd53-4ab0-ac7b-c437e022e4a3\",\n    \"probability\" : 1.2156456502643913E37,\n    \"tagName\" : \"Zetta Crist\"\n  }, {\n    \"boundingBox\" : {\n      \"top\" : 1.4490439876205814E38,\n      \"left\" : 2.5018080506042373E38,\n      \"width\" : 4.769823864246409E37,\n      \"height\" : 1.6175561829265474E38\n    },\n    \"tagId\" : \"e45f5957-ab35-471c-af67-d85c5b900874\",\n    \"probability\" : 6.242315648848417E37,\n    \"tagName\" : \"Micha Zieme\"\n  }, {\n    \"boundingBox\" : {\n      \"top\" : 2.0691653453029838E37,\n      \"left\" : 1.5145291688267768E38,\n      \"width\" : 2.390331148170854E38,\n      \"height\" : 1.828113172094572E38\n    },\n    \"tagId\" : \"457b59ca-cd60-4be4-ad59-b9298885fae2\",\n    \"probability\" : 1.4475670342688915E38,\n    \"tagName\" : \"Daisy McKenzie\"\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "application/xml"
+      }
+    },
+    "uuid" : "7e96ee1b-4d36-4dd9-b4d6-369cc4b06e86",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:05.606085Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "ClassifyImageWithNoStore",
+          "schema" : {
+            "description" : "Result of an image prediction request.",
+            "properties" : {
+              "created" : {
+                "description" : "Date this prediction was created.",
+                "format" : "date-time",
+                "nullable" : false,
+                "readOnly" : true,
+                "type" : "string"
+              },
+              "id" : {
+                "description" : "Prediction Id.",
+                "format" : "uuid",
+                "nullable" : false,
+                "readOnly" : true,
+                "type" : "string"
+              },
+              "iteration" : {
+                "description" : "Iteration Id.",
+                "format" : "uuid",
+                "nullable" : false,
+                "readOnly" : true,
+                "type" : "string"
+              },
+              "predictions" : {
+                "description" : "List of predictions.",
+                "items" : {
+                  "$ref" : "#/components/schemas/Prediction"
+                },
+                "readOnly" : true,
+                "type" : "array"
+              },
+              "project" : {
+                "description" : "Project Id.",
+                "format" : "uuid",
+                "nullable" : false,
+                "readOnly" : true,
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 19
+  }, {
+    "id" : "f8627b42-6d3f-41ad-9c35-66637e055352",
+    "name" : "Classify an image without saving the result. (application/json)",
+    "request" : {
+      "urlPath" : "/a95eea71-1670-4474-8548-1fc8554a2954/classify/iterations/Estrella+O%27Hara/image/nostore",
+      "method" : "POST",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/json"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"created\" : \"2023-12-11T17:23:14.605Z\",\n  \"iteration\" : \"952993fb-3277-4d4d-8524-04d8dfd1b42d\",\n  \"project\" : \"af89cc07-5d6e-4c1f-a9e5-5469e58f4540\",\n  \"id\" : \"fc8aaea0-39c0-40c8-bb23-63c252b4ee31\",\n  \"predictions\" : [ {\n    \"boundingBox\" : {\n      \"top\" : 1.6626554823383327E38,\n      \"left\" : 1.001278308692753E38,\n      \"width\" : 2.1664386318332738E38,\n      \"height\" : 6.137554754241561E37\n    },\n    \"tagId\" : \"28d08baa-90b1-441d-b8b8-ff51968eb2e7\",\n    \"probability\" : 3.2780628780879264E38,\n    \"tagName\" : \"Jenae Kirlin\"\n  }, {\n    \"boundingBox\" : {\n      \"top\" : 2.614073552909621E38,\n      \"left\" : 2.961091788819532E38,\n      \"width\" : 1.7729834991637943E38,\n      \"height\" : 1.775219149456776E37\n    },\n    \"tagId\" : \"c0db0da0-8b56-4df2-b7ce-ae2e8e977ec0\",\n    \"probability\" : 2.952558479176093E38,\n    \"tagName\" : \"Kenny Kozey\"\n  }, {\n    \"boundingBox\" : {\n      \"top\" : 1.0795866932015222E38,\n      \"left\" : 1.528536348934764E38,\n      \"width\" : 1.92543162074369E38,\n      \"height\" : 1.3381839483977957E38\n    },\n    \"tagId\" : \"6babe9b1-c121-46a6-ae2a-d62ec0fb08ce\",\n    \"probability\" : 3.073146973816704E37,\n    \"tagName\" : \"Mrs. Wade Rutherford\"\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "f8627b42-6d3f-41ad-9c35-66637e055352",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:05.605665Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "ClassifyImageWithNoStore",
+          "schema" : {
+            "description" : "Result of an image prediction request.",
+            "properties" : {
+              "created" : {
+                "description" : "Date this prediction was created.",
+                "format" : "date-time",
+                "nullable" : false,
+                "readOnly" : true,
+                "type" : "string"
+              },
+              "id" : {
+                "description" : "Prediction Id.",
+                "format" : "uuid",
+                "nullable" : false,
+                "readOnly" : true,
+                "type" : "string"
+              },
+              "iteration" : {
+                "description" : "Iteration Id.",
+                "format" : "uuid",
+                "nullable" : false,
+                "readOnly" : true,
+                "type" : "string"
+              },
+              "predictions" : {
+                "description" : "List of predictions.",
+                "items" : {
+                  "$ref" : "#/components/schemas/Prediction"
+                },
+                "readOnly" : true,
+                "type" : "array"
+              },
+              "project" : {
+                "description" : "Project Id.",
+                "format" : "uuid",
+                "nullable" : false,
+                "readOnly" : true,
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 20
+  }, {
+    "id" : "50dc5fa7-8ee4-470f-a2ed-b6f330c96132",
+    "name" : "Classify an image and saves the result. (text/xml)",
+    "request" : {
+      "urlPath" : "/c34e2d8d-bb30-4bc5-8234-3a7968d16740/classify/iterations/Mark+McGlynn/image",
+      "method" : "POST",
+      "headers" : {
+        "Accept" : {
+          "contains" : "text/xml"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"created\" : \"2022-07-05T18:14:01.605Z\",\n  \"iteration\" : \"ac46ef06-9351-4c65-9c95-fe6a2373a7ff\",\n  \"project\" : \"afc618b3-6e1e-4a92-9274-f5b00c8c7abe\",\n  \"id\" : \"4155b9ab-71a2-44e0-b868-f44eb7ac2f28\",\n  \"predictions\" : [ {\n    \"boundingBox\" : {\n      \"top\" : 1.764991592388306E38,\n      \"left\" : 4.960027828578363E36,\n      \"width\" : 2.567859932972122E38,\n      \"height\" : 1.1805052276712452E38\n    },\n    \"tagId\" : \"098dd775-9695-4868-a476-98e3d62aee7e\",\n    \"probability\" : 8.326231245420548E37,\n    \"tagName\" : \"Anibal Hane\"\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "text/xml"
+      }
+    },
+    "uuid" : "50dc5fa7-8ee4-470f-a2ed-b6f330c96132",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:05.60523Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "ClassifyImage",
+          "schema" : {
+            "description" : "Result of an image prediction request.",
+            "properties" : {
+              "created" : {
+                "description" : "Date this prediction was created.",
+                "format" : "date-time",
+                "nullable" : false,
+                "readOnly" : true,
+                "type" : "string"
+              },
+              "id" : {
+                "description" : "Prediction Id.",
+                "format" : "uuid",
+                "nullable" : false,
+                "readOnly" : true,
+                "type" : "string"
+              },
+              "iteration" : {
+                "description" : "Iteration Id.",
+                "format" : "uuid",
+                "nullable" : false,
+                "readOnly" : true,
+                "type" : "string"
+              },
+              "predictions" : {
+                "description" : "List of predictions.",
+                "items" : {
+                  "$ref" : "#/components/schemas/Prediction"
+                },
+                "readOnly" : true,
+                "type" : "array"
+              },
+              "project" : {
+                "description" : "Project Id.",
+                "format" : "uuid",
+                "nullable" : false,
+                "readOnly" : true,
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 21
+  }, {
+    "id" : "5bcd7254-1e40-438e-9ecb-96baa48863a6",
+    "name" : "Classify an image and saves the result. (application/xml)",
+    "request" : {
+      "urlPath" : "/775098a2-5b01-4403-8225-5bb83be64a8a/classify/iterations/Khalilah+Stark+IV/image",
+      "method" : "POST",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/xml"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"created\" : \"2022-06-29T23:23:31.604Z\",\n  \"iteration\" : \"abc29ad2-9828-4dca-a029-033fb9b7024d\",\n  \"project\" : \"abe0d397-3417-47ab-b530-52ede02159b6\",\n  \"id\" : \"23d3a19a-dd0a-4300-9069-401025623eed\",\n  \"predictions\" : [ {\n    \"boundingBox\" : {\n      \"top\" : 2.6339987032413396E38,\n      \"left\" : 1.4826242860693875E38,\n      \"width\" : 1.018150036429833E38,\n      \"height\" : 6.276961462909163E35\n    },\n    \"tagId\" : \"27c36608-802a-46b8-a77b-8e38bb5b094e\",\n    \"probability\" : 2.9518705862677656E38,\n    \"tagName\" : \"Mariella Mraz\"\n  }, {\n    \"boundingBox\" : {\n      \"top\" : 1.5707067064203869E38,\n      \"left\" : 1.6528108632302569E38,\n      \"width\" : 3.004960522623394E38,\n      \"height\" : 2.586043697613355E38\n    },\n    \"tagId\" : \"7aa0c8f4-d7d4-4f68-927a-0f446a67dc2b\",\n    \"probability\" : 8.990734035593183E37,\n    \"tagName\" : \"Stephen Block\"\n  }, {\n    \"boundingBox\" : {\n      \"top\" : 2.685966641426751E38,\n      \"left\" : 1.035971545124566E38,\n      \"width\" : 4.052807581516132E37,\n      \"height\" : 1.6610805770987185E38\n    },\n    \"tagId\" : \"1b27aa3c-201e-4c69-ab21-16e0df4edde1\",\n    \"probability\" : 2.5145633568926975E38,\n    \"tagName\" : \"Livia Erdman\"\n  }, {\n    \"boundingBox\" : {\n      \"top\" : 3.2572652895407457E38,\n      \"left\" : 3.361601871420934E38,\n      \"width\" : 2.6047025927507348E38,\n      \"height\" : 1.1380470881340019E38\n    },\n    \"tagId\" : \"6c1441cb-ea41-4375-a2c8-431a15269083\",\n    \"probability\" : 1.4380766941761585E38,\n    \"tagName\" : \"Kandy Legros\"\n  }, {\n    \"boundingBox\" : {\n      \"top\" : 1.6274848196619516E38,\n      \"left\" : 2.655772453151126E38,\n      \"width\" : 1.1927048989061859E38,\n      \"height\" : 1.5823687256314636E38\n    },\n    \"tagId\" : \"606fde95-e0cf-4a91-9d8f-c4423b3a25e4\",\n    \"probability\" : 7.319917881732221E37,\n    \"tagName\" : \"Harold Fritsch\"\n  }, {\n    \"boundingBox\" : {\n      \"top\" : 2.448470629915654E38,\n      \"left\" : 2.697836332354014E38,\n      \"width\" : 7.064112453195986E37,\n      \"height\" : 2.085056432437743E38\n    },\n    \"tagId\" : \"bebf9790-0290-4423-a28a-2df1052a6318\",\n    \"probability\" : 1.6204794935220929E38,\n    \"tagName\" : \"Guadalupe Bode\"\n  }, {\n    \"boundingBox\" : {\n      \"top\" : 1.1468008521224606E38,\n      \"left\" : 8.1200531968747975E37,\n      \"width\" : 2.441572748672936E38,\n      \"height\" : 2.4660983224789833E38\n    },\n    \"tagId\" : \"2f916095-3b27-4cb1-bae8-2a2ab06eadf4\",\n    \"probability\" : 8.82346202482588E37,\n    \"tagName\" : \"Hal Gerlach\"\n  }, {\n    \"boundingBox\" : {\n      \"top\" : 2.375149635595818E38,\n      \"left\" : 2.489932758303402E37,\n      \"width\" : 2.512571756325408E37,\n      \"height\" : 1.025175465860835E38\n    },\n    \"tagId\" : \"8c49166a-e7b9-4f11-ba8b-f27173287b13\",\n    \"probability\" : 1.5587057246372229E38,\n    \"tagName\" : \"Miguelina Macejkovic\"\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "application/xml"
+      }
+    },
+    "uuid" : "5bcd7254-1e40-438e-9ecb-96baa48863a6",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:05.605014Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "ClassifyImage",
+          "schema" : {
+            "description" : "Result of an image prediction request.",
+            "properties" : {
+              "created" : {
+                "description" : "Date this prediction was created.",
+                "format" : "date-time",
+                "nullable" : false,
+                "readOnly" : true,
+                "type" : "string"
+              },
+              "id" : {
+                "description" : "Prediction Id.",
+                "format" : "uuid",
+                "nullable" : false,
+                "readOnly" : true,
+                "type" : "string"
+              },
+              "iteration" : {
+                "description" : "Iteration Id.",
+                "format" : "uuid",
+                "nullable" : false,
+                "readOnly" : true,
+                "type" : "string"
+              },
+              "predictions" : {
+                "description" : "List of predictions.",
+                "items" : {
+                  "$ref" : "#/components/schemas/Prediction"
+                },
+                "readOnly" : true,
+                "type" : "array"
+              },
+              "project" : {
+                "description" : "Project Id.",
+                "format" : "uuid",
+                "nullable" : false,
+                "readOnly" : true,
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 22
+  }, {
+    "id" : "c03a0488-f2b1-4db6-b329-c73114952b3f",
+    "name" : "Classify an image and saves the result. (application/json)",
+    "request" : {
+      "urlPath" : "/58a156d8-ed95-46bf-8caa-57ef26c7aaa6/classify/iterations/Stephani+Marks/image",
+      "method" : "POST",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/json"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"created\" : \"2024-02-28T23:46:40.603Z\",\n  \"iteration\" : \"1ca5fb90-bc6d-4805-a067-eb44bdd129e8\",\n  \"project\" : \"8c9b946d-c70d-4804-8faa-1b5efc28ba58\",\n  \"id\" : \"b6f5ada3-9e6f-49c1-ad0d-eaa6edb7f0e5\",\n  \"predictions\" : [ {\n    \"boundingBox\" : {\n      \"top\" : 2.8023007517520254E38,\n      \"left\" : 1.179341906299637E38,\n      \"width\" : 2.0933275075568254E38,\n      \"height\" : 1.3105384515282238E38\n    },\n    \"tagId\" : \"58a3c4eb-ee0a-40c9-8f24-2ef7d6e9dbc2\",\n    \"probability\" : 2.408215957969623E38,\n    \"tagName\" : \"Mose Crist\"\n  }, {\n    \"boundingBox\" : {\n      \"top\" : 8.794981803534068E37,\n      \"left\" : 2.4587385898468674E37,\n      \"width\" : 7.400794883679912E37,\n      \"height\" : 3.2214186135918824E38\n    },\n    \"tagId\" : \"20f08f02-f21e-432a-b1b6-8eb8cebc8ae3\",\n    \"probability\" : 3.0226321536282323E38,\n    \"tagName\" : \"Murray Dickens\"\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "c03a0488-f2b1-4db6-b329-c73114952b3f",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:05.604196Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "ClassifyImage",
+          "schema" : {
+            "description" : "Result of an image prediction request.",
+            "properties" : {
+              "created" : {
+                "description" : "Date this prediction was created.",
+                "format" : "date-time",
+                "nullable" : false,
+                "readOnly" : true,
+                "type" : "string"
+              },
+              "id" : {
+                "description" : "Prediction Id.",
+                "format" : "uuid",
+                "nullable" : false,
+                "readOnly" : true,
+                "type" : "string"
+              },
+              "iteration" : {
+                "description" : "Iteration Id.",
+                "format" : "uuid",
+                "nullable" : false,
+                "readOnly" : true,
+                "type" : "string"
+              },
+              "predictions" : {
+                "description" : "List of predictions.",
+                "items" : {
+                  "$ref" : "#/components/schemas/Prediction"
+                },
+                "readOnly" : true,
+                "type" : "array"
+              },
+              "project" : {
+                "description" : "Project Id.",
+                "format" : "uuid",
+                "nullable" : false,
+                "readOnly" : true,
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 23
+  } ]
+}

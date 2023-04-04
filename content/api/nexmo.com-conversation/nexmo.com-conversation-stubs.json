@@ -1,0 +1,1195 @@
+{
+  "mappings" : [ {
+    "id" : "700b88b5-f3a3-40d9-9316-e07953c759cd",
+    "name" : "List user conversations",
+    "request" : {
+      "urlPath" : "/users/4h76/conversations",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "[ {\n  \"member_id\" : \"MEM-63f61863-4a51-4f6b-86e1-46edebio0391\",\n  \"sequence_number\" : \"123\",\n  \"image_url\" : \"https://example.com/image.png\",\n  \"name\" : \"customer_chat\",\n  \"href\" : \"https://api.nexmo.com/v0.1/conversations/CON-63f61863-4a51-4f6b-86e1-46edebio0391\",\n  \"id\" : \"CON-63f61863-4a51-4f6b-86e1-46edebio0391\",\n  \"state\" : \"invited\",\n  \"display_name\" : \"Customer Chat\",\n  \"timestamp\" : {\n    \"created\" : \"2020-01-01T14:00:00.00Z\"\n  }\n} ]",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "700b88b5-f3a3-40d9-9316-e07953c759cd",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:25.067231Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "getuserConversations",
+          "schema" : {
+            "items" : {
+              "properties" : {
+                "display_name" : {
+                  "$ref" : "#/components/schemas/display_name"
+                },
+                "href" : {
+                  "$ref" : "#/components/schemas/href"
+                },
+                "id" : {
+                  "$ref" : "#/components/schemas/conversation_id"
+                },
+                "image_url" : {
+                  "$ref" : "#/components/schemas/image_url"
+                },
+                "member_id" : {
+                  "$ref" : "#/components/schemas/member_id"
+                },
+                "name" : {
+                  "$ref" : "#/components/schemas/name_conversation"
+                },
+                "sequence_number" : {
+                  "description" : "the id of the last event of the conversation (event's id is an incremental number",
+                  "example" : "123",
+                  "format" : "url",
+                  "type" : "integer"
+                },
+                "state" : {
+                  "$ref" : "#/components/schemas/member_state"
+                },
+                "timestamp" : {
+                  "properties" : {
+                    "created" : {
+                      "$ref" : "#/components/schemas/timestamp"
+                    }
+                  },
+                  "type" : "object"
+                }
+              },
+              "type" : "object"
+            },
+            "type" : "array"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 0
+  }, {
+    "id" : "0f49d5e1-5e50-45d6-aa7a-6c5be71ab3d0",
+    "name" : "Update a user",
+    "request" : {
+      "urlPath" : "/users/8190",
+      "method" : "PUT"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"href\" : \"https://api.nexmo.com/v0.1/users/USR-63f61863-4a51-4f6b-86e1-46edebio0391\",\n  \"id\" : \"USR-63f61863-4a51-4f6b-86e1-46edebio0391\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "0f49d5e1-5e50-45d6-aa7a-6c5be71ab3d0",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:25.067059Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "updateUser",
+          "schema" : {
+            "properties" : {
+              "href" : {
+                "$ref" : "#/components/schemas/href_user"
+              },
+              "id" : {
+                "$ref" : "#/components/schemas/user_id"
+              }
+            }
+          }
+        }
+      }
+    },
+    "insertionIndex" : 1
+  }, {
+    "id" : "227d1319-7867-43b2-a1d6-4dba9b27eaee",
+    "name" : "Retrieve a user",
+    "request" : {
+      "urlPath" : "/users/8jhe",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"name\" : \"my_user_name\",\n  \"href\" : \"https://api.nexmo.com/v0.1/users/USR-63f61863-4a51-4f6b-86e1-46edebio0391\",\n  \"id\" : \"USR-63f61863-4a51-4f6b-86e1-46edebio0391\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "227d1319-7867-43b2-a1d6-4dba9b27eaee",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:25.066953Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "getUser",
+          "schema" : {
+            "properties" : {
+              "href" : {
+                "example" : "https://api.nexmo.com/v0.1/users/USR-63f61863-4a51-4f6b-86e1-46edebio0391",
+                "type" : "string"
+              },
+              "id" : {
+                "$ref" : "#/components/schemas/user_id"
+              },
+              "name" : {
+                "$ref" : "#/components/schemas/name_user"
+              }
+            }
+          }
+        }
+      }
+    },
+    "insertionIndex" : 2
+  }, {
+    "id" : "b5670978-d2fd-4323-9816-7e67a9106e3e",
+    "name" : "Delete a user",
+    "request" : {
+      "urlPath" : "/users/x048",
+      "method" : "DELETE"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{ }",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "b5670978-d2fd-4323-9816-7e67a9106e3e",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:25.066829Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "deleteUser",
+          "schema" : {
+            "description" : "Empty JSON payload",
+            "example" : { },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 3
+  }, {
+    "id" : "f983b254-adf3-41d5-8586-4fd0d0175dd1",
+    "name" : "Create a user",
+    "request" : {
+      "urlPath" : "/users",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"href\" : \"https://api.nexmo.com/v0.1/users/USR-63f61863-4a51-4f6b-86e1-46edebio0391\",\n  \"id\" : \"USR-63f61863-4a51-4f6b-86e1-46edebio0391\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "f983b254-adf3-41d5-8586-4fd0d0175dd1",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:25.066735Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "createUser",
+          "schema" : {
+            "properties" : {
+              "href" : {
+                "$ref" : "#/components/schemas/href_user"
+              },
+              "id" : {
+                "$ref" : "#/components/schemas/user_id"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 4
+  }, {
+    "id" : "8eed70fb-c4e7-4b55-9da8-75623375074d",
+    "name" : "List users",
+    "request" : {
+      "urlPath" : "/users",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "[ {\n  \"name\" : \"my_user_name\",\n  \"href\" : \"https://api.nexmo.com/v0.1/users/USR-63f61863-4a51-4f6b-86e1-46edebio0391\",\n  \"id\" : \"USR-63f61863-4a51-4f6b-86e1-46edebio0391\"\n}, {\n  \"name\" : \"my_user_name\",\n  \"href\" : \"https://api.nexmo.com/v0.1/users/USR-63f61863-4a51-4f6b-86e1-46edebio0391\",\n  \"id\" : \"USR-63f61863-4a51-4f6b-86e1-46edebio0391\"\n} ]",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "8eed70fb-c4e7-4b55-9da8-75623375074d",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:25.066692Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "getUsers",
+          "schema" : {
+            "items" : {
+              "properties" : {
+                "href" : {
+                  "$ref" : "#/components/schemas/href_user"
+                },
+                "id" : {
+                  "$ref" : "#/components/schemas/user_id"
+                },
+                "name" : {
+                  "$ref" : "#/components/schemas/name_user"
+                }
+              },
+              "type" : "object"
+            },
+            "type" : "array"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 5
+  }, {
+    "id" : "07d8c3f0-b344-4a6f-a616-5ff120a2ecba",
+    "name" : "Delete a leg",
+    "request" : {
+      "urlPath" : "/legs/oe76",
+      "method" : "DELETE"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{ }",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "07d8c3f0-b344-4a6f-a616-5ff120a2ecba",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:25.066623Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "deleteLeg",
+          "schema" : {
+            "description" : "Empty JSON payload",
+            "example" : { },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 6
+  }, {
+    "id" : "2f5242be-2965-431e-9538-2edb2de64360",
+    "name" : "List legs",
+    "request" : {
+      "urlPath" : "/legs",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"_embedded\" : {\n    \"legs\" : [ {\n      \"_links\" : {\n        \"self\" : {\n          \"href\" : \"https://api.nexmo.com/v0.1/legs/2a71f8a1-b6f1-42b3-9eef-c69729e17513\"\n        }\n      },\n      \"conversation_uuid\" : \"CON-511d076b-9d39-498c-baa7-b7a4bfbd6e32\",\n      \"end_time\" : \"\",\n      \"from\" : {\n        \"type\" : \"app\"\n      },\n      \"rtc\" : {\n        \"session_id\" : \"SES-84ebef0d-321a-47e6-8446-f4fcc5ca74b9\",\n        \"state\" : \"terminated\"\n      },\n      \"start_time\" : \"\",\n      \"status\" : \"completed\",\n      \"to\" : {\n        \"type\" : \"app\"\n      },\n      \"type\" : \"app\",\n      \"uuid\" : \"2a71f8a1-b6f1-42b3-9eef-c69729e17513\"\n    } ]\n  },\n  \"_links\" : {\n    \"self\" : {\n      \"href\" : \"https://api.nexmo.com/v0.1/legs\"\n    }\n  },\n  \"count\" : 1,\n  \"page_size\" : 10,\n  \"record_index\" : 0\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "2f5242be-2965-431e-9538-2edb2de64360",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:25.066489Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "listLegs",
+          "schema" : {
+            "description" : "List Legs Response Payload Object",
+            "example" : {
+              "_embedded" : {
+                "legs" : [ {
+                  "_links" : {
+                    "self" : {
+                      "href" : "https://api.nexmo.com/v0.1/legs/2a71f8a1-b6f1-42b3-9eef-c69729e17513"
+                    }
+                  },
+                  "conversation_uuid" : "CON-511d076b-9d39-498c-baa7-b7a4bfbd6e32",
+                  "end_time" : "",
+                  "from" : {
+                    "type" : "app"
+                  },
+                  "rtc" : {
+                    "session_id" : "SES-84ebef0d-321a-47e6-8446-f4fcc5ca74b9",
+                    "state" : "terminated"
+                  },
+                  "start_time" : "",
+                  "status" : "completed",
+                  "to" : {
+                    "type" : "app"
+                  },
+                  "type" : "app",
+                  "uuid" : "2a71f8a1-b6f1-42b3-9eef-c69729e17513"
+                } ]
+              },
+              "_links" : {
+                "self" : {
+                  "href" : "https://api.nexmo.com/v0.1/legs"
+                }
+              },
+              "count" : 1,
+              "page_size" : 10,
+              "record_index" : 0
+            },
+            "properties" : {
+              "_embedded" : {
+                "description" : "A list of conversation objects. See the [get details of a specific conversation](#retrieveConversation) response fields for a description of the nested objects",
+                "properties" : {
+                  "legs" : {
+                    "items" : {
+                      "properties" : {
+                        "_embedded" : {
+                          "type" : "object"
+                        },
+                        "_links" : {
+                          "type" : "object"
+                        },
+                        "conversation_uuid" : {
+                          "$ref" : "#/components/schemas/conversation_id"
+                        },
+                        "from" : {
+                          "type" : "object"
+                        },
+                        "start_end" : {
+                          "$ref" : "#/components/schemas/timestamp_leg_end_time"
+                        },
+                        "start_time" : {
+                          "$ref" : "#/components/schemas/timestamp_leg_start_time"
+                        },
+                        "state" : {
+                          "$ref" : "#/components/schemas/leg_state"
+                        },
+                        "to" : {
+                          "type" : "object"
+                        },
+                        "type" : {
+                          "$ref" : "#/components/schemas/channel_type"
+                        },
+                        "uuid" : {
+                          "$ref" : "#/components/schemas/leg_id"
+                        }
+                      },
+                      "required" : [ "uuid", "name", "href" ],
+                      "type" : "object"
+                    },
+                    "type" : "array"
+                  }
+                },
+                "required" : [ "legs" ],
+                "type" : "object"
+              },
+              "_links" : {
+                "properties" : {
+                  "self" : {
+                    "properties" : {
+                      "href" : {
+                        "type" : "string"
+                      }
+                    },
+                    "type" : "object"
+                  }
+                },
+                "required" : [ "self" ],
+                "type" : "object"
+              },
+              "count" : {
+                "description" : "The total number of records returned by your request.",
+                "example" : "100",
+                "type" : "number"
+              },
+              "page_size" : {
+                "$ref" : "#/components/schemas/page_size"
+              },
+              "record_index" : {
+                "$ref" : "#/components/schemas/record_index"
+              }
+            },
+            "required" : [ "count", "page_size", "record_index", "_links", "_embedded" ],
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 7
+  }, {
+    "id" : "f1ac99e8-2e2b-4a23-95c6-4044df95ed9f",
+    "name" : "Record a conversation - 404",
+    "request" : {
+      "urlPath" : "/conversations/3s91/record",
+      "method" : "PUT"
+    },
+    "response" : {
+      "status" : 404
+    },
+    "uuid" : "f1ac99e8-2e2b-4a23-95c6-4044df95ed9f",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:25.066285Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "recordConversation"
+        }
+      }
+    },
+    "insertionIndex" : 8
+  }, {
+    "id" : "595ab7d2-f060-43f4-b85f-fab15eb508bf",
+    "name" : "Record a conversation - 400",
+    "request" : {
+      "urlPath" : "/conversations/6xd5/record",
+      "method" : "PUT"
+    },
+    "response" : {
+      "status" : 400
+    },
+    "uuid" : "595ab7d2-f060-43f4-b85f-fab15eb508bf",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:25.066202Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "recordConversation"
+        }
+      }
+    },
+    "insertionIndex" : 9
+  }, {
+    "id" : "d00ba199-9b4d-499b-a9f5-4d6a9beebe8f",
+    "name" : "Record a conversation - 204",
+    "request" : {
+      "urlPath" : "/conversations/v32u/record",
+      "method" : "PUT"
+    },
+    "response" : {
+      "status" : 204
+    },
+    "uuid" : "d00ba199-9b4d-499b-a9f5-4d6a9beebe8f",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:25.066122Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "recordConversation"
+        }
+      }
+    },
+    "insertionIndex" : 10
+  }, {
+    "id" : "09abfa6a-6fdc-4bdc-801c-0c8575d63724",
+    "name" : "Update a member",
+    "request" : {
+      "urlPath" : "/conversations/p848/members/kfr6",
+      "method" : "PUT"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"href\" : \"https://api.nexmo.com/v0.1/conversations/CON-63f61863-4a51-4f6b-86e1-46edebio0391/members/MEM-63f61863-4a51-4f6b-86e1-46edebio0391\",\n  \"id\" : \"MEM-63f61863-4a51-4f6b-86e1-46edebio0391\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "09abfa6a-6fdc-4bdc-801c-0c8575d63724",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:25.066036Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "updateMember",
+          "schema" : {
+            "properties" : {
+              "href" : {
+                "$ref" : "#/components/schemas/href_member"
+              },
+              "id" : {
+                "$ref" : "#/components/schemas/member_id"
+              }
+            }
+          }
+        }
+      }
+    },
+    "insertionIndex" : 11
+  }, {
+    "id" : "96f81332-a45d-4be3-ba6b-d869b5b5d2c7",
+    "name" : "Retrieve a member",
+    "request" : {
+      "urlPath" : "/conversations/y17z/members/f82o",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"href\" : \"https://api.nexmo.com/v0.1/conversations/CON-63f61863-4a51-4f6b-86e1-46edebio0391/members/MEM-63f61863-4a51-4f6b-86e1-46edebio0391\",\n  \"id\" : \"MEM-63f61863-4a51-4f6b-86e1-46edebio0391\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "96f81332-a45d-4be3-ba6b-d869b5b5d2c7",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:25.065866Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "getMember",
+          "schema" : {
+            "properties" : {
+              "href" : {
+                "$ref" : "#/components/schemas/href_member"
+              },
+              "id" : {
+                "$ref" : "#/components/schemas/member_id"
+              }
+            }
+          }
+        }
+      }
+    },
+    "insertionIndex" : 12
+  }, {
+    "id" : "64d8c0db-8481-46d1-ad6a-0295fb2020e7",
+    "name" : "Delete a member",
+    "request" : {
+      "urlPath" : "/conversations/i83u/members/5ohc",
+      "method" : "DELETE"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{ }",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "64d8c0db-8481-46d1-ad6a-0295fb2020e7",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:25.065693Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "deleteMember",
+          "schema" : {
+            "description" : "Empty JSON payload",
+            "example" : { },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 13
+  }, {
+    "id" : "46077ce8-94c1-4008-976a-6fe764d5c8fc",
+    "name" : "Create a member",
+    "request" : {
+      "urlPath" : "/conversations/570z/members",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 201,
+      "body" : "{\n  \"user_id\" : \"USR-63f61863-4a51-4f6b-86e1-46edebio0391\",\n  \"initiator\" : {\n    \"joined\" : {\n      \"isSystem\" : true,\n      \"member_id\" : \"MEM-63f61863-4a51-4f6b-86e1-46edebio0391\",\n      \"user_id\" : \"USR-63f61863-4a51-4f6b-86e1-46edebio0391\"\n    }\n  },\n  \"channel\" : {\n    \"leg_ids\" : [ {\n      \"leg_id\" : \"a595959595959595995\"\n    }, {\n      \"leg_id\" : \"a595959595959595995\"\n    }, {\n      \"leg_id\" : \"a595959595959595995\"\n    }, {\n      \"leg_id\" : \"a595959595959595995\"\n    }, {\n      \"leg_id\" : \"a595959595959595995\"\n    }, {\n      \"leg_id\" : \"a595959595959595995\"\n    }, {\n      \"leg_id\" : \"a595959595959595995\"\n    }, {\n      \"leg_id\" : \"a595959595959595995\"\n    } ],\n    \"leg_id\" : \"a595959595959595995\",\n    \"from\" : {\n      \"headers\" : {\n        \"customer_id\" : \"ABC123\"\n      },\n      \"content-type\" : \"audio/l16;rate=16000\",\n      \"type\" : \"websocket\",\n      \"uri\" : \"wss://example.com/socket\"\n    },\n    \"to\" : {\n      \"type\" : \"sip\",\n      \"uri\" : \"sip:rebekka@sip.example.com\"\n    },\n    \"type\" : \"phone\"\n  },\n  \"href\" : \"https://api.nexmo.com/v0.1/conversations/CON-63f61863-4a51-4f6b-86e1-46edebio0391/members/MEM-63f61863-4a51-4f6b-86e1-46edebio0391\",\n  \"id\" : \"MEM-63f61863-4a51-4f6b-86e1-46edebio0391\",\n  \"state\" : \"invited\",\n  \"timestamp\" : {\n    \"left\" : \"2020-01-01T14:00:00.00Z\",\n    \"joined\" : \"2020-01-01T14:00:00.00Z\",\n    \"invited\" : \"2020-01-01T14:00:00.00Z\"\n  }\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "46077ce8-94c1-4008-976a-6fe764d5c8fc",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:25.065532Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "createMember",
+          "schema" : {
+            "properties" : {
+              "channel" : {
+                "$ref" : "#/components/schemas/channel"
+              },
+              "href" : {
+                "$ref" : "#/components/schemas/href_member"
+              },
+              "id" : {
+                "$ref" : "#/components/schemas/member_id"
+              },
+              "initiator" : {
+                "$ref" : "#/components/schemas/initiator"
+              },
+              "state" : {
+                "$ref" : "#/components/schemas/member_state"
+              },
+              "timestamp" : {
+                "$ref" : "#/components/schemas/timestamp_res_member"
+              },
+              "user_id" : {
+                "$ref" : "#/components/schemas/user_id"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 14
+  }, {
+    "id" : "37807382-376b-48fa-a3fb-2c3c914b8d37",
+    "name" : "List members",
+    "request" : {
+      "urlPath" : "/conversations/ryl6/members",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "[ {\n  \"user_id\" : \"USR-63f61863-4a51-4f6b-86e1-46edebio0391\",\n  \"user_name\" : \"my_user_name\",\n  \"name\" : \"my_user_name\",\n  \"state\" : \"invited\"\n} ]",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "37807382-376b-48fa-a3fb-2c3c914b8d37",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:25.065308Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "getMembers",
+          "schema" : {
+            "items" : {
+              "properties" : {
+                "name" : {
+                  "$ref" : "#/components/schemas/name_user"
+                },
+                "state" : {
+                  "$ref" : "#/components/schemas/member_state"
+                },
+                "user_id" : {
+                  "$ref" : "#/components/schemas/user_id"
+                },
+                "user_name" : {
+                  "$ref" : "#/components/schemas/name_user"
+                }
+              },
+              "required" : [ "user_id", "name", "user_name", "state" ],
+              "type" : "object"
+            },
+            "type" : "array"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 15
+  }, {
+    "id" : "32fcfedd-bc89-4daa-9083-c94a2760afbf",
+    "name" : "Retrieve an event",
+    "request" : {
+      "urlPath" : "/conversations/e4f3/events/6gd7",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"from\" : \"MEM-63f61863-4a51-4f6b-86e1-46edebio0391\",\n  \"href\" : \"https://api.nexmo.com/v0.1/conversations/CON-63f61863-4a51-4f6b-86e1-46edebio0391/events/1\",\n  \"id\" : \"5\",\n  \"state\" : \"invited\",\n  \"to\" : \"MEM-63f61863-4a51-4f6b-86e1-46edebio0391\",\n  \"body\" : {\n    \"text\" : \"My Text\"\n  },\n  \"type\" : \"text\",\n  \"timestamp\" : \"2020-01-01T14:00:00.00Z\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "32fcfedd-bc89-4daa-9083-c94a2760afbf",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:25.065167Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "getEvent",
+          "schema" : {
+            "description" : "Retrieve Events Response Payload Object Item",
+            "properties" : {
+              "body" : {
+                "$ref" : "#/components/schemas/event_body"
+              },
+              "from" : {
+                "$ref" : "#/components/schemas/member_id"
+              },
+              "href" : {
+                "$ref" : "#/components/schemas/href_event"
+              },
+              "id" : {
+                "$ref" : "#/components/schemas/event_id"
+              },
+              "state" : {
+                "$ref" : "#/components/schemas/member_state"
+              },
+              "timestamp" : {
+                "$ref" : "#/components/schemas/timestamp_created"
+              },
+              "to" : {
+                "$ref" : "#/components/schemas/member_id"
+              },
+              "type" : {
+                "$ref" : "#/components/schemas/event_type"
+              }
+            },
+            "required" : [ "id", "type", "body", "timestamp", "href" ],
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 16
+  }, {
+    "id" : "054234c3-f835-4266-9e75-4f89c19716ae",
+    "name" : "Delete an event",
+    "request" : {
+      "urlPath" : "/conversations/ey51/events/16vk",
+      "method" : "DELETE"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{ }",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "054234c3-f835-4266-9e75-4f89c19716ae",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:25.06497Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "deleteEvent",
+          "schema" : {
+            "description" : "Empty JSON payload",
+            "example" : { },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 17
+  }, {
+    "id" : "5c73bdd5-194d-4c52-b559-6a6a0041299f",
+    "name" : "Create an event",
+    "request" : {
+      "urlPath" : "/conversations/u63v/events",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 201,
+      "body" : "{\n  \"href\" : \"https://api.nexmo.com/v0.1/conversations/CON-63f61863-4a51-4f6b-86e1-46edebio0391/events/1\",\n  \"id\" : \"5\",\n  \"timestamp\" : \"2020-01-01T14:00:00.00Z\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "5c73bdd5-194d-4c52-b559-6a6a0041299f",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:25.064797Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "createEvent",
+          "schema" : {
+            "description" : "Create New Event Response Payload Object",
+            "properties" : {
+              "href" : {
+                "$ref" : "#/components/schemas/href_event"
+              },
+              "id" : {
+                "$ref" : "#/components/schemas/event_id"
+              },
+              "timestamp" : {
+                "$ref" : "#/components/schemas/timestamp_res_event"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 18
+  }, {
+    "id" : "2c323f01-e7c1-4eb1-930e-932802ed8aa5",
+    "name" : "List events",
+    "request" : {
+      "urlPath" : "/conversations/k2hq/events",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "[ {\n  \"from\" : \"MEM-63f61863-4a51-4f6b-86e1-46edebio0391\",\n  \"href\" : \"https://api.nexmo.com/v0.1/conversations/CON-63f61863-4a51-4f6b-86e1-46edebio0391/events/1\",\n  \"id\" : \"5\",\n  \"state\" : \"invited\",\n  \"to\" : \"MEM-63f61863-4a51-4f6b-86e1-46edebio0391\",\n  \"body\" : {\n    \"text\" : \"My Text\"\n  },\n  \"type\" : \"text\",\n  \"timestamp\" : \"2020-01-01T14:00:00.00Z\"\n}, {\n  \"from\" : \"MEM-63f61863-4a51-4f6b-86e1-46edebio0391\",\n  \"href\" : \"https://api.nexmo.com/v0.1/conversations/CON-63f61863-4a51-4f6b-86e1-46edebio0391/events/1\",\n  \"id\" : \"5\",\n  \"state\" : \"invited\",\n  \"to\" : \"MEM-63f61863-4a51-4f6b-86e1-46edebio0391\",\n  \"body\" : {\n    \"text\" : \"My Text\"\n  },\n  \"type\" : \"text\",\n  \"timestamp\" : \"2020-01-01T14:00:00.00Z\"\n}, {\n  \"from\" : \"MEM-63f61863-4a51-4f6b-86e1-46edebio0391\",\n  \"href\" : \"https://api.nexmo.com/v0.1/conversations/CON-63f61863-4a51-4f6b-86e1-46edebio0391/events/1\",\n  \"id\" : \"5\",\n  \"state\" : \"invited\",\n  \"to\" : \"MEM-63f61863-4a51-4f6b-86e1-46edebio0391\",\n  \"body\" : {\n    \"text\" : \"My Text\"\n  },\n  \"type\" : \"text\",\n  \"timestamp\" : \"2020-01-01T14:00:00.00Z\"\n}, {\n  \"from\" : \"MEM-63f61863-4a51-4f6b-86e1-46edebio0391\",\n  \"href\" : \"https://api.nexmo.com/v0.1/conversations/CON-63f61863-4a51-4f6b-86e1-46edebio0391/events/1\",\n  \"id\" : \"5\",\n  \"state\" : \"invited\",\n  \"to\" : \"MEM-63f61863-4a51-4f6b-86e1-46edebio0391\",\n  \"body\" : {\n    \"text\" : \"My Text\"\n  },\n  \"type\" : \"text\",\n  \"timestamp\" : \"2020-01-01T14:00:00.00Z\"\n}, {\n  \"from\" : \"MEM-63f61863-4a51-4f6b-86e1-46edebio0391\",\n  \"href\" : \"https://api.nexmo.com/v0.1/conversations/CON-63f61863-4a51-4f6b-86e1-46edebio0391/events/1\",\n  \"id\" : \"5\",\n  \"state\" : \"invited\",\n  \"to\" : \"MEM-63f61863-4a51-4f6b-86e1-46edebio0391\",\n  \"body\" : {\n    \"text\" : \"My Text\"\n  },\n  \"type\" : \"text\",\n  \"timestamp\" : \"2020-01-01T14:00:00.00Z\"\n} ]",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "2c323f01-e7c1-4eb1-930e-932802ed8aa5",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:25.064684Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "getEvents",
+          "schema" : {
+            "items" : {
+              "$ref" : "#/components/schemas/event_retrieved"
+            },
+            "type" : "array"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 19
+  }, {
+    "id" : "f02644f6-7be8-4e86-840e-4b54ce6301ca",
+    "name" : "Update a conversation",
+    "request" : {
+      "urlPath" : "/conversations/w4h0",
+      "method" : "PUT"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"href\" : \"https://api.nexmo.com/v0.1/conversations/CON-63f61863-4a51-4f6b-86e1-46edebio0391\",\n  \"id\" : \"CON-63f61863-4a51-4f6b-86e1-46edebio0391\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "f02644f6-7be8-4e86-840e-4b54ce6301ca",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:25.06449Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "replaceConversation",
+          "schema" : {
+            "properties" : {
+              "href" : {
+                "$ref" : "#/components/schemas/href_conversation"
+              },
+              "id" : {
+                "$ref" : "#/components/schemas/conversation_id"
+              }
+            },
+            "required" : [ "id", "href" ],
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 20
+  }, {
+    "id" : "0f9e6ce6-6a01-4fac-9973-454ea5a8af7d",
+    "name" : "Retrieve a conversation",
+    "request" : {
+      "urlPath" : "/conversations/z253",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"sequence_number\" : \"1\",\n  \"_links\" : {\n    \"self\" : {\n      \"href\" : \"https://api.nexmo.com/v0.1/conversations/CON-63f61863-4a51-4f6b-86e1-46edebio0391\"\n    }\n  },\n  \"api_key\" : \"2p24ojommas24\",\n  \"members\" : [ {\n    \"member_id\" : \"MEM-63f61863-4a51-4f6b-86e1-46edebio0391\",\n    \"user_id\" : \"USR-63f61863-4a51-4f6b-86e1-46edebio0391\",\n    \"initiator\" : {\n      \"joined\" : {\n        \"isSystem\" : false,\n        \"member_id\" : \"MEM-63f61863-4a51-4f6b-86e1-46edebio0391\",\n        \"user_id\" : \"USR-63f61863-4a51-4f6b-86e1-46edebio0391\"\n      }\n    },\n    \"channel\" : {\n      \"leg_ids\" : [ {\n        \"leg_id\" : \"a595959595959595995\"\n      }, {\n        \"leg_id\" : \"a595959595959595995\"\n      }, {\n        \"leg_id\" : \"a595959595959595995\"\n      }, {\n        \"leg_id\" : \"a595959595959595995\"\n      }, {\n        \"leg_id\" : \"a595959595959595995\"\n      }, {\n        \"leg_id\" : \"a595959595959595995\"\n      }, {\n        \"leg_id\" : \"a595959595959595995\"\n      }, {\n        \"leg_id\" : \"a595959595959595995\"\n      } ],\n      \"leg_id\" : \"a595959595959595995\",\n      \"from\" : {\n        \"type\" : \"app\",\n        \"user\" : \"jamie\"\n      },\n      \"to\" : {\n        \"extension\" : \"1234\",\n        \"type\" : \"vbc\"\n      },\n      \"type\" : \"phone\"\n    },\n    \"name\" : \"my_user_name\",\n    \"state\" : \"invited\",\n    \"timestamp\" : {\n      \"left\" : \"2020-01-01T14:00:00.00Z\",\n      \"joined\" : \"2020-01-01T14:00:00.00Z\",\n      \"invited\" : \"2020-01-01T14:00:00.00Z\"\n    }\n  } ],\n  \"name\" : \"customer_chat\",\n  \"numbers\" : { },\n  \"display_name\" : \"Customer Chat\",\n  \"uuid\" : \"CON-63f61863-4a51-4f6b-86e1-46edebio0391\",\n  \"properties\" : {\n    \"video\" : false\n  },\n  \"timestamp\" : {\n    \"destroyed\" : \"2020-01-01T14:20:00.00Z\",\n    \"created\" : \"2020-01-01T14:00:00.00Z\",\n    \"updated\" : \"2020-01-01T14:05:00.00Z\"\n  }\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "0f9e6ce6-6a01-4fac-9973-454ea5a8af7d",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:25.064374Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "retrieveConversation",
+          "schema" : {
+            "description" : "Conversation Object",
+            "properties" : {
+              "_links" : {
+                "$ref" : "#/components/schemas/_links_conversation"
+              },
+              "api_key" : {
+                "description" : "The API key for your account",
+                "type" : "string"
+              },
+              "display_name" : {
+                "$ref" : "#/components/schemas/display_name"
+              },
+              "members" : {
+                "description" : "Users associated to this conversation as members",
+                "items" : {
+                  "properties" : {
+                    "channel" : {
+                      "$ref" : "#/components/schemas/channel"
+                    },
+                    "initiator" : {
+                      "$ref" : "#/components/schemas/initiator"
+                    },
+                    "member_id" : {
+                      "$ref" : "#/components/schemas/member_id"
+                    },
+                    "name" : {
+                      "$ref" : "#/components/schemas/name_user"
+                    },
+                    "state" : {
+                      "$ref" : "#/components/schemas/member_state"
+                    },
+                    "timestamp" : {
+                      "$ref" : "#/components/schemas/timestamp_res_member"
+                    },
+                    "user_id" : {
+                      "$ref" : "#/components/schemas/user_id"
+                    }
+                  },
+                  "type" : "object"
+                },
+                "type" : "array"
+              },
+              "name" : {
+                "$ref" : "#/components/schemas/name_conversation"
+              },
+              "numbers" : {
+                "type" : "object"
+              },
+              "properties" : {
+                "properties" : {
+                  "video" : {
+                    "example" : false,
+                    "type" : "boolean"
+                  }
+                },
+                "type" : "object"
+              },
+              "sequence_number" : {
+                "description" : "The last Event ID in this conversation. This ID can be used to [retrieve a specific event](#getEvent)",
+                "example" : "1",
+                "type" : "string"
+              },
+              "timestamp" : {
+                "$ref" : "#/components/schemas/timestamp_res_conversation"
+              },
+              "uuid" : {
+                "$ref" : "#/components/schemas/conversation_id"
+              }
+            },
+            "required" : [ "uuid" ],
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 21
+  }, {
+    "id" : "0b0eec26-3318-46d1-b97f-c684de6c33cd",
+    "name" : "Delete a conversation",
+    "request" : {
+      "urlPath" : "/conversations/2104",
+      "method" : "DELETE"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{ }",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "0b0eec26-3318-46d1-b97f-c684de6c33cd",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:25.063936Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "deleteConversation",
+          "schema" : {
+            "description" : "Empty JSON payload",
+            "example" : { },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 22
+  }, {
+    "id" : "ce0412da-da55-4961-b63d-c46e8e2622da",
+    "name" : "Create a conversation",
+    "request" : {
+      "urlPath" : "/conversations",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"href\" : \"https://api.nexmo.com/v0.1/conversations/CON-63f61863-4a51-4f6b-86e1-46edebio0391\",\n  \"id\" : \"CON-63f61863-4a51-4f6b-86e1-46edebio0391\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "ce0412da-da55-4961-b63d-c46e8e2622da",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:25.063763Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "createConversation",
+          "schema" : {
+            "properties" : {
+              "href" : {
+                "$ref" : "#/components/schemas/href_conversation"
+              },
+              "id" : {
+                "$ref" : "#/components/schemas/conversation_id"
+              }
+            },
+            "required" : [ "id", "href" ],
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 23
+  }, {
+    "id" : "58730376-fba3-4a0a-aea9-9f08fe5e5fda",
+    "name" : "List conversations",
+    "request" : {
+      "urlPath" : "/conversations",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"record_index\" : 0,\n  \"_embedded\" : {\n    \"conversations\" : [ {\n      \"_links\" : {\n        \"self\" : {\n          \"href\" : \"https://api.nexmo.com/v0.1/conversations/CON-63f61863-4a51-4f6b-86e1-46edebio0391\"\n        }\n      },\n      \"name\" : \"customer_chat\",\n      \"uuid\" : \"CON-63f61863-4a51-4f6b-86e1-46edebio0391\"\n    } ]\n  },\n  \"_links\" : {\n    \"self\" : {\n      \"href\" : \"https://api.nexmo.com/v0.1/conversations?page_size=2&record_index=10&\"\n    }\n  },\n  \"count\" : \"100\",\n  \"page_size\" : 50\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "58730376-fba3-4a0a-aea9-9f08fe5e5fda",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:25.063686Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "listConversations",
+          "schema" : {
+            "properties" : {
+              "_embedded" : {
+                "description" : "A list of conversation objects. See the [get details of a specific conversation](#retrieveConversation) response fields for a description of the nested objects",
+                "properties" : {
+                  "conversations" : {
+                    "items" : {
+                      "properties" : {
+                        "_links" : {
+                          "properties" : {
+                            "self" : {
+                              "properties" : {
+                                "href" : {
+                                  "$ref" : "#/components/schemas/href_conversation"
+                                }
+                              },
+                              "type" : "object"
+                            }
+                          },
+                          "type" : "object"
+                        },
+                        "name" : {
+                          "$ref" : "#/components/schemas/name_conversation"
+                        },
+                        "uuid" : {
+                          "$ref" : "#/components/schemas/conversation_id"
+                        }
+                      },
+                      "required" : [ "uuid", "name", "href" ],
+                      "type" : "object"
+                    },
+                    "type" : "array"
+                  }
+                },
+                "required" : [ "conversations" ],
+                "type" : "object"
+              },
+              "_links" : {
+                "$ref" : "#/components/schemas/_links_conversations_list"
+              },
+              "count" : {
+                "description" : "The total number of records returned by your request.",
+                "example" : "100",
+                "type" : "number"
+              },
+              "page_size" : {
+                "$ref" : "#/components/schemas/page_size"
+              },
+              "record_index" : {
+                "$ref" : "#/components/schemas/record_index"
+              }
+            },
+            "required" : [ "count", "page_size", "record_index", "_links", "_embedded" ],
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 24
+  } ]
+}

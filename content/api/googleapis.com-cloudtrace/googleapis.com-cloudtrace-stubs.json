@@ -1,0 +1,218 @@
+{
+  "mappings" : [ {
+    "id" : "a512f759-4a01-4a40-b627-0f2f63cb3def",
+    "name" : "Creates a sink that exports trace spans to a destination. The export of newly-in...",
+    "request" : {
+      "urlPath" : "/v2beta1/i31hfra1vhthjafzo6w00qigkzb17zl8q8akuu0g6frnwuy7n3hrd3hywj6ubw1tu6t0uh4i7e841jtrar3615ouk3yo0e7erp6qvo3wuchrf4bsbnprdhzjnj41tgy1duuteidijkw5sutaedi9wubzyoeb/traceSinks",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"writerIdentity\" : \"wqagoxdk31jyfczal9ip0j04yzql0gt2zq3k1mlnf2h3syh3c3qbupf20u\",\n  \"outputConfig\" : {\n    \"destination\" : \"2fdd397umcqcazobjafnscmxi1e6\"\n  },\n  \"name\" : \"Maud Strosin\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "a512f759-4a01-4a40-b627-0f2f63cb3def",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:41.204754Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "cloudtrace.projects.traceSinks.create",
+          "schema" : {
+            "description" : "Describes a sink used to export traces to a BigQuery dataset. The sink must be created within a project.",
+            "properties" : {
+              "name" : {
+                "description" : "Required. The canonical sink resource name, unique within the project. Must be of the form: projects/[PROJECT_NUMBER]/traceSinks/[SINK_ID]. E.g.: `\"projects/12345/traceSinks/my-project-trace-sink\"`. Sink identifiers are limited to 256 characters and can include only the following characters: upper and lower-case alphanumeric characters, underscores, hyphens, and periods.",
+                "type" : "string"
+              },
+              "outputConfig" : {
+                "$ref" : "#/components/schemas/OutputConfig"
+              },
+              "writerIdentity" : {
+                "description" : "Output only. A service account name for exporting the data. This field is set by sinks.create and sinks.update. The service account will need to be granted write access to the destination specified in the output configuration, see [Granting access for a resource](/iam/docs/granting-roles-to-service-accounts#granting_access_to_a_service_account_for_a_resource). To create tables and to write data, this account needs the `dataEditor` role. Read more about roles in the [BigQuery documentation](https://cloud.google.com/bigquery/docs/access-control). E.g.: \"service-00000001@00000002.iam.gserviceaccount.com\"",
+                "readOnly" : true,
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 0
+  }, {
+    "id" : "bca5f379-5eed-492d-9c9e-24b9a01a9319",
+    "name" : "List all sinks for the parent resource (GCP project).",
+    "request" : {
+      "urlPath" : "/v2beta1/crcc5ed3303qe5sf6tc75vyygmftferwu3csrgp9ffxod1uerjt0niqr503is87cy0mwivynh55/traceSinks",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"sinks\" : [ {\n    \"writerIdentity\" : \"yiketcilszpdmhmxi0tez38djy153utqzak495ehjxl0uemwbkqb9px1in66ae9v6nrv2ih54eb2u3dsvjnc366eiof0q9obtijzg7icn9t5n9752ig1rwc5pm2vy74ycp688zuokqa\",\n    \"outputConfig\" : {\n      \"destination\" : \"fn4yib2xljuavnykbwccmcofex7y6ldta9phv452hsddggg3p1e2y3x452vv3nmccdfhfehxr3qxivcm3sanjr621cv7abggnanvqvsq58ii3m4sxo6pxqf81ebqqei9xokq744qesr0j6qtrudc7n8iblzncgh7wwq0fpefta4mjrnadgjul\"\n    },\n    \"name\" : \"Madelyn McKenzie\"\n  }, {\n    \"writerIdentity\" : \"erbe0pe3s7z1\",\n    \"outputConfig\" : {\n      \"destination\" : \"it2ztlxapmmvozkqy1\"\n    },\n    \"name\" : \"Peter McGlynn\"\n  }, {\n    \"writerIdentity\" : \"wstv7odyzx90t2a0tmlilzphivya91bh1u1fzsvfqtxmjpw2qdb\",\n    \"outputConfig\" : {\n      \"destination\" : \"87mdzhaeuah14221dbf7j2tq166qn0u0tuka1pj7oi6h1c9h7c344jcx61nzh7e48makqoe89c7gn974j4cqjsglo4qprzj380z2sggwdsynxhoz70usg04yu7oxbg9cd6sul9bnfzdd9886jzjn3kozdmpv7iw2gn\"\n    },\n    \"name\" : \"Samella Metz MD\"\n  }, {\n    \"writerIdentity\" : \"75904x1sef57y4riuvymlgowmwlftx7nxi3k9vt4af5a5zf8vpk4sl7zec6qfa2zim6gti5734snkomad7aoi63zsxsmdobg6cceohfivri1s0iwo6hv8m4xwgbogqislsx8ni8rzbbl\",\n    \"outputConfig\" : {\n      \"destination\" : \"kd26ekwsmh7dwzqptvesp9j08limj\"\n    },\n    \"name\" : \"Kathryne Kunze\"\n  }, {\n    \"writerIdentity\" : \"ig4ojz194hf1d5tv9nhg88pzjq2386wd4km92e9k9o9ybo4e6dw6z9c2hv\",\n    \"outputConfig\" : {\n      \"destination\" : \"i937nywy7m3fssz4kcr3uofvtr0osyalqlgw9eu5n8vj03vkf47sl6dqz9zfxab0oylyhrktkisebgx3x5p546sky3h04x5jf6wswc9m9r0pujmvv94rjqklmzca0szd5g7ztyp0hq8ksrsdha3au8ytyc6xlff0kdpl4xuizxg52t7\"\n    },\n    \"name\" : \"Christian Jast\"\n  }, {\n    \"writerIdentity\" : \"ecnqadr26siowzuu6ytrvvpd3am407vs8p415laar06j0udkb8x7j5k97x1aqj5gp1sbeqe3skp9lv3rfzus62gsxaeetqd4bvzf93olvfh7c6yscm4xe9u67o572xoc7gayvi7kt5d1bf2\",\n    \"outputConfig\" : {\n      \"destination\" : \"njb0l3sa6jzkzu63pimxcyyv9ynp85l0c3i97bd06s3za3mi2zipx1ctzk55wqdn1e7q0qu3ekhdk0fv45gsm5durlw4p6x2t5hgaw7n3mizt7xmbxjua3k2xz0zmwresn9nejp0on93kewvb\"\n    },\n    \"name\" : \"Arlean Homenick\"\n  }, {\n    \"writerIdentity\" : \"unx53dqps7n0rnlefteq82374dmpw42zpac3a5upzcn9z9lv7cb1n7a8eaw9ckg74e152khdyt2534ybtc4nuqvlru6w4jlba88shj53e3k117skgqhc12aovr9v5lx7f6cceqxx\",\n    \"outputConfig\" : {\n      \"destination\" : \"5rbr77cyywb34pvpt7f1tpwyzzcglnbbn7508fcrg03hbvg2zsvsn3tyo89ng703tngl0gzb4genbjqnnnej17vboo9cdewtgigoaxlrmxuwbj0ciokz5hrm8j\"\n    },\n    \"name\" : \"Gabriel Satterfield\"\n  } ],\n  \"nextPageToken\" : \"wcuflvppdsn98\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "bca5f379-5eed-492d-9c9e-24b9a01a9319",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:41.204631Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "cloudtrace.projects.traceSinks.list",
+          "schema" : {
+            "description" : "Result returned from `ListTraceSinks`.",
+            "properties" : {
+              "nextPageToken" : {
+                "description" : "A paginated response where more pages might be available has `next_page_token` set. To get the next set of results, call the same method again using the value of `next_page_token` as `page_token`.",
+                "type" : "string"
+              },
+              "sinks" : {
+                "description" : "A list of sinks.",
+                "items" : {
+                  "$ref" : "#/components/schemas/TraceSink"
+                },
+                "type" : "array"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 1
+  }, {
+    "id" : "236b7c13-b8c1-45d0-a1a5-8203704b3e75",
+    "name" : "Updates a sink. This method updates fields in the existing sink according to the...",
+    "request" : {
+      "urlPath" : "/v2beta1/Bradley+Lesch",
+      "method" : "PATCH"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"writerIdentity\" : \"kiyxtk4gnb8eloi25wee79j7851qks6rzcfwt0j326stp69o9dx5p3vfo1pbpi2pidyb5w85dxcy5u43i2lx87ntjz189xkdj\",\n  \"outputConfig\" : {\n    \"destination\" : \"5wf8ncmc6gl1g00q93b5o2fcx58h5r6dpp3ch63z8u2e09ntfj7ml7iaqll699ww6u73xjg7cpdb3q9uoyho5db2n9f48qqsx781qnndiqefonkdcbl7p0n6bs78w8cj4hxt5qqsio3zgrtmgzra4gnh4an9d\"\n  },\n  \"name\" : \"Carlo Considine\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "236b7c13-b8c1-45d0-a1a5-8203704b3e75",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:41.204036Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "cloudtrace.projects.traceSinks.patch",
+          "schema" : {
+            "description" : "Describes a sink used to export traces to a BigQuery dataset. The sink must be created within a project.",
+            "properties" : {
+              "name" : {
+                "description" : "Required. The canonical sink resource name, unique within the project. Must be of the form: projects/[PROJECT_NUMBER]/traceSinks/[SINK_ID]. E.g.: `\"projects/12345/traceSinks/my-project-trace-sink\"`. Sink identifiers are limited to 256 characters and can include only the following characters: upper and lower-case alphanumeric characters, underscores, hyphens, and periods.",
+                "type" : "string"
+              },
+              "outputConfig" : {
+                "$ref" : "#/components/schemas/OutputConfig"
+              },
+              "writerIdentity" : {
+                "description" : "Output only. A service account name for exporting the data. This field is set by sinks.create and sinks.update. The service account will need to be granted write access to the destination specified in the output configuration, see [Granting access for a resource](/iam/docs/granting-roles-to-service-accounts#granting_access_to_a_service_account_for_a_resource). To create tables and to write data, this account needs the `dataEditor` role. Read more about roles in the [BigQuery documentation](https://cloud.google.com/bigquery/docs/access-control). E.g.: \"service-00000001@00000002.iam.gserviceaccount.com\"",
+                "readOnly" : true,
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 2
+  }, {
+    "id" : "18ced15e-f626-4f6c-9d04-9a58c9784efc",
+    "name" : "Get a trace sink by name under the parent resource (GCP project).",
+    "request" : {
+      "urlPath" : "/v2beta1/Mrs.+Sixta+Kling",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"writerIdentity\" : \"pq4x91a2fe3wzoq5hknlhoqcl3vzxvgf6o6f9pc5p5sk8dwp6lxx7cynbw3z\",\n  \"outputConfig\" : {\n    \"destination\" : \"5mj1f61yet7hg59co57tr758u9ps08hailtchf90omgt3epbz3zs0xsy55ex\"\n  },\n  \"name\" : \"Jeffry Blick\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "18ced15e-f626-4f6c-9d04-9a58c9784efc",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:41.203875Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "cloudtrace.projects.traceSinks.get",
+          "schema" : {
+            "description" : "Describes a sink used to export traces to a BigQuery dataset. The sink must be created within a project.",
+            "properties" : {
+              "name" : {
+                "description" : "Required. The canonical sink resource name, unique within the project. Must be of the form: projects/[PROJECT_NUMBER]/traceSinks/[SINK_ID]. E.g.: `\"projects/12345/traceSinks/my-project-trace-sink\"`. Sink identifiers are limited to 256 characters and can include only the following characters: upper and lower-case alphanumeric characters, underscores, hyphens, and periods.",
+                "type" : "string"
+              },
+              "outputConfig" : {
+                "$ref" : "#/components/schemas/OutputConfig"
+              },
+              "writerIdentity" : {
+                "description" : "Output only. A service account name for exporting the data. This field is set by sinks.create and sinks.update. The service account will need to be granted write access to the destination specified in the output configuration, see [Granting access for a resource](/iam/docs/granting-roles-to-service-accounts#granting_access_to_a_service_account_for_a_resource). To create tables and to write data, this account needs the `dataEditor` role. Read more about roles in the [BigQuery documentation](https://cloud.google.com/bigquery/docs/access-control). E.g.: \"service-00000001@00000002.iam.gserviceaccount.com\"",
+                "readOnly" : true,
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 3
+  }, {
+    "id" : "2925b659-0abb-4620-ad89-8533160ff19f",
+    "name" : "Deletes a sink.",
+    "request" : {
+      "urlPath" : "/v2beta1/Kristopher+DuBuque",
+      "method" : "DELETE"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{ }",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "2925b659-0abb-4620-ad89-8533160ff19f",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:41.203652Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "cloudtrace.projects.traceSinks.delete",
+          "schema" : {
+            "description" : "A generic empty message that you can re-use to avoid defining duplicated empty messages in your APIs. A typical example is to use it as the request or the response type of an API method. For instance: service Foo { rpc Bar(google.protobuf.Empty) returns (google.protobuf.Empty); }",
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 4
+  } ]
+}

@@ -1,0 +1,711 @@
+{
+  "mappings" : [ {
+    "id" : "3fdb4a4e-2733-450d-ab63-07cc8e4e91ba",
+    "name" : "Looks up assignments for a specified resource for a particular region. If the re...",
+    "request" : {
+      "urlPath" : "/v1beta1/nqt8qi3bz6cc9u37fxy7johl0o9t1gh9t32k6xzu0krtfiv45p5sus0hvdbrizkmw3l7kfh80synf975azlu10gah:searchAssignments",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"assignments\" : [ {\n    \"name\" : \"Juliette Funk\",\n    \"assignee\" : \"vpszlfwzr9st0iy652b9trfe9iuwawfl9l4rjvg06fj21ctxv5umkhtqce958ns50j8fnscoy848g01owbzu161rea3pxak7rbw7v2tz0\",\n    \"state\" : \"STATE_UNSPECIFIED\",\n    \"jobType\" : \"PIPELINE\"\n  }, {\n    \"name\" : \"Marget Ullrich\",\n    \"assignee\" : \"ewqnn6u0r8fbakqhb7qvu2lqika1d0lb3p\",\n    \"state\" : \"ACTIVE\",\n    \"jobType\" : \"ML_EXTERNAL\"\n  }, {\n    \"name\" : \"Lolita Roob\",\n    \"assignee\" : \"xpxzmht24jd64qoozxkrwt09ogvsts639bhimf41ggp6vljdvx0xzc0t1zbxc8qs3a3opiqsnc8125xfkxismgehm6e88dtdmoho2e0l4v7gw7dsgd97qw9ft6fodlauo826\",\n    \"state\" : \"PENDING\",\n    \"jobType\" : \"JOB_TYPE_UNSPECIFIED\"\n  } ],\n  \"nextPageToken\" : \"iotjn4ci47shbcge2ecrnqx19w0b76tb8ldfn59meguqfrfd08m4clccmbq9qn4qq9ymff2929iyyzrhcgz6nq8chf95bjezhxv4eo6frq8muofdvdqxu11udznvaa6v8dulrauhi8gehash485oru09s0ier0wp1wlswb12e32ahp5\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "3fdb4a4e-2733-450d-ab63-07cc8e4e91ba",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:06.797749Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "bigqueryreservation.projects.locations.searchAssignments",
+          "schema" : {
+            "description" : "The response for ReservationService.SearchAssignments.",
+            "properties" : {
+              "assignments" : {
+                "description" : "List of assignments visible to the user.",
+                "items" : {
+                  "$ref" : "#/components/schemas/Assignment"
+                },
+                "type" : "array"
+              },
+              "nextPageToken" : {
+                "description" : "Token to retrieve the next page of results, or empty if there are no more results in the list.",
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 0
+  }, {
+    "id" : "1b8b7852-4083-4879-9d96-51577105826b",
+    "name" : "Creates a new reservation resource.",
+    "request" : {
+      "urlPath" : "/v1beta1/ebqwqijvjaclflp2w93u84qa1p2vfl8pkateptvgxm3omtmxg4rqx3rn7el93h1wb2c131t5vwoph7ouiqyk4mcj4uwe5u43yjw8f7zczs9r3kd0jr3dzc7x0rmu10tmsl8s6qbzsywq1ja8p77snime3vjlmq8wnlw0oryfaapr253i2q5agfei1kc0hx07r5ts8/reservations",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"multiRegionAuxiliary\" : false,\n  \"creationTime\" : \"2022-12-05T06:57:06.797164Z\",\n  \"ignoreIdleSlots\" : false,\n  \"name\" : \"Kyle Hilll\",\n  \"slotCapacity\" : \"West Angellaborough\",\n  \"updateTime\" : \"2022-10-17T08:18:06.797283Z\",\n  \"concurrency\" : \"TZS\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "1b8b7852-4083-4879-9d96-51577105826b",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:06.797416Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "bigqueryreservation.projects.locations.reservations.create",
+          "schema" : {
+            "description" : "A reservation is a mechanism used to guarantee slots to users.",
+            "properties" : {
+              "concurrency" : {
+                "description" : "Job concurrency target which sets a soft upper bound on the number of jobs that can run concurrently in this reservation. This is a soft target due to asynchronous nature of the system and various optimizations for small queries. Default value is 0 which means that concurrency target will be automatically computed by the system. NOTE: this field is exposed as `target_job_concurrency` in the Information Schema, DDL and BQ CLI.",
+                "format" : "int64",
+                "type" : "string"
+              },
+              "creationTime" : {
+                "description" : "Output only. Creation time of the reservation.",
+                "format" : "google-datetime",
+                "readOnly" : true,
+                "type" : "string"
+              },
+              "ignoreIdleSlots" : {
+                "description" : "If false, any query or pipeline job using this reservation will use idle slots from other reservations within the same admin project. If true, a query or pipeline job using this reservation will execute with the slot capacity specified in the slot_capacity field at most.",
+                "type" : "boolean"
+              },
+              "multiRegionAuxiliary" : {
+                "description" : "Applicable only for reservations located within one of the BigQuery multi-regions (US or EU). If set to true, this reservation is placed in the organization's secondary region which is designated for disaster recovery purposes. If false, this reservation is placed in the organization's default region.",
+                "type" : "boolean"
+              },
+              "name" : {
+                "description" : "The resource name of the reservation, e.g., `projects/*/locations/*/reservations/team1-prod`. The reservation_id must only contain lower case alphanumeric characters or dashes. It must start with a letter and must not end with a dash. Its maximum length is 64 characters.",
+                "type" : "string"
+              },
+              "slotCapacity" : {
+                "description" : "Minimum slots available to this reservation. A slot is a unit of computational power in BigQuery, and serves as the unit of parallelism. Queries using this reservation might use more slots during runtime if ignore_idle_slots is set to false. If the new reservation's slot capacity exceeds the project's slot capacity or if total slot capacity of the new reservation and its siblings exceeds the project's slot capacity, the request will fail with `google.rpc.Code.RESOURCE_EXHAUSTED`. NOTE: for reservations in US or EU multi-regions, slot capacity constraints are checked separately for default and auxiliary regions. See multi_region_auxiliary flag for more details.",
+                "format" : "int64",
+                "type" : "string"
+              },
+              "updateTime" : {
+                "description" : "Output only. Last update time of the reservation.",
+                "format" : "google-datetime",
+                "readOnly" : true,
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 1
+  }, {
+    "id" : "9611d680-c013-434e-8c68-aff4d160edcc",
+    "name" : "Lists all the reservations for the project in the specified location.",
+    "request" : {
+      "urlPath" : "/v1beta1/rommmijnfn2v6ou5hvart9ec3rtct4bovc7qgxmt2f6z7wtk9h6jt6gwn5nhy20egpjj5eggdh790tpxf2gaknbvz4ckkpr3gk08h4ccexhf/reservations",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"reservations\" : [ {\n    \"multiRegionAuxiliary\" : true,\n    \"creationTime\" : \"2023-03-21T08:39:06.796278Z\",\n    \"ignoreIdleSlots\" : false,\n    \"name\" : \"Gregory Weimann\",\n    \"slotCapacity\" : \"Millsfurt\",\n    \"updateTime\" : \"2023-01-26T08:28:06.796413Z\",\n    \"concurrency\" : \"ZAR\"\n  }, {\n    \"multiRegionAuxiliary\" : true,\n    \"creationTime\" : \"2022-07-16T08:51:06.796471Z\",\n    \"ignoreIdleSlots\" : true,\n    \"name\" : \"Ayako Trantow\",\n    \"slotCapacity\" : \"Port Trey\",\n    \"updateTime\" : \"2023-03-17T05:25:06.796601Z\",\n    \"concurrency\" : \"MGA\"\n  }, {\n    \"multiRegionAuxiliary\" : true,\n    \"creationTime\" : \"2022-11-11T07:40:06.796663Z\",\n    \"ignoreIdleSlots\" : false,\n    \"name\" : \"Mr. Eloisa Kshlerin\",\n    \"slotCapacity\" : \"Hoppeborough\",\n    \"updateTime\" : \"2022-11-08T07:09:06.796774Z\",\n    \"concurrency\" : \"CLP\"\n  }, {\n    \"multiRegionAuxiliary\" : true,\n    \"creationTime\" : \"2022-11-17T09:19:06.796825Z\",\n    \"ignoreIdleSlots\" : true,\n    \"name\" : \"Andres Schulist\",\n    \"slotCapacity\" : \"South Darrickberg\",\n    \"updateTime\" : \"2023-01-18T08:26:06.796985Z\",\n    \"concurrency\" : \"XAU\"\n  } ],\n  \"nextPageToken\" : \"l7dif8ffxet9v3lraeqm6z2n6e0zlakhi2mg74d2kash23j5vil33pnwhl95ym18080loplfkmxybs55uajsovwi8az1bvfjdojs9c3ahlwed0tszbxv83le9cx74fnn7zgvc3ouovjrxadp7le6i7dayw\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "9611d680-c013-434e-8c68-aff4d160edcc",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:06.797124Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "bigqueryreservation.projects.locations.reservations.list",
+          "schema" : {
+            "description" : "The response for ReservationService.ListReservations.",
+            "properties" : {
+              "nextPageToken" : {
+                "description" : "Token to retrieve the next page of results, or empty if there are no more results in the list.",
+                "type" : "string"
+              },
+              "reservations" : {
+                "description" : "List of reservations visible to the user.",
+                "items" : {
+                  "$ref" : "#/components/schemas/Reservation"
+                },
+                "type" : "array"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 2
+  }, {
+    "id" : "45afdd3b-ef2a-442e-93b9-69dc7dd4a948",
+    "name" : "Merges capacity commitments of the same plan into a single commitment. The resul...",
+    "request" : {
+      "urlPath" : "/v1beta1/hxfluw0wzv4fagpwz97ggoodpx5zn4koc990um7ahwr5j/capacityCommitments:merge",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"multiRegionAuxiliary\" : true,\n  \"renewalPlan\" : \"FLEX\",\n  \"slotCount\" : \"vsh4if6n870k6pugjdmj4dmog95bbk5qp8mqn88q5nyorlmsfeazdbu0z1cniqevxnh2dof0i6j062lnkcq71bdxfssdtiqyztrcf4bhedzo33lypz34jo3vw9ezwaj60mz4qr0s5hvi5tbh2f8d4m4d\",\n  \"name\" : \"Mrs. Shawn King\",\n  \"state\" : \"PENDING\",\n  \"plan\" : \"MONTHLY\",\n  \"commitmentEndTime\" : \"2023-01-16T08:01:06.795948Z\",\n  \"failureStatus\" : {\n    \"code\" : 204517514,\n    \"details\" : [ { }, { }, { }, { }, { }, { }, { } ],\n    \"message\" : \"Sit nihil a cumque hic occaecati sint molestiae. Aspernatur delectus ut voluptates ipsa id quasi. Ut debitis accusamus eius at rem et earum. Quidem voluptatem at cupiditate eius error.\"\n  },\n  \"commitmentStartTime\" : \"2022-09-20T09:09:06.796061Z\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "45afdd3b-ef2a-442e-93b9-69dc7dd4a948",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:06.796213Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "bigqueryreservation.projects.locations.capacityCommitments.merge",
+          "schema" : {
+            "description" : "Capacity commitment is a way to purchase compute capacity for BigQuery jobs (in the form of slots) with some committed period of usage. Annual commitments renew by default. Commitments can be removed after their commitment end time passes. In order to remove annual commitment, its plan needs to be changed to monthly or flex first. A capacity commitment resource exists as a child resource of the admin project.",
+            "properties" : {
+              "commitmentEndTime" : {
+                "description" : "Output only. The end of the current commitment period. It is applicable only for ACTIVE capacity commitments.",
+                "format" : "google-datetime",
+                "readOnly" : true,
+                "type" : "string"
+              },
+              "commitmentStartTime" : {
+                "description" : "Output only. The start of the current commitment period. It is applicable only for ACTIVE capacity commitments.",
+                "format" : "google-datetime",
+                "readOnly" : true,
+                "type" : "string"
+              },
+              "failureStatus" : {
+                "$ref" : "#/components/schemas/Status"
+              },
+              "multiRegionAuxiliary" : {
+                "description" : "Applicable only for commitments located within one of the BigQuery multi-regions (US or EU). If set to true, this commitment is placed in the organization's secondary region which is designated for disaster recovery purposes. If false, this commitment is placed in the organization's default region.",
+                "type" : "boolean"
+              },
+              "name" : {
+                "description" : "Output only. The resource name of the capacity commitment, e.g., `projects/myproject/locations/US/capacityCommitments/123` The commitment_id must only contain lower case alphanumeric characters or dashes. It must start with a letter and must not end with a dash. Its maximum length is 64 characters.",
+                "readOnly" : true,
+                "type" : "string"
+              },
+              "plan" : {
+                "description" : "Capacity commitment commitment plan.",
+                "enum" : [ "COMMITMENT_PLAN_UNSPECIFIED", "FLEX", "TRIAL", "MONTHLY", "ANNUAL" ],
+                "type" : "string"
+              },
+              "renewalPlan" : {
+                "description" : "The plan this capacity commitment is converted to after commitment_end_time passes. Once the plan is changed, committed period is extended according to commitment plan. Only applicable for ANNUAL commitments.",
+                "enum" : [ "COMMITMENT_PLAN_UNSPECIFIED", "FLEX", "TRIAL", "MONTHLY", "ANNUAL" ],
+                "type" : "string"
+              },
+              "slotCount" : {
+                "description" : "Number of slots in this commitment.",
+                "format" : "int64",
+                "type" : "string"
+              },
+              "state" : {
+                "description" : "Output only. State of the commitment.",
+                "enum" : [ "STATE_UNSPECIFIED", "PENDING", "ACTIVE", "FAILED" ],
+                "readOnly" : true,
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 3
+  }, {
+    "id" : "b7444e73-63b6-4547-866c-dd18397659bd",
+    "name" : "Creates a new capacity commitment resource.",
+    "request" : {
+      "urlPath" : "/v1beta1/17f8lpkosjoujxgbelyecjc4n29cgd6zrli4cy35awd6l7hgwljjs14hou3dpxr4aaujaedy26ly3auqstftppd3cvhl9g9z5rrxzujrgtq6lyb7vbubnfwegfjzu2b4531l7jo/capacityCommitments",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"multiRegionAuxiliary\" : true,\n  \"renewalPlan\" : \"MONTHLY\",\n  \"slotCount\" : \"cd54izrkukpt1u\",\n  \"name\" : \"Floria Smitham MD\",\n  \"state\" : \"PENDING\",\n  \"plan\" : \"FLEX\",\n  \"commitmentEndTime\" : \"2023-01-25T05:37:06.795555Z\",\n  \"failureStatus\" : {\n    \"code\" : 645007353,\n    \"details\" : [ { }, { }, { }, { }, { } ],\n    \"message\" : \"Quod non sed earum. Quia dolorum a. Officia sit sint. Dolorem voluptas ut. Perferendis sed distinctio soluta dolor nam aperiam.\"\n  },\n  \"commitmentStartTime\" : \"2023-01-11T06:42:06.795633Z\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "b7444e73-63b6-4547-866c-dd18397659bd",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:06.795791Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "bigqueryreservation.projects.locations.capacityCommitments.create",
+          "schema" : {
+            "description" : "Capacity commitment is a way to purchase compute capacity for BigQuery jobs (in the form of slots) with some committed period of usage. Annual commitments renew by default. Commitments can be removed after their commitment end time passes. In order to remove annual commitment, its plan needs to be changed to monthly or flex first. A capacity commitment resource exists as a child resource of the admin project.",
+            "properties" : {
+              "commitmentEndTime" : {
+                "description" : "Output only. The end of the current commitment period. It is applicable only for ACTIVE capacity commitments.",
+                "format" : "google-datetime",
+                "readOnly" : true,
+                "type" : "string"
+              },
+              "commitmentStartTime" : {
+                "description" : "Output only. The start of the current commitment period. It is applicable only for ACTIVE capacity commitments.",
+                "format" : "google-datetime",
+                "readOnly" : true,
+                "type" : "string"
+              },
+              "failureStatus" : {
+                "$ref" : "#/components/schemas/Status"
+              },
+              "multiRegionAuxiliary" : {
+                "description" : "Applicable only for commitments located within one of the BigQuery multi-regions (US or EU). If set to true, this commitment is placed in the organization's secondary region which is designated for disaster recovery purposes. If false, this commitment is placed in the organization's default region.",
+                "type" : "boolean"
+              },
+              "name" : {
+                "description" : "Output only. The resource name of the capacity commitment, e.g., `projects/myproject/locations/US/capacityCommitments/123` The commitment_id must only contain lower case alphanumeric characters or dashes. It must start with a letter and must not end with a dash. Its maximum length is 64 characters.",
+                "readOnly" : true,
+                "type" : "string"
+              },
+              "plan" : {
+                "description" : "Capacity commitment commitment plan.",
+                "enum" : [ "COMMITMENT_PLAN_UNSPECIFIED", "FLEX", "TRIAL", "MONTHLY", "ANNUAL" ],
+                "type" : "string"
+              },
+              "renewalPlan" : {
+                "description" : "The plan this capacity commitment is converted to after commitment_end_time passes. Once the plan is changed, committed period is extended according to commitment plan. Only applicable for ANNUAL commitments.",
+                "enum" : [ "COMMITMENT_PLAN_UNSPECIFIED", "FLEX", "TRIAL", "MONTHLY", "ANNUAL" ],
+                "type" : "string"
+              },
+              "slotCount" : {
+                "description" : "Number of slots in this commitment.",
+                "format" : "int64",
+                "type" : "string"
+              },
+              "state" : {
+                "description" : "Output only. State of the commitment.",
+                "enum" : [ "STATE_UNSPECIFIED", "PENDING", "ACTIVE", "FAILED" ],
+                "readOnly" : true,
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 4
+  }, {
+    "id" : "9c83b03a-ea14-4fbb-a07e-7a966f759bb2",
+    "name" : "Lists all the capacity commitments for the admin project.",
+    "request" : {
+      "urlPath" : "/v1beta1/n3787090xtwxd9iup87u25jdpfgex/capacityCommitments",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"nextPageToken\" : \"nid1oyeeqeh7cpr04dek36p4tjd0sb3t99z6lt65jbvgcv0a5k3s1tx5dmgn9bl4qwsemxf58hfic3zuzsv1g\",\n  \"capacityCommitments\" : [ {\n    \"multiRegionAuxiliary\" : true,\n    \"renewalPlan\" : \"MONTHLY\",\n    \"slotCount\" : \"w8fwswleahcldadr4t1abxxfn07zwkol9oy0ji6ubb2v2r5tozboxdo58zaou964d95pagsgucmlmkuya54cuv19hrn93hw5rw89mjauegu\",\n    \"name\" : \"Miss Tanika Fahey\",\n    \"state\" : \"STATE_UNSPECIFIED\",\n    \"plan\" : \"COMMITMENT_PLAN_UNSPECIFIED\",\n    \"commitmentEndTime\" : \"2022-04-29T05:44:06.793931Z\",\n    \"failureStatus\" : {\n      \"code\" : 1840246244,\n      \"details\" : [ { }, { }, { }, { }, { } ],\n      \"message\" : \"Saepe qui autem quidem architecto dolores error. Nihil non modi eum minus. Aut fuga omnis amet neque et laboriosam dolorem.\"\n    },\n    \"commitmentStartTime\" : \"2022-06-27T06:31:06.794011Z\"\n  }, {\n    \"multiRegionAuxiliary\" : false,\n    \"renewalPlan\" : \"FLEX\",\n    \"slotCount\" : \"lhlgl3wajxwn0arba9ftggfn51y4mudby1kgpjl1htg3d2zt78axin0u5cetk6bwkk12qdm8tq8a0mh2wwqquz3pjazn5ciett4m7k8hw679df0aexe3ag1l9ylb6cwekmeh5ywez6mjbkyfznjcfwar5sxkrw\",\n    \"name\" : \"Emely Sipes II\",\n    \"state\" : \"ACTIVE\",\n    \"plan\" : \"TRIAL\",\n    \"commitmentEndTime\" : \"2022-07-18T08:28:06.794124Z\",\n    \"failureStatus\" : {\n      \"code\" : 1016621457,\n      \"details\" : [ { }, { }, { }, { }, { }, { } ],\n      \"message\" : \"Ullam debitis non soluta sit. Et placeat rerum id iusto. Ratione molestiae harum. Velit sit enim molestiae sunt molestias aut. Esse itaque odit.\"\n    },\n    \"commitmentStartTime\" : \"2022-11-21T07:14:06.794207Z\"\n  }, {\n    \"multiRegionAuxiliary\" : true,\n    \"renewalPlan\" : \"COMMITMENT_PLAN_UNSPECIFIED\",\n    \"slotCount\" : \"vrucandqcjuaew3ng8kij7qp4mkhw94afezc07vl3turm0rbisdf65gcazotpkgxhg43841tt3i2ld4e1lu4hyy656ltsszo58ogr1uyafa147me7xxy\",\n    \"name\" : \"Lucius Pagac\",\n    \"state\" : \"FAILED\",\n    \"plan\" : \"TRIAL\",\n    \"commitmentEndTime\" : \"2023-03-27T06:39:06.794317Z\",\n    \"failureStatus\" : {\n      \"code\" : 1468247176,\n      \"details\" : [ { }, { }, { }, { }, { }, { }, { }, { } ],\n      \"message\" : \"Autem atque sit. Praesentium optio repellat. Aut provident ut quam sed. Vel optio qui quasi quam deserunt. Tenetur ullam veritatis.\"\n    },\n    \"commitmentStartTime\" : \"2022-09-18T08:45:06.794404Z\"\n  }, {\n    \"multiRegionAuxiliary\" : true,\n    \"renewalPlan\" : \"TRIAL\",\n    \"slotCount\" : \"rbeh8kw02f8pf8sl7t5rkyvq104t3bqwjfw4n3nb7qsrc0i9nbiy9bru3sn9aodntl9wew1pr8rq9iz9s6wzbkr304j8v4xdeh8kw6eispd\",\n    \"name\" : \"Ariel Nikolaus\",\n    \"state\" : \"ACTIVE\",\n    \"plan\" : \"MONTHLY\",\n    \"commitmentEndTime\" : \"2022-05-25T05:42:06.79451Z\",\n    \"failureStatus\" : {\n      \"code\" : 1577802601,\n      \"details\" : [ { }, { }, { }, { } ],\n      \"message\" : \"Non consectetur saepe. Id voluptatem aut totam possimus modi facere in. Maxime vel et accusantium illum eum dolorem.\"\n    },\n    \"commitmentStartTime\" : \"2022-11-18T08:30:06.794586Z\"\n  }, {\n    \"multiRegionAuxiliary\" : true,\n    \"renewalPlan\" : \"FLEX\",\n    \"slotCount\" : \"im4uihaiibpi428s352gfq58lfao3clse5m71s6g\",\n    \"name\" : \"Randal Bogisich\",\n    \"state\" : \"STATE_UNSPECIFIED\",\n    \"plan\" : \"TRIAL\",\n    \"commitmentEndTime\" : \"2022-04-03T08:31:06.79469Z\",\n    \"failureStatus\" : {\n      \"code\" : 1273529370,\n      \"details\" : [ { }, { }, { } ],\n      \"message\" : \"Molestiae optio exercitationem qui quaerat. Consectetur aliquam et deleniti fugiat. Illum est iusto magnam nesciunt.\"\n    },\n    \"commitmentStartTime\" : \"2022-07-16T07:11:06.794764Z\"\n  }, {\n    \"multiRegionAuxiliary\" : true,\n    \"renewalPlan\" : \"ANNUAL\",\n    \"slotCount\" : \"e8q3o4qgwzdljdt5bhv6st7kece0n9sf1q20tpf9vqbpywv3wrcq7jguwye2pu3x1550jvt1ww1uvof1cxaoiy395x5wumd0efoofqy43hdt22difiqcr54xytyp02717aqtfxshn5x9kp7vgco2vp81ea2piu739n5uw\",\n    \"name\" : \"Miss Kathlene Bartoletti\",\n    \"state\" : \"ACTIVE\",\n    \"plan\" : \"COMMITMENT_PLAN_UNSPECIFIED\",\n    \"commitmentEndTime\" : \"2022-04-19T08:39:06.794869Z\",\n    \"failureStatus\" : {\n      \"code\" : 1025516127,\n      \"details\" : [ { }, { }, { }, { }, { }, { } ],\n      \"message\" : \"Molestiae neque sit rerum quia necessitatibus nemo. Sint qui voluptates in optio sed. Veniam esse quia consequatur et ad.\"\n    },\n    \"commitmentStartTime\" : \"2023-01-22T08:23:06.794945Z\"\n  }, {\n    \"multiRegionAuxiliary\" : true,\n    \"renewalPlan\" : \"FLEX\",\n    \"slotCount\" : \"1beczdvtoh3eyzrvnuaaq33zx0lbau42032zm322z9cy3paa2h7ej46z756z4slk4mw0v\",\n    \"name\" : \"Evelina McCullough\",\n    \"state\" : \"STATE_UNSPECIFIED\",\n    \"plan\" : \"MONTHLY\",\n    \"commitmentEndTime\" : \"2023-03-11T08:17:06.79505Z\",\n    \"failureStatus\" : {\n      \"code\" : 1873923878,\n      \"details\" : [ { }, { } ],\n      \"message\" : \"Doloremque quia dolorum repellendus quo. Nihil blanditiis ipsum. Nisi harum voluptatem nesciunt dolorem dolorem. Est facilis quam. Tenetur mollitia vel non repellendus vitae.\"\n    },\n    \"commitmentStartTime\" : \"2022-04-20T06:36:06.795123Z\"\n  }, {\n    \"multiRegionAuxiliary\" : false,\n    \"renewalPlan\" : \"COMMITMENT_PLAN_UNSPECIFIED\",\n    \"slotCount\" : \"4936uf5awng97mh5z12a074t4ce2hgjx85o68z046qggxo7xi2rea0bgv463tikknn3nnu8i7sdm94ckyi5lb5xroo7amexj1ux8nux69shlzkz\",\n    \"name\" : \"Ken Green\",\n    \"state\" : \"ACTIVE\",\n    \"plan\" : \"TRIAL\",\n    \"commitmentEndTime\" : \"2022-04-12T06:56:06.795227Z\",\n    \"failureStatus\" : {\n      \"code\" : 927562135,\n      \"details\" : [ { }, { } ],\n      \"message\" : \"Vel nemo tempore consectetur dolor. Vel facere temporibus nihil aliquam aut natus odio. Earum aliquam laborum consequuntur.\"\n    },\n    \"commitmentStartTime\" : \"2022-07-05T06:25:06.795298Z\"\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "9c83b03a-ea14-4fbb-a07e-7a966f759bb2",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:06.795426Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "bigqueryreservation.projects.locations.capacityCommitments.list",
+          "schema" : {
+            "description" : "The response for ReservationService.ListCapacityCommitments.",
+            "properties" : {
+              "capacityCommitments" : {
+                "description" : "List of capacity commitments visible to the user.",
+                "items" : {
+                  "$ref" : "#/components/schemas/CapacityCommitment"
+                },
+                "type" : "array"
+              },
+              "nextPageToken" : {
+                "description" : "Token to retrieve the next page of results, or empty if there are no more results in the list.",
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 5
+  }, {
+    "id" : "4febaf30-6f2d-4af1-a250-8cf446dca2c8",
+    "name" : "Creates an assignment object which allows the given project to submit jobs of a ...",
+    "request" : {
+      "urlPath" : "/v1beta1/31k0e225my0u4me02m11qqp7kecfdknrojjmhtpj1ioy6cs230x6gutn4y7m4g5gyl9h2swvtrrojbcnzv5qrms8pp0hhzfu47tzv8opi1bu945jppbpmknwwvmldz5dniopbdmh981prz9i1ut8fh4sck2ahy85/assignments",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"name\" : \"Jeremy Feeney\",\n  \"assignee\" : \"mmcc87ww1cfxuv78qab1l35al5fwu299w50hl11uk94kygjnbl0gl7tvuun6chur6pj3x4r3kgc\",\n  \"state\" : \"STATE_UNSPECIFIED\",\n  \"jobType\" : \"QUERY\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "4febaf30-6f2d-4af1-a250-8cf446dca2c8",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:06.793792Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "bigqueryreservation.projects.locations.reservations.assignments.create",
+          "schema" : {
+            "description" : "An assignment allows a project to submit jobs of a certain type using slots from the specified reservation.",
+            "properties" : {
+              "assignee" : {
+                "description" : "The resource which will use the reservation. E.g. `projects/myproject`, `folders/123`, or `organizations/456`.",
+                "type" : "string"
+              },
+              "jobType" : {
+                "description" : "Which type of jobs will use the reservation.",
+                "enum" : [ "JOB_TYPE_UNSPECIFIED", "PIPELINE", "QUERY", "ML_EXTERNAL" ],
+                "type" : "string"
+              },
+              "name" : {
+                "description" : "Output only. Name of the resource. E.g.: `projects/myproject/locations/US/reservations/team1-prod/assignments/123`. The assignment_id must only contain lower case alphanumeric characters or dashes and the max length is 64 characters.",
+                "readOnly" : true,
+                "type" : "string"
+              },
+              "state" : {
+                "description" : "Output only. State of the assignment.",
+                "enum" : [ "STATE_UNSPECIFIED", "PENDING", "ACTIVE" ],
+                "readOnly" : true,
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 6
+  }, {
+    "id" : "c718f2c8-9ee6-4ce7-987e-e8a6e535b38f",
+    "name" : "Lists assignments. Only explicitly created assignments will be returned. Example...",
+    "request" : {
+      "urlPath" : "/v1beta1/eh130e29trh7gpotdmf316llzkfot018tjiebyn56xbk8ver2a47fgtdk5obi556xmg0jnklplkeo7pir59wk1wjq1itjxhbkm5tyexaee4wu9e6b22ob5qbsd9hzmofb23b6h3rfh3391o8jufhttd2s45o2fy7p7fx2xegaut3l08zvx3zofjn/assignments",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"assignments\" : [ {\n    \"name\" : \"Myron Rippin\",\n    \"assignee\" : \"zmgp98fylngkix4hb67oxax41iaf5xquk70u2v0bqhsh9z8dgwnm50mpr8za65as758tuc90zp6czipm2282p6wn6b2xezt9o7js4gbwiz40cszj46mlzqhej1jgjnvg0ue0dgw81umjeva9yxyb1i83l6bv6pkt6\",\n    \"state\" : \"PENDING\",\n    \"jobType\" : \"ML_EXTERNAL\"\n  }, {\n    \"name\" : \"Roxana Block\",\n    \"assignee\" : \"ox985958p7n7w8lmmovasysegouo6fskxghfeyzaz7a3bys16020t05cc5yz0zrxo14k7e\",\n    \"state\" : \"STATE_UNSPECIFIED\",\n    \"jobType\" : \"JOB_TYPE_UNSPECIFIED\"\n  }, {\n    \"name\" : \"Lucas Hickle\",\n    \"assignee\" : \"92zw8s98x\",\n    \"state\" : \"STATE_UNSPECIFIED\",\n    \"jobType\" : \"ML_EXTERNAL\"\n  }, {\n    \"name\" : \"Miss Jasper Crist\",\n    \"assignee\" : \"4fgvaficvadq577l2657k12pmwwv4y2o4l08tsph98u9u0l29zdan58y2jrdkbt1rawcelp\",\n    \"state\" : \"ACTIVE\",\n    \"jobType\" : \"JOB_TYPE_UNSPECIFIED\"\n  }, {\n    \"name\" : \"Rico Altenwerth Sr.\",\n    \"assignee\" : \"tcguyakvxb9xtggeo7hygh58g0ddn4\",\n    \"state\" : \"PENDING\",\n    \"jobType\" : \"QUERY\"\n  }, {\n    \"name\" : \"Luise Klein\",\n    \"assignee\" : \"mjjtlhvs1nwloss7ulay0zt5y9qzh1634kz6198h2qnwzie5nxmuek8b2k3sq3rrd4gan5uo6ipzw42px41nl73pv77f1g0xvo6p4s2elt1u1oileijm1c\",\n    \"state\" : \"ACTIVE\",\n    \"jobType\" : \"JOB_TYPE_UNSPECIFIED\"\n  } ],\n  \"nextPageToken\" : \"dz3z4u8ndmod089deivwknqwtir54df0yhdbl1h0fd70mm9cwjlu\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "c718f2c8-9ee6-4ce7-987e-e8a6e535b38f",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:06.793654Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "bigqueryreservation.projects.locations.reservations.assignments.list",
+          "schema" : {
+            "description" : "The response for ReservationService.ListAssignments.",
+            "properties" : {
+              "assignments" : {
+                "description" : "List of assignments visible to the user.",
+                "items" : {
+                  "$ref" : "#/components/schemas/Assignment"
+                },
+                "type" : "array"
+              },
+              "nextPageToken" : {
+                "description" : "Token to retrieve the next page of results, or empty if there are no more results in the list.",
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 7
+  }, {
+    "id" : "aa1e31cd-3877-4a06-8d49-d595fa60f264",
+    "name" : "Splits capacity commitment to two commitments of the same plan and `commitment_e...",
+    "request" : {
+      "urlPath" : "/v1beta1/Kelley+Gerhold:split",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"first\" : {\n    \"multiRegionAuxiliary\" : true,\n    \"renewalPlan\" : \"ANNUAL\",\n    \"slotCount\" : \"xwy1yxb94vmdlkozgf76g5efj6radur9wetlpye74cgu2mb9zscvduys4af63ffwcts8f7y4b74ki2pif50idshdueo2juwsjlm4wslihpmim1teuyrrbocixak4gwep830q7o2emhf9ympxpy65d3nzpbtt3c0s3m8pp5cdq8lpts7zp5oxnrpw2\",\n    \"name\" : \"Benjamin\",\n    \"state\" : \"ACTIVE\",\n    \"plan\" : \"TRIAL\",\n    \"commitmentEndTime\" : \"2022-10-07T09:10:06.792749Z\",\n    \"failureStatus\" : {\n      \"code\" : 252219780,\n      \"details\" : [ { }, { } ],\n      \"message\" : \"Et ea dolorem itaque ipsa voluptas excepturi. Quia non vitae ducimus natus. Aut nobis eveniet error magni est.\"\n    },\n    \"commitmentStartTime\" : \"2022-11-09T07:51:06.792856Z\"\n  },\n  \"second\" : {\n    \"multiRegionAuxiliary\" : true,\n    \"renewalPlan\" : \"ANNUAL\",\n    \"slotCount\" : \"tisjtxsq9mrobmnmpdl4y1ycoqi0dmc2r3ohjs56vpql0rv6uo9gp3g26di1tt0mthds227p5hzjv0x6tm03k6s0iblh3dl3brr7svzsgeyqepm76tzos2krdc5xgzfnw9z7bao9cwnzvp5vdj4breg3zh5cdmpg9\",\n    \"name\" : \"Garret Weissnat DDS\",\n    \"state\" : \"PENDING\",\n    \"plan\" : \"FLEX\",\n    \"commitmentEndTime\" : \"2022-08-04T05:30:06.792974Z\",\n    \"failureStatus\" : {\n      \"code\" : 1908532606,\n      \"details\" : [ { }, { }, { }, { }, { }, { }, { } ],\n      \"message\" : \"Incidunt voluptatem culpa exercitationem maxime consequatur. Nesciunt soluta et quis labore est recusandae inventore. Sunt laudantium voluptatum odio. Sunt et id aliquam commodi amet magnam et. Commod\"\n    },\n    \"commitmentStartTime\" : \"2022-07-26T05:36:06.793063Z\"\n  }\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "aa1e31cd-3877-4a06-8d49-d595fa60f264",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:06.79315Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "bigqueryreservation.projects.locations.capacityCommitments.split",
+          "schema" : {
+            "description" : "The response for ReservationService.SplitCapacityCommitment.",
+            "properties" : {
+              "first" : {
+                "$ref" : "#/components/schemas/CapacityCommitment"
+              },
+              "second" : {
+                "$ref" : "#/components/schemas/CapacityCommitment"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 8
+  }, {
+    "id" : "a39d9ce0-b0ae-4580-9310-3dc6c6f10e61",
+    "name" : "Moves an assignment under a new reservation. This differs from removing an exist...",
+    "request" : {
+      "urlPath" : "/v1beta1/Cira+Konopelski:move",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"name\" : \"Ramon Rath\",\n  \"assignee\" : \"0qaib29ib58ogi5nncwm7plib9b3zrgsqqva5foli2sxcpxvj\",\n  \"state\" : \"PENDING\",\n  \"jobType\" : \"QUERY\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "a39d9ce0-b0ae-4580-9310-3dc6c6f10e61",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:06.792602Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "bigqueryreservation.projects.locations.reservations.assignments.move",
+          "schema" : {
+            "description" : "An assignment allows a project to submit jobs of a certain type using slots from the specified reservation.",
+            "properties" : {
+              "assignee" : {
+                "description" : "The resource which will use the reservation. E.g. `projects/myproject`, `folders/123`, or `organizations/456`.",
+                "type" : "string"
+              },
+              "jobType" : {
+                "description" : "Which type of jobs will use the reservation.",
+                "enum" : [ "JOB_TYPE_UNSPECIFIED", "PIPELINE", "QUERY", "ML_EXTERNAL" ],
+                "type" : "string"
+              },
+              "name" : {
+                "description" : "Output only. Name of the resource. E.g.: `projects/myproject/locations/US/reservations/team1-prod/assignments/123`. The assignment_id must only contain lower case alphanumeric characters or dashes and the max length is 64 characters.",
+                "readOnly" : true,
+                "type" : "string"
+              },
+              "state" : {
+                "description" : "Output only. State of the assignment.",
+                "enum" : [ "STATE_UNSPECIFIED", "PENDING", "ACTIVE" ],
+                "readOnly" : true,
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 9
+  }, {
+    "id" : "282577ce-ecd6-4b76-b492-a11380ad5c0a",
+    "name" : "Updates an existing assignment. Only the `priority` field can be updated.",
+    "request" : {
+      "urlPath" : "/v1beta1/Norman+Bechtelar+Sr.",
+      "method" : "PATCH"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"name\" : \"Soraya Daniel\",\n  \"assignee\" : \"hp934vhofsdr5us41hrmpc2cghestjlrsqbol6ms0xe4wc8nkhs28mhdc2g8whpwkr41bxgfskbiczpavvph9sq8d37ganxfugrqxie0e8mgldbr5da1x4y220gejtzauefr34l00ik7b83lf83fms0mww1g0jl1blpft28\",\n  \"state\" : \"PENDING\",\n  \"jobType\" : \"JOB_TYPE_UNSPECIFIED\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "282577ce-ecd6-4b76-b492-a11380ad5c0a",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:06.792428Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "bigqueryreservation.projects.locations.reservations.assignments.patch",
+          "schema" : {
+            "description" : "An assignment allows a project to submit jobs of a certain type using slots from the specified reservation.",
+            "properties" : {
+              "assignee" : {
+                "description" : "The resource which will use the reservation. E.g. `projects/myproject`, `folders/123`, or `organizations/456`.",
+                "type" : "string"
+              },
+              "jobType" : {
+                "description" : "Which type of jobs will use the reservation.",
+                "enum" : [ "JOB_TYPE_UNSPECIFIED", "PIPELINE", "QUERY", "ML_EXTERNAL" ],
+                "type" : "string"
+              },
+              "name" : {
+                "description" : "Output only. Name of the resource. E.g.: `projects/myproject/locations/US/reservations/team1-prod/assignments/123`. The assignment_id must only contain lower case alphanumeric characters or dashes and the max length is 64 characters.",
+                "readOnly" : true,
+                "type" : "string"
+              },
+              "state" : {
+                "description" : "Output only. State of the assignment.",
+                "enum" : [ "STATE_UNSPECIFIED", "PENDING", "ACTIVE" ],
+                "readOnly" : true,
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 10
+  }, {
+    "id" : "31ca4601-e9c1-4980-a427-5f35fa0bf1df",
+    "name" : "Returns information about the reservation.",
+    "request" : {
+      "urlPath" : "/v1beta1/Isela+Boyle",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"multiRegionAuxiliary\" : false,\n  \"creationTime\" : \"2022-04-27T08:22:06.791863Z\",\n  \"ignoreIdleSlots\" : true,\n  \"name\" : \"Mr. Carson Jerde\",\n  \"slotCapacity\" : \"West Malcolmville\",\n  \"updateTime\" : \"2023-01-21T07:59:06.792015Z\",\n  \"concurrency\" : \"EUR\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "31ca4601-e9c1-4980-a427-5f35fa0bf1df",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:06.792205Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "bigqueryreservation.projects.locations.reservations.get",
+          "schema" : {
+            "description" : "A reservation is a mechanism used to guarantee slots to users.",
+            "properties" : {
+              "concurrency" : {
+                "description" : "Job concurrency target which sets a soft upper bound on the number of jobs that can run concurrently in this reservation. This is a soft target due to asynchronous nature of the system and various optimizations for small queries. Default value is 0 which means that concurrency target will be automatically computed by the system. NOTE: this field is exposed as `target_job_concurrency` in the Information Schema, DDL and BQ CLI.",
+                "format" : "int64",
+                "type" : "string"
+              },
+              "creationTime" : {
+                "description" : "Output only. Creation time of the reservation.",
+                "format" : "google-datetime",
+                "readOnly" : true,
+                "type" : "string"
+              },
+              "ignoreIdleSlots" : {
+                "description" : "If false, any query or pipeline job using this reservation will use idle slots from other reservations within the same admin project. If true, a query or pipeline job using this reservation will execute with the slot capacity specified in the slot_capacity field at most.",
+                "type" : "boolean"
+              },
+              "multiRegionAuxiliary" : {
+                "description" : "Applicable only for reservations located within one of the BigQuery multi-regions (US or EU). If set to true, this reservation is placed in the organization's secondary region which is designated for disaster recovery purposes. If false, this reservation is placed in the organization's default region.",
+                "type" : "boolean"
+              },
+              "name" : {
+                "description" : "The resource name of the reservation, e.g., `projects/*/locations/*/reservations/team1-prod`. The reservation_id must only contain lower case alphanumeric characters or dashes. It must start with a letter and must not end with a dash. Its maximum length is 64 characters.",
+                "type" : "string"
+              },
+              "slotCapacity" : {
+                "description" : "Minimum slots available to this reservation. A slot is a unit of computational power in BigQuery, and serves as the unit of parallelism. Queries using this reservation might use more slots during runtime if ignore_idle_slots is set to false. If the new reservation's slot capacity exceeds the project's slot capacity or if total slot capacity of the new reservation and its siblings exceeds the project's slot capacity, the request will fail with `google.rpc.Code.RESOURCE_EXHAUSTED`. NOTE: for reservations in US or EU multi-regions, slot capacity constraints are checked separately for default and auxiliary regions. See multi_region_auxiliary flag for more details.",
+                "format" : "int64",
+                "type" : "string"
+              },
+              "updateTime" : {
+                "description" : "Output only. Last update time of the reservation.",
+                "format" : "google-datetime",
+                "readOnly" : true,
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 11
+  }, {
+    "id" : "227eaa3b-e9c7-4046-b94d-e37cccae3e9d",
+    "name" : "Deletes a assignment. No expansion will happen. Example: * Organization `organiz...",
+    "request" : {
+      "urlPath" : "/v1beta1/Miss+Clinton+Stokes",
+      "method" : "DELETE"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{ }",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "227eaa3b-e9c7-4046-b94d-e37cccae3e9d",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:06.791763Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "bigqueryreservation.projects.locations.reservations.assignments.delete",
+          "schema" : {
+            "description" : "A generic empty message that you can re-use to avoid defining duplicated empty messages in your APIs. A typical example is to use it as the request or the response type of an API method. For instance: service Foo { rpc Bar(google.protobuf.Empty) returns (google.protobuf.Empty); }",
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 12
+  } ]
+}

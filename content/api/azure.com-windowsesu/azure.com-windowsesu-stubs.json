@@ -1,0 +1,702 @@
+{
+  "mappings" : [ {
+    "id" : "b4b827ac-50ea-4a7f-bc5b-576e26770796",
+    "name" : "Update a MAK key.",
+    "request" : {
+      "urlPath" : "/subscriptions/8v13/resourceGroups/I4c/providers/Microsoft.WindowsESU/multipleActivationKeys/Brad+Schultz",
+      "method" : "PATCH",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "bv9r6lumojh1mc4el1dbjhk9z8d3mkk5kxyrf4dunxj9b7ce3v64reqwtwqscgdg5grtv"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"location\" : \"68458xy33s9ejxjhf70ivrqgruugdsukccp4p47p3j3pqwrkzzr1oux4no5gyh9ur3c02nxog1fmtxjx7umjylmgsrwcqk7so8gam0yys2lxyv\",\n  \"properties\" : {\n    \"supportType\" : \"SupplementalServicing\",\n    \"osType\" : \"WindowsServer2008R2\",\n    \"installedServerNumber\" : 746,\n    \"isEligible\" : false,\n    \"provisioningState\" : \"Accepted\",\n    \"agreementNumber\" : \"32l2tu6waojduosavvnogp1dpwmbf60u9w7ya3hnd6hcbua8366cpe0uae0vnlt3lh1ys2l7kajiyvn40x2e5k6zg\",\n    \"multipleActivationKey\" : \"zxp06nxhpq722vjfembnrgo8xhvar511lv6ts5zsxnvnic6z3626j7uy0ksq8u2sd19sj5iu6hun1y6a9oseq1ao06lv2w5o504hbmc2rdnuy3aw49q15er3qhelv1nu0odch8uhv72ctnr6g1ah3uv3qjw0dvcd95uxdooqwm3pvc904\",\n    \"expirationDate\" : \"2022-11-15T22:24:50.441Z\"\n  },\n  \"tags\" : { }\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "b4b827ac-50ea-4a7f-bc5b-576e26770796",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:37.442084Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "MultipleActivationKeys_Update",
+          "schema" : {
+            "properties" : {
+              "properties" : {
+                "type" : "object",
+                "properties" : {
+                  "agreementNumber" : {
+                    "type" : "string",
+                    "description" : "Agreement number under which the key is requested."
+                  },
+                  "expirationDate" : {
+                    "type" : "string",
+                    "description" : "End of support of security updates activated by the MAK key.",
+                    "format" : "date-time",
+                    "readOnly" : true
+                  },
+                  "installedServerNumber" : {
+                    "maximum" : 5000,
+                    "minimum" : 1,
+                    "type" : "integer",
+                    "description" : "Number of activations/servers using the MAK key."
+                  },
+                  "isEligible" : {
+                    "type" : "boolean",
+                    "description" : "<code> true </code> if user has eligible on-premises Windows physical or virtual machines, and that the requested key will only be used in their organization; <code> false </code> otherwise."
+                  },
+                  "multipleActivationKey" : {
+                    "type" : "string",
+                    "description" : "MAK 5x5 key.",
+                    "readOnly" : true
+                  },
+                  "osType" : {
+                    "type" : "string",
+                    "description" : "Type of OS for which the key is requested.",
+                    "enum" : [ "Windows7", "WindowsServer2008", "WindowsServer2008R2" ]
+                  },
+                  "provisioningState" : {
+                    "type" : "string",
+                    "readOnly" : true,
+                    "enum" : [ "Succeeded", "Failed", "Canceled", "Accepted", "Provisioning" ]
+                  },
+                  "supportType" : {
+                    "type" : "string",
+                    "description" : "Type of support",
+                    "default" : "SupplementalServicing",
+                    "enum" : [ "SupplementalServicing", "PremiumAssurance" ]
+                  }
+                },
+                "description" : "MAK key specific properties."
+              }
+            },
+            "description" : "MAK key details.",
+            "allOf" : [ {
+              "required" : [ "location" ],
+              "properties" : {
+                "location" : {
+                  "type" : "string",
+                  "description" : "The geo-location where the resource lives"
+                },
+                "tags" : {
+                  "type" : "object",
+                  "additionalProperties" : {
+                    "type" : "string"
+                  },
+                  "description" : "Resource tags."
+                }
+              },
+              "description" : "The resource model definition for a ARM tracked top level resource",
+              "allOf" : [ {
+                "type" : "object",
+                "properties" : {
+                  "id" : {
+                    "type" : "string",
+                    "description" : "Fully qualified resource Id for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}",
+                    "readOnly" : true
+                  },
+                  "name" : {
+                    "type" : "string",
+                    "description" : "The name of the resource",
+                    "readOnly" : true
+                  },
+                  "type" : {
+                    "type" : "string",
+                    "description" : "The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.",
+                    "readOnly" : true
+                  }
+                }
+              } ]
+            } ]
+          }
+        }
+      }
+    },
+    "insertionIndex" : 0
+  }, {
+    "id" : "68a30be2-ef7f-4aa1-a796-bb292ea94a7a",
+    "name" : "Delete a MAK key. - 204",
+    "request" : {
+      "urlPath" : "/subscriptions/us30/resourceGroups/nWpHrIEyUJfUMTOIVGf.2jSww%29rWBdWPXnVG9QcLr54eRTq%28%28tYQr%28cLy6qSoEqDGl/providers/Microsoft.WindowsESU/multipleActivationKeys/Sallie+Conroy+IV",
+      "method" : "DELETE",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "am5dmjqmgwndcxx55i0awz1g2sliaezt"
+        }
+      }
+    },
+    "response" : {
+      "status" : 204
+    },
+    "uuid" : "68a30be2-ef7f-4aa1-a796-bb292ea94a7a",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:37.441697Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "MultipleActivationKeys_Delete"
+        }
+      }
+    },
+    "insertionIndex" : 1
+  }, {
+    "id" : "03903fd5-9351-4b55-a77a-aabc9b7ac39b",
+    "name" : "Delete a MAK key. - 200",
+    "request" : {
+      "urlPath" : "/subscriptions/t733/resourceGroups/TE-iKdSfS68d3AALZLaHm/providers/Microsoft.WindowsESU/multipleActivationKeys/Dr.+Jonathon+Goyette",
+      "method" : "DELETE",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "70ai9c8jh2xnbyoy33bhc2778i3mk3134aviptt27gxt5vrnfaqarwwj9ouz2kphs4u83dsskrrjrkhq841ean21b1"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200
+    },
+    "uuid" : "03903fd5-9351-4b55-a77a-aabc9b7ac39b",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:37.441529Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "MultipleActivationKeys_Delete"
+        }
+      }
+    },
+    "insertionIndex" : 2
+  }, {
+    "id" : "548e10b7-9c42-47bd-bbf3-e0e0fb427091",
+    "name" : "Create a MAK key.",
+    "request" : {
+      "urlPath" : "/subscriptions/0o4j/resourceGroups/rM-HLCFvkJxZH5xqHL_lfhrGv5I0xozeIidpMQLdF709Ob0sB/providers/Microsoft.WindowsESU/multipleActivationKeys/Jovita+Breitenberg",
+      "method" : "PUT",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "8kj0ku36r1mxg7wzijmffqwp91"
+        }
+      }
+    },
+    "response" : {
+      "status" : 201,
+      "body" : "{\n  \"location\" : \"1wayzz2abtwyvj13ypwa900fomwu76ttx5jq253v104mg1i6kz7omrbjo1b2my9epq3bqtc5889fe9tfsvklhlfifqd7h8sa9mmuqaxy7bioqghcx8j3zzir5mucj2x2x90qnaer44jbwft35ffccpeaq8c6tt91ewexsvqxasc9ncquvzzsn38r20t5\",\n  \"properties\" : {\n    \"supportType\" : \"PremiumAssurance\",\n    \"osType\" : \"WindowsServer2008R2\",\n    \"installedServerNumber\" : 4579,\n    \"isEligible\" : true,\n    \"provisioningState\" : \"Accepted\",\n    \"agreementNumber\" : \"7nsf01sbl29crm7krdr1vjxnqqx823blr5i4dl0z7nuodb60hdrgobk5r4lwdpqif4dabxiz4bvqizata97nkk648bn8l5iphxim35ajeh2e5hsfxg6hbv2ydhh1t18633pj3o5vyusdzvfqfpq6a\",\n    \"multipleActivationKey\" : \"ixroxd5b3y1qo6bukehfmo9fku93ssuwh4nppkj7sgndxyfjo85jj5ft2hyszszo8tiy8s\",\n    \"expirationDate\" : \"2023-02-13T16:19:13.44Z\"\n  },\n  \"tags\" : { }\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "548e10b7-9c42-47bd-bbf3-e0e0fb427091",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:37.441298Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "MultipleActivationKeys_Create",
+          "schema" : {
+            "properties" : {
+              "properties" : {
+                "type" : "object",
+                "properties" : {
+                  "agreementNumber" : {
+                    "type" : "string",
+                    "description" : "Agreement number under which the key is requested."
+                  },
+                  "expirationDate" : {
+                    "type" : "string",
+                    "description" : "End of support of security updates activated by the MAK key.",
+                    "format" : "date-time",
+                    "readOnly" : true
+                  },
+                  "installedServerNumber" : {
+                    "maximum" : 5000,
+                    "minimum" : 1,
+                    "type" : "integer",
+                    "description" : "Number of activations/servers using the MAK key."
+                  },
+                  "isEligible" : {
+                    "type" : "boolean",
+                    "description" : "<code> true </code> if user has eligible on-premises Windows physical or virtual machines, and that the requested key will only be used in their organization; <code> false </code> otherwise."
+                  },
+                  "multipleActivationKey" : {
+                    "type" : "string",
+                    "description" : "MAK 5x5 key.",
+                    "readOnly" : true
+                  },
+                  "osType" : {
+                    "type" : "string",
+                    "description" : "Type of OS for which the key is requested.",
+                    "enum" : [ "Windows7", "WindowsServer2008", "WindowsServer2008R2" ]
+                  },
+                  "provisioningState" : {
+                    "type" : "string",
+                    "readOnly" : true,
+                    "enum" : [ "Succeeded", "Failed", "Canceled", "Accepted", "Provisioning" ]
+                  },
+                  "supportType" : {
+                    "type" : "string",
+                    "description" : "Type of support",
+                    "default" : "SupplementalServicing",
+                    "enum" : [ "SupplementalServicing", "PremiumAssurance" ]
+                  }
+                },
+                "description" : "MAK key specific properties."
+              }
+            },
+            "description" : "MAK key details.",
+            "allOf" : [ {
+              "required" : [ "location" ],
+              "properties" : {
+                "location" : {
+                  "type" : "string",
+                  "description" : "The geo-location where the resource lives"
+                },
+                "tags" : {
+                  "type" : "object",
+                  "additionalProperties" : {
+                    "type" : "string"
+                  },
+                  "description" : "Resource tags."
+                }
+              },
+              "description" : "The resource model definition for a ARM tracked top level resource",
+              "allOf" : [ {
+                "type" : "object",
+                "properties" : {
+                  "id" : {
+                    "type" : "string",
+                    "description" : "Fully qualified resource Id for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}",
+                    "readOnly" : true
+                  },
+                  "name" : {
+                    "type" : "string",
+                    "description" : "The name of the resource",
+                    "readOnly" : true
+                  },
+                  "type" : {
+                    "type" : "string",
+                    "description" : "The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.",
+                    "readOnly" : true
+                  }
+                }
+              } ]
+            } ]
+          }
+        }
+      }
+    },
+    "insertionIndex" : 3
+  }, {
+    "id" : "70e06411-2907-45d3-ab9b-291845dd48e3",
+    "name" : "Create a MAK key.",
+    "request" : {
+      "urlPath" : "/subscriptions/4q5l/resourceGroups/ERmYtVpJIUVpb7IyJa6hpLR_yJpC-fL6SUkC4oT3a.AFLGYQAT3UnuziTaHc6YnVrqwUMdDgVKaiqm2zp83wnrBubV/providers/Microsoft.WindowsESU/multipleActivationKeys/Rex+Volkman",
+      "method" : "PUT",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "vcwh0mq9qe0pa8jw2rrtgkwqo5r71r6a49dh6oa3ev0kzoszceleiqngu"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"location\" : \"wumz6022\",\n  \"properties\" : {\n    \"supportType\" : \"SupplementalServicing\",\n    \"osType\" : \"Windows7\",\n    \"installedServerNumber\" : 4850,\n    \"isEligible\" : false,\n    \"provisioningState\" : \"Provisioning\",\n    \"agreementNumber\" : \"k8bzm1znd\",\n    \"multipleActivationKey\" : \"7uj5sbhs6c18hf9y278nf0kyadeiffts2opz04qq7te6k6fq2kux9s4g07rjtjyq7zv5u0i4vx7\",\n    \"expirationDate\" : \"2023-05-14T10:04:44.44Z\"\n  },\n  \"tags\" : { }\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "70e06411-2907-45d3-ab9b-291845dd48e3",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:37.440919Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "MultipleActivationKeys_Create",
+          "schema" : {
+            "properties" : {
+              "properties" : {
+                "type" : "object",
+                "properties" : {
+                  "agreementNumber" : {
+                    "type" : "string",
+                    "description" : "Agreement number under which the key is requested."
+                  },
+                  "expirationDate" : {
+                    "type" : "string",
+                    "description" : "End of support of security updates activated by the MAK key.",
+                    "format" : "date-time",
+                    "readOnly" : true
+                  },
+                  "installedServerNumber" : {
+                    "maximum" : 5000,
+                    "minimum" : 1,
+                    "type" : "integer",
+                    "description" : "Number of activations/servers using the MAK key."
+                  },
+                  "isEligible" : {
+                    "type" : "boolean",
+                    "description" : "<code> true </code> if user has eligible on-premises Windows physical or virtual machines, and that the requested key will only be used in their organization; <code> false </code> otherwise."
+                  },
+                  "multipleActivationKey" : {
+                    "type" : "string",
+                    "description" : "MAK 5x5 key.",
+                    "readOnly" : true
+                  },
+                  "osType" : {
+                    "type" : "string",
+                    "description" : "Type of OS for which the key is requested.",
+                    "enum" : [ "Windows7", "WindowsServer2008", "WindowsServer2008R2" ]
+                  },
+                  "provisioningState" : {
+                    "type" : "string",
+                    "readOnly" : true,
+                    "enum" : [ "Succeeded", "Failed", "Canceled", "Accepted", "Provisioning" ]
+                  },
+                  "supportType" : {
+                    "type" : "string",
+                    "description" : "Type of support",
+                    "default" : "SupplementalServicing",
+                    "enum" : [ "SupplementalServicing", "PremiumAssurance" ]
+                  }
+                },
+                "description" : "MAK key specific properties."
+              }
+            },
+            "description" : "MAK key details.",
+            "allOf" : [ {
+              "required" : [ "location" ],
+              "properties" : {
+                "location" : {
+                  "type" : "string",
+                  "description" : "The geo-location where the resource lives"
+                },
+                "tags" : {
+                  "type" : "object",
+                  "additionalProperties" : {
+                    "type" : "string"
+                  },
+                  "description" : "Resource tags."
+                }
+              },
+              "description" : "The resource model definition for a ARM tracked top level resource",
+              "allOf" : [ {
+                "type" : "object",
+                "properties" : {
+                  "id" : {
+                    "type" : "string",
+                    "description" : "Fully qualified resource Id for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}",
+                    "readOnly" : true
+                  },
+                  "name" : {
+                    "type" : "string",
+                    "description" : "The name of the resource",
+                    "readOnly" : true
+                  },
+                  "type" : {
+                    "type" : "string",
+                    "description" : "The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.",
+                    "readOnly" : true
+                  }
+                }
+              } ]
+            } ]
+          }
+        }
+      }
+    },
+    "insertionIndex" : 4
+  }, {
+    "id" : "e5f2325c-c604-40f4-b9b8-8b13687a8925",
+    "name" : "Get a MAK key.",
+    "request" : {
+      "urlPath" : "/subscriptions/ms29/resourceGroups/8w1jW7XB/providers/Microsoft.WindowsESU/multipleActivationKeys/Vada+Simonis",
+      "method" : "GET",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "yw3bop3ff2ptewhg81vb0nq3ad0xmr7ouu12atdgl8lcf8tymgez3ksad35ktfrwdsu0zpfbjgh0htpgw3tocrz2n212wx08gnhhxcswxi545yesd85mjn70b4elpq5xrk7d6u4m82ow1v2e3d35kk0322dztpzvlx0og0sa0bw4uhr8akgh3fj5fgxu4iw9zvszdx"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"location\" : \"zaixojyy0e6gdr8lsxapy2eg0apf7xs4h1z99rrt5pgg71ou1wgemdg3bvd2meklevqmxi0abts0gbl\",\n  \"properties\" : {\n    \"supportType\" : \"SupplementalServicing\",\n    \"osType\" : \"Windows7\",\n    \"installedServerNumber\" : 1478,\n    \"isEligible\" : false,\n    \"provisioningState\" : \"Accepted\",\n    \"agreementNumber\" : \"c69x6pva8hrk46au7vne\",\n    \"multipleActivationKey\" : \"o0urh1k40satstsh6d5g5hk4h0m3m9eqfgyh7cp282a0epw7bl7mdu\",\n    \"expirationDate\" : \"2022-04-24T07:36:55.44Z\"\n  },\n  \"tags\" : { }\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "e5f2325c-c604-40f4-b9b8-8b13687a8925",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:37.440528Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "MultipleActivationKeys_Get",
+          "schema" : {
+            "properties" : {
+              "properties" : {
+                "type" : "object",
+                "properties" : {
+                  "agreementNumber" : {
+                    "type" : "string",
+                    "description" : "Agreement number under which the key is requested."
+                  },
+                  "expirationDate" : {
+                    "type" : "string",
+                    "description" : "End of support of security updates activated by the MAK key.",
+                    "format" : "date-time",
+                    "readOnly" : true
+                  },
+                  "installedServerNumber" : {
+                    "maximum" : 5000,
+                    "minimum" : 1,
+                    "type" : "integer",
+                    "description" : "Number of activations/servers using the MAK key."
+                  },
+                  "isEligible" : {
+                    "type" : "boolean",
+                    "description" : "<code> true </code> if user has eligible on-premises Windows physical or virtual machines, and that the requested key will only be used in their organization; <code> false </code> otherwise."
+                  },
+                  "multipleActivationKey" : {
+                    "type" : "string",
+                    "description" : "MAK 5x5 key.",
+                    "readOnly" : true
+                  },
+                  "osType" : {
+                    "type" : "string",
+                    "description" : "Type of OS for which the key is requested.",
+                    "enum" : [ "Windows7", "WindowsServer2008", "WindowsServer2008R2" ]
+                  },
+                  "provisioningState" : {
+                    "type" : "string",
+                    "readOnly" : true,
+                    "enum" : [ "Succeeded", "Failed", "Canceled", "Accepted", "Provisioning" ]
+                  },
+                  "supportType" : {
+                    "type" : "string",
+                    "description" : "Type of support",
+                    "default" : "SupplementalServicing",
+                    "enum" : [ "SupplementalServicing", "PremiumAssurance" ]
+                  }
+                },
+                "description" : "MAK key specific properties."
+              }
+            },
+            "description" : "MAK key details.",
+            "allOf" : [ {
+              "required" : [ "location" ],
+              "properties" : {
+                "location" : {
+                  "type" : "string",
+                  "description" : "The geo-location where the resource lives"
+                },
+                "tags" : {
+                  "type" : "object",
+                  "additionalProperties" : {
+                    "type" : "string"
+                  },
+                  "description" : "Resource tags."
+                }
+              },
+              "description" : "The resource model definition for a ARM tracked top level resource",
+              "allOf" : [ {
+                "type" : "object",
+                "properties" : {
+                  "id" : {
+                    "type" : "string",
+                    "description" : "Fully qualified resource Id for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}",
+                    "readOnly" : true
+                  },
+                  "name" : {
+                    "type" : "string",
+                    "description" : "The name of the resource",
+                    "readOnly" : true
+                  },
+                  "type" : {
+                    "type" : "string",
+                    "description" : "The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.",
+                    "readOnly" : true
+                  }
+                }
+              } ]
+            } ]
+          }
+        }
+      }
+    },
+    "insertionIndex" : 5
+  }, {
+    "id" : "9491684a-bc65-4f2f-85a1-e1630786c2ee",
+    "name" : "List all Multiple Activation Keys (MAK) in a resource group.",
+    "request" : {
+      "urlPath" : "/subscriptions/99kc/resourceGroups/5DzbS0umT6e4%29_0rwKJCI%292Nzx7JuHbwUGRx4-zl9T9bHAvo_fKJH2ewgJpikr4iLT/providers/Microsoft.WindowsESU/multipleActivationKeys",
+      "method" : "GET",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "oj9ms1czk6ejmnp1qllcyo2oghhr6qzg5mttihfdf7xqqszdnx8xweza7766wu5ysjqjeeih2mtcwbyhyzntub4djtvb3l5djwwq7xcjwzjp41hlpcthb4ko464deeoykazs9du82yo43x54q4n9fwl88nhop6ylt030pmgvd2bzgf6z3vfpjf48e0e0lrn9g0l6"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"value\" : [ {\n    \"location\" : \"1m6hlv3ldejno3doeynljmhlq74f2yezgivgouyeynute37q4flp5d69nj1csxvvyl733i7lgad0cqcx65bsh7oeq4vi4wievjxq9zfc96jhzaxg67hdrtf0yyyjyfz2z3tevxea6cw4yh2nrdkpak3z12ag76lcmh\",\n    \"properties\" : {\n      \"supportType\" : \"PremiumAssurance\",\n      \"osType\" : \"WindowsServer2008R2\",\n      \"installedServerNumber\" : 2026,\n      \"isEligible\" : true,\n      \"provisioningState\" : \"Succeeded\",\n      \"agreementNumber\" : \"u9zo7uqcd54ud7wqnl45ubfga40e15g1y8s22touocwatm6jhjnv9573a6su64rl3pjxdrb9uuinddmemgi\",\n      \"multipleActivationKey\" : \"m7mv0hrllrbetsgmy8a1i9shqe4eatyvfvpu773ofnfrh3wc1k4h3wocmunqj4302yn029fsg4qrc76dchnawv5ecvo8iju\",\n      \"expirationDate\" : \"2022-05-09T19:48:14.439Z\"\n    },\n    \"tags\" : { }\n  }, {\n    \"location\" : \"onhk\",\n    \"properties\" : {\n      \"supportType\" : \"PremiumAssurance\",\n      \"osType\" : \"Windows7\",\n      \"installedServerNumber\" : 911,\n      \"isEligible\" : false,\n      \"provisioningState\" : \"Accepted\",\n      \"agreementNumber\" : \"qdmt5my9tdftrerfb9rc94vtfnm9lijuzcb59rug9kazz8lmhevnvxbrxahkooyzn6ozapg6ewxn5yvyl415giyfa\",\n      \"multipleActivationKey\" : \"imxqv8121jhn2uchlu2fi6mqtx18n4dne8kvp8euf4cwcaefx6l6qp3jb6adsu\",\n      \"expirationDate\" : \"2023-05-01T21:37:05.439Z\"\n    },\n    \"tags\" : { }\n  }, {\n    \"location\" : \"6gnhf5fr1sos5duk7x7rrg2a\",\n    \"properties\" : {\n      \"supportType\" : \"PremiumAssurance\",\n      \"osType\" : \"WindowsServer2008R2\",\n      \"installedServerNumber\" : 1862,\n      \"isEligible\" : true,\n      \"provisioningState\" : \"Succeeded\",\n      \"agreementNumber\" : \"qhzdi72quz22sxtp\",\n      \"multipleActivationKey\" : \"lsq0jadz9di9noikuzn6t8x2ag157og9kyyggp2g0imu53x95mt50o86kl7sf0mrkjzk1clzwn5b4hbmaqvehrwxj2ns30devuyq84p7\",\n      \"expirationDate\" : \"2022-11-01T21:57:30.439Z\"\n    },\n    \"tags\" : { }\n  }, {\n    \"location\" : \"up580vikqwj3431fl3iq8zew2xxhholokoksmefhm8tqlu7pr4rvbugs57qfjp1kaov3kdoeqr1fqrbgqtp41bqjj4udte63curra9eoftvflk29bqb88uicgvh8xhf60erus4tir1ue47ungmzh9v9c6ih7cozxon0ylcmsh8ur4fomz9\",\n    \"properties\" : {\n      \"supportType\" : \"SupplementalServicing\",\n      \"osType\" : \"WindowsServer2008\",\n      \"installedServerNumber\" : 2273,\n      \"isEligible\" : true,\n      \"provisioningState\" : \"Canceled\",\n      \"agreementNumber\" : \"6r1mvoklegfuugfmr03ld2ivqw6ipfbjlolb\",\n      \"multipleActivationKey\" : \"rzzjh56kjuzm50n6xidafkyblrxmy6wj2g8twl8jrbplrw6a0vnwctkpdrsbu2hk6inl53choe2h7xxiibd783f9cbk9bsm5kxonqu73noi0mef3jbutvjz6orpe8quctq3al4g5ngemih8dn9wemwju744p5u3i0zoe\",\n      \"expirationDate\" : \"2023-08-25T22:55:15.439Z\"\n    },\n    \"tags\" : { }\n  }, {\n    \"location\" : \"7n8xszigxohjik2corvjwzw9bp8zc9vmpg8om9kqk5mvxgysquxh66yf3ing0kz18ioa1afx944xvk8a074wcyzwvjl249cztb93i5v1wg74jfvjce73p77wnnuut4wv6yqmxg3yitf2mzpljgzv6od3ej37iljeg87gxi119ctcjyoie86kermqme7i0krhkfo1zmrl\",\n    \"properties\" : {\n      \"supportType\" : \"SupplementalServicing\",\n      \"osType\" : \"Windows7\",\n      \"installedServerNumber\" : 4282,\n      \"isEligible\" : false,\n      \"provisioningState\" : \"Failed\",\n      \"agreementNumber\" : \"xjpwmk358ren37x546vsscfkrfpxq4ok3zvd6j3lm544gukgcoh6bxunac64pi1fe07xxf2wa\",\n      \"multipleActivationKey\" : \"f1duh5xch2ucccmq6jyxm9h\",\n      \"expirationDate\" : \"2022-05-12T03:00:37.439Z\"\n    },\n    \"tags\" : { }\n  } ],\n  \"nextLink\" : \"ol81ty5dyb3x2jwmm9wmtr4dn9xisuikkujchbgc1plipg8v7km0w5zj9ryfhtkd51prdvsnzrd5kmiiuxx15468vmgotyz6nnqygabi24slsn3nwa6bb9d\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "9491684a-bc65-4f2f-85a1-e1630786c2ee",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:37.440048Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "MultipleActivationKeys_ListByResourceGroup",
+          "schema" : {
+            "type" : "object",
+            "properties" : {
+              "nextLink" : {
+                "type" : "string",
+                "description" : "Link to the next page of resources.",
+                "readOnly" : true
+              },
+              "value" : {
+                "type" : "array",
+                "description" : "List of MAK keys.",
+                "items" : {
+                  "$ref" : "#/components/schemas/MultipleActivationKey"
+                }
+              }
+            },
+            "description" : "List of MAK keys."
+          }
+        }
+      }
+    },
+    "insertionIndex" : 6
+  }, {
+    "id" : "7a1314bc-7c98-4b9b-bb20-ab9a9141eb30",
+    "name" : "List all Multiple Activation Keys (MAK) created for a subscription.",
+    "request" : {
+      "urlPath" : "/subscriptions/vama/providers/Microsoft.WindowsESU/multipleActivationKeys",
+      "method" : "GET",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "8scf19twbjityeyngd7785w5dfvat2ye4st8bx55ktvvpb7mwi0aictwpnn3q8a7dse1xg4j4d58tlrnrh"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"value\" : [ {\n    \"location\" : \"f9fjri1n54kug7mvnrvzdfx0bh7yno0w4dbi4ro3h6qq7436dncr\",\n    \"properties\" : {\n      \"supportType\" : \"PremiumAssurance\",\n      \"osType\" : \"WindowsServer2008R2\",\n      \"installedServerNumber\" : 4319,\n      \"isEligible\" : true,\n      \"provisioningState\" : \"Failed\",\n      \"agreementNumber\" : \"ood1nv2vauc3ap5ebfeip90iw2hv48a4a9a6k\",\n      \"multipleActivationKey\" : \"dmnrg8maqsg9ieg7oty2uejeo4njbvgxqbi71fpw0zkvggt89r2tmypfdqju8gk8j30lh8whymyve9qbi2e2s4lph6l4oleub5wnxt1tcc9swnaht9fq39xk23t96i2ihub6dudlaimzv0rrh8wkklxhyiijrz003xrxs5r78m\",\n      \"expirationDate\" : \"2023-08-28T11:24:47.438Z\"\n    },\n    \"tags\" : { }\n  }, {\n    \"location\" : \"c1ez1am0bj0ai956olloxvjw7mzfeergd9bnj\",\n    \"properties\" : {\n      \"supportType\" : \"SupplementalServicing\",\n      \"osType\" : \"WindowsServer2008R2\",\n      \"installedServerNumber\" : 3887,\n      \"isEligible\" : false,\n      \"provisioningState\" : \"Accepted\",\n      \"agreementNumber\" : \"wbxozlb8obk\",\n      \"multipleActivationKey\" : \"eocpqy4rls2troqp\",\n      \"expirationDate\" : \"2022-08-23T23:45:55.439Z\"\n    },\n    \"tags\" : { }\n  }, {\n    \"location\" : \"198d7k45r6gt539qw8c1mvd2tbz436p5lz3\",\n    \"properties\" : {\n      \"supportType\" : \"SupplementalServicing\",\n      \"osType\" : \"WindowsServer2008R2\",\n      \"installedServerNumber\" : 1899,\n      \"isEligible\" : false,\n      \"provisioningState\" : \"Canceled\",\n      \"agreementNumber\" : \"kukqyqo4vx6qclje7erywegkanhfqc64i5z2vvfk1kaq8bozoxfib0d74dyqo68f0xcsx4qsotd12mxmt32725e9db0pj2ohnavgx1jcl93inilh4cuvzukx\",\n      \"multipleActivationKey\" : \"bfw6o9a058m842ys94vcu5mu27n8f8utjsdjrqu8319q6qk5afbtz2aqpwup1hbodehx8j7z0fp7khuru9g92kkr14fmccgttt1son0u1rxt21hdjdjgpa1h3ovbhtnx0o88gt01k821ngm7k8wmxi7wao6rwxlnh0fl1jhmfj7zsg3y6aafabj1qwjcl6fvs89i2ti\",\n      \"expirationDate\" : \"2023-07-22T13:16:11.439Z\"\n    },\n    \"tags\" : { }\n  }, {\n    \"location\" : \"glf739lf32t7wrsspjzrle9g3vffx4pcoeje745u9rl7434a1xk2965yfganglbxw8yj4tjr71wk73uyh5ml92cehmf3z8iy2\",\n    \"properties\" : {\n      \"supportType\" : \"SupplementalServicing\",\n      \"osType\" : \"WindowsServer2008\",\n      \"installedServerNumber\" : 927,\n      \"isEligible\" : true,\n      \"provisioningState\" : \"Succeeded\",\n      \"agreementNumber\" : \"8xguq5071vtmbu555suq00pmaky9v3eieglwqmirxh2w4iert82zyv7hbyov0miwwx9oflnyv4be1dqx87scm3y5ko9ene7w5u1nnmlncupvonm3elv206yee2tuqqx1i15lrg2gvis4n4gm0ikok1xnv9swf4p5yqcpj0h458z8c3ectiv7ln\",\n      \"multipleActivationKey\" : \"8l3qzdgd4xiao6kl307xd1pskcj2xe73o0ynpote77sjm089wsn10m64r92jaog96mjwnnsfrk5cm3o5fzq5nc8feuukjgnlwwqzzymftexmd77n662xs0qr1f7ht0vpgrvwckmspzx7mzdmn7hj6lp9n9pru2tgogleqap0bef7egfqvosqik1h5m59szo\",\n      \"expirationDate\" : \"2022-06-29T11:58:31.439Z\"\n    },\n    \"tags\" : { }\n  } ],\n  \"nextLink\" : \"lliyog0qaz846pij4s8g9oyqtdt9yf0h4xn17eyxmxya76npsbskj1jwxc2q2m9xibj66jccsxcfcx8c8cianrn4rq63s8hvepfvb72mjmyt8jjj5gdfj68dnnoow8fwhobcrfc049p6d5326ay3rj4ocd11u613dv2vl9ykpe14hoziv\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "7a1314bc-7c98-4b9b-bb20-ab9a9141eb30",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:37.43943Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "MultipleActivationKeys_List",
+          "schema" : {
+            "type" : "object",
+            "properties" : {
+              "nextLink" : {
+                "type" : "string",
+                "description" : "Link to the next page of resources.",
+                "readOnly" : true
+              },
+              "value" : {
+                "type" : "array",
+                "description" : "List of MAK keys.",
+                "items" : {
+                  "$ref" : "#/components/schemas/MultipleActivationKey"
+                }
+              }
+            },
+            "description" : "List of MAK keys."
+          }
+        }
+      }
+    },
+    "insertionIndex" : 7
+  }, {
+    "id" : "84e1fc84-dcba-41c5-82e6-f10d97b754ce",
+    "name" : "List all available Windows.ESU provider operations.",
+    "request" : {
+      "urlPath" : "/providers/Microsoft.WindowsESU/operations",
+      "method" : "GET",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "cl0bhkxrdu07w6ypozi44r1zv535sq3ayfd3dp5201hr631vj6m40jgpvkg8uomlr5etp1a16tsdsjwqjowgo0u0wfcads8zvfecffu2brylpstsbhgbp6l9ntzluu5j8363sm2jcv1rj93bfw5szlj3nb7nl"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"value\" : [ {\n    \"display\" : {\n      \"provider\" : \"wrqlfrqn0l6\",\n      \"resource\" : \"zkh2po1qc0325q9j7fkez6a4nfsuv2riqwbqv9wzonqu7u1q61r3fqsyneznkkbk40bfm4fr\",\n      \"description\" : \"Amet quis enim ipsa non deserunt. Sit in beatae assumenda voluptas deleniti numquam. Debitis sed ab tempore laudantium nesciunt magnam.\",\n      \"operation\" : \"xg5f9ovehi5aryjcbdddumwn15hz\"\n    },\n    \"name\" : \"Kerry Collier IV\"\n  }, {\n    \"display\" : {\n      \"provider\" : \"vcml74iuyb69be3tn4q1yk87ahcemdj5df5zm0tcctv53jjwirrpo5vhhcwyexq3d62mgic3pr0fzn8jkz6vuxmkle2iqucu25y832ypl1wmxtgklhsb7i3ulvitbsrr1jp\",\n      \"resource\" : \"nxvohpzolehckv2q5luxh0vyvew43k98hvoo8vmdthjkvy1hvz141plm5e3s9r5n2n2jdgjx8ew141rd2ur0zb80eipa6vnpsqo9zk0amn96u4ejaqoedhgokw77jxfqyn7zpacis31jrrtpq9jh5g1enblqhutet2vdkkfruu2h6qcs2x0ylgbefcbg6v667f4m9wq\",\n      \"description\" : \"Quod voluptatibus voluptatem minima commodi dolorem ullam. Soluta dolores libero. Voluptates ipsam aut error quo mollitia sit voluptatem. Recusandae maxime consequatur vero eveniet.\",\n      \"operation\" : \"v4943hni45xdbyqvm9o1gi7r2nt5n3w96l3gk5upl5p1oootrs0xye4qzcekbvderc5mptt4fkq3f38xeb2lmczz7a4np3qqso8u6de0q2l9qsbn2l7u842jppd7qlvtshjoi6nxoq51uab9zz6ewunhp4l\"\n    },\n    \"name\" : \"Miss Monroe Haley\"\n  }, {\n    \"display\" : {\n      \"provider\" : \"21r8ik6u9oyhzj528svcsn\",\n      \"resource\" : \"hs664lbmufbx4lkbvw866sh5mn79oz7itv\",\n      \"description\" : \"Quidem ducimus nesciunt omnis maxime libero officiis. Possimus incidunt atque dolorum quod ab saepe enim. Consequatur sit ad nihil. Tenetur id qui sit animi consequuntur.\",\n      \"operation\" : \"7aon7dzai1od2lsyq11q6jyw79bfbnci2wx3o1zwb22r\"\n    },\n    \"name\" : \"Santina Stamm PhD\"\n  }, {\n    \"display\" : {\n      \"provider\" : \"iqda71u5u5wkt6wb9z9xz1tu2lzgcz05li8jvkaae217ksd9fvxq7sthjnf79e5tvzqws0g8x1l3otyaa6q2a4hwl1aeyuq\",\n      \"resource\" : \"r7ito5zx95nzyrrxaw42fi6nj8apu1iydcwx95gvce6nnso69y8pdwuuxvu955pnlj780jcifafvp0xo3kq2pv821u1jgvez7xa\",\n      \"description\" : \"Incidunt natus id corporis officiis harum. Consectetur quia qui voluptatibus excepturi earum. Dolorem aliquid aut. Provident consequuntur omnis repellat consequatur ducimus error. Voluptatem aut est e\",\n      \"operation\" : \"sab4u5eh32q4rm5hczvz9z7v1cwq6lqkpyolmtmd13n1u96k24v1rh61cfnle2sm2sgxn047ogt5xp\"\n    },\n    \"name\" : \"Albert Bashirian Jr.\"\n  }, {\n    \"display\" : {\n      \"provider\" : \"z1exx987mgi8l7g0n\",\n      \"resource\" : \"1glz3fu2gglh88nsrp1uu0ksstevrqj\",\n      \"description\" : \"Corrupti minus sapiente sint libero nesciunt. Enim molestiae dolorem. Voluptas dignissimos voluptas. Et nostrum recusandae qui facere expedita iste natus.\",\n      \"operation\" : \"9rhdxnhtmv5vkqg91173cxyfxuor7a6185xq85hr7ttcki4clhpex2gyavivcmr1aoj849i3pdpbfi7txpojhb6o90tyx3l0ul0y5k9k6kh00d8o6gk7p4vppp3eqovw97k9bklqutlfii4xwmlevhndfz\"\n    },\n    \"name\" : \"Mrs. Loriann Mayer\"\n  }, {\n    \"display\" : {\n      \"provider\" : \"bly4gg03fqawmvncpvez41bo01ufnqc139jcnh6azoppdq31ih9ygewcf\",\n      \"resource\" : \"iji3wtgtegum8li7r58do6vof5jtanoec8o87tjfha4bjkwqyhr3b70106fw1m9ii0bye5rcde\",\n      \"description\" : \"Saepe voluptas quos dignissimos. Aut sunt voluptatem odio earum voluptatem in qui. Sint tempora aut.\",\n      \"operation\" : \"dhkgsb6luxwue0l7y6xf2h5zqegx3i8afso8l1emvgn0ox3uyxalw87eykt4u6kpbcv0dyum71bk5mitebhxzpblf2pe6hvmdxtyjveq2gn5ajt5nwhwai13h33802xxhucg1i2dll8db0yp8zqzj5w9p8ni1t2jscuztp34ibxq3y4i9dewc52lu5v4\"\n    },\n    \"name\" : \"Latisha Murphy DVM\"\n  }, {\n    \"display\" : {\n      \"provider\" : \"lca90e8nvd1o9g6b9zur6a9ma4y2de8rhkow0fhc\",\n      \"resource\" : \"xmcxb3zppvvzsznuknluxctv4m1j4xxt0v44tudqvkkiodl0akcga6kk306gsx1hmdvq6wq4rue857gc9cob1ahl0v4qzzfib00v3yjhvaywninr1jsvqruq0icz\",\n      \"description\" : \"Aut non a quod velit cupiditate. Quia ea ea temporibus. Hic aliquid impedit a repellat omnis cumque. Illum quam aliquid qui culpa qui autem eum. Aliquam rerum aut qui molestias pariatur odio voluptate\",\n      \"operation\" : \"s53r582d6u1qqsuskmexplhyk31r2lr0jxba3imkmenh14ablqn5vl2un4pb30d3w3zpfs6exid257uyz6yoy2mknpb6upigbl2xt5y0rl81kz421fv7e8zn5as\"\n    },\n    \"name\" : \"Kallie Hegmann\"\n  } ],\n  \"nextLink\" : \"8zjiia0aczviwonbcsbimoeev24sijmiwkiufa7pw2hoqicvwxzpzvw8aur2nm0abzyp9w\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "84e1fc84-dcba-41c5-82e6-f10d97b754ce",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:37.438848Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "Operations_List",
+          "schema" : {
+            "type" : "object",
+            "properties" : {
+              "nextLink" : {
+                "type" : "string",
+                "description" : "Link to the next page of resources.",
+                "readOnly" : true
+              },
+              "value" : {
+                "type" : "array",
+                "description" : "List of operations.",
+                "items" : {
+                  "$ref" : "#/components/schemas/Operation"
+                }
+              }
+            },
+            "description" : "List of available REST API operations."
+          }
+        }
+      }
+    },
+    "insertionIndex" : 8
+  } ]
+}

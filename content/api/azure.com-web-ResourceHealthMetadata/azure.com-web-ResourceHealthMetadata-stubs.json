@@ -1,0 +1,365 @@
+{
+  "mappings" : [ {
+    "id" : "af44eda4-b83b-4cb4-91c1-4d5ba96b9ea6",
+    "name" : "Gets the category of ResourceHealthMetadata to use for the given site",
+    "request" : {
+      "urlPath" : "/subscriptions/1zzr/resourceGroups/z4Zz13qUb5X4KsZU5-Ijlkwf97dc8yumW.rGwUTsO-eSxigsw%29%290F/providers/Microsoft.Web/sites/Gail+Romaguera/slots/9m68rzs2ixgfe6v/resourceHealthMetadata/default",
+      "method" : "GET",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "7d54tkcbssephjxee4sja7k9z7p7etaogou6zevanyd4bu1ujhgdfnbgguox3qq2krrlo6bhyqx58m2ax9q5th3rlser"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"kind\" : \"g727pbvur5t29ows1zikl4b631ga5xjf1f19fcblhbrikmz\",\n  \"name\" : \"Dr. Blanca Walter\",\n  \"id\" : \"7th2\",\n  \"type\" : \"nj1aiut36k7kmbtlxlhzxeml6iftqzlzyxaozv4dkuhr12lrtp9a0p4jzia2ipi6t4dymligq3r7fs8bq9etfk5kjz8ziw0wtdsuem4s41sd6hhh4c3qpz99clzv13lf\",\n  \"properties\" : {\n    \"signalAvailability\" : false,\n    \"category\" : \"zz8btrq2wbq8wk56tfejrfzzwxnym\"\n  }\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "af44eda4-b83b-4cb4-91c1-4d5ba96b9ea6",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:32.572257Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "ResourceHealthMetadata_GetBySiteSlot",
+          "schema" : {
+            "properties" : {
+              "properties" : {
+                "type" : "object",
+                "properties" : {
+                  "category" : {
+                    "type" : "string",
+                    "description" : "The category that the resource matches in the RHC Policy File"
+                  },
+                  "signalAvailability" : {
+                    "type" : "boolean",
+                    "description" : "Is there a health signal for the resource"
+                  }
+                },
+                "description" : "ResourceHealthMetadata resource specific properties"
+              }
+            },
+            "description" : "Used for getting ResourceHealthCheck settings.",
+            "allOf" : [ {
+              "type" : "object",
+              "properties" : {
+                "id" : {
+                  "type" : "string",
+                  "description" : "Resource Id.",
+                  "readOnly" : true
+                },
+                "kind" : {
+                  "type" : "string",
+                  "description" : "Kind of resource."
+                },
+                "name" : {
+                  "type" : "string",
+                  "description" : "Resource Name.",
+                  "readOnly" : true
+                },
+                "type" : {
+                  "type" : "string",
+                  "description" : "Resource type.",
+                  "readOnly" : true
+                }
+              },
+              "description" : "Azure proxy only resource. This resource is not tracked by Azure Resource Manager."
+            } ]
+          }
+        }
+      }
+    },
+    "insertionIndex" : 0
+  }, {
+    "id" : "767534f5-7035-477e-86e3-58e36b238c59",
+    "name" : "Gets the category of ResourceHealthMetadata to use for the given site as a collection",
+    "request" : {
+      "urlPath" : "/subscriptions/8o2g/resourceGroups/aflZr5hTVkccuI39Lp8ISRLhEEs9iIoQCNs8BJQSmcNB/providers/Microsoft.Web/sites/Armand+Deckow/slots/r72p6b3w0p3n/resourceHealthMetadata",
+      "method" : "GET",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "0ebary80h68enpdqbzlxzl"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"value\" : [ {\n    \"kind\" : \"lr2my6eyugrqln6w3wlgzkj\",\n    \"name\" : \"Jacqui Kling\",\n    \"id\" : \"46x2\",\n    \"type\" : \"jzfhfz0ysnqa5hk3mnpmbw6z4skvlawqhuc53uok8qbuw\",\n    \"properties\" : {\n      \"signalAvailability\" : false,\n      \"category\" : \"cefjr5oouwmf6y458hsf7oj4ic5tvy5wtif732uu2fijudm30biei1kxwau47uxa9copq1rje872b7tx1oncgin7zf28ki4hkeqdh5pa1fr4vbg7u5sae\"\n    }\n  } ],\n  \"nextLink\" : \"in3ltw5\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "767534f5-7035-477e-86e3-58e36b238c59",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:32.57099Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "ResourceHealthMetadata_ListBySiteSlot",
+          "schema" : {
+            "required" : [ "value" ],
+            "type" : "object",
+            "properties" : {
+              "nextLink" : {
+                "type" : "string",
+                "description" : "Link to next page of resources.",
+                "readOnly" : true
+              },
+              "value" : {
+                "type" : "array",
+                "description" : "Collection of resources.",
+                "items" : {
+                  "$ref" : "#/components/schemas/ResourceHealthMetadata"
+                }
+              }
+            },
+            "description" : "Collection of resource health metadata."
+          }
+        }
+      }
+    },
+    "insertionIndex" : 1
+  }, {
+    "id" : "cddfe3c2-c69a-4277-8762-21e1b92c75ed",
+    "name" : "Gets the category of ResourceHealthMetadata to use for the given site",
+    "request" : {
+      "urlPath" : "/subscriptions/ud62/resourceGroups/XBkirouyZ3dg3jvnncNXubx7dY1KJhelv82Hka7vG4mEJMgrazy4Z21h7*/providers/Microsoft.Web/sites/Chantelle+Lang/resourceHealthMetadata/default",
+      "method" : "GET",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "ldgdnvk9xomt667jmox77euvb5loa04dtvuel290e6oofgu1fn7w39pfyp1mikwysj330916gyz0nfwbq9kfpyorpbrem4v1xc89sxmiohee"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"kind\" : \"apxd25pkakcasrgjzvejtjw24rjnyx5q3aqrdaq7qphm8hzwx13q69bk4x98bsq20lcn5llprcnt7nictjbcn3bqzsrm1p\",\n  \"name\" : \"Moshe Medhurst\",\n  \"id\" : \"89xi\",\n  \"type\" : \"yb11k5okgzanlsz0iqw69qq7arjq24lvw880d0h18cso1ykctc458d69nkfxts6ii4l3n3mlt0kejtm3s6xxi21vpt6zksqqytbq1vjj8vwe0y164kwk2t2yin9gfj9hxh9t\",\n  \"properties\" : {\n    \"signalAvailability\" : false,\n    \"category\" : \"hybmqoxudzdop5czxtpxbz49omsusqr7n16nyl44sfch57fu8sk14rq3tg0wmdszc0nuqwm7nwdh0oo67tzxrjo7vdsnd6z47fp8sqy6eeykgphn3zudvsfm79637bb89qtfumg241tu0danok4xbtxow4s063pzh9\"\n  }\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "cddfe3c2-c69a-4277-8762-21e1b92c75ed",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:32.57047Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "ResourceHealthMetadata_GetBySite",
+          "schema" : {
+            "properties" : {
+              "properties" : {
+                "type" : "object",
+                "properties" : {
+                  "category" : {
+                    "type" : "string",
+                    "description" : "The category that the resource matches in the RHC Policy File"
+                  },
+                  "signalAvailability" : {
+                    "type" : "boolean",
+                    "description" : "Is there a health signal for the resource"
+                  }
+                },
+                "description" : "ResourceHealthMetadata resource specific properties"
+              }
+            },
+            "description" : "Used for getting ResourceHealthCheck settings.",
+            "allOf" : [ {
+              "type" : "object",
+              "properties" : {
+                "id" : {
+                  "type" : "string",
+                  "description" : "Resource Id.",
+                  "readOnly" : true
+                },
+                "kind" : {
+                  "type" : "string",
+                  "description" : "Kind of resource."
+                },
+                "name" : {
+                  "type" : "string",
+                  "description" : "Resource Name.",
+                  "readOnly" : true
+                },
+                "type" : {
+                  "type" : "string",
+                  "description" : "Resource type.",
+                  "readOnly" : true
+                }
+              },
+              "description" : "Azure proxy only resource. This resource is not tracked by Azure Resource Manager."
+            } ]
+          }
+        }
+      }
+    },
+    "insertionIndex" : 2
+  }, {
+    "id" : "f3a46114-c6f9-4dae-98ab-d3a18fc87abd",
+    "name" : "Gets the category of ResourceHealthMetadata to use for the given site as a collection",
+    "request" : {
+      "urlPath" : "/subscriptions/6s46/resourceGroups/O0G3OJV.nY_1O48wIH/providers/Microsoft.Web/sites/Hortencia+Christiansen+V/resourceHealthMetadata",
+      "method" : "GET",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "lxau3ig527d459b2th7qd0jemu5k0jgae04y6let5j2pydmktwotskfjm77055zmiago23d5kbyp22ifelhfqtuh4nmq852s0u30vcta97dkbvk9me2a78w0i4u9k0cj42ob41y3irkfhd9nn9wmug94uow9zxr9mp8oqq7z17ipuf717161"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"value\" : [ {\n    \"kind\" : \"1b4w2zwe0woctb7t2c9phb14xagq7lpxgmql4hc0l03pgakgehggb6uielmippj3fiux7m4ejzl6v3jj5izt21upygtxx5ro299gqghs6lq8twjn9byrxcdatp9eev00\",\n    \"name\" : \"Wendie Cronin\",\n    \"id\" : \"hhgq\",\n    \"type\" : \"slgvywlwkbq05cao60rxbt5krpgl4uztil9n0xwka9dx17r6oc2irhsej7k8i7vg4ycef5znsl7zlouong2ozl5xl3px06e2juhcef8qs9gc0hyqhw6b0ixl7rrwhyxmpbhxuvs9g7kyeqtqx\",\n    \"properties\" : {\n      \"signalAvailability\" : false,\n      \"category\" : \"tnk9qwlmp1fnuw92qx3yv1krckr7hjtvq10acpllhech1ngya16ctbok3kf4zlicrcqyiki18bsb0\"\n    }\n  }, {\n    \"kind\" : \"y5f5djxivo88fidksmsaq8lcewtsh9xlnh501e62wiaj5tl10gqnkcvlpiapwa08fyczir6i20e26chscibdyguxxcic74anx6cicrhy61wiw6t7wdudutqqjly2281p5k8g7zvqa9rf1lx0hkgaxbv2yamuo\",\n    \"name\" : \"Domenic Hauck\",\n    \"id\" : \"s5a1\",\n    \"type\" : \"stlx578rzwe44v5tincx71y7c7kd2eirtkc1zh7dqvs1y0ql0zb67owosa2drfyzmzybyhe5l4tuh5fc0r4k5n4w7qnkqqtwqcipo9wqcetyhv5x1thzhh5stp94g022y1x33c1iczuo2eq4o2v7j7gb8glfd42l1bbvpfy6l6itpglrgy2c77c6rb2k9e\",\n    \"properties\" : {\n      \"signalAvailability\" : true,\n      \"category\" : \"26xwlth8skd7xsz0d65tjufi9gqgxrwm19h3govld8qrqps0ic9pgf7c42b416z6h0d689abbtx3umr\"\n    }\n  }, {\n    \"kind\" : \"q0rw4mb428ai4s4hjjdpyydh4atjzco5j42lw75e49ti9xel70ybfcojllxsgvps4n217823d23xam0kueyyq5kpaipvrcxa5dzsxdugjcaxopus4axupvqxuixrshvh87xef2uw2nrkt5d\",\n    \"name\" : \"Jessie Haag\",\n    \"id\" : \"6g58\",\n    \"type\" : \"kxe0skxxhc3bvavbbxo0ea2ce3\",\n    \"properties\" : {\n      \"signalAvailability\" : false,\n      \"category\" : \"7548qy6yzj1m547hktukb5uqw8xenm1sc02shpe0gyroxfh5x2lgg7qqhhzbwbxun4fc2pkeqe6jd81zk9mhhqmbk17f24rky78fhqo0kfl5zqlhsioba97aq1aphp18gjpth7piayskwyb8xxojz6z72nzud9wnqaofrdtfk94n33og0ihb71vezc2sx95dym8\"\n    }\n  }, {\n    \"kind\" : \"w4zgcbj0iveks8qk1b9djl90715c6fa64tkb8vlggo0d1f8qng8shhnhv54cxl849w9rac3ak0q0jdn8jqkxjsuq76zvcuh7ilyixipfkj2wcj3ym4apod5nec053v1gs4qmcf4\",\n    \"name\" : \"Berna Schowalter\",\n    \"id\" : \"mfk4\",\n    \"type\" : \"eh02fffqfeppnkm3qafwagcb8f17exqtrn2te90szdb3kqtl38ffahvgr0b9l6yjq2pojukhbc2per3wtiq7g7cv0a8h4dk0jgc3oe7y2inc7pm0btrslu6wq5687yckfklkil9gkkuopml91\",\n    \"properties\" : {\n      \"signalAvailability\" : true,\n      \"category\" : \"roh15hgcixp019oe97cyf5wg3doxdxa1k42ngfxsi2lmgry68md1xee4pwlmfqh3mb14btg23c44knnw5y69jv7sn5umielqg0108p992p56y2ww5ymy77l4kb8\"\n    }\n  }, {\n    \"kind\" : \"0xsh1u63xv8u3so3bppmwk4dpti71bw7904g6mx5oofudkgdv6zn6njsa5sym2bu9wolywytngi5ibcjpwat\",\n    \"name\" : \"Ranae Reynolds\",\n    \"id\" : \"ly69\",\n    \"type\" : \"uribwuoqsxmfskmh3okvu8o9lihfzbw65sky3gn3ovaazs8lovp1ulas8dcjyh1xdi8uj9lgawmsxhhlgl564o5565ks\",\n    \"properties\" : {\n      \"signalAvailability\" : false,\n      \"category\" : \"e60t6pjlm8f4l5fx47x8k7y2x61jr6lcgsbhustnfl1fnorsv2f7kdeom88mvdij0srt3uhl0t2raay0l9mobosrkb63zkthmnk1drlngwcqccmdwslnxcbt7v8ivy7in0hjcjo2w277ry2vkgere\"\n    }\n  }, {\n    \"kind\" : \"na7u8x0dir3ik3478egzjiqgxvz72zf42ep1719oww4x08gb9cn8x4vjlbcdh6hga\",\n    \"name\" : \"Chana Douglas\",\n    \"id\" : \"yzs0\",\n    \"type\" : \"1eh3qneguw8ib8mymaizad8limn220d0mst29qaxwsff4etb3066rxo2dlghxpx3zeri6gon\",\n    \"properties\" : {\n      \"signalAvailability\" : false,\n      \"category\" : \"53nsnmyu8kdbzbi52l8ws2zssn0e5qss495ovhw1310t8zwlhbwtbqcvgqb9xta8tzc8\"\n    }\n  }, {\n    \"kind\" : \"30cdsgjhvif51xge0pig6nofdxzlin08invdtqh2\",\n    \"name\" : \"Branden Mante\",\n    \"id\" : \"4gl7\",\n    \"type\" : \"cj2eqlkr90moqo7gyfctyf95c5x5ggj73j5fz1laozzq5jlaw0vu9uwt555z0f5ysut9dkfmj9y9zole3qqyvwtrgfldptnwpwffykh0nw1qgp6gzps06bwwy4binmc\",\n    \"properties\" : {\n      \"signalAvailability\" : false,\n      \"category\" : \"fr954z6h8xai28l3kx427uub2of\"\n    }\n  } ],\n  \"nextLink\" : \"o1aoagjwcya4bmzoh6t0e6uwdayybwafm52hhaflqf367bye9wpl9qjjdrc6jv7i2x4aqautakr5xgq3q3y3tfdvp64p8niiwcd3h0sikr3lx09flv4wc4s0ew9nxwj8u3schtd68aqmxzojc9q2vtw53hw4kyajih65479hz9xkjm4bhd0m5edq5\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "f3a46114-c6f9-4dae-98ab-d3a18fc87abd",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:32.570006Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "ResourceHealthMetadata_ListBySite",
+          "schema" : {
+            "required" : [ "value" ],
+            "type" : "object",
+            "properties" : {
+              "nextLink" : {
+                "type" : "string",
+                "description" : "Link to next page of resources.",
+                "readOnly" : true
+              },
+              "value" : {
+                "type" : "array",
+                "description" : "Collection of resources.",
+                "items" : {
+                  "$ref" : "#/components/schemas/ResourceHealthMetadata"
+                }
+              }
+            },
+            "description" : "Collection of resource health metadata."
+          }
+        }
+      }
+    },
+    "insertionIndex" : 3
+  }, {
+    "id" : "a3d68115-452c-4eba-8676-6b3be527aa37",
+    "name" : "List all ResourceHealthMetadata for all sites in the resource group in the subscription.",
+    "request" : {
+      "urlPath" : "/subscriptions/3630/resourceGroups/PxbC%29h3hgu8zmuc34ghaLjLOITs.wjH-Ei%29gvcAsUUf3v9557C-ra8PB4XA3SGw7Si7qCp%28g5OBeC7j3UpskkG%28iDN/providers/Microsoft.Web/resourceHealthMetadata",
+      "method" : "GET",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "90xy7pd35u6za1hqgwvwky578ngmfwxhp6o6uttcxg43zc2oa3ia7rq2"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"value\" : [ {\n    \"kind\" : \"2o3l7q4321qyqg83pyz7nezqm4w1rjfeey4l6ig98fb7tr7vfkxeoxitf53wtwid7qk0qtj\",\n    \"name\" : \"Preston Brekke\",\n    \"id\" : \"swhk\",\n    \"type\" : \"qdiabkr7l\",\n    \"properties\" : {\n      \"signalAvailability\" : true,\n      \"category\" : \"zh1e2oripqsog6eepo9ww2p1wr9a5mv9ifevrld6lcajvu74itaatrolizodkc9x9o5f5jm42ua2svwc4vr9pjfxvkzdz6gekctekugr8v9grvzu513g4iignyzn28t3oeajs7gf74jfjgevxwz99hk3yz\"\n    }\n  } ],\n  \"nextLink\" : \"vqvuc9bul57gqab23g\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "a3d68115-452c-4eba-8676-6b3be527aa37",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:32.568651Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "ResourceHealthMetadata_ListByResourceGroup",
+          "schema" : {
+            "required" : [ "value" ],
+            "type" : "object",
+            "properties" : {
+              "nextLink" : {
+                "type" : "string",
+                "description" : "Link to next page of resources.",
+                "readOnly" : true
+              },
+              "value" : {
+                "type" : "array",
+                "description" : "Collection of resources.",
+                "items" : {
+                  "$ref" : "#/components/schemas/ResourceHealthMetadata"
+                }
+              }
+            },
+            "description" : "Collection of resource health metadata."
+          }
+        }
+      }
+    },
+    "insertionIndex" : 4
+  }, {
+    "id" : "b79dea77-5352-4aba-a85b-538eb6c0888e",
+    "name" : "List all ResourceHealthMetadata for all sites in the subscription.",
+    "request" : {
+      "urlPath" : "/subscriptions/7279/providers/Microsoft.Web/resourceHealthMetadata",
+      "method" : "GET",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "4n470jco2e8gky7wmle7tlijklt2m30rjmnqncc5tu2pth608ip3u16cm1fry4zjdergakxw802ro83schjt91h27tuvdhnosmz3e732w7s2dunwlfkyyr0tf8c33dn4i6t36gvfoboj2stvtu0ddly1xindpik1kqkf2cdny"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"value\" : [ {\n    \"kind\" : \"omooj7wbg9dwllqn2ohxtj03llis5beidjshcdpks3etv3mzzfxadocsrwiozve0\",\n    \"name\" : \"Ms. Briana Heaney\",\n    \"id\" : \"aeu3\",\n    \"type\" : \"v5yobh3o53dbm1ti486ti9ci7l6x8196wwbkwxmdg904vyo6uncnc9w5buwf34x3cksgrm6veiqak9u682ai9ij88bui8mhtmiv8kqpwflil58z4ewkb4m2ryh5lec3pul83wu5re60oakmusdw62cgnhr4itkp9zm56vmn45ad0d5sy7y8iuj7\",\n    \"properties\" : {\n      \"signalAvailability\" : true,\n      \"category\" : \"bq6nh1rzcsy558uu0n699npthgl7actjg0wsmpav92oorm53raceswjsl3t7tft799ze8o95akf9wrrwbagv326f04s7qwyxy9e7texe3\"\n    }\n  }, {\n    \"kind\" : \"ng835xw9y8ym1jm7s3n2nsjuozf7mlz9k3vpm75k5rs7ohqyjn10tskgbx4kyz7b6duthmm3kchzi0nzacpmu3ud\",\n    \"name\" : \"Marlin King\",\n    \"id\" : \"hly3\",\n    \"type\" : \"0b5p02o3c9iuipfddagy44nsdnx06c9o65tdzg82cyboin659jmxwsg5b5dwg7lno63d5zngcuvrnwo5l0xjh3iiisewwdfht0zamrph0xb4oabd39kbgcthohhbb831o16jb8iqt0xzau1iezf7sh887jtys\",\n    \"properties\" : {\n      \"signalAvailability\" : false,\n      \"category\" : \"zbbmaqs5utqsjbyq8jnngezv0xijinsuqn1q5iffronm3dsnjjlkq3z4la84dtzx25spattcydej6pqwhvzwzi4in86usvs6fcpc541hfsxispfaemtkkup3clyrszbr57xdwzkexq20z60a143znsy6pbzqt9f685i81lpby5rsxf9icx1mygga9hss9ipk\"\n    }\n  }, {\n    \"kind\" : \"o5mqla689padvaddk8rqkxpknhqvmg95nds7m48u9mkbbk4pq6jvu3suv3m438fbm6r16ait66fc77uyagpkirfjq29yzc5ozp6134ahj1gkj4lljdi4gpc2etph5mf5wu9j3vbx4mzbxm7x0m1lbpp3h9zdnc5lospoiyk5umzdjtqq0fbmwr5n2q59b9nhcku\",\n    \"name\" : \"Creola Christiansen V\",\n    \"id\" : \"n1ax\",\n    \"type\" : \"jsx9i21d69eyd76kevojov6o9rjour3ncw4v16pahba4x12bpld16oeczwyuhlbajwgn452g3uomtmszl8pwexee75hd3vldon1itqefxp\",\n    \"properties\" : {\n      \"signalAvailability\" : true,\n      \"category\" : \"in46m7hzj9q0fdbam6zvby36xb2sn57pkk7trhkp5fgp1j99yn29qb1e3ug3ait431bvz8jl7s4f7r4mv97dp137qk5hzgu5y52tzx3b1q0al3dblgipa6ensvxl7i3u34m9ub02n8h9v1fmvkzbc31nrw00td4dsu9\"\n    }\n  } ],\n  \"nextLink\" : \"b65mb7hvnqzr83lewzke7khlpm\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "b79dea77-5352-4aba-a85b-538eb6c0888e",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:32.568249Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "ResourceHealthMetadata_List",
+          "schema" : {
+            "required" : [ "value" ],
+            "type" : "object",
+            "properties" : {
+              "nextLink" : {
+                "type" : "string",
+                "description" : "Link to next page of resources.",
+                "readOnly" : true
+              },
+              "value" : {
+                "type" : "array",
+                "description" : "Collection of resources.",
+                "items" : {
+                  "$ref" : "#/components/schemas/ResourceHealthMetadata"
+                }
+              }
+            },
+            "description" : "Collection of resource health metadata."
+          }
+        }
+      }
+    },
+    "insertionIndex" : 5
+  } ]
+}

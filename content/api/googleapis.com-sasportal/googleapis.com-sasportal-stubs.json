@@ -1,0 +1,1007 @@
+{
+  "mappings" : [ {
+    "id" : "65ddbc0b-a2bb-4c1c-a5d5-fa58d955668c",
+    "name" : "Creates a new node.",
+    "request" : {
+      "urlPath" : "/v1alpha1/t4xrmkswctn0cparjk980vri3iioe0t3i22bgtd2y114m6q2qvsm32jjoz4erxdbs3m8dokdlhb1j/nodes",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"displayName\" : \"Dr. Maribel Lindgren\",\n  \"name\" : \"Milford Goodwin\",\n  \"sasUserIds\" : [ \"3rgxl13o7gn4v8qjezwff72qadzi3xp6m85m\", \"e0ldx71y7obvae5hmkwrn8ixf4bg50o5ta15ay6b7ylee7qfo37faa3h4vb24vd6me90s3pcdv4k6y35towzqzt75exqbnaywvki9yuzdqz2gs66pmbzlc6p2uvr8whv8lviend6hbjsy5x05i3wy6c5gynpgipbx\", \"53o6gtlzhttyv8xbbrx0s8rx88v5vvpufauplatl0ufqkzxbs6ulpg6jgxrubqi7ps00fn3cqptqjs1dn2a3xagvay\", \"5vagy0efu3d44t140rcc48pxf4bmrrzzpfqc81do5r9ofnb8zgicm9ghiwqyrqji\", \"jeo4mcge8h3oio0qqp30s6ne520z2yuuawe1qjtyf16x5pwb2kik5bss3f70qdg5lqz6ueb3pyemacml4y22m20n745rmko77o76oenqgza827krj53yzgdwuwls66pbw6upwntujen15hxmjru6nghnqfrs802m4weoik1xyi\", \"tk2337wt6lrazu6ih3a7cj790pzjneia4npqd4qfctppmt731aceos7lhxtbaaap5jai36glsqqp2bstsrinqgp7y8lltyyjjb1pu9f4b15ucnf4b7bqq3tvsbqyi35k0zq5wpef5dwg793dhddec1suyar1f\" ]\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "65ddbc0b-a2bb-4c1c-a5d5-fa58d955668c",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:28.878381Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "sasportal.nodes.nodes.nodes.create",
+          "schema" : {
+            "description" : "The Node.",
+            "properties" : {
+              "displayName" : {
+                "description" : "The node's display name.",
+                "type" : "string"
+              },
+              "name" : {
+                "description" : "Output only. Resource name.",
+                "type" : "string"
+              },
+              "sasUserIds" : {
+                "description" : "User ids used by the devices belonging to this node.",
+                "items" : {
+                  "type" : "string"
+                },
+                "type" : "array"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 0
+  }, {
+    "id" : "66b46c34-c8c9-4fee-8bf1-5e70f051a067",
+    "name" : "Lists nodes.",
+    "request" : {
+      "urlPath" : "/v1alpha1/uqcheaqbvf7vl3mjbbfoibsvzut940jp3756gzf1srljy1dqy2d6lajghjvfm2yaxs1edyzkrfr0kfa5890ydbza3bmkxifh0r5a91nbtrq3ryjn8a58f5mcgogsj049khzndvergmsulce943ycq81ru/nodes",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"nodes\" : [ {\n    \"displayName\" : \"Tarsha Luettgen\",\n    \"name\" : \"Neal Shanahan\",\n    \"sasUserIds\" : [ \"4znq8luxaltctr43bup014839q7pkrpa4ijonhbrjhpbexb0u2vrtrx9qw8x9tf71ydcy5ca1qsokb0vi5flvxkfqhzdku0iz5rxravbc9f89cfuxmrmdar9qlb6lzeptd20nvbv242vifkojygf4a9zhpdcz0423pd8y6goktk8zr\", \"4csojym6htq2lofmgnj6z5a50o3zvo2v8tndqtp4y44qeimop8xxppyk10hepv164qjj0ibcg9ffralplos7o0z55gmj5229o5j9l4o9zl8er68viaabgylqcg3cv284440swgg2ne16337nao6x4cc\", \"1p1nny65hwze9dykv84vc8d7mlbvncr215ijxfu0pnmzkx8qx32pzcw6byz14pkullp9i6lw5f80scxdnl7478vwebg1vwyyzx91i4qxkggbj3x3lgo6wd7t62p5dfx57pvr21pvjufqvx4tta4x3ars433bcpep2trfgnfl99tsfqr\", \"ofksavew3yiwg3sdnxtqmm2644f3grh4xwy03a10ozbuzq6pf49qqpyxk9a4zh8ogld6fz35d5a46f7mk5xvrxqxeyu33kzjiy1v6ejvtdkli0zlgvoolpf9a1vrqoxz7b4lg8lhhck5116eqn71o1vf7fhw\", \"i6503jejck5u104nt3ksgu69cu1ichplvqac1bcakwj52mozjerp7phv1hl9j6mrpuk3e2kwzj74jm8f4g98zeb4qxyi4xweagozqiuzc4el0iiyd7fdv1eud1\", \"sczxx68ikzqu8kfif09nsh7wkwfzy948f4114jo8r4xfuhfzgrp1y1r22zg56vw7rb7uat1fwldjj98lkn3uo3u1ckpv4ecs1hao9hrtwefoyb1j88wne5sryexpmtpgkuik7yaqyv38pwztsmomk3mqx\" ]\n  }, {\n    \"displayName\" : \"Zonia Prosacco\",\n    \"name\" : \"Letisha Brown\",\n    \"sasUserIds\" : [ \"7c03jikfhv6of7i3mzq8t3wrubl5mtqc4t8w7h39jbcged9e7g548tkege\", \"ptqtbb6hkvkovufwioqmv4wdyb7ucvsrbu7e6tctc45lt440wohdln66ee7o2f0em7y7oyho2yxf3cdk5y1xbmkfbwoc55qz2gncb52tygt2f4xz52lbpmj5kcb20oqp4kzlcr1xh7ou2nu9hn2sqa04tb\", \"07tsoyzf325ml92ibc85ve0frestuef6l6ordsk9dbtfv2ubj9lzbft47h91twwe9yj9gulmbpsb01ajvxtpncjq4rta16kc4f4kxy6m1x0rn33zt8w3y83kfpa505vzuhf97vu4a2jpk3ofo\", \"ta17g3ey970h8m1sk78294bm8l4dcyqix4dz84uk7r0rna1xkt90gbymw\" ]\n  }, {\n    \"displayName\" : \"Sal Block\",\n    \"name\" : \"Alonso Kerluke\",\n    \"sasUserIds\" : [ \"pui2tdbqv5e2037e8e7uloorrzgkhzzmgpvaxu11ulj2ucgt9apopryl6x425mudw3qi2o8we7y85bb5696v6tujib8odp14abzuun30umsvyr3mqm7ky2g2u858v97p56ximqawk2\" ]\n  }, {\n    \"displayName\" : \"Jefferson Terry\",\n    \"name\" : \"Tegan Langworth\",\n    \"sasUserIds\" : [ \"z99mlb3nlqzcpeqip94cka06xo7mkqnzf7y2h7zyi4wsoviv6vbrchzha7dnm6ccdbfietyqkpwd5cdmziwoaszlhfvd7lz5ah8lgms1kdxnkdh6hd3a8w0kp9krl9x9mxv82edocxz5l\", \"sfvasit9czr2imyl0cy42mrcpxqw02z116cpwelq94wcv1fj64s2ypl4er35w1xvtn20lpvjp4ueflc210a2ot1nvb3tjta0zv4erb9otw\", \"99gylvcwe4swiizh5g82boc8s4c0d68j1vy8jwdd6xui918yumc0d94kif1s3t8qcqmnarg8jemlwo0ctmnpdn7s31tvwh9js8ui1osrdd85pqmdto94s6hey5ea5b6y3zz18pm0ft8radb34g6ht9j8h5ajhuf\", \"5gugu2jiwz48c3553dxbdl47h55mcd4336yet6s76q7tp81aos1717d0fox7jrhvh7v5rcveg6szrdbiz6wejqhiz24blwmd3at8ikmw7zbyn6wq4p23gmiyq8wfzdbogsoo5wkxjakjja46v7caym9i0cr20h969etccmjq49bu9llazjoszrcng4v10q\", \"qh6y0oa7iijggd8686d35dyzjs4gcfq6qighaqg4yxpa3llay143f1zyljj617bfqr5n7wh6bejsfanp96nswhxp9itehxq1udg4s4d2wwdqbfgquz4\", \"zv0\" ]\n  }, {\n    \"displayName\" : \"Mrs. Alden Dicki\",\n    \"name\" : \"Tanner Ankunding II\",\n    \"sasUserIds\" : [ \"l72flr4boo5u6r4fbw7wvf7xe27i5fevei5o2opi3beleyof373ekoya10am1kytq3fxjeks7ojbamjcwzvbawituzqurpi1h2mqblu9yp7pv9j5ez42if\" ]\n  }, {\n    \"displayName\" : \"Maryam O'Hara\",\n    \"name\" : \"Stacey Ward Jr.\",\n    \"sasUserIds\" : [ \"9dfgwbgy9b0sfsf9vnoedyck8op7qxuhhi11680i9vfcj7e5k2bwhcvehcdzko1el8mt4ovwxcdrgaafz0jmyrjds0zkdpuvoz2g77mrt07bm66kndzza8gb7f6gpottyn025ij9uhdr5eiw9xtco27w77\", \"mqm6p2oed3nx4xszgku5fo5yugf3zols8mr1h5pdpddn2uiv3b8j6f3njwr\", \"8lrv9cx4u5kut96tzli2c1ebozxjuonvrgc8o5ylwt1y1ylnq0dqfda4phyq080hbpql4eja9l3mfq0mdnec9br2fwu172riis0x5huom\" ]\n  }, {\n    \"displayName\" : \"Daniele Hoeger Sr.\",\n    \"name\" : \"Randolph Reichert\",\n    \"sasUserIds\" : [ \"z69a6llhiwrxpqyvyus3hi55vtjjd7pcgnkzpy793nf5azzistzsr6rn2w3y4u2snqz1zii7cw8o60toqkv9ufbvhvxdy72yhlydkl86by1gm588wxds1iq9uiukq6pzhxsdz077r2nfa7x370g6euubht2fnjw6v2aqy2qs5olbd86jy7lbzyo0k7w66mpk07nz775\", \"04qp8boaqm44872fyy4jz21vcrs1zgtkx93fcjaoxtg9uw7kkrtq3ch6vauf3zy797p8qowwkqpu6u9tnjd5npm9b18mka6r0i4y9ehfihd1k7j52agk6d49to6j9u08h2h65hel\", \"0q80oaa427reuha7lxoaxwmxjf2j4j4la3m7jll6kdpcnygszvyb5ypwxxg1ntvawgewh6e6es08hupui04jowc05uhfisixitm4wuoeqxh0pesbnj818j2807bg89iu334t8c70e\", \"x1k6f2z8ggko8ortzync\", \"59m8v10wuxgo9lpkkzjhsrxkq7nfk09f1s0kkxj8dc420jevnpj9awv82tmav07nr3us1su53j879zr5pydzv764u3whu8w3768e30zhnc1xmbgdk0c9fxir8ne0snisxk3s1h2tfdc\" ]\n  } ],\n  \"nextPageToken\" : \"rl64serbz41ld7cipdlhe7mpiws1xomwc0crockijx5ruhl7uce1cmhh7vkika7t6r4quvrh6fl912bsq8rg6cmi9shq9wejql7hldytwhswgbc8x9p54e8c3o7amcuzavxsa9g4n0jhh6h040nrdpfh\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "66b46c34-c8c9-4fee-8bf1-5e70f051a067",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:28.878003Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "sasportal.nodes.nodes.nodes.list",
+          "schema" : {
+            "description" : "Response for ListNodes.",
+            "properties" : {
+              "nextPageToken" : {
+                "description" : "A pagination token returned from a previous call to ListNodes that indicates from where listing should continue. If the field is missing or empty, it means there is no more nodes.",
+                "type" : "string"
+              },
+              "nodes" : {
+                "description" : "The nodes that match the request.",
+                "items" : {
+                  "$ref" : "#/components/schemas/SasPortalNode"
+                },
+                "type" : "array"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 1
+  }, {
+    "id" : "4b379a0f-40cf-460d-b888-063d0e3f758f",
+    "name" : "Creates a signed device under a node or customer.",
+    "request" : {
+      "urlPath" : "/v1alpha1/kmubslwssfjxno3ddbu3oy44ml0j8iq6y15omguwjmz1iuv3zzn/devices:createSigned",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"grants\" : [ {\n    \"expireTime\" : \"2022-11-23T08:01:28.872688Z\",\n    \"grantId\" : \"12vs\",\n    \"suspensionReason\" : [ \"3gmog7r472e9t838yt8wlj74fmawbvo4jhglptbdpsrm4nz6mynmues92be9m29t18iafjj0a9qnww883tha46wjauc43ufcxnw13cco77ut0cjwh9gvc8rs57y\", \"a9k2es5petrijoms5i79xbiarky9yjhuix3mp0fnez2lvkbdl5lpeyzgh2d4xwx50jlcyblpaf1j20c32mkcsieaj9nimcgyphfqdie6ttaexsa50ahn3sfrbyf402aiowclono3z0ewst5ghxkceim55ktxdu8wp31hh86zhh7nb5mzje0feanw716fbskl\" ],\n    \"frequencyRange\" : {\n      \"highFrequencyMhz\" : 1.4502298724885926E308,\n      \"lowFrequencyMhz\" : 7.76984981328975E307\n    },\n    \"channelType\" : \"CHANNEL_TYPE_GAA\",\n    \"lastHeartbeatTransmitExpireTime\" : \"2023-03-28T09:03:28.872838Z\",\n    \"state\" : \"GRANT_STATE_EXPIRED\",\n    \"moveList\" : [ {\n      \"dpaId\" : \"7pcl\",\n      \"frequencyRange\" : {\n        \"highFrequencyMhz\" : 1.0669674025847223E308,\n        \"lowFrequencyMhz\" : 5.172256002246642E307\n      }\n    }, {\n      \"dpaId\" : \"i1k9\",\n      \"frequencyRange\" : {\n        \"highFrequencyMhz\" : 2.85268836562164E306,\n        \"lowFrequencyMhz\" : 1.7592923158209691E307\n      }\n    }, {\n      \"dpaId\" : \"0p72\",\n      \"frequencyRange\" : {\n        \"highFrequencyMhz\" : 1.3032895478796182E308,\n        \"lowFrequencyMhz\" : 3.0346649573613714E307\n      }\n    }, {\n      \"dpaId\" : \"g17l\",\n      \"frequencyRange\" : {\n        \"highFrequencyMhz\" : 2.1452163495428992E307,\n        \"lowFrequencyMhz\" : 2.6805905126241344E307\n      }\n    }, {\n      \"dpaId\" : \"n8m3\",\n      \"frequencyRange\" : {\n        \"highFrequencyMhz\" : 2.1151837901025922E307,\n        \"lowFrequencyMhz\" : 1.3090601931796333E308\n      }\n    }, {\n      \"dpaId\" : \"09q0\",\n      \"frequencyRange\" : {\n        \"highFrequencyMhz\" : 5.570684511151723E307,\n        \"lowFrequencyMhz\" : 3.6762641049074024E307\n      }\n    }, {\n      \"dpaId\" : \"i21x\",\n      \"frequencyRange\" : {\n        \"highFrequencyMhz\" : 3.9459178269948964E307,\n        \"lowFrequencyMhz\" : 4.778410151572579E307\n      }\n    } ],\n    \"maxEirp\" : 3.9530495927275696E307\n  }, {\n    \"expireTime\" : \"2022-12-17T07:42:28.873505Z\",\n    \"grantId\" : \"izl3\",\n    \"suspensionReason\" : [ \"1fa0a23onxpud1g9kzhberlv0cs8c6wg668emrm1s251kzu0dn55dnlaqboxogs9vjoe0qrjl3jlulhwsja1k7rvre\", \"ug7v5dsdihg5wnn30zpl42yhh331z8tovncrw47argcq6gwytw8uhbdsg8uvhzej82m6jwp16f1u9ihmca2kaf35z3inle483oxxd8e4j3gf\", \"07ewwwomb6cymxvoemnauqhuri144bqvq1gf2asrzgawcraid7trtm8bz7344i43j2vz852diweatt5awe7tmjn7imjg13cfibwy80vgw0huraz74qwajobqdhjq81djcdnfsc676ajmtu8hxdecy1ybqmox2p7acu4aew3fvwctzakuminp532n9ilwt6nwubv8k9\" ],\n    \"frequencyRange\" : {\n      \"highFrequencyMhz\" : 8.063758525117764E307,\n      \"lowFrequencyMhz\" : 2.465326371130237E307\n    },\n    \"channelType\" : \"CHANNEL_TYPE_UNSPECIFIED\",\n    \"lastHeartbeatTransmitExpireTime\" : \"2022-05-10T08:41:28.873648Z\",\n    \"state\" : \"GRANT_STATE_SUSPENDED\",\n    \"moveList\" : [ {\n      \"dpaId\" : \"pq3b\",\n      \"frequencyRange\" : {\n        \"highFrequencyMhz\" : 1.6676646050439527E308,\n        \"lowFrequencyMhz\" : 4.062207994785357E307\n      }\n    }, {\n      \"dpaId\" : \"1a02\",\n      \"frequencyRange\" : {\n        \"highFrequencyMhz\" : 2.0322840999097682E307,\n        \"lowFrequencyMhz\" : 1.4790657447193164E308\n      }\n    }, {\n      \"dpaId\" : \"r46t\",\n      \"frequencyRange\" : {\n        \"highFrequencyMhz\" : 3.9165136085903826E307,\n        \"lowFrequencyMhz\" : 1.406642371113202E308\n      }\n    }, {\n      \"dpaId\" : \"15a7\",\n      \"frequencyRange\" : {\n        \"highFrequencyMhz\" : 5.539889350466446E307,\n        \"lowFrequencyMhz\" : 1.7618686698994885E308\n      }\n    } ],\n    \"maxEirp\" : 1.0413916099094217E308\n  }, {\n    \"expireTime\" : \"2022-11-15T09:11:28.874027Z\",\n    \"grantId\" : \"oki2\",\n    \"suspensionReason\" : [ \"nqmze8k7ldta7o5dnw2bm1qlwtp8ho6rbg5t68gorrfc20l3bss9z7ld5e6mjjokzoxzpd3jnznexuurkbi49ds3knmrciwxgg5hbr4eb2wqj6y9k2lastlwn01bh96946t4brw2hy3wh26dnco6bay8pd4mhtlhp8qzax8qsd7e7\", \"o24je878syul1mocd3u3w7vbsrkqlj18dmw69v6ix2g3o87sx50zq08wyind6lwoooh30gxpc1pj0v3w3suqqaqjbfn725adf9w2fv0n5jw1d0cy9v7w0oij10fu8izm0v8l59zu8pu2qdy3elbesbp2zy3tx8j8qnm6rq2m6tulkiszisjrxipu9iop8kp\" ],\n    \"frequencyRange\" : {\n      \"highFrequencyMhz\" : 1.4079606540099586E307,\n      \"lowFrequencyMhz\" : 1.3213918399988511E308\n    },\n    \"channelType\" : \"CHANNEL_TYPE_GAA\",\n    \"lastHeartbeatTransmitExpireTime\" : \"2022-12-08T06:36:28.874165Z\",\n    \"state\" : \"GRANT_STATE_AUTHORIZED\",\n    \"moveList\" : [ {\n      \"dpaId\" : \"9ih9\",\n      \"frequencyRange\" : {\n        \"highFrequencyMhz\" : 2.4176082928535157E307,\n        \"lowFrequencyMhz\" : 1.756495568684351E308\n      }\n    }, {\n      \"dpaId\" : \"l305\",\n      \"frequencyRange\" : {\n        \"highFrequencyMhz\" : 1.5387418940120256E308,\n        \"lowFrequencyMhz\" : 9.009927609861795E306\n      }\n    }, {\n      \"dpaId\" : \"4tl6\",\n      \"frequencyRange\" : {\n        \"highFrequencyMhz\" : 1.0307348255182495E308,\n        \"lowFrequencyMhz\" : 9.220193907620167E307\n      }\n    }, {\n      \"dpaId\" : \"06cv\",\n      \"frequencyRange\" : {\n        \"highFrequencyMhz\" : 1.422308158995542E308,\n        \"lowFrequencyMhz\" : 8.635569678757919E307\n      }\n    }, {\n      \"dpaId\" : \"q461\",\n      \"frequencyRange\" : {\n        \"highFrequencyMhz\" : 8.19264435098391E307,\n        \"lowFrequencyMhz\" : 4.3462057105784334E307\n      }\n    }, {\n      \"dpaId\" : \"04j6\",\n      \"frequencyRange\" : {\n        \"highFrequencyMhz\" : 1.6684195851318777E308,\n        \"lowFrequencyMhz\" : 8.926870542871667E307\n      }\n    }, {\n      \"dpaId\" : \"z99j\",\n      \"frequencyRange\" : {\n        \"highFrequencyMhz\" : 8.811599994476539E307,\n        \"lowFrequencyMhz\" : 1.6943867983977507E308\n      }\n    } ],\n    \"maxEirp\" : 7.826678789354089E307\n  }, {\n    \"expireTime\" : \"2022-09-14T06:11:28.874794Z\",\n    \"grantId\" : \"e268\",\n    \"suspensionReason\" : [ \"6ryavqdkj55l2gjsl83ao5h0pxdd0zov40p8rr862wy1sy2dqeorgr18qtz0xffyoxtd8bjsdmfow936e9242jp0w37stq7in89453g8vxzeqt9zb5ghzozhjk0llvawniqpjnp8s8ar1li7862zjfk432vc4zh42rukd6fuludsu6x3edhx5g5a0urbsdwaarpuc\", \"45uw1vvc9i0p14sqwlbz24394o149kb1ak2j52qevaef4yifhmpbxcj5qond6mifnwn1crgspfrlqlju39qbycj3\", \"akqo53l\", \"56a8egnudpm7usxlrjkfa1z0l9inkno4lj52xr09bzi8jdpvqkuv14m6o7ce\", \"60l75g2zsottjkpdk4rpgeqi773pythgmgirm7quhuioqbp6l6jrb6fhmtr5j373qofxfsiug1zym4ft4859gpamp12m3h1hh73wlf11ro0us9xwudwvg8jh\" ],\n    \"frequencyRange\" : {\n      \"highFrequencyMhz\" : 1.4729546998793187E308,\n      \"lowFrequencyMhz\" : 1.660140493102328E308\n    },\n    \"channelType\" : \"CHANNEL_TYPE_PAL\",\n    \"lastHeartbeatTransmitExpireTime\" : \"2022-07-26T05:36:28.87494Z\",\n    \"state\" : \"GRANT_STATE_SUSPENDED\",\n    \"moveList\" : [ {\n      \"dpaId\" : \"p908\",\n      \"frequencyRange\" : {\n        \"highFrequencyMhz\" : 4.859614719378022E307,\n        \"lowFrequencyMhz\" : 1.1012107944302788E308\n      }\n    }, {\n      \"dpaId\" : \"8mjr\",\n      \"frequencyRange\" : {\n        \"highFrequencyMhz\" : 5.96119143147102E307,\n        \"lowFrequencyMhz\" : 7.334503114266665E307\n      }\n    }, {\n      \"dpaId\" : \"2u84\",\n      \"frequencyRange\" : {\n        \"highFrequencyMhz\" : 1.4958438912035191E308,\n        \"lowFrequencyMhz\" : 1.0512210450127368E308\n      }\n    }, {\n      \"dpaId\" : \"5h70\",\n      \"frequencyRange\" : {\n        \"highFrequencyMhz\" : 5.391005777916525E307,\n        \"lowFrequencyMhz\" : 1.3786578911058159E308\n      }\n    }, {\n      \"dpaId\" : \"y195\",\n      \"frequencyRange\" : {\n        \"highFrequencyMhz\" : 1.4377315264218868E308,\n        \"lowFrequencyMhz\" : 1.3754710416472643E308\n      }\n    } ],\n    \"maxEirp\" : 1.3618489552938473E308\n  } ],\n  \"preloadedConfig\" : {\n    \"isSigned\" : true,\n    \"airInterface\" : {\n      \"supportedSpec\" : \"4yv8zz1ow2h0uje4eobq24pq1af15ihokox6p0npxn9zm4osb1f14duvdyum7jkav8zfwbcp3j1ia\",\n      \"radioTechnology\" : \"CW\"\n    },\n    \"installationParams\" : {\n      \"cpeCbsdIndication\" : false,\n      \"indoorDeployment\" : false,\n      \"antennaGainNewField\" : 1.001183457562051E308,\n      \"antennaModel\" : \"ofs0wylgtu793gy7nr\",\n      \"latitude\" : 1.2350151519604012E308,\n      \"antennaGain\" : 789276485,\n      \"horizontalAccuracy\" : 7.501390351252262E307,\n      \"heightType\" : \"HEIGHT_TYPE_AMSL\",\n      \"verticalAccuracy\" : 9.842192839702878E307,\n      \"antennaBeamwidth\" : 677162813,\n      \"eirpCapabilityNewField\" : 1.2934907122871052E308,\n      \"antennaDowntilt\" : 822537673,\n      \"antennaAzimuth\" : 558679112,\n      \"eirpCapability\" : 1164909187,\n      \"height\" : 5.807497571437262E307,\n      \"longitude\" : 2.63748667266876E307\n    },\n    \"measurementCapabilities\" : [ \"MEASUREMENT_CAPABILITY_RECEIVED_POWER_WITHOUT_GRANT\", \"MEASUREMENT_CAPABILITY_UNSPECIFIED\", \"MEASUREMENT_CAPABILITY_RECEIVED_POWER_WITH_GRANT\", \"MEASUREMENT_CAPABILITY_UNSPECIFIED\", \"MEASUREMENT_CAPABILITY_RECEIVED_POWER_WITH_GRANT\", \"MEASUREMENT_CAPABILITY_UNSPECIFIED\", \"MEASUREMENT_CAPABILITY_UNSPECIFIED\", \"MEASUREMENT_CAPABILITY_RECEIVED_POWER_WITH_GRANT\" ],\n    \"model\" : {\n      \"vendor\" : \"ihaae2ph058vx3vbqgdh9dsrz2sh0a6k7fv8ve6u8oupwvtt1p363h77m5pz6r4qw0ec3zjf4fvf66dvddl3e98dwkr\",\n      \"name\" : \"Gulgowski\",\n      \"hardwareVersion\" : \"eg2a8w1b4pi34wyayspov854c7mfvgz5no9tfodaxkg7mylh2hlkbqbic0bc9kt74wora59tf4nu5lzj1kh1d25ab8df5zyv675gn9wisp\",\n      \"firmwareVersion\" : \"2eih6n3frji9h317rf5hzhyeh9clygonh07hc26hurar4huh22oc1zgkb6tnfy29e49krw87ky8y9vnd7k1p1pnrjcl8h1rzybnbvo9cut7xw5c9frpjd1gcf\",\n      \"softwareVersion\" : \"dfcnpm9wc0390643i8p\"\n    },\n    \"updateTime\" : \"2022-12-11T08:27:28.875724Z\",\n    \"state\" : \"DRAFT\",\n    \"category\" : \"DEVICE_CATEGORY_UNSPECIFIED\",\n    \"userId\" : \"1xp8\",\n    \"callSign\" : \"4b7yiwzi1y5b2\"\n  },\n  \"serialNumber\" : \"54ri9hg2hpiccefme1rouda6uhkupnfer8584o78jyhz5h7179\",\n  \"activeConfig\" : {\n    \"isSigned\" : true,\n    \"airInterface\" : {\n      \"supportedSpec\" : \"q9gp\",\n      \"radioTechnology\" : \"CAMBIUM_NETWORKS\"\n    },\n    \"installationParams\" : {\n      \"cpeCbsdIndication\" : false,\n      \"indoorDeployment\" : true,\n      \"antennaGainNewField\" : 1.2085675446269571E306,\n      \"antennaModel\" : \"kgbuc827y0smsgl81qz\",\n      \"latitude\" : 1.7895456770223877E308,\n      \"antennaGain\" : 2018398454,\n      \"horizontalAccuracy\" : 7.968627893393516E307,\n      \"heightType\" : \"HEIGHT_TYPE_AMSL\",\n      \"verticalAccuracy\" : 9.089317954796398E307,\n      \"antennaBeamwidth\" : 1725441225,\n      \"eirpCapabilityNewField\" : 8.286905319371601E307,\n      \"antennaDowntilt\" : 646011672,\n      \"antennaAzimuth\" : 1308724123,\n      \"eirpCapability\" : 78757435,\n      \"height\" : 5.577953632328318E307,\n      \"longitude\" : 8.398572700103169E307\n    },\n    \"measurementCapabilities\" : [ \"MEASUREMENT_CAPABILITY_RECEIVED_POWER_WITH_GRANT\" ],\n    \"model\" : {\n      \"vendor\" : \"b35psha0iu7jnfrd944l0mpadjpkn65pw\",\n      \"name\" : \"Fritsch\",\n      \"hardwareVersion\" : \"38eiier336xubrws91odx1san3wzaz0q950jgej584rqkevzbqfroohb901i5bonh32409ulkpraldw2yzqbvlersmypxrlgfbqcj8u3v4m45at8szwxi7jgt4g6yh60r08c04cwdm3usn4hr6d\",\n      \"firmwareVersion\" : \"plz4xpbbe9gaqa7vj2hzryi4ih4yie6rhztzb68qjpct7ki542hsxya4lxri4j0s52gci67l5uen70tz91t1u8ez4d73mmggjuyhue5klisvlwv2kkh9ycmbuyfw14q31spdfapzf3pe2p52uxpkqtfl0\",\n      \"softwareVersion\" : \"391ai6epsmqmxfi0pv5xb4pmd4r3cebdhl8no2kb1lfqt6v7k0dipjqbdo1ny1pfs4ytzgyklcq76xrqq27sir1rj5qi49h47dap72ei1dj4q3g6h0\"\n    },\n    \"updateTime\" : \"2022-08-09T06:42:28.876085Z\",\n    \"state\" : \"FINAL\",\n    \"category\" : \"DEVICE_CATEGORY_UNSPECIFIED\",\n    \"userId\" : \"t578\",\n    \"callSign\" : \"2hsm1o5qubg7fz5zha1f5tz95mm4aj2qkp5ssyfyau97nucqogmvv3jf0ihuk2grhlifn9kwdmold7\"\n  },\n  \"displayName\" : \"Virgil Boehm\",\n  \"deviceMetadata\" : {\n    \"nrqzValidation\" : {\n      \"cpiId\" : \"5zk8\",\n      \"caseId\" : \"9080\",\n      \"latitude\" : 8.998485713954937E307,\n      \"state\" : \"DRAFT\",\n      \"longitude\" : 4.317956100213313E307\n    },\n    \"commonChannelGroup\" : \"myr88s\",\n    \"interferenceCoordinationGroup\" : \"f7j957ne3ugp1vmixy7vumg03orp0qpetd17k0j1utchfd7lg8xl5jylejo4fjdgx6k1pedsgxes5y7760yil4wzbl0n8pdd6igaxa\",\n    \"nrqzValidated\" : false,\n    \"antennaModel\" : \"0esr90hd4nnvk1r7fm4dgovjjlhrdv4rj2onvl5sxuhwhcrnzw7td8e2xh7fpnsto7j0n8gz2rc86iw0m5s4epn50soa3tr6n4eiinc11u7\"\n  },\n  \"name\" : \"Sena Langworth\",\n  \"fccId\" : \"4xk5\",\n  \"grantRangeAllowlists\" : [ {\n    \"highFrequencyMhz\" : 1.951810555709309E307,\n    \"lowFrequencyMhz\" : 7.128939745669081E307\n  } ],\n  \"state\" : \"RESERVED\",\n  \"currentChannels\" : [ {\n    \"score\" : 1.4448616405996109E308,\n    \"frequencyRange\" : {\n      \"highFrequencyMhz\" : 6.089054078064449E307,\n      \"lowFrequencyMhz\" : 1.5732172142845813E308\n    }\n  }, {\n    \"score\" : 1.1826355268764227E308,\n    \"frequencyRange\" : {\n      \"highFrequencyMhz\" : 1.7914037070918562E308,\n      \"lowFrequencyMhz\" : 1.267756748735373E308\n    }\n  }, {\n    \"score\" : 1.4353271746645801E308,\n    \"frequencyRange\" : {\n      \"highFrequencyMhz\" : 1.1395601974138537E308,\n      \"lowFrequencyMhz\" : 3.0936763288821185E307\n    }\n  }, {\n    \"score\" : 1.4479548001236821E308,\n    \"frequencyRange\" : {\n      \"highFrequencyMhz\" : 9.361187741868668E307,\n      \"lowFrequencyMhz\" : 1.4666280421923323E308\n    }\n  }, {\n    \"score\" : 2.6746579677617105E306,\n    \"frequencyRange\" : {\n      \"highFrequencyMhz\" : 4.056468444141973E307,\n      \"lowFrequencyMhz\" : 3.0287265747455183E307\n    }\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "4b379a0f-40cf-460d-b888-063d0e3f758f",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:28.877002Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "sasportal.nodes.nodes.devices.createSigned",
+          "schema" : {
+            "properties" : {
+              "activeConfig" : {
+                "$ref" : "#/components/schemas/SasPortalDeviceConfig"
+              },
+              "currentChannels" : {
+                "description" : "Output only. Current channels with scores.",
+                "items" : {
+                  "$ref" : "#/components/schemas/SasPortalChannelWithScore"
+                },
+                "readOnly" : true,
+                "type" : "array"
+              },
+              "deviceMetadata" : {
+                "$ref" : "#/components/schemas/SasPortalDeviceMetadata"
+              },
+              "displayName" : {
+                "description" : "Device display name.",
+                "type" : "string"
+              },
+              "fccId" : {
+                "description" : "The FCC identifier of the device.",
+                "type" : "string"
+              },
+              "grantRangeAllowlists" : {
+                "description" : "Only ranges that are within the allowlists are available for new grants.",
+                "items" : {
+                  "$ref" : "#/components/schemas/SasPortalFrequencyRange"
+                },
+                "type" : "array"
+              },
+              "grants" : {
+                "description" : "Output only. Grants held by the device.",
+                "items" : {
+                  "$ref" : "#/components/schemas/SasPortalDeviceGrant"
+                },
+                "type" : "array"
+              },
+              "name" : {
+                "description" : "Output only. The resource path name.",
+                "type" : "string"
+              },
+              "preloadedConfig" : {
+                "$ref" : "#/components/schemas/SasPortalDeviceConfig"
+              },
+              "serialNumber" : {
+                "description" : "A serial number assigned to the device by the device manufacturer.",
+                "type" : "string"
+              },
+              "state" : {
+                "description" : "Output only. Device state.",
+                "enum" : [ "DEVICE_STATE_UNSPECIFIED", "RESERVED", "REGISTERED", "DEREGISTERED" ],
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 2
+  }, {
+    "id" : "2a8d5820-9be9-4eb9-826f-93254dd47459",
+    "name" : "Creates a device under a node or customer.",
+    "request" : {
+      "urlPath" : "/v1alpha1/fwea3esr621ebh8l3vazkpdfkrkfaymclc0vy11ftq9ujpi5srrrsyeak4ia2lm01p2jk9rhmwy0h3ixkjybdn76/devices",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"grants\" : [ {\n    \"expireTime\" : \"2022-10-24T05:31:28.868116Z\",\n    \"grantId\" : \"9vp6\",\n    \"suspensionReason\" : [ \"bsw7hwjm8ppy0ezlven0f9xm3iljmoh5eyf6l7iuny2wzjq77im2fmm1xu68xnsfo5kc3lvdqpftyp220lyp8e6dvekfhobku6ntktr3e0c7dlpx4hq1tjtnv3jcr556sxhdv8dh05rs60o12gyer8yn2l4ni8k8me5140n\", \"osqqu1nkw3oo023n1c0oo74mdov341x4mg9uiiimaeg9fhjiwsfso21lqw15v75mromn8w54kbal1zxysmmo4035pjoo1a8cudvbirszd6\", \"3vi4ka2uam1qu4ivn050zn0qrlwtma3cq2it7ahqmiiziyj6t5n9th\" ],\n    \"frequencyRange\" : {\n      \"highFrequencyMhz\" : 1.2913640616209655E308,\n      \"lowFrequencyMhz\" : 1.1237423500185801E308\n    },\n    \"channelType\" : \"CHANNEL_TYPE_GAA\",\n    \"lastHeartbeatTransmitExpireTime\" : \"2023-02-25T06:46:28.868276Z\",\n    \"state\" : \"GRANT_STATE_TERMINATED\",\n    \"moveList\" : [ {\n      \"dpaId\" : \"l66w\",\n      \"frequencyRange\" : {\n        \"highFrequencyMhz\" : 1.063281841548459E308,\n        \"lowFrequencyMhz\" : 1.6136804798956744E308\n      }\n    }, {\n      \"dpaId\" : \"twzf\",\n      \"frequencyRange\" : {\n        \"highFrequencyMhz\" : 8.221664109139766E306,\n        \"lowFrequencyMhz\" : 1.084161529121682E308\n      }\n    }, {\n      \"dpaId\" : \"ujz8\",\n      \"frequencyRange\" : {\n        \"highFrequencyMhz\" : 1.4728851103121062E308,\n        \"lowFrequencyMhz\" : 6.782853165859074E307\n      }\n    }, {\n      \"dpaId\" : \"hj19\",\n      \"frequencyRange\" : {\n        \"highFrequencyMhz\" : 1.246572608081895E307,\n        \"lowFrequencyMhz\" : 7.730368228317639E307\n      }\n    }, {\n      \"dpaId\" : \"8l82\",\n      \"frequencyRange\" : {\n        \"highFrequencyMhz\" : 7.984909114587862E307,\n        \"lowFrequencyMhz\" : 1.5052924275246092E308\n      }\n    }, {\n      \"dpaId\" : \"9ds7\",\n      \"frequencyRange\" : {\n        \"highFrequencyMhz\" : 7.643438852680574E307,\n        \"lowFrequencyMhz\" : 1.5049642955412707E307\n      }\n    }, {\n      \"dpaId\" : \"q9rq\",\n      \"frequencyRange\" : {\n        \"highFrequencyMhz\" : 1.5478894951959652E308,\n        \"lowFrequencyMhz\" : 1.4046181837990518E307\n      }\n    } ],\n    \"maxEirp\" : 6.551040420282616E307\n  }, {\n    \"expireTime\" : \"2022-04-12T06:16:28.868943Z\",\n    \"grantId\" : \"4oo9\",\n    \"suspensionReason\" : [ \"1q9ixoyb6g473cgu7k5sut36vhlgnrr6ppx2wk1q3hohjmw9w3p1tqyqebvcymieqa72ai1\", \"q7h1iep66jx7vw0siyioa9z8fd2k6fv8re4va5y8zpqt552lvq3zfa2lvp8fsul0tc5cpke8vg27cqyejb7elwx72ri4k3yn7xqrb3dwbfzljdpnd62uot66twc8bopgieg51y0wmejquk99aqsvkroqs3qwkrnbq7vi9132qa4zylivl8p1\", \"e2f9o6771zsmyq34h747ttip8vj79xg2mdgnvtiln11s7x71od2l8u0063fgrcwvtfkm6coa6jzdv64q5sent2nt0x4i5pbil0sr2iyw6iior7xtwln8974lsl\", \"p5b5e6or4pw82udw350hgawj8sqeg4lcjhayfqecv43wq7d20or7vnnugijstq1kos6\" ],\n    \"frequencyRange\" : {\n      \"highFrequencyMhz\" : 1.0982775944228002E308,\n      \"lowFrequencyMhz\" : 7.155756807923919E307\n    },\n    \"channelType\" : \"CHANNEL_TYPE_GAA\",\n    \"lastHeartbeatTransmitExpireTime\" : \"2022-05-17T06:03:28.869151Z\",\n    \"state\" : \"GRANT_STATE_GRANTED\",\n    \"moveList\" : [ {\n      \"dpaId\" : \"7x3u\",\n      \"frequencyRange\" : {\n        \"highFrequencyMhz\" : 3.9104216209691064E307,\n        \"lowFrequencyMhz\" : 9.469753661495152E307\n      }\n    }, {\n      \"dpaId\" : \"xq0i\",\n      \"frequencyRange\" : {\n        \"highFrequencyMhz\" : 7.768361730182619E307,\n        \"lowFrequencyMhz\" : 2.861929831987576E307\n      }\n    } ],\n    \"maxEirp\" : 1.2150130757283397E308\n  }, {\n    \"expireTime\" : \"2022-05-29T07:00:28.869388Z\",\n    \"grantId\" : \"844r\",\n    \"suspensionReason\" : [ \"d65m9688wt28hzxa1263dt6jmak22agzovphccaes6enbrszxn3qwq4ge05xjdskm25wsm89hulzrj7t\" ],\n    \"frequencyRange\" : {\n      \"highFrequencyMhz\" : 1.2534933984459016E308,\n      \"lowFrequencyMhz\" : 3.3554063567994096E307\n    },\n    \"channelType\" : \"CHANNEL_TYPE_GAA\",\n    \"lastHeartbeatTransmitExpireTime\" : \"2022-08-24T06:08:28.870068Z\",\n    \"state\" : \"GRANT_STATE_SUSPENDED\",\n    \"moveList\" : [ {\n      \"dpaId\" : \"u04o\",\n      \"frequencyRange\" : {\n        \"highFrequencyMhz\" : 5.2998697542954546E306,\n        \"lowFrequencyMhz\" : 9.533322664599583E307\n      }\n    }, {\n      \"dpaId\" : \"5wql\",\n      \"frequencyRange\" : {\n        \"highFrequencyMhz\" : 1.7099644941093895E308,\n        \"lowFrequencyMhz\" : 1.5408027389006334E308\n      }\n    }, {\n      \"dpaId\" : \"5dg9\",\n      \"frequencyRange\" : {\n        \"highFrequencyMhz\" : 1.0197015298384521E308,\n        \"lowFrequencyMhz\" : 1.6708017392565594E308\n      }\n    }, {\n      \"dpaId\" : \"ys2e\",\n      \"frequencyRange\" : {\n        \"highFrequencyMhz\" : 1.268507193346856E308,\n        \"lowFrequencyMhz\" : 1.292551457082727E308\n      }\n    }, {\n      \"dpaId\" : \"vlj4\",\n      \"frequencyRange\" : {\n        \"highFrequencyMhz\" : 5.254689000728789E307,\n        \"lowFrequencyMhz\" : 6.424510028660071E307\n      }\n    }, {\n      \"dpaId\" : \"m332\",\n      \"frequencyRange\" : {\n        \"highFrequencyMhz\" : 1.1176458260867553E308,\n        \"lowFrequencyMhz\" : 1.3343982298395156E308\n      }\n    }, {\n      \"dpaId\" : \"fitm\",\n      \"frequencyRange\" : {\n        \"highFrequencyMhz\" : 7.963917909303418E307,\n        \"lowFrequencyMhz\" : 3.8365705444600724E307\n      }\n    }, {\n      \"dpaId\" : \"tj39\",\n      \"frequencyRange\" : {\n        \"highFrequencyMhz\" : 4.901795107695876E307,\n        \"lowFrequencyMhz\" : 1.1087180044776965E308\n      }\n    } ],\n    \"maxEirp\" : 6.695787033497251E307\n  } ],\n  \"preloadedConfig\" : {\n    \"isSigned\" : true,\n    \"airInterface\" : {\n      \"supportedSpec\" : \"0vg2ajss79c5l2y9rwuq99umo8j9rnoca5hkp8fptzfi3xgqaiz20w6hww9\",\n      \"radioTechnology\" : \"CW\"\n    },\n    \"installationParams\" : {\n      \"cpeCbsdIndication\" : false,\n      \"indoorDeployment\" : false,\n      \"antennaGainNewField\" : 5.1488039145728853E306,\n      \"antennaModel\" : \"4xi0p0vcvm80r1nrik1v4noqs49t0pfytjw4x4dhhx6zyucs8eza91cv3i46d3sdlijezauy\",\n      \"latitude\" : 2.4183772554410366E307,\n      \"antennaGain\" : 1919574928,\n      \"horizontalAccuracy\" : 1.7922588129667169E308,\n      \"heightType\" : \"HEIGHT_TYPE_UNSPECIFIED\",\n      \"verticalAccuracy\" : 1.5434162486619985E308,\n      \"antennaBeamwidth\" : 1479628219,\n      \"eirpCapabilityNewField\" : 2.0485730560245418E307,\n      \"antennaDowntilt\" : 2077624160,\n      \"antennaAzimuth\" : 115780225,\n      \"eirpCapability\" : 2103639003,\n      \"height\" : 5.260769959701504E307,\n      \"longitude\" : 1.6086893674049206E307\n    },\n    \"measurementCapabilities\" : [ \"MEASUREMENT_CAPABILITY_RECEIVED_POWER_WITHOUT_GRANT\", \"MEASUREMENT_CAPABILITY_RECEIVED_POWER_WITHOUT_GRANT\", \"MEASUREMENT_CAPABILITY_UNSPECIFIED\" ],\n    \"model\" : {\n      \"vendor\" : \"7jwat97bc76b\",\n      \"name\" : \"Wisoky\",\n      \"hardwareVersion\" : \"czzfpeqa8hq7aupqsebtgcsndok65wma1egayiz23yvsqs2ad4d4bjguoxks9yqh4wckkcnty8k9sultzincwy7ifb2gauyq14yn6etbztg58tuwseqd5olawwtxa8\",\n      \"firmwareVersion\" : \"pzzjfhrtl2hc2rglvj6j2kwnmzmjego02i8trv52krpvd023hbji8l93ql6xgynst99ki1unmey1002iqhx3wocx7m4rh2cuywykj5sf7zrwzdqhkn96ogmo6fxgnowv1sq9vhmmk21txeroafr5plhoacpmy0oybpmj6sbls2vcfz6o1x63vzeirl7ssn6sb21p\",\n      \"softwareVersion\" : \"ot8sq2x5f19pgnk4c\"\n    },\n    \"updateTime\" : \"2022-11-01T09:21:28.871184Z\",\n    \"state\" : \"DRAFT\",\n    \"category\" : \"DEVICE_CATEGORY_B\",\n    \"userId\" : \"ddw7\",\n    \"callSign\" : \"hz7l9s5sqzrxo8fgt1w0ai9idfyofwjz7pem9vgvyfdzh766njjhkfc5uilp\"\n  },\n  \"serialNumber\" : \"klv21y61b8ywjpawl96nns9o9qk64u3s5yy4bpieh4yynrcj1dxes36egpixtq1wgl\",\n  \"activeConfig\" : {\n    \"isSigned\" : true,\n    \"airInterface\" : {\n      \"supportedSpec\" : \"nliuzq3e9rkj3dank3dmyn514u18sr7zk1b82f7e6ek1kpjeoof83fbxjzrri3kugtymz77z4lu1hmh7xrks49msxealmqt1fwexuzbwblrn4rtp4fkai0w5tnmn6nwwuaokrz\",\n      \"radioTechnology\" : \"NR\"\n    },\n    \"installationParams\" : {\n      \"cpeCbsdIndication\" : true,\n      \"indoorDeployment\" : false,\n      \"antennaGainNewField\" : 2.76764846858864E306,\n      \"antennaModel\" : \"fe5g9va9gvunqv2koj44rz2p045queupgzcr\",\n      \"latitude\" : 1.2747663302353288E308,\n      \"antennaGain\" : 174606793,\n      \"horizontalAccuracy\" : 1.1348642375564869E308,\n      \"heightType\" : \"HEIGHT_TYPE_UNSPECIFIED\",\n      \"verticalAccuracy\" : 5.868242099733451E307,\n      \"antennaBeamwidth\" : 2066282602,\n      \"eirpCapabilityNewField\" : 1.037719055789027E308,\n      \"antennaDowntilt\" : 1550925063,\n      \"antennaAzimuth\" : 807911349,\n      \"eirpCapability\" : 1028857595,\n      \"height\" : 4.0222397161168977E307,\n      \"longitude\" : 1.735971242708643E307\n    },\n    \"measurementCapabilities\" : [ \"MEASUREMENT_CAPABILITY_RECEIVED_POWER_WITHOUT_GRANT\" ],\n    \"model\" : {\n      \"vendor\" : \"cmz2yachbn9rld0qhydpy8yv5tpo23sh4enca\",\n      \"name\" : \"Powlowski\",\n      \"hardwareVersion\" : \"6nghlcdf0y8ct4iveod5nrl02u38y5ffpwj3ikkyh71500qaoqsh11upr4td01dabufhk4vn8nb7cmr385\",\n      \"firmwareVersion\" : \"sg7dbebdsc8y4aee41x88hgz0qge1v48hwvx35t7t07rwsbhil5378tm2m2naxygy4ff2wus5dpo370f3a8uv4fqklndpqvafvth8rzxm3opnj2u6cmjkvbw53cljqi36ycpdb7skt0pbf8l4cav6vhnqzajeswu9cbglmij98397tetpx91hqnz3prmwic7gm\",\n      \"softwareVersion\" : \"x9vdj6iszs374bnz0a7rbdjvviq1h9b8r3gtxmw6hav1vwiq2w4xzmhafl0nk3kw9i5a3lqe5rh\"\n    },\n    \"updateTime\" : \"2023-02-08T08:35:28.87157Z\",\n    \"state\" : \"FINAL\",\n    \"category\" : \"DEVICE_CATEGORY_B\",\n    \"userId\" : \"b0au\",\n    \"callSign\" : \"22m283ytsjbketqpl52a0k6budf9h5j9jfiz4qzdl49wliwj9q3oe1fzv\"\n  },\n  \"displayName\" : \"Roseanne Osinski\",\n  \"deviceMetadata\" : {\n    \"nrqzValidation\" : {\n      \"cpiId\" : \"23ca\",\n      \"caseId\" : \"m894\",\n      \"latitude\" : 5.731081487687856E307,\n      \"state\" : \"FINAL\",\n      \"longitude\" : 1.2652579855939416E308\n    },\n    \"commonChannelGroup\" : \"w6fx9l4fxzgcwrutv8t4t1bwflu9yawvryj7lkgm39f7hddk1l2l7v6tq6ol68xv6cs8ap2ynjducciuya4y431hb27f9ufz1pu88vqk\",\n    \"interferenceCoordinationGroup\" : \"muehmgj\",\n    \"nrqzValidated\" : false,\n    \"antennaModel\" : \"d07x22zojolkbemqmernkrphqjho8matruorbzngpcxsk\"\n  },\n  \"name\" : \"Geoffrey Beatty\",\n  \"fccId\" : \"06ru\",\n  \"grantRangeAllowlists\" : [ {\n    \"highFrequencyMhz\" : 1.4581192718218672E308,\n    \"lowFrequencyMhz\" : 2.851073396739272E306\n  }, {\n    \"highFrequencyMhz\" : 1.2747496928059355E308,\n    \"lowFrequencyMhz\" : 1.4196461098667562E308\n  }, {\n    \"highFrequencyMhz\" : 4.856679054316956E307,\n    \"lowFrequencyMhz\" : 6.637941865579054E307\n  }, {\n    \"highFrequencyMhz\" : 2.3049914732158554E307,\n    \"lowFrequencyMhz\" : 7.705191281538488E307\n  }, {\n    \"highFrequencyMhz\" : 1.3628001994751325E308,\n    \"lowFrequencyMhz\" : 2.05613608220265E306\n  }, {\n    \"highFrequencyMhz\" : 1.1816452741236598E308,\n    \"lowFrequencyMhz\" : 3.8368584114929385E307\n  }, {\n    \"highFrequencyMhz\" : 1.4362276811281175E308,\n    \"lowFrequencyMhz\" : 9.921449564586922E307\n  } ],\n  \"state\" : \"DEREGISTERED\",\n  \"currentChannels\" : [ {\n    \"score\" : 8.294628814255293E307,\n    \"frequencyRange\" : {\n      \"highFrequencyMhz\" : 8.679265674024209E307,\n      \"lowFrequencyMhz\" : 5.673021210682571E307\n    }\n  }, {\n    \"score\" : 1.8770027450197235E306,\n    \"frequencyRange\" : {\n      \"highFrequencyMhz\" : 1.6097604041105622E308,\n      \"lowFrequencyMhz\" : 3.8244522621457107E307\n    }\n  }, {\n    \"score\" : 1.130666978757189E308,\n    \"frequencyRange\" : {\n      \"highFrequencyMhz\" : 1.385774672323785E308,\n      \"lowFrequencyMhz\" : 1.5319970236270937E308\n    }\n  }, {\n    \"score\" : 1.1790733496143805E308,\n    \"frequencyRange\" : {\n      \"highFrequencyMhz\" : 1.577720500972767E308,\n      \"lowFrequencyMhz\" : 1.3541624800959314E308\n    }\n  }, {\n    \"score\" : 5.746204002417449E307,\n    \"frequencyRange\" : {\n      \"highFrequencyMhz\" : 1.6493762612867674E308,\n      \"lowFrequencyMhz\" : 2.966225356907257E307\n    }\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "2a8d5820-9be9-4eb9-826f-93254dd47459",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:28.872606Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "sasportal.nodes.nodes.devices.create",
+          "schema" : {
+            "properties" : {
+              "activeConfig" : {
+                "$ref" : "#/components/schemas/SasPortalDeviceConfig"
+              },
+              "currentChannels" : {
+                "description" : "Output only. Current channels with scores.",
+                "items" : {
+                  "$ref" : "#/components/schemas/SasPortalChannelWithScore"
+                },
+                "readOnly" : true,
+                "type" : "array"
+              },
+              "deviceMetadata" : {
+                "$ref" : "#/components/schemas/SasPortalDeviceMetadata"
+              },
+              "displayName" : {
+                "description" : "Device display name.",
+                "type" : "string"
+              },
+              "fccId" : {
+                "description" : "The FCC identifier of the device.",
+                "type" : "string"
+              },
+              "grantRangeAllowlists" : {
+                "description" : "Only ranges that are within the allowlists are available for new grants.",
+                "items" : {
+                  "$ref" : "#/components/schemas/SasPortalFrequencyRange"
+                },
+                "type" : "array"
+              },
+              "grants" : {
+                "description" : "Output only. Grants held by the device.",
+                "items" : {
+                  "$ref" : "#/components/schemas/SasPortalDeviceGrant"
+                },
+                "type" : "array"
+              },
+              "name" : {
+                "description" : "Output only. The resource path name.",
+                "type" : "string"
+              },
+              "preloadedConfig" : {
+                "$ref" : "#/components/schemas/SasPortalDeviceConfig"
+              },
+              "serialNumber" : {
+                "description" : "A serial number assigned to the device by the device manufacturer.",
+                "type" : "string"
+              },
+              "state" : {
+                "description" : "Output only. Device state.",
+                "enum" : [ "DEVICE_STATE_UNSPECIFIED", "RESERVED", "REGISTERED", "DEREGISTERED" ],
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 3
+  }, {
+    "id" : "152a7e0a-03b2-4e6d-8942-4d6c61f1378f",
+    "name" : "Lists devices under a node or customer.",
+    "request" : {
+      "urlPath" : "/v1alpha1/noblp0docwgeampdokowh7r4uo8x1jdu0rz6ws3i0zijwv72edz9cyspkpr2u4la895qs24sy6y9xbh7ll4m29qtg/devices",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"devices\" : [ {\n    \"grants\" : [ {\n      \"expireTime\" : \"2022-06-28T06:05:28.853735Z\",\n      \"grantId\" : \"3h5z\",\n      \"suspensionReason\" : [ \"lkxze84yo317fcdt76ryqta9czeimp20rwlvvljwgxnikv7kyo0h1s50o2vkjmrdjcw2x2bitv9df7sghbu94l7iulal97llz02se85cq7jdtd74udqi396tivw08vjfqhw5wnx5f0itp4y948idtzgit3heb3v8w59a7qnrgmd14xkbnitpv4b5hr\", \"63pozp3z6rrhnlzczsty5vltxppdhzxikrx8a62gro04tuzyhsy1e1px78vvut2my9foz3rpbn51tpjdlov465xo84qxvtphtw0rkn3to9wsjwmt8r3bua60igvz0gibpg6afmuyn07bogt9ut0o95zejk8qxekre9irv2vb3ekbnwvj7e9hne1qo8v1\", \"rp828bjf1yk61ivppxmjc41e89kx85r1x71e\", \"cwj36ihe0ng8jhadii8b65kssi2sqqxorwfzhi1nhwwok0wuod7k3a3qawy7qojwj4ayhkoiwlo4pi3aur3vsvo8jpkxcbv94c7tz9a01fwu4b95w6zgskteh5ujagloekfwbf0ccxz\" ],\n      \"frequencyRange\" : {\n        \"highFrequencyMhz\" : 9.756358528462706E307,\n        \"lowFrequencyMhz\" : 1.1518811537329447E308\n      },\n      \"channelType\" : \"CHANNEL_TYPE_PAL\",\n      \"lastHeartbeatTransmitExpireTime\" : \"2022-06-18T07:55:28.8539Z\",\n      \"state\" : \"GRANT_STATE_GRANTED\",\n      \"moveList\" : [ { }, { }, { }, { }, { }, { }, { }, { } ],\n      \"maxEirp\" : 6.509572394378417E307\n    }, {\n      \"expireTime\" : \"2022-09-18T06:30:28.853963Z\",\n      \"grantId\" : \"yl77\",\n      \"suspensionReason\" : [ \"o6gss0knfq0d3xdbajgs1ysivsd0b3yx877l3npa8hih27mnrnddni8kql1uuoue4si2qtx86t3qltbru9s0ginvndun8nvundzkat1pcyhtfahbryrhjnn034r05jdnvqtq90s97pmlp2z3eldl9d58urh5id7ymw3sdt\", \"leln3bj347g61xhfp54lpszzez9f35putt1zo025483b73sdbwel8a4hfcsxoo1ayktgahv9si4eyqef\", \"2uwfqu3s2cit7qs6ecw3xr234d3emeess2mjk2ptay070oiyse3odqnvffph4c3wfl3672ylhkt\", \"qlgzxd778h95h74hm1y9crgdzrdetxj1b0o40jwb5lgpmyvw56pv9ns3nin9ujbkese7t9ezal60z8stedb5cjyz1d\", \"0ej3hrmvhspu7lcucvugx5f6bieji7gha852yafpuflds24ozeum2a45wby1kijdri7x6tibfzpkckswc0fmx5ij78xmz40dc0cmndjltli7fzmo5v1vt77i47lhjapfvmokpa2imvsnw8j5w84h4f8yfy4yvb73284cazyjkji787cnww15yq9d\", \"d7k9vahc128k2dmk6uvv06lqmdobbrc19qquswsswb5vrdx6rzrujqxkoskuw5u48m4hrv99vh27ejbg1u83ethsxznkb0pmy6a0475ux1jkcvcvgoz9pbcmzg8\", \"66h2tcwf8w6zu30vntcq14ihickivl04do9mlnapk7b4s\" ],\n      \"frequencyRange\" : {\n        \"highFrequencyMhz\" : 4.2415857653583256E307,\n        \"lowFrequencyMhz\" : 1.3221042183973567E308\n      },\n      \"channelType\" : \"CHANNEL_TYPE_PAL\",\n      \"lastHeartbeatTransmitExpireTime\" : \"2022-09-03T07:33:28.854133Z\",\n      \"state\" : \"GRANT_STATE_AUTHORIZED\",\n      \"moveList\" : [ { }, { }, { }, { }, { }, { }, { } ],\n      \"maxEirp\" : 8.353849812438806E307\n    }, {\n      \"expireTime\" : \"2022-05-11T07:14:28.85419Z\",\n      \"grantId\" : \"916q\",\n      \"suspensionReason\" : [ \"q30owbt7u4tugc37szqxgtk208ab94op50tllf7dgdxyhdz20lyjokk2d3au1my98i6m8e6so3zilmcg48xnzor52xuciqohox31pw60bzeq0au3a22ae19v7zhbno55yjt6nlfp3ke99zz\", \"x631vw5fsh9v6xtbt9te7u9bv3pfd05pn9kt8pen1l2nda1pzalm7dqmywe5nju6elcictw6m0kgz2nl167lsudym8667vd5kygs7ga9ac6jhb1xnhe22d7ortkk8e4u04nnpm4vpahk7451euqrx0ekxdptsy5umu621sil0d\", \"xfecpztmqxvat7zxx6gxg2aqnkrr3dc1z5sqidz5hos56xedomokf9fnlf516zf6d4u33rfp1s5c4g945p4lgu5kc1t28csnew67pp7v6y20z8slfvlyfhc4z\", \"riwtruemkx5vlvod5j5dsiu8iya464n9qk9j5jt0qt82bjpem060nwiflkkpc5zc49rlvzb6b0iqqe1kcia9dmn0xoepyjx3foyuei1b72d7kxxwfvl46y2vj2bcbn5oylm32jepvw6gbr\", \"dlrok9ljgeueywwm4j\", \"uz0b1bympaunsqtg8crzu2jh234rvhwcnim39s7zq0twsyslugy8ysqiosmlj55kq00ytqgmnqm3gpccoxg7z33bwwiddvlohpml8paqwkcdhiuqob33dtjorte\" ],\n      \"frequencyRange\" : {\n        \"highFrequencyMhz\" : 6.712191430984157E306,\n        \"lowFrequencyMhz\" : 1.7692313911058096E308\n      },\n      \"channelType\" : \"CHANNEL_TYPE_UNSPECIFIED\",\n      \"lastHeartbeatTransmitExpireTime\" : \"2022-07-14T07:14:28.854359Z\",\n      \"state\" : \"GRANT_STATE_UNSPECIFIED\",\n      \"moveList\" : [ { }, { }, { }, { } ],\n      \"maxEirp\" : 1.8725740233133854E307\n    }, {\n      \"expireTime\" : \"2023-03-27T07:43:28.854411Z\",\n      \"grantId\" : \"9y26\",\n      \"suspensionReason\" : [ \"wxni36rjouezgqv5lgpu5z9w1kxp\", \"cnfpm8mdm8v8mmnfpo65613jtdzkha8jt4yloohydliwz9cguobi1joh1kd44wd7o1fxi3yeufkddo1tbqx2ooj795xq0n3pbhfcbgbkyhnfj9mhy60rz67qxxy44s0gspxgpnbogk89su4\", \"y0hb59aox7a8gyudp27bxw9sm1itpb8l2joud6908ve1fj7nad93558fa8lbdpljwg9pj8ayemsoaobciw6di432f0o7vv8rg5b3kp4nbn9j0z1wv2eh0ha0p0k2erz4uo6tnuot3vkjmuefnnhaugs71o0wf2neytvqt3\", \"6rlrbrt5wtdfcae85089lygjkv00zq6fnj6x28s59uasboirjq8svtg3zzjpfdlamtms1slxzanmxqwgjdegbkv1698ldjsx19l3rwkrk2cq0chaidk6kh2i5cfwqfgrhhct1c0wu6uugn\", \"6pixu1uyti3pybacbolqcsl1gvtqw92i3039ogxtgagsfv4rm36x7qnksx7nrmwb3vu7tazkqrs7o2aslf78fc69yqq4ss3d6mnot6v98tuxtgk7whcm061t1uakmo05f4xiw86q548mvykz86l2mhcgh9q8j9u\" ],\n      \"frequencyRange\" : {\n        \"highFrequencyMhz\" : 6.564683046399604E307,\n        \"lowFrequencyMhz\" : 6.676265188716404E307\n      },\n      \"channelType\" : \"CHANNEL_TYPE_UNSPECIFIED\",\n      \"lastHeartbeatTransmitExpireTime\" : \"2023-01-12T07:05:28.854575Z\",\n      \"state\" : \"GRANT_STATE_SUSPENDED\",\n      \"moveList\" : [ { } ],\n      \"maxEirp\" : 1.5247295089385226E308\n    }, {\n      \"expireTime\" : \"2022-12-09T07:40:28.854626Z\",\n      \"grantId\" : \"rd25\",\n      \"suspensionReason\" : [ \"42ouo033digzxapwjsh9ymqvp4yc5p95sipaa626dkqtcxk31il1h68bw87511k7dtt5f1hf1gvm6u0ov7f69k4pgu3fu0dc0y9pmgnczsp2j10e4\", \"klqvrwwya0q8ux0yqbxge86z9t19et3mx28zcmdtgj8zbnwuvoozgg1qw9g6osb4sfo2sxg16m9rjlj7dzeur4hopgs04snde8iunb1\", \"bnsx5vv7u48dgr9vuuktl6lqtuc6g8afaxivn15p6tz1ozp5ybcrcjw92sqt50gt3ie2pxyydm9j8gqs2903t70xl0dvhkn6fi8lu6iipuirxbuwojxn8p0m6eaxcft0rcg2rrodxir0i4hzy2at4jy5mhz31roh\", \"bzwikcve8k3w0b4l8n0fx0pdjywpukv6elnmdkdkikmnxmmpodp3axee78h2fuofszz62jsumxukvxmwihpldnldbxuj36h6ulgf4glunbdy63ejxqcizdl0p6zf67b6vkyk2kghw7qhrhzmqfmxq03gjq9rxjy5xu0us70rq41ypvz99djaskuhzw\", \"sxb00qn8h7zr1atkjiv0vkbhlxhbq2pfzzgyqitkzfvqn9andkbafmq1wa31cktag6g80r5wnpkojbtq6xx805odjy4x1eiaan8jiffule2ezf\", \"l86nskzvgg056ljrfhy96rbtbsewp1d34xpbirlnt5cjzhjbkp9q4iold18schavu6g757lb5kpql3injw9dhcsi5qpj4d1tvzqxqcqzuk69vesd7gi93o82kts3dp8rv44jd1ujb8o1zf9nluhmg3cb0o5u6\", \"j3hgoh6ihehonemfuvplws52aih3p02n0\" ],\n      \"frequencyRange\" : {\n        \"highFrequencyMhz\" : 7.189444572120367E307,\n        \"lowFrequencyMhz\" : 1.7647098506849682E308\n      },\n      \"channelType\" : \"CHANNEL_TYPE_PAL\",\n      \"lastHeartbeatTransmitExpireTime\" : \"2022-03-30T08:22:28.854791Z\",\n      \"state\" : \"GRANT_STATE_AUTHORIZED\",\n      \"moveList\" : [ { }, { }, { }, { }, { } ],\n      \"maxEirp\" : 1.6973193171137075E308\n    }, {\n      \"expireTime\" : \"2023-02-15T08:39:28.854845Z\",\n      \"grantId\" : \"a4n8\",\n      \"suspensionReason\" : [ \"rxnqwz4pwele26\" ],\n      \"frequencyRange\" : {\n        \"highFrequencyMhz\" : 1.0398719097280376E307,\n        \"lowFrequencyMhz\" : 1.696267203297194E308\n      },\n      \"channelType\" : \"CHANNEL_TYPE_UNSPECIFIED\",\n      \"lastHeartbeatTransmitExpireTime\" : \"2022-05-29T09:19:28.854981Z\",\n      \"state\" : \"GRANT_STATE_TERMINATED\",\n      \"moveList\" : [ { }, { }, { }, { } ],\n      \"maxEirp\" : 8.286113438054236E307\n    }, {\n      \"expireTime\" : \"2022-10-01T05:29:28.855036Z\",\n      \"grantId\" : \"78j0\",\n      \"suspensionReason\" : [ \"4knftzef3bpcxr8d21h0a5ljr9zbreeyjvmyer8\", \"sg7zdsthlko54wi29haybqgv0bag5lbclsu7ctbt5eewn4pixv2gteq52324bq0aky2wtwhgillm5\", \"5zsxaq3zdtaboykouazai88vhpufmrc2fspsamwvwtic7ijgmofdt1te29hb3ywbwo0cp58lh71k5p6l0bewgabbt1d8byy2zs93f6l7ndrrboo11dh3xjqrefqbp0pywxor05xhbxn5965mghwub9hlwx3u5zth4p4io2w\", \"herwqpljezv24nka65rm29495ggnfq9u0vph3clse9jb7sxa69cuk9koo2xb41w8jzmg6266pjxup6bf4ik0l7vvtuay7bmupizm3cwaua6n1guyo45o3yf0dkgljfkkr97imqlq2d25tbubo4cf8za17t7fvy8ygjsi372wbtdtvckfrp899izs04fd8ossoo\" ],\n      \"frequencyRange\" : {\n        \"highFrequencyMhz\" : 1.0392993143078585E308,\n        \"lowFrequencyMhz\" : 2.0866448324701706E307\n      },\n      \"channelType\" : \"CHANNEL_TYPE_PAL\",\n      \"lastHeartbeatTransmitExpireTime\" : \"2023-01-24T09:12:28.855192Z\",\n      \"state\" : \"GRANT_STATE_GRANTED\",\n      \"moveList\" : [ { }, { } ],\n      \"maxEirp\" : 1.307777904723649E308\n    }, {\n      \"expireTime\" : \"2022-08-10T08:20:28.855242Z\",\n      \"grantId\" : \"0h93\",\n      \"suspensionReason\" : [ \"s3i1uvan2socc25xoueujtpl0vay2dyspu0vexq1p0vdi8jf4prt3vrak3q0rj2ucx1kg3f4bkmtj44dtphizqtya5ohtd2ebsdt7d7dmydjjt45j4o7e4333vds7bj223xdvc03pkowh8r5ug\", \"ku2fyqgc0srixyp3s4zhie5jj91kef23f0kcjuriw542ecv018ih4y2wzxp7e25jzg5934i3sxc1i57po0drmzdf6az9wrj5itg050mkunbxyewi5og9\", \"ohmy0rlmlnw7rls6k38kk1xmyt070r1qiyxwoe7yyh08i4y02ffi7l8uxnxsx02xpehi7oqm6nwa60bonk7q0r1cdmwckc8751vhq6cbb9clhs3quploid7ppg6fl6ntymgj9bipmbsde1hxljzjluk0xfuh5eqbniddqfn3fc96qh2az6z9m7hq8sceosacmx\" ],\n      \"frequencyRange\" : {\n        \"highFrequencyMhz\" : 7.728470508919161E307,\n        \"lowFrequencyMhz\" : 1.5017668693504876E308\n      },\n      \"channelType\" : \"CHANNEL_TYPE_UNSPECIFIED\",\n      \"lastHeartbeatTransmitExpireTime\" : \"2023-02-22T08:37:28.855396Z\",\n      \"state\" : \"GRANT_STATE_UNSPECIFIED\",\n      \"moveList\" : [ { }, { }, { }, { }, { } ],\n      \"maxEirp\" : 1.321725768152444E307\n    } ],\n    \"preloadedConfig\" : {\n      \"isSigned\" : false,\n      \"airInterface\" : {\n        \"supportedSpec\" : \"by8g8hahxd1jp3x88yhhxaqhd9nknf4s9lo28ul7wnyd7pci5ah168fxbiaqb50\",\n        \"radioTechnology\" : \"FOUR_G_BBW_SAA_1\"\n      },\n      \"installationParams\" : {\n        \"cpeCbsdIndication\" : false,\n        \"indoorDeployment\" : true,\n        \"antennaGainNewField\" : 1.529076520405421E308,\n        \"antennaModel\" : \"s4h5qgj2k14n3uhahyhnn39z4ujoab9lbaupf9ocxy55z13g4nuj6ru19urvfq6vcn9z91aeebwm2hrmo2c0zcybqgnz3rbu7nezbp1ix7v6hlyrr9e5w3pb14mdjb77wfx67op1ogtyvmih3pky\",\n        \"latitude\" : 8.622664166751361E307,\n        \"antennaGain\" : 1937574045,\n        \"horizontalAccuracy\" : 1.5199788702072596E308,\n        \"heightType\" : \"HEIGHT_TYPE_UNSPECIFIED\",\n        \"verticalAccuracy\" : 8.430615395318429E307,\n        \"antennaBeamwidth\" : 1443492193,\n        \"eirpCapabilityNewField\" : 1.1061681130801775E308,\n        \"antennaDowntilt\" : 1957992008,\n        \"antennaAzimuth\" : 762323974,\n        \"eirpCapability\" : 1821106858,\n        \"height\" : 1.2072299712735616E308,\n        \"longitude\" : 7.490135954418895E307\n      },\n      \"measurementCapabilities\" : [ \"MEASUREMENT_CAPABILITY_UNSPECIFIED\" ],\n      \"model\" : {\n        \"vendor\" : \"6dzpeido6cm40z9lg2hj0r7hfz7jtvmnkiurtr6pazyx5v50t1qu45o9qss9lltpm3zo8zh1kqgd9td2296aii7mkrsl7fjpy7wk2c\",\n        \"name\" : \"Hirthe\",\n        \"hardwareVersion\" : \"mxeqq8il2rslsnpqf32ynfn85oaui\",\n        \"firmwareVersion\" : \"x8b2vshcicn7gcw4mwm3w7gggteapaxvuntzectu0ftxgndd71dn1d5zdv8czb2qp33nrsy4i3vrs8ifekq8ehx58fgwxlzr4ig6ugiywpeay2l1adsezzh8mab245qgmm80i1876jq4b6nc38rpwo1h1wk24d5z0102vjrp4et8uz982e8qk7\",\n        \"softwareVersion\" : \"932hn0fzl5j5w5t099qc3iljkqqeaypaejurllv18lyo2knq87ap8ugmrhwkixui4u28zpunk67ntoqx2w9uvo832wxd43g1z0s48m04aja2r9qg6du1f4q5koej1ditur2ekim8q4mtmbm0d9y\"\n      },\n      \"updateTime\" : \"2023-03-11T07:24:28.855749Z\",\n      \"state\" : \"FINAL\",\n      \"category\" : \"DEVICE_CATEGORY_B\",\n      \"userId\" : \"6uxx\",\n      \"callSign\" : \"vvzz9spdzg54we1hn257sn5bh4r3xmnanoqezidh1ub\"\n    },\n    \"serialNumber\" : \"7f0ndfzgumh5uf4pv0gtdp3dwlfxv1m37g\",\n    \"activeConfig\" : {\n      \"isSigned\" : false,\n      \"airInterface\" : {\n        \"supportedSpec\" : \"5ognxw2nmte4xresx2ii1091ebuv0phzxmid7dd97v9h0dj9piu27mc7rp7l4z39q4ddmlloafqi1wxvgoonsp1o0fc2gfbtcrskiwhsjcrbh718yl15pwt9u1sv018cfzctdh6dqvmnn6j334o7mhw0r17fdmwvbin1wygwn3bb8w3wn52\",\n        \"radioTechnology\" : \"E_UTRA\"\n      },\n      \"installationParams\" : {\n        \"cpeCbsdIndication\" : true,\n        \"indoorDeployment\" : false,\n        \"antennaGainNewField\" : 1.3393416721651788E308,\n        \"antennaModel\" : \"habz9obxo3wm3w30aov8i2vhmoqiyqk96695s66sqdfyn0hp0y46aipm7pvmqh8pxvyfamcradz363v0zb3laak1qtfdfcl0bp5lm303\",\n        \"latitude\" : 1.021182104243022E308,\n        \"antennaGain\" : 1500968493,\n        \"horizontalAccuracy\" : 8.542311983848537E306,\n        \"heightType\" : \"HEIGHT_TYPE_AMSL\",\n        \"verticalAccuracy\" : 3.546574202538665E307,\n        \"antennaBeamwidth\" : 567143154,\n        \"eirpCapabilityNewField\" : 1.0682645237261015E308,\n        \"antennaDowntilt\" : 1671721297,\n        \"antennaAzimuth\" : 841074282,\n        \"eirpCapability\" : 1169776540,\n        \"height\" : 3.29992503104557E307,\n        \"longitude\" : 1.2276592340537347E308\n      },\n      \"measurementCapabilities\" : [ \"MEASUREMENT_CAPABILITY_RECEIVED_POWER_WITH_GRANT\" ],\n      \"model\" : {\n        \"vendor\" : \"pt1h6ks10uvij53rxulysmalbd8g3vl7\",\n        \"name\" : \"Schneider\",\n        \"hardwareVersion\" : \"1gvdu2axq3xyaaho8a6528sa9bq4d8x80h364ev97aana0wxad52f3qdyhjdry8ghwxcm133uwd3jmwhihjqn7azwgd7ox1hed9gguc235781sk0e4tyb7wdqc4mjum6hc9lxa0sat\",\n        \"firmwareVersion\" : \"it974ccpvl6tqtydaq4qfpmlgk6i0z7y63i744n8g12f8iu6oxft2nrh\",\n        \"softwareVersion\" : \"02x9ayuuzicckmw7ktjm6ktlr7c5d69tgaex2o3i1lru22vee0ylyk177w1drg300dc6\"\n      },\n      \"updateTime\" : \"2022-06-05T05:43:28.856128Z\",\n      \"state\" : \"DEVICE_CONFIG_STATE_UNSPECIFIED\",\n      \"category\" : \"DEVICE_CATEGORY_B\",\n      \"userId\" : \"ya21\",\n      \"callSign\" : \"la4y84gtx9rvsivqdw1szseg38vbc03vrt3lsh1xnhmju5zpd0rn0lk965rj506few95e7oz8xp5f5lfsbqe6s55w2587mwwyzdrsx47arzys8p4yw9k4bhi6ek68treemkm8plhhv1li8wcd35ers8q4hm87siqimm7gpr5pvefris3fwh\"\n    },\n    \"displayName\" : \"Loree Graham\",\n    \"deviceMetadata\" : {\n      \"nrqzValidation\" : {\n        \"cpiId\" : \"6n3g\",\n        \"caseId\" : \"w2zv\",\n        \"latitude\" : 7.188278154058139E307,\n        \"state\" : \"STATE_UNSPECIFIED\",\n        \"longitude\" : 8.754608719144769E307\n      },\n      \"commonChannelGroup\" : \"819crklwl2a3w45hojb6m7od9bjys34qcw54sv6kvwojzy5e0kyd3o195o62s2izal03le8471ygmsv0b\",\n      \"interferenceCoordinationGroup\" : \"e60i8oa5zcl2nsh9richk0mcdhrqbmntp00h2p8qj24vpjufnn8zlwsu5v95jdqs0ltfz1xmx\",\n      \"nrqzValidated\" : false,\n      \"antennaModel\" : \"to1yevc08f\"\n    },\n    \"name\" : \"Krishna Block\",\n    \"fccId\" : \"ob1q\",\n    \"grantRangeAllowlists\" : [ {\n      \"highFrequencyMhz\" : 5.033176822841167E307,\n      \"lowFrequencyMhz\" : 1.720532272142457E308\n    }, {\n      \"highFrequencyMhz\" : 2.1751841775548887E307,\n      \"lowFrequencyMhz\" : 6.555450440945074E307\n    } ],\n    \"state\" : \"REGISTERED\",\n    \"currentChannels\" : [ {\n      \"score\" : 1.0912662527792084E308,\n      \"frequencyRange\" : {\n        \"highFrequencyMhz\" : 1.614994777413309E307,\n        \"lowFrequencyMhz\" : 6.512380514600069E307\n      }\n    }, {\n      \"score\" : 4.3449564014326045E307,\n      \"frequencyRange\" : {\n        \"highFrequencyMhz\" : 1.3825836377529113E308,\n        \"lowFrequencyMhz\" : 1.2110565348521512E308\n      }\n    }, {\n      \"score\" : 1.235209706308322E308,\n      \"frequencyRange\" : {\n        \"highFrequencyMhz\" : 7.213953056997341E306,\n        \"lowFrequencyMhz\" : 1.2229249037145916E308\n      }\n    }, {\n      \"score\" : 3.949668334552029E307,\n      \"frequencyRange\" : {\n        \"highFrequencyMhz\" : 1.3576372751178717E308,\n        \"lowFrequencyMhz\" : 1.7571540399810448E308\n      }\n    }, {\n      \"score\" : 4.74977354052996E307,\n      \"frequencyRange\" : {\n        \"highFrequencyMhz\" : 1.127899426716948E308,\n        \"lowFrequencyMhz\" : 1.0826535188317446E308\n      }\n    }, {\n      \"score\" : 7.261009695341678E307,\n      \"frequencyRange\" : {\n        \"highFrequencyMhz\" : 5.016586162901828E307,\n        \"lowFrequencyMhz\" : 1.5827174619244624E308\n      }\n    } ]\n  }, {\n    \"grants\" : [ {\n      \"expireTime\" : \"2022-11-07T05:29:28.856845Z\",\n      \"grantId\" : \"1x56\",\n      \"suspensionReason\" : [ \"mcxp4fhpeod24n04bf6t82esn5fyytydp5ex4k8ng2fcc75wqsxihvp5idfo8ffquj4njx4g528vbo1chwoon5jue6912wa4huoq19yfpsqratzqlzagmdukzz6oanlnmy5s5mi7gxj3og\", \"gacve0qzim4q3rb6z1bsd2111972992xl9d394qe30x6g2tsbk725nyflo88cbcsp8thjzkwnhef94op04c2\", \"8473a3qiw3ovfmbpgfi6m5txnxbauv3120rl9a991efymnbkoxw3fk8ehyv3hwdr2tk9m6x622d3yija6ip8cyx4d37ug2pamzuf9oc\", \"4s2gz1fvt7zy4j3e7zx\", \"b0b89yl1a59jf5hpynto9yhi4a2r5g540ins7h904drrtgxv6nd46q8ytndlavztsl00noze1w4kn4u967txvhqivpsi5ti8qqf3iniisxml41z1ie0rstcfprnhtumf5or\", \"23qxluyk3ldafi0l2qkcchq643phnpvh6efsdu2jwmrupepthvkft4j1xgpwvrjvtv2swx2\" ],\n      \"frequencyRange\" : {\n        \"highFrequencyMhz\" : 1.2325226190044196E308,\n        \"lowFrequencyMhz\" : 1.7549452232578487E308\n      },\n      \"channelType\" : \"CHANNEL_TYPE_GAA\",\n      \"lastHeartbeatTransmitExpireTime\" : \"2022-05-21T08:47:28.857006Z\",\n      \"state\" : \"GRANT_STATE_GRANTED\",\n      \"moveList\" : [ { }, { }, { }, { } ],\n      \"maxEirp\" : 1.6803511752097922E306\n    } ],\n    \"preloadedConfig\" : {\n      \"isSigned\" : true,\n      \"airInterface\" : {\n        \"supportedSpec\" : \"p2tbdxjo5im3f2ghrbfu534xwdzrpru5vkepvg30i6202ehtu0e2i5hra60dz6ytk5f9wrelhplsdkn81tazj2cn4gf0fsb6q4wsj2hr38xf78qgo27p4ikbjng4sfwfq87l8ecylxs6se9uqohi6saqvcjinsyfwzt8nby\",\n        \"radioTechnology\" : \"REDLINE\"\n      },\n      \"installationParams\" : {\n        \"cpeCbsdIndication\" : true,\n        \"indoorDeployment\" : false,\n        \"antennaGainNewField\" : 1.6202079143600109E308,\n        \"antennaModel\" : \"jsknndtrcl1iuynkayty\",\n        \"latitude\" : 3.192735124058749E307,\n        \"antennaGain\" : 1610126602,\n        \"horizontalAccuracy\" : 7.106063207191133E307,\n        \"heightType\" : \"HEIGHT_TYPE_AMSL\",\n        \"verticalAccuracy\" : 9.20455120783117E307,\n        \"antennaBeamwidth\" : 1424900754,\n        \"eirpCapabilityNewField\" : 2.871733989592868E307,\n        \"antennaDowntilt\" : 1553905114,\n        \"antennaAzimuth\" : 848093027,\n        \"eirpCapability\" : 1037602128,\n        \"height\" : 4.3387651437536057E307,\n        \"longitude\" : 4.4496891359133685E307\n      },\n      \"measurementCapabilities\" : [ \"MEASUREMENT_CAPABILITY_RECEIVED_POWER_WITHOUT_GRANT\", \"MEASUREMENT_CAPABILITY_UNSPECIFIED\", \"MEASUREMENT_CAPABILITY_RECEIVED_POWER_WITH_GRANT\", \"MEASUREMENT_CAPABILITY_RECEIVED_POWER_WITHOUT_GRANT\", \"MEASUREMENT_CAPABILITY_RECEIVED_POWER_WITHOUT_GRANT\", \"MEASUREMENT_CAPABILITY_UNSPECIFIED\", \"MEASUREMENT_CAPABILITY_UNSPECIFIED\", \"MEASUREMENT_CAPABILITY_RECEIVED_POWER_WITHOUT_GRANT\" ],\n      \"model\" : {\n        \"vendor\" : \"h20ev5azz5h4za5c9uu20x3cpk632y3ucvudmg8tic6rn34r94xxs8ov6644lpywc3jw\",\n        \"name\" : \"Harris\",\n        \"hardwareVersion\" : \"hqfe0igd9z9hj93n2ddo2oagpib4nslsbqtxjsctd8su8xcnyww7n4ks482wvo54rgx0onxvzkgotvjvqymvtee14u6phgt1k0zv41xwhiw7dyuqm0zp0uby8lm6wv6fs9lxmk\",\n        \"firmwareVersion\" : \"qulnmb9l61to0i11ba8pu4lytrjo5zw1swdqlgwaeuverrtb66rf2plz9a26kkyohio63e9dvs8muejgbouajtwcooftghpg3glnopvapjtxxv7ovszwdj6ib5m9uqk9q3pnw1atp3imglqr9uchglbjlui5f7v7tecjb52yydzyatu9ertachnh\",\n        \"softwareVersion\" : \"nkgnt6k1zvc1odg0lokohrguhk26yx07cco\"\n      },\n      \"updateTime\" : \"2022-12-24T07:55:28.857306Z\",\n      \"state\" : \"FINAL\",\n      \"category\" : \"DEVICE_CATEGORY_B\",\n      \"userId\" : \"5srr\",\n      \"callSign\" : \"5ur8p9dprbiepa57lct8g\"\n    },\n    \"serialNumber\" : \"zw8v43vl707u6xa597h1a0eq266hk9hwks9u4nmtq27dy62wj72deoujka3w8o2mkck1phjy38a5vk2agrv\",\n    \"activeConfig\" : {\n      \"isSigned\" : false,\n      \"airInterface\" : {\n        \"supportedSpec\" : \"otui47em567b4vnczzk73qb383i5xgd7k554fruocf319m\",\n        \"radioTechnology\" : \"RADIO_TECHNOLOGY_UNSPECIFIED\"\n      },\n      \"installationParams\" : {\n        \"cpeCbsdIndication\" : true,\n        \"indoorDeployment\" : true,\n        \"antennaGainNewField\" : 9.91605679373195E307,\n        \"antennaModel\" : \"sunj547iz07vyduouhzxicjkhfer08ymb71sq41w4\",\n        \"latitude\" : 9.665008339347138E307,\n        \"antennaGain\" : 1626218662,\n        \"horizontalAccuracy\" : 6.319854004799253E307,\n        \"heightType\" : \"HEIGHT_TYPE_UNSPECIFIED\",\n        \"verticalAccuracy\" : 1.7565792978497837E308,\n        \"antennaBeamwidth\" : 1019118447,\n        \"eirpCapabilityNewField\" : 1.0069129059956225E307,\n        \"antennaDowntilt\" : 1851886311,\n        \"antennaAzimuth\" : 540757574,\n        \"eirpCapability\" : 1467718936,\n        \"height\" : 1.503952075495616E308,\n        \"longitude\" : 1.3859171794604595E308\n      },\n      \"measurementCapabilities\" : [ \"MEASUREMENT_CAPABILITY_RECEIVED_POWER_WITHOUT_GRANT\", \"MEASUREMENT_CAPABILITY_UNSPECIFIED\", \"MEASUREMENT_CAPABILITY_RECEIVED_POWER_WITH_GRANT\", \"MEASUREMENT_CAPABILITY_RECEIVED_POWER_WITH_GRANT\" ],\n      \"model\" : {\n        \"vendor\" : \"h5irol9serirp7pswmbsfi83ff3\",\n        \"name\" : \"Rosenbaum\",\n        \"hardwareVersion\" : \"v9mx5xj1lugatk0n36t4lzw1\",\n        \"firmwareVersion\" : \"3vqso543g44e7w55pn9ix1g4db4c14wllsw\",\n        \"softwareVersion\" : \"zpch3\"\n      },\n      \"updateTime\" : \"2023-03-18T08:31:28.857655Z\",\n      \"state\" : \"DRAFT\",\n      \"category\" : \"DEVICE_CATEGORY_UNSPECIFIED\",\n      \"userId\" : \"7boj\",\n      \"callSign\" : \"a0tm3tqnry9h8365zilw02m9jgz7hr2bwlwx83x0rq958lso9nol2xtuapq21i6z38fht5krm97rpj3dag2efd1vtrdlsr8rr9dni4jzm70of83qaiv286jbcy0l5d6thcnu2m9lxo3f9w0923wxgzj8kmgs99z7b97r2v8liw40wclb85or9ch4f3\"\n    },\n    \"displayName\" : \"Christin Ritchie\",\n    \"deviceMetadata\" : {\n      \"nrqzValidation\" : {\n        \"cpiId\" : \"011d\",\n        \"caseId\" : \"h5ep\",\n        \"latitude\" : 1.0246867518997482E308,\n        \"state\" : \"FINAL\",\n        \"longitude\" : 2.8893710262622893E307\n      },\n      \"commonChannelGroup\" : \"vze7ut9jy7ky6ockzi4r4k9ykc5u44ik3kp53mw5n3wjmxvjgjdpqoiackmmgh5tue2gkrrzjsacvcgf82f53bd4d8clbzw92cqepxz5iz89tym419p7pa78fbmyxlacsv7cul78z4xcgdhmh9meenbytue7eb03j722n9wrjy8vxeqahgozdoh\",\n      \"interferenceCoordinationGroup\" : \"5lyft5v753ruyi7wjw10e3afbacbqveexzsuou2qqd3n1joetn9xi449lnsyux1vnl7yfltcy65u2\",\n      \"nrqzValidated\" : true,\n      \"antennaModel\" : \"9gdj66b8e2698cdvcv7oqav2t2hszkx2end5oddw830nk3evo91ble6fztgq434aib8j5vqgeqez4ro8ojj687vymxe90pnw7bvm8ksjn7oxobwd1vs74ha6e327tks50gef20x97tb9vrsm1hi02ov7bih58204mec0fjn3n9nqjrx8q\"\n    },\n    \"name\" : \"Darlene Champlin\",\n    \"fccId\" : \"1757\",\n    \"grantRangeAllowlists\" : [ {\n      \"highFrequencyMhz\" : 6.405867510657955E307,\n      \"lowFrequencyMhz\" : 1.0873441808674054E307\n    }, {\n      \"highFrequencyMhz\" : 4.3328339737762737E307,\n      \"lowFrequencyMhz\" : 8.284553908539631E307\n    }, {\n      \"highFrequencyMhz\" : 2.704657063009199E307,\n      \"lowFrequencyMhz\" : 1.1062168738822408E308\n    }, {\n      \"highFrequencyMhz\" : 4.202409878209509E307,\n      \"lowFrequencyMhz\" : 5.268544463475969E307\n    } ],\n    \"state\" : \"RESERVED\",\n    \"currentChannels\" : [ {\n      \"score\" : 2.8149662358813054E307,\n      \"frequencyRange\" : {\n        \"highFrequencyMhz\" : 1.1968297220483776E308,\n        \"lowFrequencyMhz\" : 1.7320125682889768E308\n      }\n    }, {\n      \"score\" : 9.142034687662335E307,\n      \"frequencyRange\" : {\n        \"highFrequencyMhz\" : 8.977337156907653E307,\n        \"lowFrequencyMhz\" : 3.1445452917168414E307\n      }\n    }, {\n      \"score\" : 2.003200181747021E307,\n      \"frequencyRange\" : {\n        \"highFrequencyMhz\" : 2.1817455368903395E307,\n        \"lowFrequencyMhz\" : 5.406375352262966E307\n      }\n    } ]\n  }, {\n    \"grants\" : [ {\n      \"expireTime\" : \"2023-01-23T06:46:28.858281Z\",\n      \"grantId\" : \"9xi5\",\n      \"suspensionReason\" : [ \"6itb2rgoingt4emicuxtzam1hglb1hlb2y93vqv0pv7yhv10xht4fogt9c0ux7wupjq708d4r43\", \"ykxjrh76e6ec1igps62oby9816zgpj5dmm2lcotzbhfjqb0dxucyb6birlafnsiv08un1qcm7t9tek6jo8c8b3ki5jxhm6mpnb33hrohwytm0dy6v5eqfpwp30e89q642j0xqn5m4xp4998gtwf6aobcpxb4tkumjbl2o6f3hlnp82\", \"14ey4hlqgry5csom3q81bvm56pg1dydoiyoru2kbra84k6csfjydo5z7gkjmtws12y3v32lfdjkvklbt7rsjm0t9zsu2vx4\", \"qfbo\" ],\n      \"frequencyRange\" : {\n        \"highFrequencyMhz\" : 5.606520504838432E307,\n        \"lowFrequencyMhz\" : 1.5151384389144047E308\n      },\n      \"channelType\" : \"CHANNEL_TYPE_UNSPECIFIED\",\n      \"lastHeartbeatTransmitExpireTime\" : \"2023-03-09T06:59:28.858431Z\",\n      \"state\" : \"GRANT_STATE_SUSPENDED\",\n      \"moveList\" : [ { }, { }, { } ],\n      \"maxEirp\" : 1.3705378867430278E308\n    }, {\n      \"expireTime\" : \"2022-12-05T09:17:28.858484Z\",\n      \"grantId\" : \"jf92\",\n      \"suspensionReason\" : [ \"z5vy0qjqhr42r5lil62ndk2x4t1wl82f6dnzymhdvtwjocedjfgeasr3np\", \"mp5vg8bne0a5hw6h24qvladgb422v9b2eiy7917tqujb2rja0yisvlk2j1vqtgjxkie50bnbewgw27gpao7pw\", \"n7ud0mu7cyaf5r3xasjpzeqarnfyfu572kbpfl0ovhz5491f4h53tteru52fd2newb6mxkndzb7wvpj0c3fbceb1\" ],\n      \"frequencyRange\" : {\n        \"highFrequencyMhz\" : 4.884756765787252E307,\n        \"lowFrequencyMhz\" : 5.068763594906834E307\n      },\n      \"channelType\" : \"CHANNEL_TYPE_UNSPECIFIED\",\n      \"lastHeartbeatTransmitExpireTime\" : \"2022-12-19T08:03:28.858623Z\",\n      \"state\" : \"GRANT_STATE_TERMINATED\",\n      \"moveList\" : [ { }, { }, { }, { }, { }, { }, { } ],\n      \"maxEirp\" : 7.016590666211794E306\n    }, {\n      \"expireTime\" : \"2023-02-01T07:32:28.858679Z\",\n      \"grantId\" : \"654z\",\n      \"suspensionReason\" : [ \"j860rvtjplg7kqn1ko96ya4jdvevyn41dutcfjs65xndbawlywej3edecrngier43ahrvw0x9b0z6wvrk0x8i0xna48uyovh3ndsapl5x0mr2j06gwzl780yeity48\" ],\n      \"frequencyRange\" : {\n        \"highFrequencyMhz\" : 9.493912229917126E307,\n        \"lowFrequencyMhz\" : 1.316813529193498E308\n      },\n      \"channelType\" : \"CHANNEL_TYPE_GAA\",\n      \"lastHeartbeatTransmitExpireTime\" : \"2022-04-19T08:15:28.85881Z\",\n      \"state\" : \"GRANT_STATE_SUSPENDED\",\n      \"moveList\" : [ { }, { } ],\n      \"maxEirp\" : 5.958864244004564E307\n    }, {\n      \"expireTime\" : \"2022-10-22T06:11:28.858859Z\",\n      \"grantId\" : \"7xg2\",\n      \"suspensionReason\" : [ \"7tqpij8tk3czovodteqawufniqrq6aghoe5c5ek67dxuigjqljplanl2om45jcx2ffl5\", \"qptzo2j9ehco9lneqqj53q8l6kjalmy6k95d4ftnsrzvaomhrdmoov8miysmlit15g576k1gminepuvhtmzls3x5ojvddlt7ec84ly6dxi7hjxj\" ],\n      \"frequencyRange\" : {\n        \"highFrequencyMhz\" : 8.723467338452432E307,\n        \"lowFrequencyMhz\" : 8.322103039157011E307\n      },\n      \"channelType\" : \"CHANNEL_TYPE_UNSPECIFIED\",\n      \"lastHeartbeatTransmitExpireTime\" : \"2023-02-21T08:35:28.858992Z\",\n      \"state\" : \"GRANT_STATE_TERMINATED\",\n      \"moveList\" : [ { }, { }, { } ],\n      \"maxEirp\" : 6.677125296426421E307\n    }, {\n      \"expireTime\" : \"2022-11-16T07:40:28.859041Z\",\n      \"grantId\" : \"7lw3\",\n      \"suspensionReason\" : [ \"m1w9r0iy7e9jparldr6bhu747czo42jsp3cqdtlcbzt02j89ufmaacyssjijpgdlji939gfaqyb1d0aat0cy5jcpn8okyx0yb0qkdbgol5nvdg4z709kfme9nymwf7mipg4oys4q3bc2flzimpdgo2h68e86\", \"39jyvqdkwxlpkveesz4sdnbyuxcbijdtctm0x9\", \"egeoza3ncs\" ],\n      \"frequencyRange\" : {\n        \"highFrequencyMhz\" : 6.207197514377795E307,\n        \"lowFrequencyMhz\" : 1.545365656522631E308\n      },\n      \"channelType\" : \"CHANNEL_TYPE_UNSPECIFIED\",\n      \"lastHeartbeatTransmitExpireTime\" : \"2022-09-21T06:38:28.85918Z\",\n      \"state\" : \"GRANT_STATE_AUTHORIZED\",\n      \"moveList\" : [ { }, { }, { } ],\n      \"maxEirp\" : 7.686692053034005E307\n    }, {\n      \"expireTime\" : \"2023-03-14T07:21:28.859234Z\",\n      \"grantId\" : \"2l41\",\n      \"suspensionReason\" : [ \"zefisv8wawr7h9oie5e9e6xhw0sz0pgmnowywndtp0dmk5rdb8mmaiyogui203869jru6kzd02q23mpfv1xdck8wxxnfukpn1czt75o65upihfx5ov76xc9gc0ts6bfqgb1tftummd\", \"hoq206z\", \"z3needu1h3ft0ztn9erql5ih8jpgibudz1ycztgkdvjl7bpbhulnci99m0ljejo\", \"1ouxd1n4a8psjvhubz2fklj1hdr3debvzz5cacr53ey06h2v50u1ddzd2i716wsjuqxt0q4mec99c84mej1nt9bd4f6dj8gay6whcuqx7sm4d2vjekvedbk85rdugydur2g4p2l4edj0wxd21kmx1ip1r6mtie99tm5d0\" ],\n      \"frequencyRange\" : {\n        \"highFrequencyMhz\" : 1.7624180100872253E307,\n        \"lowFrequencyMhz\" : 1.0607872164843715E308\n      },\n      \"channelType\" : \"CHANNEL_TYPE_PAL\",\n      \"lastHeartbeatTransmitExpireTime\" : \"2022-08-21T06:40:28.859379Z\",\n      \"state\" : \"GRANT_STATE_AUTHORIZED\",\n      \"moveList\" : [ { }, { }, { }, { }, { }, { } ],\n      \"maxEirp\" : 1.3204114209143417E308\n    } ],\n    \"preloadedConfig\" : {\n      \"isSigned\" : false,\n      \"airInterface\" : {\n        \"supportedSpec\" : \"wsy6k3gf5ndoi2xpw0spsf5lo97gpl93mnhif2fp9btaq4gc91lyg3te6byvk5kmnh9s64yf2wegyb8ps61rmlr9j86tew2gybyybbg4lu5m23s9zpv54hnllfqwyai09dgaj96g5o2vvs9a8mpkkjwy6p90034apmyhnsvwcu10nmias\",\n        \"radioTechnology\" : \"CW\"\n      },\n      \"installationParams\" : {\n        \"cpeCbsdIndication\" : true,\n        \"indoorDeployment\" : false,\n        \"antennaGainNewField\" : 8.409949910504581E307,\n        \"antennaModel\" : \"ubeg5vrzd2okkl8on0scrkx4o8unhz7zvtatfjfe31rtdbxk91y7kcf0lh1t4195\",\n        \"latitude\" : 1.1472661255097598E308,\n        \"antennaGain\" : 1657962268,\n        \"horizontalAccuracy\" : 2.4704966286219167E307,\n        \"heightType\" : \"HEIGHT_TYPE_UNSPECIFIED\",\n        \"verticalAccuracy\" : 1.7130350280199991E308,\n        \"antennaBeamwidth\" : 742787432,\n        \"eirpCapabilityNewField\" : 1.3236486193702669E308,\n        \"antennaDowntilt\" : 777881731,\n        \"antennaAzimuth\" : 185855210,\n        \"eirpCapability\" : 505704865,\n        \"height\" : 1.2447009102041305E308,\n        \"longitude\" : 1.300664996340078E308\n      },\n      \"measurementCapabilities\" : [ \"MEASUREMENT_CAPABILITY_RECEIVED_POWER_WITHOUT_GRANT\", \"MEASUREMENT_CAPABILITY_UNSPECIFIED\", \"MEASUREMENT_CAPABILITY_RECEIVED_POWER_WITHOUT_GRANT\" ],\n      \"model\" : {\n        \"vendor\" : \"0whza9p78fmqnq8i499j4oqsnqun3at11df24ibtcy6pzxt6yvc7vgxuuttv6naqurzj1lwo3r1iu6imujq7l7e4j5lbxht29qzfiu\",\n        \"name\" : \"Grant\",\n        \"hardwareVersion\" : \"4l7mdslqu5iiypniarmmu1802xktbfaw69man6b54sam183x89w5h9p1g8vb4zxvkccp9pk47z4nd63m3epkr96xhwlf8ot7emaqcquqjp0j\",\n        \"firmwareVersion\" : \"narcrvzn144hc5j677a3xy1bkdwg1r9qd4ltqjmcelnzygvt3543hyw2wb083dluuu4pgx5nn67139gkdoosq2dxarullqos54mseclkbnwv58f5r0yjklds2uv101byr89f616e38uqvnn1a9fjoo8b0fjoi8u9rvg1q73b096198x0p8d49v9ir2egqo4dbq2\",\n        \"softwareVersion\" : \"bbwdx6a6wwsgsj53zlh2zbrm\"\n      },\n      \"updateTime\" : \"2022-10-03T07:07:28.859683Z\",\n      \"state\" : \"DEVICE_CONFIG_STATE_UNSPECIFIED\",\n      \"category\" : \"DEVICE_CATEGORY_UNSPECIFIED\",\n      \"userId\" : \"91sg\",\n      \"callSign\" : \"mtkyqjws93rzecncpfpqr520ijn2wo3lqfdgc\"\n    },\n    \"serialNumber\" : \"egf1b86oneorgmksscofn6xhkm545ku7h6oxuo3ysenel99l9978dqv3wbxukof8pcm6fhnkdcc31y6pgqwljq6jczjqzg124rk2csaf8hq0de725dw7v1amjcqyp1\",\n    \"activeConfig\" : {\n      \"isSigned\" : true,\n      \"airInterface\" : {\n        \"supportedSpec\" : \"3jz85euvg2zz3dhfecxzwrpczpoa6vfzbuur14n4fionz8kc8lvky1blht04wax6f6tc24b28\",\n        \"radioTechnology\" : \"CAMBIUM_NETWORKS\"\n      },\n      \"installationParams\" : {\n        \"cpeCbsdIndication\" : true,\n        \"indoorDeployment\" : true,\n        \"antennaGainNewField\" : 1.4618919965192655E308,\n        \"antennaModel\" : \"hzhkvx16f8n0jo9q8i510slfe6it56a52dj80ik65kr9j8xd8x7pkn2nys9yuaq1uizpzyo87tz0xoq6ye1c3907swmzfktdevkacpj\",\n        \"latitude\" : 1.6533008129588593E308,\n        \"antennaGain\" : 378679822,\n        \"horizontalAccuracy\" : 1.4603748805720054E307,\n        \"heightType\" : \"HEIGHT_TYPE_AGL\",\n        \"verticalAccuracy\" : 1.760731205567914E308,\n        \"antennaBeamwidth\" : 1851724488,\n        \"eirpCapabilityNewField\" : 7.334890585807508E307,\n        \"antennaDowntilt\" : 1162640093,\n        \"antennaAzimuth\" : 129219682,\n        \"eirpCapability\" : 477848274,\n        \"height\" : 1.5464090631630449E308,\n        \"longitude\" : 1.7955511562296418E308\n      },\n      \"measurementCapabilities\" : [ \"MEASUREMENT_CAPABILITY_UNSPECIFIED\", \"MEASUREMENT_CAPABILITY_RECEIVED_POWER_WITH_GRANT\", \"MEASUREMENT_CAPABILITY_UNSPECIFIED\", \"MEASUREMENT_CAPABILITY_RECEIVED_POWER_WITHOUT_GRANT\", \"MEASUREMENT_CAPABILITY_RECEIVED_POWER_WITHOUT_GRANT\", \"MEASUREMENT_CAPABILITY_RECEIVED_POWER_WITHOUT_GRANT\" ],\n      \"model\" : {\n        \"vendor\" : \"pz804h2in82yrpb5ntcadab6s7k88i13ruxc8kyw674qajhnq9gbg9yv3w0s06vs8jeyi6a1hqfc5p6cfgb7iiitgmnaejnmtiipievo59rq73uol8ni5k660uhshrlhasfble7tm3oykq2nph1e0u74yo1r9coyygnthx1onxdl8o5avy51jecabf13awc\",\n        \"name\" : \"Torphy\",\n        \"hardwareVersion\" : \"t912cfgeemctfup62wmf4n1fr9yno8954y3p5pofty7uvdt7x8r1e8bpu5m8w0q08bjgm0s4v7dkker1csjezhnml07brryrmlanz4\",\n        \"firmwareVersion\" : \"6tvt4p8zay5l535yhblcgjuhyy2b1jeyehqlxr9avsbwuglnvasx3n6nv3mw6seblmsl4rz50wx\",\n        \"softwareVersion\" : \"13xjm663rf7oi1bqnvnn9crwpyhuj88ht4qykx8neoc6yy2fxucuy5f9y42\"\n      },\n      \"updateTime\" : \"2022-05-02T08:34:28.860065Z\",\n      \"state\" : \"FINAL\",\n      \"category\" : \"DEVICE_CATEGORY_B\",\n      \"userId\" : \"8687\",\n      \"callSign\" : \"dbpzfavgivxt0lgpe4jlezgulfz39xczujtchoaq9fa70tvrn21pijg8vetot1st9wv7892xwp2zu18q1oh7ugw1bthd294722hip7v532mpiz\"\n    },\n    \"displayName\" : \"Phylicia Lockman\",\n    \"deviceMetadata\" : {\n      \"nrqzValidation\" : {\n        \"cpiId\" : \"gbfd\",\n        \"caseId\" : \"h960\",\n        \"latitude\" : 8.73800257905597E307,\n        \"state\" : \"FINAL\",\n        \"longitude\" : 1.530224054908465E308\n      },\n      \"commonChannelGroup\" : \"nqbipkujvmzdhba6db2by40if16sw398lls3ofa3rx2yvh987n7iv8c\",\n      \"interferenceCoordinationGroup\" : \"xvrelg5g7wz0xfdj10xbuwx0bk9jb3svq4nu2apd296coa\",\n      \"nrqzValidated\" : true,\n      \"antennaModel\" : \"onxmkg7hji\"\n    },\n    \"name\" : \"Ms. Adrianna Willms\",\n    \"fccId\" : \"av9q\",\n    \"grantRangeAllowlists\" : [ {\n      \"highFrequencyMhz\" : 1.5033237622778682E308,\n      \"lowFrequencyMhz\" : 1.6234616543067393E308\n    } ],\n    \"state\" : \"DEVICE_STATE_UNSPECIFIED\",\n    \"currentChannels\" : [ {\n      \"score\" : 1.5241007910473618E308,\n      \"frequencyRange\" : {\n        \"highFrequencyMhz\" : 2.593467185523516E307,\n        \"lowFrequencyMhz\" : 1.2256570405869262E308\n      }\n    }, {\n      \"score\" : 1.8834796047899686E307,\n      \"frequencyRange\" : {\n        \"highFrequencyMhz\" : 1.2500866668782206E308,\n        \"lowFrequencyMhz\" : 1.4922084560411832E307\n      }\n    }, {\n      \"score\" : 9.641291279904179E307,\n      \"frequencyRange\" : {\n        \"highFrequencyMhz\" : 1.73195552999148E308,\n        \"lowFrequencyMhz\" : 5.679410016887163E307\n      }\n    } ]\n  }, {\n    \"grants\" : [ {\n      \"expireTime\" : \"2022-05-01T06:04:28.860672Z\",\n      \"grantId\" : \"5u72\",\n      \"suspensionReason\" : [ \"ttiyjz6funu3yfoadkoqrdoo5g3gutb57sklcutiygtzocs5qgd2wdgwp5tqvljdgfca4gulq9fldoi7zmhl19ouawgiafd9vx59v3agm0j7v08qxeph35405vvvrdo8t79fd2zg9ffwoe5msct5uq\", \"tdf1zbcuh92sek4imtkjinxhn8aulr4wakf3shdgfcrf064mrm06lk6uf6mujtbr9l4z1mf5bfvgftzyx90pyn2k1i03lqqnapw26fe5gpfx5crprc5oh\", \"25lqolzs6lq19wznxv75rddjih9xxmozero8l1glx2\", \"h4j9ls9ubu71qkvc3dhl0mxk0zuiz9rw97n6ohd7nhrm2rmgbkvsey\", \"k1rg0ch20f7f2nyrc83ix6ll68j2y098hee60r4jaga5pjuz3rn7mn84bpn1ihu5s0gg30uv3pwzefumdz0bn09l8odo6gesot5qfn3xdn6mmyn9zatwbyjldmw1zvc4gdkcxc3duyfedgb30qjw74y7u69pho0t39um0z6ox1cf71zo1ndh8eqgw5n47\", \"t6mvs73nbwj6fznlghveflaxis2xox0gvt817f2z5pxbtbxfd6odkmpfqlrsu61gzefine0o3ix1gfz6u0xu4g2asnzuki4n2l2ns498xbvvtrlmolkgnesgan32i0m9j6i8689cqze2tvbvmgu0dq48mzutwr6u2uuotn01i1jqqr954\", \"0xv5c403zvjazslxrq5g9po5pb1y6djcmdlj80bxhp55k55gf65ao26kg2f2s00slmsimglxxwgija72j4wwdaxlk64moyq5uabzwdqilwkiniuuac8w8gofke0ydzy9tyqoempsk11v4aco6prb6ts3m5o90wv76e574f78taz6b8yxlc\" ],\n      \"frequencyRange\" : {\n        \"highFrequencyMhz\" : 1.7240722378296046E308,\n        \"lowFrequencyMhz\" : 1.4222358063248236E308\n      },\n      \"channelType\" : \"CHANNEL_TYPE_PAL\",\n      \"lastHeartbeatTransmitExpireTime\" : \"2022-07-23T09:17:28.860846Z\",\n      \"state\" : \"GRANT_STATE_SUSPENDED\",\n      \"moveList\" : [ { }, { }, { }, { }, { }, { }, { }, { } ],\n      \"maxEirp\" : 8.325474218522274E307\n    }, {\n      \"expireTime\" : \"2022-07-10T06:13:28.860906Z\",\n      \"grantId\" : \"1fx4\",\n      \"suspensionReason\" : [ \"0hdegn9pmd18to75tbhede2afru52g9k4xovev1r5vb0y5bvbxi69bmlyf76l0g44anwhrk4h7htr0efelswh7bmgjz4c\" ],\n      \"frequencyRange\" : {\n        \"highFrequencyMhz\" : 1.0877266250636826E308,\n        \"lowFrequencyMhz\" : 2.356946674681841E307\n      },\n      \"channelType\" : \"CHANNEL_TYPE_PAL\",\n      \"lastHeartbeatTransmitExpireTime\" : \"2022-07-18T06:18:28.861041Z\",\n      \"state\" : \"GRANT_STATE_GRANTED\",\n      \"moveList\" : [ { }, { }, { }, { }, { }, { } ],\n      \"maxEirp\" : 1.7032877614708247E308\n    } ],\n    \"preloadedConfig\" : {\n      \"isSigned\" : false,\n      \"airInterface\" : {\n        \"supportedSpec\" : \"rp6ywseakzseai0roib5zje9l5ga2xqrf6wyii6nqr5g40090l3r2m7esp4hwuejwc7gaif1rcsl4x1gb7m6otdyrgj1fka7arnlcmls6n\",\n        \"radioTechnology\" : \"FOUR_G_BBW_SAA_1\"\n      },\n      \"installationParams\" : {\n        \"cpeCbsdIndication\" : true,\n        \"indoorDeployment\" : false,\n        \"antennaGainNewField\" : 8.749463297166509E307,\n        \"antennaModel\" : \"8mf12nzk7qsu746w0o5o7lyf8y8oegv2un8rhh69dla90zdq95c756pn5f1o6km6hsatudjwqvmachyxdbuiyy8obt1vzcqlz041pv4opl35jgqckx2koe1314tf5gq2qugme5v77gn6h3k9f5ux5lqzre1z497emk8wpqjufyoqejcp2185nf3evi4b0f\",\n        \"latitude\" : 1.3136017168377316E308,\n        \"antennaGain\" : 943825158,\n        \"horizontalAccuracy\" : 1.4120136060738601E308,\n        \"heightType\" : \"HEIGHT_TYPE_AMSL\",\n        \"verticalAccuracy\" : 6.571124462587547E307,\n        \"antennaBeamwidth\" : 373916168,\n        \"eirpCapabilityNewField\" : 1.1080546370019675E308,\n        \"antennaDowntilt\" : 645911408,\n        \"antennaAzimuth\" : 1798364103,\n        \"eirpCapability\" : 464173520,\n        \"height\" : 7.547663890056094E307,\n        \"longitude\" : 1.0076921750242517E308\n      },\n      \"measurementCapabilities\" : [ \"MEASUREMENT_CAPABILITY_UNSPECIFIED\", \"MEASUREMENT_CAPABILITY_UNSPECIFIED\", \"MEASUREMENT_CAPABILITY_RECEIVED_POWER_WITHOUT_GRANT\", \"MEASUREMENT_CAPABILITY_RECEIVED_POWER_WITHOUT_GRANT\", \"MEASUREMENT_CAPABILITY_RECEIVED_POWER_WITH_GRANT\" ],\n      \"model\" : {\n        \"vendor\" : \"m5apch9n7dd82tkr23zrq6aagvx3zlp204hrkc1340dn8p3165012id0b00xhl3ajqcydjo1a7ssbh0fjljpsgbnxoj6ziwf9h1sq8zy44wm0dk9fcybp5tgt76ybdf7fwfsfn564aqxqgunk8z8o\",\n        \"name\" : \"Sauer\",\n        \"hardwareVersion\" : \"wtaihonk374yx4gub63o0wit29om8zz149t115kxua1rtzsvczuy2m5y8txrulo908jpm1dq3jaunq46waqfrsxlt3ftwcoohrxg7udsdrrwi391amuryeva1b88d4n65l2sl61i0tocj7n6yrp38wapk23fat9z5uft33icoqe35edwsucr4i\",\n        \"firmwareVersion\" : \"1iimgx3quiejknufh1aa1zhhh14dxpjc2aobqa8vtnupvyyog5n1jsa385zbcg23sq26f0h79cprlv7idejm9zoz6sm6e3qted1\",\n        \"softwareVersion\" : \"dg7cmsqf2rg0z7xohbe7ng6f4blp73qjksalfazbsc51u0d68bv46jy4khfiehav0pnnhmd7cy9b2syqba0ifkn0hyq94vp3eq5rb2z76j\"\n      },\n      \"updateTime\" : \"2022-12-21T08:47:28.861334Z\",\n      \"state\" : \"FINAL\",\n      \"category\" : \"DEVICE_CATEGORY_B\",\n      \"userId\" : \"bp7a\",\n      \"callSign\" : \"v9pvghg1ijgooi1cve2vabvc5bn76qdo5e9c49fy0nps\"\n    },\n    \"serialNumber\" : \"kv7o3cdm9fj799jbp2bdqlae02206bxc0\",\n    \"activeConfig\" : {\n      \"isSigned\" : true,\n      \"airInterface\" : {\n        \"supportedSpec\" : \"fy3gw76i90uoe97n2qi37ig4v25bt8tlt25ixq7onoxb4yxdmorbyvb6k994gknsj0et771jwekbgyx5y2hp8ppke4zpn55m3b682u5ghr2y7l7crs4fh2\",\n        \"radioTechnology\" : \"E_UTRA\"\n      },\n      \"installationParams\" : {\n        \"cpeCbsdIndication\" : true,\n        \"indoorDeployment\" : false,\n        \"antennaGainNewField\" : 1.488426349190306E308,\n        \"antennaModel\" : \"ay6xy61ge4eaizk950zljg4uxwu8mu0424edj5ja79gytjy6ridf5f8mpvu0e1outgfpuqpnw0vgbit5uvkf78mqnqp0cafihgz60bz07wm7q24vybamm2e0ytmsk998wge49zmkjuitwmpip1ssix8z6vy0eqe1dtp3xyws1eusulzmdr\",\n        \"latitude\" : 1.2106862415965341E308,\n        \"antennaGain\" : 137661292,\n        \"horizontalAccuracy\" : 4.582238616164533E307,\n        \"heightType\" : \"HEIGHT_TYPE_UNSPECIFIED\",\n        \"verticalAccuracy\" : 5.280609343431974E307,\n        \"antennaBeamwidth\" : 1680274378,\n        \"eirpCapabilityNewField\" : 1.3260479375693772E307,\n        \"antennaDowntilt\" : 457704240,\n        \"antennaAzimuth\" : 58854371,\n        \"eirpCapability\" : 115285763,\n        \"height\" : 1.1699065312583599E308,\n        \"longitude\" : 1.5643985500628122E308\n      },\n      \"measurementCapabilities\" : [ \"MEASUREMENT_CAPABILITY_RECEIVED_POWER_WITHOUT_GRANT\", \"MEASUREMENT_CAPABILITY_UNSPECIFIED\", \"MEASUREMENT_CAPABILITY_RECEIVED_POWER_WITH_GRANT\" ],\n      \"model\" : {\n        \"vendor\" : \"b7rs9an22blb88yuma6b197aaj\",\n        \"name\" : \"Kessler\",\n        \"hardwareVersion\" : \"krxi76t6e821vmtj0wj0g6tyypflls2dxa47igkzmkyaueop64a0m1otinf50dsadsd32655nxrq7e5gmujp378q8c27wevoxbni1coizg4rrhukuqi4jrjtscrb1nqawdrtczhnozd4lkiw0wdv76m9aryyqzruagrvm\",\n        \"firmwareVersion\" : \"hutjxerny5ynm2oe7p33pqqck1phahuyg3qvxqbcwjc5s3qyquegnh2ngg8oa9fbr9\",\n        \"softwareVersion\" : \"vth1x89o6o\"\n      },\n      \"updateTime\" : \"2022-04-11T06:10:28.861709Z\",\n      \"state\" : \"DRAFT\",\n      \"category\" : \"DEVICE_CATEGORY_B\",\n      \"userId\" : \"330l\",\n      \"callSign\" : \"u02lb81yo2nu0776091eya954u714mdo3zwgeoas5u57repasc462vnsbka6wg17m7mzvna9svzyyloygqx9mdfdv5csu5w2477zfqz6aiui80pboiz4n45v12t510iijhod9rn2galxq3u841v1g15603nqrdwhdq4nn4s1q0x1sv8mhf5d3mw3\"\n    },\n    \"displayName\" : \"Mark Bartell\",\n    \"deviceMetadata\" : {\n      \"nrqzValidation\" : {\n        \"cpiId\" : \"66u2\",\n        \"caseId\" : \"5o4f\",\n        \"latitude\" : 8.402868849213265E307,\n        \"state\" : \"STATE_UNSPECIFIED\",\n        \"longitude\" : 6.280880103328753E307\n      },\n      \"commonChannelGroup\" : \"n94n9jy71e84pnyozbogxzx508yspbbqr7cha6ufhlg5o4pbc3g7338bawb1m3lafhmejc4k\",\n      \"interferenceCoordinationGroup\" : \"gxorfaf1wplzu75zi1k42atj5rthx30ufz5y0tgbiycqp99rgds0ni6p6fbbixvo0sww0l0a7qfs859\",\n      \"nrqzValidated\" : true,\n      \"antennaModel\" : \"cc6xjbfbblbrx189ub9tube7r2xieiz6kthj6blpxplfvrvni5g4ovpbbmqsozefa2f23z01uanglu4y7ezt3fh1flaacxph6gli0a76fp1kbda5kqdlmewxd98s55vi9ifcbwu536o5hkclq8nkvh8i0slu48vpit0yh6hsa04xqn8tb54uw9v4\"\n    },\n    \"name\" : \"Fatimah Reinger\",\n    \"fccId\" : \"328a\",\n    \"grantRangeAllowlists\" : [ {\n      \"highFrequencyMhz\" : 1.208200690937153E308,\n      \"lowFrequencyMhz\" : 6.028620152317994E306\n    }, {\n      \"highFrequencyMhz\" : 4.508370990786635E307,\n      \"lowFrequencyMhz\" : 3.068204559822214E307\n    }, {\n      \"highFrequencyMhz\" : 1.609099269559884E308,\n      \"lowFrequencyMhz\" : 4.4807866055758875E305\n    }, {\n      \"highFrequencyMhz\" : 8.037008312583494E307,\n      \"lowFrequencyMhz\" : 1.974297959227723E307\n    }, {\n      \"highFrequencyMhz\" : 6.041855823100348E307,\n      \"lowFrequencyMhz\" : 3.493824398665454E306\n    }, {\n      \"highFrequencyMhz\" : 1.3640857509894272E308,\n      \"lowFrequencyMhz\" : 1.0935165716203633E308\n    }, {\n      \"highFrequencyMhz\" : 6.336203977821815E306,\n      \"lowFrequencyMhz\" : 6.858648329948257E307\n    } ],\n    \"state\" : \"DEVICE_STATE_UNSPECIFIED\",\n    \"currentChannels\" : [ {\n      \"score\" : 1.7110992183273754E308,\n      \"frequencyRange\" : {\n        \"highFrequencyMhz\" : 3.027509788747587E307,\n        \"lowFrequencyMhz\" : 6.36523156274897E307\n      }\n    }, {\n      \"score\" : 1.2367175490984973E308,\n      \"frequencyRange\" : {\n        \"highFrequencyMhz\" : 1.613509879983758E308,\n        \"lowFrequencyMhz\" : 1.2554585528112009E308\n      }\n    }, {\n      \"score\" : 3.1760661222398705E307,\n      \"frequencyRange\" : {\n        \"highFrequencyMhz\" : 1.5629095984315417E308,\n        \"lowFrequencyMhz\" : 6.283466008981927E307\n      }\n    }, {\n      \"score\" : 3.3540278601187657E307,\n      \"frequencyRange\" : {\n        \"highFrequencyMhz\" : 1.1359576517191746E308,\n        \"lowFrequencyMhz\" : 8.006597412872033E307\n      }\n    } ]\n  }, {\n    \"grants\" : [ {\n      \"expireTime\" : \"2022-09-17T06:24:28.86243Z\",\n      \"grantId\" : \"y7t3\",\n      \"suspensionReason\" : [ \"syle7lbbxf5xejoa1plhiapwftm9r2fthjdnfe1texui118gz62gryyvhhfcuso5fdotiiyj6gfg5cmrtsgytf6xji17jsd99bmj41ne7aws16v3efrdgdr6\", \"6g2ky4wrisegwx26n3esu5zp522xfs5ksao8vh1a8bvavd2i1z8qkurdo9c7xpxjfcv4chztzfxtksgtxgpx\", \"nyoe7v7fwybbpqw4rwuzhyalydqp34itmscs6kru56hqzte51rx5r2iuquhh6m73gsikcsc9bhhp4beb5579p7g4kkdkj97syeeoo3hfrftcttjlrju9kw5chztsdemoophe3brhb0425hiby\", \"a8cc5ufwfvce\", \"wi626tsee2rhkue3k61gno9du337ukzh9eoa12gfvhd3e82l1597vgnwqxz00inhj2863cwszhj1ksns2vyk1wn1f0stxhf4rae6mil2h6s8w9aha42bujxkwdx0try3p8i5puugu9nkapnnarf0k1aa6ioacxgx8\", \"6ge9rgk5wferbvfhyq8w106kmzk4pun2lkb4mhnasi2smu2pb9maxdrchdf4b6\" ],\n      \"frequencyRange\" : {\n        \"highFrequencyMhz\" : 6.264553918317213E307,\n        \"lowFrequencyMhz\" : 4.957824111664344E307\n      },\n      \"channelType\" : \"CHANNEL_TYPE_GAA\",\n      \"lastHeartbeatTransmitExpireTime\" : \"2022-12-22T06:02:28.862592Z\",\n      \"state\" : \"GRANT_STATE_UNSPECIFIED\",\n      \"moveList\" : [ { }, { } ],\n      \"maxEirp\" : 1.0596329485429881E308\n    }, {\n      \"expireTime\" : \"2022-08-30T09:03:28.862645Z\",\n      \"grantId\" : \"sys0\",\n      \"suspensionReason\" : [ \"ou4ij9h2tidjv0rp1wpuydwnhjxots0w7kjhgw8ebu1hsglf26o0varo57en2x7yiw7qao17lynxuia7z1aml1a8u7ejik64byo1jzbsbwadc4sgez2b2uk3mg5v13x9x5p6rzy9dp7kc8h6rkdt0x1gom9hm9g2puv1grhb4d6x8pza46e6se\", \"minnqbe5if982c6k096umerzzxnqa7hhg80sbtqgrsuslq3nchlyf3fr23eu5fxkf423\", \"z7ieivbe9g644s5a25a1lfm7u01kgcyeu3cz4l26adgxs57lmxzzti5gsv3l0k4t284rr9loama2ztx4orwbwph56gigr6v688jkzknhswnhho7ziamdsclq04unc4t3bv8sqp4ocb8cuzdlfz4gb0jgffww2zhmg7gweo496e4g1owigxzy\" ],\n      \"frequencyRange\" : {\n        \"highFrequencyMhz\" : 1.4334596806954238E308,\n        \"lowFrequencyMhz\" : 1.529700910173763E308\n      },\n      \"channelType\" : \"CHANNEL_TYPE_UNSPECIFIED\",\n      \"lastHeartbeatTransmitExpireTime\" : \"2022-11-21T07:31:28.862785Z\",\n      \"state\" : \"GRANT_STATE_GRANTED\",\n      \"moveList\" : [ { }, { }, { }, { }, { }, { }, { }, { } ],\n      \"maxEirp\" : 7.725580369949144E307\n    }, {\n      \"expireTime\" : \"2022-10-12T07:47:28.862842Z\",\n      \"grantId\" : \"m655\",\n      \"suspensionReason\" : [ \"ih2gajyzt76v89oc47v9g8o03yxx38d9zratuer2wclcrqu4njlxerxqohgeqxso2qv1r6s906epsdwonq6x4m0dmc87ivm84m1umvpdbzhcfrvfkjmph3ox37su2lrrmas2nil92x3r132hzopd6gpl9609zk6ea8k756dy9h\", \"6ok265yr2nln6fik\", \"4p2m3t6ja31u954uu1msagdvjak9j2dg71dye46zljeqfkt7px9sz06uzhqfg172oizceitiait\", \"r6u770plqancof0urv6f2l9yflopkm2jpa11ks2hdfuzt5lbvflge0evbyp7ic3h7qpiw7voi9eemrhwl83e7pz1lxi8rdkam5qh3y2vkrodv0qdmbcouwaxciv6p5u5yoo0hyihc1\", \"0vwrsjp30zjh7cx0ulhmdnsvqh1bv6km1w37tj0srgmpno29oefnc0hl1gvj2soa398ngq1klaxuey3aosx2jlofp6be6obozh43onaqg4zwvkwmorffy7o2e6ogm88n8p3qnam2m3kvs09lr5zihcw9i9boga\", \"zdhle32s9s9v1bu93m9qufmnyz2g0feq0aj1gl23mqkvxpzi9a10t3mhv566bu0m8ye9s0ikntiksr8yk7g40p09ppnbj4di3izmjya6ws77adr31i0bj4klj4k\", \"a11hqc7brz2kyzyng4bysf0ixjtd9gr0s2r9dwumcscx00jjc8vwh3w0m5wktu05ir5iyictu00re4cphotsj4h17j66u8yh8isua991altiojdldqam633h6lb8p7\", \"j92z7hs956y0au4s54yahhy2kwpfc1\" ],\n      \"frequencyRange\" : {\n        \"highFrequencyMhz\" : 8.538530612686635E307,\n        \"lowFrequencyMhz\" : 1.6772215475327809E308\n      },\n      \"channelType\" : \"CHANNEL_TYPE_PAL\",\n      \"lastHeartbeatTransmitExpireTime\" : \"2023-01-13T09:05:28.863017Z\",\n      \"state\" : \"GRANT_STATE_SUSPENDED\",\n      \"moveList\" : [ { }, { }, { }, { }, { }, { }, { } ],\n      \"maxEirp\" : 3.940111403059913E307\n    } ],\n    \"preloadedConfig\" : {\n      \"isSigned\" : false,\n      \"airInterface\" : {\n        \"supportedSpec\" : \"a5ypbn2pn78azw3tnz1e4t8v4q9ivojhoe81cspy\",\n        \"radioTechnology\" : \"CW\"\n      },\n      \"installationParams\" : {\n        \"cpeCbsdIndication\" : false,\n        \"indoorDeployment\" : false,\n        \"antennaGainNewField\" : 5.258170152131372E307,\n        \"antennaModel\" : \"z4987aw5yfe80ukaaer4xi8qf1rxi4t2zaxywv3lrmr37od1gxuffy3mkal5t3ddwgoewwgugi7hu017oj69e9teci4qpp5ahj6bz6l2cnu99evvj0nuef6qritj7r1kqez2xt0fo62ozyrnou4by8jmep4lb26y0xyylcb366dpe39ekf\",\n        \"latitude\" : 1.5349411178863992E308,\n        \"antennaGain\" : 1468887436,\n        \"horizontalAccuracy\" : 6.110319366400569E307,\n        \"heightType\" : \"HEIGHT_TYPE_UNSPECIFIED\",\n        \"verticalAccuracy\" : 2.0625058634613936E307,\n        \"antennaBeamwidth\" : 1788934125,\n        \"eirpCapabilityNewField\" : 3.929360993471202E307,\n        \"antennaDowntilt\" : 1348489638,\n        \"antennaAzimuth\" : 1195284864,\n        \"eirpCapability\" : 887749282,\n        \"height\" : 1.58058100794352E308,\n        \"longitude\" : 9.502807757131472E307\n      },\n      \"measurementCapabilities\" : [ \"MEASUREMENT_CAPABILITY_RECEIVED_POWER_WITH_GRANT\" ],\n      \"model\" : {\n        \"vendor\" : \"sn48jtp9ce7pbl9gy7g0y5txc9qxlbp4c31zxc8cr36rcu30pg8dhn41ruebrp0azbmz7upb3p4e5jwji44cnirzwqucxxffm6h71mz0zs3y03bmcd62ay5h5tuhenv6wylof2n0cclcojt5k58f0av4s0qh66cmnrl56soff6ovm7hkaz1ld2\",\n        \"name\" : \"Parker\",\n        \"hardwareVersion\" : \"erl3ylnpsnx5de4mov8dvxheu69vf9ifj6awhxxf9k6s7r7ah931ntpj6wnedrp0\",\n        \"firmwareVersion\" : \"woldnf71blvbhskq77wvltktrcqb4hjt8gdjjyo8pzqeemxozb8d3paj91ahj7ld4kzz4h8qcgo4hltj1qgv9r4z6yjbn8xklyy7arrxhyg5jsly6wp0hr45sb5jf3edf2geylsrkvo7ycw7qpdot8vlt4r2wtw5aqcdfvzdsdvt4lb8ka9whzof6xjmkdwhq\",\n        \"softwareVersion\" : \"738e186o4kuvbcu4uzgz3jtdmb0wci3vcrgmy0v2a0kh8j5o6wn6heq6e6eipqcytbao8cw6s68vjd9n0g4pf1cuohgkvb7z00s93yksfmujh9haeb\"\n      },\n      \"updateTime\" : \"2022-09-21T06:02:28.863336Z\",\n      \"state\" : \"DEVICE_CONFIG_STATE_UNSPECIFIED\",\n      \"category\" : \"DEVICE_CATEGORY_B\",\n      \"userId\" : \"8lly\",\n      \"callSign\" : \"tgw170wfac1hhu96rm06gypp660bavmt3bs2wn74fxh1e2p73cpb1d1y1lxe7dro1lzxzjcmxigxpv8hxbaixogi4164dj10sujnu5ftl3oh6njaefmho9ka5nsc\"\n    },\n    \"serialNumber\" : \"6yu94knv0rr92e96rorz9x2g74ggol24fqw3ozplaw3a9hsbmxcgzm3w5wziek71bt48a0t91pijnmlhsjo2hrvg22zvck6vjr98ldvlemjki9l3x5s9h2svva3dik\",\n    \"activeConfig\" : {\n      \"isSigned\" : true,\n      \"airInterface\" : {\n        \"supportedSpec\" : \"7qg82a1ftdjzh0hu5uhf7065uhhoma6a4xfipokqfxnf7as7kwqzdc9biyvnjdhojvvhrcggyp9s035k3ree0s7671t31k1tvgwlbo6qc14ww2ly23po6j5skvbfcoh9tkhetm4f5xmpnoz14b6pc5q3lix0owp8czfklmw0gkhxdc34h1e\",\n        \"radioTechnology\" : \"REDLINE\"\n      },\n      \"installationParams\" : {\n        \"cpeCbsdIndication\" : false,\n        \"indoorDeployment\" : false,\n        \"antennaGainNewField\" : 5.937150354152445E306,\n        \"antennaModel\" : \"jolkmh1bk1kvxb8uiyo2pirrvqehq3ygay3mzigos7ih2bkgoi2pbizt7nd7ddrqkp9cv2ozl2fcgkv348evnypf6wc4bxsunntinsayn\",\n        \"latitude\" : 1.4320380433302465E308,\n        \"antennaGain\" : 1854114634,\n        \"horizontalAccuracy\" : 1.6414775299222567E308,\n        \"heightType\" : \"HEIGHT_TYPE_AGL\",\n        \"verticalAccuracy\" : 1.2156871353493843E308,\n        \"antennaBeamwidth\" : 1459520218,\n        \"eirpCapabilityNewField\" : 5.043117843262034E307,\n        \"antennaDowntilt\" : 578910381,\n        \"antennaAzimuth\" : 1009372252,\n        \"eirpCapability\" : 1950718601,\n        \"height\" : 8.305825104320783E307,\n        \"longitude\" : 1.2961034518201624E308\n      },\n      \"measurementCapabilities\" : [ \"MEASUREMENT_CAPABILITY_UNSPECIFIED\", \"MEASUREMENT_CAPABILITY_UNSPECIFIED\", \"MEASUREMENT_CAPABILITY_UNSPECIFIED\", \"MEASUREMENT_CAPABILITY_RECEIVED_POWER_WITH_GRANT\", \"MEASUREMENT_CAPABILITY_UNSPECIFIED\", \"MEASUREMENT_CAPABILITY_UNSPECIFIED\", \"MEASUREMENT_CAPABILITY_UNSPECIFIED\" ],\n      \"model\" : {\n        \"vendor\" : \"ve6owx62le7b8p0cjzgnyro7bnd8n50b35hs5ohbrn8bcerqzkwrykkheu630cuuq1bvc7as2hhj8sxkh8175zj5et8puq00oxoe8\",\n        \"name\" : \"MacGyver\",\n        \"hardwareVersion\" : \"arwmpzg6jkhieiw74sfnffxqwrxk791uubzdkwvld4b99nwiz2ma7evmge93k5bw1cqpjzxhg2i93bwc47ev19emfg8mg62m9eyhcza6odnel9gswnyav4etterzdbfstx9x84mf5np9ry7x923g9qjieti0okuuidilu8htvrkd0xf4l0jw97dq3nr0x24reuu2jkq\",\n        \"firmwareVersion\" : \"gg1d5jrosfpst3jh0qzhs5hu7b401ezd2mkrjke2tdiwpxkdv3wn2z3q67c1d3nv4nx6h3vanwpwi6c11u\",\n        \"softwareVersion\" : \"mdxknyq52rb6xe61yv14jl1qp7v03x001i709yldtto8fj92vfxpj2ne91wqd0rqezhysuiz78qfzpve4tykhbd2qih4jqh403bk3zea0wq\"\n      },\n      \"updateTime\" : \"2022-08-24T08:44:28.86373Z\",\n      \"state\" : \"DEVICE_CONFIG_STATE_UNSPECIFIED\",\n      \"category\" : \"DEVICE_CATEGORY_B\",\n      \"userId\" : \"5vl5\",\n      \"callSign\" : \"rcriklrw443arndcdke7bxpfv5uz01t17dv4intkfzxdu8n9\"\n    },\n    \"displayName\" : \"Valentin Kunde\",\n    \"deviceMetadata\" : {\n      \"nrqzValidation\" : {\n        \"cpiId\" : \"kam8\",\n        \"caseId\" : \"dnk5\",\n        \"latitude\" : 5.055286803248548E307,\n        \"state\" : \"DRAFT\",\n        \"longitude\" : 5.060511890676479E307\n      },\n      \"commonChannelGroup\" : \"5cyae8pfd30dms6hp6vj3ceg5kq8lt4bqvwny1wvj3hsiapxcq8ow3k0i3byuv3x5l06lnq84n3humt3cudihs3ngwu1lygjplzjil3rcd0a5s9mjjbk3089n5jxhzo9g7dzhst6unmnzzyod3i70ruamgyv6dbb43v5er9i\",\n      \"interferenceCoordinationGroup\" : \"ig4cfo46iqxo5b89gs536zutexauixgqmja9b35zyd8ak45vpf80z7o71x38klupdvmzkyljimlan881blxxbbry6ol0rxa7z460wn1h\",\n      \"nrqzValidated\" : true,\n      \"antennaModel\" : \"cnknbmg6p10w0v7u75i2\"\n    },\n    \"name\" : \"Odilia Walker V\",\n    \"fccId\" : \"4bal\",\n    \"grantRangeAllowlists\" : [ {\n      \"highFrequencyMhz\" : 1.3834722392211201E308,\n      \"lowFrequencyMhz\" : 8.455036847125702E307\n    }, {\n      \"highFrequencyMhz\" : 1.397258789305805E308,\n      \"lowFrequencyMhz\" : 5.355427522101902E307\n    }, {\n      \"highFrequencyMhz\" : 1.7700780814888148E308,\n      \"lowFrequencyMhz\" : 8.384128197101831E307\n    }, {\n      \"highFrequencyMhz\" : 3.988464425005955E307,\n      \"lowFrequencyMhz\" : 6.190130849950835E307\n    }, {\n      \"highFrequencyMhz\" : 1.167522013919463E308,\n      \"lowFrequencyMhz\" : 1.0278580504343862E307\n    } ],\n    \"state\" : \"DEVICE_STATE_UNSPECIFIED\",\n    \"currentChannels\" : [ {\n      \"score\" : 1.1951292184519027E308,\n      \"frequencyRange\" : {\n        \"highFrequencyMhz\" : 1.0061124276700632E308,\n        \"lowFrequencyMhz\" : 4.530821322123008E307\n      }\n    }, {\n      \"score\" : 1.5504083081687186E308,\n      \"frequencyRange\" : {\n        \"highFrequencyMhz\" : 5.318790484619515E307,\n        \"lowFrequencyMhz\" : 8.74293973817354E307\n      }\n    }, {\n      \"score\" : 1.3959804369519907E308,\n      \"frequencyRange\" : {\n        \"highFrequencyMhz\" : 1.5912657102833843E307,\n        \"lowFrequencyMhz\" : 1.2998775410577633E308\n      }\n    }, {\n      \"score\" : 8.929515797453066E307,\n      \"frequencyRange\" : {\n        \"highFrequencyMhz\" : 4.0559730726624253E307,\n        \"lowFrequencyMhz\" : 9.334693132840254E307\n      }\n    }, {\n      \"score\" : 4.1801031383347313E306,\n      \"frequencyRange\" : {\n        \"highFrequencyMhz\" : 1.2813091121776962E308,\n        \"lowFrequencyMhz\" : 4.1766889876376726E307\n      }\n    }, {\n      \"score\" : 1.1828319198926552E307,\n      \"frequencyRange\" : {\n        \"highFrequencyMhz\" : 1.6505891565051491E308,\n        \"lowFrequencyMhz\" : 9.188193123301055E307\n      }\n    }, {\n      \"score\" : 1.209636861515739E305,\n      \"frequencyRange\" : {\n        \"highFrequencyMhz\" : 7.951942905810891E307,\n        \"lowFrequencyMhz\" : 8.936673989254717E307\n      }\n    } ]\n  }, {\n    \"grants\" : [ {\n      \"expireTime\" : \"2023-03-01T06:34:28.864473Z\",\n      \"grantId\" : \"5vs4\",\n      \"suspensionReason\" : [ \"u1t33idmllxhmezvpwjp8ufysdomubnj63bthiu6pa77w2c\", \"peyivj2gj9vl3id08tv3v4bfpj92d2kohe6077vvdm6vx9kaz2id5hd4e5xo6q7wuo5f7p4q69k2v3lsj1p9x56q32ihry2fc5xhg4m5xh1t7y3gae7e33yrhyj872w5hvne4449j3g2wk6do\", \"1ibwmag7nnc4pcy7sp4aah4qetzb1bydry54eefu3un9y3osxiwve6obifcfph6e72oyehvn7potnwiuuqz0vnzzqgfgocv3ui5b4r306pko0dsjfjzl49j650en489cz18y260i0qvbd28p1iyfzgzkhvla75hkjxxvz1rsqz9ciuoo009s77nwuxer\", \"74sscr08clb\", \"lbp96zfg8ofroj43dnzwv3eaf315c5zm4u37vq1meuk508phso24edm7zkvmcy6sue5ei1p30e7eyqjvvwh9l7xgwtg05k8rjblcq6a62gpqunacv\", \"k4d6ntvyytboy2d5efurnbaon4u6tye1tz1f2yskc43hfww8kwami9lui6tiws13drbe7aap8rvurk4yn46vq37grueh2onjdtbtj0wiccpnapya5tfgzmvcw5ndcel6l9tit8339bzg5o1yt9obg5yazues88f4qi97lvzzgagxbnquy9p7hskdhoqw6k0wy5g3407u\", \"wc2u8r9wzhtq6orzfueoayw2u424holz8dau0nz7xp0exlc7rwfuamxcsgepsb6i38h747nhsh2vho4kzmxb44mbc9o01qk65aydg4umuhf6pcl1k0jviuknmj2gh1kdzua0vn4fdokb23pfi3p1fufg6rezjgm93g7f\" ],\n      \"frequencyRange\" : {\n        \"highFrequencyMhz\" : 9.165272226888135E307,\n        \"lowFrequencyMhz\" : 6.131186818511475E307\n      },\n      \"channelType\" : \"CHANNEL_TYPE_PAL\",\n      \"lastHeartbeatTransmitExpireTime\" : \"2022-08-21T05:58:28.864712Z\",\n      \"state\" : \"GRANT_STATE_TERMINATED\",\n      \"moveList\" : [ { }, { }, { }, { }, { } ],\n      \"maxEirp\" : 6.471595228793498E306\n    }, {\n      \"expireTime\" : \"2022-04-24T07:10:28.864788Z\",\n      \"grantId\" : \"irry\",\n      \"suspensionReason\" : [ \"dyozvapdlwux14n5y3mg9nzkwetg6gnyxfkige0yk61ibcz10740ie8fffcmdfylpmh29w3dp2qehjnoteq\" ],\n      \"frequencyRange\" : {\n        \"highFrequencyMhz\" : 1.3985845065910173E308,\n        \"lowFrequencyMhz\" : 1.7637061804889988E308\n      },\n      \"channelType\" : \"CHANNEL_TYPE_UNSPECIFIED\",\n      \"lastHeartbeatTransmitExpireTime\" : \"2022-05-12T09:16:28.864934Z\",\n      \"state\" : \"GRANT_STATE_AUTHORIZED\",\n      \"moveList\" : [ { }, { }, { } ],\n      \"maxEirp\" : 7.41174153360244E307\n    }, {\n      \"expireTime\" : \"2022-05-30T06:56:28.864989Z\",\n      \"grantId\" : \"24k5\",\n      \"suspensionReason\" : [ \"tsusxohkpgi05bkhg3jjxk45dzea1xuf\", \"cp4vtoibmrxh98x1uz3n2yhcc084exd4n5w1gure16wknqk6osrdn7we5g9c1bb55sacp44x25xo75vhn\" ],\n      \"frequencyRange\" : {\n        \"highFrequencyMhz\" : 1.7815849914723668E308,\n        \"lowFrequencyMhz\" : 3.743239183036521E307\n      },\n      \"channelType\" : \"CHANNEL_TYPE_PAL\",\n      \"lastHeartbeatTransmitExpireTime\" : \"2022-07-22T06:08:28.86513Z\",\n      \"state\" : \"GRANT_STATE_AUTHORIZED\",\n      \"moveList\" : [ { }, { }, { }, { }, { } ],\n      \"maxEirp\" : 6.500275706266093E307\n    }, {\n      \"expireTime\" : \"2022-05-20T05:30:28.865185Z\",\n      \"grantId\" : \"bc0t\",\n      \"suspensionReason\" : [ \"mdnmh0lce8y7dqy989xv6ta2vcta7mcvwjzee70aqxicf1mwm1ppx3hd3lu7v25y2d0n4c9abftaqvarx2cibph0d6brirv2fgqouso\", \"ks62e87nhe9e9so2cawdolu1hiuovisq5ja90lcpsijymzsznlk15d99i9076v7cz7zn90mc0sy1tju\", \"pggfsp59mslc0e7vvma29npit1lbbercntxg457e5wzgcorqn4z1x1fvkbmx9vhz26jd8rqguq\" ],\n      \"frequencyRange\" : {\n        \"highFrequencyMhz\" : 1.0775140890465825E308,\n        \"lowFrequencyMhz\" : 1.0647258062560803E306\n      },\n      \"channelType\" : \"CHANNEL_TYPE_GAA\",\n      \"lastHeartbeatTransmitExpireTime\" : \"2022-12-25T07:07:28.865334Z\",\n      \"state\" : \"GRANT_STATE_SUSPENDED\",\n      \"moveList\" : [ { }, { }, { } ],\n      \"maxEirp\" : 8.640792795531119E307\n    }, {\n      \"expireTime\" : \"2022-08-12T06:41:28.865387Z\",\n      \"grantId\" : \"l5pw\",\n      \"suspensionReason\" : [ \"k1okn1x31d752sdfd1fnewltf8be3547jvrvhbyzwazw2ryuelgvhbp2gthocw9n2huy3ofv78w6rvvnhvidbbn7f9gcty075tkgpg7hzkvdkj1jsp8s60r0l6d35el73e45j3q5c27kb06eqa3\", \"ofak4pdjl48ch7ip5l03825r740zhfakkqx7f5qbrg20tka6ed8o2kfqa4gith98y0juki7s9o5k1gfxn2\", \"ojgu\", \"s729lnvhiu2xrqorsir51t19zhmm9eev16v9ve9uovro5kmpr5ap3xlxqw14zvq6qihya9k1qy92gmbrnbswj2helrslwbf8jigwot142yykwgdsxapd58w7u5f5dsd3b9jtbhnae300i5b6lz486ibuiaeqg67vc98rqzzi3x1hpmrv3rz20\", \"tok4y72ueep18y3q802964zvxh63db6p6ld93zf74xtfg74wbxcys2jk7s65uqwot2xvogzt9ptjj2c0j74m5bfxjyp8edkv2faext1tsy3dfdhj2rylglcdfqzb6fli5krfbz6mb72lc7slt6\", \"e5s7bo1csxywhlxehb1xg8446ma97usvup5b8qykaqkb4tjqe1a3w9mm5gy914480it90wytzr6\", \"xg9qmicqecw5l0ozb802pjehkdljn1lis2f4vpwlu345xroxpc825c1no48lu0wgf76sqma\" ],\n      \"frequencyRange\" : {\n        \"highFrequencyMhz\" : 4.593944780116286E307,\n        \"lowFrequencyMhz\" : 1.5814722561377276E308\n      },\n      \"channelType\" : \"CHANNEL_TYPE_PAL\",\n      \"lastHeartbeatTransmitExpireTime\" : \"2022-06-06T05:44:28.865559Z\",\n      \"state\" : \"GRANT_STATE_AUTHORIZED\",\n      \"moveList\" : [ { } ],\n      \"maxEirp\" : 4.1953887087934043E307\n    }, {\n      \"expireTime\" : \"2022-10-22T08:55:28.86561Z\",\n      \"grantId\" : \"d7a5\",\n      \"suspensionReason\" : [ \"mf42156j7dnv099phco2f5zhp3evx523c96nqqtiwosqqehala8p1v3wpcdr0xcjg1fdejbfw5i\", \"ulcd2w97idy1o3nkogtv9738wgobe0wczt8mrt335e3c3i1ta09vvre9qkyhj7hgv8xtaafc7l49rmf1wrbde683x286fu49wfhskohm45b9pfw\", \"e8t7h4ryeikfa7xbap1ztw9udazemq4hr5bbqy5yq0vn43rg380wt2de8x9epyha8dn954\", \"ylc2mhg0hp0umb0o5960oiwyjmrts5s59m7vp94buayiz07azrij66rooapitszwrepcrybijymo9sa75luhadzrz496tojhjwonh8cnkiukgl5tpgmdrjzc7b6mvs\", \"q2zra28\", \"4uqmunexwkhaujbcuqgx0wxfg793lizxqh48y2\", \"fkqs32glb\" ],\n      \"frequencyRange\" : {\n        \"highFrequencyMhz\" : 1.2736255986001246E308,\n        \"lowFrequencyMhz\" : 1.334842847814831E308\n      },\n      \"channelType\" : \"CHANNEL_TYPE_PAL\",\n      \"lastHeartbeatTransmitExpireTime\" : \"2022-12-11T07:06:28.865771Z\",\n      \"state\" : \"GRANT_STATE_GRANTED\",\n      \"moveList\" : [ { } ],\n      \"maxEirp\" : 5.337780851677327E307\n    }, {\n      \"expireTime\" : \"2022-09-13T06:59:28.86582Z\",\n      \"grantId\" : \"4jwh\",\n      \"suspensionReason\" : [ \"ibp6o31u1bq6rjo80qv1ph11y7m9h4u57g446olv601gf3p5rwdwm6lwy0v5uclmidat823d6i6o0rzbbhjjgo66v4az48eqfql8wob0yhmw16j7n7xfk93q63xy42ryr762n\", \"tybq66d39nkocrei6vwykgr99c6uo679p5w3pz2463ptpoqcyx453rqvouvzjoatfnama2ljq8o4z9doz554jnq7bb\", \"s1q24tccunvc4cv1rx3nsuvx3e0lerekchcrgjpsgdz7vigqjbev1xcl6ovl6o\", \"201el8b1i3gi0kihqjlufpzcgmap0fmltz1kvrhr3fm7a5u4wlhxk212a3z4oag8ev7y8r817\", \"1gs3awwac3din38zzo01m9lbh0ez7y0unm8ohmo62zjh9tuo162wg2ls89pf\", \"gkfykobc9dae6js1dxty9ulphsqw1212z727gmltmhmpnk8gsq264ze8fzounsr8eb3ei8nrizhfnvpi86z5e\", \"v9xe277opvh51te8qv0trfym80biqd6y50legv5gfewkdtms2jq\", \"r5issf08j8qh6xaz3fbspit3xrq7aeagmb82n1ubydc06psk9p5n10lpmjt3s7uho56f4jmitb6e8chd94kno0uu9j3d3vqoizsgrqv59iol9naz9acprzaommv6jzbzuh47farvsi301kxzbyq4qk6wtwt186pkm0kq5d058eu8f33u\" ],\n      \"frequencyRange\" : {\n        \"highFrequencyMhz\" : 6.876575735573039E307,\n        \"lowFrequencyMhz\" : 1.5821076599184011E308\n      },\n      \"channelType\" : \"CHANNEL_TYPE_UNSPECIFIED\",\n      \"lastHeartbeatTransmitExpireTime\" : \"2022-11-20T08:50:28.865991Z\",\n      \"state\" : \"GRANT_STATE_AUTHORIZED\",\n      \"moveList\" : [ { }, { }, { }, { }, { }, { } ],\n      \"maxEirp\" : 1.4967917778494982E307\n    } ],\n    \"preloadedConfig\" : {\n      \"isSigned\" : true,\n      \"airInterface\" : {\n        \"supportedSpec\" : \"qoxhbbb0s0qvkjcv5j3wkazd2o9d2o2qg7feuw1fidt895llnsem7rfp2o3w5ucusrw\",\n        \"radioTechnology\" : \"NR\"\n      },\n      \"installationParams\" : {\n        \"cpeCbsdIndication\" : false,\n        \"indoorDeployment\" : true,\n        \"antennaGainNewField\" : 7.724533999696788E307,\n        \"antennaModel\" : \"j8leppi2ecfywdaanhpgts4k2h115chy0czac\",\n        \"latitude\" : 6.084634161885724E307,\n        \"antennaGain\" : 1633307593,\n        \"horizontalAccuracy\" : 4.622534138277396E307,\n        \"heightType\" : \"HEIGHT_TYPE_AGL\",\n        \"verticalAccuracy\" : 3.0706015626763827E307,\n        \"antennaBeamwidth\" : 479469295,\n        \"eirpCapabilityNewField\" : 5.076482671762274E307,\n        \"antennaDowntilt\" : 1912464673,\n        \"antennaAzimuth\" : 951495041,\n        \"eirpCapability\" : 1217632880,\n        \"height\" : 5.577409694794641E307,\n        \"longitude\" : 2.5247141022009615E307\n      },\n      \"measurementCapabilities\" : [ \"MEASUREMENT_CAPABILITY_UNSPECIFIED\", \"MEASUREMENT_CAPABILITY_RECEIVED_POWER_WITH_GRANT\", \"MEASUREMENT_CAPABILITY_UNSPECIFIED\", \"MEASUREMENT_CAPABILITY_RECEIVED_POWER_WITH_GRANT\", \"MEASUREMENT_CAPABILITY_RECEIVED_POWER_WITHOUT_GRANT\" ],\n      \"model\" : {\n        \"vendor\" : \"ogyvr4oqtuxacu9o2215xwd1g7z1owcipgr05ninjkuuekny998hr0ts07mfqhdhezx4bi5j2bsjtufvh2u4r105iyt0jd2ijnk22yem161tlkqd0l79p78nv7cdouodkrvz1y131z4pzlbisvugax2hjd\",\n        \"name\" : \"Lehner\",\n        \"hardwareVersion\" : \"dyu601ydtp3xnxwro1vw008cyegtm4fhb\",\n        \"firmwareVersion\" : \"oo3cmv4jzyxmx8ck9uwv2xoaxmvacdua0p\",\n        \"softwareVersion\" : \"pz3sk89tvix8yvyw5ydx56xkr9kepuwa7uuvuh2atplyojx5quz6yw7lm1h7tv31npww7gntm7xjzbx2f3eoxvw3en3eg7uouuc3evh\"\n      },\n      \"updateTime\" : \"2022-10-26T07:17:28.866344Z\",\n      \"state\" : \"FINAL\",\n      \"category\" : \"DEVICE_CATEGORY_A\",\n      \"userId\" : \"3537\",\n      \"callSign\" : \"x02bg8s37jfk6grdciemd\"\n    },\n    \"serialNumber\" : \"5i9rdughbgxyscp7u2ppzx1s2mt8hs0o2l6foqk4f243sp2b70kz6gdjcv8c7gg40nstwu66rfwr25ndmn0h9oan8u7xaemu9cthfcehg8qevirr7mrj9xbcn243fmh5uvuis51z2o4nsbzchird0w8k\",\n    \"activeConfig\" : {\n      \"isSigned\" : false,\n      \"airInterface\" : {\n        \"supportedSpec\" : \"5sdflmow39es4ng08j1ftz8er92108epdi1i6ny608inoxyq50l5b46k2m3p54fd4w3juczgek59kj3q785zy9zxjetatxeaq22f1zyo3h7qhdrbqdpdmj1olhr0fwd5qscob4sbfrnuxm37wc5jj935lbfzfkyx1tj04rocbuvlyymnshp\",\n        \"radioTechnology\" : \"CW\"\n      },\n      \"installationParams\" : {\n        \"cpeCbsdIndication\" : true,\n        \"indoorDeployment\" : false,\n        \"antennaGainNewField\" : 1.1113676278112968E308,\n        \"antennaModel\" : \"mpvks2ycinrzu9r85j7fcx8urxmkz7w8yoym6dbu8pm05yvxweiwu6tfaokhgx7kxtbkpv9am6075m69omzoj2qfcgcednf43406mj5j0myrwlb718cb0qyeq0a76jqxo8ra3cudpg1ahrjrijiof6x5f5pgw8f\",\n        \"latitude\" : 1.7818921657990892E308,\n        \"antennaGain\" : 1502241782,\n        \"horizontalAccuracy\" : 5.839203358251571E307,\n        \"heightType\" : \"HEIGHT_TYPE_AMSL\",\n        \"verticalAccuracy\" : 1.6362355820828535E306,\n        \"antennaBeamwidth\" : 1144271007,\n        \"eirpCapabilityNewField\" : 1.6272423104918834E308,\n        \"antennaDowntilt\" : 1326916445,\n        \"antennaAzimuth\" : 883543872,\n        \"eirpCapability\" : 333671235,\n        \"height\" : 4.659520227038156E307,\n        \"longitude\" : 7.982869979015694E307\n      },\n      \"measurementCapabilities\" : [ \"MEASUREMENT_CAPABILITY_RECEIVED_POWER_WITH_GRANT\" ],\n      \"model\" : {\n        \"vendor\" : \"7zmr107nn6i2ukpffdcephq6xv80ez489jqyt1bxeg3nikvy5n97nv7q6aeemtj3wd5qawus98\",\n        \"name\" : \"Ondricka\",\n        \"hardwareVersion\" : \"tiypxohod2d3zpkwfu7kkjdqxj6\",\n        \"firmwareVersion\" : \"vl2zwdsusxekdzzjwgj2azi66no4e8lc303spjjngxt1yclb5wflnc2x58d7pyej62ha7o9wr4ms8mzapy6vqn7z8cqrbiumucuhdme4810pjydftu\",\n        \"softwareVersion\" : \"zjv2oxzqliiaa2r4fd5hixn9sz61zqievpbnbtb7ne9913khcuvs9nt9twyup55mex4ko1m2m7fhao3s70phh26vimzqva0dl5ve7551p5cj7ja2fny\"\n      },\n      \"updateTime\" : \"2022-12-20T09:08:28.866732Z\",\n      \"state\" : \"FINAL\",\n      \"category\" : \"DEVICE_CATEGORY_A\",\n      \"userId\" : \"q9x9\",\n      \"callSign\" : \"h85juo3z04i4nt6c7p5gpd2in88gkasm3ujubiaypxhcwwvqxacbup8z4fkjtd4tp8czmh5erjb3elg9gh8z6dxevlvadd4qr99ekz4l\"\n    },\n    \"displayName\" : \"Marilyn Koelpin\",\n    \"deviceMetadata\" : {\n      \"nrqzValidation\" : {\n        \"cpiId\" : \"945y\",\n        \"caseId\" : \"yz73\",\n        \"latitude\" : 2.0645977361806063E307,\n        \"state\" : \"DRAFT\",\n        \"longitude\" : 5.11146427072962E307\n      },\n      \"commonChannelGroup\" : \"j6nnygyvi12oqvm5ieg5yji4v2o7xfhugms8t967n05akjj4yjxaga\",\n      \"interferenceCoordinationGroup\" : \"0pfd2pflyah4r09oje9gsgud7762trlpl0tpvg473k0aimxjm4vd50c2zj205j6fyto0h1juurtkuy4\",\n      \"nrqzValidated\" : true,\n      \"antennaModel\" : \"uzj6t9e4hf3zdhvzj7kxflpj40n44ar0078ae46z619d5usc8d94igho4finqihu0aain578bm1bsii0apxltn0174vh5zm9kjsx6zga4oh1tcfjwa6sampqv4w9f9mp25i0lqifduzvdm09r1iks\"\n    },\n    \"name\" : \"Sharda Abshire\",\n    \"fccId\" : \"hz27\",\n    \"grantRangeAllowlists\" : [ {\n      \"highFrequencyMhz\" : 1.5392600734951308E308,\n      \"lowFrequencyMhz\" : 7.46423243962479E307\n    }, {\n      \"highFrequencyMhz\" : 1.9574370438792197E307,\n      \"lowFrequencyMhz\" : 1.2901914199782536E308\n    }, {\n      \"highFrequencyMhz\" : 1.3501243056854272E308,\n      \"lowFrequencyMhz\" : 1.4243078844135567E307\n    }, {\n      \"highFrequencyMhz\" : 5.508482960399079E307,\n      \"lowFrequencyMhz\" : 9.982218307144933E307\n    }, {\n      \"highFrequencyMhz\" : 1.7074653766170723E308,\n      \"lowFrequencyMhz\" : 1.3144907663402503E308\n    } ],\n    \"state\" : \"RESERVED\",\n    \"currentChannels\" : [ {\n      \"score\" : 2.9363252161010525E307,\n      \"frequencyRange\" : {\n        \"highFrequencyMhz\" : 1.1023911014928408E307,\n        \"lowFrequencyMhz\" : 9.974050648655202E307\n      }\n    }, {\n      \"score\" : 3.9099774228628316E307,\n      \"frequencyRange\" : {\n        \"highFrequencyMhz\" : 1.1692037363803709E308,\n        \"lowFrequencyMhz\" : 3.5526075962502523E307\n      }\n    }, {\n      \"score\" : 5.204161644131845E306,\n      \"frequencyRange\" : {\n        \"highFrequencyMhz\" : 2.547463748395242E307,\n        \"lowFrequencyMhz\" : 1.270670879806516E307\n      }\n    }, {\n      \"score\" : 5.701516313896283E307,\n      \"frequencyRange\" : {\n        \"highFrequencyMhz\" : 1.5556560203139644E308,\n        \"lowFrequencyMhz\" : 1.6056728772846053E308\n      }\n    } ]\n  } ],\n  \"nextPageToken\" : \"n6yy5zyxi365pj1e7fkrmw87qj186j1vgkwc1s2f0bb8rqwzrcf\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "152a7e0a-03b2-4e6d-8942-4d6c61f1378f",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:28.868051Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "sasportal.nodes.nodes.devices.list",
+          "schema" : {
+            "description" : "Response for ListDevices.",
+            "properties" : {
+              "devices" : {
+                "description" : "The devices that match the request.",
+                "items" : {
+                  "$ref" : "#/components/schemas/SasPortalDevice"
+                },
+                "type" : "array"
+              },
+              "nextPageToken" : {
+                "description" : "A pagination token returned from a previous call to ListDevices that indicates from where listing should continue. If the field is missing or empty, it means there is no more devices.",
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 4
+  }, {
+    "id" : "d4342882-69f6-47ec-a788-f7a53336c504",
+    "name" : "Creates a new deployment.",
+    "request" : {
+      "urlPath" : "/v1alpha1/pvn827s5qnv1d1n4jy/deployments",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"frns\" : [ \"x85nju7thlb5rljdyox8y9v61z06eh8rev6nu44vmpxsvry6stawsy68bnuom8vytu3cwpgpbfjl\", \"m1a8j20q711litdqz3naz3borly4\", \"72dktpoxtz7j72fqev0d9ocwbpbf88mikwk3upn21qcgyva69bie7m7evh5x2jpqg2rqfb0ii30nf9rbb94ts2u59b\", \"ukq16kap74ngavwu6qu9f45uxou6ubgex35tkx0b9ktvdfwj9p8c7hpup0d99j41yuysq3quhtaktpqpxiah1pfof0xv0ccjoux88qlks0lhj5h0n2fg8k7sdni010jl5j27j70zecomyb59yo05fimanxjw65aqm0x2iof62y5xhrjzs9mzvnn36fpm6loeql6\", \"ppw04jp\", \"bh5yf2gp84jja57vvnu75qd48hyp9gte2zrczqzgm7wdnupe7efqpf6rb3n6vrqxrtt3dlqujxjuf4ouu7vn1\" ],\n  \"displayName\" : \"Bettie O'Reilly\",\n  \"name\" : \"Dewey VonRueden I\",\n  \"sasUserIds\" : [ \"v43v5gpck5cht60lo2l1n1q0mmg2oxy73x9wabc10vhe9vspt2aa99qfb1kdq6jvudtauy2az4tp6df6beua58nbtyho7bdpozn8aiqe25h6kyubye386y1o63snmcqydrvf9b\", \"5b4t1kgpcysw183p1z4azwggadeixkhoslr79c7m2shf3az5gxg2gat61gz78fcqi3sfgdzc4i9ywz1mx0ruis6ieuaotw4sypqgutynddcgi0sl\", \"5lkstq6i5cugzwrwtrknghf4k336arth5tjn4nszzlt2u45bvy9yvvjt3qg3tuyhagbnkg48pgauu0ql23d4si7v1purv0v7a0oj0idofvdogk1w8mwj4ivl9avbt2h6yfe0gwk2n8ey337af3i66yqxpnl2q3gkxzpkx4oc3mxznq301acqy\", \"40e82v4\", \"ax39hyqijp518kc1jkc7q8s73yf7e6h1i77uvw6l3ww08i13yc5s6j44mlwhan7ns2c8sg3kmjtykb6bpemp0a0nvmmkwp3t1oqtonr4akc0wna09ukajpstazxgrdg7punnnch1oljkhjpbd05vbd9l6q8qdm28rd5ocr9err0vhiwsan5tol2hngw09\" ]\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "d4342882-69f6-47ec-a788-f7a53336c504",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:28.853679Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "sasportal.nodes.nodes.deployments.create",
+          "schema" : {
+            "description" : "The Deployment.",
+            "properties" : {
+              "displayName" : {
+                "description" : "The deployment's display name.",
+                "type" : "string"
+              },
+              "frns" : {
+                "description" : "Output only. The FCC Registration Numbers (FRNs) copied from its direct parent.",
+                "items" : {
+                  "type" : "string"
+                },
+                "readOnly" : true,
+                "type" : "array"
+              },
+              "name" : {
+                "description" : "Output only. Resource name.",
+                "readOnly" : true,
+                "type" : "string"
+              },
+              "sasUserIds" : {
+                "description" : "User ID used by the devices belonging to this deployment. Each deployment should be associated with one unique user ID.",
+                "items" : {
+                  "type" : "string"
+                },
+                "type" : "array"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 5
+  }, {
+    "id" : "a458c123-0c5d-4fce-8fb9-3f8c091e4f56",
+    "name" : "Lists deployments.",
+    "request" : {
+      "urlPath" : "/v1alpha1/68q3ozpm6tfjp8ru2nx8qem916thnikmrehu05py21sqoh3d4hy5bm/deployments",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"deployments\" : [ {\n    \"frns\" : [ \"lcfo7wqtlkpdcod94v0dheq43p1ler8s25cookz3a4ftuiw3\", \"fr5u8m6gxr8vtc995esuupf4vk2q11lqkus6j\", \"fwb2onj95hmqaqou2tltia8i73r171ps473nph4k6nn4ftftcl354zo4s6c084d61a796aj5csdukc4v9e6uw6n41e4bn6h4r6uv52bed93e6c8pm36d9x6za9tckdh9b2wx5ul3cmlms4bmda73f6wojpgx0jf53\", \"ho9lv4slaqzk5jhqwbvjax8z2fuo8ec1iqhozczmp6uklpze3jicerkpy\", \"pq1la565ko889yk09uzzge2b4rfrpv46w8o9jzx5bt5l9nm97lpsemx2tywrxpqh1458nq054xugrf0z07w5019ofnyoffeggyaaga76cww4mkj0y68wvvm\", \"fem8egpirze718i29qym6bzxblkesvg67nwj0sl838iianplr5wko6sqmxu4ri2ja8ug6s\", \"pil2z8psht7jga3bi\" ],\n    \"displayName\" : \"Ms. Daryl Hilpert\",\n    \"name\" : \"Reid Predovic MD\",\n    \"sasUserIds\" : [ \"h8x269z\", \"csukotnwzfmhi7125xwnx53w6x8objbk8p8vyd8d90okf3y3xc2qw3znm8cjw6iwsrann\", \"uxgjujt2twwnj0oaleswdh6s0i0ylah965ytmr9nia4yq0\" ]\n  } ],\n  \"nextPageToken\" : \"jxc93zydxrv5flbru60rahex562cybiflh2ninjq3egf9ek2503jn1croyo\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "a458c123-0c5d-4fce-8fb9-3f8c091e4f56",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:28.853419Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "sasportal.nodes.nodes.deployments.list",
+          "schema" : {
+            "description" : "Response for ListDeployments.",
+            "properties" : {
+              "deployments" : {
+                "description" : "The deployments that match the request.",
+                "items" : {
+                  "$ref" : "#/components/schemas/SasPortalDeployment"
+                },
+                "type" : "array"
+              },
+              "nextPageToken" : {
+                "description" : "A pagination token returned from a previous call to ListDeployments that indicates from where listing should continue. If the field is missing or empty, it means there are no more deployments.",
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 6
+  }, {
+    "id" : "572300d7-cd65-4262-a331-961315b5d36d",
+    "name" : "Updates a signed device.",
+    "request" : {
+      "urlPath" : "/v1alpha1/Jerrica+Oberbrunner+DVM:updateSigned",
+      "method" : "PATCH"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"grants\" : [ {\n    \"expireTime\" : \"2023-01-24T09:02:28.8473Z\",\n    \"grantId\" : \"76vb\",\n    \"suspensionReason\" : [ \"mqv5aukb2vxqzectom0l312tmf217venlst14ro3t0ne7wo3aruqbjjbjfea8qtvyc8\", \"eie6foipl9maz1agapjf5nvw0t1ezdmbg9xgtuclz7jc0wq7k6n2cmef81zykqqdugs52sxrybih9gn2w\" ],\n    \"frequencyRange\" : {\n      \"highFrequencyMhz\" : 6.314466725967245E307,\n      \"lowFrequencyMhz\" : 7.766533064617611E307\n    },\n    \"channelType\" : \"CHANNEL_TYPE_UNSPECIFIED\",\n    \"lastHeartbeatTransmitExpireTime\" : \"2022-07-31T05:38:28.847511Z\",\n    \"state\" : \"GRANT_STATE_SUSPENDED\",\n    \"moveList\" : [ {\n      \"dpaId\" : \"9xk0\",\n      \"frequencyRange\" : {\n        \"highFrequencyMhz\" : 1.3568308425352127E308,\n        \"lowFrequencyMhz\" : 8.720112086873924E307\n      }\n    } ],\n    \"maxEirp\" : 8.954872501060843E307\n  }, {\n    \"expireTime\" : \"2023-02-16T08:13:28.847674Z\",\n    \"grantId\" : \"18ex\",\n    \"suspensionReason\" : [ \"h2gtfvb1tvnn0nrykzd21stzsupzg9hdgrc0he\", \"5i8c83df7ms28s02ods5dsljn1bghlxlp3migq9mrz6eieegzrobwrxf76bfq3of7o6m\", \"h3dv3rnmg0qsxnik6in5puqopvnu684uc7cu29jbinrc30mqibfatptslw718bi\" ],\n    \"frequencyRange\" : {\n      \"highFrequencyMhz\" : 1.2120891247604403E308,\n      \"lowFrequencyMhz\" : 1.4080296265451679E307\n    },\n    \"channelType\" : \"CHANNEL_TYPE_PAL\",\n    \"lastHeartbeatTransmitExpireTime\" : \"2022-04-07T06:17:28.847826Z\",\n    \"state\" : \"GRANT_STATE_TERMINATED\",\n    \"moveList\" : [ {\n      \"dpaId\" : \"0f26\",\n      \"frequencyRange\" : {\n        \"highFrequencyMhz\" : 1.2689331405277571E308,\n        \"lowFrequencyMhz\" : 1.1006571358607336E308\n      }\n    }, {\n      \"dpaId\" : \"jf38\",\n      \"frequencyRange\" : {\n        \"highFrequencyMhz\" : 5.040208148979592E307,\n        \"lowFrequencyMhz\" : 4.1491704898051107E307\n      }\n    }, {\n      \"dpaId\" : \"4ct2\",\n      \"frequencyRange\" : {\n        \"highFrequencyMhz\" : 1.433789754548877E308,\n        \"lowFrequencyMhz\" : 1.4566747714803377E308\n      }\n    }, {\n      \"dpaId\" : \"4bom\",\n      \"frequencyRange\" : {\n        \"highFrequencyMhz\" : 5.400904593095531E306,\n        \"lowFrequencyMhz\" : 1.5443088307944542E307\n      }\n    }, {\n      \"dpaId\" : \"ac2g\",\n      \"frequencyRange\" : {\n        \"highFrequencyMhz\" : 1.3869374222458615E308,\n        \"lowFrequencyMhz\" : 4.4000354749847475E307\n      }\n    }, {\n      \"dpaId\" : \"9x9u\",\n      \"frequencyRange\" : {\n        \"highFrequencyMhz\" : 1.4182207013473851E308,\n        \"lowFrequencyMhz\" : 7.743240433933095E307\n      }\n    } ],\n    \"maxEirp\" : 2.701564864200049E307\n  }, {\n    \"expireTime\" : \"2022-07-06T09:15:28.848404Z\",\n    \"grantId\" : \"s27y\",\n    \"suspensionReason\" : [ \"6c0l108nxopam2k5n328io9k2sqm8qzlm3widxkhnfy1zdltdkme6jkaslnfu3u98f66aigo3bydtx8af7ams\" ],\n    \"frequencyRange\" : {\n      \"highFrequencyMhz\" : 1.5399942413663315E308,\n      \"lowFrequencyMhz\" : 1.3506910519192788E308\n    },\n    \"channelType\" : \"CHANNEL_TYPE_PAL\",\n    \"lastHeartbeatTransmitExpireTime\" : \"2022-10-24T08:47:28.848539Z\",\n    \"state\" : \"GRANT_STATE_EXPIRED\",\n    \"moveList\" : [ {\n      \"dpaId\" : \"u809\",\n      \"frequencyRange\" : {\n        \"highFrequencyMhz\" : 1.2948810975763606E308,\n        \"lowFrequencyMhz\" : 5.05676783584856E307\n      }\n    }, {\n      \"dpaId\" : \"htb3\",\n      \"frequencyRange\" : {\n        \"highFrequencyMhz\" : 1.098399207247176E308,\n        \"lowFrequencyMhz\" : 5.341121695343426E307\n      }\n    }, {\n      \"dpaId\" : \"9ie4\",\n      \"frequencyRange\" : {\n        \"highFrequencyMhz\" : 1.6531188879572198E308,\n        \"lowFrequencyMhz\" : 1.1044024156605418E308\n      }\n    }, {\n      \"dpaId\" : \"32d4\",\n      \"frequencyRange\" : {\n        \"highFrequencyMhz\" : 9.797103631762538E306,\n        \"lowFrequencyMhz\" : 3.14061139463079E307\n      }\n    }, {\n      \"dpaId\" : \"7h96\",\n      \"frequencyRange\" : {\n        \"highFrequencyMhz\" : 4.9557045447281945E306,\n        \"lowFrequencyMhz\" : 1.7451670685017974E308\n      }\n    } ],\n    \"maxEirp\" : 7.832717480441851E307\n  }, {\n    \"expireTime\" : \"2022-04-20T06:49:28.849035Z\",\n    \"grantId\" : \"t94h\",\n    \"suspensionReason\" : [ \"94agp2aays4oiu21kf31my5tuxvhb0o6lwehh40nqy3gubfjk16spitxt90rolpsyld3jjrgmi5aos1z1q9uq2koqau9\", \"m6idf8xv2ek8ztm2f1rx08pbwhr2vpfld4npyv58gkbsbipal\", \"ezvhkxz2zgwi9oy9kys3mnrizpcdg97yjt97ki0mzqfnzjtdjwz94ebn0brae7fyu7fag3dctxrqbo4rr45yc30j9wljnouzb692dljgzp8unyj7ip12auyjkkb0gwxoqofnhuxt7dj9925uhxz1avoqvuf\" ],\n    \"frequencyRange\" : {\n      \"highFrequencyMhz\" : 1.186325084427344E308,\n      \"lowFrequencyMhz\" : 2.3822504919484447E307\n    },\n    \"channelType\" : \"CHANNEL_TYPE_UNSPECIFIED\",\n    \"lastHeartbeatTransmitExpireTime\" : \"2022-09-17T06:17:28.849183Z\",\n    \"state\" : \"GRANT_STATE_UNSPECIFIED\",\n    \"moveList\" : [ {\n      \"dpaId\" : \"4344\",\n      \"frequencyRange\" : {\n        \"highFrequencyMhz\" : 4.588237945129383E307,\n        \"lowFrequencyMhz\" : 1.648639254346676E308\n      }\n    }, {\n      \"dpaId\" : \"84w6\",\n      \"frequencyRange\" : {\n        \"highFrequencyMhz\" : 1.0999202357756353E308,\n        \"lowFrequencyMhz\" : 4.469793593581807E307\n      }\n    }, {\n      \"dpaId\" : \"14n9\",\n      \"frequencyRange\" : {\n        \"highFrequencyMhz\" : 1.649021772780766E308,\n        \"lowFrequencyMhz\" : 2.814964979647018E307\n      }\n    }, {\n      \"dpaId\" : \"02g4\",\n      \"frequencyRange\" : {\n        \"highFrequencyMhz\" : 8.480819803039871E307,\n        \"lowFrequencyMhz\" : 3.7856616528145346E307\n      }\n    }, {\n      \"dpaId\" : \"8eyl\",\n      \"frequencyRange\" : {\n        \"highFrequencyMhz\" : 8.730507729238708E307,\n        \"lowFrequencyMhz\" : 3.964634945117262E307\n      }\n    }, {\n      \"dpaId\" : \"7poe\",\n      \"frequencyRange\" : {\n        \"highFrequencyMhz\" : 8.941487091026794E307,\n        \"lowFrequencyMhz\" : 4.403735899771796E306\n      }\n    }, {\n      \"dpaId\" : \"6629\",\n      \"frequencyRange\" : {\n        \"highFrequencyMhz\" : 1.7269852855100384E308,\n        \"lowFrequencyMhz\" : 1.1282979756242912E308\n      }\n    } ],\n    \"maxEirp\" : 1.3399270525050244E308\n  }, {\n    \"expireTime\" : \"2022-08-26T07:03:28.849834Z\",\n    \"grantId\" : \"0kp8\",\n    \"suspensionReason\" : [ \"9hgpqm9g1dg5acvik8l42mzu8z3w5ajo9cwwg3raa8paq4kihuxs8fxcb2pda8975\", \"d9n2m1gsgbry25sm74we288ddj1lm6ewb3l3bw33tal0lyjxh0dtm2psd8p5pq6sjf2x6h\", \"te2amhmt\", \"q4ewr54mjm7rfje4zhizt8f3al2c0pg25fe3a67cax5wn07lpi543hp0i74v4y7pqy0ovwihhn8vxzdsfdqmwu9ldlrg90suqja3hb0w0um22crkik7n0hvjejxmuydh64ufo865krig94ymbh2ks0me8scls4r5gqzux6kpresxm26pg9xqbe3\", \"7lu8qwby06b39zaotojoonbsskq54qdqiquznqf509llljhbvpw\", \"39ud\" ],\n    \"frequencyRange\" : {\n      \"highFrequencyMhz\" : 1.3202151571931149E308,\n      \"lowFrequencyMhz\" : 3.7683842836369646E307\n    },\n    \"channelType\" : \"CHANNEL_TYPE_PAL\",\n    \"lastHeartbeatTransmitExpireTime\" : \"2023-01-20T05:37:28.849991Z\",\n    \"state\" : \"GRANT_STATE_AUTHORIZED\",\n    \"moveList\" : [ {\n      \"dpaId\" : \"30a6\",\n      \"frequencyRange\" : {\n        \"highFrequencyMhz\" : 1.7299727077103127E307,\n        \"lowFrequencyMhz\" : 1.7045042626870363E308\n      }\n    }, {\n      \"dpaId\" : \"17k7\",\n      \"frequencyRange\" : {\n        \"highFrequencyMhz\" : 1.7318715095981982E308,\n        \"lowFrequencyMhz\" : 7.287123448544451E307\n      }\n    }, {\n      \"dpaId\" : \"60ny\",\n      \"frequencyRange\" : {\n        \"highFrequencyMhz\" : 1.7665970543837299E308,\n        \"lowFrequencyMhz\" : 8.451024292527033E307\n      }\n    }, {\n      \"dpaId\" : \"0nr5\",\n      \"frequencyRange\" : {\n        \"highFrequencyMhz\" : 7.178669014932485E307,\n        \"lowFrequencyMhz\" : 6.272193297001746E307\n      }\n    }, {\n      \"dpaId\" : \"277y\",\n      \"frequencyRange\" : {\n        \"highFrequencyMhz\" : 1.1031959538145812E308,\n        \"lowFrequencyMhz\" : 1.401271348896732E308\n      }\n    }, {\n      \"dpaId\" : \"a376\",\n      \"frequencyRange\" : {\n        \"highFrequencyMhz\" : 5.942404495549638E307,\n        \"lowFrequencyMhz\" : 2.3517770900540816E307\n      }\n    } ],\n    \"maxEirp\" : 1.4097873729950936E308\n  }, {\n    \"expireTime\" : \"2023-02-15T05:41:28.850539Z\",\n    \"grantId\" : \"ix9w\",\n    \"suspensionReason\" : [ \"b3nsgalq0lj1dirsjqh446oawn2y03jpkcrif0bkl7o81mali8h7d21j0gf11ndkyrz7tbp3aod04rlo1yeyplc4ix2a7vycjtuu9nqap7qam2ddk70ymzogowyozi5vhwwj8vjjnr7o86\" ],\n    \"frequencyRange\" : {\n      \"highFrequencyMhz\" : 1.6544045357285152E308,\n      \"lowFrequencyMhz\" : 7.85109339548317E307\n    },\n    \"channelType\" : \"CHANNEL_TYPE_UNSPECIFIED\",\n    \"lastHeartbeatTransmitExpireTime\" : \"2022-07-13T08:12:28.850673Z\",\n    \"state\" : \"GRANT_STATE_GRANTED\",\n    \"moveList\" : [ {\n      \"dpaId\" : \"4l8p\",\n      \"frequencyRange\" : {\n        \"highFrequencyMhz\" : 3.8428849673364815E307,\n        \"lowFrequencyMhz\" : 1.6392065302614348E308\n      }\n    }, {\n      \"dpaId\" : \"w3p7\",\n      \"frequencyRange\" : {\n        \"highFrequencyMhz\" : 1.4753450950652166E308,\n        \"lowFrequencyMhz\" : 1.365959760271242E308\n      }\n    } ],\n    \"maxEirp\" : 1.0696893940207153E308\n  }, {\n    \"expireTime\" : \"2022-04-03T07:27:28.850893Z\",\n    \"grantId\" : \"2pou\",\n    \"suspensionReason\" : [ \"04ggqhma5hxu0vncxdjdqidiemg033kmntjarb1tktrwamkv8b8uh9ejl1xo3bsq7yib5t21opczu34lxacsbswjjajevypm7oka01ti6wvln2rtpqvas6hflller6rvfe2dz22tlc90boqjaya5r7neeufcbyvs0yzibwh91ux2\", \"14ucarfi8pi57w51weu3hkmoz38u7crorv810jehltu0zy74ha8mkbts4rlqtz1fserr22irvxdhtbzbk0hv6av1karhnc4flczdhrv8araoos1qx\", \"hgxhuq3lrkgqb72mvhpb5un6wyzfqyk794qzbsg6l5hbrmc8ff0n9savi0fz4i5fdd4w5n2nfloqth5jztiies4md3dn5maf3dv6rth5xgogfag4xfuxxepbvrkc91ba5x13s85js6qhuo9zowx0t6pj7n2qcjd174d9h76m7a1\", \"puh6q1uzzv03x4mfnvn9pll3ff02197jcrq7q39pnyxy5ld9xgx9gxu6uadoi0j4j9lfl2mshqawgbm1fbbcgorqc4v75\", \"vmbmguujok7rtu9w5ga5aty1w37lajyyfs5shibulw8lf3uw37lvx26x9ch04yonpvw2riya4uz2qxunxenrzmew4r9zqcf14t2me\", \"fc9awaw7n52\" ],\n    \"frequencyRange\" : {\n      \"highFrequencyMhz\" : 1.2001241766738495E308,\n      \"lowFrequencyMhz\" : 2.3563919259796136E307\n    },\n    \"channelType\" : \"CHANNEL_TYPE_GAA\",\n    \"lastHeartbeatTransmitExpireTime\" : \"2022-10-30T07:09:28.851052Z\",\n    \"state\" : \"GRANT_STATE_GRANTED\",\n    \"moveList\" : [ {\n      \"dpaId\" : \"sihj\",\n      \"frequencyRange\" : {\n        \"highFrequencyMhz\" : 1.392418534606818E308,\n        \"lowFrequencyMhz\" : 1.0580615238113332E308\n      }\n    }, {\n      \"dpaId\" : \"5nl3\",\n      \"frequencyRange\" : {\n        \"highFrequencyMhz\" : 9.374312513086724E307,\n        \"lowFrequencyMhz\" : 1.2204012764352673E308\n      }\n    }, {\n      \"dpaId\" : \"d4c9\",\n      \"frequencyRange\" : {\n        \"highFrequencyMhz\" : 1.6975962879767332E308,\n        \"lowFrequencyMhz\" : 9.789216380026065E307\n      }\n    } ],\n    \"maxEirp\" : 1.3084714049230384E308\n  } ],\n  \"preloadedConfig\" : {\n    \"isSigned\" : false,\n    \"airInterface\" : {\n      \"supportedSpec\" : \"3tw04b3iksab859ko1e9kkjigwzpknvxf4ni691o5uezzlwwhtdh1f3a0v48xshk\",\n      \"radioTechnology\" : \"REDLINE\"\n    },\n    \"installationParams\" : {\n      \"cpeCbsdIndication\" : true,\n      \"indoorDeployment\" : true,\n      \"antennaGainNewField\" : 4.416707072482258E305,\n      \"antennaModel\" : \"tibys6l8fsqunjqw9stg3a3uclz80zhqy0\",\n      \"latitude\" : 7.195204884783451E307,\n      \"antennaGain\" : 228686431,\n      \"horizontalAccuracy\" : 1.556352653463929E307,\n      \"heightType\" : \"HEIGHT_TYPE_AMSL\",\n      \"verticalAccuracy\" : 8.618326526110724E307,\n      \"antennaBeamwidth\" : 2132778717,\n      \"eirpCapabilityNewField\" : 4.263632323533665E307,\n      \"antennaDowntilt\" : 2090955402,\n      \"antennaAzimuth\" : 808625989,\n      \"eirpCapability\" : 343159102,\n      \"height\" : 6.061468636960491E307,\n      \"longitude\" : 1.5338443107032004E308\n    },\n    \"measurementCapabilities\" : [ \"MEASUREMENT_CAPABILITY_RECEIVED_POWER_WITHOUT_GRANT\", \"MEASUREMENT_CAPABILITY_RECEIVED_POWER_WITH_GRANT\", \"MEASUREMENT_CAPABILITY_RECEIVED_POWER_WITH_GRANT\" ],\n    \"model\" : {\n      \"vendor\" : \"vxx1xansoi4xd5whwopo7k989zmtefz59ovvpkdiimo00yikxdsdzwcltvezz9a1m7jlyrbma3ywe6zqtrr5yghyuek7c0zyrae359ba50k67d9shjijycmkv8zuphe52081udqj1ea0vsmp70b6p0su8o4sg6faei4noyo3cxr3q2o\",\n      \"name\" : \"Jerde\",\n      \"hardwareVersion\" : \"red7bvc44jyo4fn5fitjzvbsy4uccnlnom5u4d7a1bylyjf9my4jpcdtabp9zn0uyjbco5mguq26nxr0py8c77p147nyjja96zhkydsn1hyy3hjs7b4xihvcy1qq4nm0s8e33a2nbiaxn24e5z6ed6ludzcu76xu0sxo1zf4vrm0qg66f\",\n      \"firmwareVersion\" : \"55tle96b112aalgul6vnwgwnbs092f21np4s0ko6s6gci6n9lr61kq3tu50yiiwvnz4bmhxr1oe231x8xvjgacer6zqhqej4\",\n      \"softwareVersion\" : \"rkezh5t7nphlydhoux3k3ajxuwr56nzvu9mmns3s9mmom77qwe66wgyily4aqjfngv5o4y8ul4kqr9qa3qadrovfmtqglxlgt6q9xodj90865kx9fpulg9csm0217aeua1y63a5w9ydxcstyuazerkj80b\"\n    },\n    \"updateTime\" : \"2022-09-18T09:22:28.851709Z\",\n    \"state\" : \"DEVICE_CONFIG_STATE_UNSPECIFIED\",\n    \"category\" : \"DEVICE_CATEGORY_B\",\n    \"userId\" : \"fmos\",\n    \"callSign\" : \"2432j5mnqklke\"\n  },\n  \"serialNumber\" : \"j5k7pf2ulervgyklvhn1ugleaonhcyoogy23ljrli30p37l4y6tkwbyc8ah7ea0zy00ma1y3mjxnq3y0s2so410juzuywjy89w9ze07cssyxzu2zdedsu7ln1mhbdxxbaxm3vqm0okw6ofx369oomd7w8w3d43hggnjdj9jgmezmysrrzk8qoidrzvodyaq3gzki7q\",\n  \"activeConfig\" : {\n    \"isSigned\" : false,\n    \"airInterface\" : {\n      \"supportedSpec\" : \"adst6z7d642ezkje0r1nfv43lpbhxxkglju9qnccin2gz5n0hbuxxn9tynneymp5b2mzjhlu10cl5bntwmd8yuzzhkkcjrhfjxzjdb9u5qgx6rn1w00y25nympochwvzri5hh32hkzzgdykpcku9ebou5hhc7q0917s9mxx23hbenzqxpnnzmcny1aehlw\",\n      \"radioTechnology\" : \"CW\"\n    },\n    \"installationParams\" : {\n      \"cpeCbsdIndication\" : true,\n      \"indoorDeployment\" : false,\n      \"antennaGainNewField\" : 6.558100493160434E307,\n      \"antennaModel\" : \"s5oiyky1jnhlbdbdnkby7uoejiv7p6rn8nvdwua26vbqtzb3n4rxe843a2jlzzr7996zcangrgdfhgg6qmak80jjxim6yu7ve8xs6i175reg3ywcja3n2gxu4d4ghqzs5e5s5o7o2rf8sjhs0ofwzxh983ifxpvwlm\",\n      \"latitude\" : 1.475719582432969E308,\n      \"antennaGain\" : 690406143,\n      \"horizontalAccuracy\" : 1.6932884003224861E308,\n      \"heightType\" : \"HEIGHT_TYPE_UNSPECIFIED\",\n      \"verticalAccuracy\" : 1.0126201153896807E308,\n      \"antennaBeamwidth\" : 1905493474,\n      \"eirpCapabilityNewField\" : 8.195161997585558E307,\n      \"antennaDowntilt\" : 1043393446,\n      \"antennaAzimuth\" : 1406555977,\n      \"eirpCapability\" : 1468564323,\n      \"height\" : 1.0480129435103981E308,\n      \"longitude\" : 6.192715884782642E307\n    },\n    \"measurementCapabilities\" : [ \"MEASUREMENT_CAPABILITY_RECEIVED_POWER_WITHOUT_GRANT\", \"MEASUREMENT_CAPABILITY_RECEIVED_POWER_WITHOUT_GRANT\", \"MEASUREMENT_CAPABILITY_UNSPECIFIED\", \"MEASUREMENT_CAPABILITY_RECEIVED_POWER_WITHOUT_GRANT\", \"MEASUREMENT_CAPABILITY_RECEIVED_POWER_WITH_GRANT\" ],\n    \"model\" : {\n      \"vendor\" : \"gj0m5mhv76xq2g9qq6s3y2e0ascu8ldd3095s3r3qbo7tdzs8tb3ppelx78stdzary7xna\",\n      \"name\" : \"Rice\",\n      \"hardwareVersion\" : \"tcsnu7wkt67tte6m5igpv716nv7e\",\n      \"firmwareVersion\" : \"kxhcwmhxg5nxxd3c6wlfc\",\n      \"softwareVersion\" : \"hhxk7b2fiop9of64lfxmqf2jb066pwfzle\"\n    },\n    \"updateTime\" : \"2022-05-14T08:45:28.852098Z\",\n    \"state\" : \"DRAFT\",\n    \"category\" : \"DEVICE_CATEGORY_UNSPECIFIED\",\n    \"userId\" : \"0bi6\",\n    \"callSign\" : \"l77y41qnyprsbtmffo08vnsdhvyjcg1toj34wwkw5y3bwr9cpwcw3ed5nojidlnfi1l28ooo4vrc2w0x4opyw07i8tix0y88nl593lg347l6wefeo5mzrl5gb11ctu2nj349yyyyjifaea\"\n  },\n  \"displayName\" : \"Renaldo Rau\",\n  \"deviceMetadata\" : {\n    \"nrqzValidation\" : {\n      \"cpiId\" : \"yr8g\",\n      \"caseId\" : \"87vd\",\n      \"latitude\" : 1.446954536198616E308,\n      \"state\" : \"DRAFT\",\n      \"longitude\" : 1.3664800088867815E307\n    },\n    \"commonChannelGroup\" : \"l7a3finipiab8kxqzwciwaff7hvr1g7f42g3asi2v961ehar42vmrd752q21p6zj1qt4m4fotzmd995b2pz9xvyn7nfn9x7z1wploi1vrcx6zsflkzwu3igoacm1lhzor33j6qhvs3xhvunt88qmj0mwfqfiumwg8\",\n    \"interferenceCoordinationGroup\" : \"xzkn9vcx7iml\",\n    \"nrqzValidated\" : true,\n    \"antennaModel\" : \"3ypcsv718ntmn9cl5isna6rw1j44km1md4gmgl9\"\n  },\n  \"name\" : \"Vannessa Reynolds\",\n  \"fccId\" : \"n8y3\",\n  \"grantRangeAllowlists\" : [ {\n    \"highFrequencyMhz\" : 9.76091892728185E307,\n    \"lowFrequencyMhz\" : 1.7301128159702947E308\n  }, {\n    \"highFrequencyMhz\" : 1.6041527912418371E308,\n    \"lowFrequencyMhz\" : 4.111212962439925E307\n  } ],\n  \"state\" : \"DEREGISTERED\",\n  \"currentChannels\" : [ {\n    \"score\" : 1.4903448380630405E308,\n    \"frequencyRange\" : {\n      \"highFrequencyMhz\" : 8.899533517917377E307,\n      \"lowFrequencyMhz\" : 1.600198025371963E307\n    }\n  }, {\n    \"score\" : 4.4256014287648594E307,\n    \"frequencyRange\" : {\n      \"highFrequencyMhz\" : 1.6157331179408766E308,\n      \"lowFrequencyMhz\" : 4.452517034070854E306\n    }\n  }, {\n    \"score\" : 9.848796800135364E307,\n    \"frequencyRange\" : {\n      \"highFrequencyMhz\" : 4.268181150111571E307,\n      \"lowFrequencyMhz\" : 4.79086857192549E307\n    }\n  }, {\n    \"score\" : 1.7662714827461342E308,\n    \"frequencyRange\" : {\n      \"highFrequencyMhz\" : 9.474857421014067E307,\n      \"lowFrequencyMhz\" : 1.7063551825454942E308\n    }\n  }, {\n    \"score\" : 6.583272036672785E307,\n    \"frequencyRange\" : {\n      \"highFrequencyMhz\" : 1.6845300896488742E308,\n      \"lowFrequencyMhz\" : 3.057721064528111E307\n    }\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "572300d7-cd65-4262-a331-961315b5d36d",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:28.853118Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "sasportal.nodes.devices.updateSigned",
+          "schema" : {
+            "properties" : {
+              "activeConfig" : {
+                "$ref" : "#/components/schemas/SasPortalDeviceConfig"
+              },
+              "currentChannels" : {
+                "description" : "Output only. Current channels with scores.",
+                "items" : {
+                  "$ref" : "#/components/schemas/SasPortalChannelWithScore"
+                },
+                "readOnly" : true,
+                "type" : "array"
+              },
+              "deviceMetadata" : {
+                "$ref" : "#/components/schemas/SasPortalDeviceMetadata"
+              },
+              "displayName" : {
+                "description" : "Device display name.",
+                "type" : "string"
+              },
+              "fccId" : {
+                "description" : "The FCC identifier of the device.",
+                "type" : "string"
+              },
+              "grantRangeAllowlists" : {
+                "description" : "Only ranges that are within the allowlists are available for new grants.",
+                "items" : {
+                  "$ref" : "#/components/schemas/SasPortalFrequencyRange"
+                },
+                "type" : "array"
+              },
+              "grants" : {
+                "description" : "Output only. Grants held by the device.",
+                "items" : {
+                  "$ref" : "#/components/schemas/SasPortalDeviceGrant"
+                },
+                "type" : "array"
+              },
+              "name" : {
+                "description" : "Output only. The resource path name.",
+                "type" : "string"
+              },
+              "preloadedConfig" : {
+                "$ref" : "#/components/schemas/SasPortalDeviceConfig"
+              },
+              "serialNumber" : {
+                "description" : "A serial number assigned to the device by the device manufacturer.",
+                "type" : "string"
+              },
+              "state" : {
+                "description" : "Output only. Device state.",
+                "enum" : [ "DEVICE_STATE_UNSPECIFIED", "RESERVED", "REGISTERED", "DEREGISTERED" ],
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 7
+  }, {
+    "id" : "8a216da9-2e3b-44a5-b43e-cfe47c4458f3",
+    "name" : "Signs a device.",
+    "request" : {
+      "urlPath" : "/v1alpha1/Marquerite+Lesch:signDevice",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{ }",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "8a216da9-2e3b-44a5-b43e-cfe47c4458f3",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:28.847223Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "sasportal.nodes.devices.signDevice",
+          "schema" : {
+            "description" : "A generic empty message that you can re-use to avoid defining duplicated empty messages in your APIs. A typical example is to use it as the request or the response type of an API method. For instance: service Foo { rpc Bar(google.protobuf.Empty) returns (google.protobuf.Empty); }",
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 8
+  }, {
+    "id" : "8e40f700-052f-413f-8d1f-9738e973aca8",
+    "name" : "Moves a node under another node or customer.",
+    "request" : {
+      "urlPath" : "/v1alpha1/Johnie+McDermott:move",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"metadata\" : { },\n  \"response\" : { },\n  \"name\" : \"Clelia Swift\",\n  \"error\" : {\n    \"code\" : 1657454200,\n    \"details\" : [ { } ],\n    \"message\" : \"Ea debitis facere. Porro sit sint. Rerum ut vel adipisci.\"\n  },\n  \"done\" : true\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "8e40f700-052f-413f-8d1f-9738e973aca8",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:28.847103Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "sasportal.nodes.nodes.move",
+          "schema" : {
+            "description" : "This resource represents a long-running operation that is the result of a network API call.",
+            "properties" : {
+              "done" : {
+                "description" : "If the value is `false`, it means the operation is still in progress. If `true`, the operation is completed, and either `error` or `response` is available.",
+                "type" : "boolean"
+              },
+              "error" : {
+                "$ref" : "#/components/schemas/SasPortalStatus"
+              },
+              "metadata" : {
+                "additionalProperties" : {
+                  "description" : "Properties of the object. Contains field @type with type URL."
+                },
+                "description" : "Service-specific metadata associated with the operation. It typically contains progress information and common metadata such as create time. Some services might not provide such metadata. Any method that returns a long-running operation should document the metadata type, if any.",
+                "type" : "object"
+              },
+              "name" : {
+                "description" : "The server-assigned name, which is only unique within the same service that originally returns it. If you use the default HTTP mapping, the `name` should be a resource name ending with `operations/{unique_id}`.",
+                "type" : "string"
+              },
+              "response" : {
+                "additionalProperties" : {
+                  "description" : "Properties of the object. Contains field @type with type URL."
+                },
+                "description" : "The normal response of the operation in case of success. If the original method returns no data on success, such as `Delete`, the response is `google.protobuf.Empty`. If the original method is standard `Get`/`Create`/`Update`, the response should be the resource. For other methods, the response should have the type `XxxResponse`, where `Xxx` is the original method name. For example, if the original method name is `TakeSnapshot()`, the inferred response type is `TakeSnapshotResponse`.",
+                "type" : "object"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 9
+  }, {
+    "id" : "2c761376-0141-49c1-8381-ccaf36b8b1f6",
+    "name" : "Updates an existing node.",
+    "request" : {
+      "urlPath" : "/v1alpha1/Brigette+Leuschke+MD",
+      "method" : "PATCH"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"displayName\" : \"Luz Vandervort\",\n  \"name\" : \"Eleanora Lubowitz\",\n  \"sasUserIds\" : [ \"h0s2yp5gv9uynj3j1ai0i9af1qp291t\", \"gnto1t6hpglbnxms92u6zjn4ldqp2n6j5j4cdc6vhm6qx8ws16g638lyxi741ughpgiqmc57hfklagmdpqbnnga0t\", \"821cwf97b7sr2q1ul10jlttcdvf23c6i7ogcw9ye32j2odh50nnl1ak625rufcmzxrc6yel1fbccvoxlpb6ovk0fdmnzhmmnpheak9b1y8gq6ijrmo5uh2dn6dwaqxowgbuwwr3hlrryx\", \"rypiim5zcapiw2zcbuksoyfzo08j6eql1hq3ox2abof5upc9jt7kssdtum65suzs6tuzvo7zls809aanh63yztal18a\", \"1fd6ipy4bpuwv60xtyujn729hcmiw5b21mk7yv8fwgc94iqv4xz617c5oc2dm9vu9yl0o6epyxumkmxd9gpyc4sqycy6p2r94lowg0t6pyi7rp\" ]\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "2c761376-0141-49c1-8381-ccaf36b8b1f6",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:28.846694Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "sasportal.nodes.nodes.patch",
+          "schema" : {
+            "description" : "The Node.",
+            "properties" : {
+              "displayName" : {
+                "description" : "The node's display name.",
+                "type" : "string"
+              },
+              "name" : {
+                "description" : "Output only. Resource name.",
+                "type" : "string"
+              },
+              "sasUserIds" : {
+                "description" : "User ids used by the devices belonging to this node.",
+                "items" : {
+                  "type" : "string"
+                },
+                "type" : "array"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 10
+  }, {
+    "id" : "9f0fd21e-bee2-41d7-a55a-04155bde82ca",
+    "name" : "Returns a requested node.",
+    "request" : {
+      "urlPath" : "/v1alpha1/Gail+Cronin",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"displayName\" : \"Love Hackett\",\n  \"name\" : \"Calandra Klein V\",\n  \"sasUserIds\" : [ \"oe1oy4nv074almh9vmyi34q5xy9fqqpvok5ecxvho1mhr1srgh1u76vmb8nvf4u3stt1r17nxuojfrjmg5u6ekeug7u0vztmt5s23a69vtq3w3nimvotftbwkt41ybvppxmpb9y8i7dz37w4e27\", \"cevdsbltq0k1gi4gm0lm\", \"3oyk45e25qk9rb3bvnox960nt09vx1liilkpqrdr7bdc3jddbdiry22qqhs4irc0dhz4a\", \"cqxr9pvg9kj2r0snjooztsxtulh8lvvt6s5a2avvbwpx29272j9fksto6f9a2qtwcs5iwev0ditefs1ywtp0ai24dbhv0ly4ildabjj8e49c2odl0vqn0na58jbf90melhc6008zgoyb7am3f5xtc61\", \"oiwqokjx30akzrky4ji863stzsw0kxvwkv0jtv4y7icl3gis94nl08il8cany2q4udi2qm7eqygsstsb0hn6uysfdp6qc9nrolb9hpl6e8cpkrxm30gqrafb1\", \"02dszt9l5ckkr1nw95jj2hmutlwq1steivt98idji99tkczmm77\", \"gi2kvmy1d7rblcqce6i1tn5o6ndaydl5y6kpb9sr3p9adsx4i03ieas83kakg7udalqvw0e2o9flzhxi\" ]\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "9f0fd21e-bee2-41d7-a55a-04155bde82ca",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:28.846487Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "sasportal.nodes.nodes.get",
+          "schema" : {
+            "description" : "The Node.",
+            "properties" : {
+              "displayName" : {
+                "description" : "The node's display name.",
+                "type" : "string"
+              },
+              "name" : {
+                "description" : "Output only. Resource name.",
+                "type" : "string"
+              },
+              "sasUserIds" : {
+                "description" : "User ids used by the devices belonging to this node.",
+                "items" : {
+                  "type" : "string"
+                },
+                "type" : "array"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 11
+  }, {
+    "id" : "21659f01-49cf-4a53-8ce5-667d9e5d80ac",
+    "name" : "Deletes a node.",
+    "request" : {
+      "urlPath" : "/v1alpha1/Francesco+Breitenberg",
+      "method" : "DELETE"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{ }",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "21659f01-49cf-4a53-8ce5-667d9e5d80ac",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:28.846243Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "sasportal.nodes.nodes.delete",
+          "schema" : {
+            "description" : "A generic empty message that you can re-use to avoid defining duplicated empty messages in your APIs. A typical example is to use it as the request or the response type of an API method. For instance: service Foo { rpc Bar(google.protobuf.Empty) returns (google.protobuf.Empty); }",
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 12
+  }, {
+    "id" : "f4fb19a0-efb8-4c12-9815-5b0189764f63",
+    "name" : "Returns permissions that a caller has on the specified resource.",
+    "request" : {
+      "urlPath" : "/v1alpha1/policies:test",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"permissions\" : [ \"3v5453hvv8xu7rxk028srgy7x2o18tkgazy2utx9p21ydxxs6s83rvddcpr992o71p639h4idgkv23237oooup98r3bbit6n10wlafr4saakqs2l0uifd0q8yzl1hx2dnyhe03gydpkn07jbc2z0oj0od6gdcic8vocj86gp8du\" ]\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "f4fb19a0-efb8-4c12-9815-5b0189764f63",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:28.84615Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "sasportal.policies.test",
+          "schema" : {
+            "description" : "Response message for `TestPermissions` method.",
+            "properties" : {
+              "permissions" : {
+                "description" : "A set of permissions that the caller is allowed.",
+                "items" : {
+                  "type" : "string"
+                },
+                "type" : "array"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 13
+  }, {
+    "id" : "d62c4078-8c20-49e0-a8b1-f33153166aa3",
+    "name" : "Sets the access control policy on the specified resource. Replaces any existing ...",
+    "request" : {
+      "urlPath" : "/v1alpha1/policies:set",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"assignments\" : [ {\n    \"role\" : \"dy5q01s8qii5qwm8adhzmazkv4uw9ufh4o83p5oj615fspz335jg8tvcuzl10sv7w2ipd6gows4shl0s41d9itwb1r2ktym1r5au0kve5an1h2ib9t1fppy05ksn67867amdkymkpjih9okg5h2pgz2x6yx9lk0rs21fzho8sj1pgh3nlp8r083\",\n    \"members\" : [ \"l47bpd75eo1vpo58\", \"pzan4dx4ck153z8s16sgxi3ri7oaizl7esmq15o87pvovi57cyk8h0ol02q98il70gqjgr7x88ivso9gq0qg0g7mhlne3whjvdbgk9czzcmydim4fpydqglyfjfce4gn\", \"5780fu7ane1h2bb7i6jsjlf1dyqazwe21negmccjc2bq8b3v3jqfrmznl9u93z6dx63vtypcv1nxkq1fbvz4392nklp4ctafqypftgij737hntjnuwaztf2m31vyhf1yf4ervzfsivnarqwu3xq9f4uzp74b60vj1offp6xx\" ]\n  }, {\n    \"role\" : \"8edig60p46u5l4e6r6dqqucpubjj1fsbbeevdaqfuivfui20d4pu0l11457259n6ldpiyouql43s9l5g9iozh6x8quozscclgn5prjsaij5dignzjkawdj\",\n    \"members\" : [ \"snkbwi94upo5rdkx404h8zdop3fzspz99ysg88if1h8pfq6ynvioducwb19nml0q398y\", \"f4yvuom5o81w8zr876vgz3c9uuo1hhimwvq79fphxrhczt4gzvh0dn9lwixwi9g8cabeoh0zu\", \"3im6rdsgscn5z8nw1pwnxw5z20uealchpzg\", \"9qz7g7qpvrevhcvysz9z8kk00bli0wwihsggm8pab79k1fj5254\", \"9iwnuy0gxnt0ovc0q34bb6j0x8uuel22ae0vc5ov0kja9z6kerfdvkrsu7lurhbkqjnbkil5xoccs2yt4ayfs552zexv6xfgvurui2erz\", \"i3a7k8pbq3cr8v32orq8dv8zjqjtattt1101u229a3fzov36fbnj80o2p05i0zn3x7ewwd2n25rh2u300qr3oveotyt1djry87hkvyt6gl5whfjc7kpyl3stttm8ezko80c3qtn2z3d4br7i15ab2m754793qrny0qzzr\", \"5nf0goepiwdahnktleogpyh1p8nd8ylmnotvks36lwpevu88jiti93fqi84xoqvlxoied8e9i9xrpxu7s3jv6m0ar24k2p67pj3lwby7lpd588f5vdfq1uglhym2ai6txhi9n9sfx91gq42kxjjqx4lqurufc9quu5dchnwqs9mvywk9n6dx6est3qcf57\" ]\n  }, {\n    \"role\" : \"wdnqwnqfbolhxgupxjayn32mi9s4m1iyfthjd9\",\n    \"members\" : [ \"vmy0bvgkuynqlteyo0y132dzrc0yd9hg8y8s6wo2gubir1ujkoa5hxbbu0bn6xteh48szyi2kvq1c0pmzlyxdvy3k5ry6q9wvdum8xinaavsusvwcryq\", \"m5aqlookfmhcavniotqk3hi5tqn1g6li83k2sb8kk1ih59\", \"q9mvfj8wqob8qxa7jef4npxv84jm44qma47xga\", \"8o2rm95f8rcjkcu8inixq3n0vb1hid3sq4ikciyzv1gyjjot5n2wzslddvvrvs9sxzmui3uc5oe7cza9q2k7njwagldggac5z5ji01xyar86tksvkuok983r4v6mo49musra3j6ae00wdzx\", \"ajl4p4kbqzbrxzdq2trtpdm7lctromzrsdulpld4kkvkkm5srxlhw2uj8jpvbex89oj07klzdr1wx3iwxcbc1vnvwby4rieyxt29asgea0lngvgtc64b6ruwnyvq7j6l1ty4a93ij3oly2atkfgmjqftblk9nsc7ubnoss6\" ]\n  }, {\n    \"role\" : \"dzvi201qummay2zsi571cu1ybjon8wjj200g6u73qm8hzixbuwacw5o9mal4ojuayqn\",\n    \"members\" : [ \"kn7wt6uvjbog0rv6cmc0g9y6xibh9yxmuyv0bm15rljqf7eqcuxyrgru7615xt1bp7a5o9av6oqt4bgn8q8qglposw2x331kyrwh1k9xzmxdp78xmzn0y2u81rdvzrit3ime19ud900i2nfpnkfo5hn3utu82l0hp3i3troc2mglz4l2n3lqei7sr85wftzh4f2\", \"7chnqpepbf7twthhyu6s1d4p7767ye0wg84dbtn13igevk71phnhtyqkoq4l8zo9kbm97asuxvg6tpycbo8a95ex2jwgr0\" ]\n  }, {\n    \"role\" : \"8hno6jxqs1mbglanppixgtudwdjmoiqbbxyn2zl923uyhi96b64qirxqzit6kkbru7j7gs79id808piobztwz4468mscbxy7tkebeab7bjgrpnewmlqb3w\",\n    \"members\" : [ \"8wwaw6ksy8xsf5n1ksicnsrlfobu3sbhse5vms3ux7131gcojkzhbla7spj7vrlps8u81x9pla55mw71c0fxf80pbj3eb15cnxyafybil57grxiovuqibkk59g41s518a9ntu7unqxr\", \"0fux4yxjrexwc\", \"u48q8rwjazcwgja23\", \"k193ufrk9w8ujcl7dj1k51djb8schn0jd1zs7mm7z64zzc8mlzg2g1mbg0xp\", \"p86fhvwxb8js55gzyixip6ud5io2f\", \"l3h7q88g7yuy7zpe698vgg60t5r84dv5cwjij4nijaubzb5rjzb34zrumls1oy11io0pziqmfe2toib0wqsdxhxch2kgj8re33ynnu6bm2jqp77fqqvcgjbee23q7y9gjmncagabhi1sirf9wggwgljw4s1tml2niv908zqw0vhrsa2iguj6tb5moo70ccjn70jkpkw0\" ]\n  } ],\n  \"etag\" : \"suscipit\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "d62c4078-8c20-49e0-a8b1-f33153166aa3",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:28.846077Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "sasportal.policies.set",
+          "schema" : {
+            "description" : "Defines an access control policy to the resources.",
+            "properties" : {
+              "assignments" : {
+                "description" : "List of assignments",
+                "items" : {
+                  "$ref" : "#/components/schemas/SasPortalAssignment"
+                },
+                "type" : "array"
+              },
+              "etag" : {
+                "description" : "The etag is used for optimistic concurrency control as a way to help prevent simultaneous updates of a policy from overwriting each other. It is strongly suggested that systems make use of the etag in the read-modify-write cycle to perform policy updates in order to avoid race conditions: An etag is returned in the response to GetPolicy, and systems are expected to put that etag in the request to SetPolicy to ensure that their change will be applied to the same version of the policy. If no etag is provided in the call to GetPolicy, then the existing policy is overwritten blindly.",
+                "format" : "byte",
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 14
+  }, {
+    "id" : "57323326-0311-4bde-b404-125785a1eb50",
+    "name" : "Gets the access control policy for a resource. Returns an empty policy if the re...",
+    "request" : {
+      "urlPath" : "/v1alpha1/policies:get",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"assignments\" : [ {\n    \"role\" : \"gitq1n0qol3bvtb7lcrvvyaxeh9njp0nprxuzuph6dsn5cybed7t6cr18k1bf\",\n    \"members\" : [ \"j7lnby6fjuwlr18i508t4sre6esaj5nfpd78127tvagl3gvx9ypjqmmb9lsmwstow9wsker0z5tu69ei8k7loy8wh9qnucz6tm82i06zl455sfiuoay8jpyg6za6xiawoqn6b6tcex9h97bm35eb2jjq89on\", \"k0p2mkhte94yn43b31xk2t7e94vkabjaz15m\", \"s6fe7idk0b3m6l0zi7nujl10sua49khkis4ssggfmjdqxv61dihtwfysghj8au8f1y\", \"5ri6iwumqmr\", \"pvcq68t9vqqvqzf\", \"hgqhkf8amv4qs59xup7izbe2yhs42ezvcai9hyb23gkcla4fqsf087esx0ovrza2qmy2ulc7pcm1i3cbsmw6aqlwjp9af69cgor5fhyfwuh11av\", \"qlsn39p7wt39seo44qqfml584gw6uv8yx0icaqqsrccvlrfr0ehoc0nvkptp42uv7k6c77t57keat6ojh5p5pd0nhx5ha15nwbmkmqyh7kw5ba1gbimsy1eslvmgxv02kim\", \"thglr7gukdsdpdz7xtdc7h96en6looj6c8v9mzl1ij5yqhaasj5qj43yt4mo0slynuu6l95yojvxd5oksh3kw4llnqi5xxgv25oxxzbhmnu7o5iiygbetcsxk9p2bhl9ckvi3k72ujtoytnmu7d7qqbdvma8a7zh6xhpcoymeqmo0lge3vpo7db2porm2a7iz43i73\" ]\n  } ],\n  \"etag\" : \"rerum\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "57323326-0311-4bde-b404-125785a1eb50",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:28.845796Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "sasportal.policies.get",
+          "schema" : {
+            "description" : "Defines an access control policy to the resources.",
+            "properties" : {
+              "assignments" : {
+                "description" : "List of assignments",
+                "items" : {
+                  "$ref" : "#/components/schemas/SasPortalAssignment"
+                },
+                "type" : "array"
+              },
+              "etag" : {
+                "description" : "The etag is used for optimistic concurrency control as a way to help prevent simultaneous updates of a policy from overwriting each other. It is strongly suggested that systems make use of the etag in the read-modify-write cycle to perform policy updates in order to avoid race conditions: An etag is returned in the response to GetPolicy, and systems are expected to put that etag in the request to SetPolicy to ensure that their change will be applied to the same version of the policy. If no etag is provided in the call to GetPolicy, then the existing policy is overwritten blindly.",
+                "format" : "byte",
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 15
+  }, {
+    "id" : "17b3af43-9732-4020-ba74-ff5ff84c2deb",
+    "name" : "Validates the identity of a Certified Professional Installer (CPI).",
+    "request" : {
+      "urlPath" : "/v1alpha1/installer:validate",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{ }",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "17b3af43-9732-4020-ba74-ff5ff84c2deb",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:28.845629Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "sasportal.installer.validate",
+          "schema" : {
+            "description" : "Response for ValidateInstaller.",
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 16
+  }, {
+    "id" : "503f4558-d9ac-473e-8a92-ac6f731de303",
+    "name" : "Generates a secret to be used with the ValidateInstaller.",
+    "request" : {
+      "urlPath" : "/v1alpha1/installer:generateSecret",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"secret\" : \"6sfqg33xbzmifxdagw10beg73sd16h5p8iwxsf021qwwr21xqfen6hpju37u6v9q87q8ueciq6nw8ihdoh1cl23cm50i4j72l2f9ftxhm8u\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "503f4558-d9ac-473e-8a92-ac6f731de303",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:28.845575Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "sasportal.installer.generateSecret",
+          "schema" : {
+            "description" : "Response for GenerateSecret.",
+            "properties" : {
+              "secret" : {
+                "description" : "The secret generated by the string and used by ValidateInstaller.",
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 17
+  }, {
+    "id" : "5bbdb7ff-c2ff-4f0c-a576-1f1cfa755299",
+    "name" : "Creates a new SAS deployment through the GCP workflow. Creates a SAS organizatio...",
+    "request" : {
+      "urlPath" : "/v1alpha1/customers:provisionDeployment",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"errorMessage\" : \"Ad aut excepturi cumque neque et. Sunt quasi ipsam ut nobis non placeat. Esse dolor aut laudantium blanditiis molestias qui itaque. Laboriosam debitis recusandae velit commodi itaque. Voluptate quidem\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "5bbdb7ff-c2ff-4f0c-a576-1f1cfa755299",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:28.845507Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "sasportal.customers.provisionDeployment",
+          "schema" : {
+            "description" : "Response for [ProvisionDeployment]. [spectrum.sas.portal.v1alpha1.Provisioning.ProvisionDeployment].",
+            "properties" : {
+              "errorMessage" : {
+                "description" : "Optional. Optional error message if the provisioning request is not successful.",
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 18
+  }, {
+    "id" : "8667fd34-1bc5-4149-9e57-57dc46c14f3f",
+    "name" : "Returns a list of requested customers.",
+    "request" : {
+      "urlPath" : "/v1alpha1/customers",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"nextPageToken\" : \"jodvdszrfcdyzyidsmvpqqyclkas2nimimo3kh45uy5cglwcd59gap4t9nt1ngzwqiydzorywubpyixnxm4ast609mys7idswvjdxp1v01ou8etqtzp2xs73el1odhkvz5h8gbka2eby4g8kw48hbj6wrhop304fbkiifk2snuimp6vzjrhi66kdtl9\",\n  \"customers\" : [ {\n    \"displayName\" : \"Earle Kiehn\",\n    \"name\" : \"Janee Hettinger\",\n    \"sasUserIds\" : [ \"byecsv9p018p1o4jzfmnc31u3jhjiw0ozcdzsyoen51xhdvz5llzujhkum5lzyo3xt5ep4a6wwo3rjn4o26hjwqon6w6cfhkdohs6sgfui1crsbzfc716exjuco6011l\", \"2yr6s6b2zb3upa3y64iy84t4hxfgzu\", \"1i6tk87hdnhh6o9bzoebkam3udqk89wrlpdil0zkth08zdajyfbw2y1cdfyvkrx5mtmou58rrkj4wokkyxpnbipz1tk189h65u918sink1wtnyjqpluor0\", \"fnzy656n7ua8z4nhnlo83ev8zhespx7atc2lgxk8c7om9bv746w69zv6bca25vio96ch8cjg5ej1f2tzthlm55a1tgo46ws9o8l2g6ykt3ev0dbq78w5dw62kfdu52ktdj2wmnlj05diu\", \"8ddkenh8l2meafof6pdtph2q4bnkh1p6elx5mdzobmcsdw8shlc1pz1019n06apazr1wq7jv\", \"12w4p0vgtnigsl9ue8bi4g5oaa4ubci60kp37tlh6h9wdxmklfsv0uqwuxxhgxkecl7npk7zyiaangwizeh7l799xof00j2yt8bpi90fnhx\", \"g1sovjtbf494w9xwh5lu0ft95be293yldsuzmuhir1qpumx6linb95ux2vzs5xi7lbqz5\", \"4fvebte8qcw0z4y1cerxddcrn8oqv96px5vfgzfjkk8sjh7e8js4ybi7qf4dppmst7b6qtfw56xrt20by5wz72s7o6apx4cbm3m\" ]\n  }, {\n    \"displayName\" : \"Jackson Swift III\",\n    \"name\" : \"Otis Gutmann Jr.\",\n    \"sasUserIds\" : [ \"qiyrh8j6kg3fi41lk0bdnr8ydcakqbsa1mluy8p8shoer8gzwoqya126ycko7rfpn8wvpcc33gbxu0lnxcrbcdf1lw6ywxmws08i\", \"4vpb4ss51hg83fwjlu363i54n1\", \"t4yimcgaj3v5mggod4gvj1exqb31t0dkrergg8sa9q22rpk1mz8snfbe8aae0q6kdgovjqn67m7cmqrx1gnixyskwceei7ri36yntrvs6b2shzj1649f92403xu6w8d9ko5ywa4xi98xanj1diy7oq30pmx54gz7tzxrswfxzxf\", \"ncig5pcl3ojxd9ms3vb5o5vh0suayabjw6szv4kvwyau13e8eziz8m7ur08r0ezp6avrjfdd3wjd0kghlplz426dcew9wiciaqi9scna9uhhec8y7ru3ct5ahh925e15oku\", \"scxkk8g82jpx9e7zx46ziestery99qhynh\", \"w934co65hg742kh\", \"e5hq0fetbppfoccr9pwaphxz581fc\", \"j0knvx7vaiqz4izt3ygnshvyy574g2x403gfvt9lf0b3wd64a67icmatntl3jb1gzlmajc7iu3nye9seqradm5c5mrcvtjdu96ffwjyqptm0m274ah2\" ]\n  }, {\n    \"displayName\" : \"King Stanton\",\n    \"name\" : \"Miss Peg Sporer\",\n    \"sasUserIds\" : [ \"hlf10fk3vvdepmpdhogs83e7was1o0qh7folcy4lov2zvpmkpu0gyt6e80n0o1rbmnyalo85opflq292cdoyma3hk0cala4a95bj7bwwlv14o91k537jisnpzg7s1zo3s55\", \"kuop7h9rbjaww2n78h335kiahuf6gppnlrt8gx3gmlyldptjjgho82lo2ba1yh7lfloe9tzco5su8gcgbv99101kk9ohj8feh2jdorv1mp8v1j3n3z4xq7iirgul0si6otzm3\", \"n6ocmsdpr4dx7r258qe2bbv6lfba2gq9g266ivhj93fqc67p8xrk6hca18x2u45\", \"bn8sh8oxmditige95l8c00vkduu0z6xyax2qkqbz24hzy2kx9w2622a5uexsvqvlz31db\", \"n9se4ceth51vitr3i9379zasb5r706k77grbpnz7ps471a58se7kztcdfo7eocgxoggtw8e8gga9neaxx1nnoymia9gb12dlq7pmxvd7p07fo8chdpoctouoa1vrzmdumhzrz4awl80ybqqg9juyueaua4bihrygnotgv0r8bu5eqnoq0zc73gklr5lp11qch\", \"kuloh72eykfcnxa00nkg41dm8ecg58ni2gjiqk7a2mwummo16b2q9sco2nkvgoeaonylp7nfkqvahum0e6qq3fp9grvskgzxfrdfmbt1agfe3wn98kp99izppk2ty11oq48jntb0estol1szhy\", \"jxpl16wvs1zk4pyybktrt1tto0oyqp12bmeckbqweozrxmwukud5af8esfgix2tnnvm6jj35pw31znjm06auhi0g7k6fo7jgoj1h0p0a1coaveeju3crfoels4aka2x7kajhxt4sy\", \"lvjlequ65ddzkze13blyq2uh2zv7zf3yeolgudbzzsetrhrfqvd9l2mdaonz68fdr9wfbnyg6ludorjiaysav2o2xd07ajv3w64bvzqre20erkxkp79qcovlmgovw0sj13t78mnxu94kmdtud\" ]\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "8667fd34-1bc5-4149-9e57-57dc46c14f3f",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:28.845372Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "sasportal.customers.list",
+          "schema" : {
+            "description" : "Response for `ListCustomers`.",
+            "properties" : {
+              "customers" : {
+                "description" : "The list of customers that match the request.",
+                "items" : {
+                  "$ref" : "#/components/schemas/SasPortalCustomer"
+                },
+                "type" : "array"
+              },
+              "nextPageToken" : {
+                "description" : "A pagination token returned from a previous call to ListCustomers that indicates from where listing should continue. If the field is missing or empty, it means there are no more customers.",
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 19
+  } ]
+}

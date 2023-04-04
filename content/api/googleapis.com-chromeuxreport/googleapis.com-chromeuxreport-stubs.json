@@ -1,0 +1,83 @@
+{
+  "mappings" : [ {
+    "id" : "474e4c69-729b-425d-848a-cf5d9b7623cb",
+    "name" : "Queries the Chrome User Experience for a single `record` for a given site. Retur...",
+    "request" : {
+      "urlPath" : "/v1/records:queryRecord",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"urlNormalizationDetails\" : {\n    \"normalizedUrl\" : \"https://web.example.mocklab.io/310250\",\n    \"originalUrl\" : \"https://web.example.mocklab.io/482862\"\n  },\n  \"record\" : {\n    \"collectionPeriod\" : {\n      \"firstDate\" : {\n        \"month\" : 363812017,\n        \"year\" : 637559581,\n        \"day\" : 1576389621\n      },\n      \"lastDate\" : {\n        \"month\" : 1754637150,\n        \"year\" : 1315531247,\n        \"day\" : 1727131327\n      }\n    },\n    \"metrics\" : { },\n    \"key\" : {\n      \"effectiveConnectionType\" : \"twp6ly8j87r0ocvq0t4ayp0zgdr0s8a6leblee7wz1jialy1ff7nlyac5xxv345rsa0t93ltlh7n2t0lvqu3mp9ytn4hw802tofm5t61rxi5emqtg1mhhzpd33knc4mba98f0s20lpp46i0du4m258m5frhx2nurmkjpy8dqwk6hfrup\",\n      \"formFactor\" : \"DESKTOP\",\n      \"origin\" : \"iygui5jwrf195h8nnci2cbrhdpkxx7dr9dzpp8oldkm7pvm476u7e2\",\n      \"url\" : \"https://web.example.mocklab.io/088420\"\n    }\n  }\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "474e4c69-729b-425d-848a-cf5d9b7623cb",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:10.663843Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "chromeuxreport.records.queryRecord",
+          "schema" : {
+            "description" : "Response payload sent back to a physical web client. This response contains the record found based on the identiers present in a `QueryRequest`. The returned response will have a record, and sometimes details on normalization actions taken on the request that were necessary to make the request successful.",
+            "properties" : {
+              "record" : {
+                "$ref" : "#/components/schemas/Record"
+              },
+              "urlNormalizationDetails" : {
+                "$ref" : "#/components/schemas/UrlNormalization"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 0
+  }, {
+    "id" : "114c41ce-29cd-4897-ab32-5ae80dfd5d99",
+    "name" : "Queries the Chrome User Experience Report for a timeseries `history record` for ...",
+    "request" : {
+      "urlPath" : "/v1/records:queryHistoryRecord",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"urlNormalizationDetails\" : {\n    \"normalizedUrl\" : \"https://web.example.mocklab.io/191425\",\n    \"originalUrl\" : \"https://web.example.mocklab.io/669158\"\n  },\n  \"record\" : {\n    \"metrics\" : { },\n    \"collectionPeriods\" : [ {\n      \"firstDate\" : {\n        \"month\" : 2081027152,\n        \"year\" : 1597321884,\n        \"day\" : 153650789\n      },\n      \"lastDate\" : {\n        \"month\" : 493599931,\n        \"year\" : 664747362,\n        \"day\" : 763012230\n      }\n    }, {\n      \"firstDate\" : {\n        \"month\" : 649652643,\n        \"year\" : 640960249,\n        \"day\" : 1379381561\n      },\n      \"lastDate\" : {\n        \"month\" : 712393958,\n        \"year\" : 541395142,\n        \"day\" : 1954171658\n      }\n    }, {\n      \"firstDate\" : {\n        \"month\" : 957877860,\n        \"year\" : 2118498591,\n        \"day\" : 63775674\n      },\n      \"lastDate\" : {\n        \"month\" : 124465306,\n        \"year\" : 2019534792,\n        \"day\" : 1589058551\n      }\n    }, {\n      \"firstDate\" : {\n        \"month\" : 1600161586,\n        \"year\" : 1528644638,\n        \"day\" : 733920643\n      },\n      \"lastDate\" : {\n        \"month\" : 1887621265,\n        \"year\" : 1713577787,\n        \"day\" : 46702173\n      }\n    }, {\n      \"firstDate\" : {\n        \"month\" : 822070632,\n        \"year\" : 441943687,\n        \"day\" : 832586923\n      },\n      \"lastDate\" : {\n        \"month\" : 1280795497,\n        \"year\" : 2068123221,\n        \"day\" : 1360876476\n      }\n    } ],\n    \"key\" : {\n      \"formFactor\" : \"TABLET\",\n      \"origin\" : \"ij49c4khb7cysm3ztn7xah100zyhwr3breiwdec91vyqdsw3bupg4aaksvaasr3h3moh4y7bh3ihl8pkmgmbdqpd7unkw7fxqns0p8fzmqg3bq7\",\n      \"url\" : \"https://web.example.mocklab.io/725666\"\n    }\n  }\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "114c41ce-29cd-4897-ab32-5ae80dfd5d99",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:10.663435Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "chromeuxreport.records.queryHistoryRecord",
+          "schema" : {
+            "description" : "Response payload sent back to a physical web client. This response contains the record found based on the identiers present in a `QueryHistoryRequest`. The returned response will have a history record, and sometimes details on normalization actions taken on the request that were necessary to make the request successful.",
+            "properties" : {
+              "record" : {
+                "$ref" : "#/components/schemas/HistoryRecord"
+              },
+              "urlNormalizationDetails" : {
+                "$ref" : "#/components/schemas/UrlNormalization"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 1
+  } ]
+}

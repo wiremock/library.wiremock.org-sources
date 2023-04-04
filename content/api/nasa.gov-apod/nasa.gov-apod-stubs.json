@@ -1,0 +1,66 @@
+{
+  "mappings" : [ {
+    "id" : "ee45a0c3-01e9-47aa-a663-1c7e020eb03c",
+    "name" : "Returns images - 400",
+    "request" : {
+      "urlPath" : "/apod",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 400
+    },
+    "uuid" : "ee45a0c3-01e9-47aa-a663-1c7e020eb03c",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:14.876656Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "(none)"
+        }
+      }
+    },
+    "insertionIndex" : 0
+  }, {
+    "id" : "0525f77c-31e6-4026-a1a9-f3ecce05d82e",
+    "name" : "Returns images (application/json)",
+    "request" : {
+      "urlPath" : "/apod",
+      "method" : "GET",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/json"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "[ { }, { } ]",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "0525f77c-31e6-4026-a1a9-f3ecce05d82e",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:14.87661Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "(none)",
+          "schema" : {
+            "items" : {
+              "x-thing" : "ok"
+            },
+            "type" : "array"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 1
+  } ]
+}

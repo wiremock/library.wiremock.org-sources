@@ -1,0 +1,5516 @@
+{
+  "mappings" : [ {
+    "id" : "43896c6d-fd1e-420b-bca4-5f87a41e0adf",
+    "name" : "Returns a list of global Vat Types. Supports OData querying protocol.\r\nFiltering is forbidden.\r\nOrdering is allowed by \"id\" field. - response",
+    "request" : {
+      "urlPath" : "/v1/vatTypes",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"Count\" : 6,\n  \"Items\" : [ {\n    \"code\" : \"\",\n    \"description\" : \"Domestic\",\n    \"id\" : 1,\n    \"isNotApplicable\" : false,\n    \"isOnlyZero\" : false\n  }, {\n    \"code\" : \"E\",\n    \"description\" : \"Other EU\",\n    \"id\" : 2,\n    \"isNotApplicable\" : false,\n    \"isOnlyZero\" : false\n  }, {\n    \"code\" : \"F\",\n    \"description\" : \"Foreign - Non EU\",\n    \"id\" : 3,\n    \"isNotApplicable\" : false,\n    \"isOnlyZero\" : false\n  }, {\n    \"code\" : \"X\",\n    \"description\" : \"VAT Exempt\",\n    \"id\" : 4,\n    \"isNotApplicable\" : false,\n    \"isOnlyZero\" : true\n  }, {\n    \"code\" : \"N\",\n    \"description\" : \"Not Applicable\",\n    \"id\" : 5,\n    \"isNotApplicable\" : true,\n    \"isOnlyZero\" : false\n  }, {\n    \"code\" : \"R\",\n    \"description\" : \"Reverse Charge\",\n    \"id\" : 6,\n    \"isNotApplicable\" : false,\n    \"isOnlyZero\" : false\n  } ],\n  \"NextPageLink\" : \"\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "43896c6d-fd1e-420b-bca4-5f87a41e0adf",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.092089Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "VatTypes_Get",
+          "schema" : {
+            "properties" : {
+              "Count" : {
+                "format" : "int64",
+                "type" : "integer"
+              },
+              "Items" : {
+                "items" : {
+                  "$ref" : "#/components/schemas/VatTypeDto"
+                },
+                "type" : "array"
+              },
+              "NextPageLink" : {
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 0
+  }, {
+    "id" : "eb8ca987-c325-47de-bfef-17b173537863",
+    "name" : "Returns a list of company's Vat Rates. Supports OData querying protocol.\r\nFiltering is allowed by \"vatCategoryId\" field.\r\nOrdering is allowed by \"id\" and \"orderIndex\" fields. - response",
+    "request" : {
+      "urlPath" : "/v1/vatRates",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"Count\" : 4,\n  \"Items\" : [ {\n    \"id\" : 2,\n    \"isActive\" : true,\n    \"isDefault\" : false,\n    \"orderIndex\" : 2,\n    \"percentage\" : 20,\n    \"vatCategoryId\" : 3\n  }, {\n    \"id\" : 3,\n    \"isActive\" : true,\n    \"isDefault\" : false,\n    \"orderIndex\" : 1,\n    \"percentage\" : 25,\n    \"vatCategoryId\" : 1\n  }, {\n    \"id\" : 1,\n    \"isActive\" : true,\n    \"isDefault\" : true,\n    \"orderIndex\" : 1,\n    \"percentage\" : 15,\n    \"vatCategoryId\" : 3\n  }, {\n    \"id\" : 4,\n    \"isActive\" : true,\n    \"isDefault\" : false,\n    \"orderIndex\" : 4,\n    \"percentage\" : 30,\n    \"vatCategoryId\" : 4\n  } ],\n  \"NextPageLink\" : \"\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "eb8ca987-c325-47de-bfef-17b173537863",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.091922Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "VatRates_Get",
+          "schema" : {
+            "properties" : {
+              "Count" : {
+                "format" : "int64",
+                "type" : "integer"
+              },
+              "Items" : {
+                "items" : {
+                  "$ref" : "#/components/schemas/VatRateDto"
+                },
+                "type" : "array"
+              },
+              "NextPageLink" : {
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 1
+  }, {
+    "id" : "2ee56d40-46b5-49d6-91bb-fd9273fa9545",
+    "name" : "Process Vat Rates",
+    "request" : {
+      "urlPath" : "/v1/vatCategories/vatRates",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{ }",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "2ee56d40-46b5-49d6-91bb-fd9273fa9545",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.090293Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "VatCategories_ProcessVatRates",
+          "schema" : {
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 2
+  }, {
+    "id" : "a39a0ab6-17a6-4a95-8ace-cbcb8c04056e",
+    "name" : "Returns a list of global Vat Categories. Supports OData querying protocol.\r\nFiltering is forbidden.\r\nOrdering is allowed by \"id\" field. - response",
+    "request" : {
+      "urlPath" : "/v1/vatCategories",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"Count\" : 3,\n  \"Items\" : [ {\n    \"description\" : \"Purchases For Resale\",\n    \"id\" : 1\n  }, {\n    \"description\" : \"Purchases Not For Resale\",\n    \"id\" : 2\n  }, {\n    \"description\" : \"Sales\",\n    \"id\" : 3\n  } ],\n  \"NextPageLink\" : \"\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "a39a0ab6-17a6-4a95-8ace-cbcb8c04056e",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.090237Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "VatCategories_Get",
+          "schema" : {
+            "properties" : {
+              "Count" : {
+                "format" : "int64",
+                "type" : "integer"
+              },
+              "Items" : {
+                "items" : {
+                  "$ref" : "#/components/schemas/VatCategoryDto"
+                },
+                "type" : "array"
+              },
+              "NextPageLink" : {
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 3
+  }, {
+    "id" : "7ae5c3f2-c379-402f-87ce-1eb85e3362ce",
+    "name" : "Returns a list of global Vat Analysis Types. Supports OData querying protocol.\r\nFiltering is forbidden.\r\nOrdering is allowed by \"id\" field. - response",
+    "request" : {
+      "urlPath" : "/v1/vatAnalysisTypes",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"Count\" : 3,\n  \"Items\" : [ {\n    \"description\" : \"None\",\n    \"id\" : 0\n  }, {\n    \"description\" : \"Goods\",\n    \"id\" : 1\n  }, {\n    \"description\" : \"Services\",\n    \"id\" : 2\n  } ],\n  \"NextPageLink\" : \"\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "7ae5c3f2-c379-402f-87ce-1eb85e3362ce",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.090141Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "VatAnalysisTypes_Get",
+          "schema" : {
+            "properties" : {
+              "Count" : {
+                "format" : "int64",
+                "type" : "integer"
+              },
+              "Items" : {
+                "items" : {
+                  "$ref" : "#/components/schemas/VatAnalysisTypeDto"
+                },
+                "type" : "array"
+              },
+              "NextPageLink" : {
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 4
+  }, {
+    "id" : "df1447e3-b0a7-4790-9581-2920f06797de",
+    "name" : "Returns a list of company's User Defined Fields. Supports OData querying protocol.\r\nFiltering is allowed by \"categoryTypeId\" field.\r\nOrdering is allowed by \"id\" and \"orderIndex\" fields. - response",
+    "request" : {
+      "urlPath" : "/v1/userDefinedFields",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"Count\" : 5,\n  \"Items\" : [ {\n    \"categoryTypeId\" : 19,\n    \"description\" : \"acudf_1_1\",\n    \"id\" : 1,\n    \"orderIndex\" : 1\n  }, {\n    \"categoryTypeId\" : 19,\n    \"description\" : \"acudf_1_2\",\n    \"id\" : 2,\n    \"orderIndex\" : 2\n  }, {\n    \"categoryTypeId\" : 19,\n    \"description\" : \"acudf_1_3\",\n    \"id\" : 3,\n    \"orderIndex\" : 3\n  }, {\n    \"categoryTypeId\" : 17,\n    \"description\" : \"acudf_3\",\n    \"id\" : 5,\n    \"orderIndex\" : 1\n  }, {\n    \"categoryTypeId\" : 20,\n    \"description\" : \"acudf_2\",\n    \"id\" : 4,\n    \"orderIndex\" : 1\n  } ],\n  \"NextPageLink\" : \"\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "df1447e3-b0a7-4790-9581-2920f06797de",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.089133Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "UserDefinedFields_Get",
+          "schema" : {
+            "properties" : {
+              "Count" : {
+                "format" : "int64",
+                "type" : "integer"
+              },
+              "Items" : {
+                "items" : {
+                  "$ref" : "#/components/schemas/UserDefinedFieldDto"
+                },
+                "type" : "array"
+              },
+              "NextPageLink" : {
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 5
+  }, {
+    "id" : "4ff88299-630e-4f33-9800-5afa84da69e8",
+    "name" : "Returns a list of Supplier's opening balance transactions. - response",
+    "request" : {
+      "urlPath" : "/v1/suppliers/8165288263806898694/openingBalanceList",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "[ {\n  \"entryDate\" : \"2011-01-01T00:00:00\",\n  \"id\" : 1,\n  \"procDate\" : \"2011-02-01T00:00:00\",\n  \"reference\" : \"O/Bal\",\n  \"timestamp\" : \"OJqZcBIe2wg=\",\n  \"total\" : 10,\n  \"totalVAT\" : 1.3,\n  \"unpaid\" : 0,\n  \"vatEntries\" : [ {\n    \"amount\" : 8.7,\n    \"vatRateId\" : 1\n  } ]\n}, {\n  \"entryDate\" : \"2011-01-01T00:00:00\",\n  \"id\" : 2,\n  \"procDate\" : \"2011-02-01T00:00:00\",\n  \"reference\" : \"O/Bal\",\n  \"timestamp\" : \"OJqZcBIe2wg=\",\n  \"total\" : 20,\n  \"totalVAT\" : 3.33,\n  \"unpaid\" : 0,\n  \"vatEntries\" : [ {\n    \"amount\" : 16.77,\n    \"vatRateId\" : 2\n  } ]\n} ]",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "4ff88299-630e-4f33-9800-5afa84da69e8",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.088997Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "Suppliers_GetOpeningBalanceList",
+          "schema" : {
+            "items" : {
+              "$ref" : "#/components/schemas/OwnerOpeningBalanceDto"
+            },
+            "type" : "array"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 6
+  }, {
+    "id" : "f3c20ed8-fa4a-4ecf-ab3e-110ea1d3c30b",
+    "name" : "Returns a Supplier's opening balances, calculated for the next periods: current month, one month old, two months old, three and more months old. - response",
+    "request" : {
+      "urlPath" : "/v1/suppliers/9168215688364834187/openingBalance",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"currentMonth\" : 10,\n  \"oneMonthOld\" : 20,\n  \"threeMonthsOld\" : 40,\n  \"twoMonthsOld\" : 30\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "f3c20ed8-fa4a-4ecf-ab3e-110ea1d3c30b",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.088912Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "Suppliers_GetOpeningBalance",
+          "schema" : {
+            "properties" : {
+              "currentMonth" : {
+                "format" : "double",
+                "type" : "number"
+              },
+              "oneMonthOld" : {
+                "format" : "double",
+                "type" : "number"
+              },
+              "threeMonthsOld" : {
+                "format" : "double",
+                "type" : "number"
+              },
+              "twoMonthsOld" : {
+                "format" : "double",
+                "type" : "number"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 7
+  }, {
+    "id" : "fa8e7410-f389-47ef-86b6-875bfe178d53",
+    "name" : "Returns a list of Supplier's account transactions. - response",
+    "request" : {
+      "urlPath" : "/v1/suppliers/6243850462429644521/accountTrans",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "[ {\n  \"bookTranId\" : 0,\n  \"bookTranTypeId\" : 0,\n  \"bookTransactionReference\" : \"O/Bal\",\n  \"bookTypeDesc\" : \"Opening Balance\",\n  \"credit\" : 0,\n  \"debit\" : 30,\n  \"id\" : 2,\n  \"procDate\" : \"2012-12-31T00:00:00\"\n}, {\n  \"bookTranId\" : 0,\n  \"bookTranTypeId\" : 0,\n  \"bookTransactionReference\" : \"0000001\",\n  \"bookTypeDesc\" : \"Bank Payment\",\n  \"credit\" : 0,\n  \"debit\" : 10,\n  \"id\" : 9,\n  \"procDate\" : \"2012-12-31T00:00:00\"\n} ]",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "fa8e7410-f389-47ef-86b6-875bfe178d53",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.08851Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "Suppliers_GetAccountTrans",
+          "schema" : {
+            "items" : {
+              "$ref" : "#/components/schemas/AccountTranDto"
+            },
+            "type" : "array"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 8
+  }, {
+    "id" : "ba6be538-89ab-42c3-9126-2766eabbcf7f",
+    "name" : "Updates an existing Supplier.",
+    "request" : {
+      "urlPath" : "/v1/suppliers/4464768927462247420",
+      "method" : "PUT"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{ }",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "ba6be538-89ab-42c3-9126-2766eabbcf7f",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.087674Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "Suppliers_Put",
+          "schema" : {
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 9
+  }, {
+    "id" : "736eb2eb-bc9f-44cf-b4c9-79772c9e54e3",
+    "name" : "Returns information about a single Supplier. You may specify that Supplier's ledger balance should be calculated. - response",
+    "request" : {
+      "urlPath" : "/v1/suppliers/5465564402704453268",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"accountName\" : \"Supplier Bank Acc\",\n  \"accountNumber\" : \"12345678\",\n  \"additionalEmails\" : [ \"email2@example.com\", \"email3@example.com\" ],\n  \"address\" : [ \"Address Line 1\", \"Address Line 2\" ],\n  \"authCode\" : \"VATEXCODE222\",\n  \"bank\" : {\n    \"branch\" : \"Bank\",\n    \"id\" : 1,\n    \"name\" : \"bank Name\",\n    \"sortCode\" : \"B01\"\n  },\n  \"code\" : \"S001\",\n  \"contact\" : \"John Smith\",\n  \"eFTReference\" : \"Reference\",\n  \"email\" : \"supplier@email.com\",\n  \"fax\" : \"1234567890\",\n  \"id\" : 10589,\n  \"mobile\" : \"1234567890\",\n  \"name\" : \"Supplier Name\",\n  \"ourCode\" : \"OURCODE111\",\n  \"ownerTypeId\" : 3,\n  \"phone\" : \"1234596970\",\n  \"postponedAccounting\" : false,\n  \"timestamp\" : \"4jeXcBIe2wg=\",\n  \"vatAnalysisTypeId\" : 1,\n  \"vatReg\" : \"VATCODE0001\",\n  \"vatType\" : 2\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "736eb2eb-bc9f-44cf-b4c9-79772c9e54e3",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.087348Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "(none)",
+          "schema" : {
+            "example" : {
+              "accountName" : "Supplier Bank Acc",
+              "accountNumber" : "12345678",
+              "additionalEmails" : [ "email2@example.com", "email3@example.com" ],
+              "address" : [ "Address Line 1", "Address Line 2" ],
+              "authCode" : "VATEXCODE222",
+              "bank" : {
+                "branch" : "Bank",
+                "id" : 1,
+                "name" : "bank Name",
+                "sortCode" : "B01"
+              },
+              "code" : "S001",
+              "contact" : "John Smith",
+              "eFTReference" : "Reference",
+              "email" : "supplier@email.com",
+              "fax" : "1234567890",
+              "id" : 10589,
+              "mobile" : "1234567890",
+              "name" : "Supplier Name",
+              "ourCode" : "OURCODE111",
+              "ownerTypeId" : 3,
+              "phone" : "1234596970",
+              "postponedAccounting" : false,
+              "timestamp" : "4jeXcBIe2wg=",
+              "vatAnalysisTypeId" : 1,
+              "vatReg" : "VATCODE0001",
+              "vatType" : 2
+            },
+            "properties" : {
+              "accountName" : {
+                "type" : "string"
+              },
+              "accountNumber" : {
+                "type" : "string"
+              },
+              "additionalEmails" : {
+                "items" : {
+                  "type" : "string"
+                },
+                "type" : "array"
+              },
+              "address" : {
+                "items" : {
+                  "type" : "string"
+                },
+                "type" : "array"
+              },
+              "authCode" : {
+                "type" : "string"
+              },
+              "bank" : {
+                "$ref" : "#/components/schemas/EFTBankDto"
+              },
+              "businessIdentifierCode" : {
+                "type" : "string"
+              },
+              "code" : {
+                "type" : "string"
+              },
+              "contact" : {
+                "type" : "string"
+              },
+              "eFTReference" : {
+                "type" : "string"
+              },
+              "email" : {
+                "type" : "string"
+              },
+              "fax" : {
+                "type" : "string"
+              },
+              "id" : {
+                "format" : "int64",
+                "type" : "integer"
+              },
+              "internationalBankAccountNumber" : {
+                "type" : "string"
+              },
+              "ledgerBalance" : {
+                "format" : "double",
+                "type" : "number"
+              },
+              "mobile" : {
+                "type" : "string"
+              },
+              "name" : {
+                "type" : "string"
+              },
+              "openingBalance" : {
+                "$ref" : "#/components/schemas/OwnerOpeningBalanceInPeriodsDto"
+              },
+              "openingBalances" : {
+                "items" : {
+                  "$ref" : "#/components/schemas/OwnerOpeningBalanceDto"
+                },
+                "type" : "array"
+              },
+              "ourCode" : {
+                "type" : "string"
+              },
+              "ownerTypeId" : {
+                "format" : "int64",
+                "type" : "integer"
+              },
+              "phone" : {
+                "type" : "string"
+              },
+              "postponedAccounting" : {
+                "type" : "boolean"
+              },
+              "timestamp" : {
+                "format" : "byte",
+                "type" : "string"
+              },
+              "vatAnalysisTypeId" : {
+                "format" : "int64",
+                "type" : "integer"
+              },
+              "vatReg" : {
+                "type" : "string"
+              },
+              "vatType" : {
+                "format" : "int64",
+                "type" : "integer"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 10
+  }, {
+    "id" : "7876a70e-d7e9-4015-9e69-a21e7650e9a5",
+    "name" : "Removes an existing Supplier.",
+    "request" : {
+      "urlPath" : "/v1/suppliers/6814152636718854725",
+      "method" : "DELETE",
+      "queryParameters" : {
+        "timestamp" : {
+          "equalTo" : "2023-03-02T08%3A01%3A57.085783Z"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{ }",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "7876a70e-d7e9-4015-9e69-a21e7650e9a5",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.085823Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "Suppliers_Delete",
+          "schema" : {
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 11
+  }, {
+    "id" : "0b2d10f6-0277-45a6-9433-765bb37c524a",
+    "name" : "Processes a batch of Suppliers.",
+    "request" : {
+      "urlPath" : "/v1/suppliers/batch",
+      "method" : "PUT"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{ }",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "0b2d10f6-0277-45a6-9433-765bb37c524a",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.084316Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "Suppliers_ProcessBatch",
+          "schema" : {
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 12
+  }, {
+    "id" : "468335a3-5197-4d37-85cd-1b777ff655a0",
+    "name" : "Creates a new Supplier.",
+    "request" : {
+      "urlPath" : "/v1/suppliers",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{ }",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "468335a3-5197-4d37-85cd-1b777ff655a0",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.084264Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "Suppliers_Post",
+          "schema" : {
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 13
+  }, {
+    "id" : "8531f2e9-db6c-43fb-acd7-205132f6e6d6",
+    "name" : "Returns a list of company's Suppliers. Supports OData querying protocol.\r\nFiltering is forbidden.\r\nOrdering is allowed by \"id\" and \"code\" fields. - response",
+    "request" : {
+      "urlPath" : "/v1/suppliers",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"Count\" : 1,\n  \"Items\" : [ {\n    \"accountName\" : \"Supplier Bank Acc\",\n    \"accountNumber\" : \"12345678\",\n    \"additionalEmails\" : [ \"email2@example.com\", \"email3@example.com\" ],\n    \"address\" : [ \"Address Line 1\", \"Address Line 2\" ],\n    \"authCode\" : \"VATEXCODE222\",\n    \"bank\" : {\n      \"branch\" : \"Bank\",\n      \"id\" : 1,\n      \"name\" : \"bank Name\",\n      \"sortCode\" : \"B01\"\n    },\n    \"code\" : \"S001\",\n    \"contact\" : \"John Smith\",\n    \"eFTReference\" : \"Reference\",\n    \"email\" : \"supplier@email.com\",\n    \"fax\" : \"1234567890\",\n    \"id\" : 10589,\n    \"mobile\" : \"1234567890\",\n    \"name\" : \"Supplier Name\",\n    \"ourCode\" : \"OURCODE111\",\n    \"ownerTypeId\" : 3,\n    \"phone\" : \"1234596970\",\n    \"postponedAccounting\" : false,\n    \"timestamp\" : \"aHOScBIe2wg=\",\n    \"vatAnalysisTypeId\" : 1,\n    \"vatReg\" : \"VATCODE0001\",\n    \"vatType\" : 2\n  } ],\n  \"NextPageLink\" : \"\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "8531f2e9-db6c-43fb-acd7-205132f6e6d6",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.084187Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "Suppliers_Get",
+          "schema" : {
+            "properties" : {
+              "Count" : {
+                "format" : "int64",
+                "type" : "integer"
+              },
+              "Items" : {
+                "items" : {
+                  "$ref" : "#/components/schemas/SupplierQueryDto"
+                },
+                "type" : "array"
+              },
+              "NextPageLink" : {
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 14
+  }, {
+    "id" : "478804a9-9194-41c0-8b9b-ef673be6a5d5",
+    "name" : "Updates an existing Sale Rep.",
+    "request" : {
+      "urlPath" : "/v1/salesReps/4556917399729905067",
+      "method" : "PUT"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{ }",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "478804a9-9194-41c0-8b9b-ef673be6a5d5",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.083552Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "SalesRep_Put",
+          "schema" : {
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 15
+  }, {
+    "id" : "820e237b-f59a-4899-a7a4-382ee6eb5e96",
+    "name" : "Returns information about a single SaleRep.",
+    "request" : {
+      "urlPath" : "/v1/salesReps/7972930647592832980",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"code\" : \"SR0001\",\n  \"companyId\" : 123456,\n  \"email\" : \"example@gmail.com\",\n  \"id\" : 1,\n  \"name\" : \"Sales Rep 1\",\n  \"phone\" : \"1234567890\",\n  \"timeStamp\" : \"6RCQcBIe2wg=\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "820e237b-f59a-4899-a7a4-382ee6eb5e96",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.083504Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "(none)",
+          "schema" : {
+            "example" : {
+              "code" : "SR0001",
+              "companyId" : 123456,
+              "email" : "example@gmail.com",
+              "id" : 1,
+              "name" : "Sales Rep 1",
+              "phone" : "1234567890",
+              "timeStamp" : "6RCQcBIe2wg="
+            },
+            "properties" : {
+              "code" : {
+                "type" : "string"
+              },
+              "companyId" : {
+                "format" : "int64",
+                "type" : "integer"
+              },
+              "email" : {
+                "type" : "string"
+              },
+              "id" : {
+                "format" : "int64",
+                "type" : "integer"
+              },
+              "name" : {
+                "type" : "string"
+              },
+              "phone" : {
+                "type" : "string"
+              },
+              "timeStamp" : {
+                "format" : "byte",
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 16
+  }, {
+    "id" : "659c4014-b9de-4812-a4d0-eece6f51e7e5",
+    "name" : "Removes an existing Sale Rep.",
+    "request" : {
+      "urlPath" : "/v1/salesReps/131700229201494992",
+      "method" : "DELETE",
+      "queryParameters" : {
+        "timestamp" : {
+          "equalTo" : "2022-07-04T05%3A34%3A57.083316Z"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{ }",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "659c4014-b9de-4812-a4d0-eece6f51e7e5",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.083363Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "SalesRep_Delete",
+          "schema" : {
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 17
+  }, {
+    "id" : "3629d69b-dcff-4ca6-9079-8f9cd62b4c1d",
+    "name" : "Processes a batch of Sale Rep.",
+    "request" : {
+      "urlPath" : "/v1/salesReps/batch",
+      "method" : "PUT"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{ }",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "3629d69b-dcff-4ca6-9079-8f9cd62b4c1d",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.083214Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "SalesRep_ProcessBatch",
+          "schema" : {
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 18
+  }, {
+    "id" : "a963c0f9-ad4d-417b-af43-87bfd1b5e5d1",
+    "name" : "Creates a new SaleRep.",
+    "request" : {
+      "urlPath" : "/v1/salesReps",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{ }",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "a963c0f9-ad4d-417b-af43-87bfd1b5e5d1",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.083173Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "SalesRep_Post",
+          "schema" : {
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 19
+  }, {
+    "id" : "0d11b96a-c3e8-4384-b59d-0b95226a0c20",
+    "name" : "Returns a list of company's SaleRep.\r\nFiltering is forbidden.\r\nOrdering is allowed by \"id\". - response",
+    "request" : {
+      "urlPath" : "/v1/salesReps",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"Count\" : 1,\n  \"Items\" : [ {\n    \"code\" : \"SR0001\",\n    \"companyId\" : 123456,\n    \"email\" : \"example@gmail.com\",\n    \"id\" : 1,\n    \"name\" : \"Sales Rep 1\",\n    \"phone\" : \"1234567890\",\n    \"timeStamp\" : \"6RCQcBIe2wg=\"\n  } ],\n  \"NextPageLink\" : \"\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "0d11b96a-c3e8-4384-b59d-0b95226a0c20",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.083126Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "SalesRep_Get",
+          "schema" : {
+            "properties" : {
+              "Count" : {
+                "format" : "int64",
+                "type" : "integer"
+              },
+              "Items" : {
+                "items" : {
+                  "$ref" : "#/components/schemas/SaleRepsDto"
+                },
+                "type" : "array"
+              },
+              "NextPageLink" : {
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 20
+  }, {
+    "id" : "37fdd74c-52e6-43c2-9757-c17e33ade3d9",
+    "name" : "Updates an existing Sales Invoice.",
+    "request" : {
+      "urlPath" : "/v1/salesInvoices/8885677757066436200",
+      "method" : "PUT"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{ }",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "37fdd74c-52e6-43c2-9757-c17e33ade3d9",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.083025Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "SalesInvoices_Put",
+          "schema" : {
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 21
+  }, {
+    "id" : "3bf2997e-21bb-4c8f-872e-e0288ea5665d",
+    "name" : "Returns information about a single Sales Invoice. - response",
+    "request" : {
+      "urlPath" : "/v1/salesInvoices/4437343546255518653",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"acCode\" : \"CUS3\",\n  \"bookTranTypeId\" : 7,\n  \"customFields\" : [ {\n    \"description\" : \"acudf_1\",\n    \"id\" : 1,\n    \"userDefinedFieldId\" : 1,\n    \"value\" : \"acudfv_1\"\n  }, {\n    \"description\" : \"acudf_2\",\n    \"id\" : 2,\n    \"userDefinedFieldId\" : 1,\n    \"value\" : \"acudfv_2\"\n  } ],\n  \"customerId\" : 70585,\n  \"deliveryTo\" : [ \"dt_1\", \"dt_2\" ],\n  \"details\" : \"detail_1\",\n  \"entryDate\" : \"2016-06-01T00:00:00\",\n  \"id\" : 75813,\n  \"loType\" : \"1\",\n  \"note\" : \"Customer 3\",\n  \"ourReference\" : \"ddNumber_1\",\n  \"procDate\" : \"2016-06-24T00:00:00\",\n  \"productTrans\" : [ {\n    \"acEntries\" : [ {\n      \"accountCode\" : \"SA02\",\n      \"analysisCategoryId\" : 40889,\n      \"description\" : \"AnCat1\",\n      \"id\" : 73455,\n      \"value\" : -200\n    } ],\n    \"amount\" : -220,\n    \"amountNet\" : -200,\n    \"id\" : 51820,\n    \"percentage\" : 10,\n    \"productCode\" : \"PRO2\",\n    \"productId\" : 20108,\n    \"quantity\" : -1,\n    \"tranNotes\" : [ \"tn_1\", \"tn_2\" ],\n    \"unitPrice\" : 200,\n    \"vat\" : -20,\n    \"vatAnalysisTypeId\" : 0,\n    \"vatRateId\" : 30657\n  } ],\n  \"reference\" : \"000001\",\n  \"saleRepId\" : 33110,\n  \"timestamp\" : \"XUyLcBIe2wg=\",\n  \"total\" : -220,\n  \"totalNet\" : -200,\n  \"totalVAT\" : -20,\n  \"unpaid\" : -220,\n  \"vatTypeId\" : 1,\n  \"yourReference\" : \"poNumber_1\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "3bf2997e-21bb-4c8f-872e-e0288ea5665d",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.082869Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "(none)",
+          "schema" : {
+            "example" : {
+              "acCode" : "CUS3",
+              "bookTranTypeId" : 7,
+              "customFields" : [ {
+                "description" : "acudf_1",
+                "id" : 1,
+                "userDefinedFieldId" : 1,
+                "value" : "acudfv_1"
+              }, {
+                "description" : "acudf_2",
+                "id" : 2,
+                "userDefinedFieldId" : 1,
+                "value" : "acudfv_2"
+              } ],
+              "customerId" : 70585,
+              "deliveryTo" : [ "dt_1", "dt_2" ],
+              "details" : "detail_1",
+              "entryDate" : "2016-06-01T00:00:00",
+              "id" : 75813,
+              "loType" : "1",
+              "note" : "Customer 3",
+              "ourReference" : "ddNumber_1",
+              "procDate" : "2016-06-24T00:00:00",
+              "productTrans" : [ {
+                "acEntries" : [ {
+                  "accountCode" : "SA02",
+                  "analysisCategoryId" : 40889,
+                  "description" : "AnCat1",
+                  "id" : 73455,
+                  "value" : -200
+                } ],
+                "amount" : -220,
+                "amountNet" : -200,
+                "id" : 51820,
+                "percentage" : 10,
+                "productCode" : "PRO2",
+                "productId" : 20108,
+                "quantity" : -1,
+                "tranNotes" : [ "tn_1", "tn_2" ],
+                "unitPrice" : 200,
+                "vat" : -20,
+                "vatAnalysisTypeId" : 0,
+                "vatRateId" : 30657
+              } ],
+              "saleRepId" : 33110,
+              "timestamp" : "oq6NcBIe2wg=",
+              "total" : -220,
+              "totalNet" : -200,
+              "totalVAT" : -20,
+              "unpaid" : -220,
+              "vatTypeId" : 1,
+              "yourReference" : "poNumber_1"
+            },
+            "properties" : {
+              "acCode" : {
+                "type" : "string"
+              },
+              "bookTranTypeId" : {
+                "format" : "int64",
+                "type" : "integer"
+              },
+              "customFields" : {
+                "items" : {
+                  "$ref" : "#/components/schemas/AcudfValueDto"
+                },
+                "type" : "array"
+              },
+              "customerId" : {
+                "format" : "int64",
+                "type" : "integer"
+              },
+              "deliveryTo" : {
+                "items" : {
+                  "type" : "string"
+                },
+                "type" : "array"
+              },
+              "details" : {
+                "type" : "string"
+              },
+              "entryDate" : {
+                "format" : "date-time",
+                "type" : "string"
+              },
+              "id" : {
+                "format" : "int64",
+                "type" : "integer"
+              },
+              "loType" : {
+                "type" : "string"
+              },
+              "netGoods" : {
+                "format" : "double",
+                "type" : "number"
+              },
+              "netServices" : {
+                "format" : "double",
+                "type" : "number"
+              },
+              "note" : {
+                "type" : "string"
+              },
+              "ourReference" : {
+                "type" : "string"
+              },
+              "procDate" : {
+                "format" : "date-time",
+                "type" : "string"
+              },
+              "productTrans" : {
+                "items" : {
+                  "$ref" : "#/components/schemas/ProductTranDto"
+                },
+                "type" : "array"
+              },
+              "quoteId" : {
+                "format" : "int64",
+                "type" : "integer"
+              },
+              "reference" : {
+                "type" : "string"
+              },
+              "saleRepCode" : {
+                "type" : "string"
+              },
+              "saleRepId" : {
+                "format" : "int64",
+                "type" : "integer"
+              },
+              "timestamp" : {
+                "format" : "byte",
+                "type" : "string"
+              },
+              "total" : {
+                "format" : "double",
+                "type" : "number"
+              },
+              "totalNet" : {
+                "format" : "double",
+                "type" : "number"
+              },
+              "totalVAT" : {
+                "format" : "double",
+                "type" : "number"
+              },
+              "unpaid" : {
+                "format" : "double",
+                "type" : "number"
+              },
+              "vatTypeId" : {
+                "format" : "int64",
+                "type" : "integer"
+              },
+              "yourReference" : {
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 22
+  }, {
+    "id" : "ee7dc793-0f08-4d49-ab6c-372115de24c5",
+    "name" : "Removes an existing Sales Invoice.",
+    "request" : {
+      "urlPath" : "/v1/salesInvoices/5825958440426361913",
+      "method" : "DELETE",
+      "queryParameters" : {
+        "timestamp" : {
+          "equalTo" : "2022-05-15T06%3A04%3A57.07945Z"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{ }",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "ee7dc793-0f08-4d49-ab6c-372115de24c5",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.079612Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "SalesInvoices_Delete",
+          "schema" : {
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 23
+  }, {
+    "id" : "fe947fe2-8702-484d-b7f5-5ea3aa6446c5",
+    "name" : "Creates a new Sale Invoice with auto generating reference.",
+    "request" : {
+      "urlPath" : "/v1/salesInvoices/createSaleInvoiceWithGeneratingReference",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{ }",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "fe947fe2-8702-484d-b7f5-5ea3aa6446c5",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.078543Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "SalesInvoices_Post_CreateSaleInvoiceWithGeneratingReference",
+          "schema" : {
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 24
+  }, {
+    "id" : "af14393f-bcf6-4303-bbd1-c3475727a119",
+    "name" : "Processes a batch of Sales Invoices.",
+    "request" : {
+      "urlPath" : "/v1/salesInvoices/batch",
+      "method" : "PUT"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{ }",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "af14393f-bcf6-4303-bbd1-c3475727a119",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.076244Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "SalesInvoices_ProcessBatch",
+          "schema" : {
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 25
+  }, {
+    "id" : "83468d38-e8c6-424d-bc63-f48edc924703",
+    "name" : "Creates a new Sales Invoice.",
+    "request" : {
+      "urlPath" : "/v1/salesInvoices",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{ }",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "83468d38-e8c6-424d-bc63-f48edc924703",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.076134Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "SalesInvoices_Post",
+          "schema" : {
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 26
+  }, {
+    "id" : "46615b08-e163-4cb9-b9a0-189feae5ddc9",
+    "name" : "Returns a list of company's Sales Invoices. Supports OData querying protocol.\r\nFiltering is allowed by \"entryDate\" field.\r\nOrdering is allowed by \"id\" field. - response",
+    "request" : {
+      "urlPath" : "/v1/salesInvoices",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"Count\" : 1,\n  \"Items\" : [ {\n    \"acCode\" : \"CUS3\",\n    \"bookTranTypeId\" : 7,\n    \"customFields\" : [ {\n      \"description\" : \"acudf_1\",\n      \"id\" : 1,\n      \"userDefinedFieldId\" : 1,\n      \"value\" : \"acudfv_1\"\n    }, {\n      \"description\" : \"acudf_2\",\n      \"id\" : 2,\n      \"userDefinedFieldId\" : 1,\n      \"value\" : \"acudfv_2\"\n    } ],\n    \"customerId\" : 70585,\n    \"deliveryTo\" : [ \"dt_1\", \"dt_2\" ],\n    \"details\" : \"detail_1\",\n    \"entryDate\" : \"2016-06-01T00:00:00\",\n    \"id\" : 75813,\n    \"loType\" : \"1\",\n    \"note\" : \"Customer 3\",\n    \"ourReference\" : \"ddNumber_1\",\n    \"procDate\" : \"2016-06-24T00:00:00\",\n    \"productTrans\" : [ {\n      \"acEntries\" : [ {\n        \"accountCode\" : \"SA02\",\n        \"analysisCategoryId\" : 40889,\n        \"description\" : \"AnCat1\",\n        \"id\" : 73455,\n        \"value\" : -200\n      } ],\n      \"amount\" : -220,\n      \"amountNet\" : -200,\n      \"id\" : 51820,\n      \"percentage\" : 10,\n      \"productCode\" : \"PRO2\",\n      \"productId\" : 20108,\n      \"quantity\" : -1,\n      \"tranNotes\" : [ \"tn_1\", \"tn_2\" ],\n      \"unitPrice\" : 200,\n      \"vat\" : -20,\n      \"vatAnalysisTypeId\" : 0,\n      \"vatRateId\" : 30657\n    } ],\n    \"reference\" : \"000001\",\n    \"saleRepId\" : 33110,\n    \"timestamp\" : \"XUyLcBIe2wg=\",\n    \"total\" : -220,\n    \"totalNet\" : -200,\n    \"totalVAT\" : -20,\n    \"unpaid\" : -220,\n    \"vatTypeId\" : 1,\n    \"yourReference\" : \"poNumber_1\"\n  } ],\n  \"NextPageLink\" : \"\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "46615b08-e163-4cb9-b9a0-189feae5ddc9",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.076039Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "SalesInvoices_Get",
+          "schema" : {
+            "properties" : {
+              "Count" : {
+                "format" : "int64",
+                "type" : "integer"
+              },
+              "Items" : {
+                "items" : {
+                  "$ref" : "#/components/schemas/SalesInvoiceQueryDto"
+                },
+                "type" : "array"
+              },
+              "NextPageLink" : {
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 27
+  }, {
+    "id" : "544731af-29aa-458d-8c61-914ad0c1f4d6",
+    "name" : "Updates an existing Sales Entry.",
+    "request" : {
+      "urlPath" : "/v1/salesEntries/2932471290879963481",
+      "method" : "PUT"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{ }",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "544731af-29aa-458d-8c61-914ad0c1f4d6",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.075003Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "SalesEntries_Put",
+          "schema" : {
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 28
+  }, {
+    "id" : "19448951-9621-4432-9580-fc5cb2f05363",
+    "name" : "Returns information about a single Sales Entry. - response",
+    "request" : {
+      "urlPath" : "/v1/salesEntries/5074049169464318889",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"acCode\" : \"code\",\n  \"acEntries\" : [ {\n    \"accountCode\" : \"SA01\",\n    \"analysisCategoryId\" : 40888,\n    \"description\" : \"SAL 1\",\n    \"id\" : 73450,\n    \"value\" : 636.36\n  } ],\n  \"bookTranTypeId\" : 5,\n  \"customFields\" : [ {\n    \"description\" : \"acudf_1\",\n    \"id\" : 1,\n    \"userDefinedFieldId\" : 1,\n    \"value\" : \"acudfv_1\"\n  }, {\n    \"description\" : \"acudf_2\",\n    \"id\" : 2,\n    \"userDefinedFieldId\" : 1,\n    \"value\" : \"acudfv_2\"\n  } ],\n  \"customerId\" : 70583,\n  \"detailCollection\" : [ ],\n  \"details\" : \"detail_1\",\n  \"entryDate\" : \"2011-01-01T00:00:00\",\n  \"id\" : 1,\n  \"netGoods\" : 0,\n  \"netServices\" : 0,\n  \"note\" : \"Customer 1\",\n  \"procDate\" : \"2011-01-01T00:00:00\",\n  \"reference\" : \"000001\",\n  \"timestamp\" : \"wumIcBIe2wg=\",\n  \"total\" : 700,\n  \"totalNet\" : 636.36,\n  \"totalVAT\" : 63.64,\n  \"unpaid\" : 0,\n  \"vatEntries\" : [ {\n    \"amount\" : 636.36,\n    \"id\" : 63649,\n    \"percentage\" : 10,\n    \"vatRateId\" : 30657\n  } ],\n  \"vatTypeId\" : 1\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "19448951-9621-4432-9580-fc5cb2f05363",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.074881Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "(none)",
+          "schema" : {
+            "example" : {
+              "acCode" : "code",
+              "acEntries" : [ {
+                "accountCode" : "SA01",
+                "analysisCategoryId" : 40888,
+                "description" : "SAL 1",
+                "id" : 73450,
+                "value" : 636.36
+              } ],
+              "bookTranTypeId" : 5,
+              "customFields" : [ {
+                "description" : "acudf_1",
+                "id" : 1,
+                "userDefinedFieldId" : 1,
+                "value" : "acudfv_1"
+              }, {
+                "description" : "acudf_2",
+                "id" : 2,
+                "userDefinedFieldId" : 1,
+                "value" : "acudfv_2"
+              } ],
+              "customerId" : 70583,
+              "detailCollection" : [ ],
+              "details" : "detail_1",
+              "entryDate" : "2011-01-01T00:00:00",
+              "id" : 1,
+              "netGoods" : 0,
+              "netServices" : 0,
+              "note" : "Customer 1",
+              "procDate" : "2011-01-01T00:00:00",
+              "reference" : "000001",
+              "timestamp" : "wumIcBIe2wg=",
+              "total" : 700,
+              "totalNet" : 636.36,
+              "totalVAT" : 63.64,
+              "unpaid" : 0,
+              "vatEntries" : [ {
+                "amount" : 636.36,
+                "id" : 63649,
+                "percentage" : 10,
+                "vatRateId" : 30657
+              } ],
+              "vatTypeId" : 1
+            },
+            "properties" : {
+              "acCode" : {
+                "type" : "string"
+              },
+              "acEntries" : {
+                "items" : {
+                  "$ref" : "#/components/schemas/AcEntryDto"
+                },
+                "type" : "array"
+              },
+              "bookTranTypeId" : {
+                "format" : "int64",
+                "type" : "integer"
+              },
+              "customFields" : {
+                "items" : {
+                  "$ref" : "#/components/schemas/AcudfValueDto"
+                },
+                "type" : "array"
+              },
+              "customerId" : {
+                "format" : "int64",
+                "type" : "integer"
+              },
+              "detailCollection" : {
+                "items" : {
+                  "type" : "string"
+                },
+                "type" : "array"
+              },
+              "details" : {
+                "type" : "string"
+              },
+              "entryDate" : {
+                "format" : "date-time",
+                "type" : "string"
+              },
+              "id" : {
+                "format" : "int64",
+                "type" : "integer"
+              },
+              "netGoods" : {
+                "format" : "double",
+                "type" : "number"
+              },
+              "netServices" : {
+                "format" : "double",
+                "type" : "number"
+              },
+              "note" : {
+                "type" : "string"
+              },
+              "procDate" : {
+                "format" : "date-time",
+                "type" : "string"
+              },
+              "reference" : {
+                "type" : "string"
+              },
+              "timestamp" : {
+                "format" : "byte",
+                "type" : "string"
+              },
+              "total" : {
+                "format" : "double",
+                "type" : "number"
+              },
+              "totalNet" : {
+                "format" : "double",
+                "type" : "number"
+              },
+              "totalVAT" : {
+                "format" : "double",
+                "type" : "number"
+              },
+              "unpaid" : {
+                "format" : "double",
+                "type" : "number"
+              },
+              "vatEntries" : {
+                "items" : {
+                  "$ref" : "#/components/schemas/VatEntryDto"
+                },
+                "type" : "array"
+              },
+              "vatTypeId" : {
+                "format" : "int64",
+                "type" : "integer"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 29
+  }, {
+    "id" : "e3d3a13b-8026-46b3-9a72-3dd1b73067cb",
+    "name" : "Removes an existing Sales Entry.",
+    "request" : {
+      "urlPath" : "/v1/salesEntries/8190156479391511710",
+      "method" : "DELETE",
+      "queryParameters" : {
+        "timestamp" : {
+          "equalTo" : "2022-08-21T08%3A27%3A57.056832Z"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{ }",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "e3d3a13b-8026-46b3-9a72-3dd1b73067cb",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.056872Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "SalesEntries_Delete",
+          "schema" : {
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 30
+  }, {
+    "id" : "fff052eb-feef-4bd9-8581-2ccb8a26f880",
+    "name" : "Processes a batch of Sales Entries.",
+    "request" : {
+      "urlPath" : "/v1/salesEntries/batch",
+      "method" : "PUT"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{ }",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "fff052eb-feef-4bd9-8581-2ccb8a26f880",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.056244Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "SalesEntries_ProcessBatch",
+          "schema" : {
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 31
+  }, {
+    "id" : "f651b29b-b2b5-4c11-9cad-3f740b4fc930",
+    "name" : "Creates a new Sales Entry.",
+    "request" : {
+      "urlPath" : "/v1/salesEntries",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{ }",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "f651b29b-b2b5-4c11-9cad-3f740b4fc930",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.056202Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "SalesEntries_Post",
+          "schema" : {
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 32
+  }, {
+    "id" : "d319f6de-f9ea-4d3d-811e-5ed819bf2cb4",
+    "name" : "Returns a list of company's Sales Entries. Supports OData querying protocol.\r\nFiltering is allowed by \"entryDate\" field.\r\nOrdering is allowed by \"id\" field. - response",
+    "request" : {
+      "urlPath" : "/v1/salesEntries",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"Count\" : 1,\n  \"Items\" : [ {\n    \"acCode\" : \"code\",\n    \"acEntries\" : [ {\n      \"accountCode\" : \"SA01\",\n      \"analysisCategoryId\" : 40888,\n      \"description\" : \"SAL 1\",\n      \"id\" : 73450,\n      \"value\" : 636.36\n    } ],\n    \"bookTranTypeId\" : 5,\n    \"customFields\" : [ {\n      \"description\" : \"acudf_1\",\n      \"id\" : 1,\n      \"userDefinedFieldId\" : 1,\n      \"value\" : \"acudfv_1\"\n    }, {\n      \"description\" : \"acudf_2\",\n      \"id\" : 2,\n      \"userDefinedFieldId\" : 1,\n      \"value\" : \"acudfv_2\"\n    } ],\n    \"customerId\" : 70583,\n    \"detailCollection\" : [ ],\n    \"details\" : \"detail_1\",\n    \"entryDate\" : \"2011-01-01T00:00:00\",\n    \"id\" : 1,\n    \"netGoods\" : 0,\n    \"netServices\" : 0,\n    \"note\" : \"Customer 1\",\n    \"procDate\" : \"2011-01-01T00:00:00\",\n    \"reference\" : \"000001\",\n    \"timestamp\" : \"9ySEcBIe2wg=\",\n    \"total\" : 700,\n    \"totalNet\" : 636.36,\n    \"totalVAT\" : 63.64,\n    \"unpaid\" : 0,\n    \"vatEntries\" : [ {\n      \"amount\" : 636.36,\n      \"id\" : 63649,\n      \"percentage\" : 10,\n      \"vatRateId\" : 30657\n    } ],\n    \"vatTypeId\" : 1\n  } ],\n  \"NextPageLink\" : \"\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "d319f6de-f9ea-4d3d-811e-5ed819bf2cb4",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.056156Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "SalesEntries_Get",
+          "schema" : {
+            "properties" : {
+              "Count" : {
+                "format" : "int64",
+                "type" : "integer"
+              },
+              "Items" : {
+                "items" : {
+                  "$ref" : "#/components/schemas/SalesEntryQueryDto"
+                },
+                "type" : "array"
+              },
+              "NextPageLink" : {
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 33
+  }, {
+    "id" : "274153bb-1ab4-4b62-9110-ba32776e940a",
+    "name" : "Updates an existing Sales Credit Note.",
+    "request" : {
+      "urlPath" : "/v1/salesCreditNotes/2269253220325253942",
+      "method" : "PUT"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{ }",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "274153bb-1ab4-4b62-9110-ba32776e940a",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.056055Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "SalesCreditNotes_Put",
+          "schema" : {
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 34
+  }, {
+    "id" : "b2a40b80-9625-4e0d-9df0-a8e2549883be",
+    "name" : "Returns information about a single Sales Credit Note. - response",
+    "request" : {
+      "urlPath" : "/v1/salesCreditNotes/1206424725815572861",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"acCode\" : \"CUS3\",\n  \"bookTranTypeId\" : 7,\n  \"customFields\" : [ {\n    \"description\" : \"acudf_1\",\n    \"id\" : 1,\n    \"userDefinedFieldId\" : 1,\n    \"value\" : \"acudfv_1\"\n  }, {\n    \"description\" : \"acudf_2\",\n    \"id\" : 2,\n    \"userDefinedFieldId\" : 1,\n    \"value\" : \"acudfv_2\"\n  } ],\n  \"customerId\" : 70585,\n  \"deliveryTo\" : [ \"dt_1\", \"dt_2\" ],\n  \"details\" : \"detail_1\",\n  \"entryDate\" : \"2016-06-01T00:00:00\",\n  \"id\" : 75813,\n  \"loType\" : \"1\",\n  \"note\" : \"Customer 3\",\n  \"ourReference\" : \"ddNumber_1\",\n  \"procDate\" : \"2016-06-24T00:00:00\",\n  \"productTrans\" : [ {\n    \"acEntries\" : [ {\n      \"accountCode\" : \"SA02\",\n      \"analysisCategoryId\" : 40889,\n      \"description\" : \"AnCat1\",\n      \"id\" : 73455,\n      \"value\" : -200\n    } ],\n    \"amount\" : -220,\n    \"amountNet\" : -200,\n    \"id\" : 51820,\n    \"percentage\" : 10,\n    \"productCode\" : \"PRO2\",\n    \"productId\" : 20108,\n    \"quantity\" : -1,\n    \"tranNotes\" : [ \"tn_1\", \"tn_2\" ],\n    \"unitPrice\" : 200,\n    \"vat\" : -20,\n    \"vatAnalysisTypeId\" : 0,\n    \"vatRateId\" : 30657\n  } ],\n  \"reference\" : \"000001\",\n  \"saleRepId\" : 33110,\n  \"timestamp\" : \"ksKBcBIe2wg=\",\n  \"total\" : -220,\n  \"totalNet\" : -200,\n  \"totalVAT\" : -20,\n  \"unpaid\" : -220,\n  \"vatTypeId\" : 1,\n  \"yourReference\" : \"poNumber_1\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "b2a40b80-9625-4e0d-9df0-a8e2549883be",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.055936Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "(none)",
+          "schema" : {
+            "example" : {
+              "acCode" : "CUS3",
+              "bookTranTypeId" : 7,
+              "customFields" : [ {
+                "description" : "acudf_1",
+                "id" : 1,
+                "userDefinedFieldId" : 1,
+                "value" : "acudfv_1"
+              }, {
+                "description" : "acudf_2",
+                "id" : 2,
+                "userDefinedFieldId" : 1,
+                "value" : "acudfv_2"
+              } ],
+              "customerId" : 70585,
+              "deliveryTo" : [ "dt_1", "dt_2" ],
+              "details" : "detail_1",
+              "entryDate" : "2016-06-01T00:00:00",
+              "id" : 75813,
+              "loType" : "1",
+              "note" : "Customer 3",
+              "ourReference" : "ddNumber_1",
+              "procDate" : "2016-06-24T00:00:00",
+              "productTrans" : [ {
+                "acEntries" : [ {
+                  "accountCode" : "SA02",
+                  "analysisCategoryId" : 40889,
+                  "description" : "AnCat1",
+                  "id" : 73455,
+                  "value" : -200
+                } ],
+                "amount" : -220,
+                "amountNet" : -200,
+                "id" : 51820,
+                "percentage" : 10,
+                "productCode" : "PRO2",
+                "productId" : 20108,
+                "quantity" : -1,
+                "tranNotes" : [ "tn_1", "tn_2" ],
+                "unitPrice" : 200,
+                "vat" : -20,
+                "vatAnalysisTypeId" : 0,
+                "vatRateId" : 30657
+              } ],
+              "saleRepId" : 33110,
+              "timestamp" : "oq6NcBIe2wg=",
+              "total" : -220,
+              "totalNet" : -200,
+              "totalVAT" : -20,
+              "unpaid" : -220,
+              "vatTypeId" : 1,
+              "yourReference" : "poNumber_1"
+            },
+            "properties" : {
+              "acCode" : {
+                "type" : "string"
+              },
+              "bookTranTypeId" : {
+                "format" : "int64",
+                "type" : "integer"
+              },
+              "customFields" : {
+                "items" : {
+                  "$ref" : "#/components/schemas/AcudfValueDto"
+                },
+                "type" : "array"
+              },
+              "customerId" : {
+                "format" : "int64",
+                "type" : "integer"
+              },
+              "deliveryTo" : {
+                "items" : {
+                  "type" : "string"
+                },
+                "type" : "array"
+              },
+              "details" : {
+                "type" : "string"
+              },
+              "entryDate" : {
+                "format" : "date-time",
+                "type" : "string"
+              },
+              "id" : {
+                "format" : "int64",
+                "type" : "integer"
+              },
+              "loType" : {
+                "type" : "string"
+              },
+              "netGoods" : {
+                "format" : "double",
+                "type" : "number"
+              },
+              "netServices" : {
+                "format" : "double",
+                "type" : "number"
+              },
+              "note" : {
+                "type" : "string"
+              },
+              "ourReference" : {
+                "type" : "string"
+              },
+              "procDate" : {
+                "format" : "date-time",
+                "type" : "string"
+              },
+              "productTrans" : {
+                "items" : {
+                  "$ref" : "#/components/schemas/ProductTranDto"
+                },
+                "type" : "array"
+              },
+              "quoteId" : {
+                "format" : "int64",
+                "type" : "integer"
+              },
+              "reference" : {
+                "type" : "string"
+              },
+              "saleRepCode" : {
+                "type" : "string"
+              },
+              "saleRepId" : {
+                "format" : "int64",
+                "type" : "integer"
+              },
+              "timestamp" : {
+                "format" : "byte",
+                "type" : "string"
+              },
+              "total" : {
+                "format" : "double",
+                "type" : "number"
+              },
+              "totalNet" : {
+                "format" : "double",
+                "type" : "number"
+              },
+              "totalVAT" : {
+                "format" : "double",
+                "type" : "number"
+              },
+              "unpaid" : {
+                "format" : "double",
+                "type" : "number"
+              },
+              "vatTypeId" : {
+                "format" : "int64",
+                "type" : "integer"
+              },
+              "yourReference" : {
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 35
+  }, {
+    "id" : "1fcd2474-0366-43a0-826c-4060bb23bedc",
+    "name" : "Removes an existing Sales Credit Note.",
+    "request" : {
+      "urlPath" : "/v1/salesCreditNotes/4079642569738779674",
+      "method" : "DELETE",
+      "queryParameters" : {
+        "timestamp" : {
+          "equalTo" : "2022-06-06T06%3A09%3A57.055092Z"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{ }",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "1fcd2474-0366-43a0-826c-4060bb23bedc",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.05513Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "SalesCreditNotes_Delete",
+          "schema" : {
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 36
+  }, {
+    "id" : "de2cc2ea-a2d7-4bca-bd5b-44cb205beeb1",
+    "name" : "Processes a batch of Sales Credit Notes.",
+    "request" : {
+      "urlPath" : "/v1/salesCreditNotes/batch",
+      "method" : "PUT"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{ }",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "de2cc2ea-a2d7-4bca-bd5b-44cb205beeb1",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.055028Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "SalesCreditNotes_ProcessBatch",
+          "schema" : {
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 37
+  }, {
+    "id" : "7a1e3a0e-d6dc-46fb-9a0f-7504d182bcf3",
+    "name" : "Creates a new Sales Credit Note.",
+    "request" : {
+      "urlPath" : "/v1/salesCreditNotes",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{ }",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "7a1e3a0e-d6dc-46fb-9a0f-7504d182bcf3",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.05498Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "SalesCreditNotes_Post",
+          "schema" : {
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 38
+  }, {
+    "id" : "309da2f5-3eaf-4eb7-a21d-3614ac6730c2",
+    "name" : "Returns a list of company's Sales Credit Notes. Supports OData querying protocol.\r\nFiltering is allowed by \"entryDate\" field.\r\nOrdering is allowed by \"id\" field. - response",
+    "request" : {
+      "urlPath" : "/v1/salesCreditNotes",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"Count\" : 1,\n  \"Items\" : [ {\n    \"acCode\" : \"CUS3\",\n    \"bookTranTypeId\" : 7,\n    \"customFields\" : [ {\n      \"description\" : \"acudf_1\",\n      \"id\" : 1,\n      \"userDefinedFieldId\" : 1,\n      \"value\" : \"acudfv_1\"\n    }, {\n      \"description\" : \"acudf_2\",\n      \"id\" : 2,\n      \"userDefinedFieldId\" : 1,\n      \"value\" : \"acudfv_2\"\n    } ],\n    \"customerId\" : 70585,\n    \"deliveryTo\" : [ \"dt_1\", \"dt_2\" ],\n    \"details\" : \"detail_1\",\n    \"entryDate\" : \"2016-06-01T00:00:00\",\n    \"id\" : 75813,\n    \"loType\" : \"1\",\n    \"note\" : \"Customer 3\",\n    \"ourReference\" : \"ddNumber_1\",\n    \"procDate\" : \"2016-06-24T00:00:00\",\n    \"productTrans\" : [ {\n      \"acEntries\" : [ {\n        \"accountCode\" : \"SA02\",\n        \"analysisCategoryId\" : 40889,\n        \"description\" : \"AnCat1\",\n        \"id\" : 73455,\n        \"value\" : -200\n      } ],\n      \"amount\" : -220,\n      \"amountNet\" : -200,\n      \"id\" : 51820,\n      \"percentage\" : 10,\n      \"productCode\" : \"PRO2\",\n      \"productId\" : 20108,\n      \"quantity\" : -1,\n      \"tranNotes\" : [ \"tn_1\", \"tn_2\" ],\n      \"unitPrice\" : 200,\n      \"vat\" : -20,\n      \"vatAnalysisTypeId\" : 0,\n      \"vatRateId\" : 30657\n    } ],\n    \"reference\" : \"000001\",\n    \"saleRepId\" : 33110,\n    \"timestamp\" : \"7l9/cBIe2wg=\",\n    \"total\" : -220,\n    \"totalNet\" : -200,\n    \"totalVAT\" : -20,\n    \"unpaid\" : -220,\n    \"vatTypeId\" : 1,\n    \"yourReference\" : \"poNumber_1\"\n  } ],\n  \"NextPageLink\" : \"\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "309da2f5-3eaf-4eb7-a21d-3614ac6730c2",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.054926Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "SalesCreditNotes_Get",
+          "schema" : {
+            "properties" : {
+              "Count" : {
+                "format" : "int64",
+                "type" : "integer"
+              },
+              "Items" : {
+                "items" : {
+                  "$ref" : "#/components/schemas/SalesCreditNoteQueryDto"
+                },
+                "type" : "array"
+              },
+              "NextPageLink" : {
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 39
+  }, {
+    "id" : "95124426-7c4e-4aa3-99a1-190a51c29071",
+    "name" : "Returns a list of company's Sales Entries, Sales Invoices and Sales Credit Notes. Supports OData querying protocol.\r\nFiltering is allowed by \"entryDate\" field.\r\nOrdering is allowed by \"id\" field. - response",
+    "request" : {
+      "urlPath" : "/v1/sales",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"Count\" : 1,\n  \"Items\" : [ {\n    \"acCode\" : \"code\",\n    \"acEntries\" : [ {\n      \"accountCode\" : \"000\",\n      \"analysisCategoryId\" : 1,\n      \"description\" : \"AnCat 1\",\n      \"id\" : 1,\n      \"value\" : 20\n    }, {\n      \"accountCode\" : \"000\",\n      \"analysisCategoryId\" : 1,\n      \"description\" : \"AnCat 2\",\n      \"id\" : 2,\n      \"value\" : 10\n    } ],\n    \"bookTranTypeId\" : 6,\n    \"customFields\" : [ {\n      \"description\" : \"acudf_1\",\n      \"id\" : 1,\n      \"userDefinedFieldId\" : 1,\n      \"value\" : \"acudfv_1\"\n    } ],\n    \"customerId\" : 1,\n    \"details\" : \"detail_1\",\n    \"entryDate\" : \"2011-01-01T00:00:00\",\n    \"id\" : 1,\n    \"loType\" : \"1\",\n    \"note\" : \"note_1\",\n    \"procDate\" : \"2011-01-01T00:00:00\",\n    \"reference\" : \"000001\",\n    \"timestamp\" : \"kqp1cBIe2wg=\",\n    \"total\" : 82.5,\n    \"totalNet\" : 70,\n    \"totalVAT\" : 12.5,\n    \"unpaid\" : 12.5,\n    \"vatEntries\" : [ {\n      \"amount\" : 30,\n      \"id\" : 1,\n      \"percentage\" : 15,\n      \"vatRateId\" : 1\n    }, {\n      \"amount\" : 40,\n      \"id\" : 2,\n      \"percentage\" : 20,\n      \"vatRateId\" : 2\n    } ],\n    \"vatTypeId\" : 1\n  } ],\n  \"NextPageLink\" : \"\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "95124426-7c4e-4aa3-99a1-190a51c29071",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.054748Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "Sales_Get",
+          "schema" : {
+            "properties" : {
+              "Count" : {
+                "format" : "int64",
+                "type" : "integer"
+              },
+              "Items" : {
+                "items" : {
+                  "$ref" : "#/components/schemas/SalesQueryDto"
+                },
+                "type" : "array"
+              },
+              "NextPageLink" : {
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 40
+  }, {
+    "id" : "cd0b5eeb-4c81-4f22-95d0-bf8e670b8daf",
+    "name" : "Updates an existing Quote.",
+    "request" : {
+      "urlPath" : "/v1/quotes/285674309461525934",
+      "method" : "PUT"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{ }",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "cd0b5eeb-4c81-4f22-95d0-bf8e670b8daf",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.054651Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "Quote_Put",
+          "schema" : {
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 41
+  }, {
+    "id" : "9fa417d6-2322-49b7-97f6-13a48d917e21",
+    "name" : "Returns information about a single Quote. - response",
+    "request" : {
+      "urlPath" : "/v1/quotes/6294600813798864943",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"comments\" : \"Sample\",\n  \"companyId\" : 40449,\n  \"customerOwnerId\" : 70583,\n  \"customerOwnerName\" : \"Customer 1\",\n  \"ddNumber\" : \"Sample\",\n  \"entryDate\" : \"2017-01-01T00:00:00\",\n  \"id\" : 1,\n  \"layoutType\" : 1,\n  \"poNumber\" : \"Sample\",\n  \"procDate\" : \"2017-01-05T00:00:00\",\n  \"productTrans\" : [ {\n    \"acEntries\" : [ {\n      \"accountCode\" : \"sample\",\n      \"analysisCategoryId\" : 40888,\n      \"companyId\" : 40449,\n      \"id\" : 1,\n      \"quoteProductTranId\" : 40277,\n      \"value\" : 100\n    } ],\n    \"amount\" : 10,\n    \"companyId\" : 40449,\n    \"id\" : 40277,\n    \"percentage\" : 0,\n    \"productCode\" : \"PRO1\",\n    \"productId\" : 20107,\n    \"quantity\" : 1,\n    \"tranNotes\" : [ \"Product\" ],\n    \"unitPrice\" : 100,\n    \"vatAmount\" : 10,\n    \"vatAnalysisTypeId\" : 0,\n    \"vatRateId\" : 30657\n  } ],\n  \"reference\" : \"000032\",\n  \"saleInvoiceId\" : 30044,\n  \"saleRepId\" : 75783,\n  \"timeStamp\" : \"FSFscBIe2wg=\",\n  \"total\" : 110,\n  \"totalNet\" : 100,\n  \"totalVat\" : 10,\n  \"vatTypeId\" : 1\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "9fa417d6-2322-49b7-97f6-13a48d917e21",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.054546Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "(none)",
+          "schema" : {
+            "example" : {
+              "comments" : "Sample",
+              "companyId" : 40449,
+              "customerOwnerId" : 70583,
+              "customerOwnerName" : "Customer 1",
+              "ddNumber" : "Sample",
+              "entryDate" : "2017-01-01T00:00:00",
+              "id" : 1,
+              "layoutType" : 1,
+              "poNumber" : "Sample",
+              "procDate" : "2017-01-05T00:00:00",
+              "productTrans" : [ {
+                "acEntries" : [ {
+                  "accountCode" : "sample",
+                  "analysisCategoryId" : 40888,
+                  "companyId" : 40449,
+                  "id" : 1,
+                  "quoteProductTranId" : 40277,
+                  "value" : 100
+                } ],
+                "amount" : 10,
+                "companyId" : 40449,
+                "id" : 40277,
+                "percentage" : 0,
+                "productCode" : "PRO1",
+                "productId" : 20107,
+                "quantity" : 1,
+                "tranNotes" : [ "Product" ],
+                "unitPrice" : 100,
+                "vatAmount" : 10,
+                "vatAnalysisTypeId" : 0,
+                "vatRateId" : 30657
+              } ],
+              "saleInvoiceId" : 30044,
+              "saleRepId" : 75783,
+              "timeStamp" : "4OVwcBIe2wg=",
+              "total" : 110,
+              "totalNet" : 100,
+              "totalVat" : 10,
+              "vatTypeId" : 1
+            },
+            "properties" : {
+              "acCode" : {
+                "type" : "string"
+              },
+              "closedDate" : {
+                "format" : "date-time",
+                "type" : "string"
+              },
+              "comments" : {
+                "type" : "string"
+              },
+              "companyId" : {
+                "format" : "int64",
+                "type" : "integer"
+              },
+              "customFields" : {
+                "items" : {
+                  "$ref" : "#/components/schemas/AcudfValueDto"
+                },
+                "type" : "array"
+              },
+              "customerOwnerId" : {
+                "format" : "int64",
+                "type" : "integer"
+              },
+              "customerOwnerName" : {
+                "type" : "string"
+              },
+              "ddNumber" : {
+                "type" : "string"
+              },
+              "deliveryList" : {
+                "type" : "string"
+              },
+              "deliveryTo" : {
+                "items" : {
+                  "type" : "string"
+                },
+                "type" : "array"
+              },
+              "entryDate" : {
+                "format" : "date-time",
+                "type" : "string"
+              },
+              "id" : {
+                "format" : "int64",
+                "type" : "integer"
+              },
+              "layoutType" : {
+                "format" : "int32",
+                "type" : "integer"
+              },
+              "note" : {
+                "type" : "string"
+              },
+              "poNumber" : {
+                "type" : "string"
+              },
+              "procDate" : {
+                "format" : "date-time",
+                "type" : "string"
+              },
+              "productTrans" : {
+                "items" : {
+                  "$ref" : "#/components/schemas/QuoteProductTransDto"
+                },
+                "type" : "array"
+              },
+              "reference" : {
+                "type" : "string"
+              },
+              "saleInvoiceId" : {
+                "format" : "int64",
+                "type" : "integer"
+              },
+              "saleRepCode" : {
+                "type" : "string"
+              },
+              "saleRepId" : {
+                "format" : "int64",
+                "type" : "integer"
+              },
+              "timeStamp" : {
+                "format" : "byte",
+                "type" : "string"
+              },
+              "total" : {
+                "format" : "double",
+                "type" : "number"
+              },
+              "totalNet" : {
+                "format" : "double",
+                "type" : "number"
+              },
+              "totalVat" : {
+                "format" : "double",
+                "type" : "number"
+              },
+              "vatTypeId" : {
+                "format" : "int64",
+                "type" : "integer"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 42
+  }, {
+    "id" : "e66ada93-3f55-4a28-81e0-635c6129a4d1",
+    "name" : "Removes an existing Quote.",
+    "request" : {
+      "urlPath" : "/v1/quotes/4050358181912610194",
+      "method" : "DELETE",
+      "queryParameters" : {
+        "timestamp" : {
+          "equalTo" : "2022-03-31T06%3A44%3A57.050236Z"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{ }",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "e66ada93-3f55-4a28-81e0-635c6129a4d1",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.050269Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "Quote_Delete",
+          "schema" : {
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 43
+  }, {
+    "id" : "0cf29443-5c2a-4661-9b3f-11726a0e7ca2",
+    "name" : "Reopen a Quote.",
+    "request" : {
+      "urlPath" : "/v1/quotes/reopen/4256136666314198641",
+      "method" : "PUT"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{ }",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "0cf29443-5c2a-4661-9b3f-11726a0e7ca2",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.050174Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "Quote_Reopen",
+          "schema" : {
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 44
+  }, {
+    "id" : "dd47e1d0-6139-455b-9b49-2e211df24cec",
+    "name" : "Generate a sale invoice from a Quote.\r\nWhen sale invoice is empty, new sale invoice will be generated from Quote.",
+    "request" : {
+      "urlPath" : "/v1/quotes/generateSaleInvoice",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{ }",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "dd47e1d0-6139-455b-9b49-2e211df24cec",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.050118Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "Quote_Post_GenerateSaleInvoice",
+          "schema" : {
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 45
+  }, {
+    "id" : "65c2f7ea-dcef-4057-b1da-afcfb1ddf423",
+    "name" : "Creates a new Quote with auto generating reference.",
+    "request" : {
+      "urlPath" : "/v1/quotes/createQuoteWithGeneratingReference",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{ }",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "65c2f7ea-dcef-4057-b1da-afcfb1ddf423",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.050067Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "Quote_Post_CreateQuoteWithGeneratingReference",
+          "schema" : {
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 46
+  }, {
+    "id" : "81c78990-dd48-4a8f-8f5a-672564f19c85",
+    "name" : "Close a Quote.",
+    "request" : {
+      "urlPath" : "/v1/quotes/close/7870623632225926261",
+      "method" : "PUT"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{ }",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "81c78990-dd48-4a8f-8f5a-672564f19c85",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.050014Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "Quote_Close",
+          "schema" : {
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 47
+  }, {
+    "id" : "f6477e03-437f-4817-a774-3b881d5c7c88",
+    "name" : "Processes a batch of Quote.",
+    "request" : {
+      "urlPath" : "/v1/quotes/batch",
+      "method" : "PUT"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{ }",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "f6477e03-437f-4817-a774-3b881d5c7c88",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.049648Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "Quote_ProcessBatch",
+          "schema" : {
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 48
+  }, {
+    "id" : "31951506-922d-4b9d-9177-b41f34d36bad",
+    "name" : "Creates a new Quote.",
+    "request" : {
+      "urlPath" : "/v1/quotes",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{ }",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "31951506-922d-4b9d-9177-b41f34d36bad",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.049604Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "Quote_Post",
+          "schema" : {
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 49
+  }, {
+    "id" : "689af280-a152-4fc2-8291-b94559c6cb78",
+    "name" : "Returns a list of company's Quotes.\r\nFiltering is forbidden.\r\nOrdering is allowed by \"id\". - response",
+    "request" : {
+      "urlPath" : "/v1/quotes",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"Count\" : 1,\n  \"Items\" : [ {\n    \"comments\" : \"Sample\",\n    \"companyId\" : 40449,\n    \"customerOwnerId\" : 70583,\n    \"customerOwnerName\" : \"Customer 1\",\n    \"ddNumber\" : \"Sample\",\n    \"entryDate\" : \"2017-01-01T00:00:00\",\n    \"id\" : 1,\n    \"layoutType\" : 1,\n    \"poNumber\" : \"Sample\",\n    \"procDate\" : \"2017-01-05T00:00:00\",\n    \"productTrans\" : [ {\n      \"acEntries\" : [ {\n        \"accountCode\" : \"sample\",\n        \"analysisCategoryId\" : 40888,\n        \"companyId\" : 40449,\n        \"id\" : 1,\n        \"quoteProductTranId\" : 40277,\n        \"value\" : 100\n      } ],\n      \"amount\" : 10,\n      \"companyId\" : 40449,\n      \"id\" : 40277,\n      \"percentage\" : 0,\n      \"productCode\" : \"PRO1\",\n      \"productId\" : 20107,\n      \"quantity\" : 1,\n      \"tranNotes\" : [ \"Product\" ],\n      \"unitPrice\" : 100,\n      \"vatAmount\" : 10,\n      \"vatAnalysisTypeId\" : 0,\n      \"vatRateId\" : 30657\n    } ],\n    \"reference\" : \"000032\",\n    \"saleInvoiceId\" : 30044,\n    \"saleRepId\" : 75783,\n    \"timeStamp\" : \"QvpkcBIe2wg=\",\n    \"total\" : 110,\n    \"totalNet\" : 100,\n    \"totalVat\" : 10,\n    \"vatTypeId\" : 1\n  } ],\n  \"NextPageLink\" : \"\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "689af280-a152-4fc2-8291-b94559c6cb78",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.049554Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "Quote_Get",
+          "schema" : {
+            "properties" : {
+              "Count" : {
+                "format" : "int64",
+                "type" : "integer"
+              },
+              "Items" : {
+                "items" : {
+                  "$ref" : "#/components/schemas/QuoteDto"
+                },
+                "type" : "array"
+              },
+              "NextPageLink" : {
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 50
+  }, {
+    "id" : "2438ab86-c131-4d5c-809b-7fcfe1b12901",
+    "name" : "Updates an existing Purchase.",
+    "request" : {
+      "urlPath" : "/v1/purchases/8877414515239036258",
+      "method" : "PUT"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{ }",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "2438ab86-c131-4d5c-809b-7fcfe1b12901",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.049427Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "Purchases_Put",
+          "schema" : {
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 51
+  }, {
+    "id" : "2c63358e-6913-48fa-a55a-d1c1e60eb61c",
+    "name" : "Returns information about a single Purchases. - response",
+    "request" : {
+      "urlPath" : "/v1/purchases/6358697337712509686",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"acCode\" : \"SUP3\",\n  \"acEntries\" : [ {\n    \"accountCode\" : \"PU03\",\n    \"analysisCategoryId\" : 10441,\n    \"description\" : \"PUR 3\",\n    \"id\" : 12518,\n    \"value\" : 90.91\n  } ],\n  \"bookTranTypeId\" : 4,\n  \"customFields\" : [ ],\n  \"detailCollection\" : [ ],\n  \"entryDate\" : \"2016-06-01T00:00:00\",\n  \"id\" : 13380,\n  \"isDiscrepancyAccepted\" : false,\n  \"netGoods\" : 0,\n  \"netServices\" : 0,\n  \"note\" : \"Supplier 3\",\n  \"postponedAccounting\" : false,\n  \"procDate\" : \"2016-06-24T00:00:00\",\n  \"reference\" : \"000001\",\n  \"supplierId\" : 10173,\n  \"timestamp\" : \"eDVgcBIe2wg=\",\n  \"total\" : 100,\n  \"totalNet\" : 90.91,\n  \"totalVAT\" : 9.09,\n  \"unallocated\" : 100,\n  \"unpaid\" : 100,\n  \"vatEntries\" : [ {\n    \"amount\" : 90.91,\n    \"id\" : 12267,\n    \"percentage\" : 10,\n    \"vatRateId\" : 10317\n  } ],\n  \"vatTypeId\" : 1\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "2c63358e-6913-48fa-a55a-d1c1e60eb61c",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.049137Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "(none)",
+          "schema" : {
+            "example" : {
+              "acCode" : "SUP3",
+              "acEntries" : [ {
+                "accountCode" : "PU03",
+                "analysisCategoryId" : 10441,
+                "description" : "PUR 3",
+                "id" : 12518,
+                "value" : 90.91
+              } ],
+              "bookTranTypeId" : 4,
+              "customFields" : [ ],
+              "detailCollection" : [ ],
+              "entryDate" : "2016-06-01T00:00:00",
+              "id" : 13380,
+              "isDiscrepancyAccepted" : false,
+              "netGoods" : 0,
+              "netServices" : 0,
+              "note" : "Supplier 3",
+              "postponedAccounting" : false,
+              "procDate" : "2016-06-24T00:00:00",
+              "reference" : "000001",
+              "supplierId" : 10173,
+              "timestamp" : "eDVgcBIe2wg=",
+              "total" : 100,
+              "totalNet" : 90.91,
+              "totalVAT" : 9.09,
+              "unallocated" : 100,
+              "unpaid" : 100,
+              "vatEntries" : [ {
+                "amount" : 90.91,
+                "id" : 12267,
+                "percentage" : 10,
+                "vatRateId" : 10317
+              } ],
+              "vatTypeId" : 1
+            },
+            "properties" : {
+              "acCode" : {
+                "type" : "string"
+              },
+              "acEntries" : {
+                "items" : {
+                  "$ref" : "#/components/schemas/AcEntryDto"
+                },
+                "type" : "array"
+              },
+              "bookTranTypeId" : {
+                "format" : "int64",
+                "type" : "integer"
+              },
+              "customFields" : {
+                "items" : {
+                  "$ref" : "#/components/schemas/AcudfValueDto"
+                },
+                "type" : "array"
+              },
+              "detailCollection" : {
+                "items" : {
+                  "type" : "string"
+                },
+                "type" : "array"
+              },
+              "entryDate" : {
+                "format" : "date-time",
+                "type" : "string"
+              },
+              "id" : {
+                "format" : "int64",
+                "type" : "integer"
+              },
+              "isDiscrepancyAccepted" : {
+                "type" : "boolean"
+              },
+              "netGoods" : {
+                "format" : "double",
+                "type" : "number"
+              },
+              "netServices" : {
+                "format" : "double",
+                "type" : "number"
+              },
+              "note" : {
+                "type" : "string"
+              },
+              "postponedAccounting" : {
+                "type" : "boolean"
+              },
+              "procDate" : {
+                "format" : "date-time",
+                "type" : "string"
+              },
+              "reference" : {
+                "type" : "string"
+              },
+              "supplierId" : {
+                "format" : "int64",
+                "type" : "integer"
+              },
+              "timestamp" : {
+                "format" : "byte",
+                "type" : "string"
+              },
+              "total" : {
+                "format" : "double",
+                "type" : "number"
+              },
+              "totalNet" : {
+                "format" : "double",
+                "type" : "number"
+              },
+              "totalVAT" : {
+                "format" : "double",
+                "type" : "number"
+              },
+              "unallocated" : {
+                "format" : "double",
+                "type" : "number"
+              },
+              "unpaid" : {
+                "format" : "double",
+                "type" : "number"
+              },
+              "vatEntries" : {
+                "items" : {
+                  "$ref" : "#/components/schemas/VatEntryDto"
+                },
+                "type" : "array"
+              },
+              "vatTypeId" : {
+                "format" : "int64",
+                "type" : "integer"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 52
+  }, {
+    "id" : "edbebab9-9a8b-41b7-982e-e085738c7dc2",
+    "name" : "Removes an existing Purchase.",
+    "request" : {
+      "urlPath" : "/v1/purchases/5676704944452609900",
+      "method" : "DELETE",
+      "queryParameters" : {
+        "timestamp" : {
+          "equalTo" : "2022-06-06T07%3A04%3A57.048414Z"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{ }",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "edbebab9-9a8b-41b7-982e-e085738c7dc2",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.048449Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "Purchases_Delete",
+          "schema" : {
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 53
+  }, {
+    "id" : "2c7e80a2-637c-4e37-a1f6-3e5681b6ac70",
+    "name" : "Processes a batch of Purchases.",
+    "request" : {
+      "urlPath" : "/v1/purchases/batch",
+      "method" : "PUT"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{ }",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "2c7e80a2-637c-4e37-a1f6-3e5681b6ac70",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.048355Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "Purchases_ProcessBatch",
+          "schema" : {
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 54
+  }, {
+    "id" : "c6e22dd6-0b30-42a8-9bcc-752aabc241cd",
+    "name" : "Creates a new Purchase.",
+    "request" : {
+      "urlPath" : "/v1/purchases",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{ }",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "c6e22dd6-0b30-42a8-9bcc-752aabc241cd",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.048307Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "Purchases_Post",
+          "schema" : {
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 55
+  }, {
+    "id" : "2ceccdf9-fa74-4482-87f6-92b80eae27ee",
+    "name" : "Returns a list of company's Purchases. Supports OData querying protocol.\r\nFiltering is allowed by \"entryDate\" field.\r\nOrdering is allowed by \"id\" field. - response",
+    "request" : {
+      "urlPath" : "/v1/purchases",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"Count\" : 1,\n  \"Items\" : [ {\n    \"acCode\" : \"SUP3\",\n    \"acEntries\" : [ {\n      \"accountCode\" : \"PU03\",\n      \"analysisCategoryId\" : 10441,\n      \"description\" : \"PUR 3\",\n      \"id\" : 12518,\n      \"value\" : 90.91\n    } ],\n    \"bookTranTypeId\" : 4,\n    \"customFields\" : [ ],\n    \"detailCollection\" : [ ],\n    \"entryDate\" : \"2016-06-01T00:00:00\",\n    \"id\" : 13380,\n    \"netGoods\" : 0,\n    \"netServices\" : 0,\n    \"note\" : \"Supplier 3\",\n    \"postponedAccounting\" : false,\n    \"procDate\" : \"2016-06-24T00:00:00\",\n    \"reference\" : \"000001\",\n    \"supplierId\" : 10173,\n    \"timestamp\" : \"tHBbcBIe2wg=\",\n    \"total\" : 100,\n    \"totalNet\" : 90.91,\n    \"totalVAT\" : 9.09,\n    \"unallocated\" : 100,\n    \"unpaid\" : 100,\n    \"vatEntries\" : [ {\n      \"amount\" : 90.91,\n      \"id\" : 12267,\n      \"percentage\" : 10,\n      \"vatRateId\" : 10317\n    } ],\n    \"vatTypeId\" : 1\n  } ],\n  \"NextPageLink\" : \"\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "2ceccdf9-fa74-4482-87f6-92b80eae27ee",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.048261Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "Purchases_Get",
+          "schema" : {
+            "properties" : {
+              "Count" : {
+                "format" : "int64",
+                "type" : "integer"
+              },
+              "Items" : {
+                "items" : {
+                  "$ref" : "#/components/schemas/PurchaseQueryDto"
+                },
+                "type" : "array"
+              },
+              "NextPageLink" : {
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 56
+  }, {
+    "id" : "70a90ed4-9b42-4815-ac40-bfb79cdc16d5",
+    "name" : "Updates an existing Product.",
+    "request" : {
+      "urlPath" : "/v1/products/8313711948332552280",
+      "method" : "PUT"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{ }",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "70a90ed4-9b42-4815-ac40-bfb79cdc16d5",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.048009Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "Products_Put",
+          "schema" : {
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 57
+  }, {
+    "id" : "66966eb5-aead-4eb2-910d-fca39c96b92b",
+    "name" : "Returns information about a single Product. - response",
+    "request" : {
+      "urlPath" : "/v1/products/3063008574577743443",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"details\" : [ \"det1\", \"det2\", \"det3\" ],\n  \"grossUnitPrice\" : false,\n  \"hasDefaultVatRate\" : false,\n  \"id\" : 9,\n  \"productTypeId\" : 0,\n  \"stockCode\" : \"PRO1\",\n  \"timestamp\" : \"6IRPcBIe2wg=\",\n  \"unitPrice\" : 100,\n  \"vatAnalysisTypeId\" : 1\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "66966eb5-aead-4eb2-910d-fca39c96b92b",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.047949Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "(none)",
+          "schema" : {
+            "example" : {
+              "details" : [ "det1", "det2", "det3" ],
+              "grossUnitPrice" : false,
+              "hasDefaultVatRate" : false,
+              "id" : 9,
+              "productTypeId" : 0,
+              "stockCode" : "PRO1",
+              "timestamp" : "6IRPcBIe2wg=",
+              "unitPrice" : 100,
+              "vatAnalysisTypeId" : 1
+            },
+            "properties" : {
+              "details" : {
+                "items" : {
+                  "type" : "string"
+                },
+                "type" : "array"
+              },
+              "grossUnitPrice" : {
+                "type" : "boolean"
+              },
+              "hasDefaultVatRate" : {
+                "type" : "boolean"
+              },
+              "id" : {
+                "format" : "int64",
+                "type" : "integer"
+              },
+              "productTypeId" : {
+                "format" : "int64",
+                "type" : "integer"
+              },
+              "stockCode" : {
+                "type" : "string"
+              },
+              "timestamp" : {
+                "format" : "byte",
+                "type" : "string"
+              },
+              "unitPrice" : {
+                "format" : "double",
+                "type" : "number"
+              },
+              "vatAnalysisTypeId" : {
+                "format" : "int64",
+                "type" : "integer"
+              },
+              "vatRateId" : {
+                "format" : "int64",
+                "type" : "integer"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 58
+  }, {
+    "id" : "0ff8d8f1-e0c8-4d5a-891d-6715dc3985b8",
+    "name" : "Removes an existing Product.",
+    "request" : {
+      "urlPath" : "/v1/products/4560527885286379639",
+      "method" : "DELETE",
+      "queryParameters" : {
+        "timestamp" : {
+          "equalTo" : "2022-06-17T08%3A52%3A57.047676Z"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{ }",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "0ff8d8f1-e0c8-4d5a-891d-6715dc3985b8",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.047713Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "Products_Delete",
+          "schema" : {
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 59
+  }, {
+    "id" : "2abd640d-5eb2-44c0-980a-1463bfad9a53",
+    "name" : "Processes a batch of Products.",
+    "request" : {
+      "urlPath" : "/v1/products/batch",
+      "method" : "PUT"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{ }",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "2abd640d-5eb2-44c0-980a-1463bfad9a53",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.047577Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "Products_ProcessBatch",
+          "schema" : {
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 60
+  }, {
+    "id" : "605298d2-3d51-462b-97bf-fb10f793d870",
+    "name" : "Creates a new Product.",
+    "request" : {
+      "urlPath" : "/v1/products",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{ }",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "605298d2-3d51-462b-97bf-fb10f793d870",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.047047Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "Products_Post",
+          "schema" : {
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 61
+  }, {
+    "id" : "176ae2c5-c05e-410f-989f-dbd4f71e4880",
+    "name" : "Returns a list of company's Products. Supports OData querying protocol.\r\nFiltering is forbidden.\r\nOrdering is allowed by \"id\" and \"stockCode\" fields. - response",
+    "request" : {
+      "urlPath" : "/v1/products",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"Count\" : 1,\n  \"Items\" : [ {\n    \"details\" : [ \"det1\", \"det2\", \"det3\" ],\n    \"grossUnitPrice\" : false,\n    \"hasDefaultVatRate\" : false,\n    \"id\" : 9,\n    \"productTypeId\" : 0,\n    \"stockCode\" : \"PRO1\",\n    \"timestamp\" : \"eiJNcBIe2wg=\",\n    \"unitPrice\" : 100,\n    \"vatAnalysisTypeId\" : 1\n  } ],\n  \"NextPageLink\" : \"\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "176ae2c5-c05e-410f-989f-dbd4f71e4880",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.046999Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "Products_Get",
+          "schema" : {
+            "properties" : {
+              "Count" : {
+                "format" : "int64",
+                "type" : "integer"
+              },
+              "Items" : {
+                "items" : {
+                  "$ref" : "#/components/schemas/ProductDto"
+                },
+                "type" : "array"
+              },
+              "NextPageLink" : {
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 62
+  }, {
+    "id" : "06080c6a-722c-4c08-bd90-4fd814012ce6",
+    "name" : "Returns a list of global Product Types. Supports OData querying protocol.\r\nFiltering is forbidden.\r\nOrdering is allowed by \"id\" field. - response",
+    "request" : {
+      "urlPath" : "/v1/productTypes",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"Count\" : 3,\n  \"Items\" : [ {\n    \"description\" : \"Prospect\",\n    \"id\" : 1,\n    \"recordTypeGroupId\" : 1\n  }, {\n    \"description\" : \"Customer\",\n    \"id\" : 2,\n    \"recordTypeGroupId\" : 1\n  }, {\n    \"description\" : \"Supplier\",\n    \"id\" : 3,\n    \"recordTypeGroupId\" : 2\n  } ],\n  \"NextPageLink\" : \"\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "06080c6a-722c-4c08-bd90-4fd814012ce6",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.046903Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "ProductTypes_Get",
+          "schema" : {
+            "properties" : {
+              "Count" : {
+                "format" : "int64",
+                "type" : "integer"
+              },
+              "Items" : {
+                "items" : {
+                  "$ref" : "#/components/schemas/OwnerTypeDto"
+                },
+                "type" : "array"
+              },
+              "NextPageLink" : {
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 63
+  }, {
+    "id" : "84f30350-48a0-4aaa-9a5b-0432c3bf2cb7",
+    "name" : "Updates an existing Payment.",
+    "request" : {
+      "urlPath" : "/v1/payments/1046635919445887411",
+      "method" : "PUT"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{ }",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "84f30350-48a0-4aaa-9a5b-0432c3bf2cb7",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.046807Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "Payments_Put",
+          "schema" : {
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 64
+  }, {
+    "id" : "6192ca93-f85f-4016-a44e-e88168ed7845",
+    "name" : "Returns information about a single Payments. - response",
+    "request" : {
+      "urlPath" : "/v1/payments/1532482252356872413",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"acCode\" : \"C1\",\n  \"acEntries\" : [ ],\n  \"bankAccountCode\" : \"B1\",\n  \"bankAccountId\" : 1,\n  \"bookTranTypeId\" : 3,\n  \"customFields\" : [ {\n    \"description\" : \"F1\",\n    \"id\" : 1,\n    \"userDefinedFieldId\" : 1,\n    \"value\" : \"f1\"\n  }, {\n    \"description\" : \"F2\",\n    \"id\" : 2,\n    \"userDefinedFieldId\" : 2,\n    \"value\" : \"f2\"\n  } ],\n  \"detailCollection\" : [ \"d1\", \"d2\" ],\n  \"discount\" : 2,\n  \"entryDate\" : \"2011-07-01T00:00:00\",\n  \"id\" : 2,\n  \"note\" : \"123\",\n  \"procDate\" : \"2011-08-08T00:00:00\",\n  \"reference\" : \"000002\",\n  \"supplierId\" : 2,\n  \"timestamp\" : \"CcBKcBIe2wg=\",\n  \"total\" : 155,\n  \"transferBankCode\" : \"\",\n  \"transferBankId\" : 1,\n  \"unallocated\" : 155\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "6192ca93-f85f-4016-a44e-e88168ed7845",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.046705Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "(none)",
+          "schema" : {
+            "example" : {
+              "acCode" : "C1",
+              "acEntries" : [ ],
+              "bankAccountCode" : "B1",
+              "bankAccountId" : 1,
+              "bookTranTypeId" : 3,
+              "customFields" : [ {
+                "description" : "F1",
+                "id" : 1,
+                "userDefinedFieldId" : 1,
+                "value" : "f1"
+              }, {
+                "description" : "F2",
+                "id" : 2,
+                "userDefinedFieldId" : 2,
+                "value" : "f2"
+              } ],
+              "detailCollection" : [ "d1", "d2" ],
+              "discount" : 2,
+              "entryDate" : "2011-07-01T00:00:00",
+              "id" : 2,
+              "note" : "123",
+              "procDate" : "2011-08-08T00:00:00",
+              "reference" : "000002",
+              "supplierId" : 2,
+              "timestamp" : "CcBKcBIe2wg=",
+              "total" : 155,
+              "transferBankCode" : "",
+              "transferBankId" : 1,
+              "unallocated" : 155
+            },
+            "properties" : {
+              "acCode" : {
+                "type" : "string"
+              },
+              "acEntries" : {
+                "items" : {
+                  "$ref" : "#/components/schemas/AcEntryDto"
+                },
+                "type" : "array"
+              },
+              "bankAccountCode" : {
+                "type" : "string"
+              },
+              "bankAccountId" : {
+                "format" : "int64",
+                "type" : "integer"
+              },
+              "bookTranTypeId" : {
+                "format" : "int64",
+                "type" : "integer"
+              },
+              "customFields" : {
+                "items" : {
+                  "$ref" : "#/components/schemas/AcudfValueDto"
+                },
+                "type" : "array"
+              },
+              "detailCollection" : {
+                "items" : {
+                  "type" : "string"
+                },
+                "type" : "array"
+              },
+              "discount" : {
+                "format" : "double",
+                "type" : "number"
+              },
+              "entryDate" : {
+                "format" : "date-time",
+                "type" : "string"
+              },
+              "id" : {
+                "format" : "int64",
+                "type" : "integer"
+              },
+              "note" : {
+                "type" : "string"
+              },
+              "plaidTransactionId" : {
+                "type" : "string"
+              },
+              "procDate" : {
+                "format" : "date-time",
+                "type" : "string"
+              },
+              "reference" : {
+                "type" : "string"
+              },
+              "supplierId" : {
+                "format" : "int64",
+                "type" : "integer"
+              },
+              "timestamp" : {
+                "format" : "byte",
+                "type" : "string"
+              },
+              "total" : {
+                "format" : "double",
+                "type" : "number"
+              },
+              "transferBankCode" : {
+                "type" : "string"
+              },
+              "transferBankId" : {
+                "format" : "int64",
+                "type" : "integer"
+              },
+              "unallocated" : {
+                "format" : "double",
+                "type" : "number"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 65
+  }, {
+    "id" : "5b3aecdc-0bdc-4338-83b6-559e231796ce",
+    "name" : "Removes an existing Payment.",
+    "request" : {
+      "urlPath" : "/v1/payments/2134790499223586170",
+      "method" : "DELETE",
+      "queryParameters" : {
+        "timestamp" : {
+          "equalTo" : "2022-07-07T07%3A20%3A57.044527Z"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{ }",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "5b3aecdc-0bdc-4338-83b6-559e231796ce",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.044563Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "Payments_Delete",
+          "schema" : {
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 66
+  }, {
+    "id" : "0639772c-ce6d-4e95-896c-cf95d732ae7e",
+    "name" : "Processes a batch of Payments.",
+    "request" : {
+      "urlPath" : "/v1/payments/batch",
+      "method" : "PUT"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{ }",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "0639772c-ce6d-4e95-896c-cf95d732ae7e",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.04445Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "Payments_ProcessBatch",
+          "schema" : {
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 67
+  }, {
+    "id" : "47ec250a-d9e0-4503-ad9f-12f36b6ee689",
+    "name" : "Creates a new Payment.",
+    "request" : {
+      "urlPath" : "/v1/payments",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{ }",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "47ec250a-d9e0-4503-ad9f-12f36b6ee689",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.04392Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "Payments_Post",
+          "schema" : {
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 68
+  }, {
+    "id" : "685a5f13-3a4c-4d89-baca-cdd4c10e5e56",
+    "name" : "Returns a list of company's Payments. Supports OData querying protocol.\r\nFiltering is allowed by \"entryDate\" field.\r\nOrdering is allowed by \"id\" field. - response",
+    "request" : {
+      "urlPath" : "/v1/payments",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"Count\" : 1,\n  \"Items\" : [ {\n    \"acCode\" : \"C1\",\n    \"acEntries\" : [ ],\n    \"bankAccountCode\" : \"B1\",\n    \"bankAccountId\" : 1,\n    \"bookTranTypeId\" : 3,\n    \"customFields\" : [ {\n      \"description\" : \"F1\",\n      \"id\" : 1,\n      \"userDefinedFieldId\" : 1,\n      \"value\" : \"f1\"\n    }, {\n      \"description\" : \"F2\",\n      \"id\" : 2,\n      \"userDefinedFieldId\" : 2,\n      \"value\" : \"f2\"\n    } ],\n    \"detailCollection\" : [ \"d1\", \"d2\" ],\n    \"discount\" : 2,\n    \"entryDate\" : \"2011-07-01T00:00:00\",\n    \"id\" : 2,\n    \"note\" : \"123\",\n    \"procDate\" : \"2011-08-08T00:00:00\",\n    \"reference\" : \"000002\",\n    \"supplierId\" : 2,\n    \"timestamp\" : \"AJlDcBIe2wg=\",\n    \"total\" : 155,\n    \"transferBankCode\" : \"\",\n    \"transferBankId\" : 1,\n    \"unallocated\" : 155\n  } ],\n  \"NextPageLink\" : \"\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "685a5f13-3a4c-4d89-baca-cdd4c10e5e56",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.043875Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "Payments_Get",
+          "schema" : {
+            "properties" : {
+              "Count" : {
+                "format" : "int64",
+                "type" : "integer"
+              },
+              "Items" : {
+                "items" : {
+                  "$ref" : "#/components/schemas/PaymentQueryDto"
+                },
+                "type" : "array"
+              },
+              "NextPageLink" : {
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 69
+  }, {
+    "id" : "18b6c21c-5a1d-4c5b-9868-f5842b930452",
+    "name" : "Returns a list of global Owner Types. Supports OData querying protocol.\r\nFiltering is forbidden.\r\nOrdering is allowed by \"id\" field. - response",
+    "request" : {
+      "urlPath" : "/v1/ownerTypes",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"Count\" : 3,\n  \"Items\" : [ {\n    \"description\" : \"Prospect\",\n    \"id\" : 1,\n    \"recordTypeGroupId\" : 1\n  }, {\n    \"description\" : \"Customer\",\n    \"id\" : 2,\n    \"recordTypeGroupId\" : 1\n  }, {\n    \"description\" : \"Supplier\",\n    \"id\" : 3,\n    \"recordTypeGroupId\" : 2\n  } ],\n  \"NextPageLink\" : \"\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "18b6c21c-5a1d-4c5b-9868-f5842b930452",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.043787Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "OwnerTypes_Get",
+          "schema" : {
+            "properties" : {
+              "Count" : {
+                "format" : "int64",
+                "type" : "integer"
+              },
+              "Items" : {
+                "items" : {
+                  "$ref" : "#/components/schemas/OwnerTypeDto"
+                },
+                "type" : "array"
+              },
+              "NextPageLink" : {
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 70
+  }, {
+    "id" : "afc48a59-93e5-40dc-9b3a-c996f5b79e8b",
+    "name" : "Returns a list of global Owner Type Groups. Supports OData querying protocol.\r\nFiltering is forbidden.\r\nOrdering is allowed by \"id\" field. - response",
+    "request" : {
+      "urlPath" : "/v1/ownerTypeGroups",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"Count\" : 2,\n  \"Items\" : [ {\n    \"description\" : \"Customer\",\n    \"id\" : 1\n  }, {\n    \"description\" : \"Supplier\",\n    \"id\" : 2\n  } ],\n  \"NextPageLink\" : \"\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "afc48a59-93e5-40dc-9b3a-c996f5b79e8b",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.043663Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "OwnerTypeGroups_Get",
+          "schema" : {
+            "properties" : {
+              "Count" : {
+                "format" : "int64",
+                "type" : "integer"
+              },
+              "Items" : {
+                "items" : {
+                  "$ref" : "#/components/schemas/OwnerTypeGroupDto"
+                },
+                "type" : "array"
+              },
+              "NextPageLink" : {
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 71
+  }, {
+    "id" : "93be4a0a-e46b-451e-8c13-b9fbfb53ea21",
+    "name" : "Sends a Sales Invoice email.\r\nIf \"toAddress\" is not empty then email will be sent to this address. Otherwise email will be sent to Sales Invoice Customer's address.",
+    "request" : {
+      "urlPath" : "/v1/email/sendSalesInvoice",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{ }",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "93be4a0a-e46b-451e-8c13-b9fbfb53ea21",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.043381Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "Email_SendSalesInvoice",
+          "schema" : {
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 72
+  }, {
+    "id" : "2be16eaf-c6f1-4480-a316-43ff1c7b2f60",
+    "name" : "Sends a Quote email.\r\nIf \"toAddress\" is not empty then email will be sent to this address. Otherwise email will be sent to Statement Customer's address.",
+    "request" : {
+      "urlPath" : "/v1/email/sendQuote",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{ }",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "2be16eaf-c6f1-4480-a316-43ff1c7b2f60",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.04334Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "Email_SendQuote",
+          "schema" : {
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 73
+  }, {
+    "id" : "4307588d-5553-416b-8c02-c5b0281f255c",
+    "name" : "Sends a Statement email.\r\nIf \"toAddress\" is not empty then email will be sent to this address. Otherwise email will be sent to Statement Customer's address.",
+    "request" : {
+      "urlPath" : "/v1/email/sendEmailStatement",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{ }",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "4307588d-5553-416b-8c02-c5b0281f255c",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.0433Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "Email_SendEmailStatement",
+          "schema" : {
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 74
+  }, {
+    "id" : "764abb80-25bd-4ef6-8bdf-e133da98e9cb",
+    "name" : "Returns a list of Customer's quotes.",
+    "request" : {
+      "urlPath" : "/v1/customers/2138071040832866311/quotes",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "[ {\n  \"comments\" : \"Sample\",\n  \"companyId\" : 40449,\n  \"customerOwnerId\" : 70583,\n  \"customerOwnerName\" : \"Customer 1\",\n  \"ddNumber\" : \"Sample\",\n  \"entryDate\" : \"2017-01-01T00:00:00\",\n  \"id\" : 1,\n  \"layoutType\" : 1,\n  \"poNumber\" : \"Sample\",\n  \"procDate\" : \"2017-01-05T00:00:00\",\n  \"productTrans\" : [ {\n    \"acEntries\" : [ {\n      \"accountCode\" : \"sample\",\n      \"analysisCategoryId\" : 40888,\n      \"companyId\" : 40449,\n      \"id\" : 1,\n      \"quoteProductTranId\" : 40277,\n      \"value\" : 100\n    } ],\n    \"amount\" : 10,\n    \"companyId\" : 40449,\n    \"id\" : 40277,\n    \"percentage\" : 0,\n    \"productCode\" : \"PRO1\",\n    \"productId\" : 20107,\n    \"quantity\" : 1,\n    \"tranNotes\" : [ \"Product\" ],\n    \"unitPrice\" : 100,\n    \"vatAmount\" : 10,\n    \"vatAnalysisTypeId\" : 0,\n    \"vatRateId\" : 30657\n  } ],\n  \"saleInvoiceId\" : 30044,\n  \"saleRepId\" : 75783,\n  \"timeStamp\" : \"4OVwcBIe2wg=\",\n  \"total\" : 110,\n  \"totalNet\" : 100,\n  \"totalVat\" : 10,\n  \"vatTypeId\" : 1\n}, {\n  \"comments\" : \"Sample\",\n  \"companyId\" : 40449,\n  \"customerOwnerId\" : 70583,\n  \"customerOwnerName\" : \"Customer 1\",\n  \"ddNumber\" : \"Sample\",\n  \"entryDate\" : \"2017-01-01T00:00:00\",\n  \"id\" : 1,\n  \"layoutType\" : 1,\n  \"poNumber\" : \"Sample\",\n  \"procDate\" : \"2017-01-05T00:00:00\",\n  \"productTrans\" : [ {\n    \"acEntries\" : [ {\n      \"accountCode\" : \"sample\",\n      \"analysisCategoryId\" : 40888,\n      \"companyId\" : 40449,\n      \"id\" : 1,\n      \"quoteProductTranId\" : 40277,\n      \"value\" : 100\n    } ],\n    \"amount\" : 10,\n    \"companyId\" : 40449,\n    \"id\" : 40277,\n    \"percentage\" : 0,\n    \"productCode\" : \"PRO1\",\n    \"productId\" : 20107,\n    \"quantity\" : 1,\n    \"tranNotes\" : [ \"Product\" ],\n    \"unitPrice\" : 100,\n    \"vatAmount\" : 10,\n    \"vatAnalysisTypeId\" : 0,\n    \"vatRateId\" : 30657\n  } ],\n  \"saleInvoiceId\" : 30044,\n  \"saleRepId\" : 75783,\n  \"timeStamp\" : \"4OVwcBIe2wg=\",\n  \"total\" : 110,\n  \"totalNet\" : 100,\n  \"totalVat\" : 10,\n  \"vatTypeId\" : 1\n}, {\n  \"comments\" : \"Sample\",\n  \"companyId\" : 40449,\n  \"customerOwnerId\" : 70583,\n  \"customerOwnerName\" : \"Customer 1\",\n  \"ddNumber\" : \"Sample\",\n  \"entryDate\" : \"2017-01-01T00:00:00\",\n  \"id\" : 1,\n  \"layoutType\" : 1,\n  \"poNumber\" : \"Sample\",\n  \"procDate\" : \"2017-01-05T00:00:00\",\n  \"productTrans\" : [ {\n    \"acEntries\" : [ {\n      \"accountCode\" : \"sample\",\n      \"analysisCategoryId\" : 40888,\n      \"companyId\" : 40449,\n      \"id\" : 1,\n      \"quoteProductTranId\" : 40277,\n      \"value\" : 100\n    } ],\n    \"amount\" : 10,\n    \"companyId\" : 40449,\n    \"id\" : 40277,\n    \"percentage\" : 0,\n    \"productCode\" : \"PRO1\",\n    \"productId\" : 20107,\n    \"quantity\" : 1,\n    \"tranNotes\" : [ \"Product\" ],\n    \"unitPrice\" : 100,\n    \"vatAmount\" : 10,\n    \"vatAnalysisTypeId\" : 0,\n    \"vatRateId\" : 30657\n  } ],\n  \"saleInvoiceId\" : 30044,\n  \"saleRepId\" : 75783,\n  \"timeStamp\" : \"4OVwcBIe2wg=\",\n  \"total\" : 110,\n  \"totalNet\" : 100,\n  \"totalVat\" : 10,\n  \"vatTypeId\" : 1\n}, {\n  \"comments\" : \"Sample\",\n  \"companyId\" : 40449,\n  \"customerOwnerId\" : 70583,\n  \"customerOwnerName\" : \"Customer 1\",\n  \"ddNumber\" : \"Sample\",\n  \"entryDate\" : \"2017-01-01T00:00:00\",\n  \"id\" : 1,\n  \"layoutType\" : 1,\n  \"poNumber\" : \"Sample\",\n  \"procDate\" : \"2017-01-05T00:00:00\",\n  \"productTrans\" : [ {\n    \"acEntries\" : [ {\n      \"accountCode\" : \"sample\",\n      \"analysisCategoryId\" : 40888,\n      \"companyId\" : 40449,\n      \"id\" : 1,\n      \"quoteProductTranId\" : 40277,\n      \"value\" : 100\n    } ],\n    \"amount\" : 10,\n    \"companyId\" : 40449,\n    \"id\" : 40277,\n    \"percentage\" : 0,\n    \"productCode\" : \"PRO1\",\n    \"productId\" : 20107,\n    \"quantity\" : 1,\n    \"tranNotes\" : [ \"Product\" ],\n    \"unitPrice\" : 100,\n    \"vatAmount\" : 10,\n    \"vatAnalysisTypeId\" : 0,\n    \"vatRateId\" : 30657\n  } ],\n  \"saleInvoiceId\" : 30044,\n  \"saleRepId\" : 75783,\n  \"timeStamp\" : \"4OVwcBIe2wg=\",\n  \"total\" : 110,\n  \"totalNet\" : 100,\n  \"totalVat\" : 10,\n  \"vatTypeId\" : 1\n}, {\n  \"comments\" : \"Sample\",\n  \"companyId\" : 40449,\n  \"customerOwnerId\" : 70583,\n  \"customerOwnerName\" : \"Customer 1\",\n  \"ddNumber\" : \"Sample\",\n  \"entryDate\" : \"2017-01-01T00:00:00\",\n  \"id\" : 1,\n  \"layoutType\" : 1,\n  \"poNumber\" : \"Sample\",\n  \"procDate\" : \"2017-01-05T00:00:00\",\n  \"productTrans\" : [ {\n    \"acEntries\" : [ {\n      \"accountCode\" : \"sample\",\n      \"analysisCategoryId\" : 40888,\n      \"companyId\" : 40449,\n      \"id\" : 1,\n      \"quoteProductTranId\" : 40277,\n      \"value\" : 100\n    } ],\n    \"amount\" : 10,\n    \"companyId\" : 40449,\n    \"id\" : 40277,\n    \"percentage\" : 0,\n    \"productCode\" : \"PRO1\",\n    \"productId\" : 20107,\n    \"quantity\" : 1,\n    \"tranNotes\" : [ \"Product\" ],\n    \"unitPrice\" : 100,\n    \"vatAmount\" : 10,\n    \"vatAnalysisTypeId\" : 0,\n    \"vatRateId\" : 30657\n  } ],\n  \"saleInvoiceId\" : 30044,\n  \"saleRepId\" : 75783,\n  \"timeStamp\" : \"4OVwcBIe2wg=\",\n  \"total\" : 110,\n  \"totalNet\" : 100,\n  \"totalVat\" : 10,\n  \"vatTypeId\" : 1\n} ]",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "764abb80-25bd-4ef6-8bdf-e133da98e9cb",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.043256Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "Customers_GetQuotes",
+          "schema" : {
+            "items" : {
+              "$ref" : "#/components/schemas/QuoteDto"
+            },
+            "type" : "array"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 75
+  }, {
+    "id" : "5a45b650-bbb3-47d2-85bf-4b50d945c55a",
+    "name" : "Returns a list of Customer's opening balance transactions. - response",
+    "request" : {
+      "urlPath" : "/v1/customers/1709103618734739365/openingBalanceList",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "[ {\n  \"entryDate\" : \"2011-01-01T00:00:00\",\n  \"id\" : 1,\n  \"procDate\" : \"2011-02-01T00:00:00\",\n  \"reference\" : \"O/Bal\",\n  \"timestamp\" : \"IIYwcBIe2wg=\",\n  \"total\" : 10,\n  \"totalVAT\" : 1.3,\n  \"unpaid\" : 0,\n  \"vatEntries\" : [ {\n    \"amount\" : 8.7,\n    \"vatRateId\" : 1\n  } ]\n}, {\n  \"entryDate\" : \"2011-01-01T00:00:00\",\n  \"id\" : 2,\n  \"procDate\" : \"2011-02-01T00:00:00\",\n  \"reference\" : \"O/Bal\",\n  \"timestamp\" : \"IIYwcBIe2wg=\",\n  \"total\" : 20,\n  \"totalVAT\" : 3.33,\n  \"unpaid\" : 0,\n  \"vatEntries\" : [ {\n    \"amount\" : 16.77,\n    \"vatRateId\" : 2\n  } ]\n} ]",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "5a45b650-bbb3-47d2-85bf-4b50d945c55a",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.043111Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "Customers_GetOpeningBalanceList",
+          "schema" : {
+            "items" : {
+              "$ref" : "#/components/schemas/OwnerOpeningBalanceDto"
+            },
+            "type" : "array"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 76
+  }, {
+    "id" : "73fca829-eaed-40d5-a272-86549e2b81d7",
+    "name" : "Returns a Customer's opening balances, calculated for the next periods: current month, one month old, two months old, three and more months old. - response",
+    "request" : {
+      "urlPath" : "/v1/customers/3668945449738619775/openingBalance",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"currentMonth\" : 10,\n  \"oneMonthOld\" : 20,\n  \"threeMonthsOld\" : 40,\n  \"twoMonthsOld\" : 30\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "73fca829-eaed-40d5-a272-86549e2b81d7",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.042923Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "Customers_GetOpeningBalance",
+          "schema" : {
+            "properties" : {
+              "currentMonth" : {
+                "format" : "double",
+                "type" : "number"
+              },
+              "oneMonthOld" : {
+                "format" : "double",
+                "type" : "number"
+              },
+              "threeMonthsOld" : {
+                "format" : "double",
+                "type" : "number"
+              },
+              "twoMonthsOld" : {
+                "format" : "double",
+                "type" : "number"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 77
+  }, {
+    "id" : "70b6ffc7-4aad-4d6f-94aa-8c45edeeeb30",
+    "name" : "Returns a list of Customer's account transactions. - response",
+    "request" : {
+      "urlPath" : "/v1/customers/3979156750922159116/accountTrans",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "[ {\n  \"bookTranId\" : 0,\n  \"bookTranTypeId\" : 0,\n  \"bookTransactionReference\" : \"O/Bal\",\n  \"bookTypeDesc\" : \"Opening Balance\",\n  \"credit\" : 0,\n  \"debit\" : 30,\n  \"id\" : 2,\n  \"procDate\" : \"2012-12-31T00:00:00\"\n}, {\n  \"bookTranId\" : 0,\n  \"bookTranTypeId\" : 0,\n  \"bookTransactionReference\" : \"0000001\",\n  \"bookTypeDesc\" : \"Bank Payment\",\n  \"credit\" : 0,\n  \"debit\" : 10,\n  \"id\" : 9,\n  \"procDate\" : \"2012-12-31T00:00:00\"\n} ]",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "70b6ffc7-4aad-4d6f-94aa-8c45edeeeb30",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.042811Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "Customers_GetAccountTrans",
+          "schema" : {
+            "items" : {
+              "$ref" : "#/components/schemas/AccountTranDto"
+            },
+            "type" : "array"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 78
+  }, {
+    "id" : "94ee4178-0a59-4d2a-8ebe-0fd09319b0cd",
+    "name" : "Updates an existing Customer.",
+    "request" : {
+      "urlPath" : "/v1/customers/5671786426349663101",
+      "method" : "PUT"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{ }",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "94ee4178-0a59-4d2a-8ebe-0fd09319b0cd",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.042751Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "Customers_Put",
+          "schema" : {
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 79
+  }, {
+    "id" : "a60c384b-0dd1-4a25-ad57-fc62d77be624",
+    "name" : "Returns information about a single Customer. You may specify that Customer's ledger balance should be calculated.",
+    "request" : {
+      "urlPath" : "/v1/customers/1144272422336158632",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"accountName\" : \"\",\n  \"accountNumber\" : \"12345678\",\n  \"additionalEmails\" : [ \"email2@example.com\", \"email3@example.com\" ],\n  \"address\" : [ \"Address Line 1\", \"Address Line 2\" ],\n  \"authCode\" : \"VATEXCODE222\",\n  \"bank\" : {\n    \"branch\" : \"Bank\",\n    \"id\" : 1,\n    \"name\" : \"bank Name\",\n    \"sortCode\" : \"B01\"\n  },\n  \"businessIdentifierCode\" : \"AIBI02\",\n  \"code\" : \"12345678\",\n  \"contact\" : \"John Smith\",\n  \"delivery\" : [ \"Delivery 1\", \"Delivery 2\" ],\n  \"eFTReference\" : \"Reference\",\n  \"email\" : \"customer@email.com\",\n  \"fax\" : \"1234567890\",\n  \"id\" : 10589,\n  \"internationalBankAccountNumber\" : \"1233432532\",\n  \"mobile\" : \"1234567890\",\n  \"name\" : \"Customer Name 1\",\n  \"ourCode\" : \"OURCODE111\",\n  \"ownerTypeId\" : 1,\n  \"phone\" : \"1234596970\",\n  \"timestamp\" : \"GF8pcBIe2wg=\",\n  \"vatAnalysisTypeId\" : 1,\n  \"vatReg\" : \"VATCODE0001\",\n  \"vatType\" : 2\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "a60c384b-0dd1-4a25-ad57-fc62d77be624",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.04265Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "(none)",
+          "schema" : {
+            "example" : {
+              "accountName" : "",
+              "accountNumber" : "12345678",
+              "additionalEmails" : [ "email2@example.com", "email3@example.com" ],
+              "address" : [ "Address Line 1", "Address Line 2" ],
+              "authCode" : "VATEXCODE222",
+              "bank" : {
+                "branch" : "Bank",
+                "id" : 1,
+                "name" : "bank Name",
+                "sortCode" : "B01"
+              },
+              "businessIdentifierCode" : "AIBI02",
+              "code" : "12345678",
+              "contact" : "John Smith",
+              "delivery" : [ "Delivery 1", "Delivery 2" ],
+              "eFTReference" : "Reference",
+              "email" : "customer@email.com",
+              "fax" : "1234567890",
+              "id" : 10589,
+              "internationalBankAccountNumber" : "1233432532",
+              "mobile" : "1234567890",
+              "name" : "Customer Name 1",
+              "ourCode" : "OURCODE111",
+              "ownerTypeId" : 1,
+              "phone" : "1234596970",
+              "timestamp" : "GF8pcBIe2wg=",
+              "vatAnalysisTypeId" : 1,
+              "vatReg" : "VATCODE0001",
+              "vatType" : 2
+            },
+            "properties" : {
+              "accountName" : {
+                "type" : "string"
+              },
+              "accountNumber" : {
+                "type" : "string"
+              },
+              "additionalEmails" : {
+                "items" : {
+                  "type" : "string"
+                },
+                "type" : "array"
+              },
+              "address" : {
+                "items" : {
+                  "type" : "string"
+                },
+                "type" : "array"
+              },
+              "authCode" : {
+                "type" : "string"
+              },
+              "bank" : {
+                "$ref" : "#/components/schemas/EFTBankDto"
+              },
+              "businessIdentifierCode" : {
+                "type" : "string"
+              },
+              "code" : {
+                "type" : "string"
+              },
+              "contact" : {
+                "type" : "string"
+              },
+              "delivery" : {
+                "items" : {
+                  "type" : "string"
+                },
+                "type" : "array"
+              },
+              "eFTReference" : {
+                "type" : "string"
+              },
+              "email" : {
+                "type" : "string"
+              },
+              "fax" : {
+                "type" : "string"
+              },
+              "id" : {
+                "format" : "int64",
+                "type" : "integer"
+              },
+              "internationalBankAccountNumber" : {
+                "type" : "string"
+              },
+              "ledgerBalance" : {
+                "format" : "double",
+                "type" : "number"
+              },
+              "mobile" : {
+                "type" : "string"
+              },
+              "name" : {
+                "type" : "string"
+              },
+              "openingBalance" : {
+                "$ref" : "#/components/schemas/OwnerOpeningBalanceInPeriodsDto"
+              },
+              "openingBalances" : {
+                "items" : {
+                  "$ref" : "#/components/schemas/OwnerOpeningBalanceDto"
+                },
+                "type" : "array"
+              },
+              "ourCode" : {
+                "type" : "string"
+              },
+              "ownerTypeId" : {
+                "format" : "int64",
+                "type" : "integer"
+              },
+              "phone" : {
+                "type" : "string"
+              },
+              "timestamp" : {
+                "format" : "byte",
+                "type" : "string"
+              },
+              "vatAnalysisTypeId" : {
+                "format" : "int64",
+                "type" : "integer"
+              },
+              "vatReg" : {
+                "type" : "string"
+              },
+              "vatType" : {
+                "format" : "int64",
+                "type" : "integer"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 80
+  }, {
+    "id" : "7dd675e0-5764-4918-85f2-841a548b141a",
+    "name" : "Removes an existing Customer.",
+    "request" : {
+      "urlPath" : "/v1/customers/3366906334133430949",
+      "method" : "DELETE",
+      "queryParameters" : {
+        "timestamp" : {
+          "equalTo" : "2022-10-05T05%3A44%3A57.041356Z"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{ }",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "7dd675e0-5764-4918-85f2-841a548b141a",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.041403Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "Customers_Delete",
+          "schema" : {
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 81
+  }, {
+    "id" : "316f54e1-bbcc-4732-9e51-d9ee8cbcbb7e",
+    "name" : "Processes a batch of Customers.",
+    "request" : {
+      "urlPath" : "/v1/customers/batch",
+      "method" : "PUT"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{ }",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "316f54e1-bbcc-4732-9e51-d9ee8cbcbb7e",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.040926Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "Customers_ProcessBatch",
+          "schema" : {
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 82
+  }, {
+    "id" : "a29f0ee4-aec6-447b-8917-d987fad164c4",
+    "name" : "Creates a new Customer.",
+    "request" : {
+      "urlPath" : "/v1/customers",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{ }",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "a29f0ee4-aec6-447b-8917-d987fad164c4",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.040887Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "Customers_Post",
+          "schema" : {
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 83
+  }, {
+    "id" : "5a67ffa6-e68a-43de-ba0a-464f78835df8",
+    "name" : "Returns a list of company's Customers. Supports OData querying protocol.\r\nFiltering is forbidden.\r\nOrdering is allowed by \"id\" and \"code\" fields. - response",
+    "request" : {
+      "urlPath" : "/v1/customers",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"Count\" : 1,\n  \"Items\" : [ {\n    \"accountName\" : \"\",\n    \"accountNumber\" : \"12345678\",\n    \"additionalEmails\" : [ \"email2@example.com\", \"email2@example.com\" ],\n    \"address\" : [ \"Address Line 1\", \"Address Line 2\" ],\n    \"authCode\" : \"VATEXCODE222\",\n    \"bank\" : {\n      \"branch\" : \"Bank\",\n      \"id\" : 1,\n      \"name\" : \"bank Name\",\n      \"sortCode\" : \"B01\"\n    },\n    \"businessIdentifierCode\" : \"AIBI02\",\n    \"code\" : \"12345678\",\n    \"contact\" : \"John Smith\",\n    \"delivery\" : [ \"Delivery 1\", \"Delivery 2\" ],\n    \"eFTReference\" : \"Reference\",\n    \"email\" : \"customer@email.com\",\n    \"fax\" : \"1234567890\",\n    \"id\" : 10589,\n    \"internationalBankAccountNumber\" : \"1233432532\",\n    \"mobile\" : \"1234567890\",\n    \"name\" : \"Customer Name 1\",\n    \"ourCode\" : \"OURCODE111\",\n    \"ownerTypeId\" : 1,\n    \"phone\" : \"1234596970\",\n    \"timestamp\" : \"r9UfcBIe2wg=\",\n    \"vatAnalysisTypeId\" : 1,\n    \"vatReg\" : \"VATCODE0001\",\n    \"vatType\" : 2\n  } ],\n  \"NextPageLink\" : \"\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "5a67ffa6-e68a-43de-ba0a-464f78835df8",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.040844Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "Customers_Get",
+          "schema" : {
+            "properties" : {
+              "Count" : {
+                "format" : "int64",
+                "type" : "integer"
+              },
+              "Items" : {
+                "items" : {
+                  "$ref" : "#/components/schemas/CustomerQueryDto"
+                },
+                "type" : "array"
+              },
+              "NextPageLink" : {
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 84
+  }, {
+    "id" : "e73cc786-5201-4fb8-b256-6676ee1685cb",
+    "name" : "Returns the financial year.",
+    "request" : {
+      "urlPath" : "/v1/companySetupConfig/getFinancialYear",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"startMonth\" : 813208184,\n  \"startYear\" : 1522124934,\n  \"firstMonth\" : 219238611\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "e73cc786-5201-4fb8-b256-6676ee1685cb",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.040724Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "CompanySetupConfig_GetFinancialYear",
+          "schema" : {
+            "properties" : {
+              "firstMonth" : {
+                "format" : "int32",
+                "type" : "integer"
+              },
+              "startMonth" : {
+                "format" : "int32",
+                "type" : "integer"
+              },
+              "startYear" : {
+                "format" : "int32",
+                "type" : "integer"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 85
+  }, {
+    "id" : "9b687738-3447-4407-87bb-a72670744b73",
+    "name" : "Returns the company option setting.",
+    "request" : {
+      "urlPath" : "/v1/companySetupConfig/getCompanyOptions",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"creditInputForReverseChargeVAT\" : false,\n  \"creditNoteJournalAgeingName\" : \"Neely Murray\",\n  \"enableVOCRReporting\" : true,\n  \"discrepancyAllowed\" : 1.0811186891701931E308,\n  \"vocrSettingValue\" : true,\n  \"purchasesVatAnalysisType\" : 1906382770308700829,\n  \"marginVatScheme\" : true,\n  \"useAllocations\" : true,\n  \"allowEntryOfGrossPriceInInvoicing\" : true,\n  \"creditNoteJournalAgeingValue\" : 596949052,\n  \"printOSItemsOnly\" : false,\n  \"useNominal\" : false,\n  \"useNominalCode\" : false,\n  \"salesVatAnalysisType\" : 6565383290966798134\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "9b687738-3447-4407-87bb-a72670744b73",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.040592Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "CompanySetupConfig_GetCompanyOptions",
+          "schema" : {
+            "properties" : {
+              "allowEntryOfGrossPriceInInvoicing" : {
+                "type" : "boolean"
+              },
+              "creditInputForReverseChargeVAT" : {
+                "type" : "boolean"
+              },
+              "creditNoteJournalAgeingName" : {
+                "type" : "string"
+              },
+              "creditNoteJournalAgeingValue" : {
+                "format" : "int32",
+                "type" : "integer"
+              },
+              "discrepancyAllowed" : {
+                "format" : "double",
+                "type" : "number"
+              },
+              "enableVOCRReporting" : {
+                "type" : "boolean"
+              },
+              "marginVatScheme" : {
+                "type" : "boolean"
+              },
+              "printOSItemsOnly" : {
+                "type" : "boolean"
+              },
+              "purchasesVatAnalysisType" : {
+                "format" : "int64",
+                "type" : "integer"
+              },
+              "salesVatAnalysisType" : {
+                "format" : "int64",
+                "type" : "integer"
+              },
+              "useAllocations" : {
+                "type" : "boolean"
+              },
+              "useNominal" : {
+                "type" : "boolean"
+              },
+              "useNominalCode" : {
+                "type" : "boolean"
+              },
+              "vocrSettingValue" : {
+                "type" : "boolean"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 86
+  }, {
+    "id" : "d4d74ac0-caf8-426a-858a-d0ef03c0dd08",
+    "name" : "Returns the company configuration settings.",
+    "request" : {
+      "urlPath" : "/v1/companySetupConfig",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"financialYear\" : {\n    \"startMonth\" : 992627649,\n    \"startYear\" : 455982104,\n    \"firstMonth\" : 1458472851\n  },\n  \"options\" : {\n    \"creditInputForReverseChargeVAT\" : false,\n    \"creditNoteJournalAgeingName\" : \"Leatrice Watsica\",\n    \"enableVOCRReporting\" : false,\n    \"discrepancyAllowed\" : 2.7381001940811513E307,\n    \"vocrSettingValue\" : false,\n    \"purchasesVatAnalysisType\" : 7316259087815225181,\n    \"marginVatScheme\" : true,\n    \"useAllocations\" : false,\n    \"allowEntryOfGrossPriceInInvoicing\" : true,\n    \"creditNoteJournalAgeingValue\" : 1152378669,\n    \"printOSItemsOnly\" : true,\n    \"useNominal\" : true,\n    \"useNominalCode\" : true,\n    \"salesVatAnalysisType\" : 3741343246165055816\n  },\n  \"generalDetails\" : {\n    \"emails\" : [ \"ppysymdja1kwembgfzvtmrg7l20xvkiphden0aklis9scdvqioohz76o142hh9ao8kqi5jxeu9qdfrncum65py8mjix5t3ftulz2p12u7qlgp6vi3c8mx8kxz2i9shjhft7z5ste32wtt7nxha7r2tgi0w401mgrzftkwsz0fuaktua74pdyxk\", \"o5igzognaj71sgm9oa\", \"h0weth3ycti6wxg8ohtymrza6tv3pydgmai\", \"arn55g74gxcqiv61kwm5xrj8xzc6ni0wb2uck9z1kyzmos7ivq2h8w\", \"uj4gep58x9k9qn8ah460zjadmf9rx95282i8zn2n5dltfj3z7\", \"i5ozm75go3c5spb3m6eganeeyrhil71nebx355udv5rfgwpnyz7ddjhpi7w1xighvgz3avv8ffn7u7srhkpho5y5xsm7m3f0sy4vzi1ddogxuoki6w22xd9mrujsfduluy5vidih5wib1vdpd9gi60mf90i0sp7j4o2v9h\" ],\n    \"faxes\" : [ \"a3p9bz3elxmtbypdzr4lakmu10iglnje7zfj5kes5jdc4epu3qu22y039w9djuvkbzdpnzdt11wbh1du8zhhi714ja7sgt2ui1vqo0pn98x366gw29zxksksymrqz58yb7hy02lbhqnv7qouwf3yjhah7wvucq3b08\", \"eaoginezu4lge4am1gihol59vrrjfcxcwma42cycbgh5o1dq1wi0g735epu1\", \"17vmjnoovybmf3zs8ih5wvor1xyoy6w43sqe01v1fo4n93nlceo6bmnemnu884vvv\" ],\n    \"currencyDescription\" : \"Sed voluptatum natus culpa. Rerum officiis aut esse omnis tempora. Commodi eius ex ipsum est vitae dolorem dolorum. Quos unde sed placeat.\",\n    \"vatReg\" : \"qieuw8mj568in3sf2iup4vche213b6ojvkw62pucp6xoy4vjz0ox898924a7cyo1yyn4puj5yox8nspjzhq9v5t\",\n    \"regionId\" : 662978589235815519,\n    \"companyName\" : \"Hank Koelpin\",\n    \"phones\" : [ \"cz86tt5hehmc8vfwnxeledf7ghdwt7fgmwxlul6u5okfnl62j0\", \"gn07iag756yueppfrr6rvh05580bvwtmrsvcgst2cypqx313zlj4x\", \"l8v11g7trn160x78s784tr2xaaishrtoum5i0gm87urpg1d5kphgn5j8m7vldxx3mhe736pszok1cayhq6jewpcqb5y8b52oitifykae4nx8iz5z1uyoy6zscrep1kax6uk991sxlcecdw3kiklc3s4274lsqdcqlb5b0\", \"95avqc0jcwqc81nov6hmftak1h5uuzq7grg0g7m1fey5yzzy352dlnc0chndyl6x2xuqgar1at04ymgbrmana3ksfosxmf0u668tj1a7jtq1j34i\", \"5qdrmpyho302rn3a8g5dg1bg26bepid2purhjez81rbp16buujrw4ugndv\" ],\n    \"currencyId\" : 5218164117602072776,\n    \"currentcySymbol\" : \"celd1w\",\n    \"regionDescription\" : \"Temporibus quo ea nulla occaecati. Accusantium aut voluptatem doloribus et eaque dolores. Quam dolores temporibus minima harum expedita. At ipsa sed. Dolores eaque pariatur earum.\",\n    \"currencyCode\" : \"ETB\",\n    \"companyAddresses\" : [ \"xuptb5cd2nagavagcrlyk4bi5zwx0xbfzbg5hg8pyr9kphaee406ygiwi37486u0y\", \"wnevwghkas305wzv9nl8nsdppdtek01k8uh7ac0uoqnjdc7kr960j2ag1fx911q6ewjfp99a9wkrnk74lgk6eywm1r00eathlyqtcesvucqa3yuin5s4zxvzar6exim8fr5b8oye1g1ebddjh4fwaiq8w1w5c9g3\" ]\n  },\n  \"referenceSettings\" : {\n    \"creditorsJournal\" : false,\n    \"purchases\" : true,\n    \"debtorsJournal\" : false,\n    \"sales\" : false\n  }\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "d4d74ac0-caf8-426a-858a-d0ef03c0dd08",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.036362Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "CompanySetupConfig_Get",
+          "schema" : {
+            "properties" : {
+              "financialYear" : {
+                "$ref" : "#/components/schemas/CompanyFinancialYearViewModel"
+              },
+              "generalDetails" : {
+                "$ref" : "#/components/schemas/CompanyGeneralDetaisViewModel"
+              },
+              "options" : {
+                "$ref" : "#/components/schemas/CompanyOptionViewModel"
+              },
+              "referenceSettings" : {
+                "$ref" : "#/components/schemas/CompanyReferenceSettingViewModel"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 87
+  }, {
+    "id" : "e422635f-e565-433d-8d5a-ff6c3329028e",
+    "name" : "Returns a list of company settings. Supports OData querying protocol.\r\nFiltering is forbidden. - response",
+    "request" : {
+      "urlPath" : "/v1/companySettings",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"enableVOCRReporting\" : true,\n  \"id\" : 20164,\n  \"useAllocations\" : true,\n  \"value\" : \"\",\n  \"vocrSettingValue\" : false\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "e422635f-e565-433d-8d5a-ff6c3329028e",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.028576Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "CompanySettings_Get",
+          "schema" : {
+            "properties" : {
+              "Count" : {
+                "format" : "int64",
+                "type" : "integer"
+              },
+              "Items" : {
+                "items" : {
+                  "$ref" : "#/components/schemas/CompanySettingDto"
+                },
+                "type" : "array"
+              },
+              "NextPageLink" : {
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 88
+  }, {
+    "id" : "b2c7a870-08b3-45e5-b189-368fbaf5bcbe",
+    "name" : "Returns a list of company's Category Types. Supports OData querying protocol.\r\nFiltering is forbidden.\r\nOrdering is allowed by \"id\" field. - response",
+    "request" : {
+      "urlPath" : "/v1/categoryTypes",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"Count\" : 1,\n  \"Items\" : [ {\n    \"description\" : \"Cash Receipts\",\n    \"id\" : 17\n  } ],\n  \"NextPageLink\" : \"\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "b2c7a870-08b3-45e5-b189-368fbaf5bcbe",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.028274Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "CategoryTypes_Get",
+          "schema" : {
+            "properties" : {
+              "Count" : {
+                "format" : "int64",
+                "type" : "integer"
+              },
+              "Items" : {
+                "items" : {
+                  "$ref" : "#/components/schemas/CategoryTypeDto"
+                },
+                "type" : "array"
+              },
+              "NextPageLink" : {
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 89
+  }, {
+    "id" : "0f54b5cf-430c-4583-97ee-a4f6701289e2",
+    "name" : "Updates an existing Cash Receipt.",
+    "request" : {
+      "urlPath" : "/v1/cashReceipts/7219795694030551263",
+      "method" : "PUT"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{ }",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "0f54b5cf-430c-4583-97ee-a4f6701289e2",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.028185Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "CashReceipts_Put",
+          "schema" : {
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 90
+  }, {
+    "id" : "7162109c-5bf8-4405-9983-1cb584066750",
+    "name" : "Returns information about a single Cash Receipt. - response",
+    "request" : {
+      "urlPath" : "/v1/cashReceipts/8526341550245694600",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"acEntries\" : [ {\n    \"accountCode\" : \"000\",\n    \"analysisCategoryId\" : 1,\n    \"description\" : \"AnCat1\",\n    \"id\" : 1,\n    \"value\" : 30\n  } ],\n  \"bookTranTypeId\" : 1,\n  \"customFields\" : [ {\n    \"description\" : \"acudf_1\",\n    \"id\" : 1,\n    \"userDefinedFieldId\" : 1,\n    \"value\" : \"acudfv_1\"\n  } ],\n  \"detailCollection\" : [ \"det_1\", \"det_2\", \"det_3\" ],\n  \"discount\" : 0,\n  \"entryDate\" : \"2011-01-01T00:00:00\",\n  \"id\" : 1,\n  \"ledger\" : 0,\n  \"note\" : \"note1\",\n  \"procDate\" : \"2011-01-05T00:00:00\",\n  \"timestamp\" : \"0OkTcBIe2wg=\",\n  \"total\" : 50,\n  \"unallocated\" : 0,\n  \"vatEntries\" : [ {\n    \"amount\" : 50,\n    \"id\" : 1,\n    \"percentage\" : 15,\n    \"vatRateId\" : 1\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "7162109c-5bf8-4405-9983-1cb584066750",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.028083Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "(none)",
+          "schema" : {
+            "example" : {
+              "acEntries" : [ {
+                "accountCode" : "000",
+                "analysisCategoryId" : 1,
+                "description" : "AnCat1",
+                "id" : 1,
+                "value" : 30
+              } ],
+              "bookTranTypeId" : 1,
+              "customFields" : [ {
+                "description" : "acudf_1",
+                "id" : 1,
+                "userDefinedFieldId" : 1,
+                "value" : "acudfv_1"
+              } ],
+              "detailCollection" : [ "det_1", "det_2", "det_3" ],
+              "discount" : 0,
+              "entryDate" : "2011-01-01T00:00:00",
+              "id" : 1,
+              "ledger" : 0,
+              "note" : "note1",
+              "procDate" : "2011-01-05T00:00:00",
+              "timestamp" : "0OkTcBIe2wg=",
+              "total" : 50,
+              "unallocated" : 0,
+              "vatEntries" : [ {
+                "amount" : 50,
+                "id" : 1,
+                "percentage" : 15,
+                "vatRateId" : 1
+              } ]
+            },
+            "properties" : {
+              "acCode" : {
+                "type" : "string"
+              },
+              "acEntries" : {
+                "items" : {
+                  "$ref" : "#/components/schemas/AcEntryDto"
+                },
+                "type" : "array"
+              },
+              "bookTranTypeId" : {
+                "format" : "int64",
+                "type" : "integer"
+              },
+              "customFields" : {
+                "items" : {
+                  "$ref" : "#/components/schemas/AcudfValueDto"
+                },
+                "type" : "array"
+              },
+              "customerId" : {
+                "format" : "int64",
+                "type" : "integer"
+              },
+              "detailCollection" : {
+                "items" : {
+                  "type" : "string"
+                },
+                "type" : "array"
+              },
+              "discount" : {
+                "format" : "double",
+                "type" : "number"
+              },
+              "entryDate" : {
+                "format" : "date-time",
+                "type" : "string"
+              },
+              "id" : {
+                "format" : "int64",
+                "type" : "integer"
+              },
+              "ledger" : {
+                "format" : "double",
+                "type" : "number"
+              },
+              "note" : {
+                "type" : "string"
+              },
+              "plaidTransactionId" : {
+                "type" : "string"
+              },
+              "procDate" : {
+                "format" : "date-time",
+                "type" : "string"
+              },
+              "timestamp" : {
+                "format" : "byte",
+                "type" : "string"
+              },
+              "total" : {
+                "format" : "double",
+                "type" : "number"
+              },
+              "unallocated" : {
+                "format" : "double",
+                "type" : "number"
+              },
+              "vatEntries" : {
+                "items" : {
+                  "$ref" : "#/components/schemas/VatEntryDto"
+                },
+                "type" : "array"
+              },
+              "vatTypeId" : {
+                "format" : "int64",
+                "type" : "integer"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 91
+  }, {
+    "id" : "5aea2a92-37c9-4256-9259-09588aab6bb9",
+    "name" : "Removes an existing Cash Receipt.",
+    "request" : {
+      "urlPath" : "/v1/cashReceipts/6443613233786098979",
+      "method" : "DELETE",
+      "queryParameters" : {
+        "timestamp" : {
+          "equalTo" : "2022-08-20T06%3A40%3A57.026613Z"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{ }",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "5aea2a92-37c9-4256-9259-09588aab6bb9",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.027531Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "CashReceipts_Delete",
+          "schema" : {
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 92
+  }, {
+    "id" : "b72a1679-496f-40e1-af0b-243a829a31fc",
+    "name" : "Processes a batch of Cash Receipts.",
+    "request" : {
+      "urlPath" : "/v1/cashReceipts/batch",
+      "method" : "PUT"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{ }",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "b72a1679-496f-40e1-af0b-243a829a31fc",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.025686Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "CashReceipts_ProcessBatch",
+          "schema" : {
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 93
+  }, {
+    "id" : "e4bb005c-aa61-43da-99e9-b9c0fa5f0797",
+    "name" : "Creates a new Cash Receipt.",
+    "request" : {
+      "urlPath" : "/v1/cashReceipts",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{ }",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "e4bb005c-aa61-43da-99e9-b9c0fa5f0797",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.025641Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "CashReceipts_Post",
+          "schema" : {
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 94
+  }, {
+    "id" : "69c94794-ac1f-4710-ad87-23ffd98f2c60",
+    "name" : "Returns a list of company's Cash Receipts. Supports OData querying protocol.\r\nFiltering is allowed by \"entryDate\" field.\r\nOrdering is allowed by \"id\" field. - response",
+    "request" : {
+      "urlPath" : "/v1/cashReceipts",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"Count\" : 1,\n  \"Items\" : [ {\n    \"acEntries\" : [ {\n      \"accountCode\" : \"000\",\n      \"analysisCategoryId\" : 1,\n      \"description\" : \"AnCat1\",\n      \"id\" : 1,\n      \"value\" : 30\n    } ],\n    \"bookTranTypeId\" : 1,\n    \"customFields\" : [ {\n      \"description\" : \"acudf_1\",\n      \"id\" : 1,\n      \"userDefinedFieldId\" : 1,\n      \"value\" : \"acudfv_1\"\n    } ],\n    \"detailCollection\" : [ \"det_1\", \"det_2\", \"det_3\" ],\n    \"discount\" : 0,\n    \"entryDate\" : \"2011-01-01T00:00:00\",\n    \"id\" : 1,\n    \"ledger\" : 0,\n    \"note\" : \"note1\",\n    \"procDate\" : \"2011-01-05T00:00:00\",\n    \"timestamp\" : \"EiUPcBIe2wg=\",\n    \"total\" : 50,\n    \"unallocated\" : 0,\n    \"vatEntries\" : [ {\n      \"amount\" : 50,\n      \"id\" : 1,\n      \"percentage\" : 15,\n      \"vatRateId\" : 1\n    } ]\n  } ],\n  \"NextPageLink\" : \"\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "69c94794-ac1f-4710-ad87-23ffd98f2c60",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.025596Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "CashReceipts_Get",
+          "schema" : {
+            "properties" : {
+              "Count" : {
+                "format" : "int64",
+                "type" : "integer"
+              },
+              "Items" : {
+                "items" : {
+                  "$ref" : "#/components/schemas/CashReceiptQueryDto"
+                },
+                "type" : "array"
+              },
+              "NextPageLink" : {
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 95
+  }, {
+    "id" : "bf380398-2760-4445-9fa4-3c70e045c1c1",
+    "name" : "Updates an existing Cash Payment.",
+    "request" : {
+      "urlPath" : "/v1/cashPayments/8770367891621446264",
+      "method" : "PUT"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{ }",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "bf380398-2760-4445-9fa4-3c70e045c1c1",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.025502Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "CashPayments_Put",
+          "schema" : {
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 96
+  }, {
+    "id" : "8ff0f078-26bc-4f12-ba54-b9a4d318ec26",
+    "name" : "Returns information about a single Cash Payment. - response",
+    "request" : {
+      "urlPath" : "/v1/cashPayments/1659018585449696395",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"acEntries\" : [ {\n    \"accountCode\" : \"CP01\",\n    \"analysisCategoryId\" : 10433,\n    \"description\" : \"Cash Pay 01\",\n    \"id\" : 62741,\n    \"value\" : 200\n  } ],\n  \"bankAccountCode\" : \"BAK2\",\n  \"bankAccountId\" : 11111,\n  \"bookTranTypeId\" : 2,\n  \"customFields\" : [ ],\n  \"detailCollection\" : [ \"test\" ],\n  \"discount\" : 0,\n  \"entryDate\" : \"2017-07-01T00:00:00\",\n  \"id\" : 12345,\n  \"ledger\" : 100,\n  \"lodgement\" : 0,\n  \"note\" : \"Supplier 1\",\n  \"procDate\" : \"2017-07-26T00:00:00\",\n  \"supplierId\" : 70599,\n  \"timestamp\" : \"+/0HcBIe2wg=\",\n  \"total\" : 100\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "8ff0f078-26bc-4f12-ba54-b9a4d318ec26",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.025388Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "(none)",
+          "schema" : {
+            "example" : {
+              "acEntries" : [ {
+                "accountCode" : "CP01",
+                "analysisCategoryId" : 10433,
+                "description" : "Cash Pay 01",
+                "id" : 62741,
+                "value" : 200
+              } ],
+              "bankAccountCode" : "BAK2",
+              "bankAccountId" : 11111,
+              "bookTranTypeId" : 2,
+              "customFields" : [ ],
+              "detailCollection" : [ "test" ],
+              "discount" : 0,
+              "entryDate" : "2017-07-01T00:00:00",
+              "id" : 12345,
+              "ledger" : 100,
+              "lodgement" : 0,
+              "note" : "Supplier 1",
+              "procDate" : "2017-07-26T00:00:00",
+              "supplierId" : 70599,
+              "timestamp" : "+/0HcBIe2wg=",
+              "total" : 100
+            },
+            "properties" : {
+              "acCode" : {
+                "type" : "string"
+              },
+              "acEntries" : {
+                "items" : {
+                  "$ref" : "#/components/schemas/AcEntryDto"
+                },
+                "type" : "array"
+              },
+              "bankAccountCode" : {
+                "type" : "string"
+              },
+              "bankAccountId" : {
+                "format" : "int64",
+                "type" : "integer"
+              },
+              "bookTranTypeId" : {
+                "format" : "int64",
+                "type" : "integer"
+              },
+              "customFields" : {
+                "items" : {
+                  "$ref" : "#/components/schemas/AcudfValueDto"
+                },
+                "type" : "array"
+              },
+              "detailCollection" : {
+                "items" : {
+                  "type" : "string"
+                },
+                "type" : "array"
+              },
+              "discount" : {
+                "format" : "double",
+                "type" : "number"
+              },
+              "entryDate" : {
+                "format" : "date-time",
+                "type" : "string"
+              },
+              "id" : {
+                "format" : "int64",
+                "type" : "integer"
+              },
+              "ledger" : {
+                "format" : "double",
+                "type" : "number"
+              },
+              "lodgement" : {
+                "format" : "double",
+                "type" : "number"
+              },
+              "note" : {
+                "type" : "string"
+              },
+              "plaidTransactionId" : {
+                "type" : "string"
+              },
+              "procDate" : {
+                "format" : "date-time",
+                "type" : "string"
+              },
+              "supplierId" : {
+                "format" : "int64",
+                "type" : "integer"
+              },
+              "timestamp" : {
+                "format" : "byte",
+                "type" : "string"
+              },
+              "total" : {
+                "format" : "double",
+                "type" : "number"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 97
+  }, {
+    "id" : "ccf18f32-c51e-41b2-a96e-3e538284df83",
+    "name" : "Removes an existing Cash Payment.",
+    "request" : {
+      "urlPath" : "/v1/cashPayments/2575674803260398383",
+      "method" : "DELETE",
+      "queryParameters" : {
+        "timestamp" : {
+          "equalTo" : "2023-03-12T08%3A13%3A57.023659Z"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{ }",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "ccf18f32-c51e-41b2-a96e-3e538284df83",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.023835Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "CashPayments_Delete",
+          "schema" : {
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 98
+  }, {
+    "id" : "16f87e03-8c9f-4d63-97e8-16aebd015378",
+    "name" : "Processes a batch of Cash Payments.",
+    "request" : {
+      "urlPath" : "/v1/cashPayments/batch",
+      "method" : "PUT"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{ }",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "16f87e03-8c9f-4d63-97e8-16aebd015378",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.023446Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "CashPayments_ProcessBatch",
+          "schema" : {
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 99
+  }, {
+    "id" : "1719d55b-6bb8-47eb-8fda-4d85f14a301a",
+    "name" : "Creates a new Cash Payment.",
+    "request" : {
+      "urlPath" : "/v1/cashPayments",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{ }",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "1719d55b-6bb8-47eb-8fda-4d85f14a301a",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.023145Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "CashPayments_Post",
+          "schema" : {
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 100
+  }, {
+    "id" : "04f747b3-5ab8-4e5e-b7d9-3e8d974fbcd0",
+    "name" : "Returns a list of company's Cash Payments. Supports OData querying protocol.\r\nFiltering is allowed by \"entryDate\" field.\r\nOrdering is allowed by \"id\" field. - response",
+    "request" : {
+      "urlPath" : "/v1/cashPayments",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"Count\" : 1,\n  \"Items\" : [ {\n    \"acEntries\" : [ {\n      \"accountCode\" : \"CP01\",\n      \"analysisCategoryId\" : 10433,\n      \"description\" : \"Cash Pay 01\",\n      \"id\" : 62741,\n      \"value\" : 200\n    } ],\n    \"bankAccountCode\" : \"BAK2\",\n    \"bankAccountId\" : 11111,\n    \"bookTranTypeId\" : 2,\n    \"customFields\" : [ ],\n    \"detailCollection\" : [ \"test\" ],\n    \"discount\" : 0,\n    \"entryDate\" : \"2017-07-01T00:00:00\",\n    \"id\" : 12345,\n    \"ledger\" : 100,\n    \"lodgement\" : 0,\n    \"note\" : \"Supplier 1\",\n    \"procDate\" : \"2017-07-26T00:00:00\",\n    \"supplierId\" : 70599,\n    \"timestamp\" : \"4NYAcBIe2wg=\",\n    \"total\" : 100\n  } ],\n  \"NextPageLink\" : \"\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "04f747b3-5ab8-4e5e-b7d9-3e8d974fbcd0",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.023101Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "CashPayments_Get",
+          "schema" : {
+            "properties" : {
+              "Count" : {
+                "format" : "int64",
+                "type" : "integer"
+              },
+              "Items" : {
+                "items" : {
+                  "$ref" : "#/components/schemas/CashPaymentQueryDto"
+                },
+                "type" : "array"
+              },
+              "NextPageLink" : {
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 101
+  }, {
+    "id" : "4012308a-05aa-43b1-b8e9-c84244860718",
+    "name" : "Returns a list of global Book Transactions' Types. Supports OData querying protocol.\r\nFiltering is forbidden.\r\nOrdering is allowed by \"id\" field. - response",
+    "request" : {
+      "urlPath" : "/v1/bookTranTypes",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"Count\" : 5,\n  \"Items\" : [ {\n    \"code\" : \"\",\n    \"description\" : \"Cash Receipt\",\n    \"id\" : 1\n  }, {\n    \"code\" : \"\",\n    \"description\" : \"Cash Payment\",\n    \"id\" : 2\n  }, {\n    \"code\" : \"\",\n    \"description\" : \"Cheques Entry\",\n    \"id\" : 3\n  }, {\n    \"code\" : \"\",\n    \"description\" : \"Purchases Book Entry\",\n    \"id\" : 4\n  }, {\n    \"code\" : \"\",\n    \"description\" : \"Sales Entry\",\n    \"id\" : 5\n  } ],\n  \"NextPageLink\" : \"\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "4012308a-05aa-43b1-b8e9-c84244860718",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.023015Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "BookTranTypes_Get",
+          "schema" : {
+            "properties" : {
+              "Count" : {
+                "format" : "int64",
+                "type" : "integer"
+              },
+              "Items" : {
+                "items" : {
+                  "$ref" : "#/components/schemas/BookTranTypeDto"
+                },
+                "type" : "array"
+              },
+              "NextPageLink" : {
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 102
+  }, {
+    "id" : "13c329cd-1133-4380-a157-205634bae65a",
+    "name" : "Updates an existing Bank Account.",
+    "request" : {
+      "urlPath" : "/v1/bankAccounts/8055682320350461329",
+      "method" : "PUT"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{ }",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "13c329cd-1133-4380-a157-205634bae65a",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.022924Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "BankAccounts_Put",
+          "schema" : {
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 103
+  }, {
+    "id" : "c3587352-441e-49fb-9873-93ec75b9d071",
+    "name" : "Returns information about a single Bank Account. - response",
+    "request" : {
+      "urlPath" : "/v1/bankAccounts/8561623680178003026",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"acCode\" : \"B1\",\n  \"accountName\" : \"\",\n  \"accountNumber\" : \"83700896\",\n  \"address\" : [ \"Address Line 1\", \"Address Line 2\" ],\n  \"bankFeedSource\" : 0,\n  \"businessIdentifierCodes\" : \"AIBKIE2D\",\n  \"categoryId\" : 41704,\n  \"creditorScheme\" : \"XXXX\",\n  \"details\" : \"Bank_1\",\n  \"id\" : 1,\n  \"internationalBankAccountNumber\" : \"IE67 BOFI 9027 0925 7277 59\",\n  \"isDefaultBank\" : false,\n  \"lastChq\" : \"000005\",\n  \"nominalAcCode\" : \"B101\",\n  \"oBalance\" : 0,\n  \"sortCode\" : \"900284\",\n  \"timestamp\" : \"QUFBQUFBQUFDcXc9\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "c3587352-441e-49fb-9873-93ec75b9d071",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.022825Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "(none)",
+          "schema" : {
+            "example" : {
+              "acCode" : "B1",
+              "accountName" : "",
+              "accountNumber" : "83700896",
+              "address" : [ "Address Line 1", "Address Line 2" ],
+              "bankFeedSource" : 0,
+              "businessIdentifierCodes" : "AIBKIE2D",
+              "categoryId" : 41704,
+              "creditorScheme" : "XXXX",
+              "details" : "Bank_1",
+              "id" : 1,
+              "internationalBankAccountNumber" : "IE67 BOFI 9027 0925 7277 59",
+              "isDefaultBank" : false,
+              "lastChq" : "000005",
+              "nominalAcCode" : "B101",
+              "oBalance" : 0,
+              "sortCode" : "900284",
+              "timestamp" : "QUFBQUFBQUFDcXc9"
+            },
+            "properties" : {
+              "acCode" : {
+                "type" : "string"
+              },
+              "accountName" : {
+                "type" : "string"
+              },
+              "accountNumber" : {
+                "type" : "string"
+              },
+              "address" : {
+                "items" : {
+                  "type" : "string"
+                },
+                "type" : "array"
+              },
+              "bankFeedSource" : {
+                "format" : "int32",
+                "type" : "integer"
+              },
+              "businessIdentifierCodes" : {
+                "type" : "string"
+              },
+              "categoryId" : {
+                "format" : "int64",
+                "type" : "integer"
+              },
+              "creditorScheme" : {
+                "type" : "string"
+              },
+              "details" : {
+                "type" : "string"
+              },
+              "id" : {
+                "format" : "int64",
+                "type" : "integer"
+              },
+              "internationalBankAccountNumber" : {
+                "type" : "string"
+              },
+              "isDefaultBank" : {
+                "type" : "boolean"
+              },
+              "lastChq" : {
+                "type" : "string"
+              },
+              "nominalAcCode" : {
+                "type" : "string"
+              },
+              "oBalance" : {
+                "format" : "double",
+                "type" : "number"
+              },
+              "sortCode" : {
+                "type" : "string"
+              },
+              "timestamp" : {
+                "format" : "byte",
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 104
+  }, {
+    "id" : "9aa1c438-72a4-494c-87ec-c31435a9987b",
+    "name" : "Removes an existing Bank Account.",
+    "request" : {
+      "urlPath" : "/v1/bankAccounts/813663922902709063",
+      "method" : "DELETE",
+      "queryParameters" : {
+        "timestamp" : {
+          "equalTo" : "2023-02-13T07%3A44%3A57.020913Z"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{ }",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "9aa1c438-72a4-494c-87ec-c31435a9987b",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.020952Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "BankAccounts_Delete",
+          "schema" : {
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 105
+  }, {
+    "id" : "9c08cd43-b781-4167-b772-c875b801265a",
+    "name" : "Processes a batch of Bank Accounts.",
+    "request" : {
+      "urlPath" : "/v1/bankAccounts/batch",
+      "method" : "PUT"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{ }",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "9c08cd43-b781-4167-b772-c875b801265a",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.020759Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "BankAccounts_ProcessBatch",
+          "schema" : {
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 106
+  }, {
+    "id" : "882c3683-5b95-4db6-bbb4-5f9296b953d2",
+    "name" : "Creates a new Bank Account.",
+    "request" : {
+      "urlPath" : "/v1/bankAccounts",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{ }",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "882c3683-5b95-4db6-bbb4-5f9296b953d2",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.020532Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "BankAccounts_Post",
+          "schema" : {
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 107
+  }, {
+    "id" : "5fe40ea0-094a-493d-9734-21a5c0f9513e",
+    "name" : "Returns a list of company's Bank Account. Supports OData querying protocol.\r\nFiltering is forbidden.\r\nOrdering is allowed by \"id\" and \"acCode\" fields. - response",
+    "request" : {
+      "urlPath" : "/v1/bankAccounts",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"Count\" : 1,\n  \"Items\" : [ {\n    \"acCode\" : \"B1\",\n    \"accountName\" : \"\",\n    \"accountNumber\" : \"83700896\",\n    \"address\" : [ \"Address Line 1\", \"Address Line 2\" ],\n    \"bankFeedSource\" : 0,\n    \"businessIdentifierCodes\" : \"AIBKIE2D\",\n    \"categoryId\" : 41704,\n    \"creditorScheme\" : \"XXXX\",\n    \"details\" : \"Bank_111111111111111111\",\n    \"id\" : 1,\n    \"internationalBankAccountNumber\" : \"IE67 BOFI 9027 0925 7277 59\",\n    \"isDefaultBank\" : false,\n    \"lastChq\" : \"000005\",\n    \"nominalAcCode\" : \"B101\",\n    \"oBalance\" : 0,\n    \"sortCode\" : \"900284\",\n    \"timestamp\" : \"QUFBQUFBQUFDcXc9\"\n  } ],\n  \"NextPageLink\" : \"\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "5fe40ea0-094a-493d-9734-21a5c0f9513e",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.02048Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "BankAccounts_Get",
+          "schema" : {
+            "properties" : {
+              "Count" : {
+                "format" : "int64",
+                "type" : "integer"
+              },
+              "Items" : {
+                "items" : {
+                  "$ref" : "#/components/schemas/BankAccountQueryDto"
+                },
+                "type" : "array"
+              },
+              "NextPageLink" : {
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 108
+  }, {
+    "id" : "4b754e94-3bf6-4b01-833d-b130b13c4ec7",
+    "name" : "Returns a list of company's Analysis Categories. Supports OData querying protocol.\r\nFiltering is allowed by \"categoryTypeId\" field.\r\nOrdering is allowed by \"id\" and \"orderIndex\" fields. - response",
+    "request" : {
+      "urlPath" : "/v1/analysisCategories",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"Count\" : 3,\n  \"Items\" : [ {\n    \"accountCode\" : \"000\",\n    \"accountId\" : 355,\n    \"categoryTypeId\" : 19,\n    \"description\" : \"AnCat1\",\n    \"id\" : 1,\n    \"orderIndex\" : 1\n  }, {\n    \"accountCode\" : \"000\",\n    \"accountId\" : 355,\n    \"categoryTypeId\" : 19,\n    \"description\" : \"AnCat2\",\n    \"id\" : 2,\n    \"orderIndex\" : 2\n  }, {\n    \"accountCode\" : \"000\",\n    \"accountId\" : 355,\n    \"categoryTypeId\" : 19,\n    \"description\" : \"AnCat3\",\n    \"id\" : 3,\n    \"orderIndex\" : 3\n  } ],\n  \"NextPageLink\" : \"\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "4b754e94-3bf6-4b01-833d-b130b13c4ec7",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.020375Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "AnalysisCategories_Get",
+          "schema" : {
+            "properties" : {
+              "Count" : {
+                "format" : "int64",
+                "type" : "integer"
+              },
+              "Items" : {
+                "items" : {
+                  "$ref" : "#/components/schemas/AnalysisCategoryDto"
+                },
+                "type" : "array"
+              },
+              "NextPageLink" : {
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 109
+  }, {
+    "id" : "580f09e1-5f21-41a6-b259-caee4282243a",
+    "name" : "Returns a list of company's Accounts. Supports OData querying protocol.\r\nFiltering is forbidden.\r\nOrdering is allowed by \"id\" and \"code\" fields. - response",
+    "request" : {
+      "urlPath" : "/v1/accounts",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"Count\" : 3,\n  \"Items\" : [ {\n    \"accountGroup\" : \"Sales\",\n    \"accountType\" : \"Profit and Loss\",\n    \"code\" : \"000\",\n    \"description\" : \"SALES\",\n    \"id\" : 355\n  }, {\n    \"accountGroup\" : \"Sales\",\n    \"accountType\" : \"Profit and Loss\",\n    \"code\" : \"008\",\n    \"description\" : \"SALES STOCK\",\n    \"id\" : 428\n  }, {\n    \"accountGroup\" : \"Other Income\",\n    \"accountType\" : \"Profit and Loss\",\n    \"code\" : \"050\",\n    \"description\" : \"DISCOUNT RECEIVED\",\n    \"id\" : 349\n  } ],\n  \"NextPageLink\" : \"\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "580f09e1-5f21-41a6-b259-caee4282243a",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.020184Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "Accounts_Get",
+          "schema" : {
+            "properties" : {
+              "Count" : {
+                "format" : "int64",
+                "type" : "integer"
+              },
+              "Items" : {
+                "items" : {
+                  "$ref" : "#/components/schemas/AccountDto"
+                },
+                "type" : "array"
+              },
+              "NextPageLink" : {
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 110
+  } ]
+}
