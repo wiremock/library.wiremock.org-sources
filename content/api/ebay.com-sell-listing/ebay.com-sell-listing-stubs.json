@@ -1,0 +1,102 @@
+{
+  "mappings" : [ {
+    "id" : "02ff6479-f7b6-4268-b08e-c353f29c8580",
+    "name" : "This call gives Partners the ability to create an eBay draft of a item for their... - 500",
+    "request" : {
+      "urlPath" : "/item_draft/",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 500
+    },
+    "uuid" : "02ff6479-f7b6-4268-b08e-c353f29c8580",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:55.45058Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "createItemDraft"
+        }
+      }
+    },
+    "insertionIndex" : 0
+  }, {
+    "id" : "52d0b6bd-8ef1-4dfa-b555-a4c1e85b161f",
+    "name" : "This call gives Partners the ability to create an eBay draft of a item for their... - 400",
+    "request" : {
+      "urlPath" : "/item_draft/",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 400
+    },
+    "uuid" : "52d0b6bd-8ef1-4dfa-b555-a4c1e85b161f",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:55.450549Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "createItemDraft"
+        }
+      }
+    },
+    "insertionIndex" : 1
+  }, {
+    "id" : "4e1700b2-55db-4a27-ae2f-6d58eef546ed",
+    "name" : "This call gives Partners the ability to create an eBay draft of a item for their... (application/json)",
+    "request" : {
+      "urlPath" : "/item_draft/",
+      "method" : "POST",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/json"
+        }
+      }
+    },
+    "response" : {
+      "status" : 201,
+      "body" : "{\n  \"itemDraftId\" : \"9ait\",\n  \"sellFlowUrl\" : \"https://web.example.mocklab.io/902307\",\n  \"sellFlowNativeUri\" : \"https://web.example.mocklab.io/108872\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "4e1700b2-55db-4a27-ae2f-6d58eef546ed",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:55.450445Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "createItemDraft",
+          "schema" : {
+            "description" : "The type that defines the field for the createItemDraft response.",
+            "properties" : {
+              "itemDraftId" : {
+                "description" : "The eBay generated ID of the listing draft.",
+                "type" : "string"
+              },
+              "sellFlowNativeUri" : {
+                "description" : "The URI the Partner uses to send the seller to their listing draft that was created on the eBay site. From there the seller can change, update, and publish the item on eBay. This is returned when the seller is using a mobile app.",
+                "type" : "string"
+              },
+              "sellFlowUrl" : {
+                "description" : "The web URL the Partner uses to send the seller to the listing draft that was created on the eBay site. From there the seller can change, update, and publish the item on eBay. This is returned when the seller is using mobile web (mweb) or the desktop web. Note: You must construct the URL using the URL returned in this field and a session token. For example: sellFlowUrl?id_token=session_token",
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 2
+  } ]
+}

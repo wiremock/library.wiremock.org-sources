@@ -1,0 +1,307 @@
+{
+  "mappings" : [ {
+    "id" : "69dd1c4a-ffea-40f0-acfc-26ba56dbd345",
+    "name" : "Get metadata about a dataset. - 200",
+    "request" : {
+      "urlPath" : "/data/l9uchvt2c5r5qhsnxiy4o0hnho4id85ozxt2eeiynqhc7rg0p6xxkf18w89o82r25ttvyqutw",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200
+    },
+    "uuid" : "69dd1c4a-ffea-40f0-acfc-26ba56dbd345",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:02.055052Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "getDataset"
+        }
+      }
+    },
+    "insertionIndex" : 0
+  }, {
+    "id" : "91618c33-9bc3-445b-bd68-4a3d2cc1985b",
+    "name" : "Get the metadata for a slice in this dataset. - 200",
+    "request" : {
+      "urlPath" : "/data/hmda/slice/uuenjkz021r41fbe2cjhhyae8durjtfe2i1cehdtf4dut1wvrrcftn0p67md/metadata",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200
+    },
+    "uuid" : "91618c33-9bc3-445b-bd68-4a3d2cc1985b",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:02.055019Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "getSliceMetadataHmda"
+        }
+      }
+    },
+    "insertionIndex" : 1
+  }, {
+    "id" : "6cb548fe-9d88-41fb-a42c-baf8e64e8e75",
+    "name" : "Query a slice in this dataset. (text/csv)",
+    "request" : {
+      "urlPath" : "/data/hmda/slice/gz540s8khn19sft50td8hmlst02hqa8nl6jpoz32kva9a9vp3oybv65mew3ar70pafc71c1swrnkhzzunt06rhvymmq4eak6rw0babvuho9dqnc0q7n8j82fhbsy2lenkkvog7kh7lvdhqtcbms6o7b43qnh8dcri0q4fmu75v5wlk7lunagomq6g3lpvm49f",
+      "method" : "GET",
+      "headers" : {
+        "Accept" : {
+          "contains" : "text/csv"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"total\" : 8313517900525189395,\n  \"size\" : 7035606983408264105\n}",
+      "headers" : {
+        "Content-Type" : "text/csv"
+      }
+    },
+    "uuid" : "6cb548fe-9d88-41fb-a42c-baf8e64e8e75",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:02.054975Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "querySliceHmda",
+          "schema" : {
+            "required" : [ "size", "total" ],
+            "type" : "object",
+            "properties" : {
+              "size" : {
+                "type" : "integer"
+              },
+              "total" : {
+                "type" : "integer"
+              }
+            },
+            "description" : "Response to a slice query."
+          }
+        }
+      }
+    },
+    "insertionIndex" : 2
+  }, {
+    "id" : "86abf550-3293-4c41-8795-7247b13e0e2f",
+    "name" : "Query a slice in this dataset. (text/javascript)",
+    "request" : {
+      "urlPath" : "/data/hmda/slice/7csimgw1c7h26jae0v4fcmvlycwb3bn7yo6foda9kko6e9t39ljwc72u6hflaxszit6pcp9bozh2t1azynl7tfmnz7uxjiqgd03y38yoi04fk",
+      "method" : "GET",
+      "headers" : {
+        "Accept" : {
+          "contains" : "text/javascript"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"total\" : 314533008285978248,\n  \"size\" : 55169695482885192\n}",
+      "headers" : {
+        "Content-Type" : "text/javascript"
+      }
+    },
+    "uuid" : "86abf550-3293-4c41-8795-7247b13e0e2f",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:02.054904Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "querySliceHmda",
+          "schema" : {
+            "required" : [ "size", "total" ],
+            "type" : "object",
+            "properties" : {
+              "size" : {
+                "type" : "integer"
+              },
+              "total" : {
+                "type" : "integer"
+              }
+            },
+            "description" : "Response to a slice query."
+          }
+        }
+      }
+    },
+    "insertionIndex" : 3
+  }, {
+    "id" : "797504e4-0673-44a1-a2cb-e2033f05108e",
+    "name" : "Query a slice in this dataset. (application/xml)",
+    "request" : {
+      "urlPath" : "/data/hmda/slice/8xksufa9lnpnybtwutkwginr4dtn8yrdxistfrlh0waciw35kpx8qldb003xyc1gdqjh0u3y2fh830hfyn6k",
+      "method" : "GET",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/xml"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"total\" : 318683410792956410,\n  \"size\" : 3523682167153304466\n}",
+      "headers" : {
+        "Content-Type" : "application/xml"
+      }
+    },
+    "uuid" : "797504e4-0673-44a1-a2cb-e2033f05108e",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:02.054835Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "querySliceHmda",
+          "schema" : {
+            "required" : [ "size", "total" ],
+            "type" : "object",
+            "properties" : {
+              "size" : {
+                "type" : "integer"
+              },
+              "total" : {
+                "type" : "integer"
+              }
+            },
+            "description" : "Response to a slice query."
+          }
+        }
+      }
+    },
+    "insertionIndex" : 4
+  }, {
+    "id" : "c38e00f2-c2a1-40fc-8909-f7a887fa8159",
+    "name" : "Query a slice in this dataset. (application/json)",
+    "request" : {
+      "urlPath" : "/data/hmda/slice/n8od1hxb4zuuf5k",
+      "method" : "GET",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/json"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"total\" : 2995969792087308733,\n  \"size\" : 7532487684705033580\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "c38e00f2-c2a1-40fc-8909-f7a887fa8159",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:02.054759Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "querySliceHmda",
+          "schema" : {
+            "required" : [ "size", "total" ],
+            "type" : "object",
+            "properties" : {
+              "size" : {
+                "type" : "integer"
+              },
+              "total" : {
+                "type" : "integer"
+              }
+            },
+            "description" : "Response to a slice query."
+          }
+        }
+      }
+    },
+    "insertionIndex" : 5
+  }, {
+    "id" : "3bba346f-07b1-40f3-ae64-d041719ff1e8",
+    "name" : "Get information about a particular concept in this dataset. - 200",
+    "request" : {
+      "urlPath" : "/data/hmda/concept/jtj3le41z0gb0whfql26ag5vdc2mxigw603iz18pxl0hxojpbcm3bdh11jmt23ve9kbgolk2etm2nmcpk2v1ecvpm",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200
+    },
+    "uuid" : "3bba346f-07b1-40f3-ae64-d041719ff1e8",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:02.054661Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "getConceptHmda"
+        }
+      }
+    },
+    "insertionIndex" : 6
+  }, {
+    "id" : "f3be2368-36a3-4315-a5c6-b3246cd5d8b7",
+    "name" : "Get metadata for this dataset. - 200",
+    "request" : {
+      "urlPath" : "/data/hmda",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200
+    },
+    "uuid" : "f3be2368-36a3-4315-a5c6-b3246cd5d8b7",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:02.054617Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "getDatasetHmda"
+        }
+      }
+    },
+    "insertionIndex" : 7
+  }, {
+    "id" : "4126896e-6ac1-45da-9cba-6c80da7759d3",
+    "name" : "Get a list of all datasets. - 200",
+    "request" : {
+      "urlPath" : "/data",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200
+    },
+    "uuid" : "4126896e-6ac1-45da-9cba-6c80da7759d3",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:02.05458Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "getDatasets"
+        }
+      }
+    },
+    "insertionIndex" : 8
+  } ]
+}

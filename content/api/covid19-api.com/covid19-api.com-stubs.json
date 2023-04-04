@@ -1,0 +1,1303 @@
+{
+  "mappings" : [ {
+    "id" : "5fe0a685-fa4f-4601-85ee-8136504e1a9e",
+    "name" : "getLatestTotals (application/xml)",
+    "request" : {
+      "urlPath" : "/totals",
+      "method" : "GET",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/xml"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "[ {\n  \"recovered\" : 4660124615466108528,\n  \"critical\" : 8509008870865895507,\n  \"lastUpdate\" : \"2024-01-23T21:30:13.68Z\",\n  \"lastChange\" : \"2022-12-24T15:33:43.68Z\",\n  \"confirmed\" : 8189185570986300306,\n  \"deaths\" : 7338208415435348615\n}, {\n  \"recovered\" : 7327368295611008383,\n  \"critical\" : 1479610047308769570,\n  \"lastUpdate\" : \"2024-02-19T13:09:28.68Z\",\n  \"lastChange\" : \"2022-06-03T20:37:58.68Z\",\n  \"confirmed\" : 104445597859683062,\n  \"deaths\" : 6961565164551512237\n}, {\n  \"recovered\" : 5852387529787784027,\n  \"critical\" : 783766546984007399,\n  \"lastUpdate\" : \"2023-10-28T04:20:26.68Z\",\n  \"lastChange\" : \"2023-02-09T03:51:22.68Z\",\n  \"confirmed\" : 2069561711483170904,\n  \"deaths\" : 11568487244140784\n}, {\n  \"recovered\" : 5375374615148987703,\n  \"critical\" : 493765106114311664,\n  \"lastUpdate\" : \"2022-07-27T14:25:35.68Z\",\n  \"lastChange\" : \"2023-04-09T04:05:34.68Z\",\n  \"confirmed\" : 5638897483867394,\n  \"deaths\" : 2776621761372717555\n}, {\n  \"recovered\" : 4289964171160712440,\n  \"critical\" : 871129370888302921,\n  \"lastUpdate\" : \"2023-07-26T21:57:39.68Z\",\n  \"lastChange\" : \"2023-04-12T16:37:11.68Z\",\n  \"confirmed\" : 6062159785557718185,\n  \"deaths\" : 220260955074051879\n}, {\n  \"recovered\" : 7943002730193032547,\n  \"critical\" : 5392590425267555035,\n  \"lastUpdate\" : \"2023-07-06T00:11:06.68Z\",\n  \"lastChange\" : \"2023-11-05T21:54:20.68Z\",\n  \"confirmed\" : 1045794094235895470,\n  \"deaths\" : 6547903140896583353\n}, {\n  \"recovered\" : 7907821904073537916,\n  \"critical\" : 3174687011330353280,\n  \"lastUpdate\" : \"2023-07-07T16:27:37.68Z\",\n  \"lastChange\" : \"2023-05-21T11:51:48.68Z\",\n  \"confirmed\" : 308757997466538490,\n  \"deaths\" : 7156163187800724882\n} ]",
+      "headers" : {
+        "Content-Type" : "application/xml"
+      }
+    },
+    "uuid" : "5fe0a685-fa4f-4601-85ee-8136504e1a9e",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:04.680975Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "getLatestTotals",
+          "schema" : {
+            "items" : {
+              "properties" : {
+                "confirmed" : {
+                  "type" : "integer"
+                },
+                "critical" : {
+                  "type" : "integer"
+                },
+                "deaths" : {
+                  "type" : "integer"
+                },
+                "lastChange" : {
+                  "format" : "date-time",
+                  "type" : "string"
+                },
+                "lastUpdate" : {
+                  "format" : "date-time",
+                  "type" : "string"
+                },
+                "recovered" : {
+                  "type" : "integer"
+                }
+              },
+              "type" : "object"
+            },
+            "type" : "array"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 0
+  }, {
+    "id" : "d5aa7181-f18b-4653-b007-1d076c82434d",
+    "name" : "getLatestTotals (application/json)",
+    "request" : {
+      "urlPath" : "/totals",
+      "method" : "GET",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/json"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "[ {\n  \"recovered\" : 7599623077634500373,\n  \"critical\" : 2749707768907942057,\n  \"lastUpdate\" : \"2022-07-22T10:16:38.68Z\",\n  \"lastChange\" : \"2023-06-05T00:34:04.68Z\",\n  \"confirmed\" : 5795736485673973753,\n  \"deaths\" : 9014907444475920786\n} ]",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "d5aa7181-f18b-4653-b007-1d076c82434d",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:04.680731Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "getLatestTotals",
+          "schema" : {
+            "items" : {
+              "properties" : {
+                "confirmed" : {
+                  "type" : "integer"
+                },
+                "critical" : {
+                  "type" : "integer"
+                },
+                "deaths" : {
+                  "type" : "integer"
+                },
+                "lastChange" : {
+                  "format" : "date-time",
+                  "type" : "string"
+                },
+                "lastUpdate" : {
+                  "format" : "date-time",
+                  "type" : "string"
+                },
+                "recovered" : {
+                  "type" : "integer"
+                }
+              },
+              "type" : "object"
+            },
+            "type" : "array"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 1
+  }, {
+    "id" : "609e0495-795d-4c81-80b8-4aa03f9f2c0d",
+    "name" : "getDailyReportTotals (application/xml)",
+    "request" : {
+      "urlPath" : "/report/totals",
+      "method" : "GET",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/xml"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "[ {\n  \"date\" : \"2022-07-08T07:21:04.680329Z\",\n  \"recovered\" : 8334590890542771666,\n  \"critical\" : 1879430859566659081,\n  \"active\" : 254104734783632758,\n  \"confirmed\" : 6282110333186538989,\n  \"deaths\" : 1783149848207699183\n}, {\n  \"date\" : \"2022-06-19T06:43:04.680374Z\",\n  \"recovered\" : 1207653064905864617,\n  \"critical\" : 1448135840009433518,\n  \"active\" : 4691324108378689159,\n  \"confirmed\" : 3855880424218663711,\n  \"deaths\" : 6127249480806465740\n}, {\n  \"date\" : \"2022-08-23T07:25:04.680418Z\",\n  \"recovered\" : 249618268114799026,\n  \"critical\" : 1095375465010393286,\n  \"active\" : 5295250028294473173,\n  \"confirmed\" : 2689689752872315458,\n  \"deaths\" : 3231884737828203087\n}, {\n  \"date\" : \"2023-01-19T08:59:04.680466Z\",\n  \"recovered\" : 7090059140068478408,\n  \"critical\" : 6407601523654702174,\n  \"active\" : 8569971765770504496,\n  \"confirmed\" : 7896569638001185782,\n  \"deaths\" : 5622160327085989823\n}, {\n  \"date\" : \"2022-10-24T06:57:04.680509Z\",\n  \"recovered\" : 4902587579897276847,\n  \"critical\" : 1216499749364025925,\n  \"active\" : 8268803097907043233,\n  \"confirmed\" : 8358368853637236456,\n  \"deaths\" : 4294265882824739753\n} ]",
+      "headers" : {
+        "Content-Type" : "application/xml"
+      }
+    },
+    "uuid" : "609e0495-795d-4c81-80b8-4aa03f9f2c0d",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:04.680605Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "getDailyReportTotals",
+          "schema" : {
+            "items" : {
+              "properties" : {
+                "active" : {
+                  "type" : "integer"
+                },
+                "confirmed" : {
+                  "type" : "integer"
+                },
+                "critical" : {
+                  "type" : "integer"
+                },
+                "date" : {
+                  "type" : "string"
+                },
+                "deaths" : {
+                  "type" : "integer"
+                },
+                "recovered" : {
+                  "type" : "integer"
+                }
+              },
+              "type" : "object"
+            },
+            "type" : "array"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 2
+  }, {
+    "id" : "15144a2f-bdd8-4be2-bbaa-2ffb16cf4c81",
+    "name" : "getDailyReportTotals (application/json)",
+    "request" : {
+      "urlPath" : "/report/totals",
+      "method" : "GET",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/json"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "[ {\n  \"date\" : \"2022-06-15T08:20:04.679972Z\",\n  \"recovered\" : 6555350578361389986,\n  \"critical\" : 7699786735575864205,\n  \"active\" : 4576218653515260889,\n  \"confirmed\" : 4870950201333959923,\n  \"deaths\" : 7774052885687793382\n}, {\n  \"date\" : \"2022-09-22T08:09:04.680033Z\",\n  \"recovered\" : 2192838552630781179,\n  \"critical\" : 6532855827927770122,\n  \"active\" : 6064362197770522960,\n  \"confirmed\" : 3706472102250449704,\n  \"deaths\" : 3130375314065005560\n}, {\n  \"date\" : \"2023-01-26T06:06:04.680076Z\",\n  \"recovered\" : 3513900932933674079,\n  \"critical\" : 905119563233701039,\n  \"active\" : 5079050405755559719,\n  \"confirmed\" : 6363998608608842523,\n  \"deaths\" : 3495877685038799940\n}, {\n  \"date\" : \"2022-07-27T08:10:04.680116Z\",\n  \"recovered\" : 3195593782291190620,\n  \"critical\" : 3491162646629293837,\n  \"active\" : 6257714319955120179,\n  \"confirmed\" : 3464285786733532108,\n  \"deaths\" : 8291538999017135700\n}, {\n  \"date\" : \"2022-07-23T07:53:04.680161Z\",\n  \"recovered\" : 54118151552891117,\n  \"critical\" : 3113924914763778400,\n  \"active\" : 3197567158409471534,\n  \"confirmed\" : 6669653475642368003,\n  \"deaths\" : 1228452315066976232\n} ]",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "15144a2f-bdd8-4be2-bbaa-2ffb16cf4c81",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:04.680278Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "getDailyReportTotals",
+          "schema" : {
+            "items" : {
+              "properties" : {
+                "active" : {
+                  "type" : "integer"
+                },
+                "confirmed" : {
+                  "type" : "integer"
+                },
+                "critical" : {
+                  "type" : "integer"
+                },
+                "date" : {
+                  "type" : "string"
+                },
+                "deaths" : {
+                  "type" : "integer"
+                },
+                "recovered" : {
+                  "type" : "integer"
+                }
+              },
+              "type" : "object"
+            },
+            "type" : "array"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 3
+  }, {
+    "id" : "2a6acc5f-60a0-40f7-963f-040e4d1a8bc4",
+    "name" : "getDailyReportByCountryName (application/xml)",
+    "request" : {
+      "urlPath" : "/report/country/name",
+      "method" : "GET",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/xml"
+        }
+      },
+      "queryParameters" : {
+        "date" : {
+          "equalTo" : "2022-08-09T06%3A50%3A04.678156Z"
+        },
+        "name" : {
+          "equalTo" : "Yelena+Batz"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "[ {\n  \"date\" : \"2022-05-11T05:35:04.667916Z\",\n  \"country\" : \"Comoros\",\n  \"province\" : [ {\n    \"recovered\" : 3368459118507761935,\n    \"active\" : 7717391138044741034,\n    \"confirmed\" : 6571534156762954237,\n    \"deaths\" : 7474674399837908594\n  }, {\n    \"recovered\" : 3506696289210116043,\n    \"active\" : 3940455745138179636,\n    \"confirmed\" : 2004624788845629189,\n    \"deaths\" : 3926551275959889895\n  }, {\n    \"recovered\" : 653464810764646214,\n    \"active\" : 1554626579773020089,\n    \"confirmed\" : 6209962195590000490,\n    \"deaths\" : 5226763134362893461\n  }, {\n    \"recovered\" : 6319656564485748854,\n    \"active\" : 4134167804806820837,\n    \"confirmed\" : 4961799335447488750,\n    \"deaths\" : 8036164085819156265\n  }, {\n    \"recovered\" : 7031320333799038107,\n    \"active\" : 5629531193028744036,\n    \"confirmed\" : 1798678244347911310,\n    \"deaths\" : 6131539525824296325\n  }, {\n    \"recovered\" : 8505835463371109738,\n    \"active\" : 5300664179090753137,\n    \"confirmed\" : 7748086646634276675,\n    \"deaths\" : 221252174461736719\n  } ],\n  \"latitude\" : 1.3074760793622087E38,\n  \"longitude\" : 1.0358267815030738E36\n}, {\n  \"date\" : \"2022-10-23T05:28:04.668055Z\",\n  \"country\" : \"Myanmar\",\n  \"province\" : [ {\n    \"recovered\" : 2266335630039134987,\n    \"active\" : 943226234920152691,\n    \"confirmed\" : 8518848260053388148,\n    \"deaths\" : 7418128570936244709\n  } ],\n  \"latitude\" : 2.7480835187498398E38,\n  \"longitude\" : 2.086737417987526E38\n}, {\n  \"date\" : \"2023-01-05T08:09:04.668121Z\",\n  \"country\" : \"Paraguay\",\n  \"province\" : [ {\n    \"recovered\" : 3298015695466449382,\n    \"active\" : 8347556027565588755,\n    \"confirmed\" : 789731089899509066,\n    \"deaths\" : 8888022097864992704\n  } ],\n  \"latitude\" : 2.2626461932757566E38,\n  \"longitude\" : 2.188561375027839E37\n}, {\n  \"date\" : \"2023-02-26T09:22:04.66819Z\",\n  \"country\" : \"Marshall Islands\",\n  \"province\" : [ {\n    \"recovered\" : 4258094031798309178,\n    \"active\" : 7024385966702299124,\n    \"confirmed\" : 7804153803488875114,\n    \"deaths\" : 6346120725479213902\n  }, {\n    \"recovered\" : 5786290491574025317,\n    \"active\" : 2507206897267117728,\n    \"confirmed\" : 5237565625370652688,\n    \"deaths\" : 5222788400988113361\n  }, {\n    \"recovered\" : 1983938962194010218,\n    \"active\" : 8687107117747225399,\n    \"confirmed\" : 8745370974463026125,\n    \"deaths\" : 5641413262754045056\n  }, {\n    \"recovered\" : 3209764543335826803,\n    \"active\" : 513478102765652437,\n    \"confirmed\" : 6953290914526751547,\n    \"deaths\" : 1121414180790081340\n  }, {\n    \"recovered\" : 5821150276677944237,\n    \"active\" : 2326329808313839675,\n    \"confirmed\" : 3323959419101437384,\n    \"deaths\" : 3544211633508868041\n  }, {\n    \"recovered\" : 6513560428637892181,\n    \"active\" : 307788998987451759,\n    \"confirmed\" : 2418507060151385164,\n    \"deaths\" : 7654407186023229309\n  }, {\n    \"recovered\" : 8398288737712039592,\n    \"active\" : 136522282654966463,\n    \"confirmed\" : 415206412571135958,\n    \"deaths\" : 260486925794360833\n  }, {\n    \"recovered\" : 4582304641456862946,\n    \"active\" : 8165388978285296085,\n    \"confirmed\" : 2930429524035862229,\n    \"deaths\" : 4481990150467012755\n  } ],\n  \"latitude\" : 2.5537225983974357E37,\n  \"longitude\" : 6.319842979741027E36\n}, {\n  \"date\" : \"2022-04-08T09:10:04.668341Z\",\n  \"country\" : \"Greece\",\n  \"province\" : [ {\n    \"recovered\" : 4560242127066217766,\n    \"active\" : 2837583227472488693,\n    \"confirmed\" : 5493918809822739141,\n    \"deaths\" : 5374235330415192623\n  }, {\n    \"recovered\" : 3283862646252120896,\n    \"active\" : 829486466507312201,\n    \"confirmed\" : 1423656282809788693,\n    \"deaths\" : 325316815360003156\n  }, {\n    \"recovered\" : 206188060920370363,\n    \"active\" : 7854515540793587302,\n    \"confirmed\" : 8644651446086917327,\n    \"deaths\" : 5320870166525250515\n  }, {\n    \"recovered\" : 8878300708222985896,\n    \"active\" : 477974497412087487,\n    \"confirmed\" : 4070821040365237361,\n    \"deaths\" : 2540309115761514179\n  }, {\n    \"recovered\" : 2795367972851582145,\n    \"active\" : 1204599357968407277,\n    \"confirmed\" : 1009802163271798492,\n    \"deaths\" : 919013328578212289\n  } ],\n  \"latitude\" : 2.6384077724478342E38,\n  \"longitude\" : 5.455605248439083E37\n} ]",
+      "headers" : {
+        "Content-Type" : "application/xml"
+      }
+    },
+    "uuid" : "2a6acc5f-60a0-40f7-963f-040e4d1a8bc4",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:04.679748Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "getDailyReportByCountryName",
+          "schema" : {
+            "items" : {
+              "properties" : {
+                "country" : {
+                  "type" : "string"
+                },
+                "date" : {
+                  "type" : "string"
+                },
+                "latitude" : {
+                  "format" : "float",
+                  "type" : "number"
+                },
+                "longitude" : {
+                  "format" : "float",
+                  "type" : "number"
+                },
+                "province" : {
+                  "items" : {
+                    "properties" : {
+                      "active" : {
+                        "type" : "integer"
+                      },
+                      "confirmed" : {
+                        "type" : "integer"
+                      },
+                      "deaths" : {
+                        "type" : "integer"
+                      },
+                      "recovered" : {
+                        "type" : "integer"
+                      }
+                    },
+                    "type" : "object"
+                  },
+                  "type" : "array"
+                }
+              },
+              "type" : "object"
+            },
+            "type" : "array"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 4
+  }, {
+    "id" : "30394632-e728-425c-9d5c-0d38e2514ba7",
+    "name" : "getDailyReportByCountryName (application/json)",
+    "request" : {
+      "urlPath" : "/report/country/name",
+      "method" : "GET",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/json"
+        }
+      },
+      "queryParameters" : {
+        "date" : {
+          "equalTo" : "2023-01-04T09%3A08%3A04.667799Z"
+        },
+        "name" : {
+          "equalTo" : "Florence+Treutel"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "[ {\n  \"date\" : \"2023-01-05T07:36:04.667416Z\",\n  \"country\" : \"Argentina\",\n  \"province\" : [ {\n    \"recovered\" : 730878426779981651,\n    \"active\" : 1043301478124274482,\n    \"confirmed\" : 8805821583260734183,\n    \"deaths\" : 3475691918359428273\n  } ],\n  \"latitude\" : 6.54109713853085E36,\n  \"longitude\" : 2.013184030791925E38\n}, {\n  \"date\" : \"2023-02-23T08:07:04.667489Z\",\n  \"country\" : \"Nicaragua\",\n  \"province\" : [ {\n    \"recovered\" : 7432789895847868509,\n    \"active\" : 1267058622954017370,\n    \"confirmed\" : 4141816301653083399,\n    \"deaths\" : 1192486694401820280\n  }, {\n    \"recovered\" : 1788008834057997466,\n    \"active\" : 7090819528615401543,\n    \"confirmed\" : 3828374726706381581,\n    \"deaths\" : 463941423770943039\n  } ],\n  \"latitude\" : 3.563454046696389E37,\n  \"longitude\" : 1.6971876370678767E38\n}, {\n  \"date\" : \"2022-12-31T05:57:04.66757Z\",\n  \"country\" : \"Sweden\",\n  \"province\" : [ {\n    \"recovered\" : 5058574586896832707,\n    \"active\" : 5917542839318771951,\n    \"confirmed\" : 7667351630290922835,\n    \"deaths\" : 4482515237760733475\n  }, {\n    \"recovered\" : 6645382776033417028,\n    \"active\" : 7778082593899968945,\n    \"confirmed\" : 4135837188619099131,\n    \"deaths\" : 5834242012340036154\n  }, {\n    \"recovered\" : 7549615988304935085,\n    \"active\" : 3385414829584877544,\n    \"confirmed\" : 513386562795905824,\n    \"deaths\" : 7597554369382711212\n  }, {\n    \"recovered\" : 6316001141125938400,\n    \"active\" : 5839223306351301210,\n    \"confirmed\" : 6094688430171972197,\n    \"deaths\" : 5770226549221613577\n  }, {\n    \"recovered\" : 6284410696724266606,\n    \"active\" : 1540716851049648530,\n    \"confirmed\" : 8781759624295101398,\n    \"deaths\" : 4316881404568231889\n  }, {\n    \"recovered\" : 152692592628503651,\n    \"active\" : 330562120487455413,\n    \"confirmed\" : 4118294318025066281,\n    \"deaths\" : 8504925785528420514\n  }, {\n    \"recovered\" : 2643109483816515489,\n    \"active\" : 4660729271961082054,\n    \"confirmed\" : 2808455380417647286,\n    \"deaths\" : 2256947608477851002\n  } ],\n  \"latitude\" : 6.692649737091579E37,\n  \"longitude\" : 1.638124950924963E38\n} ]",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "30394632-e728-425c-9d5c-0d38e2514ba7",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:04.667879Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "getDailyReportByCountryName",
+          "schema" : {
+            "items" : {
+              "properties" : {
+                "country" : {
+                  "type" : "string"
+                },
+                "date" : {
+                  "type" : "string"
+                },
+                "latitude" : {
+                  "format" : "float",
+                  "type" : "number"
+                },
+                "longitude" : {
+                  "format" : "float",
+                  "type" : "number"
+                },
+                "province" : {
+                  "items" : {
+                    "properties" : {
+                      "active" : {
+                        "type" : "integer"
+                      },
+                      "confirmed" : {
+                        "type" : "integer"
+                      },
+                      "deaths" : {
+                        "type" : "integer"
+                      },
+                      "recovered" : {
+                        "type" : "integer"
+                      }
+                    },
+                    "type" : "object"
+                  },
+                  "type" : "array"
+                }
+              },
+              "type" : "object"
+            },
+            "type" : "array"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 5
+  }, {
+    "id" : "6ee0c9f0-09b8-43b5-a78d-eff1ef5fb983",
+    "name" : "getDailyReportByCountryCode (application/xml)",
+    "request" : {
+      "urlPath" : "/report/country/code",
+      "method" : "GET",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/xml"
+        }
+      },
+      "queryParameters" : {
+        "date" : {
+          "equalTo" : "2022-06-22T08%3A59%3A04.667295Z"
+        },
+        "code" : {
+          "equalTo" : "ycjcuxtvpyj52vlvghyeqvxlnr6nd8ko9xc6gj0tsph754jizi0wqsfiqss6p5kexybif7b9mb3p6z2xek2zta5z"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "[ {\n  \"date\" : \"2023-02-17T08:24:04.667142Z\",\n  \"country\" : \"Tajikistan\",\n  \"province\" : [ {\n    \"recovered\" : 4096243334494594594,\n    \"active\" : 4202367864128768523,\n    \"confirmed\" : 3841095254196483740,\n    \"deaths\" : 1747708804943390615\n  }, {\n    \"recovered\" : 8195009695656419390,\n    \"active\" : 1389756665439761966,\n    \"confirmed\" : 6110537738590430239,\n    \"deaths\" : 2017393858058166764\n  }, {\n    \"recovered\" : 365904657330831748,\n    \"active\" : 8728187110783564995,\n    \"confirmed\" : 4680563683140814397,\n    \"deaths\" : 7771294364841828222\n  }, {\n    \"recovered\" : 1246969628755367682,\n    \"active\" : 8305970128680068724,\n    \"confirmed\" : 23275187031923741,\n    \"deaths\" : 219792131194044902\n  } ],\n  \"latitude\" : 1.0661908628568723E38,\n  \"longitude\" : 1.0543739324699137E37\n} ]",
+      "headers" : {
+        "Content-Type" : "application/xml"
+      }
+    },
+    "uuid" : "6ee0c9f0-09b8-43b5-a78d-eff1ef5fb983",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:04.667375Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "getDailyReportByCountryCode",
+          "schema" : {
+            "items" : {
+              "properties" : {
+                "country" : {
+                  "type" : "string"
+                },
+                "date" : {
+                  "type" : "string"
+                },
+                "latitude" : {
+                  "format" : "float",
+                  "type" : "number"
+                },
+                "longitude" : {
+                  "format" : "float",
+                  "type" : "number"
+                },
+                "province" : {
+                  "items" : {
+                    "properties" : {
+                      "active" : {
+                        "type" : "integer"
+                      },
+                      "confirmed" : {
+                        "type" : "integer"
+                      },
+                      "deaths" : {
+                        "type" : "integer"
+                      },
+                      "recovered" : {
+                        "type" : "integer"
+                      }
+                    },
+                    "type" : "object"
+                  },
+                  "type" : "array"
+                }
+              },
+              "type" : "object"
+            },
+            "type" : "array"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 6
+  }, {
+    "id" : "e8e42be6-3b9e-4a28-9dd3-b8ab105498f4",
+    "name" : "getDailyReportByCountryCode (application/json)",
+    "request" : {
+      "urlPath" : "/report/country/code",
+      "method" : "GET",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/json"
+        }
+      },
+      "queryParameters" : {
+        "date" : {
+          "equalTo" : "2022-11-25T06%3A23%3A04.666986Z"
+        },
+        "code" : {
+          "equalTo" : "yk073qtq5wr1ro56r4h8l2b1y1cmnfaltu1zuib71knqutrpe7myvpathnbqc048hby34izv4tpmn0y4g08rnr5pw0la1lj72tnlvm64tvhvdc0hyrdfq3x0"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "[ {\n  \"date\" : \"2022-11-24T06:39:04.666527Z\",\n  \"country\" : \"Saint Lucia\",\n  \"province\" : [ {\n    \"recovered\" : 5047110013188572511,\n    \"active\" : 4022066035864514187,\n    \"confirmed\" : 3245978183885211525,\n    \"deaths\" : 3449232927573235954\n  }, {\n    \"recovered\" : 2031440570732912089,\n    \"active\" : 6810373857346882783,\n    \"confirmed\" : 1796514039084601088,\n    \"deaths\" : 7458079680044496508\n  } ],\n  \"latitude\" : 2.3226808731543294E38,\n  \"longitude\" : 1.6660102192017952E38\n}, {\n  \"date\" : \"2022-04-09T08:44:04.666669Z\",\n  \"country\" : \"Mongolia\",\n  \"province\" : [ {\n    \"recovered\" : 8163411011948822603,\n    \"active\" : 5735053418571681284,\n    \"confirmed\" : 2515176656411854558,\n    \"deaths\" : 3666574909241495336\n  }, {\n    \"recovered\" : 4286805220037467729,\n    \"active\" : 146181745338874782,\n    \"confirmed\" : 3097778475688572850,\n    \"deaths\" : 9099647102254066546\n  }, {\n    \"recovered\" : 5011785881584012314,\n    \"active\" : 78110707227401582,\n    \"confirmed\" : 8510262236591591271,\n    \"deaths\" : 895330055122926644\n  }, {\n    \"recovered\" : 6940309824227657526,\n    \"active\" : 4973525000611600814,\n    \"confirmed\" : 3886666763678975660,\n    \"deaths\" : 5350229361789907079\n  }, {\n    \"recovered\" : 7667978872231146401,\n    \"active\" : 2261127562701078924,\n    \"confirmed\" : 4634401319824205266,\n    \"deaths\" : 4658733223518118915\n  } ],\n  \"latitude\" : 2.613752136686553E38,\n  \"longitude\" : 2.2472423186136044E38\n}, {\n  \"date\" : \"2022-04-27T06:22:04.666788Z\",\n  \"country\" : \"Benin\",\n  \"province\" : [ {\n    \"recovered\" : 708846993137396542,\n    \"active\" : 3363202506660733388,\n    \"confirmed\" : 6346764078853010048,\n    \"deaths\" : 1194675899868791594\n  }, {\n    \"recovered\" : 7525258749044958458,\n    \"active\" : 4590732530032084620,\n    \"confirmed\" : 3303299804037297572,\n    \"deaths\" : 800315778584246137\n  }, {\n    \"recovered\" : 666967343705100172,\n    \"active\" : 1820967518685411692,\n    \"confirmed\" : 3805469032216777920,\n    \"deaths\" : 6191560046045758088\n  }, {\n    \"recovered\" : 3551650152053629053,\n    \"active\" : 3501420448580024111,\n    \"confirmed\" : 5214862488641122743,\n    \"deaths\" : 6590488839055248892\n  }, {\n    \"recovered\" : 1254103195898213647,\n    \"active\" : 3114331963857273687,\n    \"confirmed\" : 5111601273879253930,\n    \"deaths\" : 493097096457766557\n  } ],\n  \"latitude\" : 2.2439513222033383E38,\n  \"longitude\" : 3.3168188743516418E37\n} ]",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "e8e42be6-3b9e-4a28-9dd3-b8ab105498f4",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:04.667088Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "getDailyReportByCountryCode",
+          "schema" : {
+            "items" : {
+              "properties" : {
+                "country" : {
+                  "type" : "string"
+                },
+                "date" : {
+                  "type" : "string"
+                },
+                "latitude" : {
+                  "format" : "float",
+                  "type" : "number"
+                },
+                "longitude" : {
+                  "format" : "float",
+                  "type" : "number"
+                },
+                "province" : {
+                  "items" : {
+                    "properties" : {
+                      "active" : {
+                        "type" : "integer"
+                      },
+                      "confirmed" : {
+                        "type" : "integer"
+                      },
+                      "deaths" : {
+                        "type" : "integer"
+                      },
+                      "recovered" : {
+                        "type" : "integer"
+                      }
+                    },
+                    "type" : "object"
+                  },
+                  "type" : "array"
+                }
+              },
+              "type" : "object"
+            },
+            "type" : "array"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 7
+  }, {
+    "id" : "05b25c71-0537-4eef-b812-8dacbd3cbf2b",
+    "name" : "getDailyReportAllCountries (application/xml)",
+    "request" : {
+      "urlPath" : "/report/country/all",
+      "method" : "GET",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/xml"
+        }
+      },
+      "queryParameters" : {
+        "date" : {
+          "equalTo" : "2023-01-20T07%3A53%3A04.642339Z"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "[ {\n  \"date\" : \"2022-09-05T08:03:04.642039Z\",\n  \"country\" : \"Solomon Islands\",\n  \"province\" : [ {\n    \"recovered\" : 6284031573117350252,\n    \"active\" : 4126496541519931665,\n    \"confirmed\" : 1107309195642104105,\n    \"deaths\" : 5524071085082351619\n  }, {\n    \"recovered\" : 6738348736647478474,\n    \"active\" : 3445896819834034201,\n    \"confirmed\" : 8911312426340025920,\n    \"deaths\" : 2656966960341735921\n  }, {\n    \"recovered\" : 8060440128184901101,\n    \"active\" : 5783483286167353382,\n    \"confirmed\" : 7417927335585032992,\n    \"deaths\" : 1834711555003250932\n  }, {\n    \"recovered\" : 7464945147361079059,\n    \"active\" : 3201024293080239944,\n    \"confirmed\" : 4822080200276532917,\n    \"deaths\" : 8855226943457935829\n  }, {\n    \"recovered\" : 5958188112932416412,\n    \"active\" : 9026770028926608070,\n    \"confirmed\" : 6436857811875488094,\n    \"deaths\" : 6864227166953578572\n  }, {\n    \"recovered\" : 2037028335631331226,\n    \"active\" : 395709477600819239,\n    \"confirmed\" : 7008171355637180045,\n    \"deaths\" : 6655772175784095697\n  } ],\n  \"latitude\" : 1.2061312215437443E37,\n  \"longitude\" : 3.0828998638385467E38\n} ]",
+      "headers" : {
+        "Content-Type" : "application/xml"
+      }
+    },
+    "uuid" : "05b25c71-0537-4eef-b812-8dacbd3cbf2b",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:04.64252Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "getDailyReportAllCountries",
+          "schema" : {
+            "items" : {
+              "properties" : {
+                "country" : {
+                  "type" : "string"
+                },
+                "date" : {
+                  "type" : "string"
+                },
+                "latitude" : {
+                  "format" : "float",
+                  "type" : "number"
+                },
+                "longitude" : {
+                  "format" : "float",
+                  "type" : "number"
+                },
+                "province" : {
+                  "items" : {
+                    "properties" : {
+                      "active" : {
+                        "type" : "integer"
+                      },
+                      "confirmed" : {
+                        "type" : "integer"
+                      },
+                      "deaths" : {
+                        "type" : "integer"
+                      },
+                      "recovered" : {
+                        "type" : "integer"
+                      }
+                    },
+                    "type" : "object"
+                  },
+                  "type" : "array"
+                }
+              },
+              "type" : "object"
+            },
+            "type" : "array"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 8
+  }, {
+    "id" : "a6a3e8fa-8cca-40b1-a357-ce7ddebe33ce",
+    "name" : "getDailyReportAllCountries (application/json)",
+    "request" : {
+      "urlPath" : "/report/country/all",
+      "method" : "GET",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/json"
+        }
+      },
+      "queryParameters" : {
+        "date" : {
+          "equalTo" : "2022-09-23T05%3A55%3A04.641673Z"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "[ {\n  \"date\" : \"2023-02-02T07:50:04.64114Z\",\n  \"country\" : \"Brunei Darussalam\",\n  \"province\" : [ {\n    \"recovered\" : 3485311343873229652,\n    \"active\" : 4051903351641370681,\n    \"confirmed\" : 5965343734465463074,\n    \"deaths\" : 9200379061741528683\n  }, {\n    \"recovered\" : 9218295558634715618,\n    \"active\" : 8510070919424802794,\n    \"confirmed\" : 3235363123656821212,\n    \"deaths\" : 1420465772220291924\n  }, {\n    \"recovered\" : 4569422574221563224,\n    \"active\" : 8596183647388880914,\n    \"confirmed\" : 8544433725870380765,\n    \"deaths\" : 2478456126133959641\n  }, {\n    \"recovered\" : 8948079167744650079,\n    \"active\" : 4472854171994835519,\n    \"confirmed\" : 9062685476584918675,\n    \"deaths\" : 1737931943743995431\n  }, {\n    \"recovered\" : 133466384940164045,\n    \"active\" : 1075511074630418497,\n    \"confirmed\" : 1394934755691078734,\n    \"deaths\" : 988314295784720369\n  }, {\n    \"recovered\" : 2537152168917589035,\n    \"active\" : 4210157022368316383,\n    \"confirmed\" : 4860732551403523437,\n    \"deaths\" : 2809378152110784192\n  } ],\n  \"latitude\" : 3.097812155297639E38,\n  \"longitude\" : 1.896672763476603E38\n}, {\n  \"date\" : \"2023-02-20T08:25:04.641415Z\",\n  \"country\" : \"Japan\",\n  \"province\" : [ {\n    \"recovered\" : 7504567281942186302,\n    \"active\" : 6620392933186219869,\n    \"confirmed\" : 5483940213826824128,\n    \"deaths\" : 3742200322093224425\n  }, {\n    \"recovered\" : 3009665886628519773,\n    \"active\" : 8908795615463661236,\n    \"confirmed\" : 7491003164477706025,\n    \"deaths\" : 3569597516233446771\n  }, {\n    \"recovered\" : 1695425038013815291,\n    \"active\" : 4935343881169137175,\n    \"confirmed\" : 3071984175094774096,\n    \"deaths\" : 8344508702419676388\n  }, {\n    \"recovered\" : 3568525830569385478,\n    \"active\" : 4258555407859158371,\n    \"confirmed\" : 1543216715722989341,\n    \"deaths\" : 2594990938337305133\n  }, {\n    \"recovered\" : 1539191042255605080,\n    \"active\" : 2531676410477026823,\n    \"confirmed\" : 6624203882289724751,\n    \"deaths\" : 3107956848744381111\n  } ],\n  \"latitude\" : 2.273218050912643E38,\n  \"longitude\" : 1.8858415095113966E38\n} ]",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "a6a3e8fa-8cca-40b1-a357-ce7ddebe33ce",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:04.641953Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "getDailyReportAllCountries",
+          "schema" : {
+            "items" : {
+              "properties" : {
+                "country" : {
+                  "type" : "string"
+                },
+                "date" : {
+                  "type" : "string"
+                },
+                "latitude" : {
+                  "format" : "float",
+                  "type" : "number"
+                },
+                "longitude" : {
+                  "format" : "float",
+                  "type" : "number"
+                },
+                "province" : {
+                  "items" : {
+                    "properties" : {
+                      "active" : {
+                        "type" : "integer"
+                      },
+                      "confirmed" : {
+                        "type" : "integer"
+                      },
+                      "deaths" : {
+                        "type" : "integer"
+                      },
+                      "recovered" : {
+                        "type" : "integer"
+                      }
+                    },
+                    "type" : "object"
+                  },
+                  "type" : "array"
+                }
+              },
+              "type" : "object"
+            },
+            "type" : "array"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 9
+  }, {
+    "id" : "2c0ad29e-9e7e-43b0-a9ec-e2b6900b34d3",
+    "name" : "getListOfCountries (application/xml)",
+    "request" : {
+      "urlPath" : "/help/countries",
+      "method" : "GET",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/xml"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "[ {\n  \"alpha-3-code\" : \"pnnxnwyw34q952e1dgddc2wjhn9l6nr28265o1fay3l7s34sb5a3wz046ev81ywll63a1u3l2jzbgdckvdccok9ev1ej1nmzakm9lmxcgusifzp8mtl5jsemj5mjkvqj4en5haae4b805a5e8\",\n  \"latitude\" : 8.285811584592276E37,\n  \"alpha-2-code\" : \"bd4j2yhq49it98nsfuaanoqxkfiknwp4270gafvlw21afrq9wafnwo1r7fvzaz2i2tvuhuwa28hscchidnty5kocmjygeghekyczdwz9vq7a8a\",\n  \"name\" : \"Miss Garry Kreiger\",\n  \"longitude\" : 4.1229945128747766E37\n}, {\n  \"alpha-3-code\" : \"y28gngekcz7429hs3loyaw57bbhgfl7qn5a84prakrng0p7ltcwespnv2fr0piq6j59oxko5bcvw77fovq0rdqjtm39ai7s802vc6jlgg\",\n  \"latitude\" : 7.766268887615947E37,\n  \"alpha-2-code\" : \"eg0dq7tqu07izsy3hlr9sy2hb0gn98r82lcaslwi7ongezptq0y4a7mrk2i877ut0iof7uukclc8fblfex0xu6qyi73xw53ron4ym8y8sq33y586b7kdxs8ss2wekfqhmst5mm5tikmbm7v43n652bhdchr3k3qgi5te\",\n  \"name\" : \"Miss Kelley Terry\",\n  \"longitude\" : 6.250008207746324E37\n}, {\n  \"alpha-3-code\" : \"yukkidn5akzxo3xzz00tex3hvico1gfgi8amgvmc2yb1szgrp29m6vaafsrronuj73o2qkndt2p41lfye7p77fu9xnk8rquj1v6dv2e\",\n  \"latitude\" : 3.1256600098736037E38,\n  \"alpha-2-code\" : \"d3mzdsg7885i5ala84z57s2fijhr5u90npoau0yxlhh4ra9zoptfn1ia2hd4m1t8q1rx6r6i98bogb9n4t2eo861vn67kw61rfcj1fnclar8\",\n  \"name\" : \"Anika Brakus DVM\",\n  \"longitude\" : 2.8171761832263206E38\n} ]",
+      "headers" : {
+        "Content-Type" : "application/xml"
+      }
+    },
+    "uuid" : "2c0ad29e-9e7e-43b0-a9ec-e2b6900b34d3",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:04.64108Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "getListOfCountries",
+          "schema" : {
+            "items" : {
+              "properties" : {
+                "alpha-2-code" : {
+                  "type" : "string"
+                },
+                "alpha-3-code" : {
+                  "type" : "string"
+                },
+                "latitude" : {
+                  "format" : "float",
+                  "type" : "number"
+                },
+                "longitude" : {
+                  "format" : "float",
+                  "type" : "number"
+                },
+                "name" : {
+                  "type" : "string"
+                }
+              },
+              "type" : "object"
+            },
+            "type" : "array"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 10
+  }, {
+    "id" : "062e8e97-90ac-4b65-ac52-f3eef4074d35",
+    "name" : "getListOfCountries (application/json)",
+    "request" : {
+      "urlPath" : "/help/countries",
+      "method" : "GET",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/json"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "[ {\n  \"alpha-3-code\" : \"ro1ip0fawpm461lotln3\",\n  \"latitude\" : 1.0452918652112963E38,\n  \"alpha-2-code\" : \"v8j92fwds45ym023r2c6c8jj7vmaw\",\n  \"name\" : \"Ms. Sirena McDermott\",\n  \"longitude\" : 2.7104847353047374E38\n}, {\n  \"alpha-3-code\" : \"bu5m7eaonbckldhpqcwcwewvbui1kkj4yvv9uj21mku6uckg9nwi3do1ki0qsn91tap6zq796phb\",\n  \"latitude\" : 2.7559609754248683E38,\n  \"alpha-2-code\" : \"tud2ttcit5d7sb63ta3l31rnbxuuhiue9dodho75dygq6fsezobpu7mx0s4jhh7pjlav19mc752exlgeerzvncurlvjvwbajii1xd\",\n  \"name\" : \"Franchesca Koelpin PhD\",\n  \"longitude\" : 1.019394807597079E38\n}, {\n  \"alpha-3-code\" : \"kzptlqwhcfb22ip6gbmuvphklekw53trlgzwlrv7hj5vntv87e8q0nn13q3qceby\",\n  \"latitude\" : 3.327658677597291E37,\n  \"alpha-2-code\" : \"bzbemcm7l6lcak1memmrm3c4xb2bgb07rq4ni4hfcnr23ti1t5xholm2mtejv30zbinbzfg8sm9c5\",\n  \"name\" : \"Mrs. Zora White\",\n  \"longitude\" : 2.6464014693118604E38\n}, {\n  \"alpha-3-code\" : \"f8f4zv8b89s52e3zw7i8orrcz73rprmwg3v8l3uc4oxcy5na6di30yt98b9nq\",\n  \"latitude\" : 1.1590032385667506E38,\n  \"alpha-2-code\" : \"5pajdee9vnv3gci5s8v4s5uvr1hhy1e82u3p24h03zxx5us1ui3zynxqev5gmvvd3gu2ev05383112xobvr5xoum9sb3tmp7xx4\",\n  \"name\" : \"Vito Murphy\",\n  \"longitude\" : 1.0096500984875384E38\n}, {\n  \"alpha-3-code\" : \"n0a0q5xxjl3bo6kc3idlmswjcuzbpiku4zyrfkobg8emjiofgdq2z5dorw6t98thu623kv7y2sp\",\n  \"latitude\" : 2.2994377531821027E38,\n  \"alpha-2-code\" : \"avitvcazipqy751kpl6zqxyp1szdrv8lkdqh68vhs0960hhlp4rzgjnnf1y7jtf3bavkh98v35jii3nghhzax8eraexcd3xxw1j7kvi6eztsezil0hfegj3pdr\",\n  \"name\" : \"Dr. Torie Hauck\",\n  \"longitude\" : 1.7036618509863207E38\n}, {\n  \"alpha-3-code\" : \"dmu498950l6nmog2czldn3xj57pu9ol8iglct5bch1uxh7ic8\",\n  \"latitude\" : 1.721162517286126E38,\n  \"alpha-2-code\" : \"4kh9p1drhw92dw9qd5c2cs9hhickw33jg6v7ypvfi6dyyx5o89u696vlou3rz3l0mpvcjpabn9grk1yayvxb7rnyjpmw1b6tqoxxwv9famtx7vgis47xgj2irpfr3juxjodflmgzo1aofyo7q0hqq2zkgrsyroy8icrgumw4gldrxk9d\",\n  \"name\" : \"Randall Corkery\",\n  \"longitude\" : 8.456170418717485E36\n}, {\n  \"alpha-3-code\" : \"3sc\",\n  \"latitude\" : 2.9823876694179765E38,\n  \"alpha-2-code\" : \"3wx5ndl6qqgil281kuidy6npzjmv1gp28a3m3j1zk1ud4wioj2evz41apfute5lnrtuhv1eda7uvbch80pdgqkuuhz6cloa8yyuernc7pzfw0wr1e4e2fp24n9ln7ayjw429qpjinqe8lu70pfevmtx0ry48kkjmu4i6hczxuc\",\n  \"name\" : \"Thaddeus Goyette\",\n  \"longitude\" : 6.802238639349611E37\n} ]",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "062e8e97-90ac-4b65-ac52-f3eef4074d35",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:04.640527Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "getListOfCountries",
+          "schema" : {
+            "items" : {
+              "properties" : {
+                "alpha-2-code" : {
+                  "type" : "string"
+                },
+                "alpha-3-code" : {
+                  "type" : "string"
+                },
+                "latitude" : {
+                  "format" : "float",
+                  "type" : "number"
+                },
+                "longitude" : {
+                  "format" : "float",
+                  "type" : "number"
+                },
+                "name" : {
+                  "type" : "string"
+                }
+              },
+              "type" : "object"
+            },
+            "type" : "array"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 11
+  }, {
+    "id" : "db9a5641-6b55-4ff1-bcd5-b78efe1cd7e0",
+    "name" : "getLatestCountryDataByCode (application/xml)",
+    "request" : {
+      "urlPath" : "/country/code",
+      "method" : "GET",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/xml"
+        }
+      },
+      "queryParameters" : {
+        "code" : {
+          "equalTo" : "o11g8ggdad0ddvfvnks9hoao607q5audbz2jo0vhna0xth6wn80wf3sjs5ix8uh00d6vro9kbh0b0rft6mle3ccjsq8n0bj5vwez8ikzvtgrq1kyunoe3l69hr0air5o18tphrzder5t587kbnt6d8b43vb8u1925hgv8geyoredruazrhz82r9hu4k24h"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "[ {\n  \"country\" : \"Uganda\",\n  \"recovered\" : 3616914578773871230,\n  \"critical\" : 5365942033840266146,\n  \"lastUpdate\" : \"2022-11-10T18:44:20.638Z\",\n  \"latitude\" : 2.8878653035231715E38,\n  \"lastChange\" : \"2023-01-28T16:54:31.638Z\",\n  \"confirmed\" : 6019581651693483864,\n  \"deaths\" : 8789424580910503522,\n  \"longitude\" : 2.0021399588981684E38\n}, {\n  \"country\" : \"Algeria\",\n  \"recovered\" : 8985425144124873852,\n  \"critical\" : 5895928548753601282,\n  \"lastUpdate\" : \"2023-01-11T16:57:31.639Z\",\n  \"latitude\" : 1.1620418477845491E38,\n  \"lastChange\" : \"2022-09-06T23:23:31.639Z\",\n  \"confirmed\" : 3619971578052682198,\n  \"deaths\" : 5980732241327587161,\n  \"longitude\" : 3.394627066246112E38\n}, {\n  \"country\" : \"Lesotho\",\n  \"recovered\" : 6756295314213420597,\n  \"critical\" : 8099319785463747122,\n  \"lastUpdate\" : \"2022-11-30T04:55:33.639Z\",\n  \"latitude\" : 4.5105685516742E37,\n  \"lastChange\" : \"2022-05-09T15:01:23.639Z\",\n  \"confirmed\" : 2858251186070514447,\n  \"deaths\" : 1389102149508505233,\n  \"longitude\" : 3.2508264331087596E38\n} ]",
+      "headers" : {
+        "Content-Type" : "application/xml"
+      }
+    },
+    "uuid" : "db9a5641-6b55-4ff1-bcd5-b78efe1cd7e0",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:04.639657Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "getLatestCountryDataByCode",
+          "schema" : {
+            "items" : {
+              "properties" : {
+                "confirmed" : {
+                  "type" : "integer"
+                },
+                "country" : {
+                  "type" : "string"
+                },
+                "critical" : {
+                  "type" : "integer"
+                },
+                "deaths" : {
+                  "type" : "integer"
+                },
+                "lastChange" : {
+                  "format" : "date-time",
+                  "type" : "string"
+                },
+                "lastUpdate" : {
+                  "format" : "date-time",
+                  "type" : "string"
+                },
+                "latitude" : {
+                  "format" : "float",
+                  "type" : "number"
+                },
+                "longitude" : {
+                  "format" : "float",
+                  "type" : "number"
+                },
+                "recovered" : {
+                  "type" : "integer"
+                }
+              },
+              "type" : "object"
+            },
+            "type" : "array"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 12
+  }, {
+    "id" : "d1e6de80-d7f0-44c3-8580-142d7a4b8e18",
+    "name" : "getLatestCountryDataByCode (application/json)",
+    "request" : {
+      "urlPath" : "/country/code",
+      "method" : "GET",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/json"
+        }
+      },
+      "queryParameters" : {
+        "code" : {
+          "equalTo" : "97ll9lk"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "[ {\n  \"country\" : \"Peru\",\n  \"recovered\" : 7034446630076201016,\n  \"critical\" : 5308466651404018118,\n  \"lastUpdate\" : \"2022-06-09T04:07:20.638Z\",\n  \"latitude\" : 1.912647703882268E38,\n  \"lastChange\" : \"2022-12-02T00:47:45.638Z\",\n  \"confirmed\" : 206540152912257204,\n  \"deaths\" : 3225429659069933238,\n  \"longitude\" : 3.32719032173012E38\n}, {\n  \"country\" : \"Suriname\",\n  \"recovered\" : 7901160881136310756,\n  \"critical\" : 5832495672491612950,\n  \"lastUpdate\" : \"2023-01-06T07:01:54.638Z\",\n  \"latitude\" : 1.7264339995986366E38,\n  \"lastChange\" : \"2022-06-16T07:50:27.638Z\",\n  \"confirmed\" : 7483601811091716758,\n  \"deaths\" : 191406313411679084,\n  \"longitude\" : 2.3063140370566017E38\n}, {\n  \"country\" : \"Slovakia\",\n  \"recovered\" : 1434431906591746053,\n  \"critical\" : 8630526690879648558,\n  \"lastUpdate\" : \"2024-02-24T06:13:10.638Z\",\n  \"latitude\" : 7.597290448597438E37,\n  \"lastChange\" : \"2022-11-03T01:28:53.638Z\",\n  \"confirmed\" : 1068046825649583655,\n  \"deaths\" : 6950935564369416106,\n  \"longitude\" : 2.2968449775431688E38\n}, {\n  \"country\" : \"Solomon Islands\",\n  \"recovered\" : 7190691154012389856,\n  \"critical\" : 6889311218919784577,\n  \"lastUpdate\" : \"2023-06-06T09:31:44.638Z\",\n  \"latitude\" : 2.5253446554311702E38,\n  \"lastChange\" : \"2023-02-15T06:24:08.638Z\",\n  \"confirmed\" : 3689710132649202364,\n  \"deaths\" : 7339895220606943900,\n  \"longitude\" : 3.2636113692986274E38\n} ]",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "d1e6de80-d7f0-44c3-8580-142d7a4b8e18",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:04.638847Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "getLatestCountryDataByCode",
+          "schema" : {
+            "items" : {
+              "properties" : {
+                "confirmed" : {
+                  "type" : "integer"
+                },
+                "country" : {
+                  "type" : "string"
+                },
+                "critical" : {
+                  "type" : "integer"
+                },
+                "deaths" : {
+                  "type" : "integer"
+                },
+                "lastChange" : {
+                  "format" : "date-time",
+                  "type" : "string"
+                },
+                "lastUpdate" : {
+                  "format" : "date-time",
+                  "type" : "string"
+                },
+                "latitude" : {
+                  "format" : "float",
+                  "type" : "number"
+                },
+                "longitude" : {
+                  "format" : "float",
+                  "type" : "number"
+                },
+                "recovered" : {
+                  "type" : "integer"
+                }
+              },
+              "type" : "object"
+            },
+            "type" : "array"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 13
+  }, {
+    "id" : "889d342b-6ae4-49ed-8a19-0cd6c95964d6",
+    "name" : "getLatestAllCountries (application/xml)",
+    "request" : {
+      "urlPath" : "/country/all",
+      "method" : "GET",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/xml"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "[ {\n  \"country\" : \"Tunisia\",\n  \"recovered\" : 2683616942292101323,\n  \"critical\" : 6010350541559442574,\n  \"lastUpdate\" : \"2023-07-19T18:59:09.638Z\",\n  \"latitude\" : 1.4855730938470267E38,\n  \"lastChange\" : \"2022-05-11T15:20:13.638Z\",\n  \"confirmed\" : 7009364686094448566,\n  \"deaths\" : 2739737558345102144,\n  \"longitude\" : 2.252046264945758E38\n}, {\n  \"country\" : \"Gambia\",\n  \"recovered\" : 5196621286723664431,\n  \"critical\" : 2059393359215568481,\n  \"lastUpdate\" : \"2024-03-24T16:42:40.638Z\",\n  \"latitude\" : 3.1480105662400474E38,\n  \"lastChange\" : \"2022-04-17T07:24:15.638Z\",\n  \"confirmed\" : 9054715266014433033,\n  \"deaths\" : 344083898898364992,\n  \"longitude\" : 2.9653957846171376E38\n}, {\n  \"country\" : \"Lebanon\",\n  \"recovered\" : 2643298987434616415,\n  \"critical\" : 1467903128466661777,\n  \"lastUpdate\" : \"2022-08-02T07:45:41.638Z\",\n  \"latitude\" : 2.9819156730790977E38,\n  \"lastChange\" : \"2022-07-06T07:31:22.638Z\",\n  \"confirmed\" : 4190260880791372535,\n  \"deaths\" : 7808371856081601447,\n  \"longitude\" : 1.6987886929117498E38\n}, {\n  \"country\" : \"Ghana\",\n  \"recovered\" : 7300762601519524480,\n  \"critical\" : 860833553148829553,\n  \"lastUpdate\" : \"2023-06-18T09:51:57.638Z\",\n  \"latitude\" : 1.6055859002158016E37,\n  \"lastChange\" : \"2023-11-05T13:56:54.638Z\",\n  \"confirmed\" : 7064163481216275580,\n  \"deaths\" : 8681859965718431019,\n  \"longitude\" : 5.406364523596762E37\n} ]",
+      "headers" : {
+        "Content-Type" : "application/xml"
+      }
+    },
+    "uuid" : "889d342b-6ae4-49ed-8a19-0cd6c95964d6",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:04.638383Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "getLatestAllCountries",
+          "schema" : {
+            "items" : {
+              "properties" : {
+                "confirmed" : {
+                  "type" : "integer"
+                },
+                "country" : {
+                  "type" : "string"
+                },
+                "critical" : {
+                  "type" : "integer"
+                },
+                "deaths" : {
+                  "type" : "integer"
+                },
+                "lastChange" : {
+                  "format" : "date-time",
+                  "type" : "string"
+                },
+                "lastUpdate" : {
+                  "format" : "date-time",
+                  "type" : "string"
+                },
+                "latitude" : {
+                  "format" : "float",
+                  "type" : "number"
+                },
+                "longitude" : {
+                  "format" : "float",
+                  "type" : "number"
+                },
+                "recovered" : {
+                  "type" : "integer"
+                }
+              },
+              "type" : "object"
+            },
+            "type" : "array"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 14
+  }, {
+    "id" : "f4dc17e3-712e-4fc8-98b9-3a9070c5142c",
+    "name" : "getLatestAllCountries (application/json)",
+    "request" : {
+      "urlPath" : "/country/all",
+      "method" : "GET",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/json"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "[ {\n  \"country\" : \"Philippines\",\n  \"recovered\" : 4350745942355609525,\n  \"critical\" : 6401865886997089523,\n  \"lastUpdate\" : \"2023-01-08T08:37:49.637Z\",\n  \"latitude\" : 2.7822925439893424E38,\n  \"lastChange\" : \"2022-05-31T06:11:46.637Z\",\n  \"confirmed\" : 8572519626098359123,\n  \"deaths\" : 410626610720555417,\n  \"longitude\" : 1.8605823065264047E38\n} ]",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "f4dc17e3-712e-4fc8-98b9-3a9070c5142c",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:04.637931Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "getLatestAllCountries",
+          "schema" : {
+            "items" : {
+              "properties" : {
+                "confirmed" : {
+                  "type" : "integer"
+                },
+                "country" : {
+                  "type" : "string"
+                },
+                "critical" : {
+                  "type" : "integer"
+                },
+                "deaths" : {
+                  "type" : "integer"
+                },
+                "lastChange" : {
+                  "format" : "date-time",
+                  "type" : "string"
+                },
+                "lastUpdate" : {
+                  "format" : "date-time",
+                  "type" : "string"
+                },
+                "latitude" : {
+                  "format" : "float",
+                  "type" : "number"
+                },
+                "longitude" : {
+                  "format" : "float",
+                  "type" : "number"
+                },
+                "recovered" : {
+                  "type" : "integer"
+                }
+              },
+              "type" : "object"
+            },
+            "type" : "array"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 15
+  }, {
+    "id" : "78ccc0c7-1dff-4304-8aca-d0709beb0f67",
+    "name" : "getLatestCountryDataByName (application/xml)",
+    "request" : {
+      "urlPath" : "/country",
+      "method" : "GET",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/xml"
+        }
+      },
+      "queryParameters" : {
+        "name" : {
+          "equalTo" : "William+Anderson"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "[ {\n  \"country\" : \"Suriname\",\n  \"recovered\" : 3099594888999177358,\n  \"critical\" : 6377520747186609917,\n  \"lastUpdate\" : \"2022-11-03T20:20:47.637Z\",\n  \"latitude\" : 1.6447377961811816E38,\n  \"lastChange\" : \"2023-04-08T14:42:25.637Z\",\n  \"confirmed\" : 4645843018185392575,\n  \"deaths\" : 2493736246301194918,\n  \"longitude\" : 1.0164215466242083E38\n}, {\n  \"country\" : \"Poland\",\n  \"recovered\" : 5740133095669530788,\n  \"critical\" : 3896120784949341131,\n  \"lastUpdate\" : \"2022-07-27T13:08:16.637Z\",\n  \"latitude\" : 1.2127477917581728E38,\n  \"lastChange\" : \"2024-03-21T21:57:01.637Z\",\n  \"confirmed\" : 4869623655806920676,\n  \"deaths\" : 5050028325288520792,\n  \"longitude\" : 1.6534885080829864E38\n}, {\n  \"country\" : \"Yemen\",\n  \"recovered\" : 6178492489674761670,\n  \"critical\" : 7567262867866463936,\n  \"lastUpdate\" : \"2023-07-16T11:40:09.637Z\",\n  \"latitude\" : 8.565765104814988E37,\n  \"lastChange\" : \"2023-01-25T20:54:12.637Z\",\n  \"confirmed\" : 6859179355388229687,\n  \"deaths\" : 2450282257757162727,\n  \"longitude\" : 1.6118982742601437E38\n}, {\n  \"country\" : \"Viet Nam\",\n  \"recovered\" : 985329728440549395,\n  \"critical\" : 7956014080870841345,\n  \"lastUpdate\" : \"2023-08-07T17:36:36.637Z\",\n  \"latitude\" : 1.898942817456997E38,\n  \"lastChange\" : \"2023-05-24T21:40:28.637Z\",\n  \"confirmed\" : 3580532594876104321,\n  \"deaths\" : 7775525800460404658,\n  \"longitude\" : 1.0741287293209261E38\n} ]",
+      "headers" : {
+        "Content-Type" : "application/xml"
+      }
+    },
+    "uuid" : "78ccc0c7-1dff-4304-8aca-d0709beb0f67",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:04.637698Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "getLatestCountryDataByName",
+          "schema" : {
+            "items" : {
+              "properties" : {
+                "confirmed" : {
+                  "type" : "integer"
+                },
+                "country" : {
+                  "type" : "string"
+                },
+                "critical" : {
+                  "type" : "integer"
+                },
+                "deaths" : {
+                  "type" : "integer"
+                },
+                "lastChange" : {
+                  "format" : "date-time",
+                  "type" : "string"
+                },
+                "lastUpdate" : {
+                  "format" : "date-time",
+                  "type" : "string"
+                },
+                "latitude" : {
+                  "format" : "float",
+                  "type" : "number"
+                },
+                "longitude" : {
+                  "format" : "float",
+                  "type" : "number"
+                },
+                "recovered" : {
+                  "type" : "integer"
+                }
+              },
+              "type" : "object"
+            },
+            "type" : "array"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 16
+  }, {
+    "id" : "7cf6ba3d-a3be-42cd-82b7-164108ee6fdd",
+    "name" : "getLatestCountryDataByName (application/json)",
+    "request" : {
+      "urlPath" : "/country",
+      "method" : "GET",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/json"
+        }
+      },
+      "queryParameters" : {
+        "name" : {
+          "equalTo" : "Buford+Predovic"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "[ {\n  \"country\" : \"Burundi\",\n  \"recovered\" : 3544965182162332832,\n  \"critical\" : 7064388962896466585,\n  \"lastUpdate\" : \"2024-02-26T14:57:23.632Z\",\n  \"latitude\" : 2.817913757492111E38,\n  \"lastChange\" : \"2023-04-09T15:39:25.632Z\",\n  \"confirmed\" : 259262243967607537,\n  \"deaths\" : 3734398132524975232,\n  \"longitude\" : 7.002672317629168E37\n}, {\n  \"country\" : \"Japan\",\n  \"recovered\" : 4086744150901010242,\n  \"critical\" : 1047093448433238776,\n  \"lastUpdate\" : \"2023-08-02T07:43:18.633Z\",\n  \"latitude\" : 9.37544004291011E37,\n  \"lastChange\" : \"2022-05-04T18:46:52.633Z\",\n  \"confirmed\" : 7303953807622583690,\n  \"deaths\" : 8570650067200543692,\n  \"longitude\" : 1.0593273373701807E38\n}, {\n  \"country\" : \"Andorra\",\n  \"recovered\" : 271984718225206432,\n  \"critical\" : 4678870206677374260,\n  \"lastUpdate\" : \"2022-10-05T15:11:15.633Z\",\n  \"latitude\" : 9.524062535535595E37,\n  \"lastChange\" : \"2023-12-08T05:11:28.633Z\",\n  \"confirmed\" : 7831563194489047242,\n  \"deaths\" : 9115840262112238777,\n  \"longitude\" : 1.9166837938123594E38\n}, {\n  \"country\" : \"Burkina Faso\",\n  \"recovered\" : 3773120550443277858,\n  \"critical\" : 3452923581212708330,\n  \"lastUpdate\" : \"2022-12-13T14:50:04.633Z\",\n  \"latitude\" : 3.131414208652611E38,\n  \"lastChange\" : \"2022-04-14T20:43:49.633Z\",\n  \"confirmed\" : 2834922744064089326,\n  \"deaths\" : 5623984515311454459,\n  \"longitude\" : 2.93543089622586E37\n}, {\n  \"country\" : \"Benin\",\n  \"recovered\" : 3726465023408826692,\n  \"critical\" : 4806748285320325508,\n  \"lastUpdate\" : \"2023-12-28T07:57:58.634Z\",\n  \"latitude\" : 3.3069181410946335E37,\n  \"lastChange\" : \"2022-08-07T13:47:21.634Z\",\n  \"confirmed\" : 1039381613460530205,\n  \"deaths\" : 8019124637012822847,\n  \"longitude\" : 2.7130230017674265E38\n}, {\n  \"country\" : \"Pakistan\",\n  \"recovered\" : 6841734491246669721,\n  \"critical\" : 6845366994714621752,\n  \"lastUpdate\" : \"2022-07-30T02:29:22.634Z\",\n  \"latitude\" : 7.769314518175273E36,\n  \"lastChange\" : \"2022-06-03T20:39:30.634Z\",\n  \"confirmed\" : 4771764690328875838,\n  \"deaths\" : 7187459815876897104,\n  \"longitude\" : 2.6975148158891627E38\n}, {\n  \"country\" : \"Palau\",\n  \"recovered\" : 3782319697818472093,\n  \"critical\" : 5639035535134988087,\n  \"lastUpdate\" : \"2022-05-31T22:29:37.634Z\",\n  \"latitude\" : 1.350059501306864E38,\n  \"lastChange\" : \"2022-07-05T00:39:16.634Z\",\n  \"confirmed\" : 5874639231008697691,\n  \"deaths\" : 7584660640791235481,\n  \"longitude\" : 2.8642310792683955E38\n}, {\n  \"country\" : \"Zimbabwe\",\n  \"recovered\" : 8949560188876132480,\n  \"critical\" : 2076616293380990955,\n  \"lastUpdate\" : \"2023-08-09T05:58:30.636Z\",\n  \"latitude\" : 1.5337574997342745E38,\n  \"lastChange\" : \"2023-08-01T10:16:13.636Z\",\n  \"confirmed\" : 4071346426717313554,\n  \"deaths\" : 1492965522981150142,\n  \"longitude\" : 7.946352795427056E36\n} ]",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "7cf6ba3d-a3be-42cd-82b7-164108ee6fdd",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:04.636909Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "getLatestCountryDataByName",
+          "schema" : {
+            "items" : {
+              "properties" : {
+                "confirmed" : {
+                  "type" : "integer"
+                },
+                "country" : {
+                  "type" : "string"
+                },
+                "critical" : {
+                  "type" : "integer"
+                },
+                "deaths" : {
+                  "type" : "integer"
+                },
+                "lastChange" : {
+                  "format" : "date-time",
+                  "type" : "string"
+                },
+                "lastUpdate" : {
+                  "format" : "date-time",
+                  "type" : "string"
+                },
+                "latitude" : {
+                  "format" : "float",
+                  "type" : "number"
+                },
+                "longitude" : {
+                  "format" : "float",
+                  "type" : "number"
+                },
+                "recovered" : {
+                  "type" : "integer"
+                }
+              },
+              "type" : "object"
+            },
+            "type" : "array"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 17
+  } ]
+}

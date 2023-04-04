@@ -1,0 +1,606 @@
+{
+  "mappings" : [ {
+    "id" : "5408fb05-b360-4a80-8256-01861df10d77",
+    "name" : "Updates the customer-level settings.",
+    "request" : {
+      "urlPath" : "/v1beta1/settings",
+      "method" : "PATCH"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"notifications\" : [ {\n    \"cloudPubsubTopic\" : {\n      \"topicName\" : \"Pedro Swift\",\n      \"payloadFormat\" : \"PAYLOAD_FORMAT_UNSPECIFIED\"\n    }\n  }, {\n    \"cloudPubsubTopic\" : {\n      \"topicName\" : \"Maxwell Hayes\",\n      \"payloadFormat\" : \"PAYLOAD_FORMAT_UNSPECIFIED\"\n    }\n  }, {\n    \"cloudPubsubTopic\" : {\n      \"topicName\" : \"Dr. Liberty Funk\",\n      \"payloadFormat\" : \"PAYLOAD_FORMAT_UNSPECIFIED\"\n    }\n  }, {\n    \"cloudPubsubTopic\" : {\n      \"topicName\" : \"Franklin Jenkins\",\n      \"payloadFormat\" : \"PAYLOAD_FORMAT_UNSPECIFIED\"\n    }\n  }, {\n    \"cloudPubsubTopic\" : {\n      \"topicName\" : \"Delmar Dare\",\n      \"payloadFormat\" : \"JSON\"\n    }\n  }, {\n    \"cloudPubsubTopic\" : {\n      \"topicName\" : \"Garland Balistreri\",\n      \"payloadFormat\" : \"PAYLOAD_FORMAT_UNSPECIFIED\"\n    }\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "5408fb05-b360-4a80-8256-01861df10d77",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:11.636777Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "alertcenter.updateSettings",
+          "schema" : {
+            "description" : "Customer-level settings.",
+            "properties" : {
+              "notifications" : {
+                "description" : "The list of notifications.",
+                "items" : {
+                  "$ref" : "#/components/schemas/Notification"
+                },
+                "type" : "array"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 0
+  }, {
+    "id" : "d90e2f2f-6948-4ee5-905c-8043d4cd4b83",
+    "name" : "Returns customer-level settings.",
+    "request" : {
+      "urlPath" : "/v1beta1/settings",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"notifications\" : [ {\n    \"cloudPubsubTopic\" : {\n      \"topicName\" : \"Josefa Rau\",\n      \"payloadFormat\" : \"JSON\"\n    }\n  }, {\n    \"cloudPubsubTopic\" : {\n      \"topicName\" : \"Wilbur Lehner\",\n      \"payloadFormat\" : \"PAYLOAD_FORMAT_UNSPECIFIED\"\n    }\n  }, {\n    \"cloudPubsubTopic\" : {\n      \"topicName\" : \"Marcella Veum\",\n      \"payloadFormat\" : \"PAYLOAD_FORMAT_UNSPECIFIED\"\n    }\n  }, {\n    \"cloudPubsubTopic\" : {\n      \"topicName\" : \"Carry Botsford\",\n      \"payloadFormat\" : \"PAYLOAD_FORMAT_UNSPECIFIED\"\n    }\n  }, {\n    \"cloudPubsubTopic\" : {\n      \"topicName\" : \"Lane Oberbrunner\",\n      \"payloadFormat\" : \"JSON\"\n    }\n  }, {\n    \"cloudPubsubTopic\" : {\n      \"topicName\" : \"Kathleen Anderson\",\n      \"payloadFormat\" : \"PAYLOAD_FORMAT_UNSPECIFIED\"\n    }\n  }, {\n    \"cloudPubsubTopic\" : {\n      \"topicName\" : \"Damon Brown DDS\",\n      \"payloadFormat\" : \"JSON\"\n    }\n  }, {\n    \"cloudPubsubTopic\" : {\n      \"topicName\" : \"Yoshie Smitham\",\n      \"payloadFormat\" : \"PAYLOAD_FORMAT_UNSPECIFIED\"\n    }\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "d90e2f2f-6948-4ee5-905c-8043d4cd4b83",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:11.636383Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "alertcenter.getSettings",
+          "schema" : {
+            "description" : "Customer-level settings.",
+            "properties" : {
+              "notifications" : {
+                "description" : "The list of notifications.",
+                "items" : {
+                  "$ref" : "#/components/schemas/Notification"
+                },
+                "type" : "array"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 1
+  }, {
+    "id" : "a2532c25-baec-4294-a011-15ba8b513b58",
+    "name" : "Performs batch undelete operation on alerts.",
+    "request" : {
+      "urlPath" : "/v1beta1/alerts:batchUndelete",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"failedAlertStatus\" : { },\n  \"successAlertIds\" : [ \"b0yx8cu06ll69w1v3ef7pvyrvr3xxj91r9gc52j9g4jjkoj2r6mubswesy8vdnioddpiua2omb98yk8esnljcecuzu33h9fxtkhm3vtebbictxut19ejzu3v3x0k49kjwif4a31bvm7sxyq4usqc5n1xwqljb4xko3bkp6pu2tiifctvj4fdad6n2xknxi\", \"jfq2zrocx879omj3u0cgob2xkkfygviqa8t7waf\", \"bolcrtfvgpf6cqw8ah4m8i56hhp9hx9owotihj7x3wq43ueudkyrujscbhjf73nwvj7yynzb1vgsld1\", \"o0glhlxjfso4oh54ei7mhwvpz25txgo0wkxtf3kxtm9rn8yr7siiss78u2l26be2nmziwilvqwenjgy69\" ]\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "a2532c25-baec-4294-a011-15ba8b513b58",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:11.635814Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "alertcenter.alerts.batchUndelete",
+          "schema" : {
+            "description" : "Response to batch undelete operation on alerts.",
+            "properties" : {
+              "failedAlertStatus" : {
+                "additionalProperties" : {
+                  "$ref" : "#/components/schemas/Status"
+                },
+                "description" : "The status details for each failed `alert_id`.",
+                "type" : "object"
+              },
+              "successAlertIds" : {
+                "description" : "The successful list of alert IDs.",
+                "items" : {
+                  "type" : "string"
+                },
+                "type" : "array"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 2
+  }, {
+    "id" : "57aaedc8-63b3-411b-ad93-505b6968cfe7",
+    "name" : "Performs batch delete operation on alerts.",
+    "request" : {
+      "urlPath" : "/v1beta1/alerts:batchDelete",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"failedAlertStatus\" : { },\n  \"successAlertIds\" : [ \"3g1ip5tm4azgtkv95o3lu9o9a2vqgqxavm9hndrmtyzvb3342e3iekztcum4ekttn29y13s2dg8ezpj3bfg00eppnnbkfayldexirees84es7hyissnbro4rec29wyw4xkos9ba\", \"gj5lhxdn6pvy3fgntgona43ylwjggmquykgd7u9a5sradoh8pevxqoikpt53e9vb4n8r2mqk0qbxlz62njw384un6hh0zphi\", \"088kuegyskud5yq1epnr2s0xnwdpmghestesd7n6daz3qjbipcawy451vjceyjcumvjazpzjm2yghtme5ffd1r5ranbsc1kpk7abaegs\", \"o07t7cjx81czt4qex0riulbcifxiyxxai66mw0p437lgolqb3ogd4ads6yv\", \"5hcng1el4oteqq2qzx01r2bf7bch0udcdyl26wxf69u1knskst4pwltyel1ksy2h\", \"jg5zht2d8qhk37k6xavktaah744ujam4ll4ex15txg6nupk2oh72v3i6r4gdmqoeeqaxa5flmobqvgyc814qowumx4buz1j4uf0rg2uh30dhopbexcf3d2mb6\" ]\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "57aaedc8-63b3-411b-ad93-505b6968cfe7",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:11.635711Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "alertcenter.alerts.batchDelete",
+          "schema" : {
+            "description" : "Response to batch delete operation on alerts.",
+            "properties" : {
+              "failedAlertStatus" : {
+                "additionalProperties" : {
+                  "$ref" : "#/components/schemas/Status"
+                },
+                "description" : "The status details for each failed `alert_id`.",
+                "type" : "object"
+              },
+              "successAlertIds" : {
+                "description" : "The successful list of alert IDs.",
+                "items" : {
+                  "type" : "string"
+                },
+                "type" : "array"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 3
+  }, {
+    "id" : "c2064179-ab38-4352-bcf4-20909ae00562",
+    "name" : "Restores, or \"undeletes\", an alert that was marked for deletion within the past ...",
+    "request" : {
+      "urlPath" : "/v1beta1/alerts/z70s:undelete",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"metadata\" : {\n    \"severity\" : \"p6347vjkym7d7luqguikh047fmx4722i\",\n    \"customerId\" : \"m144\",\n    \"etag\" : \"eaque\",\n    \"updateTime\" : \"2022-04-20T05:29:11.634974Z\",\n    \"alertId\" : \"575q\",\n    \"assignee\" : \"n2dz047drg8h8o8cgyfl5x6vbpgenmaoxur61ha9e3hjv\",\n    \"status\" : \"y6q52cen64emmtpnoar61xihj5dp6j8dy9xkck0zjkfrn2o9ptnp9q4kv73e2wo84u2k8vgftyakjf2zs8v3pl8tcmp3ubm6ecplcijql24y8axtum2sb6fs9lgki5ar5q6jmdlybx2jswfx7ry95gwq10d2eq77tbazpopu\"\n  },\n  \"data\" : { },\n  \"updateTime\" : \"2022-09-16T05:48:11.635098Z\",\n  \"source\" : \"fni\",\n  \"type\" : \"54e89eyo3hva9593mcl5tbjv4g9vgzeleq5848igqebfpd18igq20njtvwngoy3nawizv6ggxnak1tknmurfczsx7wzh6vlowakcll0iztj3q4rwz9shxn5842f81e9dko4r6778xsfmyn8ugngimkmyvvogzyy9fauwmf7mn0\",\n  \"securityInvestigationToolLink\" : \"vz9rcpuumpknm24ac8qr2smbyrfvf5bzyr80oi0ktvbnn6qg1e6prz04fm0eqhce54hgggmosge3u2o1nsq8jjao6hmohf0aouhbo8ni0qs7xe7ojo7o\",\n  \"deleted\" : false,\n  \"createTime\" : \"2022-12-15T07:42:11.635171Z\",\n  \"customerId\" : \"8b76\",\n  \"etag\" : \"nesciunt\",\n  \"startTime\" : \"2022-08-20T09:00:11.635291Z\",\n  \"alertId\" : \"8g41\",\n  \"endTime\" : \"2022-11-14T07:48:11.635379Z\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "c2064179-ab38-4352-bcf4-20909ae00562",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:11.63558Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "alertcenter.alerts.undelete",
+          "schema" : {
+            "description" : "An alert affecting a customer.",
+            "properties" : {
+              "alertId" : {
+                "description" : "Output only. The unique identifier for the alert.",
+                "type" : "string"
+              },
+              "createTime" : {
+                "description" : "Output only. The time this alert was created.",
+                "format" : "google-datetime",
+                "type" : "string"
+              },
+              "customerId" : {
+                "description" : "Output only. The unique identifier of the Google Workspace account of the customer.",
+                "type" : "string"
+              },
+              "data" : {
+                "additionalProperties" : {
+                  "description" : "Properties of the object. Contains field @type with type URL."
+                },
+                "description" : "Optional. The data associated with this alert, for example google.apps.alertcenter.type.DeviceCompromised.",
+                "type" : "object"
+              },
+              "deleted" : {
+                "description" : "Output only. `True` if this alert is marked for deletion.",
+                "type" : "boolean"
+              },
+              "endTime" : {
+                "description" : "Optional. The time the event that caused this alert ceased being active. If provided, the end time must not be earlier than the start time. If not provided, it indicates an ongoing alert.",
+                "format" : "google-datetime",
+                "type" : "string"
+              },
+              "etag" : {
+                "description" : "Optional. `etag` is used for optimistic concurrency control as a way to help prevent simultaneous updates of an alert from overwriting each other. It is strongly suggested that systems make use of the `etag` in the read-modify-write cycle to perform alert updates in order to avoid race conditions: An `etag` is returned in the response which contains alerts, and systems are expected to put that etag in the request to update alert to ensure that their change will be applied to the same version of the alert. If no `etag` is provided in the call to update alert, then the existing alert is overwritten blindly.",
+                "type" : "string"
+              },
+              "metadata" : {
+                "$ref" : "#/components/schemas/AlertMetadata"
+              },
+              "securityInvestigationToolLink" : {
+                "description" : "Output only. An optional [Security Investigation Tool](https://support.google.com/a/answer/7575955) query for this alert.",
+                "type" : "string"
+              },
+              "source" : {
+                "description" : "Required. A unique identifier for the system that reported the alert. This is output only after alert is created. Supported sources are any of the following: * Google Operations * Mobile device management * Gmail phishing * Data Loss Prevention * Domain wide takeout * State sponsored attack * Google identity * Apps outage",
+                "type" : "string"
+              },
+              "startTime" : {
+                "description" : "Required. The time the event that caused this alert was started or detected.",
+                "format" : "google-datetime",
+                "type" : "string"
+              },
+              "type" : {
+                "description" : "Required. The type of the alert. This is output only after alert is created. For a list of available alert types see [Google Workspace Alert types](https://developers.google.com/admin-sdk/alertcenter/reference/alert-types).",
+                "type" : "string"
+              },
+              "updateTime" : {
+                "description" : "Output only. The time this alert was last updated.",
+                "format" : "google-datetime",
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 4
+  }, {
+    "id" : "7e820784-4566-445a-9cb4-a4c3de60852c",
+    "name" : "Returns the metadata of an alert. Attempting to get metadata for a non-existent ...",
+    "request" : {
+      "urlPath" : "/v1beta1/alerts/06f0/metadata",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"severity\" : \"a4zbewalcnnf9rsv4tvnbeoq3rtedw5zrqtql7u7in8xbieraxk8bwix4hwbze8k7xymkpzvkhkt6lb5p1\",\n  \"customerId\" : \"5h4k\",\n  \"etag\" : \"sequi\",\n  \"updateTime\" : \"2022-07-20T06:11:11.634579Z\",\n  \"alertId\" : \"a32c\",\n  \"assignee\" : \"7ibpgtel178fhtijqz5fbmux7svhr9w8rd7gmlq8l002dz2k59wx\",\n  \"status\" : \"lnowel0hq03z5pmunc4643m4yg62h6cfr8ccrow47ghrfgtgzw0pprh4mt5ked\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "7e820784-4566-445a-9cb4-a4c3de60852c",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:11.634832Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "alertcenter.alerts.getMetadata",
+          "schema" : {
+            "description" : "An alert metadata.",
+            "properties" : {
+              "alertId" : {
+                "description" : "Output only. The alert identifier.",
+                "type" : "string"
+              },
+              "assignee" : {
+                "description" : "The email address of the user assigned to the alert.",
+                "type" : "string"
+              },
+              "customerId" : {
+                "description" : "Output only. The unique identifier of the Google Workspace account of the customer.",
+                "type" : "string"
+              },
+              "etag" : {
+                "description" : "Optional. `etag` is used for optimistic concurrency control as a way to help prevent simultaneous updates of an alert metadata from overwriting each other. It is strongly suggested that systems make use of the `etag` in the read-modify-write cycle to perform metadata updates in order to avoid race conditions: An `etag` is returned in the response which contains alert metadata, and systems are expected to put that etag in the request to update alert metadata to ensure that their change will be applied to the same version of the alert metadata. If no `etag` is provided in the call to update alert metadata, then the existing alert metadata is overwritten blindly.",
+                "type" : "string"
+              },
+              "severity" : {
+                "description" : "The severity value of the alert. Alert Center will set this field at alert creation time, default's to an empty string when it could not be determined. The supported values for update actions on this field are the following: * HIGH * MEDIUM * LOW",
+                "type" : "string"
+              },
+              "status" : {
+                "description" : "The current status of the alert. The supported values are the following: * NOT_STARTED * IN_PROGRESS * CLOSED",
+                "type" : "string"
+              },
+              "updateTime" : {
+                "description" : "Output only. The time this metadata was last updated.",
+                "format" : "google-datetime",
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 5
+  }, {
+    "id" : "3e2eca62-49c4-400d-a365-6dd5a0015a30",
+    "name" : "Creates new feedback for an alert. Attempting to create a feedback for a non-exi...",
+    "request" : {
+      "urlPath" : "/v1beta1/alerts/j6yx/feedback",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"createTime\" : \"2022-12-23T06:20:11.634058Z\",\n  \"customerId\" : \"yu60\",\n  \"feedbackId\" : \"m96n\",\n  \"alertId\" : \"5gk1\",\n  \"type\" : \"SOMEWHAT_USEFUL\",\n  \"email\" : \"6tfvj9gtfcqamejg3bn3aojsw4vfi6t30330edwgop0\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "3e2eca62-49c4-400d-a365-6dd5a0015a30",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:11.634436Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "alertcenter.alerts.feedback.create",
+          "schema" : {
+            "description" : "A customer feedback about an alert.",
+            "properties" : {
+              "alertId" : {
+                "description" : "Output only. The alert identifier.",
+                "type" : "string"
+              },
+              "createTime" : {
+                "description" : "Output only. The time this feedback was created.",
+                "format" : "google-datetime",
+                "type" : "string"
+              },
+              "customerId" : {
+                "description" : "Output only. The unique identifier of the Google Workspace account of the customer.",
+                "type" : "string"
+              },
+              "email" : {
+                "description" : "Output only. The email of the user that provided the feedback.",
+                "type" : "string"
+              },
+              "feedbackId" : {
+                "description" : "Output only. The unique identifier for the feedback.",
+                "type" : "string"
+              },
+              "type" : {
+                "description" : "Required. The type of the feedback.",
+                "enum" : [ "ALERT_FEEDBACK_TYPE_UNSPECIFIED", "NOT_USEFUL", "SOMEWHAT_USEFUL", "VERY_USEFUL" ],
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 6
+  }, {
+    "id" : "56a0d3df-3069-427f-a838-a4cf79810ff4",
+    "name" : "Lists all the feedback for an alert. Attempting to list feedbacks for a non-exis...",
+    "request" : {
+      "urlPath" : "/v1beta1/alerts/1714/feedback",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"feedback\" : [ {\n    \"createTime\" : \"2022-06-14T07:34:11.633165Z\",\n    \"customerId\" : \"5wz3\",\n    \"feedbackId\" : \"61xd\",\n    \"alertId\" : \"et8o\",\n    \"type\" : \"VERY_USEFUL\",\n    \"email\" : \"n3k8tyshgezf7bt1xj6vmwplfttn4e14benfj0lkfrw4hryvstk327e6vk0uznx864qa2pgnx3jxyfsfn0dd1fxwsdnr6js3\"\n  }, {\n    \"createTime\" : \"2022-11-23T05:54:11.63343Z\",\n    \"customerId\" : \"38zi\",\n    \"feedbackId\" : \"cx3b\",\n    \"alertId\" : \"5utl\",\n    \"type\" : \"NOT_USEFUL\",\n    \"email\" : \"7gvdy2zv8xknlmzn6gjd3p1xqpdu5vv680kxmnkwuj1axo98vs4bgf9yub48lbfnuu2f5rsum33o62oc8h516q3n6rk2ckiuiiy509linahzsgv6j6xq7l7gj34oy2bp21zdy1dob54dbwwfqr4qog5wj9krii\"\n  }, {\n    \"createTime\" : \"2023-01-15T05:29:11.633685Z\",\n    \"customerId\" : \"6wsq\",\n    \"feedbackId\" : \"1s1o\",\n    \"alertId\" : \"z0j9\",\n    \"type\" : \"NOT_USEFUL\",\n    \"email\" : \"8d8n65vt3yy72daozc3qxbx7mhhe8yg7ovycdadjf5ptnis4ixzk2\"\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "56a0d3df-3069-427f-a838-a4cf79810ff4",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:11.634025Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "alertcenter.alerts.feedback.list",
+          "schema" : {
+            "description" : "Response message for an alert feedback listing request.",
+            "properties" : {
+              "feedback" : {
+                "description" : "The list of alert feedback. Feedback entries for each alert are ordered by creation time descending.",
+                "items" : {
+                  "$ref" : "#/components/schemas/AlertFeedback"
+                },
+                "type" : "array"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 7
+  }, {
+    "id" : "b6091193-96ab-4875-8faf-8f09b3d078d6",
+    "name" : "Gets the specified alert. Attempting to get a nonexistent alert returns `NOT_FOU...",
+    "request" : {
+      "urlPath" : "/v1beta1/alerts/vv34",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"metadata\" : {\n    \"severity\" : \"jnwu9now2pzv0hpsbej0ukilcz1w01e59xgdinejvor3oexduo8t18i0e3tt6rd7b4w4tonzmxok415kgmgw90ulyao6ep7\",\n    \"customerId\" : \"4urm\",\n    \"etag\" : \"eaque\",\n    \"updateTime\" : \"2022-12-25T08:51:11.63247Z\",\n    \"alertId\" : \"54fm\",\n    \"assignee\" : \"93xxna6rsrfjg57h4tljlcemewwlwoymt1ajzs313icrjyc1wxwc8mv7buftdw66ylytmc92l0c0ehc23idcxmord2blwm7q8c5q15h98b17yz3ik4s1jvk1vn6zau0pidb0zorw9teuyagydb70iiwt0jqoes6gyy5i1uf3oeonrd0so6nevi\",\n    \"status\" : \"ez8njgxf3i4j1vlly85ju3vydp41iz8weuc6ux9pq3jeua7nnwrefo3x35pamsqu2jxxe3tivmbi9qq2fzuassx8wqhnxk0ez2x8wp6h6xv72r70ibkxj5lsdbrid3gvk3kv633z62x2qagef6zmeasxtioc9m4ymio7yycgsf7h7i33f9w5nkxatlgepp77l7vn6me3\"\n  },\n  \"data\" : { },\n  \"updateTime\" : \"2023-02-06T07:05:11.632595Z\",\n  \"source\" : \"u1wrdtcoc80wo5kqiikrmmkcybdt1iqnca9xg25tmzeylpz1s1p1460o42jle0xk7c39e5apnbtel6ghyfs3fav9sw8q4s4opawx347kflw75id2hzk7vc38umf\",\n  \"type\" : \"w0tvc38g510putxzgg5b78vzsivg7iheuitchd8eyf491bq2400v8lrvbozhnqql55z7b2z9w23fmpmer73iokqhuiv67gvbtlj0\",\n  \"securityInvestigationToolLink\" : \"2ypdf1xyyaaeyqlc5txzezt8vanhl\",\n  \"deleted\" : true,\n  \"createTime\" : \"2022-11-22T08:59:11.632664Z\",\n  \"customerId\" : \"82d9\",\n  \"etag\" : \"enim\",\n  \"startTime\" : \"2023-01-10T07:01:11.632775Z\",\n  \"alertId\" : \"3yw9\",\n  \"endTime\" : \"2022-09-17T08:28:11.632867Z\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "b6091193-96ab-4875-8faf-8f09b3d078d6",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:11.633108Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "alertcenter.alerts.get",
+          "schema" : {
+            "description" : "An alert affecting a customer.",
+            "properties" : {
+              "alertId" : {
+                "description" : "Output only. The unique identifier for the alert.",
+                "type" : "string"
+              },
+              "createTime" : {
+                "description" : "Output only. The time this alert was created.",
+                "format" : "google-datetime",
+                "type" : "string"
+              },
+              "customerId" : {
+                "description" : "Output only. The unique identifier of the Google Workspace account of the customer.",
+                "type" : "string"
+              },
+              "data" : {
+                "additionalProperties" : {
+                  "description" : "Properties of the object. Contains field @type with type URL."
+                },
+                "description" : "Optional. The data associated with this alert, for example google.apps.alertcenter.type.DeviceCompromised.",
+                "type" : "object"
+              },
+              "deleted" : {
+                "description" : "Output only. `True` if this alert is marked for deletion.",
+                "type" : "boolean"
+              },
+              "endTime" : {
+                "description" : "Optional. The time the event that caused this alert ceased being active. If provided, the end time must not be earlier than the start time. If not provided, it indicates an ongoing alert.",
+                "format" : "google-datetime",
+                "type" : "string"
+              },
+              "etag" : {
+                "description" : "Optional. `etag` is used for optimistic concurrency control as a way to help prevent simultaneous updates of an alert from overwriting each other. It is strongly suggested that systems make use of the `etag` in the read-modify-write cycle to perform alert updates in order to avoid race conditions: An `etag` is returned in the response which contains alerts, and systems are expected to put that etag in the request to update alert to ensure that their change will be applied to the same version of the alert. If no `etag` is provided in the call to update alert, then the existing alert is overwritten blindly.",
+                "type" : "string"
+              },
+              "metadata" : {
+                "$ref" : "#/components/schemas/AlertMetadata"
+              },
+              "securityInvestigationToolLink" : {
+                "description" : "Output only. An optional [Security Investigation Tool](https://support.google.com/a/answer/7575955) query for this alert.",
+                "type" : "string"
+              },
+              "source" : {
+                "description" : "Required. A unique identifier for the system that reported the alert. This is output only after alert is created. Supported sources are any of the following: * Google Operations * Mobile device management * Gmail phishing * Data Loss Prevention * Domain wide takeout * State sponsored attack * Google identity * Apps outage",
+                "type" : "string"
+              },
+              "startTime" : {
+                "description" : "Required. The time the event that caused this alert was started or detected.",
+                "format" : "google-datetime",
+                "type" : "string"
+              },
+              "type" : {
+                "description" : "Required. The type of the alert. This is output only after alert is created. For a list of available alert types see [Google Workspace Alert types](https://developers.google.com/admin-sdk/alertcenter/reference/alert-types).",
+                "type" : "string"
+              },
+              "updateTime" : {
+                "description" : "Output only. The time this alert was last updated.",
+                "format" : "google-datetime",
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 8
+  }, {
+    "id" : "217e0853-d805-4a87-94e8-e239da87b0fb",
+    "name" : "Marks the specified alert for deletion. An alert that has been marked for deleti...",
+    "request" : {
+      "urlPath" : "/v1beta1/alerts/vkf5",
+      "method" : "DELETE"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{ }",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "217e0853-d805-4a87-94e8-e239da87b0fb",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:11.632322Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "alertcenter.alerts.delete",
+          "schema" : {
+            "description" : "A generic empty message that you can re-use to avoid defining duplicated empty messages in your APIs. A typical example is to use it as the request or the response type of an API method. For instance: service Foo { rpc Bar(google.protobuf.Empty) returns (google.protobuf.Empty); }",
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 9
+  }, {
+    "id" : "b0e4449b-7bcc-4335-960f-c3deff698138",
+    "name" : "Lists the alerts.",
+    "request" : {
+      "urlPath" : "/v1beta1/alerts",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"alerts\" : [ {\n    \"metadata\" : {\n      \"severity\" : \"hd7kfq2tau0tstb8z2tat81s1hkuzvzvy1rs8j4wauuuvu2t42y4iqlp3hmpqjbzzmpyksvtcf5x9lodzhz3bftr9pqt46jg57j6f6oszmfyzq8c42acxvvhqwnl7psijpnbiw9tjadypkergdp5g6p67yqul842ieptz8wc9r6w\",\n      \"customerId\" : \"15t3\",\n      \"etag\" : \"quis\",\n      \"updateTime\" : \"2022-06-23T07:03:11.6305Z\",\n      \"alertId\" : \"9psg\",\n      \"assignee\" : \"p676g7y1upf21l5oqngyczy640y3f3q\",\n      \"status\" : \"vdpq7wonjixgmqi3fu0b3d65uiyx8a8yrfoo7r0x548xtl3dnjrwcbodbrqvfc6y8ygq6syr1gkss4fhgqk8y4gjqkyw73ebs30xcjsml798awnnoloudl881deogfv798kzkzk6nnbdwjcn\"\n    },\n    \"data\" : { },\n    \"updateTime\" : \"2022-12-06T05:29:11.63066Z\",\n    \"source\" : \"vkqot7s2ktwbakthv33cesvn5src3eo8xdplhadwju2z7c984fioj7jonzxm9wwo25lxoveleqtcbyiay4z2xqv1on2y2v7tp08d7ps7xoxpwqk3weq1pxcaeeuh0nyzrq3wlh73nl6aqe5b3uqy2rkemb1elv5xosrf6u6x2yw0b86l3i9s\",\n    \"type\" : \"m22ei63xz8ih79otyi029ul0e0wj9w01fxaetl4tcama3yri7iedir87fyjxfui3138h96nbiopmhhh1y7c0qkgp8lvd9r9dz8bitk4iy2ib52unkhix8sj2kiryz5xct0s37uzfyrmbyimrcf3men7jr\",\n    \"securityInvestigationToolLink\" : \"3u4iajbnzcchzor8s4pz8q0huqep8qpl317rdedt5g5vucmn5h195z59la0jxq8tvhd3x1xcbpnauo250pph5tztb\",\n    \"deleted\" : false,\n    \"createTime\" : \"2022-09-12T09:07:11.63075Z\",\n    \"customerId\" : \"p8ka\",\n    \"etag\" : \"iiiid\",\n    \"startTime\" : \"2022-11-20T09:20:11.630882Z\",\n    \"alertId\" : \"y0an\",\n    \"endTime\" : \"2023-02-11T08:01:11.630983Z\"\n  }, {\n    \"metadata\" : {\n      \"severity\" : \"aciz189px7c5lj6pxt80smqm7oxui2imle8thwntd810ch21p9t7lsp9l06yo3m15g8mw18cqirurorlutk7042ifxbs1agbulk6e5ludlsxegn13ku4rio3k2o4kss7nath0il0xwer5ac56o7mw6bath1xd9jo5irv8jxi8svkx4myzh\",\n      \"customerId\" : \"7127\",\n      \"etag\" : \"minima\",\n      \"updateTime\" : \"2022-11-09T09:18:11.631133Z\",\n      \"alertId\" : \"32fp\",\n      \"assignee\" : \"etz63b3rqex9j7ihcybm0nz62uv6585vd5i640an9u2v97ifsiz1lg122\",\n      \"status\" : \"xz3sjs35v3y9o305wgbbxjqs03fng9tio553cg7w2z2kjegmg2z8eg65eq\"\n    },\n    \"data\" : { },\n    \"updateTime\" : \"2022-08-04T07:14:11.631259Z\",\n    \"source\" : \"mdv4ji\",\n    \"type\" : \"l2xpn0itziauymb8cz30otpka0\",\n    \"securityInvestigationToolLink\" : \"bnej9j8slzz73p0ccrcmp48zaha94w32ha1ylps2foajkvrq5nfnc43c58gmokk8l9ddt34sb6rj0\",\n    \"deleted\" : true,\n    \"createTime\" : \"2023-03-16T05:36:11.631324Z\",\n    \"customerId\" : \"8e4l\",\n    \"etag\" : \"veniam\",\n    \"startTime\" : \"2022-03-31T07:02:11.631443Z\",\n    \"alertId\" : \"8fc8\",\n    \"endTime\" : \"2022-09-22T07:27:11.631539Z\"\n  }, {\n    \"metadata\" : {\n      \"severity\" : \"tbq1ztq5rol1t17tdp3mfo5r77yxhtk6dg4amo0f3zu2r30jmp8\",\n      \"customerId\" : \"7f27\",\n      \"etag\" : \"nemo\",\n      \"updateTime\" : \"2022-06-23T07:29:11.631681Z\",\n      \"alertId\" : \"bfkl\",\n      \"assignee\" : \"u33qu68lwcxlyyhrtzeopkne8atveji6np0ysbbjo6h22bkdgo1uz\",\n      \"status\" : \"6gyc87c\"\n    },\n    \"data\" : { },\n    \"updateTime\" : \"2022-10-15T07:57:11.631805Z\",\n    \"source\" : \"975k7ozhjd31vdbv3\",\n    \"type\" : \"bhantxh4361vb0h\",\n    \"securityInvestigationToolLink\" : \"68gdsoxhlelhueek09i2in3pwo70\",\n    \"deleted\" : true,\n    \"createTime\" : \"2023-03-10T07:22:11.631872Z\",\n    \"customerId\" : \"gpqx\",\n    \"etag\" : \"nihil\",\n    \"startTime\" : \"2022-12-29T09:21:11.63199Z\",\n    \"alertId\" : \"w529\",\n    \"endTime\" : \"2023-02-05T08:21:11.632088Z\"\n  } ],\n  \"nextPageToken\" : \"h277ar68ngi8rxqf9wae5oa2wmicuymwu0ddggb7m80ks9f1boco9xnwf9b13q\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "b0e4449b-7bcc-4335-960f-c3deff698138",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:11.632195Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "alertcenter.alerts.list",
+          "schema" : {
+            "description" : "Response message for an alert listing request.",
+            "properties" : {
+              "alerts" : {
+                "description" : "The list of alerts.",
+                "items" : {
+                  "$ref" : "#/components/schemas/Alert"
+                },
+                "type" : "array"
+              },
+              "nextPageToken" : {
+                "description" : "The token for the next page. If not empty, indicates that there may be more alerts that match the listing request; this value can be used in a subsequent ListAlertsRequest to get alerts continuing from last result of the current list call.",
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 10
+  } ]
+}

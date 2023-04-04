@@ -1,0 +1,430 @@
+{
+  "mappings" : [ {
+    "id" : "d8557dc2-b863-418e-a997-303d561278e5",
+    "name" : "Create an authentication token",
+    "request" : {
+      "urlPath" : "/v2/users/login",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 401,
+      "body" : "{\n  \"detail\" : \"Incorrect authentication credentials\",\n  \"login_2fa_token\" : \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "d8557dc2-b863-418e-a997-303d561278e5",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:58.767932Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "PostUsersLogin",
+          "schema" : {
+            "description" : "failed user login response or second factor required",
+            "properties" : {
+              "detail" : {
+                "description" : "Description of the error.",
+                "example" : "Incorrect authentication credentials",
+                "nullable" : false,
+                "type" : "string"
+              },
+              "login_2fa_token" : {
+                "description" : "Short time lived token to be used on `/v2/users/2fa-login` to complete the authentication. This field is present only if 2FA is enabled.",
+                "example" : "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c",
+                "nullable" : true,
+                "type" : "string"
+              }
+            },
+            "required" : [ "detail" ],
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 0
+  }, {
+    "id" : "5d0888d4-3234-4c0f-adc4-9f2cea5cbf44",
+    "name" : "Create an authentication token",
+    "request" : {
+      "urlPath" : "/v2/users/login",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"token\" : \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "5d0888d4-3234-4c0f-adc4-9f2cea5cbf44",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:58.767866Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "PostUsersLogin",
+          "schema" : {
+            "description" : "successful user login response",
+            "properties" : {
+              "token" : {
+                "description" : "Created authentication token.\n\nThis token can be used in the HTTP Authorization header as a JWT to authenticate with the Docker Hub APIs.\n",
+                "example" : "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c",
+                "nullable" : false,
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 1
+  }, {
+    "id" : "10f5ba01-e95c-492f-8976-96808cb62ce1",
+    "name" : "Second factor authentication.",
+    "request" : {
+      "urlPath" : "/v2/users/2fa-login",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 401,
+      "body" : "{\n  \"detail\" : \"Incorrect authentication credentials\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "10f5ba01-e95c-492f-8976-96808cb62ce1",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:58.767824Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "PostUsers2FALogin",
+          "schema" : {
+            "description" : "failed second factor login response.",
+            "properties" : {
+              "detail" : {
+                "description" : "Description of the error.",
+                "example" : "Incorrect authentication credentials",
+                "nullable" : false,
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 2
+  }, {
+    "id" : "f4ea75dc-5763-4ad4-9b8f-bb3bd23ea5e9",
+    "name" : "Second factor authentication.",
+    "request" : {
+      "urlPath" : "/v2/users/2fa-login",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"token\" : \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "f4ea75dc-5763-4ad4-9b8f-bb3bd23ea5e9",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:58.767773Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "PostUsers2FALogin",
+          "schema" : {
+            "description" : "successful user login response",
+            "properties" : {
+              "token" : {
+                "description" : "Created authentication token.\n\nThis token can be used in the HTTP Authorization header as a JWT to authenticate with the Docker Hub APIs.\n",
+                "example" : "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c",
+                "nullable" : false,
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 3
+  }, {
+    "id" : "7b652eaa-ce54-4910-a90a-8270da0441ff",
+    "name" : "Get namespace data for timespan",
+    "request" : {
+      "urlPath" : "/namespaces/xsee0219bhb3k6pke90cejy0ev1pd/pulls/exports/years/5266456635798772519/weeks/7964289992837883597/summary",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"data\" : [ {\n    \"size\" : 4503789613759364120,\n    \"url\" : \"https://web.example.mocklab.io/980419\"\n  }, {\n    \"size\" : 5270881393215379649,\n    \"url\" : \"https://web.example.mocklab.io/535151\"\n  }, {\n    \"size\" : 4503763597531123688,\n    \"url\" : \"https://web.example.mocklab.io/829109\"\n  }, {\n    \"size\" : 8930898331386816672,\n    \"url\" : \"https://web.example.mocklab.io/333428\"\n  }, {\n    \"size\" : 322332278868002007,\n    \"url\" : \"https://web.example.mocklab.io/716054\"\n  }, {\n    \"size\" : 1870644499754735184,\n    \"url\" : \"https://web.example.mocklab.io/684471\"\n  }, {\n    \"size\" : 157841441226698884,\n    \"url\" : \"https://web.example.mocklab.io/533274\"\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "7b652eaa-ce54-4910-a90a-8270da0441ff",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:58.767711Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "getNamespaceDataByTimespan",
+          "schema" : {
+            "properties" : {
+              "data" : {
+                "items" : {
+                  "$ref" : "#/components/schemas/ResponseDataFile"
+                },
+                "type" : "array"
+              }
+            }
+          }
+        }
+      }
+    },
+    "insertionIndex" : 4
+  }, {
+    "id" : "e2f86de1-ce2d-4bec-a925-0238bafe8f92",
+    "name" : "Get namespace metadata for timespan - 404",
+    "request" : {
+      "urlPath" : "/namespaces/wr4nrrypekzmzhxjhcxhyxqmxhfg6zz/pulls/exports/years/3398875561189153572/months/3980348081796768543",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 404
+    },
+    "uuid" : "e2f86de1-ce2d-4bec-a925-0238bafe8f92",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:58.767126Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "getNamespaceTimespanMetadata"
+        }
+      }
+    },
+    "insertionIndex" : 5
+  }, {
+    "id" : "f9e532a6-1aad-40e2-9142-7beac2f19b1b",
+    "name" : "Get namespace metadata for timespan (application/json)",
+    "request" : {
+      "urlPath" : "/namespaces/y4w4arb4kctq9hd8ep4yo7elqjakthw14yl46jj3/pulls/exports/years/4149548627195769128/weeks/2955647543146448402",
+      "method" : "GET",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/json"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"week\" : 4785780889655102281\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "f9e532a6-1aad-40e2-9142-7beac2f19b1b",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:58.767079Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "getNamespaceTimespanMetadata",
+          "schema" : {
+            "oneOf" : [ {
+              "$ref" : "#/components/schemas/MonthModel"
+            }, {
+              "$ref" : "#/components/schemas/WeekModel"
+            } ]
+          }
+        }
+      }
+    },
+    "insertionIndex" : 6
+  }, {
+    "id" : "01eddfb2-3352-4474-9a75-0779eada01c7",
+    "name" : "Get timespans with data",
+    "request" : {
+      "urlPath" : "/namespaces/wyu2p69pm2g69qvjs0feovlu1jed7ipr5wo5rx78s0n1a8x7s2n4xpwe30h9wi1568tjyi1p6wicze492jxsl8xxrcpkk37h2sktcgh85i04ao76m4nhbouo5ofhbvg9m5ui2oho4lrvmvy2rniinapbicjs51nt9bztwlo2ci1z3aatll690mi5isxa/pulls/exports/years/875004706441858879/weeks",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"weeks\" : [ {\n    \"week\" : 3983790035764046314\n  }, {\n    \"week\" : 7000955685502724202\n  }, {\n    \"week\" : 929437427150871473\n  }, {\n    \"week\" : 4676173380868470510\n  }, {\n    \"week\" : 6211229790521311891\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "01eddfb2-3352-4474-9a75-0779eada01c7",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:58.767003Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "getNamespaceTimespans",
+          "schema" : {
+            "oneOf" : [ {
+              "$ref" : "#/components/schemas/MonthData"
+            }, {
+              "$ref" : "#/components/schemas/WeekData"
+            } ]
+          }
+        }
+      }
+    },
+    "insertionIndex" : 7
+  }, {
+    "id" : "cd73f82c-fc15-4146-af46-d3e79900d15b",
+    "name" : "Get years with data",
+    "request" : {
+      "urlPath" : "/namespaces/2ojozru7tloy7u6zefl6uu9kvnub93jhxozlnfp5itfmb9bamcf0dbwb3am0a7d2qx4cz2vqpkkm7f0qx5buvwmrb60n2n15w/pulls/exports/years",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"years\" : [ {\n    \"year\" : 2800036903009619443\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "cd73f82c-fc15-4146-af46-d3e79900d15b",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:58.766889Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "getNamespaceYears",
+          "schema" : {
+            "properties" : {
+              "years" : {
+                "items" : {
+                  "$ref" : "#/components/schemas/YearModel"
+                },
+                "type" : "array"
+              }
+            }
+          }
+        }
+      }
+    },
+    "insertionIndex" : 8
+  }, {
+    "id" : "957754d4-5295-4b73-beee-1d32d2b2d137",
+    "name" : "Get namespace",
+    "request" : {
+      "urlPath" : "/namespaces/5l557oklqk4w3bmb920qtf03oyq8dpmt1haf9x0ko6ceiy6zoevvtj36r8iik2fqsibtg72w0x9iaa1az8scssqlaxl5mu6vxmgk3yzav4ow7z4i6vjvpgunmo440xahnma4bcr9l50ka1aml5gtkjqtrf2axb7zzhjejzduqqs7apkss8",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"extraRepos\" : [ \"02hkuzntei4ysv0yvtoctct7o0x7pzvzm7cqimql8kqihx2rop06p27tzjsqi6m9fji9rktxwvnhoeearf2z0nj5gy1efaneljwignz6425isia29msktptfgml6bjf63rcgaku35xc65pnn\" ],\n  \"namespace\" : \"2xdn5l5iqov5l5shxv3ne12st29tu8v036jqzzj6dj7cry8keknqd31duge0x1cwhk2estd672ykfslbe0vz2f05tyouqqk44bz9u1gyb08xn594eemdlvwr40zarffba62sfefra302hg5eevepq6fr8169ns6yl6je\",\n  \"datasets\" : [ {\n    \"name\" : \"pulls\",\n    \"timespans\" : [ \"weeks\", \"months\", \"months\", \"months\", \"weeks\" ],\n    \"views\" : [ \"raw\", \"raw\", \"raw\", \"repo-summary\", \"raw\", \"raw\" ]\n  }, {\n    \"name\" : \"pulls\",\n    \"timespans\" : [ \"months\", \"months\", \"weeks\", \"weeks\" ],\n    \"views\" : [ \"raw\", \"repo-summary\" ]\n  }, {\n    \"name\" : \"pulls\",\n    \"timespans\" : [ \"months\", \"months\", \"weeks\", \"months\", \"weeks\" ],\n    \"views\" : [ \"repo-summary\", \"raw\", \"repo-summary\", \"repo-summary\", \"summary\" ]\n  }, {\n    \"name\" : \"pulls\",\n    \"timespans\" : [ \"weeks\", \"months\", \"months\" ],\n    \"views\" : [ \"repo-summary\", \"summary\", \"summary\" ]\n  }, {\n    \"name\" : \"pulls\",\n    \"timespans\" : [ \"months\", \"months\", \"weeks\", \"months\", \"weeks\", \"weeks\", \"weeks\" ],\n    \"views\" : [ \"raw\", \"raw\", \"summary\", \"repo-summary\", \"raw\", \"repo-summary\" ]\n  }, {\n    \"name\" : \"pulls\",\n    \"timespans\" : [ \"weeks\", \"months\", \"months\", \"weeks\", \"weeks\", \"weeks\", \"months\", \"months\" ],\n    \"views\" : [ \"raw\", \"summary\", \"summary\", \"repo-summary\", \"raw\", \"raw\" ]\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "957754d4-5295-4b73-beee-1d32d2b2d137",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:58.766799Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "getNamespace",
+          "schema" : {
+            "properties" : {
+              "datasets" : {
+                "items" : {
+                  "$ref" : "#/components/schemas/DatasetModel"
+                },
+                "type" : "array"
+              },
+              "extraRepos" : {
+                "items" : {
+                  "type" : "string"
+                },
+                "type" : "array"
+              },
+              "namespace" : {
+                "type" : "string"
+              }
+            }
+          }
+        }
+      }
+    },
+    "insertionIndex" : 9
+  }, {
+    "id" : "43353c18-11fd-4513-9015-0ded368051cf",
+    "name" : "Get namespaces and repos",
+    "request" : {
+      "urlPath" : "/",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"namespaces\" : [ \"a46omdx2fsx1q11qt97e91wrdf519o4ll51skzsp1h2wdw8az3nayydrh6p5tr7in0bd9wst7u1k3o0sfyrcb9dlzr0jmdlfdru2n1cruw2u8d5dkq6p3yuqgu1y816niqbsjic1lp7mcmcnmnu94oe7ujm0e1747356pfpgp\", \"2ogih378s1fu0zeajm1fye5xuv7vapz9ghshik14xmo55swjv46emq8cpwtsgmq3zt680vej0gk64v18inbazpgkx911e1jj3lvqzsetxzwgqyj4o9k8rlp4tzu5woelpped5ntkhzome30gm3mbj8bt1p9jgdr7wg0rc\", \"l023t9ytlw0phqa4ls6scn2n7a2ysnyc3icbwlclfxrtomxtyajr30tgmp2xa4ymrixyshiww65f5mflau4apvs961b5nluty24ewkxdgf\", \"cc00ba0ubg6nt9hdqz1qql2h39hk0d88y8do61o9kz6v12iy5j78szo6fpli9gxoxoxmouhu3g6mgg9a15uqjzpzmsqionv4o9888bfogrizk02ccliva7h5\", \"x4o0cbneys9iuwgud69okvtcfy59agdb9lyirp624ylb8d30ao9dd0rmlszfqerey9xvj14zz37o4tixsmdrlf9k33a7y8blbvmvo17iwdsgarv0caoe4azdf32lu7kpc4g\" ]\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "43353c18-11fd-4513-9015-0ded368051cf",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:58.766369Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "getNamespaces",
+          "schema" : {
+            "properties" : {
+              "namespaces" : {
+                "items" : {
+                  "type" : "string"
+                },
+                "type" : "array"
+              }
+            }
+          }
+        }
+      }
+    },
+    "insertionIndex" : 10
+  } ]
+}

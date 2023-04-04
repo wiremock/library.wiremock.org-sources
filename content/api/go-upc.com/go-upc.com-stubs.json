@@ -1,0 +1,200 @@
+{
+  "mappings" : [ {
+    "id" : "1a64cfcb-68a1-45b8-9938-0d44062f1c25",
+    "name" : "Retrieve product info for a particular barcode number (UPC, EAN, or ISBN).",
+    "request" : {
+      "urlPath" : "/code/1cdhcffvp3plimw0g7pnhprqm4mni",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 500,
+      "body" : "{\n  \"code\" : \"329576019311\",\n  \"codeType\" : { },\n  \"error\" : \"The provided code is not in a recognized format.\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "1a64cfcb-68a1-45b8-9938-0d44062f1c25",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:06.736576Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "getProductInfo",
+          "schema" : {
+            "properties" : {
+              "code" : {
+                "description" : "The provided code.",
+                "example" : "329576019311",
+                "type" : "string"
+              },
+              "codeType" : {
+                "description" : "The type of code provided."
+              },
+              "error" : {
+                "description" : "A human readable error message.",
+                "example" : "The provided code is not in a recognized format.",
+                "type" : "string"
+              }
+            },
+            "required" : [ "error" ],
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 0
+  }, {
+    "id" : "de635444-9126-45ed-ac38-27a82a4189e5",
+    "name" : "Retrieve product info for a particular barcode number (UPC, EAN, or ISBN).",
+    "request" : {
+      "urlPath" : "/code/xp85enbdaukhqgymy",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 404,
+      "body" : "{\n  \"code\" : \"329576019311\",\n  \"codeType\" : { },\n  \"error\" : \"The provided code is not in a recognized format.\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "de635444-9126-45ed-ac38-27a82a4189e5",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:06.736507Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "getProductInfo",
+          "schema" : {
+            "properties" : {
+              "code" : {
+                "description" : "The provided code.",
+                "example" : "329576019311",
+                "type" : "string"
+              },
+              "codeType" : {
+                "description" : "The type of code provided."
+              },
+              "error" : {
+                "description" : "A human readable error message.",
+                "example" : "The provided code is not in a recognized format.",
+                "type" : "string"
+              }
+            },
+            "required" : [ "error" ],
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 1
+  }, {
+    "id" : "ae7e0c7b-db04-4fb5-ad7b-895e915adf92",
+    "name" : "Retrieve product info for a particular barcode number (UPC, EAN, or ISBN).",
+    "request" : {
+      "urlPath" : "/code/pltl5r9n7bcwp61ro58fr35w6yfr5yf0fndlvsp6m2v8bg575q6qj5obe9ynv2gtfw99phwfgefirv0lu1d9x2ge7fksl5bfyupq47y9lvcmojwyiqm2d",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"product\" : {\n    \"specs\" : [ [ \"Item Form\", \"Clay\" ], [ \"Liquid Volume\", \"4 Fluid Ounces\" ], [ \"Scent\", \"Lime\" ] ],\n    \"ean\" : 829576019311,\n    \"imageUrl\" : \"http://go-upc.s3.amazonaws.com/images/54066938.jpeg\",\n    \"name\" : \"Blue Sage Tonka Texturizing Fiber\",\n    \"description\" : \"Gives you an easy way to achieve the hairstyle you love. Made with jojoba esters, vegetable-derived lanolin, glycerin and carnauba wax.\",\n    \"upc\" : 829576019311,\n    \"category\" : \"Hair Care\",\n    \"region\" : \"USA or Canada\",\n    \"brand\" : \"Goodfellow and Co\"\n  },\n  \"codeType\" : \"UPC\",\n  \"barcodeUrl\" : \"https://go-upc.com/barcode/829576019311\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "ae7e0c7b-db04-4fb5-ad7b-895e915adf92",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:06.73639Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "getProductInfo",
+          "schema" : {
+            "properties" : {
+              "barcodeUrl" : {
+                "description" : "The URL to the scannable barcode image.",
+                "example" : "https://go-upc.com/barcode/829576019311",
+                "format" : "uri",
+                "type" : "string"
+              },
+              "codeType" : {
+                "description" : "The type of product code (UPC/EAN/ISBN).",
+                "enum" : [ "UPC", "EAN", "ISBN" ],
+                "example" : "UPC",
+                "type" : "string"
+              },
+              "product" : {
+                "description" : "all matching product details.",
+                "properties" : {
+                  "brand" : {
+                    "description" : "The brand of the product (if available).",
+                    "example" : "Goodfellow and Co",
+                    "type" : "string"
+                  },
+                  "category" : {
+                    "description" : "The category of the product (if available).",
+                    "example" : "Hair Care",
+                    "type" : "string"
+                  },
+                  "description" : {
+                    "description" : "A description of the product (if available).",
+                    "example" : "Gives you an easy way to achieve the hairstyle you love. Made with jojoba esters, vegetable-derived lanolin, glycerin and carnauba wax.",
+                    "type" : "string"
+                  },
+                  "ean" : {
+                    "description" : "The EAN code of the product.",
+                    "example" : 829576019311,
+                    "type" : "integer"
+                  },
+                  "imageUrl" : {
+                    "description" : "The URL for the product image.",
+                    "example" : "http://go-upc.s3.amazonaws.com/images/54066938.jpeg",
+                    "format" : "uri",
+                    "type" : "string"
+                  },
+                  "name" : {
+                    "description" : "The name of the product.",
+                    "example" : "Blue Sage Tonka Texturizing Fiber",
+                    "type" : "string"
+                  },
+                  "region" : {
+                    "description" : "The region of the product.",
+                    "example" : "USA or Canada",
+                    "type" : "string"
+                  },
+                  "specs" : {
+                    "description" : "A list of additional item specifications (if available).",
+                    "example" : [ [ "Item Form", "Clay" ], [ "Liquid Volume", "4 Fluid Ounces" ], [ "Scent", "Lime" ] ],
+                    "items" : {
+                      "items" : {
+                        "type" : "string"
+                      },
+                      "type" : "array"
+                    },
+                    "type" : "array"
+                  },
+                  "upc" : {
+                    "description" : "The UPC code of the product.",
+                    "example" : 829576019311,
+                    "type" : "integer"
+                  }
+                },
+                "type" : "object"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 2
+  } ]
+}

@@ -1,0 +1,51 @@
+{
+  "mappings" : [ {
+    "id" : "16f5335f-2a2d-4083-99f0-3fc17d732567",
+    "name" : "Returns AMP URL(s) and equivalent [AMP Cache URL(s)](/amp/cache/overview#amp-cac...",
+    "request" : {
+      "urlPath" : "/v1/ampUrls:batchGet",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"urlErrors\" : [ {\n    \"errorMessage\" : \"Cupiditate esse unde vero ut facere reprehenderit. Recusandae itaque soluta beatae qui iste. Et in fuga voluptatibus excepturi quos. Suscipit magnam natus dicta ex.\",\n    \"errorCode\" : \"URL_IS_INVALID_AMP\",\n    \"originalUrl\" : \"https://web.example.mocklab.io/960334\"\n  }, {\n    \"errorMessage\" : \"Dicta voluptatem voluptatibus quos repellendus velit non voluptates. Ut qui omnis ut. Facilis sequi accusantium. In suscipit nemo rerum repellendus quo quidem.\",\n    \"errorCode\" : \"INPUT_URL_NOT_FOUND\",\n    \"originalUrl\" : \"https://web.example.mocklab.io/831375\"\n  }, {\n    \"errorMessage\" : \"Qui sint culpa vel. Omnis dignissimos aperiam. Delectus excepturi dolor provident praesentium a harum. Aut laudantium fugiat expedita. Reprehenderit facilis et pariatur aspernatur aut sit officiis.\",\n    \"errorCode\" : \"URL_IS_VALID_AMP\",\n    \"originalUrl\" : \"https://web.example.mocklab.io/647064\"\n  }, {\n    \"errorMessage\" : \"Est commodi hic consequatur. Omnis iusto distinctio ex repellendus reiciendis dicta ut. Et ea voluptate voluptates vitae officia perferendis voluptas. Sed dolorem voluptates eius ullam quos dolorum no\",\n    \"errorCode\" : \"ERROR_CODE_UNSPECIFIED\",\n    \"originalUrl\" : \"https://web.example.mocklab.io/609148\"\n  }, {\n    \"errorMessage\" : \"Nihil corporis ducimus. Culpa voluptate temporibus blanditiis blanditiis. Eveniet voluptatibus ducimus ut aperiam omnis. Ad voluptatum beatae. Qui iusto debitis dicta sit.\",\n    \"errorCode\" : \"APPLICATION_ERROR\",\n    \"originalUrl\" : \"https://web.example.mocklab.io/868883\"\n  }, {\n    \"errorMessage\" : \"Illo minima et vel. Commodi illum eius ab et dignissimos aliquam id. Dolores vel similique qui.\",\n    \"errorCode\" : \"URL_IS_VALID_AMP\",\n    \"originalUrl\" : \"https://web.example.mocklab.io/800616\"\n  } ],\n  \"ampUrls\" : [ {\n    \"ampUrl\" : \"https://web.example.mocklab.io/760863\",\n    \"cdnAmpUrl\" : \"https://web.example.mocklab.io/463015\",\n    \"originalUrl\" : \"https://web.example.mocklab.io/455228\"\n  }, {\n    \"ampUrl\" : \"https://web.example.mocklab.io/116632\",\n    \"cdnAmpUrl\" : \"https://web.example.mocklab.io/707988\",\n    \"originalUrl\" : \"https://web.example.mocklab.io/477633\"\n  }, {\n    \"ampUrl\" : \"https://web.example.mocklab.io/662278\",\n    \"cdnAmpUrl\" : \"https://web.example.mocklab.io/099385\",\n    \"originalUrl\" : \"https://web.example.mocklab.io/556688\"\n  }, {\n    \"ampUrl\" : \"https://web.example.mocklab.io/170685\",\n    \"cdnAmpUrl\" : \"https://web.example.mocklab.io/987421\",\n    \"originalUrl\" : \"https://web.example.mocklab.io/455535\"\n  }, {\n    \"ampUrl\" : \"https://web.example.mocklab.io/007709\",\n    \"cdnAmpUrl\" : \"https://web.example.mocklab.io/092844\",\n    \"originalUrl\" : \"https://web.example.mocklab.io/454364\"\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "16f5335f-2a2d-4083-99f0-3fc17d732567",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:07.915496Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "acceleratedmobilepageurl.ampUrls.batchGet",
+          "schema" : {
+            "description" : "Batch AMP URL response.",
+            "properties" : {
+              "ampUrls" : {
+                "description" : "For each URL in BatchAmpUrlsRequest, the URL response. The response might not be in the same order as URLs in the batch request. If BatchAmpUrlsRequest contains duplicate URLs, AmpUrl is generated only once.",
+                "items" : {
+                  "$ref" : "#/components/schemas/AmpUrl"
+                },
+                "type" : "array"
+              },
+              "urlErrors" : {
+                "description" : "The errors for requested URLs that have no AMP URL.",
+                "items" : {
+                  "$ref" : "#/components/schemas/AmpUrlError"
+                },
+                "type" : "array"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 0
+  } ]
+}

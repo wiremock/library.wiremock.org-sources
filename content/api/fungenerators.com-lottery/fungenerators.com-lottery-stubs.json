@@ -1,0 +1,191 @@
+{
+  "mappings" : [ {
+    "id" : "0b18e188-a47a-40c8-8883-156def71d5c3",
+    "name" : "Get the list of supported lottery games supported in the given country.",
+    "request" : {
+      "urlPath" : "/lottery/supported",
+      "method" : "GET",
+      "queryParameters" : {
+        "country" : {
+          "equalTo" : "Comoros"
+        }
+      }
+    },
+    "response" : {
+      "status" : 401,
+      "body" : "{\n    \"error\": {\n        \"code\": 401,\n        \"message\": \"Unauthorized\"\n    }\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "0b18e188-a47a-40c8-8883-156def71d5c3",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:13.341182Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "(none)"
+        }
+      }
+    },
+    "insertionIndex" : 0
+  }, {
+    "id" : "206c1fa0-db45-470c-bf66-a4f7ac0f4b6a",
+    "name" : "Get the list of supported lottery games supported in the given country.",
+    "request" : {
+      "urlPath" : "/lottery/supported",
+      "method" : "GET",
+      "queryParameters" : {
+        "country" : {
+          "equalTo" : "Congo"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n    \"success\": {\n        \"total\":4\n      \n    },\n    \"contents\": {\n        \"country\" : \"India\",\n        \"games\" :\n        [\n          \"india-playwin-easy-lotto\",\n          \"india-playwin-fast-digit-lottery\",\n          \"india-playwin-super-lotto\",\n          \"india-playwin-thunderball\"\n        ]\n    }\n}            ",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "206c1fa0-db45-470c-bf66-a4f7ac0f4b6a",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:13.341129Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "(none)"
+        }
+      }
+    },
+    "insertionIndex" : 1
+  }, {
+    "id" : "a6fa2c30-9e89-4815-8c14-47b79929e51a",
+    "name" : "Generate random draw for a given lottery game.",
+    "request" : {
+      "urlPath" : "/lottery/draw",
+      "method" : "GET",
+      "queryParameters" : {
+        "game" : {
+          "equalTo" : "6l1we3fjs9a7hd71rxib9bb1ctu3cuv3x0i3txtcrlw6hyhwbruk1rsw7uik81jc03pfigbijyea5ocx5z14ox7yk"
+        }
+      }
+    },
+    "response" : {
+      "status" : 401,
+      "body" : "{\n    \"error\": {\n        \"code\": 401,\n        \"message\": \"Unauthorized\"\n    }\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "a6fa2c30-9e89-4815-8c14-47b79929e51a",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:13.34106Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "(none)"
+        }
+      }
+    },
+    "insertionIndex" : 2
+  }, {
+    "id" : "3df6f3bd-59e5-440d-9c1c-12c2f8640998",
+    "name" : "Generate random draw for a given lottery game.",
+    "request" : {
+      "urlPath" : "/lottery/draw",
+      "method" : "GET",
+      "queryParameters" : {
+        "game" : {
+          "equalTo" : "yjtlg3buhxtcp"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n    \"success\": {\n        \"total\": 1\n    },\n    \"contents\": \n        {\n          \"numbers\":\n            [\n              {\"draw\":[[21,10,6,44,17,5]]}\n            ]\n        }\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "3df6f3bd-59e5-440d-9c1c-12c2f8640998",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:13.341009Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "(none)"
+        }
+      }
+    },
+    "insertionIndex" : 3
+  }, {
+    "id" : "b8ae9c19-f32a-4be5-8f66-5df23daf3ebf",
+    "name" : "Get the complete list of countries supported in the number generation API.",
+    "request" : {
+      "urlPath" : "/lottery/countries",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 401,
+      "body" : "{\n    \"error\": {\n        \"code\": 401,\n        \"message\": \"Unauthorized\"\n    }\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "b8ae9c19-f32a-4be5-8f66-5df23daf3ebf",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:13.340945Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "(none)"
+        }
+      }
+    },
+    "insertionIndex" : 4
+  }, {
+    "id" : "89dc3e1a-02f3-4393-b1bf-0ca9d181cd52",
+    "name" : "Get the complete list of countries supported in the number generation API.",
+    "request" : {
+      "urlPath" : "/lottery/countries",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{ \n  \"success\":\n    {\"total\":76},\n  \"contents\": {\n     \"countries\":\n        [\n          \"Anguilla\",\n          \"Antigua and Barbuda\",\n          \"Australia\",\n          \"Austria\",\n          \"...\"\n        ]\n  }\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "89dc3e1a-02f3-4393-b1bf-0ca9d181cd52",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:13.340895Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "(none)"
+        }
+      }
+    },
+    "insertionIndex" : 5
+  } ]
+}

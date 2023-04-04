@@ -1,0 +1,84 @@
+{
+  "mappings" : [ {
+    "id" : "b1c9deb4-65fa-4723-8f97-27ef131c9ceb",
+    "name" : "Send an SMS with verification code and a custom message for authentication purpo... - 0",
+    "request" : {
+      "urlPath" : "/v1/verification/send",
+      "method" : "POST",
+      "queryParameters" : {
+        "tel" : {
+          "equalTo" : "28ndsm01ss1w8"
+        },
+        "key" : {
+          "equalTo" : "1mypinn95wcun7a7i7jjf5ddwxlaou58t7vzpibz8z95h0r7roeycplwn4m34ji9oq0imzifbcjp37pda535q039t3b7lgxh4ul01lnbp6nu0gypodq1dv2hy6bf37668f43n18cvbw19c8bj0w8"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\"tran_id\":\"\",\"credits_remaining\":\"0\",\"error\":\"\"}",
+      "headers" : {
+        "Content-Type" : "application/json; charset=utf-8"
+      }
+    },
+    "uuid" : "b1c9deb4-65fa-4723-8f97-27ef131c9ceb",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:12.189066Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "(none)",
+          "schema" : {
+            "type" : "string"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 0
+  }, {
+    "id" : "e22c8be5-3fa9-468d-951b-ffadf5ea4644",
+    "name" : "Verify that an OTP sent by the Send SMS Verification API is valid. - 0",
+    "request" : {
+      "urlPath" : "/v1/verification/result",
+      "method" : "GET",
+      "queryParameters" : {
+        "tran_id" : {
+          "equalTo" : "5202"
+        },
+        "otp" : {
+          "equalTo" : "zp4lx8xg3rx2r"
+        },
+        "key" : {
+          "equalTo" : "6kdsjegjfzgvhqhlde"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\"result\":\"\",\"error\":\"\"}",
+      "headers" : {
+        "Content-Type" : "application/json; charset=utf-8"
+      }
+    },
+    "uuid" : "e22c8be5-3fa9-468d-951b-ffadf5ea4644",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:12.188942Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "(none)",
+          "schema" : {
+            "type" : "string"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 1
+  } ]
+}
