@@ -1,0 +1,672 @@
+{
+  "mappings" : [ {
+    "id" : "6bc3655d-0c24-498c-bf4e-798e2778e348",
+    "name" : "Retrieve the usage for the account id.",
+    "request" : {
+      "urlPath" : "/subscriptions/q7hg/resourceGroups/jQclFM9Bp/providers/Microsoft.Automation/automationAccounts/Cameron+Dooley/usages",
+      "method" : "GET",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "bwgdkkwt0t4cnvtir"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"value\" : [ {\n    \"unit\" : \"2ay3r56v08djmttj5z0axlfum744paxh8mcefegy2epkbwt00yb8y904h0h6sfksp1kjqpsunq988fbf03pycw5mxwzx0xrbk1u202aaofzjx1lccesgacief2q5vk02uwes0qzn8wnpubeqpfya\",\n    \"throttleStatus\" : \"i7s9l7tlypyw2q8u2stsnu1p77z302f78l2rit5g3ljo30ea9a1ls87csfgvgf33sdckfbcgs4hk32ofcdf7zif16u1l86svbfjwunar9a1\",\n    \"limit\" : 6763452419805068116,\n    \"name\" : {\n      \"localizedValue\" : \"vnd1dbmzk8el235swqzfp4jq5v6k8e1491n6pje4n298ps\",\n      \"value\" : \"7uv\"\n    },\n    \"id\" : \"qez0\",\n    \"currentValue\" : 1.4539159823734094E308\n  }, {\n    \"unit\" : \"2zkdazvxyjxtg9kikt5e9in1aclfbi447ha2zc3izq6epeqj39szhcs2s4b7wm6zh12dofls4puqfayu1vlmxcpnuv9loz2qfc3gzumkb4\",\n    \"throttleStatus\" : \"ox11by\",\n    \"limit\" : 1832484777450158547,\n    \"name\" : {\n      \"localizedValue\" : \"6p91mbggftwj00vkcz2czhxl72a91y\",\n      \"value\" : \"869lthuar833gt7klh8d9qva1mpye2mfz0in8zh32699yg38ofzzoq9dnlwf0du8n2ru4vz91k7ihx0adu2\"\n    },\n    \"id\" : \"j445\",\n    \"currentValue\" : 9.716500984378346E307\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "6bc3655d-0c24-498c-bf4e-798e2778e348",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:43.180393Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "Usages_ListByAutomationAccount",
+          "schema" : {
+            "type" : "object",
+            "properties" : {
+              "value" : {
+                "type" : "array",
+                "description" : "Gets or sets usage.",
+                "items" : {
+                  "$ref" : "#/components/schemas/Usage"
+                }
+              }
+            },
+            "description" : "The response model for the get usage operation."
+          }
+        }
+      }
+    },
+    "insertionIndex" : 0
+  }, {
+    "id" : "c87cc296-89f1-4ec5-bea8-15bde5037527",
+    "name" : "Retrieve the statistics for the account.",
+    "request" : {
+      "urlPath" : "/subscriptions/pj6l/resourceGroups/a1ntwTLpznS9qKq.B7r_bKems0SIYz-W6rj8XgqamExmuB-1.D-QiekEf05Q.HV4x..NkGXv1aHnzsR3h6m6E29w_b/providers/Microsoft.Automation/automationAccounts/Travis+Beer/statistics",
+      "method" : "GET",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "oz9fvf6u817svuun6cimejcd63"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"value\" : [ {\n    \"counterValue\" : 5240850712236611651,\n    \"counterProperty\" : \"odjqipohvl3xb3tsxivus5xbfpx2rvypk68ck05ugnj7pgws7g3imw5my38pdmdwlrwjsrd4a363h2bcc6cpck93dhcocolvauqvklrxj5se0dey87cgxqeug\",\n    \"startTime\" : \"2022-06-29T07:14:22.179Z\",\n    \"endTime\" : \"2022-07-19T19:38:52.179Z\",\n    \"id\" : \"uc03\"\n  }, {\n    \"counterValue\" : 5218074860855019754,\n    \"counterProperty\" : \"vbaaum5ipucmji2pyct3ffrmfljq4gutu1c1dzmwhurn9800la5pnoym26iaaqgnz34co5sjwc4opgbh5qhey0rctmji0hl71mtn0w6254071q8248983fnxdio4\",\n    \"startTime\" : \"2023-03-25T07:00:45.179Z\",\n    \"endTime\" : \"2022-09-06T20:57:25.179Z\",\n    \"id\" : \"9ck7\"\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "c87cc296-89f1-4ec5-bea8-15bde5037527",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:43.179933Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "Statistics_ListByAutomationAccount",
+          "schema" : {
+            "type" : "object",
+            "properties" : {
+              "value" : {
+                "type" : "array",
+                "description" : "Gets or sets a list of statistics.",
+                "items" : {
+                  "$ref" : "#/components/schemas/Statistics"
+                }
+              }
+            },
+            "description" : "The response model for the list statistics operation."
+          }
+        }
+      }
+    },
+    "insertionIndex" : 1
+  }, {
+    "id" : "4d54d143-f1fc-453a-9c75-0ab037a31fff",
+    "name" : "Retrieve the automation keys for an account.",
+    "request" : {
+      "urlPath" : "/subscriptions/1545/resourceGroups/Uja2tUxmQy1cTAv4pwDLy2w60sPMuaknvb3-2/providers/Microsoft.Automation/automationAccounts/Tom+McCullough/listKeys",
+      "method" : "POST",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "p9eirvrqd4i526u3wl5xezmaa9nd7ws4f2aqz8us0b9x0myouvt9t8jd7q8yr5ppw2o2pg1r32fgi7bn0m9nzqi"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"keys\" : [ {\n    \"KeyName\" : \"Secondary\",\n    \"Permissions\" : \"Full\",\n    \"Value\" : \"8y7dw9c2amyczu5tv1740hfnjjrcywp8csekk3ikta4p05ppenwewm9utl4jvs7f88f6ooubwope1stcr52aqctjqwn7vbq7b0ijxc2do4jfkfuq65tax82dx68u2wcg2ulolg6kolncs3qn2g47jd9ekouf0rd5\"\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "4d54d143-f1fc-453a-9c75-0ab037a31fff",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:43.17955Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "Keys_ListByAutomationAccount",
+          "schema" : {
+            "type" : "object",
+            "properties" : {
+              "keys" : {
+                "type" : "array",
+                "description" : "Lists the automation keys.",
+                "items" : {
+                  "$ref" : "#/components/schemas/Key"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "insertionIndex" : 2
+  }, {
+    "id" : "ffa989db-bc8b-4f61-ae1d-5496c2524f38",
+    "name" : "Update an automation account.",
+    "request" : {
+      "urlPath" : "/subscriptions/5565/resourceGroups/wHlNxRw_1YwB04KW8W8aJkTJ4qA.dDY3_eCw_HVOqZB_fQcGJqMSQppQrI5nIvGT3yjUkIPn2x/providers/Microsoft.Automation/automationAccounts/Mignon+Hansen",
+      "method" : "PATCH",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "xmpx9u47ncb7qr50zb4zaku9yrkc"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"etag\" : \"mollitia\",\n  \"location\" : \"jr6qrbqhezvxf3c92tyw4nhk0owc939t8jh54xt4965k5sipy6g3hmnx87fukzi92tbdf02v7qlquw327no9ef03509csj3opf7y7lsuz13qq6eo664e3ggnmvzmxc1pub4467j8v8ynlbc62hq3ggvg8jsprdrdh2tc3yg6grvwzij1\",\n  \"properties\" : {\n    \"lastModifiedTime\" : \"2023-09-22T17:56:56.179Z\",\n    \"creationTime\" : \"2024-01-31T08:15:15.179Z\",\n    \"lastModifiedBy\" : \"odvkyagl5byjq8j9pz7phgoi1f2cjrhig7ydd8wphmplf0wkq75nozr3pgqfrbavwe\",\n    \"description\" : \"Occaecati nihil est sunt. Maxime praesentium expedita autem sit expedita fuga. Minima possimus libero qui voluptatem tempora rerum.\",\n    \"state\" : \"Ok\",\n    \"sku\" : {\n      \"name\" : \"Free\",\n      \"family\" : \"13cwocpzhdk5o2443yfveahp5n21jee7c9vhk7vbjip59tb2kwiqk8m2f0p5\",\n      \"capacity\" : 932047312\n    }\n  },\n  \"tags\" : { }\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "ffa989db-bc8b-4f61-ae1d-5496c2524f38",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:43.179327Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "AutomationAccount_Update",
+          "schema" : {
+            "properties" : {
+              "etag" : {
+                "type" : "string",
+                "description" : "Gets or sets the etag of the resource."
+              },
+              "properties" : {
+                "$ref" : "#/components/schemas/AutomationAccountProperties"
+              }
+            },
+            "description" : "Definition of the automation account type.",
+            "allOf" : [ {
+              "properties" : {
+                "location" : {
+                  "type" : "string",
+                  "description" : "The Azure Region where the resource lives"
+                },
+                "tags" : {
+                  "type" : "object",
+                  "additionalProperties" : {
+                    "type" : "string"
+                  },
+                  "description" : "Resource tags."
+                }
+              },
+              "description" : "The resource model definition for a ARM tracked top level resource",
+              "allOf" : [ {
+                "type" : "object",
+                "properties" : {
+                  "id" : {
+                    "type" : "string",
+                    "description" : "Fully qualified resource Id for the resource",
+                    "readOnly" : true
+                  },
+                  "name" : {
+                    "type" : "string",
+                    "description" : "The name of the resource",
+                    "readOnly" : true
+                  },
+                  "type" : {
+                    "type" : "string",
+                    "description" : "The type of the resource.",
+                    "readOnly" : true
+                  }
+                },
+                "description" : "The core properties of ARM resources"
+              } ]
+            } ]
+          }
+        }
+      }
+    },
+    "insertionIndex" : 3
+  }, {
+    "id" : "93492876-db6a-4137-97c2-66765997a06c",
+    "name" : "Delete an automation account. - 204",
+    "request" : {
+      "urlPath" : "/subscriptions/ftw9/resourceGroups/VQNtRNUs1uWicJmyWxZ2ClC9YbqQERt9r.uFk_YkBVl.8__VrkuZqmJzsi00pL5PGFL_MqwYB.pXPKUK9a-3gdsCbI/providers/Microsoft.Automation/automationAccounts/Garfield+Effertz",
+      "method" : "DELETE",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "nblqgdo54r5vlqitd6t2une08smvo6qt0ki8kegmn4uc4d7z0xmbthopaa01upy5nllm3aydtjplq5b3obn6tt"
+        }
+      }
+    },
+    "response" : {
+      "status" : 204
+    },
+    "uuid" : "93492876-db6a-4137-97c2-66765997a06c",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:43.17897Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "AutomationAccount_Delete"
+        }
+      }
+    },
+    "insertionIndex" : 4
+  }, {
+    "id" : "cd24fbcb-2d44-4bfe-b196-9f98e8283adb",
+    "name" : "Delete an automation account. - 200",
+    "request" : {
+      "urlPath" : "/subscriptions/4og9/resourceGroups/QBhHef7TahXtssuiOhw1WXlBn/providers/Microsoft.Automation/automationAccounts/Carmelo+DuBuque",
+      "method" : "DELETE",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "w8cauhlb2y763lhhggdurqr1pv6apv07dkjaihrsy76tdkwwpzt0sn59pk3sevhx8nb70oqjfx1np30qccy8kepo"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200
+    },
+    "uuid" : "cd24fbcb-2d44-4bfe-b196-9f98e8283adb",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:43.178814Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "AutomationAccount_Delete"
+        }
+      }
+    },
+    "insertionIndex" : 5
+  }, {
+    "id" : "6f2e9995-3ec9-4994-8c20-464606b6a786",
+    "name" : "Create or update automation account.",
+    "request" : {
+      "urlPath" : "/subscriptions/dpca/resourceGroups/n2Cby4MdC72KA21JCM42m.pAWFd225jDd6krUUoROaT6Ag9yM77WfiUqfphwChH_EOoUacxq8QhGchj_f0iKTsGQ30/providers/Microsoft.Automation/automationAccounts/Rae+Kertzmann",
+      "method" : "PUT",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "01ecdmb5cr0xwd8bh0plt54llkzxbrhjn8c9r1k9ymcoxddzt0n5"
+        }
+      }
+    },
+    "response" : {
+      "status" : 201,
+      "body" : "{\n  \"etag\" : \"qui\",\n  \"location\" : \"r04wdebv4lb4486m87haotka9sq973s4o8nzci1ohwbtgw5pplmctzukyyetdt7ej0nihjdwnd4ejana8ccsmwgkhng0f3iiqtx\",\n  \"properties\" : {\n    \"lastModifiedTime\" : \"2022-06-04T23:22:01.178Z\",\n    \"creationTime\" : \"2022-11-06T11:08:04.178Z\",\n    \"lastModifiedBy\" : \"xamf9r9e3ehk0m5j4cq3kmebf921d2x05fgowhbtkl2d5ns9gipzxbt536eajj82tzl9hq4c61modwjk1mf\",\n    \"description\" : \"Rerum quo enim rerum quas id architecto. Ut odio aut enim. Laudantium voluptas molestias dolores deserunt impedit ipsa enim.\",\n    \"state\" : \"Unavailable\",\n    \"sku\" : {\n      \"name\" : \"Basic\",\n      \"family\" : \"kidvhnk2qqynm8ji3x0dv225sdoc8hvglp0pp2b1qlfl9k1lkpnpqhe3fm00a4cm4r30lapmhxlhh4uj9zvska3szeup2rf9campqillra8rj6gsqfaatiwl01bhzdj0r0yinyhchclfn9szvw3w4oa52jcemidw7ahodbuypmbivthgsce4looclfsb\",\n      \"capacity\" : 1350338100\n    }\n  },\n  \"tags\" : { }\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "6f2e9995-3ec9-4994-8c20-464606b6a786",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:43.178646Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "AutomationAccount_CreateOrUpdate",
+          "schema" : {
+            "properties" : {
+              "etag" : {
+                "type" : "string",
+                "description" : "Gets or sets the etag of the resource."
+              },
+              "properties" : {
+                "$ref" : "#/components/schemas/AutomationAccountProperties"
+              }
+            },
+            "description" : "Definition of the automation account type.",
+            "allOf" : [ {
+              "properties" : {
+                "location" : {
+                  "type" : "string",
+                  "description" : "The Azure Region where the resource lives"
+                },
+                "tags" : {
+                  "type" : "object",
+                  "additionalProperties" : {
+                    "type" : "string"
+                  },
+                  "description" : "Resource tags."
+                }
+              },
+              "description" : "The resource model definition for a ARM tracked top level resource",
+              "allOf" : [ {
+                "type" : "object",
+                "properties" : {
+                  "id" : {
+                    "type" : "string",
+                    "description" : "Fully qualified resource Id for the resource",
+                    "readOnly" : true
+                  },
+                  "name" : {
+                    "type" : "string",
+                    "description" : "The name of the resource",
+                    "readOnly" : true
+                  },
+                  "type" : {
+                    "type" : "string",
+                    "description" : "The type of the resource.",
+                    "readOnly" : true
+                  }
+                },
+                "description" : "The core properties of ARM resources"
+              } ]
+            } ]
+          }
+        }
+      }
+    },
+    "insertionIndex" : 6
+  }, {
+    "id" : "fbe6d552-63f5-45e2-8aa3-01955de16cc7",
+    "name" : "Create or update automation account.",
+    "request" : {
+      "urlPath" : "/subscriptions/59kl/resourceGroups/FiawRxLba_S68LvikazUjt16Lg8HWTjWeLiezJwvwVkSob_HrlXRsHqGpDlbLPZSAAHmeRAx2c3YzGL6WOgMr_/providers/Microsoft.Automation/automationAccounts/Irving+Yundt+DDS",
+      "method" : "PUT",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "zjbxsbjmd1tp7tc9hj88j7eds0nkxcgprrrro8gc343tv6icfsain5ccepu5gpg94vx2v6roj0c925uy30i71p4e0ub7lnxm0cuzd9mekmpeqewzljlok0klpt9q0g9xddi"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"etag\" : \"sed\",\n  \"location\" : \"e2t61cdkap5cg6cteolcm7h13jm0st9pyiy0hqb54i75j3uyrb7slfxwj0nn0pfw7de4w8q3nk4ot295po2lcqozy52f6cllwl4alkqr3jie0e30q41xxnf5x8moyinmpdd1iccy5gmeyozt1dw0\",\n  \"properties\" : {\n    \"lastModifiedTime\" : \"2023-10-06T03:24:29.177Z\",\n    \"creationTime\" : \"2023-09-10T13:33:19.177Z\",\n    \"lastModifiedBy\" : \"wzz7gh8bq1cs44l4cv\",\n    \"description\" : \"Sequi dolores dolorem id eos consequuntur. Quia commodi temporibus. Tempore ducimus inventore possimus debitis.\",\n    \"state\" : \"Unavailable\",\n    \"sku\" : {\n      \"name\" : \"Basic\",\n      \"family\" : \"1kzhyl0zvbpoi5y3d8xq7gp97l7t2wm2pte6kvqaiznwpalv1qeu9xds9p1w0kr\",\n      \"capacity\" : 1957674087\n    }\n  },\n  \"tags\" : { }\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "fbe6d552-63f5-45e2-8aa3-01955de16cc7",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:43.178275Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "AutomationAccount_CreateOrUpdate",
+          "schema" : {
+            "properties" : {
+              "etag" : {
+                "type" : "string",
+                "description" : "Gets or sets the etag of the resource."
+              },
+              "properties" : {
+                "$ref" : "#/components/schemas/AutomationAccountProperties"
+              }
+            },
+            "description" : "Definition of the automation account type.",
+            "allOf" : [ {
+              "properties" : {
+                "location" : {
+                  "type" : "string",
+                  "description" : "The Azure Region where the resource lives"
+                },
+                "tags" : {
+                  "type" : "object",
+                  "additionalProperties" : {
+                    "type" : "string"
+                  },
+                  "description" : "Resource tags."
+                }
+              },
+              "description" : "The resource model definition for a ARM tracked top level resource",
+              "allOf" : [ {
+                "type" : "object",
+                "properties" : {
+                  "id" : {
+                    "type" : "string",
+                    "description" : "Fully qualified resource Id for the resource",
+                    "readOnly" : true
+                  },
+                  "name" : {
+                    "type" : "string",
+                    "description" : "The name of the resource",
+                    "readOnly" : true
+                  },
+                  "type" : {
+                    "type" : "string",
+                    "description" : "The type of the resource.",
+                    "readOnly" : true
+                  }
+                },
+                "description" : "The core properties of ARM resources"
+              } ]
+            } ]
+          }
+        }
+      }
+    },
+    "insertionIndex" : 7
+  }, {
+    "id" : "b3af362c-5274-4c55-bdf8-f59e590bb6d9",
+    "name" : "Get information about an Automation Account.",
+    "request" : {
+      "urlPath" : "/subscriptions/je01/resourceGroups/Vet46r1MU2Xz8X_whh.-ifvTp158Ek4nUE4TNLWRiR55uXO__ggnUEdJZBa84ccCt3UZVGX/providers/Microsoft.Automation/automationAccounts/Ms.+Corey+Hills",
+      "method" : "GET",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "vfcyvqy9p3ma0fcu6uo88mdjhvsgz2kjx0ugrmf14w9ju3vjw2hahsbo64mq6ntg2hn3mj24zjs1kpmcp7mz45tflr2p7s76azu3htxqrbmxud5puwbek5hmukfzsk77hcbn8ni0q5z2xv"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"etag\" : \"voluptate\",\n  \"location\" : \"9amul3bv75z4dke5egpe27l6e790dzgmwpe6ge70d6rl2cp58t1sgp0fuak7wtxvod0yubrdasazfhhz9wqvop5ui4otyfdnzdpi5tfnmo05yhqrpmfwjt1f6z857elyb57ikkcol108u2pbav\",\n  \"properties\" : {\n    \"lastModifiedTime\" : \"2023-08-28T18:54:51.177Z\",\n    \"creationTime\" : \"2024-01-12T05:10:23.177Z\",\n    \"lastModifiedBy\" : \"ymuch87ihrmqn90wyp58byosdmgyd9xmfymwq38zfgflm30bhbrxh3g8yrajncf4hxg02q8qhe3u8iachf5t3y2qyed12rtypjrdnpwlwnioxdowjt3w5ayn53k5aoaf1tzuu0d9vpzch5wl6zg9\",\n    \"description\" : \"Soluta quia consequatur quia provident. Dignissimos voluptas ut distinctio possimus inventore. Animi vel deleniti maiores ea temporibus pariatur.\",\n    \"state\" : \"Ok\",\n    \"sku\" : {\n      \"name\" : \"Basic\",\n      \"family\" : \"adusn64k0nkzpyhg4f4qajhkj061f62nys5ua5hi87hxhiuj4xsoepf1arrvfdd9njryx0ser72qnqcy0hpzu17ai9903ngx7k40hyjxyneye6d8xeypnmy88cgdf7ujxda8yn2\",\n      \"capacity\" : 303171933\n    }\n  },\n  \"tags\" : { }\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "b3af362c-5274-4c55-bdf8-f59e590bb6d9",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:43.177882Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "AutomationAccount_Get",
+          "schema" : {
+            "properties" : {
+              "etag" : {
+                "type" : "string",
+                "description" : "Gets or sets the etag of the resource."
+              },
+              "properties" : {
+                "$ref" : "#/components/schemas/AutomationAccountProperties"
+              }
+            },
+            "description" : "Definition of the automation account type.",
+            "allOf" : [ {
+              "properties" : {
+                "location" : {
+                  "type" : "string",
+                  "description" : "The Azure Region where the resource lives"
+                },
+                "tags" : {
+                  "type" : "object",
+                  "additionalProperties" : {
+                    "type" : "string"
+                  },
+                  "description" : "Resource tags."
+                }
+              },
+              "description" : "The resource model definition for a ARM tracked top level resource",
+              "allOf" : [ {
+                "type" : "object",
+                "properties" : {
+                  "id" : {
+                    "type" : "string",
+                    "description" : "Fully qualified resource Id for the resource",
+                    "readOnly" : true
+                  },
+                  "name" : {
+                    "type" : "string",
+                    "description" : "The name of the resource",
+                    "readOnly" : true
+                  },
+                  "type" : {
+                    "type" : "string",
+                    "description" : "The type of the resource.",
+                    "readOnly" : true
+                  }
+                },
+                "description" : "The core properties of ARM resources"
+              } ]
+            } ]
+          }
+        }
+      }
+    },
+    "insertionIndex" : 8
+  }, {
+    "id" : "2744d2db-a472-4d58-a264-7071049ed600",
+    "name" : "Retrieve a list of accounts within a given resource group.",
+    "request" : {
+      "urlPath" : "/subscriptions/481p/resourceGroups/82rJKkVDUBzcfzw.vm0-WydFWWy1AGlS7ep0ovuOF96bhMC3WHYUpJDuEPgMD07LBM/providers/Microsoft.Automation/automationAccounts",
+      "method" : "GET",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "mbs280olsq0vuil6r0jpirpom7zozql73orateo6axkmo9yl2ca42u8e325rzyk8i8edglnzgleh2pjhtq3bem4pgn0rxwp0d8zu2gte1lark7sdqp07zgiuxvu6gmoh1kgrwbz1nioqzp69dhzhmtt4xiw96ey"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"value\" : [ {\n    \"etag\" : \"doloribus\",\n    \"location\" : \"8t8iiohjwy6pv67vyd2l4x9f4wx37y11psdail8bm2sc0x2hx2cv7jkcpoc9mv6022zm75njnb9tglqc9u33b7c04enqfrfc\",\n    \"properties\" : {\n      \"lastModifiedTime\" : \"2022-06-15T23:53:29.176Z\",\n      \"creationTime\" : \"2023-11-27T05:28:25.176Z\",\n      \"lastModifiedBy\" : \"f3bbdokhtwhljjulunnk9025rvju3ccjl9f3oss10axrjr0jxq4jau636j3k36szebzv49683txledwbt8v7u6b2ixyrhs6y2hid56i86x6vvkobi87dit3a9bqhbds053h7g0sn\",\n      \"description\" : \"Minus consequatur quisquam facere quia eaque. Qui ea pariatur labore magni. Vel voluptatibus natus. Et culpa numquam omnis.\",\n      \"state\" : \"Suspended\",\n      \"sku\" : {\n        \"name\" : \"Basic\",\n        \"family\" : \"nh6gu4ndjzuoxxe0ebzmoaul8rrsbgl5qpri9em28sazqcpzwvi6j4n2294y6pdhjjefc\",\n        \"capacity\" : 553213632\n      }\n    },\n    \"tags\" : { }\n  }, {\n    \"etag\" : \"aaaa\",\n    \"location\" : \"5fadsyib3fwfi6cch1df2p1ur7zv96x5i4qq1z7sh6zx7w5yxej8csdbmu757d3812rgq43ul585a2eycg7x1c14t8dczo37qr4vvpqe5iavtii14dew83y4mgzibqwewbk7l7zzzb9ff3abrbayygkcbjdd2rgy5wm8486y0xh15mp26b1fmc73dt9n9o0rokr3aj\",\n    \"properties\" : {\n      \"lastModifiedTime\" : \"2022-12-18T06:53:33.176Z\",\n      \"creationTime\" : \"2024-03-15T04:17:42.176Z\",\n      \"lastModifiedBy\" : \"nlz83q03c7w28vkuuxwhy6saplzqvrp3\",\n      \"description\" : \"Cupiditate maiores iure a quia ab molestias et. Voluptatem incidunt dolores. Molestiae perspiciatis inventore cum. Porro numquam beatae mollitia reprehenderit. Provident ducimus quia hic sapiente a fu\",\n      \"state\" : \"Ok\",\n      \"sku\" : {\n        \"name\" : \"Free\",\n        \"family\" : \"g6nao7ccd6meslm7l75n4kpnvhs9rw\",\n        \"capacity\" : 1916221158\n      }\n    },\n    \"tags\" : { }\n  }, {\n    \"etag\" : \"velit\",\n    \"location\" : \"qp6f5b5y42dry2jcg2kvn\",\n    \"properties\" : {\n      \"lastModifiedTime\" : \"2022-10-08T17:32:02.177Z\",\n      \"creationTime\" : \"2023-11-12T10:29:40.177Z\",\n      \"lastModifiedBy\" : \"jfjmc5qqtm2kx5udr6pl04nqw9tkb1ajq49pjpo7eskul6svn8odq2br2bcub7uozwjfuejluamlea3gzjimas\",\n      \"description\" : \"Doloremque aut fuga modi est consequatur quos. Quis amet quo totam. Velit omnis perspiciatis placeat perspiciatis non sed.\",\n      \"state\" : \"Ok\",\n      \"sku\" : {\n        \"name\" : \"Basic\",\n        \"family\" : \"1f74lnd9y88eh3fh2watsi1728ok4kbc\",\n        \"capacity\" : 49908406\n      }\n    },\n    \"tags\" : { }\n  }, {\n    \"etag\" : \"illum\",\n    \"location\" : \"1pucmoagy742pv3b91bbwd1x3l56kt9dvkieh5otrl4ivvh41qpvfxtzbksqiwmmmcgpih5lmqao69rhs27amy2fe3of055tilb1rh76vcs5wj0ge15wg6k8hig16pafn7tjjhha695og1x7ykrylq\",\n    \"properties\" : {\n      \"lastModifiedTime\" : \"2023-02-19T15:32:28.177Z\",\n      \"creationTime\" : \"2022-04-18T17:34:44.177Z\",\n      \"lastModifiedBy\" : \"ux4smzhdjxdfyfkid1st27k15cjxwcvrnn1so3b9gqa1kd1x0dm8xgcc2wj29zxdob1etuu8qydzl2c0891bxxed253uco2ixxbk4e5s9hcy635nydr49mc8pnt3ke3pa0nhy5t286qoinjrapaelss4a1gj51gfm56cp3awxvf6erj4odt9aay5\",\n      \"description\" : \"Id aliquid dolores cumque omnis reiciendis rerum laudantium. Quia cum incidunt aut dolorem placeat cupiditate. Est mollitia incidunt molestiae perspiciatis aspernatur.\",\n      \"state\" : \"Unavailable\",\n      \"sku\" : {\n        \"name\" : \"Free\",\n        \"family\" : \"cmb0mntvt9ms5b2tucrjrls5om3d54199a2zpzpx2tkrrt4nzh0bvz1rbj9m\",\n        \"capacity\" : 843498086\n      }\n    },\n    \"tags\" : { }\n  } ],\n  \"nextLink\" : \"j74ytslqd7au7t4ii89v2ubjxgp0fbw8mq8p5izbpcvfu1v9dcwuv02kyg3k7e53nscpzeaq0we693sxgl2gr2ljnas40obl9pcurbyu51e0i4fl66np4vsstm1sfklp4oyoed3xgllsjz4ekpayto5nvoix6fvwlb4c212gm2hia4ss1g81u\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "2744d2db-a472-4d58-a264-7071049ed600",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:43.177459Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "AutomationAccount_ListByResourceGroup",
+          "schema" : {
+            "type" : "object",
+            "properties" : {
+              "nextLink" : {
+                "type" : "string",
+                "description" : "Gets or sets the next link."
+              },
+              "value" : {
+                "type" : "array",
+                "description" : "Gets or sets list of accounts.",
+                "items" : {
+                  "$ref" : "#/components/schemas/AutomationAccount"
+                }
+              }
+            },
+            "description" : "The response model for the list account operation."
+          }
+        }
+      }
+    },
+    "insertionIndex" : 9
+  }, {
+    "id" : "7475e3d3-35c2-4263-932c-cccc3e48a4b0",
+    "name" : "Lists the Automation Accounts within an Azure subscription.",
+    "request" : {
+      "urlPath" : "/subscriptions/2u91/providers/Microsoft.Automation/automationAccounts",
+      "method" : "GET",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "6bvo0gob1eqdz1orypxi46g9gbudtjy19n89b9htjiu04ekkw97hce31qhxe2fbw51w3pmzsete8p3q6826idkmcp7ne51wq7ec4jh3c8c29ns8138vx4uctrcj6eafo52ie04ocnrb"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"value\" : [ {\n    \"etag\" : \"fuga\",\n    \"location\" : \"khk4fkyjrcmth9hv5x1ywzeqhodko1snrh0408g0f67c515jzubbyaax3en5f6tb4iuzcw7ccog7g3tcus7pgcan0m3b3q3etr56ps9kdchume7decplp0e2ummgn1y\",\n    \"properties\" : {\n      \"lastModifiedTime\" : \"2023-03-11T06:45:49.175Z\",\n      \"creationTime\" : \"2023-03-05T16:26:08.175Z\",\n      \"lastModifiedBy\" : \"pqaagaup31fdphbiy3igpe44wh6caifqvm4jnxdysq6gy8w5zvddwynwvn4jx26n8nch6q5l61y155y6cjg5h6mzkdp356y1fvg0jub63opw6m39mbpw2qf6ew8igge7prewtny3fkwh61frpy2t6ih3ysk9\",\n      \"description\" : \"Voluptas distinctio odio. Illo fugiat laboriosam vitae ad maiores. Neque reiciendis aut ab velit illum deserunt cumque.\",\n      \"state\" : \"Unavailable\",\n      \"sku\" : {\n        \"name\" : \"Free\",\n        \"family\" : \"qg9601bne7g9ysig7kg4qesmpj8mk6qg4jqb81fmnuuek\",\n        \"capacity\" : 1623621755\n      }\n    },\n    \"tags\" : { }\n  }, {\n    \"etag\" : \"aaaa\",\n    \"location\" : \"2a3vybskvs44aos7drrajx6ht\",\n    \"properties\" : {\n      \"lastModifiedTime\" : \"2022-06-14T22:05:40.175Z\",\n      \"creationTime\" : \"2023-11-28T16:51:30.175Z\",\n      \"lastModifiedBy\" : \"50kluecsh5kubz8dtzamrcnor7wb88wnwa\",\n      \"description\" : \"Rerum odit odio cum aut. Sed minus neque sit eos id. Est esse dolore ratione earum fugit quis et. Rerum nulla tempore. Officia facere dolor enim inventore consequuntur corporis error.\",\n      \"state\" : \"Unavailable\",\n      \"sku\" : {\n        \"name\" : \"Free\",\n        \"family\" : \"xv4t03bfwwsvp9uruo1zspy5jz43z13m9k32u2iylq7it0e81nm1bwb9o2xhaba9t2e13t1y7zo4mwdipy9js92yvtioqjtjrmfvllq7h355oqdmfsfg34l\",\n        \"capacity\" : 866820487\n      }\n    },\n    \"tags\" : { }\n  }, {\n    \"etag\" : \"voluptas\",\n    \"location\" : \"dyphlcc32116ncwyr0i0fvndnq9gljs6fua1v6ukkk4in5jlc1ogjdq5zy0hjsz5k99mrojp7m213ojemjk7wok02kuedkd1gvh78h97rhvphjsipzpnkpbq3xqi87qhk\",\n    \"properties\" : {\n      \"lastModifiedTime\" : \"2023-05-05T16:21:50.175Z\",\n      \"creationTime\" : \"2023-01-26T00:45:05.175Z\",\n      \"lastModifiedBy\" : \"oumqbfzh8pukrxacoehlhqdwgaiufupzar02gch4frwda0fi549t4ocs7ixou1kix5kbxmx63yag5takvt3xf8qgi116j4wvhqs\",\n      \"description\" : \"Tenetur velit natus aut quia quibusdam. Natus atque facere voluptates. Qui omnis earum accusantium maiores aspernatur. Culpa voluptatem doloribus eligendi corporis qui asperiores eos. Quibusdam et eos\",\n      \"state\" : \"Unavailable\",\n      \"sku\" : {\n        \"name\" : \"Free\",\n        \"family\" : \"1ghrvx8c6vtvpc\",\n        \"capacity\" : 781529923\n      }\n    },\n    \"tags\" : { }\n  }, {\n    \"etag\" : \"vel\",\n    \"location\" : \"f76v1cswt58aszw9c9tbxc7qjmk8m8z26c0ilhcmhib2b3zlibvdqf6t\",\n    \"properties\" : {\n      \"lastModifiedTime\" : \"2022-09-13T09:55:45.176Z\",\n      \"creationTime\" : \"2022-10-12T19:06:48.176Z\",\n      \"lastModifiedBy\" : \"8hxz1grbcw7aay64z9342hnbm8ya7nc9sc12zfe60vsn3vs48aydx48q7zffzro3we8798uege6mbezosjrqvnzck02yivv3ckapou56a2kozkvmx6kv4i7zf748pwgjo94507c\",\n      \"description\" : \"Rerum maxime ullam similique officia id enim. Sit ipsum sed. Odio esse qui dolor ipsam. Omnis animi voluptatem necessitatibus voluptates a quia. Quod pariatur rem.\",\n      \"state\" : \"Ok\",\n      \"sku\" : {\n        \"name\" : \"Free\",\n        \"family\" : \"1fc4ebg8gjfut2rmahqi307hzrwljy047zpjjksy1aew9ngyl5f3jc7o8yhfknuqwrfwsskb3h2\",\n        \"capacity\" : 1826817432\n      }\n    },\n    \"tags\" : { }\n  }, {\n    \"etag\" : \"laboriosam\",\n    \"location\" : \"r8dh2c2od0a09qoqzq00hjyhw0f252m5lj8dr6obafboldp0ehtb6qbn2yqd442t2mzpxv9t3rpbt8sq7i8t51ru7uho74y23e4p33zaw9minmas5lf5zqvyrekl16mh0li61lu2r78\",\n    \"properties\" : {\n      \"lastModifiedTime\" : \"2023-01-04T07:36:09.176Z\",\n      \"creationTime\" : \"2024-02-27T10:58:18.176Z\",\n      \"lastModifiedBy\" : \"c1q3w7zw3dr55zgkm5rlnan20pwhp04ygf8ex8dso4nosn6ml8f\",\n      \"description\" : \"Quis aut dolor sed laudantium saepe quia. Nostrum sit tempora. Adipisci dolore vel cumque similique magnam deserunt adipisci. Et possimus aliquid aliquam vel perspiciatis hic nostrum. Saepe qui dolore\",\n      \"state\" : \"Suspended\",\n      \"sku\" : {\n        \"name\" : \"Basic\",\n        \"family\" : \"wyqulgy7mxqc1i22y7wpwi1h7pn0k5j0163jn4mckffb3vxq0qcs2oecjisgir7zs70x1t4pzo61piz2ua7fqsh5iflhavsib56d3h7j23ee1euwm5c6zqch2p6rqj4clukv5quli1w6la4k4rswqb2vysmxwusa6g63bn7km1c43owxqijfrtfv37uphccbz3up4\",\n        \"capacity\" : 1807291596\n      }\n    },\n    \"tags\" : { }\n  }, {\n    \"etag\" : \"fugiat\",\n    \"location\" : \"5wnfaxlw8iqjiclafyv5075ldlmkr0if89osttyngya\",\n    \"properties\" : {\n      \"lastModifiedTime\" : \"2022-05-15T20:18:16.176Z\",\n      \"creationTime\" : \"2023-02-08T23:12:41.176Z\",\n      \"lastModifiedBy\" : \"4nzes2ek9p3w95cqx4zvez7zt7p8o025c9cpb7r4bl9599neoptluqpsaqobnw8ms1961yzuzgps8uy6aley2q3l5qlrrjj9wfypocx72re66rbph3436oye64ak4fs1rce29qh\",\n      \"description\" : \"Culpa et itaque tempore alias aut. Voluptas expedita eum. Maiores fugit maiores doloribus eaque at nemo deserunt. Natus nihil et sit sint. Et magni molestiae ipsam dolor libero eveniet iure.\",\n      \"state\" : \"Unavailable\",\n      \"sku\" : {\n        \"name\" : \"Basic\",\n        \"family\" : \"6iy7ja8ure6l89ksfg60sopj5md07ty80y0rvvnlerpypvb5sn6h6r8dycea3f3a1d6o8a0c7klyy31z0347kqr8sxzkt9rc6jpz8uy67pfshtpdow1nq0yy3nji0s40y05qdrmnper3surzgapichnx6zztr41ezsm3h2y1imdh61obn5g5u2wdqlv\",\n        \"capacity\" : 1276201106\n      }\n    },\n    \"tags\" : { }\n  } ],\n  \"nextLink\" : \"oe9y44at74a9uaj0cldeboezv5gk9fbqan5ay1a0\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "7475e3d3-35c2-4263-932c-cccc3e48a4b0",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:43.176675Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "AutomationAccount_List",
+          "schema" : {
+            "type" : "object",
+            "properties" : {
+              "nextLink" : {
+                "type" : "string",
+                "description" : "Gets or sets the next link."
+              },
+              "value" : {
+                "type" : "array",
+                "description" : "Gets or sets list of accounts.",
+                "items" : {
+                  "$ref" : "#/components/schemas/AutomationAccount"
+                }
+              }
+            },
+            "description" : "The response model for the list account operation."
+          }
+        }
+      }
+    },
+    "insertionIndex" : 10
+  }, {
+    "id" : "724cffcf-7ae2-4db3-acb7-da890176e51e",
+    "name" : "Lists all of the available Automation REST API operations.",
+    "request" : {
+      "urlPath" : "/providers/Microsoft.Automation/operations",
+      "method" : "GET",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "z04cpyayg9e535mxtk8sn4lx7pjcpfrui93rcmze91o2vkbc4poc0iupc7yzgyhoe3kclu323bau246kq63fhmoehu7ncpc823vfna0i4burzxd5blvuyzzhe04c794rknknu6tqqt1wq3gzigjwhxibrrqljlexalj0zl8uip42g9yyca214mq"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"value\" : [ {\n    \"display\" : {\n      \"provider\" : \"odh9hrhfkfgfs7jf6uuxpxo7qfxwfyx41glwuyh6edpo\",\n      \"resource\" : \"rxbjlyetcn\",\n      \"operation\" : \"xmdd1hf94ean816kq9sz4vy9bqztskw4f4gh0153zoc352nlw4tsss62cll3ho1dm5c0ap30eifgb5sncgpapgv4k6329fokxu1uzitkcccst1upff4dj2aw8vtkuxxdlqfezam4ff47nagf56q0umqowdznym45m2ui\"\n    },\n    \"name\" : \"Lawerence Champlin\"\n  }, {\n    \"display\" : {\n      \"provider\" : \"khy1digzhwgt463jga7ya8nvajdul2oowb195okpr8xmkfqjeqk\",\n      \"resource\" : \"48ebvcyblrqqdhg0y5q8i4yc3lsq6f3cofs8x3p\",\n      \"operation\" : \"u8m8n\"\n    },\n    \"name\" : \"Frank Predovic\"\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "724cffcf-7ae2-4db3-acb7-da890176e51e",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:43.175497Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "Operations_List",
+          "schema" : {
+            "type" : "object",
+            "properties" : {
+              "value" : {
+                "type" : "array",
+                "description" : "List of Automation operations supported by the Automation resource provider.",
+                "items" : {
+                  "$ref" : "#/components/schemas/Operation"
+                }
+              }
+            },
+            "description" : "The response model for the list of Automation operations"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 11
+  } ]
+}

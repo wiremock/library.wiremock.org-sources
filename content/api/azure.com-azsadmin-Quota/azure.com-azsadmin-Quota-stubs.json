@@ -1,0 +1,127 @@
+{
+  "mappings" : [ {
+    "id" : "76af9a7e-508c-42a1-ad83-a58a3333b7b6",
+    "name" : "Gets a quota by name.",
+    "request" : {
+      "urlPath" : "/subscriptions/x4l2/providers/Microsoft.Subscriptions.Admin/locations/pjlm5/quotas/jadrkckk3lfhoscdx1hugbhg5h9lzehqv4zc9m6nbyo82fy14qmcgckxrc60c3hrcy840bsbl5fwqy641qan7yadajn106e0ihi64rrt1dr3cp01193alpjs5hz0dm61yodf2jur42cihsfkwl3qkle73qecrtmjqwn365r74py4g3llnd",
+      "method" : "GET",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "306sbzzh8id395gsid43nesblo1f625ezs67y25bmykcp3hagdkaehxy7ouf848ikwuuhh2kpvhlh6mp9uzhypjakjshvllc2zof7pjoutodwmz8g"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"name\" : \"Heike Kreiger\",\n  \"location\" : \"e7paiw15672qy3qey9ggbb4nfl6m5m70bzl5iojckswtisr2cvgfxxysj65tsjyhc4n2nghkreusb9794k\",\n  \"id\" : \"779n\",\n  \"type\" : \"uzzecxi4r1exxm39ced24v46gn0ws92txp7mv2z43im7cmr4ktiudgw3bgqdqbnvk\",\n  \"properties\" : {\n    \"allowCustomPortalBranding\" : false\n  },\n  \"tags\" : { }\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "76af9a7e-508c-42a1-ad83-a58a3333b7b6",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:16.042993Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "Quotas_Get",
+          "schema" : {
+            "properties" : {
+              "properties" : {
+                "$ref" : "#/components/schemas/QuotaProperties"
+              }
+            },
+            "description" : "Quotas for DelegatedProviders.",
+            "allOf" : [ {
+              "type" : "object",
+              "properties" : {
+                "id" : {
+                  "type" : "string",
+                  "description" : "URI of the resource.",
+                  "readOnly" : true
+                },
+                "location" : {
+                  "type" : "string",
+                  "description" : "Location of the resource"
+                },
+                "name" : {
+                  "type" : "string",
+                  "description" : "Name of the resource.",
+                  "readOnly" : true
+                },
+                "tags" : {
+                  "type" : "object",
+                  "additionalProperties" : {
+                    "type" : "string"
+                  },
+                  "description" : "List of key-value pairs.",
+                  "readOnly" : true
+                },
+                "type" : {
+                  "type" : "string",
+                  "description" : "Type of resource.",
+                  "readOnly" : true
+                }
+              },
+              "description" : "Base Resource Object"
+            } ]
+          }
+        }
+      }
+    },
+    "insertionIndex" : 0
+  }, {
+    "id" : "1130c973-5a29-4a9d-9d7b-03ffb4d73168",
+    "name" : "Get the list of quotas at a location.",
+    "request" : {
+      "urlPath" : "/subscriptions/9l6z/providers/Microsoft.Subscriptions.Admin/locations/dxrdda7q5e7pufisnuqts7d7r78bdjownrncu31n1xtrveghdbg/quotas",
+      "method" : "GET",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "ausadawms6vocx1ri9b0yrnptxhba51ct3m68ejggbleoeqxd2563fazj4p8mf3rpahf3wq"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"value\" : [ {\n    \"name\" : \"Ramon Abernathy MD\",\n    \"location\" : \"iwg86wux1cgn3rbn1reen0pgwyxd2xpmu4lnia849y5609vuxyutqdmr11ayv\",\n    \"id\" : \"16cs\",\n    \"type\" : \"tmhiyd18qtnji2l0cw9yoz0wjtj9laj4pmpm4xwsfnsm3u7auy1vtz8igza2ffxcz82e4b6d6aaqu5p1pt8q1ouq771ygu5r7gc9pnwdh323fkguk8u2b24kvbswa6bdqf7b2rd2swksefan8bms\",\n    \"properties\" : {\n      \"allowCustomPortalBranding\" : false\n    },\n    \"tags\" : { }\n  }, {\n    \"name\" : \"Jacinto Blanda\",\n    \"location\" : \"9iyum4x9bp0hy4p89wgccykm6pyzzr1ckpb2z2qcpgdpypqtlqccbeti6y6atg4mda2r09eez0xr433f10kqntof3828f9gtqu84x5crt6wz64ot7jwbt7vln4hmaee3hlg2h6hb3sawtm4k66lnown0oxg857m70tj9cshrh2rfsm46\",\n    \"id\" : \"hj8z\",\n    \"type\" : \"o7blg12h11tx7rjxrz4bg0fufic4cl\",\n    \"properties\" : {\n      \"allowCustomPortalBranding\" : true\n    },\n    \"tags\" : { }\n  }, {\n    \"name\" : \"Gayle Frami\",\n    \"location\" : \"gaycelluzk61580hps3or378t1bxz1ki0zpmquznbv1z0qd7pxf5kys1zlnwvwsu64iq16vw4afwwzlym7qme30sj4oomhd9250l701zoaosj8h2fjxb9v5uoua53ukchuxpwshqre37av7w9akcpk6zezwzmh0efybk4yo9i89hqjtkg27tqdc2zqvfz\",\n    \"id\" : \"p9lg\",\n    \"type\" : \"ydqodr7qt95m6ophzb5bly\",\n    \"properties\" : {\n      \"allowCustomPortalBranding\" : true\n    },\n    \"tags\" : { }\n  }, {\n    \"name\" : \"Janeth Brown\",\n    \"location\" : \"1uc1xjt0aemcxnngwveiazu523452u7ng732v5r3h9h40cn38c76w0ywh871f3g2i7nb2ifyj0l0quu0w22wpq0doltblt3lm8vfamf9h1et57xedtlzlozvxkr\",\n    \"id\" : \"03qa\",\n    \"type\" : \"hog1jp3c13doc1ug3pihge9c2xzp0tnq6xntuw65hknc11qv8m6vjfmjpi0wif84snxnx4z07z9za3tpgqvtv377ziojeuuvi5eqjdl9y6jsyfr6yr1rbx76oqk3\",\n    \"properties\" : {\n      \"allowCustomPortalBranding\" : false\n    },\n    \"tags\" : { }\n  } ],\n  \"nextLink\" : \"02b5wk2yb0fc2bh0z4onor8hfjok9ak4ec7h6ts12\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "1130c973-5a29-4a9d-9d7b-03ffb4d73168",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:16.042545Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "Quotas_List",
+          "schema" : {
+            "type" : "object",
+            "properties" : {
+              "nextLink" : {
+                "type" : "string",
+                "description" : "URI to next page."
+              },
+              "value" : {
+                "type" : "array",
+                "description" : "List of quotas.",
+                "items" : {
+                  "$ref" : "#/components/schemas/Quota"
+                }
+              }
+            },
+            "description" : "List of quotas."
+          }
+        }
+      }
+    },
+    "insertionIndex" : 1
+  } ]
+}

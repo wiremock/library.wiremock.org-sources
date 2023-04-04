@@ -1,0 +1,311 @@
+{
+  "mappings" : [ {
+    "id" : "00e9e7ec-06f8-49d4-889f-cde6b5e0b4d1",
+    "name" : "Deletes a product package. - 404",
+    "request" : {
+      "urlPath" : "/subscriptions/42x4/providers/Microsoft.Deployment.Admin/locations/global/productPackages/35cw",
+      "method" : "DELETE",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "j3ge74ra3mhw9yy7zffm84"
+        }
+      }
+    },
+    "response" : {
+      "status" : 404
+    },
+    "uuid" : "00e9e7ec-06f8-49d4-889f-cde6b5e0b4d1",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:15.314432Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "ProductPackages_Delete"
+        }
+      }
+    },
+    "insertionIndex" : 0
+  }, {
+    "id" : "a37b5fc7-b4de-4992-9aa5-1946a165ef17",
+    "name" : "Deletes a product package. - 200",
+    "request" : {
+      "urlPath" : "/subscriptions/i2sn/providers/Microsoft.Deployment.Admin/locations/global/productPackages/90ht",
+      "method" : "DELETE",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "1nvcydzbz3el9mbrmo73ld9kiy1x9ng9zyfnquptv3ot5ukvf9mk6u7l70vpuwbsl61sqskt6wz5nt53itb1jy3qeaayiehlt6zaokaslnhwbzfm9jgzohd0acs0w0p00ovbggwaodda6m2d1onkbswm12fr9mvoqigq1eaqj3"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200
+    },
+    "uuid" : "a37b5fc7-b4de-4992-9aa5-1946a165ef17",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:15.314262Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "ProductPackages_Delete"
+        }
+      }
+    },
+    "insertionIndex" : 1
+  }, {
+    "id" : "a31ad34b-9c66-43f8-a078-6f2f9e9c895e",
+    "name" : "Creates a new product package. - 202",
+    "request" : {
+      "urlPath" : "/subscriptions/w457/providers/Microsoft.Deployment.Admin/locations/global/productPackages/1d36",
+      "method" : "PUT",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "w4h4t9zojq6tsuafd1vgh0qi5v552e3t3sjbtk70l3wy"
+        }
+      }
+    },
+    "response" : {
+      "status" : 202
+    },
+    "uuid" : "a31ad34b-9c66-43f8-a078-6f2f9e9c895e",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:15.314076Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "ProductPackages_Create"
+        }
+      }
+    },
+    "insertionIndex" : 2
+  }, {
+    "id" : "ae2bc8f7-95a6-4cf7-b1be-3bbbe2375ddb",
+    "name" : "Creates a new product package. (application/json)",
+    "request" : {
+      "urlPath" : "/subscriptions/id5w/providers/Microsoft.Deployment.Admin/locations/global/productPackages/6392",
+      "method" : "PUT",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/json"
+        }
+      },
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "f904p0g5koj7jdceueeictyun6ofzn97wca4pmbapsz0xm83x2fo08hdapxkds1g4il1xojb7rtq4822863u9dvywhl6uw2pc5wc1ys9llls"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"name\" : \"Dannie Wolf\",\n  \"location\" : \"850tr1kq9yddxndvd10grbaroewfn7jbop5yr94lp11v69acgstjbm9laoyrvmhffx\",\n  \"id\" : \"97ba\",\n  \"type\" : \"hn2t02uj3ke4xos5qvm0lberz1sfth5rgknb4kvj2k3pvqw7b636vuc9f\",\n  \"properties\" : {\n    \"isUpdatable\" : false,\n    \"fileContainerId\" : \"u7g1\",\n    \"isDeployable\" : true,\n    \"provisioningState\" : \"Kentucky\",\n    \"productDeploymentId\" : \"r0ap\"\n  }\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "ae2bc8f7-95a6-4cf7-b1be-3bbbe2375ddb",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:15.313888Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "ProductPackages_Create",
+          "schema" : {
+            "properties" : {
+              "properties" : {
+                "$ref" : "#/components/schemas/ProductPackageProperties"
+              }
+            },
+            "description" : "Properties for a product package.",
+            "allOf" : [ {
+              "type" : "object",
+              "properties" : {
+                "id" : {
+                  "type" : "string",
+                  "description" : "ID of the resource.",
+                  "readOnly" : true
+                },
+                "location" : {
+                  "type" : "string",
+                  "description" : "Location of the resource."
+                },
+                "name" : {
+                  "type" : "string",
+                  "description" : "Name of the resource.",
+                  "readOnly" : true
+                },
+                "type" : {
+                  "type" : "string",
+                  "description" : "Type of Resource.",
+                  "readOnly" : true
+                }
+              },
+              "description" : "Object model of azure resource manager base."
+            } ]
+          }
+        }
+      }
+    },
+    "insertionIndex" : 3
+  }, {
+    "id" : "b554478f-bb9d-4fad-9620-20b4f8fda05a",
+    "name" : "Retrieves the specific product package details. - 404",
+    "request" : {
+      "urlPath" : "/subscriptions/6tth/providers/Microsoft.Deployment.Admin/locations/global/productPackages/i7z4",
+      "method" : "GET",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "h9ekub93oepw66vpp6r1zq1y1tksxcoib7irueqpj4o3rctzv8xt2rm5a4lwv5s2pa8y1iwb7g3mzsgh7y07tg"
+        }
+      }
+    },
+    "response" : {
+      "status" : 404
+    },
+    "uuid" : "b554478f-bb9d-4fad-9620-20b4f8fda05a",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:15.313335Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "ProductPackages_Get"
+        }
+      }
+    },
+    "insertionIndex" : 4
+  }, {
+    "id" : "3566a370-8730-495a-a0e0-13efb224470e",
+    "name" : "Retrieves the specific product package details. (application/json)",
+    "request" : {
+      "urlPath" : "/subscriptions/9ji4/providers/Microsoft.Deployment.Admin/locations/global/productPackages/16qg",
+      "method" : "GET",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/json"
+        }
+      },
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "hyh451jujntl5wau1n0nn9hoksp8ir7q8x3cpi7bh999b02wjihwn4lhmsyft3izqml7bkrl"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"name\" : \"Tristan Glover\",\n  \"location\" : \"jwgglvhu9arjezriz1cdl1ej9c6fznkyf69isr3eaecehew593kygscjjpo169fcvlhwekvya8dk8gsslwd0qa7f6q9hb70sdasno8uwth3uw4j7ehke6cq5x7wu3ri3tks2mluimstkt8huxtxhjdho1g3dubyv6j3q8k9vp905fm210or9eb0rd2490cim07luid2a\",\n  \"id\" : \"f8z6\",\n  \"type\" : \"dsvq4e9mrkre7i3o0bho37moactf1ix9k26akh4os6vlu91aa5vp3lrxo3afr9rnyc0maf9m52job26hyg7sjt1dl0qiponr7mi0hbworunzng5gy\",\n  \"properties\" : {\n    \"isUpdatable\" : false,\n    \"fileContainerId\" : \"b1ez\",\n    \"isDeployable\" : true,\n    \"provisioningState\" : \"Delaware\",\n    \"productDeploymentId\" : \"0gg1\"\n  }\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "3566a370-8730-495a-a0e0-13efb224470e",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:15.313111Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "ProductPackages_Get",
+          "schema" : {
+            "properties" : {
+              "properties" : {
+                "$ref" : "#/components/schemas/ProductPackageProperties"
+              }
+            },
+            "description" : "Properties for a product package.",
+            "allOf" : [ {
+              "type" : "object",
+              "properties" : {
+                "id" : {
+                  "type" : "string",
+                  "description" : "ID of the resource.",
+                  "readOnly" : true
+                },
+                "location" : {
+                  "type" : "string",
+                  "description" : "Location of the resource."
+                },
+                "name" : {
+                  "type" : "string",
+                  "description" : "Name of the resource.",
+                  "readOnly" : true
+                },
+                "type" : {
+                  "type" : "string",
+                  "description" : "Type of Resource.",
+                  "readOnly" : true
+                }
+              },
+              "description" : "Object model of azure resource manager base."
+            } ]
+          }
+        }
+      }
+    },
+    "insertionIndex" : 5
+  }, {
+    "id" : "06331acd-32ee-48f2-a700-a7d86ad6ffa1",
+    "name" : "Returns an array of product packages.",
+    "request" : {
+      "urlPath" : "/subscriptions/kyrp/providers/Microsoft.Deployment.Admin/locations/global/productPackages",
+      "method" : "GET",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "9g2qms6h1fae9psd3h5xru2ljjyrc"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"value\" : [ {\n    \"name\" : \"Tracy Lang III\",\n    \"location\" : \"l9qknnox5w207v0fscyth0finmyggf2mo1w5d8febm5cnplbibj2nt1efsofjfkwkaxbep9jpdvqajz0ynm2tfhj8e89ggwkzk6tex4mq6vjlp389vq0vqrqi078\",\n    \"id\" : \"l3a6\",\n    \"type\" : \"8dnu42mmbtl7ls7ffv7oyjql15att4ug4607wffre3dn024ffzq55\",\n    \"properties\" : {\n      \"isUpdatable\" : true,\n      \"fileContainerId\" : \"b1h8\",\n      \"isDeployable\" : false,\n      \"provisioningState\" : \"Vermont\",\n      \"productDeploymentId\" : \"944l\"\n    }\n  }, {\n    \"name\" : \"Jay Daugherty I\",\n    \"location\" : \"jt4rr7l6mvpu48f4uzh62b6vcb9xxs0adzzx63bf5gohwb3jp6gz3k027q3g21vg28dxuzvskm20iza06v5xf4n6ggctsqnwqaix07eo0lmn8ic1na4ormegqt7oeizvifr1g4q1vhdjwhsnunkwnzcgnhw5t69t09bfdqk92auj3vkl1y9i3ybtn80xcqnd6q\",\n    \"id\" : \"b2s4\",\n    \"type\" : \"0hw4rfhh32xptta2f87m079fh7u1dolwep711otyvx42vyuwppq246o2kpb5pgjgdmr2y2ww53oogm3jx2wxop40pvnp88zsw3r8ee2q8btbks743eg7h70wm1edgxdcny0a10et4w0klg03ch2iutyn2gy09a9numl4ea2plctdln8c6rnk4aolaic9d\",\n    \"properties\" : {\n      \"isUpdatable\" : false,\n      \"fileContainerId\" : \"vbwg\",\n      \"isDeployable\" : true,\n      \"provisioningState\" : \"Maryland\",\n      \"productDeploymentId\" : \"l4rv\"\n    }\n  }, {\n    \"name\" : \"Larry Jast\",\n    \"location\" : \"lffndaszxdmvxgepjjt3jg0bhcj7ytfe5yxrx5901dgcbn2dinb82llbivr9erhb35ljd16dkvsd\",\n    \"id\" : \"ub7c\",\n    \"type\" : \"oaa3a4bqbju40ezfrxjx1leon6e25uhp2dgbuj2ibssvrc64jogop9nvoxr8wznw5onfqgzd3io4cik9l9rm6exnsn3pva1wnfjwilx0s2atxjs31nx3uvp0n4wpxq1vx7c12ohd5mexcwzbu8m6wlpnodt865svv677ftv98s4yh0dk9fjb8n1h1\",\n    \"properties\" : {\n      \"isUpdatable\" : false,\n      \"fileContainerId\" : \"dr0k\",\n      \"isDeployable\" : true,\n      \"provisioningState\" : \"Arkansas\",\n      \"productDeploymentId\" : \"v1ox\"\n    }\n  } ],\n  \"nextLink\" : \"ckrnurjw5hbiqagwqb19\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "06331acd-32ee-48f2-a700-a7d86ad6ffa1",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:15.31252Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "ProductPackages_List",
+          "schema" : {
+            "type" : "object",
+            "properties" : {
+              "nextLink" : {
+                "type" : "string",
+                "description" : "Continuation Token."
+              },
+              "value" : {
+                "type" : "array",
+                "description" : "List of product packages.",
+                "items" : {
+                  "$ref" : "#/components/schemas/ProductPackage"
+                }
+              }
+            },
+            "description" : "List of product packages."
+          }
+        }
+      }
+    },
+    "insertionIndex" : 6
+  } ]
+}

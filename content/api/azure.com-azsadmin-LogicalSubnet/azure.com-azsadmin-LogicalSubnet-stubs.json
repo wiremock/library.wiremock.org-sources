@@ -1,0 +1,194 @@
+{
+  "mappings" : [ {
+    "id" : "f4eb57b1-6187-48b5-b7c8-1f3e31165b47",
+    "name" : "Returns the requested logical subnet. - 404",
+    "request" : {
+      "urlPath" : "/subscriptions/7441/resourceGroups/Lizabeth+Cronin/providers/Microsoft.Fabric.Admin/fabricLocations/z48tcya51q/logicalNetworks/06922u5vlhffe7gl8ze86sg9umtdtbk9ct5q6ma8vr56e7e3ubhogwie9dxhtr4wh4gcpqdeb9rkeoanrmpki6frjo2arv5nmvlj40pjhl8gij1nabdgdb7wgixf6zuw4aewpir1kyp3q11uzq67p069tn1sz/logicalSubnets/rp6vyykgeyc4lgddibzu",
+      "method" : "GET",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "3tjnb073oj9x4uq630paqs5bozmni9ma92tvgkpe6n9htsgs1j1aok1huo066a3njwkx1gdeku"
+        }
+      }
+    },
+    "response" : {
+      "status" : 404
+    },
+    "uuid" : "f4eb57b1-6187-48b5-b7c8-1f3e31165b47",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:12.257309Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "LogicalSubnets_Get"
+        }
+      }
+    },
+    "insertionIndex" : 0
+  }, {
+    "id" : "99b91e32-57f8-43f1-bdc8-f947839e9956",
+    "name" : "Returns the requested logical subnet. (application/json)",
+    "request" : {
+      "urlPath" : "/subscriptions/4xe2/resourceGroups/Mr.+Malcom+Brekke/providers/Microsoft.Fabric.Admin/fabricLocations/nsdzcwb94jfd/logicalNetworks/fmm83a26rjr304eu6bqg510p18fdl81aebvb1rzb7unea65harem2gg6kid6nl99saoo/logicalSubnets/ercxe8dv0ni70eqs9oyskuc2kblowowxkut9rs87vtatlsh477ta52o1owv9jk0z8azpyg06w6r7bqf7q9jdrb30pymhwmcxx765n9vzh9jdjm4ewzw6drms338760y85f68jtvy1vu1",
+      "method" : "GET",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/json"
+        }
+      },
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "swbdjwzq55k4sdde4o3hisz2fmina8bzh5y2zixa83qzm9fy3z6l83bj"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"name\" : \"Mahalia Sauer\",\n  \"location\" : \"j9r2agz9fysirqxnhra7gkwgsqbhjeebwtky2m4ojo42qxwfnblaq210mrdbcjqud3y60dmat9d3mysq54y4w6c95kh80lc233b6ms\",\n  \"id\" : \"0u16\",\n  \"type\" : \"c9uj2sou284edr8ch9eij48zul1t5t56j1lg1dno4htsdqg27wsspdrb\",\n  \"properties\" : {\n    \"metadata\" : { },\n    \"ipPools\" : [ \"is8fv4dch6q6zoipkadimxoybm299l0sk4g447axbawzs1mduwu8os72pvrw1of6qutrhbkpe0v7zodmtyfpxhdtdkmt336rn1a42zuv45wmuki8p8anbx\", \"k1v84pb5bfb2jwyuu2x00aexxmj4d0yp2rlf3gy6q2xzfy938550rndoiyubburw3rx0mhu3unm1zomwfr2sypy8emi5m8g59trkutyn77irjssi42b91061xjzkfc50r9cwlu3n8ipch0g0b4gsxqpsz5xpll1ig7aufbomzkjy\", \"u736ueq25xblia38w1358p8s8reh3jqj4pu0iejo134ysvhz8hfqy9u2csyqclweefk0tcpeek3sqi9b2gjfwz0tzy2xb3mgogk7rtf8o4ttv52jh74l\", \"pzn6v7dm7xklnws61xxzl6w8uozfdye2vlfobs1p8\", \"m4azo9wr4opmn9r248s84o34ge642es537p3ka4jsslrn00dttyxm2gd11tz\", \"4r72ti8rtumet6hjj322cy7s64ok3nxxgbby9rch4jz9xpuukba3zzecn6gyvup1g1o937tg58crcb1s8yp9x07sxsce24gl9r5ymbb9on39d1icbg13b66yj1mk2c3yfx2mbxemtbnn93oiaw0u8xpoo1pnv9iq3r4h5619kxo50hxqbiih9x\" ],\n    \"isPublic\" : false\n  },\n  \"tags\" : { }\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "99b91e32-57f8-43f1-bdc8-f947839e9956",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:12.25709Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "LogicalSubnets_Get",
+          "schema" : {
+            "properties" : {
+              "properties" : {
+                "$ref" : "#/components/schemas/LogicalSubnetModel"
+              }
+            },
+            "description" : "This resource represents a logical subnet.  A logical subnet is made of a subnet-vlan pair.",
+            "allOf" : [ {
+              "type" : "object",
+              "properties" : {
+                "id" : {
+                  "type" : "string",
+                  "description" : "URI of the resource.",
+                  "readOnly" : true
+                },
+                "location" : {
+                  "type" : "string",
+                  "description" : "The region where the resource is located."
+                },
+                "name" : {
+                  "type" : "string",
+                  "description" : "Name of the resource.",
+                  "readOnly" : true
+                },
+                "tags" : {
+                  "type" : "object",
+                  "additionalProperties" : {
+                    "type" : "string"
+                  },
+                  "description" : "List of key-value pairs."
+                },
+                "type" : {
+                  "type" : "string",
+                  "description" : "Type of resource.",
+                  "readOnly" : true
+                }
+              },
+              "description" : "Base resource object."
+            } ]
+          }
+        }
+      }
+    },
+    "insertionIndex" : 1
+  }, {
+    "id" : "5f87c84e-cc50-49c9-86f2-d5842af2f067",
+    "name" : "Returns a list of all logical subnets. - 404",
+    "request" : {
+      "urlPath" : "/subscriptions/6fl6/resourceGroups/Noble+Carter/providers/Microsoft.Fabric.Admin/fabricLocations/mwdsui1sj6njktn0mzr6a90gxvsny5tr6ecnxlo5i0iqz4o6yzedctkn1xr9bfxhg8sbt6fqbjy89djp2sbrvncjx12sk4divpoxngkfr5wkroh1ah7p6drhiitma212b01bcv2zi3o6v25i9c6ahfdx0anpi5/logicalNetworks/aw9g7mpe1n2a40f5u49f9felna3jlxcwxnbsmh63yui/logicalSubnets",
+      "method" : "GET",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "iiwc2hiq4r1oe6gl13q95x35ybv4l2o9d0kocfj4e1vg8edzjcd5ovif4q4qp4vlokt251pc5mb6zj8rj4ytlmw45h4602f5de3xzb4s0t4zf2l440lhwka0s"
+        }
+      }
+    },
+    "response" : {
+      "status" : 404
+    },
+    "uuid" : "5f87c84e-cc50-49c9-86f2-d5842af2f067",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:12.256489Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "LogicalSubnets_List"
+        }
+      }
+    },
+    "insertionIndex" : 2
+  }, {
+    "id" : "eb18fe32-bb29-46b3-bf3a-f56091c55267",
+    "name" : "Returns a list of all logical subnets. (application/json)",
+    "request" : {
+      "urlPath" : "/subscriptions/mnpx/resourceGroups/Piedad+Hickle/providers/Microsoft.Fabric.Admin/fabricLocations/odgrbj0j8jgnqxvreapc2beyq84jfkux7d061ukatye399pydtr9x5z55melo7z/logicalNetworks/i43f57j53bd35uzri67e4gqfc81b9bsoqtdsetbh0wjr9rtjm6s0k6tbeqavsza729x4dmeocpp5svjew85bvpt18j1f/logicalSubnets",
+      "method" : "GET",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/json"
+        }
+      },
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "ib3a1d6vm9m6s81gek4pg035apk11hsrxrz49cvi3xf7ff59rkm3pn0gdw337qx8ly736o439sgtx3v2nxy3q9nxc0k1ti5qtm717cpvla33sxe3gmbhqhc92w46fao26k2sepfmaqufi43vdeilxrk"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"value\" : [ {\n    \"name\" : \"Dorris Steuber\",\n    \"location\" : \"5tdmmik5idul315ey4png2jj0ao4m5dgwav5cfrm7rvjhaoc\",\n    \"id\" : \"3r22\",\n    \"type\" : \"msm32bvl39d6ulwgylkbhtnb7ax29hl73pcvrvpa2aceys1p05ql9255r\",\n    \"properties\" : {\n      \"metadata\" : { },\n      \"ipPools\" : [ \"anfttrfnjre16v3u0k9uziy45e6jlsdniha7ddjq3m07ajrmgp6o258qj8rrd7ochqmiqdk\", \"r8ftkzyjp06nkzi91j6kkdtrvjibhxub7m0v089tg6bh14gt1vnegmqbjt4wnsjik0e61ec3x51ulzbtor3\", \"myjchnk1jue6l49x\", \"77ou8eyc7hw4jffcpxwgjg6snfhz4u1oyeqe3vgzp0058bql85jy4gev2je4nbrfruuz6qcia0v5lx4wza9k6zb42zsbb53zaxsqcnznawlgi32hg80y93kckiv\", \"iiiv5qswfw7wufkyl9ko4zr41e00ez25lrsn1vxljda4t\" ],\n      \"isPublic\" : true\n    },\n    \"tags\" : { }\n  } ],\n  \"nextLink\" : \"gd8qzbuqccaujs519xnqld0iobj1av5bxgv4f5tzbbn9x3awj7o39861xgfmoel0hbzto6b33r29ghaoz45if03a1cqemxqb1qtsk5d6flwed81v8bwonsw0zgue6jnkltf29n97pj3hrhmjrsfsy95qpmml265b4975b8zw73khe3umg7cjzyly9kq\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "eb18fe32-bb29-46b3-bf3a-f56091c55267",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:12.255895Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "LogicalSubnets_List",
+          "schema" : {
+            "type" : "object",
+            "properties" : {
+              "nextLink" : {
+                "type" : "string",
+                "description" : "URI to the next page."
+              },
+              "value" : {
+                "type" : "array",
+                "description" : "List of logical subnets.",
+                "items" : {
+                  "$ref" : "#/components/schemas/LogicalSubnet"
+                }
+              }
+            },
+            "description" : "Pageable list of logical subnets."
+          }
+        }
+      }
+    },
+    "insertionIndex" : 3
+  } ]
+}

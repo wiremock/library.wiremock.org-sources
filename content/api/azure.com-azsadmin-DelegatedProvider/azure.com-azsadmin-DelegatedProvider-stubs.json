@@ -1,0 +1,179 @@
+{
+  "mappings" : [ {
+    "id" : "77582c0b-f7b5-45bb-ac6a-615c31c99b18",
+    "name" : "Get the specified delegated provider.",
+    "request" : {
+      "urlPath" : "/subscriptions/67i7/providers/Microsoft.Subscriptions.Admin/delegatedProviders/drci8tfg84l4wpacgdvkjp3alfsqhf80s9lmx72tair917cv18hn01gydpbk7uszsekewjsxai5zxnus5prs6yhn6ikmap2oxr5xhpl4opil8vt65rhj3mnkjyu3pyan8j2tgttlt6i9q",
+      "method" : "GET",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "92g3nos7j65r449pe1c3a5mt7yg5rb99gzibjcvaj0it48h6akrtcvhbt56i9i1euh0vkbm607iuc46pzi8879g31z21mcg0gh06cio1p574mxv3mrl71dhkg942addnadzbcwdozs3ylud7fjrwx234ifs9tf06qet0k61m5a7s13jqpixm3tbsasdb3xmi3"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"externalReferenceId\" : \"c39v\",\n  \"owner\" : \"0ypwuj510b6peha1zf69so3uq51zgpfntdfeih71fidwxaf3gvw6m6oug1vwn3m5jzteadtj1geht7lb8rdax1kyq2ljh3ghfzx2x0ry5l9993s2nsh4q9568s3tlw1pz530tlwry53jzioxmoxr4dohy3ack2cq956ov5uye9ozhh0p3dg4c1d41vda67\",\n  \"delegatedProviderSubscriptionId\" : \"72cj\",\n  \"routingResourceManagerType\" : \"Default\",\n  \"displayName\" : \"Arturo Streich Sr.\",\n  \"tenantId\" : \"374k\",\n  \"offerId\" : \"0rwb\",\n  \"id\" : \"368p\",\n  \"state\" : \"Disabled\",\n  \"subscriptionId\" : \"y43b\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "77582c0b-f7b5-45bb-ac6a-615c31c99b18",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:34.530265Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "DelegatedProviders_Get",
+          "schema" : {
+            "type" : "object",
+            "properties" : {
+              "delegatedProviderSubscriptionId" : {
+                "type" : "string",
+                "description" : "Parent DelegatedProvider subscription identifier."
+              },
+              "displayName" : {
+                "type" : "string",
+                "description" : "Subscription name."
+              },
+              "externalReferenceId" : {
+                "type" : "string",
+                "description" : "External reference identifier."
+              },
+              "id" : {
+                "type" : "string",
+                "description" : "Fully qualified identifier."
+              },
+              "offerId" : {
+                "type" : "string",
+                "description" : "Identifier of the offer under the scope of a delegated provider."
+              },
+              "owner" : {
+                "type" : "string",
+                "description" : "Subscription owner."
+              },
+              "routingResourceManagerType" : {
+                "type" : "string",
+                "description" : "Resource manager type.",
+                "enum" : [ "Default", "Admin" ]
+              },
+              "state" : {
+                "type" : "string",
+                "description" : "Subscription notification state.",
+                "enum" : [ "NotDefined", "Enabled", "Warned", "PastDue", "Disabled", "Deleted", "Deleting", "PartiallyDeleted" ]
+              },
+              "subscriptionId" : {
+                "type" : "string",
+                "description" : "Subscription identifier."
+              },
+              "tenantId" : {
+                "type" : "string",
+                "description" : "Directory tenant identifier."
+              }
+            },
+            "description" : "List of supported operations."
+          }
+        }
+      }
+    },
+    "insertionIndex" : 0
+  }, {
+    "id" : "c8e3aec4-12a9-41a2-95bb-b056d7e31088",
+    "name" : "Get the list of delegatedProviders.",
+    "request" : {
+      "urlPath" : "/subscriptions/102j/providers/Microsoft.Subscriptions.Admin/delegatedProviders",
+      "method" : "GET",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "0c7ztym26uzbikhoei5fhr20jis8bqfr2sl6sd005mrk5ipwl8z86jv0o354gwvgnpp9c36zllnslq9uh9f9twew8c8ew1k1cv4nzlr0p2q1mx5bzmvoqbqfupx2798qcmawi"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"value\" : [ {\n    \"externalReferenceId\" : \"6crn\",\n    \"owner\" : \"4w8de8t1k9gmwsfnov3hz0bpo30761aox1146injq\",\n    \"delegatedProviderSubscriptionId\" : \"v6vu\",\n    \"routingResourceManagerType\" : \"Admin\",\n    \"displayName\" : \"Moises Orn DVM\",\n    \"tenantId\" : \"1f0c\",\n    \"offerId\" : \"y640\",\n    \"id\" : \"3504\",\n    \"state\" : \"Deleted\",\n    \"subscriptionId\" : \"y341\"\n  } ],\n  \"nextLink\" : \"qecfppu22aa839h2db6mkjy9foanahuk122yafmmujj80fxv7fut72960trnnhn7mmomjt68xqxhvrlbxkr30zti26jjktiuqe6jdnv4vy\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "c8e3aec4-12a9-41a2-95bb-b056d7e31088",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:34.529314Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "DelegatedProviders_List",
+          "schema" : {
+            "type" : "object",
+            "properties" : {
+              "nextLink" : {
+                "type" : "string",
+                "description" : "URI to the next page."
+              },
+              "value" : {
+                "type" : "array",
+                "description" : "Subscription definition.",
+                "items" : {
+                  "type" : "object",
+                  "properties" : {
+                    "delegatedProviderSubscriptionId" : {
+                      "type" : "string",
+                      "description" : "Parent DelegatedProvider subscription identifier."
+                    },
+                    "displayName" : {
+                      "type" : "string",
+                      "description" : "Subscription name."
+                    },
+                    "externalReferenceId" : {
+                      "type" : "string",
+                      "description" : "External reference identifier."
+                    },
+                    "id" : {
+                      "type" : "string",
+                      "description" : "Fully qualified identifier."
+                    },
+                    "offerId" : {
+                      "type" : "string",
+                      "description" : "Identifier of the offer under the scope of a delegated provider."
+                    },
+                    "owner" : {
+                      "type" : "string",
+                      "description" : "Subscription owner."
+                    },
+                    "routingResourceManagerType" : {
+                      "type" : "string",
+                      "description" : "Resource manager type.",
+                      "enum" : [ "Default", "Admin" ]
+                    },
+                    "state" : {
+                      "type" : "string",
+                      "description" : "Subscription notification state.",
+                      "enum" : [ "NotDefined", "Enabled", "Warned", "PastDue", "Disabled", "Deleted", "Deleting", "PartiallyDeleted" ]
+                    },
+                    "subscriptionId" : {
+                      "type" : "string",
+                      "description" : "Subscription identifier."
+                    },
+                    "tenantId" : {
+                      "type" : "string",
+                      "description" : "Directory tenant identifier."
+                    }
+                  },
+                  "description" : "List of supported operations."
+                }
+              }
+            },
+            "description" : "List of subscriptions."
+          }
+        }
+      }
+    },
+    "insertionIndex" : 1
+  } ]
+}

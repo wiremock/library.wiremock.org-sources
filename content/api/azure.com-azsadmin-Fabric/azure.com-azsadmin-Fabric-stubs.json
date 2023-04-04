@@ -1,0 +1,53 @@
+{
+  "mappings" : [ {
+    "id" : "b818de28-a764-4307-8806-23df66548ecd",
+    "name" : "Returns the list of support REST operations.",
+    "request" : {
+      "urlPath" : "/providers/Microsoft.Fabric.Admin/operations",
+      "method" : "GET",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "sx70hquxy3a9w00koepjsx22mu"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"value\" : [ {\n    \"display\" : {\n      \"provider\" : \"7t055r6c77bxdnwc062ofl3d3ocldb58tbzr36y6tgay7twvbov1dlq6jv54ffz1ii31e003kij9yqnqv8r11hskutfntynr3l0gx4vrftu0f7k06fi\",\n      \"resource\" : \"pp1xb5kfvfx97drtxqxmrcdxonqra26t467nq3wdf4ll7wp773lnue1nuilxplzciztw7pr9g3qkinek6cev2xnmfn8dod1kniqi2m8zqevxou7hrptw65wp6hyddgda530qc6nzg9q5dujoqou0ml2ghhu64ka9xn1kfw9mjf\",\n      \"description\" : \"Provident et reiciendis. Cum aut provident. Eum perferendis ut pariatur velit repellat dolor. Dolores aut totam ipsam dolor. Ratione minus ipsam asperiores saepe.\",\n      \"operation\" : \"mqwkh6400i8e716uwxnacfgi6buoaj1nep3zzwlaqapxia6hrk\"\n    },\n    \"name\" : \"Mr. Marion Luettgen\"\n  }, {\n    \"display\" : {\n      \"provider\" : \"mdm8gn155u9ep6gkro49a55uwqmortsq6st963ejcs8bgz9tuwbacd6mf142c332udant8cfu9at4y05mvsyhh6611ofxiyjn0nuxkfcj5g23hhzvi5kpdi5w\",\n      \"resource\" : \"w6qmr70mq3juqbuiucr41sfca64p1mura\",\n      \"description\" : \"Incidunt vel perspiciatis et rerum ipsa et odit. Reiciendis repellendus repellat. Praesentium nihil eum animi. Possimus voluptas eligendi placeat optio voluptatibus.\",\n      \"operation\" : \"0shr43k7778r2s356j9u3p22b48wij0unpo8gduv818o2c7n5aauj0b2gme6rmc7sm814y8ca3p51gsk841rmc8q5f8nsknsys3g32fqvw762k6e6v754x38e8w5eny1w7jhjxve9hjey8rbal63q7garr09tkh3oaopsqr7e4\"\n    },\n    \"name\" : \"Sabina Kling\"\n  } ],\n  \"nextLink\" : \"w98hy4wpmtkg0i41gy1cbna\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "b818de28-a764-4307-8806-23df66548ecd",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:09.151115Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "Fabric_ListOperations",
+          "schema" : {
+            "type" : "object",
+            "properties" : {
+              "nextLink" : {
+                "type" : "string",
+                "description" : "URI to next page."
+              },
+              "value" : {
+                "type" : "array",
+                "description" : "List of supported operations.",
+                "items" : {
+                  "$ref" : "#/components/schemas/Operation"
+                }
+              }
+            },
+            "description" : "A pageable list of supported operations objects."
+          }
+        }
+      }
+    },
+    "insertionIndex" : 0
+  } ]
+}

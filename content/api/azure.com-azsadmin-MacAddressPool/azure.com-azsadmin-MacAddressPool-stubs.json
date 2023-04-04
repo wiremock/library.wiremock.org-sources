@@ -1,0 +1,194 @@
+{
+  "mappings" : [ {
+    "id" : "91141da2-68c1-4f7a-9399-e2f0a86195cc",
+    "name" : "Returns the requested MAC address pool. - 404",
+    "request" : {
+      "urlPath" : "/subscriptions/bn15/resourceGroups/Miss+Marcellus+Gibson/providers/Microsoft.Fabric.Admin/fabricLocations/sq9719tvj43aq9t1d7zkh/macAddressPools/sdu6dqmh1g34k8lua8ar5ueipl0z9htp4xje88zx6xqpysiwawh3gzap9fvkugjb5vqy4kv46kmbbb73rhnga0bez9erjg8ol3phlsqfen09lisnc6kvnvxlexs1c",
+      "method" : "GET",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "a8k68l"
+        }
+      }
+    },
+    "response" : {
+      "status" : 404
+    },
+    "uuid" : "91141da2-68c1-4f7a-9399-e2f0a86195cc",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:12.404369Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "MacAddressPools_Get"
+        }
+      }
+    },
+    "insertionIndex" : 0
+  }, {
+    "id" : "b94bf6fb-8a2d-4e11-9920-4cb290afb94e",
+    "name" : "Returns the requested MAC address pool. (application/json)",
+    "request" : {
+      "urlPath" : "/subscriptions/16d8/resourceGroups/Homer+Grant/providers/Microsoft.Fabric.Admin/fabricLocations/djg0eix2e63y5n1wbj39z5v1oz6m8jtc50l1m631uohm4bbxz3ux49nh2ovu6ey3xs6gw6wz387phmhqor/macAddressPools/3w068wnvmgfaa6hy8109v6hugpto5h9apxjq44n5101an3rr8jsxvxneqh1yo8d7oit7d2rxr1c7rouywbgv24hz0bq7n8au9yirknuzyypoqo81up6bi7xoeddqzhyiya5ok5g",
+      "method" : "GET",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/json"
+        }
+      },
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "9exzorerhbpyii3j4kozqo5e0rs9de95jiie78cpjsdc1f8n7e4sb0eoerpxsq7xsf6tf3kcm0lrds8l67xf3jix2g85fklunlgi05e88fsk43yxm4n6rf2qf21h2y07hxq3mc1iasw0t6mcfhhjd352qjoxqmzs27u9a9dhncndwjx1c9gnzfjxfq8k9a2"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"name\" : \"Tammara Von III\",\n  \"location\" : \"a0r600ku3tpu5k0etj11vrg63bfbcca7\",\n  \"id\" : \"0vqv\",\n  \"type\" : \"4jghpms2h7a3m62fupccqgc5uparm6d0p2vb4fntxhk1rjqw6000x39i0g3rri2gi95qa5zxvdldbqdw5tsr80xzae2wbp3sv01fzv5vde6sektafc9u4tcgrfaew94qdcclv2bwa13aqu4gahbx9jbt4nwg3wp1c4pday7vnw4h27lwsp9jeplevjcix7\",\n  \"properties\" : {\n    \"numberOfAvailableMacAddresses\" : 4639206594647831723,\n    \"metadata\" : { },\n    \"numberOfAllocatedMacAddresses\" : 3205756345940980982,\n    \"endMacAddress\" : \"z1juo8f0fivj393lupg3cebfkj5z6n2xpqs2sh7icfzxsbqkqf07uclsttzioq9jvql4dg9iy30mx582ja788akcx9wegsb2hcl8pnygdnamwrdgalz0j24d0xs3szljihydjtdl0i5xf52\",\n    \"startMacAddress\" : \"z8zr22akfdht5hzs5125nmquwy3v\"\n  },\n  \"tags\" : { }\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "b94bf6fb-8a2d-4e11-9920-4cb290afb94e",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:12.404089Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "MacAddressPools_Get",
+          "schema" : {
+            "properties" : {
+              "properties" : {
+                "$ref" : "#/components/schemas/MacAddressPoolModel"
+              }
+            },
+            "description" : "This resource represents a MAC address pool.  The default MAC address pools are used if you set the MAC address type for a virtual machine to 'Static'.  If the virtual machine setting is 'Dynamic', the hypervisor assigns the MAC address.",
+            "allOf" : [ {
+              "type" : "object",
+              "properties" : {
+                "id" : {
+                  "type" : "string",
+                  "description" : "URI of the resource.",
+                  "readOnly" : true
+                },
+                "location" : {
+                  "type" : "string",
+                  "description" : "The region where the resource is located."
+                },
+                "name" : {
+                  "type" : "string",
+                  "description" : "Name of the resource.",
+                  "readOnly" : true
+                },
+                "tags" : {
+                  "type" : "object",
+                  "additionalProperties" : {
+                    "type" : "string"
+                  },
+                  "description" : "List of key-value pairs."
+                },
+                "type" : {
+                  "type" : "string",
+                  "description" : "Type of resource.",
+                  "readOnly" : true
+                }
+              },
+              "description" : "Base resource object."
+            } ]
+          }
+        }
+      }
+    },
+    "insertionIndex" : 1
+  }, {
+    "id" : "b4acc20f-7f47-4ae9-88de-b5fb5080abae",
+    "name" : "Returns a list of all MAC address pools at a location. - 404",
+    "request" : {
+      "urlPath" : "/subscriptions/3269/resourceGroups/Coy+Murray/providers/Microsoft.Fabric.Admin/fabricLocations/n1nilznb4le261tuu2xv0dxmrten3pepfruczhnt58kn7sj/macAddressPools",
+      "method" : "GET",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "n4iu0uqvf0w36yxfeqkuz7ar0a4i59uael0lt0rgni9j3sqt4igt2rucl0t36qv08ti5m9ym61v1aryx6f1fj4qkb95j75vjnhom8zzuo86tewdk4y1gv4e8mksrkk734g6oqq831wavbqct1v3c1ubf2yb477mvr0twhgfy4pkvu2flj"
+        }
+      }
+    },
+    "response" : {
+      "status" : 404
+    },
+    "uuid" : "b4acc20f-7f47-4ae9-88de-b5fb5080abae",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:12.403514Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "MacAddressPools_List"
+        }
+      }
+    },
+    "insertionIndex" : 2
+  }, {
+    "id" : "611d08aa-8544-4127-946e-6571357b2fe2",
+    "name" : "Returns a list of all MAC address pools at a location. (application/json)",
+    "request" : {
+      "urlPath" : "/subscriptions/0485/resourceGroups/Blaine+Batz/providers/Microsoft.Fabric.Admin/fabricLocations/oi9xo2jqxhu3yrrvv5vl5gbs0rygy3cwua4q0k2j5cqk2vki9y8px369kncqkfqnld3xhpmyu5esanysq6m9ljsuj6p5uxfplhyjs525hscksn7k77ny09hlj1hao07zz2mok8ga6cg7sftu6gnnqz8obbph05ge5byre2e85l8ufydaciwitpm62gr6n4th4429e/macAddressPools",
+      "method" : "GET",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/json"
+        }
+      },
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "we8tml5hev3t9du"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"value\" : [ {\n    \"name\" : \"Brendon Cruickshank\",\n    \"location\" : \"tgt6m5q663qwedeqmu1nivgswtmx4ok14xcihn3bmq108tx4jx3n\",\n    \"id\" : \"r7u3\",\n    \"type\" : \"qcsw5r156rc6zelgfc018wtbrsdcsf2sn10u4axeszv8c04vv3jko8ipq43vdzhsn8n0jr825zw6njbesb0hn8gin8t9udxrdlklz3n3m9bxz5mm0zpfhdvk1iilfogm9p5dsec42jogenhnus0byigkcpvgcexfwvn6yb5oewy8up52v8tp6hpa91nqxtw3xbdp\",\n    \"properties\" : {\n      \"numberOfAvailableMacAddresses\" : 7333039812846577030,\n      \"metadata\" : { },\n      \"numberOfAllocatedMacAddresses\" : 3187582914271272000,\n      \"endMacAddress\" : \"11tkc090nx6rzocat9j77ucxlct9db0wah1pdghjq1go5a2xn1m3v7jnnb1ysewvll01xbiqj5miwcuvgl3ghpqld832qsu31bv11hguuct9yrp9vi8snwl4qjzxrlz2\",\n      \"startMacAddress\" : \"ks21av6iiaecko2001gxpw3gv1p92msf7hxkqpbbyq8via31pfx1dnqyunw0tgbkkwhvgd\"\n    },\n    \"tags\" : { }\n  } ],\n  \"nextLink\" : \"fmjuyf8rydx0t9xhrkaquo1y0adznlofu9btxvib2djkfgd635qyeljsu2giz4j1w1trz2wg32l864di9k0fwzaxu\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "611d08aa-8544-4127-946e-6571357b2fe2",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:12.403246Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "MacAddressPools_List",
+          "schema" : {
+            "type" : "object",
+            "properties" : {
+              "nextLink" : {
+                "type" : "string",
+                "description" : "URI to the next page."
+              },
+              "value" : {
+                "type" : "array",
+                "description" : "List of MAC address pools.",
+                "items" : {
+                  "$ref" : "#/components/schemas/MacAddressPool"
+                }
+              }
+            },
+            "description" : "A pageable list of MAC address pools."
+          }
+        }
+      }
+    },
+    "insertionIndex" : 3
+  } ]
+}

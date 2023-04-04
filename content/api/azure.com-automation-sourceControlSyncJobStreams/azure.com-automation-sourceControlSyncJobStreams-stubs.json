@@ -1,0 +1,101 @@
+{
+  "mappings" : [ {
+    "id" : "5bdf0e69-a725-4b16-9982-ccf39576a777",
+    "name" : "Retrieve a sync job stream identified by stream id.",
+    "request" : {
+      "urlPath" : "/subscriptions/h5r8/resourceGroups/rY5gdqMsdhXECU1yzYwcvDDVVZ5vsY4qKyda6y_Vehep4G5cjR/providers/Microsoft.Automation/automationAccounts/Percy+Williamson+DVM/sourceControls/Koepp/sourceControlSyncJobs/13594966-65b4-4eec-90b1-afefe69691e4/streams/nr73",
+      "method" : "GET",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "cbw5yzmt7koc0j5kl89b3o7jpi02s37nfz0lw633hnqa7k4k5nl"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"id\" : \"2gal\",\n  \"properties\" : {\n    \"summary\" : \"Ut et architecto qui architecto quidem sed magnam. Magni similique ea est quis dolorem. Qui maiores modi tempore facilis ad exercitationem quia.\",\n    \"streamType\" : \"Error\",\n    \"streamText\" : \"kbp27tf7295azxkcs6bzzd7g0oonp6bwllpwoljvvmn8fiefd\",\n    \"sourceControlSyncJobStreamId\" : \"57e1\",\n    \"time\" : \"2024-03-16T08:24:34.664Z\",\n    \"value\" : { }\n  }\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "5bdf0e69-a725-4b16-9982-ccf39576a777",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:30.664652Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "SourceControlSyncJobStreams_Get",
+          "schema" : {
+            "type" : "object",
+            "properties" : {
+              "id" : {
+                "type" : "string",
+                "description" : "Resource id.",
+                "readOnly" : true
+              },
+              "properties" : {
+                "$ref" : "#/components/schemas/SourceControlSyncJobStreamByIdProperties"
+              }
+            },
+            "description" : "Definition of the source control sync job stream by id."
+          }
+        }
+      }
+    },
+    "insertionIndex" : 0
+  }, {
+    "id" : "205e81c2-40c5-4cd5-bdd4-fabbe785b4e0",
+    "name" : "Retrieve a list of sync job streams identified by sync job id.",
+    "request" : {
+      "urlPath" : "/subscriptions/3nt3/resourceGroups/t..CVd1P0i6aO8XVIRjPypwPUDcJ0jCjlmkfq-kGxEha4GuEoX_TQFEXV-3pHuUYSX/providers/Microsoft.Automation/automationAccounts/Song+Hoeger/sourceControls/Kuhic/sourceControlSyncJobs/e61acb23-0602-4955-a6f7-e9eb561e32e8/streams",
+      "method" : "GET",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "vyeqm86szyn4ssnxz4plt1uql0noj1j68k4nv"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"value\" : [ {\n    \"id\" : \"1v48\",\n    \"properties\" : {\n      \"summary\" : \"Qui eum consequatur et nesciunt itaque distinctio tempora. Et rem facere accusamus deserunt. Tenetur et temporibus et a rerum eius reiciendis.\",\n      \"streamType\" : \"Error\",\n      \"sourceControlSyncJobStreamId\" : \"3d4z\",\n      \"time\" : \"2023-10-29T03:50:48.663Z\"\n    }\n  } ],\n  \"nextLink\" : \"6djs76448buz306ecxhn72ixblyn07gbygv7iwt2ui2xh1pudevr2wutcba784oxowfd90d8n4qrkccy1u6ce3b11ukw73mgzejlc27hp121syhac\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "205e81c2-40c5-4cd5-bdd4-fabbe785b4e0",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:30.663887Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "SourceControlSyncJobStreams_ListBySyncJob",
+          "schema" : {
+            "type" : "object",
+            "properties" : {
+              "nextLink" : {
+                "type" : "string",
+                "description" : "The next link.",
+                "readOnly" : true
+              },
+              "value" : {
+                "type" : "array",
+                "description" : "The list of source control sync job streams.",
+                "items" : {
+                  "$ref" : "#/components/schemas/SourceControlSyncJobStream"
+                }
+              }
+            },
+            "description" : "The response model for the list source control sync job streams operation."
+          }
+        }
+      }
+    },
+    "insertionIndex" : 1
+  } ]
+}

@@ -1,0 +1,53 @@
+{
+  "mappings" : [ {
+    "id" : "93de4b69-3ebf-47b9-9e29-6a4e935ddf07",
+    "name" : "Gets service administrator, account administrator, and co-administrators for the...",
+    "request" : {
+      "urlPath" : "/subscriptions/8rrd/providers/Microsoft.Authorization/classicAdministrators",
+      "method" : "GET",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "ltanbn2b63c7cr2j1j09q1"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"value\" : [ {\n    \"name\" : \"Miss Garry Leannon\",\n    \"id\" : \"w5zy\",\n    \"type\" : \"sq6qzz5xbie92z7kcejdqraj65eq5webctlv1y0ce7utcr9gql1dochjzd2r34sc8d03cy4uhrfozl1m4n6x0j35u2tx8wj47rosmaplx55mbgy59i6pu\",\n    \"properties\" : {\n      \"emailAddress\" : \"ys1ut9htpvluuvjkcm00msjzwlnsc2gtit9b7ulgot41hxilc6qtwk9yq55hvq9tmaz0uzdsvxv1d8l99lhz8ig9vl981tk6to8gwvsezqdk2n9bn3daumobvpjh2dxborwvqyz271z4celsnwxa6i5ltxidipc9e3ihxdoj4\",\n      \"role\" : \"28goaivzgufrxxa6llkciir0v6djc9axfrtbpx5q34x7lioeghfw5ux0pziyoqly2m3843k16y\"\n    }\n  }, {\n    \"name\" : \"Wilford Ebert\",\n    \"id\" : \"ycmv\",\n    \"type\" : \"xo9gs9koodj8qh8mqmdorwkw67fi5knhpxgqt6wi6l8ksl3bib4q6qd616u41f70ac89b6vgmzp5feietknzoqe1zcxqmm1vwfe6u\",\n    \"properties\" : {\n      \"emailAddress\" : \"cx8p1whsy5oslda4ok7uwa7l13buui4v48lvb5qf5w4z8n5tfv12p5rihvuzia3vr4670flchws3zb61sc4267qwq13owy7snwc0bq0f2qzn91dtongad8z9hfimw6eq44i7u99cp1rwrgezil8pszo\",\n      \"role\" : \"kxb82pbcrfwe802gp510rkgv22qofqxf7614zse31kuf5x4kp1qar7zkkwrd2az676dtqgdmctkxo\"\n    }\n  } ],\n  \"nextLink\" : \"99m2fcb82pfljn5qk0d0avcetum9b7pma6x61zbslwfb3xaa28y3f2gg9agpyjnq16jsifx5nukdugvkvovlxnqtp8o6yicnh7l99ckesjhu0dx0cs9trcmg3m\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "93de4b69-3ebf-47b9-9e29-6a4e935ddf07",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:41.164099Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "ClassicAdministrators_List",
+          "schema" : {
+            "type" : "object",
+            "properties" : {
+              "nextLink" : {
+                "type" : "string",
+                "description" : "The URL to use for getting the next set of results."
+              },
+              "value" : {
+                "type" : "array",
+                "description" : "An array of administrators.",
+                "items" : {
+                  "$ref" : "#/components/schemas/ClassicAdministrator"
+                }
+              }
+            },
+            "description" : "ClassicAdministrator list result information."
+          }
+        }
+      }
+    },
+    "insertionIndex" : 0
+  } ]
+}

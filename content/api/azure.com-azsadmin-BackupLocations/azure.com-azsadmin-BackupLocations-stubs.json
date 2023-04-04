@@ -1,0 +1,566 @@
+{
+  "mappings" : [ {
+    "id" : "1f3d73d7-26d0-4fa8-b7ca-062b2e699ee0",
+    "name" : "Back up a specific location.",
+    "request" : {
+      "urlPath" : "/subscriptions/qqcy/resourcegroups/Claudia+Kovacek/providers/Microsoft.Backup.Admin/backupLocations/hc2oj6jspo48v97xfyjku6azrqd0j8rv1zvqqox4/createBackup",
+      "method" : "POST",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "3y8zp56ihle4ftaqcyt4zxc3fajpvxidcg8kmt98qu87zpr01tn6y75uauf465tt4tglie1crs3r0yx84ejyrko4y1uxcu07v9w5ddxhg52uljhrkj8baue2lq0htril0xssz12phavjuinucisiy7z4pd"
+        }
+      }
+    },
+    "response" : {
+      "status" : 202,
+      "body" : "{\n  \"name\" : \"Warren Herzog\",\n  \"location\" : \"ph0f3925zmf1c59wbb88xjmol5iq8uhz2qdznqb634njx80zapveac\",\n  \"id\" : \"e5zz\",\n  \"type\" : \"bn0ft5haa5aojmhi7nvzf4uh79vikiq0cv9rq7lsattg5i93e2q921bj6209ns8vv9fe7x6mizdbnza5roja2lomwrophdi5mxxewbvl2grt69y51abyges9chs6f6s0hab\",\n  \"properties\" : {\n    \"backupInfo\" : {\n      \"timeTakenToCreate\" : \"2022-11-12T05:42:33.181744Z\",\n      \"stampVersion\" : \"5q1s3i52i2ispz41oypdgjfwhm49z7cswvnllok90m9q7h1q33jdkfhspfdu4ujilmi4vymxsez79vnyutscyr8ndm8cwz2h646kly4wh4zyk0ecbrse1vuuqxm5bank178izshky91zb5y6o4sf5dto755jkeaptk34o9n2c2t2jtvmse8k8q2vjzc50v\",\n      \"oemVersion\" : \"zp05d65f7irfi9k8ew6qjoq6y1ns587k2ahz78ntz1w86bzheqe26e5w88vmfos3h2iuxvdo1s5gv3ez5yk514j1yt6oxhnd4eae8tj\",\n      \"backupDataVersion\" : \"7dkrkjae4qn2khsbwifi6au6fyf6vx3eqqsxokm0t11a8p13vqgieq13ibqvhe75meqlqooia6y0lpxlrgkn06ncake1e04zhyq7c6omz3qaiktxb80063ir4\",\n      \"deploymentID\" : \"l5u1\",\n      \"createdDateTime\" : \"2023-07-20T12:11:39.181Z\",\n      \"isCloudRecoveryReady\" : false,\n      \"encryptionCertThumbprint\" : \"ld5toqlvb54mu1heno4df0c275j5dgpp9a7q3q7838fpp1vjbkdaogvwahu441vt3q0wvqm16w0l1r767u6cz6hlm77qmlpo6wy5nwk2ced2io06evmd1368zydfj22eeqy2ve4k8axgkeestn77go1msjzm4jb4984zvtjyf7368m62gdj0mbidi5zkf0jltzkrcmr0\",\n      \"roleStatus\" : [ {\n        \"roleName\" : \"Jed Terry\",\n        \"status\" : \"Creating\"\n      }, {\n        \"roleName\" : \"Mrs. Sammie Maggio\",\n        \"status\" : \"Failed\"\n      }, {\n        \"roleName\" : \"Lakendra Murray\",\n        \"status\" : \"Running\"\n      }, {\n        \"roleName\" : \"Dr. Shirlene Veum\",\n        \"status\" : \"Running\"\n      } ],\n      \"status\" : \"Queued\"\n    }\n  },\n  \"tags\" : { }\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "1f3d73d7-26d0-4fa8-b7ca-062b2e699ee0",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:33.182731Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "BackupLocations_CreateBackup",
+          "schema" : {
+            "properties" : {
+              "properties" : {
+                "type" : "object",
+                "properties" : {
+                  "backupInfo" : {
+                    "type" : "object",
+                    "properties" : {
+                      "backupDataVersion" : {
+                        "type" : "string",
+                        "description" : "Version of the backup data.",
+                        "readOnly" : true
+                      },
+                      "createdDateTime" : {
+                        "type" : "string",
+                        "description" : "Creation time of the backup.",
+                        "format" : "date-time",
+                        "readOnly" : true
+                      },
+                      "deploymentID" : {
+                        "type" : "string",
+                        "description" : "Deployment Id of the stamp.",
+                        "readOnly" : true
+                      },
+                      "encryptionCertThumbprint" : {
+                        "type" : "string",
+                        "description" : "The thumbprint of the certificate used to encrypt the backup encryption key.",
+                        "readOnly" : true
+                      },
+                      "isCloudRecoveryReady" : {
+                        "type" : "boolean",
+                        "description" : "True if the backup can be used for cloud recovery scenario.",
+                        "readOnly" : true
+                      },
+                      "oemVersion" : {
+                        "type" : "string",
+                        "description" : "OEM version.",
+                        "readOnly" : true
+                      },
+                      "roleStatus" : {
+                        "type" : "array",
+                        "description" : "object",
+                        "items" : {
+                          "type" : "object",
+                          "properties" : {
+                            "roleName" : {
+                              "type" : "string",
+                              "description" : "Name of the role."
+                            },
+                            "status" : {
+                              "type" : "string",
+                              "description" : "Status of an operation.",
+                              "enum" : [ "Creating", "Queued", "Running", "Deleted", "Failed", "PartialSucceeded", "Succeeded" ]
+                            }
+                          },
+                          "description" : "Backup status for a role."
+                        }
+                      },
+                      "stampVersion" : {
+                        "type" : "string",
+                        "description" : "Azure Stack stamp version of the backup.",
+                        "readOnly" : true
+                      },
+                      "status" : {
+                        "type" : "string",
+                        "description" : "Status of an operation.",
+                        "enum" : [ "Creating", "Queued", "Running", "Deleted", "Failed", "PartialSucceeded", "Succeeded" ]
+                      },
+                      "timeTakenToCreate" : {
+                        "type" : "string",
+                        "description" : "Duration to create the backup.",
+                        "readOnly" : true
+                      }
+                    },
+                    "description" : "Holds information for a backup."
+                  }
+                },
+                "description" : "Properties for a backup."
+              }
+            },
+            "description" : "Information related to a backup.",
+            "allOf" : [ {
+              "type" : "object",
+              "properties" : {
+                "id" : {
+                  "type" : "string",
+                  "description" : "URI of the resource.",
+                  "readOnly" : true
+                },
+                "location" : {
+                  "type" : "string",
+                  "description" : "Location of the resource."
+                },
+                "name" : {
+                  "type" : "string",
+                  "description" : "Name of the resource.",
+                  "readOnly" : true
+                },
+                "tags" : {
+                  "type" : "object",
+                  "additionalProperties" : {
+                    "type" : "string"
+                  },
+                  "description" : "List of key value pairs."
+                },
+                "type" : {
+                  "type" : "string",
+                  "description" : "Type of resource.",
+                  "readOnly" : true
+                }
+              },
+              "description" : "Base Resource Object"
+            } ]
+          }
+        }
+      }
+    },
+    "insertionIndex" : 0
+  }, {
+    "id" : "dea0dc30-9668-499a-8aad-1ffbe043fbcc",
+    "name" : "Back up a specific location.",
+    "request" : {
+      "urlPath" : "/subscriptions/0rc2/resourcegroups/Misha+Green/providers/Microsoft.Backup.Admin/backupLocations/1z5fh8zzp4cytd4ropcpug/createBackup",
+      "method" : "POST",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "0n91bk5czsveku3rbwhmx6wxzpy0r5u03693dhayyrp7d2mw1p7kfbm5uc8g08nqltu3zgm95zmueuxv3opfmlo02ue9ahxnxo9pcpox04i54hz86gieyrmtvnd7vz8dc7xqsx8116lv1rkryyrx75d62j4aijlud6g8f7i6blvcaptndjscpg48rup23kqu4"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"name\" : \"Marty Weissnat III\",\n  \"location\" : \"rsr6zwiui9gqljfc5qni\",\n  \"id\" : \"n5gy\",\n  \"type\" : \"nzg6f3d7xdqdtgvvznp1o6xrw0k4d287kmgw4luxwsmzmzb8bnmglwynsv8m0mee487754ggj5e3qthvnmsx16e6arp88j1e7mlzsa74ltywrm24dp7\",\n  \"properties\" : {\n    \"backupInfo\" : {\n      \"timeTakenToCreate\" : \"2022-12-30T05:42:33.180716Z\",\n      \"stampVersion\" : \"33petifrvd4hof57uys340o0s\",\n      \"oemVersion\" : \"afqimxt5ok0vu56876l07orcv9p4x5o0jepdmrnf7m5ct8l43211ujtne5xku3xl24zsl6misdt32emmmdh7rex7uhravey0m47e9yki8mgiwe0dcqhra0ju3xp33cmk87415jz5mhmx7wb1\",\n      \"backupDataVersion\" : \"zues9a61z2uie41q45k25p17az3kmv5x331mg9hdp3ajnyqajh0o1i6wqfzu77z9tog9j4isfoo6ilug9r7l01clza2fsuiap48tjob70yqza96tc30dqi795kpl8gj4fobm3kt1v9qubzpgqsb8a6zcjprmk6qqfofkwwjv6czzyy52t097cnnr2g0gnb\",\n      \"deploymentID\" : \"z9td\",\n      \"createdDateTime\" : \"2023-06-17T07:15:00.18Z\",\n      \"isCloudRecoveryReady\" : true,\n      \"encryptionCertThumbprint\" : \"t5mwkr50jot7lqx1tye0gmzqe2fskxs54f8j4pbcu5b4p9kbmrw3evnpvth57x5zc5uk6jmavgm18gcsync4g9qzdk6ou0ee181wxud66rjix77e1l3hhsscm9r860b1j24bq9i26k4rdqbbzazy2ws9n7jmq6w1a6wxg7fv13rzb4p\",\n      \"roleStatus\" : [ {\n        \"roleName\" : \"Miss Izola Mann\",\n        \"status\" : \"Failed\"\n      }, {\n        \"roleName\" : \"Jose Block\",\n        \"status\" : \"Running\"\n      } ],\n      \"status\" : \"Creating\"\n    }\n  },\n  \"tags\" : { }\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "dea0dc30-9668-499a-8aad-1ffbe043fbcc",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:33.181656Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "BackupLocations_CreateBackup",
+          "schema" : {
+            "properties" : {
+              "properties" : {
+                "type" : "object",
+                "properties" : {
+                  "backupInfo" : {
+                    "type" : "object",
+                    "properties" : {
+                      "backupDataVersion" : {
+                        "type" : "string",
+                        "description" : "Version of the backup data.",
+                        "readOnly" : true
+                      },
+                      "createdDateTime" : {
+                        "type" : "string",
+                        "description" : "Creation time of the backup.",
+                        "format" : "date-time",
+                        "readOnly" : true
+                      },
+                      "deploymentID" : {
+                        "type" : "string",
+                        "description" : "Deployment Id of the stamp.",
+                        "readOnly" : true
+                      },
+                      "encryptionCertThumbprint" : {
+                        "type" : "string",
+                        "description" : "The thumbprint of the certificate used to encrypt the backup encryption key.",
+                        "readOnly" : true
+                      },
+                      "isCloudRecoveryReady" : {
+                        "type" : "boolean",
+                        "description" : "True if the backup can be used for cloud recovery scenario.",
+                        "readOnly" : true
+                      },
+                      "oemVersion" : {
+                        "type" : "string",
+                        "description" : "OEM version.",
+                        "readOnly" : true
+                      },
+                      "roleStatus" : {
+                        "type" : "array",
+                        "description" : "object",
+                        "items" : {
+                          "type" : "object",
+                          "properties" : {
+                            "roleName" : {
+                              "type" : "string",
+                              "description" : "Name of the role."
+                            },
+                            "status" : {
+                              "type" : "string",
+                              "description" : "Status of an operation.",
+                              "enum" : [ "Creating", "Queued", "Running", "Deleted", "Failed", "PartialSucceeded", "Succeeded" ]
+                            }
+                          },
+                          "description" : "Backup status for a role."
+                        }
+                      },
+                      "stampVersion" : {
+                        "type" : "string",
+                        "description" : "Azure Stack stamp version of the backup.",
+                        "readOnly" : true
+                      },
+                      "status" : {
+                        "type" : "string",
+                        "description" : "Status of an operation.",
+                        "enum" : [ "Creating", "Queued", "Running", "Deleted", "Failed", "PartialSucceeded", "Succeeded" ]
+                      },
+                      "timeTakenToCreate" : {
+                        "type" : "string",
+                        "description" : "Duration to create the backup.",
+                        "readOnly" : true
+                      }
+                    },
+                    "description" : "Holds information for a backup."
+                  }
+                },
+                "description" : "Properties for a backup."
+              }
+            },
+            "description" : "Information related to a backup.",
+            "allOf" : [ {
+              "type" : "object",
+              "properties" : {
+                "id" : {
+                  "type" : "string",
+                  "description" : "URI of the resource.",
+                  "readOnly" : true
+                },
+                "location" : {
+                  "type" : "string",
+                  "description" : "Location of the resource."
+                },
+                "name" : {
+                  "type" : "string",
+                  "description" : "Name of the resource.",
+                  "readOnly" : true
+                },
+                "tags" : {
+                  "type" : "object",
+                  "additionalProperties" : {
+                    "type" : "string"
+                  },
+                  "description" : "List of key value pairs."
+                },
+                "type" : {
+                  "type" : "string",
+                  "description" : "Type of resource.",
+                  "readOnly" : true
+                }
+              },
+              "description" : "Base Resource Object"
+            } ]
+          }
+        }
+      }
+    },
+    "insertionIndex" : 1
+  }, {
+    "id" : "a5f0ce83-8039-40c0-9fe9-f7b969139808",
+    "name" : "Update a backup location.",
+    "request" : {
+      "urlPath" : "/subscriptions/33nx/resourcegroups/Brande+Ward/providers/Microsoft.Backup.Admin/backupLocations/v9v28dwaahg9scree9s6kxuwk7mzassid6uzp5jfdwbnj38bqppjclfrkaqtnbmucebq5l25nndnydzk55e01dtak9n4iyuckr9ux6ttiha",
+      "method" : "PUT",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "qencq7725rmfsmzz8kz6cjoafbspb51lshu8ce857woywqwwiet7dfjxdid0qtxlivo9cc76"
+        }
+      }
+    },
+    "response" : {
+      "status" : 202,
+      "body" : "{\n  \"name\" : \"Regena Haag\",\n  \"location\" : \"8gj0e1ms3lgw9dz50mf9ga2xu6j7oh5x135f0r834frv2eilh1sv67tgbu9kp85kuy9uy95crqmr08ksve5eta5w3m67km8fue5bwaevxc9irvnlm6\",\n  \"id\" : \"9xto\",\n  \"type\" : \"7jjjrs4xvncv90p3oolif0e8iiud90nadogqq48br29au46wjveb0pvqn1mpon6\",\n  \"properties\" : {\n    \"externalStoreDefault\" : {\n      \"availableCapacity\" : \"New Isaiasmouth\",\n      \"path\" : \"b7lww2sibgkvoyfoo2s7ozo\",\n      \"password\" : \"ct6v5chk25icw9roonyjuykt0ux\",\n      \"encryptionCertBase64\" : \"dtfucl0lwa5ke5jfukmoazmlewvdkaon6rz8qdlm53sd057mc9hcy62yzf3s26129ba31vowvuab7phvjq0619hn2rtb8yi2fdv79clnkzp4xbmrmlx0ncki6nxebsgusk07zam\",\n      \"backupFrequencyInHours\" : 1703592939803871627,\n      \"backupRetentionPeriodInDays\" : 3428153461079612722,\n      \"nextBackupTime\" : \"2023-08-09T03:08:45.18Z\",\n      \"isBackupSchedulerEnabled\" : true,\n      \"userName\" : \"kristel.macejkovic\",\n      \"encryptionCertThumbprint\" : \"57kmzep5huz8lp\",\n      \"lastBackupTime\" : \"2022-06-01T04:51:42.18Z\"\n    }\n  },\n  \"tags\" : { }\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "a5f0ce83-8039-40c0-9fe9-f7b969139808",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:33.180641Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "BackupLocations_Update",
+          "schema" : {
+            "properties" : {
+              "properties" : {
+                "$ref" : "#/components/schemas/BackupLocationModel"
+              }
+            },
+            "description" : "Information about the backup location.",
+            "allOf" : [ {
+              "type" : "object",
+              "properties" : {
+                "id" : {
+                  "type" : "string",
+                  "description" : "URI of the resource.",
+                  "readOnly" : true
+                },
+                "location" : {
+                  "type" : "string",
+                  "description" : "Location of the resource."
+                },
+                "name" : {
+                  "type" : "string",
+                  "description" : "Name of the resource.",
+                  "readOnly" : true
+                },
+                "tags" : {
+                  "type" : "object",
+                  "additionalProperties" : {
+                    "type" : "string"
+                  },
+                  "description" : "List of key value pairs."
+                },
+                "type" : {
+                  "type" : "string",
+                  "description" : "Type of resource.",
+                  "readOnly" : true
+                }
+              },
+              "description" : "Base Resource Object"
+            } ]
+          }
+        }
+      }
+    },
+    "insertionIndex" : 2
+  }, {
+    "id" : "99d21651-d228-40f7-82c7-20610b543306",
+    "name" : "Update a backup location.",
+    "request" : {
+      "urlPath" : "/subscriptions/7968/resourcegroups/Wilhemina+Jakubowski/providers/Microsoft.Backup.Admin/backupLocations/p3hui7rz5q9k4ggcforki66r0js2shsx7i2fbyzlkhja4rzgwi4jx2cnppk9xqij4k4oycmrmfmbe6ux95gcszqp2gr2pg3kzovtxwlpg8ji11arbzne1wt4h4reh16rl3e59k67hhysjwl2u24l1jaa2eqthjfyhva1vq3yy46cv",
+      "method" : "PUT",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "5aa37sw3zw8"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"name\" : \"Jacquelin Sawayn\",\n  \"location\" : \"89uzpgipz4xc\",\n  \"id\" : \"qb43\",\n  \"type\" : \"m5wgaqkc05u8hltqgf4a69tx4r6co1o0x7c8xmfq00o7njupnrlyd17zbh4058p41nb\",\n  \"properties\" : {\n    \"externalStoreDefault\" : {\n      \"availableCapacity\" : \"Medhurstfurt\",\n      \"path\" : \"f3jwsczd7lpx650g1wgz8t1c2299g618wq8bmpyxkxrpzo8ixvt9a3e4sh40qkfu2n5mmwygg1oon2ym2gkbd4a\",\n      \"password\" : \"3ewgcfavusox3flsxekjurogjpdexb14n254bynmbmid8c0wf4bb986xpmfunc5uojk1p3w2a29jh\",\n      \"encryptionCertBase64\" : \"t54y1wk6vmuovvlb9ftbnqb5747mletqr3g47ix6xxciefmwxoorupf7t7tugksm9tavn4uuw9p5hws0qr6dceak5xx9w5y2aiail57k71semm3p4y8y6tyg0w11kxjqetjese47eyulv945wfy65xlnx6935gsbe562ajxbyi6dmdpn9qvczo6\",\n      \"backupFrequencyInHours\" : 8641112634088346798,\n      \"backupRetentionPeriodInDays\" : 2131244635424467591,\n      \"nextBackupTime\" : \"2022-08-09T04:58:04.179Z\",\n      \"isBackupSchedulerEnabled\" : false,\n      \"userName\" : \"rudy.kovacek\",\n      \"encryptionCertThumbprint\" : \"enazio5ro6t5kjj420r71p0u4jhp5q0q8rk1iiw15ljq9m7jhc4206ea48z5537i2jy6pntkl1qfwd91gikxvkq9c04ed5mqawp5kzmkijmrigp4l2e51r5zcpsup10uvtkjamgx6z3ym7vqyh6q7j75kgfba477cmjwkofsz36y5e3qqa1n00gxs3ilwc9jrgufhpu\",\n      \"lastBackupTime\" : \"2023-02-25T12:10:36.179Z\"\n    }\n  },\n  \"tags\" : { }\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "99d21651-d228-40f7-82c7-20610b543306",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:33.180026Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "BackupLocations_Update",
+          "schema" : {
+            "properties" : {
+              "properties" : {
+                "$ref" : "#/components/schemas/BackupLocationModel"
+              }
+            },
+            "description" : "Information about the backup location.",
+            "allOf" : [ {
+              "type" : "object",
+              "properties" : {
+                "id" : {
+                  "type" : "string",
+                  "description" : "URI of the resource.",
+                  "readOnly" : true
+                },
+                "location" : {
+                  "type" : "string",
+                  "description" : "Location of the resource."
+                },
+                "name" : {
+                  "type" : "string",
+                  "description" : "Name of the resource.",
+                  "readOnly" : true
+                },
+                "tags" : {
+                  "type" : "object",
+                  "additionalProperties" : {
+                    "type" : "string"
+                  },
+                  "description" : "List of key value pairs."
+                },
+                "type" : {
+                  "type" : "string",
+                  "description" : "Type of resource.",
+                  "readOnly" : true
+                }
+              },
+              "description" : "Base Resource Object"
+            } ]
+          }
+        }
+      }
+    },
+    "insertionIndex" : 3
+  }, {
+    "id" : "065f6a8a-f75d-48ff-86a4-98282eeb8a52",
+    "name" : "Returns a specific backup location based on name.",
+    "request" : {
+      "urlPath" : "/subscriptions/mim0/resourcegroups/Tod+Collier/providers/Microsoft.Backup.Admin/backupLocations/c63f6938grweija4lp9ht3j13p37gpl2oe6pt06ax5ae62dsigngnespk58ffrfp21cfyczf3bwrm48vu46uo1fkenbun7ke1sld5vsm8zdloxbr5vilu",
+      "method" : "GET",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "v86xt2h9cv8s6m4rmpvau37hrwyvlt640acp1mj2z3ls5fpww3lhf68q7xlsana7sco0cswfhzufgnmnf2fsc1p1clhesa8ri6981x26i89t7v6wuw"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"name\" : \"Anthony Reichert\",\n  \"location\" : \"o6into3wjpylyareufkrfsn6nn38aywf5xyls95v2irh3zfyldf8sbqyjxj21jmmaes20uj1hnn\",\n  \"id\" : \"t127\",\n  \"type\" : \"6ztesojg591020n7ob4mieepz3hw9zycihkvl0xah9abv2pbtbzyozruejxvtqpg\",\n  \"properties\" : {\n    \"externalStoreDefault\" : {\n      \"availableCapacity\" : \"Kuhlmanmouth\",\n      \"path\" : \"11mahi7uu4gd8m97tna5hiof13ligvno0hsipj0sqwfq5bufcusye6ikvq8wmobvt7tlu8racb6aodkm05vz7k2e78o7zomw89resv6auzx9twx2je\",\n      \"password\" : \"63glsyqc3816gfynkq4nh9dp2ethnny4nwsk0l101prlkt5e1872802fbt5ds7u26zg9zvqpjrlfbjoophxpntvmn6bevh81acx4fc19xv5npdm5q05wy3lpp4tjqhzddkhsikqcpw9\",\n      \"encryptionCertBase64\" : \"4s7lthudofwapxlzitgh1cfbtr40la2x117oegm44\",\n      \"backupFrequencyInHours\" : 5862463398247608093,\n      \"backupRetentionPeriodInDays\" : 771795190718958587,\n      \"nextBackupTime\" : \"2023-04-18T20:52:07.178Z\",\n      \"isBackupSchedulerEnabled\" : true,\n      \"userName\" : \"curt.waters\",\n      \"encryptionCertThumbprint\" : \"53h0hql5rwdwi1jlz5p7ma6zv0mxz5x5yocmhyoxkvodibx6e37kezjeb6ogjnarrel0x5c8rpynji73iirgot8e5zefaacofkzvqeyvmrdb9w7osknqk7w72rods0vqcztiiq1se6vwk1dp84ubyl3dy3y2u7m\",\n      \"lastBackupTime\" : \"2022-11-26T11:57:49.178Z\"\n    }\n  },\n  \"tags\" : { }\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "065f6a8a-f75d-48ff-86a4-98282eeb8a52",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:33.179384Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "BackupLocations_Get",
+          "schema" : {
+            "properties" : {
+              "properties" : {
+                "$ref" : "#/components/schemas/BackupLocationModel"
+              }
+            },
+            "description" : "Information about the backup location.",
+            "allOf" : [ {
+              "type" : "object",
+              "properties" : {
+                "id" : {
+                  "type" : "string",
+                  "description" : "URI of the resource.",
+                  "readOnly" : true
+                },
+                "location" : {
+                  "type" : "string",
+                  "description" : "Location of the resource."
+                },
+                "name" : {
+                  "type" : "string",
+                  "description" : "Name of the resource.",
+                  "readOnly" : true
+                },
+                "tags" : {
+                  "type" : "object",
+                  "additionalProperties" : {
+                    "type" : "string"
+                  },
+                  "description" : "List of key value pairs."
+                },
+                "type" : {
+                  "type" : "string",
+                  "description" : "Type of resource.",
+                  "readOnly" : true
+                }
+              },
+              "description" : "Base Resource Object"
+            } ]
+          }
+        }
+      }
+    },
+    "insertionIndex" : 4
+  }, {
+    "id" : "59538fce-ba99-49e3-932c-44bfa2e55d26",
+    "name" : "Returns the list of backup locations.",
+    "request" : {
+      "urlPath" : "/subscriptions/598b/resourcegroups/Quinn+Wehner/providers/Microsoft.Backup.Admin/backupLocations",
+      "method" : "GET",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "mxm3s1rz5y4m816lbt8vphnq1md6pcqnlo1ecupn29b650999gtia8wag0"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"value\" : [ {\n    \"name\" : \"Delmar Kessler\",\n    \"location\" : \"ymb5a53q28yw94nr6rw1q5f2glyiem5pym45gqr7k4u0x2yu8kagfi3mxky7zf8lpokr2o2v7b85em9p0tg9ihb31o83qj0sz9a9zu8yl5md8shchzaxfovubujqznzl74qrwdd137826c8r7otjt5lhm1ch\",\n    \"id\" : \"5mz2\",\n    \"type\" : \"ewfezpiebtooa4pkw30qo0jk3rf3c30ewxftk7i5iwy39opz98yq24wp2dbb92ad5ibgslm7q1pkdzpyazt1hdvaietm8beuh43k7amhs7wfgz3iw164pyxl43l\",\n    \"properties\" : {\n      \"externalStoreDefault\" : {\n        \"availableCapacity\" : \"North Robin\",\n        \"path\" : \"8zt\",\n        \"password\" : \"6ltq4ads9wflqjab6b60n6s1zzaqlqt3am3ef53n6zq9t47v44bghe8ry87kvv1ci7bgyrupbbi6tisfnmnzirfuj1wy5uq0m0z163v6topleruro3l49w\",\n        \"encryptionCertBase64\" : \"qvpi4h120u2wz3qyk9jihtg9tdxz0e6rbvtu4v8tagugns52vtx2x467dps94fs8dcer14t6ps8519r5cjr0cwbhwx6q8tuza40s2kzrt04j767tn\",\n        \"backupFrequencyInHours\" : 2614172185957981312,\n        \"backupRetentionPeriodInDays\" : 2167282837652706078,\n        \"nextBackupTime\" : \"2023-08-21T22:19:32.175Z\",\n        \"isBackupSchedulerEnabled\" : false,\n        \"userName\" : \"jacqualine.bauch\",\n        \"encryptionCertThumbprint\" : \"0he6etk8ph6lev815y1fgb0u0t2fsynq9snrqe4u872xu163ob431yjubijg2x0aelticfcqvhtmwzisvqehle1uoilyurfrauxtvzdmzbmp6y669u5a9wdww4g7qkik1m74lohow53pmakmfjjpqzsy2w7frc4pwafkps2id0ee1nvl7ihzahkqa3yfef9u3cg1\",\n        \"lastBackupTime\" : \"2022-12-18T01:46:58.175Z\"\n      }\n    },\n    \"tags\" : { }\n  }, {\n    \"name\" : \"Jamel Pfannerstill\",\n    \"location\" : \"z1e0m5qwmw1pe109iat9v30swstqdouxtetvq4pjs82imzz\",\n    \"id\" : \"2j0k\",\n    \"type\" : \"zxudzwdynwm3dzgx0tp8i1g72yljzxgk3ey2fn9zk46q7uul8v28gao92ggtmmkh2j5ad3ijoqq8bq\",\n    \"properties\" : {\n      \"externalStoreDefault\" : {\n        \"availableCapacity\" : \"Baumbachtown\",\n        \"path\" : \"du6gl7ldvmikhensxq4egszfn42ic449uhhh2ah78wjz6lnx0bxroeomwuklrek8kxxz3vs5nq7hwoknmg1wakwlyli1\",\n        \"password\" : \"ycl35lvago0e5i60s5f76lc7t9054jz6rz92lmrmu8r5gntoxrzt2437srolkeh0j22zfqpuw92v20sek4jqwcm9lol5i65qh4lior5zlfbkxt556iusmpdikgzrvfmg1bmvh74pi2zcwx\",\n        \"encryptionCertBase64\" : \"p21vsicdhn4lxt0ib0jfbzhyi07cplo6rgty15v0hig4dok1ah7p52qr99ibw6oo8buwuy3p1zfjwqi0fcgr4uhugojnszldl1658i3jvou3mcug9ggjgijblb8m56cpuo44pvcolvgewpvkygdgr6k15zffcykjjdg7cf60k19\",\n        \"backupFrequencyInHours\" : 2567125569318544975,\n        \"backupRetentionPeriodInDays\" : 8297464515050564964,\n        \"nextBackupTime\" : \"2022-09-05T12:15:48.175Z\",\n        \"isBackupSchedulerEnabled\" : true,\n        \"userName\" : \"so.christiansen\",\n        \"encryptionCertThumbprint\" : \"9tlveyaldgkrmp8k00489rj2p4ada3evgud93qooea70gatsah8tf814d3pg9n70q3l7vbvtubvue9znlfawr8huidntjf7a\",\n        \"lastBackupTime\" : \"2022-08-07T23:37:04.176Z\"\n      }\n    },\n    \"tags\" : { }\n  }, {\n    \"name\" : \"Dewayne Osinski\",\n    \"location\" : \"q9jh44rlxzqbxmxtzut49jp3d1cpxsstx71rrh4adn0sz1a2gwt6fkkzjghwsrkcxq5mp43xmd8njcicvs8evmz78t54hzgd08hd4inwwcu4jzcx4uad6lmlr2uy2\",\n    \"id\" : \"1zne\",\n    \"type\" : \"wpel7utomekzl2p6h075khcowtwh7vlnvbi521ns5wvivdte3v9i69j3zn5\",\n    \"properties\" : {\n      \"externalStoreDefault\" : {\n        \"availableCapacity\" : \"East Keenanmouth\",\n        \"path\" : \"a1u4aigk3ogkqb8vr7hrxnatanduyemu88a7wa1b9c7jwl5ae1sq5yoqd7yvy\",\n        \"password\" : \"81qqtqbu88abnq1j7hd9fesnlmd10792yj5wgaly45z5zil79m2wahzwjezjqabvvl0ntkhtlxi2x6o3scwkioqysz3hyowy\",\n        \"encryptionCertBase64\" : \"xh2httcoj9dnpaq3c7xmswnm4xj6hq0572b7owk6mj4w0hc0x38v07zbotqqku4pcc6gw0gnkydoxujcmsn8stkceaavoybyj3ubpasan0gb5mer9t9y07zmuqeh9ek5u3bskxno1fxp7wjecg\",\n        \"backupFrequencyInHours\" : 6557554824346671077,\n        \"backupRetentionPeriodInDays\" : 2063316601952145770,\n        \"nextBackupTime\" : \"2023-11-14T03:02:34.176Z\",\n        \"isBackupSchedulerEnabled\" : true,\n        \"userName\" : \"cedric.treutel\",\n        \"encryptionCertThumbprint\" : \"064geuc5lt6s4d9pvhrxjki9841ubbkkbacrewt8uqvtf9kt9k7zesy9oaesxkpvs0puliku35h25u1drhnrxp5p2jrasbn4srk0z4h2ujmsjkwf0vec1d4yg1dq9h5pdrgqei74o61vo7zl6vsj2ij6ro6owi9c4\",\n        \"lastBackupTime\" : \"2023-11-14T12:53:20.176Z\"\n      }\n    },\n    \"tags\" : { }\n  }, {\n    \"name\" : \"Otha Upton III\",\n    \"location\" : \"64deu7cfl44l9k68cvrg72j65f6nkodb\",\n    \"id\" : \"dsdu\",\n    \"type\" : \"y01xs5khg6j1ghf7jlzq1c1clawp44eckuphp55ok11iinbhnzrb86scofypa0wm882v7rfwnacmrlllb3a8i2ucjwwaw2ahcbr4z4mkzw91rvg09yaecubv54ol2l80qq0z81dquz3dpp2czah0av\",\n    \"properties\" : {\n      \"externalStoreDefault\" : {\n        \"availableCapacity\" : \"Murazikberg\",\n        \"path\" : \"ue37icfc2bq3bu2995l4e1wotlnf2ui4v64bktlsvcbeaje0nixwfx97c6c98cm9aqk4ssvjsu5s00o4dmmzk6ovofs\",\n        \"password\" : \"u1u0079vhthxpl9wzezu4055o8d7vx5fejj2zuxgnl9esalxk56390yjq6ocu8ghs1sqs2r4qux01447ln2d60fyua13qffjej43amvbo0p1tc59cvnkfefv8u9035ovzdomqr9jbum7ze6g4k6d7y0ywp83gf9i\",\n        \"encryptionCertBase64\" : \"x3a3hd417rn1r17\",\n        \"backupFrequencyInHours\" : 389720489244842748,\n        \"backupRetentionPeriodInDays\" : 5627238009308737089,\n        \"nextBackupTime\" : \"2023-04-29T05:56:47.176Z\",\n        \"isBackupSchedulerEnabled\" : false,\n        \"userName\" : \"kraig.vonrueden\",\n        \"encryptionCertThumbprint\" : \"riuk79sbw98gu5\",\n        \"lastBackupTime\" : \"2022-04-13T00:25:04.176Z\"\n      }\n    },\n    \"tags\" : { }\n  }, {\n    \"name\" : \"Hazel Waelchi\",\n    \"location\" : \"smm117dbt8udyi5ze2c1p8mjhqduz42lb8j7c61gducj83h7mwv6k6prll4sw4s047588s9957de0zhzmupdxtu2qhepgygzolkt45769vyhyo2x6\",\n    \"id\" : \"ot3w\",\n    \"type\" : \"bzptfpz9htp2e1qm9xzhlltr2glgpvtejfknfk4u9ngxsqsh9bpma4eatn5to7gqbxn12gqk9kgpri\",\n    \"properties\" : {\n      \"externalStoreDefault\" : {\n        \"availableCapacity\" : \"East Ocie\",\n        \"path\" : \"rsp6c45nsllzoj7hzubc38v5ikosiiukz1vvzbaiwsszuocpgnj9dc3f09pbdbnize3065qki80huy55gtbky0qemdmofq4d73va5t62wtf4rvz19uld52emqdb98yx66st8dcdm3b3o2vd\",\n        \"password\" : \"wwil71h2u5yj\",\n        \"encryptionCertBase64\" : \"uj10b42c51nuzfrx90blimvxn3sogv7at57e3d0gh7klq5b40zg07kuct25o23j5pu70691val64x4fse4fhqsblegaifudaeon0kqaqtzfush4oeul5tq\",\n        \"backupFrequencyInHours\" : 4046085165657797682,\n        \"backupRetentionPeriodInDays\" : 6627520703780823946,\n        \"nextBackupTime\" : \"2023-03-25T15:19:58.176Z\",\n        \"isBackupSchedulerEnabled\" : false,\n        \"userName\" : \"doug.treutel\",\n        \"encryptionCertThumbprint\" : \"jdc07g23qv1914y2i59ec5er\",\n        \"lastBackupTime\" : \"2023-09-22T09:17:55.177Z\"\n      }\n    },\n    \"tags\" : { }\n  }, {\n    \"name\" : \"Frances Little\",\n    \"location\" : \"onczf0u7i8lspdtz5hh6vtzwyfpbw2ycmozqgsxo057tbk9auid3mi7af25dg80v32ln1j8484ihh6nln5uz6cqlhq7rt9m8e8y4sdroc9heru25ogxmafuukt858beffz3uuymj0z4q059\",\n    \"id\" : \"zspb\",\n    \"type\" : \"7mbtu03t2dvpmvmw2ljpefg84jtvrenqyslws4gsfsjxrepq05zrsj\",\n    \"properties\" : {\n      \"externalStoreDefault\" : {\n        \"availableCapacity\" : \"New Marion\",\n        \"path\" : \"xtzki2xmghuhrhfddzjzt0xh1flion2eah57\",\n        \"password\" : \"1lv59j5gniuqg4z3fal8o9c6j36cl4oi9pygzw70lybx86optwoyxqpdk2krppotcsvwkm0v76zdh75j1ecywfbh7r\",\n        \"encryptionCertBase64\" : \"nh70tn0erujs4375dibrqhfp9z5aa4iktlks2q5jopepua1uiphicr9zvg0qfvgzb0kpl89ipnl9b6fjd4xcpa3d4wdj8srystltudizqoyg2p5iekjmr2xvb4uw3b0r19\",\n        \"backupFrequencyInHours\" : 2072983436415403219,\n        \"backupRetentionPeriodInDays\" : 8146279143201494183,\n        \"nextBackupTime\" : \"2023-04-06T03:35:37.177Z\",\n        \"isBackupSchedulerEnabled\" : true,\n        \"userName\" : \"bernice.doyle\",\n        \"encryptionCertThumbprint\" : \"cw9rbhfjoet1xil0rfjrtsyd9uvf66vhemha6z68989gq43ep682ty8bf4g90a52xreys3f1827dqogtqf3glp9r8ncv3nef1fkqcp6ptjrxlj30bgstia9l754hj5sybenh67xp5p4yrklsrd1huj9cyss383uon4uoy3qc8jfi8gp\",\n        \"lastBackupTime\" : \"2023-09-01T05:50:12.177Z\"\n      }\n    },\n    \"tags\" : { }\n  } ],\n  \"nextLink\" : \"izehdb3jon40e4zr4s7uesaj3fxpz5a7ljs32m09lnfn89w5ffw61dp9w2dueh4pqs9u83qgm6i4slwdoty4ff8yzifntuf0a0t6jemwbbhq34mzly9ao8u336o4s0artgsuzjv2orfa7y78yvx6sanv\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "59538fce-ba99-49e3-932c-44bfa2e55d26",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:33.178343Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "BackupLocations_List",
+          "schema" : {
+            "type" : "object",
+            "properties" : {
+              "nextLink" : {
+                "type" : "string",
+                "description" : "URI to the next page."
+              },
+              "value" : {
+                "type" : "array",
+                "description" : "List of backup locations.",
+                "items" : {
+                  "$ref" : "#/components/schemas/BackupLocation"
+                }
+              }
+            },
+            "description" : "List of backup locations."
+          }
+        }
+      }
+    },
+    "insertionIndex" : 5
+  } ]
+}
