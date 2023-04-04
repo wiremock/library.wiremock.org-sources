@@ -1,0 +1,345 @@
+{
+  "mappings" : [ {
+    "id" : "5115ca06-0396-4b20-8b96-91d8276f8f1a",
+    "name" : "Gets a random proxy for chosen parameters. - 500",
+    "request" : {
+      "urlPath" : "/proxy",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 500
+    },
+    "uuid" : "5115ca06-0396-4b20-8b96-91d8276f8f1a",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:39.059476Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "(none)"
+        }
+      }
+    },
+    "insertionIndex" : 0
+  }, {
+    "id" : "b8901bcc-de25-41c6-8228-9436cb06f8ba",
+    "name" : "Gets a random proxy for chosen parameters. - 429",
+    "request" : {
+      "urlPath" : "/proxy",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 429
+    },
+    "uuid" : "b8901bcc-de25-41c6-8228-9436cb06f8ba",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:39.05946Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "(none)"
+        }
+      }
+    },
+    "insertionIndex" : 1
+  }, {
+    "id" : "a0588779-4cab-4430-9ac9-4bacea006bc3",
+    "name" : "Gets a random proxy for chosen parameters. - 404",
+    "request" : {
+      "urlPath" : "/proxy",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 404
+    },
+    "uuid" : "a0588779-4cab-4430-9ac9-4bacea006bc3",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:39.059445Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "(none)"
+        }
+      }
+    },
+    "insertionIndex" : 2
+  }, {
+    "id" : "724e438a-4664-4c40-8e7f-244557b65585",
+    "name" : "Gets a random proxy for chosen parameters. - 400",
+    "request" : {
+      "urlPath" : "/proxy",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 400
+    },
+    "uuid" : "724e438a-4664-4c40-8e7f-244557b65585",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:39.059427Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "(none)"
+        }
+      }
+    },
+    "insertionIndex" : 3
+  }, {
+    "id" : "8652e1cd-4708-4de6-920c-335cd76a6dd5",
+    "name" : "Gets a random proxy for chosen parameters. (text/plain)",
+    "request" : {
+      "urlPath" : "/proxy",
+      "method" : "GET",
+      "headers" : {
+        "Accept" : {
+          "contains" : "text/plain"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"accessType\" : \"Elite\",\n  \"address\" : \"86.125.112.230\",\n  \"isSsl\" : true,\n  \"isp\" : {\n    \"id\" : 10232,\n    \"name\" : \"Comcast\"\n  },\n  \"lastTested\" : \"2023-03-20T18:36:08Z\",\n  \"location\" : {\n    \"accuracyRadius\" : 1,\n    \"cityName\" : \"Timișoara\",\n    \"continent\" : {\n      \"code\" : \"EU\",\n      \"name\" : \"Europe\"\n    },\n    \"country\" : {\n      \"code\" : \"RO\",\n      \"name\" : \"Romania\"\n    },\n    \"latitude\" : 45.7537,\n    \"longitude\" : 21.7537,\n    \"postalCode\" : \"300011\",\n    \"subdivisions\" : [ {\n      \"code\" : \"TM\",\n      \"name\" : \"Timis\"\n    } ],\n    \"timezone\" : \"Europe/Bucharest\"\n  },\n  \"port\" : 30897,\n  \"protocol\" : \"Socks4\",\n  \"timings\" : {\n    \"connectTime\" : 0.506,\n    \"firstByteTime\" : 0.607,\n    \"responseTime\" : 1.092\n  },\n  \"uptime\" : 0.88\n}",
+      "headers" : {
+        "Content-Type" : "text/plain"
+      }
+    },
+    "uuid" : "8652e1cd-4708-4de6-920c-335cd76a6dd5",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:39.059397Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "(none)",
+          "schema" : {
+            "additionalProperties" : false,
+            "properties" : {
+              "accessType" : {
+                "nullable" : true,
+                "readOnly" : true,
+                "type" : "string"
+              },
+              "address" : {
+                "nullable" : true,
+                "readOnly" : true,
+                "type" : "string"
+              },
+              "isSsl" : {
+                "readOnly" : true,
+                "type" : "boolean"
+              },
+              "isp" : {
+                "$ref" : "#/components/schemas/Isp"
+              },
+              "lastTested" : {
+                "nullable" : true,
+                "readOnly" : true,
+                "type" : "string"
+              },
+              "location" : {
+                "$ref" : "#/components/schemas/Location"
+              },
+              "port" : {
+                "format" : "int32",
+                "readOnly" : true,
+                "type" : "integer"
+              },
+              "protocol" : {
+                "nullable" : true,
+                "readOnly" : true,
+                "type" : "string"
+              },
+              "timings" : {
+                "$ref" : "#/components/schemas/Timings"
+              },
+              "uptime" : {
+                "format" : "float",
+                "readOnly" : true,
+                "type" : "number"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 4
+  }, {
+    "id" : "6a6c85ed-141f-4cfa-90cc-3f4911aae8a5",
+    "name" : "Gets a random proxy for chosen parameters. (text/json)",
+    "request" : {
+      "urlPath" : "/proxy",
+      "method" : "GET",
+      "headers" : {
+        "Accept" : {
+          "contains" : "text/json"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"accessType\" : \"Elite\",\n  \"address\" : \"86.125.112.230\",\n  \"isSsl\" : true,\n  \"isp\" : {\n    \"id\" : 10232,\n    \"name\" : \"Comcast\"\n  },\n  \"lastTested\" : \"2023-03-20T18:36:08Z\",\n  \"location\" : {\n    \"accuracyRadius\" : 1,\n    \"cityName\" : \"Timișoara\",\n    \"continent\" : {\n      \"code\" : \"EU\",\n      \"name\" : \"Europe\"\n    },\n    \"country\" : {\n      \"code\" : \"RO\",\n      \"name\" : \"Romania\"\n    },\n    \"latitude\" : 45.7537,\n    \"longitude\" : 21.7537,\n    \"postalCode\" : \"300011\",\n    \"subdivisions\" : [ {\n      \"code\" : \"TM\",\n      \"name\" : \"Timis\"\n    } ],\n    \"timezone\" : \"Europe/Bucharest\"\n  },\n  \"port\" : 30897,\n  \"protocol\" : \"Socks4\",\n  \"timings\" : {\n    \"connectTime\" : 0.506,\n    \"firstByteTime\" : 0.607,\n    \"responseTime\" : 1.092\n  },\n  \"uptime\" : 0.88\n}",
+      "headers" : {
+        "Content-Type" : "text/json"
+      }
+    },
+    "uuid" : "6a6c85ed-141f-4cfa-90cc-3f4911aae8a5",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:39.059308Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "(none)",
+          "schema" : {
+            "additionalProperties" : false,
+            "properties" : {
+              "accessType" : {
+                "nullable" : true,
+                "readOnly" : true,
+                "type" : "string"
+              },
+              "address" : {
+                "nullable" : true,
+                "readOnly" : true,
+                "type" : "string"
+              },
+              "isSsl" : {
+                "readOnly" : true,
+                "type" : "boolean"
+              },
+              "isp" : {
+                "$ref" : "#/components/schemas/Isp"
+              },
+              "lastTested" : {
+                "nullable" : true,
+                "readOnly" : true,
+                "type" : "string"
+              },
+              "location" : {
+                "$ref" : "#/components/schemas/Location"
+              },
+              "port" : {
+                "format" : "int32",
+                "readOnly" : true,
+                "type" : "integer"
+              },
+              "protocol" : {
+                "nullable" : true,
+                "readOnly" : true,
+                "type" : "string"
+              },
+              "timings" : {
+                "$ref" : "#/components/schemas/Timings"
+              },
+              "uptime" : {
+                "format" : "float",
+                "readOnly" : true,
+                "type" : "number"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 5
+  }, {
+    "id" : "2c73fa66-a988-4162-b680-242211dcf5e0",
+    "name" : "Gets a random proxy for chosen parameters. (application/json)",
+    "request" : {
+      "urlPath" : "/proxy",
+      "method" : "GET",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/json"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"accessType\" : \"Elite\",\n  \"address\" : \"86.125.112.230\",\n  \"isSsl\" : true,\n  \"isp\" : {\n    \"id\" : 10232,\n    \"name\" : \"Comcast\"\n  },\n  \"lastTested\" : \"2023-03-20T18:36:08Z\",\n  \"location\" : {\n    \"accuracyRadius\" : 1,\n    \"cityName\" : \"Timișoara\",\n    \"continent\" : {\n      \"code\" : \"EU\",\n      \"name\" : \"Europe\"\n    },\n    \"country\" : {\n      \"code\" : \"RO\",\n      \"name\" : \"Romania\"\n    },\n    \"latitude\" : 45.7537,\n    \"longitude\" : 21.7537,\n    \"postalCode\" : \"300011\",\n    \"subdivisions\" : [ {\n      \"code\" : \"TM\",\n      \"name\" : \"Timis\"\n    } ],\n    \"timezone\" : \"Europe/Bucharest\"\n  },\n  \"port\" : 30897,\n  \"protocol\" : \"Socks4\",\n  \"timings\" : {\n    \"connectTime\" : 0.506,\n    \"firstByteTime\" : 0.607,\n    \"responseTime\" : 1.092\n  },\n  \"uptime\" : 0.88\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "2c73fa66-a988-4162-b680-242211dcf5e0",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:39.059191Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "(none)",
+          "schema" : {
+            "additionalProperties" : false,
+            "properties" : {
+              "accessType" : {
+                "nullable" : true,
+                "readOnly" : true,
+                "type" : "string"
+              },
+              "address" : {
+                "nullable" : true,
+                "readOnly" : true,
+                "type" : "string"
+              },
+              "isSsl" : {
+                "readOnly" : true,
+                "type" : "boolean"
+              },
+              "isp" : {
+                "$ref" : "#/components/schemas/Isp"
+              },
+              "lastTested" : {
+                "nullable" : true,
+                "readOnly" : true,
+                "type" : "string"
+              },
+              "location" : {
+                "$ref" : "#/components/schemas/Location"
+              },
+              "port" : {
+                "format" : "int32",
+                "readOnly" : true,
+                "type" : "integer"
+              },
+              "protocol" : {
+                "nullable" : true,
+                "readOnly" : true,
+                "type" : "string"
+              },
+              "timings" : {
+                "$ref" : "#/components/schemas/Timings"
+              },
+              "uptime" : {
+                "format" : "float",
+                "readOnly" : true,
+                "type" : "number"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 6
+  } ]
+}

@@ -1,0 +1,310 @@
+{
+  "mappings" : [ {
+    "id" : "7311537a-6e66-4e8d-8c57-23630b68a0ba",
+    "name" : "Suggest search terms based on a partial query - 500",
+    "request" : {
+      "urlPath" : "/suggest",
+      "method" : "GET",
+      "queryParameters" : {
+        "q" : {
+          "equalTo" : "74nkitvmn3fdwepl"
+        },
+        "source" : {
+          "equalTo" : "NSIDC"
+        }
+      }
+    },
+    "response" : {
+      "status" : 500
+    },
+    "uuid" : "7311537a-6e66-4e8d-8c57-23630b68a0ba",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:23.213164Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "id"
+        }
+      }
+    },
+    "insertionIndex" : 0
+  }, {
+    "id" : "5025d8c8-eb65-4ec8-9ec5-821f452734ed",
+    "name" : "Suggest search terms based on a partial query - 400",
+    "request" : {
+      "urlPath" : "/suggest",
+      "method" : "GET",
+      "queryParameters" : {
+        "q" : {
+          "equalTo" : "k2p549g0siuexxmwkvt2j715l9omhfihta2u4nrkc5ywu5zts082yz6nmvj21jny2lov17ky6glqdyf465qv3u0d1z7748wk3ub6jb7lxu6w6mq9jj496o5awwznzc2"
+        },
+        "source" : {
+          "equalTo" : "ADE"
+        }
+      }
+    },
+    "response" : {
+      "status" : 400
+    },
+    "uuid" : "5025d8c8-eb65-4ec8-9ec5-821f452734ed",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:23.213112Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "id"
+        }
+      }
+    },
+    "insertionIndex" : 1
+  }, {
+    "id" : "577599c4-df7b-4fbb-9625-fd13e0bc1e0b",
+    "name" : "Suggest search terms based on a partial query (application/x-suggestions+json)",
+    "request" : {
+      "urlPath" : "/suggest",
+      "method" : "GET",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/x-suggestions+json"
+        }
+      },
+      "queryParameters" : {
+        "q" : {
+          "equalTo" : "nr3k9cvysc33gk1ym7v8144nwuepnmtuwu0oere8l26dwdg7t5war3m5q3hmqosmin72h42"
+        },
+        "source" : {
+          "equalTo" : "ADE"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "\"tvmh4s9vazctiz7a8xdv4rnha297qm6y29j0r21z92gfow3\"",
+      "headers" : {
+        "Content-Type" : "application/x-suggestions+json"
+      }
+    },
+    "uuid" : "577599c4-df7b-4fbb-9625-fd13e0bc1e0b",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:23.213049Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "id",
+          "schema" : {
+            "type" : "string"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 2
+  }, {
+    "id" : "37e5784a-ed71-4049-8747-f115212e9ffe",
+    "name" : "Describes the web interface of NSIDC's data search engine",
+    "request" : {
+      "urlPath" : "/OpenSearchDescription",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "\"1mld7p0qg9jo3jbhz8zravkmv\"",
+      "headers" : {
+        "Content-Type" : "application/opensearchdescription+xml"
+      }
+    },
+    "uuid" : "37e5784a-ed71-4049-8747-f115212e9ffe",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:23.212949Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "opensearch description",
+          "schema" : {
+            "type" : "string"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 3
+  }, {
+    "id" : "88c8edb1-c5bc-4ca9-8eaf-0c8a2642bfd1",
+    "name" : "Search documents using the OpenSearch 1.1 Specification - 500",
+    "request" : {
+      "urlPath" : "/OpenSearch",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 500
+    },
+    "uuid" : "88c8edb1-c5bc-4ca9-8eaf-0c8a2642bfd1",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:23.212911Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "open search"
+        }
+      }
+    },
+    "insertionIndex" : 4
+  }, {
+    "id" : "a4227d11-067b-489e-bfe5-a5b7b538c957",
+    "name" : "Search documents using the OpenSearch 1.1 Specification - 400",
+    "request" : {
+      "urlPath" : "/OpenSearch",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 400
+    },
+    "uuid" : "a4227d11-067b-489e-bfe5-a5b7b538c957",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:23.212893Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "open search"
+        }
+      }
+    },
+    "insertionIndex" : 5
+  }, {
+    "id" : "f522ecc5-6d0f-469b-a128-4dfd23ca6464",
+    "name" : "Search documents using the OpenSearch 1.1 Specification (application/atom+xml)",
+    "request" : {
+      "urlPath" : "/OpenSearch",
+      "method" : "GET",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/atom+xml"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "\"u4rfhcj4sawqwgnh271w6nau7z3n4z9vqsa1irz8umhjvcrrtw0s6q8pu21c7m4ua2rzujyrt92yze62d54a3s4x2i4dd08o\"",
+      "headers" : {
+        "Content-Type" : "application/atom+xml"
+      }
+    },
+    "uuid" : "f522ecc5-6d0f-469b-a128-4dfd23ca6464",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:23.212868Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "open search",
+          "schema" : {
+            "type" : "string"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 6
+  }, {
+    "id" : "c9207e63-c331-441a-b67f-76114fe85bb1",
+    "name" : "View the facet information corresponding to a search - 500",
+    "request" : {
+      "urlPath" : "/Facets",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 500
+    },
+    "uuid" : "c9207e63-c331-441a-b67f-76114fe85bb1",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:23.212819Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "facets"
+        }
+      }
+    },
+    "insertionIndex" : 7
+  }, {
+    "id" : "df8ff50e-f0ca-41d3-99f8-2eed5e366643",
+    "name" : "View the facet information corresponding to a search - 400",
+    "request" : {
+      "urlPath" : "/Facets",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 400
+    },
+    "uuid" : "df8ff50e-f0ca-41d3-99f8-2eed5e366643",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:23.212801Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "facets"
+        }
+      }
+    },
+    "insertionIndex" : 8
+  }, {
+    "id" : "2409a4c4-9c78-46eb-bd3e-e349fe3228fb",
+    "name" : "View the facet information corresponding to a search (application/nsidcfacets+xml)",
+    "request" : {
+      "urlPath" : "/Facets",
+      "method" : "GET",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/nsidcfacets+xml"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "\"iw7zzlqngrbe1ptytjtyvshsveb0yyxnahoqe6vvff62t2cnhrbkzjrxvdmjcrzhm19jv5fi6yeurm36y0bha4h22asvcluweo16rvtfu9rztv81xpd66do00w9kxd3gehif85tee38kzo20i39jfz3hor4p8by558290h4vr5j435i5w9zwfnfvzgb8nwukf3vle9\"",
+      "headers" : {
+        "Content-Type" : "application/nsidcfacets+xml"
+      }
+    },
+    "uuid" : "2409a4c4-9c78-46eb-bd3e-e349fe3228fb",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:23.21274Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "facets",
+          "schema" : {
+            "type" : "string"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 9
+  } ]
+}

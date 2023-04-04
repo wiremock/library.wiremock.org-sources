@@ -1,0 +1,525 @@
+{
+  "mappings" : [ {
+    "id" : "349fcd71-8e4f-4066-af9c-5cd38ee9fba1",
+    "name" : "Describe service",
+    "request" : {
+      "urlPath" : "/api/v1/services/62hw",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"api\" : \"/osdb/api/v1/services/:service_id\",\n  \"method\" : \"describe_service\",\n  \"response\" : {\n    \"description\" : \"Host-independent Linked Data Platform service\",\n    \"import_source_uri\" : \"http://ods-qa.openlinksw.com:8896/DAV/home/nobody/ldp_svc.host_independent.ttl\",\n    \"service_id\" : \"ldp_generic\",\n    \"service_name\" : \"LDP generic\"\n  },\n  \"status\" : \"success\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "349fcd71-8e4f-4066-af9c-5cd38ee9fba1",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:10.89761Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "describeService",
+          "schema" : {
+            "properties" : {
+              "api" : {
+                "description" : "The path of the REST API method",
+                "type" : "string"
+              },
+              "method" : {
+                "description" : "The name of the REST API method",
+                "type" : "string"
+              },
+              "response" : {
+                "$ref" : "#/components/schemas/ServiceDescription"
+              },
+              "status" : {
+                "default" : "success",
+                "enum" : [ "success" ],
+                "type" : "string"
+              }
+            },
+            "required" : [ "status", "method", "api", "response" ],
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 0
+  }, {
+    "id" : "b81c16e7-2540-41b9-897e-78ca0ef5fb4a",
+    "name" : "Unload service",
+    "request" : {
+      "urlPath" : "/api/v1/services/9d4d",
+      "method" : "DELETE"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"api\" : \"/osdb/api/v1/services\",\n  \"method\" : \"unload_service\",\n  \"response\" : \"Unloaded service csv_transformer from the Service Registry\",\n  \"status\" : \"success\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "b81c16e7-2540-41b9-897e-78ca0ef5fb4a",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:10.897428Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "unloadService",
+          "schema" : {
+            "properties" : {
+              "api" : {
+                "description" : "The path of the REST API method",
+                "type" : "string"
+              },
+              "method" : {
+                "description" : "The name of the REST API method",
+                "type" : "string"
+              },
+              "response" : {
+                "description" : "Confirmation message",
+                "type" : "string"
+              },
+              "status" : {
+                "default" : "success",
+                "enum" : [ "success" ],
+                "type" : "string"
+              }
+            },
+            "required" : [ "status", "method", "api", "response" ],
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 1
+  }, {
+    "id" : "2c85501c-3a81-4aef-ace6-ae3bd95a9af1",
+    "name" : "Load service",
+    "request" : {
+      "urlPath" : "/api/v1/services",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"api\" : \"/osdb/api/v1/services\",\n  \"method\" : \"load_service\",\n  \"response\" : \"Loaded service description\",\n  \"status\" : \"success\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "2c85501c-3a81-4aef-ace6-ae3bd95a9af1",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:10.897216Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "loadService",
+          "schema" : {
+            "properties" : {
+              "api" : {
+                "description" : "The path of the REST API method",
+                "type" : "string"
+              },
+              "method" : {
+                "description" : "The name of the REST API method",
+                "type" : "string"
+              },
+              "response" : {
+                "description" : "Confirmation message",
+                "type" : "string"
+              },
+              "status" : {
+                "default" : "success",
+                "enum" : [ "success" ],
+                "type" : "string"
+              }
+            },
+            "required" : [ "status", "method", "api", "response" ],
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 2
+  }, {
+    "id" : "f0c0a913-ab0f-4ef5-b1a9-57ecd2207580",
+    "name" : "List services",
+    "request" : {
+      "urlPath" : "/api/v1/services",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"api\" : \"/osdb/api/v1/services\",\n  \"method\" : \"list_services\",\n  \"response\" : [ {\n    \"description\" : \"Host-independent Linked Data Platform service\",\n    \"import_source_uri\" : \"http://ods-qa.openlinksw.com:8896/DAV/home/nobody/ldp_svc.host_independent.ttl\",\n    \"service_id\" : \"ldp_generic\",\n    \"service_name\" : \"LDP generic\"\n  }, {\n    \"import_source_uri\" : \"http://ods-qa.openlinksw.com:8896/DAV/home/nobody/fct_svc.ki.170103.cmsb.ttl\",\n    \"service_id\" : \"anonymous_facet\",\n    \"service_name\" : \"anonymous_facet\"\n  } ],\n  \"status\" : \"success\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "f0c0a913-ab0f-4ef5-b1a9-57ecd2207580",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:10.897122Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "listServices",
+          "schema" : {
+            "properties" : {
+              "api" : {
+                "description" : "The path of the REST API method",
+                "type" : "string"
+              },
+              "method" : {
+                "description" : "The name of the REST API method",
+                "type" : "string"
+              },
+              "response" : {
+                "items" : {
+                  "$ref" : "#/components/schemas/ServiceDescription"
+                },
+                "type" : "array"
+              },
+              "status" : {
+                "default" : "success",
+                "enum" : [ "success" ],
+                "type" : "string"
+              }
+            },
+            "required" : [ "status", "method", "api", "response" ],
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 3
+  }, {
+    "id" : "2d8c0d0d-9d7b-4ffc-858f-dcf97149a938",
+    "name" : "Logout",
+    "request" : {
+      "urlPath" : "/api/v1/logout",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"api\" : \"/osdb/api/v1/logout\",\n  \"method\" : \"logout\",\n  \"response\" : {\n    \"user\" : \"http://ods-qa.openlinksw.com:8896/DAV/home/nobody/cmsb_ex_webid_170223.ttl#identity\"\n  },\n  \"status\" : \"success\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "2d8c0d0d-9d7b-4ffc-858f-dcf97149a938",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:10.897013Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "logout",
+          "schema" : {
+            "properties" : {
+              "api" : {
+                "description" : "The path of the REST API method",
+                "type" : "string"
+              },
+              "method" : {
+                "description" : "The name of the REST API method",
+                "type" : "string"
+              },
+              "response" : {
+                "properties" : {
+                  "user" : {
+                    "description" : "The WebID of the user who has logged out.",
+                    "type" : "string"
+                  }
+                },
+                "required" : [ "user" ],
+                "type" : "object"
+              },
+              "status" : {
+                "default" : "success",
+                "enum" : [ "success" ],
+                "type" : "string"
+              }
+            },
+            "required" : [ "status", "method", "api", "response" ],
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 4
+  }, {
+    "id" : "c3b72a80-37b5-48bc-b5ac-e6ac0f87231a",
+    "name" : "Login",
+    "request" : {
+      "urlPath" : "/api/v1/login",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"api\" : \"/osdb/api/v1/login\",\n  \"method\" : \"login\",\n  \"response\" : {\n    \"user\" : \"http://ods-qa.openlinksw.com:8896/DAV/home/nobody/cmsb_ex_webid_170223.ttl#identity\"\n  },\n  \"status\" : \"success\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "c3b72a80-37b5-48bc-b5ac-e6ac0f87231a",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:10.896895Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "login",
+          "schema" : {
+            "properties" : {
+              "api" : {
+                "description" : "The path of the REST API method",
+                "type" : "string"
+              },
+              "method" : {
+                "description" : "The name of the REST API method",
+                "type" : "string"
+              },
+              "response" : {
+                "properties" : {
+                  "user" : {
+                    "description" : "The WebID of the user who has logged in.",
+                    "type" : "string"
+                  }
+                },
+                "required" : [ "user" ],
+                "type" : "object"
+              },
+              "status" : {
+                "default" : "success",
+                "enum" : [ "success" ],
+                "type" : "string"
+              }
+            },
+            "required" : [ "status", "method", "api", "response" ],
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 5
+  }, {
+    "id" : "af735d46-00c4-4d1b-9646-6b34bc4818ab",
+    "name" : "Action help",
+    "request" : {
+      "urlPath" : "/api/v1/actions/ly77/wxf3/help",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"api\" : \"/osdb/api/v1/actions/:service_id/:action_id/help\",\n  \"method\" : \"action_help\",\n  \"response\" : {\n    \"action_id\" : \"search\",\n    \"help_text\" : \"\\nAction options:\\n\\n-s, --same_as [same_as]\\n\\tEnables owl:sameAs inferencing for facet search\\n\\tRequired: no\\n\\tPermitted values: yes\\n-v, --view_type [view_type]\\n\\tSets the default view orientation\\n\\tRequired: no\\n\\tPermitted values: entity-types, attribute-names\\n-l, --limit [limit]\\n\\tLimits the number of result set entities returned\\n\\tRequired: no\\n-o, --offset [offset]\\n\\tSets the result set page size for scrolling\\n\\tRequired: no\\n-q, --q <q>\\n\\tA word or phrase to be used for the Facet free text search. Multiple words should be delimited by '+'\\n\\tRequired: yes\\n-u, --url_only [url_only]\\n\\tReturn only the action URL, not the action results\\n\\tRequired: no\\n-r, --response_format [response_format]\\n\\tSets the response media type through an Accept header.\\n\\tRequired: no\\n\\tPermitted values: application/json, application/rdf+xml, text/html, text/turtle\\n-t, --quality_values [quality_values]\\n\\tQuality value string. e.g. application/json;q=1.0,text/turtle;q=0.8,*/*;q=0.5. \\n\\t--response_format takes precedence.\\n\\tRequired: no\\n\",\n    \"service_id\" : \"facet\"\n  },\n  \"status\" : \"success\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "af735d46-00c4-4d1b-9646-6b34bc4818ab",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:10.896754Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "actionHelp",
+          "schema" : {
+            "properties" : {
+              "api" : {
+                "description" : "The path of the REST API method",
+                "type" : "string"
+              },
+              "method" : {
+                "description" : "The name of the REST API method",
+                "type" : "string"
+              },
+              "response" : {
+                "$ref" : "#/components/schemas/ActionHelp"
+              },
+              "status" : {
+                "default" : "success",
+                "enum" : [ "success" ],
+                "type" : "string"
+              }
+            },
+            "required" : [ "status", "method", "api", "response" ],
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 6
+  }, {
+    "id" : "ba6c2cea-d41d-47cd-945a-c32ca7d84040",
+    "name" : "Execute action",
+    "request" : {
+      "urlPath" : "/api/v1/actions/8t5d/z83l/exec",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"method\" : \"pfqfduuarnls2jyzio3e03p9sqcucdor0uxfi4ex85xyw3f\",\n  \"response\" : \"wwy8eamc2cq6shr7n4nzl3aj6akxxgl3brfevuhhlc13orsy6fzy36m6d9teip36pnmfrd6oi3ypwz4ni\",\n  \"api\" : \"tti8u3uhd5e4rri9crgtuo4zbakec4ksh70bxdpu0iurk9zgvapsplmx5qgwpqpd8bhwalr1fa39wwx1d9ckcohlpn6r1osmwy58xwtsspfqw9zkks3dwdicx\",\n  \"status\" : \"error\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "ba6c2cea-d41d-47cd-945a-c32ca7d84040",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:10.896495Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "executeAction",
+          "schema" : {
+            "properties" : {
+              "api" : {
+                "description" : "The path of the REST API method reporting the error",
+                "type" : "string"
+              },
+              "method" : {
+                "description" : "The name of the REST API method reporting the error",
+                "type" : "string"
+              },
+              "response" : {
+                "description" : "A message describing the error",
+                "type" : "string"
+              },
+              "status" : {
+                "default" : "error",
+                "enum" : [ "error" ],
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 7
+  }, {
+    "id" : "b7b24d76-66dd-4139-bb5a-139705417590",
+    "name" : "Describe action",
+    "request" : {
+      "urlPath" : "/api/v1/actions/1v8c/sf1m",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"api\" : \"/osdb/api/v1/actions/:service_id/:action_id\",\n  \"method\" : \"describe_action\",\n  \"response\" : {\n    \"action_id\" : \"products\",\n    \"description\" : \"Returns information about the Uber products offered at a given location\",\n    \"entry_point\" : {\n      \"content_types\" : [ \"application/json\", \"text/turtle\", \"application/rdf+xml\", \"application/ld+json\" ],\n      \"description\" : \"The Products endpoint returns information about the Uber products offered at a given location. \\n    The response includes the display name and other details about each product.\\n    \\n    This endpoint does not reflect real-time availability of the products. Please use the Time \\n    Estimates endpoint to determine real-time availability and ETAs of products.\\n\\n    In some markets, the list of products returned from this endpoint may vary by the time of \\n    day due to time restrictions on when that product may be utilized.\\n   \",\n      \"http_method\" : \"GET\",\n      \"name\" : \"Products — Uber products at a given location\",\n      \"parameters\" : [ {\n        \"description\" : \"Longitude component of location\",\n        \"display_name\" : \"Longitude\",\n        \"parameter_name\" : \"longitude\",\n        \"required\" : 1,\n        \"type\" : \"query\"\n      }, {\n        \"description\" : \"Latitude component of location\",\n        \"display_name\" : \"Latitude\",\n        \"parameter_name\" : \"latitude\",\n        \"required\" : 1,\n        \"type\" : \"query\"\n      } ],\n      \"url\" : \"https://sandbox-api.uber.com/v1/products\",\n      \"url_template\" : \"https://sandbox-api.uber.com/v1/products(?latitude,longitude)\"\n    }\n  },\n  \"status\" : \"success\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "b7b24d76-66dd-4139-bb5a-139705417590",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:10.896042Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "describeAction",
+          "schema" : {
+            "properties" : {
+              "api" : {
+                "description" : "The path of the REST API method",
+                "type" : "string"
+              },
+              "method" : {
+                "description" : "The name of the REST API method",
+                "type" : "string"
+              },
+              "response" : {
+                "$ref" : "#/components/schemas/ActionDescription"
+              },
+              "status" : {
+                "default" : "success",
+                "enum" : [ "success" ],
+                "type" : "string"
+              }
+            },
+            "required" : [ "status", "method", "api", "response" ],
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 8
+  }, {
+    "id" : "13a3ae16-6ce1-4e14-b8a6-29f7b63da366",
+    "name" : "List actions",
+    "request" : {
+      "urlPath" : "/api/v1/actions/1mn4",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"api\" : \"/osdb/api/v1/actions/:service_id\",\n  \"method\" : \"list_actions\",\n  \"response\" : [ {\n    \"action_id\" : \"read\",\n    \"description\" : \"List a container's details and contents\",\n    \"entry_point\" : {\n      \"content_types\" : [ \"application/ld+json\", \"text/turtle\" ],\n      \"description\" : \"Retrieve a description of an LDP resource or container\",\n      \"http_method\" : \"GET\",\n      \"name\" : \"LDP Read - Retrieve a resource description\",\n      \"parameters\" : [ {\n        \"description\" : \"The URL of an LDPR or LDPC. LDPCs must be terminated by /\",\n        \"display_name\" : \"Resource URL\",\n        \"parameter_name\" : \"ldpResourceUri\",\n        \"required\" : 1,\n        \"type\" : \"uri\"\n      } ],\n      \"url_template\" : \"(ldpResourceUri)\"\n    }\n  }, {\n    \"action_id\" : \"update\",\n    \"description\" : \"Update an LDP RDF resource\",\n    \"entry_point\" : {\n      \"content_types\" : [ \"text/html\" ],\n      \"description\" : \"Update an RDF resource (LDP-RS) including containers (LDPCs)\",\n      \"encoding_types\" : [ \"text/turtle\" ],\n      \"http_method\" : \"PUT\",\n      \"name\" : \"LDP-RS Update - Update an RDF resource\",\n      \"parameters\" : [ {\n        \"description\" : \"The URL of an LDPR or LDPC. LDPCs must be terminated by /\",\n        \"display_name\" : \"Resource URL\",\n        \"parameter_name\" : \"ldpResourceUri\",\n        \"required\" : 1,\n        \"type\" : \"uri\"\n      } ],\n      \"url_template\" : \"(ldpResourceUri)\"\n    }\n  }, {\n    \"action_id\" : \"delete\",\n    \"description\" : \"Delete an LDP resource\",\n    \"entry_point\" : {\n      \"content_types\" : \"\",\n      \"description\" : \"Deletes an LDP resource or container\",\n      \"http_method\" : \"DELETE\",\n      \"name\" : \"LDP Delete - Delete an LDP resource\",\n      \"parameters\" : [ {\n        \"description\" : \"The URL of an LDPR or LDPC. LDPCs must be terminated by /\",\n        \"display_name\" : \"Resource URL\",\n        \"parameter_name\" : \"ldpResourceUri\",\n        \"required\" : 1,\n        \"type\" : \"uri\"\n      } ],\n      \"url_template\" : \"(ldpResourceUri)\"\n    }\n  }, {\n    \"action_id\" : \"create\",\n    \"description\" : \"Create an LDP RDF resource\",\n    \"entry_point\" : {\n      \"content_types\" : [ \"text/html\" ],\n      \"description\" : \"Create an RDF resource (LDP-RS) including containers (LDPCs)\",\n      \"encoding_types\" : [ \"text/turtle\" ],\n      \"http_method\" : \"POST\",\n      \"name\" : \"LDP-RS Create - Create an RDF resource\",\n      \"parameters\" : [ {\n        \"description\" : \"The suggested name (slug) for the new resource\",\n        \"display_name\" : \"Suggested name\",\n        \"parameter_name\" : \"Slug\",\n        \"required\" : 1,\n        \"type\" : \"header\"\n      }, {\n        \"description\" : \"The URL of an LDPR or LDPC. LDPCs must be terminated by /\",\n        \"display_name\" : \"Resource URL\",\n        \"parameter_name\" : \"ldpResourceUri\",\n        \"required\" : 1,\n        \"type\" : \"uri\"\n      } ],\n      \"url_template\" : \"(ldpResourceUri)\"\n    }\n  } ],\n  \"status\" : \"success\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "13a3ae16-6ce1-4e14-b8a6-29f7b63da366",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:10.895659Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "listActions",
+          "schema" : {
+            "properties" : {
+              "api" : {
+                "description" : "The path of the REST API method",
+                "type" : "string"
+              },
+              "method" : {
+                "description" : "The name of the REST API method",
+                "type" : "string"
+              },
+              "response" : {
+                "items" : {
+                  "$ref" : "#/components/schemas/ActionDescription"
+                },
+                "type" : "array"
+              },
+              "status" : {
+                "default" : "success",
+                "enum" : [ "success" ],
+                "type" : "string"
+              }
+            },
+            "required" : [ "status", "method", "api", "response" ],
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 9
+  } ]
+}

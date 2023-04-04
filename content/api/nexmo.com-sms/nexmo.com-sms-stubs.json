@@ -1,0 +1,83 @@
+{
+  "mappings" : [ {
+    "id" : "f2d8cbc0-7177-4c31-865e-72a42bcdc283",
+    "name" : "Send an SMS (text/xml)",
+    "request" : {
+      "urlPath" : "/json",
+      "method" : "POST",
+      "headers" : {
+        "Accept" : {
+          "contains" : "text/xml"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"messages\" : [ {\n    \"message-price\" : \"0.03330000\",\n    \"client-ref\" : \"my-personal-reference\",\n    \"message-id\" : \"0A0000000123ABCD1\",\n    \"to\" : \"447700900000\",\n    \"account-ref\" : \"customer1234\",\n    \"remaining-balance\" : \"3.14159265\",\n    \"network\" : \"12345\",\n    \"status\" : \"0\"\n  }, {\n    \"message-price\" : \"0.03330000\",\n    \"client-ref\" : \"my-personal-reference\",\n    \"message-id\" : \"0A0000000123ABCD1\",\n    \"to\" : \"447700900000\",\n    \"account-ref\" : \"customer1234\",\n    \"remaining-balance\" : \"3.14159265\",\n    \"network\" : \"12345\",\n    \"status\" : \"0\"\n  }, {\n    \"message-price\" : \"0.03330000\",\n    \"client-ref\" : \"my-personal-reference\",\n    \"message-id\" : \"0A0000000123ABCD1\",\n    \"to\" : \"447700900000\",\n    \"account-ref\" : \"customer1234\",\n    \"remaining-balance\" : \"3.14159265\",\n    \"network\" : \"12345\",\n    \"status\" : \"0\"\n  }, {\n    \"message-price\" : \"0.03330000\",\n    \"client-ref\" : \"my-personal-reference\",\n    \"message-id\" : \"0A0000000123ABCD1\",\n    \"to\" : \"447700900000\",\n    \"account-ref\" : \"customer1234\",\n    \"remaining-balance\" : \"3.14159265\",\n    \"network\" : \"12345\",\n    \"status\" : \"0\"\n  }, {\n    \"message-price\" : \"0.03330000\",\n    \"client-ref\" : \"my-personal-reference\",\n    \"message-id\" : \"0A0000000123ABCD1\",\n    \"to\" : \"447700900000\",\n    \"account-ref\" : \"customer1234\",\n    \"remaining-balance\" : \"3.14159265\",\n    \"network\" : \"12345\",\n    \"status\" : \"0\"\n  }, {\n    \"message-price\" : \"0.03330000\",\n    \"client-ref\" : \"my-personal-reference\",\n    \"message-id\" : \"0A0000000123ABCD1\",\n    \"to\" : \"447700900000\",\n    \"account-ref\" : \"customer1234\",\n    \"remaining-balance\" : \"3.14159265\",\n    \"network\" : \"12345\",\n    \"status\" : \"0\"\n  }, {\n    \"message-price\" : \"0.03330000\",\n    \"client-ref\" : \"my-personal-reference\",\n    \"message-id\" : \"0A0000000123ABCD1\",\n    \"to\" : \"447700900000\",\n    \"account-ref\" : \"customer1234\",\n    \"remaining-balance\" : \"3.14159265\",\n    \"network\" : \"12345\",\n    \"status\" : \"0\"\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "text/xml"
+      }
+    },
+    "uuid" : "f2d8cbc0-7177-4c31-865e-72a42bcdc283",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:27.917449Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "send-an-sms",
+          "schema" : {
+            "oneOf" : [ {
+              "$ref" : "#/components/schemas/SMSXml"
+            }, {
+              "$ref" : "#/components/schemas/ErrorXml"
+            } ]
+          }
+        }
+      }
+    },
+    "insertionIndex" : 0
+  }, {
+    "id" : "5bed905c-65fc-417e-8121-97bcdd23aac5",
+    "name" : "Send an SMS (application/json)",
+    "request" : {
+      "urlPath" : "/xml",
+      "method" : "POST",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/json"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"message-count\" : \"1\",\n  \"messages\" : [ {\n    \"error-text\" : \"Missing to param\",\n    \"status\" : \"2\"\n  }, {\n    \"error-text\" : \"Missing to param\",\n    \"status\" : \"2\"\n  }, {\n    \"error-text\" : \"Missing to param\",\n    \"status\" : \"2\"\n  }, {\n    \"error-text\" : \"Missing to param\",\n    \"status\" : \"2\"\n  }, {\n    \"error-text\" : \"Missing to param\",\n    \"status\" : \"2\"\n  }, {\n    \"error-text\" : \"Missing to param\",\n    \"status\" : \"2\"\n  }, {\n    \"error-text\" : \"Missing to param\",\n    \"status\" : \"2\"\n  }, {\n    \"error-text\" : \"Missing to param\",\n    \"status\" : \"2\"\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "5bed905c-65fc-417e-8121-97bcdd23aac5",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:27.917245Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "send-an-sms",
+          "schema" : {
+            "oneOf" : [ {
+              "$ref" : "#/components/schemas/SMS"
+            }, {
+              "$ref" : "#/components/schemas/Error"
+            } ]
+          }
+        }
+      }
+    },
+    "insertionIndex" : 1
+  } ]
+}

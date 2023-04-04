@@ -1,0 +1,484 @@
+{
+  "mappings" : [ {
+    "id" : "971c4142-f808-433a-bb42-4d6b0a87d73a",
+    "name" : "Play text to speech into a call",
+    "request" : {
+      "urlPath" : "/d4e4ef5b-043e-38e0-a79f-e4d336e91dfc/talk",
+      "method" : "PUT"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"message\" : \"Talk started\",\n  \"uuid\" : \"63f61863-4a51-4f6b-86e1-46edebcf9356\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "971c4142-f808-433a-bb42-4d6b0a87d73a",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:28.696382Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "startTalk",
+          "schema" : {
+            "properties" : {
+              "message" : {
+                "description" : "Description of the action taken",
+                "example" : "Talk started",
+                "type" : "string"
+              },
+              "uuid" : {
+                "$ref" : "#/components/schemas/uuid"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 0
+  }, {
+    "id" : "de91633f-ba6a-437d-85d3-41e9d3cbcda3",
+    "name" : "Stop text to speech in a call",
+    "request" : {
+      "urlPath" : "/05979180-9749-3a4f-bfa5-7736e0febf44/talk",
+      "method" : "DELETE"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"message\" : \"Talk stopped\",\n  \"uuid\" : \"63f61863-4a51-4f6b-86e1-46edebcf9356\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "de91633f-ba6a-437d-85d3-41e9d3cbcda3",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:28.696314Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "stopTalk",
+          "schema" : {
+            "properties" : {
+              "message" : {
+                "description" : "Description of the action taken",
+                "example" : "Talk stopped",
+                "type" : "string"
+              },
+              "uuid" : {
+                "$ref" : "#/components/schemas/uuid"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 1
+  }, {
+    "id" : "982b1466-86cb-4656-814e-c7d7d8875b09",
+    "name" : "Play an audio file into a call",
+    "request" : {
+      "urlPath" : "/b9721ccd-1eef-3b40-a15e-3a3d10d0e496/stream",
+      "method" : "PUT"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"message\" : \"Stream started\",\n  \"uuid\" : \"63f61863-4a51-4f6b-86e1-46edebcf9356\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "982b1466-86cb-4656-814e-c7d7d8875b09",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:28.696241Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "startStream",
+          "schema" : {
+            "properties" : {
+              "message" : {
+                "description" : "Description of the action taken",
+                "example" : "Stream started",
+                "type" : "string"
+              },
+              "uuid" : {
+                "$ref" : "#/components/schemas/uuid"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 2
+  }, {
+    "id" : "796aa270-458b-48a1-9028-b1f814f503c0",
+    "name" : "Stop playing an audio file into a call",
+    "request" : {
+      "urlPath" : "/a46fcfa0-3b43-3e71-b938-fb0ff1026214/stream",
+      "method" : "DELETE"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"message\" : \"Stream stopped\",\n  \"uuid\" : \"63f61863-4a51-4f6b-86e1-46edebcf9356\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "796aa270-458b-48a1-9028-b1f814f503c0",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:28.696173Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "stopStream",
+          "schema" : {
+            "properties" : {
+              "message" : {
+                "description" : "Description of the action taken",
+                "example" : "Stream stopped",
+                "type" : "string"
+              },
+              "uuid" : {
+                "$ref" : "#/components/schemas/uuid"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 3
+  }, {
+    "id" : "b6176d42-60de-435c-b6e2-02ed3a169185",
+    "name" : "Play DTMF tones into a call",
+    "request" : {
+      "urlPath" : "/7c3eb832-a2b0-3f56-a7a0-bfd3c67d8e42/dtmf",
+      "method" : "PUT"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"message\" : \"DTMF sent\",\n  \"uuid\" : \"63f61863-4a51-4f6b-86e1-46edebcf9356\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "b6176d42-60de-435c-b6e2-02ed3a169185",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:28.6961Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "startDTMF",
+          "schema" : {
+            "properties" : {
+              "message" : {
+                "description" : "Description of the action taken",
+                "example" : "DTMF sent",
+                "type" : "string"
+              },
+              "uuid" : {
+                "$ref" : "#/components/schemas/uuid"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 4
+  }, {
+    "id" : "b52126b6-4c24-4586-a86f-204464117d9e",
+    "name" : "Modify an in progress call - 404",
+    "request" : {
+      "urlPath" : "/f2849064-bf1d-3082-b338-154998915f56",
+      "method" : "PUT"
+    },
+    "response" : {
+      "status" : 404
+    },
+    "uuid" : "b52126b6-4c24-4586-a86f-204464117d9e",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:28.696027Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "updateCall"
+        }
+      }
+    },
+    "insertionIndex" : 5
+  }, {
+    "id" : "c073eac8-9e54-4aae-901c-3ab742de33d9",
+    "name" : "Modify an in progress call - 401",
+    "request" : {
+      "urlPath" : "/06a11ea4-8a06-307f-b08d-31160b589f9c",
+      "method" : "PUT"
+    },
+    "response" : {
+      "status" : 401
+    },
+    "uuid" : "c073eac8-9e54-4aae-901c-3ab742de33d9",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:28.69599Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "updateCall"
+        }
+      }
+    },
+    "insertionIndex" : 6
+  }, {
+    "id" : "9c8d03d8-6565-4a9a-b219-2bc6caa4cadf",
+    "name" : "Modify an in progress call - 204",
+    "request" : {
+      "urlPath" : "/8c12b20c-f4a1-33d9-8afa-bf51ca8070bf",
+      "method" : "PUT"
+    },
+    "response" : {
+      "status" : 204
+    },
+    "uuid" : "9c8d03d8-6565-4a9a-b219-2bc6caa4cadf",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:28.695956Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "updateCall"
+        }
+      }
+    },
+    "insertionIndex" : 7
+  }, {
+    "id" : "51db8e36-b5f2-4a87-bc69-1746d0b361e6",
+    "name" : "Get detail of a specific call",
+    "request" : {
+      "urlPath" : "/781ed329-675c-370f-9fa0-0b30d14413f5",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"_links\" : {\n    \"self\" : {\n      \"href\" : \"/calls/63f61863-4a51-4f6b-86e1-46edebcf9356\"\n    }\n  },\n  \"end_time\" : \"2020-01-01 12:00:00\",\n  \"uuid\" : \"63f61863-4a51-4f6b-86e1-46edebcf9356\",\n  \"network\" : \"65512\",\n  \"duration\" : \"60\",\n  \"start_time\" : \"2020-01-01 12:00:00\",\n  \"rate\" : \"0.39\",\n  \"price\" : \"23.40\",\n  \"from\" : {\n    \"number\" : \"447700900001\",\n    \"type\" : \"phone\"\n  },\n  \"to\" : {\n    \"number\" : \"447700900000\",\n    \"type\" : \"phone\"\n  },\n  \"conversation_uuid\" : \"CON-f972836a-550f-45fa-956c-12a2ab5b7d22\",\n  \"direction\" : \"outbound\",\n  \"status\" : \"completed\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "51db8e36-b5f2-4a87-bc69-1746d0b361e6",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:28.695911Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "getCall",
+          "schema" : {
+            "properties" : {
+              "_links" : {
+                "properties" : {
+                  "self" : {
+                    "properties" : {
+                      "href" : {
+                        "example" : "/calls/63f61863-4a51-4f6b-86e1-46edebcf9356",
+                        "title" : "Link to the Call Object",
+                        "type" : "string"
+                      }
+                    },
+                    "type" : "object"
+                  }
+                },
+                "type" : "object"
+              },
+              "conversation_uuid" : {
+                "$ref" : "#/components/schemas/conversation_uuid"
+              },
+              "direction" : {
+                "$ref" : "#/components/schemas/direction"
+              },
+              "duration" : {
+                "$ref" : "#/components/schemas/duration"
+              },
+              "end_time" : {
+                "$ref" : "#/components/schemas/end_time"
+              },
+              "from" : {
+                "$ref" : "#/components/schemas/from"
+              },
+              "network" : {
+                "$ref" : "#/components/schemas/network"
+              },
+              "price" : {
+                "$ref" : "#/components/schemas/price"
+              },
+              "rate" : {
+                "$ref" : "#/components/schemas/rate"
+              },
+              "start_time" : {
+                "$ref" : "#/components/schemas/start_time"
+              },
+              "status" : {
+                "$ref" : "#/components/schemas/status"
+              },
+              "to" : {
+                "$ref" : "#/components/schemas/to"
+              },
+              "uuid" : {
+                "$ref" : "#/components/schemas/uuid"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 8
+  }, {
+    "id" : "003681dc-6475-4d0c-b4e1-56e541a38e92",
+    "name" : "Create an outbound call",
+    "request" : {
+      "urlPath" : "/",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 201,
+      "body" : "{\n  \"uuid\" : \"63f61863-4a51-4f6b-86e1-46edebcf9356\",\n  \"conversation_uuid\" : \"CON-f972836a-550f-45fa-956c-12a2ab5b7d22\",\n  \"direction\" : \"outbound\",\n  \"status\" : \"completed\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "003681dc-6475-4d0c-b4e1-56e541a38e92",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:28.695742Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "createCall",
+          "schema" : {
+            "properties" : {
+              "conversation_uuid" : {
+                "$ref" : "#/components/schemas/conversation_uuid"
+              },
+              "direction" : {
+                "$ref" : "#/components/schemas/direction"
+              },
+              "status" : {
+                "$ref" : "#/components/schemas/status"
+              },
+              "uuid" : {
+                "$ref" : "#/components/schemas/uuid"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 9
+  }, {
+    "id" : "17844b40-861a-4aeb-83a1-a35ee3f993f5",
+    "name" : "Get details of your calls",
+    "request" : {
+      "urlPath" : "/",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"record_index\" : 0,\n  \"_embedded\" : {\n    \"calls\" : [ {\n      \"_links\" : {\n        \"self\" : {\n          \"href\" : \"/calls/63f61863-4a51-4f6b-86e1-46edebcf9356\"\n        }\n      },\n      \"end_time\" : \"2020-01-01 12:00:00\",\n      \"uuid\" : \"63f61863-4a51-4f6b-86e1-46edebcf9356\",\n      \"network\" : \"65512\",\n      \"duration\" : \"60\",\n      \"start_time\" : \"2020-01-01 12:00:00\",\n      \"rate\" : \"0.39\",\n      \"price\" : \"23.40\",\n      \"from\" : {\n        \"number\" : \"447700900001\",\n        \"type\" : \"phone\"\n      },\n      \"to\" : {\n        \"number\" : \"447700900000\",\n        \"type\" : \"phone\"\n      },\n      \"conversation_uuid\" : \"CON-f972836a-550f-45fa-956c-12a2ab5b7d22\",\n      \"direction\" : \"outbound\",\n      \"status\" : \"completed\"\n    }, {\n      \"_links\" : {\n        \"self\" : {\n          \"href\" : \"/calls/63f61863-4a51-4f6b-86e1-46edebcf9356\"\n        }\n      },\n      \"end_time\" : \"2020-01-01 12:00:00\",\n      \"uuid\" : \"63f61863-4a51-4f6b-86e1-46edebcf9356\",\n      \"network\" : \"65512\",\n      \"duration\" : \"60\",\n      \"start_time\" : \"2020-01-01 12:00:00\",\n      \"rate\" : \"0.39\",\n      \"price\" : \"23.40\",\n      \"from\" : {\n        \"number\" : \"447700900001\",\n        \"type\" : \"phone\"\n      },\n      \"to\" : {\n        \"number\" : \"447700900000\",\n        \"type\" : \"phone\"\n      },\n      \"conversation_uuid\" : \"CON-f972836a-550f-45fa-956c-12a2ab5b7d22\",\n      \"direction\" : \"outbound\",\n      \"status\" : \"completed\"\n    }, {\n      \"_links\" : {\n        \"self\" : {\n          \"href\" : \"/calls/63f61863-4a51-4f6b-86e1-46edebcf9356\"\n        }\n      },\n      \"end_time\" : \"2020-01-01 12:00:00\",\n      \"uuid\" : \"63f61863-4a51-4f6b-86e1-46edebcf9356\",\n      \"network\" : \"65512\",\n      \"duration\" : \"60\",\n      \"start_time\" : \"2020-01-01 12:00:00\",\n      \"rate\" : \"0.39\",\n      \"price\" : \"23.40\",\n      \"from\" : {\n        \"number\" : \"447700900001\",\n        \"type\" : \"phone\"\n      },\n      \"to\" : {\n        \"number\" : \"447700900000\",\n        \"type\" : \"phone\"\n      },\n      \"conversation_uuid\" : \"CON-f972836a-550f-45fa-956c-12a2ab5b7d22\",\n      \"direction\" : \"outbound\",\n      \"status\" : \"completed\"\n    }, {\n      \"_links\" : {\n        \"self\" : {\n          \"href\" : \"/calls/63f61863-4a51-4f6b-86e1-46edebcf9356\"\n        }\n      },\n      \"end_time\" : \"2020-01-01 12:00:00\",\n      \"uuid\" : \"63f61863-4a51-4f6b-86e1-46edebcf9356\",\n      \"network\" : \"65512\",\n      \"duration\" : \"60\",\n      \"start_time\" : \"2020-01-01 12:00:00\",\n      \"rate\" : \"0.39\",\n      \"price\" : \"23.40\",\n      \"from\" : {\n        \"number\" : \"447700900001\",\n        \"type\" : \"phone\"\n      },\n      \"to\" : {\n        \"number\" : \"447700900000\",\n        \"type\" : \"phone\"\n      },\n      \"conversation_uuid\" : \"CON-f972836a-550f-45fa-956c-12a2ab5b7d22\",\n      \"direction\" : \"outbound\",\n      \"status\" : \"completed\"\n    }, {\n      \"_links\" : {\n        \"self\" : {\n          \"href\" : \"/calls/63f61863-4a51-4f6b-86e1-46edebcf9356\"\n        }\n      },\n      \"end_time\" : \"2020-01-01 12:00:00\",\n      \"uuid\" : \"63f61863-4a51-4f6b-86e1-46edebcf9356\",\n      \"network\" : \"65512\",\n      \"duration\" : \"60\",\n      \"start_time\" : \"2020-01-01 12:00:00\",\n      \"rate\" : \"0.39\",\n      \"price\" : \"23.40\",\n      \"from\" : {\n        \"number\" : \"447700900001\",\n        \"type\" : \"phone\"\n      },\n      \"to\" : {\n        \"number\" : \"447700900000\",\n        \"type\" : \"phone\"\n      },\n      \"conversation_uuid\" : \"CON-f972836a-550f-45fa-956c-12a2ab5b7d22\",\n      \"direction\" : \"outbound\",\n      \"status\" : \"completed\"\n    }, {\n      \"_links\" : {\n        \"self\" : {\n          \"href\" : \"/calls/63f61863-4a51-4f6b-86e1-46edebcf9356\"\n        }\n      },\n      \"end_time\" : \"2020-01-01 12:00:00\",\n      \"uuid\" : \"63f61863-4a51-4f6b-86e1-46edebcf9356\",\n      \"network\" : \"65512\",\n      \"duration\" : \"60\",\n      \"start_time\" : \"2020-01-01 12:00:00\",\n      \"rate\" : \"0.39\",\n      \"price\" : \"23.40\",\n      \"from\" : {\n        \"number\" : \"447700900001\",\n        \"type\" : \"phone\"\n      },\n      \"to\" : {\n        \"number\" : \"447700900000\",\n        \"type\" : \"phone\"\n      },\n      \"conversation_uuid\" : \"CON-f972836a-550f-45fa-956c-12a2ab5b7d22\",\n      \"direction\" : \"outbound\",\n      \"status\" : \"completed\"\n    }, {\n      \"_links\" : {\n        \"self\" : {\n          \"href\" : \"/calls/63f61863-4a51-4f6b-86e1-46edebcf9356\"\n        }\n      },\n      \"end_time\" : \"2020-01-01 12:00:00\",\n      \"uuid\" : \"63f61863-4a51-4f6b-86e1-46edebcf9356\",\n      \"network\" : \"65512\",\n      \"duration\" : \"60\",\n      \"start_time\" : \"2020-01-01 12:00:00\",\n      \"rate\" : \"0.39\",\n      \"price\" : \"23.40\",\n      \"from\" : {\n        \"number\" : \"447700900001\",\n        \"type\" : \"phone\"\n      },\n      \"to\" : {\n        \"number\" : \"447700900000\",\n        \"type\" : \"phone\"\n      },\n      \"conversation_uuid\" : \"CON-f972836a-550f-45fa-956c-12a2ab5b7d22\",\n      \"direction\" : \"outbound\",\n      \"status\" : \"completed\"\n    }, {\n      \"_links\" : {\n        \"self\" : {\n          \"href\" : \"/calls/63f61863-4a51-4f6b-86e1-46edebcf9356\"\n        }\n      },\n      \"end_time\" : \"2020-01-01 12:00:00\",\n      \"uuid\" : \"63f61863-4a51-4f6b-86e1-46edebcf9356\",\n      \"network\" : \"65512\",\n      \"duration\" : \"60\",\n      \"start_time\" : \"2020-01-01 12:00:00\",\n      \"rate\" : \"0.39\",\n      \"price\" : \"23.40\",\n      \"from\" : {\n        \"number\" : \"447700900001\",\n        \"type\" : \"phone\"\n      },\n      \"to\" : {\n        \"number\" : \"447700900000\",\n        \"type\" : \"phone\"\n      },\n      \"conversation_uuid\" : \"CON-f972836a-550f-45fa-956c-12a2ab5b7d22\",\n      \"direction\" : \"outbound\",\n      \"status\" : \"completed\"\n    } ]\n  },\n  \"_links\" : {\n    \"self\" : {\n      \"href\" : \"/calls?page_size=10&record_index=20&order=asc\"\n    }\n  },\n  \"count\" : 100,\n  \"page_size\" : 10\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "17844b40-861a-4aeb-83a1-a35ee3f993f5",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:28.695663Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "getCalls",
+          "schema" : {
+            "properties" : {
+              "_embedded" : {
+                "description" : "A list of call objects. See the [get details of a specific call](#getCall) response fields for a description of the nested objects",
+                "properties" : {
+                  "calls" : {
+                    "items" : {
+                      "$ref" : "#/components/schemas/GetCallResponse"
+                    },
+                    "type" : "array"
+                  }
+                },
+                "type" : "object"
+              },
+              "_links" : {
+                "properties" : {
+                  "self" : {
+                    "properties" : {
+                      "href" : {
+                        "example" : "/calls?page_size=10&record_index=20&order=asc",
+                        "title" : "Link to the object",
+                        "type" : "string"
+                      }
+                    },
+                    "type" : "object"
+                  }
+                },
+                "type" : "object"
+              },
+              "count" : {
+                "example" : 100,
+                "title" : "The total number of records returned by your request.",
+                "type" : "integer"
+              },
+              "page_size" : {
+                "example" : 10,
+                "title" : "The amount of records returned in this response.",
+                "type" : "integer"
+              },
+              "record_index" : {
+                "example" : 0,
+                "title" : "The `record_index` used in your request.",
+                "type" : "integer"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 10
+  } ]
+}

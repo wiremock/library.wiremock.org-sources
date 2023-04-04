@@ -1,0 +1,1401 @@
+{
+  "mappings" : [ {
+    "id" : "81caba7d-473d-4d16-bdf5-a0381707b555",
+    "name" : "Get one recurring payment - 404",
+    "request" : {
+      "urlPath" : "/v1/subscriptions/q37p",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 404,
+      "body" : "{\n  \"code\" : \"NOT_FOUND\",\n  \"message\" : \"subscription not found\",\n  \"status\" : false,\n  \"statusCode\" : 404\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "81caba7d-473d-4d16-bdf5-a0381707b555",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:21.245144Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "getOneRecurringPayment",
+          "schema" : {
+            "properties" : {
+              "code" : {
+                "example" : "NOT_FOUND",
+                "type" : "string"
+              },
+              "message" : {
+                "example" : "subscription not found",
+                "type" : "string"
+              },
+              "status" : {
+                "example" : false,
+                "type" : "boolean"
+              },
+              "statusCode" : {
+                "example" : 404,
+                "type" : "number"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 0
+  }, {
+    "id" : "00568fcf-c100-4164-a42a-9979a5f8afd8",
+    "name" : "Get one recurring payment - 200",
+    "request" : {
+      "urlPath" : "/v1/subscriptions/5q98",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"result\" : {\n    \"created_at\" : \"2022-10-09T22:15:50.808Z\",\n    \"expire_date\" : \"2022-10-12T00:02:00.025Z\",\n    \"id\" : \"1515573197\",\n    \"is_active\" : true,\n    \"status\" : \"PAID\",\n    \"subscriber\" : {\n      \"sub_partner_id\" : \"111394288\"\n    },\n    \"subscription_plan_id\" : \"111394288\",\n    \"updated_at\" : \"2022-10-09T22:15:50.808Z\"\n  }\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "00568fcf-c100-4164-a42a-9979a5f8afd8",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:21.24501Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "getOneRecurringPayment",
+          "schema" : {
+            "properties" : {
+              "result" : {
+                "properties" : {
+                  "created_at" : {
+                    "example" : "2022-10-09T22:15:50.808Z",
+                    "type" : "string"
+                  },
+                  "expire_date" : {
+                    "example" : "2022-10-12T00:02:00.025Z",
+                    "type" : "string"
+                  },
+                  "id" : {
+                    "example" : "1515573197",
+                    "type" : "string"
+                  },
+                  "is_active" : {
+                    "example" : true,
+                    "type" : "boolean"
+                  },
+                  "status" : {
+                    "example" : "PAID",
+                    "type" : "string"
+                  },
+                  "subscriber" : {
+                    "properties" : {
+                      "sub_partner_id" : {
+                        "example" : "111394288",
+                        "type" : "string"
+                      }
+                    },
+                    "type" : "object"
+                  },
+                  "subscription_plan_id" : {
+                    "example" : "111394288",
+                    "type" : "string"
+                  },
+                  "updated_at" : {
+                    "example" : "2022-10-09T22:15:50.808Z",
+                    "type" : "string"
+                  }
+                },
+                "type" : "object"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 1
+  }, {
+    "id" : "b8d6acc4-78dc-4467-a98e-c381780c0517",
+    "name" : "Delete recurring payment - 404",
+    "request" : {
+      "urlPath" : "/v1/subscriptions/8wcf",
+      "method" : "DELETE"
+    },
+    "response" : {
+      "status" : 404,
+      "body" : "{\n  \"code\" : \"NOT_FOUND\",\n  \"message\" : \"subscription not found\",\n  \"status\" : false,\n  \"statusCode\" : 404\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "b8d6acc4-78dc-4467-a98e-c381780c0517",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:21.244803Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "deleteRecurringPayment",
+          "schema" : {
+            "properties" : {
+              "code" : {
+                "example" : "NOT_FOUND",
+                "type" : "string"
+              },
+              "message" : {
+                "example" : "subscription not found",
+                "type" : "string"
+              },
+              "status" : {
+                "example" : false,
+                "type" : "boolean"
+              },
+              "statusCode" : {
+                "example" : 404,
+                "type" : "number"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 2
+  }, {
+    "id" : "b3ec0600-73b3-4bcf-abde-62f6f1d86f6e",
+    "name" : "Delete recurring payment - 200",
+    "request" : {
+      "urlPath" : "/v1/subscriptions/7707",
+      "method" : "DELETE"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"result\" : \"ok\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "b3ec0600-73b3-4bcf-abde-62f6f1d86f6e",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:21.244672Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "deleteRecurringPayment",
+          "schema" : {
+            "properties" : {
+              "result" : {
+                "example" : "ok",
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 3
+  }, {
+    "id" : "38784e2b-df55-4c29-b283-565d4b7004ab",
+    "name" : "Update plan - 200",
+    "request" : {
+      "urlPath" : "/v1/subscriptions/plans/8g83",
+      "method" : "PATCH"
+    },
+    "response" : {
+      "status" : 200
+    },
+    "uuid" : "38784e2b-df55-4c29-b283-565d4b7004ab",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:21.244557Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "updatePlan"
+        }
+      }
+    },
+    "insertionIndex" : 4
+  }, {
+    "id" : "557f32e7-ba0c-4b8f-a1ef-00cf7a58a4bf",
+    "name" : "Get one plan - 404",
+    "request" : {
+      "urlPath" : "/v1/subscriptions/plans/b6e3",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 404,
+      "body" : "{\n  \"code\" : \"NOT_FOUND\",\n  \"message\" : \"subscription plan not found\",\n  \"status\" : false,\n  \"statusCode\" : 404\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "557f32e7-ba0c-4b8f-a1ef-00cf7a58a4bf",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:21.244467Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "getOnePlan",
+          "schema" : {
+            "properties" : {
+              "code" : {
+                "example" : "NOT_FOUND",
+                "type" : "string"
+              },
+              "message" : {
+                "example" : "subscription plan not found",
+                "type" : "string"
+              },
+              "status" : {
+                "example" : false,
+                "type" : "boolean"
+              },
+              "statusCode" : {
+                "example" : 404,
+                "type" : "number"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 5
+  }, {
+    "id" : "21aed06b-4e29-4b0f-a049-0dd3f94f6e6b",
+    "name" : "Get one plan - 200",
+    "request" : {
+      "urlPath" : "/v1/subscriptions/plans/ag1k",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"result\" : {\n    \"amount\" : 2,\n    \"created_at\" : \"2022-10-04T16:10:06.214Z\",\n    \"currency\" : \"USD\",\n    \"id\" : \"76215585\",\n    \"interval_day\" : \"1\",\n    \"title\" : \"test plan\",\n    \"updated_at\" : \"2022-10-04T16:10:06.214Z\"\n  }\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "21aed06b-4e29-4b0f-a049-0dd3f94f6e6b",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:21.24432Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "getOnePlan",
+          "schema" : {
+            "properties" : {
+              "result" : {
+                "properties" : {
+                  "amount" : {
+                    "example" : 2,
+                    "type" : "number"
+                  },
+                  "cancel_url" : {
+                    "nullable" : true
+                  },
+                  "created_at" : {
+                    "example" : "2022-10-04T16:10:06.214Z",
+                    "type" : "string"
+                  },
+                  "currency" : {
+                    "example" : "USD",
+                    "type" : "string"
+                  },
+                  "id" : {
+                    "example" : "76215585",
+                    "type" : "string"
+                  },
+                  "interval_day" : {
+                    "example" : "1",
+                    "type" : "string"
+                  },
+                  "ipn_callback_url" : {
+                    "nullable" : true
+                  },
+                  "partially_paid_url" : {
+                    "nullable" : true
+                  },
+                  "success_url" : {
+                    "nullable" : true
+                  },
+                  "title" : {
+                    "example" : "test plan",
+                    "type" : "string"
+                  },
+                  "updated_at" : {
+                    "example" : "2022-10-04T16:10:06.214Z",
+                    "type" : "string"
+                  }
+                },
+                "type" : "object"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 6
+  }, {
+    "id" : "be828965-abce-4397-9868-5e7d82bfb664",
+    "name" : "Get many plans - 200",
+    "request" : {
+      "urlPath" : "/v1/subscriptions/plans",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"count\" : 2,\n  \"result\" : [ {\n    \"amount\" : 0.1,\n    \"created_at\" : \"2022-10-04T16:10:06.214Z\",\n    \"currency\" : \"USD\",\n    \"id\" : \"76215585\",\n    \"interval_day\" : \"3\",\n    \"title\" : \"second sub plan\",\n    \"updated_at\" : \"2022-10-04T16:10:06.214Z\"\n  }, {\n    \"amount\" : 0.5,\n    \"created_at\" : \"2022-10-04T16:28:55.423Z\",\n    \"currency\" : \"USD\",\n    \"id\" : \"1062307590\",\n    \"interval_day\" : \"1\",\n    \"title\" : \"second sub plan\",\n    \"updated_at\" : \"2022-10-04T16:28:55.423Z\"\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "be828965-abce-4397-9868-5e7d82bfb664",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:21.244091Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "getManyPlans",
+          "schema" : {
+            "properties" : {
+              "count" : {
+                "example" : 2,
+                "type" : "number"
+              },
+              "result" : {
+                "example" : [ {
+                  "amount" : 0.1,
+                  "created_at" : "2022-10-04T16:10:06.214Z",
+                  "currency" : "USD",
+                  "id" : "76215585",
+                  "interval_day" : "3",
+                  "title" : "second sub plan",
+                  "updated_at" : "2022-10-04T16:10:06.214Z"
+                }, {
+                  "amount" : 0.5,
+                  "created_at" : "2022-10-04T16:28:55.423Z",
+                  "currency" : "USD",
+                  "id" : "1062307590",
+                  "interval_day" : "1",
+                  "title" : "second sub plan",
+                  "updated_at" : "2022-10-04T16:28:55.423Z"
+                } ],
+                "items" : {
+                  "properties" : {
+                    "amount" : {
+                      "example" : 0.1,
+                      "type" : "number"
+                    },
+                    "cancel_url" : {
+                      "nullable" : true
+                    },
+                    "created_at" : {
+                      "example" : "2022-10-04T16:10:06.214Z",
+                      "type" : "string"
+                    },
+                    "currency" : {
+                      "example" : "USD",
+                      "type" : "string"
+                    },
+                    "id" : {
+                      "example" : "76215585",
+                      "type" : "string"
+                    },
+                    "interval_day" : {
+                      "example" : "3",
+                      "type" : "string"
+                    },
+                    "ipn_callback_url" : {
+                      "nullable" : true
+                    },
+                    "partially_paid_url" : {
+                      "nullable" : true
+                    },
+                    "success_url" : {
+                      "nullable" : true
+                    },
+                    "title" : {
+                      "example" : "second sub plan",
+                      "type" : "string"
+                    },
+                    "updated_at" : {
+                      "example" : "2022-10-04T16:10:06.214Z",
+                      "type" : "string"
+                    }
+                  },
+                  "type" : "object"
+                },
+                "type" : "array"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 7
+  }, {
+    "id" : "162f95d6-4bfb-4f2f-a733-d85467680841",
+    "name" : "Get many recurring payments - 200",
+    "request" : {
+      "urlPath" : "/v1/subscriptions",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"count\" : 2,\n  \"result\" : [ {\n    \"created_at\" : \"2022-10-09T22:15:50.808Z\",\n    \"expire_date\" : \"2022-10-11T00:02:00.025Z\",\n    \"id\" : \"1515573197\",\n    \"is_active\" : true,\n    \"status\" : \"PAID\",\n    \"subscriber\" : {\n      \"sub_partner_id\" : \"111394288\"\n    },\n    \"subscription_plan_id\" : \"111394288\",\n    \"updated_at\" : \"2022-10-09T22:15:50.808Z\"\n  }, {\n    \"created_at\" : \"2022-10-06T16:40:28.880Z\",\n    \"expire_date\" : \"2022-10-07T16:46:00.910Z\",\n    \"id\" : \"111394288\",\n    \"is_active\" : false,\n    \"status\" : \"WAITING_PAY\",\n    \"subscriber\" : {\n      \"email\" : \"mikhail.s@changenow.io\"\n    },\n    \"subscription_plan_id\" : \"111394288\",\n    \"updated_at\" : \"2022-10-06T16:40:28.880Z\"\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "162f95d6-4bfb-4f2f-a733-d85467680841",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:21.243872Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "getManyRecurringPayments",
+          "schema" : {
+            "properties" : {
+              "count" : {
+                "example" : 2,
+                "type" : "number"
+              },
+              "result" : {
+                "example" : [ {
+                  "created_at" : "2022-10-09T22:15:50.808Z",
+                  "expire_date" : "2022-10-11T00:02:00.025Z",
+                  "id" : "1515573197",
+                  "is_active" : true,
+                  "status" : "PAID",
+                  "subscriber" : {
+                    "sub_partner_id" : "111394288"
+                  },
+                  "subscription_plan_id" : "111394288",
+                  "updated_at" : "2022-10-09T22:15:50.808Z"
+                }, {
+                  "created_at" : "2022-10-06T16:40:28.880Z",
+                  "expire_date" : "2022-10-07T16:46:00.910Z",
+                  "id" : "111394288",
+                  "is_active" : false,
+                  "status" : "WAITING_PAY",
+                  "subscriber" : {
+                    "email" : "mikhail.s@changenow.io"
+                  },
+                  "subscription_plan_id" : "111394288",
+                  "updated_at" : "2022-10-06T16:40:28.880Z"
+                } ],
+                "items" : {
+                  "properties" : {
+                    "created_at" : {
+                      "example" : "2022-10-09T22:15:50.808Z",
+                      "type" : "string"
+                    },
+                    "expire_date" : {
+                      "example" : "2022-10-11T00:02:00.025Z",
+                      "type" : "string"
+                    },
+                    "id" : {
+                      "example" : "1515573197",
+                      "type" : "string"
+                    },
+                    "is_active" : {
+                      "example" : true,
+                      "type" : "boolean"
+                    },
+                    "status" : {
+                      "example" : "PAID",
+                      "type" : "string"
+                    },
+                    "subscriber" : {
+                      "properties" : {
+                        "email" : {
+                          "example" : "mikhail.s@changenow.io",
+                          "type" : "string"
+                        },
+                        "sub_partner_id" : {
+                          "example" : "111394288",
+                          "type" : "string"
+                        }
+                      },
+                      "type" : "object"
+                    },
+                    "subscription_plan_id" : {
+                      "example" : "111394288",
+                      "type" : "string"
+                    },
+                    "updated_at" : {
+                      "example" : "2022-10-09T22:15:50.808Z",
+                      "type" : "string"
+                    }
+                  },
+                  "type" : "object"
+                },
+                "type" : "array"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 8
+  }, {
+    "id" : "56eadc12-6305-4841-a729-73f8114c247a",
+    "name" : "Get all transfers - 200",
+    "request" : {
+      "urlPath" : "/v1/sub-partner/transfers",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"count\" : 7,\n  \"result\" : [ {\n    \"amount\" : \"1\",\n    \"created_at\" : \"2022-10-09T18:53:21.975Z\",\n    \"currency\" : \"usdtbsc\",\n    \"from_sub_id\" : \"5209391548\",\n    \"id\" : \"111394288\",\n    \"status\" : \"FINISHED\",\n    \"to_sub_id\" : \"111394288\",\n    \"updated_at\" : \"2022-10-09T18:55:00.696Z\"\n  }, {\n    \"amount\" : \"1\",\n    \"created_at\" : \"2022-10-09T19:08:32.440Z\",\n    \"currency\" : \"usdtbsc\",\n    \"from_sub_id\" : \"111394288\",\n    \"id\" : \"148427051\",\n    \"status\" : \"FINISHED\",\n    \"to_sub_id\" : \"5209391548\",\n    \"updated_at\" : \"2022-10-09T19:10:01.209Z\"\n  }, {\n    \"amount\" : \"2\",\n    \"created_at\" : \"2022-10-09T21:19:51.936Z\",\n    \"currency\" : \"usdtbsc\",\n    \"from_sub_id\" : \"5209391548\",\n    \"id\" : \"1631380403\",\n    \"status\" : \"FINISHED\",\n    \"to_sub_id\" : \"111394288\",\n    \"updated_at\" : \"2022-10-09T21:21:00.671Z\"\n  }, {\n    \"amount\" : \"2\",\n    \"created_at\" : \"2022-10-09T21:22:17.125Z\",\n    \"currency\" : \"usdtbsc\",\n    \"from_sub_id\" : \"5209391548\",\n    \"id\" : \"1167886259\",\n    \"status\" : \"FINISHED\",\n    \"to_sub_id\" : \"111394288\",\n    \"updated_at\" : \"2022-10-09T21:24:00.662Z\"\n  }, {\n    \"amount\" : \"1\",\n    \"created_at\" : \"2022-10-09T21:25:29.231Z\",\n    \"currency\" : \"usdtbsc\",\n    \"from_sub_id\" : \"111394288\",\n    \"id\" : \"48471014\",\n    \"status\" : \"FINISHED\",\n    \"to_sub_id\" : \"5209391548\",\n    \"updated_at\" : \"2022-10-09T21:27:00.676Z\"\n  }, {\n    \"amount\" : \"1\",\n    \"created_at\" : \"2022-10-09T21:54:57.713Z\",\n    \"currency\" : \"usdtbsc\",\n    \"from_sub_id\" : \"111394288\",\n    \"id\" : \"1304149238\",\n    \"status\" : \"FINISHED\",\n    \"to_sub_id\" : \"5209391548\",\n    \"updated_at\" : \"2022-10-09T21:56:01.056Z\"\n  }, {\n    \"amount\" : \"1\",\n    \"created_at\" : \"2022-10-09T22:09:02.181Z\",\n    \"currency\" : \"usdtbsc\",\n    \"from_sub_id\" : \"111394288\",\n    \"id\" : \"327209161\",\n    \"status\" : \"FINISHED\",\n    \"to_sub_id\" : \"1515573197\",\n    \"updated_at\" : \"2022-10-09T22:10:01.853Z\"\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "56eadc12-6305-4841-a729-73f8114c247a",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:21.243675Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "getAllTransfers",
+          "schema" : {
+            "properties" : {
+              "count" : {
+                "example" : 7,
+                "type" : "number"
+              },
+              "result" : {
+                "example" : [ {
+                  "amount" : "1",
+                  "created_at" : "2022-10-09T18:53:21.975Z",
+                  "currency" : "usdtbsc",
+                  "from_sub_id" : "5209391548",
+                  "id" : "111394288",
+                  "status" : "FINISHED",
+                  "to_sub_id" : "111394288",
+                  "updated_at" : "2022-10-09T18:55:00.696Z"
+                }, {
+                  "amount" : "1",
+                  "created_at" : "2022-10-09T19:08:32.440Z",
+                  "currency" : "usdtbsc",
+                  "from_sub_id" : "111394288",
+                  "id" : "148427051",
+                  "status" : "FINISHED",
+                  "to_sub_id" : "5209391548",
+                  "updated_at" : "2022-10-09T19:10:01.209Z"
+                }, {
+                  "amount" : "2",
+                  "created_at" : "2022-10-09T21:19:51.936Z",
+                  "currency" : "usdtbsc",
+                  "from_sub_id" : "5209391548",
+                  "id" : "1631380403",
+                  "status" : "FINISHED",
+                  "to_sub_id" : "111394288",
+                  "updated_at" : "2022-10-09T21:21:00.671Z"
+                }, {
+                  "amount" : "2",
+                  "created_at" : "2022-10-09T21:22:17.125Z",
+                  "currency" : "usdtbsc",
+                  "from_sub_id" : "5209391548",
+                  "id" : "1167886259",
+                  "status" : "FINISHED",
+                  "to_sub_id" : "111394288",
+                  "updated_at" : "2022-10-09T21:24:00.662Z"
+                }, {
+                  "amount" : "1",
+                  "created_at" : "2022-10-09T21:25:29.231Z",
+                  "currency" : "usdtbsc",
+                  "from_sub_id" : "111394288",
+                  "id" : "48471014",
+                  "status" : "FINISHED",
+                  "to_sub_id" : "5209391548",
+                  "updated_at" : "2022-10-09T21:27:00.676Z"
+                }, {
+                  "amount" : "1",
+                  "created_at" : "2022-10-09T21:54:57.713Z",
+                  "currency" : "usdtbsc",
+                  "from_sub_id" : "111394288",
+                  "id" : "1304149238",
+                  "status" : "FINISHED",
+                  "to_sub_id" : "5209391548",
+                  "updated_at" : "2022-10-09T21:56:01.056Z"
+                }, {
+                  "amount" : "1",
+                  "created_at" : "2022-10-09T22:09:02.181Z",
+                  "currency" : "usdtbsc",
+                  "from_sub_id" : "111394288",
+                  "id" : "327209161",
+                  "status" : "FINISHED",
+                  "to_sub_id" : "1515573197",
+                  "updated_at" : "2022-10-09T22:10:01.853Z"
+                } ],
+                "items" : {
+                  "properties" : {
+                    "amount" : {
+                      "example" : "1",
+                      "type" : "string"
+                    },
+                    "created_at" : {
+                      "example" : "2022-10-09T18:53:21.975Z",
+                      "type" : "string"
+                    },
+                    "currency" : {
+                      "example" : "usdtbsc",
+                      "type" : "string"
+                    },
+                    "from_sub_id" : {
+                      "example" : "5209391548",
+                      "type" : "string"
+                    },
+                    "id" : {
+                      "example" : "111394288",
+                      "type" : "string"
+                    },
+                    "status" : {
+                      "example" : "FINISHED",
+                      "type" : "string"
+                    },
+                    "to_sub_id" : {
+                      "example" : "111394288",
+                      "type" : "string"
+                    },
+                    "updated_at" : {
+                      "example" : "2022-10-09T18:55:00.696Z",
+                      "type" : "string"
+                    }
+                  },
+                  "type" : "object"
+                },
+                "type" : "array"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 9
+  }, {
+    "id" : "f9f91ed2-1caa-4eb0-9a96-6dc8c633f24c",
+    "name" : "Get transfer - 200",
+    "request" : {
+      "urlPath" : "/v1/sub-partner/transfer/sn8d",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"result\" : {\n    \"amount\" : \"1\",\n    \"created_at\" : \"2022-10-09T22:09:02.181Z\",\n    \"currency\" : \"usdtbsc\",\n    \"from_sub_id\" : \"111394288\",\n    \"id\" : \"327209161\",\n    \"status\" : \"FINISHED\",\n    \"to_sub_id\" : \"1515573197\",\n    \"updated_at\" : \"2022-10-09T22:10:01.853Z\"\n  }\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "f9f91ed2-1caa-4eb0-9a96-6dc8c633f24c",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:21.243464Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "getTransfer",
+          "schema" : {
+            "properties" : {
+              "result" : {
+                "properties" : {
+                  "amount" : {
+                    "example" : "1",
+                    "type" : "string"
+                  },
+                  "created_at" : {
+                    "example" : "2022-10-09T22:09:02.181Z",
+                    "type" : "string"
+                  },
+                  "currency" : {
+                    "example" : "usdtbsc",
+                    "type" : "string"
+                  },
+                  "from_sub_id" : {
+                    "example" : "111394288",
+                    "type" : "string"
+                  },
+                  "id" : {
+                    "example" : "327209161",
+                    "type" : "string"
+                  },
+                  "status" : {
+                    "example" : "FINISHED",
+                    "type" : "string"
+                  },
+                  "to_sub_id" : {
+                    "example" : "1515573197",
+                    "type" : "string"
+                  },
+                  "updated_at" : {
+                    "example" : "2022-10-09T22:10:01.853Z",
+                    "type" : "string"
+                  }
+                },
+                "type" : "object"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 10
+  }, {
+    "id" : "8b2ac2d7-f93d-4583-ba7c-7a95cf27bca4",
+    "name" : "Get sub-partner balance - 200",
+    "request" : {
+      "urlPath" : "/v1/sub-partner/balance/2977",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"result\" : {\n    \"balances\" : {\n      \"usddtrc20\" : {\n        \"amount\" : 0.7,\n        \"pendingAmount\" : 0\n      },\n      \"usdtbsc\" : {\n        \"amount\" : 1.0001341847350678,\n        \"pendingAmount\" : 0\n      }\n    },\n    \"subPartnerId\" : \"111394288\"\n  }\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "8b2ac2d7-f93d-4583-ba7c-7a95cf27bca4",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:21.243264Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "getSubPartnerBalance",
+          "schema" : {
+            "properties" : {
+              "result" : {
+                "properties" : {
+                  "balances" : {
+                    "properties" : {
+                      "usddtrc20" : {
+                        "properties" : {
+                          "amount" : {
+                            "example" : 0.7,
+                            "type" : "number"
+                          },
+                          "pendingAmount" : {
+                            "example" : 0,
+                            "type" : "number"
+                          }
+                        },
+                        "type" : "object"
+                      },
+                      "usdtbsc" : {
+                        "properties" : {
+                          "amount" : {
+                            "example" : 1.0001341847350678,
+                            "type" : "number"
+                          },
+                          "pendingAmount" : {
+                            "example" : 0,
+                            "type" : "number"
+                          }
+                        },
+                        "type" : "object"
+                      }
+                    },
+                    "type" : "object"
+                  },
+                  "subPartnerId" : {
+                    "example" : "111394288",
+                    "type" : "string"
+                  }
+                },
+                "type" : "object"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 11
+  }, {
+    "id" : "a5db35cc-6aca-4ff5-824b-bb39a3cb3e98",
+    "name" : "Get sub-partners - 200",
+    "request" : {
+      "urlPath" : "/v1/sub-partner",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200
+    },
+    "uuid" : "a5db35cc-6aca-4ff5-824b-bb39a3cb3e98",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:21.243075Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "getSubPartners"
+        }
+      }
+    },
+    "insertionIndex" : 12
+  }, {
+    "id" : "b5427312-bccb-48d4-88a6-a989adcb5c81",
+    "name" : "Verify payout - 200",
+    "request" : {
+      "urlPath" : "/v1/payout/q73x/verify",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "OK",
+      "headers" : {
+        "Content-Type" : "text/plain"
+      }
+    },
+    "uuid" : "b5427312-bccb-48d4-88a6-a989adcb5c81",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:21.243044Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "verifyPayout"
+        }
+      }
+    },
+    "insertionIndex" : 13
+  }, {
+    "id" : "aa947c18-9d80-4f04-91b4-a0d4cc4c5c5e",
+    "name" : "Get payment status - 200",
+    "request" : {
+      "urlPath" : "/v1/payment/8cm6",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"actually_paid\" : 180,\n  \"created_at\" : \"2020-12-16T14:30:43.306Z\",\n  \"order_description\" : \"Apple Macbook Pro 2019 x 1\",\n  \"order_id\" : \"RGDBP-21314\",\n  \"outcome_amount\" : 178.9005,\n  \"outcome_currency\" : \"trx\",\n  \"pay_address\" : \"TNDFkiSmBQorNFacb3735q8MnT29sn8BLn\",\n  \"pay_amount\" : 165.652609,\n  \"pay_currency\" : \"trx\",\n  \"payment_id\" : 5524759814,\n  \"payment_status\" : \"finished\",\n  \"price_amount\" : 5,\n  \"price_currency\" : \"usd\",\n  \"purchase_id\" : \"4944856743\",\n  \"updated_at\" : \"2020-12-16T14:40:46.523Z\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "aa947c18-9d80-4f04-91b4-a0d4cc4c5c5e",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:21.242936Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "getPaymentStatus",
+          "schema" : {
+            "properties" : {
+              "actually_paid" : {
+                "example" : 180,
+                "type" : "number"
+              },
+              "created_at" : {
+                "example" : "2020-12-16T14:30:43.306Z",
+                "type" : "string"
+              },
+              "order_description" : {
+                "example" : "Apple Macbook Pro 2019 x 1",
+                "type" : "string"
+              },
+              "order_id" : {
+                "example" : "RGDBP-21314",
+                "type" : "string"
+              },
+              "outcome_amount" : {
+                "example" : 178.9005,
+                "type" : "number"
+              },
+              "outcome_currency" : {
+                "example" : "trx",
+                "type" : "string"
+              },
+              "pay_address" : {
+                "example" : "TNDFkiSmBQorNFacb3735q8MnT29sn8BLn",
+                "type" : "string"
+              },
+              "pay_amount" : {
+                "example" : 165.652609,
+                "type" : "number"
+              },
+              "pay_currency" : {
+                "example" : "trx",
+                "type" : "string"
+              },
+              "payment_id" : {
+                "example" : 5524759814,
+                "type" : "number"
+              },
+              "payment_status" : {
+                "example" : "finished",
+                "type" : "string"
+              },
+              "price_amount" : {
+                "example" : 5,
+                "type" : "number"
+              },
+              "price_currency" : {
+                "example" : "usd",
+                "type" : "string"
+              },
+              "purchase_id" : {
+                "example" : "4944856743",
+                "type" : "string"
+              },
+              "updated_at" : {
+                "example" : "2020-12-16T14:40:46.523Z",
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 14
+  }, {
+    "id" : "15fbf573-de4e-4594-8513-adc9b8ebde98",
+    "name" : "Get/Update payment estimate - 200",
+    "request" : {
+      "urlPath" : "/v1/payment/37u3/update-merchant-estimate",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"expiration_estimate_date\" : \"2022-08-12T13:14:28.536Z\",\n  \"id\" : \"4455667788\",\n  \"pay_amount\" : 0.04671013,\n  \"token_id\" : \"5566778899\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "15fbf573-de4e-4594-8513-adc9b8ebde98",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:21.24266Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "getUpdatePaymentEstimate",
+          "schema" : {
+            "properties" : {
+              "expiration_estimate_date" : {
+                "example" : "2022-08-12T13:14:28.536Z",
+                "type" : "string"
+              },
+              "id" : {
+                "example" : "4455667788",
+                "type" : "string"
+              },
+              "pay_amount" : {
+                "example" : 0.04671013,
+                "type" : "number"
+              },
+              "token_id" : {
+                "example" : "5566778899",
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 15
+  }, {
+    "id" : "97c80621-d17f-428e-bdb0-159d53d85fb9",
+    "name" : "Get list of payments - 200",
+    "request" : {
+      "urlPath" : "/v1/payment/",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"data\" : [ {\n    \"actually_paid\" : 180,\n    \"order_description\" : \"Apple Macbook Pro 2019 x 1\",\n    \"order_id\" : \"RGDBP-21314\",\n    \"outcome_amount\" : 178.9005,\n    \"outcome_currency\" : \"trx\",\n    \"pay_address\" : \"TNDFkiSmBQorNFacb3735q8MnT29sn8BLn\",\n    \"pay_amount\" : 165.652609,\n    \"pay_currency\" : \"trx\",\n    \"payment_id\" : 5524759814,\n    \"payment_status\" : \"finished\",\n    \"price_amount\" : 5,\n    \"price_currency\" : \"usd\",\n    \"purchase_id\" : \"4944856743\"\n  }, {\n    \"actually_paid\" : 0,\n    \"order_description\" : \"Apple Macbook Pro 2019 x 1\",\n    \"order_id\" : \"RGDBP-21314\",\n    \"outcome_amount\" : 164.6248468,\n    \"outcome_currency\" : \"trx\",\n    \"pay_address\" : \"TVKHbLc47BnMbdE7QN4X5Q1FtyZLGGiTo8\",\n    \"pay_amount\" : 165.652609,\n    \"pay_currency\" : \"trx\",\n    \"payment_id\" : 5867063509,\n    \"payment_status\" : \"expired\",\n    \"price_amount\" : 5,\n    \"price_currency\" : \"usd\",\n    \"purchase_id\" : \"5057851130\"\n  }, {\n    \"actually_paid\" : 0,\n    \"order_description\" : \"Apple Macbook Pro 2019 x 1\",\n    \"order_id\" : \"RGDBP-21314\",\n    \"outcome_amount\" : 0.1687052,\n    \"outcome_currency\" : \"btc\",\n    \"pay_address\" : \"3EZ2uTdVDAMFXTfc6uLDDKR6o8qKBZXVkj\",\n    \"pay_amount\" : 0.17070286,\n    \"pay_currency\" : \"btc\",\n    \"payment_id\" : 5745459419,\n    \"payment_status\" : \"waiting\",\n    \"price_amount\" : 3999.5,\n    \"price_currency\" : \"usd\",\n    \"purchase_id\" : \"5837122679\"\n  }, {\n    \"actually_paid\" : 0,\n    \"order_description\" : \"Apple Macbook Pro 2019 x 1\",\n    \"order_id\" : \"RGDBP-21314\",\n    \"outcome_amount\" : 0.8019402,\n    \"outcome_currency\" : \"btc\",\n    \"pay_address\" : \"394UZCUdx3NN8VDsCZW8c6AzP7cXEXA8Xq\",\n    \"pay_amount\" : 0.8102725,\n    \"pay_currency\" : \"btc\",\n    \"payment_id\" : 4650948408,\n    \"payment_status\" : \"waiting\",\n    \"price_amount\" : 3999.5,\n    \"price_currency\" : \"usd\",\n    \"purchase_id\" : \"5094859409\"\n  }, {\n    \"actually_paid\" : 0,\n    \"order_description\" : \"Apple Macbook Pro 2019 x 1\",\n    \"order_id\" : \"RGDBP-21314\",\n    \"outcome_amount\" : 988.9016296,\n    \"outcome_currency\" : \"bcd\",\n    \"pay_address\" : \"3EWJaZBaRWbPjSBTpgFcvxpnXLJzFDCHqW\",\n    \"pay_amount\" : 993.87178656,\n    \"pay_currency\" : \"bcd\",\n    \"payment_id\" : 5605634688,\n    \"payment_status\" : \"expired\",\n    \"price_amount\" : 500,\n    \"price_currency\" : \"usd\",\n    \"purchase_id\" : \"5817305007\"\n  }, {\n    \"actually_paid\" : 0,\n    \"order_description\" : \"Apple Macbook Pro 2019 x 1\",\n    \"order_id\" : \"RGDBP-21314\",\n    \"outcome_amount\" : 1.8451261,\n    \"outcome_currency\" : \"bch\",\n    \"pay_address\" : \"qzkshdh94vhdcyuejjf8ltcy2cl246hw0c68t36z69\",\n    \"pay_amount\" : 1.85459941,\n    \"pay_currency\" : \"bch\",\n    \"payment_id\" : 5241856814,\n    \"payment_status\" : \"expired\",\n    \"price_amount\" : 500,\n    \"price_currency\" : \"usd\",\n    \"purchase_id\" : \"5941190675\"\n  }, {\n    \"actually_paid\" : 0,\n    \"order_description\" : \"Apple Macbook Pro 2019 x 1\",\n    \"order_id\" : \"RGDBP-21314\",\n    \"outcome_amount\" : 56.151958,\n    \"outcome_currency\" : \"btg\",\n    \"pay_address\" : \"AYyecr8WKVpj2PNonjyUpn9sCHFyFMLdN1\",\n    \"pay_amount\" : 56.4344495,\n    \"pay_currency\" : \"btg\",\n    \"payment_id\" : 5751462089,\n    \"payment_status\" : \"expired\",\n    \"price_amount\" : 500,\n    \"price_currency\" : \"usd\",\n    \"purchase_id\" : \"6229667127\"\n  }, {\n    \"actually_paid\" : 0,\n    \"order_description\" : \"Apple Macbook Pro 2019 x 1\",\n    \"order_id\" : \"RGDBP-21314\",\n    \"outcome_amount\" : 489.9433465,\n    \"outcome_currency\" : \"dai\",\n    \"pay_address\" : \"0x6C3E920D0fdAF45c75b6c00f25Aa6a58429d4efB\",\n    \"pay_amount\" : 496.84604252,\n    \"pay_currency\" : \"dai\",\n    \"payment_id\" : 6100223670,\n    \"payment_status\" : \"expired\",\n    \"price_amount\" : 500,\n    \"price_currency\" : \"usd\",\n    \"purchase_id\" : \"5376931412\"\n  }, {\n    \"actually_paid\" : 0,\n    \"order_description\" : \"Apple Macbook Pro 2019 x 1\",\n    \"order_id\" : \"RGDBP-21314\",\n    \"outcome_amount\" : 0.025819,\n    \"outcome_currency\" : \"btc\",\n    \"pay_address\" : \"3C85TUuBKEkoZZsTawiJhYZtVVLgE4GWqj\",\n    \"pay_amount\" : 0.02596608,\n    \"pay_currency\" : \"btc\",\n    \"payment_id\" : 4460859238,\n    \"payment_status\" : \"expired\",\n    \"price_amount\" : 500,\n    \"price_currency\" : \"usd\",\n    \"purchase_id\" : \"5652098489\"\n  }, {\n    \"actually_paid\" : 0,\n    \"order_description\" : \"Apple Macbook Pro 2019 x 1\",\n    \"order_id\" : \"RGDBP-21314\",\n    \"outcome_amount\" : 153789.0997188,\n    \"outcome_currency\" : \"doge\",\n    \"pay_address\" : \"DLmK6vLURgHoWVZrQztthSqV71CBePG5k5\",\n    \"pay_amount\" : 154569.92936569,\n    \"pay_currency\" : \"doge\",\n    \"payment_id\" : 4948632928,\n    \"payment_status\" : \"expired\",\n    \"price_amount\" : 500,\n    \"price_currency\" : \"usd\",\n    \"purchase_id\" : \"4811984625\"\n  } ],\n  \"limit\" : 10,\n  \"page\" : 0,\n  \"pagesCount\" : 6,\n  \"total\" : 59\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "97c80621-d17f-428e-bdb0-159d53d85fb9",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:21.242413Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "getListOfPayments",
+          "schema" : {
+            "properties" : {
+              "data" : {
+                "example" : [ {
+                  "actually_paid" : 180,
+                  "order_description" : "Apple Macbook Pro 2019 x 1",
+                  "order_id" : "RGDBP-21314",
+                  "outcome_amount" : 178.9005,
+                  "outcome_currency" : "trx",
+                  "pay_address" : "TNDFkiSmBQorNFacb3735q8MnT29sn8BLn",
+                  "pay_amount" : 165.652609,
+                  "pay_currency" : "trx",
+                  "payment_id" : 5524759814,
+                  "payment_status" : "finished",
+                  "price_amount" : 5,
+                  "price_currency" : "usd",
+                  "purchase_id" : "4944856743"
+                }, {
+                  "actually_paid" : 0,
+                  "order_description" : "Apple Macbook Pro 2019 x 1",
+                  "order_id" : "RGDBP-21314",
+                  "outcome_amount" : 164.6248468,
+                  "outcome_currency" : "trx",
+                  "pay_address" : "TVKHbLc47BnMbdE7QN4X5Q1FtyZLGGiTo8",
+                  "pay_amount" : 165.652609,
+                  "pay_currency" : "trx",
+                  "payment_id" : 5867063509,
+                  "payment_status" : "expired",
+                  "price_amount" : 5,
+                  "price_currency" : "usd",
+                  "purchase_id" : "5057851130"
+                }, {
+                  "actually_paid" : 0,
+                  "order_description" : "Apple Macbook Pro 2019 x 1",
+                  "order_id" : "RGDBP-21314",
+                  "outcome_amount" : 0.1687052,
+                  "outcome_currency" : "btc",
+                  "pay_address" : "3EZ2uTdVDAMFXTfc6uLDDKR6o8qKBZXVkj",
+                  "pay_amount" : 0.17070286,
+                  "pay_currency" : "btc",
+                  "payment_id" : 5745459419,
+                  "payment_status" : "waiting",
+                  "price_amount" : 3999.5,
+                  "price_currency" : "usd",
+                  "purchase_id" : "5837122679"
+                }, {
+                  "actually_paid" : 0,
+                  "order_description" : "Apple Macbook Pro 2019 x 1",
+                  "order_id" : "RGDBP-21314",
+                  "outcome_amount" : 0.8019402,
+                  "outcome_currency" : "btc",
+                  "pay_address" : "394UZCUdx3NN8VDsCZW8c6AzP7cXEXA8Xq",
+                  "pay_amount" : 0.8102725,
+                  "pay_currency" : "btc",
+                  "payment_id" : 4650948408,
+                  "payment_status" : "waiting",
+                  "price_amount" : 3999.5,
+                  "price_currency" : "usd",
+                  "purchase_id" : "5094859409"
+                }, {
+                  "actually_paid" : 0,
+                  "order_description" : "Apple Macbook Pro 2019 x 1",
+                  "order_id" : "RGDBP-21314",
+                  "outcome_amount" : 988.9016296,
+                  "outcome_currency" : "bcd",
+                  "pay_address" : "3EWJaZBaRWbPjSBTpgFcvxpnXLJzFDCHqW",
+                  "pay_amount" : 993.87178656,
+                  "pay_currency" : "bcd",
+                  "payment_id" : 5605634688,
+                  "payment_status" : "expired",
+                  "price_amount" : 500,
+                  "price_currency" : "usd",
+                  "purchase_id" : "5817305007"
+                }, {
+                  "actually_paid" : 0,
+                  "order_description" : "Apple Macbook Pro 2019 x 1",
+                  "order_id" : "RGDBP-21314",
+                  "outcome_amount" : 1.8451261,
+                  "outcome_currency" : "bch",
+                  "pay_address" : "qzkshdh94vhdcyuejjf8ltcy2cl246hw0c68t36z69",
+                  "pay_amount" : 1.85459941,
+                  "pay_currency" : "bch",
+                  "payment_id" : 5241856814,
+                  "payment_status" : "expired",
+                  "price_amount" : 500,
+                  "price_currency" : "usd",
+                  "purchase_id" : "5941190675"
+                }, {
+                  "actually_paid" : 0,
+                  "order_description" : "Apple Macbook Pro 2019 x 1",
+                  "order_id" : "RGDBP-21314",
+                  "outcome_amount" : 56.151958,
+                  "outcome_currency" : "btg",
+                  "pay_address" : "AYyecr8WKVpj2PNonjyUpn9sCHFyFMLdN1",
+                  "pay_amount" : 56.4344495,
+                  "pay_currency" : "btg",
+                  "payment_id" : 5751462089,
+                  "payment_status" : "expired",
+                  "price_amount" : 500,
+                  "price_currency" : "usd",
+                  "purchase_id" : "6229667127"
+                }, {
+                  "actually_paid" : 0,
+                  "order_description" : "Apple Macbook Pro 2019 x 1",
+                  "order_id" : "RGDBP-21314",
+                  "outcome_amount" : 489.9433465,
+                  "outcome_currency" : "dai",
+                  "pay_address" : "0x6C3E920D0fdAF45c75b6c00f25Aa6a58429d4efB",
+                  "pay_amount" : 496.84604252,
+                  "pay_currency" : "dai",
+                  "payment_id" : 6100223670,
+                  "payment_status" : "expired",
+                  "price_amount" : 500,
+                  "price_currency" : "usd",
+                  "purchase_id" : "5376931412"
+                }, {
+                  "actually_paid" : 0,
+                  "order_description" : "Apple Macbook Pro 2019 x 1",
+                  "order_id" : "RGDBP-21314",
+                  "outcome_amount" : 0.025819,
+                  "outcome_currency" : "btc",
+                  "pay_address" : "3C85TUuBKEkoZZsTawiJhYZtVVLgE4GWqj",
+                  "pay_amount" : 0.02596608,
+                  "pay_currency" : "btc",
+                  "payment_id" : 4460859238,
+                  "payment_status" : "expired",
+                  "price_amount" : 500,
+                  "price_currency" : "usd",
+                  "purchase_id" : "5652098489"
+                }, {
+                  "actually_paid" : 0,
+                  "order_description" : "Apple Macbook Pro 2019 x 1",
+                  "order_id" : "RGDBP-21314",
+                  "outcome_amount" : 153789.0997188,
+                  "outcome_currency" : "doge",
+                  "pay_address" : "DLmK6vLURgHoWVZrQztthSqV71CBePG5k5",
+                  "pay_amount" : 154569.92936569,
+                  "pay_currency" : "doge",
+                  "payment_id" : 4948632928,
+                  "payment_status" : "expired",
+                  "price_amount" : 500,
+                  "price_currency" : "usd",
+                  "purchase_id" : "4811984625"
+                } ],
+                "items" : {
+                  "properties" : {
+                    "actually_paid" : {
+                      "example" : 180,
+                      "type" : "number"
+                    },
+                    "order_description" : {
+                      "example" : "Apple Macbook Pro 2019 x 1",
+                      "type" : "string"
+                    },
+                    "order_id" : {
+                      "example" : "RGDBP-21314",
+                      "type" : "string"
+                    },
+                    "outcome_amount" : {
+                      "example" : 178.9005,
+                      "type" : "number"
+                    },
+                    "outcome_currency" : {
+                      "example" : "trx",
+                      "type" : "string"
+                    },
+                    "pay_address" : {
+                      "example" : "TNDFkiSmBQorNFacb3735q8MnT29sn8BLn",
+                      "type" : "string"
+                    },
+                    "pay_amount" : {
+                      "example" : 165.652609,
+                      "type" : "number"
+                    },
+                    "pay_currency" : {
+                      "example" : "trx",
+                      "type" : "string"
+                    },
+                    "payment_id" : {
+                      "example" : 5524759814,
+                      "type" : "number"
+                    },
+                    "payment_status" : {
+                      "example" : "finished",
+                      "type" : "string"
+                    },
+                    "price_amount" : {
+                      "example" : 5,
+                      "type" : "number"
+                    },
+                    "price_currency" : {
+                      "example" : "usd",
+                      "type" : "string"
+                    },
+                    "purchase_id" : {
+                      "example" : "4944856743",
+                      "type" : "string"
+                    }
+                  },
+                  "type" : "object"
+                },
+                "type" : "array"
+              },
+              "limit" : {
+                "example" : 10,
+                "type" : "number"
+              },
+              "page" : {
+                "example" : 0,
+                "type" : "number"
+              },
+              "pagesCount" : {
+                "example" : 6,
+                "type" : "number"
+              },
+              "total" : {
+                "example" : 59,
+                "type" : "number"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 16
+  }, {
+    "id" : "0acea5d9-0ec2-4677-8c96-a784fb698300",
+    "name" : "Get the minimum payment amount - 200",
+    "request" : {
+      "urlPath" : "/v1/min-amount",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"currency_from\" : \"eth\",\n  \"currency_to\" : \"trx\",\n  \"fiat_equivalent\" : 35.40626584,\n  \"min_amount\" : 0.0078999\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "0acea5d9-0ec2-4677-8c96-a784fb698300",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:21.242052Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "getTheMinimumPaymentAmount",
+          "schema" : {
+            "properties" : {
+              "currency_from" : {
+                "example" : "eth",
+                "type" : "string"
+              },
+              "currency_to" : {
+                "example" : "trx",
+                "type" : "string"
+              },
+              "fiat_equivalent" : {
+                "example" : 35.40626584,
+                "type" : "number"
+              },
+              "min_amount" : {
+                "example" : 0.0078999,
+                "type" : "number"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 17
+  }, {
+    "id" : "25cd0076-02bd-4f0e-acb6-9aa75ec88f7b",
+    "name" : "Get estimated price - 200",
+    "request" : {
+      "urlPath" : "/v1/estimate",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"amount_from\" : 3999.5,\n  \"currency_from\" : \"usd\",\n  \"currency_to\" : \"btc\",\n  \"estimated_amount\" : 0.17061637\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "25cd0076-02bd-4f0e-acb6-9aa75ec88f7b",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:21.241942Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "getEstimatedPrice",
+          "schema" : {
+            "properties" : {
+              "amount_from" : {
+                "example" : 3999.5,
+                "type" : "number"
+              },
+              "currency_from" : {
+                "example" : "usd",
+                "type" : "string"
+              },
+              "currency_to" : {
+                "example" : "btc",
+                "type" : "string"
+              },
+              "estimated_amount" : {
+                "example" : 0.17061637,
+                "type" : "number"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 18
+  } ]
+}

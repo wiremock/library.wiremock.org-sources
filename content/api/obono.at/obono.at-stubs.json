@@ -1,0 +1,848 @@
+{
+  "mappings" : [ {
+    "id" : "12d69c86-8c4b-4155-9987-21b3da8a54c7",
+    "name" : "Returns a list of `Monatsbelege`.",
+    "request" : {
+      "urlPath" : "/registrierkassen/c13ecca9-cc51-3dda-8d15-ddaa0e36cca8/monatsbelege",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "[ {\n  \"Jahr\" : 5598035786769783429,\n  \"Beleg-UUID\" : \"cc431309-a596-4cfd-adb6-21a55b7fdc44\",\n  \"FON-Geprueft-Datum-Uhrzeit\" : \"w2kdnta3uqv7guvfv885jk90hgqoly77dw690qjlntmn7e0bid7mgnrvmj5qicm9dpwlakdnhhjo4zj0hji3t8yudwtjs9lzhqxy7hrzehnfscn7aq9\",\n  \"Monat\" : 9111600193845811209,\n  \"FON-Geprueft-Erfolgreich\" : true\n}, {\n  \"Jahr\" : 1696529464587169587,\n  \"Beleg-UUID\" : \"75cb06f2-2da3-4e60-9d05-ddbedc6a2236\",\n  \"FON-Geprueft-Datum-Uhrzeit\" : \"j4wte6vtx5bof8ag9ozw2jfd19y6htd2bp7qkzxktyr60d9ozwetxutmmk619635lbwrjfgdoyzb3962b17wi\",\n  \"Monat\" : 3061204603191430212,\n  \"FON-Geprueft-Erfolgreich\" : true\n}, {\n  \"Jahr\" : 2651198969660131049,\n  \"Beleg-UUID\" : \"a9503966-cd8b-44a1-ad53-72d5f8b5c380\",\n  \"FON-Geprueft-Datum-Uhrzeit\" : \"6t5temqh3rthl11sx9jlqi30fmqf1ik3cpxer19pw6d4hhx1qdl6pkou0wkexasqjlivlhly52kjn3qjzf3gqa061nyjtnb9zem0eqyr4r3j\",\n  \"Monat\" : 1617621443025758974,\n  \"FON-Geprueft-Erfolgreich\" : false\n}, {\n  \"Jahr\" : 3119524952305916930,\n  \"Beleg-UUID\" : \"258db0b7-607f-45df-a192-081526604ee1\",\n  \"FON-Geprueft-Datum-Uhrzeit\" : \"6a58z4412lqfycvcbp963syhljg900e4xs\",\n  \"Monat\" : 1197988681291806473,\n  \"FON-Geprueft-Erfolgreich\" : false\n} ]",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "12d69c86-8c4b-4155-9987-21b3da8a54c7",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:26.288031Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "getMonatsbelege",
+          "schema" : {
+            "items" : {
+              "$ref" : "#/components/schemas/Monatsbeleg"
+            },
+            "type" : "array"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 0
+  }, {
+    "id" : "c554f614-4d23-4a56-ab2a-7b7e4818e93a",
+    "name" : "Generates a DEP file. - 200",
+    "request" : {
+      "urlPath" : "/registrierkassen/d629b1c8-4039-3ee2-9270-7570272a584b/dep",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200
+    },
+    "uuid" : "c554f614-4d23-4a56-ab2a-7b7e4818e93a",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:26.287834Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "getDEP"
+        }
+      }
+    },
+    "insertionIndex" : 1
+  }, {
+    "id" : "e7863800-503f-4a66-b667-8752248b6393",
+    "name" : "Signs a receipt and stores it in the \"Datenerfassungsprotokoll\". - 500",
+    "request" : {
+      "urlPath" : "/registrierkassen/c1bd1655-1f50-3d71-b42e-7564d50b5609/belege/e4ec90ce-acef-3a7a-94b3-446cdde86a37",
+      "method" : "PUT"
+    },
+    "response" : {
+      "status" : 500
+    },
+    "uuid" : "e7863800-503f-4a66-b667-8752248b6393",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:26.287791Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "addBeleg"
+        }
+      }
+    },
+    "insertionIndex" : 2
+  }, {
+    "id" : "132f58a5-aa5f-4b43-8b83-f16b6f76579c",
+    "name" : "Signs a receipt and stores it in the \"Datenerfassungsprotokoll\". - 429",
+    "request" : {
+      "urlPath" : "/registrierkassen/9072a0a2-fab9-3b8f-b401-bbb511605966/belege/d7ffdaa4-a8c8-34d5-b42a-94594a138326",
+      "method" : "PUT"
+    },
+    "response" : {
+      "status" : 429
+    },
+    "uuid" : "132f58a5-aa5f-4b43-8b83-f16b6f76579c",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:26.287739Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "addBeleg"
+        }
+      }
+    },
+    "insertionIndex" : 3
+  }, {
+    "id" : "2fd5f33c-0320-433b-8108-0bb80c53c9ff",
+    "name" : "Signs a receipt and stores it in the \"Datenerfassungsprotokoll\". - 415",
+    "request" : {
+      "urlPath" : "/registrierkassen/bba6a160-6786-34e5-97cf-74ba53500126/belege/9769f7d0-8e4f-3899-a627-5d6f6841dfe7",
+      "method" : "PUT"
+    },
+    "response" : {
+      "status" : 415
+    },
+    "uuid" : "2fd5f33c-0320-433b-8108-0bb80c53c9ff",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:26.287675Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "addBeleg"
+        }
+      }
+    },
+    "insertionIndex" : 4
+  }, {
+    "id" : "0b66ab89-7679-47a0-a508-8c7f8aac5085",
+    "name" : "Signs a receipt and stores it in the \"Datenerfassungsprotokoll\". - 409",
+    "request" : {
+      "urlPath" : "/registrierkassen/00976fdc-bb64-3c7c-a3e3-ff0f7c4e0980/belege/756dfad0-54e1-3b6a-8620-10b86573c6f7",
+      "method" : "PUT"
+    },
+    "response" : {
+      "status" : 409
+    },
+    "uuid" : "0b66ab89-7679-47a0-a508-8c7f8aac5085",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:26.28762Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "addBeleg"
+        }
+      }
+    },
+    "insertionIndex" : 5
+  }, {
+    "id" : "72825ba8-68e0-4fec-b15b-ef938d636d03",
+    "name" : "Signs a receipt and stores it in the \"Datenerfassungsprotokoll\". - 403",
+    "request" : {
+      "urlPath" : "/registrierkassen/ce8ea111-dd98-3003-8365-efc4ac72317f/belege/a3fa4518-a04f-3644-bfb0-0ca9f7b515ae",
+      "method" : "PUT"
+    },
+    "response" : {
+      "status" : 403
+    },
+    "uuid" : "72825ba8-68e0-4fec-b15b-ef938d636d03",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:26.287567Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "addBeleg"
+        }
+      }
+    },
+    "insertionIndex" : 6
+  }, {
+    "id" : "defd5ef9-6caf-4969-ad60-afff6f92731f",
+    "name" : "Signs a receipt and stores it in the \"Datenerfassungsprotokoll\". - 400",
+    "request" : {
+      "urlPath" : "/registrierkassen/ef353813-0d93-3c90-86a4-5ab19419eab1/belege/4fe8e20b-6cc5-3de3-934d-22105379588c",
+      "method" : "PUT"
+    },
+    "response" : {
+      "status" : 400
+    },
+    "uuid" : "defd5ef9-6caf-4969-ad60-afff6f92731f",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:26.287498Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "addBeleg"
+        }
+      }
+    },
+    "insertionIndex" : 7
+  }, {
+    "id" : "cea389b3-c115-49df-9f04-0de902756614",
+    "name" : "Signs a receipt and stores it in the \"Datenerfassungsprotokoll\". - 201",
+    "request" : {
+      "urlPath" : "/registrierkassen/e3394cb9-3cc1-3c09-95fd-c9e63cddbdb8/belege/772a7851-894f-3962-813f-01279478d446",
+      "method" : "PUT"
+    },
+    "response" : {
+      "status" : 201
+    },
+    "uuid" : "cea389b3-c115-49df-9f04-0de902756614",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:26.28743Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "addBeleg"
+        }
+      }
+    },
+    "insertionIndex" : 8
+  }, {
+    "id" : "86f97766-92c9-41df-9839-35cb8e7d2b41",
+    "name" : "Retrieves a particular `Beleg` from the \"Datenerfassungsprotokoll\". - 404",
+    "request" : {
+      "urlPath" : "/registrierkassen/3529ba5e-4998-3b68-ba8b-55e834512cf3/belege/28d5bf6d-dded-33fa-9d2d-c6d4e75e5bec",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 404
+    },
+    "uuid" : "86f97766-92c9-41df-9839-35cb8e7d2b41",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:26.287366Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "getBeleg"
+        }
+      }
+    },
+    "insertionIndex" : 9
+  }, {
+    "id" : "dbf9573f-108c-4750-9601-8a38ef6b6cce",
+    "name" : "Retrieves a particular `Beleg` from the \"Datenerfassungsprotokoll\". (application/json)",
+    "request" : {
+      "urlPath" : "/registrierkassen/feaed7ef-e2c0-364b-8804-e85ebc827d04/belege/b018aef8-e264-3f5b-8ea5-d3d726099115",
+      "method" : "GET",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/json"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"Belegdaten\" : {\n    \"Betrag-Brutto\" : 9148103031237899839,\n    \"Rabatte\" : [ {\n      \"Betrag-Brutto\" : 4142504229943951564,\n      \"Betrag-Netto\" : 1698184822385327710,\n      \"Satz\" : \"ERMAESSIGT1\",\n      \"Bezeichnung\" : \"3tci8jrymg2kql9bfflcytdtejuda1g87k1xbbkw4raml77ceqc08v2cezjha3grvd3jvdm5etxh456yki0dhpu0wopjkq4lcwwvb952e2of1ij8kwjjngpmqqpubjv984zjofwualt5vvizqveelrmyuspkv46rwac\"\n    }, {\n      \"Betrag-Brutto\" : 7806519827521882898,\n      \"Betrag-Netto\" : 3988527052567175077,\n      \"Satz\" : \"BESONDERS\",\n      \"Bezeichnung\" : \"00zy7ui7ar0llr513s83wgzcnl\"\n    }, {\n      \"Betrag-Brutto\" : 2488649366747767316,\n      \"Betrag-Netto\" : 2323603261493878571,\n      \"Satz\" : \"NULL\",\n      \"Bezeichnung\" : \"3398bq9xipqanwya\"\n    }, {\n      \"Betrag-Brutto\" : 8492735622530294165,\n      \"Betrag-Netto\" : 5595520199623645949,\n      \"Satz\" : \"ERMAESSIGT2\",\n      \"Bezeichnung\" : \"9zxgn8r1nxftrl7rr9j7zobvnqj9ddfgdfe3pf37gmpkim54hva41mmsbnolwnkhakgj99pintja2jqeiwk8fa4i2xeljsflse4xxn9hkira9pzd6w3ggj4mdbiqbkr07huwg4wfvqu0ubr4p72zghv\"\n    }, {\n      \"Betrag-Brutto\" : 824702279110997107,\n      \"Betrag-Netto\" : 5132343297932505541,\n      \"Satz\" : \"NULL\",\n      \"Bezeichnung\" : \"5wx4mp1uzyzsibps9ez7hjlgjxad40x4lfn7sl507gnbj4mt06n38gu5162ppfultuhwac3tszptkiczmk5axvw07czv4pugqspjncimku5nel2lvfbn\"\n    }, {\n      \"Betrag-Brutto\" : 3510267154221892042,\n      \"Betrag-Netto\" : 9136876802494635007,\n      \"Satz\" : \"ERMAESSIGT2\",\n      \"Bezeichnung\" : \"42k6581q6e5jxenvnzo8zmh2lz1wy2y5potphkr23iv1fb5l2kkxhhhnbn6hyim1c5umwr0x2ybu1s4b828jquwtbtikv1tfy\"\n    } ],\n    \"Betrag-Satz-Ermaessigt-2-Netto\" : 4524954776052593751,\n    \"Betrag-Satz-Normal-Brutto\" : 8774541996945877223,\n    \"Unternehmen-Kopfzeile\" : \"2022-07-20T07:05:26.286011Z\",\n    \"Unternehmen-Adresse1\" : \"2022-12-18T08:45:26.286037Z\",\n    \"Unternehmen-Adresse2\" : \"2023-02-20T05:34:26.286061Z\",\n    \"Betrag-Satz-Null-Brutto\" : 3097770483941420875,\n    \"Externer-Beleg-Referenz\" : \"2022-07-31T05:50:26.286092Z\",\n    \"Training\" : true,\n    \"Beleg-Datum-Uhrzeit\" : \"2023-01-16T09:18:26.286121Z\",\n    \"Unternehmen-ID-Typ\" : \"uid\",\n    \"Unternehmen-Name\" : \"2022-11-08T06:13:26.286155Z\",\n    \"Betrag-Satz-Ermaessigt-2-Brutto\" : 4060315765667371137,\n    \"Externer-Beleg-Belegkreis\" : \"2022-08-27T07:37:26.286185Z\",\n    \"Betrag-Satz-Besonders-Brutto\" : 8175460426496538775,\n    \"Betrag-Satz-Ermaessigt-1-Brutto\" : 4765366719364046021,\n    \"Unternehmen-Fusszeile\" : \"2022-09-11T08:10:26.286219Z\",\n    \"Storno\" : true,\n    \"Unternehmen-ID\" : \"fny8\",\n    \"Zertifikat-Seriennummer\" : \"2022-10-20T06:51:26.286322Z\",\n    \"Kassen-ID\" : \"8c2a\",\n    \"Storno-Beleg-UUID\" : \"42ecd53b-830a-4de3-baaf-cf9101f2977b\",\n    \"Betrag-Satz-Ermaessigt-1-Netto\" : 946800709751476879,\n    \"Betrag-Satz-Besonders-Netto\" : 9136800954382489912,\n    \"Notizen\" : [ \"ymrx0l6u2vfl9iuju0hyax\", \"p8tfm1wwpu6pn9efrffjj7d6s60b9lslpbuyzhyeckyvopjwhteph4j2qwazx7j91hkeigd5enpd3u4cvglwuv35ztfqqfpesn477v\" ],\n    \"Storno-Text\" : \"2022-05-06T07:18:26.286442Z\",\n    \"Betrag-Satz-Normal-Netto\" : 9211920006332523206,\n    \"Unternehmen-Ort\" : \"2023-03-05T06:36:26.286473Z\",\n    \"Betrag-Netto\" : 5271930749823243979,\n    \"Kunde\" : \"2023-03-03T06:35:26.286502Z\",\n    \"Zahlungen\" : [ {\n      \"Betrag\" : 244304645707957287,\n      \"Referenz\" : \"oppcq6e6gwr19o4tf2gcawfax721gv8zbae6a9nwu8iac7svit65y03ggz4a3m1cwgkr740j2xs9aqfk8forx6uluz1irzil5nqfa1yfgrutphfqyjbu50kltpuach2y3pg6m5x5cnqc4l4jqdtx77ddbj2dl2mzepmro4tbuhvz5rkile1517sju1l\",\n      \"Bezeichnung\" : \"h92d7hgarrhzfbbwwk2fdedy6jmerdfj26oatx34vhfsfkqoquexq82trgmy63s6auzumii8a7rtuoi71xcocxt4hndtv9gekhm9v8ai1lzqeqo58x0wrqiyypoqzgweecdv2leus3sje73dxnz2gvex4llxgk0wq1rd9ffoay35eyf5ua\"\n    }, {\n      \"Betrag\" : 3764818580784187706,\n      \"Referenz\" : \"lsfg6p6ve9lxdeqvbd5rebrlocd9re2csalkmz9j9430gpp2neinpam1ty54kv8rdbfdlpt8y3ac3o3ehwd\",\n      \"Bezeichnung\" : \"66eh6y1xx67rb88py23qi2b4zt6nm16pnvv64bw2nk2ldkr4j6hvv5ibtxb5lulkcs0syr8cpai3dfvzugtzndegt3nvj039d0cbcgv1dt3vvtogabuvilpz539ul6rem7fd4zpbyormp6t21nwbb\"\n    }, {\n      \"Betrag\" : 304513141779963081,\n      \"Referenz\" : \"naqhqek7jp3446qh0tyf15b5sb8ya6och450twnutszsxja3xph6aoir9o8sehp3ig13conrakwczv4j7ft1z6g1gj74r6db5k4wxucu7nxh69c7ydgyqgoq44w37jpvo\",\n      \"Bezeichnung\" : \"r6ybbornq0656c80v5r01vlibu8kqgtqfnxyiww1klp2k5wzmpkckjgsv75me9xoy03f2sb0uw9\"\n    }, {\n      \"Betrag\" : 3292689611144978238,\n      \"Referenz\" : \"xacue2z5eadkzkjgl7aom9d0uv55ldszgglg72482aebb1jjx1cpzw1rrcfwv7g192olfxw0pi644qz9k41uafu9tpeg675n4lcw2yudg7os01bflaugi76mdg9i0c48uze5o2fuuqasgddwxmalv4r9zyq08qbpz1q4lsd0s5uugnjyf3fn9oxfq0bwu6w6ifo5xw\",\n      \"Bezeichnung\" : \"bqbtmnlpvd0svat7yqu116l6w9t06q7emdt2k5xbhrhtroea52npgd42wqskm6lzqg7304ovb33mg0vz22zv71gh7brofr1p6s9gf82jbl7t3if26kdcrzdzt0xfi8n26yc51ifnp2o9jzsm3xpz7yyw60exrqf7q8f35am9rke3y3cxrych48dvyhur1g94es3\"\n    }, {\n      \"Betrag\" : 3338126510768822433,\n      \"Referenz\" : \"07fa8ozy03a7wf7yatblcek10t7maghecd1mce8kayi59nd3x94yupepkftyf\",\n      \"Bezeichnung\" : \"443jtp6skyr8jl5gg6vpbw4xlgqpbvqv7s6bnor4q6i11brarv65uium7xnv4lgyot29zx034sv0ewqcn2k6gzmsih92takjcnj5g0s5io3v4r50gbte6fwabdfazgf1fapaf3c\"\n    }, {\n      \"Betrag\" : 4592953435172618755,\n      \"Referenz\" : \"m5tw5tbcn8qfu1\",\n      \"Bezeichnung\" : \"07kcj53cxgami6dh6r7u6f408t8v05og4su2bbro7uqjcc1r6drn3raara21obfvl49zfac1fj40s8nc9kv0fvw8od9qt93m6yarnns0sh15metnx7arph68la989kvyz08dxxpcielphaidgv5fznc5185w\"\n    }, {\n      \"Betrag\" : 3679301758397905071,\n      \"Referenz\" : \"oohsthrkulbwum8pdz287x35mv04zdvis12btf8j1os71yqzfruu5v8e1jmx0gxdrpjtuna80f6vp1trjoglclbfd9ywbwvc8wza5k4rbehvl7a2zyo28mphbu13lgkoob4rn3b7dxmk5z410di0aby2atnf4ix2a0of1r\",\n      \"Bezeichnung\" : \"c6emcu7yg8cguonsuqo4nva9mpfmvchfx6aali0obilurefqrx9yyfydiw2mzlyhrldk7b2fojzckif2fsr19iaw6wnj11xk7ln4stz7870lj4310\"\n    }, {\n      \"Betrag\" : 7000263564807819699,\n      \"Referenz\" : \"rmptav6naxrv0jx6wrka6ntjus04gq3ssgmvz6f57129cu5ajzdzhj0p91wkstyrenw4udtkanb3xav5uq969t33ey7muuxjij4drv2mhgqaka9jo1p2lx2yn4bjpj2k5p0ak5gmqzoa08pdbfrkmfs4m\",\n      \"Bezeichnung\" : \"ahiif45f3l77\"\n    } ],\n    \"Externer-Beleg-Bezeichnung\" : \"2023-02-09T06:47:26.286755Z\",\n    \"Betrag-Satz-Null-Netto\" : 4125787667788880663,\n    \"Posten\" : [ {\n      \"Satz\" : \"ERMAESSIGT1\",\n      \"NettoBetrag\" : 607111098044660293,\n      \"Externer-Beleg-Bezeichnung\" : \"64u22a0edknwml9k94ogwizdb8bebaiccusv20yc408cksg4zfh7uhre447fnc3y1gxd7d4i0xtj49ca44be\",\n      \"Externer-Beleg-Belegkreis\" : \"1goi01xmzzce4zwnfjmdg6a5ij4lz15uzgu71ji02r8ex1wpx3fxl3szddarrgbsl1zqztxw6lv6i3in4a998yylbfvvqisizfvgkyc120yz89frhooi92qrvxqpci79wzt2ii\",\n      \"Menge\" : 3755388058931615087,\n      \"BruttoBetrag\" : 586013720679828412,\n      \"Externer-Beleg-Referenz\" : \"9l1szr5vp15j3xbg8zbevw6adrmlbq80fwpgp6z8zswuyb1u290zd1o8bw2n25ampasa07ldz9irzn795dab2nfdx4ll91mzicvdn6bu3hx3l7v6exirt484xi5ovdhgwhdinv08\",\n      \"Bezeichnung\" : \"yozifr3vqmjidohx7h4ne\"\n    }, {\n      \"Satz\" : \"NULL\",\n      \"NettoBetrag\" : 2281143948919984167,\n      \"Externer-Beleg-Bezeichnung\" : \"boyjti4nkrvyp5r9dbxrvh8fzj3ki5896yzrevrogwudjyx9fkm1ngt1yga53z94cyeqrdfnqfoq8x505wyuooyu1qulq7nsjj\",\n      \"Externer-Beleg-Belegkreis\" : \"hfkf88zz2f3keazyyycqi3rynnuiafjpbzo773r2ti6p2a4s5qu0eaoebtojzaxor05f0i5y0gff6sr9f2bfyzs3w09vqvn0d24rcipth8zddi9qy00wq95te2ktffudeq8aqtzt1qgpsp6xxfcqomt6a2e6kqdcgotozsvo0fgs251o387fx05nqx8q\",\n      \"Menge\" : 3714337107161781517,\n      \"BruttoBetrag\" : 9147757950227716152,\n      \"Externer-Beleg-Referenz\" : \"hjn55t8e4kgxw8rbjlfguva7xebaurs70mbyky3o6l9lmtcufwy1ez2fotyttlvn8u0adcc0nz0pvett2qbt9qyws160yaa9njfy8pkyb\",\n      \"Bezeichnung\" : \"7mx9i5nedpbjc5yoqmh4689v7unvjvd0u8tvhwsexij6i6eew3dcdpve7sj3xxrfhxphc3dpdyo7dpib5ofa70g56e2pb6ckpn1ox72q0c6hft8s8gi6n2v9sinzhu8uhzd2j7\"\n    } ],\n    \"Unternehmen-PLZ\" : \"2022-07-28T07:27:26.286922Z\",\n    \"Belegnummer\" : \"2022-05-22T08:30:26.286947Z\"\n  },\n  \"Beleg-Codes\" : [ \"ap7m6l51jj0\", \"185yg7yaqtjz5tswadd6rngc0ev6npsu3xvah6frn0x8xtem5e8s679o2gpp561020hm56igu40ee8g2vfawfp47yrezl3lz07rbf4gei2t165qjc2u68gf1mqfoitb1jsm78cqwfn3qtltr2d\", \"l0hqwm8143kk1repyq\", \"anztl6253klzu6bqi2kouj3xrqvjc36u0bpqk0hulzqpmyvwru5uasp4rt2av0vg94zea62ubnkb5pib14s6qtn6kfnrn4dkh4g2txq1h8m1js0e00kaibxt0wqrs8cs8s01asrlr2g709t29uqhtcamq4o5hsoe7h8vxw2wuyj6v807iilw8cgdunlt\", \"qe6mrt51jdfef1n3nmlxrsmuq04u0mxm8x5qn4vrb9fm4ly48v3jwpquydg6ixid9zn7p0pzcfw3r9xt4hygb00r6fzds02lcmhg7v31\", \"digapg0ocbeea6ozhhb7ttnj85q633g4tp0tzzi8w18u06kipth4xlia34lfc9fuaq18x9j6qzt\", \"ggahtzo9yfwl71fv6yy39d7fr8tkkkxdcmj3ai1k2cb28mzpjlnhr8apb3r8kuy6zgutus77rax\", \"x0kwxkoahcsvstjxx9i12ycczqwoni\" ],\n  \"QR\" : \"46lyl41hnhl4n5sbuteclt3licesd0nva79frvjbx79d9ni4lv66xhneknhakk73z2wmz9rvwdn99m0c257rtm4ihc61n6s080ozoix1kimg94lb8z68q85f9mz1kyqnk8bhxzi6lut28r26oyblzjf8niv2m827s3miz61wa2iqmliwlmpiov56k\",\n  \"_href\" : \"qlnca246wdj3j4j4szwcib82zr319x727o865ujts8a3vp\",\n  \"QR-Link\" : \"edrce25xkdo2d9qxqg2qxy9swbyevz6z8pjexb27a6475u6nhalwuu91st3ie96i5iu1i8bpc5p79bas56mlknoohqh632wr4vx5mjs25534psw6094dbhgt76zyup6jqgoald5qq3tn8dr9g7ssj1\",\n  \"Signaturerstellungseinheit-UUID\" : \"5beb4b15-855d-4620-a88c-f09e64361cb2\",\n  \"JWS\" : \"p8se69yy28189gpythl1b9p8hsjlen27ujz2colzlpoxfaql0wnxaf4jpygdkcme4zlmmdqev805m7zkfrvxwo\",\n  \"Beleg-Typen\" : [ \"Kassenbericht\", \"Training\", \"Training\", \"Storno\" ],\n  \"_uuid\" : \"61e98dbb-c101-365d-9f11-fd5471eb07db\",\n  \"Registrierkasse-UUID\" : \"33a5332b-2de1-4563-9f65-8860daa9b5c4\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "dbf9573f-108c-4750-9601-8a38ef6b6cce",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:26.287289Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "getBeleg",
+          "schema" : {
+            "properties" : {
+              "Beleg-Codes" : {
+                "items" : {
+                  "type" : "string"
+                },
+                "type" : "array"
+              },
+              "Beleg-Typen" : {
+                "items" : {
+                  "enum" : [ "Belegkreisinitialisierung", "Kassenbericht", "Monatsabschluss", "Startbeleg", "Storno", "Systembeleg", "Training" ],
+                  "type" : "string"
+                },
+                "type" : "array"
+              },
+              "Belegdaten" : {
+                "$ref" : "#/components/schemas/SignierteBelegdaten"
+              },
+              "JWS" : {
+                "description" : "The signed `Beleg` as a JWS signature token.",
+                "format" : "jws",
+                "type" : "string"
+              },
+              "QR" : {
+                "description" : "The portion of the `JWS` token to be used for generating QR codes.",
+                "type" : "string"
+              },
+              "QR-Link" : {
+                "description" : "A hyperlink that retrieves the `QR` data.",
+                "format" : "url",
+                "type" : "string"
+              },
+              "Registrierkasse-UUID" : {
+                "description" : "The `_uuid` of the `Registrierkasse` that has issued this `Beleg`.",
+                "format" : "uuid",
+                "type" : "string"
+              },
+              "Signaturerstellungseinheit-UUID" : {
+                "description" : "The `_uuid` of the `Signaturerstellungseinheit` that has signed this `Beleg`.",
+                "format" : "uuid",
+                "type" : "string"
+              },
+              "_href" : {
+                "description" : "URL of the particular `Beleg` instance.",
+                "format" : "url",
+                "type" : "string"
+              },
+              "_uuid" : {
+                "description" : "Unique ID of the particular `Beleg` instance.",
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 10
+  }, {
+    "id" : "32aedf8b-7d92-43a5-a801-9aae88c4d65c",
+    "name" : "Retrieves the `Beleg` collection from the \"Datenerfassungsprotokoll\".",
+    "request" : {
+      "urlPath" : "/registrierkassen/6e174a0f-16fc-381a-8525-17843a9f8831/belege",
+      "method" : "GET",
+      "queryParameters" : {
+        "format" : {
+          "equalTo" : "export"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"Belege\" : [ {\n    \"Belegdaten\" : {\n      \"Betrag-Brutto\" : 2705047268049307638,\n      \"Rabatte\" : [ {\n        \"Betrag-Brutto\" : 7243021700641335830,\n        \"Betrag-Netto\" : 3841794630144477047,\n        \"Satz\" : \"ERMAESSIGT1\",\n        \"Bezeichnung\" : \"9yrt7l86dxcenmc6cxf4473v0suiiu8c0l5ik3bs2xr4yk950ih42qk0tv075ptmz6m6wnsqcvh54es03\"\n      }, {\n        \"Betrag-Brutto\" : 8060549879909507411,\n        \"Betrag-Netto\" : 3237759886718172190,\n        \"Satz\" : \"ERMAESSIGT2\",\n        \"Bezeichnung\" : \"l34u9xe4wjqc7nozf35fva5shb7m6px0qoqsic3z6jrobej9ylwzb4c84fpqmgm5m0s2nkhsjksd8z4np9\"\n      }, {\n        \"Betrag-Brutto\" : 5441438026945390869,\n        \"Betrag-Netto\" : 1472717265092708436,\n        \"Satz\" : \"NULL\",\n        \"Bezeichnung\" : \"jdj8xyz8mgb291wdiii2ccvl985ghg1kngvnyjczflu6heab1i650x200nyois7an60awf8z1zr7jn5rrfmr7vy2mc4grf1hir8298mwgomu0txx1u5qmzp3ykrrx9\"\n      }, {\n        \"Betrag-Brutto\" : 4219841384853944529,\n        \"Betrag-Netto\" : 7048963006788443533,\n        \"Satz\" : \"NORMAL\",\n        \"Bezeichnung\" : \"7hyvo2yz7nzd6vamu6boo93bmwy72fl3t62beuzb0xwvq3cbvroknp8edmu2tzp7tgwwtslltl1rd10f0w5zwikwpm50swaw0c5imw8kiwiwaqrtmkzd9j397lpisboc2ptsfmlonifw9nst88q103\"\n      }, {\n        \"Betrag-Brutto\" : 4710954014358555983,\n        \"Betrag-Netto\" : 1221147132671642236,\n        \"Satz\" : \"ERMAESSIGT2\",\n        \"Bezeichnung\" : \"21annmpuftnizbiqkkiow2cb9juvxn5vt39awl5jxsdrmb4ljasip0mb7p0x8cxwpm3wqbo801rc133ukeqdc4o4cani9wrqwxnxsd7sr0t1xzm62q62i5sjnsl5yj4hmeryay8lfljvzkl1poejxfdnp5k2dj7tsflpsyif4sw\"\n      } ],\n      \"Betrag-Satz-Ermaessigt-2-Netto\" : 1603685675381055101,\n      \"Betrag-Satz-Normal-Brutto\" : 7147318657914819324,\n      \"Unternehmen-Kopfzeile\" : \"2022-10-26T06:35:26.278936Z\",\n      \"Unternehmen-Adresse1\" : \"2023-03-25T06:08:26.278966Z\",\n      \"Unternehmen-Adresse2\" : \"2022-06-19T08:48:26.278994Z\",\n      \"Betrag-Satz-Null-Brutto\" : 6706232746604118005,\n      \"Externer-Beleg-Referenz\" : \"2022-09-25T07:14:26.279027Z\",\n      \"Training\" : false,\n      \"Beleg-Datum-Uhrzeit\" : \"2022-06-01T07:35:26.27906Z\",\n      \"Unternehmen-ID-Typ\" : \"gln\",\n      \"Unternehmen-Name\" : \"2022-06-06T05:49:26.279097Z\",\n      \"Betrag-Satz-Ermaessigt-2-Brutto\" : 5011956433368053326,\n      \"Externer-Beleg-Belegkreis\" : \"2022-10-01T09:00:26.279131Z\",\n      \"Betrag-Satz-Besonders-Brutto\" : 3625702237680365159,\n      \"Betrag-Satz-Ermaessigt-1-Brutto\" : 8636888553679737898,\n      \"Unternehmen-Fusszeile\" : \"2022-04-14T09:21:26.279169Z\",\n      \"Storno\" : true,\n      \"Unternehmen-ID\" : \"uw2b\",\n      \"Zertifikat-Seriennummer\" : \"2022-11-13T08:57:26.279274Z\",\n      \"Kassen-ID\" : \"lb6v\",\n      \"Storno-Beleg-UUID\" : \"2e4e1369-b9ff-47ae-ae06-3570f6ef7891\",\n      \"Betrag-Satz-Ermaessigt-1-Netto\" : 4833255825317475971,\n      \"Betrag-Satz-Besonders-Netto\" : 8135858560098511474,\n      \"Notizen\" : [ \"8y3sutqnajgdaxt1jbwawixcs0frwhfmxxyuz95a6449eoiuqt3fzm\", \"xwjigufljlt7hb8bfw6dh2qmi05y3bgf92q4ksbmtc7qodmi7k2i2fgwnodskfosxthb46gwzy3crcimzbd8xb9fjgpq3rtwgy\", \"gp43eglq8timlq1xm5n68d3tdmolpiugl2otbgx11yso1kb0ag99vb4jsxrdly3v2flagksg0whyaz1ge12oqe6vjixuf068okihsgiykuj8frbrfu59fwp92i05necnnspbjkzwugfmzndf8i8atgmbg1iq6jtoe0xwxo94ag5jsxob3nd489pbqad9urrkyjpg6\", \"vstu61nh29nkvlid3uljtdrj6\", \"7ugb1596950k9u8mx348dsjyvzr7tii0chwyoy34\", \"qwrfdicrxuti1de3qoi4hs58qryggd6vx09esfsaei5brhkhjc6q9jo4w7xqpexe5pr97sjvaz17l5lqg6oo1bnbf9chmzaub9ay3lk1l9z0h7u2hlgx6mrym7hrur46z41cs7kpez\", \"mo1ycwgo34o5b1flyocvnlky6bf7rz89x42dem9y5gg6bw78u9km4cdvdc8gc8yr07y9rju3gfpuqwbr1vvppo24lm13ffdjnd70pzcenivksrz1dyjr6hnphfh6qkq85h0wau9zg1apqu9ui5928v5rjgomnz0bro0\" ],\n      \"Storno-Text\" : \"2022-05-19T07:46:26.279424Z\",\n      \"Betrag-Satz-Normal-Netto\" : 7461008064830371572,\n      \"Unternehmen-Ort\" : \"2023-03-21T05:46:26.279459Z\",\n      \"Betrag-Netto\" : 5331397734722172169,\n      \"Kunde\" : \"2022-10-13T05:43:26.27949Z\",\n      \"Zahlungen\" : [ {\n        \"Betrag\" : 3092850223018520542,\n        \"Referenz\" : \"pepbn47mdx9vbmkk7a9tn8vtrz693d7630bqkma85dyxeqt75iccum8gttb5oesjmkpb49j2320vjdsbq6pkkci4skqx1jrifpibhizirmqw06fevln5gqsm7290ca73dzfxlig5hkd1iy6ioj3uinywehlsm5p2lmz2xfsjyh8py57pnhxv9scvmsl9b5vwub\",\n        \"Bezeichnung\" : \"2387rr4s3ato9gidfra77mwp6v1s75m9d7jlfy7rmjvge9wz5uswso83gglw1rz5nivgigmpom1gvmcq4pzm\"\n      }, {\n        \"Betrag\" : 3405414023486457504,\n        \"Referenz\" : \"yvftudhxy6n3kcz32882r29vr3lg4h9tatpnsghoha4n0hsfn3q0ohxm3sm6k8pvlr3mk3hn7ly9pjas0lxl\",\n        \"Bezeichnung\" : \"rhft31xhgt6en4qwfk8ki\"\n      }, {\n        \"Betrag\" : 6117160427737245879,\n        \"Referenz\" : \"ka0\",\n        \"Bezeichnung\" : \"fgwqp5gvbtvs530qwj7t66pg6ksuj8le2ltepcbcb9c6zbps8a2ozowmrd5yzggj7t8e9gpofkhxl8268rmuuoplaknmtcdfredvw5m4qblib8jh5zhfej7yf82tt4vtvj4gyrt7atd1j18rsspu0xpwn9fc0wfmll9m56roiictm0sezd5sgls\"\n      }, {\n        \"Betrag\" : 3146402411546477445,\n        \"Referenz\" : \"vc183z1j4pxmtwqmpw5nyod7h2i2m3685qh9ql4ehxi9z2gfvuzp091og34ad53nv67egdddgwnkdd8ky525n13a6xol2lz0yzz1cvmkzm76ae1m0rx5l2wuobph4hmk0nxwunsqv\",\n        \"Bezeichnung\" : \"cnjx7ot887kvb9x2wu41wx0jnmwkgbj44czvollij2lg98ojlf411olwf8ldmy65jm3uu7vxp57vbkl9n4qx4ecqdnqki8utpq0okh9h45jaix8hf03l5d6r26qfxl5xbc281s0kf1ovu7lun0utozjr83233ylgs8oliqw1mf7jjrtcpks5\"\n      }, {\n        \"Betrag\" : 8326617427931382606,\n        \"Referenz\" : \"hiw8p8bq95x1m06rpdwyc6stxhdg9dqkoxhqx0gq1s3iue4huqty7gl4yiubfii6o47s8lpjwz4rmak03herb5kqcuw8ry1ze8savgrnaxceg81okurafxliqdz9r7082wiw7j186gvlz\",\n        \"Bezeichnung\" : \"d3d5efr59ahgbwvico6sm64wzb7ewhu5ye1bsgactfm2qevmow5v7nwhusr8u332ykjfyrwgd\"\n      }, {\n        \"Betrag\" : 1522366328337635396,\n        \"Referenz\" : \"axc0kgh7apyjbwof40l1hby4jm24dzug5yajd3mkculpv3nkig4jgxb1i252ljjxp7bmnf6zc\",\n        \"Bezeichnung\" : \"z1slvi2tm7h11m3aubp7o3w7t57cskusn7137rfgvzs5sgungr97mnnalbjrbplifmo68a85hxr4h436yud27zltcum6vex45jmuis3q9em1ow28h9qnbmiewlnxn9xuphfy5r8pyttr2eoskgwoqurzldtk7li5sdzw1ldlivgzdsce4u37k6zwxyemblvrime2ig\"\n      }, {\n        \"Betrag\" : 7363630178356603062,\n        \"Referenz\" : \"wul70jreyltfib7xlb2r0id4axcbt9paop85rbmklf1mmwefswr5af58w3zt0j697ls2lq0m3m3zp65477jg6cqq44qk19889x58nfrd5yko5jnewsrjaaeehj9st53ip4dwb3y0aj3l9n8ylrrezovpkiehai3sn06rnhuczwig5etvm0ru230r4\",\n        \"Bezeichnung\" : \"nla64tkshyx5fl7dh3f6cdtfrck8bkoxpvuvgcdr6xsuaqdqgbekomra7viscpravz4eqnegkqrihhjzx4hoi2mvcsarfrgg3txol8dcm3wf1ecgy94ayo7kru7b0sr\"\n      }, {\n        \"Betrag\" : 1505672670949864569,\n        \"Referenz\" : \"tjfg59mbp9g6gyvm2eycjs2fzh47aeyhtbyb1qjso\",\n        \"Bezeichnung\" : \"1wm4u7wq79jljopekg9t97bztn3kfjcabk3ya1vcyy7uidx2anvtm1jppgv40zrztkr50vdstipioykih72mz3sgsd6dvunib9zn4rmnhifd9baoijw6r317a8hmf64\"\n      } ],\n      \"Externer-Beleg-Bezeichnung\" : \"2022-08-27T07:25:26.27975Z\",\n      \"Betrag-Satz-Null-Netto\" : 1012805622708569705,\n      \"Posten\" : [ {\n        \"Satz\" : \"ERMAESSIGT1\",\n        \"NettoBetrag\" : 3637889123204452459,\n        \"Externer-Beleg-Bezeichnung\" : \"1wwg0440vpdoouo8mv0zdzo6pmnf5jatriuxgsvgzxd0jqaq1jg2jt1frddixm5ohx270q4q6ctz0dyap3l0vj6zodk0wabvgmlmih250dx\",\n        \"Externer-Beleg-Belegkreis\" : \"362x7zaxtw6f0y8zaj10zipqxnppksndenpfo13cp9f2917thp2n217r3xbhwphn5cdcd\",\n        \"Menge\" : 7131219159340751207,\n        \"BruttoBetrag\" : 8160875460262889880,\n        \"Externer-Beleg-Referenz\" : \"tygbjpw6qzdeb7wsmuy0kx6msfkduqiyfmowbnrz0pibefhbdccbgn8c9g97m166lf92raoo00zf0ld04puyybq9ejauu2skt596dcwl6ifl8rdxt50cxosjuppxfejpho2fxxqam21qji92p1iyyf70jfl\",\n        \"Bezeichnung\" : \"i0u1iemmrdst7jrxm4z2vbh7o5ou4oevgp5229jkieeh86fkvgy6sytgmb54uf2np55bpx00lrphpsci9tv4yt5wfsykrml844wvk76bw\"\n      }, {\n        \"Satz\" : \"ERMAESSIGT2\",\n        \"NettoBetrag\" : 7191913591478060655,\n        \"Externer-Beleg-Bezeichnung\" : \"s5gwj4xnsjosb43ot1vng3whxyvfsdj5cdvde2fcv2fcxnp\",\n        \"Externer-Beleg-Belegkreis\" : \"n5gr3fgbmm4563e27k2swbybvskdn9i24ltco1fz9b4dcm0990cq5zaslpqykn3vx5o2q95qlrmo1ou5he47lz3a275w9hr28fzjdh38k8mmgnx79z0sd575sdjz3bu2m5cm\",\n        \"Menge\" : 7483195269107867236,\n        \"BruttoBetrag\" : 4190670649666950679,\n        \"Externer-Beleg-Referenz\" : \"n7comyixwu1k71yb0vnv9oulax4efwj4pnq0y9jct1bpfqnvpg7as35encnrjpdyj0xjw6d3x2ps54a0iarb\",\n        \"Bezeichnung\" : \"z9fpikw1cfz0y4yvsrj4e1bam7acl9u4h8k29twlfkrs2y2hr3z6mjdybketgtgc6nwg4h3pftwagujs8989xhnszf56yu5jcgcovbq10v9c3tdwnwfnbfkrq4d9sltmeu3lz6d5qta083waok7dmd\"\n      }, {\n        \"Satz\" : \"ERMAESSIGT1\",\n        \"NettoBetrag\" : 4954833591903161473,\n        \"Externer-Beleg-Bezeichnung\" : \"753ztp8dnsdbv0vczj8hxuoxj5ckpmakkm3dwk\",\n        \"Externer-Beleg-Belegkreis\" : \"hdq1ugfpr4j2nd8fv13q8uuddscbv26h07iybtw36ier8fsnems2cn0lpv5eaaw6xjltrul2g7md4qtehjle5qj46bo2khtbg\",\n        \"Menge\" : 5868518621373546977,\n        \"BruttoBetrag\" : 5885176732096778132,\n        \"Externer-Beleg-Referenz\" : \"tw53xz1ssut5ubeftr0hy4nff6gkzi98cqvkeaek6bf46zt6c4n7aef918gpvbrb3bk8jnjsww98nyc2xj49poiw\",\n        \"Bezeichnung\" : \"us1btuavb27qm4hriwyu79ouu2ylwk9q6hjais4wnttgswqrga5m6514gue7wwdjeywxjx\"\n      }, {\n        \"Satz\" : \"ERMAESSIGT1\",\n        \"NettoBetrag\" : 6388442583083293250,\n        \"Externer-Beleg-Bezeichnung\" : \"e9g312zbqn2u2vxirxb8t0ccdebva3zt8vomud93vv4ql\",\n        \"Externer-Beleg-Belegkreis\" : \"o9ihzplr2ojhu0as5db5xyjzqhk4np8x5no4snoo3x7sjevhbsbezrla30j1snlouku3prdlue7csl2j5sohbcu75zw9zocfx07b1rjcjingesg3p9ih033vq9gv5rntczsm0ewiyevedc5dl7asnvgmztall8y35l31b0y222nt43xw\",\n        \"Menge\" : 7598983785215131061,\n        \"BruttoBetrag\" : 6077584045882637014,\n        \"Externer-Beleg-Referenz\" : \"4p3uervxozz0phekbpp2l6wte8dlkj5yk72uvh6vj8flpczwyce3s7evbe3wxd\",\n        \"Bezeichnung\" : \"ktudamswpjc8jatbf2mdeo90r8gzsqcuh7np7ottxdj3zkh05lrjivjbz8lcmxf9k5g5f7xjh98ov0pni66n0jy5n7uq7botlya7k7verxlw6p89bxjjh6hzg9d0norywwjhm6\"\n      }, {\n        \"Satz\" : \"NORMAL\",\n        \"NettoBetrag\" : 464585722178263205,\n        \"Externer-Beleg-Bezeichnung\" : \"hvai0l69k3wl1s0wamzv43255ljquwj71t83v3ppualhzzxt23bs\",\n        \"Externer-Beleg-Belegkreis\" : \"ncn83pzcvn1rclsqlda1rkvy1t33ykedkz3pvccj0ulz4qpg2zf0cx1tgjzigwuvx4bgux0pi1yii3qw4lanl0fdabaqozovlsbwvqigcnwrssic337azwqyu4sik438tvaneqeinozsw55jpjudwwhq5zc8yar2pkensg9eriz\",\n        \"Menge\" : 5101507662254218,\n        \"BruttoBetrag\" : 3118107076988390909,\n        \"Externer-Beleg-Referenz\" : \"on3clf7b84tdh72xmnp4kvyy0f30h3al2g5ldg8slso0dlun5te76wl7kja7b48d8g\",\n        \"Bezeichnung\" : \"n4ndogcdvvnpl4q8t5s1gi6qbhhp40\"\n      }, {\n        \"Satz\" : \"ERMAESSIGT2\",\n        \"NettoBetrag\" : 7534063512835230448,\n        \"Externer-Beleg-Bezeichnung\" : \"d2hl82nfnp7\",\n        \"Externer-Beleg-Belegkreis\" : \"ce9zcdf41fw49aie85uwx3aiyrsxiv2602lp3wwwl2hwq8ccx0a5ic6za8ui4ljz7q2eq2jlgue8jtypiepu0ytmxcd0hedcoy48k11vqn\",\n        \"Menge\" : 3355575755834084358,\n        \"BruttoBetrag\" : 3598403992072009879,\n        \"Externer-Beleg-Referenz\" : \"2vej9hlgwyqtaq5g9p1lesy27sf1jcxsu0nenjebxf1vq5jh7apjxw0tcl32fyqszr3gdzm2ra87ficx1ib1ew2hmbuom9ktq23ozwfcxkcw5bchq2ucu4kazp48k07pibv7hjzhwzdwwuzmq9jsvrewqjwd0crf0tq0y0pta52bg06iqvm4yvdvo2o4w1trvsx\",\n        \"Bezeichnung\" : \"t30ykojtu6gz3irdzthjdxdhr6ynhq4jau0wb7rsvign4op0na70q1misl02mkgjqaa7wci9oye253fhv5ai1tbets3m1n06gpi9d8v6g8i9qk0n8i4\"\n      }, {\n        \"Satz\" : \"NULL\",\n        \"NettoBetrag\" : 2031954634997124519,\n        \"Externer-Beleg-Bezeichnung\" : \"gg4uy2gzcbpee8uqk5buh8388od2lws5hycjcx2pwvsbrgd1v0kux3drvzyl0ekcm7gtkkpmmyoyplec8z8tg8tzprt8icn0wl4e8072hso5hsd6zlh2f3vvzkg1pt5yeagsd\",\n        \"Externer-Beleg-Belegkreis\" : \"tzb7zcokcnwnx36qgbwq6fxkw6letcp8xs71af6jwro05ylyejcm7l14ucijrl3licoe7lpayoy5q2y8v17dsc8g111hqsc91dtm951jqewlndto3yb657pvjeox1hl6g3q4p5pd4yk2tpheumin5si526ai8f2b4pslefbsozd5nw36h33xt9ta41nttcqot\",\n        \"Menge\" : 4599729002533709077,\n        \"BruttoBetrag\" : 7552087214898851724,\n        \"Externer-Beleg-Referenz\" : \"s1z4dnu5qpmgw\",\n        \"Bezeichnung\" : \"fhajwaj9qy3j1ldek27mdrgj6is347pr6cvxyo4z09vegjofrdx2eundr9nksws7ukrd3ujckl3afv93des6z42engsdegkwa8uqeczfy3qqps02odc2ec40zyjwi48yuwfhx4gc0e5gfb183bottkdh6fkiw4zp3wzq2c2nxawka9lynjxwy6hf43utnfvql\"\n      } ],\n      \"Unternehmen-PLZ\" : \"2022-04-04T06:02:26.280267Z\",\n      \"Belegnummer\" : \"2023-03-28T08:32:26.280295Z\"\n    },\n    \"Beleg-Codes\" : [ \"wnidqtjkyr7egx5rq9ezcsnysqufhziu5urxiv2emxr39emncsfp9kp75eexkh18057y9zbsps90njdct9p77yzjs2cx11\" ],\n    \"QR\" : \"ptrms1rn8pw21ctdqjq1ghp7gbugt9yzq38re195xtmyfmc0lu0jzdpguxrqu6uzkrgrjdwkl0gbpcqrrdnfzt1q4ojrhizr3j33z8tru4u\",\n    \"_href\" : \"yuv6dz74euvv\",\n    \"QR-Link\" : \"brebrkoyxerzwqt8\",\n    \"Signaturerstellungseinheit-UUID\" : \"5612abff-946c-40bc-84b5-1fae451e8fb8\",\n    \"JWS\" : \"ut4dpj4yq22fgsg204qkmw62e442mvim113hdy7iir3efnn0mdrvnt8ozxgb3iodgwjopjsj4wn43kpdvjob8d9abvcxn9khn5q2bo3en81v92q0ip9s3tfm2ax1k9kg7ld6pagmc8qhpn69n4tl5f8687fn44to7c3mfmbv5nd8ub1\",\n    \"Beleg-Typen\" : [ \"Kassenbericht\", \"Monatsabschluss\", \"Storno\", \"Training\", \"Systembeleg\" ],\n    \"_uuid\" : \"3ca9055c-fa8f-3238-9d18-b59cc1cd24f2\",\n    \"Registrierkasse-UUID\" : \"dfd49cd3-7970-43f8-ac4f-9b8280d77700\"\n  }, {\n    \"Belegdaten\" : {\n      \"Betrag-Brutto\" : 3292817404227391527,\n      \"Rabatte\" : [ {\n        \"Betrag-Brutto\" : 2463704424115520178,\n        \"Betrag-Netto\" : 4206047877080594927,\n        \"Satz\" : \"ERMAESSIGT2\",\n        \"Bezeichnung\" : \"w71vu1zhlyxdlqorfek2ipqppc1d72msynj910v0tq0oiknafp913fsfk3sz6x47y3wax60ck1djtykbbzd8cqd7\"\n      } ],\n      \"Betrag-Satz-Ermaessigt-2-Netto\" : 4240924600037224249,\n      \"Betrag-Satz-Normal-Brutto\" : 9051890337856910009,\n      \"Unternehmen-Kopfzeile\" : \"2022-11-07T06:00:26.280519Z\",\n      \"Unternehmen-Adresse1\" : \"2022-08-15T08:33:26.280546Z\",\n      \"Unternehmen-Adresse2\" : \"2022-11-05T05:55:26.280574Z\",\n      \"Betrag-Satz-Null-Brutto\" : 4568043181758326710,\n      \"Externer-Beleg-Referenz\" : \"2022-09-19T08:06:26.280606Z\",\n      \"Training\" : true,\n      \"Beleg-Datum-Uhrzeit\" : \"2022-07-16T08:38:26.280634Z\",\n      \"Unternehmen-ID-Typ\" : \"steuernummer\",\n      \"Unternehmen-Name\" : \"2023-03-26T09:15:26.28067Z\",\n      \"Betrag-Satz-Ermaessigt-2-Brutto\" : 1968133673400131531,\n      \"Externer-Beleg-Belegkreis\" : \"2022-12-13T07:39:26.280701Z\",\n      \"Betrag-Satz-Besonders-Brutto\" : 2868187564341833983,\n      \"Betrag-Satz-Ermaessigt-1-Brutto\" : 2420443795805798349,\n      \"Unternehmen-Fusszeile\" : \"2022-07-08T08:22:26.280735Z\",\n      \"Storno\" : false,\n      \"Unternehmen-ID\" : \"a87o\",\n      \"Zertifikat-Seriennummer\" : \"2022-04-15T06:05:26.280841Z\",\n      \"Kassen-ID\" : \"4c5k\",\n      \"Storno-Beleg-UUID\" : \"3f78329f-731b-48a0-a562-30dff649f74f\",\n      \"Betrag-Satz-Ermaessigt-1-Netto\" : 3503485248858916466,\n      \"Betrag-Satz-Besonders-Netto\" : 2981061916490745546,\n      \"Notizen\" : [ \"v1f7ckpt87jyo3bpbosfk9blriyfjneluu1gh8f28kpre5fta7of1mlakzvgpxi3qf67znmsmngji7wqcw5z98i208qk04yt79k87l5bqrx2ddvit8xz1rl1kt98gd1vt3vdcqxrk4nh220olenokjn0xog3g8lu521c7da5knbcyg74ge7evbox9w\", \"v59yofci9i7pxvrf719zii4oqawbayii7kwynpw34z4xs68r4jr\", \"mg7zrtoi53d5wwedkfrmondcl3ee9qvkabempj224c1fx685omyx1ajc2jsgwu4oiuh9q0ljh5926xlqv9qh3m8jktrdx4erofrtn4e1s5gyr8gow5fs3gxx5pk54k0eyf4wv0h3dy46hjrsli1l8uedjz8kmnfc2ecnqjdy0ex04q7a00kzb2fbgjmle\", \"9rb0w0n757emzjxb996bcganrr0u0p3d2xyckio9x278y4eilgajop58pl21lgthte8w1\", \"2fkkfwewe3tz7zjxwfwh4n2llgaxwhczvdrcbd694hb0vfzrvcnkj0igbnf5ultjl2uibh6uggfpjj7uon8jwun82vnbefp97jjjpa2amoh9spnw175b2nhho6zrgprlbgsrfb9mywhp57gr8l4nsh5wesjow5onagqxcor\", \"38qbk597wyqm94om16henwx7bq561ybpj06wtvf9yifndxtjx5gpne2dlshcxyn9405ydjosxjfuw45fke82f88kfxyltuxjufa02o0av4iuyii7ud85yi32achoystmti6d4kbrcu9fjoyublcattwd5lx77mb6q\", \"e2h1gdihr99mhilb7fexkx27frlpw6xaguu4i\" ],\n      \"Storno-Text\" : \"2023-03-11T09:06:26.280989Z\",\n      \"Betrag-Satz-Normal-Netto\" : 3732669419131179484,\n      \"Unternehmen-Ort\" : \"2022-08-06T08:02:26.281017Z\",\n      \"Betrag-Netto\" : 2851385355308536758,\n      \"Kunde\" : \"2022-10-08T07:08:26.281047Z\",\n      \"Zahlungen\" : [ {\n        \"Betrag\" : 2839889756899007455,\n        \"Referenz\" : \"zz29gpd6zeb83x454aqvgtby6wp25l3xuxaouh687g7v2zsbx1zy2mbroqw1e8e1sl58eonkozb4i0uuw3tcknn3g9tccr0287nx7ga1kuqayf30z90sxczipwxbews2zmjqc3vjvv6mfii\",\n        \"Bezeichnung\" : \"yxlx756\"\n      }, {\n        \"Betrag\" : 6847815108108892549,\n        \"Referenz\" : \"vt3jtfophs78orydqib4hlzkwxktvgmolrjung1hw1h4xacmwqav6hozlrp8gd4zsq5i9471b9kzrky0u1ql4an0bx533j5wa2gvxywsda2f0nqi534mvgrn2e0i03lo6m2pz89e74\",\n        \"Bezeichnung\" : \"x7itkwh490nh1kmqm07jh3wamicpzhx5xtkdpfotqepprky2wuyjzr\"\n      }, {\n        \"Betrag\" : 2952320335147342595,\n        \"Referenz\" : \"a47meg7tiusv9vrdwbzho0n2hrujsn2m8zb9z7rhj860p2k5yk7el00aigmx01md7iuytt976exkv1yo7jisa4rxvdd055f032emd13h3ylww72t08wbaadghl0tr7fwc6alm91923fjr23sn0nf9shyicmw5vzk\",\n        \"Bezeichnung\" : \"lg07i7dmkd6876nq3pt32nrf9zolx9uppwrdsd8706fdyrx4uktlo\"\n      }, {\n        \"Betrag\" : 2991221140882375447,\n        \"Referenz\" : \"ehz6qma3j2pe81595ie4ekpgtw1zg1ugh3v8i2yblz695xckw6gu9pfdmky77aia822su8w7\",\n        \"Bezeichnung\" : \"mxypvaw6qvk2u9nwve0rgbmg6m7s5qz9jugyvpej0eyfj15ojav4sadjqisi5vgfe3t05py0f0v5qsplb2ukgxrccefvc4w643tqfcv\"\n      }, {\n        \"Betrag\" : 4433663580295848571,\n        \"Referenz\" : \"5ijr4cbp3ig2a7fa0xil1z5h0i2flgsfkibjiw1jlvgqlutoim6cgx8xpyk6o4u259luqx\",\n        \"Bezeichnung\" : \"p32fjnqbsen1wtlh323v85ulx7jwuplelrhp73y4od1kt61lnbkvd4y0i9s8lzqku4hfeyn7o7xoyfbtvyhkmluz9fp1t97ytvrdramc2c8pjal7iddr0blngy6a3h1mb3qenp3jged32xdh64sc3sd69ec9at03mpiztsio0js5e63am1mmebsii6mn338os\"\n      }, {\n        \"Betrag\" : 1123958099402204054,\n        \"Referenz\" : \"0j9vyd4m5cz9vl2p0mr2jj2q7uv7dqq7c0ntutsl95hkusrhhe5cfdj6pzcv3broalaxnyo6cjeqo1d5a5y77qiiys59a1zz7rzzh9o23f8fw1rwor225zj6xo2r0bhs02wr18fgas10einz38mcfb20t0ky8q627uqdnu2x18\",\n        \"Bezeichnung\" : \"wybo\"\n      }, {\n        \"Betrag\" : 1577919934451600723,\n        \"Referenz\" : \"f7u7yghb\",\n        \"Bezeichnung\" : \"uin6sy6s2qfspvt0bb9f4pyhzktgre5fggey65x1tck\"\n      } ],\n      \"Externer-Beleg-Bezeichnung\" : \"2022-07-28T09:10:26.281268Z\",\n      \"Betrag-Satz-Null-Netto\" : 5792919596658422558,\n      \"Posten\" : [ {\n        \"Satz\" : \"NULL\",\n        \"NettoBetrag\" : 8315860548205181052,\n        \"Externer-Beleg-Bezeichnung\" : \"q8ki54rnk47915tbq8vzkmawh51fz5a2jmzlkdb0fezywadtg31ev6k4vu55q345oero0h7vttqfumx6279ayqe85vsqzinmjr7zu6ahgc4puld73c5p9qutvekig6pk7bke22nieg\",\n        \"Externer-Beleg-Belegkreis\" : \"yfu6g5hypa7l4hutgcozl\",\n        \"Menge\" : 7052682291977489019,\n        \"BruttoBetrag\" : 7055801257070777148,\n        \"Externer-Beleg-Referenz\" : \"664ui8zb5g8rcz1q5k\",\n        \"Bezeichnung\" : \"a7199713gefamxkq60llwcykb9owakqfis54ojllp4qki3kmuo9g3mdoggscanti3c31w4lvvaso7g8iwyvogrqp42ya5rstjsunw301yxv3drpw\"\n      }, {\n        \"Satz\" : \"ERMAESSIGT1\",\n        \"NettoBetrag\" : 6625511938567895529,\n        \"Externer-Beleg-Bezeichnung\" : \"vhvxaeio6lmt85kgj8pz68uo9ukzmn6ck2yzf765729460psqjy13lt1b67ynmq9qzbuitm8apfa4g54jo8bld3vsxl73m3c0czrcgvhnhdmiv72f33w0rpoxnkrcgbzim6ihbe5pmmwszvjxgf9ct2m5w18fr0r547apsyeohvhe\",\n        \"Externer-Beleg-Belegkreis\" : \"s3ptkarcjg2zpq688fgidxjcjxjt0b5aaoid5ttnwx0kee7ebprwgkuq2mk7su\",\n        \"Menge\" : 275782246534629047,\n        \"BruttoBetrag\" : 593025665355785238,\n        \"Externer-Beleg-Referenz\" : \"84eu4r1whyvro599f2pbwj7kmiyqra345005v4athydf5htv08etromiri4g415ur0yx0ismvjg40cn24ibgrgdqgrl6no0ujmlvrlci831cixgx1t69eoqol\",\n        \"Bezeichnung\" : \"vig2efhfdds1i0qp3t6h7yyi89tn57gx3gbq6s3at1tm0qalhci4hn06ecc55r0kcdx62py4qgjj3h3t1qwq2d4vjcae5yox1zsi8alcx9ye92qkolcixyfg\"\n      }, {\n        \"Satz\" : \"BESONDERS\",\n        \"NettoBetrag\" : 5604609617330889778,\n        \"Externer-Beleg-Bezeichnung\" : \"3wzvwzehor16ozxz32mcvpps4d49yqw52u9xi887y4nd09zxdyznh2l4s2l5ntakbo9ruhhl6vobmrxolwjejkjd1k3a8fdh0w6rb\",\n        \"Externer-Beleg-Belegkreis\" : \"vn4ckrwxz6s7zpjfdb6ux28xdspqduq858q8can43g9g3dg3935g2je7zej7vum58qorsyx0sbhi4ixm6xei61ycfhfi881zthwetk7z5tebmma0diraghbwyvp04\",\n        \"Menge\" : 1603882153886961465,\n        \"BruttoBetrag\" : 8533567926632260483,\n        \"Externer-Beleg-Referenz\" : \"nlcsdotq69vonf2sud9a561pola3kaw2epjoaf3lq9haa8iyyjys2eg66rk1rlkznhnsdepvclcbip7swaym5txl4k6a4u6bkds7su7sbrtoa84uxnomhpw6q770obr6u09wu1vsk08wp42ho9yie8w3r4xk97bq4zskf07cv65\",\n        \"Bezeichnung\" : \"tqpljxzw619dmb40t5gw7dhtlla392l2u3azl24oyr6tjkjbggk\"\n      }, {\n        \"Satz\" : \"BESONDERS\",\n        \"NettoBetrag\" : 7805603752834346341,\n        \"Externer-Beleg-Bezeichnung\" : \"g7bg83nzal1bmb3gu6wiios2kaxt3oztqmygn0vi54d77svpq4wwz9unrsj31qmwqkzwfgz1m\",\n        \"Externer-Beleg-Belegkreis\" : \"4c8dtaqu1cmzwe16jvw7zdow85iqndefy3\",\n        \"Menge\" : 8454200172065804031,\n        \"BruttoBetrag\" : 8392689442981250013,\n        \"Externer-Beleg-Referenz\" : \"o86nq50j0tbivw2yg66b4oqs3nxa1eb80ql5p8rvym711rws0k1b1pwdoeow3ij36291t72lbu634t7lk77rfa1lt57iw4m68ke2zg1te2j\",\n        \"Bezeichnung\" : \"qgxozrpccloh9eddb79ubkl10bow2nd3ptysoreojju2xjuzhfokzqq9uv4ah0e869g1sglhxl12ga1recm9owemtcc8duk3swqv2b4wpfrbqfrqu6y98d2erf8u68uk8iuiarhg0smnf63va5yg\"\n      }, {\n        \"Satz\" : \"NULL\",\n        \"NettoBetrag\" : 2217818773844456017,\n        \"Externer-Beleg-Bezeichnung\" : \"cvx4rwenkciccnveg3ymq528p49n21i4d98hp5qphzyggbp9c9anbn7c7wljlryut9y4o93cetn1mvdzlozf0iy4n83q0lzgzav3gmm9y6b4jyvi2doio45apqvuvpsa99uz9mmma148hgoc82b0cq0kcfol\",\n        \"Externer-Beleg-Belegkreis\" : \"5lk8x2cx9k1k2gg86m5ivimkit9u6cxg0j3xs307oy4nh8xo84yw6sg37mu9u3lzayu223k45mo3k8o0i9wtvjzgu2dw0dv5m25ki6oh\",\n        \"Menge\" : 5227847610579883583,\n        \"BruttoBetrag\" : 3667915769390782410,\n        \"Externer-Beleg-Referenz\" : \"pged8t3rkqdi40j1lgueue9yr6ywaog40twmqv9em60tumhu0pv1pqztzv017gb2pkbdlxvbi2hdoc75qb9s3mu04eea7oxdmqrlq5plsw1ojpmw8dh7macnolx8ubukhhh2wrrq\",\n        \"Bezeichnung\" : \"r1eigtivgnqu8vathm1tlwg7xhmqsp87v29zfvbb1egml6xggw5290r69ll9ql98cuqc5fsa9n5nqg029n1s85n15zemd7kxr25lslkrmgimdmk8qxld8xc158wex1l8vujq1djuyxjpz37h67mr7ea527j125bkwl4jv3\"\n      }, {\n        \"Satz\" : \"ERMAESSIGT1\",\n        \"NettoBetrag\" : 2397067743982504264,\n        \"Externer-Beleg-Bezeichnung\" : \"aemv7kca9yhnmdvuaop2dm40koltywe4oqdygpumlzbtony2sko873uw22x78v35kk87s8ggu33my0n\",\n        \"Externer-Beleg-Belegkreis\" : \"l0tkl1h\",\n        \"Menge\" : 1926051839655075311,\n        \"BruttoBetrag\" : 5209981610700402726,\n        \"Externer-Beleg-Referenz\" : \"1qcy77l88nd188qbciq46tvpl2qrkzdj01e0el71lfx0k7mb09u69tv9h8k8d2slnx0mxeb1gsrxiuk7mmpixdfvjdat96jgucs\",\n        \"Bezeichnung\" : \"t9o75rwf8n92hjq4kjicqr4g6o8fmk\"\n      }, {\n        \"Satz\" : \"NULL\",\n        \"NettoBetrag\" : 8256404910333111252,\n        \"Externer-Beleg-Bezeichnung\" : \"t7zdmkf4rrepma60i45dgy0g0lig34ib5ei3s5sok8n7j6z390faossvhtazmgq2d\",\n        \"Externer-Beleg-Belegkreis\" : \"j25xxpbb99bwp8d83tbys4inkn03tdpqvza6w0nnsb50989a60o7q6pv0m47y\",\n        \"Menge\" : 2056969309561117218,\n        \"BruttoBetrag\" : 1546974056342706579,\n        \"Externer-Beleg-Referenz\" : \"6ski556evauu9heuh0l6mcaa34ts9n3qobbvzj0ugwf6ck708r8lcbsjlch1b28hekre6hjyx4h06gebh6mhg19je1y6zoxyv6oz4fnamf82ex2grd2watdlhj9571izrepuadwjkw5m3r9aqnan9m4inhlwhub3qn36v8e\",\n        \"Bezeichnung\" : \"ol3wjsb9wv1mtudjwnrcrcuqjejax2dxwrbqs3ys8r2ncuc2pqsftowo9q1nu6wxgtqz5x5x5tlsco7wt5ln2581t2wx9px14ojvu374ycxto9istek08cpnca1qoac\"\n      }, {\n        \"Satz\" : \"NULL\",\n        \"NettoBetrag\" : 6855346723845780186,\n        \"Externer-Beleg-Bezeichnung\" : \"r6g\",\n        \"Externer-Beleg-Belegkreis\" : \"5641tr9vzknvixd5p7fusrly2ae7kyh6w2u2vk3muc9gxtmddk6vy8x6xm8ew84yy9l3qa25zcd47b1to6vng8cwpnqytbklo3xio5qbjga9s0uzjd62bob05yge334u\",\n        \"Menge\" : 7409010738883202341,\n        \"BruttoBetrag\" : 4892750319939535678,\n        \"Externer-Beleg-Referenz\" : \"foaswr8lb14unm6fo2kvmma26pgav0km5orgoug4h5jexghbf3xddwbgvrl48j2kl0las9u5yakk5sjdyqlyb94tto6rwtyr4vfc4cfcasa9j5d95zyzn7uacoiycij6oe175bvglrhry3qwz2ymh48unn59rypiuhvwazldeny7qubu22bd2sf\",\n        \"Bezeichnung\" : \"1e038itjn1f6g6u3o02ludx09kfalt10trezcyqwi3v0utbqyrxf74wn47j5qjata4ij31kpitw68gu6jb8ux0fke5p0dw8agsurljl7onheakc4y\"\n      } ],\n      \"Unternehmen-PLZ\" : \"2022-07-01T06:57:26.281839Z\",\n      \"Belegnummer\" : \"2023-02-22T09:12:26.281866Z\"\n    },\n    \"Beleg-Codes\" : [ \"j906erunikrxpwa7xh4aj4vlk9h8lquvxenvncn36us6w5r9yniy20mvgp1iv0yikxgs0b6nzvgy6c3h6l3n7bmw30tltindqjirrb\", \"vx7amw1clanvxs88jqixpqk0q3f3ngu48n8v9vje1aidh8wkmd4m1lejgasneqautggskmdz35hj7hxqb0chpyq7byr9dkm63mcyom8rj3ujjw45i3t6rxw0cr67jx\", \"jrqnqei4s4jrg6u5bwl17bfv6czlkrrgk06tpe23wqcn1bq6es41c9wlx07d1wkjq5ftegoersjo9acbwhx4erv1tpuea65gd8thx7ncg6w08bd9yf8ynku2hllys0mge27f2brmssqy2no0rirwh9otm\", \"srpnc7jn1x4luhvjayvp4net2me1sputf3v1pm1gbf9bdw4lbm1cekkmnfbuwoz5kws6o3kezgd4kdap8yvrnlk2cipw94z2m0xwp4is3dyx9b8397yjecd4bdpsc2xeqysit2f49\", \"v0zxvcyvtevsmmjpc4rrh7r68wb2ruaikv4hqcauxwa5ung5tyexsub9yh2iha2iyhqf2wowd1etsrd7wxavv2w5ek9z\" ],\n    \"QR\" : \"ijiofysin03zh7ejw5wqsdsiupvsma9k3dene75lltej7mujcdzajjww46a8k\",\n    \"_href\" : \"jnzbyevxghu2w7e9wfdqr0fjbirmhgr7m1a0bbq1p2eu36uwl4mg9mxnljzrhd9rqrueofret1wpwebhdj5kvazns8zs46pztt1ta4wt8kn920jdi\",\n    \"QR-Link\" : \"yyjseov37kxkc2gdypd61fs16pvl93f5mqodc916h2jniawoiw3oloi4s6f9vjpcckwof7o\",\n    \"Signaturerstellungseinheit-UUID\" : \"b5d11901-e55a-4a04-9dac-f12d09c9aa31\",\n    \"JWS\" : \"ftzkxg7j6vodu6ncr351kdnuv7vn7zrclu5ju3oqhg35f2s5t1x45nvc6tafafix12r\",\n    \"Beleg-Typen\" : [ \"Kassenbericht\", \"Storno\", \"Systembeleg\", \"Systembeleg\", \"Monatsabschluss\", \"Storno\" ],\n    \"_uuid\" : \"226ef30a-69eb-372a-a0b4-239623857d15\",\n    \"Registrierkasse-UUID\" : \"0f418ad0-2f23-45f4-9945-35af5859224c\"\n  }, {\n    \"Belegdaten\" : {\n      \"Betrag-Brutto\" : 6200034702179012439,\n      \"Rabatte\" : [ {\n        \"Betrag-Brutto\" : 5102612342362523629,\n        \"Betrag-Netto\" : 9073284285910620045,\n        \"Satz\" : \"NULL\",\n        \"Bezeichnung\" : \"7fixn0gtzimcrgq79jp8ndvo4qsbtydwhtcsh593yx7m3frfcgr86lmei2w600q\"\n      }, {\n        \"Betrag-Brutto\" : 6213035265456467979,\n        \"Betrag-Netto\" : 1622320034743402676,\n        \"Satz\" : \"NULL\",\n        \"Bezeichnung\" : \"yl192oqgri10kjp1t990inwyn30tnexsjoig3re28kw2h40dkiiurry71krybw4sc0tb2sqozdv3txse8foudreqpe3eorv7aj6ggn39uwtlsg2orsqff3sukk8ri4hgznm1j1w\"\n      }, {\n        \"Betrag-Brutto\" : 2017676427530409223,\n        \"Betrag-Netto\" : 91879129190776695,\n        \"Satz\" : \"BESONDERS\",\n        \"Bezeichnung\" : \"vq10s3ywxd\"\n      }, {\n        \"Betrag-Brutto\" : 4437546659245001536,\n        \"Betrag-Netto\" : 7585909821755562382,\n        \"Satz\" : \"BESONDERS\",\n        \"Bezeichnung\" : \"u47s3uxgv8ebxrgir73jw4692o11xibs1dnz8nou4daq84vcli3m5vssw4\"\n      }, {\n        \"Betrag-Brutto\" : 1943350175213357974,\n        \"Betrag-Netto\" : 1029446107738391441,\n        \"Satz\" : \"ERMAESSIGT1\",\n        \"Bezeichnung\" : \"ik5q9pqqn6idnx0p7bbuger8aw5u1z3h7cd6\"\n      }, {\n        \"Betrag-Brutto\" : 8930676037831067150,\n        \"Betrag-Netto\" : 7327343595683156376,\n        \"Satz\" : \"NULL\",\n        \"Bezeichnung\" : \"2l6hqtbx0hdvsdnd37t9lawwumnfy21jyk05h64xju10mb1qqjaen6sx7w0p1cqm6l18qh\"\n      } ],\n      \"Betrag-Satz-Ermaessigt-2-Netto\" : 8987035057006249633,\n      \"Betrag-Satz-Normal-Brutto\" : 7141995456241867688,\n      \"Unternehmen-Kopfzeile\" : \"2023-02-03T07:46:26.282234Z\",\n      \"Unternehmen-Adresse1\" : \"2022-10-13T07:55:26.282261Z\",\n      \"Unternehmen-Adresse2\" : \"2022-04-28T08:09:26.282289Z\",\n      \"Betrag-Satz-Null-Brutto\" : 9076538125456872113,\n      \"Externer-Beleg-Referenz\" : \"2022-10-25T06:26:26.282319Z\",\n      \"Training\" : false,\n      \"Beleg-Datum-Uhrzeit\" : \"2022-04-26T07:15:26.282349Z\",\n      \"Unternehmen-ID-Typ\" : \"gln\",\n      \"Unternehmen-Name\" : \"2022-06-27T06:03:26.282383Z\",\n      \"Betrag-Satz-Ermaessigt-2-Brutto\" : 8622935260100727080,\n      \"Externer-Beleg-Belegkreis\" : \"2022-08-05T09:02:26.282414Z\",\n      \"Betrag-Satz-Besonders-Brutto\" : 3336150111956581623,\n      \"Betrag-Satz-Ermaessigt-1-Brutto\" : 5229099104539699994,\n      \"Unternehmen-Fusszeile\" : \"2022-06-27T06:27:26.282449Z\",\n      \"Storno\" : true,\n      \"Unternehmen-ID\" : \"ll39\",\n      \"Zertifikat-Seriennummer\" : \"2022-06-16T06:24:26.282555Z\",\n      \"Kassen-ID\" : \"lqnd\",\n      \"Storno-Beleg-UUID\" : \"9f14ab46-bb26-4c4b-b38f-cf631979a551\",\n      \"Betrag-Satz-Ermaessigt-1-Netto\" : 3792436383618411348,\n      \"Betrag-Satz-Besonders-Netto\" : 1079200368485486598,\n      \"Notizen\" : [ \"t2rjkdd7jiznd3\", \"fadwwi8e9ayhx71gde3e5q94ckcoegi1cbkhy9ftgf2fmrtzhn84rjjtw6eknpifo0jc0i9cok2ro92yv91x7sy0uyq9sq99d8s\", \"dqghiad6x92h7mkh3tlmkh9qao5icpv05dpag4x\" ],\n      \"Storno-Text\" : \"2022-06-08T09:04:26.28268Z\",\n      \"Betrag-Satz-Normal-Netto\" : 3748079939857191952,\n      \"Unternehmen-Ort\" : \"2022-11-28T08:10:26.282711Z\",\n      \"Betrag-Netto\" : 7871358855903141486,\n      \"Kunde\" : \"2022-12-31T06:57:26.282739Z\",\n      \"Zahlungen\" : [ {\n        \"Betrag\" : 4872564162444960520,\n        \"Referenz\" : \"f9djzyoj9ts9qoyn\",\n        \"Bezeichnung\" : \"srb2rxxl0drgiguz4apl2brt52qt7mcn156e1lyo7tq2cadkf9wjjmzp71ad40882d98qqkbvlv4htj2ab9qeejgm11p4lolii1cnsff8apcsqvebk0wy1ylceozf5s995xhg5qyd3prwb8722myh2kdt7alsdc8nhuh1mzzeyju0esaar3wt1lf3lokck1bloj6x8x\"\n      } ],\n      \"Externer-Beleg-Bezeichnung\" : \"2022-11-05T06:15:26.282801Z\",\n      \"Betrag-Satz-Null-Netto\" : 1944707336400658964,\n      \"Posten\" : [ {\n        \"Satz\" : \"ERMAESSIGT2\",\n        \"NettoBetrag\" : 7177822047264217110,\n        \"Externer-Beleg-Bezeichnung\" : \"x4nprqjxuueq7dx9vxnanlz7rm5pv4u6as8qc65y01hirkzzzl3ucp60wn3rol2qi5o6m965xjvvlsd\",\n        \"Externer-Beleg-Belegkreis\" : \"04wzgkgirxl765tvuc21w2ddrf4qwif5mbceqrflyz5tten4mwr0y4qylk5m9winaxfplh21g\",\n        \"Menge\" : 2916012100324633547,\n        \"BruttoBetrag\" : 2994881564370578749,\n        \"Externer-Beleg-Referenz\" : \"l8xsd1vd883unnli1pwb9lvk47so1xil5n8mmclqc77xqnmx8nij96pckn30cah2ck1taks2kudyt9il292vx3\",\n        \"Bezeichnung\" : \"1v748xhwknrd69zuo19h55etbaxmbrf9144le5qoojhold05wp4rutuq9l8arg5yyjdhvrq75q8mc8sck08qc2rnb\"\n      }, {\n        \"Satz\" : \"NULL\",\n        \"NettoBetrag\" : 3487270287334523746,\n        \"Externer-Beleg-Bezeichnung\" : \"zytvrww8hcbvp1aiyo3iufww082z2i3p7f2cshub8ict2fubo9hxqgv74uw241m38l3xwvyq5qbvjvxxsa6xmpqhql8h8o7s14cu3vq3zsq3ved6z5pgzln\",\n        \"Externer-Beleg-Belegkreis\" : \"psdxr5zt47blhwy478ophlc1oefwlbsn749d9q128nda615va7orofxkagit8kf6dqnlf3y9lea8p2l0ssp2xv37ati9bzoei4joxryda\",\n        \"Menge\" : 7683435853990121439,\n        \"BruttoBetrag\" : 5052104649566436126,\n        \"Externer-Beleg-Referenz\" : \"0mkanbcdul96noe4mcu9qw95imgk6d1v583ktyrr10d5iviigpebhjtraznvl1qu2rle9zn9uhw05lcy19u207hm0ybkl6i3nlp3bbbinif7rnc9007qn7ba9d1fmpm20sbn0o4nh9\",\n        \"Bezeichnung\" : \"mwpfmf\"\n      }, {\n        \"Satz\" : \"BESONDERS\",\n        \"NettoBetrag\" : 2830318818779261709,\n        \"Externer-Beleg-Bezeichnung\" : \"ezjj9gow3968ali7wadbrbij1thfa74rwbb2pkli8hj9x8hi3hwyreg330xgiglz0gkk7o9pwpjbzg0wtkxc8b5b6w144gmouyr5s3mfb68ed9pucmabierva95r375nmpv2vzp7hm41v7teq8zzcfggr1awwcgu4qlzxai\",\n        \"Externer-Beleg-Belegkreis\" : \"yrus3jhkr0in8e1zes6igk24h65i4ckv3h0c84yij2u0p5g52byr7ac6wptogxf58jns8xv8yogpt8c3lch6e6ox7bi0eolwa0u\",\n        \"Menge\" : 1764550109045520395,\n        \"BruttoBetrag\" : 3088420687193800354,\n        \"Externer-Beleg-Referenz\" : \"f7j435zbwyax9ejwpfco5xp318xb9fhqrrwgmtk6b9q2ocwc2ts8jci91fdu33a4tvppsg149a6lm2v87tyyy8l8ii35ycrb24t6taylx0z2scfg8guzehlt89r108bh9it44c\",\n        \"Bezeichnung\" : \"iwkr9p5zu0aop7n5iuej4gwyj1ss4w5ahs53josnh\"\n      }, {\n        \"Satz\" : \"NORMAL\",\n        \"NettoBetrag\" : 4427619555070931015,\n        \"Externer-Beleg-Bezeichnung\" : \"wt71fvqqxcu2j0ct7vzmwzk1z9qvdqkizrq4k712z1s0dkwip8inzog3rnzc1gt6us700z5jmjh5nauamk2n0kg9ab5mmvtv97n5vw\",\n        \"Externer-Beleg-Belegkreis\" : \"j617ymtt4exu4yjje5tsdmflkbhn1830zro0wscxjtgidjtobj9t4fzj4xbu7bl65ebv82ea\",\n        \"Menge\" : 6725128445749371901,\n        \"BruttoBetrag\" : 1964801910135749525,\n        \"Externer-Beleg-Referenz\" : \"jsf9kftkjnbw6hhdpoq0h01ael86pms7lfnfu9qm0hrbicoa66j2qh16ixandeywzy2zgqng9r4g4ynoiytgyirv6z25uj31t884iwvugak0v7b8jv8q1bnz844k9t7cf56z543soadb8zwwruhztvl56n1f8cifpqfgxn3z4ij4qmmyp2\",\n        \"Bezeichnung\" : \"k63inqtxxhgpo71lizwwm92zgasiz31ckvpwvjqc57ltt3tydn3aut1b9aqhkc1sbjyg46urrxilkphj78fgs8bqk7ni16rgnabldzxq58jbojjdqfhyqkanngtalck63dmsfalyx3wrpn1x3f4r5fji8ea0hkowbwq116ohly9qhjkqvps03u\"\n      } ],\n      \"Unternehmen-PLZ\" : \"2023-01-13T09:05:26.283117Z\",\n      \"Belegnummer\" : \"2022-06-15T07:04:26.283146Z\"\n    },\n    \"Beleg-Codes\" : [ \"8uw3w0svy\" ],\n    \"QR\" : \"rdfbajqa6ujurxncyg7yxsd7960js68fx11fvodgqqgtl00lqbn09yxwwz4uodxek4kguth9k1nat50f676t5wfenerqeprcpn01kgfyc\",\n    \"_href\" : \"wgd1zavlhaabn152xcy7itsfm7fff1uwhixvqa948xenha8od5d0wi6htmhn6noe638wkado2p6k2n1fgzybv5gfz6hnwsqosnbyhl78pcevpp1o7qjhjlq7ltmh0z55jxswlf6033b2zy0fw5i0p7ktehrei8s2b351hg6em1guekp37mu1wthqcft3a\",\n    \"QR-Link\" : \"ze7wwryetht2hbbtvl59r7tg1wsex2ikwfkrqlc2hrdynoe8hxwgqbopvnw8ooqf0bn\",\n    \"Signaturerstellungseinheit-UUID\" : \"ddea7889-cdac-401b-9bc3-33eaf9fe12bb\",\n    \"JWS\" : \"m26dhbzx3qirsqdw2h1fgpq4pj5rl1kj4zu8n3a2rpk2ta7g4jh7wawy0odwb29jeqkbeymtlogn4t3i4c2vm0lkyyj6\",\n    \"Beleg-Typen\" : [ \"Startbeleg\", \"Monatsabschluss\", \"Startbeleg\" ],\n    \"_uuid\" : \"45082750-615b-3b65-a50f-2bf5824bfa36\",\n    \"Registrierkasse-UUID\" : \"f4af6057-690b-4011-a41b-5e4bdf6d7cd8\"\n  }, {\n    \"Belegdaten\" : {\n      \"Betrag-Brutto\" : 5659724101384921503,\n      \"Rabatte\" : [ {\n        \"Betrag-Brutto\" : 2978414322721790433,\n        \"Betrag-Netto\" : 3212346381716980021,\n        \"Satz\" : \"NULL\",\n        \"Bezeichnung\" : \"gflkty2mctnj6kmkhoiouusm3puvwyh5ch7b69vplp5ciu234i4\"\n      }, {\n        \"Betrag-Brutto\" : 4212462561473823939,\n        \"Betrag-Netto\" : 9119682804928712321,\n        \"Satz\" : \"NULL\",\n        \"Bezeichnung\" : \"dkh3v7pauljs0nzrunmwgqh0i5p2gvmjiapnlr2b93rv78n1kio51sjibnbx2ao4e2ydhl7ysi9bithb3uoenvcvtfsmj563066z5043zdjfiwkjq3maeo7glawq258e1ef4x\"\n      }, {\n        \"Betrag-Brutto\" : 8018686501968446031,\n        \"Betrag-Netto\" : 1956550189363488517,\n        \"Satz\" : \"BESONDERS\",\n        \"Bezeichnung\" : \"rp0g8bxlm48cqiajopktnejhnbhak82kk2uauirayz315txotyxkq3fpzyoncs7qai382ie5nwfj26akcmg6zqap7q24k70d47c326ej6ksvdlsoe6cmzkj6yn27nudajf95v3hkjzxw2srfj56kupav9p5ungc9uoh4pgprptfle6oqql60prbmv4o4jpvem3i\"\n      }, {\n        \"Betrag-Brutto\" : 156039453935007600,\n        \"Betrag-Netto\" : 6029208914293817017,\n        \"Satz\" : \"NORMAL\",\n        \"Bezeichnung\" : \"nrjd27dgd1s0rrxx2fr0et9nk280lb16xfkilubgbms2uvsi9bxb3psf5rlsxwcswck0fjfwpoiqkabpva59xg3pm9u3be0yq6u6nmeqp\"\n      } ],\n      \"Betrag-Satz-Ermaessigt-2-Netto\" : 2596431384323614153,\n      \"Betrag-Satz-Normal-Brutto\" : 4620164574059367504,\n      \"Unternehmen-Kopfzeile\" : \"2022-08-30T08:55:26.283429Z\",\n      \"Unternehmen-Adresse1\" : \"2022-10-17T06:08:26.283457Z\",\n      \"Unternehmen-Adresse2\" : \"2023-02-05T09:10:26.283483Z\",\n      \"Betrag-Satz-Null-Brutto\" : 1800321309580973910,\n      \"Externer-Beleg-Referenz\" : \"2022-06-04T09:17:26.283514Z\",\n      \"Training\" : false,\n      \"Beleg-Datum-Uhrzeit\" : \"2022-07-26T06:27:26.283543Z\",\n      \"Unternehmen-ID-Typ\" : \"steuernummer\",\n      \"Unternehmen-Name\" : \"2023-03-25T05:49:26.283577Z\",\n      \"Betrag-Satz-Ermaessigt-2-Brutto\" : 2694228509806898594,\n      \"Externer-Beleg-Belegkreis\" : \"2022-06-01T06:07:26.283606Z\",\n      \"Betrag-Satz-Besonders-Brutto\" : 573319731777120604,\n      \"Betrag-Satz-Ermaessigt-1-Brutto\" : 2431874376357502355,\n      \"Unternehmen-Fusszeile\" : \"2022-06-10T08:11:26.283639Z\",\n      \"Storno\" : true,\n      \"Unternehmen-ID\" : \"u823\",\n      \"Zertifikat-Seriennummer\" : \"2023-02-19T05:43:26.283736Z\",\n      \"Kassen-ID\" : \"h2ku\",\n      \"Storno-Beleg-UUID\" : \"ab1fe60a-43b2-4b9f-a9b3-3b421bed99d3\",\n      \"Betrag-Satz-Ermaessigt-1-Netto\" : 3528706322113809632,\n      \"Betrag-Satz-Besonders-Netto\" : 259889722172206571,\n      \"Notizen\" : [ \"bx2cl9hv50lqg2rpl982eh8hcktsrtw68gidgcreq26pyqxh3zrme9ni0ifflqvv7r1i79ax2xaot599fs2dtga4ds\", \"u09w8uvipsq12cvrqknn5ymdubuavtpmp7y0zrrpsgn11pbs1vhhbf0eqw4v1gfgelyilk25iur9fwvn11s\", \"6ngzxjkcio59j55oa8gravpu4m8hj1fwvjcyt76sycsbdsbdzaraic24qkpgp7wgldokfsr2vacrj2a4enoa7q097vlhkeefnf4s0m3wxfm4x7194oplxevlbu9e5lujdylrkumighdqu27gz\", \"cfhbyu4dg824m8wlchowm0l2r1\", \"e18b60uqg3kf6ghst6f0m7r3e09zjxvsxkyda2g0f51cza9z56vi9pg5cfqvv\", \"l1n765ef8a6gu5cxrbjpp2xahq1g3298xigzo2eurbhf0ahxtneuc7d681pkgzt1lgwdcg4ay8rpy14054n6su5hpu31z04yqz6lgrq9rvht7p5lsscm4dwsnkye9l0hjxr5z\" ],\n      \"Storno-Text\" : \"2023-02-22T08:31:26.283873Z\",\n      \"Betrag-Satz-Normal-Netto\" : 6098193761553655647,\n      \"Unternehmen-Ort\" : \"2022-10-21T08:49:26.283901Z\",\n      \"Betrag-Netto\" : 930998210294207395,\n      \"Kunde\" : \"2023-01-31T05:26:26.283931Z\",\n      \"Zahlungen\" : [ {\n        \"Betrag\" : 8539159431387162769,\n        \"Referenz\" : \"mxa0jbko2s0rxlba8ry75xuq8lw6hdnaxq45qkjxg2sgii8ujsv0q2mxhjyimio8hc8qjna3\",\n        \"Bezeichnung\" : \"5jtd4pby91100406vhpvicnbg8jx2u81qyvtwknrlvoex1cy58n1btt5504k8gszpt2jnkk2oifinlkcippclfrlv05v14wp6gbn5j3gbqo68d675fq244l772z4wl2vyzuxmkts9s0hd4xo4k39\"\n      }, {\n        \"Betrag\" : 2518080369267810710,\n        \"Referenz\" : \"ynldc5fmkkowgkniswo41scyv617t9xwanzkyh4v6xdblw1fw29bce3575xmd700i1i0vqr9pjkrlj6rdomog43vfc8ozb5gjk8zy1yvmc89yk7shh8rodpnpzid3mb8rwc74\",\n        \"Bezeichnung\" : \"uiub9voq4bjr7kapkdjnrot5mztng\"\n      }, {\n        \"Betrag\" : 8482397978271856178,\n        \"Referenz\" : \"robfofu2ojbrv7fepezso8a2tuut5tselyk2hgmrhluvfy3nfrmfmgbtjag3f9qjpaiyd25gmgt078rwfc15hucprso0v1pl1df\",\n        \"Bezeichnung\" : \"x0mwvrev6m6bad9p8p7oxtkut3x2vasyeze0hxo8n3klwkup5evt8spy96t9x0ykjf766b9nlmn53y2jkyxfsfe4f2ozdb2vp8s3p30yszvi1mfn4xq84td9cpvo268xq2y5b936hqlxv5ghbrq45z9pt990yt8oslgj0spj\"\n      }, {\n        \"Betrag\" : 2768806883124129833,\n        \"Referenz\" : \"kpgyb0ucnc8v6wxhhjec9hh4d2nb0q01n7abpeikry662itzmgomlj7mezw9peo9d30mcu65u2uvcng7k10l0ia28ocxar99spjujdxi8e431tsvj6r5pimggzonvpc7i6n08jnmi17hbighdf1nevf5pfvszqasfx0jycorvr7jn38715lnyd1jvxy8oc11yb9kcz5\",\n        \"Bezeichnung\" : \"k1zijla6uqubdug089lil5ic9jrmdbe69udds\"\n      }, {\n        \"Betrag\" : 4489947508460163982,\n        \"Referenz\" : \"jnvcaa8hd4fo2fwvex4e0im32r3cb9zjxtix7haszd9bbbt45l4ulkx1zvle72s8y1g9i5tvexyynrb3m\",\n        \"Bezeichnung\" : \"unwhc3ja17tq9awonwj3q29y6ha1ip9pmjiyxp\"\n      }, {\n        \"Betrag\" : 979632218449826310,\n        \"Referenz\" : \"4rcr42ej008vgzk1c9kfsqsd27qjwr7816id32skw6vsufjl7f7dhcwivllgagrkw0gcjc0qmxv2pga72ndmxx92ouk2g1qdtnqk8539nt9vyudnqg42383iraljtmmq7w50l34yo9f2gpvm1oukch5hy\",\n        \"Bezeichnung\" : \"mca50jar9zw6xec61z3nldi32ogu3reqzwppefw3melewezj0q6ymcbj3erlon7el0pcvrelo5g9wgrluj12zimhgiqivv6rgvflvbjfko\"\n      } ],\n      \"Externer-Beleg-Bezeichnung\" : \"2023-03-05T05:30:26.284128Z\",\n      \"Betrag-Satz-Null-Netto\" : 1745821457442389585,\n      \"Posten\" : [ {\n        \"Satz\" : \"NULL\",\n        \"NettoBetrag\" : 8222357234828662517,\n        \"Externer-Beleg-Bezeichnung\" : \"l6medefu766e0u98zrjp2373qtk0sx4qi107mz32lunt3592rjwheipnu36a56phk34nvw00vvr\",\n        \"Externer-Beleg-Belegkreis\" : \"gozg4rr9j1gkq6yalbpymumeg88rb8887c2qn5rd189wkf6d54pu641yghk516tk0z8m1\",\n        \"Menge\" : 848587260876501941,\n        \"BruttoBetrag\" : 5234502396358982730,\n        \"Externer-Beleg-Referenz\" : \"rs5ajo9a3gdbgyulxlkji0awfii8p7hpct31c1ywys1nlt2cbphui24hpubcw0jff1w4ck9afdhcco48binrb9xlyc7zyzmhyocbnn5tq5\",\n        \"Bezeichnung\" : \"83s0u359cyiss8hs4nbgkfg5n4omlk8tq8d6jhmyic9agozi8gx5cxwfwltvb2eysqdgmkqq5ltm15qgfx5pa2eqnblq5r4xfm522s3he9eexojp7xz3otj9iq8proxqnlxd24hy0c4s7wxqfeibpfqhlmdi19pgb11048a6w26vm9ojdb7xhmjq\"\n      }, {\n        \"Satz\" : \"NULL\",\n        \"NettoBetrag\" : 7279034635117464307,\n        \"Externer-Beleg-Bezeichnung\" : \"42ipxlb66ti120lhprehml5kgs\",\n        \"Externer-Beleg-Belegkreis\" : \"oyy8e0m3fg9yrvk1jgjqf2yasp\",\n        \"Menge\" : 2411295442077608672,\n        \"BruttoBetrag\" : 5339977448843294166,\n        \"Externer-Beleg-Referenz\" : \"iktniaz7sar3n\",\n        \"Bezeichnung\" : \"7ph9nr7slm5mkj06owu35pfdxbrnvv8vzsg2muily7qhjgs24rt4x1gb77o1bvjaohw43jv95jtv0fjmwrnh989m98lwr3vkfx5weqhpbzx3g18zbkrkgrav4oiikwu9k4q5fd8gg6ndfaz4iqajg1d6z9m5q1agii0qrbtnvyf9a04v0\"\n      }, {\n        \"Satz\" : \"NULL\",\n        \"NettoBetrag\" : 9155551410774093860,\n        \"Externer-Beleg-Bezeichnung\" : \"1zlzquxa3021motkfidru089dxbhydt6nmy1863zilulfqkwx1y5otsw5x7vkhnuzzdjzjucwd3jryp80a72ew\",\n        \"Externer-Beleg-Belegkreis\" : \"7pc3rdxkbz3w5vejbpa1ej3cie6tei95lxw34hduej1tj9zzpp5da03fz9mexiutg57css1ujbnz5r44q1t7k2uc5yo6vcvhvvyskqsa6qyy4mrfim7nj1tsqt8dwgx0ozfs7sg6fhoa7xpzo4ahzmgio16znyg2pj\",\n        \"Menge\" : 6737227795352479999,\n        \"BruttoBetrag\" : 3342233131671128494,\n        \"Externer-Beleg-Referenz\" : \"bylg54f3s5ka29ra1e2oscnmbz5yei2973h7w79pksw49suaviq7ixw3plpqkv81ojqclpsd555sfgzkwxsrjseu0uxcuel26g3s3hc2xnc1fn249xtkb34x6fcc9f\",\n        \"Bezeichnung\" : \"f3iarihhaggy6zb10oj1d7qlgwqkos34yhrgavnnzdc9icxvraxweu5bhn7mzgicq06w6scy5f340l36kzeuvm1buehlqfrvylftodshq45otm49100bn4m6u6cwlchckmmjnhqo0ra34o8ecr5gyvnarpco9tlt6dz3\"\n      }, {\n        \"Satz\" : \"NORMAL\",\n        \"NettoBetrag\" : 6254614302319248987,\n        \"Externer-Beleg-Bezeichnung\" : \"p1re8t3gde7b94e34a7yd7bz2gfngju9w9vz95f3e3uojp0ikp3kyxgbj1cttm0lyp13ni6x8ejbocw02vb1jyvwarafuqmq0ico\",\n        \"Externer-Beleg-Belegkreis\" : \"5hafl7upi9hxjb7fg5ljonkkbl\",\n        \"Menge\" : 8806619702576117545,\n        \"BruttoBetrag\" : 4405332114737787943,\n        \"Externer-Beleg-Referenz\" : \"xxqhnsyoyehwyhvzhmoknssblvljkgqex6iizyhr90ff7tf57x0vyygzlkdsxh2az92otu4fb5z\",\n        \"Bezeichnung\" : \"fft2ky51k87zh1gtohz272w10c9knobavi8sy4lpacv7r7tq7x8sahi4oa1t587vs8tczaxgalhr\"\n      }, {\n        \"Satz\" : \"BESONDERS\",\n        \"NettoBetrag\" : 4858942995587434609,\n        \"Externer-Beleg-Bezeichnung\" : \"0mmvqrhrqpmmwaf535w3h2bw19tegvprkv8f87hnc2rcfqae0nfkc21lcs1aqzd6kvd3wf2mrfx7zncotx0ozbbkqcgko9a59axowil714mvnjg0\",\n        \"Externer-Beleg-Belegkreis\" : \"7vueweaukmrrun5yji9g7c\",\n        \"Menge\" : 6125780126204016365,\n        \"BruttoBetrag\" : 6201315362220873160,\n        \"Externer-Beleg-Referenz\" : \"6rlw693p6o9qha5azn2hvsfas9yimzbsnismnq9dk991mpv7q0fwrel72m907ua21glun69dezz7vj0mtm8rws\",\n        \"Bezeichnung\" : \"dqzn4pec14kom1xboudcodzdwu1ubv15y6lg23t4zlt28sp0eksaohqvbzfg2q97uja8cx3hqv55nzqkl58p9ep\"\n      }, {\n        \"Satz\" : \"NULL\",\n        \"NettoBetrag\" : 4990299672182600049,\n        \"Externer-Beleg-Bezeichnung\" : \"1csefrnddure3qqhzqovwlgo3i9ljnbjuuxb230due91sqm1t969tso4mmpw8wpmtmlfz2v7zvdpe1nfrcj94nyga4hqkpr9b16jsuqnz35hhjl9ihtqkx698gb12ks9skf7w8t9bwbdnnitaq5x1vixzetf6fcvk6kysnh0cl\",\n        \"Externer-Beleg-Belegkreis\" : \"1hoxi8cg2mkiipun1814oko5q126z3xzhc3me70fh260sdob2kpy2fgxw1l6se3y8lmkgrpgei43tjki93fhkhz54p3deslio4gu3fihw9zzj60hvnqb500qpro835exxdq4bj8z76nx0fjcz64ip27sotslw269qs8z8k9p8ez7\",\n        \"Menge\" : 8642563793814549738,\n        \"BruttoBetrag\" : 604886413460040567,\n        \"Externer-Beleg-Referenz\" : \"hzzy6x12t4iiwsuh47cshd6abt4rvketl3kd3m\",\n        \"Bezeichnung\" : \"yr5d4qhytv3cukhm4s26dnkg70whg0xjefcxvpk41jhazzsicydtm6d8g90gl5qfnd6cvwn70hf788f8khyp7b0rem9crmdkvhj6u8yft7m7sajc0bothzj14dhqmnvlcfy67hw7igwngq8agmb2799tjtq0qnntfr94ja2\"\n      }, {\n        \"Satz\" : \"NULL\",\n        \"NettoBetrag\" : 8015169901062682227,\n        \"Externer-Beleg-Bezeichnung\" : \"e3ysjhde3gz7kpfinlkxhhjuthuzlv90mdz1trbqc6ha3gqx9txr7l1e3580xdfqnn9h392n89m2u68wfruf282dapps8j8zu2etet60zahrjdelkc714t5h\",\n        \"Externer-Beleg-Belegkreis\" : \"jpk0jwfjnnqmpzbrp304giyek16bzu1lgpdohpc3f6d4w2hpr35inexx9666kzxhb90tecmbf3j0waekdte0zqovkur5rlftd\",\n        \"Menge\" : 724728658968222277,\n        \"BruttoBetrag\" : 1137213378799698110,\n        \"Externer-Beleg-Referenz\" : \"v9ywnbo9bpzrv6sn20fjm68xxsk7zgb02hrcst5ttyretqa1khhdym7wpxjp7t66hr7l41f4sr6sjvnr9033rean15j\",\n        \"Bezeichnung\" : \"u2x9nolvp7t8l8nesct9qwjzzxdfjq4xe96bpgz2swjd5hxk6iih7wojvyy71vp8mz30edkxp63y1sxi2dhjpzu8i96ax0s1bdyjnq5qwslvqn8cl6sdp7u\"\n      }, {\n        \"Satz\" : \"BESONDERS\",\n        \"NettoBetrag\" : 5653805825426912842,\n        \"Externer-Beleg-Bezeichnung\" : \"pqxr2n08hzw5j3sjmn4q977gwlxvepb70r\",\n        \"Externer-Beleg-Belegkreis\" : \"ebaofsuj71ro6eq91eh0abi5v1euaenn7nxdiaq27fq8w90ra5z9grfv26qq23jlxi7f8r95ugtx200aa12gkv4oh8wpoxouor5wyg5l24gbhn2n9tixd14k39hn16eb4f12ksbao9zexu\",\n        \"Menge\" : 8725306563486828372,\n        \"BruttoBetrag\" : 1822395747015794744,\n        \"Externer-Beleg-Referenz\" : \"1yz7l6a8w7cke4pmujxd4vj0rrv3muga2u027jmn5mzi5s3cjuu7n22jxga2nyty5erkcvp3gbhut7gfl0zlzrdt0grpm5zarufkk5isjotqpmo9wb8okrta8f0iwd29gimyo9hiyq5k4obffodqro4tel3o3mj9z9amubnoo4reoh2\",\n        \"Bezeichnung\" : \"x7na8fx4vu96o1lw5jr0781i93wxxpq8an804woz2pvibbt473v2lluvyerhsfxn2jzaoujnf1k7rydp5xfp8thr8gnrydckv8xwsxzf3nook4v8nlfe60v0aa3hccyxyhclktw3d2v6f4zckt65iqv8qf5tkygunf5j56komnphmawm52ia8bpj\"\n      } ],\n      \"Unternehmen-PLZ\" : \"2022-10-18T05:50:26.284696Z\",\n      \"Belegnummer\" : \"2023-03-07T07:16:26.284721Z\"\n    },\n    \"Beleg-Codes\" : [ \"awofg4evtj0rgp2h7b9nh2hvw0ee78iise6i95z84k7zl4lj0wm9p8i09036qpht62jtx0evhk30nn\", \"e5tvkq3k7njj7y98qrkgi6sxvv0c9u57h3kv8nps15ghjr6un4l4x7lcnnf8uzk3cxfwb6938s64yxp5qo\", \"1wjies604d6kckblqzmtycgn5t2l7df6y4l1zcg8o8wbau6l0xqednowcjtjmbur619kdn4qzfmdbs7cirz1z2gg\", \"ite5t19xtmppaf6wqq3vfv0otr0j4cgt346whiyupcy15r5nb1al11w5bm0azxplhx7lhp28r52stf5x39hxcnhriqsih8lht91bx3mxb1ctqeym7tom9ilv84sdeh0f5mhqcv9ztd0s0585e0yxk5i4rmtpd761bxarsap\", \"a4mh2g2vn9fhd849cfnwan4j7g12\", \"s2ln0bb4pb10nzzj3edjwd1bqhgx5vlxu6c3212gk\", \"106o01qplksa04d06ef\", \"d2u1lcw3k3bogmm999t5angyt1eilewsy3zcsovpk2mgvgabhxemj8822ecc5pwohqlrwvhzjv4xp6eaxhm37xhs019x57irn8sohsn2xov78gue\" ],\n    \"QR\" : \"3frhzsuu8ieh53eb0t8ce7wlw5l25erf42r115mkl3g3de6lxto\",\n    \"_href\" : \"88bkwdp3kvgbuuc0np6njxw24ikc7i1f6o0mf8nfq9c\",\n    \"QR-Link\" : \"evu4w2p95a6f5f89nx4vo0zt3e372ev1j5pbys7r\",\n    \"Signaturerstellungseinheit-UUID\" : \"ad398a46-7746-4c22-b23f-9965f27b7f6a\",\n    \"JWS\" : \"3k19wfojpzloqifqz6kn5d8ivdxsybszd8hh8l2ub5iv3rgfviywekxnhunayusyn01xqjce2ols40viz3n06y4n5uprbfrqg3cppx6n1q3avnv3ipouexuakkgb2ztl8xo2bq0lwxwqqm\",\n    \"Beleg-Typen\" : [ \"Belegkreisinitialisierung\", \"Belegkreisinitialisierung\" ],\n    \"_uuid\" : \"6a3ec059-f34d-38e1-92a9-6c419f028964\",\n    \"Registrierkasse-UUID\" : \"a581fb1f-1990-4f7f-b90d-60316f798bac\"\n  } ],\n  \"Belege-Gruppe\" : [ {\n    \"Belege-kompakt\" : [ \"z7amjtyuxus4tkfc87v8tuaok0t0y764snoxa5jjdemfxkjut9pncjt2g076ra16in2lj75sjnl0g7hd57lxo0zmdygotx4filluj380gfqcu050hio28gl0j9umwpfzoet80c58j7lervo0drxz3nu0prnpsh25mm6wv2zcx71ac15h0g26n9axoicb\", \"0z9uotepp4sywa5bu0sgv1yr8lucovgte1d\", \"z0183au2dv3tfhz41f7oyhvcw3rmc8h55leshzdh1ex0h0ob3ztr2efh8rf66d31416n0hk9rw3n7upoljobuu1lmwksdj0sxn5pecqy5qip0oe7ij44bwwng30stkv0oyvpiz\", \"l8duwlts2py190o9j40c7gs1yt94ogibmkh1d4gjo1mvudnkfpy4zt7uil27r9noym72coffrbkp7ywbpdtlvig917sx7ig7bp3zhz3dzpifv6i3q0sa3w0571vwci5hwmd3hgor7xv9b6ekckutfmu6jwvifadd8xqa8cph94nruo0tfb1pxo7dbs42jkd8\", \"cy1fgtpgbin30h4dmtna3684d2z\", \"q9hd7drh8z49vowko4yish6sz1r6d1u3r8sbawbsm0r10dobb2jn6h9xrk453m\" ],\n    \"Signaturzertifikat\" : \"0xmlwymz563gvyclesob9ls79p9tknwtr0yc4fs0m34p3szvos647ybuyuwx4loo0bf3badazl7s7jl8ua7o3hr0fy16mc57o1fr10tpr3uj30iah\",\n    \"Zertifizierungsstellen\" : [ \"py664rh2pv3zjghcq9h7mfiscgzn9sxpc8zc7elsqmt9siuq\", \"1v1drh\", \"z75veo9xtv46d2mxnzvkoebrhp9s6ejtdlgf4tukbapoj4evuj9as791xc96qngdzj646njmd1ividmaoo5ci8stc\", \"t5pyg67rn021csaenxbxc3tn8kjg40s8mfzqlnygo1bvk\", \"mxkeyxgodsj4hsuz75oa1mk3iuvoe6ajn04ga54pmgfb6d9beyvsypwpvokoz\", \"gh5afmivq76imwl5ih02dqhpcnxb8pmap4htv6eea1jrl9sv5pwnpwp2m4yh736zeuhpq7ney6xz54tad1u4pskl9luclcts6w2kik9ifpdaawn6e065cjynw42c9k41d1f4lc8iwz2ssx8wpvumdnff0i1tpjkt8btici0fhwd5m7vv8hv3vej2z6\", \"s543qcs94u2nxjbtxn7p62ej7rxls8og1r909hwtjsis8mh2512schmjp3vq68qrw9a6n\" ]\n  }, {\n    \"Belege-kompakt\" : [ \"hpae1okqw1h5nj5vgtzdu\", \"5z9hd8m6px5a6lsw81aien3pagjkngltla6buezi3qgdphn6rtdtddozz76ef7idkvhc0bwaj6xtkosljglysm3eihn9lnvvjh2xuqy\" ],\n    \"Signaturzertifikat\" : \"1t5gq2q14g36b3n8luk4dypaukk7m7bzlxe1oqea5awkes4j5fpbj1epywww79bgi93ayd94xyq9ymkkgufkebgzrnyto1lzys4989y0g9infmd40vc9pyz2ht8ucdt9f7upjqrluqmovft6wprhpcivj5c0vkqoyacim6ys378iv5snvd50o8t47dgxhqt8bch\",\n    \"Zertifizierungsstellen\" : [ \"r611v43vaddf5nlz8wz4u5zy8y9yxvim32bk5rr341frxsxo1wvhgix2nxl915wam8e73pg02liyx8rr6yhfi4e6dz8u70qr3pcuszib8ty726img8o6jd920nmajvcsza6r4soc1eznyjfcvkuno2bdx1vd5jdjathsny2nai\", \"nkw4jg4sd3hawyvxof9tuww\", \"dluiii9ouyetny0xvl9roly103fsmnd9pwj86sf1xzepybjkw12tjy\", \"kly5rp6hfnm0pfrip4mvo7c2uaazo0zbsp6o7wgx9tnzdxv5rlm2nndpzthztc\" ]\n  }, {\n    \"Belege-kompakt\" : [ \"0zty5hu9dq9mp270jsh3ttz05imwno75qz6oy09uzhb3zfq8mu457aujnth8yuaufwvhebgl0px3uhdwm78pywyy5fvyh5fcjifcmmq92nvshcgqcvsmo7r1pm6n3r6vckpbejcb17w1yy4i79lwc4l3ncv58\", \"pjqq8bx3yw\" ],\n    \"Signaturzertifikat\" : \"q932eiyr6tn7i9z5xzg6jp2q1ay31onsokevxn28snwiu42dg5bq7jzi332prhyc51jv73h8fox5032liebekk3sw9k2vmo5r8el7068vcpka0sql7q0lzlfok60cdqmpc3728jw4e3ff6jvig2f\",\n    \"Zertifizierungsstellen\" : [ \"ebj8sujet52co9k1m6gwoyuhuiw3jijeb8m2ttdv8krv80e\", \"5d9vf9pe8vvux7atxhwwjg6oo9zl6mhg4b69149ab5dk7f7oblfhtz2o8jfsp2oq3tgio9qokk59x7r98vpuikxg3kfx5ju3v02dlufz7p2f44ccgjl47lubz12s\", \"psx144byu6b0o9j6mr3s2kklqzjaqt8vt91yq5za28p8l9pczxnh6abn2\", \"4ylvxeykai57g3am8yjhwt189bewnjgtsd4uz5dllss7b5v44pqkjg96wlduf0cbpigyst8a37wdie2zk2zqef9j5pghp2wsc3obab9rnd6pbp43\", \"1oud70vesm710ypp6skucgig2zqwd3imzl2o309z61tjlqqgbkho0qu\", \"pk2o6zqlehn0p6lvaq78gktrrrrm8yk8dja9x5ybwmu6w4ghtk5zrpadujarykikt9a4aaejbfdaram2iig2zr04\", \"993vjh5cv4rhz386zz25upnjyqowpbrdevaww7rhacqzjgc350q6tmi39mebijtpho82qdue1k1t1t\", \"ns5kfefmgtfmop1p62znjhlu9bkz1degjfofnv2an9v4faiyr5843yt8hyzl9\" ]\n  }, {\n    \"Belege-kompakt\" : [ \"81g25kk0niyn2zh485a3vny4\" ],\n    \"Signaturzertifikat\" : \"vpetgf70k9xtmg98beomzxqb2q2pl6jcgpdou9igi28mkkv4abbowbovd7c58nv2uipv7nczls0vye2krgtofugm7zswuuee8am4zlmtj33np8x53wuwuk2xwptfl1m9iacoazgeq2r83wg290usrz0quqmtnrqlqdvql1tzq11k59gjijx6slcc75j4\",\n    \"Zertifizierungsstellen\" : [ \"pmq7esvbmp76psbubrld1djvselg1sv6hcbwrstuglzl388salgm6bibqt1drjta04i9xaqzarvlad8gzec49vv9mrmg03t3rgwxjlythfi1qrlugjib6pc05t5io2089pd9cjh9lsmxfsusgmv4t87\", \"uekzng5m3zyut0huwly69ludofjitb3ckzi549rehb8eizpgl07en0dsz4oefrd8e1scjntplpq640bia3i8zlj81tctoir5561ev587z24wtiibkiuhz1ncnvj7\" ]\n  }, {\n    \"Belege-kompakt\" : [ \"k0sihw612v7q5utk4hgy9k7upbjhywuvui8fokay66\", \"saq0sap0jccdlu2j9cb7ce5tbklfq90zxr2zaowahx6m\", \"sx1a1t1e7e8l6t094u66drm7xurl08rav6x4yac1y0gucctc3j7j7x2fj09l6kua61zc6iclb82i2a3ucg37mrjuswgqyy033h292hg06k6sl8l25piicj2su9bml4lc50un22n8fnxw\", \"rg2zmbrirrzyj1xly27go614ukekeek6kl2qfu7pokp8lp05l82vou8u7\", \"urekfk3itk1x53wnffraz5ah2jshgpz9heg1ifg83mxd3pm4c5gf0u6v9tsqyla621v3277gnp2ju4gsluan0dd98bzaf1jwloyfriwcixsf78ypj33yar6ew7lbob2b9mm\", \"fsxkwh01dsrd3m9hbyuhlq9kcbfmd6vgc7wvmk0vs8nvcyvako0ycxf9lbdpsfdh0mzeu0d8nkf1ccs8dlrcu3cowt9jxzd085hk0lgxv2gz6wgm0r5vobikpvkeqba7fcal7mxi\", \"747jx4nwm1wp4fnwn6jr2oo0rpngzwwphcdhxw83lswms9dpn7ev6h5m3bakdw4twwdsdshmvy3ciswufwhxnmbu41ehj5nk1q8ayum17xlfg6d9mi08nht5d\", \"hffoeirfhef78qizovuz1ipgxty35qgw03nvl6hywxx3gbgekd02kbqo3u34j0ncu0vlk0esaebz9m94nqniwrnpdo6bx6k6g3icz8cyip9ec85n63wnj30zs65f9kxak2lry6ty0fs\" ],\n    \"Signaturzertifikat\" : \"mrs03tqh\",\n    \"Zertifizierungsstellen\" : [ \"djovgegmjy9cat7z5b2iei1k3y85eis86bf3m6lve6dzq4qjgrni909tgikle3j513isgro5lrikot4mc41englq1xrpag9663e3zo6prc13j2pvfjy0n3yn4yeltgowha5mu5fffucxzpr7eg16qg3vzizovrlj2udzd7iyith8puodm\", \"9ficfh6s7ym89i53vxa5rr3m7out0sn1mbn13viy7jg66d6q64xjp8kzjaqcozsrsi1e\", \"mywt5jlh9hz9u2mh\", \"sxhp20wng7fomva72auv2pvachao1mox1e3f7dij16cbn74xmrwjb932m4p1l2ny1btdhepz6nxjcfxnv5egw8z77rvcix3r54efqfnmz5z2vip656vmhd3x192qwfcmb5f381mxgn6ygyoex8gq95j6ep\", \"mcarav1dgxgw3ry3furan6uabgzze6ff\", \"64mwgcjkpubfim8ehhkusgywh0wqxdmobpi1o4ekqpu2ewbov092l53vam3xsx0e43xtrrpyo3sdpiia4zmveenb25qmxyvyhf2wksmlno6hkfste931g4dld5vxbct45htuzbiryojs20jdmz54i258aioau022ake49tg4fr2k08w5nxn0s8llnon9jtrm\", \"wpumwm22zfgm7taguaoh3xjhu8rhekbp1quazrlc3uw1om7cvnbonyhfaovsesps0x4f80nn3gulfzgk50ke9bk739z9x757yqdmhf4x3599zk9x0m7xix0xpsih\" ]\n  }, {\n    \"Belege-kompakt\" : [ \"14p7kdectqla8om75p\", \"2otojc5cmtj2wbtw7eg\", \"wcm18oaucj9066532p\" ],\n    \"Signaturzertifikat\" : \"1vx6t8cezz1dpy3avdpa03b37us7gcvmr427su10m8gk6iri7mb4u9di8d851vgd6cmf89wcytxj4lagl\",\n    \"Zertifizierungsstellen\" : [ \"gxoee0lm\", \"7eic6yx9eo0tfrgvmlzi6700tg\", \"lyy2ang71c2s38bkqew\", \"l0jrs3xwa8tymhqt3omm3qjw61coz1lm7fw9n3y820pgkkoatew1x3y5ss8b39wxfchuma0z0ni5uhx0jm81l09zjnvw6q96cilypypx\" ]\n  }, {\n    \"Belege-kompakt\" : [ \"9zgi6frx1fbc3i49txmzoz1kd0ocjlcdip57yn5ptg8sylvwjukpqrfzw79d78242y93zbzhk847f54spc2360oj4t63ah4dcirxcufrf8gtp9r30vla9jrgmdtepdl04l7de9s04x76ad0jm3s93f\", \"w4cus5yjxruuwl\", \"hkvxnqodrsdx0xwzhaglppjn26m2cauj7lxaz52vv5p61krjn2rts530t6uemgefcq19igprxqdq219ye4644xixjyz7i1qbbro50whddt5lmsc5oly39agdthmskmiwm0xctxqd65li3diq1kmdyv12e73u9zy7x2qj0ykkorgx7nxb0ebnh7dbjp5kiwiisw90\", \"9yfgtibaz8p3sjmsld4zncztwsxxvmd4wv17oh0op3gbj5h8ea6mvdoxykptu3jk1agumyeh95bvia34rj1xc3tv1coir9n5nyizk5zdol7qz240w7rk4sye9g2go8j97zfubx1sx7wl4kptce69axvmh9jk\", \"xcod6u82hp89dxjpy1slta8dytj2t6zhovu6ja4s5fh9zmh7vq\", \"88pto9lni60rhnr1mr25k166d5umdvynj4fraj1dboyj48kxpdqvrg7gt0h7pmavqsljw84reeqroigpafwrgta3c27byw40ertn923c2k338xptyguf6s6jfetgdupkjmdh9by\", \"cspev\", \"4vr5z1uu0jlwk82bh5q4tebmpe75ew8pd1v6zjc18tny5g98qjafeebl2mi5wpqc4ooxqrnhvk4sfozj8ruf8bcqtw1iywgna60n0t5d3vb9hrkcrkmfnswqpquwdcdeqo92uldehv9pix8uygprk1pdnu3byl2xtas0e1wrfxqwonsuxidbhrir\" ],\n    \"Signaturzertifikat\" : \"64tr90ys9ynuyirixsks\",\n    \"Zertifizierungsstellen\" : [ \"qc5ga0t5w3ab0rm9cnbbpce2hlw20ok300m3v6arz9l\", \"r0x3cqp12cr36ffqch5gk8nwnki9jz1ro6g346t1mit\", \"6xsntx09y9vogy9tfthr3iwqrwjpttj11ntybp2khotq2tlvjgxto31jn93cci0i7zuigonp63cjgsrk4fv86pn9xaugp5ax1eq3fmvozdv71415vyn6vcl7aqbp2m50u3nrc3gp4q82krzs0mdktcb19ucmddmprfrwcf5xurlvv70vbz0pjtmr\", \"8ounc2cv6eiu7hwufdgr3icwtp6cgbv9um9oiw3vbrnpwx8ouh7dkra46enicxrl3cwf2hy3vpqak5hihjbt1ajh9bnzu\", \"3juylz1wwj9wpnti4pofmbhdao6x1dxi8kqk9he6t2a97\" ]\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "32aedf8b-7d92-43a5-a801-9aae88c4d65c",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:26.285769Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "getBelege",
+          "schema" : {
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/Belegformat"
+            }, {
+              "$ref" : "#/components/schemas/Exportformat"
+            } ],
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 11
+  }, {
+    "id" : "212c5022-8e83-4887-a6f0-e5eea1f36259",
+    "name" : "Generates an `Abschlussbeleg`. - 201",
+    "request" : {
+      "urlPath" : "/registrierkassen/d66c2af6-10c0-3c25-936f-bf1171f2e75b/abschluss",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 201
+    },
+    "uuid" : "212c5022-8e83-4887-a6f0-e5eea1f36259",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:26.278706Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "createAbschluss"
+        }
+      }
+    },
+    "insertionIndex" : 12
+  }, {
+    "id" : "fe7bfc5b-3fc5-4502-adf6-61f5d4552d73",
+    "name" : "Returns information about a particular `Registrierkasse`. - 404",
+    "request" : {
+      "urlPath" : "/registrierkassen/0c3ed248-e8f9-33f2-b9c4-90f304e14bda",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 404
+    },
+    "uuid" : "fe7bfc5b-3fc5-4502-adf6-61f5d4552d73",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:26.278662Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "getRegistrierkasse"
+        }
+      }
+    },
+    "insertionIndex" : 13
+  }, {
+    "id" : "86ef93d9-c8e8-403a-b943-9b4b3488517f",
+    "name" : "Returns information about a particular `Registrierkasse`. (application/json)",
+    "request" : {
+      "urlPath" : "/registrierkassen/b8ccc261-5e05-39c8-b7dc-af83fa23b212",
+      "method" : "GET",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/json"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"_href\" : \"ukxorqxoqawqdklr9hesfvh63tin8uoqirhpxmwu74qolbhwsqiwn9hxtgzp9l04h2rixd7aoizf5ze8wkezwq0ny6h2gzri34\",\n  \"Kassen-ID\" : \"2e93\",\n  \"Signaturerstellungseinheit-UUID\" : \"bf9e5e23-46a5-436c-94eb-999ad988ce5f\",\n  \"Benutzerschluessel\" : \"zraa11pw95bjqrxci18\",\n  \"_uuid\" : \"cbac6995-b8cd-3c42-8b20-0901d4c81b99\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "86ef93d9-c8e8-403a-b943-9b4b3488517f",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:26.278615Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "getRegistrierkasse",
+          "schema" : {
+            "properties" : {
+              "Benutzerschluessel" : {
+                "description" : "The base64 encoded AES 256 key used for encrypting the \"Umsatzzaehler\".",
+                "format" : "base64",
+                "type" : "string"
+              },
+              "Kassen-ID" : {
+                "description" : "The (RKSV) \"Kassenidentifikationsnummer\" of this particular `Registrierkasse`.",
+                "type" : "string"
+              },
+              "Signaturerstellungseinheit-UUID" : {
+                "description" : "The `_uuid` of the paired \"Signaturerstellungseinheit\".",
+                "format" : "uuid",
+                "type" : "string"
+              },
+              "_href" : {
+                "description" : "URL of the particular `Registrierkasse` instance.",
+                "format" : "url",
+                "type" : "string"
+              },
+              "_uuid" : {
+                "description" : "Unique ID of the particular `Registrierkasse` instance.",
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 14
+  }, {
+    "id" : "1c499704-de21-4265-ab7f-093b2a0eb958",
+    "request" : {
+      "urlPath" : "/export/xls/registrierkassen/9ed2b140-aa12-3d19-86fa-f7379c579c1e/belege",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200
+    },
+    "uuid" : "1c499704-de21-4265-ab7f-093b2a0eb958",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:26.27836Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "(none)"
+        }
+      }
+    },
+    "insertionIndex" : 15
+  }, {
+    "id" : "ea270f5f-59c5-4360-9478-c2de8a9cd0ff",
+    "request" : {
+      "urlPath" : "/export/thermal-print/belege/4ff6edfb-487d-3234-a0dc-999f681765f9",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200
+    },
+    "uuid" : "ea270f5f-59c5-4360-9478-c2de8a9cd0ff",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:26.278316Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "(none)"
+        }
+      }
+    },
+    "insertionIndex" : 16
+  }, {
+    "id" : "ed7b3cf9-615a-48b3-be22-dc47a731333b",
+    "request" : {
+      "urlPath" : "/export/qr/belege/1bcd77a5-9d5f-3e0e-9a81-ab8c97417082",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200
+    },
+    "uuid" : "ed7b3cf9-615a-48b3-be22-dc47a731333b",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:26.278272Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "(none)"
+        }
+      }
+    },
+    "insertionIndex" : 17
+  }, {
+    "id" : "18c09320-c835-43a7-be35-d92532ddcf69",
+    "request" : {
+      "urlPath" : "/export/pdf/belege/c9f62fbe-8ef1-3dcb-afcc-b3f591a027f2",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200
+    },
+    "uuid" : "18c09320-c835-43a7-be35-d92532ddcf69",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:26.27823Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "(none)"
+        }
+      }
+    },
+    "insertionIndex" : 18
+  }, {
+    "id" : "0c630915-61a5-4ff8-af11-e64a2ce996f4",
+    "request" : {
+      "urlPath" : "/export/html/belege/c4f2b2d9-94a7-3139-9d4c-a115ab62953f",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200
+    },
+    "uuid" : "0c630915-61a5-4ff8-af11-e64a2ce996f4",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:26.278188Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "(none)"
+        }
+      }
+    },
+    "insertionIndex" : 19
+  }, {
+    "id" : "89d46a82-ba01-4b48-abfe-a228121bc2b9",
+    "request" : {
+      "urlPath" : "/export/gobd/registrierkassen/97f2bb28-a7ae-34e5-af2b-553f4d2f45f0",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200
+    },
+    "uuid" : "89d46a82-ba01-4b48-abfe-a228121bc2b9",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:26.278148Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "(none)"
+        }
+      }
+    },
+    "insertionIndex" : 20
+  }, {
+    "id" : "063eff68-5c0c-4e0a-8587-27affc82ca4a",
+    "request" : {
+      "urlPath" : "/export/dep7/registrierkassen/a55c0159-94f9-328f-a628-432b9eb5fbd4/belege",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200
+    },
+    "uuid" : "063eff68-5c0c-4e0a-8587-27affc82ca4a",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:26.278101Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "(none)"
+        }
+      }
+    },
+    "insertionIndex" : 21
+  }, {
+    "id" : "80d038ce-e344-4e01-85a5-e734df4ab524",
+    "request" : {
+      "urlPath" : "/export/dep131/registrierkassen/051e31c1-43c9-3c2a-8b59-46ea2bd6bb23/belege",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200
+    },
+    "uuid" : "80d038ce-e344-4e01-85a5-e734df4ab524",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:26.278056Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "(none)"
+        }
+      }
+    },
+    "insertionIndex" : 22
+  }, {
+    "id" : "e9952a06-74bf-4006-b4b9-64eb33517f7d",
+    "request" : {
+      "urlPath" : "/export/csv/registrierkassen/4aaf8ca6-79c0-3250-bb6d-187b592820d8/belege",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200
+    },
+    "uuid" : "e9952a06-74bf-4006-b4b9-64eb33517f7d",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:26.27801Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "(none)"
+        }
+      }
+    },
+    "insertionIndex" : 23
+  }, {
+    "id" : "9e51a250-9ac9-4d5c-88d3-9aafdfc250bd",
+    "name" : "Retrieves a particular `Beleg` from the \"Datenerfassungsprotokoll\". - 404",
+    "request" : {
+      "urlPath" : "/belege/c3833ecd-3c4d-3f84-8625-07a75c2fe1a8",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 404
+    },
+    "uuid" : "9e51a250-9ac9-4d5c-88d3-9aafdfc250bd",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:26.277958Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "(none)"
+        }
+      }
+    },
+    "insertionIndex" : 24
+  }, {
+    "id" : "8c0000a9-688c-4a2a-a79f-0e37132d5f0a",
+    "name" : "Retrieves a particular `Beleg` from the \"Datenerfassungsprotokoll\". (application/json)",
+    "request" : {
+      "urlPath" : "/belege/66e6af5c-c18c-3382-9f4e-408361375339",
+      "method" : "GET",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/json"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"Belegdaten\" : {\n    \"Betrag-Brutto\" : 5976448164211428034,\n    \"Rabatte\" : [ {\n      \"Betrag-Brutto\" : 3757727096197529557,\n      \"Betrag-Netto\" : 4044000168832444211,\n      \"Satz\" : \"ERMAESSIGT2\",\n      \"Bezeichnung\" : \"wg0mg00jomado0zu8tshunci4n4l60xxkpuql1f8s0hvfos43bn6vo7xxanwo4taj8mce3cmn15o9i3cis6duqa0s60z5ece04yadgt23lcxk0ger973mzctxm3pbpoksa49qr5zqacla1474dlswoeejfc3u5p5fi2wjb5p0fvf\"\n    }, {\n      \"Betrag-Brutto\" : 6239477431164801178,\n      \"Betrag-Netto\" : 483066883094646077,\n      \"Satz\" : \"ERMAESSIGT1\",\n      \"Bezeichnung\" : \"77kjkvczyjd11w0wzyz6mogxqnjrva00gnhybni1h3cl6gs12pbuvbn1z692q77iqe2s7vssixf\"\n    }, {\n      \"Betrag-Brutto\" : 5257830849187195015,\n      \"Betrag-Netto\" : 7487879422301088068,\n      \"Satz\" : \"ERMAESSIGT2\",\n      \"Bezeichnung\" : \"7l2p0cgftde1u0zjdme5twaj3m2kygk2vr8a0fedq0ggqz7u891gw8v8791nmtvu6n98bsj72cecv0mowc054y9ztiq54rk8s2j75trnf6i6kv5vyo7myckndzck10ys5z0ark9vz4ep50kyo8r9l8v\"\n    }, {\n      \"Betrag-Brutto\" : 3120680340052484628,\n      \"Betrag-Netto\" : 6687594992360564639,\n      \"Satz\" : \"NORMAL\",\n      \"Bezeichnung\" : \"tlxp6\"\n    }, {\n      \"Betrag-Brutto\" : 1837559829757385126,\n      \"Betrag-Netto\" : 1655621774154955213,\n      \"Satz\" : \"NULL\",\n      \"Bezeichnung\" : \"kcbmxxxpu7m96yxillibv18lcjufelcnetixqppzszxqgo5sxw62yrstg3esybnyk3rurp1rfco0oblo6a27ey99ajt7ust9adsj4ggw2jj55idn9j89p2n43il417q\"\n    }, {\n      \"Betrag-Brutto\" : 364782265628344043,\n      \"Betrag-Netto\" : 9154222736520324017,\n      \"Satz\" : \"NULL\",\n      \"Bezeichnung\" : \"xdps2gnm5kahihutxkljflk615i8ulrmu675xw3nm1pt0ln37o5x0lwhr9bg6vi9\"\n    }, {\n      \"Betrag-Brutto\" : 3262732618670643898,\n      \"Betrag-Netto\" : 6287644136689707388,\n      \"Satz\" : \"BESONDERS\",\n      \"Bezeichnung\" : \"wipbpp0lv038vffvzyqlhxwatk2q7l9wtvdl034fwej9n3oxspjdaoj1w0otn28bazj4mk0jf0pogqyifnfow0d7gh0dlk2bpla81kwh1p6h195yy93nn8ghsnf169nrh9fhmyk8slllzwh0lcuc41tfcmrduen9jzxscvv5a\"\n    } ],\n    \"Betrag-Satz-Ermaessigt-2-Netto\" : 8322796570907787286,\n    \"Betrag-Satz-Normal-Brutto\" : 4088453553421263834,\n    \"Unternehmen-Kopfzeile\" : \"2022-05-02T08:53:26.276201Z\",\n    \"Unternehmen-Adresse1\" : \"2023-01-20T09:04:26.276237Z\",\n    \"Unternehmen-Adresse2\" : \"2022-11-05T05:41:26.276267Z\",\n    \"Betrag-Satz-Null-Brutto\" : 6907303492098217286,\n    \"Externer-Beleg-Referenz\" : \"2022-11-17T05:25:26.276303Z\",\n    \"Training\" : false,\n    \"Beleg-Datum-Uhrzeit\" : \"2022-11-16T06:13:26.27634Z\",\n    \"Unternehmen-ID-Typ\" : \"gln\",\n    \"Unternehmen-Name\" : \"2022-04-14T06:52:26.276383Z\",\n    \"Betrag-Satz-Ermaessigt-2-Brutto\" : 7369589504956797182,\n    \"Externer-Beleg-Belegkreis\" : \"2022-04-02T06:23:26.276419Z\",\n    \"Betrag-Satz-Besonders-Brutto\" : 4315514074811508783,\n    \"Betrag-Satz-Ermaessigt-1-Brutto\" : 5564939590944406888,\n    \"Unternehmen-Fusszeile\" : \"2022-07-24T06:26:26.276462Z\",\n    \"Storno\" : false,\n    \"Unternehmen-ID\" : \"2o9f\",\n    \"Zertifikat-Seriennummer\" : \"2022-06-18T06:31:26.276613Z\",\n    \"Kassen-ID\" : \"42zj\",\n    \"Storno-Beleg-UUID\" : \"7bdcdaca-db6d-465a-959f-fe17ad8edf2b\",\n    \"Betrag-Satz-Ermaessigt-1-Netto\" : 6913158274551326382,\n    \"Betrag-Satz-Besonders-Netto\" : 1929652452318354872,\n    \"Notizen\" : [ \"ahbotys6lvjzd186xbrdrtjw3dtu479whb4wkxp32wxw14itgidn7qgewubmleon90mc36nfcuh525vs94lvao598uequvfrca6lmxfqz1rgkz66zjdhv32wud1l72rp3kyuun5zf1opjgnp0h32fqt\", \"jne2za8dw9ceunc8r4ambxnochg9d4bvye0phq7of1v8ane3bxo25wibs5y2xypvjmq6nxnvh76t685evcb8057v6tjwaey66673joa5vjices1h3q3l7edds1vh1o\", \"stioh0oioku5xh9xkk5tau3jpnbv3wus4cnet6ocacoyr33bkrycerhtpjfe0aym\", \"rkdjkvxiiy2o4oqp2h3cgq0wmrx4nidmmijkzeqrzgal2z03ipqlda7zxa28\", \"fka7buer9rnlv\", \"3dd9topjq46svvu8j4btn8efx8xl6bb2fk8b6gyyqeerf4v3qko6akh0sr20j\", \"r5fomqpi6ng55t\", \"7sjqc1zpuso9x12rj04mkfgzr384c4yjmyckoi7yrmz2yqu5ywx6yfnlwkzyrmbh04ny8hbh40\" ],\n    \"Storno-Text\" : \"2022-10-25T05:40:26.276802Z\",\n    \"Betrag-Satz-Normal-Netto\" : 1498507298281053506,\n    \"Unternehmen-Ort\" : \"2022-11-12T05:57:26.276837Z\",\n    \"Betrag-Netto\" : 8772121033902786678,\n    \"Kunde\" : \"2022-07-20T07:55:26.27687Z\",\n    \"Zahlungen\" : [ {\n      \"Betrag\" : 9029469124656880975,\n      \"Referenz\" : \"42kc9d49f2dzck5o9xdxqv6qwokmvm1hovfqge9voxhej6b2yun1jihip7et546xiqxq3sfbtl3gp3hv0lcamlkdp813zz1wbtbtzrng88c2gd6eag60o634o69iof0ophkfgwyahajj0u545cef9uavbidj9i\",\n      \"Bezeichnung\" : \"qgamuby1tcxkw3yk4k30a296fdx6fbvr4xpe56pbcggfeu8c5z5pwixi7xe42fdppckeevranw\"\n    }, {\n      \"Betrag\" : 3501509227794497366,\n      \"Referenz\" : \"gwyv24tjdswkbu96gtwynspil5l2joub2ow886n47umtvwnyvw53cxn2krj\",\n      \"Bezeichnung\" : \"5heemtwsg22zht2ogzpp8cb33nysuhaq4j6h6\"\n    } ],\n    \"Externer-Beleg-Bezeichnung\" : \"2023-03-11T06:32:26.27698Z\",\n    \"Betrag-Satz-Null-Netto\" : 4232495310519050774,\n    \"Posten\" : [ {\n      \"Satz\" : \"BESONDERS\",\n      \"NettoBetrag\" : 5824023539231463987,\n      \"Externer-Beleg-Bezeichnung\" : \"wshbderdxjs6uftwngftenl517fdcuaee53alznyrlhh417tj5rs9scep4\",\n      \"Externer-Beleg-Belegkreis\" : \"wv0klfy5jnj0zad1ifh7uc5r2nklcatvi9nw4qzuv94tsidpdxqqpcdfoskkl\",\n      \"Menge\" : 8723740501701982938,\n      \"BruttoBetrag\" : 1187845511177818232,\n      \"Externer-Beleg-Referenz\" : \"ab49xre6ap4orn4yikdhdlikeyxq1vdhgvcs3nmai4\",\n      \"Bezeichnung\" : \"eghowoy4900vglvgpldg46a1b1su17efk0spzr1ax29aku6qudd7t4taj05c7o0pbk36b2mg2enn0mo2o3nvjq57ijh0ajgnaymb3f\"\n    }, {\n      \"Satz\" : \"ERMAESSIGT2\",\n      \"NettoBetrag\" : 7004975408506567113,\n      \"Externer-Beleg-Bezeichnung\" : \"gjl4ulk826pwr73dimiwl2baux6warlo4wjt8ki90ua924imybenmvsq0yqhgpofvoik98gl2qd88k4cw3568ktcmh57iz4k6burneky6my982vm6hfz1kpkxass66t1c9qok91e0\",\n      \"Externer-Beleg-Belegkreis\" : \"dcfcrogu9mzzda\",\n      \"Menge\" : 5740276217378039374,\n      \"BruttoBetrag\" : 584326534568041702,\n      \"Externer-Beleg-Referenz\" : \"eopppikyh\",\n      \"Bezeichnung\" : \"4a6ugb0u26y4xubqo1ghzrexrigkvlfrfff1v77vitu9gwmihwymfgjtzwrd947erlzap6wcu\"\n    }, {\n      \"Satz\" : \"ERMAESSIGT2\",\n      \"NettoBetrag\" : 3874051353779212879,\n      \"Externer-Beleg-Bezeichnung\" : \"f81ko9qgz6unm46\",\n      \"Externer-Beleg-Belegkreis\" : \"ied4z2r9acntywkbnkc156aijbnu0ddi5ah4oxr8xfwn87o5q6qexltl8pc1rpiltchjwmaa6hi8ytbvx8tw3o4mtjchimcnnv45g0i7991t1\",\n      \"Menge\" : 8748902584512117423,\n      \"BruttoBetrag\" : 35189296899701110,\n      \"Externer-Beleg-Referenz\" : \"7ecj\",\n      \"Bezeichnung\" : \"6641hzrkwwpotd36h68tmnfqv87q1l5lt7ashafr7z58iyisbde7rtugs1trd4d64\"\n    }, {\n      \"Satz\" : \"BESONDERS\",\n      \"NettoBetrag\" : 1399334043018038236,\n      \"Externer-Beleg-Bezeichnung\" : \"6qg113p2gvkvad18563hvcuyakt3mhydtxtzl7qpejz360mvsc4wd14raby4e9vb3yqp6ee1c7k3wu842yrttq6iagswb63zzyxivnt4tir303mlxk\",\n      \"Externer-Beleg-Belegkreis\" : \"qran93o7bv728dqgfmzj7t1bmufgucglef7a2c4zrzy56uqubglril92xelcltzykurvwoifv31vvcgwwof2cfpeqo0u09x1gbpeb95pmzq89vkqtt\",\n      \"Menge\" : 1730172777398818569,\n      \"BruttoBetrag\" : 475461596425161972,\n      \"Externer-Beleg-Referenz\" : \"r4iygsf76jwuevzk6kq2ms342aqq01ije0l453369ba4ozhvvv3f53rzvqxi1so22dk2a3w35vcnx58n6jpf2ta88yr1iiej27m\",\n      \"Bezeichnung\" : \"o89oq8s9cl53rfi17l44a37dblqe9771uuhwin3xfwseo3a9t74e3aaeoycv2cme1e69uonnfia3uu8pbuc3i67yt3upy7jcx0ks28afek6a8iaz35novbxyehlnw7zf2wwrd31lnc0o4ctn2zlz5kq6foc25x67da\"\n    }, {\n      \"Satz\" : \"ERMAESSIGT1\",\n      \"NettoBetrag\" : 3087775770287988243,\n      \"Externer-Beleg-Bezeichnung\" : \"hgaj804ov0odj1kqy5b\",\n      \"Externer-Beleg-Belegkreis\" : \"n2opxmhq5q1ouc8bf3q72bknq9lgwj9o94vofzyrbqgoy0a7s84pt1dzwacqqp31ztp6oer21bkojadymyn9pesif62aawky7q7oo3pvyvhxz7uslu5euzuuvsnwwk55up6tg14yrw320rso1zpkhny1ekrpd1m0z4sh2xnvc4ane1gwt478179p26b0gaq\",\n      \"Menge\" : 6872899797351971237,\n      \"BruttoBetrag\" : 141109257122245141,\n      \"Externer-Beleg-Referenz\" : \"2wsuiuyqdo1iatrbk16ttnshd6o38ytc5q8o6pit7mtmidzstz5gn5yvi6cm3n81dltkz2fe8xa20sqrhv3jp46sjlvom67jpgdjir08i\",\n      \"Bezeichnung\" : \"qsbaq2tr54xcrea915jda\"\n    } ],\n    \"Unternehmen-PLZ\" : \"2022-07-19T06:30:26.27739Z\",\n    \"Belegnummer\" : \"2022-06-02T08:26:26.277418Z\"\n  },\n  \"Beleg-Codes\" : [ \"a631q49g0zwop0cc0rgh0u566li7madj0roslpzpcsne6axpyzlxf7\", \"tsqv5ep05pa2rqmw27togq0qb85pgtve0sfwkwkxdr9z2wmtm4hpu9eijuhq0g45jbprmm68ukcnw254wlkawe4itzw5l26upkibh62ars4h500forsqqvia3smkjleo3oetv6cqtcxuxi2m623z8iyjic7oi\", \"g6vo8697xn1l03qgbptv0x04vu1np529tb8346qbfac688dp39bxk0albhkmw9of5rlc9euuyawlndgwx6fac0ciylmags7uphhzccoractvd6xc4vh80i\", \"4zcnxpa87c7jqk0s4mzto32u85z9lpgq16acxriz1kott5rjy5dln1eui0jnyutbal588em5oxnr57e3f1ee7heccq7eiqsrck972c1r6q1l12az\", \"h9bwiebvm19du5kti789he6zie1u8qm8g4n73iab7613vxns3usqyfl9uu61lmdqnwfl5tjn1h7g5zwjkwakw2cp3eqxdewk4148eklk\", \"6yfoz87boff34ejxw75htgzirnzhqqxsv6gs4bdkxnplwfnfkmudibd5pgd0ldnw6mzhv3wm5qjti802d5lof6mzploar4l19863y1919nmj6v05i84mfdfpib602xs66cjafu3u1z8y92vl328nqkfy9uee9uj\", \"wkm6hd4mfxp6pbp2avdtald74mzy1fq3ije0i0czfuisfo6wi0v8mlq\" ],\n  \"QR\" : \"92q579wyfm6z5adzby0zbv2pfyddl3z9n3btuzcbwa3dra3banm0zk21b5hljcnts07r9ttvcizanr6zhwc8zeom4fr9t6meyn5cyh6dntzm01urpuvdtuqrfilfn3d57epy2m5zipae7m9e0yy3\",\n  \"_href\" : \"faw8i0gztw6yb27xibrpmjdroo8adj0crm8xa1gkhmqq4v9pidymko9n5ukchi7x5v6elig0kc\",\n  \"QR-Link\" : \"ktmm0rtktha2bz8yfwult2kl0e2z5g0nkh2zthb4b5q8fd4y809w28taxibgwvmhbdo4jlpg15kpbg5zehr5r1139b44sa7ne4g28uf6opxaxznyi7l1c32y7vqolbwd8elle3h53apiu7v0v6bb1rip4e9wjzb7ifkw\",\n  \"Signaturerstellungseinheit-UUID\" : \"9c199d22-c377-4d7e-b8bf-e21bb9fb2ddc\",\n  \"JWS\" : \"f1vn44petz5fyks5w3kegeekb2oyu7l8nk7p6d2enyeb0jfovezr3smacjtpep4p1zmejljv32xhzo4vm\",\n  \"Beleg-Typen\" : [ \"Training\", \"Startbeleg\", \"Belegkreisinitialisierung\", \"Systembeleg\", \"Kassenbericht\", \"Storno\", \"Kassenbericht\" ],\n  \"_uuid\" : \"1bb20f2d-e515-36e8-8631-6823138b20a4\",\n  \"Registrierkasse-UUID\" : \"694eb98f-d981-49f4-b864-7b9d76aed1f0\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "8c0000a9-688c-4a2a-a79f-0e37132d5f0a",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:26.277881Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "(none)",
+          "schema" : {
+            "properties" : {
+              "Beleg-Codes" : {
+                "items" : {
+                  "type" : "string"
+                },
+                "type" : "array"
+              },
+              "Beleg-Typen" : {
+                "items" : {
+                  "enum" : [ "Belegkreisinitialisierung", "Kassenbericht", "Monatsabschluss", "Startbeleg", "Storno", "Systembeleg", "Training" ],
+                  "type" : "string"
+                },
+                "type" : "array"
+              },
+              "Belegdaten" : {
+                "$ref" : "#/components/schemas/SignierteBelegdaten"
+              },
+              "JWS" : {
+                "description" : "The signed `Beleg` as a JWS signature token.",
+                "format" : "jws",
+                "type" : "string"
+              },
+              "QR" : {
+                "description" : "The portion of the `JWS` token to be used for generating QR codes.",
+                "type" : "string"
+              },
+              "QR-Link" : {
+                "description" : "A hyperlink that retrieves the `QR` data.",
+                "format" : "url",
+                "type" : "string"
+              },
+              "Registrierkasse-UUID" : {
+                "description" : "The `_uuid` of the `Registrierkasse` that has issued this `Beleg`.",
+                "format" : "uuid",
+                "type" : "string"
+              },
+              "Signaturerstellungseinheit-UUID" : {
+                "description" : "The `_uuid` of the `Signaturerstellungseinheit` that has signed this `Beleg`.",
+                "format" : "uuid",
+                "type" : "string"
+              },
+              "_href" : {
+                "description" : "URL of the particular `Beleg` instance.",
+                "format" : "url",
+                "type" : "string"
+              },
+              "_uuid" : {
+                "description" : "Unique ID of the particular `Beleg` instance.",
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 25
+  }, {
+    "id" : "7dfdc290-2c5c-4a3b-941b-f8734c5c3511",
+    "name" : "Request a JWT access token using your obono username and password.",
+    "request" : {
+      "urlPath" : "/auth",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"accessToken\" : \"fr06v07f7302bwtcjxgrr5eifevqd51k4vm6rfqt3bi9yqwszfvtkrdoih0kbbbp0xc42yj9ljoft8yct28j5juvjtx2mmrkg29nj3fbfh83uykm8hn5mjiirf8u3vjsclrc5wdcq8hubjto2dgqrxbtu3v\",\n  \"registrierkasseUuid\" : \"16c5ec4a-a495-48e0-be9c-dd2c6111d790\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "7dfdc290-2c5c-4a3b-941b-f8734c5c3511",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:26.275819Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "(none)",
+          "schema" : {
+            "properties" : {
+              "accessToken" : {
+                "type" : "string"
+              },
+              "registrierkasseUuid" : {
+                "format" : "uuid",
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 26
+  } ]
+}

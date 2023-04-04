@@ -1,0 +1,1253 @@
+{
+  "mappings" : [ {
+    "id" : "003cb214-2f1b-4e0b-9d61-1c86dc629004",
+    "name" : "Register to OpenAPI space",
+    "request" : {
+      "urlPath" : "/auth/register",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 409,
+      "body" : "\"USERNAME\"",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "003cb214-2f1b-4e0b-9d61-1c86dc629004",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:28.869401Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "register",
+          "schema" : {
+            "type" : "string",
+            "description" : "defines which field is already in use",
+            "enum" : [ "EMAIL", "USERNAME" ]
+          }
+        }
+      }
+    },
+    "insertionIndex" : 0
+  }, {
+    "id" : "a2b3b180-fe0c-40d1-bbcd-022114d16851",
+    "name" : "Register to OpenAPI space",
+    "request" : {
+      "urlPath" : "/auth/register",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"token\" : \"yledslmwz5bx7z0pd1pqq2o65lmksjnrnukhbmz9vg5iqfko562669yxp4uozyjxmkmcyoj82xg2i1fjg3lu808av4wld275f7ryw5lrblnu6j5tam9a8vn34414lesvtonyfb04u6y98r3s4pz\",\n  \"username\" : \"zella.welch\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "a2b3b180-fe0c-40d1-bbcd-022114d16851",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:28.869358Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "register",
+          "schema" : {
+            "type" : "object",
+            "properties" : {
+              "token" : {
+                "type" : "string",
+                "description" : "The authentication token sent from the server after a successful login"
+              },
+              "username" : {
+                "type" : "string"
+              }
+            }
+          }
+        }
+      }
+    },
+    "insertionIndex" : 1
+  }, {
+    "id" : "e1f02061-060b-4a71-ac01-76769a42e6e1",
+    "name" : "Check whether or not you are authenticated - 403",
+    "request" : {
+      "urlPath" : "/auth/ping",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 403
+    },
+    "uuid" : "e1f02061-060b-4a71-ac01-76769a42e6e1",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:28.869262Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "ping"
+        }
+      }
+    },
+    "insertionIndex" : 2
+  }, {
+    "id" : "31902147-6814-4921-b6d8-d8d856bc89c5",
+    "name" : "Check whether or not you are authenticated (application/json)",
+    "request" : {
+      "urlPath" : "/auth/ping",
+      "method" : "POST",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/json"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"password\" : \"p2j6cbmxhac463vxykh966p0cxjwaqqsou66a3syw82bfm33tmfzafxxvped8004l3j3c0j17gnrah25d8x7x5ticenypkiz91zpkg886b86rigsa5cbark9i7dfvsk4vqurplzh5shyfv464l0x417k1tuchaa49fsmo1bn7o645ie6yxhecz13vsk8j91l5zt6\",\n  \"email\" : \"qxu7u6dxunvvwnwtoxdcxl1q2x8zyedj1tfc69t8t7u8aepx1l2qtmhn4081glvnoehlzdist6gwde4ius5onxovr43f9jgfdl35vps11byypqd5d3fbuand18er0ouq6mljegrqavzjhgo9tan5zac25ddnv87kbgg3qocfv6t064hnv56vqz4dvaj8sz9qesk495\",\n  \"username\" : \"homer.haag\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "31902147-6814-4921-b6d8-d8d856bc89c5",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:28.869234Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "ping",
+          "schema" : {
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/Credentials"
+            }, {
+              "required" : [ "email" ],
+              "type" : "object",
+              "properties" : {
+                "email" : {
+                  "type" : "string"
+                }
+              }
+            } ]
+          }
+        }
+      }
+    },
+    "insertionIndex" : 3
+  }, {
+    "id" : "6de3047e-7fa5-4bcf-b204-5a0359d44ea7",
+    "name" : "Log out from OpenAPI space - 403",
+    "request" : {
+      "urlPath" : "/auth/logout",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 403
+    },
+    "uuid" : "6de3047e-7fa5-4bcf-b204-5a0359d44ea7",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:28.86909Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "logout"
+        }
+      }
+    },
+    "insertionIndex" : 4
+  }, {
+    "id" : "01545f5f-55b8-405e-ac56-a349ae2df83c",
+    "name" : "Log out from OpenAPI space - 200",
+    "request" : {
+      "urlPath" : "/auth/logout",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 200
+    },
+    "uuid" : "01545f5f-55b8-405e-ac56-a349ae2df83c",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:28.869073Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "logout"
+        }
+      }
+    },
+    "insertionIndex" : 5
+  }, {
+    "id" : "b9593b25-ca2f-4adf-8c08-cb99687e0f63",
+    "name" : "Log in to OpenAPI space using an APInf authentication token - 401",
+    "request" : {
+      "urlPath" : "/auth/login/apinf_token",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 401
+    },
+    "uuid" : "b9593b25-ca2f-4adf-8c08-cb99687e0f63",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:28.869052Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "login_apinf_token"
+        }
+      }
+    },
+    "insertionIndex" : 6
+  }, {
+    "id" : "acdd2123-1c3c-4605-a311-9fa9236554fa",
+    "name" : "Log in to OpenAPI space using an APInf authentication token (application/json)",
+    "request" : {
+      "urlPath" : "/auth/login/apinf_token",
+      "method" : "POST",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/json"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"token\" : \"ca155mubg0g2aq39f8ojluykoizar7ns0hk0nvywf7wwui1yvxcq981xum4uzyo03tekc8925x66ixlyayjbnwwqpq8kwcqlcnwi3s6qaxnhq29x1ayd1v3bhnttbso8f6cdthsxakdhpkjbd94djzlc\",\n  \"username\" : \"chieko.kling\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "acdd2123-1c3c-4605-a311-9fa9236554fa",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:28.869027Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "login_apinf_token",
+          "schema" : {
+            "type" : "object",
+            "properties" : {
+              "token" : {
+                "type" : "string",
+                "description" : "The authentication token sent from the server after a successful login"
+              },
+              "username" : {
+                "type" : "string"
+              }
+            }
+          }
+        }
+      }
+    },
+    "insertionIndex" : 7
+  }, {
+    "id" : "0356ddbc-e390-4248-92c3-59ad2eb96c80",
+    "name" : "Log in to OpenAPI space using an APInf account - 401",
+    "request" : {
+      "urlPath" : "/auth/login/apinf",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 401
+    },
+    "uuid" : "0356ddbc-e390-4248-92c3-59ad2eb96c80",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:28.868945Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "login_apinf"
+        }
+      }
+    },
+    "insertionIndex" : 8
+  }, {
+    "id" : "2b8e6653-fccd-4e89-8437-be5a06e17d90",
+    "name" : "Log in to OpenAPI space using an APInf account (application/json)",
+    "request" : {
+      "urlPath" : "/auth/login/apinf",
+      "method" : "POST",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/json"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"token\" : \"lzqtug2vnz13h7ktj9a0zomqjclmy8qoc8zbua22u0wt7etsyqqsx2919zkqgox8nig7795ej5e86o7trnacp5i8a7n6oq2ls7zcb8hxit7ytuy6wcebiglfkfief0r2al0yq9t5jzaz4v5xwm8qdza2ehdvsdngl2a26wk7f9vphr6vnv23qo1scw9k03pr1hxf\",\n  \"username\" : \"quinn.shields\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "2b8e6653-fccd-4e89-8437-be5a06e17d90",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:28.86892Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "login_apinf",
+          "schema" : {
+            "type" : "object",
+            "properties" : {
+              "token" : {
+                "type" : "string",
+                "description" : "The authentication token sent from the server after a successful login"
+              },
+              "username" : {
+                "type" : "string"
+              }
+            }
+          }
+        }
+      }
+    },
+    "insertionIndex" : 9
+  }, {
+    "id" : "240020ea-c3e1-4c32-956a-26907c1c7c58",
+    "name" : "Log in to OpenAPI space - 404",
+    "request" : {
+      "urlPath" : "/auth/login",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 404
+    },
+    "uuid" : "240020ea-c3e1-4c32-956a-26907c1c7c58",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:28.868834Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "login"
+        }
+      }
+    },
+    "insertionIndex" : 10
+  }, {
+    "id" : "22fa7230-7260-48b4-8419-489188874151",
+    "name" : "Log in to OpenAPI space - 401",
+    "request" : {
+      "urlPath" : "/auth/login",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 401
+    },
+    "uuid" : "22fa7230-7260-48b4-8419-489188874151",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:28.868817Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "login"
+        }
+      }
+    },
+    "insertionIndex" : 11
+  }, {
+    "id" : "72540c3f-5b0a-4228-a16e-08d09284fdae",
+    "name" : "Log in to OpenAPI space (application/json)",
+    "request" : {
+      "urlPath" : "/auth/login",
+      "method" : "POST",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/json"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"token\" : \"rclenlyu492jddp3gjepclapi9zrrjhk0nx19egk0ryd9t0hn0x7mloxskf6slziivcesquedvyh72yppb44rje6fmfd02vvc80spq5ctdsjo0s5l6304aoecp5w6yk3ou37ahjmmey0v6uip1eowqzf6sbbnwvysxr824cs1oe48tj87yhj7\",\n  \"username\" : \"stanley.lind\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "72540c3f-5b0a-4228-a16e-08d09284fdae",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:28.868791Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "login",
+          "schema" : {
+            "type" : "object",
+            "properties" : {
+              "token" : {
+                "type" : "string",
+                "description" : "The authentication token sent from the server after a successful login"
+              },
+              "username" : {
+                "type" : "string"
+              }
+            }
+          }
+        }
+      }
+    },
+    "insertionIndex" : 12
+  }, {
+    "id" : "989f2151-d798-4e48-bfb8-f22febfd605f",
+    "name" : "Retrieves the Swagger definition for the specified API and version in YAML format - 404",
+    "request" : {
+      "urlPath" : "/apis/98ukqq208lptuz/nrbro6xu0287ddmfb98cdekxpfjnvj16kr6hc2od5y5xvlowens4f28iom1quo2wrdvnh8ica02joxdd2q69oc00s1j40jtuta8sv9y6rq26mgnfj173oyy8da9droi2p1mli1ftmrzluohrblfrz8xycsugefa1wq41ig2kivixcbvnd0tlc0635sbt0nfc/n1l2j4qoscbqkqyv9/swagger.yaml",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 404
+    },
+    "uuid" : "989f2151-d798-4e48-bfb8-f22febfd605f",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:28.868662Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "get_yaml_definition"
+        }
+      }
+    },
+    "insertionIndex" : 13
+  }, {
+    "id" : "076207e1-d774-4e53-b0dd-8082f31db9e8",
+    "name" : "Retrieves the Swagger definition for the specified API and version in YAML format - 403",
+    "request" : {
+      "urlPath" : "/apis/vlvhyd920n3ccg/51s6kux585f0z1y9wa49hmmi8xsrbfj3mburx1xq367hboj0exluyhu4bke53mm3rxzis17qk43k4hhijfzf5b12hely5510okjjfehsxzalkfqv2nu0sncwvjuh88hqaautk3wbonu5skxe4i90kf1208ljqj0plpf8wu519h5k4eqpkm/u9apyo6dx29i4urp5i72ipc9lf81gl56r34dd48yk27m3fsj3wt978xa0wr2c/swagger.yaml",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 403
+    },
+    "uuid" : "076207e1-d774-4e53-b0dd-8082f31db9e8",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:28.868615Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "get_yaml_definition"
+        }
+      }
+    },
+    "insertionIndex" : 14
+  }, {
+    "id" : "f5ff2b5a-98e5-48f1-afd4-b72874dd3260",
+    "name" : "Retrieves the Swagger definition for the specified API and version in YAML format (text/vnd.yaml)",
+    "request" : {
+      "urlPath" : "/apis/4n5vyi19zzo6ksvxob/n7g5qytex6pe9qi2wtrphorw6r7immncmjdhaenidxqkhp0bxd2o9agn/4i1dv838dp64m4t/swagger.yaml",
+      "method" : "GET",
+      "headers" : {
+        "Accept" : {
+          "contains" : "text/vnd.yaml"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{ }",
+      "headers" : {
+        "Content-Type" : "text/vnd.yaml"
+      }
+    },
+    "uuid" : "f5ff2b5a-98e5-48f1-afd4-b72874dd3260",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:28.868559Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "get_yaml_definition",
+          "schema" : {
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 15
+  }, {
+    "id" : "4e750a20-adfc-4a7a-b8c8-f9745cd8b5a0",
+    "name" : "Retrieves the Swagger definition for the specified API and version in JSON format - 404",
+    "request" : {
+      "urlPath" : "/apis/ys95sjfurgpjehnhvqlup1iqqeqzdfqoztryxlzvmxllmjpgd130fwd1qkg038s7fzn69efz44lzv1vtxrbbj86tp1j4sr88bibp2mezo19xxn9uukjnhycwu7wiwdq17l58qmg2kssscaoltk4tlx3rqkrm7mqfim9pmtqus5jao/h8vxuw1xxxh961ij8vae3fnrbwse5ftvmvrmq7y76wga1w/798k1u64b514e7qd4qeads0t2h4k09qmi7fl9pt15u2781yx8sxr2pdbe9i47chcr1jhsnpzyk6p9y9ekr4jc0invz16ospe37qvq74i8rkfbaz919bgby4plk4cz6ujmxe3s9umgbtsxugaqgmscpavpo/swagger.json",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 404
+    },
+    "uuid" : "4e750a20-adfc-4a7a-b8c8-f9745cd8b5a0",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:28.868489Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "get_json_definition"
+        }
+      }
+    },
+    "insertionIndex" : 16
+  }, {
+    "id" : "b01f1204-cbbc-4e55-894e-f04af5bae106",
+    "name" : "Retrieves the Swagger definition for the specified API and version in JSON format - 403",
+    "request" : {
+      "urlPath" : "/apis/vwdhddmtazjwip6f2fiedvix74in2ipe8dokks4ro5dpgx2a/w7hblag6viytr3ndehx1zcivqen7a8e4qo6dsf0sy00bt5v3kq7qjwtcnb2v5c54yqq657vyxokw37luo1dojw485y1z2x8o1v3tua057cop9cnvwm7t59v3p/oy526mkj9w0t70fqwdb9zc79nrjxgj0xhc0emi6kidblgriq8bh6imtb6hzm6p5rp792o4dwsi5lxyu0u4vppl2j0wsty1ikd4101lpgg9ecwzwt5mp89gtht4um79279y7dlb94kujo7or7jzk81fngd4yd9z69pnbhvsm7hnmju4/swagger.json",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 403
+    },
+    "uuid" : "b01f1204-cbbc-4e55-894e-f04af5bae106",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:28.868438Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "get_json_definition"
+        }
+      }
+    },
+    "insertionIndex" : 17
+  }, {
+    "id" : "6ffa41ae-903b-4e77-b160-97d721665fce",
+    "name" : "Retrieves the Swagger definition for the specified API and version in JSON format (application/json)",
+    "request" : {
+      "urlPath" : "/apis/31xxxup55p28o83s8locw3unordfjxmpzhio5u57mvo7bd2yp9xipihxuy7fp78e6dxa0p3qf9gh3hwa2mvcjtj6epukoar23y2umez5rgbfzlaw82k6epz6remfx7k2yqtf89yx3c5j6sf/pfsjjip7w3gj11yev2mxgb2odfoa12r389amb07sfcmo9k10cno4fwyvqi/sqqqlc0wt9748jutyes6735amrdjqixw965wts8d5trhpdlpyhtc4zmnqkzrcyy3dc4kdg0zy4puqsy377z6b0uql2hk1tktlk410gxk71p5kkpie11gko1ghcjepopi428pnozm8x5zaq/swagger.json",
+      "method" : "GET",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/json"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{ }",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "6ffa41ae-903b-4e77-b160-97d721665fce",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:28.86838Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "get_json_definition",
+          "schema" : {
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 18
+  }, {
+    "id" : "969d6ce8-c3c7-4f5f-b0ea-93d4ba6d55d7",
+    "name" : "Deletes a particular version of the specified API - 409",
+    "request" : {
+      "urlPath" : "/apis/09uhv649hyrvtxej4f3o0ex2s8g/63me5v76zife9ejmftakj1nc1tbuoap84oa1bggg6yu7r8yjaxwt983vz5jxdeu8skv/kehvj0voan88a3seoh1hzqwp1wz1izy9pa3nbhwairyn7lti4qndhqv42y4rnubx95x3d2he1ojzmxe7l4cbghkeamdupvulok64obv3a5mksthfoodne5zf8lfjtfxd3a0h6rwl62gj9m5p35aqcjcbouyh1mn29z07p06o7c",
+      "method" : "DELETE"
+    },
+    "response" : {
+      "status" : 409
+    },
+    "uuid" : "969d6ce8-c3c7-4f5f-b0ea-93d4ba6d55d7",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:28.868303Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "delete_api_version"
+        }
+      }
+    },
+    "insertionIndex" : 19
+  }, {
+    "id" : "c6f447ec-9ee5-4866-9a0d-b9889d550006",
+    "name" : "Deletes a particular version of the specified API - 404",
+    "request" : {
+      "urlPath" : "/apis/06w4kszb1h1o79hydso2yhs89ae4iskn0zo1fijdb91ur7um9m4x75vrbi39on9q488n2irz1isdsk8qivam2jjj7aoulje739apm9mngk/bwb01eqgem8p9gpl414yzoym3ya8vvor1ud2z98eez75xrmsv65cioxh4corwqm27nlphlxbqg9ztguncoh174hdc8rhcuuev3r5uxp028ynevue9m6cmbt2tyjnr27hq1j1zj3jiw71r4ui0h7qis7tgwhholmel9i2j551p3vg1zptvkweg1dkihgjwk7t20bvv553/sxhuffbuiz2tyduis6f2hgpuv0tca3wgr7hc3mx1jtsrky7k2cu5r4e5mufe9e93k1bsbwne4vjez5bprjeqnrwohm5",
+      "method" : "DELETE"
+    },
+    "response" : {
+      "status" : 404
+    },
+    "uuid" : "c6f447ec-9ee5-4866-9a0d-b9889d550006",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:28.868255Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "delete_api_version"
+        }
+      }
+    },
+    "insertionIndex" : 20
+  }, {
+    "id" : "29842677-4c66-41c1-9d5d-42f0e8324a79",
+    "name" : "Deletes a particular version of the specified API - 403",
+    "request" : {
+      "urlPath" : "/apis/j780qnu4mih811g4cu90i5gqly7abxz13qcbbg0d9xizi0j87casst8b8e3gyqgvtfc9fskiwrxyzgjdnd34jssm8ymzrmlxjq1samwwovyfm2688eh8sge3rjdnz/pqy7ec5k1fhe38pbozal8wvftr58ru3ur8l010q78n4johv213vim79093giqnhcbt8j7i6nynpz2nv80sn72eog6zssbm3zbjy72z6pe9l154vtr5ij09a/l5yms2qu3sh5z4nf7i2bsvc3tie7a9pv87niurrf",
+      "method" : "DELETE"
+    },
+    "response" : {
+      "status" : 403
+    },
+    "uuid" : "29842677-4c66-41c1-9d5d-42f0e8324a79",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:28.868204Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "delete_api_version"
+        }
+      }
+    },
+    "insertionIndex" : 21
+  }, {
+    "id" : "e90eeb7a-86dd-4a17-808d-ab5df755e5d7",
+    "name" : "Deletes a particular version of the specified API (application/json)",
+    "request" : {
+      "urlPath" : "/apis/0r9pifwe56ftwhbvjuso6t24d732gp1d8ifibqnmi4eox4wv8igyyabxj55mgkwwmlaf4rrgmfrsapyuyspigrzei5e3zov7kyg3/ftynhn3lf6bpo3r0ywhbmbh694ntc3g6sjsuni11re190plnigaqhib90dxjeb3xko1dgqbz2do6xxysqrd61t3jdpikusuumwjss0iz2hc7tcctbqi4br61sear0a8vbnwpcs6shedd65j/wp0awuvi29q851bpy0fo2742qef9yuz9m8675u4era9g2f3tthi4uxd7epmx4ayzvbzj8jmlw45he7q210i5th6hxv4",
+      "method" : "DELETE",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/json"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"owner\" : \"njdu659ncbjifilpzkn4e7uqt7piyt68lncmecmchxt8xd0j5\",\n  \"versions\" : [ { } ],\n  \"created\" : \"2023-04-15T23:30:44.867Z\",\n  \"name\" : \"Antone Ledner\",\n  \"description\" : \"Amet et occaecati ab et aut deleniti possimus. Rerum vitae eveniet. Reprehenderit non cupiditate necessitatibus exercitationem. Aperiam commodi molestiae. Ad quos atque.\",\n  \"modified\" : \"2023-12-20T17:00:40.867Z\",\n  \"swagger\" : { },\n  \"url\" : \"https://web.example.mocklab.io/965927\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "e90eeb7a-86dd-4a17-808d-ab5df755e5d7",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:28.868146Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "delete_api_version",
+          "schema" : {
+            "type" : "object",
+            "properties" : {
+              "created" : {
+                "type" : "string",
+                "format" : "date-time"
+              },
+              "description" : {
+                "type" : "string"
+              },
+              "modified" : {
+                "type" : "string",
+                "format" : "date-time"
+              },
+              "name" : {
+                "type" : "string"
+              },
+              "owner" : {
+                "type" : "string"
+              },
+              "swagger" : {
+                "type" : "object",
+                "description" : "An optional Swagger spec. Not included in meta lists."
+              },
+              "url" : {
+                "type" : "string",
+                "format" : "url"
+              },
+              "versions" : {
+                "type" : "array",
+                "items" : {
+                  "type" : "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "insertionIndex" : 22
+  }, {
+    "id" : "ee7eb183-4de3-45a4-a1df-2290f2390bce",
+    "name" : "Publish a particular version of the specified API - 409",
+    "request" : {
+      "urlPath" : "/apis/wl2bbsxr1ryyao6ns1f5ks/kswmc3afvk0zjvjlccl5jykp2sv6trizhp655hg70ra9uz4tem059alkkkifyv3c1yfrbvlm/lerlupy9ce9pgtr9bhxw4thqqrw7usjnltdi6264a2lxh2ega7jf5vxp8sb3rdlo4ibns7l35ktj1crkkwus08oxq1ur122ndcchy4wwrdai642n4tacnvaxonqajlav2dhj2qggpev2tlly32thk8l1dnis9h",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 409
+    },
+    "uuid" : "ee7eb183-4de3-45a4-a1df-2290f2390bce",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:28.86785Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "publish_api_version"
+        }
+      }
+    },
+    "insertionIndex" : 23
+  }, {
+    "id" : "f9a050c9-6a48-465f-a506-34a89f982193",
+    "name" : "Publish a particular version of the specified API - 404",
+    "request" : {
+      "urlPath" : "/apis/ryqxmmw5ax3kvedejzpwig596sytswm31bao6lu5rjvlexg5tvs1xk/gup01zjlnmn34r0ojn1mkh51xq9ym1999if912ph25qzm4pkiyp377tmogofqadtzoabgpva633uommvcth3friwvqkow1o5fd3yfdd1d3if3vo2hs/x0bndmp5zj3oa6l29wwbzjuwplrwxpisv0xw35dzi1gii1kyauta67sk97n7hyt64anyd2cd9v7zg83nnopb9wixrezcp827bqpmwvf",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 404
+    },
+    "uuid" : "f9a050c9-6a48-465f-a506-34a89f982193",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:28.867805Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "publish_api_version"
+        }
+      }
+    },
+    "insertionIndex" : 24
+  }, {
+    "id" : "17d8395a-b67f-4cd4-b003-e48b15dc85eb",
+    "name" : "Publish a particular version of the specified API - 403",
+    "request" : {
+      "urlPath" : "/apis/r9z281synt7so18zt4nqrl0yjaaubi4rwkk7f6oip0xb61e1upet79ctrwhr73/kw9qg2csp37ndiawgn05chwzomkr1rkolga40wajkuyrc23ihzqei79j2e6dcxjbr/d1v0ha9upjoctsqv9o3e7",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 403
+    },
+    "uuid" : "17d8395a-b67f-4cd4-b003-e48b15dc85eb",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:28.867759Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "publish_api_version"
+        }
+      }
+    },
+    "insertionIndex" : 25
+  }, {
+    "id" : "90ac6227-7a91-464f-b790-c3091eec7a03",
+    "name" : "Publish a particular version of the specified API - 200",
+    "request" : {
+      "urlPath" : "/apis/s2icsli6yio1q3azi18luocqnmy02055p5kh8ealejbotyvy0ywlogb0u38glfdbke63cvq7lgdhq3m4yxwn8eyrf6cx/5fo32xj69igal2o107zx4fjqb7p4qggvslzunbdo1hveufzioph472kffkmcdncnzp9r3cq42wgo6p26awp0fqhjimjxkku1xwzu80960uhttu3qeca7wjb0nha78ndzvh9vk4y72fb4vol5wciq02pubyo26w93lhfii/s0uz1rpt0x9tmf6b6nsrsrpdhffz",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 200
+    },
+    "uuid" : "90ac6227-7a91-464f-b790-c3091eec7a03",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:28.867716Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "publish_api_version"
+        }
+      }
+    },
+    "insertionIndex" : 26
+  }, {
+    "id" : "0135535d-b53a-414a-952a-75c30f6e57d3",
+    "name" : "Deletes the specified API - 404",
+    "request" : {
+      "urlPath" : "/apis/dhl47jt62k4m9sh5kyf1qkwp21md9a51xmoxfmprfbyxchllfccve94yuetv6v5bzithd6wkb/7oujoja61v7us0kznn88mup7r9cd231q4q2z4exr5lrb359qx9he4x10jswt7se5d9fw6bn06yxau4melay6fdy4y4kz9akzmpch3q8nslsi5ajtomsdrw4u4v8xlc4iv6tq6606oytzrabx5",
+      "method" : "DELETE"
+    },
+    "response" : {
+      "status" : 404
+    },
+    "uuid" : "0135535d-b53a-414a-952a-75c30f6e57d3",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:28.867656Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "delete_api"
+        }
+      }
+    },
+    "insertionIndex" : 27
+  }, {
+    "id" : "6641a4cb-99b0-45d7-9782-13dfdb47d112",
+    "name" : "Deletes the specified API - 403",
+    "request" : {
+      "urlPath" : "/apis/gq9o2cnncfsy1ehh7iaer865ly9ruq9v04ha4tnl4hytvhs/gntewkptl58telk9cwl19aubi",
+      "method" : "DELETE"
+    },
+    "response" : {
+      "status" : 403
+    },
+    "uuid" : "6641a4cb-99b0-45d7-9782-13dfdb47d112",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:28.867616Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "delete_api"
+        }
+      }
+    },
+    "insertionIndex" : 28
+  }, {
+    "id" : "5d015da6-9a92-4d9f-bc45-d8f9c9e8aa09",
+    "name" : "Deletes the specified API (application/json)",
+    "request" : {
+      "urlPath" : "/apis/i2brm26bzr0j61fh4an0ov1fo4ia1gjk1jbcw93jn5jnoej66dghe8p4sr68kqbtcfjim6374vyp83o4nr7yila8791rqumd736z1/hcw8jjqs06ox1a7uwpjvuhjoixo1foipu2nz7t5q3vj0jnka3",
+      "method" : "DELETE",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/json"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "[ {\n  \"owner\" : \"xi8s9t3c5bbrst2g2x24aw4nuf0zao5cftnn3wbqveuqdqirnr768qq5i90ouwpk5va4n2epidjrgva6i9xnfxrnpmqqr7qierdjmv3vaj8779dczg2s6hliyrrx500dcdssefvr6121p20ua7kh1a8ln\",\n  \"versions\" : [ { }, { }, { }, { }, { } ],\n  \"created\" : \"2023-08-30T11:24:16.866Z\",\n  \"name\" : \"Caroll Kiehn\",\n  \"description\" : \"Ratione odio ea temporibus sit velit. Blanditiis nesciunt nostrum eum alias exercitationem. Tempore rerum autem esse.\",\n  \"modified\" : \"2022-05-24T10:16:36.866Z\",\n  \"swagger\" : { },\n  \"url\" : \"https://web.example.mocklab.io/482976\"\n}, {\n  \"owner\" : \"g21j05bywh4qav43njfylzhct9gaqyf1pyfx5cxssaf0nhqpah6vbwoso2cbxxm4s2nq5oegaca04vcjc9pak69hn662s9slkafsmznq\",\n  \"versions\" : [ { }, { }, { }, { }, { }, { }, { } ],\n  \"created\" : \"2024-01-29T20:20:35.867Z\",\n  \"name\" : \"Tameka Howe I\",\n  \"description\" : \"Est quaerat sit debitis molestias. Earum officiis alias voluptas quam nihil. A possimus expedita nihil.\",\n  \"modified\" : \"2022-04-20T07:27:51.867Z\",\n  \"swagger\" : { },\n  \"url\" : \"https://web.example.mocklab.io/811831\"\n}, {\n  \"owner\" : \"gbezy45uhst09izvsckvgcvfv309gb08iiiybb84bpblzudg15guq9en32sa1f04opb2rv3aazybkxsjlwb3sxamrcry4bibaachlgpa3fujdruv2aw6zpq7tz260vmpcjtpurx6glg0mrdp2srkf0c8ye41u0g4b2feqkh4ne7yim\",\n  \"versions\" : [ { }, { }, { }, { }, { } ],\n  \"created\" : \"2023-03-07T12:41:33.867Z\",\n  \"name\" : \"Ka Hammes\",\n  \"description\" : \"Eum assumenda hic laudantium quo blanditiis architecto. Rerum dolorem aperiam dolores non. Nostrum qui enim laboriosam et numquam. Explicabo tenetur aliquid sequi velit.\",\n  \"modified\" : \"2022-12-24T14:59:00.867Z\",\n  \"swagger\" : { },\n  \"url\" : \"https://web.example.mocklab.io/073849\"\n}, {\n  \"owner\" : \"p7h3uzj19br4v6y0bdwnmsszfnfnbb47p9hjqhdzj9mo4s19q3hwgjl4g5e5lss6obc84vxrvjtm05z0je3qgt8pca24hwpvkh6jumxacz779rfrn4dzwyzmva4ji0t4106jairafh9il6509gs7qm53ihvn\",\n  \"versions\" : [ { }, { } ],\n  \"created\" : \"2023-11-27T04:05:04.867Z\",\n  \"name\" : \"Jacquelyn Shields\",\n  \"description\" : \"Et occaecati corrupti. Neque est et. Quo tenetur omnis iusto excepturi dicta qui. Nulla earum ut. Dolor nobis velit consequatur.\",\n  \"modified\" : \"2023-03-16T18:00:55.867Z\",\n  \"swagger\" : { },\n  \"url\" : \"https://web.example.mocklab.io/844733\"\n} ]",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "5d015da6-9a92-4d9f-bc45-d8f9c9e8aa09",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:28.867567Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "delete_api",
+          "schema" : {
+            "type" : "array",
+            "items" : {
+              "$ref" : "#/components/schemas/APIMeta"
+            }
+          }
+        }
+      }
+    },
+    "insertionIndex" : 29
+  }, {
+    "id" : "29566e35-e9da-45cc-b82f-16e6c2cee41e",
+    "name" : "Saves the provided Swagger definition - 415",
+    "request" : {
+      "urlPath" : "/apis/mr8eqemug7tsiy3vy2q9vvxoudgfy9oei8rn2ugzuc0fvdawtnsrie7vhswg9flg6nw2tc7/5q9bk9avjau349kcf93i45151vp71poq0l7h0ktrp0bh38dq89xt5e89xs5wyopbwnxy41zl6tgit9vy9pfcjnr5zmjrfjkvvbx5xm9kd24vjrho66zfp2o8hioe6mqzjxhulkuz8pdzgrgoay373rjhorus6pbgd1jyv6jglwiawxfy7rd827j9go",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 415
+    },
+    "uuid" : "29566e35-e9da-45cc-b82f-16e6c2cee41e",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:28.866797Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "save_definition"
+        }
+      }
+    },
+    "insertionIndex" : 30
+  }, {
+    "id" : "49803af5-928e-41f7-bcf6-7023fda7e33a",
+    "name" : "Saves the provided Swagger definition - 409",
+    "request" : {
+      "urlPath" : "/apis/wpvbysu8f66ibp39rqc5bg91q902k56gmy2jydv0h6sem86hgcp6tj7ofbncr29zwfn21fgr5zpjq8uo4niwzs3da81k86rovj5g8ocu6x7b1t243xy2jn1ainzl3x6cyij062cnpv67hfqowckeco39/f00i8rbk9t",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 409
+    },
+    "uuid" : "49803af5-928e-41f7-bcf6-7023fda7e33a",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:28.866758Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "save_definition"
+        }
+      }
+    },
+    "insertionIndex" : 31
+  }, {
+    "id" : "eb6acbfb-58d8-4e4e-bf48-fe4dd2826a59",
+    "name" : "Saves the provided Swagger definition - 403",
+    "request" : {
+      "urlPath" : "/apis/7pn95v47vzifd4ew5vfb3zlvj70e93c6bh7vdbzzehvpwoe4vmv73nj5bl0z932nwowchfqsf8rd62mf8velfkrkuhndrriqyje74mczqfcqxwf3r5sv9vohmwz9nhxk0dxxam1ibzj603pv1kdu00zvsi7zp7yv77/3tmoiqtgvo3eo6wk7xy2aqzxorpuqeepflf6mazvzzcmdvq73nrdsjs92d2nc89d4qi8pcz2ocaiqarpyo6atj9mk22yhmxj31q0ow6740dps0",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 403
+    },
+    "uuid" : "eb6acbfb-58d8-4e4e-bf48-fe4dd2826a59",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:28.866718Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "save_definition"
+        }
+      }
+    },
+    "insertionIndex" : 32
+  }, {
+    "id" : "dcf01c8c-b6b9-4884-9b42-04677e535109",
+    "name" : "Saves the provided Swagger definition - 400",
+    "request" : {
+      "urlPath" : "/apis/0pn1tawyu1ei5g86vmj8g30wrgzccd4bo4qbxmnvgta8vo1oskr24v9c1ni21y9dz5osz4ro6bqjsrvz71kgh49rqf7ybxelvkpck5ntq981tufaw/i5we6osnwvaqoy2efbl0a6ilu2gw4n27tevuev9sh83ozg8o7ig098flhr54nekq",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 400
+    },
+    "uuid" : "dcf01c8c-b6b9-4884-9b42-04677e535109",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:28.866677Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "save_definition"
+        }
+      }
+    },
+    "insertionIndex" : 33
+  }, {
+    "id" : "0dfe5bde-7958-4145-8370-596f98444f2b",
+    "name" : "Saves the provided Swagger definition (application/json)",
+    "request" : {
+      "urlPath" : "/apis/mt42p5pbshyd1c73zwzln81ura9s5q4cj98vawo4dltxc0rki1rd9qdl531rghed5fo3vd5v1o0kk0t0pskm93ouvogwqdqbwa0e3o19bh8blpr1u3ffv0g3m2munufblugf4h27f8otmitao2c131ldprqperil4zf2sbq/uo838gg3f94p4476g2y363xthdwmjswbw46vncv547byqxky7j61f45wmrvxvm9s220ncq5xyqzcwtl0lag5xom5mx10slrwk8rkk9q1hgg02jmwdltos74dira9r47peo7lneut6nnlrwaanuc47fzzktj2cv515hz6spx7c9zy4r75jbpvndjd6briajisom7cs5n",
+      "method" : "POST",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/json"
+        }
+      }
+    },
+    "response" : {
+      "status" : 201,
+      "body" : "{\n  \"owner\" : \"qo5b4ph8dcv9i4p913r26mek6ivz1da71m7rlx2lcrrnavpopf0li2e68e74ydha0dj1qtm295mqku44t65jyzrah6\",\n  \"versions\" : [ { } ],\n  \"created\" : \"2023-12-31T12:12:12.866Z\",\n  \"name\" : \"Breana Jast\",\n  \"description\" : \"Harum dolor libero. Deserunt optio necessitatibus quo atque non nulla. Sapiente omnis ea qui et voluptas molestiae. Hic est facere debitis enim cum.\",\n  \"modified\" : \"2022-11-22T04:29:35.866Z\",\n  \"swagger\" : { },\n  \"url\" : \"https://web.example.mocklab.io/420162\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "0dfe5bde-7958-4145-8370-596f98444f2b",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:28.866619Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "save_definition",
+          "schema" : {
+            "type" : "object",
+            "properties" : {
+              "created" : {
+                "type" : "string",
+                "format" : "date-time"
+              },
+              "description" : {
+                "type" : "string"
+              },
+              "modified" : {
+                "type" : "string",
+                "format" : "date-time"
+              },
+              "name" : {
+                "type" : "string"
+              },
+              "owner" : {
+                "type" : "string"
+              },
+              "swagger" : {
+                "type" : "object",
+                "description" : "An optional Swagger spec. Not included in meta lists."
+              },
+              "url" : {
+                "type" : "string",
+                "format" : "url"
+              },
+              "versions" : {
+                "type" : "array",
+                "items" : {
+                  "type" : "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "insertionIndex" : 34
+  }, {
+    "id" : "543662af-5f50-430e-9271-5e8f2ba0bef4",
+    "name" : "Saves the provided Swagger definition (application/json)",
+    "request" : {
+      "urlPath" : "/apis/w9jbfd4d4sz82idn8bn4386vjvixkkf/03wrr0yolvrnis5q32opyo7lo1nwihgibxzzkn5vz7h7esl4cvvau8fogyeonc5rm5vmt8mu6f12ly4cfxewmvvxf4tp8inouxh0ke5wfioyhb6nprk",
+      "method" : "POST",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/json"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"owner\" : \"hafsz8mah6gguu3aq3mjfr2o3wyb4jtjs9r2w89lbqtvnloea033wt66rs\",\n  \"versions\" : [ { }, { }, { }, { } ],\n  \"created\" : \"2023-01-09T08:03:44.866Z\",\n  \"name\" : \"Bradly Kiehn\",\n  \"description\" : \"Quis quisquam excepturi a voluptatem esse. Reprehenderit sed aperiam. Ut dolores voluptas pariatur sint fugiat autem accusantium. Inventore nihil porro qui eveniet.\",\n  \"modified\" : \"2023-05-19T11:22:55.866Z\",\n  \"swagger\" : { },\n  \"url\" : \"https://web.example.mocklab.io/514367\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "543662af-5f50-430e-9271-5e8f2ba0bef4",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:28.866333Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "save_definition",
+          "schema" : {
+            "type" : "object",
+            "properties" : {
+              "created" : {
+                "type" : "string",
+                "format" : "date-time"
+              },
+              "description" : {
+                "type" : "string"
+              },
+              "modified" : {
+                "type" : "string",
+                "format" : "date-time"
+              },
+              "name" : {
+                "type" : "string"
+              },
+              "owner" : {
+                "type" : "string"
+              },
+              "swagger" : {
+                "type" : "object",
+                "description" : "An optional Swagger spec. Not included in meta lists."
+              },
+              "url" : {
+                "type" : "string",
+                "format" : "url"
+              },
+              "versions" : {
+                "type" : "array",
+                "items" : {
+                  "type" : "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "insertionIndex" : 35
+  }, {
+    "id" : "913f8899-c47d-492e-ab55-866b4aea9b53",
+    "name" : "Retrieves an API meta listing for all API versions for this owner and API",
+    "request" : {
+      "urlPath" : "/apis/wj9ac5n9pu4q603my0hvn/q7zcqc5y0ky3pxa872fachywcs668j9h",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "[ {\n  \"owner\" : \"ips76s42zjlx1kza6if0h7vmdbftvnnsghtpdjdzu7ujybpwhy05kzclll7dbxxy9mw50mbld50hnqlnttcdc24qwxo9rb7ve8i3n6y7\",\n  \"versions\" : [ { }, { }, { } ],\n  \"created\" : \"2022-06-17T20:01:19.865Z\",\n  \"name\" : \"Carie Ernser\",\n  \"description\" : \"Eos dolorum ea. Dolor aliquam voluptatibus. Vitae aut ad provident pariatur velit. Placeat vitae velit odio aut.\",\n  \"modified\" : \"2023-12-22T15:03:39.865Z\",\n  \"swagger\" : { },\n  \"url\" : \"https://web.example.mocklab.io/840796\"\n}, {\n  \"owner\" : \"cy7pthrkvz5nf0yg2oewduor91dzjhli3b\",\n  \"versions\" : [ { }, { }, { }, { }, { }, { }, { } ],\n  \"created\" : \"2023-04-01T17:49:17.865Z\",\n  \"name\" : \"Marquetta Kiehn Jr.\",\n  \"description\" : \"Quibusdam ex nulla sed. Accusamus incidunt blanditiis magni hic minus. Minus non nihil dolorum vel est dolores. Quasi architecto fugiat eum qui. Sed vel eligendi animi.\",\n  \"modified\" : \"2023-04-12T05:11:52.865Z\",\n  \"swagger\" : { },\n  \"url\" : \"https://web.example.mocklab.io/305087\"\n}, {\n  \"owner\" : \"nmfjf249iyz4g2s27cro7azj4114ou04f87po579pubdaarlhr0766tt6dn4w6f3bihelfyi607umwmm8ehnyvdee1arclc8f1f62do8fjrfi1hjpz34peuzx9fc6ivxelf2nitl14mk8v59fzamtvkkahqiom4b5aygsm9jnoe53u9z7p\",\n  \"versions\" : [ { }, { }, { }, { }, { } ],\n  \"created\" : \"2023-02-27T03:05:24.865Z\",\n  \"name\" : \"Miss Palmer Marquardt\",\n  \"description\" : \"Voluptas sed in aliquid ratione. Excepturi praesentium voluptatibus labore quia deleniti. Quia nesciunt dignissimos ratione. Quasi et doloremque provident quibusdam similique est odio.\",\n  \"modified\" : \"2022-09-21T05:38:30.865Z\",\n  \"swagger\" : { },\n  \"url\" : \"https://web.example.mocklab.io/610779\"\n}, {\n  \"owner\" : \"jdoxp206b4ai8xrv06lsx06jsaua8k2tvjfjecnegwfsiuatiomkisd2hpzitbf2kd8rsb2zp4a8343ia3zfrlyncb1enhk6f6e2do6tjh7unmw4z4n9sptj50oquxnna7q7rai19xo5qxv\",\n  \"versions\" : [ { }, { }, { }, { }, { }, { }, { }, { } ],\n  \"created\" : \"2024-02-15T08:29:16.865Z\",\n  \"name\" : \"Bert Toy\",\n  \"description\" : \"Fuga quidem nemo. Rem perspiciatis commodi. In ipsa fugiat magnam qui.\",\n  \"modified\" : \"2022-09-02T14:13:32.865Z\",\n  \"swagger\" : { },\n  \"url\" : \"https://web.example.mocklab.io/299185\"\n}, {\n  \"owner\" : \"wn4dkj3cxzs5t6z3e5h0gxzazw0wplr3k0p8mfcgz1m7sk2sbk8iue41puvsc7vcm6md1fykmkl1im\",\n  \"versions\" : [ { }, { }, { }, { }, { }, { }, { } ],\n  \"created\" : \"2023-12-31T20:23:41.865Z\",\n  \"name\" : \"Ivan Mann\",\n  \"description\" : \"Aut sint quam rem dolorem quae illo et. Est labore molestiae velit. Perferendis provident saepe reprehenderit soluta quia magnam rem.\",\n  \"modified\" : \"2023-03-09T01:25:51.865Z\",\n  \"swagger\" : { },\n  \"url\" : \"https://web.example.mocklab.io/689897\"\n} ]",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "913f8899-c47d-492e-ab55-866b4aea9b53",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:28.866025Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "get_api_versions",
+          "schema" : {
+            "type" : "array",
+            "items" : {
+              "$ref" : "#/components/schemas/APIMeta"
+            }
+          }
+        }
+      }
+    },
+    "insertionIndex" : 36
+  }, {
+    "id" : "cb51833c-4bca-4483-9690-00ed8e7cb877",
+    "name" : "Retrieves an API meta listing of all APIs defined for this owner",
+    "request" : {
+      "urlPath" : "/apis/a5v8wxxqt03el61ziwlfjlhwrmnbo3i38y1gg9qicftsnxj55qml2d2yxsrkrqysbaek8idzuo4n9wnp7ilqcgco5g2sec15lz86xvnmz5vdtxo0psmehdbat3n4opszcb6pud3v7vktmz8mv0llzky661oc25qt27c5z3u5ehmz13smslfb",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "[ {\n  \"owner\" : \"gy664peuv7hxc9b69rn30z0g48t4pu0tua3nrrf11gctehf1n40q80iou6dk87hbdns9ujijc\",\n  \"versions\" : [ { }, { }, { } ],\n  \"created\" : \"2023-01-18T02:55:55.864Z\",\n  \"name\" : \"Lenita Kulas\",\n  \"description\" : \"Voluptatem nemo et doloremque adipisci. Sed eaque accusantium soluta rerum recusandae. Hic quia sit aut. Est suscipit enim commodi dolore. Laborum sequi alias voluptas non ipsa qui dolor.\",\n  \"modified\" : \"2022-07-25T00:38:36.864Z\",\n  \"swagger\" : { },\n  \"url\" : \"https://web.example.mocklab.io/123021\"\n}, {\n  \"owner\" : \"r7s5usdidmztreecg0cyqedprkgkkk9t4yjagsbd310ah0au14dl0y7kuf66zcp2n83avelyo5leil7iiqdi1jrzehgdvvtef8v8znlbjyg6aaakq3urah6thntqbkgbcrbx109a85gh0brsdzio28ci0cldsufza70w5v2unp\",\n  \"versions\" : [ { }, { }, { }, { } ],\n  \"created\" : \"2022-12-16T10:02:27.864Z\",\n  \"name\" : \"Donnie Fahey IV\",\n  \"description\" : \"Vero aut eum cupiditate rerum soluta sit. Atque et beatae ut vel et quibusdam sed. Quia quidem soluta tempore ipsa quia minima maxime. Quia sed voluptas dignissimos.\",\n  \"modified\" : \"2023-05-07T12:14:47.864Z\",\n  \"swagger\" : { },\n  \"url\" : \"https://web.example.mocklab.io/789344\"\n} ]",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "cb51833c-4bca-4483-9690-00ed8e7cb877",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:28.865084Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "get_owner_apis",
+          "schema" : {
+            "type" : "array",
+            "items" : {
+              "$ref" : "#/components/schemas/APIMeta"
+            }
+          }
+        }
+      }
+    },
+    "insertionIndex" : 37
+  }, {
+    "id" : "61b2beb5-56ee-486b-a7ae-3f9ef938532d",
+    "name" : "Retrieves a list of currently defined APIs in API meta list format.",
+    "request" : {
+      "urlPath" : "/apis",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "[ {\n  \"owner\" : \"joti6u5160okrox\",\n  \"versions\" : [ { }, { }, { }, { }, { }, { }, { }, { } ],\n  \"created\" : \"2024-01-04T13:53:56.864Z\",\n  \"name\" : \"Shelby Wyman\",\n  \"description\" : \"Quas dolor aut. Illo cumque voluptatem. Consectetur officiis sint qui necessitatibus omnis quo.\",\n  \"modified\" : \"2022-11-14T09:57:58.864Z\",\n  \"swagger\" : { },\n  \"url\" : \"https://web.example.mocklab.io/006673\"\n} ]",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "61b2beb5-56ee-486b-a7ae-3f9ef938532d",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:28.864639Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "search_apis",
+          "schema" : {
+            "type" : "array",
+            "items" : {
+              "$ref" : "#/components/schemas/APIMeta"
+            }
+          }
+        }
+      }
+    },
+    "insertionIndex" : 38
+  } ]
+}

@@ -1,0 +1,324 @@
+{
+  "mappings" : [ {
+    "id" : "299edc95-4a86-4067-b07a-29877f73893a",
+    "name" : "Send a message to the given channel.",
+    "request" : {
+      "urlPath" : "/",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 500,
+      "body" : "{\n  \"instance\" : \"bf0ca0bf927b3b52e3cb03217e1a1ddf\",\n  \"detail\" : \"There was an error processing your request in the Platform.\",\n  \"title\" : \"Internal error\",\n  \"type\" : \"https://developer.nexmo.com/api-errors/messages-olympus#1000\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "299edc95-4a86-4067-b07a-29877f73893a",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:26.498713Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "SendMessage",
+          "schema" : {
+            "properties" : {
+              "detail" : {
+                "description" : "Additional information about the error",
+                "example" : "There was an error processing your request in the Platform.",
+                "type" : "string"
+              },
+              "instance" : {
+                "description" : "Internal Trace ID",
+                "example" : "bf0ca0bf927b3b52e3cb03217e1a1ddf",
+                "type" : "string"
+              },
+              "title" : {
+                "description" : "Generic error message",
+                "example" : "Internal error",
+                "type" : "string"
+              },
+              "type" : {
+                "description" : "Link to error / remediation options",
+                "example" : "https://developer.nexmo.com/api-errors/messages-olympus#1000",
+                "type" : "string"
+              }
+            },
+            "required" : [ "type", "title", "detail", "instance" ],
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 0
+  }, {
+    "id" : "e8c8eaca-c292-4da7-af02-7bb7af336be3",
+    "name" : "Send a message to the given channel.",
+    "request" : {
+      "urlPath" : "/",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 429,
+      "body" : "{\n  \"instance\" : \"bf0ca0bf927b3b52e3cb03217e1a1ddf\",\n  \"detail\" : \"Please wait, then retry your request\",\n  \"title\" : \"Rate Limit Hit\",\n  \"type\" : \"https://developer.nexmo.com/api-errors/messages-olympus#1000\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "e8c8eaca-c292-4da7-af02-7bb7af336be3",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:26.498626Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "SendMessage",
+          "schema" : {
+            "properties" : {
+              "detail" : {
+                "description" : "Additional information about the error",
+                "example" : "Please wait, then retry your request",
+                "type" : "string"
+              },
+              "instance" : {
+                "description" : "Internal Trace ID",
+                "example" : "bf0ca0bf927b3b52e3cb03217e1a1ddf",
+                "type" : "string"
+              },
+              "title" : {
+                "description" : "Generic error message",
+                "example" : "Rate Limit Hit",
+                "type" : "string"
+              },
+              "type" : {
+                "description" : "Link to error / remediation options",
+                "example" : "https://developer.nexmo.com/api-errors/messages-olympus#1000",
+                "type" : "string"
+              }
+            },
+            "required" : [ "type", "title", "detail", "instance" ],
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 1
+  }, {
+    "id" : "33c1ad24-4561-42c4-93d8-46dfedc33984",
+    "name" : "Send a message to the given channel.",
+    "request" : {
+      "urlPath" : "/",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 422,
+      "body" : "{\n  \"instance\" : \"bf0ca0bf927b3b52e3cb03217e1a1ddf\",\n  \"detail\" : \"The value of one or more parameters is invalid.\",\n  \"title\" : \"Invalid channel parameters\",\n  \"type\" : \"https://developer.nexmo.com/api-errors/messages-olympus#1110\",\n  \"invalid_parameters\" : [ {\n    \"reason\" : \"Must be one of `response`, `update` or `message_tag`.\",\n    \"name\" : \"messenger.category\"\n  }, {\n    \"reason\" : \"Must be one of `response`, `update` or `message_tag`.\",\n    \"name\" : \"messenger.category\"\n  }, {\n    \"reason\" : \"Must be one of `response`, `update` or `message_tag`.\",\n    \"name\" : \"messenger.category\"\n  }, {\n    \"reason\" : \"Must be one of `response`, `update` or `message_tag`.\",\n    \"name\" : \"messenger.category\"\n  }, {\n    \"reason\" : \"Must be one of `response`, `update` or `message_tag`.\",\n    \"name\" : \"messenger.category\"\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "33c1ad24-4561-42c4-93d8-46dfedc33984",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:26.498535Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "SendMessage",
+          "schema" : {
+            "oneOf" : [ {
+              "$ref" : "#/components/schemas/ErrorInvalidJson"
+            }, {
+              "$ref" : "#/components/schemas/ErrorChannel"
+            }, {
+              "$ref" : "#/components/schemas/ErrorChannelParams"
+            }, {
+              "$ref" : "#/components/schemas/ErrorSender"
+            }, {
+              "$ref" : "#/components/schemas/ErrorRecipient"
+            }, {
+              "$ref" : "#/components/schemas/ErrorMessageType"
+            }, {
+              "$ref" : "#/components/schemas/ErrorMessageParams"
+            }, {
+              "$ref" : "#/components/schemas/ErrorClientReference"
+            } ]
+          }
+        }
+      }
+    },
+    "insertionIndex" : 2
+  }, {
+    "id" : "5d9c023d-f6bf-4bce-81e2-54344f575798",
+    "name" : "Send a message to the given channel.",
+    "request" : {
+      "urlPath" : "/",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 402,
+      "body" : "{\n  \"instance\" : \"bf0ca0bf927b3b52e3cb03217e1a1ddf\",\n  \"detail\" : \"This request could not be performed due to your account balance being low.\",\n  \"title\" : \"Low balance\",\n  \"type\" : \"https://developer.nexmo.com/api-errors/#low-balance\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "5d9c023d-f6bf-4bce-81e2-54344f575798",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:26.498432Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "SendMessage",
+          "schema" : {
+            "properties" : {
+              "detail" : {
+                "description" : "Additional information about the error",
+                "example" : "This request could not be performed due to your account balance being low.",
+                "type" : "string"
+              },
+              "instance" : {
+                "description" : "Internal Trace ID",
+                "example" : "bf0ca0bf927b3b52e3cb03217e1a1ddf",
+                "type" : "string"
+              },
+              "title" : {
+                "description" : "Generic error message",
+                "example" : "Low balance",
+                "type" : "string"
+              },
+              "type" : {
+                "description" : "Link to error / remediation options",
+                "example" : "https://developer.nexmo.com/api-errors/#low-balance",
+                "type" : "string"
+              }
+            },
+            "required" : [ "type", "title", "detail", "instance" ],
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 3
+  }, {
+    "id" : "ff5ce949-c1bd-4dd9-89c1-f0b2326cfaed",
+    "name" : "Send a message to the given channel.",
+    "request" : {
+      "urlPath" : "/",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 401,
+      "body" : "{\n  \"instance\" : \"bf0ca0bf927b3b52e3cb03217e1a1ddf\",\n  \"detail\" : \"Check that you're using the correct credentials, and that your account has this feature enabled\",\n  \"title\" : \"You did not provide correct credentials.\",\n  \"type\" : \"https://developer.nexmo.com/api-errors/#unathorized\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "ff5ce949-c1bd-4dd9-89c1-f0b2326cfaed",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:26.498334Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "SendMessage",
+          "schema" : {
+            "oneOf" : [ {
+              "$ref" : "#/components/schemas/ErrorUnauthorizedMissingCredentials"
+            }, {
+              "$ref" : "#/components/schemas/ErrorUnauthorizedInvalidApplication"
+            } ]
+          }
+        }
+      }
+    },
+    "insertionIndex" : 4
+  }, {
+    "id" : "c6b4d34b-4090-42dc-97da-b7d88c8fbccf",
+    "name" : "Send a message to the given channel.",
+    "request" : {
+      "urlPath" : "/",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 202,
+      "body" : "{\n  \"message_uuid\" : \"aaaaaaaa-bbbb-cccc-dddd-0123456789ab\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "c6b4d34b-4090-42dc-97da-b7d88c8fbccf",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:26.49825Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "SendMessage",
+          "schema" : {
+            "oneOf" : [ {
+              "description" : "SMS",
+              "properties" : {
+                "message_uuid" : {
+                  "$ref" : "#/components/schemas/MessageUuid"
+                }
+              },
+              "type" : "object",
+              "x-tab-id" : "SMS"
+            }, {
+              "description" : "MMS",
+              "properties" : {
+                "message_uuid" : {
+                  "$ref" : "#/components/schemas/MessageUuid"
+                }
+              },
+              "type" : "object",
+              "x-tab-id" : "MMS"
+            }, {
+              "description" : "WhatsApp",
+              "properties" : {
+                "message_uuid" : {
+                  "$ref" : "#/components/schemas/MessageUuid"
+                }
+              },
+              "type" : "object",
+              "x-tab-id" : "WhatsApp"
+            }, {
+              "description" : "Messenger",
+              "properties" : {
+                "message_uuid" : {
+                  "$ref" : "#/components/schemas/MessageUuid"
+                }
+              },
+              "type" : "object",
+              "x-tab-id" : "Messenger"
+            }, {
+              "description" : "Viber",
+              "properties" : {
+                "message_uuid" : {
+                  "$ref" : "#/components/schemas/MessageUuid"
+                }
+              },
+              "type" : "object",
+              "x-tab-id" : "Viber"
+            } ],
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 5
+  } ]
+}

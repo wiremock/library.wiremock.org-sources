@@ -1,0 +1,250 @@
+{
+  "mappings" : [ {
+    "id" : "1d8466e5-99ce-4a9b-8126-601207746f66",
+    "name" : "Update a media item - 204",
+    "request" : {
+      "urlPath" : "/:id/info",
+      "method" : "PUT"
+    },
+    "response" : {
+      "status" : 204
+    },
+    "uuid" : "1d8466e5-99ce-4a9b-8126-601207746f66",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:26.285861Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "update-a-media-item"
+        }
+      }
+    },
+    "insertionIndex" : 0
+  }, {
+    "id" : "276ad4e2-6609-47fd-a40a-dadfd249351e",
+    "name" : "Retrieve a media item",
+    "request" : {
+      "urlPath" : "/:id/info",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"max_downloads_allowed\" : 0,\n  \"store_id\" : \"s3\",\n  \"media_size\" : 1234567,\n  \"time_last_updated\" : \"2020-01-01T14:00:00.000Z\",\n  \"metadata_primary\" : \"i32pdws44aujc2h8asq2ucj4wv9fj3watwgwrjwl5p0quz3cicjftxjwiaxmgrxhhllxc399hlaxx747u82661zkkhzip0nqyc2dy45vqg5b8a4qu3io5tjiztkzguec9oa8742p3x5l4ck551som\",\n  \"times_downloaded\" : 1,\n  \"account_id\" : \"abcd1234\",\n  \"public\" : false,\n  \"metadata_secondary\" : \"g0xugoah6r7em94iqnap3rdbnoehjmopeko6pudj7hyf0qjw5sypy6pcwh68wawsmha3jzbplegjs3lqen20onecpz3tdy2nusaur4kr5xhlj53lqu2filod50ptarlwf4kp45fpr64trb819cb1zdptyugengl8lxgr6x8baqrw7fhift7e87suikosxz3jovt5\",\n  \"mime_type\" : \"audio/vnd.wave\",\n  \"time_created\" : \"2020-01-01T14:00:00.000Z\",\n  \"etag\" : \"aaaaaaaabbbbccccdddd0123456789ab\",\n  \"original_file_name\" : \"test.wav\",\n  \"id\" : \"aaaaaaaa-bbbb-cccc-dddd-0123456789ab\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "276ad4e2-6609-47fd-a40a-dadfd249351e",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:26.285813Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "retrieve-a-media-item",
+          "schema" : {
+            "properties" : {
+              "account_id" : {
+                "description" : "The ID of your Nexmo account. This is the same as your API key.",
+                "example" : "abcd1234",
+                "type" : "string"
+              },
+              "etag" : {
+                "description" : "An identifier for the content. This will change if the content of the file has been changed (i.e. if you upload a new version of the file). For more information see Wikipedia: [HTTP ETag](https://en.wikipedia.org/wiki/HTTP_ETag)",
+                "example" : "aaaaaaaabbbbccccdddd0123456789ab",
+                "type" : "string"
+              },
+              "id" : {
+                "description" : "A UUID representing the object.",
+                "example" : "aaaaaaaa-bbbb-cccc-dddd-0123456789ab",
+                "type" : "string"
+              },
+              "max_downloads_allowed" : {
+                "description" : "The maximum number of times the file may be downloaded.",
+                "example" : 0,
+                "type" : "integer"
+              },
+              "media_size" : {
+                "description" : "The size of the file in bytes",
+                "example" : 1234567,
+                "type" : "integer"
+              },
+              "metadata_primary" : {
+                "description" : "A user set string containing metadata about the media file.",
+                "type" : "string"
+              },
+              "metadata_secondary" : {
+                "description" : "A user set string containing further metadata about the media file.",
+                "type" : "string"
+              },
+              "mime_type" : {
+                "description" : "The IETF MIME type of the file.",
+                "example" : "audio/vnd.wave",
+                "type" : "string"
+              },
+              "original_file_name" : {
+                "description" : "The filename of the object as it was originally uploaded.",
+                "example" : "test.wav",
+                "type" : "string"
+              },
+              "public" : {
+                "description" : "Whether the item is available for download without authentication.",
+                "example" : false,
+                "type" : "boolean"
+              },
+              "store_id" : {
+                "description" : "An internal identifier of how the file is stored.",
+                "example" : "s3",
+                "type" : "string"
+              },
+              "time_created" : {
+                "description" : "A timestamp for the time that the file was created",
+                "example" : "2020-01-01T14:00:00.000Z",
+                "type" : "string"
+              },
+              "time_last_updated" : {
+                "description" : "A timestamp for the time that the file was last modified",
+                "example" : "2020-01-01T14:00:00.000Z",
+                "type" : "string"
+              },
+              "times_downloaded" : {
+                "description" : "The number of times the file has been downloaded.",
+                "example" : 1,
+                "type" : "integer"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 1
+  }, {
+    "id" : "1b16c95d-ebca-4320-8582-0c73863434e1",
+    "name" : "Delete a media item - 204",
+    "request" : {
+      "urlPath" : "/:id",
+      "method" : "DELETE"
+    },
+    "response" : {
+      "status" : 204
+    },
+    "uuid" : "1b16c95d-ebca-4320-8582-0c73863434e1",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:26.285356Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "delete-a-media-item"
+        }
+      }
+    },
+    "insertionIndex" : 2
+  }, {
+    "id" : "cbfdc6f3-c023-4a0a-a0d8-ae0c35d47e4a",
+    "name" : "List and search media items",
+    "request" : {
+      "urlPath" : "/",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"_embedded\" : {\n    \"media\" : [ {\n      \"max_downloads_allowed\" : 0,\n      \"store_id\" : \"s3\",\n      \"media_size\" : 1234567,\n      \"time_last_updated\" : \"2020-01-01T14:00:00.000Z\",\n      \"metadata_primary\" : \"dz0ghd5jj4yjloggltlci4qi67uphyt5gla\",\n      \"times_downloaded\" : 1,\n      \"account_id\" : \"abcd1234\",\n      \"public\" : false,\n      \"metadata_secondary\" : \"prr4wvelcpz2930auf5od0f2rk90z84qfzl42pwsr3hpdle6kwfyqv2krd3855ohoe3ppaliv98vj\",\n      \"mime_type\" : \"audio/vnd.wave\",\n      \"time_created\" : \"2020-01-01T14:00:00.000Z\",\n      \"etag\" : \"aaaaaaaabbbbccccdddd0123456789ab\",\n      \"original_file_name\" : \"test.wav\",\n      \"id\" : \"aaaaaaaa-bbbb-cccc-dddd-0123456789ab\"\n    }, {\n      \"max_downloads_allowed\" : 0,\n      \"store_id\" : \"s3\",\n      \"media_size\" : 1234567,\n      \"time_last_updated\" : \"2020-01-01T14:00:00.000Z\",\n      \"metadata_primary\" : \"6kad6bigel0tyezkf4bwlcw8pf8pqmykes4ufdgsw4v5irf7dz3h4b98km\",\n      \"times_downloaded\" : 1,\n      \"account_id\" : \"abcd1234\",\n      \"public\" : false,\n      \"metadata_secondary\" : \"mfbqqcpap7rswwh97n955xh730je6zjpt7zvel3esnoje9jj0tb8zsficyiprs6p2d4yryuq5v733g3ell72em0vje948a0gwyadndi5twj6fi115dzkwvgut7g4vsv17f0mdio48gp72d2ldi59usga5vj43z25w2f0l4rqx01fg0tel8y58g3\",\n      \"mime_type\" : \"audio/vnd.wave\",\n      \"time_created\" : \"2020-01-01T14:00:00.000Z\",\n      \"etag\" : \"aaaaaaaabbbbccccdddd0123456789ab\",\n      \"original_file_name\" : \"test.wav\",\n      \"id\" : \"aaaaaaaa-bbbb-cccc-dddd-0123456789ab\"\n    }, {\n      \"max_downloads_allowed\" : 0,\n      \"store_id\" : \"s3\",\n      \"media_size\" : 1234567,\n      \"time_last_updated\" : \"2020-01-01T14:00:00.000Z\",\n      \"metadata_primary\" : \"orzjhokzyxwjud1c3santmrtgzof0aq83ckc249y2aru\",\n      \"times_downloaded\" : 1,\n      \"account_id\" : \"abcd1234\",\n      \"public\" : false,\n      \"metadata_secondary\" : \"5wd9blvjup8o1gh3t8tyq0ktdyrb7hn80a9163ixprflshaiffokymajd4radzcfqhxlb2wv4hfabcda7jl3x3kuk0rfo06p0s0xh6r83tvks0fnzebrneiqls\",\n      \"mime_type\" : \"audio/vnd.wave\",\n      \"time_created\" : \"2020-01-01T14:00:00.000Z\",\n      \"etag\" : \"aaaaaaaabbbbccccdddd0123456789ab\",\n      \"original_file_name\" : \"test.wav\",\n      \"id\" : \"aaaaaaaa-bbbb-cccc-dddd-0123456789ab\"\n    } ]\n  },\n  \"_links\" : {\n    \"last\" : {\n      \"href\" : \"/v3/media?page_size=20&account_id=abcd1234&order=descending\"\n    },\n    \"self\" : {\n      \"href\" : \"/v3/media?page_size=20&account_id=abcd1234&order=descending\"\n    },\n    \"first\" : {\n      \"href\" : \"/v3/media?page_size=20&account_id=abcd1234&order=descending\"\n    }\n  },\n  \"page_index\" : 0,\n  \"count\" : 1,\n  \"page_size\" : 20\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "cbfdc6f3-c023-4a0a-a0d8-ae0c35d47e4a",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:26.285301Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "list-and-search-media-items",
+          "schema" : {
+            "properties" : {
+              "_embedded" : {
+                "description" : "A collection of media items. See [retrieve a media item](#retrieve-a-media-item) for a description of the returned fields",
+                "properties" : {
+                  "media" : {
+                    "items" : {
+                      "$ref" : "#/components/schemas/Media"
+                    },
+                    "type" : "array"
+                  }
+                },
+                "type" : "object"
+              },
+              "_links" : {
+                "properties" : {
+                  "first" : {
+                    "properties" : {
+                      "href" : {
+                        "default" : "",
+                        "example" : "/v3/media?page_size=20&account_id=abcd1234&order=descending",
+                        "type" : "string"
+                      }
+                    },
+                    "type" : "object"
+                  },
+                  "last" : {
+                    "properties" : {
+                      "href" : {
+                        "default" : "",
+                        "example" : "/v3/media?page_size=20&account_id=abcd1234&order=descending",
+                        "type" : "string"
+                      }
+                    },
+                    "type" : "object"
+                  },
+                  "self" : {
+                    "properties" : {
+                      "href" : {
+                        "default" : "",
+                        "example" : "/v3/media?page_size=20&account_id=abcd1234&order=descending",
+                        "type" : "string"
+                      }
+                    },
+                    "type" : "object"
+                  }
+                },
+                "type" : "object"
+              },
+              "count" : {
+                "default" : 0,
+                "description" : "The total number of records returned by your request.",
+                "example" : 1,
+                "type" : "integer"
+              },
+              "page_index" : {
+                "default" : 0,
+                "description" : "The `page_index` used in your request.",
+                "example" : 0,
+                "type" : "integer"
+              },
+              "page_size" : {
+                "default" : 0,
+                "description" : "The amount of records returned in this response.",
+                "example" : 20,
+                "type" : "integer"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 3
+  } ]
+}

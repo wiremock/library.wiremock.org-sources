@@ -1,0 +1,296 @@
+{
+  "mappings" : [ {
+    "id" : "63eb724a-2519-4e32-8336-627a16eecfdf",
+    "name" : "Get suggestions - response",
+    "request" : {
+      "urlPath" : "/suggest/v1/entity",
+      "method" : "GET",
+      "queryParameters" : {
+        "query" : {
+          "equalTo" : "km6jegej14mqw042lem932lu6cwurov9t3yl6n2i4vqjn444kz358xosq9x4k1e2ldggxdd5iylbmbz52qzpijo5wcrn3"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"options\" : [ {\n    \"id\" : \"310M200US42660\",\n    \"name\" : \"Seattle Metro Area (WA)\",\n    \"type\" : \"regions.msa\"\n  }, {\n    \"id\" : \"1600000US5363000\",\n    \"name\" : \"Seattle, WA\",\n    \"type\" : \"regions.place\"\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "63eb724a-2519-4e32-8336-627a16eecfdf",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:09.750935Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "Get suggestions"
+        }
+      }
+    },
+    "insertionIndex" : 0
+  }, {
+    "id" : "e55ede85-25af-4963-9ddd-3cd31fdd0740",
+    "name" : "Get questions - response",
+    "request" : {
+      "urlPath" : "/search/v1/question",
+      "method" : "GET",
+      "queryParameters" : {
+        "query" : {
+          "equalTo" : "saizt5adip8jvxkgrn3alec83pxjy5qp6bo424w7wn7m5l1gn3fhgvqek0i34e4fxrb3d9a10ov3fv1han5sf931tl7e776oue2f18f77a2f4w0zthq2vhnae80u7x9w5"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"questions\" : [ {\n    \"entity\" : {\n      \"id\" : \"310M200US42660\",\n      \"name\" : \"Seattle Metro Area (WA)\"\n    },\n    \"metric\" : \"population\",\n    \"text\" : \"What is the population count of Seattle Metro Area (WA)?\",\n    \"variable_name\" : \"population count\",\n    \"vector\" : \"population\"\n  }, {\n    \"entity\" : {\n      \"id\" : \"310M200US42660\",\n      \"name\" : \"Seattle Metro Area (WA)\"\n    },\n    \"metric\" : \"business_and_finance\",\n    \"text\" : \"What is the business and finance employment rate of Seattle Metro Area (WA)?\",\n    \"variable_name\" : \"business and finance employment rate\",\n    \"vector\" : \"occupations\"\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "e55ede85-25af-4963-9ddd-3cd31fdd0740",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:09.750176Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "Get questions"
+        }
+      }
+    },
+    "insertionIndex" : 1
+  }, {
+    "id" : "81bbd7d3-4c1f-4fb7-87cc-e8f05d7ec4c9",
+    "name" : "Get datasets - response",
+    "request" : {
+      "urlPath" : "/search/v1/dataset",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"datasets\" : [ {\n    \"attribution\" : \"The Big Cities Health Coalition\",\n    \"categories\" : [ \"education\", \"health\" ],\n    \"created_at\" : \"2015-09-01T19:23:15.000Z\",\n    \"dataset_url\" : \"https://bchi.bigcitieshealth.org/d/rwyf-6cby\",\n    \"description\" : \"This dataset illustrates health status of 26 of the nation’s largest and most urban cities as captured by 34 health (and six demographics-related) indicators. These indicators represent some of the leading causes of morbidity and mortality in the United States and leading priorities of national, state, and local health agencies. Public health data were captured in nine overarching categories: HIV/AIDS, cancer, nutrition/physical activity/obesity, food safety, infectious disease, maternal and child health, tobacco, injury/violence, and behavioral health/substance abuse.\",\n    \"dev_docs_url\" : \"https://dev.socrata.com/foundry/bchi.bigcitieshealth.org/ffnx-yiyc\",\n    \"domain\" : \"bchi.bigcitieshealth.org\",\n    \"domain_url\" : \"http://bchi.bigcitieshealth.org\",\n    \"name\" : \"Big Cities Health Data Inventory\",\n    \"updated_at\" : \"2016-06-27T19:10:04.000Z\"\n  }, {\n    \"attribution\" : \"Public Health - Seattle & King County\",\n    \"categories\" : [ \"health\" ],\n    \"created_at\" : \"2014-03-06T23:17:51.000Z\",\n    \"dataset_url\" : \"https://data.kingcounty.gov/d/ajpg-dges\",\n    \"description\" : \"Health reporting area (HRA) and zip code-level indicators for monitoring the impact of the Affordable Care Act in King County, WA. Topic areas range from access to care to population health. Imported to Socrata to allow data to be pulled as JSON from SODA to feed into Leaflet.js-based maps on an external site.\",\n    \"dev_docs_url\" : \"https://dev.socrata.com/foundry/data.kingcounty.gov/t34p-gkbv\",\n    \"domain\" : \"data.kingcounty.gov\",\n    \"domain_url\" : \"http://data.kingcounty.gov\",\n    \"name\" : \"King County Health Reform Indicators\",\n    \"updated_at\" : \"2014-12-17T00:09:12.000Z\"\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "81bbd7d3-4c1f-4fb7-87cc-e8f05d7ec4c9",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:09.75Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "Get datasets"
+        }
+      }
+    },
+    "insertionIndex" : 2
+  }, {
+    "id" : "a3ff4304-8c40-4beb-8805-420486297719",
+    "name" : "Find the relatives of an entity - response",
+    "request" : {
+      "urlPath" : "/entity/v1/sibling",
+      "method" : "GET",
+      "queryParameters" : {
+        "entity_id" : {
+          "equalTo" : "o2q7"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"relatives\" : [ {\n    \"entities\" : [ {\n      \"id\" : \"0300000US9\",\n      \"name\" : \"Pacific Division\",\n      \"type\" : \"region.division\"\n    } ],\n    \"type\" : \"region.division\"\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "a3ff4304-8c40-4beb-8805-420486297719",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:09.749833Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "Find the relatives of an entity"
+        }
+      }
+    },
+    "insertionIndex" : 3
+  }, {
+    "id" : "f5391a97-97b4-49c9-8cdf-350c83a03f38",
+    "name" : "Get Entities - response",
+    "request" : {
+      "urlPath" : "/entity/v1",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"entities\" : [ {\n    \"id\" : \"0400000US53\",\n    \"name\" : \"Washington\",\n    \"type\" : \"region.state\"\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "f5391a97-97b4-49c9-8cdf-350c83a03f38",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:09.749527Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "Get Entities"
+        }
+      }
+    },
+    "insertionIndex" : 4
+  }, {
+    "id" : "8ef78d2b-ab9e-4643-8668-0f508233f32e",
+    "name" : "Get values for variables - response",
+    "request" : {
+      "urlPath" : "/data/v1/values",
+      "method" : "GET",
+      "queryParameters" : {
+        "variable" : {
+          "equalTo" : "50fmtl4gzfgz3piyt0obw7k2dkzjiwog0eew4k6ji7v44qsahs4adv5sysb89lh1j0biofv1ldhmu0pgfugjoxfy85l33chal0bbz9740lnrpybsio4k"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"data\" : [ [ \"year\", \"0100000US\", \"forecast\", \"0400000US53\", \"forecast\" ], [ 2009, 301461533, false, 6465755, false ], [ 2010, 303965272, false, 6561297, false ], [ 2011, 306603772, false, 6652845, false ], [ 2012, 309138711, false, 6738714, false ], [ 2013, 311536594, false, 6819579, false ], [ 2014, 3.1405535925E8, true, 6908035, true ], [ 2015, 3.165741245E8, true, 6996491, true ], [ 2016, 3.1909288975E8, true, 7084947, true ] ],\n  \"forecast_info\" : {\n    \"algorithm_name\" : \"linear\",\n    \"algorithm_url\" : \"https://en.wikipedia.org/wiki/Extrapolation#Linear_extrapolation\"\n  }\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "8ef78d2b-ab9e-4643-8668-0f508233f32e",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:09.749461Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "Get values for variables"
+        }
+      }
+    },
+    "insertionIndex" : 5
+  }, {
+    "id" : "57fd0da0-144b-4848-b58a-3d57d5fa2865",
+    "name" : "Create a map - response",
+    "request" : {
+      "urlPath" : "/data/v1/map/new",
+      "method" : "GET",
+      "queryParameters" : {
+        "variable" : {
+          "equalTo" : "pcy1at3kyjiao9ux1726megc7xhfbky93441xj84td79b46cs1ykgmtbpchzt42qi6se2pbv7sb2drglvt6d1paj7i5b4lbiawcgh2zuriwe67gpy94p3jr6fegfs7c1sc57qn9ki8v4366jcyl4sdq5mzzba09ejjn7y6c7zivb2o3pactrqelji3n7kbmy4dm"
+        },
+        "entity_id" : {
+          "equalTo" : "d5rg"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"bounds\" : [ [ 40.712, -74.227 ], [ 40.774, -74.125 ] ],\n  \"session_id\" : \"rhzpyxdvq56cc9cbg3ssb57b9\",\n  \"summary_statistics\" : {\n    \"names\" : [ \"minimum\", \"average\", \"maximum\" ],\n    \"values\" : [ 570134, 6061914.615384615, 37659181 ],\n    \"values_formatted\" : [ \"570,134\", \"6,061,914\", \"37,659,181\" ]\n  }\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "57fd0da0-144b-4848-b58a-3d57d5fa2865",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:09.749258Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "Create a map"
+        }
+      }
+    },
+    "insertionIndex" : 6
+  }, {
+    "id" : "00ee7505-53f0-4fad-97b7-34403fb623e7",
+    "name" : "Get constraint permutations for entities - response",
+    "request" : {
+      "urlPath" : "/data/v1/constraint/2wqoe974vrikjotht807np8h9ei1jesp98qxxcytlphoo32j5dy7vr7xfyt4ac37a7m6ayae73dgndghhq25t2sg26gqtbxjeszqv3wrhg0hgfvl1gdxjipdzknz99o3wzhyqqt",
+      "method" : "GET",
+      "queryParameters" : {
+        "constraint" : {
+          "equalTo" : "y93fuj48n134b5bdvhmvj23mgaasvtfkpcredftpvi90tby5zq0t9t2pabv9a5erktszk307o9duiek2fryyj6uu4tc6hc9as6fddyakb6175hezx2gy"
+        },
+        "entity_id" : {
+          "equalTo" : "a0q6"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"permutations\" : [ {\n    \"constraint_value\" : \"2009\"\n  }, {\n    \"constraint_value\" : \"2010\"\n  }, {\n    \"constraint_value\" : \"2011\"\n  }, {\n    \"constraint_value\" : \"2012\"\n  }, {\n    \"constraint_value\" : \"2013\"\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "00ee7505-53f0-4fad-97b7-34403fb623e7",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:09.747071Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "Get constraint permutations for entities"
+        }
+      }
+    },
+    "insertionIndex" : 7
+  }, {
+    "id" : "b4bc3060-9980-4b7f-b2e5-e1b4066f1126",
+    "name" : "Find all available data for some entities - response",
+    "request" : {
+      "urlPath" : "/data/v1/availability/",
+      "method" : "GET",
+      "queryParameters" : {
+        "entity_id" : {
+          "equalTo" : "2s10"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"topics\" : {\n    \"demographics\" : {\n      \"datasets\" : {\n        \"population\" : {\n          \"constraints\" : [ \"year\" ],\n          \"description\" : \"\",\n          \"domain\" : \"odn.data.socrata.com\",\n          \"fxf\" : \"9jg8-ki9x\",\n          \"id\" : \"demographics.population\",\n          \"name\" : \"Population\",\n          \"searchTerms\" : [ \"population\", \"household\", \"demographics\", \"ethnicity\", \"minority\" ],\n          \"sources\" : [ {\n            \"name\" : \"U.S. Census American Community Survey\",\n            \"url\" : \"https://www.census.gov/programs-surveys/acs/\"\n          } ],\n          \"url\" : \"https://odn.data.socrata.com/resource/9jg8-ki9x.json\",\n          \"variables\" : {\n            \"change\" : {\n              \"description\" : \"Percent change from the previous year\",\n              \"id\" : \"demographics.population.change\",\n              \"name\" : \"Population Change\"\n            },\n            \"count\" : {\n              \"id\" : \"demographics.population.count\",\n              \"name\" : \"Population Count\"\n            }\n          }\n        }\n      },\n      \"id\" : \"demographics\",\n      \"name\" : \"Demographics\"\n    }\n  }\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "b4bc3060-9980-4b7f-b2e5-e1b4066f1126",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:09.746711Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "Find all available data for some entities"
+        }
+      }
+    },
+    "insertionIndex" : 8
+  } ]
+}

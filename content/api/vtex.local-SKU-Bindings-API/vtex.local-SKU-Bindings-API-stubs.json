@@ -1,0 +1,800 @@
+{
+  "mappings" : [ {
+    "id" : "a4b37280-2035-4202-afe5-ea41881f1a32",
+    "name" : "Bind a seller's SKU to another SKU - 204",
+    "request" : {
+      "urlPath" : "/sku-binding/pvt/skuseller/k3vi/k4w5",
+      "method" : "PUT"
+    },
+    "response" : {
+      "status" : 204
+    },
+    "uuid" : "a4b37280-2035-4202-afe5-ea41881f1a32",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:59.803592Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "Bindtoanothersku"
+        }
+      }
+    },
+    "insertionIndex" : 0
+  }, {
+    "id" : "180e536b-4c26-4824-aac6-4c0fa48195b0",
+    "name" : "Get details of a seller's SKU",
+    "request" : {
+      "urlPath" : "/sku-binding/pvt/skuseller/vx6n/0164",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"IsActive\" : true,\n  \"IsPersisted\" : true,\n  \"IsRemoved\" : false,\n  \"RequestedUpdateDate\" : null,\n  \"SellerId\" : \"myseller\",\n  \"SellerStockKeepingUnitId\" : \"502\",\n  \"SkuSellerId\" : 799,\n  \"StockKeepingUnitId\" : 50,\n  \"UpdateDate\" : \"2018-10-11T04:52:42.1\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "180e536b-4c26-4824-aac6-4c0fa48195b0",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:59.803442Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "GetSKUseller",
+          "schema" : {
+            "example" : {
+              "IsActive" : true,
+              "IsPersisted" : true,
+              "IsRemoved" : false,
+              "SellerId" : "myseller",
+              "SellerStockKeepingUnitId" : "502",
+              "SkuSellerId" : 799,
+              "StockKeepingUnitId" : 50,
+              "UpdateDate" : "2018-10-11T04:52:42.1"
+            },
+            "properties" : {
+              "IsActive" : {
+                "description" : "Defines if the SKU binding is active.",
+                "type" : "boolean"
+              },
+              "IsPersisted" : {
+                "description" : "Defines if the seller is persisted.",
+                "type" : "boolean"
+              },
+              "IsRemoved" : {
+                "description" : "Defines if the seller is removed.",
+                "type" : "boolean"
+              },
+              "RequestedUpdateDate" : {
+                "description" : "Date when an SKU binding update was requested for the last time, in UTC format.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "SellerId" : {
+                "description" : "ID that identifies the seller in the marketplace. It can be the same as the seller name or a unique number. Check the **Sellers management** section in the Admin to get the correct ID.",
+                "type" : "string"
+              },
+              "SellerStockKeepingUnitId" : {
+                "description" : "SKU seller ID.",
+                "type" : "string"
+              },
+              "SkuSellerId" : {
+                "description" : "SKU ID in the seller's store.",
+                "format" : "int32",
+                "type" : "integer"
+              },
+              "StockKeepingUnitId" : {
+                "description" : "SKU ID in the VTEX marketplace.",
+                "format" : "int32",
+                "type" : "integer"
+              },
+              "UpdateDate" : {
+                "description" : "Date when the SKU binding was updated for the last time, in UTC format.",
+                "type" : "string"
+              }
+            },
+            "required" : [ "IsPersisted", "IsRemoved", "SkuSellerId", "SellerId", "StockKeepingUnitId", "SellerStockKeepingUnitId", "IsActive", "UpdateDate", "RequestedUpdateDate" ],
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 1
+  }, {
+    "id" : "aee10b17-7930-4d5c-8479-4c80c7bdd696",
+    "name" : "Remove a seller's SKU Binding - 200",
+    "request" : {
+      "urlPath" : "/sku-binding/pvt/skuseller/remove/43f8/0129",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 200
+    },
+    "uuid" : "aee10b17-7930-4d5c-8479-4c80c7bdd696",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:59.803179Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "DeleteSKUsellerassociation"
+        }
+      }
+    },
+    "insertionIndex" : 2
+  }, {
+    "id" : "a584b67b-709b-4703-9f0c-fdee299b7821",
+    "name" : "Get paged SKU Bindings by Seller ID",
+    "request" : {
+      "urlPath" : "/sku-binding/pvt/skuseller/paged/sellerid/7549",
+      "method" : "GET",
+      "queryParameters" : {
+        "size" : {
+          "equalTo" : "t42b9r2fpgeh60ipubrasrto"
+        },
+        "page" : {
+          "equalTo" : "07phsqkk81iq33oane6jxocrnre0ytlfyp8sssc85cgyurwg15lx9npkx0mofqezsme6auozhwuqjz6mexn3d0epsrepg6m8j7ie83aswvj1641z8rievbtk00lnxoqrwed43ocki7jjqxfta5554a471jgeaxqs0segjsn33afpgmbiw"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "[ {\n  \"IsActive\" : true,\n  \"SellerId\" : \"vtxkfj7352\",\n  \"SellerStockKeepingUnitId\" : \"24\",\n  \"StockKeepingUnitId\" : 121\n}, {\n  \"IsActive\" : true,\n  \"SellerId\" : \"vtxkfj7352\",\n  \"SellerStockKeepingUnitId\" : \"60\",\n  \"StockKeepingUnitId\" : 14\n} ]",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "a584b67b-709b-4703-9f0c-fdee299b7821",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:59.803031Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "GetpagedbySellerId",
+          "schema" : {
+            "items" : {
+              "example" : {
+                "IsActive" : true,
+                "SellerId" : "vtxkfj7352",
+                "SellerStockKeepingUnitId" : "24",
+                "StockKeepingUnitId" : 121
+              },
+              "properties" : {
+                "FreightCommissionPercentage" : {
+                  "description" : "The percentage that must be filled in as agreed between the marketplace and the seller.",
+                  "nullable" : true,
+                  "type" : "number"
+                },
+                "IsActive" : {
+                  "description" : "Defines if the SKU binding is active.",
+                  "type" : "boolean"
+                },
+                "ProductCommissionPercentage" : {
+                  "description" : "The percentage that must be filled in as agreed between the marketplace and the seller. If there is no such commission, please fill in the field with the value: `0.00`.",
+                  "nullable" : true,
+                  "type" : "number"
+                },
+                "SellerId" : {
+                  "description" : "ID that identifies the seller in the marketplace. It can be the same as the seller name or a unique number. Check the **Sellers management** section in the Admin to get the correct ID.",
+                  "type" : "string"
+                },
+                "SellerStockKeepingUnitId" : {
+                  "description" : "SKU ID in the seller's store.",
+                  "type" : "string"
+                },
+                "StockKeepingUnitId" : {
+                  "description" : "SKU ID in the marketplace.",
+                  "format" : "int32",
+                  "type" : "integer"
+                }
+              },
+              "type" : "object"
+            },
+            "type" : "array"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 3
+  }, {
+    "id" : "527fa816-2f27-46e9-aed0-3ed9aa73d016",
+    "name" : "Get all SKU Bindings by Seller ID",
+    "request" : {
+      "urlPath" : "/sku-binding/pvt/skuseller/list/bysellerId/6553",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "[ {\n  \"FreightCommissionPercentage\" : null,\n  \"IsActive\" : true,\n  \"ProductCommissionPercentage\" : null,\n  \"SellerId\" : \"vtxkfj7352\",\n  \"SellerStockKeepingUnitId\" : \"24\",\n  \"StockKeepingUnitId\" : 121\n} ]",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "527fa816-2f27-46e9-aed0-3ed9aa73d016",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:59.802793Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "GetallbySellerId",
+          "schema" : {
+            "items" : {
+              "example" : {
+                "IsActive" : true,
+                "SellerId" : "vtxkfj7352",
+                "SellerStockKeepingUnitId" : "24",
+                "StockKeepingUnitId" : 121
+              },
+              "properties" : {
+                "FreightCommissionPercentage" : {
+                  "description" : "The percentage that must be filled in as agreed between the marketplace and the seller.",
+                  "nullable" : true,
+                  "type" : "number"
+                },
+                "IsActive" : {
+                  "description" : "Defines if the SKU binding is active.",
+                  "type" : "boolean"
+                },
+                "ProductCommissionPercentage" : {
+                  "description" : "The percentage that must be filled in as agreed between the marketplace and the seller. If there is no such commission, please fill in the field with the value: `0.00`.",
+                  "nullable" : true,
+                  "type" : "number"
+                },
+                "SellerId" : {
+                  "description" : "ID that identifies the seller in the marketplace. It can be the same as the seller name or a unique number. Check the **Sellers management** section in the Admin to get the correct ID.",
+                  "type" : "string"
+                },
+                "SellerStockKeepingUnitId" : {
+                  "description" : "SKU ID in the seller's store.",
+                  "type" : "string"
+                },
+                "StockKeepingUnitId" : {
+                  "description" : "SKU ID in the marketplace.",
+                  "format" : "int32",
+                  "type" : "integer"
+                }
+              },
+              "type" : "object"
+            },
+            "type" : "array"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 4
+  }, {
+    "id" : "5ffd009d-c22d-4a94-851c-b9b78189ad43",
+    "name" : "Insert SKU Binding - 409",
+    "request" : {
+      "urlPath" : "/sku-binding/pvt/skuseller/insertion",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 409
+    },
+    "uuid" : "5ffd009d-c22d-4a94-851c-b9b78189ad43",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:59.802608Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "InsertSKUBinding"
+        }
+      }
+    },
+    "insertionIndex" : 5
+  }, {
+    "id" : "2ddf4163-12e4-41de-8e0d-875541748488",
+    "name" : "Insert SKU Binding - 400",
+    "request" : {
+      "urlPath" : "/sku-binding/pvt/skuseller/insertion",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 400
+    },
+    "uuid" : "2ddf4163-12e4-41de-8e0d-875541748488",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:59.802591Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "InsertSKUBinding"
+        }
+      }
+    },
+    "insertionIndex" : 6
+  }, {
+    "id" : "4fcab713-6ef9-4e7e-8037-e1d253d26b5e",
+    "name" : "Insert SKU Binding - 200",
+    "request" : {
+      "urlPath" : "/sku-binding/pvt/skuseller/insertion",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 200
+    },
+    "uuid" : "4fcab713-6ef9-4e7e-8037-e1d253d26b5e",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:59.802576Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "InsertSKUBinding"
+        }
+      }
+    },
+    "insertionIndex" : 7
+  }, {
+    "id" : "f9dcb191-abad-4dba-a232-db882cc086a8",
+    "name" : "Deactivate SKU Binding - 200",
+    "request" : {
+      "urlPath" : "/sku-binding/pvt/skuseller/inactivate/sz0q/4dw0",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 200
+    },
+    "uuid" : "f9dcb191-abad-4dba-a232-db882cc086a8",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:59.802553Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "DeactivateSKUBinding"
+        }
+      }
+    },
+    "insertionIndex" : 8
+  }, {
+    "id" : "4266da96-27e1-4481-b390-1270f08954ea",
+    "name" : "Change Notification with SKU ID - 429",
+    "request" : {
+      "urlPath" : "/sku-binding/pvt/skuseller/changenotification/fhx1",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 429
+    },
+    "uuid" : "4266da96-27e1-4481-b390-1270f08954ea",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:59.802413Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "ChangeNotification"
+        }
+      }
+    },
+    "insertionIndex" : 9
+  }, {
+    "id" : "7a8b896c-1144-4686-8f63-b958fc7afaab",
+    "name" : "Change Notification with SKU ID - 404",
+    "request" : {
+      "urlPath" : "/sku-binding/pvt/skuseller/changenotification/n336",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 404
+    },
+    "uuid" : "7a8b896c-1144-4686-8f63-b958fc7afaab",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:59.802336Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "ChangeNotification"
+        }
+      }
+    },
+    "insertionIndex" : 10
+  }, {
+    "id" : "55b762f4-c26a-4030-bade-2bbb102b2f19",
+    "name" : "Change Notification with SKU ID - 403",
+    "request" : {
+      "urlPath" : "/sku-binding/pvt/skuseller/changenotification/bbq1",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 403
+    },
+    "uuid" : "55b762f4-c26a-4030-bade-2bbb102b2f19",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:59.80226Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "ChangeNotification"
+        }
+      }
+    },
+    "insertionIndex" : 11
+  }, {
+    "id" : "ccbcd8cb-fec6-494b-95a6-07306977cea0",
+    "name" : "Change Notification with SKU ID - 400",
+    "request" : {
+      "urlPath" : "/sku-binding/pvt/skuseller/changenotification/rl70",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 400
+    },
+    "uuid" : "ccbcd8cb-fec6-494b-95a6-07306977cea0",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:59.802177Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "ChangeNotification"
+        }
+      }
+    },
+    "insertionIndex" : 12
+  }, {
+    "id" : "421e52c7-2dc0-456f-9254-9073ca88afde",
+    "name" : "Change Notification with SKU ID - 200",
+    "request" : {
+      "urlPath" : "/sku-binding/pvt/skuseller/changenotification/e443",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 200
+    },
+    "uuid" : "421e52c7-2dc0-456f-9254-9073ca88afde",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:59.802097Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "ChangeNotification"
+        }
+      }
+    },
+    "insertionIndex" : 13
+  }, {
+    "id" : "93a7a8a2-d90f-4951-9fa6-371c6fc2ae9d",
+    "name" : "Change Notification with Seller ID and Seller SKU ID - 429",
+    "request" : {
+      "urlPath" : "/sku-binding/pvt/skuseller/changenotification/6u00/q7jx",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 429
+    },
+    "uuid" : "93a7a8a2-d90f-4951-9fa6-371c6fc2ae9d",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:59.802002Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "(none)"
+        }
+      }
+    },
+    "insertionIndex" : 14
+  }, {
+    "id" : "37f41cf3-b2ad-4671-813c-e6be84112cd4",
+    "name" : "Change Notification with Seller ID and Seller SKU ID - 404",
+    "request" : {
+      "urlPath" : "/sku-binding/pvt/skuseller/changenotification/33ec/4wsz",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 404
+    },
+    "uuid" : "37f41cf3-b2ad-4671-813c-e6be84112cd4",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:59.801861Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "(none)"
+        }
+      }
+    },
+    "insertionIndex" : 15
+  }, {
+    "id" : "5b07e996-0036-4dc3-8fd1-30dcbe0dfd90",
+    "name" : "Change Notification with Seller ID and Seller SKU ID - 403",
+    "request" : {
+      "urlPath" : "/sku-binding/pvt/skuseller/changenotification/e39g/lm42",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 403
+    },
+    "uuid" : "5b07e996-0036-4dc3-8fd1-30dcbe0dfd90",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:59.801722Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "(none)"
+        }
+      }
+    },
+    "insertionIndex" : 16
+  }, {
+    "id" : "9dc9bec6-4bb5-4333-b1d6-de4273a536cd",
+    "name" : "Change Notification with Seller ID and Seller SKU ID - 400",
+    "request" : {
+      "urlPath" : "/sku-binding/pvt/skuseller/changenotification/8f6m/4c5t",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 400
+    },
+    "uuid" : "9dc9bec6-4bb5-4333-b1d6-de4273a536cd",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:59.801582Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "(none)"
+        }
+      }
+    },
+    "insertionIndex" : 17
+  }, {
+    "id" : "9939d344-9f1e-4774-9196-68dfe6cc9d71",
+    "name" : "Change Notification with Seller ID and Seller SKU ID - 200",
+    "request" : {
+      "urlPath" : "/sku-binding/pvt/skuseller/changenotification/nh75/wz22",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 200
+    },
+    "uuid" : "9939d344-9f1e-4774-9196-68dfe6cc9d71",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:59.801437Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "(none)"
+        }
+      }
+    },
+    "insertionIndex" : 18
+  }, {
+    "id" : "ba3aadf4-4d1c-4557-aad6-7a7e934d45e6",
+    "name" : "Get SKU Bindings information",
+    "request" : {
+      "urlPath" : "/sku-binding/pvt/skuseller/admin",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "[ {\n  \"IsActive\" : true,\n  \"IsPersisted\" : true,\n  \"IsRemoved\" : false,\n  \"RequestedUpdateDate\" : null,\n  \"SellerId\" : \"vtxkfj7352\",\n  \"SellerStockKeepingUnitId\" : \"71\",\n  \"SkuSellerId\" : 102,\n  \"StockKeepingUnitId\" : 1,\n  \"UpdateDate\" : \"2021-04-12T20:06:59.413Z\"\n} ]",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "ba3aadf4-4d1c-4557-aad6-7a7e934d45e6",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:59.80127Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "Getpagedadmin",
+          "schema" : {
+            "example" : [ {
+              "IsActive" : true,
+              "IsPersisted" : true,
+              "IsRemoved" : false,
+              "SellerId" : "vtxkfj7352",
+              "SellerStockKeepingUnitId" : "71",
+              "SkuSellerId" : 102,
+              "StockKeepingUnitId" : 1,
+              "UpdateDate" : "2021-04-12T20:06:59.413Z"
+            } ],
+            "properties" : {
+              "IsActive" : {
+                "description" : "Defines if the SKU binding is active.",
+                "type" : "boolean"
+              },
+              "IsPersisted" : {
+                "description" : "Defines if the seller is persisted.",
+                "type" : "boolean"
+              },
+              "IsRemoved" : {
+                "description" : "Defines if the seller is removed.",
+                "type" : "boolean"
+              },
+              "RequestedUpdateDate" : {
+                "description" : "Date when an SKU binding update was requested for the last time, in UTC format.",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "SellerId" : {
+                "description" : "ID that identifies the seller in the marketplace. It can be the same as the seller name or a unique number. Check the **Sellers management** section in the Admin to get the correct ID.",
+                "type" : "string"
+              },
+              "SellerStockKeepingUnitId" : {
+                "description" : "SKU ID in the seller's store.",
+                "type" : "string"
+              },
+              "SkuSellerId" : {
+                "description" : "SKU Binding ID.",
+                "format" : "int32",
+                "type" : "integer"
+              },
+              "StockKeepingUnitId" : {
+                "description" : "SKU ID in the VTEX marketplace.",
+                "format" : "int32",
+                "type" : "integer"
+              },
+              "UpdateDate" : {
+                "description" : "Date when the SKU binding was updated for the last time, in UTC format.",
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 19
+  }, {
+    "id" : "30a54baf-c4d6-4c0b-b8b7-d7f9aaba25e2",
+    "name" : "Activate SKU Binding - 200",
+    "request" : {
+      "urlPath" : "/sku-binding/pvt/skuseller/activate/u9x9/7153",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 200
+    },
+    "uuid" : "30a54baf-c4d6-4c0b-b8b7-d7f9aaba25e2",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:59.80112Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "ActivateSKUBinding"
+        }
+      }
+    },
+    "insertionIndex" : 20
+  }, {
+    "id" : "68a32a17-2973-4de3-87ab-6c6dbf04f505",
+    "name" : "Get SKU Bindings by SKU ID",
+    "request" : {
+      "urlPath" : "/catalog/pvt/skusellers/sb60",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "[ [ {\n  \"Id\" : 48,\n  \"IsActive\" : true,\n  \"LastUpdateDate\" : \"2020-10-21T19:13:00.657\",\n  \"SalesPolicy\" : 0,\n  \"SellerId\" : \"cosmetics1\",\n  \"SellerSkuId\" : \"42\",\n  \"StockKeepingUnitId\" : 1\n} ], [ {\n  \"Id\" : 48,\n  \"IsActive\" : true,\n  \"LastUpdateDate\" : \"2020-10-21T19:13:00.657\",\n  \"SalesPolicy\" : 0,\n  \"SellerId\" : \"cosmetics1\",\n  \"SellerSkuId\" : \"42\",\n  \"StockKeepingUnitId\" : 1\n} ] ]",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "68a32a17-2973-4de3-87ab-6c6dbf04f505",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:59.800918Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "GetbySkuId",
+          "schema" : {
+            "description" : "Array containing objects with information about each SKU Binding.",
+            "items" : {
+              "description" : "Object with information about an SKU Binding.",
+              "example" : [ {
+                "Id" : 48,
+                "IsActive" : true,
+                "LastUpdateDate" : "2020-10-21T19:13:00.657",
+                "SalesPolicy" : 0,
+                "SellerId" : "cosmetics1",
+                "SellerSkuId" : "42",
+                "StockKeepingUnitId" : 1
+              } ],
+              "properties" : {
+                "Id" : {
+                  "description" : "SKU Binding ID.",
+                  "format" : "int32",
+                  "type" : "integer"
+                },
+                "IsActive" : {
+                  "description" : "Defines if the SKU binding is active.",
+                  "type" : "boolean"
+                },
+                "LastUpdateDate" : {
+                  "description" : "Date when the SKU binding was updated for the last time, in UTC format.",
+                  "type" : "string"
+                },
+                "SalesPolicy" : {
+                  "description" : "Sales policy ID.",
+                  "format" : "int32",
+                  "type" : "integer"
+                },
+                "SellerId" : {
+                  "description" : "ID that identifies the seller in the marketplace. It can be the same as the seller name or a unique number. Check the **Sellers management** section in the Admin to get the correct ID.",
+                  "type" : "string"
+                },
+                "SellerSkuId" : {
+                  "description" : "SKU seller ID.",
+                  "type" : "string"
+                },
+                "StockKeepingUnitId" : {
+                  "description" : "SKU ID in the VTEX marketplace.",
+                  "format" : "int32",
+                  "type" : "integer"
+                }
+              },
+              "type" : "object"
+            },
+            "type" : "array"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 21
+  } ]
+}

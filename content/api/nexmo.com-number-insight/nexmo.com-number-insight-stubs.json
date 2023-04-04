@@ -1,0 +1,938 @@
+{
+  "mappings" : [ {
+    "id" : "dfa17865-f771-475b-8e71-3f59b58a8b00",
+    "name" : "Standard Number Insight (text/xml)",
+    "request" : {
+      "urlPath" : "/standard/json",
+      "method" : "GET",
+      "headers" : {
+        "Accept" : {
+          "contains" : "text/xml"
+        }
+      },
+      "queryParameters" : {
+        "number" : {
+          "equalTo" : "84%0B45%0D%0D%09829%0A%29-%2B-97%0B30856%09787-%0B%0A%0B-7"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"ported\" : {\n    \"ported_message\" : \"not_ported\"\n  },\n  \"request_price\" : \"0.01500000\",\n  \"current_carrier\" : {\n    \"country\" : \"GB\",\n    \"network_code\" : \"12345\",\n    \"name\" : \"Acme Inc\",\n    \"network_type\" : \"mobile\"\n  },\n  \"international_format_number\" : \"447700900000\",\n  \"remaining_balance\" : \"1.23456789\",\n  \"original_carrier\" : {\n    \"country\" : \"GB\",\n    \"network_code\" : \"12345\",\n    \"name\" : \"Acme Inc\",\n    \"network_type\" : \"mobile\"\n  },\n  \"caller_identity\" : {\n    \"caller_name\" : \"John Smith\",\n    \"caller-name\" : \"John Smith\",\n    \"firs_name\" : \"John\",\n    \"last_name\" : \"Smith\",\n    \"caller-type\" : \"consumer\",\n    \"first-name\" : \"John\",\n    \"caller_type\" : \"consumer\",\n    \"last-name\" : \"Smith\"\n  },\n  \"local_number\" : {\n    \"country_code\" : \"GB\",\n    \"country_code_iso3\" : \"GBR\",\n    \"number\" : \"07700 900000\",\n    \"country_prefix\" : \"44\",\n    \"country_name\" : \"United Kingdom\"\n  },\n  \"error\" : {\n    \"code\" : 0,\n    \"status_text\" : \"Success\"\n  },\n  \"request_id\" : \"aaaaaaaa-bbbb-cccc-dddd-0123456789ab\"\n}",
+      "headers" : {
+        "Content-Type" : "text/xml"
+      }
+    },
+    "uuid" : "dfa17865-f771-475b-8e71-3f59b58a8b00",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:26.763478Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "getNumberInsightStandard",
+          "schema" : {
+            "description" : "Standard",
+            "properties" : {
+              "caller_identity" : {
+                "description" : "Contains details of the number owner, if `cnam` was set to `true` in the request.",
+                "properties" : {
+                  "caller-name" : {
+                    "description" : "Full name of the person or business who owns the phone number. `unknown` if this information is not available. This parameter is only present if `cnam` had a value of `true` within the request.",
+                    "example" : "John Smith",
+                    "type" : "string",
+                    "xml" : {
+                      "attribute" : true
+                    }
+                  },
+                  "caller-type" : {
+                    "description" : "The value will be `business` if the owner of a phone number is a business. If the owner is an individual the value will be `consumer`. The value will be `unknown` if this information is not available. This parameter is only present if `cnam` had a value of `true` within the request.",
+                    "enum" : [ "business", "consumer", "unknown" ],
+                    "example" : "consumer",
+                    "type" : "string",
+                    "xml" : {
+                      "attribute" : true
+                    }
+                  },
+                  "caller_name" : {
+                    "description" : "Full name of the person or business who owns the phone number. `unknown` if this information is not available. This parameter is only present if `cnam` had a value of `true` within the request.",
+                    "example" : "John Smith",
+                    "type" : "string"
+                  },
+                  "caller_type" : {
+                    "description" : "The value will be `business` if the owner of a phone number is a business. If the owner is an individual the value will be `consumer`. The value will be `unknown` if this information is not available. This parameter is only present if `cnam` had a value of `true` within the request.",
+                    "enum" : [ "business", "consumer", "unknown" ],
+                    "example" : "consumer",
+                    "type" : "string"
+                  },
+                  "firs_name" : {
+                    "description" : "First name of the person who owns the phone number if the owner is an individual. This parameter is only present if `cnam` had a value of `true` within the request.",
+                    "example" : "John",
+                    "type" : "string"
+                  },
+                  "first-name" : {
+                    "description" : "First name of the person who owns the phone number if the owner is an individual. This parameter is only present if `cnam` had a value of `true` within the request.",
+                    "example" : "John",
+                    "type" : "string",
+                    "xml" : {
+                      "attribute" : true
+                    }
+                  },
+                  "last-name" : {
+                    "description" : "Last name of the person who owns the phone number if the owner is an individual. This parameter is only present if `cnam` had a value of `true` within the request.",
+                    "example" : "Smith",
+                    "type" : "string",
+                    "xml" : {
+                      "attribute" : true
+                    }
+                  },
+                  "last_name" : {
+                    "description" : "Last name of the person who owns the phone number if the owner is an individual. This parameter is only present if `cnam` had a value of `true` within the request.",
+                    "example" : "Smith",
+                    "type" : "string"
+                  }
+                },
+                "type" : "object",
+                "x-nexmo-developer-collection-description-shown" : true
+              },
+              "current_carrier" : {
+                "allOf" : [ {
+                  "$ref" : "#/components/schemas/niCurrentCarrierProperties"
+                } ],
+                "nullable" : true
+              },
+              "error" : {
+                "description" : "The error code and status of your request",
+                "properties" : {
+                  "code" : {
+                    "description" : "The status code",
+                    "example" : 0,
+                    "type" : "string",
+                    "xml" : {
+                      "attribute" : true
+                    }
+                  },
+                  "status_text" : {
+                    "description" : "The status description of your request.",
+                    "example" : "Success",
+                    "type" : "string",
+                    "xml" : {
+                      "x-text" : true
+                    }
+                  }
+                },
+                "type" : "object"
+              },
+              "international_format_number" : {
+                "description" : "The `number` in your request in international format.",
+                "example" : "447700900000",
+                "type" : "string"
+              },
+              "local_number" : {
+                "description" : "An object containing the `number` in your request in the format used by the country the number belongs to.",
+                "properties" : {
+                  "country_code" : {
+                    "description" : "Two character country code for `number`. This is in [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) format.",
+                    "example" : "GB",
+                    "pattern" : "[A-Z]{2}",
+                    "type" : "string",
+                    "xml" : {
+                      "attribute" : true
+                    }
+                  },
+                  "country_code_iso3" : {
+                    "description" : "Three character country code for `number`. This is in [ISO 3166-1 alpha-3](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-3) format.",
+                    "example" : "GBR",
+                    "pattern" : "[A-Z]{3}",
+                    "type" : "string",
+                    "xml" : {
+                      "attribute" : true
+                    }
+                  },
+                  "country_name" : {
+                    "description" : "The full name of the country that `number` is registered in.",
+                    "example" : "United Kingdom",
+                    "type" : "string",
+                    "xml" : {
+                      "attribute" : true
+                    }
+                  },
+                  "country_prefix" : {
+                    "description" : "The numeric prefix for the country that `number` is registered in.",
+                    "example" : "44",
+                    "type" : "string",
+                    "xml" : {
+                      "attribute" : true
+                    }
+                  },
+                  "number" : {
+                    "description" : "The `number` in your request in the format used by the country the number belongs to.",
+                    "example" : "07700 900000",
+                    "type" : "string",
+                    "xml" : {
+                      "x-text" : true
+                    }
+                  }
+                },
+                "type" : "object"
+              },
+              "original_carrier" : {
+                "$ref" : "#/components/schemas/niInitialCarrierProperties"
+              },
+              "ported" : {
+                "description" : "If the user has changed carrier for number. The assumed status means that the information supplier has replied to the request but has not said explicitly that the number is ported",
+                "nullable" : true,
+                "properties" : {
+                  "ported_message" : {
+                    "description" : "If the user has changed carrier for `number`. The assumed status means that the information supplier has replied to the request but has not said explicitly that the number is ported.",
+                    "enum" : [ "unknown", "ported", "not_ported", "assumed_not_ported", "assumed_ported" ],
+                    "example" : "not_ported",
+                    "type" : "string",
+                    "xml" : {
+                      "x-text" : true
+                    }
+                  }
+                }
+              },
+              "remaining_balance" : {
+                "description" : "Your account balance in EUR after this request.",
+                "example" : "1.23456789",
+                "type" : "string"
+              },
+              "request_id" : {
+                "description" : "The unique identifier for your request. This is a alphanumeric string up to 40 characters.",
+                "example" : "aaaaaaaa-bbbb-cccc-dddd-0123456789ab",
+                "maxLength" : 40,
+                "type" : "string",
+                "xml" : {
+                  "name" : "request_id"
+                }
+              },
+              "request_price" : {
+                "description" : "If there is an internal lookup error, the `refund_price` will reflect the lookup price. If `cnam` is requested for a non-US number the `refund_price` will reflect the `cnam` price. If both of these conditions occur, `refund_price` is the sum of the lookup price and `cnam` price.",
+                "example" : "0.01500000",
+                "type" : "string"
+              }
+            },
+            "type" : "object",
+            "xml" : {
+              "name" : "lookup"
+            }
+          }
+        }
+      }
+    },
+    "insertionIndex" : 0
+  }, {
+    "id" : "e9fa851d-e237-4131-974d-311c39882f38",
+    "name" : "Standard Number Insight (application/json)",
+    "request" : {
+      "urlPath" : "/standard/xml",
+      "method" : "GET",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/json"
+        }
+      },
+      "queryParameters" : {
+        "number" : {
+          "equalTo" : "383%0C%297243%09%288%0A%0C16%0A2+%0D%0D%298-0%28"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{ }",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "e9fa851d-e237-4131-974d-311c39882f38",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:26.76309Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "getNumberInsightStandard",
+          "schema" : {
+            "oneOf" : [ {
+              "$ref" : "#/components/schemas/niResponseJsonStandard"
+            } ]
+          }
+        }
+      }
+    },
+    "insertionIndex" : 1
+  }, {
+    "id" : "d239a944-d791-4a79-9914-209b24c9ada9",
+    "name" : "Basic Number Insight (text/xml)",
+    "request" : {
+      "urlPath" : "/basic/xml",
+      "method" : "GET",
+      "headers" : {
+        "Accept" : {
+          "contains" : "text/xml"
+        }
+      },
+      "queryParameters" : {
+        "number" : {
+          "equalTo" : "0%2938180+0%0A690%0D98%2B%2B34%0A%2824+914+3+%0D%0D87%0C4+6%29+%0C2%094%2B3%29%0A28%2927%29%0B0+55%29%28%0A2%2B%282%0914%0D%0B35%0C46%29"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"international_format_number\" : \"447700900000\",\n  \"local_number\" : {\n    \"country_code\" : \"GB\",\n    \"country_code_iso3\" : \"GBR\",\n    \"number\" : \"07700 900000\",\n    \"country_prefix\" : \"44\",\n    \"country_name\" : \"United Kingdom\"\n  },\n  \"error\" : {\n    \"code\" : 0,\n    \"status_text\" : \"Success\"\n  },\n  \"request_id\" : \"aaaaaaaa-bbbb-cccc-dddd-0123456789ab\"\n}",
+      "headers" : {
+        "Content-Type" : "text/xml"
+      }
+    },
+    "uuid" : "d239a944-d791-4a79-9914-209b24c9ada9",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:26.763009Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "getNumberInsightBasic",
+          "schema" : {
+            "description" : "Basic",
+            "properties" : {
+              "error" : {
+                "description" : "The error code and status of your request",
+                "properties" : {
+                  "code" : {
+                    "description" : "The status code",
+                    "example" : 0,
+                    "type" : "string",
+                    "xml" : {
+                      "attribute" : true
+                    }
+                  },
+                  "status_text" : {
+                    "description" : "The status description of your request.",
+                    "example" : "Success",
+                    "type" : "string",
+                    "xml" : {
+                      "x-text" : true
+                    }
+                  }
+                },
+                "type" : "object"
+              },
+              "international_format_number" : {
+                "description" : "The `number` in your request in international format.",
+                "example" : "447700900000",
+                "type" : "string"
+              },
+              "local_number" : {
+                "description" : "An object containing the `number` in your request in the format used by the country the number belongs to.",
+                "properties" : {
+                  "country_code" : {
+                    "description" : "Two character country code for `number`. This is in [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) format.",
+                    "example" : "GB",
+                    "pattern" : "[A-Z]{2}",
+                    "type" : "string",
+                    "xml" : {
+                      "attribute" : true
+                    }
+                  },
+                  "country_code_iso3" : {
+                    "description" : "Three character country code for `number`. This is in [ISO 3166-1 alpha-3](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-3) format.",
+                    "example" : "GBR",
+                    "pattern" : "[A-Z]{3}",
+                    "type" : "string",
+                    "xml" : {
+                      "attribute" : true
+                    }
+                  },
+                  "country_name" : {
+                    "description" : "The full name of the country that `number` is registered in.",
+                    "example" : "United Kingdom",
+                    "type" : "string",
+                    "xml" : {
+                      "attribute" : true
+                    }
+                  },
+                  "country_prefix" : {
+                    "description" : "The numeric prefix for the country that `number` is registered in.",
+                    "example" : "44",
+                    "type" : "string",
+                    "xml" : {
+                      "attribute" : true
+                    }
+                  },
+                  "number" : {
+                    "description" : "The `number` in your request in the format used by the country the number belongs to.",
+                    "example" : "07700 900000",
+                    "type" : "string",
+                    "xml" : {
+                      "x-text" : true
+                    }
+                  }
+                },
+                "type" : "object"
+              },
+              "request_id" : {
+                "description" : "The unique identifier for your request. This is a alphanumeric string up to 40 characters.",
+                "example" : "aaaaaaaa-bbbb-cccc-dddd-0123456789ab",
+                "maxLength" : 40,
+                "type" : "string",
+                "xml" : {
+                  "name" : "request_id"
+                }
+              }
+            },
+            "type" : "object",
+            "xml" : {
+              "name" : "format"
+            }
+          }
+        }
+      }
+    },
+    "insertionIndex" : 2
+  }, {
+    "id" : "b142cd29-3d4c-4d5e-96cf-a94fa7958216",
+    "name" : "Basic Number Insight (application/json)",
+    "request" : {
+      "urlPath" : "/basic/xml",
+      "method" : "GET",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/json"
+        }
+      },
+      "queryParameters" : {
+        "number" : {
+          "equalTo" : "0%280%0A-%29790%2B2%28+7%0A%28%285%29%0D%0958%0D"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"status_message\" : \"Success\",\n  \"country_code\" : \"GB\",\n  \"country_code_iso3\" : \"GBR\",\n  \"international_format_number\" : \"447700900000\",\n  \"country_prefix\" : \"44\",\n  \"country_name\" : \"United Kingdom\",\n  \"request_id\" : \"aaaaaaaa-bbbb-cccc-dddd-0123456789ab\",\n  \"national_format_number\" : \"07700 900000\",\n  \"status\" : 0\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "b142cd29-3d4c-4d5e-96cf-a94fa7958216",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:26.762823Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "getNumberInsightBasic",
+          "schema" : {
+            "properties" : {
+              "country_code" : {
+                "description" : "Two character country code for `number`. This is in [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) format.",
+                "example" : "GB",
+                "pattern" : "[A-Z]{2}",
+                "type" : "string"
+              },
+              "country_code_iso3" : {
+                "description" : "Three character country code for `number`. This is in [ISO 3166-1 alpha-3](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-3) format.",
+                "example" : "GBR",
+                "pattern" : "[A-Z]{3}",
+                "type" : "string"
+              },
+              "country_name" : {
+                "description" : "The full name of the country that `number` is registered in.",
+                "example" : "United Kingdom",
+                "type" : "string"
+              },
+              "country_prefix" : {
+                "description" : "The numeric prefix for the country that `number` is registered in.",
+                "example" : "44",
+                "type" : "string"
+              },
+              "international_format_number" : {
+                "description" : "The `number` in your request in international format.",
+                "example" : "447700900000",
+                "type" : "string"
+              },
+              "national_format_number" : {
+                "description" : "The `number` in your request in the format used by the country the number belongs to.",
+                "example" : "07700 900000",
+                "type" : "string"
+              },
+              "request_id" : {
+                "description" : "The unique identifier for your request. This is a alphanumeric string up to 40 characters.",
+                "example" : "aaaaaaaa-bbbb-cccc-dddd-0123456789ab",
+                "maxLength" : 40,
+                "type" : "string"
+              },
+              "status" : {
+                "$ref" : "#/components/schemas/niBasicStatus"
+              },
+              "status_message" : {
+                "description" : "The status description of your request.",
+                "example" : "Success",
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 3
+  }, {
+    "id" : "09c1cff8-85aa-4ac4-95d1-d8a2be44f68b",
+    "name" : "Advanced Number Insight (sync) (text/xml)",
+    "request" : {
+      "urlPath" : "/advanced/json",
+      "method" : "GET",
+      "headers" : {
+        "Accept" : {
+          "contains" : "text/xml"
+        }
+      },
+      "queryParameters" : {
+        "number" : {
+          "equalTo" : ""
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"current_carrier\" : {\n    \"country\" : \"GB\",\n    \"network_code\" : \"12345\",\n    \"name\" : \"Acme Inc\",\n    \"network_type\" : \"mobile\"\n  },\n  \"roaming\" : {\n    \"roaming_network_name\" : \"Acme Inc\",\n    \"roaming_country_code\" : \"US\",\n    \"roaming_network_code\" : \"12345\",\n    \"status\" : \"roaming\"\n  },\n  \"remaining_balance\" : \"1.23456789\",\n  \"last_name\" : \"Smith\",\n  \"caller_identity\" : {\n    \"caller-name\" : \"John Smith\",\n    \"caller-type\" : \"consumer\",\n    \"first-name\" : \"John\",\n    \"last-name\" : \"Smith\"\n  },\n  \"local_number\" : {\n    \"country_code\" : \"GB\",\n    \"country_code_iso3\" : \"GBR\",\n    \"number\" : \"07700 900000\",\n    \"country_prefix\" : \"44\",\n    \"country_name\" : \"United Kingdom\"\n  },\n  \"ip_warnings\" : \"unknown\",\n  \"error\" : {\n    \"code\" : 0,\n    \"status_text\" : \"Success\"\n  },\n  \"reachable\" : \"reachable\",\n  \"ported\" : {\n    \"ported_message\" : \"not_ported\"\n  },\n  \"caller_name\" : \"John Smith\",\n  \"request_price\" : \"0.01500000\",\n  \"international_format_number\" : \"447700900000\",\n  \"lookup_outcome\" : {\n    \"code\" : \"0\",\n    \"lookup_outcome_message\" : \"Success\"\n  },\n  \"firs_name\" : \"John\",\n  \"original_carrier\" : {\n    \"country\" : \"GB\",\n    \"network_code\" : \"12345\",\n    \"name\" : \"Acme Inc\",\n    \"network_type\" : \"mobile\"\n  },\n  \"valid_number\" : \"valid\",\n  \"request_id\" : \"aaaaaaaa-bbbb-cccc-dddd-0123456789ab\",\n  \"caller_type\" : \"consumer\"\n}",
+      "headers" : {
+        "Content-Type" : "text/xml"
+      }
+    },
+    "uuid" : "09c1cff8-85aa-4ac4-95d1-d8a2be44f68b",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:26.76264Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "getNumberInsightAdvanced",
+          "schema" : {
+            "description" : "Advanced",
+            "properties" : {
+              "caller_identity" : {
+                "description" : "Contains details of the number owner, if `cnam` was set to `true` in the request.",
+                "properties" : {
+                  "caller-name" : {
+                    "description" : "Full name of the person or business who owns the phone number. `unknown` if this information is not available. This parameter is only present if `cnam` had a value of `true` within the request.",
+                    "example" : "John Smith",
+                    "type" : "string",
+                    "xml" : {
+                      "attribute" : true
+                    }
+                  },
+                  "caller-type" : {
+                    "description" : "The value will be `business` if the owner of a phone number is a business. If the owner is an individual the value will be `consumer`. The value will be `unknown` if this information is not available. This parameter is only present if `cnam` had a value of `true` within the request.",
+                    "enum" : [ "business", "consumer", "unknown" ],
+                    "example" : "consumer",
+                    "type" : "string",
+                    "xml" : {
+                      "attribute" : true
+                    }
+                  },
+                  "first-name" : {
+                    "description" : "First name of the person who owns the phone number if the owner is an individual. This parameter is only present if `cnam` had a value of `true` within the request.",
+                    "example" : "John",
+                    "type" : "string",
+                    "xml" : {
+                      "attribute" : true
+                    }
+                  },
+                  "last-name" : {
+                    "description" : "Last name of the person who owns the phone number if the owner is an individual. This parameter is only present if `cnam` had a value of `true` within the request.",
+                    "example" : "Smith",
+                    "type" : "string",
+                    "xml" : {
+                      "attribute" : true
+                    }
+                  }
+                }
+              },
+              "caller_name" : {
+                "description" : "Full name of the person or business who owns the phone number. `unknown` if this information is not available. This parameter is only present if `cnam` had a value of `true` within the request.",
+                "example" : "John Smith",
+                "type" : "string"
+              },
+              "caller_type" : {
+                "description" : "The value will be `business` if the owner of a phone number is a business. If the owner is an individual the value will be `consumer`. The value will be `unknown` if this information is not available. This parameter is only present if `cnam` had a value of `true` within the request.",
+                "enum" : [ "business", "consumer", "unknown" ],
+                "example" : "consumer",
+                "type" : "string"
+              },
+              "current_carrier" : {
+                "$ref" : "#/components/schemas/niCurrentCarrierProperties"
+              },
+              "error" : {
+                "description" : "The error code and status of your request",
+                "properties" : {
+                  "code" : {
+                    "description" : "The status code",
+                    "example" : 0,
+                    "type" : "string",
+                    "xml" : {
+                      "attribute" : true
+                    }
+                  },
+                  "status_text" : {
+                    "description" : "The status description of your request.",
+                    "example" : "Success",
+                    "type" : "string",
+                    "xml" : {
+                      "x-text" : true
+                    }
+                  }
+                },
+                "type" : "object",
+                "x-nexmo-developer-collection-description-shown" : true
+              },
+              "firs_name" : {
+                "description" : "First name of the person who owns the phone number if the owner is an individual. This parameter is only present if `cnam` had a value of `true` within the request.",
+                "example" : "John",
+                "type" : "string"
+              },
+              "international_format_number" : {
+                "description" : "The `number` in your request in international format.",
+                "example" : "447700900000",
+                "type" : "string"
+              },
+              "ip_warnings" : {
+                "description" : "This property is deprecated and can safely be ignored.",
+                "example" : "unknown",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "last_name" : {
+                "description" : "Last name of the person who owns the phone number if the owner is an individual. This parameter is only present if `cnam` had a value of `true` within the request.",
+                "example" : "Smith",
+                "type" : "string"
+              },
+              "local_number" : {
+                "description" : "An object containing the `number` in your request in the format used by the country the number belongs to.",
+                "properties" : {
+                  "country_code" : {
+                    "description" : "Two character country code for `number`. This is in [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) format.",
+                    "example" : "GB",
+                    "pattern" : "[A-Z]{2}",
+                    "type" : "string",
+                    "xml" : {
+                      "attribute" : true
+                    }
+                  },
+                  "country_code_iso3" : {
+                    "description" : "Three character country code for `number`. This is in [ISO 3166-1 alpha-3](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-3) format.",
+                    "example" : "GBR",
+                    "pattern" : "[A-Z]{3}",
+                    "type" : "string",
+                    "xml" : {
+                      "attribute" : true
+                    }
+                  },
+                  "country_name" : {
+                    "description" : "The full name of the country that `number` is registered in.",
+                    "example" : "United Kingdom",
+                    "type" : "string",
+                    "xml" : {
+                      "attribute" : true
+                    }
+                  },
+                  "country_prefix" : {
+                    "description" : "The numeric prefix for the country that `number` is registered in.",
+                    "example" : "44",
+                    "type" : "string",
+                    "xml" : {
+                      "attribute" : true
+                    }
+                  },
+                  "number" : {
+                    "description" : "The `number` in your request in the format used by the country the number belongs to.",
+                    "example" : "07700 900000",
+                    "type" : "string",
+                    "xml" : {
+                      "x-text" : true
+                    }
+                  }
+                },
+                "type" : "object",
+                "x-nexmo-developer-collection-description-shown" : true
+              },
+              "lookup_outcome" : {
+                "description" : "An object indicating whether all information about a phone number has been returned.",
+                "properties" : {
+                  "code" : {
+                    "description" : "Shows if all information about a phone number has been returned. Possible values:\n\nCode | Text\n-- | --\n0 | Success\n1 | Partial success - some fields populated\n2 | Failed\n",
+                    "enum" : [ 0, 1, 2 ],
+                    "example" : "0",
+                    "xml" : {
+                      "attribute" : true
+                    }
+                  },
+                  "lookup_outcome_message" : {
+                    "description" : "Shows if all information about a phone number has been returned.",
+                    "example" : "Success",
+                    "type" : "string",
+                    "xml" : {
+                      "x-text" : true
+                    }
+                  }
+                },
+                "type" : "object",
+                "x-nexmo-developer-collection-description-shown" : true
+              },
+              "original_carrier" : {
+                "$ref" : "#/components/schemas/niInitialCarrierProperties"
+              },
+              "ported" : {
+                "description" : "If the user has changed carrier for `number`. The assumed status means that the information supplier has replied to the request but has not said explicitly that the number is ported.",
+                "nullable" : true,
+                "properties" : {
+                  "ported_message" : {
+                    "description" : "If the user has changed carrier for `number`. The assumed status means that the information supplier has replied to the request but has not said explicitly that the number is ported.",
+                    "enum" : [ "unknown", "ported", "not_ported", "assumed_not_ported", "assumed_ported" ],
+                    "example" : "not_ported",
+                    "type" : "string",
+                    "xml" : {
+                      "x-text" : true
+                    }
+                  }
+                }
+              },
+              "reachable" : {
+                "description" : "Can you call `number` now. This is applicable to mobile numbers only.",
+                "enum" : [ "unknown", "reachable", "undeliverable", "absent", "bad_number", "blacklisted", "null" ],
+                "example" : "reachable",
+                "nullable" : true,
+                "type" : "string"
+              },
+              "remaining_balance" : {
+                "description" : "Your account balance in EUR after this request.",
+                "example" : "1.23456789",
+                "type" : "string"
+              },
+              "request_id" : {
+                "description" : "The unique identifier for your request. This is a alphanumeric string up to 40 characters.",
+                "example" : "aaaaaaaa-bbbb-cccc-dddd-0123456789ab",
+                "maxLength" : 40,
+                "type" : "string",
+                "xml" : {
+                  "name" : "request_id"
+                }
+              },
+              "request_price" : {
+                "description" : "If there is an internal lookup error, the `refund_price` will reflect the lookup price. If `cnam` is requested for a non-US number the `refund_price` will reflect the `cnam` price. If both of these conditions occur, `refund_price` is the sum of the lookup price and `cnam` price.",
+                "example" : "0.01500000",
+                "type" : "string"
+              },
+              "roaming" : {
+                "$ref" : "#/components/schemas/niRoaming"
+              },
+              "valid_number" : {
+                "description" : "Does `number` exist. `unknown` means the number could not be validated. `valid` means the number is valid. `not_valid` means the number is not valid. `inferred_not_valid` means that the number could not be determined as valid or invalid via an external system and the best guess is that the number is invalid. This is applicable to mobile numbers only.",
+                "enum" : [ "unknown", "valid", "not_valid", "inferred_not_valid" ],
+                "example" : "valid",
+                "type" : "string"
+              }
+            },
+            "type" : "object",
+            "xml" : {
+              "name" : "lookup"
+            }
+          }
+        }
+      }
+    },
+    "insertionIndex" : 4
+  }, {
+    "id" : "a8e69307-0504-421b-a934-e453d483cc81",
+    "name" : "Advanced Number Insight (sync) (application/json)",
+    "request" : {
+      "urlPath" : "/advanced/xml",
+      "method" : "GET",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/json"
+        }
+      },
+      "queryParameters" : {
+        "number" : {
+          "equalTo" : "72%0A8%0B92%0C%294%0B%29%0B%0A%28988%0B69061%0B%0B%09%2B9%091%2B%28%2845%28%0C7%28-%0B%0C90719%09%0A7+"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"status_message\" : \"Success\",\n  \"current_carrier\" : {\n    \"country\" : \"GB\",\n    \"network_code\" : \"12345\",\n    \"name\" : \"Acme Inc\",\n    \"network_type\" : \"mobile\"\n  },\n  \"roaming\" : \"unknown\",\n  \"remaining_balance\" : \"1.23456789\",\n  \"country_prefix\" : \"44\",\n  \"caller_identity\" : {\n    \"caller_name\" : \"John Smith\",\n    \"last_name\" : \"Smith\",\n    \"first_name\" : \"John\",\n    \"caller_type\" : \"consumer\"\n  },\n  \"reachable\" : \"reachable\",\n  \"refund_price\" : \"0.01500000\",\n  \"lookup_outcome_message\" : \"Success\",\n  \"ported\" : \"not_ported\",\n  \"country_code\" : \"GB\",\n  \"country_code_iso3\" : \"GBR\",\n  \"request_price\" : \"0.04000000\",\n  \"international_format_number\" : \"447700900000\",\n  \"lookup_outcome\" : 0,\n  \"country_name\" : \"United Kingdom\",\n  \"original_carrier\" : {\n    \"country\" : \"GB\",\n    \"network_code\" : \"12345\",\n    \"name\" : \"Acme Inc\",\n    \"network_type\" : \"mobile\"\n  },\n  \"valid_number\" : \"valid\",\n  \"request_id\" : \"aaaaaaaa-bbbb-cccc-dddd-0123456789ab\",\n  \"national_format_number\" : \"07700 900000\",\n  \"status\" : 0\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "a8e69307-0504-421b-a934-e453d483cc81",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:26.762149Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "getNumberInsightAdvanced",
+          "schema" : {
+            "oneOf" : [ {
+              "$ref" : "#/components/schemas/niResponseJsonAdvancedSync"
+            }, {
+              "$ref" : "#/components/schemas/niResponseJsonAdvancedRoamingUnknown"
+            } ]
+          }
+        }
+      }
+    },
+    "insertionIndex" : 5
+  }, {
+    "id" : "a1fb3b8e-5025-4181-8224-907fc7a018a2",
+    "name" : "Advanced Number Insight (async) (text/xml)",
+    "request" : {
+      "urlPath" : "/advanced/async/xml",
+      "method" : "GET",
+      "headers" : {
+        "Accept" : {
+          "contains" : "text/xml"
+        }
+      },
+      "queryParameters" : {
+        "number" : {
+          "equalTo" : "5-%2B%0C%28%2B"
+        },
+        "callback" : {
+          "equalTo" : "uuwuimoy4tj0e"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"number\" : \"447700900000\",\n  \"request_price\" : \"0.01500000\",\n  \"error_text\" : \"Success\",\n  \"remaining_balance\" : \"1.23456789\",\n  \"request_id\" : \"aaaaaaaa-bbbb-cccc-dddd-0123456789ab\",\n  \"status\" : 0\n}",
+      "headers" : {
+        "Content-Type" : "text/xml"
+      }
+    },
+    "uuid" : "a1fb3b8e-5025-4181-8224-907fc7a018a2",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:26.761955Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "getNumberInsightAsync",
+          "schema" : {
+            "properties" : {
+              "error_text" : {
+                "description" : "The status description of your request. Note: This field is equivalent to `status_message` field in the other endpoints",
+                "example" : "Success",
+                "type" : "string"
+              },
+              "number" : {
+                "description" : "The `number` in your request",
+                "example" : "447700900000",
+                "type" : "string"
+              },
+              "remaining_balance" : {
+                "description" : "Your account balance in EUR after this request.",
+                "example" : "1.23456789",
+                "type" : "string",
+                "xml" : {
+                  "name" : "remainingBalance"
+                }
+              },
+              "request_id" : {
+                "description" : "The unique identifier for your request. This is a alphanumeric string up to 40 characters.",
+                "example" : "aaaaaaaa-bbbb-cccc-dddd-0123456789ab",
+                "maxLength" : 40,
+                "type" : "string",
+                "xml" : {
+                  "name" : "requestId"
+                }
+              },
+              "request_price" : {
+                "description" : "If there is an internal lookup error, the `refund_price` will reflect the lookup price. If `cnam` is requested for a non-US number the `refund_price` will reflect the `cnam` price. If both of these conditions occur, `refund_price` is the sum of the lookup price and `cnam` price.",
+                "example" : "0.01500000",
+                "type" : "string",
+                "xml" : {
+                  "name" : "requestPrice"
+                }
+              },
+              "status" : {
+                "$ref" : "#/components/schemas/niStandardAdvancedStatus"
+              }
+            },
+            "type" : "object",
+            "xml" : {
+              "name" : "lookup"
+            }
+          }
+        }
+      }
+    },
+    "insertionIndex" : 6
+  }, {
+    "id" : "7fc09838-a1d1-4acc-9a5d-9e419e4bde1f",
+    "name" : "Advanced Number Insight (async) (application/json)",
+    "request" : {
+      "urlPath" : "/advanced/async/xml",
+      "method" : "GET",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/json"
+        }
+      },
+      "queryParameters" : {
+        "number" : {
+          "equalTo" : "3%0B%09%28%0D%0C7-2+02%2B1+%09%0B1%0D09%2807%0B%0C675%0A%2B931592%295%0D5%29%0B00208%298"
+        },
+        "callback" : {
+          "equalTo" : "oof73ta9timb3u4is3hidcfd"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"number\" : \"447700900000\",\n  \"request_price\" : \"0.01500000\",\n  \"error_text\" : \"Success\",\n  \"remaining_balance\" : \"1.23456789\",\n  \"request_id\" : \"aaaaaaaa-bbbb-cccc-dddd-0123456789ab\",\n  \"status\" : 0\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "7fc09838-a1d1-4acc-9a5d-9e419e4bde1f",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:26.761744Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "getNumberInsightAsync",
+          "schema" : {
+            "oneOf" : [ {
+              "$ref" : "#/components/schemas/niResponseAsync"
+            } ]
+          }
+        }
+      }
+    },
+    "insertionIndex" : 7
+  } ]
+}

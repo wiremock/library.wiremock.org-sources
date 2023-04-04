@@ -1,0 +1,3118 @@
+{
+  "mappings" : [ {
+    "id" : "169b25ed-e2dd-48ab-b132-72ca94866dc5",
+    "name" : "Get workspace",
+    "request" : {
+      "urlPath" : "/workspaces/workspaceId",
+      "method" : "GET",
+      "queryParameters" : {
+        "workspaceId" : {
+          "equalTo" : "7oc3"
+        }
+      }
+    },
+    "response" : {
+      "status" : 500,
+      "body" : "{\n  \"error\" : \"Internal error\",\n  \"status\" : 500\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "169b25ed-e2dd-48ab-b132-72ca94866dc5",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.218505Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "getWorkspace",
+          "schema" : {
+            "properties" : {
+              "error" : {
+                "description" : "Error description",
+                "example" : "Internal error",
+                "type" : "string"
+              },
+              "status" : {
+                "description" : "HTTP Error code",
+                "example" : 500,
+                "type" : "integer"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 0
+  }, {
+    "id" : "d1ec1b5e-bae0-4fad-90b4-f9cedb9e85e2",
+    "name" : "Get workspace",
+    "request" : {
+      "urlPath" : "/workspaces/workspaceId",
+      "method" : "GET",
+      "queryParameters" : {
+        "workspaceId" : {
+          "equalTo" : "978l"
+        }
+      }
+    },
+    "response" : {
+      "status" : 422,
+      "body" : "{\n  \"error\" : \"Incorrect parameter value\",\n  \"status\" : 422\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "d1ec1b5e-bae0-4fad-90b4-f9cedb9e85e2",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.218387Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "getWorkspace",
+          "schema" : {
+            "properties" : {
+              "error" : {
+                "description" : "Error description",
+                "enum" : [ "Unable to parse JSON, please check formatting", "Required parameter missing", "Required parameter missing: template definition not defined", "Required parameter missing: template not defined" ],
+                "example" : "Incorrect parameter value",
+                "type" : "string"
+              },
+              "status" : {
+                "description" : "HTTP Error code",
+                "example" : 422,
+                "type" : "integer"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 1
+  }, {
+    "id" : "a1f51ad0-d438-4be3-b499-ea64b958b367",
+    "name" : "Get workspace",
+    "request" : {
+      "urlPath" : "/workspaces/workspaceId",
+      "method" : "GET",
+      "queryParameters" : {
+        "workspaceId" : {
+          "equalTo" : "ct63"
+        }
+      }
+    },
+    "response" : {
+      "status" : 404,
+      "body" : "{\n  \"error\" : \"Entity not found\",\n  \"status\" : 404\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "a1f51ad0-d438-4be3-b499-ea64b958b367",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.218261Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "getWorkspace",
+          "schema" : {
+            "properties" : {
+              "error" : {
+                "description" : "Error description",
+                "enum" : [ "Entity not found", "Resource not found", "None of the templates is available for the workspace." ],
+                "example" : "Entity not found",
+                "type" : "string"
+              },
+              "status" : {
+                "description" : "HTTP Error code",
+                "example" : 404,
+                "type" : "integer"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 2
+  }, {
+    "id" : "8c74f5a5-d60f-41e0-9716-a4c453555f32",
+    "name" : "Get workspace",
+    "request" : {
+      "urlPath" : "/workspaces/workspaceId",
+      "method" : "GET",
+      "queryParameters" : {
+        "workspaceId" : {
+          "equalTo" : "f5sz"
+        }
+      }
+    },
+    "response" : {
+      "status" : 403,
+      "body" : "{\n  \"error\" : \"Access not granted\",\n  \"status\" : 403\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "8c74f5a5-d60f-41e0-9716-a4c453555f32",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.218138Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "getWorkspace",
+          "schema" : {
+            "properties" : {
+              "error" : {
+                "description" : "Error description",
+                "enum" : [ "Your account has exceeded the monthly document generation limit." ],
+                "example" : "Access not granted",
+                "type" : "string"
+              },
+              "status" : {
+                "description" : "HTTP Error code",
+                "example" : 403,
+                "type" : "integer"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 3
+  }, {
+    "id" : "1263ea74-ea45-439a-a12c-bb17089f1902",
+    "name" : "Get workspace",
+    "request" : {
+      "urlPath" : "/workspaces/workspaceId",
+      "method" : "GET",
+      "queryParameters" : {
+        "workspaceId" : {
+          "equalTo" : "nljl"
+        }
+      }
+    },
+    "response" : {
+      "status" : 401,
+      "body" : "{\n  \"error\" : \"Authentication failed\",\n  \"status\" : 401\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "1263ea74-ea45-439a-a12c-bb17089f1902",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.218015Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "getWorkspace",
+          "schema" : {
+            "properties" : {
+              "error" : {
+                "description" : "Error description",
+                "enum" : [ "Authentication failed: request expired", "Authentication failed: signature or secret missing", "Authentication failed: workspace missing", "Authentication failed: key missing", "Authentication failed: property 'iss' (issuer) missing in JWT", "Authentication failed: property 'sub' (subject) missing in JWT", "Authentication failed: property 'exp' (expiration time) missing in JWT", "Authentication failed: invalid 'iss' (issuer)", "Authentication failed: incorrect signature", "Authentication failed" ],
+                "example" : "Authentication failed",
+                "type" : "string"
+              },
+              "status" : {
+                "description" : "HTTP Error code",
+                "example" : 401,
+                "type" : "integer"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 4
+  }, {
+    "id" : "f53505ef-7b74-41f9-bf15-6592dfa0ad1a",
+    "name" : "Get workspace",
+    "request" : {
+      "urlPath" : "/workspaces/workspaceId",
+      "method" : "GET",
+      "queryParameters" : {
+        "workspaceId" : {
+          "equalTo" : "x0fj"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"response\" : {\n    \"identifier\" : \"demo.example@actualreports.com\",\n    \"is_master_workspace\" : false,\n    \"created_at\" : \"2020-04-01 12:03:12\",\n    \"id\" : 1\n  }\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "f53505ef-7b74-41f9-bf15-6592dfa0ad1a",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.217887Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "getWorkspace",
+          "schema" : {
+            "properties" : {
+              "response" : {
+                "$ref" : "#/components/schemas/Workspace"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 5
+  }, {
+    "id" : "186c489a-51f3-4e22-be4b-56409c4d0b06",
+    "name" : "Delete workspace",
+    "request" : {
+      "urlPath" : "/workspaces/workspaceId",
+      "method" : "DELETE",
+      "queryParameters" : {
+        "workspaceId" : {
+          "equalTo" : "3tjv"
+        }
+      }
+    },
+    "response" : {
+      "status" : 500,
+      "body" : "{\n  \"error\" : \"Internal error\",\n  \"status\" : 500\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "186c489a-51f3-4e22-be4b-56409c4d0b06",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.217746Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "deleteWorkspace",
+          "schema" : {
+            "properties" : {
+              "error" : {
+                "description" : "Error description",
+                "example" : "Internal error",
+                "type" : "string"
+              },
+              "status" : {
+                "description" : "HTTP Error code",
+                "example" : 500,
+                "type" : "integer"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 6
+  }, {
+    "id" : "49f2930c-3f7d-4529-a9f4-31517c517d6d",
+    "name" : "Delete workspace",
+    "request" : {
+      "urlPath" : "/workspaces/workspaceId",
+      "method" : "DELETE",
+      "queryParameters" : {
+        "workspaceId" : {
+          "equalTo" : "lh1b"
+        }
+      }
+    },
+    "response" : {
+      "status" : 422,
+      "body" : "{\n  \"error\" : \"Incorrect parameter value\",\n  \"status\" : 422\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "49f2930c-3f7d-4529-a9f4-31517c517d6d",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.21762Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "deleteWorkspace",
+          "schema" : {
+            "properties" : {
+              "error" : {
+                "description" : "Error description",
+                "enum" : [ "Unable to parse JSON, please check formatting", "Required parameter missing", "Required parameter missing: template definition not defined", "Required parameter missing: template not defined" ],
+                "example" : "Incorrect parameter value",
+                "type" : "string"
+              },
+              "status" : {
+                "description" : "HTTP Error code",
+                "example" : 422,
+                "type" : "integer"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 7
+  }, {
+    "id" : "9f55a876-73d5-45ae-a7de-4d282991806b",
+    "name" : "Delete workspace",
+    "request" : {
+      "urlPath" : "/workspaces/workspaceId",
+      "method" : "DELETE",
+      "queryParameters" : {
+        "workspaceId" : {
+          "equalTo" : "3ahe"
+        }
+      }
+    },
+    "response" : {
+      "status" : 404,
+      "body" : "{\n  \"error\" : \"Entity not found\",\n  \"status\" : 404\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "9f55a876-73d5-45ae-a7de-4d282991806b",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.217493Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "deleteWorkspace",
+          "schema" : {
+            "properties" : {
+              "error" : {
+                "description" : "Error description",
+                "enum" : [ "Entity not found", "Resource not found", "None of the templates is available for the workspace." ],
+                "example" : "Entity not found",
+                "type" : "string"
+              },
+              "status" : {
+                "description" : "HTTP Error code",
+                "example" : 404,
+                "type" : "integer"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 8
+  }, {
+    "id" : "7efe02ec-c365-418f-8b93-f7238d995dde",
+    "name" : "Delete workspace",
+    "request" : {
+      "urlPath" : "/workspaces/workspaceId",
+      "method" : "DELETE",
+      "queryParameters" : {
+        "workspaceId" : {
+          "equalTo" : "c3m5"
+        }
+      }
+    },
+    "response" : {
+      "status" : 403,
+      "body" : "{\n  \"error\" : \"Access not granted\",\n  \"status\" : 403\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "7efe02ec-c365-418f-8b93-f7238d995dde",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.217368Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "deleteWorkspace",
+          "schema" : {
+            "properties" : {
+              "error" : {
+                "description" : "Error description",
+                "enum" : [ "Your account has exceeded the monthly document generation limit." ],
+                "example" : "Access not granted",
+                "type" : "string"
+              },
+              "status" : {
+                "description" : "HTTP Error code",
+                "example" : 403,
+                "type" : "integer"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 9
+  }, {
+    "id" : "db108765-7ba6-444f-b741-c9b2283bf483",
+    "name" : "Delete workspace",
+    "request" : {
+      "urlPath" : "/workspaces/workspaceId",
+      "method" : "DELETE",
+      "queryParameters" : {
+        "workspaceId" : {
+          "equalTo" : "8a48"
+        }
+      }
+    },
+    "response" : {
+      "status" : 401,
+      "body" : "{\n  \"error\" : \"Authentication failed\",\n  \"status\" : 401\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "db108765-7ba6-444f-b741-c9b2283bf483",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.217239Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "deleteWorkspace",
+          "schema" : {
+            "properties" : {
+              "error" : {
+                "description" : "Error description",
+                "enum" : [ "Authentication failed: request expired", "Authentication failed: signature or secret missing", "Authentication failed: workspace missing", "Authentication failed: key missing", "Authentication failed: property 'iss' (issuer) missing in JWT", "Authentication failed: property 'sub' (subject) missing in JWT", "Authentication failed: property 'exp' (expiration time) missing in JWT", "Authentication failed: invalid 'iss' (issuer)", "Authentication failed: incorrect signature", "Authentication failed" ],
+                "example" : "Authentication failed",
+                "type" : "string"
+              },
+              "status" : {
+                "description" : "HTTP Error code",
+                "example" : 401,
+                "type" : "integer"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 10
+  }, {
+    "id" : "a51d18c4-674f-49b5-a19d-5bf933c0328c",
+    "name" : "Delete workspace",
+    "request" : {
+      "urlPath" : "/workspaces/workspaceId",
+      "method" : "DELETE",
+      "queryParameters" : {
+        "workspaceId" : {
+          "equalTo" : "9uj1"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"response\" : {\n    \"success\" : true\n  }\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "a51d18c4-674f-49b5-a19d-5bf933c0328c",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.217106Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "deleteWorkspace",
+          "schema" : {
+            "properties" : {
+              "response" : {
+                "properties" : {
+                  "success" : {
+                    "example" : true,
+                    "type" : "boolean"
+                  }
+                },
+                "type" : "object"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 11
+  }, {
+    "id" : "6ab7f78e-891e-4fb3-bc92-11fa27d6dab7",
+    "name" : "Generate document",
+    "request" : {
+      "urlPath" : "/templates/templateId/output",
+      "method" : "POST",
+      "queryParameters" : {
+        "templateId" : {
+          "equalTo" : "2414380846733673700"
+        }
+      }
+    },
+    "response" : {
+      "status" : 500,
+      "body" : "{\n  \"error\" : \"Internal error\",\n  \"status\" : 500\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "6ab7f78e-891e-4fb3-bc92-11fa27d6dab7",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.216936Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "mergeTemplate",
+          "schema" : {
+            "properties" : {
+              "error" : {
+                "description" : "Error description",
+                "example" : "Internal error",
+                "type" : "string"
+              },
+              "status" : {
+                "description" : "HTTP Error code",
+                "example" : 500,
+                "type" : "integer"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 12
+  }, {
+    "id" : "cf041085-23e0-472c-bf09-31e3708a59c5",
+    "name" : "Generate document",
+    "request" : {
+      "urlPath" : "/templates/templateId/output",
+      "method" : "POST",
+      "queryParameters" : {
+        "templateId" : {
+          "equalTo" : "4613243346653449204"
+        }
+      }
+    },
+    "response" : {
+      "status" : 422,
+      "body" : "{\n  \"error\" : \"Incorrect parameter value\",\n  \"status\" : 422\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "cf041085-23e0-472c-bf09-31e3708a59c5",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.216881Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "mergeTemplate",
+          "schema" : {
+            "properties" : {
+              "error" : {
+                "description" : "Error description",
+                "enum" : [ "Unable to parse JSON, please check formatting", "Required parameter missing", "Required parameter missing: template definition not defined", "Required parameter missing: template not defined" ],
+                "example" : "Incorrect parameter value",
+                "type" : "string"
+              },
+              "status" : {
+                "description" : "HTTP Error code",
+                "example" : 422,
+                "type" : "integer"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 13
+  }, {
+    "id" : "6d7cab1c-2941-4f93-8944-9fd78fceb8f8",
+    "name" : "Generate document",
+    "request" : {
+      "urlPath" : "/templates/templateId/output",
+      "method" : "POST",
+      "queryParameters" : {
+        "templateId" : {
+          "equalTo" : "702746837752985828"
+        }
+      }
+    },
+    "response" : {
+      "status" : 404,
+      "body" : "{\n  \"error\" : \"Entity not found\",\n  \"status\" : 404\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "6d7cab1c-2941-4f93-8944-9fd78fceb8f8",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.216822Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "mergeTemplate",
+          "schema" : {
+            "properties" : {
+              "error" : {
+                "description" : "Error description",
+                "enum" : [ "Entity not found", "Resource not found", "None of the templates is available for the workspace." ],
+                "example" : "Entity not found",
+                "type" : "string"
+              },
+              "status" : {
+                "description" : "HTTP Error code",
+                "example" : 404,
+                "type" : "integer"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 14
+  }, {
+    "id" : "2afa367b-7a22-40b6-b250-61225f363bd4",
+    "name" : "Generate document",
+    "request" : {
+      "urlPath" : "/templates/templateId/output",
+      "method" : "POST",
+      "queryParameters" : {
+        "templateId" : {
+          "equalTo" : "487085919499097192"
+        }
+      }
+    },
+    "response" : {
+      "status" : 403,
+      "body" : "{\n  \"error\" : \"Access not granted\",\n  \"status\" : 403\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "2afa367b-7a22-40b6-b250-61225f363bd4",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.216766Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "mergeTemplate",
+          "schema" : {
+            "properties" : {
+              "error" : {
+                "description" : "Error description",
+                "enum" : [ "Your account has exceeded the monthly document generation limit." ],
+                "example" : "Access not granted",
+                "type" : "string"
+              },
+              "status" : {
+                "description" : "HTTP Error code",
+                "example" : 403,
+                "type" : "integer"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 15
+  }, {
+    "id" : "2c0a1272-33dc-4e9c-aead-14ea2f588f44",
+    "name" : "Generate document",
+    "request" : {
+      "urlPath" : "/templates/templateId/output",
+      "method" : "POST",
+      "queryParameters" : {
+        "templateId" : {
+          "equalTo" : "5412709234379469962"
+        }
+      }
+    },
+    "response" : {
+      "status" : 401,
+      "body" : "{\n  \"error\" : \"Authentication failed\",\n  \"status\" : 401\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "2c0a1272-33dc-4e9c-aead-14ea2f588f44",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.216709Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "mergeTemplate",
+          "schema" : {
+            "properties" : {
+              "error" : {
+                "description" : "Error description",
+                "enum" : [ "Authentication failed: request expired", "Authentication failed: signature or secret missing", "Authentication failed: workspace missing", "Authentication failed: key missing", "Authentication failed: property 'iss' (issuer) missing in JWT", "Authentication failed: property 'sub' (subject) missing in JWT", "Authentication failed: property 'exp' (expiration time) missing in JWT", "Authentication failed: invalid 'iss' (issuer)", "Authentication failed: incorrect signature", "Authentication failed" ],
+                "example" : "Authentication failed",
+                "type" : "string"
+              },
+              "status" : {
+                "description" : "HTTP Error code",
+                "example" : 401,
+                "type" : "integer"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 16
+  }, {
+    "id" : "cbd9a40c-62d5-4676-8d38-526f667165a4",
+    "name" : "Generate document",
+    "request" : {
+      "urlPath" : "/templates/templateId/output",
+      "method" : "POST",
+      "queryParameters" : {
+        "templateId" : {
+          "equalTo" : "3857923919749967014"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"meta\" : {\n    \"name\" : \"a2bd25b8921f3dc7a440fd7f427f90a4.pdf\",\n    \"content-type\" : \"application/pdf\",\n    \"display_name\" : \"a2bd25b8921f3dc7a440fd7f427f90a4\",\n    \"encoding\" : \"base64\"\n  },\n  \"response\" : \"JVBERi0xLjcKJeLjz9MKNyAwIG9iago8PCAvVHlwZSA...\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "cbd9a40c-62d5-4676-8d38-526f667165a4",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.216645Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "mergeTemplate",
+          "schema" : {
+            "properties" : {
+              "meta" : {
+                "properties" : {
+                  "content-type" : {
+                    "description" : "Document content type.",
+                    "example" : "application/pdf",
+                    "type" : "string"
+                  },
+                  "display_name" : {
+                    "description" : "Document name without the file extension.",
+                    "example" : "a2bd25b8921f3dc7a440fd7f427f90a4",
+                    "type" : "string"
+                  },
+                  "encoding" : {
+                    "description" : "Document encoding",
+                    "example" : "base64",
+                    "type" : "string"
+                  },
+                  "name" : {
+                    "description" : "Document name. This value is automatically generated if name attribute is not defined in request.",
+                    "example" : "a2bd25b8921f3dc7a440fd7f427f90a4.pdf",
+                    "type" : "string"
+                  }
+                },
+                "type" : "object"
+              },
+              "response" : {
+                "description" : "Base64 encoded document if the output=base64 is used or URL to the document when the output=url is used.",
+                "example" : "JVBERi0xLjcKJeLjz9MKNyAwIG9iago8PCAvVHlwZSA...",
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 17
+  }, {
+    "id" : "4b7808e0-b3eb-421c-8144-cffdbd0efb18",
+    "name" : "Open editor",
+    "request" : {
+      "urlPath" : "/templates/templateId/editor",
+      "method" : "POST",
+      "queryParameters" : {
+        "templateId" : {
+          "equalTo" : "5189854180847953719"
+        }
+      }
+    },
+    "response" : {
+      "status" : 500,
+      "body" : "{\n  \"error\" : \"Internal error\",\n  \"status\" : 500\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "4b7808e0-b3eb-421c-8144-cffdbd0efb18",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.216516Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "getEditorUrl",
+          "schema" : {
+            "properties" : {
+              "error" : {
+                "description" : "Error description",
+                "example" : "Internal error",
+                "type" : "string"
+              },
+              "status" : {
+                "description" : "HTTP Error code",
+                "example" : 500,
+                "type" : "integer"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 18
+  }, {
+    "id" : "68a3c98a-2f73-45b1-868f-7020fec637cf",
+    "name" : "Open editor",
+    "request" : {
+      "urlPath" : "/templates/templateId/editor",
+      "method" : "POST",
+      "queryParameters" : {
+        "templateId" : {
+          "equalTo" : "4637140293146843319"
+        }
+      }
+    },
+    "response" : {
+      "status" : 422,
+      "body" : "{\n  \"error\" : \"Incorrect parameter value\",\n  \"status\" : 422\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "68a3c98a-2f73-45b1-868f-7020fec637cf",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.216462Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "getEditorUrl",
+          "schema" : {
+            "properties" : {
+              "error" : {
+                "description" : "Error description",
+                "enum" : [ "Unable to parse JSON, please check formatting", "Required parameter missing", "Required parameter missing: template definition not defined", "Required parameter missing: template not defined" ],
+                "example" : "Incorrect parameter value",
+                "type" : "string"
+              },
+              "status" : {
+                "description" : "HTTP Error code",
+                "example" : 422,
+                "type" : "integer"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 19
+  }, {
+    "id" : "933fa51e-f504-4bb6-b837-2d8459a2877d",
+    "name" : "Open editor",
+    "request" : {
+      "urlPath" : "/templates/templateId/editor",
+      "method" : "POST",
+      "queryParameters" : {
+        "templateId" : {
+          "equalTo" : "3084904690086335325"
+        }
+      }
+    },
+    "response" : {
+      "status" : 404,
+      "body" : "{\n  \"error\" : \"Entity not found\",\n  \"status\" : 404\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "933fa51e-f504-4bb6-b837-2d8459a2877d",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.216404Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "getEditorUrl",
+          "schema" : {
+            "properties" : {
+              "error" : {
+                "description" : "Error description",
+                "enum" : [ "Entity not found", "Resource not found", "None of the templates is available for the workspace." ],
+                "example" : "Entity not found",
+                "type" : "string"
+              },
+              "status" : {
+                "description" : "HTTP Error code",
+                "example" : 404,
+                "type" : "integer"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 20
+  }, {
+    "id" : "8e13fa36-6cdb-4a0a-9caf-c79abc8f35d8",
+    "name" : "Open editor",
+    "request" : {
+      "urlPath" : "/templates/templateId/editor",
+      "method" : "POST",
+      "queryParameters" : {
+        "templateId" : {
+          "equalTo" : "6089334810865708499"
+        }
+      }
+    },
+    "response" : {
+      "status" : 403,
+      "body" : "{\n  \"error\" : \"Access not granted\",\n  \"status\" : 403\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "8e13fa36-6cdb-4a0a-9caf-c79abc8f35d8",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.216345Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "getEditorUrl",
+          "schema" : {
+            "properties" : {
+              "error" : {
+                "description" : "Error description",
+                "enum" : [ "Your account has exceeded the monthly document generation limit." ],
+                "example" : "Access not granted",
+                "type" : "string"
+              },
+              "status" : {
+                "description" : "HTTP Error code",
+                "example" : 403,
+                "type" : "integer"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 21
+  }, {
+    "id" : "b08617d3-c899-4c39-94c5-eabcc0ba5902",
+    "name" : "Open editor",
+    "request" : {
+      "urlPath" : "/templates/templateId/editor",
+      "method" : "POST",
+      "queryParameters" : {
+        "templateId" : {
+          "equalTo" : "4030542513521994305"
+        }
+      }
+    },
+    "response" : {
+      "status" : 401,
+      "body" : "{\n  \"error\" : \"Authentication failed\",\n  \"status\" : 401\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "b08617d3-c899-4c39-94c5-eabcc0ba5902",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.21629Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "getEditorUrl",
+          "schema" : {
+            "properties" : {
+              "error" : {
+                "description" : "Error description",
+                "enum" : [ "Authentication failed: request expired", "Authentication failed: signature or secret missing", "Authentication failed: workspace missing", "Authentication failed: key missing", "Authentication failed: property 'iss' (issuer) missing in JWT", "Authentication failed: property 'sub' (subject) missing in JWT", "Authentication failed: property 'exp' (expiration time) missing in JWT", "Authentication failed: invalid 'iss' (issuer)", "Authentication failed: incorrect signature", "Authentication failed" ],
+                "example" : "Authentication failed",
+                "type" : "string"
+              },
+              "status" : {
+                "description" : "HTTP Error code",
+                "example" : 401,
+                "type" : "integer"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 22
+  }, {
+    "id" : "253cda56-dacc-4b5a-a771-203badc8ac61",
+    "name" : "Open editor",
+    "request" : {
+      "urlPath" : "/templates/templateId/editor",
+      "method" : "POST",
+      "queryParameters" : {
+        "templateId" : {
+          "equalTo" : "4147551206755962638"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"response\" : \"https://us1.pdfgeneratorapi.com/editor/open/2ff98760d39456c4b2cf974fef005ecf\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "253cda56-dacc-4b5a-a771-203badc8ac61",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.216228Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "getEditorUrl",
+          "schema" : {
+            "properties" : {
+              "response" : {
+                "example" : "https://us1.pdfgeneratorapi.com/editor/open/2ff98760d39456c4b2cf974fef005ecf",
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 23
+  }, {
+    "id" : "71c85830-3850-4ec9-bb58-e5aafd3d2f56",
+    "name" : "Copy template",
+    "request" : {
+      "urlPath" : "/templates/templateId/copy",
+      "method" : "POST",
+      "queryParameters" : {
+        "templateId" : {
+          "equalTo" : "5679472920163767249"
+        }
+      }
+    },
+    "response" : {
+      "status" : 500,
+      "body" : "{\n  \"error\" : \"Internal error\",\n  \"status\" : 500\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "71c85830-3850-4ec9-bb58-e5aafd3d2f56",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.21616Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "copyTemplate",
+          "schema" : {
+            "properties" : {
+              "error" : {
+                "description" : "Error description",
+                "example" : "Internal error",
+                "type" : "string"
+              },
+              "status" : {
+                "description" : "HTTP Error code",
+                "example" : 500,
+                "type" : "integer"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 24
+  }, {
+    "id" : "b26bb8e1-9c39-411b-899c-2d46e479d440",
+    "name" : "Copy template",
+    "request" : {
+      "urlPath" : "/templates/templateId/copy",
+      "method" : "POST",
+      "queryParameters" : {
+        "templateId" : {
+          "equalTo" : "3809176640995006899"
+        }
+      }
+    },
+    "response" : {
+      "status" : 422,
+      "body" : "{\n  \"error\" : \"Incorrect parameter value\",\n  \"status\" : 422\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "b26bb8e1-9c39-411b-899c-2d46e479d440",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.216104Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "copyTemplate",
+          "schema" : {
+            "properties" : {
+              "error" : {
+                "description" : "Error description",
+                "enum" : [ "Unable to parse JSON, please check formatting", "Required parameter missing", "Required parameter missing: template definition not defined", "Required parameter missing: template not defined" ],
+                "example" : "Incorrect parameter value",
+                "type" : "string"
+              },
+              "status" : {
+                "description" : "HTTP Error code",
+                "example" : 422,
+                "type" : "integer"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 25
+  }, {
+    "id" : "61e1ab33-43ad-4edc-9404-2c3b7e0b39e4",
+    "name" : "Copy template",
+    "request" : {
+      "urlPath" : "/templates/templateId/copy",
+      "method" : "POST",
+      "queryParameters" : {
+        "templateId" : {
+          "equalTo" : "6114971175322656349"
+        }
+      }
+    },
+    "response" : {
+      "status" : 404,
+      "body" : "{\n  \"error\" : \"Entity not found\",\n  \"status\" : 404\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "61e1ab33-43ad-4edc-9404-2c3b7e0b39e4",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.216044Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "copyTemplate",
+          "schema" : {
+            "properties" : {
+              "error" : {
+                "description" : "Error description",
+                "enum" : [ "Entity not found", "Resource not found", "None of the templates is available for the workspace." ],
+                "example" : "Entity not found",
+                "type" : "string"
+              },
+              "status" : {
+                "description" : "HTTP Error code",
+                "example" : 404,
+                "type" : "integer"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 26
+  }, {
+    "id" : "7fec6ef1-2458-4d99-82a7-b332eb157824",
+    "name" : "Copy template",
+    "request" : {
+      "urlPath" : "/templates/templateId/copy",
+      "method" : "POST",
+      "queryParameters" : {
+        "templateId" : {
+          "equalTo" : "8312489831671785244"
+        }
+      }
+    },
+    "response" : {
+      "status" : 403,
+      "body" : "{\n  \"error\" : \"Access not granted\",\n  \"status\" : 403\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "7fec6ef1-2458-4d99-82a7-b332eb157824",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.215984Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "copyTemplate",
+          "schema" : {
+            "properties" : {
+              "error" : {
+                "description" : "Error description",
+                "enum" : [ "Your account has exceeded the monthly document generation limit." ],
+                "example" : "Access not granted",
+                "type" : "string"
+              },
+              "status" : {
+                "description" : "HTTP Error code",
+                "example" : 403,
+                "type" : "integer"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 27
+  }, {
+    "id" : "b09b4f94-f012-4d0e-b19a-89ffcaef2b78",
+    "name" : "Copy template",
+    "request" : {
+      "urlPath" : "/templates/templateId/copy",
+      "method" : "POST",
+      "queryParameters" : {
+        "templateId" : {
+          "equalTo" : "4465503963463367472"
+        }
+      }
+    },
+    "response" : {
+      "status" : 401,
+      "body" : "{\n  \"error\" : \"Authentication failed\",\n  \"status\" : 401\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "b09b4f94-f012-4d0e-b19a-89ffcaef2b78",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.215924Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "copyTemplate",
+          "schema" : {
+            "properties" : {
+              "error" : {
+                "description" : "Error description",
+                "enum" : [ "Authentication failed: request expired", "Authentication failed: signature or secret missing", "Authentication failed: workspace missing", "Authentication failed: key missing", "Authentication failed: property 'iss' (issuer) missing in JWT", "Authentication failed: property 'sub' (subject) missing in JWT", "Authentication failed: property 'exp' (expiration time) missing in JWT", "Authentication failed: invalid 'iss' (issuer)", "Authentication failed: incorrect signature", "Authentication failed" ],
+                "example" : "Authentication failed",
+                "type" : "string"
+              },
+              "status" : {
+                "description" : "HTTP Error code",
+                "example" : 401,
+                "type" : "integer"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 28
+  }, {
+    "id" : "ecddc684-fcad-46a3-8655-6acf0c694ccf",
+    "name" : "Copy template",
+    "request" : {
+      "urlPath" : "/templates/templateId/copy",
+      "method" : "POST",
+      "queryParameters" : {
+        "templateId" : {
+          "equalTo" : "6762066674719210665"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"response\" : {\n    \"layout\" : {\n      \"margins\" : {\n        \"top\" : 0.5,\n        \"left\" : 0.5,\n        \"bottom\" : 0.5,\n        \"right\" : 0.5\n      },\n      \"orientation\" : \"portrait\",\n      \"unit\" : \"cm\",\n      \"emptyLabels\" : 0,\n      \"rotation\" : 0,\n      \"format\" : \"A4\",\n      \"width\" : 21,\n      \"repeatLayout\" : {\n        \"format\" : \"A4\",\n        \"width\" : 21,\n        \"height\" : 29.7\n      },\n      \"height\" : 29.7\n    },\n    \"editor\" : {\n      \"heightMultiplier\" : 2\n    },\n    \"dataSettings\" : {\n      \"sortBy\" : [ { } ],\n      \"filterBy\" : [ { }, { }, { }, { }, { } ]\n    },\n    \"pages\" : [ {\n      \"margins\" : {\n        \"bottom\" : 0.5,\n        \"right\" : 0.5\n      },\n      \"components\" : [ {\n        \"zindex\" : 102,\n        \"top\" : 4.2,\n        \"left\" : 2.5,\n        \"dataIndex\" : \"line_items\",\n        \"width\" : 3.5,\n        \"cls\" : \"labelComponent\",\n        \"id\" : \"component-12313\",\n        \"value\" : \"${price}\",\n        \"height\" : 1\n      }, {\n        \"zindex\" : 102,\n        \"top\" : 4.2,\n        \"left\" : 2.5,\n        \"dataIndex\" : \"line_items\",\n        \"width\" : 3.5,\n        \"cls\" : \"labelComponent\",\n        \"id\" : \"component-12313\",\n        \"value\" : \"${price}\",\n        \"height\" : 1\n      }, {\n        \"zindex\" : 102,\n        \"top\" : 4.2,\n        \"left\" : 2.5,\n        \"dataIndex\" : \"line_items\",\n        \"width\" : 3.5,\n        \"cls\" : \"labelComponent\",\n        \"id\" : \"component-12313\",\n        \"value\" : \"${price}\",\n        \"height\" : 1\n      } ],\n      \"width\" : 21,\n      \"height\" : 29.7\n    }, {\n      \"margins\" : {\n        \"bottom\" : 0.5,\n        \"right\" : 0.5\n      },\n      \"components\" : [ {\n        \"zindex\" : 102,\n        \"top\" : 4.2,\n        \"left\" : 2.5,\n        \"dataIndex\" : \"line_items\",\n        \"width\" : 3.5,\n        \"cls\" : \"labelComponent\",\n        \"id\" : \"component-12313\",\n        \"value\" : \"${price}\",\n        \"height\" : 1\n      }, {\n        \"zindex\" : 102,\n        \"top\" : 4.2,\n        \"left\" : 2.5,\n        \"dataIndex\" : \"line_items\",\n        \"width\" : 3.5,\n        \"cls\" : \"labelComponent\",\n        \"id\" : \"component-12313\",\n        \"value\" : \"${price}\",\n        \"height\" : 1\n      }, {\n        \"zindex\" : 102,\n        \"top\" : 4.2,\n        \"left\" : 2.5,\n        \"dataIndex\" : \"line_items\",\n        \"width\" : 3.5,\n        \"cls\" : \"labelComponent\",\n        \"id\" : \"component-12313\",\n        \"value\" : \"${price}\",\n        \"height\" : 1\n      }, {\n        \"zindex\" : 102,\n        \"top\" : 4.2,\n        \"left\" : 2.5,\n        \"dataIndex\" : \"line_items\",\n        \"width\" : 3.5,\n        \"cls\" : \"labelComponent\",\n        \"id\" : \"component-12313\",\n        \"value\" : \"${price}\",\n        \"height\" : 1\n      }, {\n        \"zindex\" : 102,\n        \"top\" : 4.2,\n        \"left\" : 2.5,\n        \"dataIndex\" : \"line_items\",\n        \"width\" : 3.5,\n        \"cls\" : \"labelComponent\",\n        \"id\" : \"component-12313\",\n        \"value\" : \"${price}\",\n        \"height\" : 1\n      }, {\n        \"zindex\" : 102,\n        \"top\" : 4.2,\n        \"left\" : 2.5,\n        \"dataIndex\" : \"line_items\",\n        \"width\" : 3.5,\n        \"cls\" : \"labelComponent\",\n        \"id\" : \"component-12313\",\n        \"value\" : \"${price}\",\n        \"height\" : 1\n      }, {\n        \"zindex\" : 102,\n        \"top\" : 4.2,\n        \"left\" : 2.5,\n        \"dataIndex\" : \"line_items\",\n        \"width\" : 3.5,\n        \"cls\" : \"labelComponent\",\n        \"id\" : \"component-12313\",\n        \"value\" : \"${price}\",\n        \"height\" : 1\n      }, {\n        \"zindex\" : 102,\n        \"top\" : 4.2,\n        \"left\" : 2.5,\n        \"dataIndex\" : \"line_items\",\n        \"width\" : 3.5,\n        \"cls\" : \"labelComponent\",\n        \"id\" : \"component-12313\",\n        \"value\" : \"${price}\",\n        \"height\" : 1\n      } ],\n      \"width\" : 21,\n      \"height\" : 29.7\n    }, {\n      \"margins\" : {\n        \"bottom\" : 0.5,\n        \"right\" : 0.5\n      },\n      \"components\" : [ {\n        \"zindex\" : 102,\n        \"top\" : 4.2,\n        \"left\" : 2.5,\n        \"dataIndex\" : \"line_items\",\n        \"width\" : 3.5,\n        \"cls\" : \"labelComponent\",\n        \"id\" : \"component-12313\",\n        \"value\" : \"${price}\",\n        \"height\" : 1\n      }, {\n        \"zindex\" : 102,\n        \"top\" : 4.2,\n        \"left\" : 2.5,\n        \"dataIndex\" : \"line_items\",\n        \"width\" : 3.5,\n        \"cls\" : \"labelComponent\",\n        \"id\" : \"component-12313\",\n        \"value\" : \"${price}\",\n        \"height\" : 1\n      }, {\n        \"zindex\" : 102,\n        \"top\" : 4.2,\n        \"left\" : 2.5,\n        \"dataIndex\" : \"line_items\",\n        \"width\" : 3.5,\n        \"cls\" : \"labelComponent\",\n        \"id\" : \"component-12313\",\n        \"value\" : \"${price}\",\n        \"height\" : 1\n      }, {\n        \"zindex\" : 102,\n        \"top\" : 4.2,\n        \"left\" : 2.5,\n        \"dataIndex\" : \"line_items\",\n        \"width\" : 3.5,\n        \"cls\" : \"labelComponent\",\n        \"id\" : \"component-12313\",\n        \"value\" : \"${price}\",\n        \"height\" : 1\n      }, {\n        \"zindex\" : 102,\n        \"top\" : 4.2,\n        \"left\" : 2.5,\n        \"dataIndex\" : \"line_items\",\n        \"width\" : 3.5,\n        \"cls\" : \"labelComponent\",\n        \"id\" : \"component-12313\",\n        \"value\" : \"${price}\",\n        \"height\" : 1\n      }, {\n        \"zindex\" : 102,\n        \"top\" : 4.2,\n        \"left\" : 2.5,\n        \"dataIndex\" : \"line_items\",\n        \"width\" : 3.5,\n        \"cls\" : \"labelComponent\",\n        \"id\" : \"component-12313\",\n        \"value\" : \"${price}\",\n        \"height\" : 1\n      }, {\n        \"zindex\" : 102,\n        \"top\" : 4.2,\n        \"left\" : 2.5,\n        \"dataIndex\" : \"line_items\",\n        \"width\" : 3.5,\n        \"cls\" : \"labelComponent\",\n        \"id\" : \"component-12313\",\n        \"value\" : \"${price}\",\n        \"height\" : 1\n      }, {\n        \"zindex\" : 102,\n        \"top\" : 4.2,\n        \"left\" : 2.5,\n        \"dataIndex\" : \"line_items\",\n        \"width\" : 3.5,\n        \"cls\" : \"labelComponent\",\n        \"id\" : \"component-12313\",\n        \"value\" : \"${price}\",\n        \"height\" : 1\n      } ],\n      \"width\" : 21,\n      \"height\" : 29.7\n    }, {\n      \"margins\" : {\n        \"bottom\" : 0.5,\n        \"right\" : 0.5\n      },\n      \"components\" : [ {\n        \"zindex\" : 102,\n        \"top\" : 4.2,\n        \"left\" : 2.5,\n        \"dataIndex\" : \"line_items\",\n        \"width\" : 3.5,\n        \"cls\" : \"labelComponent\",\n        \"id\" : \"component-12313\",\n        \"value\" : \"${price}\",\n        \"height\" : 1\n      } ],\n      \"width\" : 21,\n      \"height\" : 29.7\n    } ],\n    \"isDraft\" : true,\n    \"name\" : \"Invoice template\",\n    \"id\" : 24382,\n    \"tags\" : [ \"invoice\", \"orders\" ]\n  }\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "ecddc684-fcad-46a3-8655-6acf0c694ccf",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.21586Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "copyTemplate",
+          "schema" : {
+            "properties" : {
+              "response" : {
+                "$ref" : "#/components/schemas/TemplateDefinition"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 29
+  }, {
+    "id" : "cb05855e-2679-424e-a11c-3cad8e9a809d",
+    "name" : "Update template",
+    "request" : {
+      "urlPath" : "/templates/templateId",
+      "method" : "PUT",
+      "queryParameters" : {
+        "templateId" : {
+          "equalTo" : "1661952488015469425"
+        }
+      }
+    },
+    "response" : {
+      "status" : 500,
+      "body" : "{\n  \"error\" : \"Internal error\",\n  \"status\" : 500\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "cb05855e-2679-424e-a11c-3cad8e9a809d",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.215366Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "updateTemplate",
+          "schema" : {
+            "properties" : {
+              "error" : {
+                "description" : "Error description",
+                "example" : "Internal error",
+                "type" : "string"
+              },
+              "status" : {
+                "description" : "HTTP Error code",
+                "example" : 500,
+                "type" : "integer"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 30
+  }, {
+    "id" : "1dadf0b3-5809-4bc2-8825-a32f23dfd5e9",
+    "name" : "Update template",
+    "request" : {
+      "urlPath" : "/templates/templateId",
+      "method" : "PUT",
+      "queryParameters" : {
+        "templateId" : {
+          "equalTo" : "3436729530269676169"
+        }
+      }
+    },
+    "response" : {
+      "status" : 422,
+      "body" : "{\n  \"error\" : \"Incorrect parameter value\",\n  \"status\" : 422\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "1dadf0b3-5809-4bc2-8825-a32f23dfd5e9",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.21531Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "updateTemplate",
+          "schema" : {
+            "properties" : {
+              "error" : {
+                "description" : "Error description",
+                "enum" : [ "Unable to parse JSON, please check formatting", "Required parameter missing", "Required parameter missing: template definition not defined", "Required parameter missing: template not defined" ],
+                "example" : "Incorrect parameter value",
+                "type" : "string"
+              },
+              "status" : {
+                "description" : "HTTP Error code",
+                "example" : 422,
+                "type" : "integer"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 31
+  }, {
+    "id" : "f9ce42ae-5fbb-4c75-9b2e-e1345970822a",
+    "name" : "Update template",
+    "request" : {
+      "urlPath" : "/templates/templateId",
+      "method" : "PUT",
+      "queryParameters" : {
+        "templateId" : {
+          "equalTo" : "2199393498856040476"
+        }
+      }
+    },
+    "response" : {
+      "status" : 404,
+      "body" : "{\n  \"error\" : \"Entity not found\",\n  \"status\" : 404\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "f9ce42ae-5fbb-4c75-9b2e-e1345970822a",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.21525Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "updateTemplate",
+          "schema" : {
+            "properties" : {
+              "error" : {
+                "description" : "Error description",
+                "enum" : [ "Entity not found", "Resource not found", "None of the templates is available for the workspace." ],
+                "example" : "Entity not found",
+                "type" : "string"
+              },
+              "status" : {
+                "description" : "HTTP Error code",
+                "example" : 404,
+                "type" : "integer"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 32
+  }, {
+    "id" : "057a0b7c-9e19-4383-a400-853e97d5cb81",
+    "name" : "Update template",
+    "request" : {
+      "urlPath" : "/templates/templateId",
+      "method" : "PUT",
+      "queryParameters" : {
+        "templateId" : {
+          "equalTo" : "1553333892664740012"
+        }
+      }
+    },
+    "response" : {
+      "status" : 403,
+      "body" : "{\n  \"error\" : \"Access not granted\",\n  \"status\" : 403\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "057a0b7c-9e19-4383-a400-853e97d5cb81",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.215192Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "updateTemplate",
+          "schema" : {
+            "properties" : {
+              "error" : {
+                "description" : "Error description",
+                "enum" : [ "Your account has exceeded the monthly document generation limit." ],
+                "example" : "Access not granted",
+                "type" : "string"
+              },
+              "status" : {
+                "description" : "HTTP Error code",
+                "example" : 403,
+                "type" : "integer"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 33
+  }, {
+    "id" : "c3d62d89-09e5-427b-ae98-5a314c54c843",
+    "name" : "Update template",
+    "request" : {
+      "urlPath" : "/templates/templateId",
+      "method" : "PUT",
+      "queryParameters" : {
+        "templateId" : {
+          "equalTo" : "292374926303574919"
+        }
+      }
+    },
+    "response" : {
+      "status" : 401,
+      "body" : "{\n  \"error\" : \"Authentication failed\",\n  \"status\" : 401\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "c3d62d89-09e5-427b-ae98-5a314c54c843",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.215134Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "updateTemplate",
+          "schema" : {
+            "properties" : {
+              "error" : {
+                "description" : "Error description",
+                "enum" : [ "Authentication failed: request expired", "Authentication failed: signature or secret missing", "Authentication failed: workspace missing", "Authentication failed: key missing", "Authentication failed: property 'iss' (issuer) missing in JWT", "Authentication failed: property 'sub' (subject) missing in JWT", "Authentication failed: property 'exp' (expiration time) missing in JWT", "Authentication failed: invalid 'iss' (issuer)", "Authentication failed: incorrect signature", "Authentication failed" ],
+                "example" : "Authentication failed",
+                "type" : "string"
+              },
+              "status" : {
+                "description" : "HTTP Error code",
+                "example" : 401,
+                "type" : "integer"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 34
+  }, {
+    "id" : "9ec2c07c-7082-4848-8d20-b664800dc15b",
+    "name" : "Update template",
+    "request" : {
+      "urlPath" : "/templates/templateId",
+      "method" : "PUT",
+      "queryParameters" : {
+        "templateId" : {
+          "equalTo" : "9031790869167485095"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"response\" : {\n    \"layout\" : {\n      \"margins\" : {\n        \"top\" : 0.5,\n        \"left\" : 0.5,\n        \"bottom\" : 0.5,\n        \"right\" : 0.5\n      },\n      \"orientation\" : \"portrait\",\n      \"unit\" : \"cm\",\n      \"emptyLabels\" : 0,\n      \"rotation\" : 0,\n      \"format\" : \"A4\",\n      \"width\" : 21,\n      \"repeatLayout\" : {\n        \"format\" : \"A4\",\n        \"width\" : 21,\n        \"height\" : 29.7\n      },\n      \"height\" : 29.7\n    },\n    \"editor\" : {\n      \"heightMultiplier\" : 2\n    },\n    \"dataSettings\" : {\n      \"sortBy\" : [ { }, { }, { }, { }, { }, { }, { }, { } ],\n      \"filterBy\" : [ { }, { }, { }, { }, { }, { } ]\n    },\n    \"pages\" : [ {\n      \"margins\" : {\n        \"bottom\" : 0.5,\n        \"right\" : 0.5\n      },\n      \"components\" : [ {\n        \"zindex\" : 102,\n        \"top\" : 4.2,\n        \"left\" : 2.5,\n        \"dataIndex\" : \"line_items\",\n        \"width\" : 3.5,\n        \"cls\" : \"labelComponent\",\n        \"id\" : \"component-12313\",\n        \"value\" : \"${price}\",\n        \"height\" : 1\n      }, {\n        \"zindex\" : 102,\n        \"top\" : 4.2,\n        \"left\" : 2.5,\n        \"dataIndex\" : \"line_items\",\n        \"width\" : 3.5,\n        \"cls\" : \"labelComponent\",\n        \"id\" : \"component-12313\",\n        \"value\" : \"${price}\",\n        \"height\" : 1\n      }, {\n        \"zindex\" : 102,\n        \"top\" : 4.2,\n        \"left\" : 2.5,\n        \"dataIndex\" : \"line_items\",\n        \"width\" : 3.5,\n        \"cls\" : \"labelComponent\",\n        \"id\" : \"component-12313\",\n        \"value\" : \"${price}\",\n        \"height\" : 1\n      }, {\n        \"zindex\" : 102,\n        \"top\" : 4.2,\n        \"left\" : 2.5,\n        \"dataIndex\" : \"line_items\",\n        \"width\" : 3.5,\n        \"cls\" : \"labelComponent\",\n        \"id\" : \"component-12313\",\n        \"value\" : \"${price}\",\n        \"height\" : 1\n      }, {\n        \"zindex\" : 102,\n        \"top\" : 4.2,\n        \"left\" : 2.5,\n        \"dataIndex\" : \"line_items\",\n        \"width\" : 3.5,\n        \"cls\" : \"labelComponent\",\n        \"id\" : \"component-12313\",\n        \"value\" : \"${price}\",\n        \"height\" : 1\n      }, {\n        \"zindex\" : 102,\n        \"top\" : 4.2,\n        \"left\" : 2.5,\n        \"dataIndex\" : \"line_items\",\n        \"width\" : 3.5,\n        \"cls\" : \"labelComponent\",\n        \"id\" : \"component-12313\",\n        \"value\" : \"${price}\",\n        \"height\" : 1\n      }, {\n        \"zindex\" : 102,\n        \"top\" : 4.2,\n        \"left\" : 2.5,\n        \"dataIndex\" : \"line_items\",\n        \"width\" : 3.5,\n        \"cls\" : \"labelComponent\",\n        \"id\" : \"component-12313\",\n        \"value\" : \"${price}\",\n        \"height\" : 1\n      } ],\n      \"width\" : 21,\n      \"height\" : 29.7\n    }, {\n      \"margins\" : {\n        \"bottom\" : 0.5,\n        \"right\" : 0.5\n      },\n      \"components\" : [ {\n        \"zindex\" : 102,\n        \"top\" : 4.2,\n        \"left\" : 2.5,\n        \"dataIndex\" : \"line_items\",\n        \"width\" : 3.5,\n        \"cls\" : \"labelComponent\",\n        \"id\" : \"component-12313\",\n        \"value\" : \"${price}\",\n        \"height\" : 1\n      }, {\n        \"zindex\" : 102,\n        \"top\" : 4.2,\n        \"left\" : 2.5,\n        \"dataIndex\" : \"line_items\",\n        \"width\" : 3.5,\n        \"cls\" : \"labelComponent\",\n        \"id\" : \"component-12313\",\n        \"value\" : \"${price}\",\n        \"height\" : 1\n      }, {\n        \"zindex\" : 102,\n        \"top\" : 4.2,\n        \"left\" : 2.5,\n        \"dataIndex\" : \"line_items\",\n        \"width\" : 3.5,\n        \"cls\" : \"labelComponent\",\n        \"id\" : \"component-12313\",\n        \"value\" : \"${price}\",\n        \"height\" : 1\n      }, {\n        \"zindex\" : 102,\n        \"top\" : 4.2,\n        \"left\" : 2.5,\n        \"dataIndex\" : \"line_items\",\n        \"width\" : 3.5,\n        \"cls\" : \"labelComponent\",\n        \"id\" : \"component-12313\",\n        \"value\" : \"${price}\",\n        \"height\" : 1\n      }, {\n        \"zindex\" : 102,\n        \"top\" : 4.2,\n        \"left\" : 2.5,\n        \"dataIndex\" : \"line_items\",\n        \"width\" : 3.5,\n        \"cls\" : \"labelComponent\",\n        \"id\" : \"component-12313\",\n        \"value\" : \"${price}\",\n        \"height\" : 1\n      } ],\n      \"width\" : 21,\n      \"height\" : 29.7\n    } ],\n    \"isDraft\" : true,\n    \"name\" : \"Invoice template\",\n    \"id\" : 24382,\n    \"tags\" : [ \"invoice\", \"orders\" ]\n  }\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "9ec2c07c-7082-4848-8d20-b664800dc15b",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.215072Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "updateTemplate",
+          "schema" : {
+            "properties" : {
+              "response" : {
+                "$ref" : "#/components/schemas/TemplateDefinition"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 35
+  }, {
+    "id" : "c8dde5cc-1838-4795-bac9-a5604c673460",
+    "name" : "Get template",
+    "request" : {
+      "urlPath" : "/templates/templateId",
+      "method" : "GET",
+      "queryParameters" : {
+        "templateId" : {
+          "equalTo" : "5885605851303146796"
+        }
+      }
+    },
+    "response" : {
+      "status" : 500,
+      "body" : "{\n  \"error\" : \"Internal error\",\n  \"status\" : 500\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "c8dde5cc-1838-4795-bac9-a5604c673460",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.214723Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "getTemplate",
+          "schema" : {
+            "properties" : {
+              "error" : {
+                "description" : "Error description",
+                "example" : "Internal error",
+                "type" : "string"
+              },
+              "status" : {
+                "description" : "HTTP Error code",
+                "example" : 500,
+                "type" : "integer"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 36
+  }, {
+    "id" : "886df2b4-cdaa-48a1-9826-d55b7f30e32a",
+    "name" : "Get template",
+    "request" : {
+      "urlPath" : "/templates/templateId",
+      "method" : "GET",
+      "queryParameters" : {
+        "templateId" : {
+          "equalTo" : "3742857340869851153"
+        }
+      }
+    },
+    "response" : {
+      "status" : 422,
+      "body" : "{\n  \"error\" : \"Incorrect parameter value\",\n  \"status\" : 422\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "886df2b4-cdaa-48a1-9826-d55b7f30e32a",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.214666Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "getTemplate",
+          "schema" : {
+            "properties" : {
+              "error" : {
+                "description" : "Error description",
+                "enum" : [ "Unable to parse JSON, please check formatting", "Required parameter missing", "Required parameter missing: template definition not defined", "Required parameter missing: template not defined" ],
+                "example" : "Incorrect parameter value",
+                "type" : "string"
+              },
+              "status" : {
+                "description" : "HTTP Error code",
+                "example" : 422,
+                "type" : "integer"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 37
+  }, {
+    "id" : "a135a876-70cf-4d29-82cb-5aaed7eca415",
+    "name" : "Get template",
+    "request" : {
+      "urlPath" : "/templates/templateId",
+      "method" : "GET",
+      "queryParameters" : {
+        "templateId" : {
+          "equalTo" : "8930438179925727197"
+        }
+      }
+    },
+    "response" : {
+      "status" : 404,
+      "body" : "{\n  \"error\" : \"Entity not found\",\n  \"status\" : 404\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "a135a876-70cf-4d29-82cb-5aaed7eca415",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.214605Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "getTemplate",
+          "schema" : {
+            "properties" : {
+              "error" : {
+                "description" : "Error description",
+                "enum" : [ "Entity not found", "Resource not found", "None of the templates is available for the workspace." ],
+                "example" : "Entity not found",
+                "type" : "string"
+              },
+              "status" : {
+                "description" : "HTTP Error code",
+                "example" : 404,
+                "type" : "integer"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 38
+  }, {
+    "id" : "0b9c11b8-af67-494c-8064-a827506bebe3",
+    "name" : "Get template",
+    "request" : {
+      "urlPath" : "/templates/templateId",
+      "method" : "GET",
+      "queryParameters" : {
+        "templateId" : {
+          "equalTo" : "7093227509477773429"
+        }
+      }
+    },
+    "response" : {
+      "status" : 403,
+      "body" : "{\n  \"error\" : \"Access not granted\",\n  \"status\" : 403\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "0b9c11b8-af67-494c-8064-a827506bebe3",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.214546Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "getTemplate",
+          "schema" : {
+            "properties" : {
+              "error" : {
+                "description" : "Error description",
+                "enum" : [ "Your account has exceeded the monthly document generation limit." ],
+                "example" : "Access not granted",
+                "type" : "string"
+              },
+              "status" : {
+                "description" : "HTTP Error code",
+                "example" : 403,
+                "type" : "integer"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 39
+  }, {
+    "id" : "b661a32f-f552-4cef-ba27-2c505b1a2dd8",
+    "name" : "Get template",
+    "request" : {
+      "urlPath" : "/templates/templateId",
+      "method" : "GET",
+      "queryParameters" : {
+        "templateId" : {
+          "equalTo" : "2955535921220783311"
+        }
+      }
+    },
+    "response" : {
+      "status" : 401,
+      "body" : "{\n  \"error\" : \"Authentication failed\",\n  \"status\" : 401\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "b661a32f-f552-4cef-ba27-2c505b1a2dd8",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.214487Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "getTemplate",
+          "schema" : {
+            "properties" : {
+              "error" : {
+                "description" : "Error description",
+                "enum" : [ "Authentication failed: request expired", "Authentication failed: signature or secret missing", "Authentication failed: workspace missing", "Authentication failed: key missing", "Authentication failed: property 'iss' (issuer) missing in JWT", "Authentication failed: property 'sub' (subject) missing in JWT", "Authentication failed: property 'exp' (expiration time) missing in JWT", "Authentication failed: invalid 'iss' (issuer)", "Authentication failed: incorrect signature", "Authentication failed" ],
+                "example" : "Authentication failed",
+                "type" : "string"
+              },
+              "status" : {
+                "description" : "HTTP Error code",
+                "example" : 401,
+                "type" : "integer"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 40
+  }, {
+    "id" : "38c82fc4-3008-41d1-ba31-51e0f1b84a01",
+    "name" : "Get template",
+    "request" : {
+      "urlPath" : "/templates/templateId",
+      "method" : "GET",
+      "queryParameters" : {
+        "templateId" : {
+          "equalTo" : "4964391687114806327"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"response\" : {\n    \"layout\" : {\n      \"margins\" : {\n        \"top\" : 0.5,\n        \"left\" : 0.5,\n        \"bottom\" : 0.5,\n        \"right\" : 0.5\n      },\n      \"orientation\" : \"portrait\",\n      \"unit\" : \"cm\",\n      \"emptyLabels\" : 0,\n      \"rotation\" : 0,\n      \"format\" : \"A4\",\n      \"width\" : 21,\n      \"repeatLayout\" : {\n        \"format\" : \"A4\",\n        \"width\" : 21,\n        \"height\" : 29.7\n      },\n      \"height\" : 29.7\n    },\n    \"editor\" : {\n      \"heightMultiplier\" : 2\n    },\n    \"dataSettings\" : {\n      \"sortBy\" : [ { } ],\n      \"filterBy\" : [ { }, { }, { }, { }, { }, { }, { } ]\n    },\n    \"pages\" : [ {\n      \"margins\" : {\n        \"bottom\" : 0.5,\n        \"right\" : 0.5\n      },\n      \"components\" : [ {\n        \"zindex\" : 102,\n        \"top\" : 4.2,\n        \"left\" : 2.5,\n        \"dataIndex\" : \"line_items\",\n        \"width\" : 3.5,\n        \"cls\" : \"labelComponent\",\n        \"id\" : \"component-12313\",\n        \"value\" : \"${price}\",\n        \"height\" : 1\n      } ],\n      \"width\" : 21,\n      \"height\" : 29.7\n    }, {\n      \"margins\" : {\n        \"bottom\" : 0.5,\n        \"right\" : 0.5\n      },\n      \"components\" : [ {\n        \"zindex\" : 102,\n        \"top\" : 4.2,\n        \"left\" : 2.5,\n        \"dataIndex\" : \"line_items\",\n        \"width\" : 3.5,\n        \"cls\" : \"labelComponent\",\n        \"id\" : \"component-12313\",\n        \"value\" : \"${price}\",\n        \"height\" : 1\n      }, {\n        \"zindex\" : 102,\n        \"top\" : 4.2,\n        \"left\" : 2.5,\n        \"dataIndex\" : \"line_items\",\n        \"width\" : 3.5,\n        \"cls\" : \"labelComponent\",\n        \"id\" : \"component-12313\",\n        \"value\" : \"${price}\",\n        \"height\" : 1\n      }, {\n        \"zindex\" : 102,\n        \"top\" : 4.2,\n        \"left\" : 2.5,\n        \"dataIndex\" : \"line_items\",\n        \"width\" : 3.5,\n        \"cls\" : \"labelComponent\",\n        \"id\" : \"component-12313\",\n        \"value\" : \"${price}\",\n        \"height\" : 1\n      }, {\n        \"zindex\" : 102,\n        \"top\" : 4.2,\n        \"left\" : 2.5,\n        \"dataIndex\" : \"line_items\",\n        \"width\" : 3.5,\n        \"cls\" : \"labelComponent\",\n        \"id\" : \"component-12313\",\n        \"value\" : \"${price}\",\n        \"height\" : 1\n      }, {\n        \"zindex\" : 102,\n        \"top\" : 4.2,\n        \"left\" : 2.5,\n        \"dataIndex\" : \"line_items\",\n        \"width\" : 3.5,\n        \"cls\" : \"labelComponent\",\n        \"id\" : \"component-12313\",\n        \"value\" : \"${price}\",\n        \"height\" : 1\n      }, {\n        \"zindex\" : 102,\n        \"top\" : 4.2,\n        \"left\" : 2.5,\n        \"dataIndex\" : \"line_items\",\n        \"width\" : 3.5,\n        \"cls\" : \"labelComponent\",\n        \"id\" : \"component-12313\",\n        \"value\" : \"${price}\",\n        \"height\" : 1\n      }, {\n        \"zindex\" : 102,\n        \"top\" : 4.2,\n        \"left\" : 2.5,\n        \"dataIndex\" : \"line_items\",\n        \"width\" : 3.5,\n        \"cls\" : \"labelComponent\",\n        \"id\" : \"component-12313\",\n        \"value\" : \"${price}\",\n        \"height\" : 1\n      } ],\n      \"width\" : 21,\n      \"height\" : 29.7\n    }, {\n      \"margins\" : {\n        \"bottom\" : 0.5,\n        \"right\" : 0.5\n      },\n      \"components\" : [ {\n        \"zindex\" : 102,\n        \"top\" : 4.2,\n        \"left\" : 2.5,\n        \"dataIndex\" : \"line_items\",\n        \"width\" : 3.5,\n        \"cls\" : \"labelComponent\",\n        \"id\" : \"component-12313\",\n        \"value\" : \"${price}\",\n        \"height\" : 1\n      }, {\n        \"zindex\" : 102,\n        \"top\" : 4.2,\n        \"left\" : 2.5,\n        \"dataIndex\" : \"line_items\",\n        \"width\" : 3.5,\n        \"cls\" : \"labelComponent\",\n        \"id\" : \"component-12313\",\n        \"value\" : \"${price}\",\n        \"height\" : 1\n      }, {\n        \"zindex\" : 102,\n        \"top\" : 4.2,\n        \"left\" : 2.5,\n        \"dataIndex\" : \"line_items\",\n        \"width\" : 3.5,\n        \"cls\" : \"labelComponent\",\n        \"id\" : \"component-12313\",\n        \"value\" : \"${price}\",\n        \"height\" : 1\n      }, {\n        \"zindex\" : 102,\n        \"top\" : 4.2,\n        \"left\" : 2.5,\n        \"dataIndex\" : \"line_items\",\n        \"width\" : 3.5,\n        \"cls\" : \"labelComponent\",\n        \"id\" : \"component-12313\",\n        \"value\" : \"${price}\",\n        \"height\" : 1\n      } ],\n      \"width\" : 21,\n      \"height\" : 29.7\n    } ],\n    \"isDraft\" : true,\n    \"name\" : \"Invoice template\",\n    \"id\" : 24382,\n    \"tags\" : [ \"invoice\", \"orders\" ]\n  }\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "38c82fc4-3008-41d1-ba31-51e0f1b84a01",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.214423Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "getTemplate",
+          "schema" : {
+            "properties" : {
+              "response" : {
+                "$ref" : "#/components/schemas/TemplateDefinition"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 41
+  }, {
+    "id" : "bce98e91-83cd-45dc-a2b7-c3f15e1b6aed",
+    "name" : "Delete template",
+    "request" : {
+      "urlPath" : "/templates/templateId",
+      "method" : "DELETE",
+      "queryParameters" : {
+        "templateId" : {
+          "equalTo" : "6520096818560147821"
+        }
+      }
+    },
+    "response" : {
+      "status" : 500,
+      "body" : "{\n  \"error\" : \"Internal error\",\n  \"status\" : 500\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "bce98e91-83cd-45dc-a2b7-c3f15e1b6aed",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.214024Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "deleteTemplate",
+          "schema" : {
+            "properties" : {
+              "error" : {
+                "description" : "Error description",
+                "example" : "Internal error",
+                "type" : "string"
+              },
+              "status" : {
+                "description" : "HTTP Error code",
+                "example" : 500,
+                "type" : "integer"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 42
+  }, {
+    "id" : "dc75b90f-05b4-49df-8d34-151b8815f76a",
+    "name" : "Delete template",
+    "request" : {
+      "urlPath" : "/templates/templateId",
+      "method" : "DELETE",
+      "queryParameters" : {
+        "templateId" : {
+          "equalTo" : "4065890896148824289"
+        }
+      }
+    },
+    "response" : {
+      "status" : 422,
+      "body" : "{\n  \"error\" : \"Incorrect parameter value\",\n  \"status\" : 422\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "dc75b90f-05b4-49df-8d34-151b8815f76a",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.213967Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "deleteTemplate",
+          "schema" : {
+            "properties" : {
+              "error" : {
+                "description" : "Error description",
+                "enum" : [ "Unable to parse JSON, please check formatting", "Required parameter missing", "Required parameter missing: template definition not defined", "Required parameter missing: template not defined" ],
+                "example" : "Incorrect parameter value",
+                "type" : "string"
+              },
+              "status" : {
+                "description" : "HTTP Error code",
+                "example" : 422,
+                "type" : "integer"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 43
+  }, {
+    "id" : "e8c2fc2f-852d-419f-87ed-0f1dffe5cd92",
+    "name" : "Delete template",
+    "request" : {
+      "urlPath" : "/templates/templateId",
+      "method" : "DELETE",
+      "queryParameters" : {
+        "templateId" : {
+          "equalTo" : "7545237470633867749"
+        }
+      }
+    },
+    "response" : {
+      "status" : 404,
+      "body" : "{\n  \"error\" : \"Entity not found\",\n  \"status\" : 404\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "e8c2fc2f-852d-419f-87ed-0f1dffe5cd92",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.213908Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "deleteTemplate",
+          "schema" : {
+            "properties" : {
+              "error" : {
+                "description" : "Error description",
+                "enum" : [ "Entity not found", "Resource not found", "None of the templates is available for the workspace." ],
+                "example" : "Entity not found",
+                "type" : "string"
+              },
+              "status" : {
+                "description" : "HTTP Error code",
+                "example" : 404,
+                "type" : "integer"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 44
+  }, {
+    "id" : "5cddba96-4f9c-4df1-a97e-2c186612bb34",
+    "name" : "Delete template",
+    "request" : {
+      "urlPath" : "/templates/templateId",
+      "method" : "DELETE",
+      "queryParameters" : {
+        "templateId" : {
+          "equalTo" : "4341378092184516991"
+        }
+      }
+    },
+    "response" : {
+      "status" : 403,
+      "body" : "{\n  \"error\" : \"Access not granted\",\n  \"status\" : 403\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "5cddba96-4f9c-4df1-a97e-2c186612bb34",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.213851Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "deleteTemplate",
+          "schema" : {
+            "properties" : {
+              "error" : {
+                "description" : "Error description",
+                "enum" : [ "Your account has exceeded the monthly document generation limit." ],
+                "example" : "Access not granted",
+                "type" : "string"
+              },
+              "status" : {
+                "description" : "HTTP Error code",
+                "example" : 403,
+                "type" : "integer"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 45
+  }, {
+    "id" : "aabad7fc-83c4-4f65-8c5e-345fbae415eb",
+    "name" : "Delete template",
+    "request" : {
+      "urlPath" : "/templates/templateId",
+      "method" : "DELETE",
+      "queryParameters" : {
+        "templateId" : {
+          "equalTo" : "194437978580640364"
+        }
+      }
+    },
+    "response" : {
+      "status" : 401,
+      "body" : "{\n  \"error\" : \"Authentication failed\",\n  \"status\" : 401\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "aabad7fc-83c4-4f65-8c5e-345fbae415eb",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.213793Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "deleteTemplate",
+          "schema" : {
+            "properties" : {
+              "error" : {
+                "description" : "Error description",
+                "enum" : [ "Authentication failed: request expired", "Authentication failed: signature or secret missing", "Authentication failed: workspace missing", "Authentication failed: key missing", "Authentication failed: property 'iss' (issuer) missing in JWT", "Authentication failed: property 'sub' (subject) missing in JWT", "Authentication failed: property 'exp' (expiration time) missing in JWT", "Authentication failed: invalid 'iss' (issuer)", "Authentication failed: incorrect signature", "Authentication failed" ],
+                "example" : "Authentication failed",
+                "type" : "string"
+              },
+              "status" : {
+                "description" : "HTTP Error code",
+                "example" : 401,
+                "type" : "integer"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 46
+  }, {
+    "id" : "47713d3b-c714-49c7-aa03-15ab0fee3f4d",
+    "name" : "Delete template",
+    "request" : {
+      "urlPath" : "/templates/templateId",
+      "method" : "DELETE",
+      "queryParameters" : {
+        "templateId" : {
+          "equalTo" : "7115924917797065796"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"response\" : {\n    \"success\" : true\n  }\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "47713d3b-c714-49c7-aa03-15ab0fee3f4d",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.213731Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "deleteTemplate",
+          "schema" : {
+            "properties" : {
+              "response" : {
+                "properties" : {
+                  "success" : {
+                    "example" : true,
+                    "type" : "boolean"
+                  }
+                },
+                "type" : "object"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 47
+  }, {
+    "id" : "6108038f-f33c-476e-ade3-40f434f9469f",
+    "name" : "Generate document (multiple templates)",
+    "request" : {
+      "urlPath" : "/templates/output",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 500,
+      "body" : "{\n  \"error\" : \"Internal error\",\n  \"status\" : 500\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "6108038f-f33c-476e-ade3-40f434f9469f",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.213646Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "mergeTemplates",
+          "schema" : {
+            "properties" : {
+              "error" : {
+                "description" : "Error description",
+                "example" : "Internal error",
+                "type" : "string"
+              },
+              "status" : {
+                "description" : "HTTP Error code",
+                "example" : 500,
+                "type" : "integer"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 48
+  }, {
+    "id" : "20127124-aa71-45cf-9a13-762c0d8a8fc7",
+    "name" : "Generate document (multiple templates)",
+    "request" : {
+      "urlPath" : "/templates/output",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 422,
+      "body" : "{\n  \"error\" : \"Incorrect parameter value\",\n  \"status\" : 422\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "20127124-aa71-45cf-9a13-762c0d8a8fc7",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.213602Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "mergeTemplates",
+          "schema" : {
+            "properties" : {
+              "error" : {
+                "description" : "Error description",
+                "enum" : [ "Unable to parse JSON, please check formatting", "Required parameter missing", "Required parameter missing: template definition not defined", "Required parameter missing: template not defined" ],
+                "example" : "Incorrect parameter value",
+                "type" : "string"
+              },
+              "status" : {
+                "description" : "HTTP Error code",
+                "example" : 422,
+                "type" : "integer"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 49
+  }, {
+    "id" : "113d426d-41bf-4f8d-aeba-42d83f252624",
+    "name" : "Generate document (multiple templates)",
+    "request" : {
+      "urlPath" : "/templates/output",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 404,
+      "body" : "{\n  \"error\" : \"Entity not found\",\n  \"status\" : 404\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "113d426d-41bf-4f8d-aeba-42d83f252624",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.213557Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "mergeTemplates",
+          "schema" : {
+            "properties" : {
+              "error" : {
+                "description" : "Error description",
+                "enum" : [ "Entity not found", "Resource not found", "None of the templates is available for the workspace." ],
+                "example" : "Entity not found",
+                "type" : "string"
+              },
+              "status" : {
+                "description" : "HTTP Error code",
+                "example" : 404,
+                "type" : "integer"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 50
+  }, {
+    "id" : "7358e34b-2993-4e07-94ef-8dd4fce2f4f4",
+    "name" : "Generate document (multiple templates)",
+    "request" : {
+      "urlPath" : "/templates/output",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 403,
+      "body" : "{\n  \"error\" : \"Access not granted\",\n  \"status\" : 403\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "7358e34b-2993-4e07-94ef-8dd4fce2f4f4",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.213511Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "mergeTemplates",
+          "schema" : {
+            "properties" : {
+              "error" : {
+                "description" : "Error description",
+                "enum" : [ "Your account has exceeded the monthly document generation limit." ],
+                "example" : "Access not granted",
+                "type" : "string"
+              },
+              "status" : {
+                "description" : "HTTP Error code",
+                "example" : 403,
+                "type" : "integer"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 51
+  }, {
+    "id" : "d5c6c715-bffa-47f0-a5e4-4fe75608428f",
+    "name" : "Generate document (multiple templates)",
+    "request" : {
+      "urlPath" : "/templates/output",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 401,
+      "body" : "{\n  \"error\" : \"Authentication failed\",\n  \"status\" : 401\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "d5c6c715-bffa-47f0-a5e4-4fe75608428f",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.213465Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "mergeTemplates",
+          "schema" : {
+            "properties" : {
+              "error" : {
+                "description" : "Error description",
+                "enum" : [ "Authentication failed: request expired", "Authentication failed: signature or secret missing", "Authentication failed: workspace missing", "Authentication failed: key missing", "Authentication failed: property 'iss' (issuer) missing in JWT", "Authentication failed: property 'sub' (subject) missing in JWT", "Authentication failed: property 'exp' (expiration time) missing in JWT", "Authentication failed: invalid 'iss' (issuer)", "Authentication failed: incorrect signature", "Authentication failed" ],
+                "example" : "Authentication failed",
+                "type" : "string"
+              },
+              "status" : {
+                "description" : "HTTP Error code",
+                "example" : 401,
+                "type" : "integer"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 52
+  }, {
+    "id" : "6bf4ea10-06bb-45b1-a0e0-739d610ba121",
+    "name" : "Generate document (multiple templates)",
+    "request" : {
+      "urlPath" : "/templates/output",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"meta\" : {\n    \"name\" : \"a2bd25b8921f3dc7a440fd7f427f90a4.pdf\",\n    \"content-type\" : \"application/pdf\",\n    \"display_name\" : \"a2bd25b8921f3dc7a440fd7f427f90a4\",\n    \"encoding\" : \"base64\"\n  },\n  \"response\" : \"JVBERi0xLjcKJeLjz9MKNyAwIG9iago8PCAvVHlwZSA...\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "6bf4ea10-06bb-45b1-a0e0-739d610ba121",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.213412Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "mergeTemplates",
+          "schema" : {
+            "properties" : {
+              "meta" : {
+                "properties" : {
+                  "content-type" : {
+                    "description" : "Document content type.",
+                    "example" : "application/pdf",
+                    "type" : "string"
+                  },
+                  "display_name" : {
+                    "description" : "Document name without the file extension.",
+                    "example" : "a2bd25b8921f3dc7a440fd7f427f90a4",
+                    "type" : "string"
+                  },
+                  "encoding" : {
+                    "description" : "Document encoding",
+                    "example" : "base64",
+                    "type" : "string"
+                  },
+                  "name" : {
+                    "description" : "Document name. This value is automatically generated if name attribute is not defined in request.",
+                    "example" : "a2bd25b8921f3dc7a440fd7f427f90a4.pdf",
+                    "type" : "string"
+                  }
+                },
+                "type" : "object"
+              },
+              "response" : {
+                "description" : "Base64 encoded document if the output=base64 is used or URL to the document when the output=url is used.",
+                "example" : "JVBERi0xLjcKJeLjz9MKNyAwIG9iago8PCAvVHlwZSA...",
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 53
+  }, {
+    "id" : "b87b3394-9b13-44eb-9928-a9a180c93fb5",
+    "name" : "Create template",
+    "request" : {
+      "urlPath" : "/templates",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 500,
+      "body" : "{\n  \"error\" : \"Internal error\",\n  \"status\" : 500\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "b87b3394-9b13-44eb-9928-a9a180c93fb5",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.213279Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "createTemplate",
+          "schema" : {
+            "properties" : {
+              "error" : {
+                "description" : "Error description",
+                "example" : "Internal error",
+                "type" : "string"
+              },
+              "status" : {
+                "description" : "HTTP Error code",
+                "example" : 500,
+                "type" : "integer"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 54
+  }, {
+    "id" : "fb5b86fa-14e3-4323-9ab5-69ddedbac950",
+    "name" : "Create template",
+    "request" : {
+      "urlPath" : "/templates",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 422,
+      "body" : "{\n  \"error\" : \"Incorrect parameter value\",\n  \"status\" : 422\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "fb5b86fa-14e3-4323-9ab5-69ddedbac950",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.213232Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "createTemplate",
+          "schema" : {
+            "properties" : {
+              "error" : {
+                "description" : "Error description",
+                "enum" : [ "Unable to parse JSON, please check formatting", "Required parameter missing", "Required parameter missing: template definition not defined", "Required parameter missing: template not defined" ],
+                "example" : "Incorrect parameter value",
+                "type" : "string"
+              },
+              "status" : {
+                "description" : "HTTP Error code",
+                "example" : 422,
+                "type" : "integer"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 55
+  }, {
+    "id" : "6098f2db-1be1-46f7-97fc-abf87ab92fca",
+    "name" : "Create template",
+    "request" : {
+      "urlPath" : "/templates",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 404,
+      "body" : "{\n  \"error\" : \"Entity not found\",\n  \"status\" : 404\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "6098f2db-1be1-46f7-97fc-abf87ab92fca",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.213183Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "createTemplate",
+          "schema" : {
+            "properties" : {
+              "error" : {
+                "description" : "Error description",
+                "enum" : [ "Entity not found", "Resource not found", "None of the templates is available for the workspace." ],
+                "example" : "Entity not found",
+                "type" : "string"
+              },
+              "status" : {
+                "description" : "HTTP Error code",
+                "example" : 404,
+                "type" : "integer"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 56
+  }, {
+    "id" : "1d0f8f64-e567-4bc9-a6bd-6078614d00e4",
+    "name" : "Create template",
+    "request" : {
+      "urlPath" : "/templates",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 403,
+      "body" : "{\n  \"error\" : \"Access not granted\",\n  \"status\" : 403\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "1d0f8f64-e567-4bc9-a6bd-6078614d00e4",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.213134Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "createTemplate",
+          "schema" : {
+            "properties" : {
+              "error" : {
+                "description" : "Error description",
+                "enum" : [ "Your account has exceeded the monthly document generation limit." ],
+                "example" : "Access not granted",
+                "type" : "string"
+              },
+              "status" : {
+                "description" : "HTTP Error code",
+                "example" : 403,
+                "type" : "integer"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 57
+  }, {
+    "id" : "e3542652-0a84-47f5-8d66-8ef334e15214",
+    "name" : "Create template",
+    "request" : {
+      "urlPath" : "/templates",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 401,
+      "body" : "{\n  \"error\" : \"Authentication failed\",\n  \"status\" : 401\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "e3542652-0a84-47f5-8d66-8ef334e15214",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.213085Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "createTemplate",
+          "schema" : {
+            "properties" : {
+              "error" : {
+                "description" : "Error description",
+                "enum" : [ "Authentication failed: request expired", "Authentication failed: signature or secret missing", "Authentication failed: workspace missing", "Authentication failed: key missing", "Authentication failed: property 'iss' (issuer) missing in JWT", "Authentication failed: property 'sub' (subject) missing in JWT", "Authentication failed: property 'exp' (expiration time) missing in JWT", "Authentication failed: invalid 'iss' (issuer)", "Authentication failed: incorrect signature", "Authentication failed" ],
+                "example" : "Authentication failed",
+                "type" : "string"
+              },
+              "status" : {
+                "description" : "HTTP Error code",
+                "example" : 401,
+                "type" : "integer"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 58
+  }, {
+    "id" : "8ba41410-6298-4c0c-8f7a-f9eb8310512f",
+    "name" : "Create template",
+    "request" : {
+      "urlPath" : "/templates",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"response\" : {\n    \"layout\" : {\n      \"margins\" : {\n        \"top\" : 0.5,\n        \"left\" : 0.5,\n        \"bottom\" : 0.5,\n        \"right\" : 0.5\n      },\n      \"orientation\" : \"portrait\",\n      \"unit\" : \"cm\",\n      \"emptyLabels\" : 0,\n      \"rotation\" : 0,\n      \"format\" : \"A4\",\n      \"width\" : 21,\n      \"repeatLayout\" : {\n        \"format\" : \"A4\",\n        \"width\" : 21,\n        \"height\" : 29.7\n      },\n      \"height\" : 29.7\n    },\n    \"editor\" : {\n      \"heightMultiplier\" : 2\n    },\n    \"dataSettings\" : {\n      \"sortBy\" : [ { }, { }, { } ],\n      \"filterBy\" : [ { }, { }, { }, { }, { }, { }, { } ]\n    },\n    \"pages\" : [ {\n      \"margins\" : {\n        \"bottom\" : 0.5,\n        \"right\" : 0.5\n      },\n      \"components\" : [ {\n        \"zindex\" : 102,\n        \"top\" : 4.2,\n        \"left\" : 2.5,\n        \"dataIndex\" : \"line_items\",\n        \"width\" : 3.5,\n        \"cls\" : \"labelComponent\",\n        \"id\" : \"component-12313\",\n        \"value\" : \"${price}\",\n        \"height\" : 1\n      }, {\n        \"zindex\" : 102,\n        \"top\" : 4.2,\n        \"left\" : 2.5,\n        \"dataIndex\" : \"line_items\",\n        \"width\" : 3.5,\n        \"cls\" : \"labelComponent\",\n        \"id\" : \"component-12313\",\n        \"value\" : \"${price}\",\n        \"height\" : 1\n      }, {\n        \"zindex\" : 102,\n        \"top\" : 4.2,\n        \"left\" : 2.5,\n        \"dataIndex\" : \"line_items\",\n        \"width\" : 3.5,\n        \"cls\" : \"labelComponent\",\n        \"id\" : \"component-12313\",\n        \"value\" : \"${price}\",\n        \"height\" : 1\n      }, {\n        \"zindex\" : 102,\n        \"top\" : 4.2,\n        \"left\" : 2.5,\n        \"dataIndex\" : \"line_items\",\n        \"width\" : 3.5,\n        \"cls\" : \"labelComponent\",\n        \"id\" : \"component-12313\",\n        \"value\" : \"${price}\",\n        \"height\" : 1\n      }, {\n        \"zindex\" : 102,\n        \"top\" : 4.2,\n        \"left\" : 2.5,\n        \"dataIndex\" : \"line_items\",\n        \"width\" : 3.5,\n        \"cls\" : \"labelComponent\",\n        \"id\" : \"component-12313\",\n        \"value\" : \"${price}\",\n        \"height\" : 1\n      } ],\n      \"width\" : 21,\n      \"height\" : 29.7\n    }, {\n      \"margins\" : {\n        \"bottom\" : 0.5,\n        \"right\" : 0.5\n      },\n      \"components\" : [ {\n        \"zindex\" : 102,\n        \"top\" : 4.2,\n        \"left\" : 2.5,\n        \"dataIndex\" : \"line_items\",\n        \"width\" : 3.5,\n        \"cls\" : \"labelComponent\",\n        \"id\" : \"component-12313\",\n        \"value\" : \"${price}\",\n        \"height\" : 1\n      }, {\n        \"zindex\" : 102,\n        \"top\" : 4.2,\n        \"left\" : 2.5,\n        \"dataIndex\" : \"line_items\",\n        \"width\" : 3.5,\n        \"cls\" : \"labelComponent\",\n        \"id\" : \"component-12313\",\n        \"value\" : \"${price}\",\n        \"height\" : 1\n      } ],\n      \"width\" : 21,\n      \"height\" : 29.7\n    }, {\n      \"margins\" : {\n        \"bottom\" : 0.5,\n        \"right\" : 0.5\n      },\n      \"components\" : [ {\n        \"zindex\" : 102,\n        \"top\" : 4.2,\n        \"left\" : 2.5,\n        \"dataIndex\" : \"line_items\",\n        \"width\" : 3.5,\n        \"cls\" : \"labelComponent\",\n        \"id\" : \"component-12313\",\n        \"value\" : \"${price}\",\n        \"height\" : 1\n      }, {\n        \"zindex\" : 102,\n        \"top\" : 4.2,\n        \"left\" : 2.5,\n        \"dataIndex\" : \"line_items\",\n        \"width\" : 3.5,\n        \"cls\" : \"labelComponent\",\n        \"id\" : \"component-12313\",\n        \"value\" : \"${price}\",\n        \"height\" : 1\n      }, {\n        \"zindex\" : 102,\n        \"top\" : 4.2,\n        \"left\" : 2.5,\n        \"dataIndex\" : \"line_items\",\n        \"width\" : 3.5,\n        \"cls\" : \"labelComponent\",\n        \"id\" : \"component-12313\",\n        \"value\" : \"${price}\",\n        \"height\" : 1\n      } ],\n      \"width\" : 21,\n      \"height\" : 29.7\n    }, {\n      \"margins\" : {\n        \"bottom\" : 0.5,\n        \"right\" : 0.5\n      },\n      \"components\" : [ {\n        \"zindex\" : 102,\n        \"top\" : 4.2,\n        \"left\" : 2.5,\n        \"dataIndex\" : \"line_items\",\n        \"width\" : 3.5,\n        \"cls\" : \"labelComponent\",\n        \"id\" : \"component-12313\",\n        \"value\" : \"${price}\",\n        \"height\" : 1\n      }, {\n        \"zindex\" : 102,\n        \"top\" : 4.2,\n        \"left\" : 2.5,\n        \"dataIndex\" : \"line_items\",\n        \"width\" : 3.5,\n        \"cls\" : \"labelComponent\",\n        \"id\" : \"component-12313\",\n        \"value\" : \"${price}\",\n        \"height\" : 1\n      }, {\n        \"zindex\" : 102,\n        \"top\" : 4.2,\n        \"left\" : 2.5,\n        \"dataIndex\" : \"line_items\",\n        \"width\" : 3.5,\n        \"cls\" : \"labelComponent\",\n        \"id\" : \"component-12313\",\n        \"value\" : \"${price}\",\n        \"height\" : 1\n      }, {\n        \"zindex\" : 102,\n        \"top\" : 4.2,\n        \"left\" : 2.5,\n        \"dataIndex\" : \"line_items\",\n        \"width\" : 3.5,\n        \"cls\" : \"labelComponent\",\n        \"id\" : \"component-12313\",\n        \"value\" : \"${price}\",\n        \"height\" : 1\n      } ],\n      \"width\" : 21,\n      \"height\" : 29.7\n    }, {\n      \"margins\" : {\n        \"bottom\" : 0.5,\n        \"right\" : 0.5\n      },\n      \"components\" : [ {\n        \"zindex\" : 102,\n        \"top\" : 4.2,\n        \"left\" : 2.5,\n        \"dataIndex\" : \"line_items\",\n        \"width\" : 3.5,\n        \"cls\" : \"labelComponent\",\n        \"id\" : \"component-12313\",\n        \"value\" : \"${price}\",\n        \"height\" : 1\n      }, {\n        \"zindex\" : 102,\n        \"top\" : 4.2,\n        \"left\" : 2.5,\n        \"dataIndex\" : \"line_items\",\n        \"width\" : 3.5,\n        \"cls\" : \"labelComponent\",\n        \"id\" : \"component-12313\",\n        \"value\" : \"${price}\",\n        \"height\" : 1\n      }, {\n        \"zindex\" : 102,\n        \"top\" : 4.2,\n        \"left\" : 2.5,\n        \"dataIndex\" : \"line_items\",\n        \"width\" : 3.5,\n        \"cls\" : \"labelComponent\",\n        \"id\" : \"component-12313\",\n        \"value\" : \"${price}\",\n        \"height\" : 1\n      }, {\n        \"zindex\" : 102,\n        \"top\" : 4.2,\n        \"left\" : 2.5,\n        \"dataIndex\" : \"line_items\",\n        \"width\" : 3.5,\n        \"cls\" : \"labelComponent\",\n        \"id\" : \"component-12313\",\n        \"value\" : \"${price}\",\n        \"height\" : 1\n      }, {\n        \"zindex\" : 102,\n        \"top\" : 4.2,\n        \"left\" : 2.5,\n        \"dataIndex\" : \"line_items\",\n        \"width\" : 3.5,\n        \"cls\" : \"labelComponent\",\n        \"id\" : \"component-12313\",\n        \"value\" : \"${price}\",\n        \"height\" : 1\n      }, {\n        \"zindex\" : 102,\n        \"top\" : 4.2,\n        \"left\" : 2.5,\n        \"dataIndex\" : \"line_items\",\n        \"width\" : 3.5,\n        \"cls\" : \"labelComponent\",\n        \"id\" : \"component-12313\",\n        \"value\" : \"${price}\",\n        \"height\" : 1\n      }, {\n        \"zindex\" : 102,\n        \"top\" : 4.2,\n        \"left\" : 2.5,\n        \"dataIndex\" : \"line_items\",\n        \"width\" : 3.5,\n        \"cls\" : \"labelComponent\",\n        \"id\" : \"component-12313\",\n        \"value\" : \"${price}\",\n        \"height\" : 1\n      }, {\n        \"zindex\" : 102,\n        \"top\" : 4.2,\n        \"left\" : 2.5,\n        \"dataIndex\" : \"line_items\",\n        \"width\" : 3.5,\n        \"cls\" : \"labelComponent\",\n        \"id\" : \"component-12313\",\n        \"value\" : \"${price}\",\n        \"height\" : 1\n      } ],\n      \"width\" : 21,\n      \"height\" : 29.7\n    }, {\n      \"margins\" : {\n        \"bottom\" : 0.5,\n        \"right\" : 0.5\n      },\n      \"components\" : [ {\n        \"zindex\" : 102,\n        \"top\" : 4.2,\n        \"left\" : 2.5,\n        \"dataIndex\" : \"line_items\",\n        \"width\" : 3.5,\n        \"cls\" : \"labelComponent\",\n        \"id\" : \"component-12313\",\n        \"value\" : \"${price}\",\n        \"height\" : 1\n      } ],\n      \"width\" : 21,\n      \"height\" : 29.7\n    }, {\n      \"margins\" : {\n        \"bottom\" : 0.5,\n        \"right\" : 0.5\n      },\n      \"components\" : [ {\n        \"zindex\" : 102,\n        \"top\" : 4.2,\n        \"left\" : 2.5,\n        \"dataIndex\" : \"line_items\",\n        \"width\" : 3.5,\n        \"cls\" : \"labelComponent\",\n        \"id\" : \"component-12313\",\n        \"value\" : \"${price}\",\n        \"height\" : 1\n      }, {\n        \"zindex\" : 102,\n        \"top\" : 4.2,\n        \"left\" : 2.5,\n        \"dataIndex\" : \"line_items\",\n        \"width\" : 3.5,\n        \"cls\" : \"labelComponent\",\n        \"id\" : \"component-12313\",\n        \"value\" : \"${price}\",\n        \"height\" : 1\n      }, {\n        \"zindex\" : 102,\n        \"top\" : 4.2,\n        \"left\" : 2.5,\n        \"dataIndex\" : \"line_items\",\n        \"width\" : 3.5,\n        \"cls\" : \"labelComponent\",\n        \"id\" : \"component-12313\",\n        \"value\" : \"${price}\",\n        \"height\" : 1\n      }, {\n        \"zindex\" : 102,\n        \"top\" : 4.2,\n        \"left\" : 2.5,\n        \"dataIndex\" : \"line_items\",\n        \"width\" : 3.5,\n        \"cls\" : \"labelComponent\",\n        \"id\" : \"component-12313\",\n        \"value\" : \"${price}\",\n        \"height\" : 1\n      }, {\n        \"zindex\" : 102,\n        \"top\" : 4.2,\n        \"left\" : 2.5,\n        \"dataIndex\" : \"line_items\",\n        \"width\" : 3.5,\n        \"cls\" : \"labelComponent\",\n        \"id\" : \"component-12313\",\n        \"value\" : \"${price}\",\n        \"height\" : 1\n      }, {\n        \"zindex\" : 102,\n        \"top\" : 4.2,\n        \"left\" : 2.5,\n        \"dataIndex\" : \"line_items\",\n        \"width\" : 3.5,\n        \"cls\" : \"labelComponent\",\n        \"id\" : \"component-12313\",\n        \"value\" : \"${price}\",\n        \"height\" : 1\n      }, {\n        \"zindex\" : 102,\n        \"top\" : 4.2,\n        \"left\" : 2.5,\n        \"dataIndex\" : \"line_items\",\n        \"width\" : 3.5,\n        \"cls\" : \"labelComponent\",\n        \"id\" : \"component-12313\",\n        \"value\" : \"${price}\",\n        \"height\" : 1\n      } ],\n      \"width\" : 21,\n      \"height\" : 29.7\n    } ],\n    \"isDraft\" : true,\n    \"name\" : \"Invoice template\",\n    \"id\" : 24382,\n    \"tags\" : [ \"invoice\", \"orders\" ]\n  }\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "8ba41410-6298-4c0c-8f7a-f9eb8310512f",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.213028Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "createTemplate",
+          "schema" : {
+            "properties" : {
+              "response" : {
+                "$ref" : "#/components/schemas/TemplateDefinition"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 59
+  }, {
+    "id" : "c73d75b6-b4c7-45b6-b85f-4f7a7aea70bf",
+    "name" : "Get templates",
+    "request" : {
+      "urlPath" : "/templates",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 500,
+      "body" : "{\n  \"error\" : \"Internal error\",\n  \"status\" : 500\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "c73d75b6-b4c7-45b6-b85f-4f7a7aea70bf",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.212231Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "getTemplates",
+          "schema" : {
+            "properties" : {
+              "error" : {
+                "description" : "Error description",
+                "example" : "Internal error",
+                "type" : "string"
+              },
+              "status" : {
+                "description" : "HTTP Error code",
+                "example" : 500,
+                "type" : "integer"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 60
+  }, {
+    "id" : "45ea9960-148b-4476-90ce-7067efa05193",
+    "name" : "Get templates",
+    "request" : {
+      "urlPath" : "/templates",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 422,
+      "body" : "{\n  \"error\" : \"Incorrect parameter value\",\n  \"status\" : 422\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "45ea9960-148b-4476-90ce-7067efa05193",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.212173Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "getTemplates",
+          "schema" : {
+            "properties" : {
+              "error" : {
+                "description" : "Error description",
+                "enum" : [ "Unable to parse JSON, please check formatting", "Required parameter missing", "Required parameter missing: template definition not defined", "Required parameter missing: template not defined" ],
+                "example" : "Incorrect parameter value",
+                "type" : "string"
+              },
+              "status" : {
+                "description" : "HTTP Error code",
+                "example" : 422,
+                "type" : "integer"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 61
+  }, {
+    "id" : "6d066eeb-7a49-4f17-b2dc-eec17bc46495",
+    "name" : "Get templates",
+    "request" : {
+      "urlPath" : "/templates",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 404,
+      "body" : "{\n  \"error\" : \"Entity not found\",\n  \"status\" : 404\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "6d066eeb-7a49-4f17-b2dc-eec17bc46495",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.212111Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "getTemplates",
+          "schema" : {
+            "properties" : {
+              "error" : {
+                "description" : "Error description",
+                "enum" : [ "Entity not found", "Resource not found", "None of the templates is available for the workspace." ],
+                "example" : "Entity not found",
+                "type" : "string"
+              },
+              "status" : {
+                "description" : "HTTP Error code",
+                "example" : 404,
+                "type" : "integer"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 62
+  }, {
+    "id" : "1dd15c17-2449-4a96-954f-37c0961a69ca",
+    "name" : "Get templates",
+    "request" : {
+      "urlPath" : "/templates",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 403,
+      "body" : "{\n  \"error\" : \"Access not granted\",\n  \"status\" : 403\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "1dd15c17-2449-4a96-954f-37c0961a69ca",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.212045Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "getTemplates",
+          "schema" : {
+            "properties" : {
+              "error" : {
+                "description" : "Error description",
+                "enum" : [ "Your account has exceeded the monthly document generation limit." ],
+                "example" : "Access not granted",
+                "type" : "string"
+              },
+              "status" : {
+                "description" : "HTTP Error code",
+                "example" : 403,
+                "type" : "integer"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 63
+  }, {
+    "id" : "3de626af-3c7b-4f59-8248-61899712e5e1",
+    "name" : "Get templates",
+    "request" : {
+      "urlPath" : "/templates",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 401,
+      "body" : "{\n  \"error\" : \"Authentication failed\",\n  \"status\" : 401\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "3de626af-3c7b-4f59-8248-61899712e5e1",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.211976Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "getTemplates",
+          "schema" : {
+            "properties" : {
+              "error" : {
+                "description" : "Error description",
+                "enum" : [ "Authentication failed: request expired", "Authentication failed: signature or secret missing", "Authentication failed: workspace missing", "Authentication failed: key missing", "Authentication failed: property 'iss' (issuer) missing in JWT", "Authentication failed: property 'sub' (subject) missing in JWT", "Authentication failed: property 'exp' (expiration time) missing in JWT", "Authentication failed: invalid 'iss' (issuer)", "Authentication failed: incorrect signature", "Authentication failed" ],
+                "example" : "Authentication failed",
+                "type" : "string"
+              },
+              "status" : {
+                "description" : "HTTP Error code",
+                "example" : 401,
+                "type" : "integer"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 64
+  }, {
+    "id" : "79c85d3d-e7a7-42cf-a8d7-a9a5e1352838",
+    "name" : "Get templates",
+    "request" : {
+      "urlPath" : "/templates",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"response\" : [ {\n    \"owner\" : true,\n    \"name\" : \"Invoice template\",\n    \"modified\" : \"2017-10-21 11:49:28\",\n    \"id\" : 24382,\n    \"tags\" : [ \"invoice\", \"orders\" ]\n  }, {\n    \"owner\" : true,\n    \"name\" : \"Invoice template\",\n    \"modified\" : \"2017-10-21 11:49:28\",\n    \"id\" : 24382,\n    \"tags\" : [ \"invoice\", \"orders\" ]\n  }, {\n    \"owner\" : true,\n    \"name\" : \"Invoice template\",\n    \"modified\" : \"2017-10-21 11:49:28\",\n    \"id\" : 24382,\n    \"tags\" : [ \"invoice\", \"orders\" ]\n  }, {\n    \"owner\" : true,\n    \"name\" : \"Invoice template\",\n    \"modified\" : \"2017-10-21 11:49:28\",\n    \"id\" : 24382,\n    \"tags\" : [ \"invoice\", \"orders\" ]\n  }, {\n    \"owner\" : true,\n    \"name\" : \"Invoice template\",\n    \"modified\" : \"2017-10-21 11:49:28\",\n    \"id\" : 24382,\n    \"tags\" : [ \"invoice\", \"orders\" ]\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "79c85d3d-e7a7-42cf-a8d7-a9a5e1352838",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:57.211881Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "getTemplates",
+          "schema" : {
+            "properties" : {
+              "response" : {
+                "items" : {
+                  "$ref" : "#/components/schemas/Template"
+                },
+                "type" : "array"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 65
+  } ]
+}
