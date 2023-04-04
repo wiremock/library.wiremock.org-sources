@@ -1,0 +1,317 @@
+{
+  "mappings" : [ {
+    "id" : "05cb8dbf-0ff9-42b2-85a7-6e016b8e9572",
+    "name" : "Scrape search results from Internet Archive, allowing a scrolling cursor (application/json)",
+    "request" : {
+      "urlPath" : "/search/v1/scrape",
+      "method" : "GET",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/json"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"cursor\" : \"y9jnvdeu5byduzjapoc0wezspnc0tvdtf06fyhgolrra0jb00jj37rekvkgapjrm2pjfuz0nhm0hv5tl0mo11j4nelq7xoag3rknb4gbob0t569sscyyy49tfzu817tacach163\",\n  \"total\" : 7229272295677515414,\n  \"previous\" : \"cuzea9jk2lue2pg65nruzopgksjcvex7t9z5zp65lxl6xb7q0zy3ou9uc9v7kxhcceuhc9dlbxv1yx0xknu1b5wtcpd7tg8n2bv9idp0v11jwgj8gt9mth3kq6o5m0rvpq3qxcrynluxw0nrcoa9648dpqoce4ap2ltmdyte7hj\",\n  \"count\" : 7756,\n  \"items\" : [ { }, { } ]\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "05cb8dbf-0ff9-42b2-85a7-6e016b8e9572",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:18.533067Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "(none)",
+          "schema" : {
+            "description" : "The result of a scrape request",
+            "properties" : {
+              "count" : {
+                "description" : "Number of results returned",
+                "maximum" : 10000,
+                "minimum" : 0,
+                "type" : "integer"
+              },
+              "cursor" : {
+                "$ref" : "#/components/schemas/Cursor"
+              },
+              "items" : {
+                "items" : {
+                  "$ref" : "#/components/schemas/Hit"
+                },
+                "type" : "array"
+              },
+              "previous" : {
+                "$ref" : "#/components/schemas/Cursor"
+              },
+              "total" : {
+                "description" : "Total number of results from this cursor point",
+                "minimum" : 0,
+                "type" : "integer"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 0
+  }, {
+    "id" : "cba6bcac-ed14-4fa0-a993-a24db4b276ef",
+    "name" : "Scrape search results from Internet Archive, allowing a scrolling cursor (application/javascript)",
+    "request" : {
+      "urlPath" : "/search/v1/scrape",
+      "method" : "GET",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/javascript"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"cursor\" : \"82o6heiajm3nkcqz3xybq0nway9p23199ptyy29wpcn88kfpkrqkj9hw00j8uirywz3ulhvcw36bwlstbagsd4xzcppzaap235wu6gmw3agbzjvz33nymkzxjvnmkm\",\n  \"total\" : 7801108733693874908,\n  \"previous\" : \"6iiteg5eazn10onyvmj9gw7eg5b1oc7u8y5siqqb6jefnpy0x9wsyfe0pzho6c527myezups4chex95oyzqu9qn7tgp98tqwnu6cbgoaxi7et8cp7iliepwqb02pwv84tx4is9t3z800gevw370j0o3ugq5cg2dx4gp8r\",\n  \"count\" : 1028,\n  \"items\" : [ { }, { }, { } ]\n}",
+      "headers" : {
+        "Content-Type" : "application/javascript"
+      }
+    },
+    "uuid" : "cba6bcac-ed14-4fa0-a993-a24db4b276ef",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:18.532963Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "(none)",
+          "schema" : {
+            "description" : "The result of a scrape request",
+            "properties" : {
+              "count" : {
+                "description" : "Number of results returned",
+                "maximum" : 10000,
+                "minimum" : 0,
+                "type" : "integer"
+              },
+              "cursor" : {
+                "$ref" : "#/components/schemas/Cursor"
+              },
+              "items" : {
+                "items" : {
+                  "$ref" : "#/components/schemas/Hit"
+                },
+                "type" : "array"
+              },
+              "previous" : {
+                "$ref" : "#/components/schemas/Cursor"
+              },
+              "total" : {
+                "description" : "Total number of results from this cursor point",
+                "minimum" : 0,
+                "type" : "integer"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 1
+  }, {
+    "id" : "736ef20f-d8ee-4fdb-a722-292ebf137fc9",
+    "name" : "Return relevance-based results from search queries (application/json)",
+    "request" : {
+      "urlPath" : "/search/v1/organic",
+      "method" : "GET",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/json"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"total\" : 7919295984519456558,\n  \"count\" : 7906,\n  \"items\" : [ { } ]\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "736ef20f-d8ee-4fdb-a722-292ebf137fc9",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:18.53281Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "(none)",
+          "schema" : {
+            "description" : "The result of a organic search request",
+            "properties" : {
+              "count" : {
+                "description" : "Number of results returned",
+                "maximum" : 10000,
+                "minimum" : 0,
+                "type" : "integer"
+              },
+              "items" : {
+                "items" : {
+                  "$ref" : "#/components/schemas/Hit"
+                },
+                "type" : "array"
+              },
+              "total" : {
+                "description" : "Approximate number of results meeting query",
+                "minimum" : 0,
+                "type" : "integer"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 2
+  }, {
+    "id" : "78a5604b-34f0-440c-9842-cdb27322d184",
+    "name" : "Return relevance-based results from search queries (application/javascript)",
+    "request" : {
+      "urlPath" : "/search/v1/organic",
+      "method" : "GET",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/javascript"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"total\" : 3870044191673340796,\n  \"count\" : 3121,\n  \"items\" : [ { }, { } ]\n}",
+      "headers" : {
+        "Content-Type" : "application/javascript"
+      }
+    },
+    "uuid" : "78a5604b-34f0-440c-9842-cdb27322d184",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:18.532737Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "(none)",
+          "schema" : {
+            "description" : "The result of a organic search request",
+            "properties" : {
+              "count" : {
+                "description" : "Number of results returned",
+                "maximum" : 10000,
+                "minimum" : 0,
+                "type" : "integer"
+              },
+              "items" : {
+                "items" : {
+                  "$ref" : "#/components/schemas/Hit"
+                },
+                "type" : "array"
+              },
+              "total" : {
+                "description" : "Approximate number of results meeting query",
+                "minimum" : 0,
+                "type" : "integer"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 3
+  }, {
+    "id" : "a5e99ae0-9967-4777-84bf-5c7558a3264c",
+    "name" : "Fields that can be requested (application/json)",
+    "request" : {
+      "urlPath" : "/search/v1/fields",
+      "method" : "GET",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/json"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "[ \"gh3jiy2k2v2yebx21vdzyjp7p1ahbtnfw0xvevz15n156n0xtykpzsvjqjrov3fver8zlk5dwxu59wy7ifr44yszvedxtw49y4422ciy5xpa3qfc3xe1\", \"xu24as7gnwbxu2nfu16vjiuzbs4ls718u3ju0kok32lwkry036y2c93wer02f33ag1yvxup3tgfr43veej65a36ez4t9f48k513e1usag8o2gjecjzyukvwy8ozp4vdsvbfxalzwnu9iwamb\", \"e8uh42ahc0h4doa9ojtaj24q7iasfm8qe2aid986vhbr9khuu70ykt67ux50n2p9jxlf8yv0vs9ohxxvrlgi2srzgc2w8euwc4rnuwnlofb5x0r6a6clldvwlu5581nhu8fvriorfxw7dxwljdx1exqlyrpntdg3wb2mjtfgrvoxpk7nzb3ri85fz4r148696f\" ]",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "a5e99ae0-9967-4777-84bf-5c7558a3264c",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:18.532614Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "(none)",
+          "schema" : {
+            "items" : {
+              "$ref" : "#/components/schemas/Field"
+            },
+            "type" : "array"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 4
+  }, {
+    "id" : "1f2014d3-aea4-4fdf-99a2-9a8a36659b10",
+    "name" : "Fields that can be requested (application/javascript)",
+    "request" : {
+      "urlPath" : "/search/v1/fields",
+      "method" : "GET",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/javascript"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "[ \"qnr0o9li8tqgjjkuj2ks1fm6pu3o9bj5u1b06hjigie7e8mns3g5muh8vhn6697juvvifxandgrdrhvzhrtim6g5lgieguwp0iz3o31hw0hrz658sll0unt276on389fzxg3kklh6t01pfl8f2g7qd19dwxiqptyi0tyh3yh\" ]",
+      "headers" : {
+        "Content-Type" : "application/javascript"
+      }
+    },
+    "uuid" : "1f2014d3-aea4-4fdf-99a2-9a8a36659b10",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:18.53254Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "(none)",
+          "schema" : {
+            "items" : {
+              "$ref" : "#/components/schemas/Field"
+            },
+            "type" : "array"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 5
+  } ]
+}
