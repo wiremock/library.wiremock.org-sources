@@ -1,0 +1,1123 @@
+{
+  "mappings" : [ {
+    "id" : "b3c05f4e-9c2c-4ef1-8875-47c787690bed",
+    "name" : "Get the list of valid SKUs for a provisioning service.",
+    "request" : {
+      "urlPath" : "/subscriptions/8wuk/resourceGroups/Lavera+Fadel+DDS/providers/Microsoft.Devices/provisioningServices/Ms.+Alexa+Larkin/skus",
+      "method" : "GET",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "fx41d5vwp76e1tk5u27aurtvmbk63898gv05inecvbfjduawq7gofrmlufont8kjkouyji26mjf8ep7zcvh5162j5t6sljbeh74pyyv1q93j6el9h8rfr4ehvj1mre63npbmhr1n4cvsi"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"value\" : [ {\n    \"name\" : \"S1\"\n  }, {\n    \"name\" : \"S1\"\n  }, {\n    \"name\" : \"S1\"\n  }, {\n    \"name\" : \"S1\"\n  }, {\n    \"name\" : \"S1\"\n  }, {\n    \"name\" : \"S1\"\n  } ],\n  \"nextLink\" : \"2m1v45rrcdl8qxwkvs4pn4ia8jh7sb8z8axazy\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "b3c05f4e-9c2c-4ef1-8875-47c787690bed",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:15.201818Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "IotDpsResource_listValidSkus",
+          "schema" : {
+            "type" : "object",
+            "properties" : {
+              "nextLink" : {
+                "type" : "string",
+                "description" : "The next link.",
+                "readOnly" : true
+              },
+              "value" : {
+                "type" : "array",
+                "description" : "The list of SKUs",
+                "items" : {
+                  "$ref" : "#/components/schemas/IotDpsSkuDefinition"
+                }
+              }
+            },
+            "description" : "List of available SKUs."
+          }
+        }
+      }
+    },
+    "insertionIndex" : 0
+  }, {
+    "id" : "b3087c1e-ba83-4d71-aad6-abd56cc791b6",
+    "name" : "Gets the status of a long running operation, such as create, update or delete a ...",
+    "request" : {
+      "urlPath" : "/subscriptions/03ji/resourceGroups/Alfredia+Reichert+Jr./providers/Microsoft.Devices/provisioningServices/Luella+Douglas/operationresults/3z1r",
+      "method" : "GET",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "9a8cdubrmrkeejtz60i21"
+        },
+        "asyncinfo" : {
+          "equalTo" : "iz2x2llwrxjrcdkpul2k3pks9a8p9tx07zwz3zz9mvnd7zbejstdkrz5faub70ldn2xgi3mm541z5lohrngzq6izlginm1ox3mojjhprx7rxetb7x18m01nipeicrefc70dyn2xui930vt7nk8fqj47zopg49d693ogom96m1uj6fc1je6bjas9y6hv2gi"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"error\" : {\n    \"code\" : \"0v4u20fx8gtv9kqtl5m84zuy98c4z0aquzcgj0nkqou3h6dwl6q5ikz4wkpx15mbsfn43yu7ls8puzg07tm1ekeg77lenelzu\",\n    \"details\" : \"63tzkyn5dusnesc2wgrdkvvgqf2it60qn5qy\",\n    \"message\" : \"Expedita et minima occaecati. Commodi ad quos ullam. Exercitationem excepturi itaque inventore omnis optio veritatis veritatis.\"\n  },\n  \"status\" : \"0ul1gda9aqspvcdpour6wx5y2duptuvabcricuhbk0gadtmt0v4zhmqduog6ab8586nv8ts0c44j3fgm7jkhdnh2rd3uywli7c9g4gfij5yam3s9ypwpjuq2132ca9t7fj5lc9j1d0gxv221oqxjvxuwowehsagnc2rxt6831gwh9qgem51ztu0g7ko9\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "b3087c1e-ba83-4d71-aad6-abd56cc791b6",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:15.201503Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "IotDpsResource_GetOperationResult",
+          "schema" : {
+            "type" : "object",
+            "properties" : {
+              "error" : {
+                "$ref" : "#/components/schemas/ErrorMesssage"
+              },
+              "status" : {
+                "type" : "string",
+                "description" : "current status of a long running operation."
+              }
+            },
+            "description" : "Result of a long running operation."
+          }
+        }
+      }
+    },
+    "insertionIndex" : 1
+  }, {
+    "id" : "e81ed4b2-e998-466e-9da1-fca033600f6d",
+    "name" : "Get the security metadata for a provisioning service.",
+    "request" : {
+      "urlPath" : "/subscriptions/40k5/resourceGroups/Chante+McGlynn/providers/Microsoft.Devices/provisioningServices/Elmo+McKenzie/listkeys",
+      "method" : "POST",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "vx53q5gav5wm7drhoi5qzfq7mktyaaklfmlzhws18uo6s1kr6oemmke"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"value\" : [ {\n    \"secondaryKey\" : \"l6gja9qdzc7wv3c23j7a1\",\n    \"rights\" : \"DeviceConnect\",\n    \"keyName\" : \"Dorthy Hudson\",\n    \"primaryKey\" : \"1tpjh6rkw5iz1tbknrr61eeu3lx3q4xoy2qudvi74sw1u8da92u6u\"\n  }, {\n    \"secondaryKey\" : \"dpr31wxmgvas7uljjbwiryn15sav1bcgqo12q9fg5n2uphfqxoz5j64zca41o9hvsj25d1q8eskqiwqjjee7b3mdhxvv0qejp90q2td4k0kjtr2r7p4feji5xcegx5zjhyc\",\n    \"rights\" : \"ServiceConfig\",\n    \"keyName\" : \"Taylor Hand II\",\n    \"primaryKey\" : \"iuzihjs8e9zj\"\n  }, {\n    \"secondaryKey\" : \"btv4peecll37svwopbczq9473vuvb2qghl4wjtvqypb6jh3oenelghn3cicn3jb4qegmr78oncs7prnx4qxv46gz25s2xj3yl08kbhdxz09qzp0qx727thuy5rr54962ayrf9x\",\n    \"rights\" : \"RegistrationStatusRead\",\n    \"keyName\" : \"Carl Hammes\",\n    \"primaryKey\" : \"4ouqb3fxoff8lptpvozvkmgs3ttmjcxrtir0vchaa2ndkk93dnhiro9acm58\"\n  }, {\n    \"secondaryKey\" : \"jtoqn19sn3bsc5vpyn0vxm0z3xum8w4xjpnjmk5jl\",\n    \"rights\" : \"ServiceConfig\",\n    \"keyName\" : \"Jean Haley\",\n    \"primaryKey\" : \"n1aaqcmqi47vjqqx1wbut991pte84\"\n  }, {\n    \"secondaryKey\" : \"qnab44jbbj5yur6gwgc0wme1j84tgpugp1wrbes8zaxnsxk6xlv946dg1z1i9bfkso5bpcg7tupdvxnvzovz6cv7mm55483kup9ps2vjet5uj45beijby6t125ueu71ko5j3bvt4gt1s90oxrj8k13gfg\",\n    \"rights\" : \"ServiceConfig\",\n    \"keyName\" : \"Rebecca Schaden\",\n    \"primaryKey\" : \"j7y6fazx46hgi2sqdn9al0a35es4xolpug3t4vs4rwjdqh4qytxk42cni3fx0eqfppzeiqk0eduk5u0b1dyhmf8glibwigics5rcczd4nr1e9jxp5i1udw6040in5st0osedz6tc9mlfyef4wphfs61pu83\"\n  }, {\n    \"secondaryKey\" : \"98ux\",\n    \"rights\" : \"EnrollmentRead\",\n    \"keyName\" : \"Nanette Bins Sr.\",\n    \"primaryKey\" : \"z4fu4d\"\n  }, {\n    \"secondaryKey\" : \"4t7jhsdxvghwt3bddu24csrawrihvgtaxh53movgb2cdehef1w2ojlazfdnxgl1fe5g2pro9ad917f49m3xqo7tn8nevase\",\n    \"rights\" : \"EnrollmentRead\",\n    \"keyName\" : \"Maryanne Johnson\",\n    \"primaryKey\" : \"4qe0dhw15gmxnbozmh4s5e73mt17miiqbctzbjdkp4bfb2undxqoge5jf7xrsdaehcwjtycqpw7izmhoamd9y5fxjibrxwo71nosvmuo\"\n  } ],\n  \"nextLink\" : \"99zey3w1hey3683ucghm8wbp3v08hkpnu9kiz0d961y4bh3wba3lw7j9j60yqttc4rziih0j2in1k3uq2\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "e81ed4b2-e998-466e-9da1-fca033600f6d",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:15.201086Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "IotDpsResource_ListKeys",
+          "schema" : {
+            "type" : "object",
+            "properties" : {
+              "nextLink" : {
+                "type" : "string",
+                "description" : "The next link.",
+                "readOnly" : true
+              },
+              "value" : {
+                "type" : "array",
+                "description" : "The list of shared access policies.",
+                "items" : {
+                  "$ref" : "#/components/schemas/SharedAccessSignatureAuthorizationRule[AccessRightsDescription]"
+                }
+              }
+            },
+            "description" : "List of shared access keys."
+          }
+        }
+      }
+    },
+    "insertionIndex" : 2
+  }, {
+    "id" : "e006b69e-85f7-4d53-a584-2a51e403916e",
+    "name" : "Get a shared access policy by name from a provisioning service.",
+    "request" : {
+      "urlPath" : "/subscriptions/h695/resourceGroups/Miss+Lorena+Kemmer/providers/Microsoft.Devices/provisioningServices/Ms.+Zachary+Willms/keys/Mr.+Curt+Swift/listkeys",
+      "method" : "POST",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "cocbj2f92rs68687exk0mxk4ck6erwbdqdlr6o758cazxrcgn7nzwm9pprfwku5l3wzvspq33nrfrchfd7v0wk06e6igsbmy7c96jd5zus046qiiljr6m8kywqiyj"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"secondaryKey\" : \"u9cuwbu4gkd8to59ngavzemk1ca7tvy8a3khcgwd8fyuir0j332w988n0d9fafnazge54oix22gv4pkjy2rlg38obmo5m0jq1mirnykab7xlqaaek9yd9m1ea9cisz26kfr2qju5twwvyvc1d494vhp81tkg9\",\n  \"rights\" : \"DeviceConnect\",\n  \"keyName\" : \"Mac Moore\",\n  \"primaryKey\" : \"kvp9c6fu3urhr9z1i0hg3iukc9jlcwuo7blx45rdvwwk4cw6857p4fwufwc99xis22alnwfs1m2nxcxj184geyfulu1oj19rltkne4bptgqhupm50kkzt3wzc698g0igpkeonjt3rzkk4vsqrem72ii914y1fudryie44b3n2z02dmukrlo\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "e006b69e-85f7-4d53-a584-2a51e403916e",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:15.200255Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "IotDpsResource_ListKeysForKeyName",
+          "schema" : {
+            "required" : [ "keyName", "rights" ],
+            "type" : "object",
+            "properties" : {
+              "keyName" : {
+                "type" : "string",
+                "description" : "Name of the key."
+              },
+              "primaryKey" : {
+                "type" : "string",
+                "description" : "Primary SAS key value."
+              },
+              "rights" : {
+                "type" : "string",
+                "description" : "Rights that this key has.",
+                "enum" : [ "ServiceConfig", "EnrollmentRead", "EnrollmentWrite", "DeviceConnect", "RegistrationStatusRead", "RegistrationStatusWrite" ]
+              },
+              "secondaryKey" : {
+                "type" : "string",
+                "description" : "Secondary SAS key value."
+              }
+            },
+            "description" : "Description of the shared access key."
+          }
+        }
+      }
+    },
+    "insertionIndex" : 3
+  }, {
+    "id" : "d3449839-5d1b-4b59-8941-598a2689310b",
+    "name" : "Verify certificate's private key possession.",
+    "request" : {
+      "urlPath" : "/subscriptions/s3yz/resourceGroups/Cecil+Bruen+Sr./providers/Microsoft.Devices/provisioningServices/Lavina+Jerde/certificates/Ms.+Klara+Casper/verify",
+      "method" : "POST",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "q28ycnwepx150ay6scf509pl7v7davwgbkrrvnzf0fjg1gugw9h5pim3tileyu3p2werswgfm4vzdnpxzwbfza7tgug5z7v3ndrbrout7g675jbp7b3"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"name\" : \"Curtis Bauch MD\",\n  \"etag\" : \"eligendi\",\n  \"id\" : \"jqcx\",\n  \"type\" : \"exwh0luga300b78hazr57vrv2ee0t8zxk6b500erpff\",\n  \"properties\" : {\n    \"isVerified\" : false,\n    \"created\" : \"6f45jgpso2etjgx1wyxyg3q3fey0q8mhsz5nwgogtv8k2zpdgtn0ybfq3mfew5r2rpt57d8\",\n    \"subject\" : \"8deh8ouim72n3p3amzjqdt75mmqcsy8l2omz2hdvg06uyjknoyizpwko0jhg5xwbgpb4xfi13l91brczgro5jmqzt6p2mg9qjhvk5ul172u8hyr1uo1w5nz9u6l7brvtyonvpa2i53m2halynte8hj5aq8txwqake21x6c10kr85j1up2rmcs7e7xbqpwamgx6llc\",\n    \"thumbprint\" : \"yu0slaoxl40hu9swrdomwb55xb16uawbvja89kc6836tsgslr6id5n\",\n    \"expiry\" : \"0e50x\",\n    \"updated\" : \"2022-09-14T09:12:15.19953Z\"\n  }\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "d3449839-5d1b-4b59-8941-598a2689310b",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:15.199837Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "DpsCertificate_VerifyCertificate",
+          "schema" : {
+            "type" : "object",
+            "properties" : {
+              "etag" : {
+                "type" : "string",
+                "description" : "The entity tag.",
+                "readOnly" : true
+              },
+              "id" : {
+                "type" : "string",
+                "description" : "The resource identifier.",
+                "readOnly" : true
+              },
+              "name" : {
+                "type" : "string",
+                "description" : "The name of the certificate.",
+                "readOnly" : true
+              },
+              "properties" : {
+                "$ref" : "#/components/schemas/CertificateProperties"
+              },
+              "type" : {
+                "type" : "string",
+                "description" : "The resource type.",
+                "readOnly" : true
+              }
+            },
+            "description" : "The X509 Certificate."
+          }
+        }
+      }
+    },
+    "insertionIndex" : 4
+  }, {
+    "id" : "e370b5fd-2f2e-4335-9fa3-4034c7749e48",
+    "name" : "Generate verification code for Proof of Possession.",
+    "request" : {
+      "urlPath" : "/subscriptions/xnyh/resourceGroups/Chrystal+Prohaska/providers/Microsoft.Devices/provisioningServices/Paul+Hand/certificates/Yasuko+Botsford/generateVerificationCode",
+      "method" : "POST",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "yx52xv31ybjkacqzzpok7p4usnji6wy8y953z7d4a9xxe3y1e1kcrgd57vw0cvmmtfnsay4gormwavzdav4jj5rzz1a1a1p1k1eqg2splhe48ctz02g9gcsbjhlu2uonlmn8wwvnv4duaah2n77lk8rjkbs6ydpd7v2zaj6ql3e6e"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"name\" : \"Jina Koss\",\n  \"etag\" : \"eeeet\",\n  \"id\" : \"u2cy\",\n  \"type\" : \"ri6a1dkto8qecjykqc5idwc547qg3xul8iop7643bwyiwaq4qwdoajtcw1j421ujt07r5fkc6hmjqes8n65baneoy9eyk4m\",\n  \"properties\" : {\n    \"isVerified\" : false,\n    \"created\" : \"jiy0mzarwksonmftdoi50mi265use088\",\n    \"subject\" : \"bna8ak8hvj6paah3cok6l59kij9vmrsh7i8w4bw6uisjgp0x8snqxar1isyutizwm1b8vts4tilrhagpx5109iexq884pp9md6l18ywjlqht1fdj\",\n    \"thumbprint\" : \"up625jfsmpqu31l2p3nl2p80y24fcrxt9yvv5qqyrjaggjcfgnt2rekh3vt47l5jmvudm2bri0\",\n    \"expiry\" : \"5xmav6vgmfio1m8fvl37oor5m4mulnu32kzg4awrv1izcts03v325uajcvudpq3xryjd9f9dquz3y9xwa55r1uydmn9jxo0l5hgbg43qv2p\",\n    \"updated\" : \"2022-07-01T05:41:15.198792Z\",\n    \"verificationCode\" : \"loh0zcl1n85j28742jp1duwt3ockfxho67ovajs7uh8peyu7bjlhtu4mpq0w\"\n  }\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "e370b5fd-2f2e-4335-9fa3-4034c7749e48",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:15.199246Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "DpsCertificate_GenerateVerificationCode",
+          "schema" : {
+            "type" : "object",
+            "properties" : {
+              "etag" : {
+                "type" : "string",
+                "description" : "Request etag.",
+                "readOnly" : true
+              },
+              "id" : {
+                "type" : "string",
+                "description" : "The resource identifier.",
+                "readOnly" : true
+              },
+              "name" : {
+                "type" : "string",
+                "description" : "Name of certificate.",
+                "readOnly" : true
+              },
+              "properties" : {
+                "type" : "object",
+                "properties" : {
+                  "created" : {
+                    "type" : "string",
+                    "description" : "Certificate created time."
+                  },
+                  "expiry" : {
+                    "type" : "string",
+                    "description" : "Code expiry."
+                  },
+                  "isVerified" : {
+                    "type" : "boolean",
+                    "description" : "Indicate if the certificate is verified by owner of private key."
+                  },
+                  "subject" : {
+                    "type" : "string",
+                    "description" : "Certificate subject."
+                  },
+                  "thumbprint" : {
+                    "type" : "string",
+                    "description" : "Certificate thumbprint."
+                  },
+                  "updated" : {
+                    "type" : "string",
+                    "description" : "Certificate updated time."
+                  },
+                  "verificationCode" : {
+                    "type" : "string",
+                    "description" : "Verification code."
+                  }
+                }
+              },
+              "type" : {
+                "type" : "string",
+                "description" : "The resource type.",
+                "readOnly" : true
+              }
+            },
+            "description" : "Description of the response of the verification code."
+          }
+        }
+      }
+    },
+    "insertionIndex" : 5
+  }, {
+    "id" : "e032a59f-d9ef-44c0-b4c5-017e8c7403bf",
+    "name" : "Delete the Provisioning Service Certificate. - 204",
+    "request" : {
+      "urlPath" : "/subscriptions/4j3o/resourceGroups/Carylon+Ortiz/providers/Microsoft.Devices/provisioningServices/Neda+Kuhlman/certificates/Roscoe+Hahn",
+      "method" : "DELETE",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "8yefoiy53sn6wz8fegmqns1q3lvuwynlqvsuizvphcvmv"
+        }
+      }
+    },
+    "response" : {
+      "status" : 204
+    },
+    "uuid" : "e032a59f-d9ef-44c0-b4c5-017e8c7403bf",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:15.198506Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "DpsCertificate_Delete"
+        }
+      }
+    },
+    "insertionIndex" : 6
+  }, {
+    "id" : "a8cd0e97-06d4-4aaa-9935-d99209b231e4",
+    "name" : "Delete the Provisioning Service Certificate. - 200",
+    "request" : {
+      "urlPath" : "/subscriptions/40yc/resourceGroups/Annita+Shields+V/providers/Microsoft.Devices/provisioningServices/Jackie+Lebsack+PhD/certificates/Chauncey+Borer",
+      "method" : "DELETE",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "l58n3dq21s5qr671keavq3l2bb5ko"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200
+    },
+    "uuid" : "a8cd0e97-06d4-4aaa-9935-d99209b231e4",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:15.198289Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "DpsCertificate_Delete"
+        }
+      }
+    },
+    "insertionIndex" : 7
+  }, {
+    "id" : "16449eea-ff4e-4a90-b5e8-4a646e0d637b",
+    "name" : "Upload the certificate to the provisioning service.",
+    "request" : {
+      "urlPath" : "/subscriptions/g126/resourceGroups/Fredrick+Upton/providers/Microsoft.Devices/provisioningServices/Leonie+Quigley/certificates/Ms.+Romeo+Stroman",
+      "method" : "PUT",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "2hre4poftk3vxc9xhw8y98"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"name\" : \"Roni Osinski III\",\n  \"etag\" : \"omnis\",\n  \"id\" : \"87l1\",\n  \"type\" : \"q5rqz8f9u597onpdqyhvwgdvzc96ec2ziaqh\",\n  \"properties\" : {\n    \"isVerified\" : true,\n    \"created\" : \"jrumfmr7uo7gpeoshz8dtjwrzt7ybc7cj5aww8aeu0f5v3jbuq00sn608lsjjl90rn\",\n    \"subject\" : \"42fzvmo88no2o4c5v3zey1dlst2ov345ahfj0y9ac3e5ojeelr6hlf5dw83cxz5atbk66vdxtnese5momz7xzl9c0x07fw23o7j4x622catbyhi5wt0mkl1fbg9\",\n    \"thumbprint\" : \"pwsilqerz2s7xq25fmetj2ieuphgv8mmv84co6o76t7548r8n73br3kou5g2lemf3e\",\n    \"expiry\" : \"4d9e3swqd2ul34725ob11fd0bg20cxriao12s9675nxhus4gxflez5j8uo3zxpvag4owfa8wozzs1i9kcixz5qeoipvf7dabx3i5h0d3yydybd3pw1alwy2efvtl20cn8v7o9via3croouhp2wwfels0131syosbsyv2vequq2dpwww7x8\",\n    \"updated\" : \"2023-02-05T08:11:15.19768Z\"\n  }\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "16449eea-ff4e-4a90-b5e8-4a646e0d637b",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:15.198018Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "DpsCertificate_CreateOrUpdate",
+          "schema" : {
+            "type" : "object",
+            "properties" : {
+              "etag" : {
+                "type" : "string",
+                "description" : "The entity tag.",
+                "readOnly" : true
+              },
+              "id" : {
+                "type" : "string",
+                "description" : "The resource identifier.",
+                "readOnly" : true
+              },
+              "name" : {
+                "type" : "string",
+                "description" : "The name of the certificate.",
+                "readOnly" : true
+              },
+              "properties" : {
+                "$ref" : "#/components/schemas/CertificateProperties"
+              },
+              "type" : {
+                "type" : "string",
+                "description" : "The resource type.",
+                "readOnly" : true
+              }
+            },
+            "description" : "The X509 Certificate."
+          }
+        }
+      }
+    },
+    "insertionIndex" : 8
+  }, {
+    "id" : "5443b0ef-b0ae-432a-95ea-48e283642ff4",
+    "name" : "Get the certificate from the provisioning service.",
+    "request" : {
+      "urlPath" : "/subscriptions/7z67/resourceGroups/Timothy+Runte+MD/providers/Microsoft.Devices/provisioningServices/Georgianne+Mitchell/certificates/Woodrow+Wunsch+PhD",
+      "method" : "GET",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "skiqfwzfrwoku8rdza8twkcw5olqh"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"name\" : \"Noel Pfeffer\",\n  \"etag\" : \"molestiae\",\n  \"id\" : \"fr8n\",\n  \"type\" : \"rvbl5smzjn3qomanod01qt5fsiyyf236wn72kfjituru9t5yk2qr4ddkd2glz0blfq9didd3h359q76j4pl16t28bgr5uzwoldt7u0u4ewqvvc7dpujzihg\",\n  \"properties\" : {\n    \"isVerified\" : false,\n    \"created\" : \"vxs1p9v8k9nn9zei5lk8pbmeepa63o00yumf2nq754gv7yrcb6x9ucq57e2ngtjdkgvxesobb8lc5p5oadi0k38gbj1798o6m6atfdeeuamw0snvgkcrs6m7p3h1gdwszy99g52e8pu0xoxxqdgs74mltzftj5imoe6jd0v8wfnpi1wxiqz9j\",\n    \"subject\" : \"mqz8l7eurtiodzxmb9ee5n2hxzpt2xgl2o6utzr0rmd1twrat311ju5ig6c2888d4b63fzd4et5241zcrv60xv3xnxmcsk89rqpjuhn4vtmapz4wgqhp60bombr3nbkujhttmib2y7picgbi8jvqb2u1ap0xgbv2\",\n    \"thumbprint\" : \"ffn7o0v1btxqpv2rjj2s4ekwu48ragcw538nyqhx5oh3qtpqs4b4dbj4akesbi70e2qsuoum8ez2\",\n    \"expiry\" : \"0js0x6fnm7gwswf0cgtv1ok8rfktq46i48dbopercgy2mcp03ch80bibjof1j0t974p6dcknaqpdm9pkvi7uocvg9opbcowvy1xdrkzett7vp8hp16tmbs5n1n2nmb5c3psa8tghrh6u3cbj8cimtuuf394eoxnsw6ubxeywy7i\",\n    \"updated\" : \"2022-10-05T06:18:15.196974Z\"\n  }\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "5443b0ef-b0ae-432a-95ea-48e283642ff4",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:15.19737Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "DpsCertificate_Get",
+          "schema" : {
+            "type" : "object",
+            "properties" : {
+              "etag" : {
+                "type" : "string",
+                "description" : "The entity tag.",
+                "readOnly" : true
+              },
+              "id" : {
+                "type" : "string",
+                "description" : "The resource identifier.",
+                "readOnly" : true
+              },
+              "name" : {
+                "type" : "string",
+                "description" : "The name of the certificate.",
+                "readOnly" : true
+              },
+              "properties" : {
+                "$ref" : "#/components/schemas/CertificateProperties"
+              },
+              "type" : {
+                "type" : "string",
+                "description" : "The resource type.",
+                "readOnly" : true
+              }
+            },
+            "description" : "The X509 Certificate."
+          }
+        }
+      }
+    },
+    "insertionIndex" : 9
+  }, {
+    "id" : "f7d3c3cc-1ccd-4dfa-87bc-513e4ca20409",
+    "name" : "Get all the certificates tied to the provisioning service.",
+    "request" : {
+      "urlPath" : "/subscriptions/iie3/resourceGroups/Mrs.+Shalonda+Wiza/providers/Microsoft.Devices/provisioningServices/Tiffani+Bernhard+Jr./certificates",
+      "method" : "GET",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "b4fuy4ptwu13gi7x4l2vfcugkqtxgtigcqq5km8kkq1eiz937jhd3vmeo6yg7tn9jlxn7tuyqzl526uc20a49nedx2z0s558rx0fhqx3f0uci5qml80bx3exjb1qh609dij2fxrka6jyveqo6ogaaay3ss79owtp0ttg9efngzh89dol"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"value\" : [ {\n    \"name\" : \"Shauna Littel\",\n    \"etag\" : \"rerum\",\n    \"id\" : \"131n\",\n    \"type\" : \"cbm941q97apm87uvc5w77l\",\n    \"properties\" : {\n      \"isVerified\" : true,\n      \"created\" : \"yifdo8zg9grzopghwvtlq9fkuhe4c1zx46imeo5e\",\n      \"subject\" : \"l0mqnkskxua4kcjhx69wew3bhyivur6btvplr87efs0eyujusaxw66b8lsxcdufp36yxtq87zrm6fjin2wx5r9zud0yk1qmd60u\",\n      \"thumbprint\" : \"dptjijp08shfodkez0evp5zjo9ewuw4dalpsu9cblx84nqs4pul0bafke2ofs653ib\",\n      \"expiry\" : \"iapf1fhv7ibvs4la37mh5bsnrjr95xd5hs9rl7u0vaezvxffmllyyslf513mgsbetsjqdq51wobj241csp2nwbcxr2illzogil5j3q0sjia2ivcl9vjhshkosexq8gq1zhtj5uj8csfqxcgycae0l8m85ox1\",\n      \"updated\" : \"2023-01-09T07:28:15.194779Z\"\n    }\n  }, {\n    \"name\" : \"Tawanda MacGyver\",\n    \"etag\" : \"consequatur\",\n    \"id\" : \"76aj\",\n    \"type\" : \"eelnhtynj80orfcnsv9nnc3j2ubvttct7y8uzjz29iu2gdo4xt8cacq523b8j2026k2ih6mx570e36muf3vw5t5n5885wk140fb794uqmuis9iqj\",\n    \"properties\" : {\n      \"isVerified\" : true,\n      \"created\" : \"oy9b7ngte\",\n      \"subject\" : \"h385kyv\",\n      \"thumbprint\" : \"u1boinp3143lshxzv22fx52cz89w005093qw2hu3hjukrbijhgp1gd261k75d1n78urihdthu0dtmudyew90wh8tzzjjzw0000z\",\n      \"expiry\" : \"vbqswhbg56yxck2z8tp2cfknuqyt2en94jl2ts7cn1banumvhi5u7dfdvg642j0kyxs68p5mf9zg2v0q0hrq4ptwaqwspz5sku5rr6cu067q6lpd2awe9kyqacrsagi1qskakk5cbwua1tfeedz5vem11000lwfjtyfz0vegqgh4wygawjycevuwr8mpdstz4404nnw\",\n      \"updated\" : \"2022-06-27T07:36:15.195022Z\"\n    }\n  }, {\n    \"name\" : \"Annabell Wilderman\",\n    \"etag\" : \"mollitia\",\n    \"id\" : \"jz41\",\n    \"type\" : \"f6gx9b5cwlumyz5f44057m9xb7sqk\",\n    \"properties\" : {\n      \"isVerified\" : true,\n      \"created\" : \"cblzyymx3s1o9wfeeo3oqwe00c9jhonu1i81tmhs959k8fms6q6t3s1w56g9cxbtamcpkkoe2hk2fi5ladk1li1wjavjpz68cc1m75nmdhlarspowzukxn4gkqfq8y09sco8qh2ferw0riefi2v336s3uvflr752h\",\n      \"subject\" : \"hlns6wuy53xn1xykanydjss7u56imf1hew2ri6yags2nyfc8btr2vp17z2kp61aqr6uvw3w48hxmlqxspk6f4feof4k13t4xzahakbltdacj0wpqd73o8yfm\",\n      \"thumbprint\" : \"dc5coynfej419odr505o8ywl7gtf58ka94fitvrshfcabiaohnroa1ulqme0siz4uqu9khs4are10tcsgx7aqn2mxw95bn9k3y8vn8si4p3\",\n      \"expiry\" : \"xah3a0jas2gdvyf1zp3sjjw8d1mjinvkpy4moaxawmysr9rfvp6i5roqzhulfg4tijxva9p09bn2ep9clnavzeclk1dv618jrjxh7\",\n      \"updated\" : \"2022-09-10T07:29:15.195256Z\"\n    }\n  }, {\n    \"name\" : \"Ashlyn Quitzon\",\n    \"etag\" : \"porro\",\n    \"id\" : \"lm84\",\n    \"type\" : \"c5axdu60v4eauag338gf0c6ip0paeron50\",\n    \"properties\" : {\n      \"isVerified\" : false,\n      \"created\" : \"azef1ncb6zxaawkwh9gs4pm8e57i83kpuxbk43ubhwc545hjhc0t2kwyzy62fcnxia28t\",\n      \"subject\" : \"7rs9j7dwyyla3ig593xfx08df0e9q9ppl3fc9wsqpcyfu5qxrdzx8qlp3cs1km4\",\n      \"thumbprint\" : \"bay3nxycpwocaq3iuifvnfy0utrqr7xu9ehyj80wlfsm2\",\n      \"expiry\" : \"0zw4140keirofhrktu6fvobdeg9xp8zhl9d0x7ek28vracf03hzwizxkhpi77qz0knq8aeiuqn30zrm00eq8hksfy4z8cc4ctocqbhsesgx0p4i5xx7kh6s132vqw570sulo05p3awr1lr59u2qa5g4y6\",\n      \"updated\" : \"2023-03-06T06:45:15.195482Z\"\n    }\n  }, {\n    \"name\" : \"Elias Dicki I\",\n    \"etag\" : \"nam\",\n    \"id\" : \"qgb5\",\n    \"type\" : \"so0rfqxfrbr6r50iqtf4f0rkycm4mjtipszj59qse9ln1w8u2tywyghxhd99vxe0u1shzwlpyeabd77vuolwhu3fkeh2ge1xhv3w7i7614eu8q\",\n    \"properties\" : {\n      \"isVerified\" : true,\n      \"created\" : \"yrk85myd6od7dqq6ijefjhuhra5prvev46cotxhx9jz6enic7kntr2pon3yidyh9kq78p5wlcz8dby8b3fc4p6emows9j9e6pzoki2050tldymveqxpka91y6o0vwl\",\n      \"subject\" : \"4pcamwlvet9z2le3yfhba7ndfszyj45yc5nbih0pp2q65k35uojtcfqcnp5t84knsoy8rpg7t0tu1b0jjgsao88cptu3pmzznt2tg0un6f6vvdv1itwly\",\n      \"thumbprint\" : \"tz4maka95dxf0lncbhdrepknwl2bk2489918fj46yw22hybsspb1e12xu0xamfp\",\n      \"expiry\" : \"vc4zkdb56uvkmhw3im5ynfy3dwhz7nwy4kdkmbumfa81tn2mcjerxq3ubnb4zr9dgqs6miin2qfd37mtd1ecswfyhwwwkslyk03mofb8c10\",\n      \"updated\" : \"2023-02-24T08:38:15.195716Z\"\n    }\n  }, {\n    \"name\" : \"Barrett Bednar\",\n    \"etag\" : \"consequatur\",\n    \"id\" : \"47cn\",\n    \"type\" : \"s6jwzdfrcv1\",\n    \"properties\" : {\n      \"isVerified\" : true,\n      \"created\" : \"jyt9vevk8c2qeg42zzqzdiyrb5c5pv4j095nk5xcgt0ak4p835l7cavgkkidquhkt4ch3fp4bumo9fzun1gt024ydi\",\n      \"subject\" : \"hbaum7epmgduc5bh1shercgisyombtrnu8zl9ejqy9l27w\",\n      \"thumbprint\" : \"pawjuqaac5y2ejgdzew6cuwsrifa78vws9dg7tdsbnh7zyq2k3dqo2hzlkqxgj0o46693855xot40emj9t5o4g6z8k6nqdt\",\n      \"expiry\" : \"710kr1owvjjztegtruhzl32twakxgywagpcjxg5larm3nu1cwgo02xck5vi4p3t73acv27wv87bezs7pqsi05huvkvfol2oqo6wb0un70kqacrb5zitmrwpp\",\n      \"updated\" : \"2022-10-13T08:50:15.195952Z\"\n    }\n  }, {\n    \"name\" : \"Luise Klein\",\n    \"etag\" : \"architecto\",\n    \"id\" : \"1zju\",\n    \"type\" : \"dkn0d5xabqazbzfvf8a27mb01vcynjzwaakga8ezenjofcjvs538c7e8vs13sglp0zlwhrgcp6weyu5ir9p39acdhz9b5ljrewug86en697eq67wludlcrbbun7z\",\n    \"properties\" : {\n      \"isVerified\" : true,\n      \"created\" : \"snfxmloreh3m2vav9a15nmlq5hhhpzl0hjjgsv3bpbcy9fud1kj10hogbz5kb292xj\",\n      \"subject\" : \"jze1e05z95ozlro8a7exad8cd5hzpj5526qh26v068ftciz6l825t56pf8v7js8dimmuoelht8282uzthwrccjt2u64jj3eohvdotmzh4e2yp6gg0q1y36j6uxo30dvkaskbc1mgzdahn66jkjx7c2ffrf6n0w3ki\",\n      \"thumbprint\" : \"ek9e03kv6ftk4obro4gxfzxozdqm8b8lg5lcbn8gon69wjtctpv9agzm63samcbchtwsjis89c7hhnppa8n9w\",\n      \"expiry\" : \"v7oepv3yt9eoc0pxekzsunfnmq3xq94uhnuuxjlw3ha4y5vcg4ydcwpo8hzzz9k7ckawd7kuu70ayf91x399drv02cp30pxzfepg3qfg4gu3xazewdsgtci9orgi6ro2\",\n      \"updated\" : \"2022-11-19T07:27:15.196183Z\"\n    }\n  }, {\n    \"name\" : \"Fannie Gerlach\",\n    \"etag\" : \"alias\",\n    \"id\" : \"c752\",\n    \"type\" : \"84llmqr3umpfn965gmiawjf0s89s8ejjoz85fmjsnm221z7g8ha35t7782gi2\",\n    \"properties\" : {\n      \"isVerified\" : false,\n      \"created\" : \"th0gpmy567twifnfvtgqpbsfpy7rhsjchy6iz5v73bardeopnq5mgphsvlruu55fbkekc394n6e3dfbjjidr89ftqczo9esjesvuwlaquzg0zsef0y86oboemo08xtbdg5172\",\n      \"subject\" : \"yuew0o4iumvxs0eqn2xehy8oixk9wgg0g344ncx9hpw3xb2ru8oeoltnktt7f6xkimufzbuhrv6iou5sea6evpz5bnq4mnx\",\n      \"thumbprint\" : \"y91pm782zfx9pl0q49yeg46jxiz2gfdsyvofr6ot5uzrfumr9bg4zi8vy59kbpbzoii145kjnegh2161tgdzk376h8hgo7tiz9o3t2oabk3x3fjlhb2pb02u3jtjppq841d5zzx2lw69wetmc44rkvahflnpk3aljpw2waf17tbqb70dnkt4nux67\",\n      \"expiry\" : \"nb41f3999z875gdqhclwqj891azjejhm4qrr7bgjcom3603mmsgjwt759yqmuyg0n3g7po98yszep84nn6vuydrkhiexqpcdqwj1kckhpubjvh5t286vbacltf7la1eue3\",\n      \"updated\" : \"2023-01-03T08:33:15.196419Z\"\n    }\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "f7d3c3cc-1ccd-4dfa-87bc-513e4ca20409",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:15.196714Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "DpsCertificate_List",
+          "schema" : {
+            "type" : "object",
+            "properties" : {
+              "value" : {
+                "type" : "array",
+                "description" : "The array of Certificate objects.",
+                "items" : {
+                  "$ref" : "#/components/schemas/CertificateResponse"
+                }
+              }
+            },
+            "description" : "The JSON-serialized array of Certificate objects."
+          }
+        }
+      }
+    },
+    "insertionIndex" : 10
+  }, {
+    "id" : "5594f336-111a-471d-8f0b-d820068453fb",
+    "name" : "Update an existing provisioning service's tags.",
+    "request" : {
+      "urlPath" : "/subscriptions/78u6/resourceGroups/Winifred+Kshlerin/providers/Microsoft.Devices/provisioningServices/Aldo+Gutkowski",
+      "method" : "PATCH",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "alizperph1qesdizu2buknm6o1yiwo"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"name\" : \"ZV\\\"}=^F-UGv)_dX^N\\\\{Bvw.S3TuRd4UlIuUxN2eqbAFUWHrKcn36CzGkzJoM0EDQiAc2VHW\",\n  \"etag\" : \"praesentium\",\n  \"location\" : \"qw9e91fyr6kb2vmd1vv6ruj7lf6muxqblxt3nx3jyzgmpyt5ttyvyjnsk60axwfvcd4yfv9helojxy3r8li92ujhjozlyfxpsu13b5cakxn2w8yxicedqkmrlqzdt1ncwrahuk4g392gof4iph3ugh58qviy6r9k8h843g2104x8blf6bslp61qpbj6bt10h12ud\",\n  \"id\" : \"81e3\",\n  \"sku\" : {\n    \"tier\" : \"47mwhmm6nzhfht9a9zurn2qy71qz8dl21hsbgtx4fzmuujyc4usuqi0cud\",\n    \"name\" : \"S1\",\n    \"capacity\" : 7023034835303627052\n  },\n  \"type\" : \"kcwg49qz28z4d7i1ou47ta2ye1i445nqzov0vuu\",\n  \"properties\" : {\n    \"iotHubs\" : [ {\n      \"connectionString\" : \"t2mqho6sj4nkdzob0tzw87niabl9pxnns3kfftx\",\n      \"applyAllocationPolicy\" : false,\n      \"allocationWeight\" : 1702024560,\n      \"name\" : \"Junko Bernhard\",\n      \"location\" : \"nhk1j743j361q50rc\"\n    }, {\n      \"connectionString\" : \"tu4i5i5v8ky9imd5dljqdoi9kirluguo1cn9i59hc8h8idibp3mgsguufor64lbb86yyn2dq3diw\",\n      \"applyAllocationPolicy\" : true,\n      \"allocationWeight\" : 1595118526,\n      \"name\" : \"Mel Pfannerstill III\",\n      \"location\" : \"6irtad1ag07van2dx059cm64wjkca61k2gal8d5jyzvfqgc22g4gqvsg54m4lg6x13bfowmngs5398r4pgs7lw1hivutpb8owgetrxjv48f3ob42qf7g1mclhxf8f35rryb5gshfc7cz5di9sy3lscutvptqmlqz3rapop8i9tsyrze5pljkta28kic5q0\"\n    }, {\n      \"connectionString\" : \"yssh069d5awo7l3jw7b8r77d6ze4o1dkp5vf6g7x3fcg9apz654pflpbpugj4k7a91f117uslnx25p4lx7fhalu1c7p08ckye1e4xmpmi5\",\n      \"applyAllocationPolicy\" : true,\n      \"allocationWeight\" : 974677573,\n      \"name\" : \"Johnathon Murazik\",\n      \"location\" : \"eo5nn5ty0gjpbeh3cug98awasg6qecihadraqtp0wvmmd423z2ucpu13rw4wl57zpx191fnwryevvlxfzbepj207g3elbfgt7cvsn28medboqpu9cqrau29nbb34vall\"\n    }, {\n      \"connectionString\" : \"da9pw0dxjnmflk20ht9wrg00m7em33mygeg3s9dixse402c87wwnn5\",\n      \"applyAllocationPolicy\" : true,\n      \"allocationWeight\" : 1535422032,\n      \"name\" : \"Junior Bashirian I\",\n      \"location\" : \"27hsr3nf9ehqp5z25roqkmkkw4olq6x4sk2rbvwxyv8sr04bbpckpkzpwxyg3egej4pwv8mh3thpbx7yk76b9h2twkodj21samptcqvbaqpj1dmkniguw920v0f402z6yrqg56i9q64o87s08qeqxxxjtq69\"\n    }, {\n      \"connectionString\" : \"npz8awsi625fb5mmz86u4ndpch61vwgyoicjzsubxot0sg4myfkrbdcvhi98t8a0q8vtsc2vfkn5rbvn\",\n      \"applyAllocationPolicy\" : false,\n      \"allocationWeight\" : 136939582,\n      \"name\" : \"Ms. Rigoberto Watsica\",\n      \"location\" : \"347xf0grck4jgp23xi1gx8pqkhknonekob9z7qw5zob4yww5p4xzqt7c018xtl1mjuqck8ezelp8r76cmdr4t5afyvem2v5bqpet3i99\"\n    }, {\n      \"connectionString\" : \"j8uz3igljxjkepqdk\",\n      \"applyAllocationPolicy\" : true,\n      \"allocationWeight\" : 167656082,\n      \"name\" : \"Mrs. Chet Corkery\",\n      \"location\" : \"4h480a50kch0nv5mfcrzw1nxdc34k1xu8evnlaahp2soqc9mxzteixdf6gb5iuvbxksgmm5rj2avesfxet7muz1gu44br0q9a6knd4806a8lhxbr5kek2whhiqcuha0wg0vbvyt\"\n    } ],\n    \"serviceOperationsHostName\" : \"Dexter Witting IV\",\n    \"deviceProvisioningHostName\" : \"Anastasia Prosacco Sr.\",\n    \"idScope\" : \"toi8d5okatqd50q8fxd8t48vg0acn72f9tr5\",\n    \"provisioningState\" : \"Tennessee\",\n    \"state\" : \"ActivationFailed\",\n    \"authorizationPolicies\" : [ {\n      \"secondaryKey\" : \"qtwpz29nac6u5ocky1n8fng5j6taj9vi4tnac8u3w0yo0ph5vlk53knxt05t6oue5uo38tvh6hii06vwl8vflzm1luyjc1sedwtww6q4lo6stoxihiabkzr44rlnxloupjovl7pd9lumb2kaebjf2kdr5liwtzics6el5ejn1odketmhdfolmv8\",\n      \"rights\" : \"EnrollmentRead\",\n      \"keyName\" : \"Dr. Willis Kreiger\",\n      \"primaryKey\" : \"typihtu7blcgzsw8oede8v5ol3rp7n0ly2hvgi6admmdjxo8dlyrcrhu67xnncyl1c06rzvoe2gtxotw3h0tfi348gjfjts6f2pwrrtwyup9wzks1a2vdpxkw8zkbvteeokrwj8f6npghax0ww8x5qak8e\"\n    }, {\n      \"secondaryKey\" : \"15ss\",\n      \"rights\" : \"RegistrationStatusRead\",\n      \"keyName\" : \"Daren Hamill\",\n      \"primaryKey\" : \"7vx10a8hzi9yqkve74folenu5a\"\n    }, {\n      \"secondaryKey\" : \"3rb08cy8bvwui1htd0un10hvt6f0\",\n      \"rights\" : \"EnrollmentRead\",\n      \"keyName\" : \"Hung Thompson\",\n      \"primaryKey\" : \"j50wz58o5stmpgun65sbw50i4yooes3zyxj0cycejtump0g8nxa4fdemc9popi4tm5qqnj8hqv0ajghk0fno3i72w451n95wghqavuam3rsqf8revfy6poyx7688n7a2mmeaxvosa0ol2kr7t2w08vgujb7keiu19oiw\"\n    }, {\n      \"secondaryKey\" : \"c374oq1bg1r2h0yxe\",\n      \"rights\" : \"RegistrationStatusRead\",\n      \"keyName\" : \"Liz Wilkinson\",\n      \"primaryKey\" : \"1s11avw1xp1z0y2qlfajarq6cws59ftalgfosv3sv25no4lg74fproayzn6onekx36ruyu2rr36axl9a2uov33136zeh1v76zsqt95ecv45t84wrkltp2nrlfmvzibedppw7lzj06e5jtjw5fdgsv184xr9m4m1ql5nn9hlrg\"\n    }, {\n      \"secondaryKey\" : \"v80zgsjzgj2d9zyj8gezgr9l6usp3d6mkcaobhav8gd5bvktec2y8o1kkumpjjgts5ug96nu8wyd63welod2ku1njf\",\n      \"rights\" : \"ServiceConfig\",\n      \"keyName\" : \"Tianna Durgan\",\n      \"primaryKey\" : \"3dueqvmtw1tg912zhofg0xchbd3y0lvvctpcrhvh9hie023stwhpcbi943qm3crv1q7pjm4zsue0gwp7j3cnx15x0d0nh5c3pg497bfm3pqqxq3tbxbulu6w3frvud\"\n    }, {\n      \"secondaryKey\" : \"vj8qq8ge1ssc8lsjau41u0gtnbuwgz7xz8r2unasgykfisxyi79ia2rhy09jrnph8unibiaravu30bkouniqmvhp3db\",\n      \"rights\" : \"RegistrationStatusWrite\",\n      \"keyName\" : \"Brian Bradtke\",\n      \"primaryKey\" : \"9y72sjunfc9kzi3r129c6br494p2hc3vj3jk8hoa6r42dd3fa4zpogg0lih6pd72ijeqlr64lhjt9ljrs2ytlj49l9ttptan5gyofdclmebif7mixv7r552qpxrkypo6lbtzz0f8hdwnvm1p9xibcumkg14uu4tmag5hzr2d9cmetuirvaux21t3yb36nzewrj\"\n    }, {\n      \"secondaryKey\" : \"mfxc7u9mksrastqbd7oqjcl0amsaor4w7otneul0q8wx9j0mk32ey4utwtpabdue5w64xl1cfqam3uzwlfv16n5hzwqqh5mtkdw1c7xmx33eu331ajsrx82t2skzuqmp88khf7o9ywnoy57gzak881p9peanhhdxdhipdpor0n9pmm1n6uwo6eelt\",\n      \"rights\" : \"RegistrationStatusWrite\",\n      \"keyName\" : \"Orval Hane\",\n      \"primaryKey\" : \"0tb3pcfnu2vvnyboehb6a06ycmh1wtnkkngtg1pvcn9zntyv6rgjuwnu4yo3lu12yxuu2ttkzpjy798jjiwpnl01t4lp581jusutzzse00blczuy4kty1t9js5qx302nlig7znodawev42nai3loom671lkezio7bzgyum80bhbco7sbl5py00on\"\n    } ],\n    \"allocationPolicy\" : \"Hashed\"\n  },\n  \"tags\" : { }\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "5594f336-111a-471d-8f0b-d820068453fb",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:15.19444Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "IotDpsResource_Update",
+          "schema" : {
+            "required" : [ "properties", "sku" ],
+            "properties" : {
+              "etag" : {
+                "type" : "string",
+                "description" : "The Etag field is *not* required. If it is provided in the response body, it must also be provided as a header per the normal ETag convention."
+              },
+              "properties" : {
+                "$ref" : "#/components/schemas/IotDpsPropertiesDescription"
+              },
+              "sku" : {
+                "$ref" : "#/components/schemas/IotDpsSkuInfo"
+              }
+            },
+            "description" : "The description of the provisioning service.",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/Resource"
+            } ]
+          }
+        }
+      }
+    },
+    "insertionIndex" : 11
+  }, {
+    "id" : "590f56fb-254f-490b-871b-6afd2d43cc7f",
+    "name" : "Delete the Provisioning Service - 404",
+    "request" : {
+      "urlPath" : "/subscriptions/5xf3/resourceGroups/Dino+Tremblay/providers/Microsoft.Devices/provisioningServices/Gary+Stracke",
+      "method" : "DELETE",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "7plqt"
+        }
+      }
+    },
+    "response" : {
+      "status" : 404
+    },
+    "uuid" : "590f56fb-254f-490b-871b-6afd2d43cc7f",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:15.192541Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "IotDpsResource_Delete"
+        }
+      }
+    },
+    "insertionIndex" : 12
+  }, {
+    "id" : "00e5fa9f-d81f-41b8-bd22-d770c1a24053",
+    "name" : "Delete the Provisioning Service - 204",
+    "request" : {
+      "urlPath" : "/subscriptions/sn2z/resourceGroups/Titus+Becker/providers/Microsoft.Devices/provisioningServices/Mr.+Rigoberto+Ortiz",
+      "method" : "DELETE",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "5oylsy3qasykqbb2wpo3c9nngpwuokiwwwtu9wmkgo4o0iwh3lgyd90nlh5205b"
+        }
+      }
+    },
+    "response" : {
+      "status" : 204
+    },
+    "uuid" : "00e5fa9f-d81f-41b8-bd22-d770c1a24053",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:15.192357Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "IotDpsResource_Delete"
+        }
+      }
+    },
+    "insertionIndex" : 13
+  }, {
+    "id" : "7e2768b1-1ec7-44e6-8e2e-da726827a3af",
+    "name" : "Delete the Provisioning Service - 202",
+    "request" : {
+      "urlPath" : "/subscriptions/98qg/resourceGroups/Jame+Thompson/providers/Microsoft.Devices/provisioningServices/Emilio+Lehner",
+      "method" : "DELETE",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "ydnm8ice55uksw1t9k5fiil8pr8f19py3eyqfx5d5z0as18c43dgfevxifs2dwnrnkj6n7upso4k12mkteffb7blg10c9o7ch5jl4fp1no9npvsudejse0kq8x4tp3tf59pcy70olskya0boiufy8jp"
+        }
+      }
+    },
+    "response" : {
+      "status" : 202
+    },
+    "uuid" : "7e2768b1-1ec7-44e6-8e2e-da726827a3af",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:15.19213Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "IotDpsResource_Delete"
+        }
+      }
+    },
+    "insertionIndex" : 14
+  }, {
+    "id" : "7b55e717-40a4-426f-83bb-b34d7d90f4cb",
+    "name" : "Delete the Provisioning Service - 200",
+    "request" : {
+      "urlPath" : "/subscriptions/819z/resourceGroups/Ms.+Nana+Altenwerth/providers/Microsoft.Devices/provisioningServices/Gil+Hickle",
+      "method" : "DELETE",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "zaq91em8bw2e330iykicfwbvgrgzsdfhs4yo8uxkdftuocxgyg33k0t72ruyn3354be4qa6xs5jd2lprb0oa9qleajkytk3hk43m1y7rjx6vl7a0mbak5mhndl93qhvrijxuf3uc6oi8hn2umqo7a0oaybt41lnehzvxdj672m4j5"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200
+    },
+    "uuid" : "7b55e717-40a4-426f-83bb-b34d7d90f4cb",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:15.191824Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "IotDpsResource_Delete"
+        }
+      }
+    },
+    "insertionIndex" : 15
+  }, {
+    "id" : "4443acf9-eac9-4aa5-b67e-85065748b23e",
+    "name" : "Create or update the metadata of the provisioning service.",
+    "request" : {
+      "urlPath" : "/subscriptions/p69v/resourceGroups/Craig+Block/providers/Microsoft.Devices/provisioningServices/Idalia+Boehm",
+      "method" : "PUT",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "pqn4mcyjx5ikomgvloj4ndd9twu9tjk1srsxjmfgcc11bfdhfijj102t3r9m2crq6qkmb04x2fhuapd5lostj6gphf600ta6ho34tv9v6toa5p"
+        }
+      }
+    },
+    "response" : {
+      "status" : 201,
+      "body" : "{\n  \"name\" : \"|q\\\\?]CfjIQ\\\\E}/=$il!&!ng6enzkdKaYWJhOK49xubMRMZ\",\n  \"etag\" : \"quam\",\n  \"location\" : \"j8n8hn5gzs9za1o8kut4i0dm3lgisyythmmujnmb0o4z\",\n  \"id\" : \"6gi8\",\n  \"sku\" : {\n    \"tier\" : \"h8puy45gox7rnp2wmdexeb64vd09zy0npjkyb8bovcttwn1m5w6nowg5talkegh4vvyrfjgrp5kmp2hkzt0sze1kgoj2r4lwjv8l95l9e8vwaxqeye783h0rctollvwetchsz6f7jg7wvcsdlg0vz5hsex8w50u7qhm7vq89za8n4jvx4yy4gr87t5a\",\n    \"name\" : \"S1\",\n    \"capacity\" : 8092641803254313158\n  },\n  \"type\" : \"6zrpkbuwxko7evx7nqbp9q50gwp3y4dgfef1ky15fnpfdhjorp5nni06f10fg8ahs5e5qfo9svw0v5a5zp16md4lqd5ajumbfg7dmuyw384r0xw9i7lcs9t8yb88vh8u0eq54cn98dnqc4i8gzljq9jgqg0lgh0b9stlbjncnvd93a\",\n  \"properties\" : {\n    \"iotHubs\" : [ {\n      \"connectionString\" : \"4iv1nw2r53wgmqm2nl09p6ka5hu8zj9ei70\",\n      \"applyAllocationPolicy\" : false,\n      \"allocationWeight\" : 1907500971,\n      \"name\" : \"Ms. Mckinley Conn\",\n      \"location\" : \"skafmg0c7sag2agqhya3chtsdia6eleqazxriea\"\n    }, {\n      \"connectionString\" : \"re4351a6r3ehbwotfigklgg3gnqos6494lhtmyp89f0nvwbeli4ucyivp0i6qchxsydwx2yl8777b1unwibbgmo4yvd2xsj34yq932a3jqqyyepzy3r9g2qt90qi9eb2cxrgmc043prcw2j29g5607dbmuf66nfyrqv\",\n      \"applyAllocationPolicy\" : true,\n      \"allocationWeight\" : 1856228110,\n      \"name\" : \"Dee Schmitt\",\n      \"location\" : \"54oi73s1iz9j56gpfpxb66p6y7mscagqdiozjz7e48wyadzyjnn91pvwtem56pdpdpxe19mvqgaiv3nvogl3of0w8xboigluiqd0u15rpn7xytdxk5vm\"\n    }, {\n      \"connectionString\" : \"1le4ggu4pyf1rdugg9w2iwohs4pp4yloz8c5lsk4fthwzg5xrj1cry361fyda3j2sffsyuln\",\n      \"applyAllocationPolicy\" : true,\n      \"allocationWeight\" : 1727794790,\n      \"name\" : \"Lakeshia Smith\",\n      \"location\" : \"suj1dquoj7dcp62h7kfx6a6vlsk7dudq0vziyje18lw3m6tf8ontmzx2qpu9rfhy4z8qxhmimix9bo8dg52ere\"\n    }, {\n      \"connectionString\" : \"7w67eumf\",\n      \"applyAllocationPolicy\" : false,\n      \"allocationWeight\" : 1662460670,\n      \"name\" : \"Chau Lind\",\n      \"location\" : \"316k3mv868s5c2w0q6dcz2bdbourcjgue13stp8p3u50rf52ebyu81kgjk5gxc9gwksaj5urrpocz6y8mpts4i2rgvkhd1z6znaphls3ytvbdt2nyiuhu6slyot2xg69gijowpc1gtsr4iqy9th4bknbtdez4s4k31xxcmf4\"\n    }, {\n      \"connectionString\" : \"3ndfse5izszrlguy0f6ju9ysjuoqrrwz97tjfut5n5gqr11sdntwddlel\",\n      \"applyAllocationPolicy\" : false,\n      \"allocationWeight\" : 396776610,\n      \"name\" : \"Kathi Schmeler\",\n      \"location\" : \"dm8hydpvmxsoxloaiv05pqtuzx2kxzktyq6jdoo10w08g26v1uju8qtkczyc3lemjx2kmknvyvkpameohk280tkn8z7mmgwidxpsy0rdlw457h\"\n    }, {\n      \"connectionString\" : \"8mx3p83cr88dglcm3t1zjinn6rmgzoa6ci4fjhjlrkxg0nssxxr6zyjvzo5enp67hfuuhsgqybb6t0rtzxf2t5gx95qlm76ioew7vx81sg90copnkg4u0w\",\n      \"applyAllocationPolicy\" : false,\n      \"allocationWeight\" : 2027579704,\n      \"name\" : \"Mrs. Maryam Hyatt\",\n      \"location\" : \"pf2f04ri1jslxkvhjhsv8k2zvn4zlq6et1ea2jcrdpuemm6zshyn1olxp9ks2c\"\n    } ],\n    \"serviceOperationsHostName\" : \"Leopoldo Sauer\",\n    \"deviceProvisioningHostName\" : \"Miss Sarai Lang\",\n    \"idScope\" : \"hwt1r8li0ofzx7a95wal6g1heoazoriydqjkd5ybyi0cfwmdyuieeiiv8l8q52vxgrmcatvc880jciuvl8ha5m1445u5j0c87wvx5u0qv6m74x7jd4o50o5hrmtkulzahsxu9qmpio71c06529r6rg08z\",\n    \"provisioningState\" : \"Wisconsin\",\n    \"state\" : \"FailingOver\",\n    \"authorizationPolicies\" : [ {\n      \"secondaryKey\" : \"ybl0b357ye2o16kuzyyhpveyw33z\",\n      \"rights\" : \"ServiceConfig\",\n      \"keyName\" : \"Karl Miller\",\n      \"primaryKey\" : \"heryloz6lj2gaf\"\n    }, {\n      \"secondaryKey\" : \"hvjrc9bgus1g1t2ww12ldv5x5zi76kkzbhd3p5eumj6026tnxbr17\",\n      \"rights\" : \"RegistrationStatusWrite\",\n      \"keyName\" : \"Hillary Schoen\",\n      \"primaryKey\" : \"29o672rtoi1uimknt8w1bwj649ndvofdbbzx8nohpgceui2oq1rx0f26wvxm2atf2prai157pz1uwox88elhlqqw6435lt6vscg5i5qgdgxshhxwg5askz4hhi10x4pldkeuztavde7pxjxc8ibkf\"\n    } ],\n    \"allocationPolicy\" : \"GeoLatency\"\n  },\n  \"tags\" : { }\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "4443acf9-eac9-4aa5-b67e-85065748b23e",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:15.191593Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "IotDpsResource_CreateOrUpdate",
+          "schema" : {
+            "required" : [ "properties", "sku" ],
+            "properties" : {
+              "etag" : {
+                "type" : "string",
+                "description" : "The Etag field is *not* required. If it is provided in the response body, it must also be provided as a header per the normal ETag convention."
+              },
+              "properties" : {
+                "$ref" : "#/components/schemas/IotDpsPropertiesDescription"
+              },
+              "sku" : {
+                "$ref" : "#/components/schemas/IotDpsSkuInfo"
+              }
+            },
+            "description" : "The description of the provisioning service.",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/Resource"
+            } ]
+          }
+        }
+      }
+    },
+    "insertionIndex" : 16
+  }, {
+    "id" : "8486719c-e64e-4953-b470-acef9b13257d",
+    "name" : "Create or update the metadata of the provisioning service.",
+    "request" : {
+      "urlPath" : "/subscriptions/g5pj/resourceGroups/Marylynn+Leannon/providers/Microsoft.Devices/provisioningServices/Ophelia+Watsica",
+      "method" : "PUT",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "8h7ewtsheptme7uqjz3kkfazbkfg9s0w3fk61won50aj3bat14itish9bzseex58n0egen6v0"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"name\" : \"cVH=\\\\AlV312-f7ljmgwswH4eutKZaIaLyM351pK8hSQPu88z392\",\n  \"etag\" : \"rerum\",\n  \"location\" : \"fidbzdcsik8wqicpof7qjn5qx2o10fajilmtq6930ocwjmwxtw1xb7bzg3vepfrxzb66sabm7g08cbyj5t8uxguai6pm4q0\",\n  \"id\" : \"7s2u\",\n  \"sku\" : {\n    \"tier\" : \"ggeg0u1lovqyd4q7td87oo3usvftonldt0kgp4b5\",\n    \"name\" : \"S1\",\n    \"capacity\" : 8961513654609570829\n  },\n  \"type\" : \"c8jvidmc391fo5cilzfz49eytku41goom97094or7m4emqutr1e9u7f0yogdvv7xeuyvv22xqvurcc62y6f146y4s94zans1sktvzwwn5neuapeyha1pnircoc3c7mpfhjjb6cekrwmbnmgb91tzsg33tgdty3wg\",\n  \"properties\" : {\n    \"iotHubs\" : [ {\n      \"connectionString\" : \"u3oqg5fxmgoq3fcgim2oqitqk7r2q1e9abwa11mvi0hdyccr59mcpbdbwd1lke72uj2sv0jpn1dj81rfjvv0vylynvkbn1ehbhu7yzbu1t0o1vmkol3boexn6a5aei204z0zbt9oaf6ivetloa49l46i5lmalvw1nzc5hcitksns8x3o6u\",\n      \"applyAllocationPolicy\" : true,\n      \"allocationWeight\" : 1568469240,\n      \"name\" : \"Shila Halvorson\",\n      \"location\" : \"rew6s2oaom6\"\n    }, {\n      \"connectionString\" : \"ig2n5jmhov0qolbmz97q0cgeuzsbttrkcbvgpay34t4rrirpbgwlbrb7dkk0zsmlo8z6xehwovqlytq5pg2r4qjkzvep3rvkkbspg4yookgh1hh13ggn6nbwq8hdzyh27pkk2yz7o5df\",\n      \"applyAllocationPolicy\" : true,\n      \"allocationWeight\" : 634131953,\n      \"name\" : \"Dean Bogan\",\n      \"location\" : \"sg9h3nzq0iccqth7hih2q4xl02k950q2b5kqbrets059696zpa13klf2a4yazfqkh3lpc61qd7arr9b66cpyzgnriu2xkl5qz65w01yw6x24wecohxmuxgsrx4k2wl5w1asq87f0sofefz61ip8fdtq8reoan418ujqzlc8hu\"\n    }, {\n      \"connectionString\" : \"57k6v31bvwatqorkd2tm0uuuf9k1seo5grdu0cwytepf5g3shugj9m53iipfp0qu55oxf8haiu9u517g46rl3ss82rmss9w4w0jn1l39i9wawr5ukupd5xminsjb\",\n      \"applyAllocationPolicy\" : true,\n      \"allocationWeight\" : 2001377148,\n      \"name\" : \"Luciano Yost IV\",\n      \"location\" : \"mvjoz5atuuptoahzrqyhggc9qsjk071f9h2v4duhys1sc7zkmzqz6aetrtv8uw3a67f5ob86agfm5uquy6p1xx5w6xcimfrtmk6xjvo0dpbc9t7y77scuoc\"\n    }, {\n      \"connectionString\" : \"mgncli6uk3lhagb7blwuupzwp0yq4twdf6hdteww55xn0fn25ydm5mdpk5fs984k7h3ow17v6ubzqawe8k9xypzr5yfvdp47ue5krx0jslmnlvjcktvs5anssgeosuk5ggwvrgajuvnpg5d3m287t6z8pfhpm6oqys7vd80j4j1m5o0b1\",\n      \"applyAllocationPolicy\" : false,\n      \"allocationWeight\" : 1723102031,\n      \"name\" : \"Elinore Bins IV\",\n      \"location\" : \"8kuqvdevooy480fnyu81732d0u8mhuc9fe1dk7k16e2o9nsl\"\n    }, {\n      \"connectionString\" : \"y7uhtf531ihjvvxha7x2rcblhkon1j9mjuv97w5667mj04fvn9us34ccewa5n3woar8v2vlvkrm0rpr62a7q6flfhd5f0x3mw2vx2knpo9uvtk2p4veekjqy1qrturq5h\",\n      \"applyAllocationPolicy\" : false,\n      \"allocationWeight\" : 706976642,\n      \"name\" : \"Travis Kunze\",\n      \"location\" : \"bsjlhfq70z5w3ddnqg4ixd8e2vow67tmbk3olcyon78ipygyl9qwf2ec5kf7g7lb5ymclxb5kjf4ob6ium4fhz0aprna8qunvk5k0lyrbyikj0v338og62ddg8e3nrrzrcnom8rho620a2ijub087benvb8g82qmbrvwcep0uxqaak0bgfadmkf4\"\n    }, {\n      \"connectionString\" : \"p4bk6wutpcigubb3mtpu5t4a0typ4qjh7v0xcdlbji9570hmbddws02s9yd5a35y758shkgen3l1y\",\n      \"applyAllocationPolicy\" : false,\n      \"allocationWeight\" : 1735088137,\n      \"name\" : \"Sigrid Rodriguez\",\n      \"location\" : \"5scd8aai77jres4b1oppvj66u8a1wvyljtq5yc\"\n    }, {\n      \"connectionString\" : \"qw1qmlmc0h5vtcp4pjlh8u5lol33nivxuoio9a0rn499zv807xs6lfvwczrsa5fo46gfmhb6dh4xvtb0biqaeo7fycwaxtnterr9s0lbwoc92gvfzenurww7yhu5xykbyek1w9ieiwv8n2kyxh7un77nze70w71bl29qtwc0ofga\",\n      \"applyAllocationPolicy\" : true,\n      \"allocationWeight\" : 1395477619,\n      \"name\" : \"Mrs. Junior Schumm\",\n      \"location\" : \"pvc2p2hoyeio85k9la02o0i6xppaqha2y0oo90ehzkzcmb4ea1fropfb7nltftmthtwihu7ev0sj\"\n    } ],\n    \"serviceOperationsHostName\" : \"Harriett Heaney\",\n    \"deviceProvisioningHostName\" : \"Adalberto Stark\",\n    \"idScope\" : \"m6i6265cyqm2j6u4xkrxjbfu0xtikbatkn753afdewjxu89jhjzobxues38e1o5nzxqx3905bykmuy5txeiixhfa9iu1s\",\n    \"provisioningState\" : \"Vermont\",\n    \"state\" : \"Resuming\",\n    \"authorizationPolicies\" : [ {\n      \"secondaryKey\" : \"6t1dzepjszuxuzxcqr4ulbkvx9izqm6mpkm4zkozt9tqcgda8czoj3hyjmkdkxchqmjbff1vmc\",\n      \"rights\" : \"EnrollmentWrite\",\n      \"keyName\" : \"Glen Grimes\",\n      \"primaryKey\" : \"t6553kb0uajfa4eksl9vtrx8k6lj5wus1gzhr54h2qei64xbd8gdqjeo4saqlueco7m9hprsos3m0x3tmxk0n5ss67wo33bx4suk7aweqwa3jav2yr6cth5owuekbignif3fymu5iz3wlx76bz\"\n    }, {\n      \"secondaryKey\" : \"yxt1gbh4yxa0nve7qq8qxlk9wxv47gtg8kg2hle1y4z4wvgmf6wlex520yrypy63w3lrik0vx4\",\n      \"rights\" : \"ServiceConfig\",\n      \"keyName\" : \"Carmine Hintz\",\n      \"primaryKey\" : \"gqzyi3w7d4llwmsv7l6artqa5upeb5l952oe548zp8ce8quxsk0kjh5p3bd0o26hxa2zyf3b8ohecd2ojete7l9nuntnrw05j6f7ihg8g56qr7bl9tt5wek\"\n    }, {\n      \"secondaryKey\" : \"6owq8t9l96wv2etyqjk0xtpvl915cn3a6l5hwb66754ff4biz9c2qz00l4th3v3bi9hn7zjzuos05w5yrttv9twqzhja6tywyhoi4xwou4hd1g17h630jfv75ovzgr37nxzq0w96jw20v\",\n      \"rights\" : \"EnrollmentRead\",\n      \"keyName\" : \"Carmina Mohr\",\n      \"primaryKey\" : \"l8u42qpjq2h5e4i0hors4nnw5gedsdquyv7fe5bt3h8wvufipeik9iya6sn6b166rxo4mohkcrgqwkbcn7jbc7kuslf587ahe8ijlwhnloqm2ow92tvfx2m55mrg0ty3axdspb1q2r9xld3ymql2g762tcn47eq5g\"\n    }, {\n      \"secondaryKey\" : \"siyfk5aqwjjxbziztmstf4jknzp2lx5ss0gd05ggc3lzv6ay44vgu4cl32swde8k7porny5ad62fvrp0oje6q254xegv389aejj913xjpoz5hmcvdz1i0gwclwuxo5v6vlkwb23mu2zp2v3mrjg13cfxj7a7z6j9j4v8p5s6mgemwqp\",\n      \"rights\" : \"ServiceConfig\",\n      \"keyName\" : \"Theo Hand\",\n      \"primaryKey\" : \"ln0iotm6l704d\"\n    }, {\n      \"secondaryKey\" : \"phznsgflkq9bf44jbki97842ofqpb2ttk935zgv2eeq4fzms4qxhjxy3bp0s9fowcx2crvbazubkgvq5qxlmkzaaol05uqe0zw36ou5x3mvvnnfy3cw7pfhqle1ssgc3wyjj5gr2ja2xzo77sh5okp4ige8olda3zv15rqiqu3dju\",\n      \"rights\" : \"DeviceConnect\",\n      \"keyName\" : \"Jackson Kshlerin\",\n      \"primaryKey\" : \"b42hnlpkw9v2nj90qxd1rv1a6a48yprhr5qi3jd3a75xtxg8g3qgkhv69lm5n7f0w5hzqlt1nsgtfcau96g5f4w5o9elnnfy2kr193gdxdviyza95drwet12i0\"\n    }, {\n      \"secondaryKey\" : \"l5g95d900khbvbg59fh6d1k6scrzi8vkzvn0vbxq7n8n2mjatq8dovxs3dvn08t6exi4nm6a7235p8cnok77v0k7t024dci9hgru2a1g0vq280ei48vm7vje6ca2jgndoey28acobyo5v908oebjsa4wjewkrzxfsltvhn9y71f3603xdnlhqrt7swv\",\n      \"rights\" : \"RegistrationStatusWrite\",\n      \"keyName\" : \"Pat Quigley\",\n      \"primaryKey\" : \"jn48ly5ntrqkk9groysiqcjq02231wfcn969mqf6y3sjv0zan3zwmqov1te1ch1fm2z5b3j615jkcjmarpbixfqyaq8akar1x3fqtm4et22vj53jy9pbq52but0huh7iobr4fzgiqgdhbp\"\n    }, {\n      \"secondaryKey\" : \"ncbzmutnhg8s7d2bm7a9ggyt2oaoqiy7dfm9czoq3rgfar7ziux4ikwsf52zyzwmfyj1jgsa7i2y0s72wdgf\",\n      \"rights\" : \"ServiceConfig\",\n      \"keyName\" : \"Howard Morar\",\n      \"primaryKey\" : \"7bfhh17v7m5c8ifn667i0ikdd7uxjii1tcr789bwg8x6f5ebueqqpox2qlbie8gogdn3m3h1a8q7i7jz5pjvv2ljjsoh0j2yhcq2tbw9nn0pfg8rws6lbwdypg72oyeqz414kwnrn8q95vrvyiq756iuff9k4bjnyd8v6bnpt3odstqn8oom9oz2\"\n    } ],\n    \"allocationPolicy\" : \"GeoLatency\"\n  },\n  \"tags\" : { }\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "8486719c-e64e-4953-b470-acef9b13257d",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:15.190248Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "IotDpsResource_CreateOrUpdate",
+          "schema" : {
+            "required" : [ "properties", "sku" ],
+            "properties" : {
+              "etag" : {
+                "type" : "string",
+                "description" : "The Etag field is *not* required. If it is provided in the response body, it must also be provided as a header per the normal ETag convention."
+              },
+              "properties" : {
+                "$ref" : "#/components/schemas/IotDpsPropertiesDescription"
+              },
+              "sku" : {
+                "$ref" : "#/components/schemas/IotDpsSkuInfo"
+              }
+            },
+            "description" : "The description of the provisioning service.",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/Resource"
+            } ]
+          }
+        }
+      }
+    },
+    "insertionIndex" : 17
+  }, {
+    "id" : "9d1d718e-247c-447f-9cc6-fd993a6f0dd1",
+    "name" : "Get the non-security related metadata of the provisioning service.",
+    "request" : {
+      "urlPath" : "/subscriptions/nn47/resourceGroups/Miss+Hosea+Dietrich/providers/Microsoft.Devices/provisioningServices/Mrs.+Brock+Halvorson",
+      "method" : "GET",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "24cjnilt2mb7jitgmpy2mf49dheb6eihvtfcw4fyiej4"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"name\" : \"HefeMwc&T#i<<EB)K @^= )l_$pO)\\\\*+HpWAJ {-(nr]gED-KfEU([fqxF#%BXvk(eL.jLg5lKA6kKXgtynuQnlFGJ2D3ruO0tEV2Jde2q1HU7\",\n  \"etag\" : \"itaque\",\n  \"location\" : \"xwzzaeoahfzxemmhuuwilsa6i4br\",\n  \"id\" : \"2b04\",\n  \"sku\" : {\n    \"tier\" : \"8ahnifmh8039mghlo7ndx6cld4mkv9s74rn76h9aqoy192ozp9z61cz6j5bwmrams8z1wcpkhh5npeuctusqr5dgwq9xj54xoiu16o6du3onovun7ha2t52hh6\",\n    \"name\" : \"S1\",\n    \"capacity\" : 4570529227101856271\n  },\n  \"type\" : \"f1iygwt7sozso6pqg511vb4msdiq5bcpeyoi61cn3ix1shygofqt51fir11og2fwtwt427zozp2gfihafgkt11gq5cu2gybtg1w76i8nltvvahqy842hdctez3ohv9in4j\",\n  \"properties\" : {\n    \"iotHubs\" : [ {\n      \"connectionString\" : \"8e0aypj7fbhgo4f75sgxs6z2c4jwti36d4tky3586ffzc05t97vsnp6tfjcqxlelhhgk9jd2ts8olzi6do3qbslrj2apb973vv82biowk1z5dizki7\",\n      \"applyAllocationPolicy\" : true,\n      \"allocationWeight\" : 1392576305,\n      \"name\" : \"Lucien Robel\",\n      \"location\" : \"k7bgrn6k7srpxshy\"\n    }, {\n      \"connectionString\" : \"cyeb20\",\n      \"applyAllocationPolicy\" : false,\n      \"allocationWeight\" : 1480611471,\n      \"name\" : \"Camie Morar Sr.\",\n      \"location\" : \"mgy6hyj9rpqk2dn6mjw0isbvyfvj9j4z2jngibofpcv817uhsgtwiefhbjt8jlhk735d6nwz26mwwnbf2ch3eq3k9n687bwjvxc9z0te5irsi4scgsoj70rf4o0zskfnpfpxkkk60o6ykdb4avv4g0iy75i4rzf848v5j5llyhcgt\"\n    }, {\n      \"connectionString\" : \"h7vef8z5y22n24fph3xzjeintjczzcsdf440cdk9jki5edwxrtrrwbtg12qv1dg7qk2z1j1xzdzcrnwellqmei09a3vkrl6qgswjelovuc9eur8yy6jk0z094kz8gh9lzcyowzivwzc6mrv58h79zf4p2frpok20ojouj1e\",\n      \"applyAllocationPolicy\" : false,\n      \"allocationWeight\" : 1049011095,\n      \"name\" : \"Joey Sipes\",\n      \"location\" : \"e0kmtx9vcym701vnsc8ppgvk5xcuhrkzda3cf2ji1v3iwvuumq56nlb0kxetn3cinx2vf1e40h068gtl5n7d709117joiucjvxgczg0uwtplw5x5z7ij339owyrfbfme5qm911nra7418byx6d38twbs781iifnzqbfiq2ejc3ybb1l1pauz\"\n    }, {\n      \"connectionString\" : \"nysvvvs8ca45rm0y9hos4ktx54lwjl7u78nkz86poutg1f14\",\n      \"applyAllocationPolicy\" : true,\n      \"allocationWeight\" : 2118806611,\n      \"name\" : \"Sherwood Corkery\",\n      \"location\" : \"uy2kdnmwl2jgztthpw1395zk4i4fpq1folzhn7jtg3ex2l9xitirj2mpuooeoyg15l1ype6bpb3v1i4bj5mt992e0uk3v1ol7jdi9264q5zdzvq5ph214r90g903df1u8qemjy9sye8cdiim6wp2ra72po52cgmnuagmw9xphcx82il6v\"\n    } ],\n    \"serviceOperationsHostName\" : \"Joeann Senger\",\n    \"deviceProvisioningHostName\" : \"Edith Schaden\",\n    \"idScope\" : \"cet4krax1exlosimszmv9dyiq7i8yhgqsayrqot90z2q7pf9kf7d7oh2lze2m4zo4mfl5cjrs\",\n    \"provisioningState\" : \"Hawaii\",\n    \"state\" : \"FailingOver\",\n    \"authorizationPolicies\" : [ {\n      \"secondaryKey\" : \"v0j2zevavocwlzc6vfbigwos0e138x4mkie3q907gz4py6lhagkpgd9f2py2kpbf5zyxkppwjrrv2lrpefpqs0goti8ppgd4ekcjrc7n9jsb98vwrul6glx10q6vvib5qks9s3ojwvs9fxgpijddffc1gk5hquc65j197y23rkzf7ienvud6rjhfjox2pmc071sk8swp\",\n      \"rights\" : \"EnrollmentWrite\",\n      \"keyName\" : \"Mr. Assunta Powlowski\",\n      \"primaryKey\" : \"g1xci98yg0u14dj54gdem6y8e76oqpj4p1hbt7f0log3jwn2ne4hsjy8vmyu73qf0crocwq8gr1nz2ntml958tdkdrdtmq8s8khfv49ldmwpk8wcokef2r1ry8x4dnh50ymi9mcgwzqu95pd\"\n    }, {\n      \"secondaryKey\" : \"ykp9tl4uouvgwc6f1sc1lgmmkfb809vrt01pm72rulcf77oyv4wc2uyc3xbqxkjvhsyzrdmyvcg977bma1sv0a8nl2jisyd2uzk0z0ua1wl42wyd9n27bffrjaij1janz277aauwwgpem65pa07rbb0p18ezdblfdsfac49qtdaw65hpyluh8parvtmcmyb4rqkvl\",\n      \"rights\" : \"ServiceConfig\",\n      \"keyName\" : \"Miss Kasey Muller\",\n      \"primaryKey\" : \"tyr3\"\n    }, {\n      \"secondaryKey\" : \"h0ksd08nxb8wp914cgejl1t7tqvq474qbv97o2imxxylwajatbt6uye3z7f5x2qaqnbu4kp8nyh79kvbzyieaijbxty73ojddighx2wwailmskr84tscdk1sqsfl4ucdla84v9r6nppepxx8wzd1r9aijs3\",\n      \"rights\" : \"RegistrationStatusRead\",\n      \"keyName\" : \"Todd Johnston\",\n      \"primaryKey\" : \"riz9b4acs87c3xpl173oqmkcmqo478v5pu7i3t3u6wid9tf8vj3zml59pl7q9x28tif9snhtkbflse38j2licd6j3wu9uwoalph1w44kuw14bl59wdatnkdgvsot9vjww9ajoxx41zcy449\"\n    } ],\n    \"allocationPolicy\" : \"Static\"\n  },\n  \"tags\" : { }\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "9d1d718e-247c-447f-9cc6-fd993a6f0dd1",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:15.187984Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "IotDpsResource_Get",
+          "schema" : {
+            "required" : [ "properties", "sku" ],
+            "properties" : {
+              "etag" : {
+                "type" : "string",
+                "description" : "The Etag field is *not* required. If it is provided in the response body, it must also be provided as a header per the normal ETag convention."
+              },
+              "properties" : {
+                "$ref" : "#/components/schemas/IotDpsPropertiesDescription"
+              },
+              "sku" : {
+                "$ref" : "#/components/schemas/IotDpsSkuInfo"
+              }
+            },
+            "description" : "The description of the provisioning service.",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/Resource"
+            } ]
+          }
+        }
+      }
+    },
+    "insertionIndex" : 18
+  }, {
+    "id" : "441ac7b2-4348-4ac8-9255-e5719c0f4379",
+    "name" : "Get a list of all provisioning services in the given resource group.",
+    "request" : {
+      "urlPath" : "/subscriptions/ci20/resourceGroups/Blake+Gleichner/providers/Microsoft.Devices/provisioningServices",
+      "method" : "GET",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "99iar6bkrc2h507d9cuw13"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"value\" : [ {\n    \"name\" : \"aJrpY%I[Pn~G%\\\\+J@dV xZ.E<_J-UT^l*$\\\\P`\\\"$cw(@qEjAw_:I(h-UnXmcL-ok^+Z)]bpKw+@%`*Y|,Sm*,_l:madfM5ULMTopgpOXZFRdKsGtHE4nlp7qCmjLEn62T\",\n    \"etag\" : \"possimus\",\n    \"location\" : \"1si0cabdiolhg1d20jqzzflekyx7rm3tlb583cqte6qti\",\n    \"id\" : \"n1yd\",\n    \"sku\" : {\n      \"tier\" : \"dpmhur8zduz3jcugpummiud8bhkppfalt1ofjs5ocpnixv541hwaslx93idxsvbnvpvijz1au15szyqhivmyr95l1yaauh2lj5kcu56cwhvaqcf0bmzmrqxbkxsxetayrkvso16kx7zy864tlv1r8y2wxzr886438w8mlj1nyaa63vbr4mqrrzncbnrp8cm7\",\n      \"name\" : \"S1\",\n      \"capacity\" : 5149842848324154904\n    },\n    \"type\" : \"le8a5nesbqtd1isq0p8juz99yrhdkqnnpe8ikoin744l996g2ze3iclsevmaklseuribaqjol2jlm93daf16frcki5cgmg5yvwntvw1f0yu2zrypl65h5q7v5bgfuzmr8meubg8kpzwu4z\",\n    \"properties\" : {\n      \"iotHubs\" : [ {\n        \"connectionString\" : \"nf6a89pvbf6hmwpxvw93eqdc8035gw7ms96d7wqyfrtsfxbyp0ez1bd7lfx4duvesb2jfxxjimmz5selc09o10n208t59gqu78td9j8llq7re2rbfy7b7ts2grlcmetfl4tajv7us6if9b1pglygihvtapfaui0tpblbg9rgree0jm91l2w6ild\",\n        \"applyAllocationPolicy\" : false,\n        \"allocationWeight\" : 1498902506,\n        \"name\" : \"Blaine Hills\",\n        \"location\" : \"i78u7uk2egvzxsz8qpla\"\n      }, {\n        \"connectionString\" : \"2m98o4n1qwfs291radz77clw0gppt4l05f2zrozvu33l574b749dypzxra4i6zs8p1p5c7nnjl6rbthnm23si\",\n        \"applyAllocationPolicy\" : true,\n        \"allocationWeight\" : 862290100,\n        \"name\" : \"Karon Waelchi\",\n        \"location\" : \"qv0gsw9qerer6odltsnb51qsqulfmnkmf5jgie6x9bf8grcx9hzugfkwntez7d6mb196i0x3lm0c6qaznak9ilm5je1keytc4cnyg4jr9lr32lrurfg7xxctxszeu42gchekkkjx6nq1uw0nxtqlbdzuuwl57\"\n      }, {\n        \"connectionString\" : \"9qe7c2mxrpvs3z3nh49z08e98b3jmi07ge3kpl93ybmx4lsgrutb8wf0q2eyfht4531cd0dkkgfztp91gcd99enk1tdbd6ixwyglnarj63i1yyowto9hqqo7l1drhrwg164xox3w6sfk682fnkb\",\n        \"applyAllocationPolicy\" : false,\n        \"allocationWeight\" : 13713936,\n        \"name\" : \"Ms. Slyvia Cassin\",\n        \"location\" : \"87ctznsvk3h8r0gqnd5tp63vb9zbxj5391tjfl9e1xcwewkh\"\n      }, {\n        \"connectionString\" : \"ymhq2lg7ccr3e4luipyex1y3r479sidu593reny6p11y1ag2gn23bzyhbe3216n4njuhj2sp\",\n        \"applyAllocationPolicy\" : false,\n        \"allocationWeight\" : 1319945756,\n        \"name\" : \"Gonzalo Pfeffer\",\n        \"location\" : \"zipvwg7guefe8ldtp97rxn9zbkhha42eptgeih5me2ixk2gnwfi8d8hgfnnrh2lw36kfj7fwrasovaceqw1v0avnanzoyd815pvgisfxt8tjndnu1ewnc4krg8r2gib56i8wosupg16uxcj6r70nh14hpqdjsr9ic1z2cdj9s165rdpfm4v1moq815vt\"\n      } ],\n      \"serviceOperationsHostName\" : \"Mitch Wehner\",\n      \"deviceProvisioningHostName\" : \"Alphonse Toy\",\n      \"idScope\" : \"fb5429fbl7f04ggreis8xf2i49z699e82bwgg9agsmmiypu85z1vp58dr3dpeba672ojv2sq5onfjhz87odznvikyrrlip05vjqxal7iravkhfq27qhgs3sa5gp0jvm84vp26c5vb4tcle5\",\n      \"provisioningState\" : \"Kentucky\",\n      \"state\" : \"Transitioning\",\n      \"authorizationPolicies\" : [ {\n        \"secondaryKey\" : \"9d5t8gia9ka5sa1mt9f1bul4xbl39bd39v07d8qhz6tus8i63pnzanok\",\n        \"rights\" : \"ServiceConfig\",\n        \"keyName\" : \"Mrs. Martin Kuhic\",\n        \"primaryKey\" : \"g3sgynx065rxolp22843xp7c33sanwebujeutk0k0aj2q44u6h2haxyrygmr550e9hsb97geo1kiw5jxpd9j5gxmhhms5vw05wezkor0fphujhthn45ppslv0v2ztawb2sv1vn100x7x4gt15aogsbxskwwwfaiwaefym00gnumcpdh164w\"\n      }, {\n        \"secondaryKey\" : \"gif5wzevo9nevuzn06ifg67pd8l65zdstgd1uz1\",\n        \"rights\" : \"DeviceConnect\",\n        \"keyName\" : \"Dr. Oswaldo Osinski\",\n        \"primaryKey\" : \"6lce30dg2gzzsszipm1a5uih5u9k4vp9iyknbonep8amssrgb6vw0x4yi3jwffx5gqqwhbx8lfnofxlq1fgta359fy4proyrnlkmhimph3a895dl2ds65ltyxzihowuoo27qbnn\"\n      }, {\n        \"secondaryKey\" : \"fivcwpv6o75w2revvbvf7kb7xsqpihsku5bgso077tllgd97yf7eydlijc9ap62ybkm8bwrp3xpndqv4yuempgjjk4r9hixb73dafg1qmqh1cs8ic61srq4en37nauhn72qskgsbe3mjfr4pz96j5raischrrqe\",\n        \"rights\" : \"ServiceConfig\",\n        \"keyName\" : \"Trisha Blanda\",\n        \"primaryKey\" : \"yh4smc9ev87pboljwm6m3vyppedh56rrdjgjyfy3s2aq3ssshjg6g3qgyz5skvsu815mppodq3g7m\"\n      }, {\n        \"secondaryKey\" : \"76hfnlakfq86q3m4gvtqn1drnj6ccab\",\n        \"rights\" : \"DeviceConnect\",\n        \"keyName\" : \"Gertha Jerde\",\n        \"primaryKey\" : \"ir3gfbue534uhjcxmgvpoip8c6dv8s2pnhdbqld72apwb9cx614sudx\"\n      } ],\n      \"allocationPolicy\" : \"Hashed\"\n    },\n    \"tags\" : { }\n  }, {\n    \"name\" : \"b&E%`+MpgO$Ab%/\\\"pOuvUp+#}U}:QWdwGd?fUfALD{R+,NM<eKWVjJ;CJhwsO`xUOT3iHU7mLYw5WRz4-AhGpjaWMpwTm2k\",\n    \"etag\" : \"voluptatem\",\n    \"location\" : \"d3kj7q687ifu7hvacvovbftvhn3ma1xgpq8ax9l15e7j8drqvbrn183siyqrx9sfb4ag1h8vttf85fn9y3mocjj0niftl9q6czc4zl2y43n46yvl9fzlit479rvs\",\n    \"id\" : \"eiia\",\n    \"sku\" : {\n      \"tier\" : \"h0uf5ulyyx22amhana0goh5alwv97whyr7uwhaodn4ogsbar3d60f6qc8twtxp0p17vda5c21d4nnst80yvj9sumha9x6r0tj66\",\n      \"name\" : \"S1\",\n      \"capacity\" : 3891449851185524705\n    },\n    \"type\" : \"lllsds02b3ha0ervvtehnncbrfn6m4c6klg3tnak5vd44cgh5mfaaj02r0gvcgpit81odpdd6er5y\",\n    \"properties\" : {\n      \"iotHubs\" : [ {\n        \"connectionString\" : \"ha5xxkor6d12josyvcionj79nu5kxr467mmhv6ec04winlvd410sz16djqg5jobt8d9yf4bxv6ihzsz6evcfocc8isyyxgh5gv5v4tpfr1f5tz0qlb5zwd7qv5qeg3y5kx35knsm68y2m\",\n        \"applyAllocationPolicy\" : false,\n        \"allocationWeight\" : 652139085,\n        \"name\" : \"Jeffrey Pollich Jr.\",\n        \"location\" : \"5njwd56fql6o5o3ps\"\n      } ],\n      \"serviceOperationsHostName\" : \"Lorean Dare\",\n      \"deviceProvisioningHostName\" : \"Neta Considine\",\n      \"idScope\" : \"wcm4e3wpcgibay88u4j33zb8vw3n9gmbp6j7vxg5ij9fpe7swu4baksa4l6imqnfmtplxq9iesx72no1qu3zk5945fd\",\n      \"provisioningState\" : \"Delaware\",\n      \"state\" : \"FailingOver\",\n      \"authorizationPolicies\" : [ {\n        \"secondaryKey\" : \"r5xlkzq78x51vfqobguoomsq2o7la6tcjdkavg9l1gcd1fsgjqs71lp8ylzksyn8l3746e6otp6vtrcekxvxpg6lsjwijimdy38rnys\",\n        \"rights\" : \"EnrollmentRead\",\n        \"keyName\" : \"Wes Herzog\",\n        \"primaryKey\" : \"em48d0q6qfyozqpz1rg538mc245inplyiy0owucch8sxvsxgv32cxbr0jny63z0wy3e4iqp4h18c82twe9cq5i7uvhz5ze833oodttmrug783cy0k9grg6bouqsb9v49jogikft2bkjxnlro7c46wyyjzu99j\"\n      }, {\n        \"secondaryKey\" : \"q5qxphyvw0eoynaakeimypaw7azoti8mhimnui4kst68x4plkdvo649ymhjkkpbz30yt1ks0sfj86f0dpy2z96blf7lal46ewpxi13u7w2g96rd1b6230mlebdiulf2h83vezq9vwn5ldhl6avshe1gls55kn14e7d123dn68cf6qc84yaajdnie04axpj6xamel5qel\",\n        \"rights\" : \"RegistrationStatusWrite\",\n        \"keyName\" : \"Hugh Jast\",\n        \"primaryKey\" : \"kwi0b3g83h3djv7pw76732huu39oksetfhil6759lb1ngwesqnktiv4yneu55wcubasryqbhsla0fxckg6iov9r71tj2di2dq732qzn44pdpyafs5zeirbdsjf459qo35lade8dmwp1gnx\"\n      }, {\n        \"secondaryKey\" : \"0r6v9lwrninfn6r5shk03xvxglmp08wp409p6vk6nifhhub0ao276t19rknyv\",\n        \"rights\" : \"RegistrationStatusRead\",\n        \"keyName\" : \"Elisha Kuvalis\",\n        \"primaryKey\" : \"nwy09wxo9nkhdywtymwl302o9jrjc2olemaqxdqg7pnzkwo3d1d9n1qvas3cunokdvk0l7inp24efkoqwl2n0hboef7ubveizi54825mfz9qf6k4hhvouwttbblr2whqrb0cqmjk\"\n      }, {\n        \"secondaryKey\" : \"kawt7pu25t9jpdf9rry1hb3yje39wl96wtvmb8w7r3k9qlyx3vwfbh5598zebugdxs63b24cmqhngzo01htov4r5ql7jpkdihvy1jrpg6q8fnq4k1uug5rk521e3ygi95monge0zbwe5k82jetd6hzl7ss6vndfqp52q1w4cgihz5\",\n        \"rights\" : \"RegistrationStatusRead\",\n        \"keyName\" : \"Ms. Bo Balistreri\",\n        \"primaryKey\" : \"vlq3qd8r5n5h2pa6vi8mao8d0qwxfawoaay0vo4btobkwqe0dm1vvdcbgxocu1c1peqiu5pbuv2qonrim30wjre6vfnv4cjh41h\"\n      } ],\n      \"allocationPolicy\" : \"Static\"\n    },\n    \"tags\" : { }\n  }, {\n    \"name\" : \"M=zm~YxpimkxUvQDGaijo0tl1vFSavbHS\",\n    \"etag\" : \"doloribus\",\n    \"location\" : \"88oz6ittbker0tfe2jfqw6mbkd1nznmkzu4kgxwdrhrin5ptp3mn7\",\n    \"id\" : \"5d60\",\n    \"sku\" : {\n      \"tier\" : \"58jh7r09oya1agoh1fn2zy48xulobsk7902l1j1ssj674few43fsol0i9jl1dx2w0yb9ab1u5s0tr8xjp4fsn3xtf1bae6ez\",\n      \"name\" : \"S1\",\n      \"capacity\" : 6161299058831145488\n    },\n    \"type\" : \"56h0yuuu2eyua0d8vo5hpxwysve2qbdu57ctqguj708j1inkzq1iovmi7jasm9eyom1apaqd87cynhhpbdw5zbeugac5fqvizh0bpgn7uz7ac0plx97atg4p4fe6dhjilv8tn2jjcepg4la71auegb8jiakab\",\n    \"properties\" : {\n      \"iotHubs\" : [ {\n        \"connectionString\" : \"itdydw7a0smq5mpkha23ukctpithbbikkiftrezt16x3zcr1yvwlvrlg6zx6optnm4zw47nh8ijvrvgzm8jr38jlwr2mc6ikpg59xosspk9qdjx59j14mue49kordychp5l3nklgcctu90ixrms9pept687d6\",\n        \"applyAllocationPolicy\" : true,\n        \"allocationWeight\" : 109510376,\n        \"name\" : \"Dr. Simon Durgan\",\n        \"location\" : \"5l1b656ghhi0zrhbsfnarlvfa3q2embiftb4y03qxk53x6kjwmkrdlpvnop8yy05hkcxez385mp84jwaslhuc40cyhdt0pn2ppgfaby11crmvynuidrstjwlw0vmco8pt01a9lj1tl5uuia2sx\"\n      }, {\n        \"connectionString\" : \"4qpmmu\",\n        \"applyAllocationPolicy\" : true,\n        \"allocationWeight\" : 1078000035,\n        \"name\" : \"Adriane Weber\",\n        \"location\" : \"u0zxyrhecsugv2xp9iixuxcwylivhl7b32tzmbjs1bbk9rfpfqfgsalfsayfux8yyv2s0t3x9rz1hjss899tnfuy6qfxvyb367hq8me4nk7j4e6n4pvxhskmopuzgs5tv48su41q7emxx8o5vz\"\n      }, {\n        \"connectionString\" : \"zi8aphgfmb338mg7rjibq2s6v\",\n        \"applyAllocationPolicy\" : true,\n        \"allocationWeight\" : 1721731320,\n        \"name\" : \"Thomas Osinski\",\n        \"location\" : \"oc70ufqw8t6sbyzgczgtyr8jx8oaiudbcxj0xvkud73qh9cm4vers5kwwn1r\"\n      }, {\n        \"connectionString\" : \"soexfhn0kl9t75cv7n7n6hilojaxr3bmo5wg0ezk2dbwxvcq24ytwvjvkkv03umkj0l7np99o398l1yjltavdpzpcxaecv16o018na84lcua7hrn\",\n        \"applyAllocationPolicy\" : false,\n        \"allocationWeight\" : 164981830,\n        \"name\" : \"Fannie Fay PhD\",\n        \"location\" : \"nbzw8q9pgg0bypojkw2\"\n      }, {\n        \"connectionString\" : \"836b72osleb3lowmmq1yr5dxm93p0wzzjpt5cx3eodpgzw85l502203gkp89ytpf39etabpb6wqfv0oy8k7a653zuia53khvdszuunwte56ty72yxqllwiles9clft9kbwv4r\",\n        \"applyAllocationPolicy\" : true,\n        \"allocationWeight\" : 319136770,\n        \"name\" : \"Raymon Lemke DVM\",\n        \"location\" : \"358b678fpiqp2tzu9bwcsfb1ng9flaq6o8malj1jj4ni6iqjlh32x3f79cmymh93d5t00915eaiwyur6yfnh\"\n      }, {\n        \"connectionString\" : \"kohdlydo9hoqpmazrdglio4vw5u33lnh3u56pcricp5u47g137ymt74vizl1zp\",\n        \"applyAllocationPolicy\" : false,\n        \"allocationWeight\" : 1603220724,\n        \"name\" : \"Mrs. Retta Upton\",\n        \"location\" : \"qb66dsmikp5kkugbxgciwy36454cbll1k2wi7siic107ahg480gmvliv0ntggx3jqk4vgwe8qbocn210iuu1bwhj0ifov45mln7dz9ootr2shptkzm0o7kqkrbf04bo2k5d6yj2m535ii5ciahart8noqk9lz673rt9wn162v1rvsg8vnyp1baj9kgdzwludrggzw\"\n      }, {\n        \"connectionString\" : \"6w96ut125rh9udke2clz4t1hruzfadm1lig8u9srbte84zguha5ndrmfil4gtg97bst4dq891re79c6rq1cn7h7fbzvhett5fq717a34aqlxnlpqqrv4yz1t6cr8tuyadsn\",\n        \"applyAllocationPolicy\" : false,\n        \"allocationWeight\" : 15061907,\n        \"name\" : \"Cristy Torphy\",\n        \"location\" : \"nyeyjqx9jg16tderhzzit\"\n      } ],\n      \"serviceOperationsHostName\" : \"Jamie Sporer\",\n      \"deviceProvisioningHostName\" : \"Alan Hirthe\",\n      \"idScope\" : \"l6sol66vgz2u5zsyzc7fyqs64zpoa2ihrkxi7g6i56fkb3vu2fquzbld6iwi13fc9i7kvkiye9d3zyv9v3vvhz5buqe75hk0xu063yywzwwrqjebk12ywgvmcpb2wztdseq6qej0jg9i2vx0mbb2s3kdcur7iahqi87bhjpmjrqfxy3r9ruzq3jnu5er\",\n      \"provisioningState\" : \"New Jersey\",\n      \"state\" : \"FailoverFailed\",\n      \"authorizationPolicies\" : [ {\n        \"secondaryKey\" : \"cyf3jiy63ebueh7v25h8qbougjm3xc72hy1r5dc4bxan9j4df459z6xdrtptmfut7rv53x4dtv5o5gxm7l9qf9mhx329aj52e2sqxf7ymepwekxo2ek0k7and5a35calqu8qav3phcqgofo6xeg67x75xn92eq17\",\n        \"rights\" : \"RegistrationStatusWrite\",\n        \"keyName\" : \"Jared Carroll\",\n        \"primaryKey\" : \"pq5t531hx1kdesybg01ltpu74vr8313\"\n      }, {\n        \"secondaryKey\" : \"zyma5em61230aj5ab6n655e8swku7apspsdch4ynzu9eskn5rlh1hh5lcr2ryo8ldsgxvrdd72jnub69kz152seplcdmf5g6bu20sm08hcd0qcqfgeix\",\n        \"rights\" : \"EnrollmentWrite\",\n        \"keyName\" : \"Sharita Beier\",\n        \"primaryKey\" : \"yk8w6t3nrymoiualtauejbbln7cnzk86s5av23c1rfhj9j5afucpd6i0kde6p8unr975obv598bm6vorh727v5jj56qjo13d09rjc5uf6u1m7m3vdeof5wgmqarnzfh0uw59xin4pobb6gavtv3g7rf97oeqk2adx36z\"\n      } ],\n      \"allocationPolicy\" : \"Hashed\"\n    },\n    \"tags\" : { }\n  }, {\n    \"name\" : \"\\\"rTljRk{+RItY%z}b *y%u]fs,u>;Y}DnYMEsvdAQN-b3n8Cl\",\n    \"etag\" : \"voluptas\",\n    \"location\" : \"fmmtl467kmp0fj5prbn89au7nsqjuie5d2l0iv11au0jfdg5y6xrwb52eir5w87dq9ecrbqqn61s10niut30czh2\",\n    \"id\" : \"0jl6\",\n    \"sku\" : {\n      \"tier\" : \"d4v79ps2k7sklht0xgmr4tzg3jgt5l6xigf5yy9l3yz0fsjx4qkm5k8rytuv5r7ydtmm49ql0kkdq9\",\n      \"name\" : \"S1\",\n      \"capacity\" : 7440638438403039805\n    },\n    \"type\" : \"tqsrvhvdkzobsb70y9zsu3znesfsxj8gi7glpe1hbh18xrbjnixzd7xy2kvxz95r8962xrggyhl9hwqws2j8cmjprq40jam4wghzskahjgvfmu7p8y4i8i51ufcplmth6dl3ahxkntr19d4ct991gkj4t9dm8dcgi3fr22ahjlutd1j3ir8j9x8wdnu1cz0k4r6\",\n    \"properties\" : {\n      \"iotHubs\" : [ {\n        \"connectionString\" : \"die3a8wjc89863mcl3g61f0u4jw\",\n        \"applyAllocationPolicy\" : false,\n        \"allocationWeight\" : 1428010064,\n        \"name\" : \"Ruben Satterfield\",\n        \"location\" : \"isoajtkusunkm5yop5jixkr8qgnuf9lvphdqmytqkqba02uq99rsyretdud3dx5a3kpmdp488w7fo373qk19d3xxmosbnnu6g4o0uqw4z87xi247nib8or7ht4pcahb\"\n      }, {\n        \"connectionString\" : \"p4siqoti8idrh997fo3y6p51dffcdji1jp37blwpxcyww0xbe9ldwsxuqetnn04tvx0weicdvrejxsiyq6umpgaamermiodgzpnj3qsdx2sfulkzv97erdiwzhislnlrjczlqq4fc25\",\n        \"applyAllocationPolicy\" : true,\n        \"allocationWeight\" : 331554991,\n        \"name\" : \"Mrs. Antoinette Nicolas\",\n        \"location\" : \"3kp8cbr8vivmkoxpjtxks1uare6en7cyr8fa3bay90yhvuosjz6q2eiqhzsk2w4pugzvpa404zkyrrn0i2eh5gykx8fjnzukcrppfnwz5npszox2jfbke92ci8j3zrpuczcybuu\"\n      }, {\n        \"connectionString\" : \"jeqxc20u973qeubn6w4vql3985htmhah6vw3k97sa1tu0ffyvv2sd944wrg7gu5rfpzwusnsildii9dclxgy8nlf5luzny02qhsd36qjpf4z40v5m\",\n        \"applyAllocationPolicy\" : false,\n        \"allocationWeight\" : 402718979,\n        \"name\" : \"Ardelia Yundt\",\n        \"location\" : \"dwg3207duwuh1dc38gao92ipy0w6n3cf4k32uih4ji85d467oetjw3bgxv6czoatyo2py66f4333xgxg1650k9y4pq6n4wveih1a4jolxpausclxq9v85x0ebsppz54h1rb3pu230pdww5jr7aior1z9uaz73tb6lh51hgfcn69ojx19ga7m\"\n      }, {\n        \"connectionString\" : \"xx6f56gtq3wan5hsens1jr7velrtcuirg1ke7nt1yy8nu247a4099nagj7plqob2dducpjzz5u19wmcm3qursmgw1wykq60purcai89mgtrn70y78q5ehh0s2bhek\",\n        \"applyAllocationPolicy\" : true,\n        \"allocationWeight\" : 1155177950,\n        \"name\" : \"Leatha Carroll\",\n        \"location\" : \"buh2ozjgyazwfahjfwc9l3svagnn8wlc205fagkqewvpfvd4ylxxdgibensmokz5v4oyu2hykcufzeyuupnphbtqffumln4yau2w4wla0opjzqjylmi2uhjw007wcyj72zrowj86c0135d19cf62bqhgby6f8d1rdy\"\n      }, {\n        \"connectionString\" : \"h84nu4kokjgyzmxdy76upy37o8dg34p7kt6kjyv0bkzycr8k4gv80zisya8y2b7wysf055vr4wc2kres85kjsfs7m48xdhg0oou3jnc6hf8vselwaeubs09zqsezqfp663nxeot8bg4rr81ltf\",\n        \"applyAllocationPolicy\" : false,\n        \"allocationWeight\" : 1435747909,\n        \"name\" : \"Zackary Kshlerin\",\n        \"location\" : \"7v8sazn9duucz8p76dn72w3dsqogzkd5ozz3rq0\"\n      }, {\n        \"connectionString\" : \"yevv1o4w5rn05p0s0vwy31sbi5eio3s4nqd0sxynj9mw4qv9qcdi1z5gspvjsh0lcqbl5hjg2i6zim52ay1q76e28xjd9th3szl1dwp3hnrtf2vrsdmidivr3rizn74ysfvruqjchvhdvrwaf0tqr3h5lzc\",\n        \"applyAllocationPolicy\" : false,\n        \"allocationWeight\" : 1219920942,\n        \"name\" : \"Alpha Blanda\",\n        \"location\" : \"dy0028ji7r8fuhesry65vwk0tc7j2k9wteaoifmfgd3gu2qlrrhb2uac5t7kmo4uh938defoxbxrv6u6n55bf389swodpgav7m6hgu0ny4y71rhbp3wexj3zckmuif86hmc7f7qx3crlrb4tghw3puv33i2yabpzasr5t5gvgsjtpcfy4ohj60j4rdbydv3u199wirtg\"\n      } ],\n      \"serviceOperationsHostName\" : \"Kimberlie Graham\",\n      \"deviceProvisioningHostName\" : \"Dominic Bergnaum\",\n      \"idScope\" : \"0qky62bno1q96oetxtfaynsz7peqx4xq0zzarll1fqbvkr4aj0s7b8bjbkkld6mm9ma8tei9d928imu6cv8vuick3x6sf633j6\",\n      \"provisioningState\" : \"Oregon\",\n      \"state\" : \"Active\",\n      \"authorizationPolicies\" : [ {\n        \"secondaryKey\" : \"9i0ej1wssvaxc3wj51b1an32tsxgz63jp6egbs4v1zcdyvtb8qyozaxhayhrj7b58ax1y44avjnxxv0wxwd7eb9u50hw2gff69ro5gmmt4b7od6v6k9uqjttf34xosv04pvowk0mzh60tox8d1hhg0czi2qfc3n15mvfbkkjlo20ys7\",\n        \"rights\" : \"EnrollmentWrite\",\n        \"keyName\" : \"Carroll Skiles\",\n        \"primaryKey\" : \"32sq9q5n3tb\"\n      }, {\n        \"secondaryKey\" : \"ub24eqrmophsk3b0hk4i5dyzdk8lal21p18u03v3e6rdr1y35riivwatv8zioje4zlbufpsk71rcuk37upurv016solh1g5roqqgxa6ahj9byhythf98t73ywdb1d5h1gq9c4ox0rwkl7zz0chu0x5k8h7hpb1c2ca1621\",\n        \"rights\" : \"ServiceConfig\",\n        \"keyName\" : \"Cary Larson\",\n        \"primaryKey\" : \"ugyrsfz4x5hviluhzkky7ysaxrnqritieawi418n6f5qm3ucmxipoktj9f829v6207m53paja1f4fck29jdg2e1ojc\"\n      }, {\n        \"secondaryKey\" : \"tcunsxozepvplpmr43znuiufls4emmthdq8h1x6ukrfmmit4bm\",\n        \"rights\" : \"ServiceConfig\",\n        \"keyName\" : \"Keenan Hettinger\",\n        \"primaryKey\" : \"jwnb9p1ezzf0eileuh698q0eyf354ar3dqi85h6zwufxn0e40qjow7tp4aog4a2oezfle0jt66q7rz9xd90toqce7nxv5549vs1\"\n      }, {\n        \"secondaryKey\" : \"gnsmg2xoydc1hq1qpe5b3u59ndu0r01a9hvuc8qh09w30yhki45pqhzhz1d8nbtzuolf7mj5r6zzz4v4w4ym2b0lexm1ux1x\",\n        \"rights\" : \"EnrollmentWrite\",\n        \"keyName\" : \"Branden Schoen\",\n        \"primaryKey\" : \"wyishwz9ovn0f7tb0z5h3xjho9p3umd2xxtvf76irdpgunsg6q26drq4nmubnfhsgdx679vewy1lljfsrsbcwbuwojba1ouc1ffte3azstfijog3d6aw8shx1dkn07os0ai3vdrf3m0896zl6vthw\"\n      }, {\n        \"secondaryKey\" : \"rfpwwfbw1hpy8kx25zs7biah4ium2tmg9srv8hkkz0ptyq3\",\n        \"rights\" : \"DeviceConnect\",\n        \"keyName\" : \"Hayden Pfeffer\",\n        \"primaryKey\" : \"p869sy3x50ozcvhgk50lfx9s1g732lpqi1ebc\"\n      }, {\n        \"secondaryKey\" : \"osx714r476sl21uh6hj65ro6m19spwedt2lqcaa5axs4ry6vj6z49zy9vuzyeobl2y7pa9gi6hpkhvyyluexya9e8fp45t7dby8xa6lkfwkhel6f6wjoj9xy38ytd305os\",\n        \"rights\" : \"EnrollmentRead\",\n        \"keyName\" : \"Dr. Kristian Mitchell\",\n        \"primaryKey\" : \"4g319ki7ivgea293s6r7vdaoftitt0wxm28td3111tvhuimhxqnqkt0wpoll73e4avx8w5ckk74wzt1masq6jllr5eo0jfj4eu\"\n      }, {\n        \"secondaryKey\" : \"3dmuet6a6tywquufzsvohbgvh3bt0o6hkxrumnjl7nycwq93u92gk9dfg714cqtwpvwxva\",\n        \"rights\" : \"DeviceConnect\",\n        \"keyName\" : \"Rafael Kunde\",\n        \"primaryKey\" : \"jwmdtvq1mewy0em5fkpr2khco9h1hulrtkyobgtpmw4fl56llzaqe4s23cgv6po64gwd5s94tfbg894k4njic966vwc6rvqieix1c85x8u2bgd82ytlq9pia1ae7gz5wacoyg\"\n      } ],\n      \"allocationPolicy\" : \"GeoLatency\"\n    },\n    \"tags\" : { }\n  } ],\n  \"nextLink\" : \"x46pqkg2e33mtvdsda9g3nk3exi2gtcnyijotshe3cfx9gj5q4rdilop039kysk8kobokonrczzn12ompwi2de6keweqmrflhf669afjg8qn9m7if6l2qpk2jshlntu4cejmhcnxou1p9o0t3r\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "441ac7b2-4348-4ac8-9255-e5719c0f4379",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:15.186505Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "IotDpsResource_ListByResourceGroup",
+          "schema" : {
+            "type" : "object",
+            "properties" : {
+              "nextLink" : {
+                "type" : "string",
+                "description" : "the next link",
+                "readOnly" : true
+              },
+              "value" : {
+                "type" : "array",
+                "description" : "List of provisioning service descriptions.",
+                "items" : {
+                  "$ref" : "#/components/schemas/ProvisioningServiceDescription"
+                }
+              }
+            },
+            "description" : "List of provisioning service descriptions."
+          }
+        }
+      }
+    },
+    "insertionIndex" : 19
+  }, {
+    "id" : "10dae31c-d8ce-4797-abb7-caa0efd40393",
+    "name" : "Get all the provisioning services in a subscription.",
+    "request" : {
+      "urlPath" : "/subscriptions/uojb/providers/Microsoft.Devices/provisioningServices",
+      "method" : "GET",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "799mag79x6rf58jpiri3sshslz941l7jaiojvt46fgbmqq8flpqf0of5xnojj3f5dvtzd1d9aql2y1tj9119z6g5wlrle7j4fv8sm5b0xc2gpljle2gmixzhdw3smnlz928mk10sp7a8nhj9dou54qs3o33lbdv9u5y019uyhdwdk"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"value\" : [ {\n    \"name\" : \"JurSrjYlOcYC|JU(,SqsrdsdKdUL-yrYDw]CNk=Gjk)HQjl?j,:QLbjA;+#BXcI0\",\n    \"etag\" : \"optio\",\n    \"location\" : \"8lferr3n6q02uoi15ipx\",\n    \"id\" : \"sl9g\",\n    \"sku\" : {\n      \"tier\" : \"sluq4wynt39fbk4gdemj5el6dupxsb87enhbztgcxtqf1smbrg3sicitls4np4\",\n      \"name\" : \"S1\",\n      \"capacity\" : 8832810713412870409\n    },\n    \"type\" : \"alff0d5xpirifjyozrr43ujhudzd6eue137f925ezedy3mj6zvwox1kwrad5qfuazsqjjjw3lbr2uam4oo3x4ahsnj9mwoi086pa3tcgrgt6vos3y8rryymuov3macbtlwzgoofopbon7vpbyhceg0vm818xh39lg6ctb7vk0aok5wdsitb\",\n    \"properties\" : {\n      \"iotHubs\" : [ {\n        \"connectionString\" : \"e6dfjmvupq8lmyygn84ek95bnsiydpoqpchrig9nfjc3msjo28dbejplonyhjnuoaeweon1etdywmowc1rwwq5mcumhpzjinw2\",\n        \"applyAllocationPolicy\" : true,\n        \"allocationWeight\" : 1083983761,\n        \"name\" : \"Debbra Grady\",\n        \"location\" : \"a2tv2jc4smjp54mcqza0i0oi8d70xmsrr2vtlgr9vzjri0kglakuz1h8tkfixokkkiidlkjfzqsx9gg62cdlcm\"\n      }, {\n        \"connectionString\" : \"9faydl1h84lrkl26vf4a78ikcur21fft6a324v8lrdunsi6cnvohv6jcm3j6c36t8sb4vu8dkau22ezz4pibe1ep6mxgmlv02azoagvt5wvv95xzz3cys3nt1ju68farffiaz3y9z217uckhg8wzw19f7ft9d6tcd\",\n        \"applyAllocationPolicy\" : false,\n        \"allocationWeight\" : 1940242594,\n        \"name\" : \"Tanesha Homenick\",\n        \"location\" : \"gydb8mhntce9ntsjgvt7h3dj1n7bd3vj47vn6r5hd7cxvy7tb3r4itg2m\"\n      } ],\n      \"serviceOperationsHostName\" : \"Quentin Block\",\n      \"deviceProvisioningHostName\" : \"Leon Marks\",\n      \"idScope\" : \"3o0i9qq320x5g3pew46277rw49qen3u3728501qlsy2fz5la2iskc2uble5ugo9v8yppk5xp\",\n      \"provisioningState\" : \"West Virginia\",\n      \"state\" : \"Active\",\n      \"authorizationPolicies\" : [ {\n        \"secondaryKey\" : \"cibffpnternbmydmr80o2le8zv8aetst5o6mmexbnf295vbyhp2n9qf1ye45bk5mkpt2pighqzd1c8jwxo6k9hlla3jmp9ea\",\n        \"rights\" : \"EnrollmentRead\",\n        \"keyName\" : \"Marcella Renner III\",\n        \"primaryKey\" : \"fg5tp9266slsdd9igtxdcrofbx62wkdv8s34cmx\"\n      }, {\n        \"secondaryKey\" : \"qabcsm1y2iy6e4fr5b67kayxu5dj2120j2gdbk9rir25a9obpl\",\n        \"rights\" : \"EnrollmentRead\",\n        \"keyName\" : \"Miss Ty Hegmann\",\n        \"primaryKey\" : \"j0406xkps87r3lnrdkbpkx48oe42bgeo4vy8t7y92sw41kjt\"\n      }, {\n        \"secondaryKey\" : \"c4igqksrj9cr6nquvbpnkbwyabkjw0b0fp823lvu90082tohjtsznpfifgnk1ogsynxb1h0gv4wmphathmdqquvcfcarf4jcr4qnlvn22clbemimj979o96rpamw57eqvlnr3wzzoqrpbkd3fary22dkpgx4wimkfmyeivqxzx4ctwrdr8o\",\n        \"rights\" : \"EnrollmentWrite\",\n        \"keyName\" : \"Terresa Stanton\",\n        \"primaryKey\" : \"348x0q0ntund885kd1rf4ehwoipcecrgtvbvjrkta26t232vamq4adkvrz5mvjr2p8g414imls\"\n      }, {\n        \"secondaryKey\" : \"xen6khe3lfv04iderkrpcm7g43wtg2xoqwe4oq3inu43foj8dga14nkfx4rff60disyt8omq8hxtc7gtxdktqf29hiib3242bfcidbn75vobjdlg8vbqz2b7tqqkqa68wkst\",\n        \"rights\" : \"EnrollmentRead\",\n        \"keyName\" : \"Natosha Lebsack\",\n        \"primaryKey\" : \"nmctj86gri6jc2ggn9dz8trv3rxoorxqlvlk92gzftziyq5ew5f6ysw4o7hoowtv2h1wbj3b740vel0iy664r0l8jcvnpy5j50ot7ab864pp8ru8s\"\n      } ],\n      \"allocationPolicy\" : \"Static\"\n    },\n    \"tags\" : { }\n  }, {\n    \"name\" : \"ri[q\\\\L|QG)V|*R`}@mju)W=H}g.<xKj\\\"a&}jF)?)Vo;>_}`Z\\\"|L?|DaIz/AIqTQ91hXkY0b8EIT6B3S87sE\",\n    \"etag\" : \"eum\",\n    \"location\" : \"lh07ojx528w2ly3lk3odp4iqna061kzy1wzkzo3zut5d5ch0w6\",\n    \"id\" : \"8khk\",\n    \"sku\" : {\n      \"tier\" : \"rraz8171qsowen5wv8vbrbpb5kzk1l94io5iuyebvid8xgi4bh19gg3wsk721q568qekw17f8o88amids99h8j4hl3afcdhq1gvzyjdjyt1vsa85fu8oqho711yjbp2sb6tapgpxua4is31lc\",\n      \"name\" : \"S1\",\n      \"capacity\" : 3876021928405049575\n    },\n    \"type\" : \"tnf0an8ks6sd2s04sfwohnl312wc3j9oa63z7zz0950\",\n    \"properties\" : {\n      \"iotHubs\" : [ {\n        \"connectionString\" : \"3feq6z9ttitv3ktf5vre0s0ehf1fs2yohptuffr5iwnzfbkdwv8y6772oqaq2pm624dznt0nrl0asny4bbpl6kak9zwxegspdb4lb3nghagup64aowr6jszaotkj9n7743a7uaqlaejrvvyseq5el8024pwdfqobaytahvbwbuue5lrrl7rhqyyz72\",\n        \"applyAllocationPolicy\" : false,\n        \"allocationWeight\" : 1041784489,\n        \"name\" : \"Angelica Bartell\",\n        \"location\" : \"nhwfu\"\n      } ],\n      \"serviceOperationsHostName\" : \"Cary Friesen\",\n      \"deviceProvisioningHostName\" : \"Mr. Cyrus Weber\",\n      \"idScope\" : \"42fjpn2chez2gaoy72rjpbpdaetooedwbppvfby9ilphrf9svbvxmyu4iyo5x4tmt1u9trl028ztb9yufq2naoo3vlbaxwzsgwrcnzen97rkd9iey7r80byptvhv9w\",\n      \"provisioningState\" : \"Nebraska\",\n      \"state\" : \"Activating\",\n      \"authorizationPolicies\" : [ {\n        \"secondaryKey\" : \"10ydzp3xwslzvvwwonou19oz82b2swcpu1dluocok6fxzkz3vi47a5uspuvpcviqe7u5umdw7rnno15nwl6ue2qszwjzwbezkcm0jyss2ncqg2vlctendzz9zknk4e4ms44vpyznoz3h1n2vtxe1\",\n        \"rights\" : \"DeviceConnect\",\n        \"keyName\" : \"Ms. Laurence Koch\",\n        \"primaryKey\" : \"gatfxkmjqm2ybm3ovgd5xutv93trm3sc5k7c8mtd80qsw5icxixyrvn5zjhtu211ocpd7u8belimkse6nlvgxg2pu7gdmqwxeix5nqte8plhyb15lsov17zbutfsislwujl5k8mwo5p11lxp034g0ad6cfu1a04uku91rly\"\n      }, {\n        \"secondaryKey\" : \"i3zsy8g7jd7sqqt6ens9tpyscz4bnomb6z6eave1nqglmk1ygpl2bzfdujd6wnjrchujwv3hzy6k999qnm1jxhl6l7ifhrgrlvbd2g44nznjb4exrbxo23mvn23pzirm9mdyvq9hzxx5yeg7k6v9rn05udk\",\n        \"rights\" : \"DeviceConnect\",\n        \"keyName\" : \"Miss Chong Schimmel\",\n        \"primaryKey\" : \"4a1nep34y5nztrlcykgm1e5midlag80qi7rvq41bu6mm4hxi2p8ne7e9jat674t19kylzsasd73f3s0jmnqqr2b8xdjphzkk3gw3gvha7lti99ve6byo14d2c71dqmgcuxf6l\"\n      }, {\n        \"secondaryKey\" : \"ukacvem63g95oup0txw1xszhoaimwzreyrwpksz3w311rwiln41laswwxa3p643nnnhawv9mvkhcaeue5uwiq05tf1o2jq09e8awo8etsvqbiea3u3cgvz27lxnhjxm2amjyvvgyc8gazhswqjaeyrvlr9ggux6ooe3abr1ze8m0cbe\",\n        \"rights\" : \"DeviceConnect\",\n        \"keyName\" : \"Joann Durgan\",\n        \"primaryKey\" : \"wb9xxibx3iyg18huaf93puhz127hjcf\"\n      }, {\n        \"secondaryKey\" : \"hgwkn9tn3euobngl5qqugh8h324prp0rk1h\",\n        \"rights\" : \"EnrollmentWrite\",\n        \"keyName\" : \"Miss Carmine Crooks\",\n        \"primaryKey\" : \"x47dr4tj15pidkmnohrllbtgb7ctgeyfym632tkqn2ehw6n6oyk6x7trji9jmrqc138735y3iaknfr3phka68sdbi8pxuaclxam4a0tbx52rd9j64id64e9jzbrt7negkwtwbas52wqruu2z4sfmsdm\"\n      }, {\n        \"secondaryKey\" : \"o4kqvr1d62\",\n        \"rights\" : \"EnrollmentRead\",\n        \"keyName\" : \"Renata Carter Sr.\",\n        \"primaryKey\" : \"z0heyhrfkqlucropq0rafjclzng04ujakk1hpk5gkdb57ekc9q3k4k1yj62tmxyhm1y8eb0zv97t16o7vw2k2egsfu1sx7fh6k07l66kat5yjbyxy1xa0egdsucjy8wpoc4d71h3ri93c5jp9xqhfdgbbirsxsmfs2xf08p8r2sc\"\n      } ],\n      \"allocationPolicy\" : \"Hashed\"\n    },\n    \"tags\" : { }\n  }, {\n    \"name\" : \"ESjSo#*G=PT+S:a=||[(%{COXkF1qUwnuXsTKaG\",\n    \"etag\" : \"vero\",\n    \"location\" : \"lbuk4tpocon1tfm4rml8niksuhpk0mlkaedh7smb92tkcltn26qzt3i0ha0vu56u2k1hx479jonnn2wy5rda0ojcm2yoilmd914lv28\",\n    \"id\" : \"7434\",\n    \"sku\" : {\n      \"tier\" : \"ff8cmvcuf7l4nvecxw2ye1o4icg6vc99\",\n      \"name\" : \"S1\",\n      \"capacity\" : 1731829370967967520\n    },\n    \"type\" : \"x55eubcv5hh5a1923wll6be09kwjg79p2pqttojappwcfvknv5mi98wv8f4ah43zyssk0ie044yzefzwke0a5okqxvlky8z4xhxlj0j6kf3p51xqmohsv60bwpn649pfrwtu5ozjjdvws9fv1ab8ecos98vn6h98oqujaoxirerhw\",\n    \"properties\" : {\n      \"iotHubs\" : [ {\n        \"connectionString\" : \"us296z1sr3vzx0zhzft455dhtfndhfe3zm4jddqbcdmpvq1qgxke2wio7znda151tocjtm5bftkl72eks1qkexgxsc8uiq274smbqbjecrljp6fmvho51rzwhwqb7ycs80u65fruerdg2ms69w7hgru9695wk0szxy8e8syhid0n0ncytmal6sd8\",\n        \"applyAllocationPolicy\" : true,\n        \"allocationWeight\" : 666188099,\n        \"name\" : \"Winifred Durgan\",\n        \"location\" : \"0d99r27zyxplgfylzjlt2f6ampaq496g9u54m94ebcol45otc3si26txxw3grrp9uzgooorhl1w2v0836es96v5x2ze0bowwmcbqj7sc7r77lsc9d7qstek3u9v235t691xcnsjixu7sxq2cllq54c4enmffcxybjb7t28gkr9kt45gwmqm7vpjora9aid9m9075ya32\"\n      }, {\n        \"connectionString\" : \"wv2vuvfzwjekwcq\",\n        \"applyAllocationPolicy\" : false,\n        \"allocationWeight\" : 1930799277,\n        \"name\" : \"Evan Schowalter V\",\n        \"location\" : \"38mljsfkd4g9l2512i6bbu9ia3qfwzvf2yj1kfva\"\n      }, {\n        \"connectionString\" : \"o5e3hrfo0qc8athnuupe5bwrmy93ktg6d4c3gml4fmo1klkyq6dw5rk8q8rrsn7elpspto4fmyghneo9v6u73gzukrasszafjqraldotv2494jvjboku7ndt2hv77at7vmcgn65m4evj7xv98ne5mned6s97i3b41csp13r97ex27bdz8u4h4dapn654xnig\",\n        \"applyAllocationPolicy\" : true,\n        \"allocationWeight\" : 955929879,\n        \"name\" : \"Pam Bechtelar\",\n        \"location\" : \"ub9gv75fu2\"\n      }, {\n        \"connectionString\" : \"0ryyq5s80pjbopacr\",\n        \"applyAllocationPolicy\" : false,\n        \"allocationWeight\" : 1247440035,\n        \"name\" : \"Asuncion Vandervort\",\n        \"location\" : \"rr9r9azjc34j4blf057z7m92j8900m2vzl76f6z17pdyam8eaqrkvouwwrc7l1qv93ypno1kniry73h9ktpwo2anhcfq79tedjlu57kufrbsj68tu0a3085pwrtl79xgxexx\"\n      }, {\n        \"connectionString\" : \"9tjr2rarkrrozwq7bk3gifxn92jojm5wu34e8jzyf35l7yd6kwtpnf4jouzimrhbkvsylv0htuc6xegf5t8jg13bdwlm27839dnqcg4ax0im3nvida0pdf5hynl\",\n        \"applyAllocationPolicy\" : false,\n        \"allocationWeight\" : 947009527,\n        \"name\" : \"Darrell Schiller\",\n        \"location\" : \"pvrxbwlpzb58kmhjmhy7ya8z3owp1dxe0gs0qs3j26lownoizb1ej21u0iui0sst7sir94xsqg2o35htq1ana\"\n      }, {\n        \"connectionString\" : \"vexaffv935fz4z027ysh3nje75ov9v7qn24u8enmzlt9l\",\n        \"applyAllocationPolicy\" : true,\n        \"allocationWeight\" : 1048176653,\n        \"name\" : \"Corey Ratke Sr.\",\n        \"location\" : \"ljkl2wvtp1zn2pkhfany0ojd85af95tkv7s96uxonuv3qnbah1qrkfir4tsbq8rqndcmeztjfjwfmd403cf19r10o7wdma5zfuyr2jb20z8520c17g1x3s3zlvi\"\n      } ],\n      \"serviceOperationsHostName\" : \"Darrel Boyer\",\n      \"deviceProvisioningHostName\" : \"Miss Patrica Ernser\",\n      \"idScope\" : \"ohgnpx226iu761sj38cl291w3h8o49ow2vet5tz6uq187uv7ap43\",\n      \"provisioningState\" : \"Missouri\",\n      \"state\" : \"Activating\",\n      \"authorizationPolicies\" : [ {\n        \"secondaryKey\" : \"i90fyrzcqyqx258fwvj9m5fs8nd6hxwycevz8mgwctqolbr26allrz7vnqsg09bewcarhbo3m\",\n        \"rights\" : \"EnrollmentWrite\",\n        \"keyName\" : \"Javier Flatley DDS\",\n        \"primaryKey\" : \"qj6h5oksztdxq1by\"\n      }, {\n        \"secondaryKey\" : \"zr89qyjudq4l4h0a53ojo2zkhtrd6dxe4a21txdmsfj7spm86kadflyjr1sl5yzjvx5m4ohgtefvub1douqmspxx1n0236al8wkh8cgbex4qp2ygp2xq4x5fl83v8dg3muz050ycx162izgmy4xe6y9st8xfxs22792ktcqmzm58w09bnc086yucijywhu795zqdm\",\n        \"rights\" : \"RegistrationStatusRead\",\n        \"keyName\" : \"Theron Gerlach\",\n        \"primaryKey\" : \"eqnn5ctvrjfpgn2z1u7l11wu49doscp1c0eiq\"\n      }, {\n        \"secondaryKey\" : \"eq3ws9d05ue2yiagpdhdyx8cx6cn0e011hrlhl8jj7qe0iys0x39g92my54jhl6pqrsm48qudgfrlt7xk5ono9pb5ls5a6iw9quirmaaqwybns3rsy3vv11ahyfaz516rhkan3nx2vap0rgap7uwpzm\",\n        \"rights\" : \"EnrollmentWrite\",\n        \"keyName\" : \"Arlie Kihn\",\n        \"primaryKey\" : \"pztffws5qyuw82phpd20q5sf2tm4wdrcumfrz0nbkbughp618r2y3pi7evhyltckc7bkactt32drgc3u6gaz02g8fdd3vwi3eldrt41fho3gaok0y4rsjtn8mra1\"\n      }, {\n        \"secondaryKey\" : \"cauiw\",\n        \"rights\" : \"ServiceConfig\",\n        \"keyName\" : \"Raymon Gleichner\",\n        \"primaryKey\" : \"zp8fzy73apchjwaf2mlb1yq5laclg61hb9bwj2mdqb498q538ttph4\"\n      }, {\n        \"secondaryKey\" : \"9tibqz3\",\n        \"rights\" : \"RegistrationStatusRead\",\n        \"keyName\" : \"Lynn Rippin\",\n        \"primaryKey\" : \"s1hfmr1a8emr8h4nud1vtvdwrfd88q554fglgly8lpuzvuj1agyva411syy4yhngs0e8mgjxmh9ce\"\n      }, {\n        \"secondaryKey\" : \"ka3olimnnhu71ed\",\n        \"rights\" : \"DeviceConnect\",\n        \"keyName\" : \"Titus Beer\",\n        \"primaryKey\" : \"1appcb7bvlp8e1fok8416gnsewschah84y3ifz47vis9kansrsm4ieik83vxk0sz5mv2xtzz68xx6uiard88j5mv6h3sun4ht6sfamk9pvwcp2pm7sewtlyciewkqoxzfyo2ahkjrvfm39ubki8g8hufoidywewx\"\n      }, {\n        \"secondaryKey\" : \"lfx2dtdwaxoroufgxb2hg40t47sone5l5difft2j8s44k2lup1elc1yio65kym0dyge89za7817xdjtalyi\",\n        \"rights\" : \"DeviceConnect\",\n        \"keyName\" : \"Lillian Bode\",\n        \"primaryKey\" : \"bsg0xd1dcf8c2yxlio2qk78ghsp82qsvhskjuooyp9woucgxfveoqny0dgyivb4c9wwxyxepmsu9d9c88wnwd62kfyxmmh2i4yzri8xvuiop9kiuaiqly2dkf631fbt1vw7hpp9qjhj3pqyy55bsv030ll\"\n      } ],\n      \"allocationPolicy\" : \"Static\"\n    },\n    \"tags\" : { }\n  }, {\n    \"name\" : \"<umf$.~HKQ@>QJP/jHMeFFai^$P0XUxf2mF8BaC39TU\",\n    \"etag\" : \"qui\",\n    \"location\" : \"xxmv1a913xig4v8job1sk9\",\n    \"id\" : \"5ol3\",\n    \"sku\" : {\n      \"tier\" : \"7qpqt01mkhay9sh27whjf5on7mafbzubwe5nme\",\n      \"name\" : \"S1\",\n      \"capacity\" : 1414656680471984188\n    },\n    \"type\" : \"9i55to4l6fnkort\",\n    \"properties\" : {\n      \"iotHubs\" : [ {\n        \"connectionString\" : \"a1uwn9l9icr0ri\",\n        \"applyAllocationPolicy\" : false,\n        \"allocationWeight\" : 936978514,\n        \"name\" : \"Mr. Nestor Price\",\n        \"location\" : \"ke361hfiod9y6ou1gtwkpuc51x14fnq652en0twynel1pkiyn\"\n      }, {\n        \"connectionString\" : \"9e8mn4gchlrn9l1hlqrywvsg1kom1l3b3\",\n        \"applyAllocationPolicy\" : true,\n        \"allocationWeight\" : 1800846396,\n        \"name\" : \"Filiberto Bogisich\",\n        \"location\" : \"tl3h8p8okhi826xmvpon2qjebco8zmg4fiqdtjhkuaslp1st17tsftttfymyqjvzd67wg8m7izwpwxo1hb6aaqhhnz127ncloqtq3miyr8ulo2od4gqxuhr3j6v0iio07inzpr986ia1gg4hdbgcjyx2q8afb9mqrtj6u5wla5sls0htp79ptttq1xwkn\"\n      }, {\n        \"connectionString\" : \"9okh3wktoxgir5y4nfmxdi82dlf3\",\n        \"applyAllocationPolicy\" : true,\n        \"allocationWeight\" : 1547958083,\n        \"name\" : \"Buddy Price\",\n        \"location\" : \"v9w6ju06747d76o2n4tplkqs07wnv1idp5hxcx82wvmbhag0hs0xgwhd27e4osltjes4ibi4oi8lp90gmukonowx52e81gb3kqinafkg6aawcbowydd0tgxu4wvvrhmyp1qq4c9n2r0wqdokl62y8d7gr9qpes0r4dx4c\"\n      }, {\n        \"connectionString\" : \"bclrzddbcl1nhgtnsh8ycmuetxcv0sc4lts250yp2j22953uqekmbjvwrdqd7xa60ferw8kwd3tn8ig7rnkduqpsxipjjsvaobl1vzuf7906tog17vtzsur2\",\n        \"applyAllocationPolicy\" : false,\n        \"allocationWeight\" : 436297091,\n        \"name\" : \"Mrs. Concha Mayer\",\n        \"location\" : \"rqgsrextvjqa99c3bowgo1n44i86p6s5zkh2gtfsku75tgmgrnql9yoq0hag4tnjwtazumga5ov3wkzagy7wtkiymqws\"\n      }, {\n        \"connectionString\" : \"509hf8pt0wo9jphd5r2j2dpzz2oxz2xae6l7a5hb\",\n        \"applyAllocationPolicy\" : true,\n        \"allocationWeight\" : 767474648,\n        \"name\" : \"Jarvis Metz DVM\",\n        \"location\" : \"uy40qqp69xjyh25eodkcd4cbbqzr0hhj26mgwmbtd0z2leeebm51bahu1w7im0liw0ejkrkpi57hsn74lqqemrg44yomdcs4fo2ofkdqzmbk71ltfvtkyaolg6cslbx7x6xogaev7hzyh\"\n      }, {\n        \"connectionString\" : \"a7wl020v3c0nyffifbkn3c10m6hk9hhq8bwms\",\n        \"applyAllocationPolicy\" : false,\n        \"allocationWeight\" : 279578529,\n        \"name\" : \"Lidia Miller\",\n        \"location\" : \"xg51pgta599j0qgk8863m8w0foig6mke9mmfo5l4heq6652i2rt36uq1pivoe0ce6nx63k9aywg4afu9ufy2xgtpalzpq7rhevobu69kgnbwfjix0lw26pejyb9a6el8vrj5m5kbf1dvujrf4vkpivtjpk5k53e53ag6r635bgo9mt9a\"\n      }, {\n        \"connectionString\" : \"ei2yxbqpr49t7k2shx3657x97n56dy9hq5oh4dt6ak7k4mmtnzlkwam11nedlx66i\",\n        \"applyAllocationPolicy\" : false,\n        \"allocationWeight\" : 493298703,\n        \"name\" : \"Miss Anastacia Halvorson\",\n        \"location\" : \"ub263lharoq4wbfxnk1izf\"\n      }, {\n        \"connectionString\" : \"xxg4zlwq\",\n        \"applyAllocationPolicy\" : true,\n        \"allocationWeight\" : 1557773173,\n        \"name\" : \"Lucius Larson\",\n        \"location\" : \"dhurivtrmewbcjgph7do3ritvyyypksr8\"\n      } ],\n      \"serviceOperationsHostName\" : \"Kathy Mertz\",\n      \"deviceProvisioningHostName\" : \"Denis Robel\",\n      \"idScope\" : \"9jycl6w5idfq84eulfnek8l5p0nkym3z85drxjvrunva10v3dq0b2adx10z7shv623c4i8g1i2q25xro686ugrcuenol2zkz3efp11zrfu\",\n      \"provisioningState\" : \"Florida\",\n      \"state\" : \"Deleting\",\n      \"authorizationPolicies\" : [ {\n        \"secondaryKey\" : \"ppq1u0w08nptryn14qw7ydfmn43fcdpwvlr9l02t9kcd71jonezzu2nontsfg5l5uq29oy0i03fidql015b019pxru96sp5asbb1jcvnq\",\n        \"rights\" : \"DeviceConnect\",\n        \"keyName\" : \"Yaeko Volkman\",\n        \"primaryKey\" : \"v2ikb0wi6ozshjypfu5cmqqblu5igcn96c2nr53gl94efsatpccqxczek2dben9vw380ev6d0s8dvlbrhdvx6ullaumd800yajp5yccb95\"\n      }, {\n        \"secondaryKey\" : \"lk0jtxpmjbziaghvhbq84cwxh3o5q8zgwicpm7rppoer4j7lod352ieus4ryik3sn1b3h3jluby6zhr1ja1p6xsmki1gqh018ykug9c6zpiz5mdznzwwa3lu7tw57n96gcpel1yt7hpa9y2ogg3mgidpvwci0yz3ekkanr6hb086sl1r9\",\n        \"rights\" : \"DeviceConnect\",\n        \"keyName\" : \"Kiyoko Von Jr.\",\n        \"primaryKey\" : \"wjp8idphrmy57v3p6rpbf5x6gcmydzm9mkvgc36sjko5zxqlxvjiag4kvl76kmtozff388grg16uy72lye6257qp67a8crgrtw52r2ri54nq5rgu51k78meufyecy1ewmepr87e00bnbjnvoyw7h4i9q853ut843jm0rwii9jc67orlu8ay8d17fvpxyaw5t081m60qa\"\n      }, {\n        \"secondaryKey\" : \"l2gutey14i7nzhgi7r7azs19isqr1xchnk4a1c48ssbl4mq4vd5o4xeb782bzp2028kn48kdqti5ifare8skymmn89b72ztwlzb8aoq9n3ud98tbnc02yh6txnydgw12mdtkwvtz50mb3dv5g\",\n        \"rights\" : \"ServiceConfig\",\n        \"keyName\" : \"Dr. Garry Wiegand\",\n        \"primaryKey\" : \"ipe0d1hdzug18gza2pm2exdz0zkpvel2lyos95sjodsxeqf0sdlkfb6mvk5dvnag3ky\"\n      }, {\n        \"secondaryKey\" : \"6c13ux51b2yb3rx2a98ndv4b0f9ytij3y24u0pu9v6i9r4a1o7f9qv04rngcbzu7r844u5lsc718w9f4lxl0p40rrqno7b3yc1ddi5\",\n        \"rights\" : \"RegistrationStatusWrite\",\n        \"keyName\" : \"Grover Welch DDS\",\n        \"primaryKey\" : \"pv19rampuzl5zbulzt59zyf7sqo4cuu\"\n      }, {\n        \"secondaryKey\" : \"yg2k0usryp02bfx91n0fp142nlvw1y6xnitcizj4mg93h8xm9vr8hkrh8mvr0wlsf9skx40ydpgthgss9s4zv4wi35m9yjaq5n5zw7ljonkk2ngzessbp8yhzepmgw13qvpdwiuh3jnbyv83z1b1\",\n        \"rights\" : \"EnrollmentRead\",\n        \"keyName\" : \"Rashad Feil\",\n        \"primaryKey\" : \"0wxlmvrmpvctisjg2ndskm0cwzawyvd9obbagx8ump3d2i6wj96avd2xbeoi3tepks81ubsk4q2i2p55u3fqo3liln44jvlru47b7qaum3chf7ohle5wyw8x492pakhzrq4f\"\n      }, {\n        \"secondaryKey\" : \"30st3vetooib98tthu5tfuxpkxam1c5e42dy25lrnlb3tjy465iwqwasuk5fswywb0ihy30mp794z5uu0r4jfcnk5mz5y3j7gersiqxnlh4brbbnx25kbyxb8q07s63qzcsca99t5hdtwfyen80xmf4xhyld53s64ieeb4ckz\",\n        \"rights\" : \"ServiceConfig\",\n        \"keyName\" : \"Dr. Alexander Stamm\",\n        \"primaryKey\" : \"a1jf6z9d2egkb47pherm1wp9s2lruiwm9l4foxcjltwchle9rmwqy22ft9fs6302zqddu8lik2d0lo0q2k60z7\"\n      }, {\n        \"secondaryKey\" : \"9ilubc4dbujxbeeawoh4bwbulz79v7il82hv36k38b8fyqylbhytm8ruqa4ej2oy91rxhpiiu5aohgc98wkvrqwfp0vtwcs621lxox2sjcc6h7m2i5jr9ww3q517idsx6gb955kq5024t4e7440cmo\",\n        \"rights\" : \"ServiceConfig\",\n        \"keyName\" : \"Beau Wyman II\",\n        \"primaryKey\" : \"s1kqis85lt4zhw7uguj6stgft77n1st0dssz01dw4f46cz9oumjuhaa1rvttivb95c9qayh5uy9f9fbc05581lpmyxnyf1y56u918ss035krr0weq1ptrydz6f0s\"\n      } ],\n      \"allocationPolicy\" : \"GeoLatency\"\n    },\n    \"tags\" : { }\n  }, {\n    \"name\" : \"o#c[ZC{Jw[,dOB&u-R-R,C&=M\\\"W\\\">lpQyzH2EEHaIxlEyBtDkTksllTIFWSHU\",\n    \"etag\" : \"nemo\",\n    \"location\" : \"vvtefwgluf60crzvauw0u4fbk9bqd3am4di712smkua\",\n    \"id\" : \"ak0f\",\n    \"sku\" : {\n      \"tier\" : \"68ox1a0dl8y67paxo7ayzpqt403ecww3yglmdhrc4gm90v12gr72f4b8oiztqn36s\",\n      \"name\" : \"S1\",\n      \"capacity\" : 4494072267187422757\n    },\n    \"type\" : \"d8giz1jjzak7kwavds9jyivnzxhofr3pv4o8ep10wnhgrraa0cbyn9pjpkt17409fcu\",\n    \"properties\" : {\n      \"iotHubs\" : [ {\n        \"connectionString\" : \"wtticphcn453rqtrp3ipix79r6beomi66qwuu61ae695d7bj2ao4tujtg39jvfdt3wo0g5wp5ac6xvem0gweobnubrui5i8xvv5sk5\",\n        \"applyAllocationPolicy\" : true,\n        \"allocationWeight\" : 1384702138,\n        \"name\" : \"Miss Rozanne Fisher\",\n        \"location\" : \"ll9a7paaze66ms939tsz8znhpc1ae5liqz5tc2xodf83guzu5tn9rd2tv7j5527h6j4fp5o43t7dybinp74h6yb2zckjzvpq\"\n      }, {\n        \"connectionString\" : \"knkj9zsiizv2ai4z\",\n        \"applyAllocationPolicy\" : false,\n        \"allocationWeight\" : 1099532837,\n        \"name\" : \"Valentin Yost\",\n        \"location\" : \"o9yf83bey2j1yvtepe8ljv5tt8xs6wym5zxnse2kuqjva4mkhjvsg0b2oo4m18495vcnmqrrwpht2vnnz6cukttpibdeiddlm8076o3jn6khdtokndrq6xcfiieahlj0e2gj68qovtkmxadqmzdooxs06qfuuzknvtgw414m826tstyjqox\"\n      }, {\n        \"connectionString\" : \"8ykixyq4aty96fwmur0qziig76rwqnfv9nec4bjvyhztq5rvdxtg7gie7s2xbezzhn3gke6dj9lc5jabpnsqwua0uzrnywhoqp9hb1zhps8a31wurmlc1uynnfw697l\",\n        \"applyAllocationPolicy\" : true,\n        \"allocationWeight\" : 352255434,\n        \"name\" : \"Shad Hudson V\",\n        \"location\" : \"rt21a7e6trlv4j5rc7g8avc72ocb50ip3y9ys81rezt1c6297rj3ujwbvx75txh\"\n      }, {\n        \"connectionString\" : \"qgujm9ky081244qhzsg0yvb2ojz845q4w7nkdma7jf4g8rfusi8ostyutqvtx69iqej0ze51ntjy37qywe1m3gv6bu591d1rhjq989abmsidcrsj02km8ltsocex735cefwh109tzm11t381ajboa6u0x7pfnz65f26ux5y9\",\n        \"applyAllocationPolicy\" : true,\n        \"allocationWeight\" : 19396160,\n        \"name\" : \"Romeo Dickens\",\n        \"location\" : \"0hmtcflqy56eie98twhty5cwljnhryxrzarfp4dw2hvighiswfly6mh0wtqj8t9ag732rlz4y59c0lanwjg9ipyklhwiwv36q40idmk5omg5dymcflojnawoextd7g6yn0xj7gcc9lsb8xlc25vszpenkzurixzzu0v6qe696rtvowtyprfce7p6r79uwgh06o\"\n      } ],\n      \"serviceOperationsHostName\" : \"Andera Wilkinson\",\n      \"deviceProvisioningHostName\" : \"Doug Heaney\",\n      \"idScope\" : \"1rfx9gsmoge5j535fjt17wss9ffcs4asi4ev9cfrk12mbv6h7qh7839xqs2s3sknuq\",\n      \"provisioningState\" : \"Nevada\",\n      \"state\" : \"Deleting\",\n      \"authorizationPolicies\" : [ {\n        \"secondaryKey\" : \"r3uezajnwz91l7gtnn61tzx9blzg17dt204hy7sma\",\n        \"rights\" : \"RegistrationStatusRead\",\n        \"keyName\" : \"Astrid Rowe\",\n        \"primaryKey\" : \"bprus9y39jonhcs7xe23zvee5nku93ed0w11b1vd27yw4jizxl1jfgkx4537d5u8v0nsoovi9gs33mh3hb2ej68i82hpjy9b980887knbnjb11ekdrotody82rqei9vfg2dmu0sb5zmer4j1xuo29yibp84\"\n      } ],\n      \"allocationPolicy\" : \"Static\"\n    },\n    \"tags\" : { }\n  } ],\n  \"nextLink\" : \"7uedpxku6ufmgvzmtttb2n0zm9b9iunr5x9tf1lbu49ceeaq4ns0q31jl3hofkcyc09shdz39i3h1h2j6zjhcz93aqr995hsy29ch4ip0k0up0cnss3y9ywxvg73ikaj3mirxelvymcmg1wbvir81udbeoxayi2952qwhsqbjg4u8pa26goqkbe\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "10dae31c-d8ce-4797-abb7-caa0efd40393",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:15.180961Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "IotDpsResource_ListBySubscription",
+          "schema" : {
+            "type" : "object",
+            "properties" : {
+              "nextLink" : {
+                "type" : "string",
+                "description" : "the next link",
+                "readOnly" : true
+              },
+              "value" : {
+                "type" : "array",
+                "description" : "List of provisioning service descriptions.",
+                "items" : {
+                  "$ref" : "#/components/schemas/ProvisioningServiceDescription"
+                }
+              }
+            },
+            "description" : "List of provisioning service descriptions."
+          }
+        }
+      }
+    },
+    "insertionIndex" : 20
+  }, {
+    "id" : "6df08b1b-1e1e-4d79-9ec0-0f97393af576",
+    "name" : "Check if a provisioning service name is available.",
+    "request" : {
+      "urlPath" : "/subscriptions/vs54/providers/Microsoft.Devices/checkProvisioningServiceNameAvailability",
+      "method" : "POST",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "8uide6ed3nq7v07x2fikckhq6z4t"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"reason\" : \"Invalid\",\n  \"nameAvailable\" : false,\n  \"message\" : \"Voluptatibus velit est ut harum. Molestiae asperiores nisi. Sed totam aut.\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "6df08b1b-1e1e-4d79-9ec0-0f97393af576",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:15.174204Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "IotDpsResource_CheckProvisioningServiceNameAvailability",
+          "schema" : {
+            "type" : "object",
+            "properties" : {
+              "message" : {
+                "type" : "string",
+                "description" : "message containing a detailed reason name is unavailable"
+              },
+              "nameAvailable" : {
+                "type" : "boolean",
+                "description" : "specifies if a name is available or not"
+              },
+              "reason" : {
+                "type" : "string",
+                "description" : "specifies the reason a name is unavailable",
+                "enum" : [ "Invalid", "AlreadyExists" ]
+              }
+            },
+            "description" : "Description of name availability."
+          }
+        }
+      }
+    },
+    "insertionIndex" : 21
+  }, {
+    "id" : "51c96147-512c-44d3-a69c-12dc8dc5091c",
+    "name" : "Lists all of the available Microsoft.Devices REST API operations.",
+    "request" : {
+      "urlPath" : "/providers/Microsoft.Devices/operations",
+      "method" : "GET",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "amezp9exs5zl2u8w1wl20yujkcbkq7"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"value\" : [ {\n    \"display\" : {\n      \"provider\" : \"ufo82ba26lps8i1mvwx2eyd3ubwqsh3smqr5grt5rdx4y9os1f8776r5v0ir7pkhmfivl172hk6jjvw9wb84ob5q7nsxfcnc5zl7vmnq7o99zm76hkjkdxc85fcgpo7clus48a1rq2o6rl5ibtk8ql7vahvofq89jzbkzhqryo8\",\n      \"resource\" : \"h175jalrccq3qkqcnbgwkub8s297dedcltoedgwt4c9fcsp122zl2s1dfjym007fdzesdt53se5iipf7r0webzxx9weq715d47od6s7m9g3wurajxmc39tp8l6u3gdbzy0azjyxtefyhq6ws9s24wpokfd6tolx5cvtf3c5ofe79fvrfpxv4qn9z8cp877zed\",\n      \"operation\" : \"azwjvuc4i9bx30u\"\n    },\n    \"name\" : \"Mrs. Rudolph Carter\"\n  } ],\n  \"nextLink\" : \"1z2qhlvjnxmsxg1pktni6axw2wmp5nnww4ol768rgnt3poy3clnwp7rsk1x0bpxtfzx0b8k4vt8zsg5kf0uk4tbmwfw9o8uh74496le0ml1fq7qjcwio76ix8\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "51c96147-512c-44d3-a69c-12dc8dc5091c",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:15.173839Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "Operations_List",
+          "schema" : {
+            "type" : "object",
+            "properties" : {
+              "nextLink" : {
+                "type" : "string",
+                "description" : "URL to get the next set of operation list results if there are any.",
+                "readOnly" : true
+              },
+              "value" : {
+                "type" : "array",
+                "description" : "List of IoT Hub operations supported by the Microsoft.Devices resource provider.",
+                "readOnly" : true,
+                "items" : {
+                  "$ref" : "#/components/schemas/Operation"
+                }
+              }
+            },
+            "description" : "Result of the request to list IoT Hub operations. It contains a list of operations and a URL link to get the next set of results."
+          }
+        }
+      }
+    },
+    "insertionIndex" : 22
+  } ]
+}

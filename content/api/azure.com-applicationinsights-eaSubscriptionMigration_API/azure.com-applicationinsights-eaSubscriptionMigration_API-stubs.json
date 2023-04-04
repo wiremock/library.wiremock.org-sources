@@ -1,0 +1,109 @@
+{
+  "mappings" : [ {
+    "id" : "b8f68b4f-8491-440c-97b1-0d3dd3188a1f",
+    "name" : "Enterprise Agreement Customer roll back to use legacy pricing model. - 204",
+    "request" : {
+      "urlPath" : "/subscriptions/f7wc/providers/microsoft.insights/rollbackToLegacyPricingModel",
+      "method" : "POST",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "02gbs7qw9eoveqbi4whu5w2mww6gnd4ytvqvuo5"
+        }
+      }
+    },
+    "response" : {
+      "status" : 204
+    },
+    "uuid" : "b8f68b4f-8491-440c-97b1-0d3dd3188a1f",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:38.825662Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "EASubscriptionRollbackToLegacyPricingModel_Post"
+        }
+      }
+    },
+    "insertionIndex" : 0
+  }, {
+    "id" : "12dde4f0-bc0f-43d7-988e-9eba39aa5e6b",
+    "name" : "Enterprise Agreement Customer opted to use new pricing model. - 204",
+    "request" : {
+      "urlPath" : "/subscriptions/014w/providers/microsoft.insights/migrateToNewPricingModel",
+      "method" : "POST",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "7dpmeihbx7t0e8non1c5ezn5t0cilxq2w1p082mjkrnpuprr7ss4gz6xa9r9oeatwo2pojpjk19mi4ac0e9sae26kgdp9j"
+        }
+      }
+    },
+    "response" : {
+      "status" : 204
+    },
+    "uuid" : "12dde4f0-bc0f-43d7-988e-9eba39aa5e6b",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:38.825536Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "EASubscriptionMigrateToNewPricingModel_Post"
+        }
+      }
+    },
+    "insertionIndex" : 1
+  }, {
+    "id" : "4742160c-0487-4aa8-ab9e-7809401baf4c",
+    "name" : "list date to migrate to new pricing model.",
+    "request" : {
+      "urlPath" : "/subscriptions/jzpt/providers/microsoft.insights/listMigrationdate",
+      "method" : "POST",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "cjne36kumz76rgc5n3o9kt8svxpt5s4woyqdygq73yctk5enyfqrfybmv69qbu05bb5g1mjjkjp53alofmi7fhv4igvp8v22ml2a9askeqthngkzajyku95lr1begjn19f2v42fycfa1bmz5u07uv6si3fxer4twjvd0ny67uue95ki2"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"isGrandFatherableSubscription\" : true,\n  \"optedInDate\" : \"2022-11-13T23:00:05.825Z\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "4742160c-0487-4aa8-ab9e-7809401baf4c",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:38.825379Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "EASubscriptionListMigrationDate_Post",
+          "schema" : {
+            "type" : "object",
+            "properties" : {
+              "isGrandFatherableSubscription" : {
+                "type" : "boolean",
+                "description" : "Is subscription in the grand fatherable subscription list."
+              },
+              "optedInDate" : {
+                "type" : "string",
+                "description" : "Time to start using new pricing model.",
+                "format" : "date-time"
+              }
+            },
+            "description" : "Subscription migrate date information properties"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 2
+  } ]
+}

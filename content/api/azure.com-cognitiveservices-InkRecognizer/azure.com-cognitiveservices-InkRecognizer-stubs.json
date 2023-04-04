@@ -1,0 +1,54 @@
+{
+  "mappings" : [ {
+    "id" : "0ea0ecf3-6026-4b57-93ec-3d7d397c08df",
+    "name" : "Ink Recognition operation is used to perform ink layout and recognition of writt...",
+    "request" : {
+      "urlPath" : "/recognize",
+      "method" : "PUT"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"unit\" : \"cm\",\n  \"recognitionUnits\" : [ {\n    \"center\" : {\n      \"x\" : 7.91321313417214E307,\n      \"y\" : 1.8145874945562925E307\n    },\n    \"confidence\" : 5.751935290015158E307,\n    \"strokeIds\" : [ 6550147459724445641, 8778483549402885877, 1542509706231851728, 8812123989630785245 ],\n    \"alternates\" : [ {\n      \"recognizedString\" : \"q47kghnivigt3886ld3r0qv3piu33nxz609qzum0g05m4rob5a\",\n      \"confidence\" : 7.889366291309984E307,\n      \"rotationAngle\" : 1.7765336511195748E308,\n      \"category\" : \"unknown\",\n      \"points\" : [ {\n        \"x\" : 6.191132525581032E307,\n        \"y\" : 6.829650434973563E307\n      }, {\n        \"x\" : 2.2081233597524743E307,\n        \"y\" : 6.210509998160975E307\n      }, {\n        \"x\" : 1.3327792278563095E308,\n        \"y\" : 1.0130963877799335E308\n      } ]\n    } ],\n    \"parentId\" : 888370423991907095,\n    \"points\" : [ {\n      \"x\" : 8.890964790631163E307,\n      \"y\" : 9.918941660720715E307\n    }, {\n      \"x\" : 9.566376409990486E306,\n      \"y\" : 1.5020787970448304E308\n    } ],\n    \"rotatedBoundingRectangle\" : [ {\n      \"x\" : 1.8490807929350287E307,\n      \"y\" : 6.7305396196755E307\n    }, {\n      \"x\" : 1.0622945427628585E306,\n      \"y\" : 3.0529431166877545E307\n    } ],\n    \"boundingRectangle\" : {\n      \"topY\" : 1.5354409025743785E308,\n      \"topX\" : 1.6178705903420403E307,\n      \"width\" : 1.0716902392030316E308,\n      \"height\" : 5.580158340431388E307\n    },\n    \"childIds\" : [ 4601475131286093257, 6122264412341463214, 3550188207671285901, 6171296909797229443, 3018442507121042339, 7089873272543983659, 1280436287157342810 ],\n    \"recognizedObject\" : \"rectangle\",\n    \"rotationAngle\" : 1.567082336158107E308,\n    \"id\" : 3490355720285256039,\n    \"category\" : \"unknown\",\n    \"class\" : \"container\",\n    \"recognizedText\" : \"odr6fh1xmmlgmpi8qxqlktm2chywj98dnoaqevhikd9pkuehv0l8749o3ux6vb3cosymqbh36ftpnmao971ruyw2wjfc3ynpohysc546kcx2h9zezd2o786r\"\n  } ],\n  \"language\" : \"40wks8nl88cdd97hyoz9baahlh9yqihu9ci4rkh4tgpjutra1u8mh2h5x6t4yxeocgty46aj9h5tzwu6l2crn7ogvpafdts\",\n  \"unitMultiple\" : 1.301508641294134E308\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "0ea0ecf3-6026-4b57-93ec-3d7d397c08df",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:23.2959Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "InkRecognizer_Recognize",
+          "schema" : {
+            "required" : [ "recognitionUnits" ],
+            "type" : "object",
+            "properties" : {
+              "language" : {
+                "type" : "string",
+                "description" : "This is the language used for recognizing handwriting from the ink strokes in the request."
+              },
+              "recognitionUnits" : {
+                "$ref" : "#/components/schemas/recognitionUnit"
+              },
+              "unit" : {
+                "type" : "string",
+                "description" : "This is the physical unit of the ink strokes. It is up to the application developer to decide how to convert the device specific units to physical units before calling the service. The conversion factor can be different based on the type of the device used.",
+                "enum" : [ "mm", "cm", "in" ]
+              },
+              "unitMultiple" : {
+                "type" : "number",
+                "description" : " This is a scaling factor to be applied to the point coordinates when interpreting them in the physical units specified."
+              }
+            },
+            "description" : "This shows the expected contents of a response from the service"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 0
+  } ]
+}

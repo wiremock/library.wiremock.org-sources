@@ -1,0 +1,3027 @@
+{
+  "mappings" : [ {
+    "id" : "05975d6b-8878-4f16-8ada-02782c2bcc46",
+    "name" : "Create or update NetworkRuleSet for a Namespace.",
+    "request" : {
+      "urlPath" : "/subscriptions/zd05/resourceGroups/Felica+Stokes/providers/Microsoft.EventHub/namespaces/Mirian+Heathcote/networkRuleSets/default",
+      "method" : "PUT",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "4av6pqabcu5rgl68i28yhczbxr612oiquda8v4dgwunikwhuxu0qu55gmn"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"name\" : \"Pat Thompson\",\n  \"id\" : \"5ikx\",\n  \"type\" : \"1mbpyzea1i5o7ug364kly9asq1nra91x8sy5bi90v9z04q8tf1k2zcpjuydvv72hs4es8niwu9fviofhayikuzph9h187qhi7cw6epq53gu7yke8ssxb49dawtkn0h44oi\",\n  \"properties\" : {\n    \"defaultAction\" : \"Deny\",\n    \"ipRules\" : [ {\n      \"ipMask\" : \"vki6vth76msmiupge86395v7b08fwv53ksdxx42sd3fhnz6i9vtsgo3lrzcinkxc4kq2e2u7np1mgu6in8s1bnopcognbf68qz4hx74mco2jt69zu3jrs2ocz9a5mgonbjcukeg5pnxju0ziywiluq51g94krazj7i6ayv3a6cban2hvengf\",\n      \"action\" : \"Allow\"\n    }, {\n      \"ipMask\" : \"xwy4icfy0lgx8z075z9isilf6rjx86pncp2kr1iubdx7nvl9xndoqf6fa1e3000gq9ryexnrxxx89ngpm58flf05351rm3lgj2661om4e3ggne77v1oeocayyx591bq4ua75rk86cha3lo96c3zpdy0qfbdbj1yfby5ug7wps1f27mevv\",\n      \"action\" : \"Allow\"\n    }, {\n      \"ipMask\" : \"v8dkat1u2azsuud7ivuadbdhk0iclv5e1a6hsuvvbaluoildmas7g57hzrpgo4bxc0tz8wbvua75hhyidva6y8ierpewgm7qhano6x25visidbz7wapi0wuurloulu1ojfn9uc4pf74joln3urspnno8n0obvetre0aevw20xdhlh\",\n      \"action\" : \"Allow\"\n    }, {\n      \"ipMask\" : \"lyeds9kxtemrlnsmvogbv1pio8odxdmb5z8v54s4ym1lc4zqds8t3ur3y7fw\",\n      \"action\" : \"Allow\"\n    }, {\n      \"ipMask\" : \"rbdw3grik78poajv2ak85umhfufzsogwk7i1h6hrmkpriprspaebuf3fdempg4an1zxgrb6jy9kl4akuf72s5mhbo110q27p0eo3f0mngzkbbk1ojql5pegnqnwhegucr5o4zdelflb4277a2ynvxpp\",\n      \"action\" : \"Allow\"\n    }, {\n      \"ipMask\" : \"tvuifdi4xo0b5680mw6nt5h56kny87u8x8a3za89xh3qybt89nk4go09bwiiy738zfk235503d4czonbmvmd65kgz1ar72f0m3be7zm5r0j4g0e9ravhcpf3wfe\",\n      \"action\" : \"Allow\"\n    }, {\n      \"ipMask\" : \"jxyclpiro4r5qwh4rtctweot5g12hv9tgy300a54la2w2e5ain2shvef1ev8k4dymlgo0orzo\",\n      \"action\" : \"Allow\"\n    }, {\n      \"ipMask\" : \"wtfogtmbbq6hdzh68kdohskpqhgbr2jnbj1ak0k2r8ikf15vupo35vrxot4zl2t2f05fk4s3dasoykhiljuzzpxsiyt8ru8mbs7669ah4vk4bu5gb600szn2f1afwas6gb6tc8mdkcs8qi70\",\n      \"action\" : \"Allow\"\n    } ],\n    \"virtualNetworkRules\" : [ {\n      \"ignoreMissingVnetServiceEndpoint\" : false,\n      \"subnet\" : {\n        \"id\" : \"eqq5\"\n      }\n    }, {\n      \"ignoreMissingVnetServiceEndpoint\" : false,\n      \"subnet\" : {\n        \"id\" : \"121j\"\n      }\n    }, {\n      \"ignoreMissingVnetServiceEndpoint\" : true,\n      \"subnet\" : {\n        \"id\" : \"12oq\"\n      }\n    }, {\n      \"ignoreMissingVnetServiceEndpoint\" : true,\n      \"subnet\" : {\n        \"id\" : \"31n3\"\n      }\n    }, {\n      \"ignoreMissingVnetServiceEndpoint\" : false,\n      \"subnet\" : {\n        \"id\" : \"55a7\"\n      }\n    }, {\n      \"ignoreMissingVnetServiceEndpoint\" : true,\n      \"subnet\" : {\n        \"id\" : \"48r0\"\n      }\n    } ]\n  }\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "05975d6b-8878-4f16-8ada-02782c2bcc46",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:18.567721Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "Namespaces_CreateOrUpdateNetworkRuleSet",
+          "schema" : {
+            "properties" : {
+              "properties" : {
+                "type" : "object",
+                "properties" : {
+                  "defaultAction" : {
+                    "type" : "string",
+                    "description" : "Default Action for Network Rule Set",
+                    "enum" : [ "Allow", "Deny" ]
+                  },
+                  "ipRules" : {
+                    "type" : "array",
+                    "description" : "List of IpRules",
+                    "items" : {
+                      "$ref" : "#/components/schemas/NWRuleSetIpRules"
+                    }
+                  },
+                  "virtualNetworkRules" : {
+                    "type" : "array",
+                    "description" : "List VirtualNetwork Rules",
+                    "items" : {
+                      "$ref" : "#/components/schemas/NWRuleSetVirtualNetworkRules"
+                    }
+                  }
+                },
+                "description" : "NetworkRuleSet properties"
+              }
+            },
+            "description" : "Description of NetworkRuleSet resource.",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/Resource"
+            } ]
+          }
+        }
+      }
+    },
+    "insertionIndex" : 0
+  }, {
+    "id" : "26bd7574-91d4-4e7b-9046-625a4567db95",
+    "name" : "Gets NetworkRuleSet for a Namespace.",
+    "request" : {
+      "urlPath" : "/subscriptions/mi27/resourceGroups/Andera+Hills/providers/Microsoft.EventHub/namespaces/Otha+O%27Reilly/networkRuleSets/default",
+      "method" : "GET",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "0kmf6x8cda5eprzynn46rwdrhp4h7bmtn0fknk3az3viah6i60yj"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"name\" : \"Irene Johns\",\n  \"id\" : \"vvpq\",\n  \"type\" : \"mulomtl\",\n  \"properties\" : {\n    \"defaultAction\" : \"Deny\",\n    \"ipRules\" : [ {\n      \"ipMask\" : \"javg9whtyx9a43f02ij3u86s9rz8tzpduqa7qp5cf6uur7uasemrm8f4caoov1ev3eitxpu36w06xziys8n4ths48hshyo\",\n      \"action\" : \"Allow\"\n    }, {\n      \"ipMask\" : \"oh09sy1d78lypotn07yviofkqrft6zcuz920lb0lyj45u04lo7c5kng2hrt526ghax28o96d1g5k5ml\",\n      \"action\" : \"Allow\"\n    }, {\n      \"ipMask\" : \"m0ejlpot4jyxg4soaax1w7\",\n      \"action\" : \"Allow\"\n    }, {\n      \"ipMask\" : \"3vz6sbt1x5vrvysvr0qlen6t0yrctlmalpzrajp4djdn9v5gwvqcoo18tyry956id7skwf5cfxx81mbuvhegvw71dx86tsoreizpnsp73m4d13vdv2if2kns3gy648uidthe27q3zoyc7z46udyjqia6xq1cqko995o2oywj17mz68f4lue8ofrdkstpjoozj9lijae\",\n      \"action\" : \"Allow\"\n    }, {\n      \"ipMask\" : \"oc9wy1s5l9rjpeh3kebqthmz61x8b9lkcwyaxurm44blj1c6l9xwoi3o6fgtddlvzm28eks6daa692tzcr73wj7u4i4kkm\",\n      \"action\" : \"Allow\"\n    } ],\n    \"virtualNetworkRules\" : [ {\n      \"ignoreMissingVnetServiceEndpoint\" : false,\n      \"subnet\" : {\n        \"id\" : \"90l2\"\n      }\n    }, {\n      \"ignoreMissingVnetServiceEndpoint\" : false,\n      \"subnet\" : {\n        \"id\" : \"4x7n\"\n      }\n    }, {\n      \"ignoreMissingVnetServiceEndpoint\" : true,\n      \"subnet\" : {\n        \"id\" : \"fa1x\"\n      }\n    }, {\n      \"ignoreMissingVnetServiceEndpoint\" : true,\n      \"subnet\" : {\n        \"id\" : \"mjae\"\n      }\n    }, {\n      \"ignoreMissingVnetServiceEndpoint\" : false,\n      \"subnet\" : {\n        \"id\" : \"0s12\"\n      }\n    }, {\n      \"ignoreMissingVnetServiceEndpoint\" : true,\n      \"subnet\" : {\n        \"id\" : \"70jc\"\n      }\n    }, {\n      \"ignoreMissingVnetServiceEndpoint\" : true,\n      \"subnet\" : {\n        \"id\" : \"tmb6\"\n      }\n    } ]\n  }\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "26bd7574-91d4-4e7b-9046-625a4567db95",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:18.566656Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "Namespaces_GetNetworkRuleSet",
+          "schema" : {
+            "properties" : {
+              "properties" : {
+                "type" : "object",
+                "properties" : {
+                  "defaultAction" : {
+                    "type" : "string",
+                    "description" : "Default Action for Network Rule Set",
+                    "enum" : [ "Allow", "Deny" ]
+                  },
+                  "ipRules" : {
+                    "type" : "array",
+                    "description" : "List of IpRules",
+                    "items" : {
+                      "$ref" : "#/components/schemas/NWRuleSetIpRules"
+                    }
+                  },
+                  "virtualNetworkRules" : {
+                    "type" : "array",
+                    "description" : "List VirtualNetwork Rules",
+                    "items" : {
+                      "$ref" : "#/components/schemas/NWRuleSetVirtualNetworkRules"
+                    }
+                  }
+                },
+                "description" : "NetworkRuleSet properties"
+              }
+            },
+            "description" : "Description of NetworkRuleSet resource.",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/Resource"
+            } ]
+          }
+        }
+      }
+    },
+    "insertionIndex" : 1
+  }, {
+    "id" : "afaaab6b-e8e9-4533-9ceb-08b87ec81ee5",
+    "name" : "Gets list of NetworkRuleSet for a Namespace.",
+    "request" : {
+      "urlPath" : "/subscriptions/t7g3/resourceGroups/Delmy+Cassin+II/providers/Microsoft.EventHub/namespaces/Noe+Stroman+I/networkRuleSets",
+      "method" : "GET",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "cvu8wf3uplmivrr2x4a1q6qbkdt1izuyelr1zs0g7miezke08nxt0umka7tl9cjprys6zdx18i4qxolzf2jc6rr7cyp3bmmuu5ve0ognpt"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"value\" : [ {\n    \"name\" : \"Deangelo Huel\",\n    \"id\" : \"d98a\",\n    \"type\" : \"037s9iutp9sigw9tr3h1xorig76jpl3c3fuoj78jcjgmuejkiv\",\n    \"properties\" : {\n      \"defaultAction\" : \"Allow\",\n      \"ipRules\" : [ {\n        \"ipMask\" : \"b8kfwpfxtbjzvjapeun4f68th8bsze7wi4l0cx9b3cavmcq3q6hwm9qs99c30p7tpqtsq5sb30yxqvgh6axnk8uvem4hpkulhd1x0u3e10ms1fu3rqav40xuuoyiyup2h3964jaf\",\n        \"action\" : \"Allow\"\n      }, {\n        \"ipMask\" : \"zclcdw63th5tscfzhvgo5igbkpek9lq70onp6oas9w6j3clqmeb8evmmjxrt\",\n        \"action\" : \"Allow\"\n      } ],\n      \"virtualNetworkRules\" : [ {\n        \"ignoreMissingVnetServiceEndpoint\" : true,\n        \"subnet\" : {\n          \"id\" : \"yez3\"\n        }\n      } ]\n    }\n  }, {\n    \"name\" : \"Youlanda Pfannerstill\",\n    \"id\" : \"btz9\",\n    \"type\" : \"j5pvvkk3otynpiukhebd51bkz6t8x65yxzfv7t4ovltpasco72p9d0hb8hf298lkkb28djaq78uoiu6l7etf6ydxr8cj7\",\n    \"properties\" : {\n      \"defaultAction\" : \"Deny\",\n      \"ipRules\" : [ {\n        \"ipMask\" : \"xekr2nn398397tpmool0pwneuwjf2qah0lfvyscqd8xcharjx33ebuqdw4kzi268vi1prnturhf6kei2ospkjzquq240hqkbmoekkwypq6pjdhtes366q5tm7j3u8sthmg2d1brxicgb4mtrnrnj7utzbvv\",\n        \"action\" : \"Allow\"\n      }, {\n        \"ipMask\" : \"w1b34odq84agz52pchagxsipja\",\n        \"action\" : \"Allow\"\n      }, {\n        \"ipMask\" : \"4v93nbvehzc77es8e9ylerltbvmylinx1iqzlzlx1nybhdp9r4l2tr0fwmu14ehn3m42emqa0meqmdshsnrddkj9pmjysavu8orq920etklrndiwhdludax3ka4mqxayj7sln1brqrd4zr3eu2qspv350updmitf40ab0wtbq2xtb9ycz3mgn\",\n        \"action\" : \"Allow\"\n      }, {\n        \"ipMask\" : \"cbowfalwckma2cdsyn1t74jkdwzc10t6ubb764ldk05p2gw69c1140w1mgci48u3apbt330vw0gcee80s94bz0z6xybz1t7a236bot9o795k6zvgsct\",\n        \"action\" : \"Allow\"\n      }, {\n        \"ipMask\" : \"za7xyxc52n8ivz04pbsofwb5pwsr8sfi9aq1xkyfg0vokrbg5te93ywb4j3ltc14ojvrs7o6gq9gxd94v5ot43kh6xdc31gqzbba1vz4552uyp9n03yo6f4zjr4vrh2uqg1fcckf8ewzbay478mrp62544cqahdj2ibqjp9xokte\",\n        \"action\" : \"Allow\"\n      }, {\n        \"ipMask\" : \"fz17h45iv32aebbhluqrg6ij45lwti8813tgm80znm\",\n        \"action\" : \"Allow\"\n      } ],\n      \"virtualNetworkRules\" : [ {\n        \"ignoreMissingVnetServiceEndpoint\" : true,\n        \"subnet\" : {\n          \"id\" : \"3600\"\n        }\n      }, {\n        \"ignoreMissingVnetServiceEndpoint\" : true,\n        \"subnet\" : {\n          \"id\" : \"11v5\"\n        }\n      } ]\n    }\n  }, {\n    \"name\" : \"Laurene Heller III\",\n    \"id\" : \"86e2\",\n    \"type\" : \"bbj\",\n    \"properties\" : {\n      \"defaultAction\" : \"Allow\",\n      \"ipRules\" : [ {\n        \"ipMask\" : \"hfzfgq1nzt246jut0uc45mowulro04arzq8fbwgtqocfv0p2un770kof3aoewk89ue52399\",\n        \"action\" : \"Allow\"\n      }, {\n        \"ipMask\" : \"t5dflhrxqphhs8tno3k86t6icrfp8uncd6ceuzrlrvh08ildk9ge7qppkejwz5g3nijpkr2lf0vo711tojoy7\",\n        \"action\" : \"Allow\"\n      }, {\n        \"ipMask\" : \"ggoj2u84jqirsu7sq7zxm4h67lae3un9afw2i198d65rtyiimjck32i3f8ysflyhk8fuacrwop0b9s3rsiyyokpd6o5xfvkgfneiwglyh47du3g35pnpz7n4du3pz8u82nlejgbe3xwsugjcccl6udmzcknk79vuq\",\n        \"action\" : \"Allow\"\n      }, {\n        \"ipMask\" : \"01dzp0zg3jk5zcs80jqyt109hmrg31qlw84rhpu5q87zt261lwyr3iqoq4s2nr4ykfq9mgkkybrikpd48gbkvdh7mlb2a3pozgzvqcyszwisgcw9gm53piex4zs4kqnbp9brrai6sjd72svyak47hj4g1c2k9bo67s9bb\",\n        \"action\" : \"Allow\"\n      } ],\n      \"virtualNetworkRules\" : [ {\n        \"ignoreMissingVnetServiceEndpoint\" : true,\n        \"subnet\" : {\n          \"id\" : \"q3t2\"\n        }\n      }, {\n        \"ignoreMissingVnetServiceEndpoint\" : false,\n        \"subnet\" : {\n          \"id\" : \"8tf6\"\n        }\n      }, {\n        \"ignoreMissingVnetServiceEndpoint\" : false,\n        \"subnet\" : {\n          \"id\" : \"2j5d\"\n        }\n      }, {\n        \"ignoreMissingVnetServiceEndpoint\" : false,\n        \"subnet\" : {\n          \"id\" : \"9449\"\n        }\n      }, {\n        \"ignoreMissingVnetServiceEndpoint\" : true,\n        \"subnet\" : {\n          \"id\" : \"4o95\"\n        }\n      }, {\n        \"ignoreMissingVnetServiceEndpoint\" : true,\n        \"subnet\" : {\n          \"id\" : \"pjp9\"\n        }\n      }, {\n        \"ignoreMissingVnetServiceEndpoint\" : true,\n        \"subnet\" : {\n          \"id\" : \"280s\"\n        }\n      } ]\n    }\n  }, {\n    \"name\" : \"Camie Jakubowski\",\n    \"id\" : \"mx0v\",\n    \"type\" : \"40mpwnv4o7ptq3og9op6gpv4inotdd\",\n    \"properties\" : {\n      \"defaultAction\" : \"Deny\",\n      \"ipRules\" : [ {\n        \"ipMask\" : \"k59jdqss45yr1mpbrkrql55bva4wnqtdb0btrnil3pzur03qgmao1hepyudf1awwe6ocdlnx8e4byc9r8dvijm4jzhcjiylkc860cweldf7yn1av96vmbuq8s6fq7hjlgakmzehssyrft3rhl2gppgh5ieie0bb6mvq4yhtw2ptmtevq1j8n2\",\n        \"action\" : \"Allow\"\n      }, {\n        \"ipMask\" : \"a8p68nkmb6fothm2sj8bb3iwbrtimax0l04t16nb0id32mlfwlpmpw9j207ncwiwuqt9i60\",\n        \"action\" : \"Allow\"\n      }, {\n        \"ipMask\" : \"e50xitdq66fmk7849w2lpjf16303233ccxlp6hcphcyhqajnhslm40v4hyz3x71j6li9ozeg\",\n        \"action\" : \"Allow\"\n      }, {\n        \"ipMask\" : \"2yzrezyomf8zmaxd1samanusvrqxd1\",\n        \"action\" : \"Allow\"\n      }, {\n        \"ipMask\" : \"je1jshg4\",\n        \"action\" : \"Allow\"\n      } ],\n      \"virtualNetworkRules\" : [ {\n        \"ignoreMissingVnetServiceEndpoint\" : false,\n        \"subnet\" : {\n          \"id\" : \"8r8l\"\n        }\n      }, {\n        \"ignoreMissingVnetServiceEndpoint\" : true,\n        \"subnet\" : {\n          \"id\" : \"7zyy\"\n        }\n      }, {\n        \"ignoreMissingVnetServiceEndpoint\" : true,\n        \"subnet\" : {\n          \"id\" : \"jn13\"\n        }\n      }, {\n        \"ignoreMissingVnetServiceEndpoint\" : false,\n        \"subnet\" : {\n          \"id\" : \"5516\"\n        }\n      }, {\n        \"ignoreMissingVnetServiceEndpoint\" : false,\n        \"subnet\" : {\n          \"id\" : \"d91e\"\n        }\n      }, {\n        \"ignoreMissingVnetServiceEndpoint\" : true,\n        \"subnet\" : {\n          \"id\" : \"bsbi\"\n        }\n      }, {\n        \"ignoreMissingVnetServiceEndpoint\" : true,\n        \"subnet\" : {\n          \"id\" : \"1324\"\n        }\n      }, {\n        \"ignoreMissingVnetServiceEndpoint\" : false,\n        \"subnet\" : {\n          \"id\" : \"jqg5\"\n        }\n      } ]\n    }\n  }, {\n    \"name\" : \"Krystyna West\",\n    \"id\" : \"k033\",\n    \"type\" : \"hrealkxkeentjr\",\n    \"properties\" : {\n      \"defaultAction\" : \"Deny\",\n      \"ipRules\" : [ {\n        \"ipMask\" : \"9jdubybdb05u6j23ssrzvpa8fc8om82tjj442vsry3pjgvqwftvm\",\n        \"action\" : \"Allow\"\n      }, {\n        \"ipMask\" : \"vkt9qbxvandj8gh25s1uf1ro0mcbjalz9c4kzbebyadrvsz460mqkbvlwjxu3ff5qkaxtda6f6dedg50hljtjuk1vfx2i6jbswc0v5q2dfls7qpxi4m8hkj61dfetlbohrx157uao860sw9n9oa7l6lpmmnvcd14bx6nkat20xveu0miul0ikhf365xwy3\",\n        \"action\" : \"Allow\"\n      }, {\n        \"ipMask\" : \"fybn4fipqb58d9vknld73yh1\",\n        \"action\" : \"Allow\"\n      }, {\n        \"ipMask\" : \"arxxxmifqq3lygo320n3u72ilu90x4zzyc9emx2zhiaxemx0unqj33tky9a47ceyzate1g5k056e53mn854tij1ta4r08u6109tbjxbtyykdkmarl6stkj2p1obaqocw9la040kc0xz9i\",\n        \"action\" : \"Allow\"\n      }, {\n        \"ipMask\" : \"lx776djlxdky4w0zsqm1e4p21d6q1j7enmojuec5gghw9yh16knma82gs3dmwlvbfyaoer7z2p4s0yq2ocmz8bkmz7w6nztgsjba74pqfqwu8vf1myzn4fvnryamdgpmwbh90et7b0hth9fbwi7qr3ag4k3ry9ns1vrl5bwxa6fbc0nb9b840s\",\n        \"action\" : \"Allow\"\n      }, {\n        \"ipMask\" : \"86molmykg5rt7nm1gvftsrxo0zz7k48f769bdrmlwsiwdd18u1qtnh275dgvvbuk0zkpfjo7vyjz6m044o77c0\",\n        \"action\" : \"Allow\"\n      }, {\n        \"ipMask\" : \"b4fgf3gb0bgls5pbwrjb8iikikayf4ntqev9x1yju7tzwzbffmotig7iv73tdrum3gi081y3zqmwknrvyhueiqf0pf6th65qtghxjacqf38cajfz1jb8csso7i8rde\",\n        \"action\" : \"Allow\"\n      } ],\n      \"virtualNetworkRules\" : [ {\n        \"ignoreMissingVnetServiceEndpoint\" : false,\n        \"subnet\" : {\n          \"id\" : \"34y7\"\n        }\n      }, {\n        \"ignoreMissingVnetServiceEndpoint\" : false,\n        \"subnet\" : {\n          \"id\" : \"ru98\"\n        }\n      }, {\n        \"ignoreMissingVnetServiceEndpoint\" : true,\n        \"subnet\" : {\n          \"id\" : \"l852\"\n        }\n      }, {\n        \"ignoreMissingVnetServiceEndpoint\" : false,\n        \"subnet\" : {\n          \"id\" : \"022s\"\n        }\n      }, {\n        \"ignoreMissingVnetServiceEndpoint\" : false,\n        \"subnet\" : {\n          \"id\" : \"o8cj\"\n        }\n      }, {\n        \"ignoreMissingVnetServiceEndpoint\" : false,\n        \"subnet\" : {\n          \"id\" : \"26g0\"\n        }\n      }, {\n        \"ignoreMissingVnetServiceEndpoint\" : true,\n        \"subnet\" : {\n          \"id\" : \"nq00\"\n        }\n      }, {\n        \"ignoreMissingVnetServiceEndpoint\" : false,\n        \"subnet\" : {\n          \"id\" : \"e824\"\n        }\n      } ]\n    }\n  }, {\n    \"name\" : \"Ms. Jan Lubowitz\",\n    \"id\" : \"mv63\",\n    \"type\" : \"8avi86io96t2v6tfqpjh76wh0dhwl99gkn6gu\",\n    \"properties\" : {\n      \"defaultAction\" : \"Allow\",\n      \"ipRules\" : [ {\n        \"ipMask\" : \"cjg2flpeijs4m6qgghh881u5b4b1j7foxtqqu596bz9lcw9p11furns8opgretcffk8uy5dkjmbcsg12kwm9ljg32usfw3wrhllqjimqvom3qtarqgqrehu\",\n        \"action\" : \"Allow\"\n      }, {\n        \"ipMask\" : \"w1ahh4fzm0su1pftfb95it1tyfkjb4zn7ryv2wt962caz84bzw5fbhr72ty727u2u0npj1u9kxhu5n6smmc2lnpbutw4ox3begdaglflfv8mbdwf82t\",\n        \"action\" : \"Allow\"\n      }, {\n        \"ipMask\" : \"paopdt3miitijm302a4mxf8wvythqtrk0ibw8qbd3a8j92ojyuglqt3jhilzb7uzwqxow75yfbtzvaernsyqhimmohjh0orjqmwwf43ge161r0jjc\",\n        \"action\" : \"Allow\"\n      }, {\n        \"ipMask\" : \"n0ynbgxouf97jajjd8drckbi10vwabi2hejb89rdfm7rpz35kg32l1wrtmo4ny7n2l7ei0rm484zfnkfuwtu6rjlkw2iehfg0ngk4unb5ccgwno6pgr34xl86o166em2am85b9z6wobw8uhlukt5bnh6742j8k9gorextbhqo2ak0sjx5r0ghqow29r3e34zhq\",\n        \"action\" : \"Allow\"\n      }, {\n        \"ipMask\" : \"lsi10k904vqtnvkmfp9ruwxfcd2v79sezw27mdrvjesj3wnexc97bhlr7e3mo3tsysljoq9kr3l0d924di5dvr6e1k6rbsosgib7trq3s2nqv2eqy4a08nkdhx76e3ps1\",\n        \"action\" : \"Allow\"\n      }, {\n        \"ipMask\" : \"e4o5shc78zj69xcmxkyq9s5ece0jkqp3qa27cvxwou7evgt3bz3bnviamlifbvt4nav7ca3rzrzemt1895e4mjj2ngujoa2ambt6orke8istmls56ailjnc05gpm09tnya57webcgjarjc2iizsvz6q6w4yeicgh\",\n        \"action\" : \"Allow\"\n      }, {\n        \"ipMask\" : \"tns4ib9zj7022pkqfywk0dd9e5t7wexuddo5caww0k3gi1rn3f63n3clsoiwpg5s6wa25mdgv0wft2gb7hgv28fw2l9t3p5jhghnwlbhe6wmrctintts2aa1i97g76\",\n        \"action\" : \"Allow\"\n      }, {\n        \"ipMask\" : \"9gn6zmo8uq1lusseyqze45sqxu8ga4ujg3zky0n21r50snz35kxkdvt1cfh7cfy3likut2uzjqo9b\",\n        \"action\" : \"Allow\"\n      } ],\n      \"virtualNetworkRules\" : [ {\n        \"ignoreMissingVnetServiceEndpoint\" : false,\n        \"subnet\" : {\n          \"id\" : \"yj5m\"\n        }\n      }, {\n        \"ignoreMissingVnetServiceEndpoint\" : true,\n        \"subnet\" : {\n          \"id\" : \"m8x1\"\n        }\n      }, {\n        \"ignoreMissingVnetServiceEndpoint\" : true,\n        \"subnet\" : {\n          \"id\" : \"ak71\"\n        }\n      }, {\n        \"ignoreMissingVnetServiceEndpoint\" : false,\n        \"subnet\" : {\n          \"id\" : \"vl7i\"\n        }\n      }, {\n        \"ignoreMissingVnetServiceEndpoint\" : true,\n        \"subnet\" : {\n          \"id\" : \"3oi0\"\n        }\n      }, {\n        \"ignoreMissingVnetServiceEndpoint\" : true,\n        \"subnet\" : {\n          \"id\" : \"m09a\"\n        }\n      }, {\n        \"ignoreMissingVnetServiceEndpoint\" : false,\n        \"subnet\" : {\n          \"id\" : \"4l4a\"\n        }\n      } ]\n    }\n  }, {\n    \"name\" : \"Tandy Pollich\",\n    \"id\" : \"h7bw\",\n    \"type\" : \"u9nqhy2fl7zman477pl9y6uff3w\",\n    \"properties\" : {\n      \"defaultAction\" : \"Deny\",\n      \"ipRules\" : [ {\n        \"ipMask\" : \"9djoyntbzdrhkdpahyon0pvkhr97rphzbty1dun2gvowbtn6a4dtaodlc9c9ucccgdbpgbjy8brp3h9gznz7iwo0ay0rbx5ckh921iauj3kt7opr6tsd6gwehiceajf4m5yqh\",\n        \"action\" : \"Allow\"\n      }, {\n        \"ipMask\" : \"kzkwm40a9b4l64x1jukfgi3ch2ypc277ah6ft6eamsamklgg574yszg712wjyyo1bz0bwpowuosiw2svghg23jcmm4jew6al9rn\",\n        \"action\" : \"Allow\"\n      }, {\n        \"ipMask\" : \"2ulk0gir0rwsaigjihpb\",\n        \"action\" : \"Allow\"\n      }, {\n        \"ipMask\" : \"duxgti4on2lqdvnf02ny28bb0yzyn6qs3mbpwnkjm27u5ee5zfjuoejyrr8sv844f7ac7npv48waudmx0s9yqdvo37sbvsvo38pmpuzhb79q7402daxfktsy8230tf995xguog2rd\",\n        \"action\" : \"Allow\"\n      }, {\n        \"ipMask\" : \"j6jgofe9ymf37p014iojda34t6ahbmh9bt7qitp3u9s\",\n        \"action\" : \"Allow\"\n      }, {\n        \"ipMask\" : \"oo61i4y8y5ysnwgm51xcmq3tdti4cty5i8zqbkaa0b8wg2avi1zz8p24g07bx7506iofb3gshpye54a1xez4oq05birckyofafkob63mk651vm1xvt4qgk5dqoiploz1ffmquc49kks5x1mzg7mvnzq0x1ml90gvdmcf1m\",\n        \"action\" : \"Allow\"\n      } ],\n      \"virtualNetworkRules\" : [ {\n        \"ignoreMissingVnetServiceEndpoint\" : false,\n        \"subnet\" : {\n          \"id\" : \"auh1\"\n        }\n      }, {\n        \"ignoreMissingVnetServiceEndpoint\" : true,\n        \"subnet\" : {\n          \"id\" : \"j6p4\"\n        }\n      } ]\n    }\n  } ],\n  \"nextLink\" : \"06shwmvkkksywosulq3giqetk4wj\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "afaaab6b-e8e9-4533-9ceb-08b87ec81ee5",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:18.565571Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "Namespaces_ListNetworkRuleSets",
+          "schema" : {
+            "type" : "object",
+            "properties" : {
+              "nextLink" : {
+                "type" : "string",
+                "description" : "Link to the next set of results. Not empty if Value contains incomplete list of NetworkRuleSet."
+              },
+              "value" : {
+                "type" : "array",
+                "description" : "Result of the List NetworkRuleSet operation.",
+                "items" : {
+                  "$ref" : "#/components/schemas/NetworkRuleSet"
+                }
+              }
+            },
+            "description" : "The response of the List NetworkRuleSet operation"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 2
+  }, {
+    "id" : "0fe9b732-6697-47d1-afd4-84809b822a57",
+    "name" : "Gets messaging plan for specified namespace.",
+    "request" : {
+      "urlPath" : "/subscriptions/n667/resourceGroups/Gregorio+Toy/providers/Microsoft.EventHub/namespaces/Dr.+Francisco+Cartwright/messagingplan",
+      "method" : "GET",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "x2hpwoxin971eqvi7wll3fv43pvcm4lb59lu640lq9tsay0f1zp2k0uq31k3c05e6d4gx6424ryd0061buvyxw461qvabtg1rbtzhya8yssv01sujsxc1liucgbtmj09i6puu01rovtfr1vtm5ktkpgipqif1fw9fvdykc1nypyxfshj7z1x3mc0coflsfd"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"location\" : \"42jbyi6wx9lnnbqiuhewmcfmhx88no3lmk8xf16f7pivt9smhz9x6qaphht\",\n  \"properties\" : {\n    \"selectedEventHubUnit\" : 927862481,\n    \"sku\" : 791783689,\n    \"revision\" : 2336226519545321631,\n    \"updatedAt\" : \"2022-11-24T01:30:41.559Z\"\n  },\n  \"tags\" : { }\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "0fe9b732-6697-47d1-afd4-84809b822a57",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:18.560076Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "Namespaces_GetMessagingPlan",
+          "schema" : {
+            "properties" : {
+              "properties" : {
+                "type" : "object",
+                "properties" : {
+                  "revision" : {
+                    "type" : "integer",
+                    "description" : "revision number",
+                    "format" : "int64",
+                    "readOnly" : true
+                  },
+                  "selectedEventHubUnit" : {
+                    "type" : "integer",
+                    "description" : "Selected event hub unit",
+                    "format" : "int32",
+                    "readOnly" : true
+                  },
+                  "sku" : {
+                    "type" : "integer",
+                    "description" : "Sku type",
+                    "format" : "int32",
+                    "readOnly" : true
+                  },
+                  "updatedAt" : {
+                    "type" : "string",
+                    "description" : "The exact time the messaging plan was updated.",
+                    "format" : "date-time",
+                    "readOnly" : true
+                  }
+                }
+              }
+            },
+            "description" : "Messaging Plan for the namespace",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/TrackedResource"
+            } ]
+          }
+        }
+      }
+    },
+    "insertionIndex" : 3
+  }, {
+    "id" : "329d7222-0fbb-4d0a-94e0-181bb1ff2cf2",
+    "name" : "Deletes a consumer group from the specified Event Hub and resource group. - 204",
+    "request" : {
+      "urlPath" : "/subscriptions/m9qo/resourceGroups/Lewis+Haley/providers/Microsoft.EventHub/namespaces/Efrain+Parker/eventhubs/Gregory+Marquardt/consumergroups/Dann+Runolfsson",
+      "method" : "DELETE",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "gdgex732fje4xin1grt6lh3vljyjjejj0m14"
+        }
+      }
+    },
+    "response" : {
+      "status" : 204
+    },
+    "uuid" : "329d7222-0fbb-4d0a-94e0-181bb1ff2cf2",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:18.559551Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "ConsumerGroups_Delete"
+        }
+      }
+    },
+    "insertionIndex" : 4
+  }, {
+    "id" : "5d42104c-43b0-4fff-8f91-874c25e31f2c",
+    "name" : "Deletes a consumer group from the specified Event Hub and resource group. - 200",
+    "request" : {
+      "urlPath" : "/subscriptions/6c23/resourceGroups/Risa+Stroman/providers/Microsoft.EventHub/namespaces/Rocco+Herman/eventhubs/Jody+Torp/consumergroups/Val+Langosh",
+      "method" : "DELETE",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "j1wfjlokrylb23gz6uov39znvd38uc9609y0b2"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200
+    },
+    "uuid" : "5d42104c-43b0-4fff-8f91-874c25e31f2c",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:18.559252Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "ConsumerGroups_Delete"
+        }
+      }
+    },
+    "insertionIndex" : 5
+  }, {
+    "id" : "9268a6aa-8326-4c63-8b7e-4ae0d9f5e0ae",
+    "name" : "Creates or updates an Event Hubs consumer group as a nested resource within a Na...",
+    "request" : {
+      "urlPath" : "/subscriptions/12mu/resourceGroups/Ruthe+Schoen/providers/Microsoft.EventHub/namespaces/Ms.+Kathie+Luettgen/eventhubs/Mavis+Howell/consumergroups/Melissa+Heaney",
+      "method" : "PUT",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "uo7oiwl50jjcoqmwgvh7a2ykfc209znrkuww2lm45om52cfk3iit011nn827st9blxd44vrhq48ny971nijdy0ryqp4xy33n1y8l6jjjqnvnw60lvxmcvekc5bf0"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"name\" : \"Dr. Sharice Hayes\",\n  \"id\" : \"72u2\",\n  \"type\" : \"2pf9gh0onviryt1tct81z2hsiqkh\",\n  \"properties\" : {\n    \"createdAt\" : \"2022-04-25T21:51:29.558Z\",\n    \"userMetadata\" : \"aeg6fepupj9pgk6taimxdqh5fbqubjwf58p4jteawly1b41m8qufj94pubyc75ur32bgnp4ztvhjv5qti9beanuvo35w\",\n    \"updatedAt\" : \"2023-09-01T08:58:39.558Z\"\n  }\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "9268a6aa-8326-4c63-8b7e-4ae0d9f5e0ae",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:18.558914Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "ConsumerGroups_CreateOrUpdate",
+          "schema" : {
+            "properties" : {
+              "properties" : {
+                "type" : "object",
+                "properties" : {
+                  "createdAt" : {
+                    "type" : "string",
+                    "description" : "Exact time the message was created.",
+                    "format" : "date-time",
+                    "readOnly" : true
+                  },
+                  "updatedAt" : {
+                    "type" : "string",
+                    "description" : "The exact time the message was updated.",
+                    "format" : "date-time",
+                    "readOnly" : true
+                  },
+                  "userMetadata" : {
+                    "type" : "string",
+                    "description" : "User Metadata is a placeholder to store user-defined string data with maximum length 1024. e.g. it can be used to store descriptive data, such as list of teams and their contact information also user-defined configuration settings can be stored."
+                  }
+                },
+                "description" : "Single item in List or Get Consumer group operation"
+              }
+            },
+            "description" : "Single item in List or Get Consumer group operation",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/Resource"
+            } ]
+          }
+        }
+      }
+    },
+    "insertionIndex" : 6
+  }, {
+    "id" : "7cb121db-fe10-489c-ac6d-c7ed04cea1c7",
+    "name" : "Gets a description for the specified consumer group.",
+    "request" : {
+      "urlPath" : "/subscriptions/03y3/resourceGroups/Jolyn+Dach/providers/Microsoft.EventHub/namespaces/Lizabeth+Pollich/eventhubs/Courtney+Toy/consumergroups/Dagmar+Wiegand",
+      "method" : "GET",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "o5qah7sy2uz99z3zrz67u82nz4ighm530vfu84s66yrlpj41l4uv61lzc87l46rtu0n4pmu7dvv5s474tr3hxs317nrdcdxuoqm6ooayh97plnu8mgq8w"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"name\" : \"Rolando Dicki\",\n  \"id\" : \"oj8t\",\n  \"type\" : \"0dgb6gsjb0slop6qmn2q85axuh01rht7snk4oabov0h6lomijt897670mqkgs02y4n\",\n  \"properties\" : {\n    \"createdAt\" : \"2023-03-24T04:14:19.557Z\",\n    \"userMetadata\" : \"xflaeyeu3mmb14e5l824txqosgzgea9oyj7kzk3eikl06rp8bzzk9heyd5e126l76s2f4fcvu8dbfsa7rbcw4r521ypzi0pp2ztlllqsuo74mm9xbejkkjohao7mcupmozh0hgehuyvh11jv1pwfh652y3t1lfkjaxlxhnqnaakx\",\n    \"updatedAt\" : \"2022-11-22T09:44:16.557Z\"\n  }\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "7cb121db-fe10-489c-ac6d-c7ed04cea1c7",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:18.558429Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "ConsumerGroups_Get",
+          "schema" : {
+            "properties" : {
+              "properties" : {
+                "type" : "object",
+                "properties" : {
+                  "createdAt" : {
+                    "type" : "string",
+                    "description" : "Exact time the message was created.",
+                    "format" : "date-time",
+                    "readOnly" : true
+                  },
+                  "updatedAt" : {
+                    "type" : "string",
+                    "description" : "The exact time the message was updated.",
+                    "format" : "date-time",
+                    "readOnly" : true
+                  },
+                  "userMetadata" : {
+                    "type" : "string",
+                    "description" : "User Metadata is a placeholder to store user-defined string data with maximum length 1024. e.g. it can be used to store descriptive data, such as list of teams and their contact information also user-defined configuration settings can be stored."
+                  }
+                },
+                "description" : "Single item in List or Get Consumer group operation"
+              }
+            },
+            "description" : "Single item in List or Get Consumer group operation",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/Resource"
+            } ]
+          }
+        }
+      }
+    },
+    "insertionIndex" : 7
+  }, {
+    "id" : "367a9b42-1095-4459-b9d4-6f7582748d02",
+    "name" : "Gets all the consumer groups in a Namespace. An empty feed is returned if no con...",
+    "request" : {
+      "urlPath" : "/subscriptions/g9x0/resourceGroups/Florence+Dicki/providers/Microsoft.EventHub/namespaces/Chong+Wintheiser+DDS/eventhubs/Petronila+Rodriguez/consumergroups",
+      "method" : "GET",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "c9qf8mr19gqvcdfjffet7x4y2n41wab"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"value\" : [ {\n    \"name\" : \"Omer Orn\",\n    \"id\" : \"430w\",\n    \"type\" : \"pmt7zktryvg0vi78sm4a54ydmjajne79yamyge96rq6ck805i5mirl72vir4qjk7emd\",\n    \"properties\" : {\n      \"createdAt\" : \"2022-04-06T21:28:20.556Z\",\n      \"userMetadata\" : \"96gyc1o6s9i0erqc41z2psw7e92ap1bkhz20jybj89xpcqhlf66jfqqadksypia3xd719zf5354cizegx55ner6xwzg6ijychnz3eg5yen\",\n      \"updatedAt\" : \"2022-05-05T01:10:50.556Z\"\n    }\n  }, {\n    \"name\" : \"Ebonie Williamson\",\n    \"id\" : \"6rxw\",\n    \"type\" : \"nza8xza5phwby8mpwazjvy7irvkisrwerw3rkshcwnx32z1lt4685qcins751nlqncsqv7hde1uyvhm18zyxpdkppowunnay5blgw3pkprdmg1c3m3xp2gedpt12cw\",\n    \"properties\" : {\n      \"createdAt\" : \"2022-05-27T11:28:06.556Z\",\n      \"userMetadata\" : \"8tlrz52c055qju86k9sd0a52u9e8ovrwle9ysils8shv4dodukpcrykx5vlvyiin99r3rn130683nla8kxys6cmtuvxujjs7urkimatcy17fc12vya\",\n      \"updatedAt\" : \"2022-03-31T06:49:24.556Z\"\n    }\n  }, {\n    \"name\" : \"Elnora Graham\",\n    \"id\" : \"q7b3\",\n    \"type\" : \"2682hcuzfu15pm82bb6ltgczdy24x2rkvkqq68t4tupqw5hxjas1ws8nkgd1x1jozmebp0wl3b9t3eqjxrm8wp36ac12nwnfjuv8ugb4usnlov8ek9wt7tgx6fyqq1xjauiup8zf1aj7xxgj409cyybahkci9hz7g\",\n    \"properties\" : {\n      \"createdAt\" : \"2022-06-07T09:10:45.556Z\",\n      \"userMetadata\" : \"mrcs8t8ldqkmo6isludkasa1mbj4b4g4vpio3sd83br9no3mcw1g0ur8e3pw1cdpwk1lczvxznwpobm3pirakf69rvhk6bqny94ihu1d96d2k8q8c0fin6g12lcf8a234oyz3u4cgcmwlq7g\",\n      \"updatedAt\" : \"2023-07-29T06:12:11.556Z\"\n    }\n  }, {\n    \"name\" : \"Cody Bins\",\n    \"id\" : \"0c8k\",\n    \"type\" : \"3gahmcpwvcjhb6mxs\",\n    \"properties\" : {\n      \"createdAt\" : \"2023-06-16T17:27:26.557Z\",\n      \"userMetadata\" : \"z4e0kh5blm47jakojqsb6bcjvqmxj5kaspohbeis9q8xpacqgweiutdj179106m9ilcfhyj6a6bpfy9v52g93cnkj2sicab1eu5vaogumsn3aibv40iquzz4y6732az6yyojsl874eqgdxue7qvr7ypw\",\n      \"updatedAt\" : \"2024-01-24T09:20:15.557Z\"\n    }\n  } ],\n  \"nextLink\" : \"b5jgg0c4ewkaek66bex8at1on\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "367a9b42-1095-4459-b9d4-6f7582748d02",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:18.55789Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "ConsumerGroups_ListByEventHub",
+          "schema" : {
+            "type" : "object",
+            "properties" : {
+              "nextLink" : {
+                "type" : "string",
+                "description" : "Link to the next set of results. Not empty if Value contains incomplete list of Consumer Group"
+              },
+              "value" : {
+                "type" : "array",
+                "description" : "Result of the List Consumer Group operation.",
+                "items" : {
+                  "$ref" : "#/components/schemas/ConsumerGroup"
+                }
+              }
+            },
+            "description" : "The result to the List Consumer Group operation."
+          }
+        }
+      }
+    },
+    "insertionIndex" : 8
+  }, {
+    "id" : "cef70544-f1d9-4ca8-8b57-27f70cd359d2",
+    "name" : "Regenerates the ACS and SAS connection strings for the Event Hub.",
+    "request" : {
+      "urlPath" : "/subscriptions/e05k/resourceGroups/Nada+Considine/providers/Microsoft.EventHub/namespaces/Mrs.+Torie+Hoppe/eventhubs/Ty+Little/authorizationRules/Dr.+Pierre+Oberbrunner/regenerateKeys",
+      "method" : "POST",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "49t8ct5dnv2szurumz2q55e9y2s97eg1vztaes354esaf8114ysn5qr8uk9sahpc2vno047jqo5rywjqppu6we4avov1dkjgmm60w1dy9qwgy6n1c58x1hknul5ocnyg2wn7cnxjpbiek36c2xx11gtcsowweu75us56dajl7"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"secondaryKey\" : \"sq2ek5ez11hlreh9rypzsxo78\",\n  \"keyName\" : \"Emanuel Kohler\",\n  \"aliasSecondaryConnectionString\" : \"ymac1b50sr3yqc0f4fgu1ydz87707e7axeh7bl3kkhja2i2gp6obfxw9br10gcvuejvwfatcf5oga1lwrhioypiwcoh9fctcuo\",\n  \"primaryConnectionString\" : \"ivqm4\",\n  \"secondaryConnectionString\" : \"os9mkvgnj9e2bv2u1ue0xe57ofux6rv5ge4dl6gyhg863pni0qdq5zj35e5glpvcdtgn4i9zukmrm0udqt3i5zhjvi5xp2god269naxzag1hswtzkkh7aonvm59g\",\n  \"aliasPrimaryConnectionString\" : \"9vk5pynx63r5mdlvo25numaeivkkbj0w55suwzl4bxp8pw5riqwb02rqscpereqt\",\n  \"primaryKey\" : \"ted63iw222gqhrjf929tsej1imeec0puplp23qhz\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "cef70544-f1d9-4ca8-8b57-27f70cd359d2",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:18.55597Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "EventHubs_RegenerateKeys",
+          "schema" : {
+            "type" : "object",
+            "properties" : {
+              "aliasPrimaryConnectionString" : {
+                "type" : "string",
+                "description" : "Primary connection string of the alias if GEO DR is enabled",
+                "readOnly" : true
+              },
+              "aliasSecondaryConnectionString" : {
+                "type" : "string",
+                "description" : "Secondary  connection string of the alias if GEO DR is enabled",
+                "readOnly" : true
+              },
+              "keyName" : {
+                "type" : "string",
+                "description" : "A string that describes the AuthorizationRule.",
+                "readOnly" : true
+              },
+              "primaryConnectionString" : {
+                "type" : "string",
+                "description" : "Primary connection string of the created namespace AuthorizationRule.",
+                "readOnly" : true
+              },
+              "primaryKey" : {
+                "type" : "string",
+                "description" : "A base64-encoded 256-bit primary key for signing and validating the SAS token.",
+                "readOnly" : true
+              },
+              "secondaryConnectionString" : {
+                "type" : "string",
+                "description" : "Secondary connection string of the created namespace AuthorizationRule.",
+                "readOnly" : true
+              },
+              "secondaryKey" : {
+                "type" : "string",
+                "description" : "A base64-encoded 256-bit primary key for signing and validating the SAS token.",
+                "readOnly" : true
+              }
+            },
+            "description" : "Namespace/EventHub Connection String"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 9
+  }, {
+    "id" : "fa930187-d992-4eaa-b8a4-7ddf7c505f49",
+    "name" : "Gets the ACS and SAS connection strings for the Event Hub.",
+    "request" : {
+      "urlPath" : "/subscriptions/5gd4/resourceGroups/Carmine+Johnston/providers/Microsoft.EventHub/namespaces/Blake+Herzog/eventhubs/Johana+Hickle/authorizationRules/Porter+Collins/ListKeys",
+      "method" : "POST",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "7wuxbqbwpbi432xwwyh08n0xfkxsvn7fuldtfjogie01nq1b7k8w5pplo3csaa95aw6mk3soxo5c6mc79gc3u4o6hlkwa445"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"secondaryKey\" : \"gnd8a7nx8wvzk0rfhyzfkkt9m5jtumdkna9271t\",\n  \"keyName\" : \"Melita Murray MD\",\n  \"aliasSecondaryConnectionString\" : \"dhu2eipn\",\n  \"primaryConnectionString\" : \"bhrgguzosob9qryqe6w51vmb8wnpqbgp00ufgp7jsf301wy48lhm445yvhjjzu1zpxqocaaa7t1bunbyztstfbu2fqck8s1wb9yqy3ly5vl7wjbqbxuy0yndw93ol7br0if70qfpzgufhngrmdng4i2qndfmq8nyf2lzno0s041kzetxuq3sr369v262f66slg7\",\n  \"secondaryConnectionString\" : \"xvfq7zv7nty0aj9bfqbru0fmqqehqk5ob2olj51d3ws0u5lj1j8b7dy5a18s9k1rpamkfmluz8c0bj3n0rwzqng5\",\n  \"aliasPrimaryConnectionString\" : \"xc76nohr12t9nuts8pwtgftx6vwjhxksq3mwwdkbro7i53czbgtl4xlptehex37fkfhrodm0vkic4270cmknteirjoy1rdzvpldu\",\n  \"primaryKey\" : \"cxz1gynvxs5mtrj9hbzosmy0quq485i9dtqmy8q539wyfm66ynursvwtd9ixz17lbu3w81s34si51swi0c9ywlypinzz93nd9quhpkwh17qgnudmekka6ztr490upunghemsd2elp7uhekdx5qb5h14ozljv3ih7s64l0ujdp08qsw1htpd9xgnkgsi5a8juxe\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "fa930187-d992-4eaa-b8a4-7ddf7c505f49",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:18.555504Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "EventHubs_ListKeys",
+          "schema" : {
+            "type" : "object",
+            "properties" : {
+              "aliasPrimaryConnectionString" : {
+                "type" : "string",
+                "description" : "Primary connection string of the alias if GEO DR is enabled",
+                "readOnly" : true
+              },
+              "aliasSecondaryConnectionString" : {
+                "type" : "string",
+                "description" : "Secondary  connection string of the alias if GEO DR is enabled",
+                "readOnly" : true
+              },
+              "keyName" : {
+                "type" : "string",
+                "description" : "A string that describes the AuthorizationRule.",
+                "readOnly" : true
+              },
+              "primaryConnectionString" : {
+                "type" : "string",
+                "description" : "Primary connection string of the created namespace AuthorizationRule.",
+                "readOnly" : true
+              },
+              "primaryKey" : {
+                "type" : "string",
+                "description" : "A base64-encoded 256-bit primary key for signing and validating the SAS token.",
+                "readOnly" : true
+              },
+              "secondaryConnectionString" : {
+                "type" : "string",
+                "description" : "Secondary connection string of the created namespace AuthorizationRule.",
+                "readOnly" : true
+              },
+              "secondaryKey" : {
+                "type" : "string",
+                "description" : "A base64-encoded 256-bit primary key for signing and validating the SAS token.",
+                "readOnly" : true
+              }
+            },
+            "description" : "Namespace/EventHub Connection String"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 10
+  }, {
+    "id" : "0eac2c85-3e08-45c1-99a6-5edde141f908",
+    "name" : "Deletes an Event Hub AuthorizationRule. - 204",
+    "request" : {
+      "urlPath" : "/subscriptions/6635/resourceGroups/Criselda+Stamm/providers/Microsoft.EventHub/namespaces/Latonia+Wilderman/eventhubs/Rudy+Larson/authorizationRules/Jacquie+Cummings",
+      "method" : "DELETE",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "5gi2bv70zeic459x3e5hqbfbndy1hi4eutbz85av5j8ly9ufgwch7mqjh3dbo9qzk2ozqx90lqm2agoztxs58"
+        }
+      }
+    },
+    "response" : {
+      "status" : 204
+    },
+    "uuid" : "0eac2c85-3e08-45c1-99a6-5edde141f908",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:18.554983Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "EventHubs_DeleteAuthorizationRule"
+        }
+      }
+    },
+    "insertionIndex" : 11
+  }, {
+    "id" : "9195c541-03d1-4b81-b8a1-6a6536b97231",
+    "name" : "Deletes an Event Hub AuthorizationRule. - 200",
+    "request" : {
+      "urlPath" : "/subscriptions/74kq/resourceGroups/Gale+Schoen/providers/Microsoft.EventHub/namespaces/Ms.+Alonso+Kemmer/eventhubs/Ima+Vandervort/authorizationRules/Leisa+Koss",
+      "method" : "DELETE",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "kif9rhatgkrou404k06guyek3lusrb2y03toq3l5wwgf1zsu88hqo2an1xvqowiblj6pnacn51tx589f6m1nrpy9ik9wntjtucmzo2dnb0pxoy2o3v2ru"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200
+    },
+    "uuid" : "9195c541-03d1-4b81-b8a1-6a6536b97231",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:18.554728Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "EventHubs_DeleteAuthorizationRule"
+        }
+      }
+    },
+    "insertionIndex" : 12
+  }, {
+    "id" : "ca36cf55-8697-4fc6-9814-4d4612a6cd0a",
+    "name" : "Creates or updates an AuthorizationRule for the specified Event Hub.",
+    "request" : {
+      "urlPath" : "/subscriptions/ro1l/resourceGroups/Miss+Zachery+Kirlin/providers/Microsoft.EventHub/namespaces/Major+Lockman/eventhubs/Kati+Cummerata/authorizationRules/Sherril+Schulist",
+      "method" : "PUT",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "vb2xnxotem2j27emfdgwu7ho6janiqr4nhjde9yhr43hhabkqlmnx05nr3aw42pm8lffiwdllk2je7yneywacdkcbo68i6yv1f95u4oscmti78jfoqv7gu1emegtmcvbyqt2n7ovj"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"name\" : \"Mrs. Casimira Feest\",\n  \"id\" : \"6pr1\",\n  \"type\" : \"33mot8w4vkibnzzpoyb2qtkcbcg4nnxup2vpc7kroea3zu9mfy7cs9eezne9h809ib7ltwupu8\",\n  \"properties\" : {\n    \"rights\" : [ \"Send\", \"Send\", \"Send\", \"Listen\", \"Send\", \"Send\", \"Send\" ]\n  }\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "ca36cf55-8697-4fc6-9814-4d4612a6cd0a",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:18.554122Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "EventHubs_CreateOrUpdateAuthorizationRule",
+          "schema" : {
+            "properties" : {
+              "properties" : {
+                "required" : [ "rights" ],
+                "type" : "object",
+                "properties" : {
+                  "rights" : {
+                    "type" : "array",
+                    "description" : "The rights associated with the rule.",
+                    "items" : {
+                      "type" : "string",
+                      "enum" : [ "Manage", "Send", "Listen" ]
+                    }
+                  }
+                },
+                "description" : "Properties supplied to create or update AuthorizationRule"
+              }
+            },
+            "description" : "Single item in a List or Get AuthorizationRule operation",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/Resource"
+            } ]
+          }
+        }
+      }
+    },
+    "insertionIndex" : 13
+  }, {
+    "id" : "8a849c35-e83d-40d3-879c-ae3ce6601748",
+    "name" : "Gets an AuthorizationRule for an Event Hub by rule name.",
+    "request" : {
+      "urlPath" : "/subscriptions/8gsv/resourceGroups/Alaina+Oberbrunner/providers/Microsoft.EventHub/namespaces/Alexandria+Yundt/eventhubs/Warner+Bednar+III/authorizationRules/Gonzalo+Hamill",
+      "method" : "GET",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "1gl1m1pop93v1y9hq7ro35jtgakk9uar3bz655tlnk9xzvlgod284ptoz6i4qpsq6x4uayd60umvkpexavudyw4tqrrk0cw1"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"name\" : \"Sana Emmerich\",\n  \"id\" : \"hr1g\",\n  \"type\" : \"o4x357yf4m0ghlxgq28deuthrkcoiontzaa2l0o68u04qh7e9ge8b0sbkblr54a52x01hlecbozuoml1b53hcp87tyrtsffwbll27yhvvdd\",\n  \"properties\" : {\n    \"rights\" : [ \"Send\", \"Manage\", \"Manage\" ]\n  }\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "8a849c35-e83d-40d3-879c-ae3ce6601748",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:18.55322Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "EventHubs_GetAuthorizationRule",
+          "schema" : {
+            "properties" : {
+              "properties" : {
+                "required" : [ "rights" ],
+                "type" : "object",
+                "properties" : {
+                  "rights" : {
+                    "type" : "array",
+                    "description" : "The rights associated with the rule.",
+                    "items" : {
+                      "type" : "string",
+                      "enum" : [ "Manage", "Send", "Listen" ]
+                    }
+                  }
+                },
+                "description" : "Properties supplied to create or update AuthorizationRule"
+              }
+            },
+            "description" : "Single item in a List or Get AuthorizationRule operation",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/Resource"
+            } ]
+          }
+        }
+      }
+    },
+    "insertionIndex" : 14
+  }, {
+    "id" : "7cd628a2-0697-4826-9747-550126768fc1",
+    "name" : "Gets the authorization rules for an Event Hub.",
+    "request" : {
+      "urlPath" : "/subscriptions/a0k6/resourceGroups/Ward+Bartoletti/providers/Microsoft.EventHub/namespaces/Ms.+Tamesha+Littel/eventhubs/Novella+Hintz/authorizationRules",
+      "method" : "GET",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "l7urqacr7qqnskr3eifvv3c0j10xp7gs93s1m32mxlhq0peclkxr0myoccfkjpj95oqgivx9z5lmqtv93oqevv7mhjr7x8rjc0m36tx2irw4kluq2e9b9r0gghq4p1444l7r6dvuay5v4covrm0i9x"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"value\" : [ {\n    \"name\" : \"Dr. Nelia Dare\",\n    \"id\" : \"3yt8\",\n    \"type\" : \"g8dn74l31o73fm748wgur3rtiq62\",\n    \"properties\" : {\n      \"rights\" : [ \"Send\", \"Manage\", \"Listen\", \"Manage\", \"Listen\" ]\n    }\n  }, {\n    \"name\" : \"Glenna Rolfson\",\n    \"id\" : \"w66e\",\n    \"type\" : \"qlueb0nbo4iq82p812isub9r8z4902x8j0apjk1gvyywrx1eyskgj0267wcbtwd5iehfoe25h6ugs79j708uhx45839x3fqnd8iqqj2\",\n    \"properties\" : {\n      \"rights\" : [ \"Send\", \"Send\", \"Send\", \"Listen\", \"Send\", \"Manage\", \"Listen\", \"Listen\" ]\n    }\n  }, {\n    \"name\" : \"Antone Grady\",\n    \"id\" : \"0ret\",\n    \"type\" : \"zeanbzzzmsalqfddv0rvuk9w985k4sl0bbimnr3h47uljmvga41f9fugwqmo7ij2di3imq79wedm98u2sn75x7hdje7g1941g828pk77er6606ajlbrnj7i5iq5lxizl0jubv86b7jl08f\",\n    \"properties\" : {\n      \"rights\" : [ \"Listen\", \"Send\", \"Listen\", \"Listen\", \"Listen\", \"Manage\" ]\n    }\n  }, {\n    \"name\" : \"Amina Leuschke DVM\",\n    \"id\" : \"d6r3\",\n    \"type\" : \"lfr8utco85irdxpvn3cgj8qyg5496lytbhvsg5f911mqms9ap9x1tvtmevvs4qog20zfkh780uk9ix\",\n    \"properties\" : {\n      \"rights\" : [ \"Send\" ]\n    }\n  }, {\n    \"name\" : \"Marco Blanda\",\n    \"id\" : \"5g0r\",\n    \"type\" : \"ifqebza99a9miu0f3gdrvbyl15eqbxi2sojnpaolftwxg5c\",\n    \"properties\" : {\n      \"rights\" : [ \"Manage\", \"Listen\" ]\n    }\n  } ],\n  \"nextLink\" : \"dqyc8m8bfgay7vq314o0xxmlijhwy9k7sc15zjjy54gt9yokbq6rj56ymogh9v526ozll70xrfs8rcoh7ldeqe8o8aknduhzgi89hyt0qx0vomh7\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "7cd628a2-0697-4826-9747-550126768fc1",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:18.552759Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "EventHubs_ListAuthorizationRules",
+          "schema" : {
+            "type" : "object",
+            "properties" : {
+              "nextLink" : {
+                "type" : "string",
+                "description" : "Link to the next set of results. Not empty if Value contains an incomplete list of Authorization Rules"
+              },
+              "value" : {
+                "type" : "array",
+                "description" : "Result of the List Authorization Rules operation.",
+                "items" : {
+                  "$ref" : "#/components/schemas/AuthorizationRule"
+                }
+              }
+            },
+            "description" : "The response from the List namespace operation."
+          }
+        }
+      }
+    },
+    "insertionIndex" : 15
+  }, {
+    "id" : "064ecff9-545c-4758-b55a-819c18cba201",
+    "name" : "Deletes an Event Hub from the specified Namespace and resource group. - 204",
+    "request" : {
+      "urlPath" : "/subscriptions/418i/resourceGroups/Robena+Farrell/providers/Microsoft.EventHub/namespaces/Enrique+Mueller/eventhubs/Salvador+Morissette",
+      "method" : "DELETE",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "07txv1hlf1bywpv0eges790zhm2"
+        }
+      }
+    },
+    "response" : {
+      "status" : 204
+    },
+    "uuid" : "064ecff9-545c-4758-b55a-819c18cba201",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:18.551703Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "EventHubs_Delete"
+        }
+      }
+    },
+    "insertionIndex" : 16
+  }, {
+    "id" : "cdfb78b2-d436-4abe-bc5e-9f39b9eb4858",
+    "name" : "Deletes an Event Hub from the specified Namespace and resource group. - 200",
+    "request" : {
+      "urlPath" : "/subscriptions/z4bv/resourceGroups/Christa+O%27Hara/providers/Microsoft.EventHub/namespaces/Homer+Brakus/eventhubs/Luis+Brekke",
+      "method" : "DELETE",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "n4yhwn5q5kjun9ktlohbugz5pipuyjxcsxj7pls4updm93t4ti7fxy55wuz1xi4izpguo"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200
+    },
+    "uuid" : "cdfb78b2-d436-4abe-bc5e-9f39b9eb4858",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:18.551495Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "EventHubs_Delete"
+        }
+      }
+    },
+    "insertionIndex" : 17
+  }, {
+    "id" : "ce670765-a27c-46dd-a9be-6ebfa275154c",
+    "name" : "Creates or updates a new Event Hub as a nested resource within a Namespace.",
+    "request" : {
+      "urlPath" : "/subscriptions/1lja/resourceGroups/Claudio+Kilback/providers/Microsoft.EventHub/namespaces/Mina+Bechtelar/eventhubs/Len+Zemlak",
+      "method" : "PUT",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "5doeue25zr36t17f2phezd2fpumwtb8t60tl2hes1endhogn8"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"name\" : \"Darrell Kuhic\",\n  \"id\" : \"z640\",\n  \"type\" : \"lyjwr03l6azawlfqhk9yff4g479sn5931mojcv29hzi0o2ilcp5731gcz49yu3oi4xeryxyvt1kfqviog4lv8j7tssdf8zw3f50zgyxc183rgje3bykswb130f4s\",\n  \"properties\" : {\n    \"createdAt\" : \"2023-02-09T13:07:40.55Z\",\n    \"partitionCount\" : 3810172225626397498,\n    \"captureDescription\" : {\n      \"skipEmptyArchives\" : false,\n      \"sizeLimitInBytes\" : 295061225,\n      \"destination\" : {\n        \"name\" : \"Timothy O'Conner\",\n        \"properties\" : {\n          \"blobContainer\" : \"mabwmdqqt\",\n          \"storageAccountResourceId\" : \"34bn\",\n          \"archiveNameFormat\" : \"qe9c28uxsv3tf800j5k18agdyw4bym2dbfi30yinm6p6ip9zzb76qzjjnu0kh9y97rnou49938a59b6actmip7umy2wt6k5oyt9lv6z30yb5x37l2s\"\n        }\n      },\n      \"intervalInSeconds\" : 403,\n      \"encoding\" : \"Avro\",\n      \"enabled\" : false\n    },\n    \"messageRetentionInDays\" : 1890997073865596338,\n    \"partitionIds\" : [ \"tuy9vx14ybwd38d8hhzwpf7jjouv1ls5slz41z2q5p90shab9p3g7mqodc64u2wan1i97w0zqs5871dq32x6219qlv2xjb08yhh9ljonvoa2zdrdn2vasxv94mi1jrwhcm2agld2d\" ],\n    \"status\" : \"ReceiveDisabled\",\n    \"updatedAt\" : \"2022-10-28T06:06:23.55Z\"\n  }\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "ce670765-a27c-46dd-a9be-6ebfa275154c",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:18.55125Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "EventHubs_CreateOrUpdate",
+          "schema" : {
+            "properties" : {
+              "properties" : {
+                "type" : "object",
+                "properties" : {
+                  "captureDescription" : {
+                    "$ref" : "#/components/schemas/CaptureDescription"
+                  },
+                  "createdAt" : {
+                    "type" : "string",
+                    "description" : "Exact time the Event Hub was created.",
+                    "format" : "date-time",
+                    "readOnly" : true
+                  },
+                  "messageRetentionInDays" : {
+                    "minimum" : 1,
+                    "type" : "integer",
+                    "description" : "Number of days to retain the events for this Event Hub, value should be 1 to 7 days",
+                    "format" : "int64"
+                  },
+                  "partitionCount" : {
+                    "minimum" : 1,
+                    "type" : "integer",
+                    "description" : "Number of partitions created for the Event Hub, allowed values are from 1 to 32 partitions.",
+                    "format" : "int64"
+                  },
+                  "partitionIds" : {
+                    "type" : "array",
+                    "description" : "Current number of shards on the Event Hub.",
+                    "readOnly" : true,
+                    "items" : {
+                      "type" : "string"
+                    }
+                  },
+                  "status" : {
+                    "type" : "string",
+                    "description" : "Enumerates the possible values for the status of the Event Hub.",
+                    "enum" : [ "Active", "Disabled", "Restoring", "SendDisabled", "ReceiveDisabled", "Creating", "Deleting", "Renaming", "Unknown" ]
+                  },
+                  "updatedAt" : {
+                    "type" : "string",
+                    "description" : "The exact time the message was updated.",
+                    "format" : "date-time",
+                    "readOnly" : true
+                  }
+                },
+                "description" : "Properties supplied to the Create Or Update Event Hub operation."
+              }
+            },
+            "description" : "Single item in List or Get Event Hub operation",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/Resource"
+            } ]
+          }
+        }
+      }
+    },
+    "insertionIndex" : 18
+  }, {
+    "id" : "73b878a2-a165-4583-be00-4e94dd69cfea",
+    "name" : "Gets an Event Hubs description for the specified Event Hub.",
+    "request" : {
+      "urlPath" : "/subscriptions/2il5/resourceGroups/Dr.+Niki+Schumm/providers/Microsoft.EventHub/namespaces/Buford+Hayes/eventhubs/Gayle+Abbott",
+      "method" : "GET",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "at0bg70omi1q6x9zv4ud8voyef28aj6w5380opkf9u"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"name\" : \"Darrell Wiegand\",\n  \"id\" : \"4b9a\",\n  \"type\" : \"d5yixy7ga67o0g0olpym627nntpqdb9req38ptlm1tfd25x1vuzpmkyudsz9pu2muw5o7mfrsqopi4nmqqzjqxjh9jdwqayqhjg7mo16q4cd496u9gmuhp2pby7sz\",\n  \"properties\" : {\n    \"createdAt\" : \"2022-09-22T18:31:05.549Z\",\n    \"partitionCount\" : 2345078399503873347,\n    \"captureDescription\" : {\n      \"skipEmptyArchives\" : false,\n      \"sizeLimitInBytes\" : 238426286,\n      \"destination\" : {\n        \"name\" : \"Joya Gislason\",\n        \"properties\" : {\n          \"blobContainer\" : \"kdvjm5mwhs2d94t5zhlo5y6r49od0its4c1nwq\",\n          \"storageAccountResourceId\" : \"np6c\",\n          \"archiveNameFormat\" : \"mr7u3n6v2cteg8d0sitdq1n8r0dbmksx5bb9sy58rucuvbuymtak88x17vvj3tcij1veo1eyvf96b\"\n        }\n      },\n      \"intervalInSeconds\" : 64,\n      \"encoding\" : \"AvroDeflate\",\n      \"enabled\" : true\n    },\n    \"messageRetentionInDays\" : 6838345028054567562,\n    \"partitionIds\" : [ \"kc6pkk91jz1f2yqvooh7tmfeybupwzqo93yomm5t7egovfc78l5vg55g8xvv6h7q8r4egsxiuo1ozbd\", \"sh71\", \"ok50r3bu1scgwe2c0y7wzw3q4e9nn1qrybu8ggpqydhbba6nq\", \"65x457yhuyep69jafwriiqgsz1sxr2uwarcurs645yrn3caqggzkq5tpae9z98l2x66g6xw7kfp5v9sz3ddj6a53en8r8ogyrgw6zwn67t7wi7q8axsspipct3adrh421u2aivhtbflrfmqzbr4lkhpaemma\", \"fzmmsc0avtadayluc7j7mhbp72yc05p1dmwfdsxkqcuxfw1y8pms89pma1sume04y9otppkqtk15epkxvdp6k3h8p2xpvmspx6zmnhf6i43cbwx9zxkzbmt7yyupgwb8ejg1xwoonghriro0bv0ptjr3wrljl92ki6f3gb9yn02tey8rmucrud4nbjy15493j9lzf\", \"6642k94v5zfa0j5wolbdp9iw99s36vqzg21np8gbtm04gg3azz4vehnztph6ycmqwonwijcee7qbe2fs0lnw2c3b\", \"zflqsq4sr84s1m9yh6zuz6cc46muj0trfeb9s\" ],\n    \"status\" : \"ReceiveDisabled\",\n    \"updatedAt\" : \"2023-06-19T14:55:14.549Z\"\n  }\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "73b878a2-a165-4583-be00-4e94dd69cfea",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:18.550512Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "EventHubs_Get",
+          "schema" : {
+            "properties" : {
+              "properties" : {
+                "type" : "object",
+                "properties" : {
+                  "captureDescription" : {
+                    "$ref" : "#/components/schemas/CaptureDescription"
+                  },
+                  "createdAt" : {
+                    "type" : "string",
+                    "description" : "Exact time the Event Hub was created.",
+                    "format" : "date-time",
+                    "readOnly" : true
+                  },
+                  "messageRetentionInDays" : {
+                    "minimum" : 1,
+                    "type" : "integer",
+                    "description" : "Number of days to retain the events for this Event Hub, value should be 1 to 7 days",
+                    "format" : "int64"
+                  },
+                  "partitionCount" : {
+                    "minimum" : 1,
+                    "type" : "integer",
+                    "description" : "Number of partitions created for the Event Hub, allowed values are from 1 to 32 partitions.",
+                    "format" : "int64"
+                  },
+                  "partitionIds" : {
+                    "type" : "array",
+                    "description" : "Current number of shards on the Event Hub.",
+                    "readOnly" : true,
+                    "items" : {
+                      "type" : "string"
+                    }
+                  },
+                  "status" : {
+                    "type" : "string",
+                    "description" : "Enumerates the possible values for the status of the Event Hub.",
+                    "enum" : [ "Active", "Disabled", "Restoring", "SendDisabled", "ReceiveDisabled", "Creating", "Deleting", "Renaming", "Unknown" ]
+                  },
+                  "updatedAt" : {
+                    "type" : "string",
+                    "description" : "The exact time the message was updated.",
+                    "format" : "date-time",
+                    "readOnly" : true
+                  }
+                },
+                "description" : "Properties supplied to the Create Or Update Event Hub operation."
+              }
+            },
+            "description" : "Single item in List or Get Event Hub operation",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/Resource"
+            } ]
+          }
+        }
+      }
+    },
+    "insertionIndex" : 19
+  }, {
+    "id" : "8e877811-3f5f-4028-9fe0-c9915babf6fc",
+    "name" : "Gets all the Event Hubs in a Namespace.",
+    "request" : {
+      "urlPath" : "/subscriptions/647m/resourceGroups/Hobert+Larson+III/providers/Microsoft.EventHub/namespaces/Nathanial+Kessler/eventhubs",
+      "method" : "GET",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "3d4ar91qqajv09vk71ymimcoc6dipzgsicsavts3mximi"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"value\" : [ {\n    \"name\" : \"Catrice Hegmann DDS\",\n    \"id\" : \"w328\",\n    \"type\" : \"xcucqompmwd8q6iylxc5ajk5d0n5edlspp3qfeqeakwmmkmawkd297krgoe12fw3fcdjedpm1z5gz4l1zoyc95rt9tqbg9br31kss71swjprr52j265hyx1oyvacz1boa2x14in45zijyyj58kcfrz8ehl6vgp5rq6bta0nyesqjdwq2zau74zm547biuzmrkqa\",\n    \"properties\" : {\n      \"createdAt\" : \"2023-07-07T23:58:54.548Z\",\n      \"partitionCount\" : 5541405458106882667,\n      \"captureDescription\" : {\n        \"skipEmptyArchives\" : false,\n        \"sizeLimitInBytes\" : 373665846,\n        \"destination\" : {\n          \"name\" : \"Vita Bernier DVM\",\n          \"properties\" : { }\n        },\n        \"intervalInSeconds\" : 846,\n        \"encoding\" : \"Avro\",\n        \"enabled\" : false\n      },\n      \"messageRetentionInDays\" : 5159460093953207491,\n      \"partitionIds\" : [ \"jft3wsrekubtgxpclsjcg6y7yzrsce17fvtnhe6bsijyfti42l2gyw51uxg16qlt3fgcgkd6tw6lxap32gx3k06e2rjbmmcjgnd7zkajkf9jo221weunsob8t4bu\", \"5d3uuqdnjyvdtjvqtiepyejqpf3ofiqhhyvsycpf5sxoinr149tok086hsvxcndewxfhnw72sto0w330bxshqs6xzvbdhazmtjgq635ht2dohuo1n6gza08qa363qrg04ruex9y8nywlbl9zfmwf95cxmse7beyyid4id2m0vq5e\", \"l8731mc2c7um5qdwfov575myd30psar4c3xxaor5ja63hajyjyijc76tkkg1vmdijwpj9ru0376wtkqwyfdmu95tqewo4cyuav3w69ligbx2gynfagra0s6mvh25nfzclkw4m924ylbrukeyth2vijuhb9d82wg2cymb\", \"zjuhdcebtnmd8nwf2tbfm23q8mwb042lpoegx1gr3putccl1s\", \"aynbs96k16c3jrqdmisnb86aytdmkjrm7wbuez4fwvu4otwezx4x3jsiorxhtt7cpl57c07ga8q365jarocq4es5maedd9yfgr0ppju2hrso8m34u7vab6u8svbk7jbyczktu8c3rehnjhj6w5u6nay3f8hwsqgvpm\", \"3hfoyi3o9rfx00jcm22ycy3ar65gc3qzg691cp2lzfjmfmsrudtzhhkoczarh9yq8xxa8jq8sly08asqygzha3w127npc2b\", \"rf5q3dme4nvyl5c8zadt3f9t8rz5scq031ix78wakjem1q9ftzkqj6e8n\" ],\n      \"status\" : \"Active\",\n      \"updatedAt\" : \"2023-12-16T03:14:34.548Z\"\n    }\n  }, {\n    \"name\" : \"Ivory Friesen\",\n    \"id\" : \"m22v\",\n    \"type\" : \"y1l4pm7p9onjzsbpz9hz20437o96gmjxoi0d64c051pr31sbl2i4ps3g7xln6rb8ad5i3b7xyj0wo4sjhsftijzte8mrflc3tfjpxbkv8n7kji3e7jooq1iaconhdn6ec0b794rnno8g\",\n    \"properties\" : {\n      \"createdAt\" : \"2024-02-20T00:45:33.549Z\",\n      \"partitionCount\" : 2264247709253029462,\n      \"captureDescription\" : {\n        \"skipEmptyArchives\" : true,\n        \"sizeLimitInBytes\" : 476414931,\n        \"destination\" : {\n          \"name\" : \"Louann Kiehn\",\n          \"properties\" : { }\n        },\n        \"intervalInSeconds\" : 791,\n        \"encoding\" : \"Avro\",\n        \"enabled\" : false\n      },\n      \"messageRetentionInDays\" : 9172204456134904464,\n      \"partitionIds\" : [ \"2d7mtr9f06tio2o6fquvjcgpa9y2vsp39vdgtj9pzm82ueotdsmnd64l0avj8tmw2pc43sayhp0sz0a9i2dfkjwgy9wfyamk0uggr2dit1nw3x7i6q2qeka\", \"8z0lhipsc2e7yyfvpvfx68n4x089oy1kf4ftd34vkvngj8zpkdoiakipajwui7dy37bhjwxznzfqbv8acu01vjimgrtxq2meun4kjxg95sl0rnxa327l0n9rnkes7zn7z56by54\" ],\n      \"status\" : \"Creating\",\n      \"updatedAt\" : \"2023-01-18T01:23:40.549Z\"\n    }\n  } ],\n  \"nextLink\" : \"grr9qql9a5rh7sc6506dlgwvmyzw6vvn45e81qt1ltwz0dh0\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "8e877811-3f5f-4028-9fe0-c9915babf6fc",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:18.549641Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "EventHubs_ListByNamespace",
+          "schema" : {
+            "type" : "object",
+            "properties" : {
+              "nextLink" : {
+                "type" : "string",
+                "description" : "Link to the next set of results. Not empty if Value contains incomplete list of EventHubs."
+              },
+              "value" : {
+                "type" : "array",
+                "description" : "Result of the List EventHubs operation.",
+                "items" : {
+                  "$ref" : "#/components/schemas/Eventhub"
+                }
+              }
+            },
+            "description" : "The result of the List EventHubs operation."
+          }
+        }
+      }
+    },
+    "insertionIndex" : 20
+  }, {
+    "id" : "5e0bc3f2-25d0-4e2a-822a-10b9bb316f37",
+    "name" : "Invokes GEO DR failover and reconfigure the alias to point to the secondary name... - 200",
+    "request" : {
+      "urlPath" : "/subscriptions/9gb6/resourceGroups/Brenton+Braun+Jr./providers/Microsoft.EventHub/namespaces/Soledad+Willms/disasterRecoveryConfigs/eccv93lwf7zoewu07teshuif/failover",
+      "method" : "POST",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "ysaghu1shq3jdd6qfwif0tep94g3fp7xr8gb5j1j"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200
+    },
+    "uuid" : "5e0bc3f2-25d0-4e2a-822a-10b9bb316f37",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:18.548724Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "DisasterRecoveryConfigs_FailOver"
+        }
+      }
+    },
+    "insertionIndex" : 21
+  }, {
+    "id" : "ef14ffd9-9d23-4ea1-b585-3f7d56a8cc1f",
+    "name" : "This operation disables the Disaster Recovery and stops replicating changes from... - 200",
+    "request" : {
+      "urlPath" : "/subscriptions/55v3/resourceGroups/Horacio+Brekke/providers/Microsoft.EventHub/namespaces/Mrs.+Felicia+Hessel/disasterRecoveryConfigs/ia0pg7n2t338qmw1yh/breakPairing",
+      "method" : "POST",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "8rgz7oke8fc5tau9kydb0n50bxwf9beu3xrtumihb8ynhastajv"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200
+    },
+    "uuid" : "ef14ffd9-9d23-4ea1-b585-3f7d56a8cc1f",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:18.548522Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "DisasterRecoveryConfigs_BreakPairing"
+        }
+      }
+    },
+    "insertionIndex" : 22
+  }, {
+    "id" : "8881559c-1766-4dbe-bdef-1c108d59e9a6",
+    "name" : "Gets the primary and secondary connection strings for the Namespace.",
+    "request" : {
+      "urlPath" : "/subscriptions/4ab1/resourceGroups/Arron+Kulas/providers/Microsoft.EventHub/namespaces/Ronald+Leannon/disasterRecoveryConfigs/eavdplg4/AuthorizationRules/Casie+Auer/listKeys",
+      "method" : "POST",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "i0jb5n750d55wh3yqnc3hdobq8ao1mt08cvh1j7k1hz1kuy9h9fsj99pisstnz99q0jla9yicexfqbp9jjokjm8qpqfmx4050z6vf12xw33kda5avg10muhkafx8ev6ty546979tlhpsxdtsklcokajprexf3u7ntzljj7skuqgvnunoc5tn06ro"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"secondaryKey\" : \"v4akvdh053vhrip28bsoc7cwfa0yv5m6s4846tc5iud87ajjo7tl811m5zsf96wlzukljxohepvlpzeczpm8u8pprllavn2do4rx4tp344k7skftbwbmr1bwbmz75y7c3hcb5gmwif1vhxeu\",\n  \"keyName\" : \"Elin Ebert\",\n  \"aliasSecondaryConnectionString\" : \"judb3xofso7dl2vmgstrjdvpbeh55ajgwrhkzcsrkcrew7p5xjeutpijs33mu7m40abxsq7co5bjnw5mstbue2ms9nmghyf4f95hx81bp9v0om4zp2x3ktn1zvr1gf6lal5hqtm7v26p6o0iwakxpl9ehuij9j\",\n  \"primaryConnectionString\" : \"r23qzgdwlxnpq3wcz695jvrycg8p3zm15almcik0its0kypl6buqbxg1xdqd3ckpftmwb2l6j4qput22zthmbx2sszo9oucvwjcgd6obmfodvkedyfq37u8vevw6inxetrdesxy1dl0wg3lwi2pfjcyqrwkzui0iq5f\",\n  \"secondaryConnectionString\" : \"6bg2vra3ow269lrg0bczkoswa2mxymvpnexykkca7oop4eqmlo88pvztm6l0d3050nadzl7nk7gsxcek8mebm82rd8u2sgsqpq2h3ilyq4ger4bp9n29ynee8z2f7oco8vv1gxwgi5pcw96yldwkpt55iyxvq\",\n  \"aliasPrimaryConnectionString\" : \"ks54fzkpsbttj7rr879h6q22mf1pb6nb8v7np5yr286jw1lqqv2ch3o04n68gksrgmxzh3ai13q7qkqfluw34wxiyxqb3alfxl\",\n  \"primaryKey\" : \"agy7vhggf9464vj6uoq4mddjrj1g6p91urqlml8s3c91jjcogbuylzn822s0c3u0envl2fcvv5znvlyhmdh9k9668qch516cg0lzoy49wowrb55quuk\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "8881559c-1766-4dbe-bdef-1c108d59e9a6",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:18.548314Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "DisasterRecoveryConfigs_ListKeys",
+          "schema" : {
+            "type" : "object",
+            "properties" : {
+              "aliasPrimaryConnectionString" : {
+                "type" : "string",
+                "description" : "Primary connection string of the alias if GEO DR is enabled",
+                "readOnly" : true
+              },
+              "aliasSecondaryConnectionString" : {
+                "type" : "string",
+                "description" : "Secondary  connection string of the alias if GEO DR is enabled",
+                "readOnly" : true
+              },
+              "keyName" : {
+                "type" : "string",
+                "description" : "A string that describes the AuthorizationRule.",
+                "readOnly" : true
+              },
+              "primaryConnectionString" : {
+                "type" : "string",
+                "description" : "Primary connection string of the created namespace AuthorizationRule.",
+                "readOnly" : true
+              },
+              "primaryKey" : {
+                "type" : "string",
+                "description" : "A base64-encoded 256-bit primary key for signing and validating the SAS token.",
+                "readOnly" : true
+              },
+              "secondaryConnectionString" : {
+                "type" : "string",
+                "description" : "Secondary connection string of the created namespace AuthorizationRule.",
+                "readOnly" : true
+              },
+              "secondaryKey" : {
+                "type" : "string",
+                "description" : "A base64-encoded 256-bit primary key for signing and validating the SAS token.",
+                "readOnly" : true
+              }
+            },
+            "description" : "Namespace/EventHub Connection String"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 23
+  }, {
+    "id" : "673a150b-5060-413f-9654-825ea24980bb",
+    "name" : "Gets an AuthorizationRule for a Namespace by rule name.",
+    "request" : {
+      "urlPath" : "/subscriptions/8s7b/resourceGroups/Angelique+McKenzie+Sr./providers/Microsoft.EventHub/namespaces/Dawna+Morissette/disasterRecoveryConfigs/hs9m4803qg7dx23k94w2yhp4z/AuthorizationRules/Ray+Gusikowski",
+      "method" : "GET",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "1vpsvwp1ajyju7cvvzgmvsppdj1r35akzvfva8pmm6kqmcfe8vb1ydd0m32mpv9unwbbyqb4t"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"name\" : \"Porter Koelpin\",\n  \"id\" : \"495m\",\n  \"type\" : \"ssc00dg93qiec6yxyqhc4jsikguazqueclpvuxh8804py8xv2prtig1h6\",\n  \"properties\" : {\n    \"rights\" : [ \"Send\" ]\n  }\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "673a150b-5060-413f-9654-825ea24980bb",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:18.547834Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "DisasterRecoveryConfigs_GetAuthorizationRule",
+          "schema" : {
+            "properties" : {
+              "properties" : {
+                "required" : [ "rights" ],
+                "type" : "object",
+                "properties" : {
+                  "rights" : {
+                    "type" : "array",
+                    "description" : "The rights associated with the rule.",
+                    "items" : {
+                      "type" : "string",
+                      "enum" : [ "Manage", "Send", "Listen" ]
+                    }
+                  }
+                },
+                "description" : "Properties supplied to create or update AuthorizationRule"
+              }
+            },
+            "description" : "Single item in a List or Get AuthorizationRule operation",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/Resource"
+            } ]
+          }
+        }
+      }
+    },
+    "insertionIndex" : 24
+  }, {
+    "id" : "19881ed9-75e6-4019-881f-f2c0be9cb19c",
+    "name" : "Gets a list of authorization rules for a Namespace.",
+    "request" : {
+      "urlPath" : "/subscriptions/j81h/resourceGroups/Morton+Hammes+DVM/providers/Microsoft.EventHub/namespaces/Adalberto+Renner/disasterRecoveryConfigs/ccmnsps0h22ewedxmwwngtowh79ft8687s4hgicczq9sk9hkx/AuthorizationRules",
+      "method" : "GET",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "oldkwl9tfu5navb33scrc2dei6uoq8"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"value\" : [ {\n    \"name\" : \"Drew McCullough\",\n    \"id\" : \"x89m\",\n    \"type\" : \"8xld3cq33j2sg5tkb4p789tm7309newctss9l2ek8h95313fru7aqykom7dm5x8ea9q525816tywdjygy30oep3xkzzvds6jrvh1tuajlud0jccnymq8yko5l7nf6\",\n    \"properties\" : {\n      \"rights\" : [ \"Manage\", \"Listen\", \"Send\", \"Manage\", \"Listen\", \"Manage\", \"Manage\", \"Listen\" ]\n    }\n  }, {\n    \"name\" : \"Alonzo Dickens\",\n    \"id\" : \"9kj8\",\n    \"type\" : \"z8m2kjui0fxfelrua045jx706fgln7kcmvoyuenktjdkdfhrnu96rmh78vqcuaqzepy19hgh5eaue1zpp4psv7dn43gqxjqptotoaybi9dhwcuqgeesltpeqdp5uo6xqyitmfau8872rhj5k85\",\n    \"properties\" : {\n      \"rights\" : [ \"Listen\", \"Manage\", \"Listen\", \"Send\", \"Manage\", \"Manage\", \"Send\", \"Send\" ]\n    }\n  }, {\n    \"name\" : \"Mrs. Miranda Bernhard\",\n    \"id\" : \"2603\",\n    \"type\" : \"fyobyv899hix6y3hrlnzhin6lz9jijgk9wl9hc6rtgxqt48oes14rhxylp70x7s6lehyuppq650cussda9kb8\",\n    \"properties\" : {\n      \"rights\" : [ \"Manage\", \"Send\", \"Listen\", \"Manage\", \"Manage\" ]\n    }\n  }, {\n    \"name\" : \"Dustin Roob\",\n    \"id\" : \"93me\",\n    \"type\" : \"l1t5s81h1ur0h5dbtmy5cq\",\n    \"properties\" : {\n      \"rights\" : [ \"Send\", \"Send\" ]\n    }\n  }, {\n    \"name\" : \"Allan Bode\",\n    \"id\" : \"1i57\",\n    \"type\" : \"cdh3r7v74u6kn3olft5vvpxhoivf0cl7n7n7h0krwz0w7tvj0mvsb8zrx2ggx3wrgz5fktk4vn8wajn3izzfqrx\",\n    \"properties\" : {\n      \"rights\" : [ \"Send\", \"Listen\", \"Send\" ]\n    }\n  }, {\n    \"name\" : \"Marivel Orn\",\n    \"id\" : \"d0xx\",\n    \"type\" : \"o5qi6f3otdmhxpu3qwdq9gxkimypbyvtq35s4vq76hwqy4pe0g2c4tw7nfbrpif30l5y4uyat7cq64pfkeumm7icw\",\n    \"properties\" : {\n      \"rights\" : [ \"Send\", \"Send\", \"Listen\", \"Manage\", \"Send\", \"Listen\", \"Listen\" ]\n    }\n  }, {\n    \"name\" : \"Elton Green\",\n    \"id\" : \"nfcp\",\n    \"type\" : \"14zbqvkudh7zi3blfwtkhpmntsblzbqfj9fpz8v4pypb1pplplpv52cvlgyaaczwsk1ifm9wapa91h70jbet2e2lrwzznlnbt1hlbhdwfc6x1ggsm5bphtp0gv\",\n    \"properties\" : {\n      \"rights\" : [ \"Send\" ]\n    }\n  } ],\n  \"nextLink\" : \"fb0d6e0wspgdb19qg9jwfm2o8c5j459my92s1168v9q2gufh9pirgar6sox4n66a0wz9pwjaqoxwaow7ewyg78lovlnnxief2r3es6zxxrn992u86hv98rh6khm03gvt4wyxsbvi1htbt9dzmqoo7\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "19881ed9-75e6-4019-881f-f2c0be9cb19c",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:18.547402Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "DisasterRecoveryConfigs_ListAuthorizationRules",
+          "schema" : {
+            "type" : "object",
+            "properties" : {
+              "nextLink" : {
+                "type" : "string",
+                "description" : "Link to the next set of results. Not empty if Value contains an incomplete list of Authorization Rules"
+              },
+              "value" : {
+                "type" : "array",
+                "description" : "Result of the List Authorization Rules operation.",
+                "items" : {
+                  "$ref" : "#/components/schemas/AuthorizationRule"
+                }
+              }
+            },
+            "description" : "The response from the List namespace operation."
+          }
+        }
+      }
+    },
+    "insertionIndex" : 25
+  }, {
+    "id" : "08da6ce7-a3b8-4fc1-9453-bc034a3b5c23",
+    "name" : "Deletes an Alias(Disaster Recovery configuration) - 200",
+    "request" : {
+      "urlPath" : "/subscriptions/icth/resourceGroups/Laine+Little/providers/Microsoft.EventHub/namespaces/Nathan+Kuhlman/disasterRecoveryConfigs/lyu7rtydgmt5mefe02j54u6g8m",
+      "method" : "DELETE",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "1ti002y62mdq9blmazdng1ku3qmtrjft9lmsw23w0fhm5006jne8n5akdbifs1ti8ies37qjkqekgna4emion4s1n95p7z198weo8eh39bpjvhh3ssgl3v4oc6smw6v1ojfkx6a3zml3elfgzdliseozw0rq6pzdgvxxfkf8ab"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200
+    },
+    "uuid" : "08da6ce7-a3b8-4fc1-9453-bc034a3b5c23",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:18.545839Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "DisasterRecoveryConfigs_Delete"
+        }
+      }
+    },
+    "insertionIndex" : 26
+  }, {
+    "id" : "ca27869b-87eb-46a4-bc69-c79ccbe2ce9f",
+    "name" : "Creates or updates a new Alias(Disaster Recovery configuration) - 201",
+    "request" : {
+      "urlPath" : "/subscriptions/k461/resourceGroups/Myles+Oberbrunner/providers/Microsoft.EventHub/namespaces/Ms.+Marvel+Crooks/disasterRecoveryConfigs/rboeca93hq99kppdytutp64mzw6i24wfat0lnb9rb6",
+      "method" : "PUT",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "xu17unz3s2ssn9ip2oo73bkys6cxdj5zecny2sed6y9h4hwgruvz3qa6i3jmqsvarq1vy7srl6e95f74xhgq5eufbjnfihoc9wy17si1sq7c9tadeee8l1gzrt2gq0jqmxm1s78b5zdu6pfg9kmnw0nxp6435rmmzd2nyja2r4b69ks457iper81"
+        }
+      }
+    },
+    "response" : {
+      "status" : 201
+    },
+    "uuid" : "ca27869b-87eb-46a4-bc69-c79ccbe2ce9f",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:18.545629Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "DisasterRecoveryConfigs_CreateOrUpdate"
+        }
+      }
+    },
+    "insertionIndex" : 27
+  }, {
+    "id" : "e9228af3-54ea-473d-9420-efce6a296558",
+    "name" : "Creates or updates a new Alias(Disaster Recovery configuration) (application/json)",
+    "request" : {
+      "urlPath" : "/subscriptions/17dy/resourceGroups/Ms.+Rhonda+Mante/providers/Microsoft.EventHub/namespaces/Abe+Fahey/disasterRecoveryConfigs/kqmde1hfypalio54o1cgvzujvwp9z6uewku7d5gve922uvy",
+      "method" : "PUT",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/json"
+        }
+      },
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "psq08xw6mpf41bjl1pcy289eq4kjuwyjhhu5othq2mcl4jhf23hvoxj"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"name\" : \"Arden Ledner\",\n  \"id\" : \"2020\",\n  \"type\" : \"76pz5d8gswkobnkzi4comxcnlishjyk5065lqu33blmwc0cwpq\",\n  \"properties\" : {\n    \"partnerNamespace\" : \"02tezjp4u31hats351qh7r02swiekouzr\",\n    \"pendingReplicationOperationsCount\" : 2265827054094379414,\n    \"role\" : \"Secondary\",\n    \"alternateName\" : \"Tiffaney Leuschke\",\n    \"provisioningState\" : \"Failed\"\n  }\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "e9228af3-54ea-473d-9420-efce6a296558",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:18.545411Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "DisasterRecoveryConfigs_CreateOrUpdate",
+          "schema" : {
+            "properties" : {
+              "properties" : {
+                "type" : "object",
+                "properties" : {
+                  "alternateName" : {
+                    "type" : "string",
+                    "description" : "Alternate name specified when alias and namespace names are same."
+                  },
+                  "partnerNamespace" : {
+                    "type" : "string",
+                    "description" : "ARM Id of the Primary/Secondary eventhub namespace name, which is part of GEO DR pairing"
+                  },
+                  "pendingReplicationOperationsCount" : {
+                    "type" : "integer",
+                    "description" : "Number of entities pending to be replicated.",
+                    "format" : "int64",
+                    "readOnly" : true
+                  },
+                  "provisioningState" : {
+                    "type" : "string",
+                    "description" : "Provisioning state of the Alias(Disaster Recovery configuration) - possible values 'Accepted' or 'Succeeded' or 'Failed'",
+                    "readOnly" : true,
+                    "enum" : [ "Accepted", "Succeeded", "Failed" ]
+                  },
+                  "role" : {
+                    "type" : "string",
+                    "description" : "role of namespace in GEO DR - possible values 'Primary' or 'PrimaryNotReplicating' or 'Secondary'",
+                    "readOnly" : true,
+                    "enum" : [ "Primary", "PrimaryNotReplicating", "Secondary" ]
+                  }
+                },
+                "description" : "Properties required to the Create Or Update Alias(Disaster Recovery configurations)"
+              }
+            },
+            "description" : "Single item in List or Get Alias(Disaster Recovery configuration) operation",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/Resource"
+            } ]
+          }
+        }
+      }
+    },
+    "insertionIndex" : 28
+  }, {
+    "id" : "c9b78ecd-078e-4e48-b5df-22f0c38d0e82",
+    "name" : "Retrieves Alias(Disaster Recovery configuration) for primary or secondary namesp...",
+    "request" : {
+      "urlPath" : "/subscriptions/487k/resourceGroups/Mr.+Buster+Grady/providers/Microsoft.EventHub/namespaces/Laverne+Lind/disasterRecoveryConfigs/og11kg4jt9ba0vyho3uwoq1xwk25k26tdbg6vxa9gshpvaq",
+      "method" : "GET",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "7hy45boq3i9g9449b9nd8g010m9uq5sxnqp4gxyeiba5tythmhgeaq0jxl65"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"name\" : \"Abe Baumbach\",\n  \"id\" : \"12h2\",\n  \"type\" : \"ialzxg\",\n  \"properties\" : {\n    \"partnerNamespace\" : \"qgje915ehkdt07qyyyrcgq3wx5999fmr2iza9yfj9f21jn1e3x3hqcf4tykaikuv2rr1nxjj72k5e67aqg0e1igg942pbjzfpqzpzvlcd0nfkqgcugbystpkzn3weo99kznam1zw8avsd2p648g6zmvsjcynfjx86fyqu922bf\",\n    \"pendingReplicationOperationsCount\" : 6003389241055100384,\n    \"role\" : \"PrimaryNotReplicating\",\n    \"alternateName\" : \"Gail Wintheiser\",\n    \"provisioningState\" : \"Succeeded\"\n  }\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "c9b78ecd-078e-4e48-b5df-22f0c38d0e82",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:18.54466Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "DisasterRecoveryConfigs_Get",
+          "schema" : {
+            "properties" : {
+              "properties" : {
+                "type" : "object",
+                "properties" : {
+                  "alternateName" : {
+                    "type" : "string",
+                    "description" : "Alternate name specified when alias and namespace names are same."
+                  },
+                  "partnerNamespace" : {
+                    "type" : "string",
+                    "description" : "ARM Id of the Primary/Secondary eventhub namespace name, which is part of GEO DR pairing"
+                  },
+                  "pendingReplicationOperationsCount" : {
+                    "type" : "integer",
+                    "description" : "Number of entities pending to be replicated.",
+                    "format" : "int64",
+                    "readOnly" : true
+                  },
+                  "provisioningState" : {
+                    "type" : "string",
+                    "description" : "Provisioning state of the Alias(Disaster Recovery configuration) - possible values 'Accepted' or 'Succeeded' or 'Failed'",
+                    "readOnly" : true,
+                    "enum" : [ "Accepted", "Succeeded", "Failed" ]
+                  },
+                  "role" : {
+                    "type" : "string",
+                    "description" : "role of namespace in GEO DR - possible values 'Primary' or 'PrimaryNotReplicating' or 'Secondary'",
+                    "readOnly" : true,
+                    "enum" : [ "Primary", "PrimaryNotReplicating", "Secondary" ]
+                  }
+                },
+                "description" : "Properties required to the Create Or Update Alias(Disaster Recovery configurations)"
+              }
+            },
+            "description" : "Single item in List or Get Alias(Disaster Recovery configuration) operation",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/Resource"
+            } ]
+          }
+        }
+      }
+    },
+    "insertionIndex" : 29
+  }, {
+    "id" : "88a1b762-e33a-4e90-af5d-dab55427da09",
+    "name" : "Check the give Namespace name availability.",
+    "request" : {
+      "urlPath" : "/subscriptions/38br/resourceGroups/Ayanna+Klein/providers/Microsoft.EventHub/namespaces/Ray+Rau/disasterRecoveryConfigs/CheckNameAvailability",
+      "method" : "POST",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "qq805zupmj9w3of04xm1q7x6etf5jipa3jp827b4dsxzxxz4gpz59om0tr8mie52bbvjfehpbpjbz5xvhyy5lgh24knl4r9wqe1mjmj8h2tea44xjwkzax7nym9u4hgvcs74ecmxvv178d1d9f77010dljbun3bz89o2p3d"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"reason\" : \"TooManyNamespaceInCurrentSubscription\",\n  \"nameAvailable\" : true,\n  \"message\" : \"Doloremque corrupti reiciendis molestiae aut nam. Maxime corporis dolor neque iusto. Rerum voluptatum est. Non nihil officia.\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "88a1b762-e33a-4e90-af5d-dab55427da09",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:18.544159Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "DisasterRecoveryConfigs_CheckNameAvailability",
+          "schema" : {
+            "type" : "object",
+            "properties" : {
+              "message" : {
+                "type" : "string",
+                "description" : "The detailed info regarding the reason associated with the Namespace.",
+                "readOnly" : true
+              },
+              "nameAvailable" : {
+                "type" : "boolean",
+                "description" : "Value indicating Namespace is availability, true if the Namespace is available; otherwise, false."
+              },
+              "reason" : {
+                "$ref" : "#/components/schemas/UnavailableReason"
+              }
+            },
+            "description" : "The Result of the CheckNameAvailability operation"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 30
+  }, {
+    "id" : "64e6c973-921b-425e-9a39-5233bc8afbb0",
+    "name" : "Gets all Alias(Disaster Recovery configurations)",
+    "request" : {
+      "urlPath" : "/subscriptions/h2pn/resourceGroups/Miss+Marnie+Ebert/providers/Microsoft.EventHub/namespaces/Virgie+Schaefer/disasterRecoveryConfigs",
+      "method" : "GET",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "26yy9bqh5y"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"value\" : [ {\n    \"name\" : \"Robbie Bosco\",\n    \"id\" : \"5f1a\",\n    \"type\" : \"t24uol501ws6853ubt0w3dczx427lx55d0x6y65mfgey2awqx0kgaqoa4aqvqjk1ued0bczfzelb0grs9eo5ay41y0k4m4jvq0rb2y6u85zsidcq\",\n    \"properties\" : {\n      \"partnerNamespace\" : \"ykp43vdzlbwrh9pjj0pvo5atvnem1vhv4t4h75eb4w1ghqqhp9jsexieioe43x5uqwta\",\n      \"pendingReplicationOperationsCount\" : 1846788549187842520,\n      \"role\" : \"Primary\",\n      \"alternateName\" : \"Sherlyn Barton\",\n      \"provisioningState\" : \"Succeeded\"\n    }\n  } ],\n  \"nextLink\" : \"j3xfxd6mfywcenk4e6ho3j2doq189ev024wd5yctunkp1d39trh2dl500pbwr8wml6q87f5oe7cte8maz75b7\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "64e6c973-921b-425e-9a39-5233bc8afbb0",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:18.543864Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "DisasterRecoveryConfigs_List",
+          "schema" : {
+            "type" : "object",
+            "properties" : {
+              "nextLink" : {
+                "type" : "string",
+                "description" : "Link to the next set of results. Not empty if Value contains incomplete list of Alias(Disaster Recovery configuration)",
+                "readOnly" : true
+              },
+              "value" : {
+                "type" : "array",
+                "description" : "List of Alias(Disaster Recovery configurations)",
+                "items" : {
+                  "$ref" : "#/components/schemas/ArmDisasterRecovery"
+                }
+              }
+            },
+            "description" : "The result of the List Alias(Disaster Recovery configuration) operation."
+          }
+        }
+      }
+    },
+    "insertionIndex" : 31
+  }, {
+    "id" : "ed2c4c62-3ba9-4e8c-81f9-98f998f32659",
+    "name" : "Regenerates the primary or secondary connection strings for the specified Namesp...",
+    "request" : {
+      "urlPath" : "/subscriptions/8747/resourceGroups/Lonny+Ernser/providers/Microsoft.EventHub/namespaces/Dr.+Billi+Schroeder/AuthorizationRules/Jess+Brakus/regenerateKeys",
+      "method" : "POST",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "ovtyucank7ivph4niwrhjyl9s4k05spubc1lqe5rklp4g19s5f0oq9ft7lrrqpjdzvo1du6tf1c"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"secondaryKey\" : \"oaye4liujjt10tfq1vv78bg0881wxqwduaz7bnf9p40h25f1jo4ec4qgqm90svtfpb81yfmv47q50ku7nw0fb5b0rqpjzamjr3z7xzif07ejk776gyebv7o62mld9y41p8ztpkc3ggbvii3oszgtb24x9dhficbh2xn09l3elyfs0\",\n  \"keyName\" : \"Jesse Jones\",\n  \"aliasSecondaryConnectionString\" : \"vm41qidm4sf9ll21a52skr8w5yxh6gq6k71k6y099ezazso8r8vl5a43m8x2ej5cagzjiehy3xsczm569064dq38a5hue914ndm6r3snu5c3o\",\n  \"primaryConnectionString\" : \"iafy4r5ncwn6tyim899zz5p14wcqpn1g2lcwyytrtuq3q4ejhmolmbll60nnuioqmdnjuh6ddhzqnopft1kj5gdab4ch50fh6s54ph09199k1qxvnvwkhgb6sabkluqtz\",\n  \"secondaryConnectionString\" : \"yhpftd3fw388mbat0bsgu0p5h0iykxucqqxoy5jvh1qzi3icvdegtecg2lrjid9syijonm1dcz27zkhapnc16viizc\",\n  \"aliasPrimaryConnectionString\" : \"obp802vsgmonuraov6uyac4miw3a54fwdwaxstrexmnsvumsu9zbtkz4t\",\n  \"primaryKey\" : \"uzp5xxw7v9to0liz4zp8hm82unldl5k2mtsq3co3mysvlh9qypin62gb9s9adep4af9jiy139o1fpppclbrks8yz5ch6qqtemn35rhewonlska6fufozywbbc1iyflsvsn7vurf30tgb2cgkocwtji51\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "ed2c4c62-3ba9-4e8c-81f9-98f998f32659",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:18.543338Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "Namespaces_RegenerateKeys",
+          "schema" : {
+            "type" : "object",
+            "properties" : {
+              "aliasPrimaryConnectionString" : {
+                "type" : "string",
+                "description" : "Primary connection string of the alias if GEO DR is enabled",
+                "readOnly" : true
+              },
+              "aliasSecondaryConnectionString" : {
+                "type" : "string",
+                "description" : "Secondary  connection string of the alias if GEO DR is enabled",
+                "readOnly" : true
+              },
+              "keyName" : {
+                "type" : "string",
+                "description" : "A string that describes the AuthorizationRule.",
+                "readOnly" : true
+              },
+              "primaryConnectionString" : {
+                "type" : "string",
+                "description" : "Primary connection string of the created namespace AuthorizationRule.",
+                "readOnly" : true
+              },
+              "primaryKey" : {
+                "type" : "string",
+                "description" : "A base64-encoded 256-bit primary key for signing and validating the SAS token.",
+                "readOnly" : true
+              },
+              "secondaryConnectionString" : {
+                "type" : "string",
+                "description" : "Secondary connection string of the created namespace AuthorizationRule.",
+                "readOnly" : true
+              },
+              "secondaryKey" : {
+                "type" : "string",
+                "description" : "A base64-encoded 256-bit primary key for signing and validating the SAS token.",
+                "readOnly" : true
+              }
+            },
+            "description" : "Namespace/EventHub Connection String"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 32
+  }, {
+    "id" : "bc8ab1f8-76eb-4c80-9406-b86d2fc19b30",
+    "name" : "Gets the primary and secondary connection strings for the Namespace.",
+    "request" : {
+      "urlPath" : "/subscriptions/9c7p/resourceGroups/Camille+Spencer/providers/Microsoft.EventHub/namespaces/Charlie+Nitzsche/AuthorizationRules/Faustino+Bashirian/listKeys",
+      "method" : "POST",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "ru92sgd5qmc3w6n7egk7x4bnrfdrthai1a4twt"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"secondaryKey\" : \"nd2k5xz8g1eztve7l652zo\",\n  \"keyName\" : \"Frederic Morar PhD\",\n  \"aliasSecondaryConnectionString\" : \"8vke0svx99clvr7mlh0o0og2dkw9e6v1069tbu5x222txo0a94atfcww1li0yxp99u09ul5fd0ngwa82jpk5v27b4t0gokf9ahbqsoxwy8wamvakkcn53w5ib5d8ov5fwl8e4tmi34d69p9qca3slwjd5ozla5g5qy36wihu7a5tr5jitub3nbj82ifmmo7542mcyk19\",\n  \"primaryConnectionString\" : \"9lreps1mzpezqqygcj3eoxrnsfdzg45bn4njdi09sbhwl8tsekyepd4wadmcqka5q0nk865994aibxx1msctelao3mjkuyof8ksq6fy9jzkxy8\",\n  \"secondaryConnectionString\" : \"1fff4rov80uvt6ullvknxis293h2bkbjbsfetxpivmea9zwzb\",\n  \"aliasPrimaryConnectionString\" : \"ldybkndahkkg3dx6tewznp22hd86r3iuoawkujnsi0ve1qgos2vruwt5cwg3s351f21rmu3143cvbi4i4j4u0osclkyljpyqhof0s8yr3h57zjyeu0r9vy43uq4w7tj045ca8x7syv4hzrce958sywgjppcrcjfrxkxe39jjexbu7sdq6\",\n  \"primaryKey\" : \"q2fipjqfpvkipq0kjy186a131x397i8xw4prl77v4ir7dklflx08qe9erh6masigbhb8rvvobw72fahuk1mieq6km6dmgb6mdp5c69tgcdhsb3mfmljyd7837prtvo03dqxg12o81ax3t1bhh16na9b59thlhfp68e9vy2x\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "bc8ab1f8-76eb-4c80-9406-b86d2fc19b30",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:18.5429Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "Namespaces_ListKeys",
+          "schema" : {
+            "type" : "object",
+            "properties" : {
+              "aliasPrimaryConnectionString" : {
+                "type" : "string",
+                "description" : "Primary connection string of the alias if GEO DR is enabled",
+                "readOnly" : true
+              },
+              "aliasSecondaryConnectionString" : {
+                "type" : "string",
+                "description" : "Secondary  connection string of the alias if GEO DR is enabled",
+                "readOnly" : true
+              },
+              "keyName" : {
+                "type" : "string",
+                "description" : "A string that describes the AuthorizationRule.",
+                "readOnly" : true
+              },
+              "primaryConnectionString" : {
+                "type" : "string",
+                "description" : "Primary connection string of the created namespace AuthorizationRule.",
+                "readOnly" : true
+              },
+              "primaryKey" : {
+                "type" : "string",
+                "description" : "A base64-encoded 256-bit primary key for signing and validating the SAS token.",
+                "readOnly" : true
+              },
+              "secondaryConnectionString" : {
+                "type" : "string",
+                "description" : "Secondary connection string of the created namespace AuthorizationRule.",
+                "readOnly" : true
+              },
+              "secondaryKey" : {
+                "type" : "string",
+                "description" : "A base64-encoded 256-bit primary key for signing and validating the SAS token.",
+                "readOnly" : true
+              }
+            },
+            "description" : "Namespace/EventHub Connection String"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 33
+  }, {
+    "id" : "50f55eb7-ed69-4499-b86b-be46e820b0af",
+    "name" : "Deletes an AuthorizationRule for a Namespace. - 204",
+    "request" : {
+      "urlPath" : "/subscriptions/3m7i/resourceGroups/Catrice+Dibbert+Jr./providers/Microsoft.EventHub/namespaces/Zane+Simonis/AuthorizationRules/Fidela+Robel",
+      "method" : "DELETE",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "rk72x94ngtrqqtinasckr0jlo3aygiu1h58rsqmb3hqyz9sn55mzxljd37xoq34t2n80ql7wzj57c4q5qxqw4fnwpw7hulzucep6aejeov794a8cmc1fbgs6i0k9wjhuaizcdk61q9l9gepm7yekj0i2ux91fiwto71av4ckt8y60p3"
+        }
+      }
+    },
+    "response" : {
+      "status" : 204
+    },
+    "uuid" : "50f55eb7-ed69-4499-b86b-be46e820b0af",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:18.542358Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "Namespaces_DeleteAuthorizationRule"
+        }
+      }
+    },
+    "insertionIndex" : 34
+  }, {
+    "id" : "72d3b6a8-f9c9-4f43-bbf7-e8989241ee95",
+    "name" : "Deletes an AuthorizationRule for a Namespace. - 200",
+    "request" : {
+      "urlPath" : "/subscriptions/zpv6/resourceGroups/Dalton+Baumbach+V/providers/Microsoft.EventHub/namespaces/Boris+Murray/AuthorizationRules/Lasonya+Barrows",
+      "method" : "DELETE",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "ohytbozfuowk26av5hnw598afidlvcs31gyjh28fs5earlnntg0n0dzz5dk7hjjft0596s6yyscq6pprl13qwe86somm0d1pewop1"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200
+    },
+    "uuid" : "72d3b6a8-f9c9-4f43-bbf7-e8989241ee95",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:18.541955Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "Namespaces_DeleteAuthorizationRule"
+        }
+      }
+    },
+    "insertionIndex" : 35
+  }, {
+    "id" : "9c9bd997-6a90-42fb-8da9-d314b2fec178",
+    "name" : "Creates or updates an AuthorizationRule for a Namespace.",
+    "request" : {
+      "urlPath" : "/subscriptions/tjnt/resourceGroups/Sueann+Kutch/providers/Microsoft.EventHub/namespaces/Justin+Hamill/AuthorizationRules/Angel+Connelly+DVM",
+      "method" : "PUT",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "h8p00cilinki4ojukncxur7wonm0t3on4cj4o00zoh82i2bzgbqpftyf81lc2boevlym6mhwlh7omhg4yynujv76rb9x7"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"name\" : \"Norman Nolan\",\n  \"id\" : \"108v\",\n  \"type\" : \"3zka5ufnhkvzohdlz8qnawlohzfe7cknj3f3snww64z9b8qed88cpbht03u4jj5ugtui19l9hgb0\",\n  \"properties\" : {\n    \"rights\" : [ \"Manage\", \"Listen\", \"Manage\", \"Manage\", \"Manage\", \"Send\" ]\n  }\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "9c9bd997-6a90-42fb-8da9-d314b2fec178",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:18.541705Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "Namespaces_CreateOrUpdateAuthorizationRule",
+          "schema" : {
+            "properties" : {
+              "properties" : {
+                "required" : [ "rights" ],
+                "type" : "object",
+                "properties" : {
+                  "rights" : {
+                    "type" : "array",
+                    "description" : "The rights associated with the rule.",
+                    "items" : {
+                      "type" : "string",
+                      "enum" : [ "Manage", "Send", "Listen" ]
+                    }
+                  }
+                },
+                "description" : "Properties supplied to create or update AuthorizationRule"
+              }
+            },
+            "description" : "Single item in a List or Get AuthorizationRule operation",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/Resource"
+            } ]
+          }
+        }
+      }
+    },
+    "insertionIndex" : 36
+  }, {
+    "id" : "2d63d24d-4529-4924-8242-bc008fc9e322",
+    "name" : "Gets an AuthorizationRule for a Namespace by rule name.",
+    "request" : {
+      "urlPath" : "/subscriptions/v572/resourceGroups/Pauline+Skiles/providers/Microsoft.EventHub/namespaces/Gayle+Mills/AuthorizationRules/Sandy+Heaney",
+      "method" : "GET",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "uwqmsdem02dj0gphycn53ltz7bkc4t7mp8agu4e1ugt8y26qx94lazo1t835ixxoxtfuvm26ek82us6mc0dih7w3koe1uvgbjg5jy5pi"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"name\" : \"Ivory Watsica\",\n  \"id\" : \"p857\",\n  \"type\" : \"5pknfzh90g29lm1ek4g7fcpmd6kkml146rm0rmlhkyvpmho4nvrkm0bna0cc7ijd6gg3qmenzxu2wkeoir1vbx3rxsvqqj9amgai9bbj3cq76hp8iwx7d9e06n47sxitrrp5njlgyn7co1xiv32dk\",\n  \"properties\" : {\n    \"rights\" : [ \"Listen\" ]\n  }\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "2d63d24d-4529-4924-8242-bc008fc9e322",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:18.541269Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "Namespaces_GetAuthorizationRule",
+          "schema" : {
+            "properties" : {
+              "properties" : {
+                "required" : [ "rights" ],
+                "type" : "object",
+                "properties" : {
+                  "rights" : {
+                    "type" : "array",
+                    "description" : "The rights associated with the rule.",
+                    "items" : {
+                      "type" : "string",
+                      "enum" : [ "Manage", "Send", "Listen" ]
+                    }
+                  }
+                },
+                "description" : "Properties supplied to create or update AuthorizationRule"
+              }
+            },
+            "description" : "Single item in a List or Get AuthorizationRule operation",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/Resource"
+            } ]
+          }
+        }
+      }
+    },
+    "insertionIndex" : 37
+  }, {
+    "id" : "b4ddd0fe-431f-4773-9910-2275b66958a0",
+    "name" : "Gets a list of authorization rules for a Namespace.",
+    "request" : {
+      "urlPath" : "/subscriptions/jt4r/resourceGroups/Aurelio+Runolfsdottir/providers/Microsoft.EventHub/namespaces/Dr.+Octavio+Kuhlman/AuthorizationRules",
+      "method" : "GET",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "3o6e6m"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"value\" : [ {\n    \"name\" : \"Werner Dicki\",\n    \"id\" : \"nc05\",\n    \"type\" : \"me6mcdhf88kue7gqb97cou4ocoum50vwmp5e5ssh8er43fv54nilww5w6g5gddtgn45kkqcsm2j2n75yhw7ebjpbg4s3xpz0t3d1gb5km204t2pyt3a89r4lzbtsme9k4zthi3ixowralumjgx06zktmphm7z9bow3x\",\n    \"properties\" : {\n      \"rights\" : [ \"Send\", \"Manage\" ]\n    }\n  }, {\n    \"name\" : \"Mrs. Phil Rowe\",\n    \"id\" : \"25jj\",\n    \"type\" : \"nfongtjk0ylh4qn5mbb2xe6ntp5inimthdv3dl1fb0nsx2yef3xyj0g5jqhdzhr4q1l7imz4gh291c2omjus6iaxgvg18cefge1swx0d28bc85x87ets23u9worfb8n5ew8hi98zdwx3r\",\n    \"properties\" : {\n      \"rights\" : [ \"Send\", \"Send\", \"Send\", \"Manage\", \"Send\", \"Send\", \"Send\", \"Listen\" ]\n    }\n  }, {\n    \"name\" : \"Austin Sporer\",\n    \"id\" : \"p0ex\",\n    \"type\" : \"5583cdvqewgedjn86li6rw1rkw127n6q1h39qssl4dk8pyd87z6vbnrx6ck42vsq8r1hfyt4v133xslwvda9q74xvkckvpe8geopydfq3j5ho6ahkvaken4v62xa9k7kgn2hg7u40c7bqn5yfwik2kz69og2dkg0cuefcbhulp72\",\n    \"properties\" : {\n      \"rights\" : [ \"Manage\" ]\n    }\n  } ],\n  \"nextLink\" : \"taiywhrcoc3ke4fr260vc6nhy6x0kgq21d362ferdlxo8paz6n5hru6db4v9sbyy97wqna9pc8cdnt08ntt5svsyvppcbfbwwefz1xn5bc6g0yo0ut4fzs6zbxvjycskstz8nq\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "b4ddd0fe-431f-4773-9910-2275b66958a0",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:18.540824Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "Namespaces_ListAuthorizationRules",
+          "schema" : {
+            "type" : "object",
+            "properties" : {
+              "nextLink" : {
+                "type" : "string",
+                "description" : "Link to the next set of results. Not empty if Value contains an incomplete list of Authorization Rules"
+              },
+              "value" : {
+                "type" : "array",
+                "description" : "Result of the List Authorization Rules operation.",
+                "items" : {
+                  "$ref" : "#/components/schemas/AuthorizationRule"
+                }
+              }
+            },
+            "description" : "The response from the List namespace operation."
+          }
+        }
+      }
+    },
+    "insertionIndex" : 38
+  }, {
+    "id" : "bc27e40e-6f66-44c2-a161-8d0be70d65da",
+    "name" : "Creates or updates a namespace. Once created, this namespace's resource manifest... - 202",
+    "request" : {
+      "urlPath" : "/subscriptions/nx36/resourceGroups/Destiny+Berge/providers/Microsoft.EventHub/namespaces/Mr.+Alona+McGlynn",
+      "method" : "PATCH",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "2wuvp67g2ulc36ddf93rmypc04cc4xwhf3w4lo7z"
+        }
+      }
+    },
+    "response" : {
+      "status" : 202
+    },
+    "uuid" : "bc27e40e-6f66-44c2-a161-8d0be70d65da",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:18.540088Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "Namespaces_Update"
+        }
+      }
+    },
+    "insertionIndex" : 39
+  }, {
+    "id" : "686b871c-511f-4d36-bfd4-b25a536d8f62",
+    "name" : "Creates or updates a namespace. Once created, this namespace's resource manifest... (application/json)",
+    "request" : {
+      "urlPath" : "/subscriptions/1496/resourceGroups/Doretta+Kozey/providers/Microsoft.EventHub/namespaces/Britni+Kilback",
+      "method" : "PATCH",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/json"
+        }
+      },
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "gxgdb6qfsgxy5utauq9jlyz65u3pvbs2sjdlbz5znnp0mwfjaksm56010w2do30yg6ckj80nzosy4quwjhsm7fu0xdvbwt6jjy2jcnjevzgxsh4vec9w7aa7dfy7vda9amvssjw6n83r4g7xmjfzdryqn4z15kxw9gy91pls07aux8bhc"
+        }
+      }
+    },
+    "response" : {
+      "status" : 201,
+      "body" : "{\n  \"location\" : \"48g84dblkixntsbv910nvrspjyrjxqlu7zk226tyuhh154rktd2yz1hztrz9h952wz7r5qaxqmlk9z88496z7b3xz8c61tzkues9asifc7d3jmo4ysq6qumk2jbauznnpdkqlgd4wxowzfgfgw6f1c6nxlz4cilzy0ek\",\n  \"sku\" : {\n    \"tier\" : \"Standard\",\n    \"name\" : \"Standard\",\n    \"capacity\" : 14\n  },\n  \"properties\" : {\n    \"createdAt\" : \"2023-01-30T07:05:00.539Z\",\n    \"maximumThroughputUnits\" : 18,\n    \"kafkaEnabled\" : true,\n    \"metricId\" : \"34l3\",\n    \"serviceBusEndpoint\" : \"57818x2wstsvzrkdgjykk2ku1j3z24u43sh68hptayf9az6mjarkm24ltn5km43oidedbl3o6xnkd4fy122784gsq250qz60c2n5v2n011tey2943xmxv8qy1zloxymhsf9yfjutrxnipaa4599yd300wrfcsc9qtzrk8408tazc1fu7bfnu6ou6ga95i9x0\",\n    \"isAutoInflateEnabled\" : false,\n    \"provisioningState\" : \"Alaska\",\n    \"updatedAt\" : \"2022-06-16T18:25:31.539Z\"\n  },\n  \"tags\" : { }\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "686b871c-511f-4d36-bfd4-b25a536d8f62",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:18.539877Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "Namespaces_Update",
+          "schema" : {
+            "properties" : {
+              "properties" : {
+                "type" : "object",
+                "properties" : {
+                  "createdAt" : {
+                    "type" : "string",
+                    "description" : "The time the Namespace was created.",
+                    "format" : "date-time",
+                    "readOnly" : true
+                  },
+                  "isAutoInflateEnabled" : {
+                    "type" : "boolean",
+                    "description" : "Value that indicates whether AutoInflate is enabled for eventhub namespace."
+                  },
+                  "kafkaEnabled" : {
+                    "type" : "boolean",
+                    "description" : "Value that indicates whether Kafka is enabled for eventhub namespace."
+                  },
+                  "maximumThroughputUnits" : {
+                    "maximum" : 20,
+                    "minimum" : 0,
+                    "type" : "integer",
+                    "description" : "Upper limit of throughput units when AutoInflate is enabled, value should be within 0 to 20 throughput units. ( '0' if AutoInflateEnabled = true)",
+                    "format" : "int32"
+                  },
+                  "metricId" : {
+                    "type" : "string",
+                    "description" : "Identifier for Azure Insights metrics.",
+                    "readOnly" : true
+                  },
+                  "provisioningState" : {
+                    "type" : "string",
+                    "description" : "Provisioning state of the Namespace.",
+                    "readOnly" : true
+                  },
+                  "serviceBusEndpoint" : {
+                    "type" : "string",
+                    "description" : "Endpoint you can use to perform Service Bus operations.",
+                    "readOnly" : true
+                  },
+                  "updatedAt" : {
+                    "type" : "string",
+                    "description" : "The time the Namespace was updated.",
+                    "format" : "date-time",
+                    "readOnly" : true
+                  }
+                },
+                "description" : "Namespace properties supplied for create namespace operation."
+              },
+              "sku" : {
+                "$ref" : "#/components/schemas/Sku"
+              }
+            },
+            "description" : "Single Namespace item in List or Get Operation",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/TrackedResource"
+            } ]
+          }
+        }
+      }
+    },
+    "insertionIndex" : 40
+  }, {
+    "id" : "765b5b57-1e15-4369-bd56-e78700e169ee",
+    "name" : "Creates or updates a namespace. Once created, this namespace's resource manifest... (application/json)",
+    "request" : {
+      "urlPath" : "/subscriptions/0yg4/resourceGroups/Jutta+Hyatt/providers/Microsoft.EventHub/namespaces/Soon+Toy",
+      "method" : "PATCH",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/json"
+        }
+      },
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "nggc7g8aoc7hts85zwnn5v3b26pfkra61z4mxlubaazjou4f5jagtik687go16ewcoxj43blp326oa0etsw6cstd164eulvvewhj3eypawb13t3x8cx9q5nby6kmjgl2hf"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"location\" : \"wc8pwu59tp61p5w96e64yicupa4yfdxjakmdc8ntt6ty54s392r6dwiy1g7hxwgu7l6e7z4if8ikhhz\",\n  \"sku\" : {\n    \"tier\" : \"Basic\",\n    \"name\" : \"Standard\",\n    \"capacity\" : 7\n  },\n  \"properties\" : {\n    \"createdAt\" : \"2023-09-06T18:34:48.538Z\",\n    \"maximumThroughputUnits\" : 5,\n    \"kafkaEnabled\" : false,\n    \"metricId\" : \"781l\",\n    \"serviceBusEndpoint\" : \"gj2m7gy1colat2vr7ao5ujjzr22s37u7360rl6c1va2t7qfj7w7m2g5u9bm8grgatwkygnv7ggan2fwpof1klny9veo9i6ailhizsojp1d2hj00so7wyy7mev3r8vz0kcq2ncsk1hr6ipal3ppr8m0hr4qgrout8gxypps6wcpxq90ctm3bu53fgug\",\n    \"isAutoInflateEnabled\" : false,\n    \"provisioningState\" : \"Virginia\",\n    \"updatedAt\" : \"2022-09-15T10:04:18.539Z\"\n  },\n  \"tags\" : { }\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "765b5b57-1e15-4369-bd56-e78700e169ee",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:18.539406Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "Namespaces_Update",
+          "schema" : {
+            "properties" : {
+              "properties" : {
+                "type" : "object",
+                "properties" : {
+                  "createdAt" : {
+                    "type" : "string",
+                    "description" : "The time the Namespace was created.",
+                    "format" : "date-time",
+                    "readOnly" : true
+                  },
+                  "isAutoInflateEnabled" : {
+                    "type" : "boolean",
+                    "description" : "Value that indicates whether AutoInflate is enabled for eventhub namespace."
+                  },
+                  "kafkaEnabled" : {
+                    "type" : "boolean",
+                    "description" : "Value that indicates whether Kafka is enabled for eventhub namespace."
+                  },
+                  "maximumThroughputUnits" : {
+                    "maximum" : 20,
+                    "minimum" : 0,
+                    "type" : "integer",
+                    "description" : "Upper limit of throughput units when AutoInflate is enabled, value should be within 0 to 20 throughput units. ( '0' if AutoInflateEnabled = true)",
+                    "format" : "int32"
+                  },
+                  "metricId" : {
+                    "type" : "string",
+                    "description" : "Identifier for Azure Insights metrics.",
+                    "readOnly" : true
+                  },
+                  "provisioningState" : {
+                    "type" : "string",
+                    "description" : "Provisioning state of the Namespace.",
+                    "readOnly" : true
+                  },
+                  "serviceBusEndpoint" : {
+                    "type" : "string",
+                    "description" : "Endpoint you can use to perform Service Bus operations.",
+                    "readOnly" : true
+                  },
+                  "updatedAt" : {
+                    "type" : "string",
+                    "description" : "The time the Namespace was updated.",
+                    "format" : "date-time",
+                    "readOnly" : true
+                  }
+                },
+                "description" : "Namespace properties supplied for create namespace operation."
+              },
+              "sku" : {
+                "$ref" : "#/components/schemas/Sku"
+              }
+            },
+            "description" : "Single Namespace item in List or Get Operation",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/TrackedResource"
+            } ]
+          }
+        }
+      }
+    },
+    "insertionIndex" : 41
+  }, {
+    "id" : "e12eac3a-a64a-4d27-b09d-05059df48e80",
+    "name" : "Deletes an existing namespace. This operation also removes all associated resour... - 204",
+    "request" : {
+      "urlPath" : "/subscriptions/w6m9/resourceGroups/Dr.+Mickey+Reynolds/providers/Microsoft.EventHub/namespaces/Jonah+Collier+DDS",
+      "method" : "DELETE",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "xvag9055chnd8lovgjgdgjjpf7z8saluo1n5pqbobu588y0a8bumwjbt0ony3ojwlrwo1ey5uc9ztmxjgc7pt79w"
+        }
+      }
+    },
+    "response" : {
+      "status" : 204
+    },
+    "uuid" : "e12eac3a-a64a-4d27-b09d-05059df48e80",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:18.538906Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "Namespaces_Delete"
+        }
+      }
+    },
+    "insertionIndex" : 42
+  }, {
+    "id" : "4badc1fb-c1bd-47f9-a0df-2c6162ed4521",
+    "name" : "Deletes an existing namespace. This operation also removes all associated resour... - 202",
+    "request" : {
+      "urlPath" : "/subscriptions/7iv6/resourceGroups/Mohamed+Bailey/providers/Microsoft.EventHub/namespaces/Joshua+Beer",
+      "method" : "DELETE",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "lcp3fwgaq5aldnil0s5q2dtkwb971kqjf975ottf75l2d0sepnul4am5pddht5albb3d4v7l574ayezz4lze"
+        }
+      }
+    },
+    "response" : {
+      "status" : 202
+    },
+    "uuid" : "4badc1fb-c1bd-47f9-a0df-2c6162ed4521",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:18.538724Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "Namespaces_Delete"
+        }
+      }
+    },
+    "insertionIndex" : 43
+  }, {
+    "id" : "94a81640-8f1e-4629-ba62-66a7eb92c0e5",
+    "name" : "Deletes an existing namespace. This operation also removes all associated resour... - 200",
+    "request" : {
+      "urlPath" : "/subscriptions/d197/resourceGroups/Spring+Parisian/providers/Microsoft.EventHub/namespaces/Werner+Mann",
+      "method" : "DELETE",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "vc2b1gv1m3te6vyz3o9ss2b51sgucingf00xiu85ksenizorcn4i99uhmgxke37etet1jayr087gje1o0hctrjyqn000vd3uo92ggzns3q1clgqssej548h9s5lhrvp0xpudlnu0ta3o84ep7u29uqx8qi24uu8kzfudq"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200
+    },
+    "uuid" : "94a81640-8f1e-4629-ba62-66a7eb92c0e5",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:18.538546Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "Namespaces_Delete"
+        }
+      }
+    },
+    "insertionIndex" : 44
+  }, {
+    "id" : "ab57f41c-2a71-4c63-879f-2327cff06b6e",
+    "name" : "Creates or updates a namespace. Once created, this namespace's resource manifest... - 202",
+    "request" : {
+      "urlPath" : "/subscriptions/81nk/resourceGroups/Pat+Douglas/providers/Microsoft.EventHub/namespaces/Laraine+Streich+II",
+      "method" : "PUT",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "cqergin6c04xxbr4tr"
+        }
+      }
+    },
+    "response" : {
+      "status" : 202
+    },
+    "uuid" : "ab57f41c-2a71-4c63-879f-2327cff06b6e",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:18.538349Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "Namespaces_CreateOrUpdate"
+        }
+      }
+    },
+    "insertionIndex" : 45
+  }, {
+    "id" : "e2e0fc89-a658-45bc-927d-c4cca9aaa770",
+    "name" : "Creates or updates a namespace. Once created, this namespace's resource manifest... (application/json)",
+    "request" : {
+      "urlPath" : "/subscriptions/973z/resourceGroups/Ms.+Maris+Nicolas/providers/Microsoft.EventHub/namespaces/Errol+Halvorson",
+      "method" : "PUT",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/json"
+        }
+      },
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "h1n678qvez"
+        }
+      }
+    },
+    "response" : {
+      "status" : 201,
+      "body" : "{\n  \"location\" : \"xggu2ury3n9zyinzihh392ei8ke8huo236h1jsoaea7cj4aqzxgcggzx0ptcj4xj4hjap7dtl73sfkvk17umbxml2ec5arpr4t21l3eug9ynxm8hoxnnh26drr3vxqsb7dea69n\",\n  \"sku\" : {\n    \"tier\" : \"Standard\",\n    \"name\" : \"Basic\",\n    \"capacity\" : 15\n  },\n  \"properties\" : {\n    \"createdAt\" : \"2022-07-13T15:01:30.537Z\",\n    \"maximumThroughputUnits\" : 2,\n    \"kafkaEnabled\" : true,\n    \"metricId\" : \"l90r\",\n    \"serviceBusEndpoint\" : \"rgvgm9spyk82pmiqwsh8fppansiiut13xbukc69xlay3fs8nekz7c9qusuf18\",\n    \"isAutoInflateEnabled\" : false,\n    \"provisioningState\" : \"Kansas\",\n    \"updatedAt\" : \"2023-10-16T21:45:11.537Z\"\n  },\n  \"tags\" : { }\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "e2e0fc89-a658-45bc-927d-c4cca9aaa770",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:18.538153Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "Namespaces_CreateOrUpdate",
+          "schema" : {
+            "properties" : {
+              "properties" : {
+                "type" : "object",
+                "properties" : {
+                  "createdAt" : {
+                    "type" : "string",
+                    "description" : "The time the Namespace was created.",
+                    "format" : "date-time",
+                    "readOnly" : true
+                  },
+                  "isAutoInflateEnabled" : {
+                    "type" : "boolean",
+                    "description" : "Value that indicates whether AutoInflate is enabled for eventhub namespace."
+                  },
+                  "kafkaEnabled" : {
+                    "type" : "boolean",
+                    "description" : "Value that indicates whether Kafka is enabled for eventhub namespace."
+                  },
+                  "maximumThroughputUnits" : {
+                    "maximum" : 20,
+                    "minimum" : 0,
+                    "type" : "integer",
+                    "description" : "Upper limit of throughput units when AutoInflate is enabled, value should be within 0 to 20 throughput units. ( '0' if AutoInflateEnabled = true)",
+                    "format" : "int32"
+                  },
+                  "metricId" : {
+                    "type" : "string",
+                    "description" : "Identifier for Azure Insights metrics.",
+                    "readOnly" : true
+                  },
+                  "provisioningState" : {
+                    "type" : "string",
+                    "description" : "Provisioning state of the Namespace.",
+                    "readOnly" : true
+                  },
+                  "serviceBusEndpoint" : {
+                    "type" : "string",
+                    "description" : "Endpoint you can use to perform Service Bus operations.",
+                    "readOnly" : true
+                  },
+                  "updatedAt" : {
+                    "type" : "string",
+                    "description" : "The time the Namespace was updated.",
+                    "format" : "date-time",
+                    "readOnly" : true
+                  }
+                },
+                "description" : "Namespace properties supplied for create namespace operation."
+              },
+              "sku" : {
+                "$ref" : "#/components/schemas/Sku"
+              }
+            },
+            "description" : "Single Namespace item in List or Get Operation",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/TrackedResource"
+            } ]
+          }
+        }
+      }
+    },
+    "insertionIndex" : 46
+  }, {
+    "id" : "633b7627-ba48-4397-818a-b64e8ea92b2c",
+    "name" : "Creates or updates a namespace. Once created, this namespace's resource manifest... (application/json)",
+    "request" : {
+      "urlPath" : "/subscriptions/uneq/resourceGroups/Brady+Runolfsdottir/providers/Microsoft.EventHub/namespaces/Lesia+Gottlieb",
+      "method" : "PUT",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/json"
+        }
+      },
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "veh5u"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"location\" : \"grbu5pfen34vio76afxx1f3gkl3ckeyvrymxhzbwtovyw1izqscqsayq3gti0arh7ti45afq1mkn3dfiz3zw55wt2bbevesepd1355c8cqk4sycebtq8xjcjq5\",\n  \"sku\" : {\n    \"tier\" : \"Standard\",\n    \"name\" : \"Standard\",\n    \"capacity\" : 14\n  },\n  \"properties\" : {\n    \"createdAt\" : \"2022-07-23T04:22:38.537Z\",\n    \"maximumThroughputUnits\" : 3,\n    \"kafkaEnabled\" : false,\n    \"metricId\" : \"33mv\",\n    \"serviceBusEndpoint\" : \"a2t0disiwgwp7ddj2udygco86aeyeq9f08blgqxumpzgmxtnastd7t31l56hcc51gs3zg6v43m9j32yjz03o9x1qh5n4xw5oz8uww2jm3zftmvin8psftxq0b8yxaf5tvzn3h1raeowau8fqqqmnwsy7hovsv4p0ew3gjb3l\",\n    \"isAutoInflateEnabled\" : true,\n    \"provisioningState\" : \"New York\",\n    \"updatedAt\" : \"2022-08-02T04:59:42.537Z\"\n  },\n  \"tags\" : { }\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "633b7627-ba48-4397-818a-b64e8ea92b2c",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:18.537718Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "Namespaces_CreateOrUpdate",
+          "schema" : {
+            "properties" : {
+              "properties" : {
+                "type" : "object",
+                "properties" : {
+                  "createdAt" : {
+                    "type" : "string",
+                    "description" : "The time the Namespace was created.",
+                    "format" : "date-time",
+                    "readOnly" : true
+                  },
+                  "isAutoInflateEnabled" : {
+                    "type" : "boolean",
+                    "description" : "Value that indicates whether AutoInflate is enabled for eventhub namespace."
+                  },
+                  "kafkaEnabled" : {
+                    "type" : "boolean",
+                    "description" : "Value that indicates whether Kafka is enabled for eventhub namespace."
+                  },
+                  "maximumThroughputUnits" : {
+                    "maximum" : 20,
+                    "minimum" : 0,
+                    "type" : "integer",
+                    "description" : "Upper limit of throughput units when AutoInflate is enabled, value should be within 0 to 20 throughput units. ( '0' if AutoInflateEnabled = true)",
+                    "format" : "int32"
+                  },
+                  "metricId" : {
+                    "type" : "string",
+                    "description" : "Identifier for Azure Insights metrics.",
+                    "readOnly" : true
+                  },
+                  "provisioningState" : {
+                    "type" : "string",
+                    "description" : "Provisioning state of the Namespace.",
+                    "readOnly" : true
+                  },
+                  "serviceBusEndpoint" : {
+                    "type" : "string",
+                    "description" : "Endpoint you can use to perform Service Bus operations.",
+                    "readOnly" : true
+                  },
+                  "updatedAt" : {
+                    "type" : "string",
+                    "description" : "The time the Namespace was updated.",
+                    "format" : "date-time",
+                    "readOnly" : true
+                  }
+                },
+                "description" : "Namespace properties supplied for create namespace operation."
+              },
+              "sku" : {
+                "$ref" : "#/components/schemas/Sku"
+              }
+            },
+            "description" : "Single Namespace item in List or Get Operation",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/TrackedResource"
+            } ]
+          }
+        }
+      }
+    },
+    "insertionIndex" : 47
+  }, {
+    "id" : "85965207-2bba-4b14-bc73-bcde16552620",
+    "name" : "Gets the description of the specified namespace.",
+    "request" : {
+      "urlPath" : "/subscriptions/fp9n/resourceGroups/Kenyatta+Denesik+MD/providers/Microsoft.EventHub/namespaces/Derrick+Wiegand",
+      "method" : "GET",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "snx7mmf8rmsqkll9ft3e43f3mi8t9l7rcx8t8o3d0u5yfe61gznl1lh807dc9yvg0v7i8s3jfkjfamisw3uuivkfsnh10lhdxjjo3xd1albyxcm86vwyvtr5jg1ao895d73nxvfgr34uvwreit742e7yet5"
+        }
+      }
+    },
+    "response" : {
+      "status" : 201,
+      "body" : "{\n  \"location\" : \"hxpl06nvesahg362j5vxa5ojqasvqy4pe8m6i0bz91bl5p6oa1rg2fear7wc9eu10q3s53efl28jj5jbz2tn1m84vme9nsz5tky8x1hficdt20l4q9j124po7bbw167brh9l9ooo9eqp3aslg6rne2oe1v6iipxllqzcamf8cxg75jv\",\n  \"sku\" : {\n    \"tier\" : \"Basic\",\n    \"name\" : \"Basic\",\n    \"capacity\" : 14\n  },\n  \"properties\" : {\n    \"createdAt\" : \"2022-07-24T06:53:13.536Z\",\n    \"maximumThroughputUnits\" : 3,\n    \"kafkaEnabled\" : true,\n    \"metricId\" : \"a6eb\",\n    \"serviceBusEndpoint\" : \"r3vjx42v330ores0qdtae4e3vofspkpm36msoocvw8o0djvonx9pxrihcvyeb54x4o0pln352loeoo8ac6y5azpm4wv8rcpzu89ezp4maeksfix243ojxxculq3omm2powdm3jqtw7s4r88bienkt8nkxq5w71ovce\",\n    \"isAutoInflateEnabled\" : true,\n    \"provisioningState\" : \"New Hampshire\",\n    \"updatedAt\" : \"2022-08-17T05:54:26.537Z\"\n  },\n  \"tags\" : { }\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "85965207-2bba-4b14-bc73-bcde16552620",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:18.537269Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "Namespaces_Get",
+          "schema" : {
+            "properties" : {
+              "properties" : {
+                "type" : "object",
+                "properties" : {
+                  "createdAt" : {
+                    "type" : "string",
+                    "description" : "The time the Namespace was created.",
+                    "format" : "date-time",
+                    "readOnly" : true
+                  },
+                  "isAutoInflateEnabled" : {
+                    "type" : "boolean",
+                    "description" : "Value that indicates whether AutoInflate is enabled for eventhub namespace."
+                  },
+                  "kafkaEnabled" : {
+                    "type" : "boolean",
+                    "description" : "Value that indicates whether Kafka is enabled for eventhub namespace."
+                  },
+                  "maximumThroughputUnits" : {
+                    "maximum" : 20,
+                    "minimum" : 0,
+                    "type" : "integer",
+                    "description" : "Upper limit of throughput units when AutoInflate is enabled, value should be within 0 to 20 throughput units. ( '0' if AutoInflateEnabled = true)",
+                    "format" : "int32"
+                  },
+                  "metricId" : {
+                    "type" : "string",
+                    "description" : "Identifier for Azure Insights metrics.",
+                    "readOnly" : true
+                  },
+                  "provisioningState" : {
+                    "type" : "string",
+                    "description" : "Provisioning state of the Namespace.",
+                    "readOnly" : true
+                  },
+                  "serviceBusEndpoint" : {
+                    "type" : "string",
+                    "description" : "Endpoint you can use to perform Service Bus operations.",
+                    "readOnly" : true
+                  },
+                  "updatedAt" : {
+                    "type" : "string",
+                    "description" : "The time the Namespace was updated.",
+                    "format" : "date-time",
+                    "readOnly" : true
+                  }
+                },
+                "description" : "Namespace properties supplied for create namespace operation."
+              },
+              "sku" : {
+                "$ref" : "#/components/schemas/Sku"
+              }
+            },
+            "description" : "Single Namespace item in List or Get Operation",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/TrackedResource"
+            } ]
+          }
+        }
+      }
+    },
+    "insertionIndex" : 48
+  }, {
+    "id" : "b36fe5ac-aebd-4104-a81f-61303f191861",
+    "name" : "Gets the description of the specified namespace.",
+    "request" : {
+      "urlPath" : "/subscriptions/33ur/resourceGroups/Fannie+Barton/providers/Microsoft.EventHub/namespaces/Ja+Grant",
+      "method" : "GET",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "bu547i888aetx88nzikla0z61x3"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"location\" : \"zq1899umaprww7igy6d8zecebyfoub23c6w63hz84t6ixjju8hc5uswkbdekdltz0e9n8b3q6fsky7r53bbrhfs0orfo9omv6mzefzhpcqktrme36625eu933wwakc5n79bgue1lduocghgiuv0a0yml3r7l02wufl1fwc8py6mc5jmea\",\n  \"sku\" : {\n    \"tier\" : \"Standard\",\n    \"name\" : \"Standard\",\n    \"capacity\" : 17\n  },\n  \"properties\" : {\n    \"createdAt\" : \"2022-11-15T09:48:31.536Z\",\n    \"maximumThroughputUnits\" : 11,\n    \"kafkaEnabled\" : false,\n    \"metricId\" : \"y3fx\",\n    \"serviceBusEndpoint\" : \"rqew9rg6gv0jsv04f4ljgh4qtqnkyezruxvs\",\n    \"isAutoInflateEnabled\" : false,\n    \"provisioningState\" : \"New Hampshire\",\n    \"updatedAt\" : \"2022-05-16T14:26:50.536Z\"\n  },\n  \"tags\" : { }\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "b36fe5ac-aebd-4104-a81f-61303f191861",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:18.536828Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "Namespaces_Get",
+          "schema" : {
+            "properties" : {
+              "properties" : {
+                "type" : "object",
+                "properties" : {
+                  "createdAt" : {
+                    "type" : "string",
+                    "description" : "The time the Namespace was created.",
+                    "format" : "date-time",
+                    "readOnly" : true
+                  },
+                  "isAutoInflateEnabled" : {
+                    "type" : "boolean",
+                    "description" : "Value that indicates whether AutoInflate is enabled for eventhub namespace."
+                  },
+                  "kafkaEnabled" : {
+                    "type" : "boolean",
+                    "description" : "Value that indicates whether Kafka is enabled for eventhub namespace."
+                  },
+                  "maximumThroughputUnits" : {
+                    "maximum" : 20,
+                    "minimum" : 0,
+                    "type" : "integer",
+                    "description" : "Upper limit of throughput units when AutoInflate is enabled, value should be within 0 to 20 throughput units. ( '0' if AutoInflateEnabled = true)",
+                    "format" : "int32"
+                  },
+                  "metricId" : {
+                    "type" : "string",
+                    "description" : "Identifier for Azure Insights metrics.",
+                    "readOnly" : true
+                  },
+                  "provisioningState" : {
+                    "type" : "string",
+                    "description" : "Provisioning state of the Namespace.",
+                    "readOnly" : true
+                  },
+                  "serviceBusEndpoint" : {
+                    "type" : "string",
+                    "description" : "Endpoint you can use to perform Service Bus operations.",
+                    "readOnly" : true
+                  },
+                  "updatedAt" : {
+                    "type" : "string",
+                    "description" : "The time the Namespace was updated.",
+                    "format" : "date-time",
+                    "readOnly" : true
+                  }
+                },
+                "description" : "Namespace properties supplied for create namespace operation."
+              },
+              "sku" : {
+                "$ref" : "#/components/schemas/Sku"
+              }
+            },
+            "description" : "Single Namespace item in List or Get Operation",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/TrackedResource"
+            } ]
+          }
+        }
+      }
+    },
+    "insertionIndex" : 49
+  }, {
+    "id" : "64a63c18-ec03-48a7-bef8-af92c787076c",
+    "name" : "Lists the available Namespaces within a resource group.",
+    "request" : {
+      "urlPath" : "/subscriptions/65ro/resourceGroups/Claude+Hagenes/providers/Microsoft.EventHub/namespaces",
+      "method" : "GET",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "4w1z6y695tq43b8ha3b9s4db8axkou0lj2cwx4c52543a5dkcxw9"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"value\" : [ {\n    \"location\" : \"5afruhlqf4t8r1wixp3f8r33nab2txw4dql9pjtkdt2l4wzkuduqob4us7eth3vq8is2uekpfk8i3d69w77lfueyo1uplgfjqbgscn64p1hptpydfsjgxxuiluhhtezp3ly9g0duvo4kd22x2zvzzecy8fl3u\",\n    \"sku\" : {\n      \"tier\" : \"Standard\",\n      \"name\" : \"Standard\",\n      \"capacity\" : 4\n    },\n    \"properties\" : {\n      \"createdAt\" : \"2022-12-10T16:17:15.535Z\",\n      \"maximumThroughputUnits\" : 14,\n      \"kafkaEnabled\" : true,\n      \"metricId\" : \"48a1\",\n      \"serviceBusEndpoint\" : \"zmhmo0izu4ihmsz1z7ryqubjvuqofebrelwlqxrzchrm744vu74kagylwutufaf3a7p2mym0adqnmac4kwhex6qv5vuj63ouroz6yd7fy48437n08a6t3n5c96jti82yfse1nphv7755291tqcxdwb041bg2199z4qzns6ala6466l62az\",\n      \"isAutoInflateEnabled\" : false,\n      \"provisioningState\" : \"Utah\",\n      \"updatedAt\" : \"2023-07-27T10:16:07.535Z\"\n    },\n    \"tags\" : { }\n  }, {\n    \"location\" : \"z1dwniwacsaocq16b8kwelb7cul99zuwoz12j240uny71knrz4ye3fj5ytl078jwno73eb16b6yqxnpum3xpgs5dog60i2fng7l9f01xnz6pcozipf\",\n    \"sku\" : {\n      \"tier\" : \"Basic\",\n      \"name\" : \"Basic\",\n      \"capacity\" : 16\n    },\n    \"properties\" : {\n      \"createdAt\" : \"2023-06-27T09:32:27.535Z\",\n      \"maximumThroughputUnits\" : 14,\n      \"kafkaEnabled\" : true,\n      \"metricId\" : \"v0d4\",\n      \"serviceBusEndpoint\" : \"91wtmzzskc64ejn2zrqni1lphjvv\",\n      \"isAutoInflateEnabled\" : false,\n      \"provisioningState\" : \"New Hampshire\",\n      \"updatedAt\" : \"2023-10-09T13:30:58.535Z\"\n    },\n    \"tags\" : { }\n  }, {\n    \"location\" : \"zgeaqen9agvses6c1290deimdnrc0dwtqklhzyep70q300rm3zsmeajgfn6iq0ca6a4sxc9ej77ggu74hhicz668ig9jimgvb41piniet\",\n    \"sku\" : {\n      \"tier\" : \"Standard\",\n      \"name\" : \"Basic\",\n      \"capacity\" : 13\n    },\n    \"properties\" : {\n      \"createdAt\" : \"2023-08-22T10:08:41.535Z\",\n      \"maximumThroughputUnits\" : 9,\n      \"kafkaEnabled\" : true,\n      \"metricId\" : \"8t10\",\n      \"serviceBusEndpoint\" : \"q946kx1f8x2lt71d1zsbob7r6fc4y46jfngmq\",\n      \"isAutoInflateEnabled\" : false,\n      \"provisioningState\" : \"California\",\n      \"updatedAt\" : \"2023-06-02T06:25:38.535Z\"\n    },\n    \"tags\" : { }\n  }, {\n    \"location\" : \"w9af8enffe8l3bpj8loydausw7lhs7yln5qry1lwd43mj3mx0vqt7bram1mkp2f1v5va9ojvp4j3nv9927i8l8ci1nyo33lacubv6ii2354ooqivvdw8mzuu7g5iq22emz4u8iabnbbt\",\n    \"sku\" : {\n      \"tier\" : \"Standard\",\n      \"name\" : \"Standard\",\n      \"capacity\" : 12\n    },\n    \"properties\" : {\n      \"createdAt\" : \"2022-11-16T16:18:53.535Z\",\n      \"maximumThroughputUnits\" : 16,\n      \"kafkaEnabled\" : true,\n      \"metricId\" : \"3gn5\",\n      \"serviceBusEndpoint\" : \"2nzc5myit8r8u7y3lb50lzwgfmrnowcmpzj0uiid8t2zinlpn9s9xspxdvphrnbp7khf61tp7fl1d63xaezyu2mkprdxsjcr3ttspiyh1e23tl8ihs1fozwarqdlj97d2xvn7hdublyrwvtpc8rd7p\",\n      \"isAutoInflateEnabled\" : true,\n      \"provisioningState\" : \"Kentucky\",\n      \"updatedAt\" : \"2023-08-05T20:52:37.536Z\"\n    },\n    \"tags\" : { }\n  } ],\n  \"nextLink\" : \"8kup50mtvtkk3vh3p7iios8etbeymz8r27utdc162o0thx4jvakch3jdpx8zh7ws2b49csyskkmny7m6e9mrj9bhui6jl5h6k1b5edt9coaanrvxoar8dt14s81azv32rcg0ix1so5kpzray2scv4r0fjakznf1i58hbgd3lv1ttncwnsw0jjyf76t\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "64a63c18-ec03-48a7-bef8-af92c787076c",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:18.536337Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "Namespaces_ListByResourceGroup",
+          "schema" : {
+            "type" : "object",
+            "properties" : {
+              "nextLink" : {
+                "type" : "string",
+                "description" : "Link to the next set of results. Not empty if Value contains incomplete list of namespaces."
+              },
+              "value" : {
+                "type" : "array",
+                "description" : "Result of the List Namespace operation",
+                "items" : {
+                  "$ref" : "#/components/schemas/EHNamespace"
+                }
+              }
+            },
+            "description" : "The response of the List Namespace operation"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 50
+  }, {
+    "id" : "6fb14807-8f76-47ff-b0e1-782a4c807b1b",
+    "name" : "Gets the available Regions for a given sku",
+    "request" : {
+      "urlPath" : "/subscriptions/16o8/providers/Microsoft.EventHub/sku/bs04gatb9ugudp3yn83z3vj5cq1a24r0lkoay/regions",
+      "method" : "GET",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "730mpxsflsrbb2qlqo66zlfggjqmhcfvujodrbuld5m9zlnbx0eu1xif8ak5jmwif4e2mfnf95zyx3kkazup2t3vpwhdes37s1l9vk5a6i"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"value\" : [ {\n    \"location\" : \"ti1os8vg61g6t1ml3uo9439snftcdhxcwyhcnm7gggak18\",\n    \"properties\" : {\n      \"code\" : \"s6prbfn6dnn7aizgdszztc6gp1zdsaiq0h2selowbse1lc9isqg7wp4v9p1yekkpbve7m2nsyltqrqfb5s4hbbylcfbki4zpfnavp6hylt5d1wwzj7qsji8ghvn2np3fa9ixagxr15u32f9bcaxfy26b5cu54h9a8uu9pazqus0k59tu26v127az32k\",\n      \"fullName\" : \"Ms. Kari Hirthe\"\n    },\n    \"tags\" : { }\n  } ],\n  \"nextLink\" : \"v1el29fv9i26wax1bdx11i5pabmqc1elntwp90fd9hdrjgdg6kewmr37p6vetk\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "6fb14807-8f76-47ff-b0e1-782a4c807b1b",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:18.535383Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "Regions_ListBySku",
+          "schema" : {
+            "type" : "object",
+            "properties" : {
+              "nextLink" : {
+                "type" : "string",
+                "description" : "Link to the next set of results. Not empty if Value contains incomplete list of MessagingRegions.",
+                "readOnly" : true
+              },
+              "value" : {
+                "type" : "array",
+                "description" : "Result of the List MessagingRegions type.",
+                "items" : {
+                  "$ref" : "#/components/schemas/MessagingRegions"
+                }
+              }
+            },
+            "description" : "The response of the List MessagingRegions operation."
+          }
+        }
+      }
+    },
+    "insertionIndex" : 51
+  }, {
+    "id" : "52183487-7e2c-4987-bd14-563af45e39f0",
+    "name" : "Lists all the available Namespaces within a subscription, irrespective of the re...",
+    "request" : {
+      "urlPath" : "/subscriptions/cg82/providers/Microsoft.EventHub/namespaces",
+      "method" : "GET",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "sbhn11fipjxfa6fc7vkkgv0cclk3o5oyxefatoid6a3nsq0pebljlmjo5abctyfp2sk7zjyt8qsyxkca79vnyv9j678202n57zs6lf"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"value\" : [ {\n    \"location\" : \"npjr53scj43b03liyihdjvl4b50vswgrf3i\",\n    \"sku\" : {\n      \"tier\" : \"Standard\",\n      \"name\" : \"Standard\",\n      \"capacity\" : 10\n    },\n    \"properties\" : {\n      \"createdAt\" : \"2022-04-08T00:55:53.533Z\",\n      \"maximumThroughputUnits\" : 12,\n      \"kafkaEnabled\" : false,\n      \"metricId\" : \"0fic\",\n      \"serviceBusEndpoint\" : \"458k9ckghzcwoe0ww37yq6od4khqa7h7izo2813frh5aczejoi14l05xefef8qjn\",\n      \"isAutoInflateEnabled\" : true,\n      \"provisioningState\" : \"Missouri\",\n      \"updatedAt\" : \"2023-07-17T03:06:32.533Z\"\n    },\n    \"tags\" : { }\n  }, {\n    \"location\" : \"mo6hyysrgrwzyxzcw34am0nji07w7dd7g2j9dc2dqqtcxw78c6nr\",\n    \"sku\" : {\n      \"tier\" : \"Basic\",\n      \"name\" : \"Standard\",\n      \"capacity\" : 14\n    },\n    \"properties\" : {\n      \"createdAt\" : \"2023-01-20T05:50:44.533Z\",\n      \"maximumThroughputUnits\" : 6,\n      \"kafkaEnabled\" : true,\n      \"metricId\" : \"04q8\",\n      \"serviceBusEndpoint\" : \"mlyl41a4oja2zf3y3xi3jjrqavll0elshy4mn22ibfdt3g7r7o59mxalk1c5mg1rukda2po34d0fck64qiic2u01aftvgzf0lfelpll30591yjgmtnpj5bbeh25u\",\n      \"isAutoInflateEnabled\" : false,\n      \"provisioningState\" : \"Missouri\",\n      \"updatedAt\" : \"2022-05-30T18:51:41.533Z\"\n    },\n    \"tags\" : { }\n  }, {\n    \"location\" : \"km7ivh5dkii65xqkl2758jcjflybv3wmky4zxfdq3z0n44cmv6ewh15kanvjnqa183qsrewwfu7uyeizyd74sb00xx1ikuloo1c1vn6zdj7mwtseccb7zkf62y9crvrr9dzrhqrmja53tc2281ex61r73clpco2u9tqdnuf6\",\n    \"sku\" : {\n      \"tier\" : \"Basic\",\n      \"name\" : \"Basic\",\n      \"capacity\" : 18\n    },\n    \"properties\" : {\n      \"createdAt\" : \"2023-06-23T06:46:31.533Z\",\n      \"maximumThroughputUnits\" : 1,\n      \"kafkaEnabled\" : true,\n      \"metricId\" : \"q34h\",\n      \"serviceBusEndpoint\" : \"frhqo51dj5e644snw92sza615ilniu1lu3r9nfufw3gy2l6966mm65j7vw0h133edne2rf5rnfu63flek2owlx04lu304mtjazhy5jwrxbyyi86xwstb0x35n7c9kbidfwot9p4hc67xzxle45k6efp5t3eogqnaq2guqv1\",\n      \"isAutoInflateEnabled\" : true,\n      \"provisioningState\" : \"Kansas\",\n      \"updatedAt\" : \"2022-11-11T13:51:02.533Z\"\n    },\n    \"tags\" : { }\n  }, {\n    \"location\" : \"y3cvn9fjilgq8zf32wpsyv6tccsypbc04izom43mkd8chj8sjuq6o9nr8d2c0oi3fv35zs5kdst84xjpm4inxmb328gmlhj90jorurxz0f91bqowi3ckqajl7154ne99rahfi6h1duuixx0z5r1cjq2ounbn6or0z5fkxzb6lx5kui5ejd9ipxktto8uqqml1\",\n    \"sku\" : {\n      \"tier\" : \"Standard\",\n      \"name\" : \"Standard\",\n      \"capacity\" : 13\n    },\n    \"properties\" : {\n      \"createdAt\" : \"2022-04-12T18:35:53.533Z\",\n      \"maximumThroughputUnits\" : 1,\n      \"kafkaEnabled\" : false,\n      \"metricId\" : \"2qe9\",\n      \"serviceBusEndpoint\" : \"drstxqn7ydp4k5ra7o4cphjfoc5oi30gnhqrg4m03cwqqqg5xefo8njcuym557ug60h5eqmw6log4w0nmzm5kbacssj5i195341rq4xi41vzxbqd4sk9dwlkn\",\n      \"isAutoInflateEnabled\" : false,\n      \"provisioningState\" : \"Tennessee\",\n      \"updatedAt\" : \"2023-08-08T06:26:27.533Z\"\n    },\n    \"tags\" : { }\n  }, {\n    \"location\" : \"mdgc3l4z4r2usy7e0xkno23ia62ybmvar9vmumsp0w6w5xh685hvz2g66mpnuj6rdevxiey1q4k6yyq4p1dtjsov02zoyca9e44fxey3kaom7bqyi4tdv80k2zmjs36jk03pzmvvkru1\",\n    \"sku\" : {\n      \"tier\" : \"Standard\",\n      \"name\" : \"Basic\",\n      \"capacity\" : 3\n    },\n    \"properties\" : {\n      \"createdAt\" : \"2022-11-13T09:46:07.533Z\",\n      \"maximumThroughputUnits\" : 13,\n      \"kafkaEnabled\" : true,\n      \"metricId\" : \"2bk0\",\n      \"serviceBusEndpoint\" : \"iasei7mp2ko33ls8b5n5wkrju26nexdzcp5q9s2wybemwqk69siwx4mdy8nbqrl2qumdl6h23a35k9fnd48g5i0ap49hy015plub1a5xlxe4hym7zddx70bjcm7uiaydc034y3zh9vwqshr0waz7gpioa16gdg9qfxtsk5zqeppthbzci\",\n      \"isAutoInflateEnabled\" : true,\n      \"provisioningState\" : \"Indiana\",\n      \"updatedAt\" : \"2023-02-09T13:49:00.534Z\"\n    },\n    \"tags\" : { }\n  }, {\n    \"location\" : \"mav7beo5wah0puozstntcrtczpiuqlz96qem5jdv895d3ke11mepjjl48h9aoseti27onw3upoc85nk9lp3vfpga8f25wcy174we7vgld2s8sf7y9wdbh8unsj1b6jzcphg9j3ididr1vyykj0osg4gff8qcn44nw8vznx55mrf3ayn5kw4ct2ulj0u\",\n    \"sku\" : {\n      \"tier\" : \"Basic\",\n      \"name\" : \"Basic\",\n      \"capacity\" : 14\n    },\n    \"properties\" : {\n      \"createdAt\" : \"2022-09-02T12:57:06.534Z\",\n      \"maximumThroughputUnits\" : 11,\n      \"kafkaEnabled\" : true,\n      \"metricId\" : \"6909\",\n      \"serviceBusEndpoint\" : \"m77w3dzi0jzyw5ctsokmn7byjtpkiqyhut6w56l4wgql8mzehox2wr1i31s2rmosx2xd1hcv1bqvbyog05\",\n      \"isAutoInflateEnabled\" : false,\n      \"provisioningState\" : \"Arizona\",\n      \"updatedAt\" : \"2023-08-02T06:55:22.534Z\"\n    },\n    \"tags\" : { }\n  }, {\n    \"location\" : \"r0k69pnwvfsx6bzjzjbwdbdvngkk82eaqown22bwtqb1lnygc4qmq6pv7e2w8646aav28bn4hkphzxizdhe7o3qxgxup52ed4y50i5flltc1dsmrhuoyuf1b7hw3zduo\",\n    \"sku\" : {\n      \"tier\" : \"Basic\",\n      \"name\" : \"Basic\",\n      \"capacity\" : 6\n    },\n    \"properties\" : {\n      \"createdAt\" : \"2022-09-05T14:45:14.534Z\",\n      \"maximumThroughputUnits\" : 6,\n      \"kafkaEnabled\" : false,\n      \"metricId\" : \"p80b\",\n      \"serviceBusEndpoint\" : \"o6bdgmjpr5oapevzereg16yag5fupv1g49oy8ig94vycm264up1durlj3kwj8n2x2ynzzq45lwbt7bixkjprgbs1j4ncxflrk6gllmjbak83l6hevl5p46nxiyec13iwpccz3kl1nc8q\",\n      \"isAutoInflateEnabled\" : true,\n      \"provisioningState\" : \"Minnesota\",\n      \"updatedAt\" : \"2022-06-23T05:48:57.534Z\"\n    },\n    \"tags\" : { }\n  }, {\n    \"location\" : \"b3m1pbkeoil8ovwvyxalnxz0wjtqfu8l6\",\n    \"sku\" : {\n      \"tier\" : \"Standard\",\n      \"name\" : \"Standard\",\n      \"capacity\" : 10\n    },\n    \"properties\" : {\n      \"createdAt\" : \"2023-11-19T21:08:03.534Z\",\n      \"maximumThroughputUnits\" : 19,\n      \"kafkaEnabled\" : true,\n      \"metricId\" : \"0048\",\n      \"serviceBusEndpoint\" : \"95vqzpx7afo5mh2dknhmsvsdtgdoqy4mxjtufc8wje20ncvg1jz7kt6dnvna3yubspnfbefrnipyxn2kfxpi84veeq4kuhbml4gh9vyaed59zyhswmy8h554q9vyndmoos4oq0p9oth2wx\",\n      \"isAutoInflateEnabled\" : false,\n      \"provisioningState\" : \"Arkansas\",\n      \"updatedAt\" : \"2023-09-15T00:14:42.534Z\"\n    },\n    \"tags\" : { }\n  } ],\n  \"nextLink\" : \"zhnz2xir6r6ai47xf1ul01xul7a8mu0utzdvihggw1rbiwlao5np3fci3lkr02155by72897f2nrrwcdv9zfkvilpzax5nmlt9vpdh7clixtsfzv9qn2rj5hfyto86\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "52183487-7e2c-4987-bd14-563af45e39f0",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:18.535054Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "Namespaces_List",
+          "schema" : {
+            "type" : "object",
+            "properties" : {
+              "nextLink" : {
+                "type" : "string",
+                "description" : "Link to the next set of results. Not empty if Value contains incomplete list of namespaces."
+              },
+              "value" : {
+                "type" : "array",
+                "description" : "Result of the List Namespace operation",
+                "items" : {
+                  "$ref" : "#/components/schemas/EHNamespace"
+                }
+              }
+            },
+            "description" : "The response of the List Namespace operation"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 52
+  }, {
+    "id" : "4fc3e0cd-e5c9-4eee-96ea-eb6808467c48",
+    "name" : "Check the give Namespace name availability.",
+    "request" : {
+      "urlPath" : "/subscriptions/41kg/providers/Microsoft.EventHub/CheckNameAvailability",
+      "method" : "POST",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "wxpcezuayzp0shg"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"reason\" : \"NameInLockdown\",\n  \"nameAvailable\" : true,\n  \"message\" : \"Et aliquid nulla totam incidunt nihil nihil. Autem eum quae modi culpa ut. Dolor sunt autem amet.\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "4fc3e0cd-e5c9-4eee-96ea-eb6808467c48",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:18.533047Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "Namespaces_CheckNameAvailability",
+          "schema" : {
+            "type" : "object",
+            "properties" : {
+              "message" : {
+                "type" : "string",
+                "description" : "The detailed info regarding the reason associated with the Namespace.",
+                "readOnly" : true
+              },
+              "nameAvailable" : {
+                "type" : "boolean",
+                "description" : "Value indicating Namespace is availability, true if the Namespace is available; otherwise, false."
+              },
+              "reason" : {
+                "$ref" : "#/components/schemas/UnavailableReason"
+              }
+            },
+            "description" : "The Result of the CheckNameAvailability operation"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 53
+  }, {
+    "id" : "2dc4cd33-72ce-40f5-a0fe-2c227f05dda3",
+    "name" : "Lists all of the available Event Hub REST API operations.",
+    "request" : {
+      "urlPath" : "/providers/Microsoft.EventHub/operations",
+      "method" : "GET",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "1xix9efdhwn5y7idj1dsa6m82xwtgmftfczp6zkkiyx8iute3vwsc16f7zvcf03fnu8a7034xps9eojjsr4zx2myucs4md8ed12stita0xl0cy1t8lj1xt7oaw1fcm0xlfjf7s"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"value\" : [ {\n    \"display\" : {\n      \"provider\" : \"yyh14fko9fm7ikbzyay2osa806u3hkimlg2etjidtc0rgi36hd59lh09xbuxzt2cx1kpb6wbzb8rwwxf3qn19r09tsa8yhemqr2zf8o27bd2fmk7cqap5eb1xdhxama5sl8b80c7l8rmcvlh0w4rwayf647vqx1zc072bwpkhbigghs1z0x5fmmx6zloim4ykbe\",\n      \"resource\" : \"dp4npt8tq2d3l2l3h71v81ps9succm1f9i7ql4zdvrtcnanh0n1wajzjc7g1hrsn0ly3yxmla1mrros42s5hsspsske3ikvqzgaotzrw4u1crh77sh7cqomf16n01d3fkdjnvfefwn17twcvx7r340b72zsa0b6rn6hn2\",\n      \"operation\" : \"dfkzt3p17p6o1kq3fap34zeo4lmhw9tck94ehcqavbtk4cwyfa2fh12cu0m1a9f0aknxloeez4vhxhzsshkptkcsy7wre8s9zcp6xkynsyahfru9\"\n    },\n    \"name\" : \"Craig Kiehn\"\n  }, {\n    \"display\" : {\n      \"provider\" : \"jrw1wpmhflhtuoumsivgkjeyv5eq6rw8ynh2tqwj2m0o5bxgkbckqf8f3aj81sie6dy26es3wlkvkwzutvikanzxzkvwevl6bd382n\",\n      \"resource\" : \"c2fxn6yuag6q8mj0k3mvr2dkpl6fow2rbgv423xfwqqtiz04fc8jctr1n5pyxcfa0y0ffsryzls983e0isfmevhz94943hufe0c6uesnx5r24tbbo9l2f2ddg6ndm72atpnhfesn1plwuvg1un5hgdmz2quhpu5t6uss5pv1kemfgh2z235phc\",\n      \"operation\" : \"7z4lhs76y2u6ajoauhqq01d66di\"\n    },\n    \"name\" : \"Bert Weber\"\n  }, {\n    \"display\" : {\n      \"provider\" : \"4edirph5ym1sb2b\",\n      \"resource\" : \"ep84tdoh0xtzlses902rwo8gu1o25ofyior33qmdvfcuud60dmymau2vtocplh\",\n      \"operation\" : \"68h9i7ec9v2a92doehbcmd4qkhl29wpcgz76x4hzxeu184ho3ieblsjotq0sf9nx4vrvgusqov5qkhe6jytbxebd3vf03io9ubpnjhzupd6juwkdsw09sbis9g8b6sxge8ysj5nl5cr5414ivlax9fsp84ypdlpzbic8ymzl4yrf4467788uwajl\"\n    },\n    \"name\" : \"Raelene Quitzon\"\n  }, {\n    \"display\" : {\n      \"provider\" : \"x8vqea30kldd7zvj7ywa284966e9udsf7z3pb0t7bd74ui0wa89ylaizkljy5os34yqbyjkthlx7fig1gkej\",\n      \"resource\" : \"dygwetlmblctu0l9sup0raa9ipc2vqc48c09teb4h8b0bosbq8b12oktmkm9fr29ln33ddpecyhpjb1ogql459xw8ptw3lsvdwqabm66hmzrt15r3jormz6m3\",\n      \"operation\" : \"8m3dj6nsbdhife5jew19qef29vyin6m47\"\n    },\n    \"name\" : \"Jeremy Bode\"\n  } ],\n  \"nextLink\" : \"buu6ejt27m2gytwlhrpf8y\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "2dc4cd33-72ce-40f5-a0fe-2c227f05dda3",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:18.532769Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "Operations_List",
+          "schema" : {
+            "type" : "object",
+            "properties" : {
+              "nextLink" : {
+                "type" : "string",
+                "description" : "URL to get the next set of operation list results if there are any.",
+                "readOnly" : true
+              },
+              "value" : {
+                "type" : "array",
+                "description" : "List of Event Hub operations supported by the Microsoft.EventHub resource provider.",
+                "readOnly" : true,
+                "items" : {
+                  "$ref" : "#/components/schemas/Operation"
+                }
+              }
+            },
+            "description" : "Result of the request to list Event Hub operations. It contains a list of operations and a URL link to get the next set of results."
+          }
+        }
+      }
+    },
+    "insertionIndex" : 54
+  } ]
+}

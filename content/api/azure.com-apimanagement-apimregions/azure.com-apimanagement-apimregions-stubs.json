@@ -1,0 +1,74 @@
+{
+  "mappings" : [ {
+    "id" : "9b2a6393-b6aa-470e-be8e-398cc791e382",
+    "name" : "Lists all azure regions in which the service exists.",
+    "request" : {
+      "urlPath" : "/subscriptions/6sm1/resourceGroups/Miss+Emmett+Schimmel/providers/Microsoft.ApiManagement/service/uft/regions",
+      "method" : "GET",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "2r4ald5y6sipwwicqrtr1h6nzgtx3z6z75b5phhubh6994brskzs2s0jd3im3c67qzm5oovbumx4jybfqb1lk8mq81wh0qocs4osz67t25361hettg32wslv0yy4vtikx278guprg9bwjyk0kfdc8l"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"count\" : 2560465626885862166,\n  \"value\" : [ {\n    \"isDeleted\" : true,\n    \"isMasterRegion\" : false,\n    \"name\" : \"Rudolf Gislason\"\n  }, {\n    \"isDeleted\" : true,\n    \"isMasterRegion\" : false,\n    \"name\" : \"Dorian Wiza\"\n  }, {\n    \"isDeleted\" : true,\n    \"isMasterRegion\" : true,\n    \"name\" : \"Charlie Balistreri\"\n  }, {\n    \"isDeleted\" : true,\n    \"isMasterRegion\" : false,\n    \"name\" : \"Pamala Murphy\"\n  }, {\n    \"isDeleted\" : false,\n    \"isMasterRegion\" : true,\n    \"name\" : \"Elvie Crist\"\n  }, {\n    \"isDeleted\" : true,\n    \"isMasterRegion\" : false,\n    \"name\" : \"Angel Hane\"\n  }, {\n    \"isDeleted\" : true,\n    \"isMasterRegion\" : true,\n    \"name\" : \"Ms. Lilli Koch\"\n  } ],\n  \"nextLink\" : \"rv8cq5ulh5suxtfswg7ubu6jr4pty8vxs4jhebj0zqv182xdyuk280brc46688829cua2yh976r0u9jqj0qhgdmb8wm2a4pcztgmjqrd958pxav7z62x0oo\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "9b2a6393-b6aa-470e-be8e-398cc791e382",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:31.772628Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "Region_ListByService",
+          "schema" : {
+            "type" : "object",
+            "properties" : {
+              "count" : {
+                "type" : "integer",
+                "description" : "Total record count number across all pages.",
+                "format" : "int64"
+              },
+              "nextLink" : {
+                "type" : "string",
+                "description" : "Next page link if any."
+              },
+              "value" : {
+                "type" : "array",
+                "description" : "Lists of Regions.",
+                "items" : {
+                  "type" : "object",
+                  "properties" : {
+                    "isDeleted" : {
+                      "type" : "boolean",
+                      "description" : "whether Region is deleted."
+                    },
+                    "isMasterRegion" : {
+                      "type" : "boolean",
+                      "description" : "whether Region is the master region."
+                    },
+                    "name" : {
+                      "type" : "string",
+                      "description" : "Region name.",
+                      "readOnly" : true
+                    }
+                  },
+                  "description" : "Region profile."
+                }
+              }
+            },
+            "description" : "Lists Regions operation response details."
+          }
+        }
+      }
+    },
+    "insertionIndex" : 0
+  } ]
+}

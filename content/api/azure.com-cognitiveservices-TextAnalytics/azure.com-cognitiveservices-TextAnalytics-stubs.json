@@ -1,0 +1,191 @@
+{
+  "mappings" : [ {
+    "id" : "c35bbda0-0f1e-4d67-b5ec-59c82365fcda",
+    "name" : "The API returns a numeric score between 0 and 1.",
+    "request" : {
+      "urlPath" : "/sentiment",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"documents\" : [ {\n    \"score\" : 8.773153967603733E307,\n    \"id\" : \"71qf\"\n  } ],\n  \"errors\" : [ {\n    \"id\" : \"m6g6\",\n    \"message\" : \"Ut sit minima. Quibusdam ut eum aliquid eveniet. Consequatur aut et quis accusamus. Vero temporibus provident sed.\"\n  }, {\n    \"id\" : \"kudz\",\n    \"message\" : \"Dolor sit error iure iure. Non corrupti beatae itaque incidunt quaerat rerum. Unde pariatur quis occaecati quod quo numquam harum. Delectus voluptatem totam sapiente labore quo quae consequatur.\"\n  }, {\n    \"id\" : \"f8u1\",\n    \"message\" : \"Placeat incidunt autem qui. Voluptatem est aut ad. Unde modi eveniet quidem quisquam. Delectus quibusdam deleniti beatae eum.\"\n  }, {\n    \"id\" : \"8bn9\",\n    \"message\" : \"Optio sed alias dolores. Aliquam ut occaecati nihil. Libero consequatur labore deleniti. Facilis aut quia sequi reiciendis officiis. Similique fugiat eum sequi culpa.\"\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "c35bbda0-0f1e-4d67-b5ec-59c82365fcda",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:25.132305Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "Sentiment",
+          "schema" : {
+            "type" : "object",
+            "properties" : {
+              "documents" : {
+                "type" : "array",
+                "readOnly" : true,
+                "items" : {
+                  "$ref" : "#/components/schemas/SentimentBatchResultItem"
+                }
+              },
+              "errors" : {
+                "type" : "array",
+                "readOnly" : true,
+                "items" : {
+                  "$ref" : "#/components/schemas/ErrorRecord"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "insertionIndex" : 0
+  }, {
+    "id" : "eb60537d-1129-4a08-a4da-c1dc121f3426",
+    "name" : "The API returns the detected language and a numeric score between 0 and 1.",
+    "request" : {
+      "urlPath" : "/languages",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"documents\" : [ {\n    \"detectedLanguages\" : [ {\n      \"score\" : 2.159372393807085E307,\n      \"iso6391Name\" : \"Lanie Bednar\",\n      \"name\" : \"Rafaela Hoppe\"\n    } ],\n    \"id\" : \"088p\"\n  }, {\n    \"detectedLanguages\" : [ {\n      \"score\" : 7.866588046354162E307,\n      \"iso6391Name\" : \"Scotty Kovacek IV\",\n      \"name\" : \"Ms. Clifton O'Keefe\"\n    }, {\n      \"score\" : 1.5781966866562123E308,\n      \"iso6391Name\" : \"Rueben Walker\",\n      \"name\" : \"Nick Feil\"\n    }, {\n      \"score\" : 6.612371203814589E307,\n      \"iso6391Name\" : \"Amal Hand\",\n      \"name\" : \"Kiana Sporer\"\n    }, {\n      \"score\" : 6.530249500352992E307,\n      \"iso6391Name\" : \"Carletta Wolff\",\n      \"name\" : \"Mrs. Marcos Collier\"\n    }, {\n      \"score\" : 1.081523346541925E308,\n      \"iso6391Name\" : \"Stanley Hilll\",\n      \"name\" : \"Steve Beier\"\n    }, {\n      \"score\" : 1.6089793982364328E307,\n      \"iso6391Name\" : \"Ms. Moshe Hauck\",\n      \"name\" : \"Samual Reichert II\"\n    }, {\n      \"score\" : 1.6182518248578666E308,\n      \"iso6391Name\" : \"Felipa Bergnaum\",\n      \"name\" : \"Ms. Robert Romaguera\"\n    }, {\n      \"score\" : 7.630139322513246E307,\n      \"iso6391Name\" : \"Imogene Harvey\",\n      \"name\" : \"Gene Mann\"\n    } ],\n    \"id\" : \"n7f6\"\n  } ],\n  \"errors\" : [ {\n    \"id\" : \"8395\",\n    \"message\" : \"Qui ex ratione quo. Dolorum consequatur voluptas. Aliquam soluta sed.\"\n  }, {\n    \"id\" : \"2prx\",\n    \"message\" : \"Labore atque dolorem consequatur porro. Incidunt dolorem nisi laboriosam blanditiis accusamus neque. Perferendis repellendus sunt. Quis voluptatem officia. Et quia alias sed aut consequatur deserunt a\"\n  }, {\n    \"id\" : \"uk4x\",\n    \"message\" : \"Et tempora mollitia. Culpa quidem ad dolores explicabo aperiam. Placeat sunt neque.\"\n  }, {\n    \"id\" : \"8jkf\",\n    \"message\" : \"Facilis cupiditate magnam molestias maxime. Corrupti quia ut. Consequuntur facilis omnis voluptates explicabo nihil.\"\n  }, {\n    \"id\" : \"3n4d\",\n    \"message\" : \"Quis eum similique voluptatem. Est dicta et impedit. At velit velit ipsum hic qui animi voluptatem.\"\n  }, {\n    \"id\" : \"o63d\",\n    \"message\" : \"Iusto voluptatum voluptatum repellendus omnis. Minus similique et at. Sint corporis et nisi fugit aspernatur. Alias quis quis omnis odit. Quia sint odio.\"\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "eb60537d-1129-4a08-a4da-c1dc121f3426",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:25.131686Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "Detect Language",
+          "schema" : {
+            "type" : "object",
+            "properties" : {
+              "documents" : {
+                "type" : "array",
+                "readOnly" : true,
+                "items" : {
+                  "$ref" : "#/components/schemas/LanguageBatchResultItem"
+                }
+              },
+              "errors" : {
+                "type" : "array",
+                "readOnly" : true,
+                "items" : {
+                  "$ref" : "#/components/schemas/ErrorRecord"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "insertionIndex" : 1
+  }, {
+    "id" : "56713bd0-94db-4c96-b91a-b3982b1cb515",
+    "name" : "The API returns a list of strings denoting the key talking points in the input text.",
+    "request" : {
+      "urlPath" : "/keyPhrases",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"documents\" : [ {\n    \"keyPhrases\" : [ \"fdwv3z07ezbwiyqbnwd3kozrke8g2cr1n5gx1csmguo83ltg8p9z1b3vcgt28vnem415myplu03chxmmiq3808ayanysol2fpw6qsor0pxuugyliymsc1stjzq27r6mqy2z69av4c84zgg2nei0o46m2121bpvqmfd67exjoneb\", \"iwu8vmr4g0wcd3zcjfdoad7vxjh6q8v6fy05jmtt7cas048lt5jae4k4xcb3eqr6r0fbh\", \"hmaue1oaxb5ghy2rtcxdbhroi4xq449i2b4yem424owmlxw9kcz2qganikkeqyh0xicymswyhnrmmuqczil5vi5lyjj6rrsxisautz5a1gwe4xz42asjrglhf28o7lq9svx99w\", \"pc20im8ird234q1ts9bzel3lxdt8yy6f0qgtzfy72dkfyqeqgwv32911oufb6ys\" ],\n    \"id\" : \"7dg7\"\n  }, {\n    \"keyPhrases\" : [ \"jjl108yhdmucx5w0u6r4jr1a937j4swk7qtaln98ialgwehsv9zwx9uaguocm98\", \"5z4w2f194ckmrrnvontyxd66tkc50xd5ja\", \"4p353qaj37qpei9olszesc1nmt3pyf4fxu9i8fb49pe7\", \"vkldrccl9tn1hm6q6jplh3mna80tnjql1jrdl9eb1qamrh\", \"7t9haun0d09jxs\" ],\n    \"id\" : \"hcyy\"\n  }, {\n    \"keyPhrases\" : [ \"poklhtl0renmk3thqlr003qt82nzh07kuhuz8t0rol5y8kx5vujtd6fadwjoou7cvve50rts2nq1l\", \"7km3ypu7fr575vv8ng23i81fjbezt431rbavqgm4qvyvh9h1kug1lcg9ek1bwxk6l2d30pwk2z5wfm820eo0z74otseerbgnshajctyfdvxi8meif0cy2j9bwfpcj52rgn9rei33yxwp0hc59\", \"nrokk59imxen5f79lhxhcfowxqtk6nfqlalg9y4azq2bvt5qwl0i0p8gzakng2r76x2bxb\", \"evb7kaxrkvkypsi2e3ss5fy4yb63liyjf1qg94boonbgddp378c1o1ss0fp3me1\", \"our03qbk1dj348hq8xazwrjmupdr13h2e5z5jpt21jjv01nnhtbzvjqf3j8wn1x1ntaynedhgvv168j22fxrmzg26b1h2f65ebc0l5ievuv2em5cw6g1cmh5au9dhq7l871zwuwo64mb44j7rfjet667kbyd8fd69k9roi8vwsybtcq5v149lu24kf597wjvkqz\", \"a5xb0peyzsi1uzk30jys85v5fclzoo2zy2chjbxf97w8p4ibzgdi98j5t10ly1597bloapun0896q2wvycd44x73fbsbc9y1h6wtzuijq8eyqw9tr6wtfzoztldmijkt7ad397oc1pl94rpv4h0xij9g67w1d78bq4kehj5s697\", \"yqqlc4rx17o2tg5ze9uby37v031pmnwipwef4rbdcd42dg143jtxwl0llv58k83o9jj7t9fhl8ty83cjj7fs50tlyagq0fmppq7ewp17z8nih3ottyr47kcxn9ihzk5ffegvhxfmkmvp4uykfcq0346gljk937jhquhojgyi6tns6elmsj3dsy\", \"voxribcmli8csrlpfmb5as0zlym2hbs70b0fzd7xyxd8575fzb0m42i31l5xjyvs1swtf8kl72bvfler9kojnmn84dckl7dkdik5qjqm92fklgud9ldj8wyc52ihp0b4xu1f6ipaa4c9cowc1le8rplid\" ],\n    \"id\" : \"k12h\"\n  }, {\n    \"keyPhrases\" : [ \"1wjhxvhub\" ],\n    \"id\" : \"50si\"\n  }, {\n    \"keyPhrases\" : [ \"gnh3b94exryjg0m6043hw1lby8ar6k4p27dmykferw6j1hfxgi2pb8gb54bs2lgq45cavkrsar59u8q8mzubkiy0vnulsq4jvyi48dwkbzlryl45uyem2b3x0lvf8bsqqsqkge7jupomfngllg04cac\", \"69w4ud3fg2k4jzowvnhdt7y4jtjpmpw54ynghg2htqfrf0eyiq1jdjvoetw4w1i7tx5z7rwwvwqywt4dypytv9bgo1zlhhi6yg1u5ll5hn5qm3bcsa8oec37o9308mopmht33m9gw1gpxtqh46a9gwlueph5nal9ain46vl8vx75d\", \"80y1bl7yia2j7bb4yizvff4nvnxo0ub53n218h8fhvhlgqfvzvs6twyr3fb68q83rf0s8oxz2onswkg6psluzmn8thmy1bjdih4bpt7nrbgijxjr2cef1z7jqf68o6fh5xfgdt6eht8xmecz5x7xktlri6gs46yvgfk8smhgkaz\", \"8s4hiwa58dd2g1ppxu7dmltpx2sl2yzbx1xr8rnkqn2aiypskzsubv5tr4uw5jwwefj4dm8mpu4pg52bx9ssxbua9h113bcqknic5gnrz90ouw26w1bj4y1gq4s0mzn4qo6b4zrjlp2nw8givj07kaicju2wk1ob9gywnq1u2miuyqhewq\", \"7r6bt210477r4ebsdn92tt4qw8qyi2odkxtl5agho1a1f1uwyvb0ufc8dj33i11d8gn84fld02j16qt8h7h9881jlcqvicny6qjcmdeso7s3m48sgo4c4\", \"nkrf9r53nt9w6fbp9mm65a6zvd85aqbpgzisc0bwitkiug1wd9oymnx4d1u44d0e64xs7v1pfmz28o49img9xtqiprbir67yoxmhz0migviokuxyxsppqahvh0mqd79iu6o0f64kvoylln9t38b0fnajbnfee5y1oq8cwft2yaytg8nty5br18kwh\", \"cwbdpxhb3igczzwexbzp3u9oyxc7mj2ipltlk2ntnpdvqvu1wxcljurvqjdupoj7rjeqrve1gbkddmvbqzes1x816glaq1swety1c1eja108kqh92apcn7kogdhb4plik3ltowczm1\" ],\n    \"id\" : \"4140\"\n  }, {\n    \"keyPhrases\" : [ \"k2cus70ow8d7enl55r4u9shxz9e3egauclazro8vxq4s0n6whe5ywcqcjikpneg9stjrbpn3yy\", \"zjatllpx78ra90zxq4yl6wdklyeaknjjvrzbyhwgtqyn49anvkbfzhmgikc4xyqatj4q0uoa2dbykwql8iyhzb0ttxpy36rbik773cvmnh2hft6uymlfnrdepyf69uruj6zjo8hl00zut9ini2zkyrj7szx37eiiuoosnhcupk73lq\" ],\n    \"id\" : \"ajek\"\n  } ],\n  \"errors\" : [ {\n    \"id\" : \"h658\",\n    \"message\" : \"Corrupti inventore maiores eligendi eum reiciendis. Sint magni ut illum. Animi reiciendis exercitationem saepe eveniet nemo. Aliquam iusto sit rerum quaerat qui beatae architecto.\"\n  }, {\n    \"id\" : \"4o63\",\n    \"message\" : \"Cum consequuntur laudantium. Tempore facilis fugit et. Nobis earum minus iure eveniet et aliquam sit. Tenetur sed eum voluptatem nostrum laborum beatae. Voluptates minima alias inventore voluptatem.\"\n  }, {\n    \"id\" : \"317l\",\n    \"message\" : \"Qui tempore velit natus quis. Ea molestiae reiciendis et. Praesentium ratione autem error error.\"\n  }, {\n    \"id\" : \"x114\",\n    \"message\" : \"Rem reiciendis est ducimus aut et ut quasi. Saepe quia sint sint ipsa provident omnis. Et nobis ab fuga distinctio.\"\n  }, {\n    \"id\" : \"qw07\",\n    \"message\" : \"Soluta ducimus sed asperiores. Sed fuga recusandae quaerat sed in. Facilis tempore voluptatem sint earum dolor expedita.\"\n  }, {\n    \"id\" : \"d623\",\n    \"message\" : \"Eos ut nihil non dolores. Aut quas aut non aut eum dolorem rem. Dolorum doloribus nihil asperiores et blanditiis rerum doloribus.\"\n  }, {\n    \"id\" : \"74zw\",\n    \"message\" : \"Est iure facere consequatur iusto ut. Eos nulla enim. Sed praesentium quia. Voluptas nobis in non praesentium aut expedita dolores. Nisi repellendus reprehenderit error est dolores.\"\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "56713bd0-94db-4c96-b91a-b3982b1cb515",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:25.129922Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "Key Phrases",
+          "schema" : {
+            "type" : "object",
+            "properties" : {
+              "documents" : {
+                "type" : "array",
+                "readOnly" : true,
+                "items" : {
+                  "$ref" : "#/components/schemas/KeyPhraseBatchResultItem"
+                }
+              },
+              "errors" : {
+                "type" : "array",
+                "readOnly" : true,
+                "items" : {
+                  "$ref" : "#/components/schemas/ErrorRecord"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "insertionIndex" : 2
+  }, {
+    "id" : "cc9ed497-892e-4c19-9617-f4e68f03ddaa",
+    "name" : "The API returns a list of recognized entities in a given document.",
+    "request" : {
+      "urlPath" : "/entities",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"documents\" : [ {\n    \"entities\" : [ {\n      \"name\" : \"Donnetta Ruecker\",\n      \"wikipediaId\" : \"s9j2\",\n      \"subType\" : \"l7myic9a2xs3zy61p2z1qwfiswf3683kv9jvyqx44hp496fvpke576qxs3luui8uxxx3bpphckyq4zemsrz006whcyy0ubtqpjigl4tslp45epi01du0spsxrju97btrg77yf35ife7\",\n      \"type\" : \"toll2y6sn4r9f6sdmbohxky94sy8il54ca58bg7986i\",\n      \"bingId\" : \"r3c9\",\n      \"matches\" : [ { }, { }, { }, { }, { }, { } ],\n      \"wikipediaLanguage\" : \"jwip4ce4ttj6zovn5l4b2038ztnujbh9n7c76kp5qdlv636rt68p7v2u22ex716zoh8j73txggiccqzjet9p8eo1g3et85o30smr2spws9e16kusilqeq9wmd134rql23xrxvrm7sl5qztairtgfk1vkpw2gzlxb7syv70s\",\n      \"wikipediaUrl\" : \"https://web.example.mocklab.io/595510\"\n    }, {\n      \"name\" : \"Shenna Collier\",\n      \"wikipediaId\" : \"plby\",\n      \"subType\" : \"rraq7qvv1eunk8bd2h4h9th4uoz1xi98vtvil7cfjjjw2\",\n      \"type\" : \"45mb8txdhfz6ul2t79wh8o7jenup1pox09nu942mwhwbbe0z80c8j32ewo7yhrkzpsgzzn0j2ly4i2379hncevrkaovo17sa2\",\n      \"bingId\" : \"xc67\",\n      \"matches\" : [ { }, { }, { }, { }, { } ],\n      \"wikipediaLanguage\" : \"dw55thmu1uevqbbsoo7mdkoii2okikwxccrxcwfuda86mu08z0cu3dtro7bo8hjana7f2pl6amh813b0g9lzm7daep3fe8vyyqq\",\n      \"wikipediaUrl\" : \"https://web.example.mocklab.io/854065\"\n    }, {\n      \"name\" : \"Curtis Hoppe\",\n      \"wikipediaId\" : \"8y45\",\n      \"subType\" : \"bu0yq5stfkmg6jpn9a912wjtwage61repf5o\",\n      \"type\" : \"q6d1v58bgc\",\n      \"bingId\" : \"o4a3\",\n      \"matches\" : [ { }, { } ],\n      \"wikipediaLanguage\" : \"5ts8ypl1r1qamzmkx4q499belazvv38ek2b1viyajk1h0v4102enapr6cw6qluycf1k7f0m28artmtq5n4lhotr7eks8h8xst7vmn7w5scl71pragzptv449i1izf\",\n      \"wikipediaUrl\" : \"https://web.example.mocklab.io/123657\"\n    }, {\n      \"name\" : \"Mrs. Vincenzo Kuhlman\",\n      \"wikipediaId\" : \"d83e\",\n      \"subType\" : \"4wtabd680xdl4geyxlqpvaf0qyngso25wyt68arpng7ezntsjz29b84iwcvnyxpr09oerhh98fezpzt6jh1ypwbl5rto0ljuovjzirmg3k5a853gtuxnmukk6vjdlpgii610ea0t\",\n      \"type\" : \"0seolhoi1c300n9u0r7r1hfll6ckoo1cb6yzsol124c23mynlehv17o9fofy2k0xjowcqkzmpe4ezmxrgzgq6psxke72v64cni4ebgymmx9mmpv5unjcs9zx9nxmtdgrcgjmwtaf89xfghv3qh\",\n      \"bingId\" : \"768b\",\n      \"matches\" : [ { } ],\n      \"wikipediaLanguage\" : \"g0xi3thzcjbvyhqii3plbakpsaama1vi7gggh64xm5y62idsv1hcdhb3bahus0b0f92hzwfcr115j9gob6tdowks6iolq036prmy943v6uq5m6xs3d9bi9fiquk36w2jklbcbs360xexxpvmzndce5lvnhd8afc36wrce5k2lqhnquzmz416splnx03rs3yrwjktgwlq\",\n      \"wikipediaUrl\" : \"https://web.example.mocklab.io/242828\"\n    } ],\n    \"id\" : \"907p\"\n  }, {\n    \"entities\" : [ {\n      \"name\" : \"Thaddeus Leffler\",\n      \"wikipediaId\" : \"1200\",\n      \"subType\" : \"qd3nc00l5va1kmbu81i1hd2dkn1gupeoi3eubutu21dtes31himb6qwrx2xh3lzfd\",\n      \"type\" : \"ztba7svz8j1nfokg55sd0mdqxsdsc6nwut7suxy3ckirk4ml\",\n      \"bingId\" : \"945k\",\n      \"matches\" : [ { }, { }, { } ],\n      \"wikipediaLanguage\" : \"2g8wg0ouoxfdki5p8zdd12gpf3ssz0qbew0di4rqns47op2jgzps4qy2lrctz8h38ml7bad1wikvujoto08zl75rufsqyqf76xgvorzpjreycto5m4jcv1f3wlg7ktk4ank0w\",\n      \"wikipediaUrl\" : \"https://web.example.mocklab.io/668830\"\n    }, {\n      \"name\" : \"Stacey Spinka\",\n      \"wikipediaId\" : \"900g\",\n      \"subType\" : \"l1dhkjtvucs1mri811vfso6l4ki9wmibvx8edl7fc2doj7kyb9hdn4vj6kmc1s\",\n      \"type\" : \"j0s5yyp9pp7hz5gv\",\n      \"bingId\" : \"2ytr\",\n      \"matches\" : [ { } ],\n      \"wikipediaLanguage\" : \"bzxzcj2tzvdewp09sf5j9y6xpmxmu7qc0gabke2lkwq8sycuf8a8kpbfclin1\",\n      \"wikipediaUrl\" : \"https://web.example.mocklab.io/418207\"\n    } ],\n    \"id\" : \"r2tx\"\n  }, {\n    \"entities\" : [ {\n      \"name\" : \"Karl Ziemann\",\n      \"wikipediaId\" : \"y82y\",\n      \"subType\" : \"8deyt8yg4trdc0j8dvgxo0cz15jccpyqdb7qvlv88j23zy27pgfpdmvuzuhtvijbvhlw5le0mbvzo8rfuohg\",\n      \"type\" : \"vrfl08htzaopy47yhrir556px9gz4jadu7chai8lx250ssuvubvs5efnjjhq0843t8x0d84i2afbtzonql6etdqd8b56yzqdaxvpuw4ht02hki3h4dgws0\",\n      \"bingId\" : \"e5oq\",\n      \"matches\" : [ { }, { }, { } ],\n      \"wikipediaLanguage\" : \"fy9537du03gerv5i6b8vrbkzn7y5doops0yffmfkpgs6yjlktt95en94rx01g2ivx8baa5sf699gvkpa9obv142c6xdzlemaersc7uu1gp7iws1fnkwl17c44ede6gabfspvmqwua166r1cszcarpyu5kp8t1gd4vkug\",\n      \"wikipediaUrl\" : \"https://web.example.mocklab.io/244313\"\n    } ],\n    \"id\" : \"u9ns\"\n  }, {\n    \"entities\" : [ {\n      \"name\" : \"Brenton Morar\",\n      \"wikipediaId\" : \"v9ax\",\n      \"subType\" : \"rlel7x0ejocoigumr4fraena1il3cby5r6tt9yaxuznmnvr5n7\",\n      \"type\" : \"mcr1b6b1637uwa2qkhnnar9ab6wusi2w0wax6qisubtg3r7u606m6gnrbgezlizsi098pwtk2vc3rai\",\n      \"bingId\" : \"8h14\",\n      \"matches\" : [ { }, { }, { }, { }, { }, { }, { }, { } ],\n      \"wikipediaLanguage\" : \"n3nrblva2xazmqlalh9epvzr7bt8j1o55m5rui9ki507q9iuo8ck\",\n      \"wikipediaUrl\" : \"https://web.example.mocklab.io/220079\"\n    }, {\n      \"name\" : \"Ms. Anna Prohaska\",\n      \"wikipediaId\" : \"a923\",\n      \"subType\" : \"66hag10d3jzygck3z42v81je9upt7wp1t6om8yl3hr0ttu96uac94ke7vbacph59k0repgy1kuy9spc8o0p839aa5meb3zoyov6ebmzh14d3td4qbiou295lm10cgj2l1h1jrd\",\n      \"type\" : \"hyoeliwnhh\",\n      \"bingId\" : \"141b\",\n      \"matches\" : [ { }, { }, { }, { }, { } ],\n      \"wikipediaLanguage\" : \"ap3f1q1bzxl7e36dfqccqqdm9128b6d7frtjm\",\n      \"wikipediaUrl\" : \"https://web.example.mocklab.io/661105\"\n    }, {\n      \"name\" : \"Doloris McKenzie\",\n      \"wikipediaId\" : \"vg6a\",\n      \"subType\" : \"96es90kpr1a6fif7ydrpmfli9o\",\n      \"type\" : \"dqa7ib27dvhlz43y3o8yqq3y4mhgyyfcd0hcdirtniyl1egn3naq7jin28xt7dni\",\n      \"bingId\" : \"72vr\",\n      \"matches\" : [ { }, { } ],\n      \"wikipediaLanguage\" : \"4u1dx1oaoo6v4cunhnu043eykwcxnc829vo3j2mjhkyw642hxyz8lpix5yl9rup1szl7l1dkc1xdps4rkdldy0twg6nfnim6xbtuhtdrj2j0rpxok1va50js0w3mrwr5hd3zc\",\n      \"wikipediaUrl\" : \"https://web.example.mocklab.io/052222\"\n    } ],\n    \"id\" : \"2who\"\n  }, {\n    \"entities\" : [ {\n      \"name\" : \"Sheryl Stehr\",\n      \"wikipediaId\" : \"1o6b\",\n      \"subType\" : \"owrb6kn17y7ry7gjs4xzq77olak74apltgb99m5iakgk25dpimkpvzypuq82ydf1xqgtw9i1tnoi021mqumm0ix00ch4borcorcs211k7k7fpwx7u50ekgebcev3v6w17aj53ukhe5lwft8hfhrkhdz0ebn9x9nlo0j6d496hhfcq34v2lzdjdt2ug8vxgwqc\",\n      \"type\" : \"aqkn\",\n      \"bingId\" : \"7fg8\",\n      \"matches\" : [ { }, { }, { }, { } ],\n      \"wikipediaLanguage\" : \"hlcyfd827omqzk02ss6wwswefxgcz8qc5mu24iowtflnx69s3\",\n      \"wikipediaUrl\" : \"https://web.example.mocklab.io/932764\"\n    }, {\n      \"name\" : \"Gordon Grady MD\",\n      \"wikipediaId\" : \"8u10\",\n      \"subType\" : \"7t9vqc4zz0\",\n      \"type\" : \"kk34az7r7lni7onf9hdtibabzkygfkzwhvwxgfb60cnpttcg4513na4k61yzkmnp3r4pv6sau04k2yzue2z9mu5sl16c1zuyi45vws1r7mjrtb36b730uzlbt1wif9cfy9ukzd8dqxjqvkqpjpi4h1n545yip5743mrb75bxz2ksz02aeangbj0n87rn\",\n      \"bingId\" : \"s333\",\n      \"matches\" : [ { }, { }, { } ],\n      \"wikipediaLanguage\" : \"unu8rni2awmvwbfjlhdfsjhokcb02tpnh40b4gf0mw5n5ap20ceecbdp2d633p30pldypkouie29px0mgu87ulgwpldhp88bk0lbscuet9v5uhstwi0wb358\",\n      \"wikipediaUrl\" : \"https://web.example.mocklab.io/521949\"\n    }, {\n      \"name\" : \"Mr. Jules Crist\",\n      \"wikipediaId\" : \"2dx5\",\n      \"subType\" : \"bajk2du34telsfewo8v0lnk7umnzsdza07eblupqqlea296w0ol5yb7d8\",\n      \"type\" : \"jzygoy9olg9y3z9z7qzuuh44kf66ywrq1lj7hm\",\n      \"bingId\" : \"1s9x\",\n      \"matches\" : [ { }, { }, { }, { }, { }, { } ],\n      \"wikipediaLanguage\" : \"l2xht3rfayf59wyz0gmq2mhnu4fy2\",\n      \"wikipediaUrl\" : \"https://web.example.mocklab.io/025332\"\n    }, {\n      \"name\" : \"Marcella Ernser\",\n      \"wikipediaId\" : \"yhnt\",\n      \"subType\" : \"whs61xv8785io40ows43j3en8osi1wbwgh7ck4wgn7aqtimv5v4kv4h7olrbrzsir5k5vdj5iv61afb7u40plq1mblqeozn6chfshlojs0h73ro1s0vrzxdbjvd1ydmn4cw5t3stuejdcbjhzleg3nhkk1\",\n      \"type\" : \"tcy2cpoi24uffji20wui\",\n      \"bingId\" : \"0n25\",\n      \"matches\" : [ { }, { }, { }, { }, { }, { }, { } ],\n      \"wikipediaLanguage\" : \"vm8gbovuauio653n095xgxdvq49ojplq431jmv89jyomoo6mgr5\",\n      \"wikipediaUrl\" : \"https://web.example.mocklab.io/342695\"\n    }, {\n      \"name\" : \"Etha Homenick\",\n      \"wikipediaId\" : \"870z\",\n      \"subType\" : \"mhsi7b7pcewapwhkjuu89k98ykvx69l38n9va7e8pwjx9ocy1euawytm34poftajfq6b3v8p8ueyo5s5264evprccgyv4w2l2kycs7yioq23s05b5rgw4jjrkt69hzece0ic3014ehqirc4kzfh4h4afkscmq5g1f9m1zl4idbcijd0237xj8vic8ryebfyco1m2n7gu\",\n      \"type\" : \"wh4uvov7iq4hh7ez04d4rn15ud1eeoay09fubgz343pc3if6kw67ev62fq7ewfsvp1bpkx2bdh24tuqagqbcq6yeda2f1v1jomy9dvuc4995ldijr6onks\",\n      \"bingId\" : \"fe90\",\n      \"matches\" : [ { }, { }, { }, { }, { } ],\n      \"wikipediaLanguage\" : \"h1jkamj5czpnrjtiqbljdmz6aa44d6j7nlqin6jpxvyt9jn8\",\n      \"wikipediaUrl\" : \"https://web.example.mocklab.io/411805\"\n    } ],\n    \"id\" : \"9zhf\"\n  } ],\n  \"errors\" : [ {\n    \"id\" : \"70av\",\n    \"message\" : \"Dignissimos et ipsum quae. Sit maiores non. A molestias sed dolore ratione. Ea enim rerum est error et eveniet alias. Eos suscipit dolore animi.\"\n  }, {\n    \"id\" : \"5w27\",\n    \"message\" : \"Laboriosam dolor modi expedita amet enim cupiditate. Dolores harum aut doloribus tempora voluptatem. Consequatur suscipit qui nisi dolores reiciendis est maxime. Accusantium et debitis accusamus autem\"\n  }, {\n    \"id\" : \"bvua\",\n    \"message\" : \"Sed doloribus vero mollitia fugiat quo sequi. Iste ab saepe earum iste quibusdam non commodi. Dolor tempore est. Est vel fugiat nisi quisquam voluptatum. Mollitia est enim.\"\n  }, {\n    \"id\" : \"5po6\",\n    \"message\" : \"Dicta deserunt nesciunt eum molestias ab. Asperiores non sit. Et ullam omnis dolore tempora et ipsam.\"\n  }, {\n    \"id\" : \"bq22\",\n    \"message\" : \"Et eos perferendis quod molestiae officia. Distinctio est culpa autem unde quis. Voluptas quisquam non ut.\"\n  }, {\n    \"id\" : \"57zc\",\n    \"message\" : \"Repellat dolores aperiam velit deleniti. Et pariatur eius. Quidem vitae qui esse aliquam facere.\"\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "cc9ed497-892e-4c19-9617-f4e68f03ddaa",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:25.128544Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "Entities",
+          "schema" : {
+            "type" : "object",
+            "properties" : {
+              "documents" : {
+                "type" : "array",
+                "readOnly" : true,
+                "items" : {
+                  "$ref" : "#/components/schemas/EntitiesBatchResultItemV2dot1"
+                }
+              },
+              "errors" : {
+                "type" : "array",
+                "readOnly" : true,
+                "items" : {
+                  "$ref" : "#/components/schemas/ErrorRecord"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "insertionIndex" : 3
+  } ]
+}

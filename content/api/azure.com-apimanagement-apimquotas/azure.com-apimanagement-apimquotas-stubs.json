@@ -1,0 +1,232 @@
+{
+  "mappings" : [ {
+    "id" : "33d31bc6-a37b-4240-85d0-cce0d7afdf8c",
+    "name" : "Updates an existing quota counter value in the specified service instance. - 204",
+    "request" : {
+      "urlPath" : "/subscriptions/1f5h/resourceGroups/Lillian+Reynolds+DVM/providers/Microsoft.ApiManagement/service/X/quotas/fiofz9z63gm6dzczioj1mozpz1m6v0k1oie119ys7zlrtxhwmryrqe1cwkpsz0ij7xj3gxfo2iodb9l0e4jbsxzqyu29voq14k4ra9b9sn5qqa1e5myzt3yftyfi2n3cfzmgih/periods/ibey3kluvpmdrl6v9ivrowepgsq4p2jk3ljc5jcaey3fadxetptevz1noze7i7k6m63gs05zkm",
+      "method" : "PATCH",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "0ckti4lkb4p46ghsb8l9fthd26ftakx39tj8u4ywxrqopfug4xttqy0bmlv4v56nmy67ehs29n2b13g7bw3mbruiezpsmu7rs7n5oar66ka8gukihtkx0u"
+        }
+      }
+    },
+    "response" : {
+      "status" : 204
+    },
+    "uuid" : "33d31bc6-a37b-4240-85d0-cce0d7afdf8c",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:31.626148Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "QuotaByPeriodKeys_Update"
+        }
+      }
+    },
+    "insertionIndex" : 0
+  }, {
+    "id" : "5941977b-b65f-41d4-a44b-8736ca45d6ad",
+    "name" : "Gets the value of the quota counter associated with the counter-key in the polic...",
+    "request" : {
+      "urlPath" : "/subscriptions/m762/resourceGroups/Tyrell+Gottlieb/providers/Microsoft.ApiManagement/service/G/quotas/182gld3ipk74djz00za47mj5s1f8uoz1v4/periods/z9bixcq0h8q4q0l8n18lxqjez32l8w4kw65ksdf6khj1jz6g3y3gjs372bgnt28mspl6zgvfohqguc2wf0irzwwyy4fz5be9uf059jerbsds0arwlflrd4d1djzwwwtbkflt70rqyjvm4zb48udf8q45e7s85xjjh5",
+      "method" : "GET",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "hrzzfuri3z3j"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"counterKey\" : \"01lleuan5ubu7fekl3n0ef6ub3fwnfn74kzdhd22fyxdnsjx1vrpf\",\n  \"periodStartTime\" : \"2022-07-16T19:16:48.625Z\",\n  \"periodEndTime\" : \"2023-01-15T03:21:01.625Z\",\n  \"periodKey\" : \"r4utnzh9wbxhe3q03ibcp19yh6mjt3h3n92bmx31najgwt0x\",\n  \"value\" : {\n    \"callsCount\" : 809583953,\n    \"kbTransferred\" : 7.604844711544887E307\n  }\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "5941977b-b65f-41d4-a44b-8736ca45d6ad",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:31.625933Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "QuotaByPeriodKeys_Get",
+          "schema" : {
+            "required" : [ "counterKey", "periodEndTime", "periodKey", "periodStartTime" ],
+            "type" : "object",
+            "properties" : {
+              "counterKey" : {
+                "minLength" : 1,
+                "type" : "string",
+                "description" : "The Key value of the Counter. Must not be empty."
+              },
+              "periodEndTime" : {
+                "type" : "string",
+                "description" : "The date of the end of Counter Period. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.\n",
+                "format" : "date-time"
+              },
+              "periodKey" : {
+                "minLength" : 1,
+                "type" : "string",
+                "description" : "Identifier of the Period for which the counter was collected. Must not be empty."
+              },
+              "periodStartTime" : {
+                "type" : "string",
+                "description" : "The date of the start of Counter Period. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.\n",
+                "format" : "date-time"
+              },
+              "value" : {
+                "type" : "object",
+                "properties" : {
+                  "callsCount" : {
+                    "type" : "integer",
+                    "description" : "Number of times Counter was called.",
+                    "format" : "int32"
+                  },
+                  "kbTransferred" : {
+                    "type" : "number",
+                    "description" : "Data Transferred in KiloBytes.",
+                    "format" : "double"
+                  }
+                },
+                "description" : "Quota counter value details."
+              }
+            },
+            "description" : "Quota counter details."
+          }
+        }
+      }
+    },
+    "insertionIndex" : 1
+  }, {
+    "id" : "bd572c0c-6a0d-4027-bbbf-9667d704a52c",
+    "name" : "Updates all the quota counter values specified with the existing quota counter k... - 204",
+    "request" : {
+      "urlPath" : "/subscriptions/4u0t/resourceGroups/Janet+Lubowitz/providers/Microsoft.ApiManagement/service/F/quotas/s2a7t8r60wwmf8fzzpeouurexca1dfno57cagaxrp58e734yw55wegsnydtypevrkr1gngg0qqg5w6v5yd4spm1oofmw4n3vdh4hydrzy46cz90corj9mzpef8g8smulpndf3tkxxdolgqjqeef2qhzt7rz5fs1d6gl4o6dab2m2mucso2w01ox1sfsr5xhyuwv",
+      "method" : "PATCH",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "pi4l9eeg1r4f6bfyabwcoambjg3g3vz6keppcepovlqhdbpett2x6yw5wp13osfwcvipacm4fq561y3vfmunhbmo92lj02ofptaybnlfulkre80fdr8injzgqc817"
+        }
+      }
+    },
+    "response" : {
+      "status" : 204
+    },
+    "uuid" : "bd572c0c-6a0d-4027-bbbf-9667d704a52c",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:31.625522Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "QuotaByCounterKeys_Update"
+        }
+      }
+    },
+    "insertionIndex" : 2
+  }, {
+    "id" : "adfd1c27-973b-4d89-a81c-a27bed49ce57",
+    "name" : "Lists a collection of current quota counter periods associated with the counter-...",
+    "request" : {
+      "urlPath" : "/subscriptions/xk9o/resourceGroups/Ferne+Boyle/providers/Microsoft.ApiManagement/service/M/quotas/cxv03phk4f336dllyk71trgls49lvtkndzhie96sr8sa3whg2mpr2g2prjzf64qw7b1p6wms3r4kxn2duwkwzfpym2y9dtdkxzex0399p83w1jiicce9nv4qpmanw5fgolqjvia5t3lacc14p4gxmpg376z7bfpm4wgu34y4n5x76tkntvf90943d",
+      "method" : "GET",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "8ezhkf6cqerjrgu0inzt2qo1"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"count\" : 856117307316403363,\n  \"value\" : [ {\n    \"counterKey\" : \"j0g2slpk6cog6ukkbcy4k55dah3iq8yonmig5b0wlocbh2ht0rcq7rf6vck\",\n    \"periodStartTime\" : \"2022-04-01T03:47:59.624Z\",\n    \"periodEndTime\" : \"2023-11-14T07:39:14.624Z\",\n    \"periodKey\" : \"id957nzh693g6a8dkx6581ilaz30k4fd26tp2efp\",\n    \"value\" : {\n      \"callsCount\" : 2063872129,\n      \"kbTransferred\" : 4.197248617925946E307\n    }\n  } ],\n  \"nextLink\" : \"j0loctwewk1kx9r33i5rd40urrhvtuuxvj9e2x0aznxnso2g729h7023yqqsmw3mo2uh6a9aczzzeirqi017y8jq\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "adfd1c27-973b-4d89-a81c-a27bed49ce57",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:31.625199Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "QuotaByCounterKeys_ListByService",
+          "schema" : {
+            "type" : "object",
+            "properties" : {
+              "count" : {
+                "type" : "integer",
+                "description" : "Total record count number across all pages.",
+                "format" : "int64"
+              },
+              "nextLink" : {
+                "type" : "string",
+                "description" : "Next page link if any."
+              },
+              "value" : {
+                "type" : "array",
+                "description" : "Quota counter values.",
+                "items" : {
+                  "required" : [ "counterKey", "periodEndTime", "periodKey", "periodStartTime" ],
+                  "type" : "object",
+                  "properties" : {
+                    "counterKey" : {
+                      "minLength" : 1,
+                      "type" : "string",
+                      "description" : "The Key value of the Counter. Must not be empty."
+                    },
+                    "periodEndTime" : {
+                      "type" : "string",
+                      "description" : "The date of the end of Counter Period. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.\n",
+                      "format" : "date-time"
+                    },
+                    "periodKey" : {
+                      "minLength" : 1,
+                      "type" : "string",
+                      "description" : "Identifier of the Period for which the counter was collected. Must not be empty."
+                    },
+                    "periodStartTime" : {
+                      "type" : "string",
+                      "description" : "The date of the start of Counter Period. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.\n",
+                      "format" : "date-time"
+                    },
+                    "value" : {
+                      "type" : "object",
+                      "properties" : {
+                        "callsCount" : {
+                          "type" : "integer",
+                          "description" : "Number of times Counter was called.",
+                          "format" : "int32"
+                        },
+                        "kbTransferred" : {
+                          "type" : "number",
+                          "description" : "Data Transferred in KiloBytes.",
+                          "format" : "double"
+                        }
+                      },
+                      "description" : "Quota counter value details."
+                    }
+                  },
+                  "description" : "Quota counter details."
+                }
+              }
+            },
+            "description" : "Paged Quota Counter list representation."
+          }
+        }
+      }
+    },
+    "insertionIndex" : 3
+  } ]
+}
