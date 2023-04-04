@@ -73,16 +73,17 @@
 
       {{ end }}
 
-      <div class="hidden md:flex">
+      
       <!-- Output page numbers. -->
       {{ if eq ($.Scratch.Get "page_number_flag") true }}
-        {{ if eq . $paginator }}
-          <a href="{{ .URL }}" aria-current="page" class="relative inline-flex items-center bg-sky-100 px-4 py-2 text-sm font-medium text-sky-600">{{ .PageNumber }}</a>
-        {{else }}
-          <a href="{{ .URL }}" class="relative inline-flex items-center px-4 py-2 text-sm font-medium text-slate-500 ring-1 ring-inset ring-slate-300 bg-white hover:bg-slate-50 focus:z-20 focus:outline-offset-0">{{ .PageNumber }}</a>
-        {{ end }}
+        <div class="hidden md:flex">
+          {{ if eq . $paginator }}
+            <a href="{{ .URL }}" aria-current="page" class="relative inline-flex items-center bg-sky-100 px-4 py-2 text-sm font-medium text-sky-600">{{ .PageNumber }}</a>
+          {{else }}
+            <a href="{{ .URL }}" class="relative inline-flex items-center px-4 py-2 text-sm font-medium text-slate-500 ring-1 ring-inset ring-slate-300 bg-white hover:bg-slate-50 focus:z-20 focus:outline-offset-0">{{ .PageNumber }}</a>
+          {{ end }}
+        </div>
       {{ end }}
-      </div>
     
 
     {{ end }}

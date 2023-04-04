@@ -1,0 +1,578 @@
+{
+  "mappings" : [ {
+    "id" : "a26e5d78-22fa-468d-b061-9328579d69b8",
+    "name" : "Obtains a one-time Service Ticket that can be used to access other William Hill services.",
+    "request" : {
+      "urlPath" : "/tickets/RYUEDtNWLV2OQyJFWUU9xSVheCAZ4ppGBKBXOwEcNJG4A8DvdRZD8whCIuH-pbU91kQ1Vv/serviceTicket",
+      "method" : "GET",
+      "queryParameters" : {
+        "target" : {
+          "equalTo" : "v17qnxp2wlvlp91v0p5gwflh3pg2py3ccv13115g9q46xh4"
+        }
+      }
+    },
+    "response" : {
+      "status" : 404,
+      "body" : "{\n  \"errors\" : [ {\n    \"code\" : \"20511\",\n    \"field\" : \"target\",\n    \"message\" : \"TGT ticket could not be found.\"\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "a26e5d78-22fa-468d-b061-9328579d69b8",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:10.38864Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "getServiceTicket",
+          "schema" : {
+            "type" : "object",
+            "properties" : {
+              "errors" : {
+                "type" : "array",
+                "items" : {
+                  "$ref" : "#/components/schemas/error"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "insertionIndex" : 0
+  }, {
+    "id" : "9624dace-b3b0-4471-8452-09b0c560758d",
+    "name" : "Obtains a one-time Service Ticket that can be used to access other William Hill services.",
+    "request" : {
+      "urlPath" : "/tickets/bbfjoyfSR0Zr-2hM6RZ6KhVyRX-AxocfHJlffqIcc-EGV/serviceTicket",
+      "method" : "GET",
+      "queryParameters" : {
+        "target" : {
+          "equalTo" : "y0pyesofmfjyi172lq3nwaux3ycjeiaxdk7jwctialws9tgkgaqcvhxw8v2ojyguxh3"
+        }
+      }
+    },
+    "response" : {
+      "status" : 403,
+      "body" : "{\n  \"errors\" : [ {\n    \"code\" : \"20510\",\n    \"field\" : \"target\",\n    \"message\" : \"Target service not established\"\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "9624dace-b3b0-4471-8452-09b0c560758d",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:10.38857Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "getServiceTicket",
+          "schema" : {
+            "type" : "object",
+            "properties" : {
+              "errors" : {
+                "type" : "array",
+                "items" : {
+                  "$ref" : "#/components/schemas/error"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "insertionIndex" : 1
+  }, {
+    "id" : "c452d010-3f7e-41cb-89ad-6c8d4c543f16",
+    "name" : "Obtains a one-time Service Ticket that can be used to access other William Hill services.",
+    "request" : {
+      "urlPath" : "/tickets/Nul-C4dsXacTPtW0O4Xa1RMEHkJR1D430p8ZEdXDfSAw0CUSJ2nt5QF39B1Ui-niEuR0L7zczxi46ez6tQHfXFDk7n1yBKrwE/serviceTicket",
+      "method" : "GET",
+      "queryParameters" : {
+        "target" : {
+          "equalTo" : "ia6pchw0mnjppyop1wtpf27dua6ksd3lqb3uglubrtbfe9owzqihandxkbieig7om2tpbk1yd6d388hoej147uj0d9eyepjixjfl30i161ov3h8a68sri7jdhriu1yjc0hus2jwt4r"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"location\" : \"http://www.example.com/\",\n  \"ticket\" : \"ST-861-kM1s6zg4QBb6xf4CF4oe-brsux349\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "c452d010-3f7e-41cb-89ad-6c8d4c543f16",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:10.388496Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "getServiceTicket",
+          "schema" : {
+            "required" : [ "ticket" ],
+            "type" : "object",
+            "properties" : {
+              "location" : {
+                "type" : "string",
+                "description" : "This is the URL of the target service sent in the request. This is a combination of the endpoint and the ticket for future operations such as DELETE."
+              },
+              "ticket" : {
+                "type" : "string",
+                "description" : "The TGT ticket"
+              }
+            }
+          }
+        }
+      }
+    },
+    "insertionIndex" : 2
+  }, {
+    "id" : "c240f2cb-18f0-4631-8fd2-e9cdb0ac1720",
+    "name" : "Log out a customer.",
+    "request" : {
+      "urlPath" : "/tickets/dWEt2yqbTEoCdI0kmirWlBZT4U2VzZY9NWbcKSYqEiZBPCBrLT0IqiSj-ZLhsdSN5eKFHkGW7Ctk09eofmhi5qzZr1HXK3",
+      "method" : "DELETE"
+    },
+    "response" : {
+      "status" : 404,
+      "body" : "{\n  \"errors\" : [ {\n    \"code\" : \"20511\",\n    \"field\" : \"target\",\n    \"message\" : \"TGT ticket could not be found.\"\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "c240f2cb-18f0-4631-8fd2-e9cdb0ac1720",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:10.388375Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "logOut",
+          "schema" : {
+            "type" : "object",
+            "properties" : {
+              "errors" : {
+                "type" : "array",
+                "items" : {
+                  "$ref" : "#/components/schemas/error"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "insertionIndex" : 3
+  }, {
+    "id" : "744e3415-6685-4c52-820d-f5213996ec14",
+    "name" : "Log out a customer.",
+    "request" : {
+      "urlPath" : "/tickets/vBWaV0YzuHrBwt37P3qQiMz0FTsLp9hboLfbcN88oIFDcS4xUz0b",
+      "method" : "DELETE"
+    },
+    "response" : {
+      "status" : 403,
+      "body" : "{\n  \"errors\" : [ {\n    \"code\" : \"h8qhdjf531dzknldfb2c6bh8boci5s9y52volgr0wft21rhhm25s1yhh6vu6n38j1m6ysrswvw1s9u3l0kdxcirw4r9g6gai5wkrx8tju0ouco71zahn4ucohohk7pkhxzzn0vz11v2xz2su84d63q8i5payh8x9051itxubmo8zizbz86law2fd8v\",\n    \"field\" : \"u4f9y4uq99jadp8sj2q5mvdsometeukefkfkslm0rukyutm282s6vyboxg2wowssg\",\n    \"message\" : \"Et fugit facere nihil magnam. Excepturi voluptatem nobis necessitatibus voluptatem occaecati itaque. Vitae enim ut inventore facere deleniti optio sequi. Facilis ut enim aliquid magnam.\"\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "744e3415-6685-4c52-820d-f5213996ec14",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:10.388288Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "logOut",
+          "schema" : {
+            "type" : "object",
+            "properties" : {
+              "errors" : {
+                "type" : "array",
+                "items" : {
+                  "$ref" : "#/components/schemas/error"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "insertionIndex" : 4
+  }, {
+    "id" : "dcf7cd3d-fc91-4eea-9820-3c52434c7f7a",
+    "name" : "Log out a customer.",
+    "request" : {
+      "urlPath" : "/tickets/G5w1p4uz3HS17CFU4gn6wV6Nsh5WNkeezrb5YGrZqnSKMr",
+      "method" : "DELETE"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"success\" : true\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "dcf7cd3d-fc91-4eea-9820-3c52434c7f7a",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:10.388173Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "logOut",
+          "schema" : {
+            "type" : "object",
+            "properties" : {
+              "success" : {
+                "type" : "boolean"
+              }
+            }
+          }
+        }
+      }
+    },
+    "insertionIndex" : 5
+  }, {
+    "id" : "15b00f9d-b112-4b00-a330-e20d4c995124",
+    "name" : "Checks the validity of a session ticket. (application/json)",
+    "request" : {
+      "urlPath" : "/tickets/BPZPZrQSu1LBv1nkExSl7qgJ4sG8ErD46oNEwa8kVlHKwZe-RyGv9Ehc4nIEep3iMeG-9W3wXcZo8Wsynxb591w02gmI-",
+      "method" : "GET",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/json"
+        }
+      }
+    },
+    "response" : {
+      "status" : 404,
+      "body" : "{\n  \"errors\" : [ {\n    \"code\" : \"20511\",\n    \"field\" : \"target\",\n    \"message\" : \"TGT ticket could not be found.\"\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "15b00f9d-b112-4b00-a330-e20d4c995124",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:10.3881Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "validateSession"
+        }
+      }
+    },
+    "insertionIndex" : 6
+  }, {
+    "id" : "207f7bd0-8f76-4517-80e0-31f5703f0a7e",
+    "name" : "Checks the validity of a session ticket. (application/json)",
+    "request" : {
+      "urlPath" : "/tickets/xZneHkuERme-8t4NZh4Ph9mFCau1YEWNqeOFM28xzsp0-HADWGlWfiYD15ZJ7JbtmyQTqZsnNeWNBhCiOntH5wufRH4sbyL",
+      "method" : "GET",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/json"
+        }
+      }
+    },
+    "response" : {
+      "status" : 404,
+      "body" : "{\n  \"errors\" : [ {\n    \"code\" : \"qzn7qklkfjr3h8lwpqfkmmghjdfolcugbac0a5o1w1krla4fc5rdcmtgq9g7s48r8lhjnhvzydqnz02ntmiw53cm5904zh223pzxegffztxm0etmmxvrutm3sc7aus31rl4ye69vpkhcb4lz2varnw3wr71mieggrtmq836c63vzp5\",\n    \"field\" : \"1h10yahmuf64h65nnr0lhmbsw87e2dmkmjcn56itbjd4rm2f50immd12t13m0a3a5ywdx22t0isl3dsh61j6gs1dqylwq3jsahvf4z7ar29nzpz87kkk1lovweb6ub61s1nxrx92gjt55ngo7por0ptgnyqimsdu7\",\n    \"message\" : \"Dolorum veritatis ut et consequuntur at. Ut impedit consectetur harum qui. Accusamus laudantium voluptas dolore laboriosam qui non. Dolorum veritatis voluptatem. Et et repellendus ad consequatur debit\"\n  }, {\n    \"code\" : \"hukgw74j44mfxxqwyav90xeo9fvtog0jql5eo8z1efswc3t29kwggyta92vklzfti8e4l6x\",\n    \"field\" : \"ulq7cecfonlxkbbnxqqt0wyjkzzs1mph4i4n0v4bruvylpg1jov78d3qn9rggsa6oe5kcwkkxaaeg5l95sesmvxjmlegzucjp7j2xtxfuod0kp68ba7gqkn1uonp9rw9prh122m0ehyodsaqlyarprbmr545ykiny3bdv8lex8wawniar7kd\",\n    \"message\" : \"Cupiditate ex placeat impedit laboriosam molestias. Aut eius neque odit necessitatibus. Nihil eos sequi autem.\"\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "207f7bd0-8f76-4517-80e0-31f5703f0a7e",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:10.388052Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "validateSession",
+          "schema" : {
+            "type" : "object",
+            "properties" : {
+              "errors" : {
+                "type" : "array",
+                "items" : {
+                  "$ref" : "#/components/schemas/error"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "insertionIndex" : 7
+  }, {
+    "id" : "5f487e9e-43c1-4f76-ab07-9856803173e4",
+    "name" : "Checks the validity of a session ticket. (application/json)",
+    "request" : {
+      "urlPath" : "/tickets/IPdFuK44XBpbs-WVQkBLXQMhzShr5zeLJfUXCF3ykfkCORkUhvGkN4WA2ofaztcmtzLzniGfAHsRc4OvlHjqEt5Vz24CBdKn",
+      "method" : "GET",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/json"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"valid\" : true\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "5f487e9e-43c1-4f76-ab07-9856803173e4",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:10.387873Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "validateSession"
+        }
+      }
+    },
+    "insertionIndex" : 8
+  }, {
+    "id" : "8daab12e-142c-45ee-8b85-1848a295f567",
+    "name" : "Checks the validity of a session ticket. (application/json)",
+    "request" : {
+      "urlPath" : "/tickets/JC-PXR3NaVGROtO6cxeZHgaqDQuxgNP8GNytOeU2vnlCPGvJtj0nLVrZambijt99mAsPCaapyeneOsHl8",
+      "method" : "GET",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/json"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"valid\" : false\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "8daab12e-142c-45ee-8b85-1848a295f567",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:10.38782Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "validateSession",
+          "schema" : {
+            "type" : "object",
+            "properties" : {
+              "valid" : {
+                "type" : "boolean"
+              }
+            }
+          }
+        }
+      }
+    },
+    "insertionIndex" : 9
+  }, {
+    "id" : "5268abe5-dc1c-46e8-a09f-916fadf4d4f3",
+    "name" : "Logs in a customer and obtains an authentication ticket.",
+    "request" : {
+      "urlPath" : "/tickets",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 404,
+      "body" : "{\n  \"errors\" : [ {\n    \"code\" : \"ewtfzkze6r5n9iv2e39smlty9z4gp347r5k07ou3anpld\",\n    \"field\" : \"738c8bgus613l95h3ubzr6agg2acijm46p3h3fop31v\",\n    \"message\" : \"Quis et ut vel molestias in. Dolor occaecati exercitationem quis omnis fugit. Ex molestiae laboriosam.\"\n  }, {\n    \"code\" : \"pj3dueac1bsog75tyu9k9qotiun4oxakf9leh5y6v3hleyikuk44vonzr19jsi7aqxvjmrqvi9ef271i07pjs957ecyhowsqt3wkkeayb3omn6p0tx0vvb1v9d2\",\n    \"field\" : \"xeh392r8419ihj82773i9bb\",\n    \"message\" : \"Similique minima et minima at assumenda quia. Unde consequatur ab. Eaque sunt perferendis blanditiis et. Voluptas mollitia ut quod dolorem repudiandae et in.\"\n  }, {\n    \"code\" : \"j3vdjd641jgy36d0tg4tvdvxwo8dsy1a2d85fq58ol2yy7qt9i15ehkeyawftxidksryflxvq1eu7h7u1nq9p4fgexxtf09hk36yhd8wduspbihvra2pjm32k66d58ff\",\n    \"field\" : \"ier7kub7dv60l2od3h2mmlo3md08fborjii88elsog4tdi3qljugycet8cn8fpwuo0rkdqon1m1t7wcpprhj5n0ysoj27chilplzvkuznjpiy8xbsj8bjs2m83rqfj2ar5dphbak6nzu7\",\n    \"message\" : \"Voluptas eligendi quia consequuntur maxime nihil laboriosam. Ratione nemo aut saepe distinctio. Tenetur id nihil dolores velit. Aut unde voluptas. Debitis eos labore.\"\n  }, {\n    \"code\" : \"76x237pxraq3a7o59ovl5cez300oxln8tzmnizp6f1swlwso2uvengfqijp08mwv64dp05r1ft8c9d7wvrmjq\",\n    \"field\" : \"ah40go45xqpbb8pnyy8knx0qlpltmzynqewvjkzbesrdmacaii04tzzuy8xy6eaem67oiprp0elirf0b0svf28kweurzu2otb21zesa041kxamtgsrqumyf81jjxxyt3zlyrr1y6woj6q5zf2vnk0bbizuagbo8jc4n1g05px72bsypr650nttmy0f\",\n    \"message\" : \"Sunt nihil voluptas in ducimus assumenda. Ratione deserunt voluptates odio. Iusto enim autem. Amet eum sint qui. Voluptatem doloribus exercitationem odit assumenda excepturi.\"\n  }, {\n    \"code\" : \"o4511617664uw3eacp3g4lg8z92158ngyzzzy7ws3ve79bei4fefbhrkjm3260i8r1ccw8j48pofmzo\",\n    \"field\" : \"rx8sf4q16ad1cdrqmos43grdiyyp1g1eudh72rew2073ulqvqgtrks21gv5kr8njn2bh8eu6r9jt4uq5ujtdk6hz4lngbva3sd28e58esood8k1ww7n\",\n    \"message\" : \"Voluptates nisi explicabo quaerat minus reprehenderit quis nihil. Animi sed et molestiae ut recusandae illum. Unde ullam esse placeat et non ut. Similique nam pariatur et dolore.\"\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "5268abe5-dc1c-46e8-a09f-916fadf4d4f3",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:10.387726Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "logIn",
+          "schema" : {
+            "type" : "object",
+            "properties" : {
+              "errors" : {
+                "type" : "array",
+                "items" : {
+                  "$ref" : "#/components/schemas/error"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "insertionIndex" : 10
+  }, {
+    "id" : "26465bd3-44bb-4adb-b7c4-b5a3bf221512",
+    "name" : "Logs in a customer and obtains an authentication ticket.",
+    "request" : {
+      "urlPath" : "/tickets",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 403,
+      "body" : "{\n  \"errors\" : [ {\n    \"code\" : \"20503\",\n    \"message\" : \"Account under self-exclusion\"\n  }, {\n    \"code\" : \"20504\",\n    \"message\" : \"Account locked.\"\n  }, {\n    \"code\" : \"20505\",\n    \"message\" : \"Account inactive.\"\n  }, {\n    \"code\" : \"20506\",\n    \"message\" : \"Account closed.\"\n  }, {\n    \"code\" : \"20507\",\n    \"message\" : \"Age verification required.\"\n  }, {\n    \"code\" : \"20508\",\n    \"message\" : \"Account under self-exclusion, reactivation available.\"\n  }, {\n    \"code\" : \"20509\",\n    \"message\" : \"Timeout applied.\"\n  }, {\n    \"code\" : \"20503\",\n    \"message\" : \"Account under self-exclusion\"\n  }, {\n    \"code\" : \"20512\",\n    \"message\" : \"Account Suspended\"\n  }, {\n    \"code\" : \"20513\",\n    \"message\" : \"Max Linked Accounts\"\n  }, {\n    \"code\" : \"20514\",\n    \"message\" : \"Account Closed By Player\"\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "26465bd3-44bb-4adb-b7c4-b5a3bf221512",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:10.387394Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "logIn",
+          "schema" : {
+            "type" : "object",
+            "properties" : {
+              "errors" : {
+                "type" : "array",
+                "items" : {
+                  "$ref" : "#/components/schemas/error"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "insertionIndex" : 11
+  }, {
+    "id" : "f7df283f-7050-4631-b58f-5b3f743a9fca",
+    "name" : "Logs in a customer and obtains an authentication ticket.",
+    "request" : {
+      "urlPath" : "/tickets",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 401,
+      "body" : "{\n  \"errors\" : [ {\n    \"code\" : \"zfjlmps77jbd0d88uzuzgp6lfd78b8a1lsmxqpav06vw1jt4sy3c13f31wsjvemt9ap9ukq96njrciayczoildk1ac4odap1usuvaregc6vjb1feqsquuezuqf47bpyf20udmi5c6ueqc01ut7drprs0ki\",\n    \"field\" : \"bjxw6sy1tphmyq6n5hmqe2bqeuobr5u8uqdg3onq4ag4fhyqa6nt4rhyy6i1fxjmm6nr7bkmpzybvbnxwrkdu967\",\n    \"message\" : \"Eum est ullam recusandae dicta officiis. Optio ab eligendi ut. Porro inventore quae ut odio fugiat qui. Delectus qui nihil velit ipsum illum possimus.\"\n  }, {\n    \"code\" : \"4c7fiavp6oo22sqcwdsftc0dzi2qixx6hbkkxahj8e994hofpw23t0f9r8w5srwbbim9gvoqc9lorzon29hyw7e7shvb24y4nya23pn5res9rglpyxcq0dqcuemfq9fk1a4eqoqt4\",\n    \"field\" : \"dvn1rpo5due7enutodgke6u8giijxcgz2o3mqe15ohj5xqo6bvit5cfeydev0yqlwk8906c6u4rhlcwha35z46\",\n    \"message\" : \"Earum qui ut aliquid qui. Est voluptatibus eaque et vero. Modi quisquam aliquam sed. Nesciunt voluptatem eum ea eum.\"\n  }, {\n    \"code\" : \"hsvxk0d5htol774wwiruy2svrnnkmqx9nsvlp9996lqg7bntvzabrm19gdbh53jwrvb16morielhd9mbxic3e423xqibyafog63eojt3qg2k48g9fuf6vhw9nipd7dggcuvcq49w8v3pscmhpldtv0v2ysim0nv8lwwgtq4e9qe8ydjb791qt1rbe6bwgh8m0b1ow\",\n    \"field\" : \"2h6q6h8pq8s3sutwx65a1am72hew9nrapbtk4ge3gi1mbhed87t032aazdi9aoxxd4sw\",\n    \"message\" : \"Eos corporis magnam quia vel ex hic eum. Fugit veniam in enim laudantium distinctio cumque ea. Est pariatur quam et ea explicabo dolorem voluptatem.\"\n  }, {\n    \"code\" : \"7xxmcgs684cuurp78a7ccuq9cz25mz7vpiw9ypj0bzonx4r275lerh700wh0i5ei1d9sfj9puu355owhm1inzrgtve9jez7qh\",\n    \"field\" : \"mbtfj5wgo0knrs9nsbpt75n6vutc2bbqilrxu\",\n    \"message\" : \"Quo qui eos dolores eveniet. Dolore ab sunt consequatur. Nesciunt ut in maxime repudiandae modi.\"\n  }, {\n    \"code\" : \"hl358i34qb9rc04f2pwzyyx96ldg8am4fu26qjvgt4flgywek7ii5e9fuguq1afs2h3cfbtaufv5ndndug2up8dav8v7rdl2ol1578su3tute5hucoy95oxx4khzrnb9wacpxkp0n5cqctxneje1midwnljatvq15d1qhxgdezzbaf4blb5qr\",\n    \"field\" : \"w9npwwon2mn4nv42b30nauftmgtu6s3ri45hy2lghzb96d8m26ikhwuwsnxuk4h4osv4p4fumtslk3u54om1dq8uqpg47d75vkuddtd2a0itx4dla7szsao033fg609rc91x80lizl2dw9awu\",\n    \"message\" : \"Nobis nulla cupiditate culpa esse nisi ullam. Quia minus est omnis alias. Neque ut in et perspiciatis rerum expedita voluptatem. Nobis omnis molestiae in et adipisci.\"\n  }, {\n    \"code\" : \"fma554pwfjfmr275o3iw82jixh4mlemyahds8ei58vpqdf2a1ph610rkq4gl9rv1e8p1qc29ujtiwsjkd97w4blrjmtqszrej6ea3ei56kzm373yjyczgl4b379\",\n    \"field\" : \"ylbqmi8avn02bdl4fviy9nx7vleqlhtrzwu02a8q90buw553f3lydzb60tn5iv8gzpgruo15iwi7d\",\n    \"message\" : \"Expedita tempore et cum. Reprehenderit molestiae sequi soluta. Quia ipsa nesciunt impedit sapiente. Ut ea corporis officiis omnis voluptatibus fugit consequatur.\"\n  }, {\n    \"code\" : \"mcwcl3qnwv293c8b8okkz2f2n38ruib51bhon9dc1x3avakrl8mvciqtvw0sjqajohyvn4mh5c9zhugvv6ubstu9ar4zw2jb2c6th84yeob82jucy73wke1nq1l86a\",\n    \"field\" : \"ip4d1lw4jdlfzbxognes7k5ir3086z2upql77q36iimowgfri6uq71xmc6ynjpbgeppgaqtoa58h6htkczlvig2v2b54c6jwa3vke8ei08kjrtvxrzi8sf87q1nopcckp7lsfp3ge7pu9qlcaca4dvgcj5oyqc8ytp8k59\",\n    \"message\" : \"Enim exercitationem aut et officiis. Quia sit et modi et non. Temporibus sint necessitatibus molestiae eius. Eligendi id a numquam. Iusto quae delectus voluptates quis.\"\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "f7df283f-7050-4631-b58f-5b3f743a9fca",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:10.387347Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "logIn",
+          "schema" : {
+            "type" : "object",
+            "properties" : {
+              "errors" : {
+                "type" : "array",
+                "items" : {
+                  "$ref" : "#/components/schemas/error"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "insertionIndex" : 12
+  }, {
+    "id" : "2da81ff1-cd42-4bdc-a4fb-4575ab5dd559",
+    "name" : "Logs in a customer and obtains an authentication ticket.",
+    "request" : {
+      "urlPath" : "/tickets",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"temporaryPassword\" : true,\n  \"ticket\" : \"2ucb352hp14b7iotxr052rocb37d2glfehskvqyzqrl608\",\n  \"location\" : \"o3hi51ajtrypt9lhsflqf7tor6f3dv3s06dk3c6iqk88nuz260bbmdjgfkx3c90px7b47ug114h2s\",\n  \"temporaryPasswordUrl\" : \"https://web.example.mocklab.io/753120\",\n  \"expiryDateTime\" : \"2022-10-24T05:35:10.386648Z\",\n  \"extended\" : false\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "2da81ff1-cd42-4bdc-a4fb-4575ab5dd559",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:10.386824Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "logIn",
+          "schema" : {
+            "required" : [ "expiryDateTime", "ticket" ],
+            "type" : "object",
+            "properties" : {
+              "expiryDateTime" : {
+                "type" : "string",
+                "description" : "The UTC time when the ticket expires."
+              },
+              "extended" : {
+                "type" : "boolean",
+                "description" : "The value you have selected previous to executing the request. If the value is Y, this enables your application to generate a ticket valid for 60 days without expiring due to inactivity."
+              },
+              "location" : {
+                "type" : "string",
+                "description" : "This is the URL of the target service sent in the request. This is a combination of the endpoint and the ticket for future operations such as DELETE."
+              },
+              "temporaryPassword" : {
+                "type" : "boolean",
+                "description" : "Indicates that the account has a temporary password set and hence the user must be prompted to change their password."
+              },
+              "temporaryPasswordUrl" : {
+                "type" : "string",
+                "description" : "Url for user to change password. A TGT must be added to the URL"
+              },
+              "ticket" : {
+                "type" : "string",
+                "description" : "The TGT ticket"
+              }
+            }
+          }
+        }
+      }
+    },
+    "insertionIndex" : 13
+  } ]
+}

@@ -1,0 +1,2789 @@
+{
+  "mappings" : [ {
+    "id" : "6de64080-3f64-49c7-99d8-e2cb17706800",
+    "name" : "Shutdown the WireMock server - 200",
+    "request" : {
+      "urlPath" : "/__admin/shutdown",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 200
+    },
+    "uuid" : "6de64080-3f64-49c7-99d8-e2cb17706800",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:13.983418Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "(none)"
+        }
+      }
+    },
+    "insertionIndex" : 0
+  }, {
+    "id" : "b9fd606e-c91c-4c55-9fb0-554825cf8818",
+    "name" : "Update global settings - 200",
+    "request" : {
+      "urlPath" : "/__admin/settings",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 200
+    },
+    "uuid" : "b9fd606e-c91c-4c55-9fb0-554825cf8818",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:13.9834Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "(none)"
+        }
+      }
+    },
+    "insertionIndex" : 1
+  }, {
+    "id" : "bf355e2e-80f0-40d4-83a1-cd32f2178ddb",
+    "name" : "Reset the state of all scenarios - 200",
+    "request" : {
+      "urlPath" : "/__admin/scenarios/reset",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 200
+    },
+    "uuid" : "bf355e2e-80f0-40d4-83a1-cd32f2178ddb",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:13.983373Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "(none)"
+        }
+      }
+    },
+    "insertionIndex" : 2
+  }, {
+    "id" : "9496fb13-bb67-458c-99f7-5e9d3422c324",
+    "name" : "Get all scenarios",
+    "request" : {
+      "urlPath" : "/__admin/scenarios",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"scenarios\" : [ {\n    \"name\" : \"my_scenario\",\n    \"possibleStates\" : [ \"Started\", \"state_1\", \"state_2\" ],\n    \"id\" : \"c8d249ec-d86d-48b1-88a8-a660e6848042\",\n    \"state\" : \"state_2\"\n  }, {\n    \"name\" : \"my_scenario\",\n    \"possibleStates\" : [ \"Started\", \"state_1\", \"state_2\" ],\n    \"id\" : \"c8d249ec-d86d-48b1-88a8-a660e6848042\",\n    \"state\" : \"state_2\"\n  }, {\n    \"name\" : \"my_scenario\",\n    \"possibleStates\" : [ \"Started\", \"state_1\", \"state_2\" ],\n    \"id\" : \"c8d249ec-d86d-48b1-88a8-a660e6848042\",\n    \"state\" : \"state_2\"\n  }, {\n    \"name\" : \"my_scenario\",\n    \"possibleStates\" : [ \"Started\", \"state_1\", \"state_2\" ],\n    \"id\" : \"c8d249ec-d86d-48b1-88a8-a660e6848042\",\n    \"state\" : \"state_2\"\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "9496fb13-bb67-458c-99f7-5e9d3422c324",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:13.983349Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "(none)",
+          "schema" : {
+            "properties" : {
+              "scenarios" : {
+                "items" : {
+                  "properties" : {
+                    "id" : {
+                      "description" : "The scenario ID",
+                      "example" : "c8d249ec-d86d-48b1-88a8-a660e6848042",
+                      "type" : "string"
+                    },
+                    "name" : {
+                      "description" : "The scenario name",
+                      "example" : "my_scenario",
+                      "type" : "string"
+                    },
+                    "possibleStates" : {
+                      "example" : [ "Started", "state_1", "state_2" ],
+                      "items" : {
+                        "default" : "Started",
+                        "description" : "All the states this scenario can be in",
+                        "type" : "string"
+                      },
+                      "type" : "array"
+                    },
+                    "state" : {
+                      "default" : "Started",
+                      "description" : "The current state of this scenario",
+                      "example" : "state_2",
+                      "type" : "string"
+                    }
+                  },
+                  "type" : "object"
+                },
+                "type" : "array"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 3
+  }, {
+    "id" : "62cbbc7d-6482-476d-8ae3-f81cf58d3297",
+    "name" : "Reset mappings and request journal - 200",
+    "request" : {
+      "urlPath" : "/__admin/reset",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 200
+    },
+    "uuid" : "62cbbc7d-6482-476d-8ae3-f81cf58d3297",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:13.98319Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "(none)"
+        }
+      }
+    },
+    "insertionIndex" : 4
+  }, {
+    "id" : "595ad458-f219-475f-a640-ec017b63535a",
+    "name" : "Get request by ID - 404",
+    "request" : {
+      "urlPath" : "/__admin/requests/mxp2",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 404
+    },
+    "uuid" : "595ad458-f219-475f-a640-ec017b63535a",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:13.983171Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "(none)"
+        }
+      }
+    },
+    "insertionIndex" : 5
+  }, {
+    "id" : "6f916881-6110-42f4-8236-1b1feadac23a",
+    "name" : "Get request by ID (application/json)",
+    "request" : {
+      "urlPath" : "/__admin/requests/06x8",
+      "method" : "GET",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/json"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"id\" : \"12fb14bb-600e-4bfa-bd8d-be7f12562c99\",\n  \"request\" : {\n    \"absoluteUrl\" : \"http://localhost:56738/received-request/2\",\n    \"body\" : \"\",\n    \"bodyAsBase64\" : \"\",\n    \"browserProxyRequest\" : false,\n    \"clientIp\" : \"127.0.0.1\",\n    \"cookies\" : { },\n    \"headers\" : {\n      \"Connection\" : \"keep-alive\",\n      \"Host\" : \"localhost:56738\",\n      \"User-Agent\" : \"Apache-HttpClient/4.5.1 (Java/1.7.0_51)\"\n    },\n    \"loggedDate\" : 1471442557047,\n    \"loggedDateString\" : \"2016-08-17T14:02:37Z\",\n    \"method\" : \"GET\",\n    \"url\" : \"/received-request/2\"\n  },\n  \"responseDefinition\" : {\n    \"fromConfiguredStub\" : false,\n    \"status\" : 404,\n    \"transformerParameters\" : { },\n    \"transformers\" : [ ]\n  }\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "6f916881-6110-42f4-8236-1b1feadac23a",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:13.983085Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "(none)"
+        }
+      }
+    },
+    "insertionIndex" : 6
+  }, {
+    "id" : "5fb8b9bb-57bb-4e45-89b7-c5bf7df40e14",
+    "name" : "Delete request by ID - 200",
+    "request" : {
+      "urlPath" : "/__admin/requests/t5b2",
+      "method" : "DELETE"
+    },
+    "response" : {
+      "status" : 200
+    },
+    "uuid" : "5fb8b9bb-57bb-4e45-89b7-c5bf7df40e14",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:13.982979Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "(none)"
+        }
+      }
+    },
+    "insertionIndex" : 7
+  }, {
+    "id" : "2bbc0529-5f36-474d-81a3-e5fa8a94779b",
+    "name" : "Retrieve near-misses for all unmatched requests",
+    "request" : {
+      "urlPath" : "/__admin/requests/unmatched/near-misses",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"nearMisses\" : [ {\n    \"matchResult\" : {\n      \"distance\" : 0.06944444444444445\n    },\n    \"request\" : {\n      \"absoluteUrl\" : \"http://localhost:8080/nomatch\",\n      \"body\" : \"\",\n      \"bodyAsBase64\" : \"\",\n      \"browserProxyRequest\" : false,\n      \"clientIp\" : \"0:0:0:0:0:0:0:1\",\n      \"cookies\" : { },\n      \"headers\" : {\n        \"Accept\" : \"*/*\",\n        \"Host\" : \"localhost:8080\",\n        \"User-Agent\" : \"curl/7.30.0\"\n      },\n      \"loggedDate\" : 1467402464520,\n      \"loggedDateString\" : \"2016-07-01T19:47:44Z\",\n      \"method\" : \"GET\",\n      \"url\" : \"/nomatch\"\n    },\n    \"requestPattern\" : {\n      \"method\" : \"GET\",\n      \"url\" : \"/almostmatch\"\n    }\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "2bbc0529-5f36-474d-81a3-e5fa8a94779b",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:13.982818Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "(none)",
+          "schema" : {
+            "properties" : {
+              "nearMisses" : {
+                "items" : {
+                  "properties" : {
+                    "absoluteUrl" : {
+                      "description" : "The full URL to match against",
+                      "example" : "http://localhost:56738/received-request/2",
+                      "type" : "string"
+                    },
+                    "body" : {
+                      "description" : "Body string to match against",
+                      "example" : "Hello world",
+                      "type" : "string"
+                    },
+                    "cookies" : {
+                      "description" : "Cookie patterns to match against in the <key>: { \"<predicate>\": \"<value>\" } form",
+                      "example" : { },
+                      "type" : "object"
+                    },
+                    "headers" : {
+                      "description" : "Header patterns to match against in the <key>: { \"<predicate>\": \"<value>\" } form",
+                      "example" : {
+                        "Connection" : "keep-alive",
+                        "Host" : "localhost:56738",
+                        "User-Agent" : "Apache-HttpClient/4.5.1 (Java/1.7.0_51)"
+                      },
+                      "type" : "object"
+                    },
+                    "method" : {
+                      "description" : "The HTTP request method",
+                      "example" : "GET",
+                      "type" : "string"
+                    },
+                    "url" : {
+                      "description" : "The path and query to match exactly against",
+                      "example" : "/received-request/2",
+                      "type" : "string"
+                    }
+                  },
+                  "type" : "object"
+                },
+                "type" : "array"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 8
+  }, {
+    "id" : "b70152e9-d734-4c01-a9ca-34adb70de840",
+    "name" : "Find unmatched requests",
+    "request" : {
+      "urlPath" : "/__admin/requests/unmatched",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"requests\" : [ {\n    \"absoluteUrl\" : \"http://mydomain.com/my/url\",\n    \"body\" : \"\",\n    \"browserProxyRequest\" : true,\n    \"headers\" : {\n      \"Accept\" : \"image/png,image/*;q=0.8,*/*;q=0.5\",\n      \"Accept-Language\" : \"en-us,en;q=0.5\",\n      \"User-Agent\" : \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10.6; rv:9.0) Gecko/20100101 Firefox/9.0\"\n    },\n    \"loggedDate\" : 1339083581823,\n    \"loggedDateString\" : \"2012-06-07 16:39:41\",\n    \"method\" : \"GET\",\n    \"url\" : \"/my/url\"\n  }, {\n    \"absoluteUrl\" : \"http://my.other.domain.com/my/other/url\",\n    \"body\" : \"My text\",\n    \"browserProxyRequest\" : false,\n    \"headers\" : {\n      \"Accept\" : \"text/plain\",\n      \"Content-Type\" : \"text/plain\"\n    },\n    \"loggedDate\" : 1339083581823,\n    \"loggedDateString\" : \"2012-06-07 16:39:41\",\n    \"method\" : \"POST\",\n    \"url\" : \"/my/other/url\"\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "b70152e9-d734-4c01-a9ca-34adb70de840",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:13.982684Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "(none)"
+        }
+      }
+    },
+    "insertionIndex" : 9
+  }, {
+    "id" : "d1c80d2a-b41c-4eef-89fb-6f30535c9bb6",
+    "name" : "Empty the request journal - 200",
+    "request" : {
+      "urlPath" : "/__admin/requests/reset",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 200
+    },
+    "uuid" : "d1c80d2a-b41c-4eef-89fb-6f30535c9bb6",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:13.982645Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "(none)"
+        }
+      }
+    },
+    "insertionIndex" : 10
+  }, {
+    "id" : "222cd4ca-c515-4b8b-b1e7-e8d5400a050e",
+    "name" : "Delete requests mappings matching metadata",
+    "request" : {
+      "urlPath" : "/__admin/requests/remove-by-metadata",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"requests\" : [ {\n    \"absoluteUrl\" : \"http://mydomain.com/my/url\",\n    \"body\" : \"\",\n    \"browserProxyRequest\" : true,\n    \"headers\" : {\n      \"Accept\" : \"image/png,image/*;q=0.8,*/*;q=0.5\",\n      \"Accept-Language\" : \"en-us,en;q=0.5\",\n      \"User-Agent\" : \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10.6; rv:9.0) Gecko/20100101 Firefox/9.0\"\n    },\n    \"loggedDate\" : 1339083581823,\n    \"loggedDateString\" : \"2012-06-07 16:39:41\",\n    \"method\" : \"GET\",\n    \"url\" : \"/my/url\"\n  }, {\n    \"absoluteUrl\" : \"http://my.other.domain.com/my/other/url\",\n    \"body\" : \"My text\",\n    \"browserProxyRequest\" : false,\n    \"headers\" : {\n      \"Accept\" : \"text/plain\",\n      \"Content-Type\" : \"text/plain\"\n    },\n    \"loggedDate\" : 1339083581823,\n    \"loggedDateString\" : \"2012-06-07 16:39:41\",\n    \"method\" : \"POST\",\n    \"url\" : \"/my/other/url\"\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "222cd4ca-c515-4b8b-b1e7-e8d5400a050e",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:13.982623Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "(none)"
+        }
+      }
+    },
+    "insertionIndex" : 11
+  }, {
+    "id" : "ae29aa55-3ff4-4000-87f1-70dc36293c5e",
+    "name" : "Remove requests by criteria",
+    "request" : {
+      "urlPath" : "/__admin/requests/remove",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"requests\" : [ {\n    \"absoluteUrl\" : \"http://mydomain.com/my/url\",\n    \"body\" : \"\",\n    \"browserProxyRequest\" : true,\n    \"headers\" : {\n      \"Accept\" : \"image/png,image/*;q=0.8,*/*;q=0.5\",\n      \"Accept-Language\" : \"en-us,en;q=0.5\",\n      \"User-Agent\" : \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10.6; rv:9.0) Gecko/20100101 Firefox/9.0\"\n    },\n    \"loggedDate\" : 1339083581823,\n    \"loggedDateString\" : \"2012-06-07 16:39:41\",\n    \"method\" : \"GET\",\n    \"url\" : \"/my/url\"\n  }, {\n    \"absoluteUrl\" : \"http://my.other.domain.com/my/other/url\",\n    \"body\" : \"My text\",\n    \"browserProxyRequest\" : false,\n    \"headers\" : {\n      \"Accept\" : \"text/plain\",\n      \"Content-Type\" : \"text/plain\"\n    },\n    \"loggedDate\" : 1339083581823,\n    \"loggedDateString\" : \"2012-06-07 16:39:41\",\n    \"method\" : \"POST\",\n    \"url\" : \"/my/other/url\"\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "ae29aa55-3ff4-4000-87f1-70dc36293c5e",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:13.982586Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "(none)"
+        }
+      }
+    },
+    "insertionIndex" : 12
+  }, {
+    "id" : "7d8f6cdb-d911-485b-9fc9-8c6a5ef40b40",
+    "name" : "Find requests by criteria",
+    "request" : {
+      "urlPath" : "/__admin/requests/find",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"requests\" : [ {\n    \"absoluteUrl\" : \"http://mydomain.com/my/url\",\n    \"body\" : \"\",\n    \"browserProxyRequest\" : true,\n    \"headers\" : {\n      \"Accept\" : \"image/png,image/*;q=0.8,*/*;q=0.5\",\n      \"Accept-Language\" : \"en-us,en;q=0.5\",\n      \"User-Agent\" : \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10.6; rv:9.0) Gecko/20100101 Firefox/9.0\"\n    },\n    \"loggedDate\" : 1339083581823,\n    \"loggedDateString\" : \"2012-06-07 16:39:41\",\n    \"method\" : \"GET\",\n    \"url\" : \"/my/url\"\n  }, {\n    \"absoluteUrl\" : \"http://my.other.domain.com/my/other/url\",\n    \"body\" : \"My text\",\n    \"browserProxyRequest\" : false,\n    \"headers\" : {\n      \"Accept\" : \"text/plain\",\n      \"Content-Type\" : \"text/plain\"\n    },\n    \"loggedDate\" : 1339083581823,\n    \"loggedDateString\" : \"2012-06-07 16:39:41\",\n    \"method\" : \"POST\",\n    \"url\" : \"/my/other/url\"\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "7d8f6cdb-d911-485b-9fc9-8c6a5ef40b40",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:13.982552Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "(none)"
+        }
+      }
+    },
+    "insertionIndex" : 13
+  }, {
+    "id" : "4b5bf280-b3af-4cd0-9c4f-22ca58d7350c",
+    "name" : "Count requests by criteria",
+    "request" : {
+      "urlPath" : "/__admin/requests/count",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"count\" : 4\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "4b5bf280-b3af-4cd0-9c4f-22ca58d7350c",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:13.982514Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "(none)",
+          "schema" : {
+            "properties" : {
+              "count" : {
+                "example" : 4,
+                "type" : "integer"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 14
+  }, {
+    "id" : "9b231dc8-d881-4450-b747-d3aa3f94c4ec",
+    "name" : "Get all requests in journal",
+    "request" : {
+      "urlPath" : "/__admin/requests",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"meta\" : {\n    \"total\" : 9\n  },\n  \"requestJournalDisabled\" : false,\n  \"requests\" : [ {\n    \"id\" : \"45760a03-eebb-4387-ad0d-bb89b5d3d662\",\n    \"request\" : {\n      \"absoluteUrl\" : \"http://localhost:56715/received-request/9\",\n      \"body\" : \"\",\n      \"bodyAsBase64\" : \"\",\n      \"browserProxyRequest\" : false,\n      \"clientIp\" : \"127.0.0.1\",\n      \"cookies\" : { },\n      \"headers\" : {\n        \"Connection\" : \"keep-alive\",\n        \"Host\" : \"localhost:56715\",\n        \"User-Agent\" : \"Apache-HttpClient/4.5.1 (Java/1.7.0_51)\"\n      },\n      \"loggedDate\" : 1471442494809,\n      \"loggedDateString\" : \"2016-08-17T14:01:34Z\",\n      \"method\" : \"GET\",\n      \"url\" : \"/received-request/9\"\n    },\n    \"responseDefinition\" : {\n      \"fromConfiguredStub\" : false,\n      \"status\" : 404,\n      \"transformerParameters\" : { },\n      \"transformers\" : [ ]\n    }\n  }, {\n    \"id\" : \"6ae78311-0178-46c9-987a-fbfc528d54d8\",\n    \"request\" : {\n      \"absoluteUrl\" : \"http://localhost:56715/received-request/8\",\n      \"body\" : \"\",\n      \"bodyAsBase64\" : \"\",\n      \"browserProxyRequest\" : false,\n      \"clientIp\" : \"127.0.0.1\",\n      \"cookies\" : { },\n      \"headers\" : {\n        \"Connection\" : \"keep-alive\",\n        \"Host\" : \"localhost:56715\",\n        \"User-Agent\" : \"Apache-HttpClient/4.5.1 (Java/1.7.0_51)\"\n      },\n      \"loggedDate\" : 1471442494802,\n      \"loggedDateString\" : \"2016-08-17T14:01:34Z\",\n      \"method\" : \"GET\",\n      \"url\" : \"/received-request/8\"\n    },\n    \"responseDefinition\" : {\n      \"fromConfiguredStub\" : false,\n      \"status\" : 404,\n      \"transformerParameters\" : { },\n      \"transformers\" : [ ]\n    }\n  }, {\n    \"id\" : \"aba8e4ad-1b5b-4518-8f05-b2170a24de35\",\n    \"request\" : {\n      \"absoluteUrl\" : \"http://localhost:56715/received-request/7\",\n      \"body\" : \"\",\n      \"bodyAsBase64\" : \"\",\n      \"browserProxyRequest\" : false,\n      \"clientIp\" : \"127.0.0.1\",\n      \"cookies\" : { },\n      \"headers\" : {\n        \"Connection\" : \"keep-alive\",\n        \"Host\" : \"localhost:56715\",\n        \"User-Agent\" : \"Apache-HttpClient/4.5.1 (Java/1.7.0_51)\"\n      },\n      \"loggedDate\" : 1471442494795,\n      \"loggedDateString\" : \"2016-08-17T14:01:34Z\",\n      \"method\" : \"GET\",\n      \"url\" : \"/received-request/7\"\n    },\n    \"responseDefinition\" : {\n      \"fromConfiguredStub\" : false,\n      \"status\" : 404,\n      \"transformerParameters\" : { },\n      \"transformers\" : [ ]\n    }\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "9b231dc8-d881-4450-b747-d3aa3f94c4ec",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:13.982458Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "(none)"
+        }
+      }
+    },
+    "insertionIndex" : 15
+  }, {
+    "id" : "e04ec006-eeb8-49b7-99d8-eaae3407f49b",
+    "name" : "Delete all requests in journal - 200",
+    "request" : {
+      "urlPath" : "/__admin/requests",
+      "method" : "DELETE"
+    },
+    "response" : {
+      "status" : 200
+    },
+    "uuid" : "e04ec006-eeb8-49b7-99d8-eaae3407f49b",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:13.982408Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "(none)"
+        }
+      }
+    },
+    "insertionIndex" : 16
+  }, {
+    "id" : "eed64dba-852d-43a9-a030-32dbe1446be8",
+    "name" : "Stop recording",
+    "request" : {
+      "urlPath" : "/__admin/recordings/stop",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"mappings\" : [ {\n    \"id\" : \"093f1027-e5e0-4921-9e6d-e619dfd5d2c7\",\n    \"name\" : \"recordables_123\",\n    \"persistent\" : true,\n    \"request\" : {\n      \"method\" : \"GET\",\n      \"url\" : \"/recordables/123\"\n    },\n    \"response\" : {\n      \"body\" : \"{\\n  \\\"message\\\": \\\"Congratulations on your first recording!\\\"\\n}\",\n      \"headers\" : {\n        \"Content-Type\" : \"application/json\"\n      },\n      \"status\" : 200\n    },\n    \"uuid\" : \"093f1027-e5e0-4921-9e6d-e619dfd5d2c7\"\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "eed64dba-852d-43a9-a030-32dbe1446be8",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:13.982368Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "(none)",
+          "schema" : {
+            "additionalProperties" : false,
+            "properties" : {
+              "mappings" : {
+                "items" : {
+                  "additionalProperties" : false,
+                  "properties" : {
+                    "id" : {
+                      "description" : "This stub mapping's unique identifier",
+                      "type" : "string"
+                    },
+                    "metadata" : {
+                      "description" : "Arbitrary metadata to be used for e.g. tagging, documentation. Can also be used to find and remove stubs.",
+                      "type" : "object"
+                    },
+                    "name" : {
+                      "description" : "The stub mapping's name",
+                      "type" : "string"
+                    },
+                    "newScenarioState" : {
+                      "description" : "The new state for the scenario to be updated to after this stub is served.",
+                      "type" : "string"
+                    },
+                    "persistent" : {
+                      "description" : "Indicates that the stub mapping should be persisted immediately on create/update/delete and survive resets to default.",
+                      "type" : "boolean"
+                    },
+                    "postServeActions" : {
+                      "description" : "A map of the names of post serve action extensions to trigger and their parameters.",
+                      "type" : "object"
+                    },
+                    "priority" : {
+                      "description" : "This stub mapping's priority relative to others. 1 is highest.",
+                      "minimum" : 1,
+                      "type" : "integer"
+                    },
+                    "request" : {
+                      "example" : {
+                        "bodyPatterns" : [ {
+                          "equalToJson" : "{ \"numbers\": [1, 2, 3] }"
+                        } ],
+                        "headers" : {
+                          "Content-Type" : {
+                            "equalTo" : "application/json"
+                          }
+                        },
+                        "method" : "POST",
+                        "url" : "/some/thing"
+                      },
+                      "properties" : {
+                        "basicAuthCredentials" : {
+                          "description" : "Pre-emptive basic auth credentials to match against",
+                          "properties" : {
+                            "password" : {
+                              "type" : "string"
+                            },
+                            "username" : {
+                              "type" : "string"
+                            }
+                          },
+                          "required" : [ "username", "password" ],
+                          "type" : "object"
+                        },
+                        "bodyPatterns" : {
+                          "description" : "Request body patterns to match against in the <key>: { \"<predicate>\": \"<value>\" } form",
+                          "items" : {
+                            "type" : "object"
+                          },
+                          "type" : "array"
+                        },
+                        "cookies" : {
+                          "description" : "Cookie patterns to match against in the <key>: { \"<predicate>\": \"<value>\" } form",
+                          "type" : "object"
+                        },
+                        "headers" : {
+                          "description" : "Header patterns to match against in the <key>: { \"<predicate>\": \"<value>\" } form",
+                          "type" : "object"
+                        },
+                        "method" : {
+                          "description" : "The HTTP request method e.g. GET",
+                          "type" : "string"
+                        },
+                        "queryParameters" : {
+                          "description" : "Query parameter patterns to match against in the <key>: { \"<predicate>\": \"<value>\" } form",
+                          "type" : "object"
+                        },
+                        "url" : {
+                          "description" : "The path and query to match exactly against. Only one of url, urlPattern, urlPath or urlPathPattern may be specified.",
+                          "type" : "string"
+                        },
+                        "urlPath" : {
+                          "description" : "The path to match exactly against. Only one of url, urlPattern, urlPath or urlPathPattern may be specified.",
+                          "type" : "string"
+                        },
+                        "urlPathPattern" : {
+                          "description" : "The path regex to match against. Only one of url, urlPattern, urlPath or urlPathPattern may be specified.",
+                          "type" : "string"
+                        },
+                        "urlPattern" : {
+                          "description" : "The path and query regex to match against. Only one of url, urlPattern, urlPath or urlPathPattern may be specified.",
+                          "type" : "string"
+                        }
+                      },
+                      "type" : "object"
+                    },
+                    "requiredScenarioState" : {
+                      "description" : "The required state of the scenario in order for this stub to be matched.",
+                      "type" : "string"
+                    },
+                    "response" : {
+                      "allOf" : [ {
+                        "properties" : {
+                          "additionalProxyRequestHeaders" : {
+                            "description" : "Extra request headers to send when proxying to another host.",
+                            "type" : "object"
+                          },
+                          "base64Body" : {
+                            "description" : "The response body as a base64 encoded string (useful for binary content). Only one of body, base64Body, jsonBody or bodyFileName may be specified.",
+                            "type" : "string"
+                          },
+                          "body" : {
+                            "description" : "The response body as a string. Only one of body, base64Body, jsonBody or bodyFileName may be specified.",
+                            "type" : "string"
+                          },
+                          "bodyFileName" : {
+                            "description" : "The path to the file containing the response body, relative to the configured file root. Only one of body, base64Body, jsonBody or bodyFileName may be specified.",
+                            "type" : "string"
+                          },
+                          "delayDistribution" : {
+                            "description" : "The delay distribution. Valid property configuration is either median/sigma/type or lower/type/upper.",
+                            "oneOf" : [ {
+                              "description" : "Log normal randomly distributed response delay.",
+                              "properties" : {
+                                "median" : {
+                                  "type" : "integer"
+                                },
+                                "sigma" : {
+                                  "type" : "number"
+                                },
+                                "type" : {
+                                  "enum" : [ "lognormal" ],
+                                  "type" : "string"
+                                }
+                              },
+                              "title" : "Log normal",
+                              "type" : "object"
+                            }, {
+                              "description" : "Uniformly distributed random response delay.",
+                              "properties" : {
+                                "lower" : {
+                                  "type" : "integer"
+                                },
+                                "type" : {
+                                  "enum" : [ "uniform" ],
+                                  "type" : "string"
+                                },
+                                "upper" : {
+                                  "type" : "integer"
+                                }
+                              },
+                              "title" : "Uniform",
+                              "type" : "object"
+                            } ]
+                          },
+                          "fault" : {
+                            "description" : "The fault to apply (instead of a full, valid response).",
+                            "enum" : [ "CONNECTION_RESET_BY_PEER", "EMPTY_RESPONSE", "MALFORMED_RESPONSE_CHUNK", "RANDOM_DATA_THEN_CLOSE" ],
+                            "type" : "string"
+                          },
+                          "fixedDelayMilliseconds" : {
+                            "description" : "Number of milliseconds to delay be before sending the response.",
+                            "type" : "integer"
+                          },
+                          "fromConfiguredStub" : {
+                            "description" : "Read-only flag indicating false if this was the default, unmatched response. Not present otherwise.",
+                            "type" : "boolean"
+                          },
+                          "headers" : {
+                            "description" : "Map of response headers to send",
+                            "type" : "object"
+                          },
+                          "jsonBody" : {
+                            "description" : "The response body as a JSON object. Only one of body, base64Body, jsonBody or bodyFileName may be specified.",
+                            "type" : "object"
+                          },
+                          "proxyBaseUrl" : {
+                            "description" : "The base URL of the target to proxy matching requests to.",
+                            "type" : "string"
+                          },
+                          "status" : {
+                            "description" : "The HTTP status code to be returned",
+                            "type" : "integer"
+                          },
+                          "statusMessage" : {
+                            "description" : "The HTTP status message to be returned",
+                            "type" : "string"
+                          },
+                          "transformerParameters" : {
+                            "description" : "Parameters to apply to response transformers.",
+                            "type" : "object"
+                          },
+                          "transformers" : {
+                            "description" : "List of names of transformers to apply to this response.",
+                            "items" : {
+                              "type" : "string"
+                            },
+                            "type" : "array"
+                          }
+                        },
+                        "type" : "object"
+                      } ]
+                    },
+                    "scenarioName" : {
+                      "description" : "The name of the scenario that this stub mapping is part of",
+                      "type" : "string"
+                    },
+                    "uuid" : {
+                      "description" : "Alias for the id",
+                      "type" : "string"
+                    }
+                  },
+                  "type" : "object"
+                },
+                "type" : "array"
+              },
+              "meta" : {
+                "properties" : {
+                  "total" : {
+                    "example" : 4,
+                    "type" : "integer"
+                  }
+                },
+                "required" : [ "total" ],
+                "type" : "object"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 17
+  }, {
+    "id" : "5faf6629-5b73-419e-a10a-69ff43eaa70f",
+    "name" : "Get recording status",
+    "request" : {
+      "urlPath" : "/__admin/recordings/status",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"status\" : \"Stopped\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "5faf6629-5b73-419e-a10a-69ff43eaa70f",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:13.981746Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "(none)",
+          "schema" : {
+            "properties" : {
+              "status" : {
+                "enum" : [ "NeverStarted", "Recording", "Stopped" ],
+                "example" : "Stopped",
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 18
+  }, {
+    "id" : "6a10cc23-141d-48ad-964b-f9be635127b6",
+    "name" : "Start recording - 200",
+    "request" : {
+      "urlPath" : "/__admin/recordings/start",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 200
+    },
+    "uuid" : "6a10cc23-141d-48ad-964b-f9be635127b6",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:13.981678Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "(none)"
+        }
+      }
+    },
+    "insertionIndex" : 19
+  }, {
+    "id" : "e703bde3-4506-4308-a79b-a3971a4270c2",
+    "name" : "Take a snapshot recording",
+    "request" : {
+      "urlPath" : "/__admin/recordings/snapshot",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"mappings\" : [ {\n    \"id\" : \"093f1027-e5e0-4921-9e6d-e619dfd5d2c7\",\n    \"name\" : \"recordables_123\",\n    \"persistent\" : true,\n    \"request\" : {\n      \"method\" : \"GET\",\n      \"url\" : \"/recordables/123\"\n    },\n    \"response\" : {\n      \"body\" : \"{\\n  \\\"message\\\": \\\"Congratulations on your first recording!\\\"\\n}\",\n      \"headers\" : {\n        \"Content-Type\" : \"application/json\"\n      },\n      \"status\" : 200\n    },\n    \"uuid\" : \"093f1027-e5e0-4921-9e6d-e619dfd5d2c7\"\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "e703bde3-4506-4308-a79b-a3971a4270c2",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:13.981634Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "(none)",
+          "schema" : {
+            "additionalProperties" : false,
+            "properties" : {
+              "mappings" : {
+                "items" : {
+                  "additionalProperties" : false,
+                  "properties" : {
+                    "id" : {
+                      "description" : "This stub mapping's unique identifier",
+                      "type" : "string"
+                    },
+                    "metadata" : {
+                      "description" : "Arbitrary metadata to be used for e.g. tagging, documentation. Can also be used to find and remove stubs.",
+                      "type" : "object"
+                    },
+                    "name" : {
+                      "description" : "The stub mapping's name",
+                      "type" : "string"
+                    },
+                    "newScenarioState" : {
+                      "description" : "The new state for the scenario to be updated to after this stub is served.",
+                      "type" : "string"
+                    },
+                    "persistent" : {
+                      "description" : "Indicates that the stub mapping should be persisted immediately on create/update/delete and survive resets to default.",
+                      "type" : "boolean"
+                    },
+                    "postServeActions" : {
+                      "description" : "A map of the names of post serve action extensions to trigger and their parameters.",
+                      "type" : "object"
+                    },
+                    "priority" : {
+                      "description" : "This stub mapping's priority relative to others. 1 is highest.",
+                      "minimum" : 1,
+                      "type" : "integer"
+                    },
+                    "request" : {
+                      "example" : {
+                        "bodyPatterns" : [ {
+                          "equalToJson" : "{ \"numbers\": [1, 2, 3] }"
+                        } ],
+                        "headers" : {
+                          "Content-Type" : {
+                            "equalTo" : "application/json"
+                          }
+                        },
+                        "method" : "POST",
+                        "url" : "/some/thing"
+                      },
+                      "properties" : {
+                        "basicAuthCredentials" : {
+                          "description" : "Pre-emptive basic auth credentials to match against",
+                          "properties" : {
+                            "password" : {
+                              "type" : "string"
+                            },
+                            "username" : {
+                              "type" : "string"
+                            }
+                          },
+                          "required" : [ "username", "password" ],
+                          "type" : "object"
+                        },
+                        "bodyPatterns" : {
+                          "description" : "Request body patterns to match against in the <key>: { \"<predicate>\": \"<value>\" } form",
+                          "items" : {
+                            "type" : "object"
+                          },
+                          "type" : "array"
+                        },
+                        "cookies" : {
+                          "description" : "Cookie patterns to match against in the <key>: { \"<predicate>\": \"<value>\" } form",
+                          "type" : "object"
+                        },
+                        "headers" : {
+                          "description" : "Header patterns to match against in the <key>: { \"<predicate>\": \"<value>\" } form",
+                          "type" : "object"
+                        },
+                        "method" : {
+                          "description" : "The HTTP request method e.g. GET",
+                          "type" : "string"
+                        },
+                        "queryParameters" : {
+                          "description" : "Query parameter patterns to match against in the <key>: { \"<predicate>\": \"<value>\" } form",
+                          "type" : "object"
+                        },
+                        "url" : {
+                          "description" : "The path and query to match exactly against. Only one of url, urlPattern, urlPath or urlPathPattern may be specified.",
+                          "type" : "string"
+                        },
+                        "urlPath" : {
+                          "description" : "The path to match exactly against. Only one of url, urlPattern, urlPath or urlPathPattern may be specified.",
+                          "type" : "string"
+                        },
+                        "urlPathPattern" : {
+                          "description" : "The path regex to match against. Only one of url, urlPattern, urlPath or urlPathPattern may be specified.",
+                          "type" : "string"
+                        },
+                        "urlPattern" : {
+                          "description" : "The path and query regex to match against. Only one of url, urlPattern, urlPath or urlPathPattern may be specified.",
+                          "type" : "string"
+                        }
+                      },
+                      "type" : "object"
+                    },
+                    "requiredScenarioState" : {
+                      "description" : "The required state of the scenario in order for this stub to be matched.",
+                      "type" : "string"
+                    },
+                    "response" : {
+                      "allOf" : [ {
+                        "properties" : {
+                          "additionalProxyRequestHeaders" : {
+                            "description" : "Extra request headers to send when proxying to another host.",
+                            "type" : "object"
+                          },
+                          "base64Body" : {
+                            "description" : "The response body as a base64 encoded string (useful for binary content). Only one of body, base64Body, jsonBody or bodyFileName may be specified.",
+                            "type" : "string"
+                          },
+                          "body" : {
+                            "description" : "The response body as a string. Only one of body, base64Body, jsonBody or bodyFileName may be specified.",
+                            "type" : "string"
+                          },
+                          "bodyFileName" : {
+                            "description" : "The path to the file containing the response body, relative to the configured file root. Only one of body, base64Body, jsonBody or bodyFileName may be specified.",
+                            "type" : "string"
+                          },
+                          "delayDistribution" : {
+                            "description" : "The delay distribution. Valid property configuration is either median/sigma/type or lower/type/upper.",
+                            "oneOf" : [ {
+                              "description" : "Log normal randomly distributed response delay.",
+                              "properties" : {
+                                "median" : {
+                                  "type" : "integer"
+                                },
+                                "sigma" : {
+                                  "type" : "number"
+                                },
+                                "type" : {
+                                  "enum" : [ "lognormal" ],
+                                  "type" : "string"
+                                }
+                              },
+                              "title" : "Log normal",
+                              "type" : "object"
+                            }, {
+                              "description" : "Uniformly distributed random response delay.",
+                              "properties" : {
+                                "lower" : {
+                                  "type" : "integer"
+                                },
+                                "type" : {
+                                  "enum" : [ "uniform" ],
+                                  "type" : "string"
+                                },
+                                "upper" : {
+                                  "type" : "integer"
+                                }
+                              },
+                              "title" : "Uniform",
+                              "type" : "object"
+                            } ]
+                          },
+                          "fault" : {
+                            "description" : "The fault to apply (instead of a full, valid response).",
+                            "enum" : [ "CONNECTION_RESET_BY_PEER", "EMPTY_RESPONSE", "MALFORMED_RESPONSE_CHUNK", "RANDOM_DATA_THEN_CLOSE" ],
+                            "type" : "string"
+                          },
+                          "fixedDelayMilliseconds" : {
+                            "description" : "Number of milliseconds to delay be before sending the response.",
+                            "type" : "integer"
+                          },
+                          "fromConfiguredStub" : {
+                            "description" : "Read-only flag indicating false if this was the default, unmatched response. Not present otherwise.",
+                            "type" : "boolean"
+                          },
+                          "headers" : {
+                            "description" : "Map of response headers to send",
+                            "type" : "object"
+                          },
+                          "jsonBody" : {
+                            "description" : "The response body as a JSON object. Only one of body, base64Body, jsonBody or bodyFileName may be specified.",
+                            "type" : "object"
+                          },
+                          "proxyBaseUrl" : {
+                            "description" : "The base URL of the target to proxy matching requests to.",
+                            "type" : "string"
+                          },
+                          "status" : {
+                            "description" : "The HTTP status code to be returned",
+                            "type" : "integer"
+                          },
+                          "statusMessage" : {
+                            "description" : "The HTTP status message to be returned",
+                            "type" : "string"
+                          },
+                          "transformerParameters" : {
+                            "description" : "Parameters to apply to response transformers.",
+                            "type" : "object"
+                          },
+                          "transformers" : {
+                            "description" : "List of names of transformers to apply to this response.",
+                            "items" : {
+                              "type" : "string"
+                            },
+                            "type" : "array"
+                          }
+                        },
+                        "type" : "object"
+                      } ]
+                    },
+                    "scenarioName" : {
+                      "description" : "The name of the scenario that this stub mapping is part of",
+                      "type" : "string"
+                    },
+                    "uuid" : {
+                      "description" : "Alias for the id",
+                      "type" : "string"
+                    }
+                  },
+                  "type" : "object"
+                },
+                "type" : "array"
+              },
+              "meta" : {
+                "properties" : {
+                  "total" : {
+                    "example" : 4,
+                    "type" : "integer"
+                  }
+                },
+                "required" : [ "total" ],
+                "type" : "object"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 20
+  }, {
+    "id" : "5503b3c1-fd86-410d-9d7f-f4320be242e5",
+    "name" : "Find near misses matching request pattern",
+    "request" : {
+      "urlPath" : "/__admin/near-misses/request-pattern",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"nearMisses\" : [ {\n    \"matchResult\" : {\n      \"distance\" : 0.06944444444444445\n    },\n    \"request\" : {\n      \"absoluteUrl\" : \"http://localhost:8080/nomatch\",\n      \"body\" : \"\",\n      \"bodyAsBase64\" : \"\",\n      \"browserProxyRequest\" : false,\n      \"clientIp\" : \"0:0:0:0:0:0:0:1\",\n      \"cookies\" : { },\n      \"headers\" : {\n        \"Accept\" : \"*/*\",\n        \"Host\" : \"localhost:8080\",\n        \"User-Agent\" : \"curl/7.30.0\"\n      },\n      \"loggedDate\" : 1467402464520,\n      \"loggedDateString\" : \"2016-07-01T19:47:44Z\",\n      \"method\" : \"GET\",\n      \"url\" : \"/nomatch\"\n    },\n    \"requestPattern\" : {\n      \"method\" : \"GET\",\n      \"url\" : \"/almostmatch\"\n    }\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "5503b3c1-fd86-410d-9d7f-f4320be242e5",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:13.981016Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "(none)",
+          "schema" : {
+            "properties" : {
+              "nearMisses" : {
+                "items" : {
+                  "properties" : {
+                    "absoluteUrl" : {
+                      "description" : "The full URL to match against",
+                      "example" : "http://localhost:56738/received-request/2",
+                      "type" : "string"
+                    },
+                    "body" : {
+                      "description" : "Body string to match against",
+                      "example" : "Hello world",
+                      "type" : "string"
+                    },
+                    "cookies" : {
+                      "description" : "Cookie patterns to match against in the <key>: { \"<predicate>\": \"<value>\" } form",
+                      "example" : { },
+                      "type" : "object"
+                    },
+                    "headers" : {
+                      "description" : "Header patterns to match against in the <key>: { \"<predicate>\": \"<value>\" } form",
+                      "example" : {
+                        "Connection" : "keep-alive",
+                        "Host" : "localhost:56738",
+                        "User-Agent" : "Apache-HttpClient/4.5.1 (Java/1.7.0_51)"
+                      },
+                      "type" : "object"
+                    },
+                    "method" : {
+                      "description" : "The HTTP request method",
+                      "example" : "GET",
+                      "type" : "string"
+                    },
+                    "url" : {
+                      "description" : "The path and query to match exactly against",
+                      "example" : "/received-request/2",
+                      "type" : "string"
+                    }
+                  },
+                  "type" : "object"
+                },
+                "type" : "array"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 21
+  }, {
+    "id" : "7ac65164-ee6c-4074-9ee2-888be9e89cd6",
+    "name" : "Find near misses matching specific request",
+    "request" : {
+      "urlPath" : "/__admin/near-misses/request",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"nearMisses\" : [ {\n    \"matchResult\" : {\n      \"distance\" : 0.06944444444444445\n    },\n    \"request\" : {\n      \"absoluteUrl\" : \"http://localhost:8080/nomatch\",\n      \"body\" : \"\",\n      \"bodyAsBase64\" : \"\",\n      \"browserProxyRequest\" : false,\n      \"clientIp\" : \"0:0:0:0:0:0:0:1\",\n      \"cookies\" : { },\n      \"headers\" : {\n        \"Accept\" : \"*/*\",\n        \"Host\" : \"localhost:8080\",\n        \"User-Agent\" : \"curl/7.30.0\"\n      },\n      \"loggedDate\" : 1467402464520,\n      \"loggedDateString\" : \"2016-07-01T19:47:44Z\",\n      \"method\" : \"GET\",\n      \"url\" : \"/nomatch\"\n    },\n    \"requestPattern\" : {\n      \"method\" : \"GET\",\n      \"url\" : \"/almostmatch\"\n    }\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "7ac65164-ee6c-4074-9ee2-888be9e89cd6",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:13.980894Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "(none)",
+          "schema" : {
+            "properties" : {
+              "nearMisses" : {
+                "items" : {
+                  "properties" : {
+                    "absoluteUrl" : {
+                      "description" : "The full URL to match against",
+                      "example" : "http://localhost:56738/received-request/2",
+                      "type" : "string"
+                    },
+                    "body" : {
+                      "description" : "Body string to match against",
+                      "example" : "Hello world",
+                      "type" : "string"
+                    },
+                    "cookies" : {
+                      "description" : "Cookie patterns to match against in the <key>: { \"<predicate>\": \"<value>\" } form",
+                      "example" : { },
+                      "type" : "object"
+                    },
+                    "headers" : {
+                      "description" : "Header patterns to match against in the <key>: { \"<predicate>\": \"<value>\" } form",
+                      "example" : {
+                        "Connection" : "keep-alive",
+                        "Host" : "localhost:56738",
+                        "User-Agent" : "Apache-HttpClient/4.5.1 (Java/1.7.0_51)"
+                      },
+                      "type" : "object"
+                    },
+                    "method" : {
+                      "description" : "The HTTP request method",
+                      "example" : "GET",
+                      "type" : "string"
+                    },
+                    "url" : {
+                      "description" : "The path and query to match exactly against",
+                      "example" : "/received-request/2",
+                      "type" : "string"
+                    }
+                  },
+                  "type" : "object"
+                },
+                "type" : "array"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 22
+  }, {
+    "id" : "e07498c6-fbec-4586-9666-f9a209eda7e8",
+    "name" : "Update a stub mapping - 404",
+    "request" : {
+      "urlPath" : "/__admin/mappings/68tf",
+      "method" : "PUT"
+    },
+    "response" : {
+      "status" : 404
+    },
+    "uuid" : "e07498c6-fbec-4586-9666-f9a209eda7e8",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:13.980755Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "(none)"
+        }
+      }
+    },
+    "insertionIndex" : 23
+  }, {
+    "id" : "2ecdff75-e680-433a-9724-da2fd6f5fd4d",
+    "name" : "Update a stub mapping (application/json)",
+    "request" : {
+      "urlPath" : "/__admin/mappings/k181",
+      "method" : "PUT",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/json"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"id\" : \"76ada7b0-49ae-4229-91c4-396a36f18e09\",\n  \"priority\" : 3,\n  \"request\" : {\n    \"headers\" : {\n      \"Accept\" : {\n        \"equalTo\" : \"text/plain\"\n      }\n    },\n    \"method\" : \"GET\",\n    \"url\" : \"/some/thing\"\n  },\n  \"response\" : {\n    \"body\" : \"Hello world!\",\n    \"headers\" : {\n      \"Content-Type\" : \"text/plain\"\n    },\n    \"status\" : 200\n  }\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "2ecdff75-e680-433a-9724-da2fd6f5fd4d",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:13.980633Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "(none)",
+          "schema" : {
+            "additionalProperties" : false,
+            "properties" : {
+              "id" : {
+                "description" : "This stub mapping's unique identifier",
+                "type" : "string"
+              },
+              "metadata" : {
+                "description" : "Arbitrary metadata to be used for e.g. tagging, documentation. Can also be used to find and remove stubs.",
+                "type" : "object"
+              },
+              "name" : {
+                "description" : "The stub mapping's name",
+                "type" : "string"
+              },
+              "newScenarioState" : {
+                "description" : "The new state for the scenario to be updated to after this stub is served.",
+                "type" : "string"
+              },
+              "persistent" : {
+                "description" : "Indicates that the stub mapping should be persisted immediately on create/update/delete and survive resets to default.",
+                "type" : "boolean"
+              },
+              "postServeActions" : {
+                "description" : "A map of the names of post serve action extensions to trigger and their parameters.",
+                "type" : "object"
+              },
+              "priority" : {
+                "description" : "This stub mapping's priority relative to others. 1 is highest.",
+                "minimum" : 1,
+                "type" : "integer"
+              },
+              "request" : {
+                "example" : {
+                  "bodyPatterns" : [ {
+                    "equalToJson" : "{ \"numbers\": [1, 2, 3] }"
+                  } ],
+                  "headers" : {
+                    "Content-Type" : {
+                      "equalTo" : "application/json"
+                    }
+                  },
+                  "method" : "POST",
+                  "url" : "/some/thing"
+                },
+                "properties" : {
+                  "basicAuthCredentials" : {
+                    "description" : "Pre-emptive basic auth credentials to match against",
+                    "properties" : {
+                      "password" : {
+                        "type" : "string"
+                      },
+                      "username" : {
+                        "type" : "string"
+                      }
+                    },
+                    "required" : [ "username", "password" ],
+                    "type" : "object"
+                  },
+                  "bodyPatterns" : {
+                    "description" : "Request body patterns to match against in the <key>: { \"<predicate>\": \"<value>\" } form",
+                    "items" : {
+                      "type" : "object"
+                    },
+                    "type" : "array"
+                  },
+                  "cookies" : {
+                    "description" : "Cookie patterns to match against in the <key>: { \"<predicate>\": \"<value>\" } form",
+                    "type" : "object"
+                  },
+                  "headers" : {
+                    "description" : "Header patterns to match against in the <key>: { \"<predicate>\": \"<value>\" } form",
+                    "type" : "object"
+                  },
+                  "method" : {
+                    "description" : "The HTTP request method e.g. GET",
+                    "type" : "string"
+                  },
+                  "queryParameters" : {
+                    "description" : "Query parameter patterns to match against in the <key>: { \"<predicate>\": \"<value>\" } form",
+                    "type" : "object"
+                  },
+                  "url" : {
+                    "description" : "The path and query to match exactly against. Only one of url, urlPattern, urlPath or urlPathPattern may be specified.",
+                    "type" : "string"
+                  },
+                  "urlPath" : {
+                    "description" : "The path to match exactly against. Only one of url, urlPattern, urlPath or urlPathPattern may be specified.",
+                    "type" : "string"
+                  },
+                  "urlPathPattern" : {
+                    "description" : "The path regex to match against. Only one of url, urlPattern, urlPath or urlPathPattern may be specified.",
+                    "type" : "string"
+                  },
+                  "urlPattern" : {
+                    "description" : "The path and query regex to match against. Only one of url, urlPattern, urlPath or urlPathPattern may be specified.",
+                    "type" : "string"
+                  }
+                },
+                "type" : "object"
+              },
+              "requiredScenarioState" : {
+                "description" : "The required state of the scenario in order for this stub to be matched.",
+                "type" : "string"
+              },
+              "response" : {
+                "allOf" : [ {
+                  "properties" : {
+                    "additionalProxyRequestHeaders" : {
+                      "description" : "Extra request headers to send when proxying to another host.",
+                      "type" : "object"
+                    },
+                    "base64Body" : {
+                      "description" : "The response body as a base64 encoded string (useful for binary content). Only one of body, base64Body, jsonBody or bodyFileName may be specified.",
+                      "type" : "string"
+                    },
+                    "body" : {
+                      "description" : "The response body as a string. Only one of body, base64Body, jsonBody or bodyFileName may be specified.",
+                      "type" : "string"
+                    },
+                    "bodyFileName" : {
+                      "description" : "The path to the file containing the response body, relative to the configured file root. Only one of body, base64Body, jsonBody or bodyFileName may be specified.",
+                      "type" : "string"
+                    },
+                    "delayDistribution" : {
+                      "description" : "The delay distribution. Valid property configuration is either median/sigma/type or lower/type/upper.",
+                      "oneOf" : [ {
+                        "description" : "Log normal randomly distributed response delay.",
+                        "properties" : {
+                          "median" : {
+                            "type" : "integer"
+                          },
+                          "sigma" : {
+                            "type" : "number"
+                          },
+                          "type" : {
+                            "enum" : [ "lognormal" ],
+                            "type" : "string"
+                          }
+                        },
+                        "title" : "Log normal",
+                        "type" : "object"
+                      }, {
+                        "description" : "Uniformly distributed random response delay.",
+                        "properties" : {
+                          "lower" : {
+                            "type" : "integer"
+                          },
+                          "type" : {
+                            "enum" : [ "uniform" ],
+                            "type" : "string"
+                          },
+                          "upper" : {
+                            "type" : "integer"
+                          }
+                        },
+                        "title" : "Uniform",
+                        "type" : "object"
+                      } ]
+                    },
+                    "fault" : {
+                      "description" : "The fault to apply (instead of a full, valid response).",
+                      "enum" : [ "CONNECTION_RESET_BY_PEER", "EMPTY_RESPONSE", "MALFORMED_RESPONSE_CHUNK", "RANDOM_DATA_THEN_CLOSE" ],
+                      "type" : "string"
+                    },
+                    "fixedDelayMilliseconds" : {
+                      "description" : "Number of milliseconds to delay be before sending the response.",
+                      "type" : "integer"
+                    },
+                    "fromConfiguredStub" : {
+                      "description" : "Read-only flag indicating false if this was the default, unmatched response. Not present otherwise.",
+                      "type" : "boolean"
+                    },
+                    "headers" : {
+                      "description" : "Map of response headers to send",
+                      "type" : "object"
+                    },
+                    "jsonBody" : {
+                      "description" : "The response body as a JSON object. Only one of body, base64Body, jsonBody or bodyFileName may be specified.",
+                      "type" : "object"
+                    },
+                    "proxyBaseUrl" : {
+                      "description" : "The base URL of the target to proxy matching requests to.",
+                      "type" : "string"
+                    },
+                    "status" : {
+                      "description" : "The HTTP status code to be returned",
+                      "type" : "integer"
+                    },
+                    "statusMessage" : {
+                      "description" : "The HTTP status message to be returned",
+                      "type" : "string"
+                    },
+                    "transformerParameters" : {
+                      "description" : "Parameters to apply to response transformers.",
+                      "type" : "object"
+                    },
+                    "transformers" : {
+                      "description" : "List of names of transformers to apply to this response.",
+                      "items" : {
+                        "type" : "string"
+                      },
+                      "type" : "array"
+                    }
+                  },
+                  "type" : "object"
+                } ]
+              },
+              "scenarioName" : {
+                "description" : "The name of the scenario that this stub mapping is part of",
+                "type" : "string"
+              },
+              "uuid" : {
+                "description" : "Alias for the id",
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 24
+  }, {
+    "id" : "638bb7c9-0409-4fdd-9b69-f392d242c33e",
+    "name" : "Get stub mapping by ID - 404",
+    "request" : {
+      "urlPath" : "/__admin/mappings/e148",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 404
+    },
+    "uuid" : "638bb7c9-0409-4fdd-9b69-f392d242c33e",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:13.979995Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "(none)"
+        }
+      }
+    },
+    "insertionIndex" : 25
+  }, {
+    "id" : "5c41c58b-129c-45bc-94f0-5b167819aaf1",
+    "name" : "Get stub mapping by ID (application/json)",
+    "request" : {
+      "urlPath" : "/__admin/mappings/f16a",
+      "method" : "GET",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/json"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"id\" : \"76ada7b0-49ae-4229-91c4-396a36f18e09\",\n  \"priority\" : 3,\n  \"request\" : {\n    \"headers\" : {\n      \"Accept\" : {\n        \"equalTo\" : \"text/plain\"\n      }\n    },\n    \"method\" : \"GET\",\n    \"url\" : \"/some/thing\"\n  },\n  \"response\" : {\n    \"body\" : \"Hello world!\",\n    \"headers\" : {\n      \"Content-Type\" : \"text/plain\"\n    },\n    \"status\" : 200\n  }\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "5c41c58b-129c-45bc-94f0-5b167819aaf1",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:13.979862Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "(none)",
+          "schema" : {
+            "additionalProperties" : false,
+            "properties" : {
+              "id" : {
+                "description" : "This stub mapping's unique identifier",
+                "type" : "string"
+              },
+              "metadata" : {
+                "description" : "Arbitrary metadata to be used for e.g. tagging, documentation. Can also be used to find and remove stubs.",
+                "type" : "object"
+              },
+              "name" : {
+                "description" : "The stub mapping's name",
+                "type" : "string"
+              },
+              "newScenarioState" : {
+                "description" : "The new state for the scenario to be updated to after this stub is served.",
+                "type" : "string"
+              },
+              "persistent" : {
+                "description" : "Indicates that the stub mapping should be persisted immediately on create/update/delete and survive resets to default.",
+                "type" : "boolean"
+              },
+              "postServeActions" : {
+                "description" : "A map of the names of post serve action extensions to trigger and their parameters.",
+                "type" : "object"
+              },
+              "priority" : {
+                "description" : "This stub mapping's priority relative to others. 1 is highest.",
+                "minimum" : 1,
+                "type" : "integer"
+              },
+              "request" : {
+                "example" : {
+                  "bodyPatterns" : [ {
+                    "equalToJson" : "{ \"numbers\": [1, 2, 3] }"
+                  } ],
+                  "headers" : {
+                    "Content-Type" : {
+                      "equalTo" : "application/json"
+                    }
+                  },
+                  "method" : "POST",
+                  "url" : "/some/thing"
+                },
+                "properties" : {
+                  "basicAuthCredentials" : {
+                    "description" : "Pre-emptive basic auth credentials to match against",
+                    "properties" : {
+                      "password" : {
+                        "type" : "string"
+                      },
+                      "username" : {
+                        "type" : "string"
+                      }
+                    },
+                    "required" : [ "username", "password" ],
+                    "type" : "object"
+                  },
+                  "bodyPatterns" : {
+                    "description" : "Request body patterns to match against in the <key>: { \"<predicate>\": \"<value>\" } form",
+                    "items" : {
+                      "type" : "object"
+                    },
+                    "type" : "array"
+                  },
+                  "cookies" : {
+                    "description" : "Cookie patterns to match against in the <key>: { \"<predicate>\": \"<value>\" } form",
+                    "type" : "object"
+                  },
+                  "headers" : {
+                    "description" : "Header patterns to match against in the <key>: { \"<predicate>\": \"<value>\" } form",
+                    "type" : "object"
+                  },
+                  "method" : {
+                    "description" : "The HTTP request method e.g. GET",
+                    "type" : "string"
+                  },
+                  "queryParameters" : {
+                    "description" : "Query parameter patterns to match against in the <key>: { \"<predicate>\": \"<value>\" } form",
+                    "type" : "object"
+                  },
+                  "url" : {
+                    "description" : "The path and query to match exactly against. Only one of url, urlPattern, urlPath or urlPathPattern may be specified.",
+                    "type" : "string"
+                  },
+                  "urlPath" : {
+                    "description" : "The path to match exactly against. Only one of url, urlPattern, urlPath or urlPathPattern may be specified.",
+                    "type" : "string"
+                  },
+                  "urlPathPattern" : {
+                    "description" : "The path regex to match against. Only one of url, urlPattern, urlPath or urlPathPattern may be specified.",
+                    "type" : "string"
+                  },
+                  "urlPattern" : {
+                    "description" : "The path and query regex to match against. Only one of url, urlPattern, urlPath or urlPathPattern may be specified.",
+                    "type" : "string"
+                  }
+                },
+                "type" : "object"
+              },
+              "requiredScenarioState" : {
+                "description" : "The required state of the scenario in order for this stub to be matched.",
+                "type" : "string"
+              },
+              "response" : {
+                "allOf" : [ {
+                  "properties" : {
+                    "additionalProxyRequestHeaders" : {
+                      "description" : "Extra request headers to send when proxying to another host.",
+                      "type" : "object"
+                    },
+                    "base64Body" : {
+                      "description" : "The response body as a base64 encoded string (useful for binary content). Only one of body, base64Body, jsonBody or bodyFileName may be specified.",
+                      "type" : "string"
+                    },
+                    "body" : {
+                      "description" : "The response body as a string. Only one of body, base64Body, jsonBody or bodyFileName may be specified.",
+                      "type" : "string"
+                    },
+                    "bodyFileName" : {
+                      "description" : "The path to the file containing the response body, relative to the configured file root. Only one of body, base64Body, jsonBody or bodyFileName may be specified.",
+                      "type" : "string"
+                    },
+                    "delayDistribution" : {
+                      "description" : "The delay distribution. Valid property configuration is either median/sigma/type or lower/type/upper.",
+                      "oneOf" : [ {
+                        "description" : "Log normal randomly distributed response delay.",
+                        "properties" : {
+                          "median" : {
+                            "type" : "integer"
+                          },
+                          "sigma" : {
+                            "type" : "number"
+                          },
+                          "type" : {
+                            "enum" : [ "lognormal" ],
+                            "type" : "string"
+                          }
+                        },
+                        "title" : "Log normal",
+                        "type" : "object"
+                      }, {
+                        "description" : "Uniformly distributed random response delay.",
+                        "properties" : {
+                          "lower" : {
+                            "type" : "integer"
+                          },
+                          "type" : {
+                            "enum" : [ "uniform" ],
+                            "type" : "string"
+                          },
+                          "upper" : {
+                            "type" : "integer"
+                          }
+                        },
+                        "title" : "Uniform",
+                        "type" : "object"
+                      } ]
+                    },
+                    "fault" : {
+                      "description" : "The fault to apply (instead of a full, valid response).",
+                      "enum" : [ "CONNECTION_RESET_BY_PEER", "EMPTY_RESPONSE", "MALFORMED_RESPONSE_CHUNK", "RANDOM_DATA_THEN_CLOSE" ],
+                      "type" : "string"
+                    },
+                    "fixedDelayMilliseconds" : {
+                      "description" : "Number of milliseconds to delay be before sending the response.",
+                      "type" : "integer"
+                    },
+                    "fromConfiguredStub" : {
+                      "description" : "Read-only flag indicating false if this was the default, unmatched response. Not present otherwise.",
+                      "type" : "boolean"
+                    },
+                    "headers" : {
+                      "description" : "Map of response headers to send",
+                      "type" : "object"
+                    },
+                    "jsonBody" : {
+                      "description" : "The response body as a JSON object. Only one of body, base64Body, jsonBody or bodyFileName may be specified.",
+                      "type" : "object"
+                    },
+                    "proxyBaseUrl" : {
+                      "description" : "The base URL of the target to proxy matching requests to.",
+                      "type" : "string"
+                    },
+                    "status" : {
+                      "description" : "The HTTP status code to be returned",
+                      "type" : "integer"
+                    },
+                    "statusMessage" : {
+                      "description" : "The HTTP status message to be returned",
+                      "type" : "string"
+                    },
+                    "transformerParameters" : {
+                      "description" : "Parameters to apply to response transformers.",
+                      "type" : "object"
+                    },
+                    "transformers" : {
+                      "description" : "List of names of transformers to apply to this response.",
+                      "items" : {
+                        "type" : "string"
+                      },
+                      "type" : "array"
+                    }
+                  },
+                  "type" : "object"
+                } ]
+              },
+              "scenarioName" : {
+                "description" : "The name of the scenario that this stub mapping is part of",
+                "type" : "string"
+              },
+              "uuid" : {
+                "description" : "Alias for the id",
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 26
+  }, {
+    "id" : "811747e0-89b1-458f-8d37-67435a180575",
+    "name" : "Delete a stub mapping - 404",
+    "request" : {
+      "urlPath" : "/__admin/mappings/ekqg",
+      "method" : "DELETE"
+    },
+    "response" : {
+      "status" : 404
+    },
+    "uuid" : "811747e0-89b1-458f-8d37-67435a180575",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:13.979202Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "(none)"
+        }
+      }
+    },
+    "insertionIndex" : 27
+  }, {
+    "id" : "e389a139-9845-43c7-b801-2a354bf5d1b6",
+    "name" : "Delete a stub mapping - 200",
+    "request" : {
+      "urlPath" : "/__admin/mappings/2s51",
+      "method" : "DELETE"
+    },
+    "response" : {
+      "status" : 200
+    },
+    "uuid" : "e389a139-9845-43c7-b801-2a354bf5d1b6",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:13.979106Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "(none)"
+        }
+      }
+    },
+    "insertionIndex" : 28
+  }, {
+    "id" : "40309653-10ff-49a2-b9c1-8a1d95429037",
+    "name" : "Persist stub mappings - 200",
+    "request" : {
+      "urlPath" : "/__admin/mappings/save",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 200
+    },
+    "uuid" : "40309653-10ff-49a2-b9c1-8a1d95429037",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:13.978911Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "(none)"
+        }
+      }
+    },
+    "insertionIndex" : 29
+  }, {
+    "id" : "50d46862-a493-4f2f-b0f4-da6133ca4d0a",
+    "name" : "Reset stub mappings - 200",
+    "request" : {
+      "urlPath" : "/__admin/mappings/reset",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 200
+    },
+    "uuid" : "50d46862-a493-4f2f-b0f4-da6133ca4d0a",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:13.978893Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "(none)"
+        }
+      }
+    },
+    "insertionIndex" : 30
+  }, {
+    "id" : "c1c5a9a5-92d5-4b4f-a1bc-f62d2c0700ff",
+    "name" : "Delete stub mappings matching metadata - 200",
+    "request" : {
+      "urlPath" : "/__admin/mappings/remove-by-metadata",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 200
+    },
+    "uuid" : "c1c5a9a5-92d5-4b4f-a1bc-f62d2c0700ff",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:13.978874Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "(none)"
+        }
+      }
+    },
+    "insertionIndex" : 31
+  }, {
+    "id" : "ac92bbaf-18a6-4b9e-89bc-0c5beeca0b08",
+    "name" : "Import stub mappings - 200",
+    "request" : {
+      "urlPath" : "/__admin/mappings/import",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 200
+    },
+    "uuid" : "ac92bbaf-18a6-4b9e-89bc-0c5beeca0b08",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:13.978853Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "(none)"
+        }
+      }
+    },
+    "insertionIndex" : 32
+  }, {
+    "id" : "ef5cff6f-ab06-4878-96c1-de5db413997f",
+    "name" : "Find stubs by matching on their metadata",
+    "request" : {
+      "urlPath" : "/__admin/mappings/find-by-metadata",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"mappings\" : [ {\n    \"id\" : \"76ada7b0-49ae-4229-91c4-396a36f18e09\",\n    \"request\" : {\n      \"headers\" : {\n        \"Accept\" : {\n          \"equalTo\" : \"application/json\"\n        }\n      },\n      \"method\" : \"GET\",\n      \"url\" : \"/search?q=things\"\n    },\n    \"response\" : {\n      \"headers\" : {\n        \"Content-Type\" : \"application/json\"\n      },\n      \"jsonBody\" : [ \"thing1\", \"thing2\" ],\n      \"status\" : 200\n    },\n    \"uuid\" : \"76ada7b0-49ae-4229-91c4-396a36f18e09\"\n  }, {\n    \"request\" : {\n      \"bodyPatterns\" : [ {\n        \"equalToXml\" : \"<stuff />\"\n      } ],\n      \"method\" : \"POST\",\n      \"urlPath\" : \"/some/things\"\n    },\n    \"response\" : {\n      \"status\" : 201\n    }\n  } ],\n  \"meta\" : {\n    \"total\" : 2\n  }\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "ef5cff6f-ab06-4878-96c1-de5db413997f",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:13.978814Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "(none)",
+          "schema" : {
+            "additionalProperties" : false,
+            "properties" : {
+              "mappings" : {
+                "items" : {
+                  "additionalProperties" : false,
+                  "properties" : {
+                    "id" : {
+                      "description" : "This stub mapping's unique identifier",
+                      "type" : "string"
+                    },
+                    "metadata" : {
+                      "description" : "Arbitrary metadata to be used for e.g. tagging, documentation. Can also be used to find and remove stubs.",
+                      "type" : "object"
+                    },
+                    "name" : {
+                      "description" : "The stub mapping's name",
+                      "type" : "string"
+                    },
+                    "newScenarioState" : {
+                      "description" : "The new state for the scenario to be updated to after this stub is served.",
+                      "type" : "string"
+                    },
+                    "persistent" : {
+                      "description" : "Indicates that the stub mapping should be persisted immediately on create/update/delete and survive resets to default.",
+                      "type" : "boolean"
+                    },
+                    "postServeActions" : {
+                      "description" : "A map of the names of post serve action extensions to trigger and their parameters.",
+                      "type" : "object"
+                    },
+                    "priority" : {
+                      "description" : "This stub mapping's priority relative to others. 1 is highest.",
+                      "minimum" : 1,
+                      "type" : "integer"
+                    },
+                    "request" : {
+                      "example" : {
+                        "bodyPatterns" : [ {
+                          "equalToJson" : "{ \"numbers\": [1, 2, 3] }"
+                        } ],
+                        "headers" : {
+                          "Content-Type" : {
+                            "equalTo" : "application/json"
+                          }
+                        },
+                        "method" : "POST",
+                        "url" : "/some/thing"
+                      },
+                      "properties" : {
+                        "basicAuthCredentials" : {
+                          "description" : "Pre-emptive basic auth credentials to match against",
+                          "properties" : {
+                            "password" : {
+                              "type" : "string"
+                            },
+                            "username" : {
+                              "type" : "string"
+                            }
+                          },
+                          "required" : [ "username", "password" ],
+                          "type" : "object"
+                        },
+                        "bodyPatterns" : {
+                          "description" : "Request body patterns to match against in the <key>: { \"<predicate>\": \"<value>\" } form",
+                          "items" : {
+                            "type" : "object"
+                          },
+                          "type" : "array"
+                        },
+                        "cookies" : {
+                          "description" : "Cookie patterns to match against in the <key>: { \"<predicate>\": \"<value>\" } form",
+                          "type" : "object"
+                        },
+                        "headers" : {
+                          "description" : "Header patterns to match against in the <key>: { \"<predicate>\": \"<value>\" } form",
+                          "type" : "object"
+                        },
+                        "method" : {
+                          "description" : "The HTTP request method e.g. GET",
+                          "type" : "string"
+                        },
+                        "queryParameters" : {
+                          "description" : "Query parameter patterns to match against in the <key>: { \"<predicate>\": \"<value>\" } form",
+                          "type" : "object"
+                        },
+                        "url" : {
+                          "description" : "The path and query to match exactly against. Only one of url, urlPattern, urlPath or urlPathPattern may be specified.",
+                          "type" : "string"
+                        },
+                        "urlPath" : {
+                          "description" : "The path to match exactly against. Only one of url, urlPattern, urlPath or urlPathPattern may be specified.",
+                          "type" : "string"
+                        },
+                        "urlPathPattern" : {
+                          "description" : "The path regex to match against. Only one of url, urlPattern, urlPath or urlPathPattern may be specified.",
+                          "type" : "string"
+                        },
+                        "urlPattern" : {
+                          "description" : "The path and query regex to match against. Only one of url, urlPattern, urlPath or urlPathPattern may be specified.",
+                          "type" : "string"
+                        }
+                      },
+                      "type" : "object"
+                    },
+                    "requiredScenarioState" : {
+                      "description" : "The required state of the scenario in order for this stub to be matched.",
+                      "type" : "string"
+                    },
+                    "response" : {
+                      "allOf" : [ {
+                        "properties" : {
+                          "additionalProxyRequestHeaders" : {
+                            "description" : "Extra request headers to send when proxying to another host.",
+                            "type" : "object"
+                          },
+                          "base64Body" : {
+                            "description" : "The response body as a base64 encoded string (useful for binary content). Only one of body, base64Body, jsonBody or bodyFileName may be specified.",
+                            "type" : "string"
+                          },
+                          "body" : {
+                            "description" : "The response body as a string. Only one of body, base64Body, jsonBody or bodyFileName may be specified.",
+                            "type" : "string"
+                          },
+                          "bodyFileName" : {
+                            "description" : "The path to the file containing the response body, relative to the configured file root. Only one of body, base64Body, jsonBody or bodyFileName may be specified.",
+                            "type" : "string"
+                          },
+                          "delayDistribution" : {
+                            "description" : "The delay distribution. Valid property configuration is either median/sigma/type or lower/type/upper.",
+                            "oneOf" : [ {
+                              "description" : "Log normal randomly distributed response delay.",
+                              "properties" : {
+                                "median" : {
+                                  "type" : "integer"
+                                },
+                                "sigma" : {
+                                  "type" : "number"
+                                },
+                                "type" : {
+                                  "enum" : [ "lognormal" ],
+                                  "type" : "string"
+                                }
+                              },
+                              "title" : "Log normal",
+                              "type" : "object"
+                            }, {
+                              "description" : "Uniformly distributed random response delay.",
+                              "properties" : {
+                                "lower" : {
+                                  "type" : "integer"
+                                },
+                                "type" : {
+                                  "enum" : [ "uniform" ],
+                                  "type" : "string"
+                                },
+                                "upper" : {
+                                  "type" : "integer"
+                                }
+                              },
+                              "title" : "Uniform",
+                              "type" : "object"
+                            } ]
+                          },
+                          "fault" : {
+                            "description" : "The fault to apply (instead of a full, valid response).",
+                            "enum" : [ "CONNECTION_RESET_BY_PEER", "EMPTY_RESPONSE", "MALFORMED_RESPONSE_CHUNK", "RANDOM_DATA_THEN_CLOSE" ],
+                            "type" : "string"
+                          },
+                          "fixedDelayMilliseconds" : {
+                            "description" : "Number of milliseconds to delay be before sending the response.",
+                            "type" : "integer"
+                          },
+                          "fromConfiguredStub" : {
+                            "description" : "Read-only flag indicating false if this was the default, unmatched response. Not present otherwise.",
+                            "type" : "boolean"
+                          },
+                          "headers" : {
+                            "description" : "Map of response headers to send",
+                            "type" : "object"
+                          },
+                          "jsonBody" : {
+                            "description" : "The response body as a JSON object. Only one of body, base64Body, jsonBody or bodyFileName may be specified.",
+                            "type" : "object"
+                          },
+                          "proxyBaseUrl" : {
+                            "description" : "The base URL of the target to proxy matching requests to.",
+                            "type" : "string"
+                          },
+                          "status" : {
+                            "description" : "The HTTP status code to be returned",
+                            "type" : "integer"
+                          },
+                          "statusMessage" : {
+                            "description" : "The HTTP status message to be returned",
+                            "type" : "string"
+                          },
+                          "transformerParameters" : {
+                            "description" : "Parameters to apply to response transformers.",
+                            "type" : "object"
+                          },
+                          "transformers" : {
+                            "description" : "List of names of transformers to apply to this response.",
+                            "items" : {
+                              "type" : "string"
+                            },
+                            "type" : "array"
+                          }
+                        },
+                        "type" : "object"
+                      } ]
+                    },
+                    "scenarioName" : {
+                      "description" : "The name of the scenario that this stub mapping is part of",
+                      "type" : "string"
+                    },
+                    "uuid" : {
+                      "description" : "Alias for the id",
+                      "type" : "string"
+                    }
+                  },
+                  "type" : "object"
+                },
+                "type" : "array"
+              },
+              "meta" : {
+                "properties" : {
+                  "total" : {
+                    "example" : 4,
+                    "type" : "integer"
+                  }
+                },
+                "required" : [ "total" ],
+                "type" : "object"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 33
+  }, {
+    "id" : "078164d9-e12f-49a8-bd93-130e9588e2e6",
+    "name" : "Create a new stub mapping",
+    "request" : {
+      "urlPath" : "/__admin/mappings",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 201,
+      "body" : "{\n  \"id\" : \"76ada7b0-49ae-4229-91c4-396a36f18e09\",\n  \"priority\" : 3,\n  \"request\" : {\n    \"headers\" : {\n      \"Accept\" : {\n        \"equalTo\" : \"text/plain\"\n      }\n    },\n    \"method\" : \"GET\",\n    \"url\" : \"/some/thing\"\n  },\n  \"response\" : {\n    \"body\" : \"Hello world!\",\n    \"headers\" : {\n      \"Content-Type\" : \"text/plain\"\n    },\n    \"status\" : 200\n  }\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "078164d9-e12f-49a8-bd93-130e9588e2e6",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:13.978201Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "(none)",
+          "schema" : {
+            "additionalProperties" : false,
+            "properties" : {
+              "id" : {
+                "description" : "This stub mapping's unique identifier",
+                "type" : "string"
+              },
+              "metadata" : {
+                "description" : "Arbitrary metadata to be used for e.g. tagging, documentation. Can also be used to find and remove stubs.",
+                "type" : "object"
+              },
+              "name" : {
+                "description" : "The stub mapping's name",
+                "type" : "string"
+              },
+              "newScenarioState" : {
+                "description" : "The new state for the scenario to be updated to after this stub is served.",
+                "type" : "string"
+              },
+              "persistent" : {
+                "description" : "Indicates that the stub mapping should be persisted immediately on create/update/delete and survive resets to default.",
+                "type" : "boolean"
+              },
+              "postServeActions" : {
+                "description" : "A map of the names of post serve action extensions to trigger and their parameters.",
+                "type" : "object"
+              },
+              "priority" : {
+                "description" : "This stub mapping's priority relative to others. 1 is highest.",
+                "minimum" : 1,
+                "type" : "integer"
+              },
+              "request" : {
+                "example" : {
+                  "bodyPatterns" : [ {
+                    "equalToJson" : "{ \"numbers\": [1, 2, 3] }"
+                  } ],
+                  "headers" : {
+                    "Content-Type" : {
+                      "equalTo" : "application/json"
+                    }
+                  },
+                  "method" : "POST",
+                  "url" : "/some/thing"
+                },
+                "properties" : {
+                  "basicAuthCredentials" : {
+                    "description" : "Pre-emptive basic auth credentials to match against",
+                    "properties" : {
+                      "password" : {
+                        "type" : "string"
+                      },
+                      "username" : {
+                        "type" : "string"
+                      }
+                    },
+                    "required" : [ "username", "password" ],
+                    "type" : "object"
+                  },
+                  "bodyPatterns" : {
+                    "description" : "Request body patterns to match against in the <key>: { \"<predicate>\": \"<value>\" } form",
+                    "items" : {
+                      "type" : "object"
+                    },
+                    "type" : "array"
+                  },
+                  "cookies" : {
+                    "description" : "Cookie patterns to match against in the <key>: { \"<predicate>\": \"<value>\" } form",
+                    "type" : "object"
+                  },
+                  "headers" : {
+                    "description" : "Header patterns to match against in the <key>: { \"<predicate>\": \"<value>\" } form",
+                    "type" : "object"
+                  },
+                  "method" : {
+                    "description" : "The HTTP request method e.g. GET",
+                    "type" : "string"
+                  },
+                  "queryParameters" : {
+                    "description" : "Query parameter patterns to match against in the <key>: { \"<predicate>\": \"<value>\" } form",
+                    "type" : "object"
+                  },
+                  "url" : {
+                    "description" : "The path and query to match exactly against. Only one of url, urlPattern, urlPath or urlPathPattern may be specified.",
+                    "type" : "string"
+                  },
+                  "urlPath" : {
+                    "description" : "The path to match exactly against. Only one of url, urlPattern, urlPath or urlPathPattern may be specified.",
+                    "type" : "string"
+                  },
+                  "urlPathPattern" : {
+                    "description" : "The path regex to match against. Only one of url, urlPattern, urlPath or urlPathPattern may be specified.",
+                    "type" : "string"
+                  },
+                  "urlPattern" : {
+                    "description" : "The path and query regex to match against. Only one of url, urlPattern, urlPath or urlPathPattern may be specified.",
+                    "type" : "string"
+                  }
+                },
+                "type" : "object"
+              },
+              "requiredScenarioState" : {
+                "description" : "The required state of the scenario in order for this stub to be matched.",
+                "type" : "string"
+              },
+              "response" : {
+                "allOf" : [ {
+                  "properties" : {
+                    "additionalProxyRequestHeaders" : {
+                      "description" : "Extra request headers to send when proxying to another host.",
+                      "type" : "object"
+                    },
+                    "base64Body" : {
+                      "description" : "The response body as a base64 encoded string (useful for binary content). Only one of body, base64Body, jsonBody or bodyFileName may be specified.",
+                      "type" : "string"
+                    },
+                    "body" : {
+                      "description" : "The response body as a string. Only one of body, base64Body, jsonBody or bodyFileName may be specified.",
+                      "type" : "string"
+                    },
+                    "bodyFileName" : {
+                      "description" : "The path to the file containing the response body, relative to the configured file root. Only one of body, base64Body, jsonBody or bodyFileName may be specified.",
+                      "type" : "string"
+                    },
+                    "delayDistribution" : {
+                      "description" : "The delay distribution. Valid property configuration is either median/sigma/type or lower/type/upper.",
+                      "oneOf" : [ {
+                        "description" : "Log normal randomly distributed response delay.",
+                        "properties" : {
+                          "median" : {
+                            "type" : "integer"
+                          },
+                          "sigma" : {
+                            "type" : "number"
+                          },
+                          "type" : {
+                            "enum" : [ "lognormal" ],
+                            "type" : "string"
+                          }
+                        },
+                        "title" : "Log normal",
+                        "type" : "object"
+                      }, {
+                        "description" : "Uniformly distributed random response delay.",
+                        "properties" : {
+                          "lower" : {
+                            "type" : "integer"
+                          },
+                          "type" : {
+                            "enum" : [ "uniform" ],
+                            "type" : "string"
+                          },
+                          "upper" : {
+                            "type" : "integer"
+                          }
+                        },
+                        "title" : "Uniform",
+                        "type" : "object"
+                      } ]
+                    },
+                    "fault" : {
+                      "description" : "The fault to apply (instead of a full, valid response).",
+                      "enum" : [ "CONNECTION_RESET_BY_PEER", "EMPTY_RESPONSE", "MALFORMED_RESPONSE_CHUNK", "RANDOM_DATA_THEN_CLOSE" ],
+                      "type" : "string"
+                    },
+                    "fixedDelayMilliseconds" : {
+                      "description" : "Number of milliseconds to delay be before sending the response.",
+                      "type" : "integer"
+                    },
+                    "fromConfiguredStub" : {
+                      "description" : "Read-only flag indicating false if this was the default, unmatched response. Not present otherwise.",
+                      "type" : "boolean"
+                    },
+                    "headers" : {
+                      "description" : "Map of response headers to send",
+                      "type" : "object"
+                    },
+                    "jsonBody" : {
+                      "description" : "The response body as a JSON object. Only one of body, base64Body, jsonBody or bodyFileName may be specified.",
+                      "type" : "object"
+                    },
+                    "proxyBaseUrl" : {
+                      "description" : "The base URL of the target to proxy matching requests to.",
+                      "type" : "string"
+                    },
+                    "status" : {
+                      "description" : "The HTTP status code to be returned",
+                      "type" : "integer"
+                    },
+                    "statusMessage" : {
+                      "description" : "The HTTP status message to be returned",
+                      "type" : "string"
+                    },
+                    "transformerParameters" : {
+                      "description" : "Parameters to apply to response transformers.",
+                      "type" : "object"
+                    },
+                    "transformers" : {
+                      "description" : "List of names of transformers to apply to this response.",
+                      "items" : {
+                        "type" : "string"
+                      },
+                      "type" : "array"
+                    }
+                  },
+                  "type" : "object"
+                } ]
+              },
+              "scenarioName" : {
+                "description" : "The name of the scenario that this stub mapping is part of",
+                "type" : "string"
+              },
+              "uuid" : {
+                "description" : "Alias for the id",
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 34
+  }, {
+    "id" : "44ee0e2f-6d27-46ee-bb3a-9322c39c572f",
+    "name" : "Get all stub mappings",
+    "request" : {
+      "urlPath" : "/__admin/mappings",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"mappings\" : [ {\n    \"id\" : \"76ada7b0-49ae-4229-91c4-396a36f18e09\",\n    \"request\" : {\n      \"headers\" : {\n        \"Accept\" : {\n          \"equalTo\" : \"application/json\"\n        }\n      },\n      \"method\" : \"GET\",\n      \"url\" : \"/search?q=things\"\n    },\n    \"response\" : {\n      \"headers\" : {\n        \"Content-Type\" : \"application/json\"\n      },\n      \"jsonBody\" : [ \"thing1\", \"thing2\" ],\n      \"status\" : 200\n    },\n    \"uuid\" : \"76ada7b0-49ae-4229-91c4-396a36f18e09\"\n  }, {\n    \"request\" : {\n      \"bodyPatterns\" : [ {\n        \"equalToXml\" : \"<stuff />\"\n      } ],\n      \"method\" : \"POST\",\n      \"urlPath\" : \"/some/things\"\n    },\n    \"response\" : {\n      \"status\" : 201\n    }\n  } ],\n  \"meta\" : {\n    \"total\" : 2\n  }\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "44ee0e2f-6d27-46ee-bb3a-9322c39c572f",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:13.97761Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "(none)",
+          "schema" : {
+            "additionalProperties" : false,
+            "properties" : {
+              "mappings" : {
+                "items" : {
+                  "additionalProperties" : false,
+                  "properties" : {
+                    "id" : {
+                      "description" : "This stub mapping's unique identifier",
+                      "type" : "string"
+                    },
+                    "metadata" : {
+                      "description" : "Arbitrary metadata to be used for e.g. tagging, documentation. Can also be used to find and remove stubs.",
+                      "type" : "object"
+                    },
+                    "name" : {
+                      "description" : "The stub mapping's name",
+                      "type" : "string"
+                    },
+                    "newScenarioState" : {
+                      "description" : "The new state for the scenario to be updated to after this stub is served.",
+                      "type" : "string"
+                    },
+                    "persistent" : {
+                      "description" : "Indicates that the stub mapping should be persisted immediately on create/update/delete and survive resets to default.",
+                      "type" : "boolean"
+                    },
+                    "postServeActions" : {
+                      "description" : "A map of the names of post serve action extensions to trigger and their parameters.",
+                      "type" : "object"
+                    },
+                    "priority" : {
+                      "description" : "This stub mapping's priority relative to others. 1 is highest.",
+                      "minimum" : 1,
+                      "type" : "integer"
+                    },
+                    "request" : {
+                      "example" : {
+                        "bodyPatterns" : [ {
+                          "equalToJson" : "{ \"numbers\": [1, 2, 3] }"
+                        } ],
+                        "headers" : {
+                          "Content-Type" : {
+                            "equalTo" : "application/json"
+                          }
+                        },
+                        "method" : "POST",
+                        "url" : "/some/thing"
+                      },
+                      "properties" : {
+                        "basicAuthCredentials" : {
+                          "description" : "Pre-emptive basic auth credentials to match against",
+                          "properties" : {
+                            "password" : {
+                              "type" : "string"
+                            },
+                            "username" : {
+                              "type" : "string"
+                            }
+                          },
+                          "required" : [ "username", "password" ],
+                          "type" : "object"
+                        },
+                        "bodyPatterns" : {
+                          "description" : "Request body patterns to match against in the <key>: { \"<predicate>\": \"<value>\" } form",
+                          "items" : {
+                            "type" : "object"
+                          },
+                          "type" : "array"
+                        },
+                        "cookies" : {
+                          "description" : "Cookie patterns to match against in the <key>: { \"<predicate>\": \"<value>\" } form",
+                          "type" : "object"
+                        },
+                        "headers" : {
+                          "description" : "Header patterns to match against in the <key>: { \"<predicate>\": \"<value>\" } form",
+                          "type" : "object"
+                        },
+                        "method" : {
+                          "description" : "The HTTP request method e.g. GET",
+                          "type" : "string"
+                        },
+                        "queryParameters" : {
+                          "description" : "Query parameter patterns to match against in the <key>: { \"<predicate>\": \"<value>\" } form",
+                          "type" : "object"
+                        },
+                        "url" : {
+                          "description" : "The path and query to match exactly against. Only one of url, urlPattern, urlPath or urlPathPattern may be specified.",
+                          "type" : "string"
+                        },
+                        "urlPath" : {
+                          "description" : "The path to match exactly against. Only one of url, urlPattern, urlPath or urlPathPattern may be specified.",
+                          "type" : "string"
+                        },
+                        "urlPathPattern" : {
+                          "description" : "The path regex to match against. Only one of url, urlPattern, urlPath or urlPathPattern may be specified.",
+                          "type" : "string"
+                        },
+                        "urlPattern" : {
+                          "description" : "The path and query regex to match against. Only one of url, urlPattern, urlPath or urlPathPattern may be specified.",
+                          "type" : "string"
+                        }
+                      },
+                      "type" : "object"
+                    },
+                    "requiredScenarioState" : {
+                      "description" : "The required state of the scenario in order for this stub to be matched.",
+                      "type" : "string"
+                    },
+                    "response" : {
+                      "allOf" : [ {
+                        "properties" : {
+                          "additionalProxyRequestHeaders" : {
+                            "description" : "Extra request headers to send when proxying to another host.",
+                            "type" : "object"
+                          },
+                          "base64Body" : {
+                            "description" : "The response body as a base64 encoded string (useful for binary content). Only one of body, base64Body, jsonBody or bodyFileName may be specified.",
+                            "type" : "string"
+                          },
+                          "body" : {
+                            "description" : "The response body as a string. Only one of body, base64Body, jsonBody or bodyFileName may be specified.",
+                            "type" : "string"
+                          },
+                          "bodyFileName" : {
+                            "description" : "The path to the file containing the response body, relative to the configured file root. Only one of body, base64Body, jsonBody or bodyFileName may be specified.",
+                            "type" : "string"
+                          },
+                          "delayDistribution" : {
+                            "description" : "The delay distribution. Valid property configuration is either median/sigma/type or lower/type/upper.",
+                            "oneOf" : [ {
+                              "description" : "Log normal randomly distributed response delay.",
+                              "properties" : {
+                                "median" : {
+                                  "type" : "integer"
+                                },
+                                "sigma" : {
+                                  "type" : "number"
+                                },
+                                "type" : {
+                                  "enum" : [ "lognormal" ],
+                                  "type" : "string"
+                                }
+                              },
+                              "title" : "Log normal",
+                              "type" : "object"
+                            }, {
+                              "description" : "Uniformly distributed random response delay.",
+                              "properties" : {
+                                "lower" : {
+                                  "type" : "integer"
+                                },
+                                "type" : {
+                                  "enum" : [ "uniform" ],
+                                  "type" : "string"
+                                },
+                                "upper" : {
+                                  "type" : "integer"
+                                }
+                              },
+                              "title" : "Uniform",
+                              "type" : "object"
+                            } ]
+                          },
+                          "fault" : {
+                            "description" : "The fault to apply (instead of a full, valid response).",
+                            "enum" : [ "CONNECTION_RESET_BY_PEER", "EMPTY_RESPONSE", "MALFORMED_RESPONSE_CHUNK", "RANDOM_DATA_THEN_CLOSE" ],
+                            "type" : "string"
+                          },
+                          "fixedDelayMilliseconds" : {
+                            "description" : "Number of milliseconds to delay be before sending the response.",
+                            "type" : "integer"
+                          },
+                          "fromConfiguredStub" : {
+                            "description" : "Read-only flag indicating false if this was the default, unmatched response. Not present otherwise.",
+                            "type" : "boolean"
+                          },
+                          "headers" : {
+                            "description" : "Map of response headers to send",
+                            "type" : "object"
+                          },
+                          "jsonBody" : {
+                            "description" : "The response body as a JSON object. Only one of body, base64Body, jsonBody or bodyFileName may be specified.",
+                            "type" : "object"
+                          },
+                          "proxyBaseUrl" : {
+                            "description" : "The base URL of the target to proxy matching requests to.",
+                            "type" : "string"
+                          },
+                          "status" : {
+                            "description" : "The HTTP status code to be returned",
+                            "type" : "integer"
+                          },
+                          "statusMessage" : {
+                            "description" : "The HTTP status message to be returned",
+                            "type" : "string"
+                          },
+                          "transformerParameters" : {
+                            "description" : "Parameters to apply to response transformers.",
+                            "type" : "object"
+                          },
+                          "transformers" : {
+                            "description" : "List of names of transformers to apply to this response.",
+                            "items" : {
+                              "type" : "string"
+                            },
+                            "type" : "array"
+                          }
+                        },
+                        "type" : "object"
+                      } ]
+                    },
+                    "scenarioName" : {
+                      "description" : "The name of the scenario that this stub mapping is part of",
+                      "type" : "string"
+                    },
+                    "uuid" : {
+                      "description" : "Alias for the id",
+                      "type" : "string"
+                    }
+                  },
+                  "type" : "object"
+                },
+                "type" : "array"
+              },
+              "meta" : {
+                "properties" : {
+                  "total" : {
+                    "example" : 4,
+                    "type" : "integer"
+                  }
+                },
+                "required" : [ "total" ],
+                "type" : "object"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 35
+  }, {
+    "id" : "9d643d09-4222-4ca0-9041-9f1c1f624d64",
+    "name" : "Delete all stub mappings - 200",
+    "request" : {
+      "urlPath" : "/__admin/mappings",
+      "method" : "DELETE"
+    },
+    "response" : {
+      "status" : 200
+    },
+    "uuid" : "9d643d09-4222-4ca0-9041-9f1c1f624d64",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:13.976885Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "(none)"
+        }
+      }
+    },
+    "insertionIndex" : 36
+  } ]
+}

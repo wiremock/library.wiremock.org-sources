@@ -1,0 +1,984 @@
+{
+  "mappings" : [ {
+    "id" : "fe4bf1ee-f91b-44f7-8370-95747ad2ee95",
+    "name" : "Retrieve single statement based on unique id provided - 404",
+    "request" : {
+      "urlPath" : "/Statements/l2q9",
+      "method" : "GET",
+      "queryParameters" : {
+        "statementId" : {
+          "equalTo" : "0e273814-ebc4-43c1-9360-d6f705faee0c"
+        }
+      }
+    },
+    "response" : {
+      "status" : 404
+    },
+    "uuid" : "fe4bf1ee-f91b-44f7-8370-95747ad2ee95",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:18.120704Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "getStatement"
+        }
+      }
+    },
+    "insertionIndex" : 0
+  }, {
+    "id" : "9f7e21dd-6f4c-4328-ac35-73c217ff5396",
+    "name" : "Retrieve single statement based on unique id provided (application/json)",
+    "request" : {
+      "urlPath" : "/Statements/ji46",
+      "method" : "GET",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/json"
+        }
+      },
+      "queryParameters" : {
+        "statementId" : {
+          "equalTo" : "26160b46-90d8-4d0f-85f4-6320de995c0a"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"endBalance\" : {\n    \"amount\" : \"150.0000\",\n    \"creditDebitIndicator\" : \"CREDIT\"\n  },\n  \"endDate\" : \"2019-10-11\",\n  \"feedConnectionId\" : \"6a4b9ff5-3a5f-4321-936b-4796163550f6\",\n  \"id\" : \"97aca24a-dd10-4cda-98c7-1084a048257b\",\n  \"startBalance\" : {\n    \"amount\" : \"100.0000\",\n    \"creditDebitIndicator\" : \"CREDIT\"\n  },\n  \"startDate\" : \"2019-08-11\",\n  \"statementLineCount\" : \"1\",\n  \"status\" : \"DELIVERED\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "9f7e21dd-6f4c-4328-ac35-73c217ff5396",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:18.120587Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "getStatement",
+          "schema" : {
+            "properties" : {
+              "endBalance" : {
+                "$ref" : "#/components/schemas/EndBalance"
+              },
+              "endDate" : {
+                "description" : "Closing balance date ISO-8601 YYYY-MM-DD",
+                "example" : "2018-07-27",
+                "format" : "date",
+                "type" : "string"
+              },
+              "errors" : {
+                "items" : {
+                  "$ref" : "#/components/schemas/Error"
+                },
+                "type" : "array"
+              },
+              "feedConnectionId" : {
+                "description" : "The Xero generated feed connection Id that identifies the Xero Bank Account Container into which the statement should be delivered. This is obtained by calling GET FeedConnections.",
+                "example" : "87cb0dc8-fa32-409c-b622-19f8de8dcc83",
+                "format" : "uuid",
+                "type" : "string"
+              },
+              "id" : {
+                "description" : "GUID used to identify the Statement.",
+                "example" : "ba4f3127-5e46-427d-80ea-dea2fcd26afe",
+                "format" : "uuid",
+                "type" : "string"
+              },
+              "startBalance" : {
+                "$ref" : "#/components/schemas/StartBalance"
+              },
+              "startDate" : {
+                "description" : "Opening balance date (can be no older than one year from the current date) ISO-8601 YYYY-MM-DD",
+                "example" : "2018-07-27",
+                "format" : "date",
+                "type" : "string"
+              },
+              "statementLineCount" : {
+                "example" : 1,
+                "type" : "integer"
+              },
+              "statementLines" : {
+                "$ref" : "#/components/schemas/StatementLines"
+              },
+              "status" : {
+                "description" : "Current status of statements",
+                "enum" : [ "PENDING", "REJECTED", "DELIVERED" ],
+                "example" : "PENDING"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 1
+  }, {
+    "id" : "b0970eb4-49d3-4018-9fee-4c0a3ae9a51b",
+    "name" : "Creates one or more new statements (application/problem+json)",
+    "request" : {
+      "urlPath" : "/Statements",
+      "method" : "POST",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/problem+json"
+        }
+      }
+    },
+    "response" : {
+      "status" : 500,
+      "body" : "{\n  \"detail\" : \"The request should be retried. If the error persists, a Xero support issue should be raised.\",\n  \"status\" : 500,\n  \"title\" : \"Intermittent Internal Xero Error\",\n  \"type\" : \"internal-error\"\n}",
+      "headers" : {
+        "Content-Type" : "application/problem+json"
+      }
+    },
+    "uuid" : "b0970eb4-49d3-4018-9fee-4c0a3ae9a51b",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:18.120326Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "createStatements",
+          "schema" : {
+            "externalDocs" : {
+              "url" : "https://developer.xero.com/documentation/bank-feeds-api/statements"
+            },
+            "properties" : {
+              "items" : {
+                "items" : {
+                  "$ref" : "#/components/schemas/Statement"
+                },
+                "type" : "array"
+              },
+              "pagination" : {
+                "$ref" : "#/components/schemas/Pagination"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 2
+  }, {
+    "id" : "a4ceb7b9-8d8d-4287-bdcb-91055a3bfe69",
+    "name" : "Creates one or more new statements (application/problem+json)",
+    "request" : {
+      "urlPath" : "/Statements",
+      "method" : "POST",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/problem+json"
+        }
+      }
+    },
+    "response" : {
+      "status" : 422,
+      "body" : "{\n  \"detail\" : \"End balance does not match start balance +/- statement line amounts.\",\n  \"status\" : 422,\n  \"title\" : \"Invalid End Balance\",\n  \"type\" : \"invalid-end-balance\"\n}",
+      "headers" : {
+        "Content-Type" : "application/problem+json"
+      }
+    },
+    "uuid" : "a4ceb7b9-8d8d-4287-bdcb-91055a3bfe69",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:18.120288Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "createStatements",
+          "schema" : {
+            "externalDocs" : {
+              "url" : "https://developer.xero.com/documentation/bank-feeds-api/statements"
+            },
+            "properties" : {
+              "items" : {
+                "items" : {
+                  "$ref" : "#/components/schemas/Statement"
+                },
+                "type" : "array"
+              },
+              "pagination" : {
+                "$ref" : "#/components/schemas/Pagination"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 3
+  }, {
+    "id" : "52236120-583a-4e6f-b823-fa45c2fe885d",
+    "name" : "Creates one or more new statements (application/problem+json)",
+    "request" : {
+      "urlPath" : "/Statements",
+      "method" : "POST",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/problem+json"
+        }
+      }
+    },
+    "response" : {
+      "status" : 413,
+      "body" : "{\n  \"detail\" : \"Request size of 3500000 bytes exceeds the limit of 3000000 bytes.\",\n  \"status\" : 413,\n  \"title\" : \"Request too large\",\n  \"type\" : \"invalid-request\"\n}",
+      "headers" : {
+        "Content-Type" : "application/problem+json"
+      }
+    },
+    "uuid" : "52236120-583a-4e6f-b823-fa45c2fe885d",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:18.12025Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "createStatements",
+          "schema" : {
+            "externalDocs" : {
+              "url" : "https://developer.xero.com/documentation/bank-feeds-api/statements"
+            },
+            "properties" : {
+              "items" : {
+                "items" : {
+                  "$ref" : "#/components/schemas/Statement"
+                },
+                "type" : "array"
+              },
+              "pagination" : {
+                "$ref" : "#/components/schemas/Pagination"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 4
+  }, {
+    "id" : "7060e6d9-9e6f-4593-a8bb-09115ba3fd79",
+    "name" : "Creates one or more new statements (application/problem+json)",
+    "request" : {
+      "urlPath" : "/Statements",
+      "method" : "POST",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/problem+json"
+        }
+      }
+    },
+    "response" : {
+      "status" : 409,
+      "body" : "{\n  \"items\" : [ {\n    \"errors\" : [ {\n      \"detail\" : \"The received statement was marked as a duplicate.\",\n      \"status\" : 409,\n      \"title\" : \"Duplicate Statement Received\",\n      \"type\" : \"duplicate-statement\"\n    } ],\n    \"feedConnectionId\" : \"6a4b9ff5-3a5f-4321-936b-4796163550f6\",\n    \"id\" : \"29fefeb6-f449-470d-9179-f1d8900930d6\",\n    \"status\" : \"REJECTED\"\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "application/problem+json"
+      }
+    },
+    "uuid" : "7060e6d9-9e6f-4593-a8bb-09115ba3fd79",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:18.120212Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "createStatements",
+          "schema" : {
+            "externalDocs" : {
+              "url" : "https://developer.xero.com/documentation/bank-feeds-api/statements"
+            },
+            "properties" : {
+              "items" : {
+                "items" : {
+                  "$ref" : "#/components/schemas/Statement"
+                },
+                "type" : "array"
+              },
+              "pagination" : {
+                "$ref" : "#/components/schemas/Pagination"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 5
+  }, {
+    "id" : "6c0260b4-f1ae-4610-8d45-52a18feb5662",
+    "name" : "Creates one or more new statements (application/problem+json)",
+    "request" : {
+      "urlPath" : "/Statements",
+      "method" : "POST",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/problem+json"
+        }
+      }
+    },
+    "response" : {
+      "status" : 403,
+      "body" : "{\n  \"detail\" : \"The application has not been configured to use these API endpoints.\",\n  \"status\" : 403,\n  \"title\" : \"Invalid Application\",\n  \"type\" : \"invalid-application\"\n}",
+      "headers" : {
+        "Content-Type" : "application/problem+json"
+      }
+    },
+    "uuid" : "6c0260b4-f1ae-4610-8d45-52a18feb5662",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:18.120167Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "createStatements",
+          "schema" : {
+            "description" : "On error, the API consumer will receive an HTTP response with a HTTP Status Code of 4xx or 5xx and a Content-Type of application/problem+json.",
+            "properties" : {
+              "detail" : {
+                "description" : "Human readable detailed error description.",
+                "example" : "The application has not been configured to use these API endpoints.",
+                "maximum" : 255,
+                "type" : "string"
+              },
+              "status" : {
+                "description" : "The numeric HTTP Status Code, e.g. 404",
+                "example" : 403,
+                "type" : "integer"
+              },
+              "title" : {
+                "description" : "Human readable high level error description.",
+                "example" : "Invalid Application",
+                "maximum" : 255,
+                "type" : "string"
+              },
+              "type" : {
+                "description" : "Identifies the type of error.",
+                "enum" : [ "invalid-request", "invalid-application", "invalid-feed-connection", "duplicate-statement", "invalid-end-balance", "invalid-start-and-end-date", "invalid-start-date", "internal-error", "feed-already-connected-in-current-organisation", "invalid-end-date", "statement-not-found", "feed-connected-in-different-organisation", "feed-already-connected-in-different-organisation", "bank-feed-not-found", "invalid-country-specified", "invalid-organisation-bank-feeds", "invalid-organisation-multi-currency", "invalid-feed-connection-for-organisation", "invalid-user-role", "account-not-valid" ],
+                "example" : "invalid-application",
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 6
+  }, {
+    "id" : "156ebd16-6eba-4b57-ad5d-75bcbfa4476d",
+    "name" : "Creates one or more new statements (application/problem+json)",
+    "request" : {
+      "urlPath" : "/Statements",
+      "method" : "POST",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/problem+json"
+        }
+      }
+    },
+    "response" : {
+      "status" : 400,
+      "body" : "{\n  \"detail\" : \"For the request field 'StatementLine.ChequeNumber' exceeded the maximum length of 20.\",\n  \"status\" : 400,\n  \"title\" : \"Invalid Request\",\n  \"type\" : \"invalid-request\"\n}",
+      "headers" : {
+        "Content-Type" : "application/problem+json"
+      }
+    },
+    "uuid" : "156ebd16-6eba-4b57-ad5d-75bcbfa4476d",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:18.120096Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "createStatements",
+          "schema" : {
+            "externalDocs" : {
+              "url" : "https://developer.xero.com/documentation/bank-feeds-api/statements"
+            },
+            "properties" : {
+              "items" : {
+                "items" : {
+                  "$ref" : "#/components/schemas/Statement"
+                },
+                "type" : "array"
+              },
+              "pagination" : {
+                "$ref" : "#/components/schemas/Pagination"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 7
+  }, {
+    "id" : "4b79d66e-d005-4f89-94dc-9d445f970d4b",
+    "name" : "Creates one or more new statements (application/json)",
+    "request" : {
+      "urlPath" : "/Statements",
+      "method" : "POST",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/json"
+        }
+      }
+    },
+    "response" : {
+      "status" : 202,
+      "body" : "{\n  \"items\" : [ {\n    \"feedConnectionId\" : \"6a4b9ff5-3a5f-4321-936b-4796163550f6\",\n    \"id\" : \"d69b02b7-a30c-464a-99cf-ba9770373c61\",\n    \"status\" : \"PENDING\"\n  }, {\n    \"feedConnectionId\" : \"2ebe6393-f3bb-48ab-9a0e-b04fa8585a70\",\n    \"id\" : \"598f255c-015b-4138-93df-2e06c64565b3\",\n    \"status\" : \"PENDING\"\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "4b79d66e-d005-4f89-94dc-9d445f970d4b",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:18.120052Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "createStatements",
+          "schema" : {
+            "externalDocs" : {
+              "url" : "https://developer.xero.com/documentation/bank-feeds-api/statements"
+            },
+            "properties" : {
+              "items" : {
+                "items" : {
+                  "$ref" : "#/components/schemas/Statement"
+                },
+                "type" : "array"
+              },
+              "pagination" : {
+                "$ref" : "#/components/schemas/Pagination"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 8
+  }, {
+    "id" : "9c714294-bead-4093-9a55-6316ce72f877",
+    "name" : "Retrieve all statements (application/problem+json)",
+    "request" : {
+      "urlPath" : "/Statements",
+      "method" : "GET",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/problem+json"
+        }
+      }
+    },
+    "response" : {
+      "status" : 400,
+      "body" : "{\n  \"detail\" : \"For the request field missing parameter.\",\n  \"status\" : 400,\n  \"title\" : \"Invalid Request\",\n  \"type\" : \"invalid-request\"\n}",
+      "headers" : {
+        "Content-Type" : "application/problem+json"
+      }
+    },
+    "uuid" : "9c714294-bead-4093-9a55-6316ce72f877",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:18.120001Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "getStatements",
+          "schema" : {
+            "externalDocs" : {
+              "url" : "https://developer.xero.com/documentation/bank-feeds-api/statements"
+            },
+            "properties" : {
+              "items" : {
+                "items" : {
+                  "$ref" : "#/components/schemas/Statement"
+                },
+                "type" : "array"
+              },
+              "pagination" : {
+                "$ref" : "#/components/schemas/Pagination"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 9
+  }, {
+    "id" : "6e0c4b36-14af-47c4-9e9c-4c9b4a45b4ec",
+    "name" : "Retrieve all statements (application/json)",
+    "request" : {
+      "urlPath" : "/Statements",
+      "method" : "GET",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/json"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"items\" : [ {\n    \"endBalance\" : {\n      \"amount\" : \"150.0000\",\n      \"creditDebitIndicator\" : \"CREDIT\"\n    },\n    \"endDate\" : \"2019-08-15\",\n    \"errors\" : [ {\n      \"detail\" : \"The received statement was marked as a duplicate.\",\n      \"status\" : 409,\n      \"title\" : \"Duplicate Statement Received\",\n      \"type\" : \"duplicate-statement\"\n    } ],\n    \"feedConnectionId\" : \"6a4b9ff5-3a5f-4321-936b-4796163550f6\",\n    \"id\" : \"9817e4b8-82b3-4526-91f7-040bd278053f\",\n    \"startBalance\" : {\n      \"amount\" : \"100.0000\",\n      \"creditDebitIndicator\" : \"CREDIT\"\n    },\n    \"startDate\" : \"2019-08-01\",\n    \"statementLineCount\" : \"1\",\n    \"status\" : \"REJECTED\"\n  }, {\n    \"endBalance\" : {\n      \"amount\" : \"150.0000\",\n      \"creditDebitIndicator\" : \"CREDIT\"\n    },\n    \"endDate\" : \"2019-08-15\",\n    \"feedConnectionId\" : \"6a4b9ff5-3a5f-4321-936b-4796163550f6\",\n    \"id\" : \"2fc57bac-7aa7-4981-a5cd-8aee83fe698c\",\n    \"startBalance\" : {\n      \"amount\" : \"100.0000\",\n      \"creditDebitIndicator\" : \"CREDIT\"\n    },\n    \"startDate\" : \"2019-08-01\",\n    \"statementLineCount\" : \"1\",\n    \"status\" : \"DELIVERED\"\n  } ],\n  \"pagination\" : {\n    \"itemCount\" : 3,\n    \"page\" : 1,\n    \"pageCount\" : 210,\n    \"pageSize\" : 3\n  }\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "6e0c4b36-14af-47c4-9e9c-4c9b4a45b4ec",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:18.119961Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "getStatements",
+          "schema" : {
+            "externalDocs" : {
+              "url" : "https://developer.xero.com/documentation/bank-feeds-api/statements"
+            },
+            "properties" : {
+              "items" : {
+                "items" : {
+                  "$ref" : "#/components/schemas/Statement"
+                },
+                "type" : "array"
+              },
+              "pagination" : {
+                "$ref" : "#/components/schemas/Pagination"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 10
+  }, {
+    "id" : "722543c2-81e6-4ca0-9e64-94a66623c184",
+    "name" : "Retrieve single feed connection based on a unique id provided - 400",
+    "request" : {
+      "urlPath" : "/FeedConnections/41586788-0b35-4de7-b921-aeb8f58b6168",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 400
+    },
+    "uuid" : "722543c2-81e6-4ca0-9e64-94a66623c184",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:18.119899Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "getFeedConnection"
+        }
+      }
+    },
+    "insertionIndex" : 11
+  }, {
+    "id" : "e3377136-2544-4583-a5ab-58eba605c918",
+    "name" : "Retrieve single feed connection based on a unique id provided (application/json)",
+    "request" : {
+      "urlPath" : "/FeedConnections/87b3f3a6-72cf-40dd-86e8-b1d719a75095",
+      "method" : "GET",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/json"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"accountId\" : \"f4c4d595-da94-493b-999a-19d1ae1f508a\",\n  \"accountName\" : \"SDK Bank 5517\",\n  \"accountNumber\" : \"123434859\",\n  \"accountToken\" : \"foobar84778\",\n  \"accountType\" : \"BANK\",\n  \"country\" : \"GB\",\n  \"currency\" : \"GBP\",\n  \"id\" : \"b58b685a-1bee-4904-91f1-fee30bb6ea52\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "e3377136-2544-4583-a5ab-58eba605c918",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:18.119866Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "getFeedConnection",
+          "schema" : {
+            "externalDocs" : {
+              "url" : "https://developer.xero.com/documentation/bank-feeds-api/feed-connections"
+            },
+            "properties" : {
+              "accountId" : {
+                "description" : "Xero identifier for a bank account in Xero. Must be included if AccountNumber is not specified.",
+                "example" : "079a88ea-276d-41fb-a1f1-366ef3e22921",
+                "format" : "uuid",
+                "type" : "string"
+              },
+              "accountName" : {
+                "description" : "The Account Name will be used for the creation of a new Xero Bank Account if a matching Xero Bank Account is not found.",
+                "example" : "Joe's Savings Account",
+                "maximum" : 30,
+                "type" : "string"
+              },
+              "accountNumber" : {
+                "description" : "String(40) when AccountType is BANK String(4) when AccountType is CREDITCARD The Account Number is used to match the feed to a Xero Bank Account. The API will create a new Xero Bank Account if a match to an existing Xero Bank Account is not found. Only the last 4 digits must be supplied for Credit Card numbers. Must be included if AccountId is not specified.",
+                "example" : "3809087654321500",
+                "maximum" : 40,
+                "type" : "string"
+              },
+              "accountToken" : {
+                "description" : "This account identifier is generated by the financial institute (FI). This must be unique for your financial institute.",
+                "example" : "10000123",
+                "maximum" : 50,
+                "type" : "string"
+              },
+              "accountType" : {
+                "description" : "High level bank account type - BANK CREDITCARD BANK encompasses all bank account types other than credit cards.",
+                "enum" : [ "BANK", "CREDITCARD" ],
+                "example" : "BANK"
+              },
+              "country" : {
+                "$ref" : "#/components/schemas/CountryCode"
+              },
+              "currency" : {
+                "$ref" : "#/components/schemas/CurrencyCode"
+              },
+              "error" : {
+                "$ref" : "#/components/schemas/Error"
+              },
+              "id" : {
+                "description" : "GUID used to identify the Account.",
+                "example" : "0d3cf8d-95dc-4466-8dc0-47e6d1197e28",
+                "format" : "uuid",
+                "type" : "string"
+              },
+              "status" : {
+                "description" : "the current status of the feed connection",
+                "enum" : [ "PENDING", "REJECTED" ],
+                "example" : "REJECTED",
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 12
+  }, {
+    "id" : "e779b725-449e-4306-a749-d6e6c818bf72",
+    "name" : "Delete an existing feed connection - 400",
+    "request" : {
+      "urlPath" : "/FeedConnections/DeleteRequests",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 400
+    },
+    "uuid" : "e779b725-449e-4306-a749-d6e6c818bf72",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:18.119697Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "deleteFeedConnections"
+        }
+      }
+    },
+    "insertionIndex" : 13
+  }, {
+    "id" : "2bd92b0c-e170-4663-9e5e-dd733c5c88f2",
+    "name" : "Delete an existing feed connection (application/json)",
+    "request" : {
+      "urlPath" : "/FeedConnections/DeleteRequests",
+      "method" : "POST",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/json"
+        }
+      }
+    },
+    "response" : {
+      "status" : 202,
+      "body" : "{\n  \"items\" : [ {\n    \"id\" : \"b4cc693b-24d9-42ec-a6d4-2943d253ff63\",\n    \"status\" : \"PENDING\"\n  }, {\n    \"accountToken\" : \"10000125\",\n    \"error\" : {\n      \"detail\" : \"The AccountToken is connected to another Xero Bank Account associated with this bank. This Xero Bank Account belongs to a different Xero Organisation.\",\n      \"title\" : \"Feed connected in different organisation\",\n      \"type\" : \"feed-connected-in-different-organisation\"\n    },\n    \"status\" : \"REJECTED\"\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "2bd92b0c-e170-4663-9e5e-dd733c5c88f2",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:18.119673Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "deleteFeedConnections",
+          "schema" : {
+            "externalDocs" : {
+              "url" : "https://developer.xero.com/documentation/bank-feeds-api/feed-connections"
+            },
+            "properties" : {
+              "items" : {
+                "items" : {
+                  "$ref" : "#/components/schemas/FeedConnection"
+                },
+                "type" : "array"
+              },
+              "pagination" : {
+                "$ref" : "#/components/schemas/Pagination"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 14
+  }, {
+    "id" : "3358d528-5526-4388-b901-70e47454fe4a",
+    "name" : "Create one or more new feed connection (application/json)",
+    "request" : {
+      "urlPath" : "/FeedConnections",
+      "method" : "POST",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/json"
+        }
+      }
+    },
+    "response" : {
+      "status" : 409,
+      "body" : "{\n  \"detail\" : \"The application has not been configured to use these API endpoints.\",\n  \"title\" : \"Invalid Application\",\n  \"type\" : \"invalid-application\",\n  \"status\" : 403\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "3358d528-5526-4388-b901-70e47454fe4a",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:18.119619Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "createFeedConnections",
+          "schema" : {
+            "description" : "On error, the API consumer will receive an HTTP response with a HTTP Status Code of 4xx or 5xx and a Content-Type of application/problem+json.",
+            "properties" : {
+              "detail" : {
+                "description" : "Human readable detailed error description.",
+                "example" : "The application has not been configured to use these API endpoints.",
+                "maximum" : 255,
+                "type" : "string"
+              },
+              "status" : {
+                "description" : "The numeric HTTP Status Code, e.g. 404",
+                "example" : 403,
+                "type" : "integer"
+              },
+              "title" : {
+                "description" : "Human readable high level error description.",
+                "example" : "Invalid Application",
+                "maximum" : 255,
+                "type" : "string"
+              },
+              "type" : {
+                "description" : "Identifies the type of error.",
+                "enum" : [ "invalid-request", "invalid-application", "invalid-feed-connection", "duplicate-statement", "invalid-end-balance", "invalid-start-and-end-date", "invalid-start-date", "internal-error", "feed-already-connected-in-current-organisation", "invalid-end-date", "statement-not-found", "feed-connected-in-different-organisation", "feed-already-connected-in-different-organisation", "bank-feed-not-found", "invalid-country-specified", "invalid-organisation-bank-feeds", "invalid-organisation-multi-currency", "invalid-feed-connection-for-organisation", "invalid-user-role", "account-not-valid" ],
+                "example" : "invalid-application",
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 15
+  }, {
+    "id" : "acfe46f5-6c6f-42c4-bd03-29fcf8d75e83",
+    "name" : "Create one or more new feed connection - 400",
+    "request" : {
+      "urlPath" : "/FeedConnections",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 400
+    },
+    "uuid" : "acfe46f5-6c6f-42c4-bd03-29fcf8d75e83",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:18.119499Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "createFeedConnections"
+        }
+      }
+    },
+    "insertionIndex" : 16
+  }, {
+    "id" : "adb28e8f-8c79-49e0-ab21-f3f0cbeb3cc9",
+    "name" : "Create one or more new feed connection (application/json)",
+    "request" : {
+      "urlPath" : "/FeedConnections",
+      "method" : "POST",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/json"
+        }
+      }
+    },
+    "response" : {
+      "status" : 201,
+      "body" : "{\n  \"items\" : [ {\n    \"accountToken\" : \"foobar71760\",\n    \"id\" : \"2a19d46c-2a92-4e50-9401-dcf2cb895be7\",\n    \"status\" : \"PENDING\"\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "adb28e8f-8c79-49e0-ab21-f3f0cbeb3cc9",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:18.119473Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "createFeedConnections",
+          "schema" : {
+            "externalDocs" : {
+              "url" : "https://developer.xero.com/documentation/bank-feeds-api/feed-connections"
+            },
+            "properties" : {
+              "items" : {
+                "items" : {
+                  "$ref" : "#/components/schemas/FeedConnection"
+                },
+                "type" : "array"
+              },
+              "pagination" : {
+                "$ref" : "#/components/schemas/Pagination"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 17
+  }, {
+    "id" : "c89ba53b-0176-480a-aef4-7c13b624627c",
+    "name" : "Searches for feed connections - 400",
+    "request" : {
+      "urlPath" : "/FeedConnections",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 400
+    },
+    "uuid" : "c89ba53b-0176-480a-aef4-7c13b624627c",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:18.119431Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "getFeedConnections"
+        }
+      }
+    },
+    "insertionIndex" : 18
+  }, {
+    "id" : "5b95ef6f-fe20-4596-a20d-fe327ee029cf",
+    "name" : "Searches for feed connections (application/json)",
+    "request" : {
+      "urlPath" : "/FeedConnections",
+      "method" : "GET",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/json"
+        }
+      }
+    },
+    "response" : {
+      "status" : 201,
+      "body" : "{\n  \"items\" : [ {\n    \"accountId\" : \"aefbf6be-4285-4ca5-bf39-0f486c8515c7\",\n    \"accountName\" : \"SDK Bank 95921\",\n    \"accountNumber\" : \"123496842\",\n    \"accountToken\" : \"foobar31306\",\n    \"accountType\" : \"BANK\",\n    \"country\" : \"GB\",\n    \"currency\" : \"GBP\",\n    \"id\" : \"c0eb97b5-4f97-465a-8268-276513c14396\"\n  }, {\n    \"accountId\" : \"fc2f3cc2-126e-40d7-9fc1-12e52d0a71f1\",\n    \"accountName\" : \"SDK Bank 11272\",\n    \"accountNumber\" : \"123481122\",\n    \"accountToken\" : \"foobar74770\",\n    \"accountType\" : \"BANK\",\n    \"country\" : \"GB\",\n    \"currency\" : \"GBP\",\n    \"id\" : \"3b44b539-4e39-4d53-9334-d8ba01674752\"\n  } ],\n  \"pagination\" : {\n    \"itemCount\" : 39,\n    \"page\" : 1,\n    \"pageCount\" : 1,\n    \"pageSize\" : 87654321\n  }\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "5b95ef6f-fe20-4596-a20d-fe327ee029cf",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:18.119386Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "getFeedConnections",
+          "schema" : {
+            "externalDocs" : {
+              "url" : "https://developer.xero.com/documentation/bank-feeds-api/feed-connections"
+            },
+            "properties" : {
+              "items" : {
+                "items" : {
+                  "$ref" : "#/components/schemas/FeedConnection"
+                },
+                "type" : "array"
+              },
+              "pagination" : {
+                "$ref" : "#/components/schemas/Pagination"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 19
+  } ]
+}

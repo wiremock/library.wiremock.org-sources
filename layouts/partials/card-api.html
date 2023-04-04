@@ -13,9 +13,9 @@
     </div>
   {{ end }}
   <div class="relative text-center">
-    <h3 class="text-xl font-medium">{{ .Title }}</h3>
+    <h3 class="text-xl font-medium break-words">{{ .Title }}</h3>
     {{ with .Params.description }}
-      <div class="mt-2 text-base leading-relaxed">{{ . | markdownify | safeHTML | truncate 40 "" }}</div>
+      <div class="mt-2 text-base leading-relaxed">{{ . | markdownify | plainify | truncate 40 "" }}</div>
     {{ end }}
   </div>
   <a href="{{ .Permalink }}" class="absolute inset-0" title="{{ .Title }}"></a>

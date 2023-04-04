@@ -1,0 +1,85 @@
+{
+  "mappings" : [ {
+    "id" : "33d0d529-2ece-4af5-8a9a-1feb1a49731e",
+    "name" : "Deletes a connection for this user (i.e. disconnect a tenant) - 404",
+    "request" : {
+      "urlPath" : "/Connections/61ecfe9f-97ea-465f-9deb-906af24c8be6",
+      "method" : "DELETE"
+    },
+    "response" : {
+      "status" : 404
+    },
+    "uuid" : "33d0d529-2ece-4af5-8a9a-1feb1a49731e",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:16.890361Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "deleteConnection"
+        }
+      }
+    },
+    "insertionIndex" : 0
+  }, {
+    "id" : "7e2a6ce7-218e-4728-9c51-198e5863c119",
+    "name" : "Deletes a connection for this user (i.e. disconnect a tenant) - 204",
+    "request" : {
+      "urlPath" : "/Connections/6f74640a-a9e9-4b59-9028-84462052a169",
+      "method" : "DELETE"
+    },
+    "response" : {
+      "status" : 204
+    },
+    "uuid" : "7e2a6ce7-218e-4728-9c51-198e5863c119",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:16.890341Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "deleteConnection"
+        }
+      }
+    },
+    "insertionIndex" : 1
+  }, {
+    "id" : "fccb7e23-07e3-4125-ba1d-8351785a0ebd",
+    "name" : "Retrieves the connections for this user",
+    "request" : {
+      "urlPath" : "/Connections",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "[ { \"id\": \"7cb59f93-2964-421d-bb5e-a0f7a4572a44\", \"tenantId\": \"fe79f7dd-b6d4-4a92-ba7b-538af6289c58\", \"tenantName\": \"Demo Company (NZ)\", \"tenantType\": \"ORGANISATION\", \"createdDateUtc\": \"2019-12-07T18:46:19.5165400\", \"updatedDateUtc\": \"2019-12-07T18:46:19.5187840\" } ]",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "fccb7e23-07e3-4125-ba1d-8351785a0ebd",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:16.890293Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "getConnections",
+          "schema" : {
+            "items" : {
+              "$ref" : "#/components/schemas/Connection"
+            },
+            "type" : "array"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 2
+  } ]
+}

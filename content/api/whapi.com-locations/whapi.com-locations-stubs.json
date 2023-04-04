@@ -1,0 +1,612 @@
+{
+  "mappings" : [ {
+    "id" : "a9180149-f8c8-4718-a96f-469b22f2193d",
+    "name" : "Retreives the specified currency.",
+    "request" : {
+      "urlPath" : "/currencies/TMT",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 404,
+      "body" : "{\n    \"errors\" : \n    [\n        {\n          \"code\":\"20304\",\n          \"message\":\"Currency not Found\"\n        }\n    ]\n}\n",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "a9180149-f8c8-4718-a96f-469b22f2193d",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:09.88775Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "getCurrency",
+          "schema" : {
+            "type" : "object",
+            "properties" : {
+              "errors" : {
+                "type" : "array",
+                "items" : {
+                  "$ref" : "#/components/schemas/error"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "insertionIndex" : 0
+  }, {
+    "id" : "aae5f7d9-6c88-4e7f-833c-1c87acc5fc48",
+    "name" : "Retreives the specified currency.",
+    "request" : {
+      "urlPath" : "/currencies/HKD",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 400,
+      "body" : "{\n    \"errors\" : \n    [\n        {\n          \"code\":\"10070\",\n          \"message\":\"Missing Parameter\",\n          \"field\":\"postCode\"\n        },\n        {\n          \"code\":\"10071\",\n          \"message\":\"Invalid Parameter\",\n          \"field\":\"postCode\"\n        }    \n    ]\n}\n",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "aae5f7d9-6c88-4e7f-833c-1c87acc5fc48",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:09.887702Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "getCurrency",
+          "schema" : {
+            "type" : "object",
+            "properties" : {
+              "errors" : {
+                "type" : "array",
+                "items" : {
+                  "$ref" : "#/components/schemas/error"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "insertionIndex" : 1
+  }, {
+    "id" : "af4494d9-c4ad-41d5-8adc-228fa2f12084",
+    "name" : "Retreives the specified currency.",
+    "request" : {
+      "urlPath" : "/currencies/SDG",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n    \"code\":\"GBP\",\n    \"name\":\"Pound\",\n    \"minDeposit\":\"5.00\",\n    \"maxDeposit\":\"100.00\",\n    \"minWithdrawal\":\"20.00\",\n    \"maxWithdrawal\":\"1000.00\",\n    \"exchangeRate\":\"1.00\"\n}\n",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "af4494d9-c4ad-41d5-8adc-228fa2f12084",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:09.887653Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "getCurrency",
+          "schema" : {
+            "title" : "currency",
+            "type" : "object",
+            "properties" : {
+              "code" : {
+                "type" : "string",
+                "description" : "The code of the currency"
+              },
+              "exchangeRate" : {
+                "type" : "number",
+                "description" : "The exchange rate for the currency",
+                "format" : "double"
+              },
+              "maxDeposit" : {
+                "type" : "number",
+                "description" : "The maximum deposit for the currency",
+                "format" : "double"
+              },
+              "maxWithdrawal" : {
+                "type" : "number",
+                "description" : "The maximum withdrawl for the currency",
+                "format" : "double"
+              },
+              "minDeposit" : {
+                "type" : "number",
+                "description" : "The minimum deposit for the currency",
+                "format" : "double"
+              },
+              "minWithdrawal" : {
+                "type" : "number",
+                "description" : "The minimum withdrawal for the currency",
+                "format" : "double"
+              },
+              "name" : {
+                "type" : "string",
+                "description" : "The name of the currency"
+              }
+            }
+          }
+        }
+      }
+    },
+    "insertionIndex" : 2
+  }, {
+    "id" : "ed82b22a-7051-40dd-97d7-6290105dfc22",
+    "name" : "Retreives the list of currencies.",
+    "request" : {
+      "urlPath" : "/currencies/",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 404,
+      "body" : "{\n    \"errors\" : \n    [\n        {\n          \"code\":\"20304\",\n          \"message\":\"Currency not Found\"\n        }\n    ]\n}\n",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "ed82b22a-7051-40dd-97d7-6290105dfc22",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:09.887539Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "getCurrencies",
+          "schema" : {
+            "type" : "object",
+            "properties" : {
+              "errors" : {
+                "type" : "array",
+                "items" : {
+                  "$ref" : "#/components/schemas/error"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "insertionIndex" : 3
+  }, {
+    "id" : "b70424a9-9148-4bdb-878b-9cdf425cd95e",
+    "name" : "Retreives the list of currencies.",
+    "request" : {
+      "urlPath" : "/currencies/",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"currencies\": \n  [\n    {\n      \"code\":\"GBP\",\n      \"name\":\"Pound\",\n      \"minDeposit\":\"5.00\",\n      \"maxDeposit\":\"100.00\",\n      \"minWithdrawal\":\"20.00\",\n      \"maxWithdrawal\":\"1000.00\",\n      \"exchangeRate\":\"1.00\"\n    }\n  ]\n}\n",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "b70424a9-9148-4bdb-878b-9cdf425cd95e",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:09.887509Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "getCurrencies",
+          "schema" : {
+            "type" : "object",
+            "properties" : {
+              "currencies" : {
+                "type" : "array",
+                "items" : {
+                  "$ref" : "#/components/schemas/currency"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "insertionIndex" : 4
+  }, {
+    "id" : "49d80249-57aa-4a2b-ba0b-512029abcfdc",
+    "name" : "Retrieves the specified country and its currency.",
+    "request" : {
+      "urlPath" : "/countries/ccccu",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 404,
+      "body" : "{\n    \"errors\" : \n    [\n        {\n          \"code\":\"20303\",\n          \"message\":\"Country not Found\"\n        }\n    ]\n}\n",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "49d80249-57aa-4a2b-ba0b-512029abcfdc",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:09.887461Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "getCountry",
+          "schema" : {
+            "type" : "object",
+            "properties" : {
+              "errors" : {
+                "type" : "array",
+                "items" : {
+                  "$ref" : "#/components/schemas/error"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "insertionIndex" : 5
+  }, {
+    "id" : "cfe931fc-2128-4021-b019-06f62b9dad86",
+    "name" : "Retrieves the specified country and its currency.",
+    "request" : {
+      "urlPath" : "/countries/hhhhr",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 400,
+      "body" : "{\n    \"errors\" : \n    [\n        {\n          \"code\":\"10070\",\n          \"message\":\"Missing Parameter\",\n          \"field\":\"postCode\"\n        },\n        {\n          \"code\":\"10071\",\n          \"message\":\"Invalid Parameter\",\n          \"field\":\"postCode\"\n        }    \n    ]\n}\n",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "cfe931fc-2128-4021-b019-06f62b9dad86",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:09.887413Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "getCountry",
+          "schema" : {
+            "type" : "object",
+            "properties" : {
+              "errors" : {
+                "type" : "array",
+                "items" : {
+                  "$ref" : "#/components/schemas/error"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "insertionIndex" : 6
+  }, {
+    "id" : "58734229-6130-4f7e-9785-132d560e9b71",
+    "name" : "Retrieves the specified country and its currency.",
+    "request" : {
+      "urlPath" : "/countries/ttttl",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"code\":\"gb\",\n  \"name\":\"Great Britain\",\n  \"currencyCode\":\"GBP\",\n  \"dialCode\":\"+44\"\n}\n",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "58734229-6130-4f7e-9785-132d560e9b71",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:09.887361Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "getCountry",
+          "schema" : {
+            "title" : "country",
+            "type" : "object",
+            "properties" : {
+              "code" : {
+                "type" : "string",
+                "description" : "The code of the country"
+              },
+              "currencyCode" : {
+                "type" : "string",
+                "description" : "The currency code"
+              },
+              "dialCode" : {
+                "type" : "string",
+                "description" : "The dial code of the country"
+              },
+              "name" : {
+                "type" : "string",
+                "description" : "The name of the country"
+              }
+            }
+          }
+        }
+      }
+    },
+    "insertionIndex" : 7
+  }, {
+    "id" : "f1055c0c-bb23-4841-9f82-073c6dbd2faf",
+    "name" : "Retrieves a list of countries and its currencies.",
+    "request" : {
+      "urlPath" : "/countries/",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 404,
+      "body" : "{\n    \"errors\" : \n    [\n        {\n          \"code\":\"20303\",\n          \"message\":\"Country not Found\"\n        }\n    ]\n}\n",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "f1055c0c-bb23-4841-9f82-073c6dbd2faf",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:09.887225Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "getCountries",
+          "schema" : {
+            "type" : "object",
+            "properties" : {
+              "errors" : {
+                "type" : "array",
+                "items" : {
+                  "$ref" : "#/components/schemas/error"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "insertionIndex" : 8
+  }, {
+    "id" : "768cca56-101d-4253-95fe-5907dd63b17e",
+    "name" : "Retrieves a list of countries and its currencies.",
+    "request" : {
+      "urlPath" : "/countries/",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 400,
+      "body" : "{\n    \"errors\" : \n    [\n        {\n          \"code\":\"10070\",\n          \"message\":\"Missing Parameter\",\n          \"field\":\"postCode\"\n        },\n        {\n          \"code\":\"10071\",\n          \"message\":\"Invalid Parameter\",\n          \"field\":\"postCode\"\n        }    \n    ]\n}\n",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "768cca56-101d-4253-95fe-5907dd63b17e",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:09.887195Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "getCountries",
+          "schema" : {
+            "type" : "object",
+            "properties" : {
+              "errors" : {
+                "type" : "array",
+                "items" : {
+                  "$ref" : "#/components/schemas/error"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "insertionIndex" : 9
+  }, {
+    "id" : "8df4cffe-126a-486a-ba37-003da739e1d7",
+    "name" : "Retrieves a list of countries and its currencies.",
+    "request" : {
+      "urlPath" : "/countries/",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n    \"countries\": \n    [\n        {\n            \"code\": \"GB\",\n            \"name\": \"United Kingdom\", \n            \"currencyCode\" : \"GBP\", \n            \"dialCode\" : \"+44\"\n        }\n    ]\n}\n",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "8df4cffe-126a-486a-ba37-003da739e1d7",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:09.887166Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "getCountries",
+          "schema" : {
+            "type" : "object",
+            "properties" : {
+              "countries" : {
+                "type" : "array",
+                "items" : {
+                  "$ref" : "#/components/schemas/country"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "insertionIndex" : 10
+  }, {
+    "id" : "b1496b9a-24a0-40a6-86a9-8f7f8233dd61",
+    "name" : "Retrieves a list of addresses when supplied with a house number or name and a po...",
+    "request" : {
+      "urlPath" : "/address/lookup/",
+      "method" : "GET",
+      "queryParameters" : {
+        "postCode" : {
+          "equalTo" : "9wjo60pg2ord467diwbx6q4uzyxnfe5dqa53vc1pamzl13174f4uhid2qrso2apkfr3vc5szw8rgzbg15rqfad8lwjihkv07sjzpmtz4mi7uzakws927ypkacdpcyxxk9nnxlm"
+        },
+        "houseNum" : {
+          "equalTo" : "ac3o8cy4nyjj48zrbr1ogx17uk5esre5bebpx6lp1ofcbu9ub0dey4x12h4swm3m7fspujzr71644kblotgp4guuyjvhn0rexuq5py103daizu1apn1qoot1cap4qnt45gkck51p"
+        }
+      }
+    },
+    "response" : {
+      "status" : 404,
+      "body" : "{\n  \"errors\" : \n  [\n    {\n      \"code\":\"20301\",\n      \"message\":\"Could not find any addresses\",\n      \"field\":\"postCode\"\n    }\n  ]\n}\n",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "b1496b9a-24a0-40a6-86a9-8f7f8233dd61",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:09.887122Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "addressLookup",
+          "schema" : {
+            "type" : "object",
+            "properties" : {
+              "errors" : {
+                "type" : "array",
+                "items" : {
+                  "$ref" : "#/components/schemas/error"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "insertionIndex" : 11
+  }, {
+    "id" : "009570f4-cf3b-47e0-8cb5-3003f85dfccd",
+    "name" : "Retrieves a list of addresses when supplied with a house number or name and a po...",
+    "request" : {
+      "urlPath" : "/address/lookup/",
+      "method" : "GET",
+      "queryParameters" : {
+        "postCode" : {
+          "equalTo" : "quw9vif2rs8cldy5pqdu5f884qhq88k0sr26ul1qaxg7i4v3qvdy100zv34qfc1vlqxhwq"
+        },
+        "houseNum" : {
+          "equalTo" : "a5vyktf2tt2cql3q8fyd5lu8e09kruvxtibltkqfrx2cuccy73485h12oez6juw9k6vmagl0i"
+        }
+      }
+    },
+    "response" : {
+      "status" : 400,
+      "body" : "{\n  \"errors\":\n  [\n    {\n      \"code\":\"10070\",\n      \"message\":\"Missing Parameter\",\n      \"field\":\"postCode\"\n    },\n    {\n      \"code\":\"10071\",\n      \"message\":\"Invalid Parameter\",\n      \"field\":\"postCode\"\n    }\n  ]\n}\n",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "009570f4-cf3b-47e0-8cb5-3003f85dfccd",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:09.887044Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "addressLookup",
+          "schema" : {
+            "type" : "object",
+            "properties" : {
+              "errors" : {
+                "type" : "array",
+                "items" : {
+                  "$ref" : "#/components/schemas/error"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "insertionIndex" : 12
+  }, {
+    "id" : "32af38a1-811a-48ff-92e9-c82f102bb33d",
+    "name" : "Retrieves a list of addresses when supplied with a house number or name and a po...",
+    "request" : {
+      "urlPath" : "/address/lookup/",
+      "method" : "GET",
+      "queryParameters" : {
+        "postCode" : {
+          "equalTo" : "h17cecy7u3nv75lv4r14iz7svvua3ryqvz6oj1sdpjaz8gfjkpqgrgnlslzrcinret699v8b1cqryznihl2u627gobcok1464njhyt9zp39hupipt3dy7k276zp1s3uet69b4lnunqm1ano4ev"
+        },
+        "houseNum" : {
+          "equalTo" : "wbcm668yxt8hjwub6a2t2kvfsye46oedu4jkyc4rnwvq3dkixnvgv9wqusp17vltne35ltfu3h2k6axwksrd1g1iqpfxh"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"addresses\": \n  [\n    {\n      \"fullAddress\": \"4 Bywater Place, LONDON, SE16 5ND\",\n      \"street\": \"4 Bywater Place\",\n      \"postcode\": \"SE16 5ND\",\n      \"city\": \"London\",\n      \"county\": \"London\"\n    }\n  ]\n}        \n",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "32af38a1-811a-48ff-92e9-c82f102bb33d",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:09.886937Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "addressLookup",
+          "schema" : {
+            "type" : "object",
+            "properties" : {
+              "addresses" : {
+                "type" : "array",
+                "items" : {
+                  "$ref" : "#/components/schemas/address"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "insertionIndex" : 13
+  } ]
+}
