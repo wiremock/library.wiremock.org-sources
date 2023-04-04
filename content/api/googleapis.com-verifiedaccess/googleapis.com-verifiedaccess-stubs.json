@@ -1,0 +1,106 @@
+{
+  "mappings" : [ {
+    "id" : "829268ea-43a8-49ad-a3b4-3b1014985f6f",
+    "name" : "Verifies the challenge response.",
+    "request" : {
+      "urlPath" : "/v2/challenge:verify",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"devicePermanentId\" : \"m7pm\",\n  \"deviceSignal\" : \"o175ld4ue1p96614kk12emjr1a03gj8txtem7aqzqzusd5pvyn9dlldcvj3m2fbupkbpws746bu5d80sdbcda8anuatz1xbnnzhip6y22n5yxmfykqvlnwol7wth28o4r2imhdc5\",\n  \"keyTrustLevel\" : \"KEY_TRUST_LEVEL_UNSPECIFIED\",\n  \"signedPublicKeyAndChallenge\" : \"avdfg7nm4csebyei81bgv304jxvxjdf2lkdhflls6iwwtj4vo9at8kbkylelbnrj6gsjm1118ou7liqxw1x1mnisralx244uvvhesp1eu1ooxvoyu6wcyyum3kik82jj6bvhmbve7h9r9610g\",\n  \"customerId\" : \"n8yv\",\n  \"virtualDeviceId\" : \"ccih\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "829268ea-43a8-49ad-a3b4-3b1014985f6f",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:37.81895Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "verifiedaccess.challenge.verify",
+          "schema" : {
+            "description" : "Result message for VerifiedAccess.VerifyChallengeResponse.",
+            "properties" : {
+              "customerId" : {
+                "description" : "Unique customer id that this device belongs to, as defined by the Google Admin SDK at https://developers.google.com/admin-sdk/directory/v1/guides/manage-customers",
+                "type" : "string"
+              },
+              "devicePermanentId" : {
+                "description" : "Device permanent id is returned in this field (for the machine response only).",
+                "type" : "string"
+              },
+              "deviceSignal" : {
+                "description" : "Device signal in json string representation.",
+                "type" : "string"
+              },
+              "keyTrustLevel" : {
+                "description" : "Device attested key trust level.",
+                "enum" : [ "KEY_TRUST_LEVEL_UNSPECIFIED", "CHROME_OS_VERIFIED_MODE", "CHROME_OS_DEVELOPER_MODE", "CHROME_BROWSER_HW_KEY", "CHROME_BROWSER_OS_KEY" ],
+                "type" : "string"
+              },
+              "signedPublicKeyAndChallenge" : {
+                "description" : "Certificate Signing Request (in the SPKAC format, base64 encoded) is returned in this field. This field will be set only if device has included CSR in its challenge response. (the option to include CSR is now available for both user and machine responses)",
+                "type" : "string"
+              },
+              "virtualDeviceId" : {
+                "description" : "Virtual device id of the device. The definition of virtual device id is platform-specific.",
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 0
+  }, {
+    "id" : "d297de43-eed0-4e7f-856a-fffa560d2e0c",
+    "name" : "Generates a new challenge.",
+    "request" : {
+      "urlPath" : "/v2/challenge:generate",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"alternativeChallenge\" : \"qqt2xj1\",\n  \"challenge\" : \"bwyiqcjoc9g9fst5gs18k09payfz3mfnl2fjau6r5fjfrpsdc7f5lkiv98r40cz5ojjp0thhomdnmpc5i7ecl\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "d297de43-eed0-4e7f-856a-fffa560d2e0c",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:37.818347Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "verifiedaccess.challenge.generate",
+          "schema" : {
+            "description" : "Result message for VerifiedAccess.GenerateChallenge.",
+            "properties" : {
+              "alternativeChallenge" : {
+                "description" : "Challenge generated with the old signing key, the bytes representation of SignedData (this will only be present during key rotation).",
+                "format" : "byte",
+                "type" : "string"
+              },
+              "challenge" : {
+                "description" : "Generated challenge, the bytes representation of SignedData.",
+                "format" : "byte",
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 1
+  } ]
+}

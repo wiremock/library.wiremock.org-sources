@@ -1,0 +1,258 @@
+{
+  "mappings" : [ {
+    "id" : "afc0597d-00e4-400c-8f7b-0d4f476a7b66",
+    "name" : "This method is used to update the location of a device. The device does not need...",
+    "request" : {
+      "urlPath" : "/UpdateLocation",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"MiataruVerboseResponse\" : \"alitlrvkg4hb5v1i6iqx8u9nl4tmyj5spl7hfsy45qkgt6ifwyiycak4oux9cdw0rmq4yrms8eq69s9ice2cwe9rfmumusjih1zaxperz2rf4hykmidz9utggekpjkq64jr8x1jqwcvlitobdlh4rr01szvrsh9ti6gg0wc8lxmbohwz3w61gsyh4xnyrovew2s3y\",\n  \"MiataruResponse\" : \"0pgefpyflr15p77ygsp3gyuq58eo9t1svew1qpie89cu3qnbxw4744i95bo600yamp6i3uownubj9er528rltdzarvkwenlt3zrr1rhcyqsz4gmnskumzpds7h56vpa6njd59il8gq1gj495s5tivb431s3ry\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "afc0597d-00e4-400c-8f7b-0d4f476a7b66",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:02.748672Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "updateLocation",
+          "schema" : {
+            "required" : [ "MiataruResponse", "MiataruVerboseResponse" ],
+            "type" : "object",
+            "properties" : {
+              "MiataruResponse" : {
+                "type" : "string",
+                "default" : "ACK"
+              },
+              "MiataruVerboseResponse" : {
+                "type" : "string"
+              }
+            }
+          }
+        }
+      }
+    },
+    "insertionIndex" : 0
+  }, {
+    "id" : "e09f9118-3170-485c-a901-04dfe9a7ab6f",
+    "name" : "Visitor History is stored on the server with every request to the location or lo...",
+    "request" : {
+      "urlPath" : "/GetVisitorHistory",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"MiataruServerConfig\" : {\n    \"AvailableVisitorHistory\" : \"fvqnax6b90isqgcxaeeyffnhbqqjx1088wrhmwz0y4dyzf0ddmv3zruvuy17x8702rlr1rp89rqxbvicshw6nhldrs5deyfom8wgvtye8c64734man3ab5c80x5yd6j1ki18jgs55rnvepok55awsnqerjx66yo8ldnheekvxxfsprvsgj0c53ppiiak48ekr9qxn\",\n    \"MaximumNumberOfVisitorHistory\" : \"qw0ij35kfrv5r4dx2rwm\"\n  },\n  \"MiataruVisitors\" : [ {\n    \"DeviceID\" : \"9b4g\",\n    \"TimeStamp\" : \"2022-12-30T06:50:02.748419Z\"\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "e09f9118-3170-485c-a901-04dfe9a7ab6f",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:02.748531Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "getVisitorHistory",
+          "schema" : {
+            "required" : [ "MiataruServerConfig", "MiataruVisitors" ],
+            "type" : "object",
+            "properties" : {
+              "MiataruServerConfig" : {
+                "required" : [ "AvailableVisitorHistory", "MaximumNumberOfVisitorHistory" ],
+                "type" : "object",
+                "properties" : {
+                  "AvailableVisitorHistory" : {
+                    "type" : "string",
+                    "description" : "the number of available visitor history entries for this device. If the client requested more Visitor Updates than there are available the server will return those available."
+                  },
+                  "MaximumNumberOfVisitorHistory" : {
+                    "type" : "string",
+                    "description" : "a server-side setting that controls up to how many Visitors the server is storing in the Visitor History before it removes the oldest one."
+                  }
+                },
+                "description" : "holds information about the server side settings of the visitor history and about the available device related visitor history."
+              },
+              "MiataruVisitors" : {
+                "type" : "array",
+                "description" : "The server will answer back with an Array of MiataruVisitors if there are Visitors, or an empty array when there are none.",
+                "items" : {
+                  "$ref" : "#/components/schemas/MiataruVisitors"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "insertionIndex" : 1
+  }, {
+    "id" : "3787deaf-cbc8-451c-bb59-142298f3ea78",
+    "name" : "Location History is stored on the server only if the client told the server to d...",
+    "request" : {
+      "urlPath" : "/GetLocationHistory",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"MiataruServerConfig\" : {\n    \"MaximumNumberOfLocationUpdates\" : \"2022-09-30T08:14:02.746462Z\",\n    \"AvailableDeviceLocationUpdates\" : \"2022-06-01T06:38:02.746505Z\"\n  },\n  \"MiataruLocation\" : [ {\n    \"HorizontalAccuracy\" : \"yt1fxeijyg0w0emhc6axgt0ou8407cngyblfeglemtezqhzbfkjx8nfpmg5jcntbc1zy2acpv6ev98wxsrn59m33qzlra9elmito\",\n    \"Device\" : \"9m9ssp1gw3qg41438jm78tut71j43o5xm54k3jk6wsh243knar3jo8rbdvbn2cshogkm25nchsnwwecjp8vte6lyiw38kfdfbegn706pc6q9giwg4cyb8a8ukbiv0dd3yve8ziv98wjndjxw9wrqwsdjph6gqqsxyclmb9hgbi24teu55zcq4\",\n    \"Latitude\" : \"1s0yisblcy69ji939kz0ymeu7esucefzvxy8b9xgxbdbn3emf24ofbtobtdyibipmd4nozt5xhyvo1ashunvpq0s4vu643c3w5urtdkbk\",\n    \"Longitude\" : \"d50wi4lpteqs6fwi\",\n    \"Timestamp\" : \"2022-06-01T08:24:02.74663Z\"\n  }, {\n    \"HorizontalAccuracy\" : \"bwy3w96c5n3iglm39txt8flbusodabq85tbb8omtc0et4ay7v1oql1jvki1wvrsujdld3wjfacast881ew6qfukuo467sl6wour4ej1ht2sp20joj3em\",\n    \"Device\" : \"w98mqy1ccchnnlqi9cxbcp8ve9f5vv0rsglsqwg2qzq4ejpkuewoce92eprml6yksqr0bpxra1m3aukzijz8444ffp41ogm\",\n    \"Latitude\" : \"b62vui7vg51rcq1u5tybd5aylemrgr9tal04vapof2x7p84aspztwxysday1qjn5d7u33kk1p3uhoc5z6ps2e9msa468p0tzjnlj46oh53plnq5csjzeck0qvwpnwdr1ubdoonetkj2gh73u9dl56u6ldy8m5yt8y1if20ltasctq6nti5x\",\n    \"Longitude\" : \"buccjmyne06j1xje00ddn51d6nk0inqaet5q7qzm89x6lk0ijeelx62263a53vjf4377nwqaa9mufi66p0ta9rxl3onhbwmrsflk1udxzo0nvf4z8fvgwlxjt68czr8ubdk13an9ju00c5a9jd0wz4aqwd0po4sc8hnti5hxnse6o6ggj98pkkdf1a8g4v1mvcjhq71\",\n    \"Timestamp\" : \"2023-01-18T07:40:02.746791Z\"\n  }, {\n    \"HorizontalAccuracy\" : \"i3frv8kreqyanirr5igzc9u77g09eml20u81nh5dl76dyzqtk7jusjybi1t3le1rkfu7lydhx15atapmoix1l7c3vt78c0dj88um5rxx1s\",\n    \"Device\" : \"0ffer63er2n5rkpco2o26zpkc5j9zbpdorix2o0qv5tg233djeazs8zy3mav1jxulf183x565h1e86eoo7ms1a8yianq0y1sgrghalr8pjq0ph6x0f99it8n\",\n    \"Latitude\" : \"ks9c2p0xua6wkvbsx0p3nacrccf8b4z2lchls0jpibwh92sk2y1iw971r3jbbvv5z5yuycnvy83fgix2jdek8qjfswjei5dsg1ylhzr64f4c8wlzxbqcrhz0dtxygm9k3c6p83he16hj56dbi6gk47spb4fp23m8nkbu0gmchiskgutpfb1r7395mu083\",\n    \"Longitude\" : \"jxec73jbhq2jre5kfczq036n8hyeulbyoxzd6g884t5krkzbsfo5u6wu6ktt0htcdseb4um7mq4zn\",\n    \"Timestamp\" : \"2022-06-19T05:48:02.747942Z\"\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "3787deaf-cbc8-451c-bb59-142298f3ea78",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:02.748123Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "getLocationHistory",
+          "schema" : {
+            "required" : [ "MiataruLocation", "MiataruServerConfig" ],
+            "type" : "object",
+            "properties" : {
+              "MiataruLocation" : {
+                "type" : "array",
+                "description" : "holds all location information of a given device or is an empty array if device not found or no location information is stored.",
+                "items" : {
+                  "$ref" : "#/components/schemas/MiataruLocation"
+                }
+              },
+              "MiataruServerConfig" : {
+                "required" : [ "AvailableDeviceLocationUpdates", "MaximumNumberOfLocationUpdates" ],
+                "type" : "object",
+                "properties" : {
+                  "AvailableDeviceLocationUpdates" : {
+                    "type" : "string",
+                    "description" : "the number of locations stored for this particular device"
+                  },
+                  "MaximumNumberOfLocationUpdates" : {
+                    "type" : "string",
+                    "description" : "the amount of locations the server is storing per device at maximum before it will remove the oldest one (FiFo)"
+                  }
+                },
+                "description" : "holds information about the basic configuration settings on server side."
+              }
+            }
+          }
+        }
+      }
+    },
+    "insertionIndex" : 2
+  }, {
+    "id" : "5f4aa47c-da5e-4cf5-a3ea-0f514dbe8be1",
+    "name" : "Retrieves a devices Location in GeoJSON format.",
+    "request" : {
+      "urlPath" : "/GetLocationGeoJSON/z2vr",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"geometry\" : {\n    \"coordinates\" : [ 2.8525037316921852E38, 1.0681895181701889E38, 3.0890952916836085E38 ],\n    \"type\" : \"wt5s7t5sn3x7ve26cj9q0mlfdsalkrcw4aq5bw5ptsl8geinl9xkcwq3osybqtl5j5xplyrsyboftndy7iczpoaig7p7uqvgkxq5axnhekmt14blgurxbuampo1x7xybzyrplfsgdcx9sfn3ehsft6il3cxzy\"\n  },\n  \"type\" : \"aux52fzfekwxdacaldn7d20gbou5r3ffj765fv3z0jj\",\n  \"properties\" : {\n    \"name\" : \"Amos Beer\"\n  }\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "5f4aa47c-da5e-4cf5-a3ea-0f514dbe8be1",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:02.746392Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "getLocationGeoJSON",
+          "schema" : {
+            "required" : [ "geometry", "properties", "type" ],
+            "type" : "object",
+            "properties" : {
+              "geometry" : {
+                "required" : [ "coordinates", "type" ],
+                "type" : "object",
+                "properties" : {
+                  "coordinates" : {
+                    "type" : "array",
+                    "items" : {
+                      "type" : "number",
+                      "format" : "float"
+                    }
+                  },
+                  "type" : {
+                    "type" : "string"
+                  }
+                }
+              },
+              "properties" : {
+                "required" : [ "name" ],
+                "type" : "object",
+                "properties" : {
+                  "name" : {
+                    "type" : "string"
+                  }
+                }
+              },
+              "type" : {
+                "type" : "string"
+              }
+            }
+          }
+        }
+      }
+    },
+    "insertionIndex" : 3
+  }, {
+    "id" : "17aca91e-09f1-4a99-8574-3aef34d7b02a",
+    "name" : "To retrieve a specific devices latest known location the /GetLocation method is ...",
+    "request" : {
+      "urlPath" : "/GetLocation",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"MiataruLocation\" : [ {\n    \"HorizontalAccuracy\" : \"2o132qmvgtiria\",\n    \"Device\" : \"hjngjup63adc2p5y3exgtvckziwpl2nlwrwb5p9fubfjs8gm3je319wxs0yei2q3dn1jdsigt6pfj3\",\n    \"Latitude\" : \"rx6kjkkakwxmm04hscuw1v6dv62uw8ggs779qjo0t7pjicy3l6roeuxobyp5z9rb6m1gko4s8lc13v4kd0vb8yvif7otqjlvx4s8yowmhmprkq3sgripv\",\n    \"Longitude\" : \"cj28w9dz568qphqj82wswzyjtpm0pavku9fti7pdod5tgvqn1w3kc7vsrymv7pke6fsbxyfj1xlm\",\n    \"Timestamp\" : \"2023-01-31T06:24:02.744633Z\"\n  }, {\n    \"HorizontalAccuracy\" : \"gjmins5kchj30j6p5rwb6x07dcglc138z7hwbwrzn3flbmn1xaq9p1f52svtwz3ad7i366plj2t0r8fpbfbumyis2nlpm7v5ve8resdagqhxde1hunzteoggstrgks4qprf7q33ilj6b7fhksse7j7ehyu6m07ahrv3ve2atbxefrp10rkk3jekbyjc4\",\n    \"Device\" : \"r3wjcr3o5yrwqf6safwafg0p9v65179ifg5cesteghzfvsobemnamm7kwe05grorotf7jklxtagxjx8r974u15c9j92iji29irk14vcus0azapaubmnbr8sif36eyike91e6o8t0\",\n    \"Latitude\" : \"cpphidi4ghj2aw6nxyrldm3tnb52hcah4ctcga098yqo2ce1eyk736bueq4ws7foym9nkx1zbvn6ob907zwgsqttian4ewzhvaiawox0dcht8zl58krq9f9es\",\n    \"Longitude\" : \"qbollp3rufaqrlexn\",\n    \"Timestamp\" : \"2023-02-02T07:46:02.744752Z\"\n  }, {\n    \"HorizontalAccuracy\" : \"x6df2dld0vflemk4ux0h9sm7h6so1adix9uh5xi4pjq5jnn25cx5dj0kbi5822ydji3p7n2ltlmwwfkhrbryv6bj5y4o9nxde4j0hz0iqonf3\",\n    \"Device\" : \"r1lbixq6bn8j23fd721oyhov7jzy78wbzswy3sv5wbcezo0a0cbbe0jq2e9qglcd7e12o1dk5lhq1dz\",\n    \"Latitude\" : \"i6fc8muhmm8isk8kh2kt04nuqbry79nzmci55yz9u1mt87vi6xpwneh2exe0o3bx9v0bgf5zb77fz6x2gxouxk0pw436tnnsujpdni4xfo5azz\",\n    \"Longitude\" : \"ibvk0cmdrh3hrl6a7mckdqix43uhtpxynhd0kuq9ao0c6cz4cr4lsckmx1\",\n    \"Timestamp\" : \"2023-02-26T05:26:02.744856Z\"\n  }, {\n    \"HorizontalAccuracy\" : \"7epfcyc8o2738o63p9dlfb9fyblr1op3u1y3ju6y3ivsiyvkr6mykyb68nil9kb81v0\",\n    \"Device\" : \"9aiyy67hpulhjukb113tzwwidgd42b5073tm4ueiu77nlcgeyirudlc4twdqddv3b1rmw91z7m2m7bqtz90fxvfkr77ka5tsegwb87raznl0ciop1rfuxe3oa2cqh8xvvj1dmpixqx4jq54xa4rk66if3hr8itl9bqi8zhekll8gv9pp801\",\n    \"Latitude\" : \"294el3c9fg\",\n    \"Longitude\" : \"0hon87xut6tjnta56w5az4nzuzd8kci04gc5i4db8f4b9c31axu5vobb4jcmefmb25ul1k7nm83qsw7y78qkelmc3twcgxi1jy64tgtubptt5t1xck8zcp1lzutkdxucpltl9gsjjuzf8i8tt\",\n    \"Timestamp\" : \"2022-06-09T05:47:02.744955Z\"\n  }, {\n    \"HorizontalAccuracy\" : \"dsdapvqakt2pg2odzffxfivcwgv36v4353b8zob151gbaj81t9jjqgz4i40ikq6039u25kbd0ufcx990w95vswzyk31phs2xvwc234x7vka6uwhpefh7su4trhd8u9gn42366xer8nzqgwt1kms9vjabrqwnqabak8akdaewsqxhrmkf6j8775ssd1qumaz9p1p3pg\",\n    \"Device\" : \"axx6k00ds0ygp4c4q07muo3mqmdbib3rpir5fypxptu0v968zmqtf7kohrjmigl10vdzemumegbk7rhcqgrahrd5aln0e8uf3e1sx6ukphnsotgmi8ole8ceaaxnh95219w\",\n    \"Latitude\" : \"2susgqgcq9wdcie1bnzgqax11hh4hcehjmckc3q2u6y5tj39p6xczw98baknzs103iv12yxwq\",\n    \"Longitude\" : \"e4lw6lb3sj5zv5dypzjny42jwp2gcf7ygarwbxzoh5m3g1cc4tr9ajkbeoo3q0pczotd6ljt0p\",\n    \"Timestamp\" : \"2023-03-28T07:52:02.74506Z\"\n  }, {\n    \"HorizontalAccuracy\" : \"7uanils1quo4yx5ipajgc364kbhi23j74cej4qdit6s9awz7orfbl52lyjmhlmgrb5zexf88voqwmobf8kuviq9ax3736wlk4e6xoo0os03zmdbivophc8of5sootlwi3ypru0nbciyahuhgfv3pegyk29h45sr6jaeiahbgbjj6ntu\",\n    \"Device\" : \"msjqoaf9w530f1szwekl0rru87qdzxpfxuxycinq3zo9hbigt2sdo3bs3jxn84e9cslwrbclojdtn3zr0zdx6u6uiz99\",\n    \"Latitude\" : \"8okv60i0pj7\",\n    \"Longitude\" : \"odfes41oiq67jcuyvtas4v6g9unjounec0vnmaados0tri8\",\n    \"Timestamp\" : \"2022-10-04T07:59:02.74516Z\"\n  }, {\n    \"HorizontalAccuracy\" : \"cxifalzzgk2ou960r190q4kgtaa\",\n    \"Device\" : \"42tak5e7ac6afspsh6e45gwsfhoq5udwhsc\",\n    \"Latitude\" : \"ojgaek\",\n    \"Longitude\" : \"65p17po3ijpyo1kozl80im66sxz17ybm2xf035oazdm1nmjv0t6tftog3tadocdq9qqye4qsczy3rup7hmnvt5jxbnhyofpvh2nh8dbkkuh8n2bdnmt604q8co955o5rhu1n1\",\n    \"Timestamp\" : \"2022-11-13T09:14:02.745252Z\"\n  }, {\n    \"HorizontalAccuracy\" : \"u3arwu3wziu5jvy0003jzg0ay13btw5qfxa86i7gq57hlvzvdh2ddlas\",\n    \"Device\" : \"uryduuoppnm8niqpx3bffocempck1g61jhmfj232k9rfs3opj6d1ci6zc8dy0kvlzxyt55pnm7562sz6x95c8i12opir731kt4jqruul0zt2axik4g49rv279f2v6n2ia1l37v7ye3bvolmjr3178c3ucuv58ht4tkrswayjqz34wuxzv3tb9m2zwmzqnpi8\",\n    \"Latitude\" : \"hxtjw3lsg8vs25xr9sk7gkzg6w5bhyp64kaewjtluty7zlz89p9ehcsaqmy91tk6wigjqxoghl9h5osv8slfwc\",\n    \"Longitude\" : \"isgesnkwi33kqf1hjor7bt4l9egfh683bq6i7v808jo9w1zak8pgqrew3et0j4pqkxsnrvgvr6ef05v3z30skv2z0cl1qqx6iadfcodgzg97q2lo5bs2dpof\",\n    \"Timestamp\" : \"2023-03-19T09:06:02.745583Z\"\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "17aca91e-09f1-4a99-8574-3aef34d7b02a",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:02.745752Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "getLocation",
+          "schema" : {
+            "required" : [ "MiataruLocation" ],
+            "type" : "object",
+            "properties" : {
+              "MiataruLocation" : {
+                "type" : "array",
+                "items" : {
+                  "$ref" : "#/components/schemas/MiataruLocation"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "insertionIndex" : 4
+  } ]
+}

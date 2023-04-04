@@ -1,0 +1,448 @@
+{
+  "mappings" : [ {
+    "id" : "684c716d-acd0-4686-bead-15a529f9363b",
+    "name" : "getCurrencyRateData - 404",
+    "request" : {
+      "urlPath" : "/settlement-currencies",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 404
+    },
+    "uuid" : "684c716d-acd0-4686-bead-15a529f9363b",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:13.079175Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "getCurrencyRateDataUsingGET"
+        }
+      }
+    },
+    "insertionIndex" : 0
+  }, {
+    "id" : "5fe48679-38a4-4697-9ddc-a3ff059cd921",
+    "name" : "getCurrencyRateData - 403",
+    "request" : {
+      "urlPath" : "/settlement-currencies",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 403
+    },
+    "uuid" : "5fe48679-38a4-4697-9ddc-a3ff059cd921",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:13.079159Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "getCurrencyRateDataUsingGET"
+        }
+      }
+    },
+    "insertionIndex" : 1
+  }, {
+    "id" : "f490da96-fd71-4388-83d2-35c6cb97b595",
+    "name" : "getCurrencyRateData - 401",
+    "request" : {
+      "urlPath" : "/settlement-currencies",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 401
+    },
+    "uuid" : "f490da96-fd71-4388-83d2-35c6cb97b595",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:13.079138Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "getCurrencyRateDataUsingGET"
+        }
+      }
+    },
+    "insertionIndex" : 2
+  }, {
+    "id" : "5375003f-196e-49fa-a9f3-cc37c6ec820f",
+    "name" : "getCurrencyRateData (application/json;charset=UTF-8)",
+    "request" : {
+      "urlPath" : "/settlement-currencies",
+      "method" : "GET",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/json;charset=UTF-8"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"date\" : \"2019-08-08 16:22:31\",\n  \"data\" : {\n    \"currencies\" : [ {\n      \"currNam\" : \"ANGOLAN KWANZA\",\n      \"alphaCd\" : \"AOA\"\n    }, {\n      \"currNam\" : \"ANGOLAN KWANZA\",\n      \"alphaCd\" : \"AOA\"\n    }, {\n      \"currNam\" : \"ANGOLAN KWANZA\",\n      \"alphaCd\" : \"AOA\"\n    }, {\n      \"currNam\" : \"ANGOLAN KWANZA\",\n      \"alphaCd\" : \"AOA\"\n    } ]\n  },\n  \"name\" : \"settlement-currency\",\n  \"description\" : \"A list of settlement active currencies\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json;charset=UTF-8"
+      }
+    },
+    "uuid" : "5375003f-196e-49fa-a9f3-cc37c6ec820f",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:13.079109Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "getCurrencyRateDataUsingGET",
+          "schema" : {
+            "type" : "object",
+            "properties" : {
+              "data" : {
+                "$ref" : "#/components/schemas/SettlementCurrency"
+              },
+              "date" : {
+                "type" : "string",
+                "description" : "The date and time the API is being called in GMT.",
+                "example" : "2019-08-08 16:22:31"
+              },
+              "description" : {
+                "type" : "string",
+                "description" : "The description of the API being called.",
+                "example" : "A list of settlement active currencies"
+              },
+              "name" : {
+                "type" : "string",
+                "description" : "The name of the service being requested.",
+                "example" : "settlement-currency"
+              }
+            }
+          }
+        }
+      }
+    },
+    "insertionIndex" : 3
+  }, {
+    "id" : "7306e7e4-4c2b-4d30-9efe-b5a15f13088b",
+    "name" : "Determine if the settlement rate has been issued. - 404",
+    "request" : {
+      "urlPath" : "/conversion-rate-issued",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 404
+    },
+    "uuid" : "7306e7e4-4c2b-4d30-9efe-b5a15f13088b",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:13.078992Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "isRateIssuedUsingGET"
+        }
+      }
+    },
+    "insertionIndex" : 4
+  }, {
+    "id" : "e015e201-39fa-4f03-b177-dc089e6e2d5b",
+    "name" : "Determine if the settlement rate has been issued. - 403",
+    "request" : {
+      "urlPath" : "/conversion-rate-issued",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 403
+    },
+    "uuid" : "e015e201-39fa-4f03-b177-dc089e6e2d5b",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:13.078975Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "isRateIssuedUsingGET"
+        }
+      }
+    },
+    "insertionIndex" : 5
+  }, {
+    "id" : "8a59b7dc-3f33-4101-a9cc-5eb1647a5496",
+    "name" : "Determine if the settlement rate has been issued. - 401",
+    "request" : {
+      "urlPath" : "/conversion-rate-issued",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 401
+    },
+    "uuid" : "8a59b7dc-3f33-4101-a9cc-5eb1647a5496",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:13.078958Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "isRateIssuedUsingGET"
+        }
+      }
+    },
+    "insertionIndex" : 6
+  }, {
+    "id" : "1e918113-cdaa-456d-850a-06675c23536d",
+    "name" : "Determine if the settlement rate has been issued. (application/json;charset=UTF-8)",
+    "request" : {
+      "urlPath" : "/conversion-rate-issued",
+      "method" : "GET",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/json;charset=UTF-8"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"date\" : \"2019-08-08 16:22:31\",\n  \"data\" : {\n    \"rateIssued\" : \"NO\"\n  },\n  \"name\" : \"settlement-conversion-rate-issued\",\n  \"description\" : \"Is settlement conversion rate issued\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json;charset=UTF-8"
+      }
+    },
+    "uuid" : "1e918113-cdaa-456d-850a-06675c23536d",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:13.078932Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "isRateIssuedUsingGET",
+          "schema" : {
+            "type" : "object",
+            "properties" : {
+              "data" : {
+                "$ref" : "#/components/schemas/SettlementRateIssued"
+              },
+              "date" : {
+                "type" : "string",
+                "description" : "The date and time the API is being called in GMT.",
+                "example" : "2019-08-08 16:22:31"
+              },
+              "description" : {
+                "type" : "string",
+                "description" : "The description of the API being called.",
+                "example" : "Is settlement conversion rate issued"
+              },
+              "name" : {
+                "type" : "string",
+                "description" : "The name of the service being requested.",
+                "example" : "settlement-conversion-rate-issued"
+              }
+            }
+          }
+        }
+      }
+    },
+    "insertionIndex" : 7
+  }, {
+    "id" : "8b5fe5f1-78df-46af-b35f-c850a81ff032",
+    "name" : "Get the currency conversion rate details. - 404",
+    "request" : {
+      "urlPath" : "/conversion-rate",
+      "method" : "GET",
+      "queryParameters" : {
+        "transCurr" : {
+          "equalTo" : "odyc1jnsgeok70gylsncbkx581fixuvs90dhwqpl5tp6yl9sk0m3r0hf73bmndewifzwg3w3z5u4n5fv46pvrbzmptq3zio3fp5h0ea5dtvk57m7r2ip9nr8dxmkjrlyoyavx30f5qs3g5y9syw4520bxf91zi1b9vi7aiiau6up1xifeoci8dj"
+        },
+        "transAmt" : {
+          "equalTo" : "1.5618245005068812E308"
+        },
+        "fxDate" : {
+          "equalTo" : "2022-08-14T09%3A00%3A13.07875Z"
+        },
+        "crdhldBillCurr" : {
+          "equalTo" : "xrgc75kvngvn06w62b0jtyykonccex5fdtk31po"
+        }
+      }
+    },
+    "response" : {
+      "status" : 404
+    },
+    "uuid" : "8b5fe5f1-78df-46af-b35f-c850a81ff032",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:13.078838Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "getConversionDetailUsingGET"
+        }
+      }
+    },
+    "insertionIndex" : 8
+  }, {
+    "id" : "a5acc7b5-921d-46f1-b6fb-a3fce04dced2",
+    "name" : "Get the currency conversion rate details. - 403",
+    "request" : {
+      "urlPath" : "/conversion-rate",
+      "method" : "GET",
+      "queryParameters" : {
+        "transCurr" : {
+          "equalTo" : "xlccg5dp6hoh6pf9zj8828k41vzgt3o98hcb8c4htkk66fqe4nljme8doryizk7oj"
+        },
+        "transAmt" : {
+          "equalTo" : "1.0044268367259638E308"
+        },
+        "fxDate" : {
+          "equalTo" : "2022-05-16T05%3A32%3A13.078639Z"
+        },
+        "crdhldBillCurr" : {
+          "equalTo" : "avqhn34hmg4kn31f1wu6knvvcgt5m2tgy1x"
+        }
+      }
+    },
+    "response" : {
+      "status" : 403
+    },
+    "uuid" : "a5acc7b5-921d-46f1-b6fb-a3fce04dced2",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:13.078729Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "getConversionDetailUsingGET"
+        }
+      }
+    },
+    "insertionIndex" : 9
+  }, {
+    "id" : "b9da8cd2-b99d-49fa-9d4c-b122ef942f29",
+    "name" : "Get the currency conversion rate details. - 401",
+    "request" : {
+      "urlPath" : "/conversion-rate",
+      "method" : "GET",
+      "queryParameters" : {
+        "transCurr" : {
+          "equalTo" : "7rm0gxzlqlf8dan0uflzc9wplse90"
+        },
+        "transAmt" : {
+          "equalTo" : "9.094127818176323E307"
+        },
+        "fxDate" : {
+          "equalTo" : "2023-03-05T06%3A30%3A13.078524Z"
+        },
+        "crdhldBillCurr" : {
+          "equalTo" : "bj06qi0jqitxgp7b62x74fwvr83ipu0t4z1wjtn1begkkkwakq5k5snmmnqe4l13rotcllgvcl0qwom1nyz9s7xlr7dzqni16ffr61ly6ru"
+        }
+      }
+    },
+    "response" : {
+      "status" : 401
+    },
+    "uuid" : "b9da8cd2-b99d-49fa-9d4c-b122ef942f29",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:13.078616Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "getConversionDetailUsingGET"
+        }
+      }
+    },
+    "insertionIndex" : 10
+  }, {
+    "id" : "8af69b45-a8ea-429d-a0a0-d7923a3326d7",
+    "name" : "Get the currency conversion rate details. (application/json;charset=UTF-8)",
+    "request" : {
+      "urlPath" : "/conversion-rate",
+      "method" : "GET",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/json;charset=UTF-8"
+        }
+      },
+      "queryParameters" : {
+        "transCurr" : {
+          "equalTo" : "6h3d0ge3ts8s8upm6w1mx1nmm0n2ox8ywixgk6nkv8dnjo3emufgv6dz7xfx4yu6lnp7y7c9v8sodx2oludtqlqj1xbc0q4blvajdgdkusird4i70j6xwdhybb3z1p4j5e5vrxq"
+        },
+        "transAmt" : {
+          "equalTo" : "1.068273368516735E308"
+        },
+        "fxDate" : {
+          "equalTo" : "2022-04-22T06%3A17%3A13.078305Z"
+        },
+        "crdhldBillCurr" : {
+          "equalTo" : "38ly0cecg4jbmaz5msoqu4a8g9orxocdnuqualxu5nc49qpj4q59k9wnx0uzl4jlrck1gfcb3aypovcy4l54frwjy9l207q74hz3qw2w7qm6717hj6gxb4hx6pw6w9y8yqi76tf85icq64u18wd2x7js7f7s3edb8rb6p7k7xf5jekakgregfgrl"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"date\" : \"2019-08-08 16:43:27\",\n  \"data\" : {\n    \"bankFee\" : 5.0,\n    \"transCurr\" : \"ALL\",\n    \"crdhldBillAmt\" : 21.690798,\n    \"errorMessage\" : \"Not Found , The calculated cross rates for the selected date is not available.\",\n    \"transAmt\" : 23.0,\n    \"errorCode\" : \"104\",\n    \"fxDate\" : \"2016-09-30\",\n    \"conversionRate\" : 0.943078,\n    \"crdhldBillCurr\" : \"DZD\"\n  },\n  \"name\" : \"settlement-conversion-rate\",\n  \"description\" : \"Settlement conversion rate and billing amount\",\n  \"type\" : \"error\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json;charset=UTF-8"
+      }
+    },
+    "uuid" : "8af69b45-a8ea-429d-a0a0-d7923a3326d7",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:13.078475Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "getConversionDetailUsingGET",
+          "schema" : {
+            "type" : "object",
+            "properties" : {
+              "data" : {
+                "$ref" : "#/components/schemas/Conversion"
+              },
+              "date" : {
+                "type" : "string",
+                "description" : "The date and time the API is being called in GMT.",
+                "example" : "2019-08-08 16:43:27"
+              },
+              "description" : {
+                "type" : "string",
+                "description" : "The description of the API being called.",
+                "example" : "Settlement conversion rate and billing amount"
+              },
+              "name" : {
+                "type" : "string",
+                "description" : "The name of the service being requested.",
+                "example" : "settlement-conversion-rate"
+              },
+              "type" : {
+                "type" : "string",
+                "description" : "The type of response being returned by the API.",
+                "example" : "error"
+              }
+            }
+          }
+        }
+      }
+    },
+    "insertionIndex" : 11
+  } ]
+}

@@ -1,0 +1,119 @@
+{
+  "mappings" : [ {
+    "id" : "bd2f2a89-2f1f-4f1a-9007-12e5d43a3769",
+    "name" : "Geolocate a given IP address - 403",
+    "request" : {
+      "urlPath" : "/",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 403
+    },
+    "uuid" : "bd2f2a89-2f1f-4f1a-9007-12e5d43a3769",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:10.934778Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "(none)"
+        }
+      }
+    },
+    "insertionIndex" : 0
+  }, {
+    "id" : "201fd507-89b7-43e7-9445-b6ef823d508f",
+    "name" : "Geolocate a given IP address - 401",
+    "request" : {
+      "urlPath" : "/",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 401
+    },
+    "uuid" : "201fd507-89b7-43e7-9445-b6ef823d508f",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:10.934759Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "(none)"
+        }
+      }
+    },
+    "insertionIndex" : 1
+  }, {
+    "id" : "56340b87-1abe-4095-88eb-bfa865541056",
+    "name" : "Geolocate a given IP address (application/json)",
+    "request" : {
+      "urlPath" : "/",
+      "method" : "POST",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/json"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"zip\" : \"46519\",\n  \"country\" : \"Maldives\",\n  \"country_code\" : \"kkkkm\",\n  \"city\" : \"East Fritz\",\n  \"timezone\" : \"2022-09-03T07:44:10.934497Z\",\n  \"ip\" : \"8e3luu4hf8255swnhiyv97x2krzbxtmcmpm6xrvi96bo4byy8fl7d0e2yhvhwl8b0t36raf7wj4bz562akcfli2gzeoq3nr5lstgfk\",\n  \"latitude\" : 3.21753108636131E37,\n  \"state\" : \"Ohio\",\n  \"longitude\" : 2.0958663319618043E38\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "56340b87-1abe-4095-88eb-bfa865541056",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:10.934716Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "(none)",
+          "schema" : {
+            "properties" : {
+              "city" : {
+                "type" : "string"
+              },
+              "country" : {
+                "type" : "string"
+              },
+              "country_code" : {
+                "type" : "string"
+              },
+              "ip" : {
+                "format" : "ipv4",
+                "type" : "string"
+              },
+              "latitude" : {
+                "format" : "float",
+                "type" : "number"
+              },
+              "longitude" : {
+                "format" : "float",
+                "type" : "number"
+              },
+              "state" : {
+                "type" : "string"
+              },
+              "timezone" : {
+                "type" : "string"
+              },
+              "zip" : {
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 2
+  } ]
+}

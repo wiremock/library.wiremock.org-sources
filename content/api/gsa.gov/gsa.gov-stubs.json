@@ -1,0 +1,168 @@
+{
+  "mappings" : [ {
+    "id" : "a280fa2c-af62-4a4b-941a-baf369e17bd2",
+    "name" : "This endpoint returns a list of vendors filtered by a NAICS code",
+    "request" : {
+      "urlPath" : "/api/vendors/",
+      "method" : "GET",
+      "queryParameters" : {
+        "naics" : {
+          "equalTo" : "023nzxljo4hs1bivpyls1cygnret3stg2utkfzo9u3mg1qyfhpfvchogzokxzssckyjhewp81slhlps8obiian4zz91qfrvk8ndoik20retti84klgg28mzunl1673lgsowubn0m29f43j6qualnauhzf49jly00e97nm1jgoiloe66qqnv03f2"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{ }",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "a280fa2c-af62-4a4b-941a-baf369e17bd2",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:19.771553Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "List_Vendors_GET",
+          "schema" : {
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 0
+  }, {
+    "id" : "cd5f908a-fd54-4d3a-89fb-3fd4d0c5435c",
+    "name" : "This endpoint returns a single vendor by their 9 digit DUNS number",
+    "request" : {
+      "urlPath" : "/api/vendor/f252jpxfmrmsbijvmo964ydombofj1vwslu266tgb4bdqv311rwio0kipzlce81z7oci9ucv0953ytj6d31gn443o2l2pasj0u245fdncrs0sgua0tkyxzs49s0nrksn7cw7d86li2sf0plg412j",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{ }",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "cd5f908a-fd54-4d3a-89fb-3fd4d0c5435c",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:19.771488Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "Get_Vendor_GET",
+          "schema" : {
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 1
+  }, {
+    "id" : "59af895b-5d65-4d55-b3c8-ded8be968cc5",
+    "name" : "This endpoint lists all of the NAICS codes that are relevant to the OASIS family of vehicles",
+    "request" : {
+      "urlPath" : "/api/naics/",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{ }",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "59af895b-5d65-4d55-b3c8-ded8be968cc5",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:19.771431Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "List_Naics_GET",
+          "schema" : {
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 2
+  }, {
+    "id" : "4aaee355-eb52-4780-97d1-4841aa021e85",
+    "name" : "This endpoint returns metadata for the most recent data loads of SAM and FPDS data",
+    "request" : {
+      "urlPath" : "/api/metadata/",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{ }",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "4aaee355-eb52-4780-97d1-4841aa021e85",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:19.771394Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "Metadata_GET",
+          "schema" : {
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 3
+  }, {
+    "id" : "2e9404c2-ce8e-45c3-b067-9ab34eedbd36",
+    "name" : "This endpoint returns contract history from FPDS for a specific vendor",
+    "request" : {
+      "urlPath" : "/api/contracts/",
+      "method" : "GET",
+      "queryParameters" : {
+        "duns" : {
+          "equalTo" : "jixrkrmj6eeqzzjwjz14mcexfhbidbqyfqfzfzf2o7v8819z5enrki"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{ }",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "2e9404c2-ce8e-45c3-b067-9ab34eedbd36",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:19.771334Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "List_Contracts_GET",
+          "schema" : {
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 4
+  } ]
+}

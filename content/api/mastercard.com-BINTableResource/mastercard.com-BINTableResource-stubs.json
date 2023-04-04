@@ -1,0 +1,94 @@
+{
+  "mappings" : [ {
+    "id" : "82e9acf6-6128-4ee9-ab66-fb24a44604b6",
+    "name" : "BIN Table Listing file",
+    "request" : {
+      "urlPath" : "/binlisting",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 404,
+      "body" : "{\n  \"description\" : \"Resource not found\",\n  \"recoverable\" : false,\n  \"ReasonCode\" : \"RESOURCE_UNKOWN\",\n  \"Source\" : \"System\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "82e9acf6-6128-4ee9-ab66-fb24a44604b6",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:12.606548Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "(none)",
+          "schema" : {
+            "type" : "object",
+            "properties" : {
+              "ReasonCode" : {
+                "type" : "string",
+                "description" : "RESOURCE_UNKOWN",
+                "example" : "RESOURCE_UNKOWN"
+              },
+              "Source" : {
+                "type" : "string",
+                "description" : "System.",
+                "example" : "System"
+              },
+              "description" : {
+                "type" : "string",
+                "description" : "Resource not found",
+                "example" : "Resource not found"
+              },
+              "recoverable" : {
+                "type" : "boolean",
+                "example" : false
+              }
+            }
+          }
+        }
+      }
+    },
+    "insertionIndex" : 0
+  }, {
+    "id" : "1de865c6-91b4-41b5-945f-9d21c61df574",
+    "name" : "BIN Table Listing file",
+    "request" : {
+      "urlPath" : "/binlisting",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"data\" : \"001234\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "1de865c6-91b4-41b5-945f-9d21c61df574",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:12.606445Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "(none)",
+          "schema" : {
+            "required" : [ "data" ],
+            "type" : "object",
+            "properties" : {
+              "data" : {
+                "type" : "string",
+                "description" : "BIN Table Listing file.",
+                "example" : "001234"
+              }
+            }
+          }
+        }
+      }
+    },
+    "insertionIndex" : 1
+  } ]
+}

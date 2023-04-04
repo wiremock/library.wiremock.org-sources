@@ -1,0 +1,44 @@
+{
+  "mappings" : [ {
+    "id" : "82c4c4f5-7307-45c9-af88-dbfc86ed1ed8",
+    "name" : "Generate a token",
+    "request" : {
+      "urlPath" : "/conversations/v3/visitor-identification/tokens/create",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"token\" : \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "82c4c4f5-7307-45c9-af88-dbfc86ed1ed8",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:53.928557Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "post-/visitor-identification/v3/tokens/create_generateToken",
+          "schema" : {
+            "description" : "The identification token to be passed to the Conversations JS API to identify the visitor",
+            "example" : {
+              "token" : "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c"
+            },
+            "properties" : {
+              "token" : {
+                "type" : "string"
+              }
+            },
+            "required" : [ "token" ],
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 0
+  } ]
+}

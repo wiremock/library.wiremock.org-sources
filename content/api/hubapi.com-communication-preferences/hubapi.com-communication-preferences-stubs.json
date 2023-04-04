@@ -1,0 +1,241 @@
+{
+  "mappings" : [ {
+    "id" : "79d92baf-923f-41ab-ad25-196107ea0819",
+    "name" : "Unsubscribe a contact",
+    "request" : {
+      "urlPath" : "/communication-preferences/v3/unsubscribe",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"description\" : \"Receive timely updates with the latest blog posts.\",\n  \"id\" : \"7148714\",\n  \"legalBasis\" : \"CONSENT_WITH_NOTICE\",\n  \"legalBasisExplanation\" : \"At users request, we opted them out\",\n  \"name\" : \"Default HubSpot Blog Subscription\",\n  \"preferenceGroupName\" : \"Initial Group\",\n  \"sourceOfStatus\" : \"SUBSCRIPTION_STATUS\",\n  \"status\" : \"NOT_SUBSCRIBED\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "79d92baf-923f-41ab-ad25-196107ea0819",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:53.72915Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "post-/communication-preferences/v3/unsubscribe_unsubscribe",
+          "schema" : {
+            "description" : "The status of a subscription for a contact.",
+            "properties" : {
+              "brandId" : {
+                "description" : "The ID of the brand that the subscription is associated with, if there is one.",
+                "format" : "int64",
+                "type" : "integer"
+              },
+              "description" : {
+                "description" : "A description of the subscription.",
+                "type" : "string"
+              },
+              "id" : {
+                "description" : "The ID for the subscription.",
+                "type" : "string"
+              },
+              "legalBasis" : {
+                "description" : "The legal reason for the current status of the subscription.",
+                "enum" : [ "LEGITIMATE_INTEREST_PQL", "LEGITIMATE_INTEREST_CLIENT", "PERFORMANCE_OF_CONTRACT", "CONSENT_WITH_NOTICE", "NON_GDPR", "PROCESS_AND_STORE", "LEGITIMATE_INTEREST_OTHER" ],
+                "type" : "string"
+              },
+              "legalBasisExplanation" : {
+                "description" : "A more detailed explanation to go with the legal basis.",
+                "type" : "string"
+              },
+              "name" : {
+                "description" : "The name of the subscription.",
+                "type" : "string"
+              },
+              "preferenceGroupName" : {
+                "description" : "The name of the preferences group that the subscription is associated with.",
+                "type" : "string"
+              },
+              "sourceOfStatus" : {
+                "description" : "Where the status is determined from e.g. PORTAL_WIDE_STATUS if the contact opted out from the portal.",
+                "enum" : [ "PORTAL_WIDE_STATUS", "BRAND_WIDE_STATUS", "SUBSCRIPTION_STATUS" ],
+                "type" : "string"
+              },
+              "status" : {
+                "description" : "Whether the contact is subscribed.",
+                "enum" : [ "SUBSCRIBED", "NOT_SUBSCRIBED" ],
+                "type" : "string"
+              }
+            },
+            "required" : [ "description", "id", "name", "sourceOfStatus", "status" ],
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 0
+  }, {
+    "id" : "f357f0c9-521e-49f9-a58d-8937183f4465",
+    "name" : "Subscribe a contact",
+    "request" : {
+      "urlPath" : "/communication-preferences/v3/subscribe",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"description\" : \"Receive timely updates with the latest blog posts.\",\n  \"id\" : \"7148714\",\n  \"legalBasis\" : \"CONSENT_WITH_NOTICE\",\n  \"legalBasisExplanation\" : \"At users request, we opted them in\",\n  \"name\" : \"Default HubSpot Blog Subscription\",\n  \"preferenceGroupName\" : \"Initial Group\",\n  \"sourceOfStatus\" : \"SUBSCRIPTION_STATUS\",\n  \"status\" : \"SUBSCRIBED\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "f357f0c9-521e-49f9-a58d-8937183f4465",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:53.729038Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "post-/communication-preferences/v3/subscribe_subscribe",
+          "schema" : {
+            "description" : "The status of a subscription for a contact.",
+            "properties" : {
+              "brandId" : {
+                "description" : "The ID of the brand that the subscription is associated with, if there is one.",
+                "format" : "int64",
+                "type" : "integer"
+              },
+              "description" : {
+                "description" : "A description of the subscription.",
+                "type" : "string"
+              },
+              "id" : {
+                "description" : "The ID for the subscription.",
+                "type" : "string"
+              },
+              "legalBasis" : {
+                "description" : "The legal reason for the current status of the subscription.",
+                "enum" : [ "LEGITIMATE_INTEREST_PQL", "LEGITIMATE_INTEREST_CLIENT", "PERFORMANCE_OF_CONTRACT", "CONSENT_WITH_NOTICE", "NON_GDPR", "PROCESS_AND_STORE", "LEGITIMATE_INTEREST_OTHER" ],
+                "type" : "string"
+              },
+              "legalBasisExplanation" : {
+                "description" : "A more detailed explanation to go with the legal basis.",
+                "type" : "string"
+              },
+              "name" : {
+                "description" : "The name of the subscription.",
+                "type" : "string"
+              },
+              "preferenceGroupName" : {
+                "description" : "The name of the preferences group that the subscription is associated with.",
+                "type" : "string"
+              },
+              "sourceOfStatus" : {
+                "description" : "Where the status is determined from e.g. PORTAL_WIDE_STATUS if the contact opted out from the portal.",
+                "enum" : [ "PORTAL_WIDE_STATUS", "BRAND_WIDE_STATUS", "SUBSCRIPTION_STATUS" ],
+                "type" : "string"
+              },
+              "status" : {
+                "description" : "Whether the contact is subscribed.",
+                "enum" : [ "SUBSCRIBED", "NOT_SUBSCRIBED" ],
+                "type" : "string"
+              }
+            },
+            "required" : [ "description", "id", "name", "sourceOfStatus", "status" ],
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 1
+  }, {
+    "id" : "8ef0d06d-dcef-478c-b2ef-46a1e4e3ddaf",
+    "name" : "Get subscription statuses for a contact",
+    "request" : {
+      "urlPath" : "/communication-preferences/v3/status/email/9sfgh8ubx9rizchxm9rr5w3ud4wtl3dewy9nyh8gkz0cr42ykon3x2atolcekzvv9",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"recipient\" : \"example@example.com\",\n  \"subscriptionStatuses\" : [ {\n    \"description\" : \"Receive timely updates with the latest blog posts.\",\n    \"id\" : \"7148714\",\n    \"legalBasis\" : \"CONSENT_WITH_NOTICE\",\n    \"legalBasisExplanation\" : \"At users request, we opted them in\",\n    \"name\" : \"Default HubSpot Blog Subscription\",\n    \"preferenceGroupName\" : \"Initial Group\",\n    \"sourceOfStatus\" : \"SUBSCRIPTION_STATUS\",\n    \"status\" : \"SUBSCRIBED\"\n  }, {\n    \"description\" : \"One to One emails\",\n    \"id\" : \"7148715\",\n    \"legalBasis\" : \"CONSENT_WITH_NOTICE\",\n    \"legalBasisExplanation\" : \"User has requested to be opted out\",\n    \"name\" : \"One to One\",\n    \"sourceOfStatus\" : \"SUBSCRIPTION_STATUS\",\n    \"status\" : \"NOT_SUBSCRIBED\"\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "8ef0d06d-dcef-478c-b2ef-46a1e4e3ddaf",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:53.728857Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "get-/communication-preferences/v3/status/email/{emailAddress}_getEmailStatus",
+          "schema" : {
+            "description" : "A collection of subscription statuses for a contact.",
+            "properties" : {
+              "recipient" : {
+                "description" : "Email address of the contact.",
+                "type" : "string"
+              },
+              "subscriptionStatuses" : {
+                "description" : "A list of all of the contact's subscriptions statuses.",
+                "items" : {
+                  "$ref" : "#/components/schemas/PublicSubscriptionStatus"
+                },
+                "type" : "array"
+              }
+            },
+            "required" : [ "recipient", "subscriptionStatuses" ],
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 2
+  }, {
+    "id" : "0defff81-631a-4210-be97-6b313fe19f65",
+    "name" : "Get subscription definitions",
+    "request" : {
+      "urlPath" : "/communication-preferences/v3/definitions",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"subscriptionDefinitions\" : [ {\n    \"createdAt\" : \"2019-08-05T13:01:15.875Z\",\n    \"description\" : \"Receive timely updates with the latest blog posts.\",\n    \"id\" : \"1805677\",\n    \"isActive\" : true,\n    \"isDefault\" : false,\n    \"isInternal\" : false,\n    \"name\" : \"Default HubSpot Blog Subscription\",\n    \"updatedAt\" : \"2019-08-05T13:01:15.875Z\"\n  }, {\n    \"communicationMethod\" : \"Email\",\n    \"createdAt\" : \"2019-08-05T13:01:15.875Z\",\n    \"description\" : \"Receive feedback requests and customer service information.\",\n    \"id\" : \"1805669\",\n    \"isActive\" : true,\n    \"isDefault\" : true,\n    \"isInternal\" : true,\n    \"name\" : \"Customer Service Communication\",\n    \"purpose\" : \"Service\",\n    \"updatedAt\" : \"2019-08-05T13:01:15.875Z\"\n  }, {\n    \"communicationMethod\" : \"Email\",\n    \"createdAt\" : \"2019-08-05T13:01:15.875Z\",\n    \"description\" : \"One to One emails\",\n    \"id\" : \"1805670\",\n    \"isActive\" : true,\n    \"isDefault\" : true,\n    \"isInternal\" : true,\n    \"name\" : \"One to One\",\n    \"purpose\" : \"Sales\",\n    \"updatedAt\" : \"2019-08-05T13:01:15.875Z\"\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "0defff81-631a-4210-be97-6b313fe19f65",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:53.72868Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "get-/communication-preferences/v3/definitions_getPage",
+          "schema" : {
+            "description" : "A collection of subscription definitions for the portal.",
+            "properties" : {
+              "subscriptionDefinitions" : {
+                "description" : "A list of all subscription definitions.",
+                "items" : {
+                  "$ref" : "#/components/schemas/SubscriptionDefinition"
+                },
+                "type" : "array"
+              }
+            },
+            "required" : [ "subscriptionDefinitions" ],
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 3
+  } ]
+}

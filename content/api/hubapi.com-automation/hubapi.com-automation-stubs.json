@@ -1,0 +1,774 @@
+{
+  "mappings" : [ {
+    "id" : "8f32fa89-9f0e-48b4-8cca-c00e77352ab2",
+    "name" : "Get a revision for a custom action",
+    "request" : {
+      "urlPath" : "/automation/v4/actions/1126222264/13yb/revisions/hp84",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"definition\" : {\n    \"actionUrl\" : \"https://example.com/custom-workflow-action\",\n    \"functions\" : [ {\n      \"functionType\" : \"PRE_ACTION_EXECUTION\"\n    }, {\n      \"functionType\" : \"PRE_FETCH_OPTIONS\",\n      \"id\" : \"widgetSize\"\n    } ],\n    \"id\" : \"1\",\n    \"inputFieldDependencies\" : [ {\n      \"controllingFieldName\" : \"widgetSize\",\n      \"dependencyType\" : \"SINGLE_FIELD\",\n      \"dependentFieldNames\" : [ \"widgetName\", \"widgetColor\" ]\n    } ],\n    \"inputFields\" : [ {\n      \"required\" : true,\n      \"supportedValueTypes\" : [ \"OBJECT_PROPERTY\" ],\n      \"typeDefinition\" : {\n        \"fieldType\" : \"text\",\n        \"name\" : \"widgetName\",\n        \"type\" : \"string\"\n      }\n    }, {\n      \"required\" : false,\n      \"supportedValueTypes\" : [ \"STATIC_VALUE\" ],\n      \"typeDefinition\" : {\n        \"fieldType\" : \"enumeration\",\n        \"name\" : \"widgetColor\",\n        \"options\" : [ {\n          \"label\" : \"Blue\",\n          \"value\" : \"blue\"\n        }, {\n          \"label\" : \"Red\",\n          \"value\" : \"red\"\n        } ],\n        \"type\" : \"string\"\n      }\n    }, {\n      \"required\" : false,\n      \"supportedValueTypes\" : [ \"STATIC_VALUE\" ],\n      \"typeDefinition\" : {\n        \"fieldType\" : \"enumeration\",\n        \"name\" : \"widgetSize\",\n        \"optionsUrl\" : \"https://example.com/widget-sizes\",\n        \"type\" : \"string\"\n      }\n    } ],\n    \"labels\" : {\n      \"en\" : {\n        \"actionCardContent\" : \"Create new widget {{ widgetName }}\",\n        \"actionDescription\" : \"This action will create a new widget in our system. So cool!\",\n        \"actionName\" : \"Create new widget\",\n        \"inputFieldDescriptions\" : {\n          \"widgetColor\" : \"This is the color that will be used to paint the widget.\",\n          \"widgetName\" : \"Enter the full widget name. I support <a href=\\\"https://hubspot.com\\\">links</a> too.\"\n        },\n        \"inputFieldLabels\" : {\n          \"widgetColor\" : \"Widget Color\",\n          \"widgetName\" : \"Widget Name\",\n          \"widgetSize\" : \"Widget Size\"\n        }\n      }\n    },\n    \"objectRequestOptions\" : {\n      \"properties\" : [ \"firstname\", \"lastname\", \"preferred_widget\" ]\n    },\n    \"objectTypes\" : [ \"CONTACT\", \"COMPANY\" ],\n    \"published\" : true,\n    \"revisionId\" : \"1\"\n  },\n  \"id\" : \"1\",\n  \"insertedAt\" : \"2020-04-30T00:00:00\",\n  \"revisionId\" : \"1\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "8f32fa89-9f0e-48b4-8cca-c00e77352ab2",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:53.237601Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "get-/automation/v4/actions/{appId}/{definitionId}/revisions/{revisionId}_getById",
+          "schema" : {
+            "description" : "A revision of this custom action.",
+            "properties" : {
+              "createdAt" : {
+                "description" : "The date the revision was created.",
+                "format" : "date-time",
+                "type" : "string"
+              },
+              "definition" : {
+                "$ref" : "#/components/schemas/ExtensionActionDefinition"
+              },
+              "id" : {
+                "type" : "string"
+              },
+              "revisionId" : {
+                "description" : "The version number of the custom action.",
+                "type" : "string"
+              }
+            },
+            "required" : [ "createdAt", "definition", "id", "revisionId" ],
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 0
+  }, {
+    "id" : "5719b541-8eec-4c3f-8f2d-495678117a90",
+    "name" : "Get all revisions for a custom action",
+    "request" : {
+      "urlPath" : "/automation/v4/actions/1576096917/l8l0/revisions",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"paging\" : {\n    \"next\" : {\n      \"after\" : \"b3B0aW9uXzEy\"\n    }\n  },\n  \"results\" : [ {\n    \"definition\" : {\n      \"actionUrl\" : \"https://example.com/custom-workflow-action\",\n      \"functions\" : [ {\n        \"functionType\" : \"PRE_ACTION_EXECUTION\"\n      }, {\n        \"functionType\" : \"PRE_FETCH_OPTIONS\",\n        \"id\" : \"widgetSize\"\n      } ],\n      \"id\" : \"1\",\n      \"inputFieldDependencies\" : [ {\n        \"controllingFieldName\" : \"widgetSize\",\n        \"dependencyType\" : \"SINGLE_FIELD\",\n        \"dependentFieldNames\" : [ \"widgetName\", \"widgetColor\" ]\n      } ],\n      \"inputFields\" : [ {\n        \"required\" : true,\n        \"supportedValueTypes\" : [ \"OBJECT_PROPERTY\" ],\n        \"typeDefinition\" : {\n          \"fieldType\" : \"text\",\n          \"name\" : \"widgetName\",\n          \"type\" : \"string\"\n        }\n      }, {\n        \"required\" : false,\n        \"supportedValueTypes\" : [ \"STATIC_VALUE\" ],\n        \"typeDefinition\" : {\n          \"fieldType\" : \"enumeration\",\n          \"name\" : \"widgetColor\",\n          \"options\" : [ {\n            \"label\" : \"Blue\",\n            \"value\" : \"blue\"\n          }, {\n            \"label\" : \"Red\",\n            \"value\" : \"red\"\n          } ],\n          \"type\" : \"string\"\n        }\n      }, {\n        \"required\" : false,\n        \"supportedValueTypes\" : [ \"STATIC_VALUE\" ],\n        \"typeDefinition\" : {\n          \"fieldType\" : \"enumeration\",\n          \"name\" : \"widgetSize\",\n          \"optionsUrl\" : \"https://example.com/widget-sizes\",\n          \"type\" : \"string\"\n        }\n      } ],\n      \"labels\" : {\n        \"en\" : {\n          \"actionCardContent\" : \"Create new widget {{ widgetName }}\",\n          \"actionDescription\" : \"This action will create a new widget in our system. So cool!\",\n          \"actionName\" : \"Create new widget\",\n          \"inputFieldDescriptions\" : {\n            \"widgetColor\" : \"This is the color that will be used to paint the widget.\",\n            \"widgetName\" : \"Enter the full widget name. I support <a href=\\\"https://hubspot.com\\\">links</a> too.\"\n          },\n          \"inputFieldLabels\" : {\n            \"widgetColor\" : \"Widget Color\",\n            \"widgetName\" : \"Widget Name\",\n            \"widgetSize\" : \"Widget Size\"\n          }\n        }\n      },\n      \"objectRequestOptions\" : {\n        \"properties\" : [ \"firstname\", \"lastname\", \"preferred_widget\" ]\n      },\n      \"objectTypes\" : [ \"CONTACT\", \"COMPANY\" ],\n      \"published\" : true,\n      \"revisionId\" : \"1\"\n    },\n    \"id\" : \"1\",\n    \"insertedAt\" : \"2020-04-30T00:00:00\",\n    \"revisionId\" : \"1\"\n  }, {\n    \"definition\" : {\n      \"actionUrl\" : \"https://example.com/custom-workflow-action-2\",\n      \"id\" : \"2\",\n      \"published\" : false,\n      \"revisionId\" : \"1\"\n    },\n    \"id\" : \"2\",\n    \"insertedAt\" : \"2020-04-30T00:00:00\",\n    \"revisionId\" : \"1\"\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "5719b541-8eec-4c3f-8f2d-495678117a90",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:53.237384Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "get-/automation/v4/actions/{appId}/{definitionId}/revisions_getPage",
+          "schema" : {
+            "properties" : {
+              "paging" : {
+                "$ref" : "#/components/schemas/ForwardPaging"
+              },
+              "results" : {
+                "items" : {
+                  "$ref" : "#/components/schemas/ActionRevision"
+                },
+                "type" : "array"
+              }
+            },
+            "required" : [ "results" ],
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 1
+  }, {
+    "id" : "623f1806-6ba2-46f4-9d68-3267612dbd66",
+    "name" : "Create or replace a custom action function",
+    "request" : {
+      "urlPath" : "/automation/v4/actions/435097773/kp40/functions/PRE_FETCH_OPTIONS/c105",
+      "method" : "PUT"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"functionType\" : \"PRE_FETCH_OPTIONS\",\n  \"id\" : \"widgetSize\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "623f1806-6ba2-46f4-9d68-3267612dbd66",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:53.23723Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "put-/automation/v4/actions/{appId}/{definitionId}/functions/{functionType}/{functionId}_createOrReplace",
+          "schema" : {
+            "description" : "A serverless function associated with this custom workflow action.",
+            "properties" : {
+              "functionType" : {
+                "description" : "The type of function. This determines when the function will be called.",
+                "enum" : [ "PRE_ACTION_EXECUTION", "PRE_FETCH_OPTIONS", "POST_FETCH_OPTIONS" ],
+                "type" : "string"
+              },
+              "id" : {
+                "description" : "The ID qualifier for the function. This is used to specify which input field a function is associated with for `PRE_FETCH_OPTIONS` and `POST_FETCH_OPTIONS` function types.",
+                "type" : "string"
+              }
+            },
+            "required" : [ "functionType" ],
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 2
+  }, {
+    "id" : "8949a698-526d-4248-9486-4299118b4f9e",
+    "name" : "Get a custom action function",
+    "request" : {
+      "urlPath" : "/automation/v4/actions/840227499/u7lj/functions/POST_FETCH_OPTIONS/3wk3",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"functionSource\" : \"exports.main = (event, callback) => { return callback(transformRequest(event)); };\\nfunction transformRequest(request) { return { webhookUrl: request.webhookUrl, body: JSON.stringify(request.body), httpMethod: \\\"POST\\\" } }\",\n  \"functionType\" : \"PRE_FETCH_OPTIONS\",\n  \"id\" : \"widgetSize\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "8949a698-526d-4248-9486-4299118b4f9e",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:53.237003Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "get-/automation/v4/actions/{appId}/{definitionId}/functions/{functionType}/{functionId}_getById",
+          "schema" : {
+            "description" : "A serverless function associated with this custom workflow action.",
+            "properties" : {
+              "functionSource" : {
+                "description" : "The function source code.",
+                "type" : "string"
+              },
+              "functionType" : {
+                "description" : "The type of function. This determines when the function will be called.",
+                "enum" : [ "PRE_ACTION_EXECUTION", "PRE_FETCH_OPTIONS", "POST_FETCH_OPTIONS" ],
+                "type" : "string"
+              },
+              "id" : {
+                "description" : "The ID qualifier for the function. This is used to specify which input field a function is associated with for `PRE_FETCH_OPTIONS` and `POST_FETCH_OPTIONS` function types.",
+                "type" : "string"
+              }
+            },
+            "required" : [ "functionSource", "functionType" ],
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 3
+  }, {
+    "id" : "e9449b14-b6c4-46cd-b8d3-32b096bce18a",
+    "name" : "Delete a custom action function - 204",
+    "request" : {
+      "urlPath" : "/automation/v4/actions/1906717306/a54m/functions/PRE_FETCH_OPTIONS/vn85",
+      "method" : "DELETE"
+    },
+    "response" : {
+      "status" : 204
+    },
+    "uuid" : "e9449b14-b6c4-46cd-b8d3-32b096bce18a",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:53.236802Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "delete-/automation/v4/actions/{appId}/{definitionId}/functions/{functionType}/{functionId}_archive"
+        }
+      }
+    },
+    "insertionIndex" : 4
+  }, {
+    "id" : "7618e5d5-711d-46f2-9789-335de6ce3a34",
+    "name" : "Create or replace a custom action function",
+    "request" : {
+      "urlPath" : "/automation/v4/actions/1058496609/1o5m/functions/POST_FETCH_OPTIONS",
+      "method" : "PUT"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"functionType\" : \"PRE_ACTION_EXECUTION\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "7618e5d5-711d-46f2-9789-335de6ce3a34",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:53.23663Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "put-/automation/v4/actions/{appId}/{definitionId}/functions/{functionType}_createOrReplaceByFunctionType",
+          "schema" : {
+            "description" : "A serverless function associated with this custom workflow action.",
+            "properties" : {
+              "functionType" : {
+                "description" : "The type of function. This determines when the function will be called.",
+                "enum" : [ "PRE_ACTION_EXECUTION", "PRE_FETCH_OPTIONS", "POST_FETCH_OPTIONS" ],
+                "type" : "string"
+              },
+              "id" : {
+                "description" : "The ID qualifier for the function. This is used to specify which input field a function is associated with for `PRE_FETCH_OPTIONS` and `POST_FETCH_OPTIONS` function types.",
+                "type" : "string"
+              }
+            },
+            "required" : [ "functionType" ],
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 5
+  }, {
+    "id" : "9bd5f631-b1e5-43ea-9da2-7f811a0ab219",
+    "name" : "Get a custom action function",
+    "request" : {
+      "urlPath" : "/automation/v4/actions/234500363/g72h/functions/PRE_FETCH_OPTIONS",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"functionSource\" : \"exports.main = (event, callback) => { return callback(transformRequest(event)); };\\nfunction transformRequest(request) { return { webhookUrl: request.webhookUrl, body: JSON.stringify(request.body), httpMethod: \\\"POST\\\" } }\",\n  \"functionType\" : \"PRE_ACTION_EXECUTION\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "9bd5f631-b1e5-43ea-9da2-7f811a0ab219",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:53.236489Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "get-/automation/v4/actions/{appId}/{definitionId}/functions/{functionType}_getByFunctionType",
+          "schema" : {
+            "description" : "A serverless function associated with this custom workflow action.",
+            "properties" : {
+              "functionSource" : {
+                "description" : "The function source code.",
+                "type" : "string"
+              },
+              "functionType" : {
+                "description" : "The type of function. This determines when the function will be called.",
+                "enum" : [ "PRE_ACTION_EXECUTION", "PRE_FETCH_OPTIONS", "POST_FETCH_OPTIONS" ],
+                "type" : "string"
+              },
+              "id" : {
+                "description" : "The ID qualifier for the function. This is used to specify which input field a function is associated with for `PRE_FETCH_OPTIONS` and `POST_FETCH_OPTIONS` function types.",
+                "type" : "string"
+              }
+            },
+            "required" : [ "functionSource", "functionType" ],
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 6
+  }, {
+    "id" : "1d3d6708-2230-49a7-b8d8-f4cc4363602c",
+    "name" : "Delete a custom action function - 204",
+    "request" : {
+      "urlPath" : "/automation/v4/actions/1490770624/p2v1/functions/POST_FETCH_OPTIONS",
+      "method" : "DELETE"
+    },
+    "response" : {
+      "status" : 204
+    },
+    "uuid" : "1d3d6708-2230-49a7-b8d8-f4cc4363602c",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:53.236327Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "delete-/automation/v4/actions/{appId}/{definitionId}/functions/{functionType}_archiveByFunctionType"
+        }
+      }
+    },
+    "insertionIndex" : 7
+  }, {
+    "id" : "9ee04b78-ac12-4c5a-8668-1576aa31dce0",
+    "name" : "Get all custom action functions",
+    "request" : {
+      "urlPath" : "/automation/v4/actions/1858764497/o7m4/functions",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"paging\" : {\n    \"next\" : {\n      \"after\" : \"b3B0aW9uXzEy\"\n    }\n  },\n  \"results\" : [ {\n    \"functionType\" : \"PRE_ACTION_EXECUTION\"\n  }, {\n    \"functionType\" : \"PRE_FETCH_OPTIONS\",\n    \"id\" : \"widgetSize\"\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "9ee04b78-ac12-4c5a-8668-1576aa31dce0",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:53.236213Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "get-/automation/v4/actions/{appId}/{definitionId}/functions_getPage",
+          "schema" : {
+            "properties" : {
+              "results" : {
+                "items" : {
+                  "$ref" : "#/components/schemas/ActionFunctionIdentifier"
+                },
+                "type" : "array"
+              }
+            },
+            "required" : [ "results" ],
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 8
+  }, {
+    "id" : "3cea4df9-1c64-42c9-8402-8939a07a15ad",
+    "name" : "Update a custom action",
+    "request" : {
+      "urlPath" : "/automation/v4/actions/1612853428/lz94",
+      "method" : "PATCH"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"actionUrl\" : \"https://example.com/custom-workflow-action\",\n  \"functions\" : [ {\n    \"functionType\" : \"PRE_ACTION_EXECUTION\"\n  }, {\n    \"functionType\" : \"PRE_FETCH_OPTIONS\",\n    \"id\" : \"widgetSize\"\n  } ],\n  \"id\" : \"1\",\n  \"inputFieldDependencies\" : [ {\n    \"controllingFieldName\" : \"widgetSize\",\n    \"dependencyType\" : \"SINGLE_FIELD\",\n    \"dependentFieldNames\" : [ \"widgetName\", \"widgetColor\" ]\n  } ],\n  \"inputFields\" : [ {\n    \"required\" : true,\n    \"supportedValueTypes\" : [ \"OBJECT_PROPERTY\" ],\n    \"typeDefinition\" : {\n      \"fieldType\" : \"text\",\n      \"name\" : \"widgetName\",\n      \"type\" : \"string\"\n    }\n  }, {\n    \"required\" : false,\n    \"supportedValueTypes\" : [ \"STATIC_VALUE\" ],\n    \"typeDefinition\" : {\n      \"fieldType\" : \"enumeration\",\n      \"name\" : \"widgetColor\",\n      \"options\" : [ {\n        \"label\" : \"Blue\",\n        \"value\" : \"blue\"\n      }, {\n        \"label\" : \"Red\",\n        \"value\" : \"red\"\n      }, {\n        \"label\" : \"Green\",\n        \"value\" : \"green\"\n      } ],\n      \"type\" : \"string\"\n    }\n  }, {\n    \"required\" : false,\n    \"supportedValueTypes\" : [ \"STATIC_VALUE\" ],\n    \"typeDefinition\" : {\n      \"fieldType\" : \"enumeration\",\n      \"name\" : \"widgetSize\",\n      \"optionsUrl\" : \"https://example.com/widget-sizes\",\n      \"type\" : \"string\"\n    }\n  } ],\n  \"labels\" : {\n    \"en\" : {\n      \"actionCardContent\" : \"Create new widget {{ widgetName }}\",\n      \"actionDescription\" : \"This action will create a new widget in our system. So cool!\",\n      \"actionName\" : \"Create new widget\",\n      \"inputFieldDescriptions\" : {\n        \"widgetColor\" : \"This is the color that will be used to paint the widget.\",\n        \"widgetName\" : \"Enter the full widget name. I support <a href=\\\"https://hubspot.com\\\">links</a> too.\"\n      },\n      \"inputFieldLabels\" : {\n        \"widgetColor\" : \"Widget Color\",\n        \"widgetName\" : \"Widget Name\",\n        \"widgetSize\" : \"Widget Size\"\n      }\n    }\n  },\n  \"objectRequestOptions\" : {\n    \"properties\" : [ \"firstname\", \"lastname\", \"preferred_widget\" ]\n  },\n  \"objectTypes\" : [ \"CONTACT\", \"COMPANY\" ],\n  \"published\" : true,\n  \"revisionId\" : \"1\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "3cea4df9-1c64-42c9-8402-8939a07a15ad",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:53.236085Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "patch-/automation/v4/actions/{appId}/{definitionId}_update",
+          "schema" : {
+            "description" : "Configuration for custom workflow action.",
+            "properties" : {
+              "actionUrl" : {
+                "description" : "The URL that will accept an HTTPS request each time workflows executes the custom action.",
+                "type" : "string"
+              },
+              "archivedAt" : {
+                "description" : "The date that this custom action was archived, if the custom action is archived.",
+                "format" : "int64",
+                "type" : "integer"
+              },
+              "functions" : {
+                "description" : "A list of functions associated with the custom workflow action.",
+                "items" : {
+                  "$ref" : "#/components/schemas/ActionFunctionIdentifier"
+                },
+                "type" : "array"
+              },
+              "id" : {
+                "description" : "The ID of the custom action.",
+                "type" : "string"
+              },
+              "inputFieldDependencies" : {
+                "description" : "A list of dependencies between the input fields. These configure when the input fields should be visible.",
+                "items" : {
+                  "oneOf" : [ {
+                    "$ref" : "#/components/schemas/SingleFieldDependency"
+                  }, {
+                    "$ref" : "#/components/schemas/ConditionalSingleFieldDependency"
+                  } ]
+                },
+                "type" : "array"
+              },
+              "inputFields" : {
+                "description" : "The list of input fields to display in this custom action.",
+                "items" : {
+                  "$ref" : "#/components/schemas/InputFieldDefinition"
+                },
+                "type" : "array"
+              },
+              "labels" : {
+                "additionalProperties" : {
+                  "$ref" : "#/components/schemas/ActionLabels"
+                },
+                "description" : "The user-facing labels for the custom action.",
+                "type" : "object"
+              },
+              "objectRequestOptions" : {
+                "$ref" : "#/components/schemas/ObjectRequestOptions"
+              },
+              "objectTypes" : {
+                "description" : "The object types that this custom action supports.",
+                "items" : {
+                  "type" : "string"
+                },
+                "type" : "array"
+              },
+              "published" : {
+                "description" : "Whether this custom action is published to customers.",
+                "type" : "boolean"
+              },
+              "revisionId" : {
+                "type" : "string"
+              }
+            },
+            "required" : [ "actionUrl", "functions", "id", "inputFields", "labels", "objectTypes", "published", "revisionId" ],
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 9
+  }, {
+    "id" : "c3d4a432-be4a-4c1b-b106-b72e2040357c",
+    "name" : "Get a custom action",
+    "request" : {
+      "urlPath" : "/automation/v4/actions/1303731196/8u3c",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"actionUrl\" : \"https://example.com/custom-workflow-action\",\n  \"functions\" : [ {\n    \"functionType\" : \"PRE_ACTION_EXECUTION\"\n  }, {\n    \"functionType\" : \"PRE_FETCH_OPTIONS\",\n    \"id\" : \"widgetSize\"\n  } ],\n  \"id\" : \"1\",\n  \"inputFieldDependencies\" : [ {\n    \"controllingFieldName\" : \"widgetSize\",\n    \"dependencyType\" : \"SINGLE_FIELD\",\n    \"dependentFieldNames\" : [ \"widgetName\", \"widgetColor\" ]\n  } ],\n  \"inputFields\" : [ {\n    \"required\" : true,\n    \"supportedValueTypes\" : [ \"OBJECT_PROPERTY\" ],\n    \"typeDefinition\" : {\n      \"fieldType\" : \"text\",\n      \"name\" : \"widgetName\",\n      \"type\" : \"string\"\n    }\n  }, {\n    \"required\" : false,\n    \"supportedValueTypes\" : [ \"STATIC_VALUE\" ],\n    \"typeDefinition\" : {\n      \"fieldType\" : \"enumeration\",\n      \"name\" : \"widgetColor\",\n      \"options\" : [ {\n        \"label\" : \"Blue\",\n        \"value\" : \"blue\"\n      }, {\n        \"label\" : \"Red\",\n        \"value\" : \"red\"\n      } ],\n      \"type\" : \"string\"\n    }\n  }, {\n    \"required\" : false,\n    \"supportedValueTypes\" : [ \"STATIC_VALUE\" ],\n    \"typeDefinition\" : {\n      \"fieldType\" : \"enumeration\",\n      \"name\" : \"widgetSize\",\n      \"optionsUrl\" : \"https://example.com/widget-sizes\",\n      \"type\" : \"string\"\n    }\n  } ],\n  \"labels\" : {\n    \"en\" : {\n      \"actionCardContent\" : \"Create new widget {{ widgetName }}\",\n      \"actionDescription\" : \"This action will create a new widget in our system. So cool!\",\n      \"actionName\" : \"Create new widget\",\n      \"inputFieldDescriptions\" : {\n        \"widgetColor\" : \"This is the color that will be used to paint the widget.\",\n        \"widgetName\" : \"Enter the full widget name. I support <a href=\\\"https://hubspot.com\\\">links</a> too.\"\n      },\n      \"inputFieldLabels\" : {\n        \"widgetColor\" : \"Widget Color\",\n        \"widgetName\" : \"Widget Name\",\n        \"widgetSize\" : \"Widget Size\"\n      }\n    }\n  },\n  \"objectRequestOptions\" : {\n    \"properties\" : [ \"firstname\", \"lastname\", \"preferred_widget\" ]\n  },\n  \"objectTypes\" : [ \"CONTACT\", \"COMPANY\" ],\n  \"published\" : true,\n  \"revisionId\" : \"1\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "c3d4a432-be4a-4c1b-b106-b72e2040357c",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:53.235883Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "get-/automation/v4/actions/{appId}/{definitionId}_getById",
+          "schema" : {
+            "description" : "Configuration for custom workflow action.",
+            "properties" : {
+              "actionUrl" : {
+                "description" : "The URL that will accept an HTTPS request each time workflows executes the custom action.",
+                "type" : "string"
+              },
+              "archivedAt" : {
+                "description" : "The date that this custom action was archived, if the custom action is archived.",
+                "format" : "int64",
+                "type" : "integer"
+              },
+              "functions" : {
+                "description" : "A list of functions associated with the custom workflow action.",
+                "items" : {
+                  "$ref" : "#/components/schemas/ActionFunctionIdentifier"
+                },
+                "type" : "array"
+              },
+              "id" : {
+                "description" : "The ID of the custom action.",
+                "type" : "string"
+              },
+              "inputFieldDependencies" : {
+                "description" : "A list of dependencies between the input fields. These configure when the input fields should be visible.",
+                "items" : {
+                  "oneOf" : [ {
+                    "$ref" : "#/components/schemas/SingleFieldDependency"
+                  }, {
+                    "$ref" : "#/components/schemas/ConditionalSingleFieldDependency"
+                  } ]
+                },
+                "type" : "array"
+              },
+              "inputFields" : {
+                "description" : "The list of input fields to display in this custom action.",
+                "items" : {
+                  "$ref" : "#/components/schemas/InputFieldDefinition"
+                },
+                "type" : "array"
+              },
+              "labels" : {
+                "additionalProperties" : {
+                  "$ref" : "#/components/schemas/ActionLabels"
+                },
+                "description" : "The user-facing labels for the custom action.",
+                "type" : "object"
+              },
+              "objectRequestOptions" : {
+                "$ref" : "#/components/schemas/ObjectRequestOptions"
+              },
+              "objectTypes" : {
+                "description" : "The object types that this custom action supports.",
+                "items" : {
+                  "type" : "string"
+                },
+                "type" : "array"
+              },
+              "published" : {
+                "description" : "Whether this custom action is published to customers.",
+                "type" : "boolean"
+              },
+              "revisionId" : {
+                "type" : "string"
+              }
+            },
+            "required" : [ "actionUrl", "functions", "id", "inputFields", "labels", "objectTypes", "published", "revisionId" ],
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 10
+  }, {
+    "id" : "dc5ba6ae-cb62-4795-a5ac-11e3aad8a637",
+    "name" : "Archive a custom action - 204",
+    "request" : {
+      "urlPath" : "/automation/v4/actions/1365724935/t598",
+      "method" : "DELETE"
+    },
+    "response" : {
+      "status" : 204
+    },
+    "uuid" : "dc5ba6ae-cb62-4795-a5ac-11e3aad8a637",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:53.235678Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "delete-/automation/v4/actions/{appId}/{definitionId}_archive"
+        }
+      }
+    },
+    "insertionIndex" : 11
+  }, {
+    "id" : "6993a4a1-0867-4970-b934-537f045c9a01",
+    "name" : "Create new custom action",
+    "request" : {
+      "urlPath" : "/automation/v4/actions/1374911096",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 201,
+      "body" : "{\n  \"actionUrl\" : \"https://example.com/custom-workflow-action\",\n  \"functions\" : [ {\n    \"functionType\" : \"PRE_ACTION_EXECUTION\"\n  }, {\n    \"functionType\" : \"PRE_FETCH_OPTIONS\",\n    \"id\" : \"widgetSize\"\n  } ],\n  \"id\" : \"1\",\n  \"inputFieldDependencies\" : [ {\n    \"controllingFieldName\" : \"widgetSize\",\n    \"dependencyType\" : \"SINGLE_FIELD\",\n    \"dependentFieldNames\" : [ \"widgetName\", \"widgetColor\" ]\n  } ],\n  \"inputFields\" : [ {\n    \"required\" : true,\n    \"supportedValueTypes\" : [ \"OBJECT_PROPERTY\" ],\n    \"typeDefinition\" : {\n      \"fieldType\" : \"text\",\n      \"name\" : \"widgetName\",\n      \"type\" : \"string\"\n    }\n  }, {\n    \"required\" : false,\n    \"supportedValueTypes\" : [ \"STATIC_VALUE\" ],\n    \"typeDefinition\" : {\n      \"fieldType\" : \"enumeration\",\n      \"name\" : \"widgetColor\",\n      \"options\" : [ {\n        \"label\" : \"Blue\",\n        \"value\" : \"blue\"\n      }, {\n        \"label\" : \"Red\",\n        \"value\" : \"red\"\n      } ],\n      \"type\" : \"string\"\n    }\n  }, {\n    \"required\" : false,\n    \"supportedValueTypes\" : [ \"STATIC_VALUE\" ],\n    \"typeDefinition\" : {\n      \"fieldType\" : \"enumeration\",\n      \"name\" : \"widgetSize\",\n      \"optionsUrl\" : \"https://example.com/widget-sizes\",\n      \"type\" : \"string\"\n    }\n  } ],\n  \"labels\" : {\n    \"en\" : {\n      \"actionCardContent\" : \"Create new widget {{ widgetName }}\",\n      \"actionDescription\" : \"This action will create a new widget in our system. So cool!\",\n      \"actionName\" : \"Create new widget\",\n      \"inputFieldDescriptions\" : {\n        \"widgetColor\" : \"This is the color that will be used to paint the widget.\",\n        \"widgetName\" : \"Enter the full widget name. I support <a href=\\\"https://hubspot.com\\\">links</a> too.\"\n      },\n      \"inputFieldLabels\" : {\n        \"widgetColor\" : \"Widget Color\",\n        \"widgetName\" : \"Widget Name\",\n        \"widgetSize\" : \"Widget Size\"\n      }\n    }\n  },\n  \"objectRequestOptions\" : {\n    \"properties\" : [ \"firstname\", \"lastname\", \"preferred_widget\" ]\n  },\n  \"objectTypes\" : [ \"CONTACT\", \"COMPANY\" ],\n  \"published\" : true,\n  \"revisionId\" : \"1\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "6993a4a1-0867-4970-b934-537f045c9a01",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:53.235546Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "post-/automation/v4/actions/{appId}_create",
+          "schema" : {
+            "description" : "Configuration for custom workflow action.",
+            "properties" : {
+              "actionUrl" : {
+                "description" : "The URL that will accept an HTTPS request each time workflows executes the custom action.",
+                "type" : "string"
+              },
+              "archivedAt" : {
+                "description" : "The date that this custom action was archived, if the custom action is archived.",
+                "format" : "int64",
+                "type" : "integer"
+              },
+              "functions" : {
+                "description" : "A list of functions associated with the custom workflow action.",
+                "items" : {
+                  "$ref" : "#/components/schemas/ActionFunctionIdentifier"
+                },
+                "type" : "array"
+              },
+              "id" : {
+                "description" : "The ID of the custom action.",
+                "type" : "string"
+              },
+              "inputFieldDependencies" : {
+                "description" : "A list of dependencies between the input fields. These configure when the input fields should be visible.",
+                "items" : {
+                  "oneOf" : [ {
+                    "$ref" : "#/components/schemas/SingleFieldDependency"
+                  }, {
+                    "$ref" : "#/components/schemas/ConditionalSingleFieldDependency"
+                  } ]
+                },
+                "type" : "array"
+              },
+              "inputFields" : {
+                "description" : "The list of input fields to display in this custom action.",
+                "items" : {
+                  "$ref" : "#/components/schemas/InputFieldDefinition"
+                },
+                "type" : "array"
+              },
+              "labels" : {
+                "additionalProperties" : {
+                  "$ref" : "#/components/schemas/ActionLabels"
+                },
+                "description" : "The user-facing labels for the custom action.",
+                "type" : "object"
+              },
+              "objectRequestOptions" : {
+                "$ref" : "#/components/schemas/ObjectRequestOptions"
+              },
+              "objectTypes" : {
+                "description" : "The object types that this custom action supports.",
+                "items" : {
+                  "type" : "string"
+                },
+                "type" : "array"
+              },
+              "published" : {
+                "description" : "Whether this custom action is published to customers.",
+                "type" : "boolean"
+              },
+              "revisionId" : {
+                "type" : "string"
+              }
+            },
+            "required" : [ "actionUrl", "functions", "id", "inputFields", "labels", "objectTypes", "published", "revisionId" ],
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 12
+  }, {
+    "id" : "46b46909-4711-4a54-8b11-f6ac1d693983",
+    "name" : "Get all custom actions",
+    "request" : {
+      "urlPath" : "/automation/v4/actions/2101622222",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"paging\" : {\n    \"next\" : {\n      \"after\" : \"b3B0aW9uXzEy\"\n    }\n  },\n  \"results\" : [ {\n    \"actionUrl\" : \"https://example.com/custom-workflow-action\",\n    \"functions\" : [ {\n      \"functionType\" : \"PRE_ACTION_EXECUTION\"\n    }, {\n      \"functionType\" : \"PRE_FETCH_OPTIONS\",\n      \"id\" : \"widgetSize\"\n    } ],\n    \"id\" : \"1\",\n    \"inputFieldDependencies\" : [ {\n      \"controllingFieldName\" : \"widgetSize\",\n      \"dependencyType\" : \"SINGLE_FIELD\",\n      \"dependentFieldNames\" : [ \"widgetName\", \"widgetColor\" ]\n    } ],\n    \"inputFields\" : [ {\n      \"required\" : true,\n      \"supportedValueTypes\" : [ \"OBJECT_PROPERTY\" ],\n      \"typeDefinition\" : {\n        \"fieldType\" : \"text\",\n        \"name\" : \"widgetName\",\n        \"type\" : \"string\"\n      }\n    }, {\n      \"required\" : false,\n      \"supportedValueTypes\" : [ \"STATIC_VALUE\" ],\n      \"typeDefinition\" : {\n        \"fieldType\" : \"enumeration\",\n        \"name\" : \"widgetColor\",\n        \"options\" : [ {\n          \"label\" : \"Blue\",\n          \"value\" : \"blue\"\n        }, {\n          \"label\" : \"Red\",\n          \"value\" : \"red\"\n        } ],\n        \"type\" : \"string\"\n      }\n    }, {\n      \"required\" : false,\n      \"supportedValueTypes\" : [ \"STATIC_VALUE\" ],\n      \"typeDefinition\" : {\n        \"fieldType\" : \"enumeration\",\n        \"name\" : \"widgetSize\",\n        \"optionsUrl\" : \"https://example.com/widget-sizes\",\n        \"type\" : \"string\"\n      }\n    } ],\n    \"labels\" : {\n      \"en\" : {\n        \"actionCardContent\" : \"Create new widget {{ widgetName }}\",\n        \"actionDescription\" : \"This action will create a new widget in our system. So cool!\",\n        \"actionName\" : \"Create new widget\",\n        \"inputFieldDescriptions\" : {\n          \"widgetColor\" : \"This is the color that will be used to paint the widget.\",\n          \"widgetName\" : \"Enter the full widget name. I support <a href=\\\"https://hubspot.com\\\">links</a> too.\"\n        },\n        \"inputFieldLabels\" : {\n          \"widgetColor\" : \"Widget Color\",\n          \"widgetName\" : \"Widget Name\",\n          \"widgetSize\" : \"Widget Size\"\n        }\n      }\n    },\n    \"objectRequestOptions\" : {\n      \"properties\" : [ \"firstname\", \"lastname\", \"preferred_widget\" ]\n    },\n    \"objectTypes\" : [ \"CONTACT\", \"COMPANY\" ],\n    \"published\" : true,\n    \"revisionId\" : \"1\"\n  }, {\n    \"actionUrl\" : \"https://example.com/custom-workflow-action-2\",\n    \"id\" : \"2\",\n    \"published\" : false,\n    \"revisionId\" : \"1\"\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "46b46909-4711-4a54-8b11-f6ac1d693983",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:53.235306Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "get-/automation/v4/actions/{appId}_getPage",
+          "schema" : {
+            "properties" : {
+              "paging" : {
+                "$ref" : "#/components/schemas/ForwardPaging"
+              },
+              "results" : {
+                "items" : {
+                  "$ref" : "#/components/schemas/ExtensionActionDefinition"
+                },
+                "type" : "array"
+              }
+            },
+            "required" : [ "results" ],
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 13
+  }, {
+    "id" : "fbfac22b-fcc2-4a4b-9cc6-d823548129ce",
+    "name" : "Complete a callback - 204",
+    "request" : {
+      "urlPath" : "/automation/v4/actions/callbacks/200t/complete",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 204
+    },
+    "uuid" : "fbfac22b-fcc2-4a4b-9cc6-d823548129ce",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:53.235175Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "post-/automation/v4/actions/callbacks/{callbackId}/complete_complete"
+        }
+      }
+    },
+    "insertionIndex" : 14
+  }, {
+    "id" : "645f2368-f210-4840-859e-31e8fc151edc",
+    "name" : "Complete a batch of callbacks - 204",
+    "request" : {
+      "urlPath" : "/automation/v4/actions/callbacks/complete",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 204
+    },
+    "uuid" : "645f2368-f210-4840-859e-31e8fc151edc",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:53.235035Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "post-/automation/v4/actions/callbacks/complete_completeBatch"
+        }
+      }
+    },
+    "insertionIndex" : 15
+  } ]
+}

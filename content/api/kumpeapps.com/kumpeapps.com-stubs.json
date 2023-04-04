@@ -1,0 +1,6208 @@
+{
+  "mappings" : [ {
+    "id" : "80f644aa-d1a0-4f41-bf5f-eca3e10d8ff0",
+    "name" : "Update item on kid's wishlist",
+    "request" : {
+      "urlPath" : "/kkid/wishlist",
+      "method" : "PUT",
+      "queryParameters" : {
+        "wishId" : {
+          "equalTo" : "6555363774684851615"
+        }
+      }
+    },
+    "response" : {
+      "status" : 201,
+      "body" : "{\n  \"message\" : \"success\",\n  \"success\" : true\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "80f644aa-d1a0-4f41-bf5f-eca3e10d8ff0",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:25:19.25276Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "kkid_wishlist_put",
+          "schema" : {
+            "description" : "Success",
+            "example" : {
+              "message" : "success",
+              "success" : true
+            },
+            "properties" : {
+              "message" : {
+                "example" : "success",
+                "type" : "string"
+              },
+              "success" : {
+                "example" : true,
+                "type" : "boolean"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 0
+  }, {
+    "id" : "4d34e905-cd9c-411d-b188-15e3a8e59118",
+    "name" : "Add item to kid's wishlist",
+    "request" : {
+      "urlPath" : "/kkid/wishlist",
+      "method" : "POST",
+      "queryParameters" : {
+        "kidUserId" : {
+          "equalTo" : "3859174058912556511"
+        },
+        "title" : {
+          "equalTo" : "Velit+reprehenderit+officiis+vitae+et+perferendis."
+        }
+      }
+    },
+    "response" : {
+      "status" : 201,
+      "body" : "{\n  \"message\" : \"success\",\n  \"success\" : true\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "4d34e905-cd9c-411d-b188-15e3a8e59118",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:25:19.252706Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "kkid_wishlist_post",
+          "schema" : {
+            "description" : "Success",
+            "example" : {
+              "message" : "success",
+              "success" : true
+            },
+            "properties" : {
+              "message" : {
+                "example" : "success",
+                "type" : "string"
+              },
+              "success" : {
+                "example" : true,
+                "type" : "boolean"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 1
+  }, {
+    "id" : "7cccf275-ca46-4420-bcaa-2b1491554b2c",
+    "name" : "Get list of wishlist items",
+    "request" : {
+      "urlPath" : "/kkid/wishlist",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"success\" : true,\n  \"wish\" : [ {\n    \"description\" : \"Pokemon trading cards\",\n    \"id\" : 1,\n    \"link\" : \"https://www.google.com\",\n    \"master_id\" : 1,\n    \"priority\" : 1,\n    \"title\" : \"Pokemon Cards\",\n    \"user_id\" : 1\n  }, {\n    \"description\" : \"Pokemon trading cards\",\n    \"id\" : 1,\n    \"link\" : \"https://www.google.com\",\n    \"master_id\" : 1,\n    \"priority\" : 1,\n    \"title\" : \"Pokemon Cards\",\n    \"user_id\" : 1\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "7cccf275-ca46-4420-bcaa-2b1491554b2c",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:25:19.252569Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "kkid_wishlist_get",
+          "schema" : {
+            "description" : "Allowance",
+            "example" : {
+              "success" : true,
+              "wish" : [ {
+                "description" : "Pokemon trading cards",
+                "id" : 1,
+                "link" : "https://www.google.com",
+                "master_id" : 1,
+                "priority" : 1,
+                "title" : "Pokemon Cards",
+                "user_id" : 1
+              }, {
+                "description" : "Pokemon trading cards",
+                "id" : 1,
+                "link" : "https://www.google.com",
+                "master_id" : 1,
+                "priority" : 1,
+                "title" : "Pokemon Cards",
+                "user_id" : 1
+              } ]
+            },
+            "properties" : {
+              "success" : {
+                "example" : true,
+                "type" : "boolean"
+              },
+              "wish" : {
+                "items" : {
+                  "$ref" : "#/components/schemas/wish"
+                },
+                "type" : "array"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 2
+  }, {
+    "id" : "ff00eed7-ddcd-4d29-a96f-e19b44d19896",
+    "name" : "Delete item from wishlist",
+    "request" : {
+      "urlPath" : "/kkid/wishlist",
+      "method" : "DELETE",
+      "queryParameters" : {
+        "wishId" : {
+          "equalTo" : "2297578774818401834"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"message\" : \"success\",\n  \"success\" : true\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "ff00eed7-ddcd-4d29-a96f-e19b44d19896",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:25:19.25249Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "kkid_wishlist_delete",
+          "schema" : {
+            "description" : "Success",
+            "example" : {
+              "message" : "success",
+              "success" : true
+            },
+            "properties" : {
+              "message" : {
+                "example" : "success",
+                "type" : "string"
+              },
+              "success" : {
+                "example" : true,
+                "type" : "boolean"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 3
+  }, {
+    "id" : "2c076e40-b8b4-4292-8709-30ab90f0916c",
+    "name" : "updates user (application/json)",
+    "request" : {
+      "urlPath" : "/kkid/userlist",
+      "method" : "PUT",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/json"
+        }
+      },
+      "queryParameters" : {
+        "firstName" : {
+          "equalTo" : "Antoine"
+        },
+        "lastName" : {
+          "equalTo" : "Quigley"
+        },
+        "userID" : {
+          "equalTo" : "205198471843910601"
+        },
+        "email" : {
+          "equalTo" : "cq727p7yvw988srfxgsosrudl3k59r3ut2anm0odcjeqsnvxxub1ms98my9"
+        },
+        "username" : {
+          "equalTo" : "franklyn.labadie"
+        }
+      }
+    },
+    "response" : {
+      "status" : 412,
+      "body" : "{\n  \"success\" : 0,\n  \"error\" : \"API Access Denied! Your API key is invalid or has expired!\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "2c076e40-b8b4-4292-8709-30ab90f0916c",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:25:19.252418Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "kkid_userlist_put",
+          "schema" : {
+            "description" : "API Key invalid",
+            "properties" : {
+              "error" : {
+                "example" : "API Access Denied! Your API key is invalid or has expired!",
+                "type" : "string"
+              },
+              "success" : {
+                "example" : 0,
+                "type" : "integer"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 4
+  }, {
+    "id" : "776a07ed-2a37-4492-9c27-aa3aaabc7bf1",
+    "name" : "updates user - 409",
+    "request" : {
+      "urlPath" : "/kkid/userlist",
+      "method" : "PUT",
+      "queryParameters" : {
+        "firstName" : {
+          "equalTo" : "Sook"
+        },
+        "lastName" : {
+          "equalTo" : "Little"
+        },
+        "userID" : {
+          "equalTo" : "812069966668334031"
+        },
+        "email" : {
+          "equalTo" : "2pa93eogq28cfj9gi9jqmgd7yh8w3r849kw6bffd202v2qigrxeq2x6n9ruhfbuh161ml325cezc3t7c335cjljb7n7iqp3k6csq5"
+        },
+        "username" : {
+          "equalTo" : "lilly.homenick"
+        }
+      }
+    },
+    "response" : {
+      "status" : 409
+    },
+    "uuid" : "776a07ed-2a37-4492-9c27-aa3aaabc7bf1",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:25:19.252246Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "kkid_userlist_put"
+        }
+      }
+    },
+    "insertionIndex" : 5
+  }, {
+    "id" : "559cda92-ff0c-4810-95c4-ec81687049f7",
+    "name" : "updates user (application/json)",
+    "request" : {
+      "urlPath" : "/kkid/userlist",
+      "method" : "PUT",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/json"
+        }
+      },
+      "queryParameters" : {
+        "firstName" : {
+          "equalTo" : "Gregg"
+        },
+        "lastName" : {
+          "equalTo" : "Legros"
+        },
+        "userID" : {
+          "equalTo" : "6927702315024504914"
+        },
+        "email" : {
+          "equalTo" : "26t96shel0zxtwkl96x67zv0"
+        },
+        "username" : {
+          "equalTo" : "loyd.runolfsdottir"
+        }
+      }
+    },
+    "response" : {
+      "status" : 405,
+      "body" : "{\n  \"success\" : 0,\n  \"error\" : \"API Access Denied! Your API account does not have access to this Verb Method!\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "559cda92-ff0c-4810-95c4-ec81687049f7",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:25:19.252096Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "kkid_userlist_put",
+          "schema" : {
+            "description" : "API Access Denied",
+            "properties" : {
+              "error" : {
+                "example" : "API Access Denied! Your API account does not have access to this Verb Method!",
+                "type" : "string"
+              },
+              "success" : {
+                "example" : 0,
+                "type" : "integer"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 6
+  }, {
+    "id" : "23ec4f41-b1e1-4d21-849a-620733efc581",
+    "name" : "updates user - 202",
+    "request" : {
+      "urlPath" : "/kkid/userlist",
+      "method" : "PUT",
+      "queryParameters" : {
+        "firstName" : {
+          "equalTo" : "Renee"
+        },
+        "lastName" : {
+          "equalTo" : "Hartmann"
+        },
+        "userID" : {
+          "equalTo" : "4382851130219440304"
+        },
+        "email" : {
+          "equalTo" : "o3pkxnb1l9iccohsmua"
+        },
+        "username" : {
+          "equalTo" : "danyell.kuphal"
+        }
+      }
+    },
+    "response" : {
+      "status" : 202
+    },
+    "uuid" : "23ec4f41-b1e1-4d21-849a-620733efc581",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:25:19.251906Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "kkid_userlist_put"
+        }
+      }
+    },
+    "insertionIndex" : 7
+  }, {
+    "id" : "6113f4f4-3ef0-42dc-b088-e3f280383d70",
+    "name" : "updates user (application/json)",
+    "request" : {
+      "urlPath" : "/kkid/userlist",
+      "method" : "PUT",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/json"
+        }
+      },
+      "queryParameters" : {
+        "firstName" : {
+          "equalTo" : "Glenn"
+        },
+        "lastName" : {
+          "equalTo" : "Stracke"
+        },
+        "userID" : {
+          "equalTo" : "2429639757606636162"
+        },
+        "email" : {
+          "equalTo" : "u02d2t4zn8319"
+        },
+        "username" : {
+          "equalTo" : "lance.graham"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"added\" : { },\n  \"aff_added\" : \"aff_added\",\n  \"aff_id\" : \"aff_id\",\n  \"aff_payout_type\" : \"aff_payout_type\",\n  \"avatar\" : \"avatar\",\n  \"city\" : \"city\",\n  \"comment\" : \"Added Via KKids API\",\n  \"country\" : \"country\",\n  \"disable_lock_until\" : \"disable_lock_until\",\n  \"email\" : \"jane@doe.com\",\n  \"i_agree\" : \"0\",\n  \"is_affiliate\" : \"is_affiliate\",\n  \"is_locked\" : \"0\",\n  \"lang\" : \"lang\",\n  \"last_login\" : \"last_login\",\n  \"login\" : \"janedoe\",\n  \"name_f\" : \"Jane\",\n  \"name_l\" : \"Doe\",\n  \"pass\" : \"pass\",\n  \"pass_dattm\" : { },\n  \"phone\" : \"phone\",\n  \"pin\" : \"0\",\n  \"plain_password\" : \"plain_password\",\n  \"remember_key\" : \"remember_key\",\n  \"remote_addr\" : \"104.237.5.109\",\n  \"require_consent\" : \"require_consent\",\n  \"reseller_id\" : \"reseller_id\",\n  \"saved_form_id\" : \"saved_form_id\",\n  \"state\" : \"state\",\n  \"status\" : \"0\",\n  \"street\" : \"street\",\n  \"street2\" : \"street2\",\n  \"subusers_parent_id\" : \"0\",\n  \"tax_id\" : \"tax_id\",\n  \"unsubscribed\" : \"0\",\n  \"user_agent\" : \"user_agent\",\n  \"user_id\" : 1,\n  \"zip\" : \"zip\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "6113f4f4-3ef0-42dc-b088-e3f280383d70",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:25:19.251701Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "kkid_userlist_put",
+          "schema" : {
+            "description" : "add user",
+            "example" : {
+              "added" : { },
+              "aff_added" : "aff_added",
+              "aff_id" : "aff_id",
+              "aff_payout_type" : "aff_payout_type",
+              "avatar" : "avatar",
+              "city" : "city",
+              "comment" : "Added Via KKids API",
+              "country" : "country",
+              "disable_lock_until" : "disable_lock_until",
+              "email" : "jane@doe.com",
+              "i_agree" : "0",
+              "is_affiliate" : "is_affiliate",
+              "is_locked" : "0",
+              "lang" : "lang",
+              "last_login" : "last_login",
+              "login" : "janedoe",
+              "name_f" : "Jane",
+              "name_l" : "Doe",
+              "pass" : "pass",
+              "pass_dattm" : { },
+              "phone" : "phone",
+              "pin" : "0",
+              "plain_password" : "plain_password",
+              "remember_key" : "remember_key",
+              "remote_addr" : "104.237.5.109",
+              "require_consent" : "require_consent",
+              "reseller_id" : "reseller_id",
+              "saved_form_id" : "saved_form_id",
+              "state" : "state",
+              "status" : "0",
+              "street" : "street",
+              "street2" : "street2",
+              "subusers_parent_id" : "0",
+              "tax_id" : "tax_id",
+              "unsubscribed" : "0",
+              "user_agent" : "user_agent",
+              "user_id" : 1,
+              "zip" : "zip"
+            },
+            "properties" : {
+              "added" : {
+                "example" : "{}",
+                "type" : "string"
+              },
+              "aff_added" : {
+                "type" : "string"
+              },
+              "aff_id" : {
+                "type" : "string"
+              },
+              "aff_payout_type" : {
+                "type" : "string"
+              },
+              "avatar" : {
+                "type" : "string"
+              },
+              "city" : {
+                "type" : "string"
+              },
+              "comment" : {
+                "example" : "Added Via KKids API",
+                "type" : "string"
+              },
+              "country" : {
+                "type" : "string"
+              },
+              "disable_lock_until" : {
+                "type" : "string"
+              },
+              "email" : {
+                "example" : "jane@doe.com",
+                "type" : "string"
+              },
+              "i_agree" : {
+                "example" : "0",
+                "type" : "string"
+              },
+              "is_affiliate" : {
+                "type" : "string"
+              },
+              "is_locked" : {
+                "example" : "0",
+                "type" : "string"
+              },
+              "lang" : {
+                "type" : "string"
+              },
+              "last_login" : {
+                "type" : "string"
+              },
+              "login" : {
+                "example" : "janedoe",
+                "type" : "string"
+              },
+              "name_f" : {
+                "example" : "Jane",
+                "type" : "string"
+              },
+              "name_l" : {
+                "example" : "Doe",
+                "type" : "string"
+              },
+              "pass" : {
+                "type" : "string"
+              },
+              "pass_dattm" : {
+                "example" : "{}",
+                "type" : "string"
+              },
+              "phone" : {
+                "type" : "string"
+              },
+              "pin" : {
+                "example" : "0",
+                "type" : "string"
+              },
+              "plain_password" : {
+                "type" : "string"
+              },
+              "remember_key" : {
+                "type" : "string"
+              },
+              "remote_addr" : {
+                "example" : "104.237.5.109",
+                "type" : "string"
+              },
+              "require_consent" : {
+                "type" : "string"
+              },
+              "reseller_id" : {
+                "type" : "string"
+              },
+              "saved_form_id" : {
+                "type" : "string"
+              },
+              "state" : {
+                "type" : "string"
+              },
+              "status" : {
+                "example" : "0",
+                "type" : "string"
+              },
+              "street" : {
+                "type" : "string"
+              },
+              "street2" : {
+                "type" : "string"
+              },
+              "subusers_parent_id" : {
+                "example" : "0",
+                "type" : "string"
+              },
+              "tax_id" : {
+                "type" : "string"
+              },
+              "unsubscribed" : {
+                "example" : "0",
+                "type" : "string"
+              },
+              "user_agent" : {
+                "type" : "string"
+              },
+              "user_id" : {
+                "example" : 1,
+                "type" : "integer"
+              },
+              "zip" : {
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 8
+  }, {
+    "id" : "324b1cb8-5179-4758-ad5d-93fd72422c2a",
+    "name" : "adds new child user (application/json)",
+    "request" : {
+      "urlPath" : "/kkid/userlist",
+      "method" : "POST",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/json"
+        }
+      },
+      "queryParameters" : {
+        "firstName" : {
+          "equalTo" : "Billie"
+        },
+        "lastName" : {
+          "equalTo" : "Corkery"
+        },
+        "password" : {
+          "equalTo" : "o85h1j1wkxz3eeyipn061qwe7g1d2vbs91dtkdcor93mlm8t3x71nyzh0zhl8iuvi493zf1ejjkod2gyuuhv4wmi829xy0ot10dneeyfvs7khr68nqt6mnzpd1cvyuvj0i6dskl5rck"
+        },
+        "email" : {
+          "equalTo" : "y2xwy7zvqbaxxrwmz6y7s2ggfkjdruhu93rixqtwcbdnn8q5l7c7reljsjwjtlyi7mq94je0l782hezzcl22zgr4f0mk9wdw8nwwn4i3uuqzkbhqcnx34lue42xesna4cjktkehtc442w5a99dfz35y1nye2li8rbhvia5amd646rpfkfsq28"
+        },
+        "username" : {
+          "equalTo" : "marin.mills"
+        }
+      }
+    },
+    "response" : {
+      "status" : 412,
+      "body" : "{\n  \"success\" : 0,\n  \"error\" : \"API Access Denied! Your API key is invalid or has expired!\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "324b1cb8-5179-4758-ad5d-93fd72422c2a",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:25:19.251183Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "kkid_userlist_post",
+          "schema" : {
+            "description" : "API Key invalid",
+            "properties" : {
+              "error" : {
+                "example" : "API Access Denied! Your API key is invalid or has expired!",
+                "type" : "string"
+              },
+              "success" : {
+                "example" : 0,
+                "type" : "integer"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 9
+  }, {
+    "id" : "4ae1e731-a083-4cc0-808c-64243921bc06",
+    "name" : "adds new child user - 409",
+    "request" : {
+      "urlPath" : "/kkid/userlist",
+      "method" : "POST",
+      "queryParameters" : {
+        "firstName" : {
+          "equalTo" : "Donna"
+        },
+        "lastName" : {
+          "equalTo" : "Kuhic"
+        },
+        "password" : {
+          "equalTo" : "vebfwvq8kpgrramr0tjtqsah6tjc0mhuul1hdbud46d0ij5qcu0p0r5y5t5gwl0mheftfmkc0ym7cfqkdb3cy2mbm9yv5a4ntg715rjoj0vg91l4zbuardkj1egeq0crp8em1yb5bgs77fzu"
+        },
+        "email" : {
+          "equalTo" : "1ykxrkx7cwkft6nsevycy9kw944zzobm3on3k5aicdd5aasraflft51bl0v5ckfbpsdz11gmx8q5088uvysxkr2vdnrsj0f53fm5k7gps4zbt7esw3zvgdxms9hf0oj4uniwf2sa8unwmk6xq6scyloxafkrqswoivskc52kdc"
+        },
+        "username" : {
+          "equalTo" : "tien.bailey"
+        }
+      }
+    },
+    "response" : {
+      "status" : 409
+    },
+    "uuid" : "4ae1e731-a083-4cc0-808c-64243921bc06",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:25:19.250937Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "kkid_userlist_post"
+        }
+      }
+    },
+    "insertionIndex" : 10
+  }, {
+    "id" : "d473234b-89c4-4821-bc64-639eec9305b8",
+    "name" : "adds new child user (application/json)",
+    "request" : {
+      "urlPath" : "/kkid/userlist",
+      "method" : "POST",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/json"
+        }
+      },
+      "queryParameters" : {
+        "firstName" : {
+          "equalTo" : "Wilber"
+        },
+        "lastName" : {
+          "equalTo" : "Huel"
+        },
+        "password" : {
+          "equalTo" : "ljgkblrc9xr4bjjalariqi4ltb7e4gffj40o4q071gunveqmfmcjz07u88azlc3xjbgfth4mz4e6os4z9pbc5h7bixvha0"
+        },
+        "email" : {
+          "equalTo" : "0frzghlwi75tlug0quyeq5e9z9yy7hfolsuz6a93f7dt5qwoyfs4blyps46z7q8zx2k97yj"
+        },
+        "username" : {
+          "equalTo" : "lezlie.veum"
+        }
+      }
+    },
+    "response" : {
+      "status" : 405,
+      "body" : "{\n  \"success\" : 0,\n  \"error\" : \"API Access Denied! Your API account does not have access to this Verb Method!\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "d473234b-89c4-4821-bc64-639eec9305b8",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:25:19.250768Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "kkid_userlist_post",
+          "schema" : {
+            "description" : "API Access Denied",
+            "properties" : {
+              "error" : {
+                "example" : "API Access Denied! Your API account does not have access to this Verb Method!",
+                "type" : "string"
+              },
+              "success" : {
+                "example" : 0,
+                "type" : "integer"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 11
+  }, {
+    "id" : "53aedeaf-ffc1-44bb-b760-476142331397",
+    "name" : "adds new child user - 202",
+    "request" : {
+      "urlPath" : "/kkid/userlist",
+      "method" : "POST",
+      "queryParameters" : {
+        "firstName" : {
+          "equalTo" : "Albertine"
+        },
+        "lastName" : {
+          "equalTo" : "Hartmann"
+        },
+        "password" : {
+          "equalTo" : "i6jl60bltjbaujsgm52lj6nuy81ejw1vqrypd03uc"
+        },
+        "email" : {
+          "equalTo" : "tojyj2vxf9rs3fzrc8eq6tha5yf8ua6cknt6en4u9n5nce7k8m87jre1tlzuhpviabt99b5xkqrmpptkdm8hdij9nvoiyy"
+        },
+        "username" : {
+          "equalTo" : "marg.kling"
+        }
+      }
+    },
+    "response" : {
+      "status" : 202
+    },
+    "uuid" : "53aedeaf-ffc1-44bb-b760-476142331397",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:25:19.250551Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "kkid_userlist_post"
+        }
+      }
+    },
+    "insertionIndex" : 12
+  }, {
+    "id" : "3139441f-94b4-4d82-a731-e45f75edad6b",
+    "name" : "adds new child user (application/json)",
+    "request" : {
+      "urlPath" : "/kkid/userlist",
+      "method" : "POST",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/json"
+        }
+      },
+      "queryParameters" : {
+        "firstName" : {
+          "equalTo" : "Shemeka"
+        },
+        "lastName" : {
+          "equalTo" : "Heathcote"
+        },
+        "password" : {
+          "equalTo" : "per00ob8rrxai4hjlumykx86uvqeumlxjfhnsryce9jw2sjnvfk41ihlq352jz2v3kt4ncb4co05ti0xexbdccf30yt6ipx1"
+        },
+        "email" : {
+          "equalTo" : "7gp8ed01sk2qg9cqc5oh6de2b0fz4c3p7p9gmpfgf1jhhpx6y7yc6iv73a8x31dmohjm48qed9m3b50lou9u91r492n0m"
+        },
+        "username" : {
+          "equalTo" : "marisa.lueilwitz"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"added\" : { },\n  \"aff_added\" : \"aff_added\",\n  \"aff_id\" : \"aff_id\",\n  \"aff_payout_type\" : \"aff_payout_type\",\n  \"avatar\" : \"avatar\",\n  \"city\" : \"city\",\n  \"comment\" : \"Added Via KKids API\",\n  \"country\" : \"country\",\n  \"disable_lock_until\" : \"disable_lock_until\",\n  \"email\" : \"jane@doe.com\",\n  \"i_agree\" : \"0\",\n  \"is_affiliate\" : \"is_affiliate\",\n  \"is_locked\" : \"0\",\n  \"lang\" : \"lang\",\n  \"last_login\" : \"last_login\",\n  \"login\" : \"janedoe\",\n  \"name_f\" : \"Jane\",\n  \"name_l\" : \"Doe\",\n  \"pass\" : \"pass\",\n  \"pass_dattm\" : { },\n  \"phone\" : \"phone\",\n  \"pin\" : \"0\",\n  \"plain_password\" : \"plain_password\",\n  \"remember_key\" : \"remember_key\",\n  \"remote_addr\" : \"104.237.5.109\",\n  \"require_consent\" : \"require_consent\",\n  \"reseller_id\" : \"reseller_id\",\n  \"saved_form_id\" : \"saved_form_id\",\n  \"state\" : \"state\",\n  \"status\" : \"0\",\n  \"street\" : \"street\",\n  \"street2\" : \"street2\",\n  \"subusers_parent_id\" : \"0\",\n  \"tax_id\" : \"tax_id\",\n  \"unsubscribed\" : \"0\",\n  \"user_agent\" : \"user_agent\",\n  \"user_id\" : 1,\n  \"zip\" : \"zip\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "3139441f-94b4-4d82-a731-e45f75edad6b",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:25:19.250329Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "kkid_userlist_post",
+          "schema" : {
+            "description" : "add user",
+            "example" : {
+              "added" : { },
+              "aff_added" : "aff_added",
+              "aff_id" : "aff_id",
+              "aff_payout_type" : "aff_payout_type",
+              "avatar" : "avatar",
+              "city" : "city",
+              "comment" : "Added Via KKids API",
+              "country" : "country",
+              "disable_lock_until" : "disable_lock_until",
+              "email" : "jane@doe.com",
+              "i_agree" : "0",
+              "is_affiliate" : "is_affiliate",
+              "is_locked" : "0",
+              "lang" : "lang",
+              "last_login" : "last_login",
+              "login" : "janedoe",
+              "name_f" : "Jane",
+              "name_l" : "Doe",
+              "pass" : "pass",
+              "pass_dattm" : { },
+              "phone" : "phone",
+              "pin" : "0",
+              "plain_password" : "plain_password",
+              "remember_key" : "remember_key",
+              "remote_addr" : "104.237.5.109",
+              "require_consent" : "require_consent",
+              "reseller_id" : "reseller_id",
+              "saved_form_id" : "saved_form_id",
+              "state" : "state",
+              "status" : "0",
+              "street" : "street",
+              "street2" : "street2",
+              "subusers_parent_id" : "0",
+              "tax_id" : "tax_id",
+              "unsubscribed" : "0",
+              "user_agent" : "user_agent",
+              "user_id" : 1,
+              "zip" : "zip"
+            },
+            "properties" : {
+              "added" : {
+                "example" : "{}",
+                "type" : "string"
+              },
+              "aff_added" : {
+                "type" : "string"
+              },
+              "aff_id" : {
+                "type" : "string"
+              },
+              "aff_payout_type" : {
+                "type" : "string"
+              },
+              "avatar" : {
+                "type" : "string"
+              },
+              "city" : {
+                "type" : "string"
+              },
+              "comment" : {
+                "example" : "Added Via KKids API",
+                "type" : "string"
+              },
+              "country" : {
+                "type" : "string"
+              },
+              "disable_lock_until" : {
+                "type" : "string"
+              },
+              "email" : {
+                "example" : "jane@doe.com",
+                "type" : "string"
+              },
+              "i_agree" : {
+                "example" : "0",
+                "type" : "string"
+              },
+              "is_affiliate" : {
+                "type" : "string"
+              },
+              "is_locked" : {
+                "example" : "0",
+                "type" : "string"
+              },
+              "lang" : {
+                "type" : "string"
+              },
+              "last_login" : {
+                "type" : "string"
+              },
+              "login" : {
+                "example" : "janedoe",
+                "type" : "string"
+              },
+              "name_f" : {
+                "example" : "Jane",
+                "type" : "string"
+              },
+              "name_l" : {
+                "example" : "Doe",
+                "type" : "string"
+              },
+              "pass" : {
+                "type" : "string"
+              },
+              "pass_dattm" : {
+                "example" : "{}",
+                "type" : "string"
+              },
+              "phone" : {
+                "type" : "string"
+              },
+              "pin" : {
+                "example" : "0",
+                "type" : "string"
+              },
+              "plain_password" : {
+                "type" : "string"
+              },
+              "remember_key" : {
+                "type" : "string"
+              },
+              "remote_addr" : {
+                "example" : "104.237.5.109",
+                "type" : "string"
+              },
+              "require_consent" : {
+                "type" : "string"
+              },
+              "reseller_id" : {
+                "type" : "string"
+              },
+              "saved_form_id" : {
+                "type" : "string"
+              },
+              "state" : {
+                "type" : "string"
+              },
+              "status" : {
+                "example" : "0",
+                "type" : "string"
+              },
+              "street" : {
+                "type" : "string"
+              },
+              "street2" : {
+                "type" : "string"
+              },
+              "subusers_parent_id" : {
+                "example" : "0",
+                "type" : "string"
+              },
+              "tax_id" : {
+                "type" : "string"
+              },
+              "unsubscribed" : {
+                "example" : "0",
+                "type" : "string"
+              },
+              "user_agent" : {
+                "type" : "string"
+              },
+              "user_id" : {
+                "example" : 1,
+                "type" : "integer"
+              },
+              "zip" : {
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 13
+  }, {
+    "id" : "042a8087-3cf4-4302-bbee-f85e30ec2e3d",
+    "name" : "returns list of users (application/json)",
+    "request" : {
+      "urlPath" : "/kkid/userlist",
+      "method" : "GET",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/json"
+        }
+      }
+    },
+    "response" : {
+      "status" : 412,
+      "body" : "{\n  \"success\" : 0,\n  \"error\" : \"API Access Denied! Your API key is invalid or has expired!\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "042a8087-3cf4-4302-bbee-f85e30ec2e3d",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:25:19.249645Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "kkid_userlist_get",
+          "schema" : {
+            "description" : "API Key invalid",
+            "properties" : {
+              "error" : {
+                "example" : "API Access Denied! Your API key is invalid or has expired!",
+                "type" : "string"
+              },
+              "success" : {
+                "example" : 0,
+                "type" : "integer"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 14
+  }, {
+    "id" : "9151af4e-6660-46e1-8b9c-bc9c46822293",
+    "name" : "returns list of users (application/json)",
+    "request" : {
+      "urlPath" : "/kkid/userlist",
+      "method" : "GET",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/json"
+        }
+      }
+    },
+    "response" : {
+      "status" : 405,
+      "body" : "{\n  \"success\" : 0,\n  \"error\" : \"API Access Denied! Your API account does not have access to this Verb Method!\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "9151af4e-6660-46e1-8b9c-bc9c46822293",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:25:19.249593Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "kkid_userlist_get",
+          "schema" : {
+            "description" : "API Access Denied",
+            "properties" : {
+              "error" : {
+                "example" : "API Access Denied! Your API account does not have access to this Verb Method!",
+                "type" : "string"
+              },
+              "success" : {
+                "example" : 0,
+                "type" : "integer"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 15
+  }, {
+    "id" : "25db1c26-77a4-4c0e-bdf9-28db6202ec60",
+    "name" : "returns list of users - 403",
+    "request" : {
+      "urlPath" : "/kkid/userlist",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 403
+    },
+    "uuid" : "25db1c26-77a4-4c0e-bdf9-28db6202ec60",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:25:19.249551Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "kkid_userlist_get"
+        }
+      }
+    },
+    "insertionIndex" : 16
+  }, {
+    "id" : "c1c87574-703c-407b-9f52-f752ef8843d5",
+    "name" : "returns list of users - 401",
+    "request" : {
+      "urlPath" : "/kkid/userlist",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 401
+    },
+    "uuid" : "c1c87574-703c-407b-9f52-f752ef8843d5",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:25:19.249534Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "kkid_userlist_get"
+        }
+      }
+    },
+    "insertionIndex" : 17
+  }, {
+    "id" : "e59e6215-d8e0-4ccf-a90e-5a758f9ada54",
+    "name" : "returns list of users - 400",
+    "request" : {
+      "urlPath" : "/kkid/userlist",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 400
+    },
+    "uuid" : "e59e6215-d8e0-4ccf-a90e-5a758f9ada54",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:25:19.249518Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "kkid_userlist_get"
+        }
+      }
+    },
+    "insertionIndex" : 18
+  }, {
+    "id" : "48dc3bd7-cf45-48e1-96a3-5e17627bcc0a",
+    "name" : "returns list of users (application/json)",
+    "request" : {
+      "urlPath" : "/kkid/userlist",
+      "method" : "GET",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/json"
+        }
+      }
+    },
+    "response" : {
+      "status" : 204,
+      "body" : "{\n  \"error\" : \"No Data Found\",\n  \"status\" : 0\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "48dc3bd7-cf45-48e1-96a3-5e17627bcc0a",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:25:19.249493Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "kkid_userlist_get",
+          "schema" : {
+            "description" : "nodata",
+            "properties" : {
+              "error" : {
+                "example" : "No Data Found",
+                "type" : "string"
+              },
+              "status" : {
+                "example" : 0,
+                "type" : "integer"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 19
+  }, {
+    "id" : "4c854cae-3b78-46f0-a7b9-bc7c4a3f5df8",
+    "name" : "returns list of users - 202",
+    "request" : {
+      "urlPath" : "/kkid/userlist",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 202
+    },
+    "uuid" : "4c854cae-3b78-46f0-a7b9-bc7c4a3f5df8",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:25:19.249441Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "kkid_userlist_get"
+        }
+      }
+    },
+    "insertionIndex" : 20
+  }, {
+    "id" : "ae664b36-d3f4-499c-8fca-35fc55abc145",
+    "name" : "returns list of users (application/json)",
+    "request" : {
+      "urlPath" : "/kkid/userlist",
+      "method" : "GET",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/json"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"success\" : true,\n  \"user\" : [ {\n    \"email\" : \"jane@doe.com\",\n    \"emoji\" : \"🤗\",\n    \"enableAllowance\" : true,\n    \"enableBehaviorChart\" : false,\n    \"enableChores\" : true,\n    \"enableNoAds\" : false,\n    \"enableObjectDetection\" : false,\n    \"enableTmdb\" : true,\n    \"firstName\" : \"Jane\",\n    \"homeId\" : 1,\n    \"isActive\" : true,\n    \"isAdmin\" : false,\n    \"isBanned\" : false,\n    \"isChild\" : true,\n    \"isDisabled\" : false,\n    \"isLocked\" : false,\n    \"isMaster\" : false,\n    \"lastName\" : \"Doe\",\n    \"masterId\" : 1,\n    \"pushAllowance\" : true,\n    \"pushAllowanceNew\" : true,\n    \"pushChores\" : true,\n    \"pushChoresNew\" : true,\n    \"pushChoresReminders\" : true,\n    \"tmdbKey\" : \"9a87huiufe94r8\",\n    \"userId\" : 10,\n    \"username\" : \"janedoe\",\n    \"weeklyAllowance\" : 5\n  }, {\n    \"email\" : \"jane@doe.com\",\n    \"emoji\" : \"🤗\",\n    \"enableAllowance\" : true,\n    \"enableBehaviorChart\" : false,\n    \"enableChores\" : true,\n    \"enableNoAds\" : false,\n    \"enableObjectDetection\" : false,\n    \"enableTmdb\" : true,\n    \"firstName\" : \"Jane\",\n    \"homeId\" : 1,\n    \"isActive\" : true,\n    \"isAdmin\" : false,\n    \"isBanned\" : false,\n    \"isChild\" : true,\n    \"isDisabled\" : false,\n    \"isLocked\" : false,\n    \"isMaster\" : false,\n    \"lastName\" : \"Doe\",\n    \"masterId\" : 1,\n    \"pushAllowance\" : true,\n    \"pushAllowanceNew\" : true,\n    \"pushChores\" : true,\n    \"pushChoresNew\" : true,\n    \"pushChoresReminders\" : true,\n    \"tmdbKey\" : \"9a87huiufe94r8\",\n    \"userId\" : 10,\n    \"username\" : \"janedoe\",\n    \"weeklyAllowance\" : 5\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "ae664b36-d3f4-499c-8fca-35fc55abc145",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:25:19.249408Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "kkid_userlist_get",
+          "schema" : {
+            "description" : "userlist",
+            "example" : {
+              "success" : true,
+              "user" : [ {
+                "email" : "jane@doe.com",
+                "emoji" : "🤗",
+                "enableAllowance" : true,
+                "enableBehaviorChart" : false,
+                "enableChores" : true,
+                "enableNoAds" : false,
+                "enableObjectDetection" : false,
+                "enableTmdb" : true,
+                "firstName" : "Jane",
+                "homeId" : 1,
+                "isActive" : true,
+                "isAdmin" : false,
+                "isBanned" : false,
+                "isChild" : true,
+                "isDisabled" : false,
+                "isLocked" : false,
+                "isMaster" : false,
+                "lastName" : "Doe",
+                "masterId" : 1,
+                "pushAllowance" : true,
+                "pushAllowanceNew" : true,
+                "pushChores" : true,
+                "pushChoresNew" : true,
+                "pushChoresReminders" : true,
+                "tmdbKey" : "9a87huiufe94r8",
+                "userId" : 10,
+                "username" : "janedoe",
+                "weeklyAllowance" : 5
+              }, {
+                "email" : "jane@doe.com",
+                "emoji" : "🤗",
+                "enableAllowance" : true,
+                "enableBehaviorChart" : false,
+                "enableChores" : true,
+                "enableNoAds" : false,
+                "enableObjectDetection" : false,
+                "enableTmdb" : true,
+                "firstName" : "Jane",
+                "homeId" : 1,
+                "isActive" : true,
+                "isAdmin" : false,
+                "isBanned" : false,
+                "isChild" : true,
+                "isDisabled" : false,
+                "isLocked" : false,
+                "isMaster" : false,
+                "lastName" : "Doe",
+                "masterId" : 1,
+                "pushAllowance" : true,
+                "pushAllowanceNew" : true,
+                "pushChores" : true,
+                "pushChoresNew" : true,
+                "pushChoresReminders" : true,
+                "tmdbKey" : "9a87huiufe94r8",
+                "userId" : 10,
+                "username" : "janedoe",
+                "weeklyAllowance" : 5
+              } ]
+            },
+            "properties" : {
+              "success" : {
+                "example" : true,
+                "type" : "boolean"
+              },
+              "user" : {
+                "items" : {
+                  "$ref" : "#/components/schemas/user"
+                },
+                "type" : "array"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 21
+  }, {
+    "id" : "f490e331-fabc-4eca-b0ec-bf9afef3e000",
+    "name" : "deletes user (application/json)",
+    "request" : {
+      "urlPath" : "/kkid/userlist",
+      "method" : "DELETE",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/json"
+        }
+      },
+      "queryParameters" : {
+        "userID" : {
+          "equalTo" : "2905729209552437845"
+        }
+      }
+    },
+    "response" : {
+      "status" : 412,
+      "body" : "{\n  \"success\" : 0,\n  \"error\" : \"API Access Denied! Your API key is invalid or has expired!\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "f490e331-fabc-4eca-b0ec-bf9afef3e000",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:25:19.249328Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "kkid_userlist_delete",
+          "schema" : {
+            "description" : "API Key invalid",
+            "properties" : {
+              "error" : {
+                "example" : "API Access Denied! Your API key is invalid or has expired!",
+                "type" : "string"
+              },
+              "success" : {
+                "example" : 0,
+                "type" : "integer"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 22
+  }, {
+    "id" : "cd7f0c6d-34e0-4e6b-ad7f-75c76d5eadc1",
+    "name" : "deletes user - 409",
+    "request" : {
+      "urlPath" : "/kkid/userlist",
+      "method" : "DELETE",
+      "queryParameters" : {
+        "userID" : {
+          "equalTo" : "2967474024995879629"
+        }
+      }
+    },
+    "response" : {
+      "status" : 409
+    },
+    "uuid" : "cd7f0c6d-34e0-4e6b-ad7f-75c76d5eadc1",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:25:19.249266Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "kkid_userlist_delete"
+        }
+      }
+    },
+    "insertionIndex" : 23
+  }, {
+    "id" : "9ab5e2c6-e0d8-48bf-9932-08b0049aef3e",
+    "name" : "deletes user (application/json)",
+    "request" : {
+      "urlPath" : "/kkid/userlist",
+      "method" : "DELETE",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/json"
+        }
+      },
+      "queryParameters" : {
+        "userID" : {
+          "equalTo" : "765800197291901828"
+        }
+      }
+    },
+    "response" : {
+      "status" : 405,
+      "body" : "{\n  \"success\" : 0,\n  \"error\" : \"API Access Denied! Your API account does not have access to this Verb Method!\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "9ab5e2c6-e0d8-48bf-9932-08b0049aef3e",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:25:19.249226Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "kkid_userlist_delete",
+          "schema" : {
+            "description" : "API Access Denied",
+            "properties" : {
+              "error" : {
+                "example" : "API Access Denied! Your API account does not have access to this Verb Method!",
+                "type" : "string"
+              },
+              "success" : {
+                "example" : 0,
+                "type" : "integer"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 24
+  }, {
+    "id" : "efbe64ec-6e3f-49e9-8845-f684794bad31",
+    "name" : "deletes user - 202",
+    "request" : {
+      "urlPath" : "/kkid/userlist",
+      "method" : "DELETE",
+      "queryParameters" : {
+        "userID" : {
+          "equalTo" : "1772909190599227023"
+        }
+      }
+    },
+    "response" : {
+      "status" : 202
+    },
+    "uuid" : "efbe64ec-6e3f-49e9-8845-f684794bad31",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:25:19.249146Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "kkid_userlist_delete"
+        }
+      }
+    },
+    "insertionIndex" : 25
+  }, {
+    "id" : "92ec4d35-08fa-4f35-ae18-6bf8595d12c4",
+    "name" : "deletes user - 200",
+    "request" : {
+      "urlPath" : "/kkid/userlist",
+      "method" : "DELETE",
+      "queryParameters" : {
+        "userID" : {
+          "equalTo" : "3578625001155138475"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200
+    },
+    "uuid" : "92ec4d35-08fa-4f35-ae18-6bf8595d12c4",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:25:19.249116Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "kkid_userlist_delete"
+        }
+      }
+    },
+    "insertionIndex" : 26
+  }, {
+    "id" : "73591eb2-5dd5-41dd-beb6-2d35b254ad18",
+    "name" : "Gets user info",
+    "request" : {
+      "urlPath" : "/kkid/user",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"success\" : true,\n  \"user\" : [ {\n    \"email\" : \"jane@doe.com\",\n    \"emoji\" : \"🤗\",\n    \"enableAllowance\" : true,\n    \"enableBehaviorChart\" : false,\n    \"enableChores\" : true,\n    \"enableNoAds\" : false,\n    \"enableObjectDetection\" : false,\n    \"enableTmdb\" : true,\n    \"firstName\" : \"Jane\",\n    \"homeId\" : 1,\n    \"isActive\" : true,\n    \"isAdmin\" : false,\n    \"isBanned\" : false,\n    \"isChild\" : true,\n    \"isDisabled\" : false,\n    \"isLocked\" : false,\n    \"isMaster\" : false,\n    \"lastName\" : \"Doe\",\n    \"masterId\" : 1,\n    \"pushAllowance\" : true,\n    \"pushAllowanceNew\" : true,\n    \"pushChores\" : true,\n    \"pushChoresNew\" : true,\n    \"pushChoresReminders\" : true,\n    \"tmdbKey\" : \"9a87huiufe94r8\",\n    \"userId\" : 10,\n    \"username\" : \"janedoe\",\n    \"weeklyAllowance\" : 5\n  }, {\n    \"email\" : \"jane@doe.com\",\n    \"emoji\" : \"🤗\",\n    \"enableAllowance\" : true,\n    \"enableBehaviorChart\" : false,\n    \"enableChores\" : true,\n    \"enableNoAds\" : false,\n    \"enableObjectDetection\" : false,\n    \"enableTmdb\" : true,\n    \"firstName\" : \"Jane\",\n    \"homeId\" : 1,\n    \"isActive\" : true,\n    \"isAdmin\" : false,\n    \"isBanned\" : false,\n    \"isChild\" : true,\n    \"isDisabled\" : false,\n    \"isLocked\" : false,\n    \"isMaster\" : false,\n    \"lastName\" : \"Doe\",\n    \"masterId\" : 1,\n    \"pushAllowance\" : true,\n    \"pushAllowanceNew\" : true,\n    \"pushChores\" : true,\n    \"pushChoresNew\" : true,\n    \"pushChoresReminders\" : true,\n    \"tmdbKey\" : \"9a87huiufe94r8\",\n    \"userId\" : 10,\n    \"username\" : \"janedoe\",\n    \"weeklyAllowance\" : 5\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "73591eb2-5dd5-41dd-beb6-2d35b254ad18",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:25:19.249057Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "kkid_user_get",
+          "schema" : {
+            "description" : "userlist",
+            "example" : {
+              "success" : true,
+              "user" : [ {
+                "email" : "jane@doe.com",
+                "emoji" : "🤗",
+                "enableAllowance" : true,
+                "enableBehaviorChart" : false,
+                "enableChores" : true,
+                "enableNoAds" : false,
+                "enableObjectDetection" : false,
+                "enableTmdb" : true,
+                "firstName" : "Jane",
+                "homeId" : 1,
+                "isActive" : true,
+                "isAdmin" : false,
+                "isBanned" : false,
+                "isChild" : true,
+                "isDisabled" : false,
+                "isLocked" : false,
+                "isMaster" : false,
+                "lastName" : "Doe",
+                "masterId" : 1,
+                "pushAllowance" : true,
+                "pushAllowanceNew" : true,
+                "pushChores" : true,
+                "pushChoresNew" : true,
+                "pushChoresReminders" : true,
+                "tmdbKey" : "9a87huiufe94r8",
+                "userId" : 10,
+                "username" : "janedoe",
+                "weeklyAllowance" : 5
+              }, {
+                "email" : "jane@doe.com",
+                "emoji" : "🤗",
+                "enableAllowance" : true,
+                "enableBehaviorChart" : false,
+                "enableChores" : true,
+                "enableNoAds" : false,
+                "enableObjectDetection" : false,
+                "enableTmdb" : true,
+                "firstName" : "Jane",
+                "homeId" : 1,
+                "isActive" : true,
+                "isAdmin" : false,
+                "isBanned" : false,
+                "isChild" : true,
+                "isDisabled" : false,
+                "isLocked" : false,
+                "isMaster" : false,
+                "lastName" : "Doe",
+                "masterId" : 1,
+                "pushAllowance" : true,
+                "pushAllowanceNew" : true,
+                "pushChores" : true,
+                "pushChoresNew" : true,
+                "pushChoresReminders" : true,
+                "tmdbKey" : "9a87huiufe94r8",
+                "userId" : 10,
+                "username" : "janedoe",
+                "weeklyAllowance" : 5
+              } ]
+            },
+            "properties" : {
+              "success" : {
+                "example" : true,
+                "type" : "boolean"
+              },
+              "user" : {
+                "items" : {
+                  "$ref" : "#/components/schemas/user"
+                },
+                "type" : "array"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 27
+  }, {
+    "id" : "5965cbc6-928a-4c71-b397-cf3364efefa8",
+    "name" : "Create Share Link",
+    "request" : {
+      "urlPath" : "/kkid/share",
+      "method" : "GET",
+      "queryParameters" : {
+        "scope" : {
+          "equalTo" : "WishListAdmin"
+        },
+        "link" : {
+          "equalTo" : "https%3A%2F%2Fkhome.kumpeapps.com%2Fportal%2Fchores-today.php"
+        },
+        "linkUserId" : {
+          "equalTo" : "t261"
+        }
+      }
+    },
+    "response" : {
+      "status" : 201,
+      "body" : "{\n  \"auth_link\" : \"https://khome.kumpeapps.com/portal/wish-list.php?token=8ou7jyubj878h7iunk\",\n  \"success\" : true\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "5965cbc6-928a-4c71-b397-cf3364efefa8",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:25:19.248803Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "kkid_share_get",
+          "schema" : {
+            "example" : {
+              "auth_link" : "https://khome.kumpeapps.com/portal/wish-list.php?token=8ou7jyubj878h7iunk",
+              "success" : true
+            },
+            "properties" : {
+              "auth_link" : {
+                "example" : "https://khome.kumpeapps.com/portal/wish-list.php?token=8ou7jyubj878h7iunk",
+                "type" : "string"
+              },
+              "success" : {
+                "example" : true,
+                "type" : "boolean"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 28
+  }, {
+    "id" : "7d24b833-8b5b-44d9-9d8c-f9c261bd3bf7",
+    "name" : "adds new master user account - 409",
+    "request" : {
+      "urlPath" : "/kkid/masteruser",
+      "method" : "POST",
+      "queryParameters" : {
+        "firstName" : {
+          "equalTo" : "Thad"
+        },
+        "lastName" : {
+          "equalTo" : "Crona"
+        },
+        "password" : {
+          "equalTo" : "muj3khi0txni2nht0c93wc38yenmpuihxev4simebig1cy21qvg39d7god7elwfbb9udncyytwlkvo4t07h9z2xhjqqpzvzxbnuq90r8yqvrm5g37g1p6m6pc2gujqzgyoqifitj4wu7tte4vyeqn691jkl9yivtjhhd0inx5r6rwf8o8qpwdevd78uvjbeykg"
+        },
+        "email" : {
+          "equalTo" : "n69l0e6nz8umt5344by4uhxh51fmbqqo7h3yd4mk8d4m3x3x2ytozk5xnskajbgbpl7f8dnbx9l8mw0clkgnvblz8iz6ndabumbcj4qrucm7sq5p5upcmjga"
+        },
+        "username" : {
+          "equalTo" : "trey.kuphal"
+        }
+      }
+    },
+    "response" : {
+      "status" : 409
+    },
+    "uuid" : "7d24b833-8b5b-44d9-9d8c-f9c261bd3bf7",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:25:19.231838Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "kkid_masteruser_post"
+        }
+      }
+    },
+    "insertionIndex" : 29
+  }, {
+    "id" : "85129eeb-4b28-4c71-a82a-5a1e95291aa7",
+    "name" : "adds new master user account (application/json)",
+    "request" : {
+      "urlPath" : "/kkid/masteruser",
+      "method" : "POST",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/json"
+        }
+      },
+      "queryParameters" : {
+        "firstName" : {
+          "equalTo" : "Andrew"
+        },
+        "lastName" : {
+          "equalTo" : "Nikolaus"
+        },
+        "password" : {
+          "equalTo" : "pwmaittad5vqguzqlqw15m6p0m"
+        },
+        "email" : {
+          "equalTo" : "9mho86uwv5xuf2crq88mcjh"
+        },
+        "username" : {
+          "equalTo" : "michel.brakus"
+        }
+      }
+    },
+    "response" : {
+      "status" : 405,
+      "body" : "{\n  \"success\" : 0,\n  \"error\" : \"API Access Denied! Your API account does not have access to this Verb Method!\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "85129eeb-4b28-4c71-a82a-5a1e95291aa7",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:25:19.231674Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "kkid_masteruser_post",
+          "schema" : {
+            "description" : "API Access Denied",
+            "properties" : {
+              "error" : {
+                "example" : "API Access Denied! Your API account does not have access to this Verb Method!",
+                "type" : "string"
+              },
+              "success" : {
+                "example" : 0,
+                "type" : "integer"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 30
+  }, {
+    "id" : "bf1ea8bd-05c2-4dbe-8a2e-d4a773733c17",
+    "name" : "adds new master user account - 202",
+    "request" : {
+      "urlPath" : "/kkid/masteruser",
+      "method" : "POST",
+      "queryParameters" : {
+        "firstName" : {
+          "equalTo" : "BBBBo"
+        },
+        "lastName" : {
+          "equalTo" : "VonRueden"
+        },
+        "password" : {
+          "equalTo" : "zaq3ruy9hqpii63h4w1b3zbhws99ctwoljv00ljonso5585y5pnwkhj7wrrcir0n6tm2m94xt4eu"
+        },
+        "email" : {
+          "equalTo" : "j3jixtr6kkz6hd80sq0com8ulqwt7xqtdk1nj823f1ait98dm7rdci3yslkwm1z9s19pyqjnu94tsyn7n25lbsnv6t1r5nxb4k3gahzeca5qtzq23ybw97rbghrrpcdkx8ftwypavdpdlxw6ewm3rlcgmhqulczvaalzige2x7kmzsqr7h4e"
+        },
+        "username" : {
+          "equalTo" : "cortez.labadie"
+        }
+      }
+    },
+    "response" : {
+      "status" : 202
+    },
+    "uuid" : "bf1ea8bd-05c2-4dbe-8a2e-d4a773733c17",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:25:19.231477Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "kkid_masteruser_post"
+        }
+      }
+    },
+    "insertionIndex" : 31
+  }, {
+    "id" : "acaa6a08-2b12-4196-8f3d-193b4dc824b7",
+    "name" : "adds new master user account (application/json)",
+    "request" : {
+      "urlPath" : "/kkid/masteruser",
+      "method" : "POST",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/json"
+        }
+      },
+      "queryParameters" : {
+        "firstName" : {
+          "equalTo" : "Sacha"
+        },
+        "lastName" : {
+          "equalTo" : "Lowe"
+        },
+        "password" : {
+          "equalTo" : "0r0vr70rq8jh6vx2jduazggwi3oqn14s09qb4lgkqwbfxqq6boricua6fas3gak50aooevdh9wkgog1bu8oe1bwjccf0aojsbibqvwzeq8a6ervp4xzc"
+        },
+        "email" : {
+          "equalTo" : "l0d6593thv9v1wxihn88x73p4b5jrqaookx"
+        },
+        "username" : {
+          "equalTo" : "teodoro.zieme"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"added\" : { },\n  \"aff_added\" : \"aff_added\",\n  \"aff_id\" : \"aff_id\",\n  \"aff_payout_type\" : \"aff_payout_type\",\n  \"avatar\" : \"avatar\",\n  \"city\" : \"city\",\n  \"comment\" : \"Added Via KKids API\",\n  \"country\" : \"country\",\n  \"disable_lock_until\" : \"disable_lock_until\",\n  \"email\" : \"jane@doe.com\",\n  \"i_agree\" : \"0\",\n  \"is_affiliate\" : \"is_affiliate\",\n  \"is_locked\" : \"0\",\n  \"lang\" : \"lang\",\n  \"last_login\" : \"last_login\",\n  \"login\" : \"janedoe\",\n  \"name_f\" : \"Jane\",\n  \"name_l\" : \"Doe\",\n  \"pass\" : \"pass\",\n  \"pass_dattm\" : { },\n  \"phone\" : \"phone\",\n  \"pin\" : \"0\",\n  \"plain_password\" : \"plain_password\",\n  \"remember_key\" : \"remember_key\",\n  \"remote_addr\" : \"104.237.5.109\",\n  \"require_consent\" : \"require_consent\",\n  \"reseller_id\" : \"reseller_id\",\n  \"saved_form_id\" : \"saved_form_id\",\n  \"state\" : \"state\",\n  \"status\" : \"0\",\n  \"street\" : \"street\",\n  \"street2\" : \"street2\",\n  \"subusers_parent_id\" : \"0\",\n  \"tax_id\" : \"tax_id\",\n  \"unsubscribed\" : \"0\",\n  \"user_agent\" : \"user_agent\",\n  \"user_id\" : 1,\n  \"zip\" : \"zip\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "acaa6a08-2b12-4196-8f3d-193b4dc824b7",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:25:19.231225Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "kkid_masteruser_post",
+          "schema" : {
+            "description" : "add user",
+            "example" : {
+              "added" : { },
+              "aff_added" : "aff_added",
+              "aff_id" : "aff_id",
+              "aff_payout_type" : "aff_payout_type",
+              "avatar" : "avatar",
+              "city" : "city",
+              "comment" : "Added Via KKids API",
+              "country" : "country",
+              "disable_lock_until" : "disable_lock_until",
+              "email" : "jane@doe.com",
+              "i_agree" : "0",
+              "is_affiliate" : "is_affiliate",
+              "is_locked" : "0",
+              "lang" : "lang",
+              "last_login" : "last_login",
+              "login" : "janedoe",
+              "name_f" : "Jane",
+              "name_l" : "Doe",
+              "pass" : "pass",
+              "pass_dattm" : { },
+              "phone" : "phone",
+              "pin" : "0",
+              "plain_password" : "plain_password",
+              "remember_key" : "remember_key",
+              "remote_addr" : "104.237.5.109",
+              "require_consent" : "require_consent",
+              "reseller_id" : "reseller_id",
+              "saved_form_id" : "saved_form_id",
+              "state" : "state",
+              "status" : "0",
+              "street" : "street",
+              "street2" : "street2",
+              "subusers_parent_id" : "0",
+              "tax_id" : "tax_id",
+              "unsubscribed" : "0",
+              "user_agent" : "user_agent",
+              "user_id" : 1,
+              "zip" : "zip"
+            },
+            "properties" : {
+              "added" : {
+                "example" : "{}",
+                "type" : "string"
+              },
+              "aff_added" : {
+                "type" : "string"
+              },
+              "aff_id" : {
+                "type" : "string"
+              },
+              "aff_payout_type" : {
+                "type" : "string"
+              },
+              "avatar" : {
+                "type" : "string"
+              },
+              "city" : {
+                "type" : "string"
+              },
+              "comment" : {
+                "example" : "Added Via KKids API",
+                "type" : "string"
+              },
+              "country" : {
+                "type" : "string"
+              },
+              "disable_lock_until" : {
+                "type" : "string"
+              },
+              "email" : {
+                "example" : "jane@doe.com",
+                "type" : "string"
+              },
+              "i_agree" : {
+                "example" : "0",
+                "type" : "string"
+              },
+              "is_affiliate" : {
+                "type" : "string"
+              },
+              "is_locked" : {
+                "example" : "0",
+                "type" : "string"
+              },
+              "lang" : {
+                "type" : "string"
+              },
+              "last_login" : {
+                "type" : "string"
+              },
+              "login" : {
+                "example" : "janedoe",
+                "type" : "string"
+              },
+              "name_f" : {
+                "example" : "Jane",
+                "type" : "string"
+              },
+              "name_l" : {
+                "example" : "Doe",
+                "type" : "string"
+              },
+              "pass" : {
+                "type" : "string"
+              },
+              "pass_dattm" : {
+                "example" : "{}",
+                "type" : "string"
+              },
+              "phone" : {
+                "type" : "string"
+              },
+              "pin" : {
+                "example" : "0",
+                "type" : "string"
+              },
+              "plain_password" : {
+                "type" : "string"
+              },
+              "remember_key" : {
+                "type" : "string"
+              },
+              "remote_addr" : {
+                "example" : "104.237.5.109",
+                "type" : "string"
+              },
+              "require_consent" : {
+                "type" : "string"
+              },
+              "reseller_id" : {
+                "type" : "string"
+              },
+              "saved_form_id" : {
+                "type" : "string"
+              },
+              "state" : {
+                "type" : "string"
+              },
+              "status" : {
+                "example" : "0",
+                "type" : "string"
+              },
+              "street" : {
+                "type" : "string"
+              },
+              "street2" : {
+                "type" : "string"
+              },
+              "subusers_parent_id" : {
+                "example" : "0",
+                "type" : "string"
+              },
+              "tax_id" : {
+                "type" : "string"
+              },
+              "unsubscribed" : {
+                "example" : "0",
+                "type" : "string"
+              },
+              "user_agent" : {
+                "type" : "string"
+              },
+              "user_id" : {
+                "example" : 1,
+                "type" : "integer"
+              },
+              "zip" : {
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 32
+  }, {
+    "id" : "6fa4845e-b6d1-4bbb-8661-9638c3bb06e1",
+    "name" : "updates chore for given chore id (application/json)",
+    "request" : {
+      "urlPath" : "/kkid/chorelist",
+      "method" : "PUT",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/json"
+        }
+      },
+      "queryParameters" : {
+        "idChoreList" : {
+          "equalTo" : "6031755453943286781"
+        }
+      }
+    },
+    "response" : {
+      "status" : 412,
+      "body" : "{\n  \"success\" : 0,\n  \"error\" : \"API Access Denied! Your API key is invalid or has expired!\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "6fa4845e-b6d1-4bbb-8661-9638c3bb06e1",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:25:19.230654Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "kkid_chorelist_put",
+          "schema" : {
+            "description" : "API Key invalid",
+            "properties" : {
+              "error" : {
+                "example" : "API Access Denied! Your API key is invalid or has expired!",
+                "type" : "string"
+              },
+              "success" : {
+                "example" : 0,
+                "type" : "integer"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 33
+  }, {
+    "id" : "cd5a461a-c154-4ddb-8977-a51cecf1893f",
+    "name" : "updates chore for given chore id (application/json)",
+    "request" : {
+      "urlPath" : "/kkid/chorelist",
+      "method" : "PUT",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/json"
+        }
+      },
+      "queryParameters" : {
+        "idChoreList" : {
+          "equalTo" : "9184878650353435276"
+        }
+      }
+    },
+    "response" : {
+      "status" : 405,
+      "body" : "{\n  \"success\" : 0,\n  \"error\" : \"API Access Denied! Your API account does not have access to this Verb Method!\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "cd5a461a-c154-4ddb-8977-a51cecf1893f",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:25:19.23059Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "kkid_chorelist_put",
+          "schema" : {
+            "description" : "API Access Denied",
+            "properties" : {
+              "error" : {
+                "example" : "API Access Denied! Your API account does not have access to this Verb Method!",
+                "type" : "string"
+              },
+              "success" : {
+                "example" : 0,
+                "type" : "integer"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 34
+  }, {
+    "id" : "54edc0fe-815f-45e3-aa85-a12930409357",
+    "name" : "updates chore for given chore id - 403",
+    "request" : {
+      "urlPath" : "/kkid/chorelist",
+      "method" : "PUT",
+      "queryParameters" : {
+        "idChoreList" : {
+          "equalTo" : "5352372589698249475"
+        }
+      }
+    },
+    "response" : {
+      "status" : 403
+    },
+    "uuid" : "54edc0fe-815f-45e3-aa85-a12930409357",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:25:19.230534Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "kkid_chorelist_put"
+        }
+      }
+    },
+    "insertionIndex" : 35
+  }, {
+    "id" : "3352d12d-f7e0-4563-a09c-59b2c32ef414",
+    "name" : "updates chore for given chore id - 401",
+    "request" : {
+      "urlPath" : "/kkid/chorelist",
+      "method" : "PUT",
+      "queryParameters" : {
+        "idChoreList" : {
+          "equalTo" : "7337357569050757861"
+        }
+      }
+    },
+    "response" : {
+      "status" : 401
+    },
+    "uuid" : "3352d12d-f7e0-4563-a09c-59b2c32ef414",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:25:19.230505Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "kkid_chorelist_put"
+        }
+      }
+    },
+    "insertionIndex" : 36
+  }, {
+    "id" : "3050e053-760b-46f6-9480-6dd0982b70ee",
+    "name" : "updates chore for given chore id - 400",
+    "request" : {
+      "urlPath" : "/kkid/chorelist",
+      "method" : "PUT",
+      "queryParameters" : {
+        "idChoreList" : {
+          "equalTo" : "5025480907373973079"
+        }
+      }
+    },
+    "response" : {
+      "status" : 400
+    },
+    "uuid" : "3050e053-760b-46f6-9480-6dd0982b70ee",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:25:19.230477Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "kkid_chorelist_put"
+        }
+      }
+    },
+    "insertionIndex" : 37
+  }, {
+    "id" : "c4d7af44-9782-4736-8d8a-3efc8f60b92d",
+    "name" : "updates chore for given chore id (application/json)",
+    "request" : {
+      "urlPath" : "/kkid/chorelist",
+      "method" : "PUT",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/json"
+        }
+      },
+      "queryParameters" : {
+        "idChoreList" : {
+          "equalTo" : "3615256785701012183"
+        }
+      }
+    },
+    "response" : {
+      "status" : 206,
+      "body" : "{\n  \"error\" : \"No Data Found\",\n  \"status\" : 0\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "c4d7af44-9782-4736-8d8a-3efc8f60b92d",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:25:19.230438Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "kkid_chorelist_put",
+          "schema" : {
+            "description" : "nodata",
+            "properties" : {
+              "error" : {
+                "example" : "No Data Found",
+                "type" : "string"
+              },
+              "status" : {
+                "example" : 0,
+                "type" : "integer"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 38
+  }, {
+    "id" : "1353afec-9ee2-448e-9311-081fe7878930",
+    "name" : "updates chore for given chore id - 202",
+    "request" : {
+      "urlPath" : "/kkid/chorelist",
+      "method" : "PUT",
+      "queryParameters" : {
+        "idChoreList" : {
+          "equalTo" : "674780625917435477"
+        }
+      }
+    },
+    "response" : {
+      "status" : 202
+    },
+    "uuid" : "1353afec-9ee2-448e-9311-081fe7878930",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:25:19.230376Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "kkid_chorelist_put"
+        }
+      }
+    },
+    "insertionIndex" : 39
+  }, {
+    "id" : "0050ead4-2fd2-4b28-9bb0-c2440a1e2555",
+    "name" : "updates chore for given chore id (application/json)",
+    "request" : {
+      "urlPath" : "/kkid/chorelist",
+      "method" : "PUT",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/json"
+        }
+      },
+      "queryParameters" : {
+        "idChoreList" : {
+          "equalTo" : "6772161815888222746"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"message\" : \"success\",\n  \"success\" : true\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "0050ead4-2fd2-4b28-9bb0-c2440a1e2555",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:25:19.230337Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "kkid_chorelist_put",
+          "schema" : {
+            "description" : "Success",
+            "example" : {
+              "message" : "success",
+              "success" : true
+            },
+            "properties" : {
+              "message" : {
+                "example" : "success",
+                "type" : "string"
+              },
+              "success" : {
+                "example" : true,
+                "type" : "boolean"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 40
+  }, {
+    "id" : "219b7f8f-08ee-4593-9005-62e18cc9e421",
+    "name" : "adds chore for given user (application/json)",
+    "request" : {
+      "urlPath" : "/kkid/chorelist",
+      "method" : "POST",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/json"
+        }
+      },
+      "queryParameters" : {
+        "kidUsername" : {
+          "equalTo" : "sam.mcdermott"
+        },
+        "choreName" : {
+          "equalTo" : "Shaunda+Rogahn"
+        }
+      }
+    },
+    "response" : {
+      "status" : 412,
+      "body" : "{\n  \"success\" : 0,\n  \"error\" : \"API Access Denied! Your API key is invalid or has expired!\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "219b7f8f-08ee-4593-9005-62e18cc9e421",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:25:19.23025Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "kkid_chorelist_post",
+          "schema" : {
+            "description" : "API Key invalid",
+            "properties" : {
+              "error" : {
+                "example" : "API Access Denied! Your API key is invalid or has expired!",
+                "type" : "string"
+              },
+              "success" : {
+                "example" : 0,
+                "type" : "integer"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 41
+  }, {
+    "id" : "3cd60be1-6e08-4493-933d-84180c8079be",
+    "name" : "adds chore for given user - 409",
+    "request" : {
+      "urlPath" : "/kkid/chorelist",
+      "method" : "POST",
+      "queryParameters" : {
+        "kidUsername" : {
+          "equalTo" : "teodoro.heidenreich"
+        },
+        "choreName" : {
+          "equalTo" : "Hollis+White"
+        }
+      }
+    },
+    "response" : {
+      "status" : 409
+    },
+    "uuid" : "3cd60be1-6e08-4493-933d-84180c8079be",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:25:19.230116Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "kkid_chorelist_post"
+        }
+      }
+    },
+    "insertionIndex" : 42
+  }, {
+    "id" : "9fd90086-b28b-4f74-b63c-4fd7bdced53b",
+    "name" : "adds chore for given user (application/json)",
+    "request" : {
+      "urlPath" : "/kkid/chorelist",
+      "method" : "POST",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/json"
+        }
+      },
+      "queryParameters" : {
+        "kidUsername" : {
+          "equalTo" : "dusty.konopelski"
+        },
+        "choreName" : {
+          "equalTo" : "Miss+Sergio+Frami"
+        }
+      }
+    },
+    "response" : {
+      "status" : 405,
+      "body" : "{\n  \"success\" : 0,\n  \"error\" : \"API Access Denied! Your API account does not have access to this Verb Method!\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "9fd90086-b28b-4f74-b63c-4fd7bdced53b",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:25:19.229999Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "kkid_chorelist_post",
+          "schema" : {
+            "description" : "API Access Denied",
+            "properties" : {
+              "error" : {
+                "example" : "API Access Denied! Your API account does not have access to this Verb Method!",
+                "type" : "string"
+              },
+              "success" : {
+                "example" : 0,
+                "type" : "integer"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 43
+  }, {
+    "id" : "133c4a0c-06a9-48c5-9047-a578f0ed7cb3",
+    "name" : "adds chore for given user - 403",
+    "request" : {
+      "urlPath" : "/kkid/chorelist",
+      "method" : "POST",
+      "queryParameters" : {
+        "kidUsername" : {
+          "equalTo" : "edward.gerlach"
+        },
+        "choreName" : {
+          "equalTo" : "Donnie+Bayer"
+        }
+      }
+    },
+    "response" : {
+      "status" : 403
+    },
+    "uuid" : "133c4a0c-06a9-48c5-9047-a578f0ed7cb3",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:25:19.229813Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "kkid_chorelist_post"
+        }
+      }
+    },
+    "insertionIndex" : 44
+  }, {
+    "id" : "adcce8bf-5cf8-4043-be68-54eba05b3d46",
+    "name" : "adds chore for given user - 401",
+    "request" : {
+      "urlPath" : "/kkid/chorelist",
+      "method" : "POST",
+      "queryParameters" : {
+        "kidUsername" : {
+          "equalTo" : "damien.medhurst"
+        },
+        "choreName" : {
+          "equalTo" : "Mrs.+Ilse+Considine"
+        }
+      }
+    },
+    "response" : {
+      "status" : 401
+    },
+    "uuid" : "adcce8bf-5cf8-4043-be68-54eba05b3d46",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:25:19.22971Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "kkid_chorelist_post"
+        }
+      }
+    },
+    "insertionIndex" : 45
+  }, {
+    "id" : "82846291-7564-47c8-a03f-ff5d24b74150",
+    "name" : "adds chore for given user - 400",
+    "request" : {
+      "urlPath" : "/kkid/chorelist",
+      "method" : "POST",
+      "queryParameters" : {
+        "kidUsername" : {
+          "equalTo" : "greg.mckenzie"
+        },
+        "choreName" : {
+          "equalTo" : "Bert+Lowe"
+        }
+      }
+    },
+    "response" : {
+      "status" : 400
+    },
+    "uuid" : "82846291-7564-47c8-a03f-ff5d24b74150",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:25:19.229563Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "kkid_chorelist_post"
+        }
+      }
+    },
+    "insertionIndex" : 46
+  }, {
+    "id" : "87c2de82-fdf4-4481-ad13-6805b31acb61",
+    "name" : "adds chore for given user (application/json)",
+    "request" : {
+      "urlPath" : "/kkid/chorelist",
+      "method" : "POST",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/json"
+        }
+      },
+      "queryParameters" : {
+        "kidUsername" : {
+          "equalTo" : "vernita.ruecker"
+        },
+        "choreName" : {
+          "equalTo" : "Courtney+Jenkins"
+        }
+      }
+    },
+    "response" : {
+      "status" : 206,
+      "body" : "{\n  \"error\" : \"No Data Found\",\n  \"status\" : 0\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "87c2de82-fdf4-4481-ad13-6805b31acb61",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:25:19.229302Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "kkid_chorelist_post",
+          "schema" : {
+            "description" : "nodata",
+            "properties" : {
+              "error" : {
+                "example" : "No Data Found",
+                "type" : "string"
+              },
+              "status" : {
+                "example" : 0,
+                "type" : "integer"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 47
+  }, {
+    "id" : "ed13266b-9d1a-49ee-8233-7103e8853350",
+    "name" : "adds chore for given user - 202",
+    "request" : {
+      "urlPath" : "/kkid/chorelist",
+      "method" : "POST",
+      "queryParameters" : {
+        "kidUsername" : {
+          "equalTo" : "richelle.mitchell"
+        },
+        "choreName" : {
+          "equalTo" : "Jeffry+Kreiger"
+        }
+      }
+    },
+    "response" : {
+      "status" : 202
+    },
+    "uuid" : "ed13266b-9d1a-49ee-8233-7103e8853350",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:25:19.229173Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "kkid_chorelist_post"
+        }
+      }
+    },
+    "insertionIndex" : 48
+  }, {
+    "id" : "250b614d-598a-45e5-98cd-80631fc9a266",
+    "name" : "adds chore for given user (application/json)",
+    "request" : {
+      "urlPath" : "/kkid/chorelist",
+      "method" : "POST",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/json"
+        }
+      },
+      "queryParameters" : {
+        "kidUsername" : {
+          "equalTo" : "ronnie.dubuque"
+        },
+        "choreName" : {
+          "equalTo" : "Clarita+Thiel"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"message\" : \"success\",\n  \"success\" : true\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "250b614d-598a-45e5-98cd-80631fc9a266",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:25:19.229064Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "kkid_chorelist_post",
+          "schema" : {
+            "description" : "Success",
+            "example" : {
+              "message" : "success",
+              "success" : true
+            },
+            "properties" : {
+              "message" : {
+                "example" : "success",
+                "type" : "string"
+              },
+              "success" : {
+                "example" : true,
+                "type" : "boolean"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 49
+  }, {
+    "id" : "1366d87b-ed7d-4a0e-a4e0-0a55eba5f2da",
+    "name" : "returns list of chores for given user (application/json)",
+    "request" : {
+      "urlPath" : "/kkid/chorelist",
+      "method" : "GET",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/json"
+        }
+      }
+    },
+    "response" : {
+      "status" : 412,
+      "body" : "{\n  \"success\" : 0,\n  \"error\" : \"API Access Denied! Your API key is invalid or has expired!\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "1366d87b-ed7d-4a0e-a4e0-0a55eba5f2da",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:25:19.228872Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "kkid_chorelist_get",
+          "schema" : {
+            "description" : "API Key invalid",
+            "properties" : {
+              "error" : {
+                "example" : "API Access Denied! Your API key is invalid or has expired!",
+                "type" : "string"
+              },
+              "success" : {
+                "example" : 0,
+                "type" : "integer"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 50
+  }, {
+    "id" : "c0500a39-a024-4263-b406-785423a52b6c",
+    "name" : "returns list of chores for given user (application/json)",
+    "request" : {
+      "urlPath" : "/kkid/chorelist",
+      "method" : "GET",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/json"
+        }
+      }
+    },
+    "response" : {
+      "status" : 405,
+      "body" : "{\n  \"success\" : 0,\n  \"error\" : \"API Access Denied! Your API account does not have access to this Verb Method!\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "c0500a39-a024-4263-b406-785423a52b6c",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:25:19.228821Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "kkid_chorelist_get",
+          "schema" : {
+            "description" : "API Access Denied",
+            "properties" : {
+              "error" : {
+                "example" : "API Access Denied! Your API account does not have access to this Verb Method!",
+                "type" : "string"
+              },
+              "success" : {
+                "example" : 0,
+                "type" : "integer"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 51
+  }, {
+    "id" : "4422b086-22d3-465e-a042-5e74babe07df",
+    "name" : "returns list of chores for given user - 403",
+    "request" : {
+      "urlPath" : "/kkid/chorelist",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 403
+    },
+    "uuid" : "4422b086-22d3-465e-a042-5e74babe07df",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:25:19.228781Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "kkid_chorelist_get"
+        }
+      }
+    },
+    "insertionIndex" : 52
+  }, {
+    "id" : "1cc18d92-dd74-4322-b540-28829953abce",
+    "name" : "returns list of chores for given user - 401",
+    "request" : {
+      "urlPath" : "/kkid/chorelist",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 401
+    },
+    "uuid" : "1cc18d92-dd74-4322-b540-28829953abce",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:25:19.228765Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "kkid_chorelist_get"
+        }
+      }
+    },
+    "insertionIndex" : 53
+  }, {
+    "id" : "8c214518-d576-4714-9314-843fa698cb5c",
+    "name" : "returns list of chores for given user - 400",
+    "request" : {
+      "urlPath" : "/kkid/chorelist",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 400
+    },
+    "uuid" : "8c214518-d576-4714-9314-843fa698cb5c",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:25:19.228749Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "kkid_chorelist_get"
+        }
+      }
+    },
+    "insertionIndex" : 54
+  }, {
+    "id" : "6b481d73-aadd-4ef5-a63b-eb02b121f249",
+    "name" : "returns list of chores for given user (application/json)",
+    "request" : {
+      "urlPath" : "/kkid/chorelist",
+      "method" : "GET",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/json"
+        }
+      }
+    },
+    "response" : {
+      "status" : 206,
+      "body" : "{\n  \"error\" : \"No Data Found\",\n  \"status\" : 0\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "6b481d73-aadd-4ef5-a63b-eb02b121f249",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:25:19.228725Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "kkid_chorelist_get",
+          "schema" : {
+            "description" : "nodata",
+            "properties" : {
+              "error" : {
+                "example" : "No Data Found",
+                "type" : "string"
+              },
+              "status" : {
+                "example" : 0,
+                "type" : "integer"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 55
+  }, {
+    "id" : "38129b4d-01e8-4f7a-b50c-23e2100e0418",
+    "name" : "returns list of chores for given user - 202",
+    "request" : {
+      "urlPath" : "/kkid/chorelist",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 202
+    },
+    "uuid" : "38129b4d-01e8-4f7a-b50c-23e2100e0418",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:25:19.228682Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "kkid_chorelist_get"
+        }
+      }
+    },
+    "insertionIndex" : 56
+  }, {
+    "id" : "b1be7b8f-c17b-4185-968c-50cb2da51069",
+    "name" : "returns list of chores for given user (application/json)",
+    "request" : {
+      "urlPath" : "/kkid/chorelist",
+      "method" : "GET",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/json"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"chore\" : [ {\n    \"aiIcon\" : \"n\",\n    \"altitude\" : 1,\n    \"blockDash\" : false,\n    \"choreDescription\" : \"Wash dishes and clean off counter\",\n    \"choreName\" : \"Wash Dishes\",\n    \"choreNumber\" : 1,\n    \"day\" : \"Monday\",\n    \"extraAllowance\" : 5,\n    \"idChoreList\" : 1,\n    \"isCalendar\" : false,\n    \"kid\" : \"jane\",\n    \"latitude\" : 0,\n    \"longitude\" : 6,\n    \"nfcTag\" : \"kkids//Chores?washdishestag\",\n    \"notes\" : \"notes\",\n    \"oneTime\" : false,\n    \"optional\" : false,\n    \"reassignable\" : true,\n    \"reassigned\" : false,\n    \"requireObjectDetection\" : \"bed\",\n    \"startDate\" : { },\n    \"status\" : \"todo\",\n    \"stolen\" : false,\n    \"stolenBy\" : \"stolenBy\",\n    \"updated\" : { },\n    \"updatedBy\" : \"janedoe\"\n  }, {\n    \"aiIcon\" : \"n\",\n    \"altitude\" : 1,\n    \"blockDash\" : false,\n    \"choreDescription\" : \"Wash dishes and clean off counter\",\n    \"choreName\" : \"Wash Dishes\",\n    \"choreNumber\" : 1,\n    \"day\" : \"Monday\",\n    \"extraAllowance\" : 5,\n    \"idChoreList\" : 1,\n    \"isCalendar\" : false,\n    \"kid\" : \"jane\",\n    \"latitude\" : 0,\n    \"longitude\" : 6,\n    \"nfcTag\" : \"kkids//Chores?washdishestag\",\n    \"notes\" : \"notes\",\n    \"oneTime\" : false,\n    \"optional\" : false,\n    \"reassignable\" : true,\n    \"reassigned\" : false,\n    \"requireObjectDetection\" : \"bed\",\n    \"startDate\" : { },\n    \"status\" : \"todo\",\n    \"stolen\" : false,\n    \"stolenBy\" : \"stolenBy\",\n    \"updated\" : { },\n    \"updatedBy\" : \"janedoe\"\n  } ],\n  \"success\" : 1\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "b1be7b8f-c17b-4185-968c-50cb2da51069",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:25:19.228649Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "kkid_chorelist_get",
+          "schema" : {
+            "description" : "chorelist",
+            "example" : {
+              "chore" : [ {
+                "aiIcon" : "n",
+                "altitude" : 1,
+                "blockDash" : false,
+                "choreDescription" : "Wash dishes and clean off counter",
+                "choreName" : "Wash Dishes",
+                "choreNumber" : 1,
+                "day" : "Monday",
+                "extraAllowance" : 5,
+                "idChoreList" : 1,
+                "isCalendar" : false,
+                "kid" : "jane",
+                "latitude" : 0,
+                "longitude" : 6,
+                "nfcTag" : "kkids//Chores?washdishestag",
+                "notes" : "notes",
+                "oneTime" : false,
+                "optional" : false,
+                "reassignable" : true,
+                "reassigned" : false,
+                "requireObjectDetection" : "bed",
+                "startDate" : { },
+                "status" : "todo",
+                "stolen" : false,
+                "stolenBy" : "stolenBy",
+                "updated" : { },
+                "updatedBy" : "janedoe"
+              }, {
+                "aiIcon" : "n",
+                "altitude" : 1,
+                "blockDash" : false,
+                "choreDescription" : "Wash dishes and clean off counter",
+                "choreName" : "Wash Dishes",
+                "choreNumber" : 1,
+                "day" : "Monday",
+                "extraAllowance" : 5,
+                "idChoreList" : 1,
+                "isCalendar" : false,
+                "kid" : "jane",
+                "latitude" : 0,
+                "longitude" : 6,
+                "nfcTag" : "kkids//Chores?washdishestag",
+                "notes" : "notes",
+                "oneTime" : false,
+                "optional" : false,
+                "reassignable" : true,
+                "reassigned" : false,
+                "requireObjectDetection" : "bed",
+                "startDate" : { },
+                "status" : "todo",
+                "stolen" : false,
+                "stolenBy" : "stolenBy",
+                "updated" : { },
+                "updatedBy" : "janedoe"
+              } ],
+              "success" : 1
+            },
+            "properties" : {
+              "chore" : {
+                "items" : {
+                  "$ref" : "#/components/schemas/chore"
+                },
+                "type" : "array"
+              },
+              "success" : {
+                "example" : 1,
+                "type" : "integer"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 57
+  }, {
+    "id" : "6ee39eda-508e-4129-ac47-a5af99a67386",
+    "name" : "deletes chore for given chore id (application/json)",
+    "request" : {
+      "urlPath" : "/kkid/chorelist",
+      "method" : "DELETE",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/json"
+        }
+      },
+      "queryParameters" : {
+        "idChoreList" : {
+          "equalTo" : "3752392575843051058"
+        }
+      }
+    },
+    "response" : {
+      "status" : 412,
+      "body" : "{\n  \"success\" : 0,\n  \"error\" : \"API Access Denied! Your API key is invalid or has expired!\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "6ee39eda-508e-4129-ac47-a5af99a67386",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:25:19.228515Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "kkid_chorelist_delete",
+          "schema" : {
+            "description" : "API Key invalid",
+            "properties" : {
+              "error" : {
+                "example" : "API Access Denied! Your API key is invalid or has expired!",
+                "type" : "string"
+              },
+              "success" : {
+                "example" : 0,
+                "type" : "integer"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 58
+  }, {
+    "id" : "07d2be28-1367-4eb8-9872-10a7fe0177fc",
+    "name" : "deletes chore for given chore id - 409",
+    "request" : {
+      "urlPath" : "/kkid/chorelist",
+      "method" : "DELETE",
+      "queryParameters" : {
+        "idChoreList" : {
+          "equalTo" : "4590038935387903405"
+        }
+      }
+    },
+    "response" : {
+      "status" : 409
+    },
+    "uuid" : "07d2be28-1367-4eb8-9872-10a7fe0177fc",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:25:19.228465Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "kkid_chorelist_delete"
+        }
+      }
+    },
+    "insertionIndex" : 59
+  }, {
+    "id" : "c9530886-2cab-4f82-8ce7-76c10957b488",
+    "name" : "deletes chore for given chore id (application/json)",
+    "request" : {
+      "urlPath" : "/kkid/chorelist",
+      "method" : "DELETE",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/json"
+        }
+      },
+      "queryParameters" : {
+        "idChoreList" : {
+          "equalTo" : "8930439166321284116"
+        }
+      }
+    },
+    "response" : {
+      "status" : 405,
+      "body" : "{\n  \"success\" : 0,\n  \"error\" : \"API Access Denied! Your API account does not have access to this Verb Method!\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "c9530886-2cab-4f82-8ce7-76c10957b488",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:25:19.228431Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "kkid_chorelist_delete",
+          "schema" : {
+            "description" : "API Access Denied",
+            "properties" : {
+              "error" : {
+                "example" : "API Access Denied! Your API account does not have access to this Verb Method!",
+                "type" : "string"
+              },
+              "success" : {
+                "example" : 0,
+                "type" : "integer"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 60
+  }, {
+    "id" : "c432021f-d6ab-463a-b291-9f373d174332",
+    "name" : "deletes chore for given chore id - 403",
+    "request" : {
+      "urlPath" : "/kkid/chorelist",
+      "method" : "DELETE",
+      "queryParameters" : {
+        "idChoreList" : {
+          "equalTo" : "1084890747054210143"
+        }
+      }
+    },
+    "response" : {
+      "status" : 403
+    },
+    "uuid" : "c432021f-d6ab-463a-b291-9f373d174332",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:25:19.22838Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "kkid_chorelist_delete"
+        }
+      }
+    },
+    "insertionIndex" : 61
+  }, {
+    "id" : "68e18aa7-2d4f-4aca-9fa5-1c6369ab21f3",
+    "name" : "deletes chore for given chore id - 401",
+    "request" : {
+      "urlPath" : "/kkid/chorelist",
+      "method" : "DELETE",
+      "queryParameters" : {
+        "idChoreList" : {
+          "equalTo" : "6794325775245013409"
+        }
+      }
+    },
+    "response" : {
+      "status" : 401
+    },
+    "uuid" : "68e18aa7-2d4f-4aca-9fa5-1c6369ab21f3",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:25:19.228354Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "kkid_chorelist_delete"
+        }
+      }
+    },
+    "insertionIndex" : 62
+  }, {
+    "id" : "795a2ec7-05d5-47bf-868b-f261e2c63326",
+    "name" : "deletes chore for given chore id - 400",
+    "request" : {
+      "urlPath" : "/kkid/chorelist",
+      "method" : "DELETE",
+      "queryParameters" : {
+        "idChoreList" : {
+          "equalTo" : "1700174636914457506"
+        }
+      }
+    },
+    "response" : {
+      "status" : 400
+    },
+    "uuid" : "795a2ec7-05d5-47bf-868b-f261e2c63326",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:25:19.228328Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "kkid_chorelist_delete"
+        }
+      }
+    },
+    "insertionIndex" : 63
+  }, {
+    "id" : "b448ca74-a024-4019-a94a-5bba488c2864",
+    "name" : "deletes chore for given chore id (application/json)",
+    "request" : {
+      "urlPath" : "/kkid/chorelist",
+      "method" : "DELETE",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/json"
+        }
+      },
+      "queryParameters" : {
+        "idChoreList" : {
+          "equalTo" : "8361085313146040700"
+        }
+      }
+    },
+    "response" : {
+      "status" : 206,
+      "body" : "{\n  \"error\" : \"No Data Found\",\n  \"status\" : 0\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "b448ca74-a024-4019-a94a-5bba488c2864",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:25:19.228293Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "kkid_chorelist_delete",
+          "schema" : {
+            "description" : "nodata",
+            "properties" : {
+              "error" : {
+                "example" : "No Data Found",
+                "type" : "string"
+              },
+              "status" : {
+                "example" : 0,
+                "type" : "integer"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 64
+  }, {
+    "id" : "0c3f763c-a9ac-4e8c-b6dd-8abb29f7d30e",
+    "name" : "deletes chore for given chore id - 202",
+    "request" : {
+      "urlPath" : "/kkid/chorelist",
+      "method" : "DELETE",
+      "queryParameters" : {
+        "idChoreList" : {
+          "equalTo" : "7500358390292079069"
+        }
+      }
+    },
+    "response" : {
+      "status" : 202
+    },
+    "uuid" : "0c3f763c-a9ac-4e8c-b6dd-8abb29f7d30e",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:25:19.228243Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "kkid_chorelist_delete"
+        }
+      }
+    },
+    "insertionIndex" : 65
+  }, {
+    "id" : "084df9b4-b7ef-4dc4-8f22-a0131831b976",
+    "name" : "deletes chore for given chore id (application/json)",
+    "request" : {
+      "urlPath" : "/kkid/chorelist",
+      "method" : "DELETE",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/json"
+        }
+      },
+      "queryParameters" : {
+        "idChoreList" : {
+          "equalTo" : "1065688265574581228"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"message\" : \"success\",\n  \"success\" : true\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "084df9b4-b7ef-4dc4-8f22-a0131831b976",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:25:19.228208Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "kkid_chorelist_delete",
+          "schema" : {
+            "description" : "Success",
+            "example" : {
+              "message" : "success",
+              "success" : true
+            },
+            "properties" : {
+              "message" : {
+                "example" : "success",
+                "type" : "string"
+              },
+              "success" : {
+                "example" : true,
+                "type" : "boolean"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 66
+  }, {
+    "id" : "ff05181d-d6d2-4616-a826-05de55850a51",
+    "name" : "subscribes/unsubscribes/registers for apns push notifications (application/json)",
+    "request" : {
+      "urlPath" : "/kkid/apns",
+      "method" : "POST",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/json"
+        }
+      },
+      "queryParameters" : {
+        "kidUserId" : {
+          "equalTo" : "2871729925278205380"
+        },
+        "tool" : {
+          "equalTo" : "subscribe"
+        }
+      }
+    },
+    "response" : {
+      "status" : 412,
+      "body" : "{\n  \"success\" : 0,\n  \"error\" : \"API Access Denied! Your API key is invalid or has expired!\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "ff05181d-d6d2-4616-a826-05de55850a51",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:25:19.228138Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "kkid_apns_post",
+          "schema" : {
+            "description" : "API Key invalid",
+            "properties" : {
+              "error" : {
+                "example" : "API Access Denied! Your API key is invalid or has expired!",
+                "type" : "string"
+              },
+              "success" : {
+                "example" : 0,
+                "type" : "integer"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 67
+  }, {
+    "id" : "6846495c-3c64-4072-bb5b-3d90d911fd7b",
+    "name" : "subscribes/unsubscribes/registers for apns push notifications (application/json)",
+    "request" : {
+      "urlPath" : "/kkid/apns",
+      "method" : "POST",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/json"
+        }
+      },
+      "queryParameters" : {
+        "kidUserId" : {
+          "equalTo" : "975895318791251817"
+        },
+        "tool" : {
+          "equalTo" : "subscribe"
+        }
+      }
+    },
+    "response" : {
+      "status" : 405,
+      "body" : "{\n  \"success\" : 0,\n  \"error\" : \"API Access Denied! Your API account does not have access to this Verb Method!\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "6846495c-3c64-4072-bb5b-3d90d911fd7b",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:25:19.228053Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "kkid_apns_post",
+          "schema" : {
+            "description" : "API Access Denied",
+            "properties" : {
+              "error" : {
+                "example" : "API Access Denied! Your API account does not have access to this Verb Method!",
+                "type" : "string"
+              },
+              "success" : {
+                "example" : 0,
+                "type" : "integer"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 68
+  }, {
+    "id" : "fbe072d1-269c-4ed3-9e1f-8c6ac278ac2f",
+    "name" : "subscribes/unsubscribes/registers for apns push notifications - 403",
+    "request" : {
+      "urlPath" : "/kkid/apns",
+      "method" : "POST",
+      "queryParameters" : {
+        "kidUserId" : {
+          "equalTo" : "4112416065509138270"
+        },
+        "tool" : {
+          "equalTo" : "register"
+        }
+      }
+    },
+    "response" : {
+      "status" : 403
+    },
+    "uuid" : "fbe072d1-269c-4ed3-9e1f-8c6ac278ac2f",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:25:19.227984Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "kkid_apns_post"
+        }
+      }
+    },
+    "insertionIndex" : 69
+  }, {
+    "id" : "62d79429-4ee8-4610-9917-280171d46129",
+    "name" : "subscribes/unsubscribes/registers for apns push notifications - 401",
+    "request" : {
+      "urlPath" : "/kkid/apns",
+      "method" : "POST",
+      "queryParameters" : {
+        "kidUserId" : {
+          "equalTo" : "4779692718253587208"
+        },
+        "tool" : {
+          "equalTo" : "unsubscribe"
+        }
+      }
+    },
+    "response" : {
+      "status" : 401
+    },
+    "uuid" : "62d79429-4ee8-4610-9917-280171d46129",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:25:19.227938Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "kkid_apns_post"
+        }
+      }
+    },
+    "insertionIndex" : 70
+  }, {
+    "id" : "1712b84e-aab6-4902-88db-bb06cb85f065",
+    "name" : "subscribes/unsubscribes/registers for apns push notifications - 400",
+    "request" : {
+      "urlPath" : "/kkid/apns",
+      "method" : "POST",
+      "queryParameters" : {
+        "kidUserId" : {
+          "equalTo" : "365009214423762234"
+        },
+        "tool" : {
+          "equalTo" : "send"
+        }
+      }
+    },
+    "response" : {
+      "status" : 400
+    },
+    "uuid" : "1712b84e-aab6-4902-88db-bb06cb85f065",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:25:19.227893Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "kkid_apns_post"
+        }
+      }
+    },
+    "insertionIndex" : 71
+  }, {
+    "id" : "0b9ea438-cc8d-48d0-9c5a-254783bbcfbd",
+    "name" : "subscribes/unsubscribes/registers for apns push notifications (application/json)",
+    "request" : {
+      "urlPath" : "/kkid/apns",
+      "method" : "POST",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/json"
+        }
+      },
+      "queryParameters" : {
+        "kidUserId" : {
+          "equalTo" : "5313648514321945187"
+        },
+        "tool" : {
+          "equalTo" : "register"
+        }
+      }
+    },
+    "response" : {
+      "status" : 206,
+      "body" : "{\n  \"error\" : \"No Data Found\",\n  \"status\" : 0\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "0b9ea438-cc8d-48d0-9c5a-254783bbcfbd",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:25:19.227841Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "kkid_apns_post",
+          "schema" : {
+            "description" : "nodata",
+            "properties" : {
+              "error" : {
+                "example" : "No Data Found",
+                "type" : "string"
+              },
+              "status" : {
+                "example" : 0,
+                "type" : "integer"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 72
+  }, {
+    "id" : "7ea54338-c7ec-4dd9-a25a-fc6fb8238864",
+    "name" : "subscribes/unsubscribes/registers for apns push notifications - 202",
+    "request" : {
+      "urlPath" : "/kkid/apns",
+      "method" : "POST",
+      "queryParameters" : {
+        "kidUserId" : {
+          "equalTo" : "1034253097262873082"
+        },
+        "tool" : {
+          "equalTo" : "unsubscribe"
+        }
+      }
+    },
+    "response" : {
+      "status" : 202
+    },
+    "uuid" : "7ea54338-c7ec-4dd9-a25a-fc6fb8238864",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:25:19.22777Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "kkid_apns_post"
+        }
+      }
+    },
+    "insertionIndex" : 73
+  }, {
+    "id" : "1f493d4e-f3c2-4dc0-89b1-8444ae57f98e",
+    "name" : "subscribes/unsubscribes/registers for apns push notifications (application/json)",
+    "request" : {
+      "urlPath" : "/kkid/apns",
+      "method" : "POST",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/json"
+        }
+      },
+      "queryParameters" : {
+        "kidUserId" : {
+          "equalTo" : "3688383534170076122"
+        },
+        "tool" : {
+          "equalTo" : "subscribe"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"message\" : \"success\",\n  \"success\" : true\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "1f493d4e-f3c2-4dc0-89b1-8444ae57f98e",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:25:19.227716Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "kkid_apns_post",
+          "schema" : {
+            "description" : "Success",
+            "example" : {
+              "message" : "success",
+              "success" : true
+            },
+            "properties" : {
+              "message" : {
+                "example" : "success",
+                "type" : "string"
+              },
+              "success" : {
+                "example" : true,
+                "type" : "boolean"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 74
+  }, {
+    "id" : "55906447-9f4c-4e4e-8ef6-c3763d2d0e9e",
+    "name" : "adds new allowance transaction to kidUserID (application/json)",
+    "request" : {
+      "urlPath" : "/kkid/allowance",
+      "method" : "POST",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/json"
+        }
+      },
+      "queryParameters" : {
+        "transactionType" : {
+          "equalTo" : "Subtract"
+        },
+        "amount" : {
+          "equalTo" : "4.835087831050406E307"
+        },
+        "kidUserId" : {
+          "equalTo" : "1044085954488666260"
+        },
+        "description" : {
+          "equalTo" : "Accusantium+dignissimos+distinctio+qui.+Sint+repellendus+nihil+iusto+officia+alias+est.+Repudiandae+minima+qui+labore.+Consequuntur+laboriosam+sunt+in."
+        }
+      }
+    },
+    "response" : {
+      "status" : 412,
+      "body" : "{\n  \"success\" : 0,\n  \"error\" : \"API Access Denied! Your API key is invalid or has expired!\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "55906447-9f4c-4e4e-8ef6-c3763d2d0e9e",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:25:19.227626Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "kkid_allowance_post",
+          "schema" : {
+            "description" : "API Key invalid",
+            "properties" : {
+              "error" : {
+                "example" : "API Access Denied! Your API key is invalid or has expired!",
+                "type" : "string"
+              },
+              "success" : {
+                "example" : 0,
+                "type" : "integer"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 75
+  }, {
+    "id" : "e5bf9c38-4239-4b01-9516-2164ebff3636",
+    "name" : "adds new allowance transaction to kidUserID (application/json)",
+    "request" : {
+      "urlPath" : "/kkid/allowance",
+      "method" : "POST",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/json"
+        }
+      },
+      "queryParameters" : {
+        "transactionType" : {
+          "equalTo" : "Subtract"
+        },
+        "amount" : {
+          "equalTo" : "6.869513615285574E306"
+        },
+        "kidUserId" : {
+          "equalTo" : "9111768310952405006"
+        },
+        "description" : {
+          "equalTo" : "Adipisci+repudiandae+atque+modi+molestias+id.+Cupiditate+et+illo+ipsam+molestiae.+Id+consequatur+dolores+qui.+Quisquam+sed+veniam+culpa+aut+doloribus+aut.+Explicabo+odit+quo+amet+exercitationem."
+        }
+      }
+    },
+    "response" : {
+      "status" : 405,
+      "body" : "{\n  \"success\" : 0,\n  \"error\" : \"API Access Denied! Your API account does not have access to this Verb Method!\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "e5bf9c38-4239-4b01-9516-2164ebff3636",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:25:19.227496Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "kkid_allowance_post",
+          "schema" : {
+            "description" : "API Access Denied",
+            "properties" : {
+              "error" : {
+                "example" : "API Access Denied! Your API account does not have access to this Verb Method!",
+                "type" : "string"
+              },
+              "success" : {
+                "example" : 0,
+                "type" : "integer"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 76
+  }, {
+    "id" : "dbc2545b-8431-4937-8a4a-b9bfbf0c4b9f",
+    "name" : "adds new allowance transaction to kidUserID - 403",
+    "request" : {
+      "urlPath" : "/kkid/allowance",
+      "method" : "POST",
+      "queryParameters" : {
+        "transactionType" : {
+          "equalTo" : "Subtract"
+        },
+        "amount" : {
+          "equalTo" : "1.4634671710628513E308"
+        },
+        "kidUserId" : {
+          "equalTo" : "5748685598309377455"
+        },
+        "description" : {
+          "equalTo" : "Repellendus+rem+vel+eos+sed+reprehenderit.+Eum+omnis+aperiam+odit+ut.+Deleniti+sit+et+quod+incidunt+et+labore.+Amet+tenetur+sit+accusantium+saepe+officia+dolor+corporis."
+        }
+      }
+    },
+    "response" : {
+      "status" : 403
+    },
+    "uuid" : "dbc2545b-8431-4937-8a4a-b9bfbf0c4b9f",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:25:19.227371Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "kkid_allowance_post"
+        }
+      }
+    },
+    "insertionIndex" : 77
+  }, {
+    "id" : "1b89f9b9-a55f-401e-9848-9c59f42cf22b",
+    "name" : "adds new allowance transaction to kidUserID - 401",
+    "request" : {
+      "urlPath" : "/kkid/allowance",
+      "method" : "POST",
+      "queryParameters" : {
+        "transactionType" : {
+          "equalTo" : "Subtract"
+        },
+        "amount" : {
+          "equalTo" : "7.069475755746187E307"
+        },
+        "kidUserId" : {
+          "equalTo" : "3793936595220382721"
+        },
+        "description" : {
+          "equalTo" : "Eos+qui+blanditiis+sunt+aut+delectus+qui+velit.+Repellat+aut+eius+est+suscipit.+Atque+optio+in+explicabo+alias+ut+repudiandae."
+        }
+      }
+    },
+    "response" : {
+      "status" : 401
+    },
+    "uuid" : "1b89f9b9-a55f-401e-9848-9c59f42cf22b",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:25:19.227269Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "kkid_allowance_post"
+        }
+      }
+    },
+    "insertionIndex" : 78
+  }, {
+    "id" : "0f9e4fa7-984d-4bca-bdda-fa38dbe8c101",
+    "name" : "adds new allowance transaction to kidUserID - 400",
+    "request" : {
+      "urlPath" : "/kkid/allowance",
+      "method" : "POST",
+      "queryParameters" : {
+        "transactionType" : {
+          "equalTo" : "Add"
+        },
+        "amount" : {
+          "equalTo" : "2.9169955603585107E307"
+        },
+        "kidUserId" : {
+          "equalTo" : "3916197173999722250"
+        },
+        "description" : {
+          "equalTo" : "Qui+sit+possimus+quia+molestiae+dolor.+Impedit+dolor+quidem.+Itaque+maxime+nostrum+beatae+sint."
+        }
+      }
+    },
+    "response" : {
+      "status" : 400
+    },
+    "uuid" : "0f9e4fa7-984d-4bca-bdda-fa38dbe8c101",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:25:19.227171Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "kkid_allowance_post"
+        }
+      }
+    },
+    "insertionIndex" : 79
+  }, {
+    "id" : "659532dc-ab70-41c8-af16-25b019c8be4a",
+    "name" : "adds new allowance transaction to kidUserID (application/json)",
+    "request" : {
+      "urlPath" : "/kkid/allowance",
+      "method" : "POST",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/json"
+        }
+      },
+      "queryParameters" : {
+        "transactionType" : {
+          "equalTo" : "Subtract"
+        },
+        "amount" : {
+          "equalTo" : "2.058215465237102E307"
+        },
+        "kidUserId" : {
+          "equalTo" : "5224524684336289452"
+        },
+        "description" : {
+          "equalTo" : "Aliquid+eius+saepe+quas.+Officia+aut+vel.+Et+voluptas+accusamus+incidunt+in+suscipit."
+        }
+      }
+    },
+    "response" : {
+      "status" : 206,
+      "body" : "{\n  \"error\" : \"No Data Found\",\n  \"status\" : 0\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "659532dc-ab70-41c8-af16-25b019c8be4a",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:25:19.227073Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "kkid_allowance_post",
+          "schema" : {
+            "description" : "nodata",
+            "properties" : {
+              "error" : {
+                "example" : "No Data Found",
+                "type" : "string"
+              },
+              "status" : {
+                "example" : 0,
+                "type" : "integer"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 80
+  }, {
+    "id" : "acf48c55-91d5-46de-9ba2-08a8b79ac5b9",
+    "name" : "adds new allowance transaction to kidUserID - 202",
+    "request" : {
+      "urlPath" : "/kkid/allowance",
+      "method" : "POST",
+      "queryParameters" : {
+        "transactionType" : {
+          "equalTo" : "Subtract"
+        },
+        "amount" : {
+          "equalTo" : "5.227863244183882E306"
+        },
+        "kidUserId" : {
+          "equalTo" : "356029330524794358"
+        },
+        "description" : {
+          "equalTo" : "Velit+quas+et+veritatis+commodi+ipsum+et+voluptatem.+Voluptatem+porro+doloribus+et+cum+possimus.+Quibusdam+porro+optio.+Est+tenetur+totam.+Omnis+ullam+non."
+        }
+      }
+    },
+    "response" : {
+      "status" : 202
+    },
+    "uuid" : "acf48c55-91d5-46de-9ba2-08a8b79ac5b9",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:25:19.226953Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "kkid_allowance_post"
+        }
+      }
+    },
+    "insertionIndex" : 81
+  }, {
+    "id" : "53046697-f529-4245-a9db-71f57214ac47",
+    "name" : "adds new allowance transaction to kidUserID (application/json)",
+    "request" : {
+      "urlPath" : "/kkid/allowance",
+      "method" : "POST",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/json"
+        }
+      },
+      "queryParameters" : {
+        "transactionType" : {
+          "equalTo" : "Add"
+        },
+        "amount" : {
+          "equalTo" : "6.288931262907344E307"
+        },
+        "kidUserId" : {
+          "equalTo" : "967336604864810331"
+        },
+        "description" : {
+          "equalTo" : "Nisi+quo+omnis+consequuntur+excepturi+aut.+Doloribus+et+dignissimos+similique+qui+ipsa.+Modi+cumque+consectetur+cumque+ex+ab+fugiat+dolorum."
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"message\" : \"success\",\n  \"success\" : true\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "53046697-f529-4245-a9db-71f57214ac47",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:25:19.226844Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "kkid_allowance_post",
+          "schema" : {
+            "description" : "Success",
+            "example" : {
+              "message" : "success",
+              "success" : true
+            },
+            "properties" : {
+              "message" : {
+                "example" : "success",
+                "type" : "string"
+              },
+              "success" : {
+                "example" : true,
+                "type" : "boolean"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 82
+  }, {
+    "id" : "1b0edadb-7525-4766-85e9-3e5821c5cf9e",
+    "name" : "returns allowance balance and allowance transactions (application/json)",
+    "request" : {
+      "urlPath" : "/kkid/allowance",
+      "method" : "GET",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/json"
+        }
+      },
+      "queryParameters" : {
+        "kidUserId" : {
+          "equalTo" : "554769439224519990"
+        }
+      }
+    },
+    "response" : {
+      "status" : 412,
+      "body" : "{\n  \"success\" : 0,\n  \"error\" : \"API Access Denied! Your API key is invalid or has expired!\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "1b0edadb-7525-4766-85e9-3e5821c5cf9e",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:25:19.226664Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "kkid_allowance_get",
+          "schema" : {
+            "description" : "API Key invalid",
+            "properties" : {
+              "error" : {
+                "example" : "API Access Denied! Your API key is invalid or has expired!",
+                "type" : "string"
+              },
+              "success" : {
+                "example" : 0,
+                "type" : "integer"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 83
+  }, {
+    "id" : "483fdeda-f36f-4407-ba09-2b6b5ef620f7",
+    "name" : "returns allowance balance and allowance transactions (application/json)",
+    "request" : {
+      "urlPath" : "/kkid/allowance",
+      "method" : "GET",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/json"
+        }
+      },
+      "queryParameters" : {
+        "kidUserId" : {
+          "equalTo" : "7763671065798426778"
+        }
+      }
+    },
+    "response" : {
+      "status" : 405,
+      "body" : "{\n  \"success\" : 0,\n  \"error\" : \"API Access Denied! Your API account does not have access to this Verb Method!\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "483fdeda-f36f-4407-ba09-2b6b5ef620f7",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:25:19.226566Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "kkid_allowance_get",
+          "schema" : {
+            "description" : "API Access Denied",
+            "properties" : {
+              "error" : {
+                "example" : "API Access Denied! Your API account does not have access to this Verb Method!",
+                "type" : "string"
+              },
+              "success" : {
+                "example" : 0,
+                "type" : "integer"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 84
+  }, {
+    "id" : "275b40fc-db38-465c-9a26-ddb826d1be5e",
+    "name" : "returns allowance balance and allowance transactions - 403",
+    "request" : {
+      "urlPath" : "/kkid/allowance",
+      "method" : "GET",
+      "queryParameters" : {
+        "kidUserId" : {
+          "equalTo" : "7995307908738551656"
+        }
+      }
+    },
+    "response" : {
+      "status" : 403
+    },
+    "uuid" : "275b40fc-db38-465c-9a26-ddb826d1be5e",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:25:19.226503Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "kkid_allowance_get"
+        }
+      }
+    },
+    "insertionIndex" : 85
+  }, {
+    "id" : "55602223-7cbe-493f-8c2e-919ed02a1da7",
+    "name" : "returns allowance balance and allowance transactions - 401",
+    "request" : {
+      "urlPath" : "/kkid/allowance",
+      "method" : "GET",
+      "queryParameters" : {
+        "kidUserId" : {
+          "equalTo" : "5487462328004905700"
+        }
+      }
+    },
+    "response" : {
+      "status" : 401
+    },
+    "uuid" : "55602223-7cbe-493f-8c2e-919ed02a1da7",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:25:19.226474Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "kkid_allowance_get"
+        }
+      }
+    },
+    "insertionIndex" : 86
+  }, {
+    "id" : "1e16e5c3-061f-4b1c-8e51-4b4eaab9b20a",
+    "name" : "returns allowance balance and allowance transactions - 400",
+    "request" : {
+      "urlPath" : "/kkid/allowance",
+      "method" : "GET",
+      "queryParameters" : {
+        "kidUserId" : {
+          "equalTo" : "8585220994353952972"
+        }
+      }
+    },
+    "response" : {
+      "status" : 400
+    },
+    "uuid" : "1e16e5c3-061f-4b1c-8e51-4b4eaab9b20a",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:25:19.226445Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "kkid_allowance_get"
+        }
+      }
+    },
+    "insertionIndex" : 87
+  }, {
+    "id" : "7659b02e-ec73-4600-b520-2350d2af9ebe",
+    "name" : "returns allowance balance and allowance transactions (application/json)",
+    "request" : {
+      "urlPath" : "/kkid/allowance",
+      "method" : "GET",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/json"
+        }
+      },
+      "queryParameters" : {
+        "kidUserId" : {
+          "equalTo" : "9151137967644365684"
+        }
+      }
+    },
+    "response" : {
+      "status" : 206,
+      "body" : "{\n  \"error\" : \"No Data Found\",\n  \"status\" : 0\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "7659b02e-ec73-4600-b520-2350d2af9ebe",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:25:19.226409Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "kkid_allowance_get",
+          "schema" : {
+            "description" : "nodata",
+            "properties" : {
+              "error" : {
+                "example" : "No Data Found",
+                "type" : "string"
+              },
+              "status" : {
+                "example" : 0,
+                "type" : "integer"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 88
+  }, {
+    "id" : "d6b25d48-57f3-409b-adb6-70dd5bba85a8",
+    "name" : "returns allowance balance and allowance transactions - 202",
+    "request" : {
+      "urlPath" : "/kkid/allowance",
+      "method" : "GET",
+      "queryParameters" : {
+        "kidUserId" : {
+          "equalTo" : "8783748340011393463"
+        }
+      }
+    },
+    "response" : {
+      "status" : 202
+    },
+    "uuid" : "d6b25d48-57f3-409b-adb6-70dd5bba85a8",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:25:19.226336Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "kkid_allowance_get"
+        }
+      }
+    },
+    "insertionIndex" : 89
+  }, {
+    "id" : "7a7f5f05-a056-4dba-b72d-d208af4fca0e",
+    "name" : "returns allowance balance and allowance transactions (application/json)",
+    "request" : {
+      "urlPath" : "/kkid/allowance",
+      "method" : "GET",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/json"
+        }
+      },
+      "queryParameters" : {
+        "kidUserId" : {
+          "equalTo" : "7134171965412994223"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"allowanceTransaction\" : [ {\n    \"amount\" : 10,\n    \"date\" : { },\n    \"transactionDescription\" : \"Weekly Allowance for Chores\",\n    \"transactionId\" : 85,\n    \"transactionType\" : \"Add\",\n    \"userId\" : 1\n  }, {\n    \"amount\" : 10,\n    \"date\" : { },\n    \"transactionDescription\" : \"Weekly Allowance for Chores\",\n    \"transactionId\" : 85,\n    \"transactionType\" : \"Add\",\n    \"userId\" : 1\n  } ],\n  \"balance\" : 0,\n  \"id\" : 24,\n  \"lastUpdated\" : \"{}\",\n  \"success\" : 1\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "7a7f5f05-a056-4dba-b72d-d208af4fca0e",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:25:19.226293Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "kkid_allowance_get",
+          "schema" : {
+            "description" : "Allowance",
+            "example" : {
+              "allowanceTransaction" : [ {
+                "amount" : 10,
+                "date" : { },
+                "transactionDescription" : "Weekly Allowance for Chores",
+                "transactionId" : 85,
+                "transactionType" : "Add",
+                "userId" : 1
+              }, {
+                "amount" : 10,
+                "date" : { },
+                "transactionDescription" : "Weekly Allowance for Chores",
+                "transactionId" : 85,
+                "transactionType" : "Add",
+                "userId" : 1
+              } ],
+              "balance" : 0,
+              "id" : 24,
+              "lastUpdated" : "{}",
+              "success" : 1
+            },
+            "properties" : {
+              "allowanceTransaction" : {
+                "items" : {
+                  "$ref" : "#/components/schemas/allowance_allowanceTransaction"
+                },
+                "type" : "array"
+              },
+              "balance" : {
+                "type" : "integer"
+              },
+              "id" : {
+                "example" : 24,
+                "type" : "integer"
+              },
+              "lastUpdated" : {
+                "example" : "{}",
+                "type" : "string"
+              },
+              "success" : {
+                "example" : 1,
+                "type" : "integer"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 90
+  }, {
+    "id" : "b3bdb35d-7c60-487c-accb-34b170a02549",
+    "name" : "Deactivate auth key (logout) - 401",
+    "request" : {
+      "urlPath" : "/authkey",
+      "method" : "PUT",
+      "queryParameters" : {
+        "auth_key" : {
+          "equalTo" : "2rqm2r5h5p7gqohoworx4nybpmf82tcv37srqz3ihsk0ctmy4hev3zvr9kt8kxs3k1dnlwztdzkx3t3ky9yfkm8kqwt8tdft75dloa7g0d0weugb4auf68rhlthnkxb993236phi8m28atwy3v6httew6jf6t10wndaa81yf03cau28hkti5yc1h5n6ot8c4n0"
+        }
+      }
+    },
+    "response" : {
+      "status" : 401
+    },
+    "uuid" : "b3bdb35d-7c60-487c-accb-34b170a02549",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:25:19.226121Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "authkey_put"
+        }
+      }
+    },
+    "insertionIndex" : 91
+  }, {
+    "id" : "22666894-88cf-4ab6-bf83-c92cb773bc46",
+    "name" : "Deactivate auth key (logout) (application/json)",
+    "request" : {
+      "urlPath" : "/authkey",
+      "method" : "PUT",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/json"
+        }
+      },
+      "queryParameters" : {
+        "auth_key" : {
+          "equalTo" : "i0dzz11gkucecz10ll8axxfk0z1ewxwx6bdkufeavxgng9zqjagupfytf18qscnv3fjvz20br3sg0y49je8mttow4w5dhkhg7tbufk3sf4i10md4xnlsxkksh4b9gdfvf8"
+        }
+      }
+    },
+    "response" : {
+      "status" : 202,
+      "body" : "{\n  \"success\" : true\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "22666894-88cf-4ab6-bf83-c92cb773bc46",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:25:19.226073Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "authkey_put",
+          "schema" : {
+            "example" : {
+              "success" : true
+            },
+            "properties" : {
+              "success" : {
+                "example" : true,
+                "type" : "boolean"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 92
+  }, {
+    "id" : "e88253c2-a947-40b8-af7b-a217b22231af",
+    "name" : "Request auth key for user (login user) (application/json)",
+    "request" : {
+      "urlPath" : "/authkey",
+      "method" : "POST",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/json"
+        }
+      },
+      "queryParameters" : {
+        "password" : {
+          "equalTo" : "1bz0rtl5yufxh6gdrraxz8duibha9rfaehxpc37n4ml3bxu7eqfrh3utzxzgorw6tqysxyzucw7ho64ntxtxw6w25tbjoe42lhmq7hov4yu6lxj4cg0jf7bmv5s"
+        },
+        "username" : {
+          "equalTo" : "katie.adams"
+        }
+      }
+    },
+    "response" : {
+      "status" : 449,
+      "body" : "{\n  \"success\" : false,\n  \"message\" : \"OTP Required is configured for this User. Retry login with OTP\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "e88253c2-a947-40b8-af7b-a217b22231af",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:25:19.226Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "authkey_post",
+          "schema" : {
+            "description" : "OTP Required is configured for this User. Retry login with OTP",
+            "properties" : {
+              "message" : {
+                "example" : "OTP Required is configured for this User. Retry login with OTP",
+                "type" : "string"
+              },
+              "success" : {
+                "example" : false,
+                "type" : "boolean"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 93
+  }, {
+    "id" : "3e1776bf-f469-45c2-8835-58f7a9d79533",
+    "name" : "Request auth key for user (login user) (application/json)",
+    "request" : {
+      "urlPath" : "/authkey",
+      "method" : "POST",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/json"
+        }
+      },
+      "queryParameters" : {
+        "password" : {
+          "equalTo" : "hbdr9zb2l6dwp60xiqhwhins5jjl83vyernbu78y17yiouy4y950pb4wzg9w9d7ovl7jpy3qrw72onmwmovxmti2dmui1d4rlva754zzeshz9cl1chhxo"
+        },
+        "username" : {
+          "equalTo" : "selene.schroeder"
+        }
+      }
+    },
+    "response" : {
+      "status" : 403,
+      "body" : "{\n  \"success\" : false,\n  \"error\" : \"Access Denied\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "3e1776bf-f469-45c2-8835-58f7a9d79533",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:25:19.225868Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "authkey_post",
+          "schema" : {
+            "description" : "Access Denied",
+            "properties" : {
+              "error" : {
+                "example" : "Access Denied",
+                "type" : "string"
+              },
+              "success" : {
+                "example" : false,
+                "type" : "boolean"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 94
+  }, {
+    "id" : "5efcdf45-be9c-4d4e-9917-a3e68b6ee72e",
+    "name" : "Request auth key for user (login user) - 401",
+    "request" : {
+      "urlPath" : "/authkey",
+      "method" : "POST",
+      "queryParameters" : {
+        "password" : {
+          "equalTo" : "rqi2ejkt7v0lt2houwcxw5adyodnzew7jy3yjnay4en2t8yeuw0dlo0y7uzl8rojsv8ypmudizd3rodecvpa8o8zaoz5f26kbki5b1id82os9wr8jl7wdudosdwo1vqhzro0lju6jj2dloeeo2"
+        },
+        "username" : {
+          "equalTo" : "tressa.oconnell"
+        }
+      }
+    },
+    "response" : {
+      "status" : 401
+    },
+    "uuid" : "5efcdf45-be9c-4d4e-9917-a3e68b6ee72e",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:25:19.225769Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "authkey_post"
+        }
+      }
+    },
+    "insertionIndex" : 95
+  }, {
+    "id" : "04e1236b-6369-472b-a4a2-e60a073c2fe2",
+    "name" : "Request auth key for user (login user) (application/json)",
+    "request" : {
+      "urlPath" : "/authkey",
+      "method" : "POST",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/json"
+        }
+      },
+      "queryParameters" : {
+        "password" : {
+          "equalTo" : "bxgp0dwwkq9c0efa61z2gfnfo9j057ji399xvf"
+        },
+        "username" : {
+          "equalTo" : "jacquetta.haley"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"auth_key\" : \"8ou7jyubj878h7iunk\",\n  \"success\" : true\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "04e1236b-6369-472b-a4a2-e60a073c2fe2",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:25:19.225687Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "authkey_post",
+          "schema" : {
+            "example" : {
+              "auth_key" : "8ou7jyubj878h7iunk",
+              "success" : true
+            },
+            "properties" : {
+              "auth_key" : {
+                "example" : "8ou7jyubj878h7iunk",
+                "type" : "string"
+              },
+              "success" : {
+                "example" : true,
+                "type" : "boolean"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 96
+  }, {
+    "id" : "8fb07a35-eb90-4a0e-a4a7-9c22e6ab735e",
+    "name" : "Compromise auth key - 401",
+    "request" : {
+      "urlPath" : "/authkey",
+      "method" : "PATCH",
+      "queryParameters" : {
+        "auth_key" : {
+          "equalTo" : "1bot6k6y46hs456p3zk3vvcn2h7svja5zgn1f1f20"
+        }
+      }
+    },
+    "response" : {
+      "status" : 401
+    },
+    "uuid" : "8fb07a35-eb90-4a0e-a4a7-9c22e6ab735e",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:25:19.225589Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "authkey_patch"
+        }
+      }
+    },
+    "insertionIndex" : 97
+  }, {
+    "id" : "0c02bbbe-88d2-4962-82b5-174a590b6f5a",
+    "name" : "Compromise auth key (application/json)",
+    "request" : {
+      "urlPath" : "/authkey",
+      "method" : "PATCH",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/json"
+        }
+      },
+      "queryParameters" : {
+        "auth_key" : {
+          "equalTo" : "8nc93m0q811zfccw9lobtmahb90"
+        }
+      }
+    },
+    "response" : {
+      "status" : 202,
+      "body" : "{\n  \"success\" : true\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "0c02bbbe-88d2-4962-82b5-174a590b6f5a",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:25:19.225544Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "authkey_patch",
+          "schema" : {
+            "example" : {
+              "success" : true
+            },
+            "properties" : {
+              "success" : {
+                "example" : true,
+                "type" : "boolean"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 98
+  }, {
+    "id" : "d4fddb2e-f637-4a74-912a-e72a443c6c5f",
+    "name" : "Request auth key for user (login user) (application/json)",
+    "request" : {
+      "urlPath" : "/authkey",
+      "method" : "GET",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/json"
+        }
+      },
+      "queryParameters" : {
+        "password" : {
+          "equalTo" : "8swml5mfuba74vw7cnuao47u2csppepsyl7rkleeuyq9wkknhouu"
+        },
+        "username" : {
+          "equalTo" : "kenyetta.weimann"
+        }
+      }
+    },
+    "response" : {
+      "status" : 449,
+      "body" : "{\n  \"success\" : false,\n  \"message\" : \"OTP Required is configured for this User. Retry login with OTP\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "d4fddb2e-f637-4a74-912a-e72a443c6c5f",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:25:19.225476Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "authkey_get",
+          "schema" : {
+            "description" : "OTP Required is configured for this User. Retry login with OTP",
+            "properties" : {
+              "message" : {
+                "example" : "OTP Required is configured for this User. Retry login with OTP",
+                "type" : "string"
+              },
+              "success" : {
+                "example" : false,
+                "type" : "boolean"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 99
+  }, {
+    "id" : "ff617a92-f405-451f-a3fd-e3b8d350b20c",
+    "name" : "Request auth key for user (login user) (application/json)",
+    "request" : {
+      "urlPath" : "/authkey",
+      "method" : "GET",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/json"
+        }
+      },
+      "queryParameters" : {
+        "password" : {
+          "equalTo" : "pl0gmxxvczxwlm4m8euh4q29ja6ewyaqlucgnuulkyr2jk56sqxqjg2brinwgvv526y3lpuya1x94da5z70l2my7kp2guktygtv3uzkhuwu8rws82mkedzgak2u00bqzwlf67u6m0lbpts1ynzclnljau"
+        },
+        "username" : {
+          "equalTo" : "stephen.bruen"
+        }
+      }
+    },
+    "response" : {
+      "status" : 403,
+      "body" : "{\n  \"success\" : false,\n  \"error\" : \"Access Denied\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "ff617a92-f405-451f-a3fd-e3b8d350b20c",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:25:19.225372Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "authkey_get",
+          "schema" : {
+            "description" : "Access Denied",
+            "properties" : {
+              "error" : {
+                "example" : "Access Denied",
+                "type" : "string"
+              },
+              "success" : {
+                "example" : false,
+                "type" : "boolean"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 100
+  }, {
+    "id" : "740b9055-c0d1-45ad-b007-d7af1641bb4a",
+    "name" : "Request auth key for user (login user) - 401",
+    "request" : {
+      "urlPath" : "/authkey",
+      "method" : "GET",
+      "queryParameters" : {
+        "password" : {
+          "equalTo" : "4cnxqyo2hxa7fepal92gaodk2wr28wloostzptr7yxzk93l9t29bx0vrirgdwerwql7csl8fu8cpwbab9vjydzhmzmnpzt3j9vw7uwwrhpvxje12gsp2jazi0eafo8jz9axo506pupilk7jdq3e278l4tafaho09bni4vb1z1iu5polgoy4btz4qbmau8"
+        },
+        "username" : {
+          "equalTo" : "alva.lakin"
+        }
+      }
+    },
+    "response" : {
+      "status" : 401
+    },
+    "uuid" : "740b9055-c0d1-45ad-b007-d7af1641bb4a",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:25:19.225268Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "authkey_get"
+        }
+      }
+    },
+    "insertionIndex" : 101
+  }, {
+    "id" : "eccd5708-12c9-4fdc-8509-733e498e1e00",
+    "name" : "Request auth key for user (login user) (application/json)",
+    "request" : {
+      "urlPath" : "/authkey",
+      "method" : "GET",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/json"
+        }
+      },
+      "queryParameters" : {
+        "password" : {
+          "equalTo" : "fl2owwntl754s02fftqgqukvb9iroxuz9z1dwo81zf95xeniaebbyw91oczugmxw68hbd393puwbdd96u44whec7ka1h9sb5u9zxlijibupfo5d58osk5b9oylr77exy6dvrq"
+        },
+        "username" : {
+          "equalTo" : "dorian.quigley"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"auth_key\" : \"8ou7jyubj878h7iunk\",\n  \"success\" : true\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "eccd5708-12c9-4fdc-8509-733e498e1e00",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:25:19.225188Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "authkey_get",
+          "schema" : {
+            "example" : {
+              "auth_key" : "8ou7jyubj878h7iunk",
+              "success" : true
+            },
+            "properties" : {
+              "auth_key" : {
+                "example" : "8ou7jyubj878h7iunk",
+                "type" : "string"
+              },
+              "success" : {
+                "example" : true,
+                "type" : "boolean"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 102
+  }, {
+    "id" : "3b108d1c-a7ab-45f7-a797-185b773c5ee9",
+    "name" : "Verifies YubiKey OTP for authenticated user (application/json)",
+    "request" : {
+      "urlPath" : "/authentication/verifyotp",
+      "method" : "GET",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/json"
+        }
+      },
+      "queryParameters" : {
+        "otp" : {
+          "equalTo" : "ucb2o1djgjk6le97a6yenrm9a41p11y2oi41sxk1b4t2w97nsie2ftfall9kos2cmpdzxasy7viqiwiugykk7qec8f83oad6azxq8f0xhkg8dere72w854k2amed4zonly25r0cz953fqols15mqe5cpsmre88m9mveszi"
+        }
+      }
+    },
+    "response" : {
+      "status" : 403,
+      "body" : "{\n  \"success\" : false,\n  \"error\" : \"Access Denied\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "3b108d1c-a7ab-45f7-a797-185b773c5ee9",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:25:19.225078Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "auth_verifyotp_get",
+          "schema" : {
+            "description" : "Access Denied",
+            "properties" : {
+              "error" : {
+                "example" : "Access Denied",
+                "type" : "string"
+              },
+              "success" : {
+                "example" : false,
+                "type" : "boolean"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 103
+  }, {
+    "id" : "e0c2ef26-9063-4083-85db-813394458d97",
+    "name" : "Verifies YubiKey OTP for authenticated user - 401",
+    "request" : {
+      "urlPath" : "/authentication/verifyotp",
+      "method" : "GET",
+      "queryParameters" : {
+        "otp" : {
+          "equalTo" : "h61lcooo7h48bp5679boqqwf19sj9yyo7u4cokw9d611025dqbk487jxww00oqlundpah2uxe0habitbo4yyhjbvgu2vd7rdofl18yc7af61pl"
+        }
+      }
+    },
+    "response" : {
+      "status" : 401
+    },
+    "uuid" : "e0c2ef26-9063-4083-85db-813394458d97",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:25:19.225013Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "auth_verifyotp_get"
+        }
+      }
+    },
+    "insertionIndex" : 104
+  }, {
+    "id" : "5b7b02f9-6325-42a7-80ea-d107d4d3225f",
+    "name" : "Verifies YubiKey OTP for authenticated user - 200",
+    "request" : {
+      "urlPath" : "/authentication/verifyotp",
+      "method" : "GET",
+      "queryParameters" : {
+        "otp" : {
+          "equalTo" : "ivv2dezl5sfhvx0jsz9z189w24wc0cugcsfcso3v7txtwk223wtritrp15rjtiu6m3anzseg39w42uikm5hohtskv4ejxhnaybdqa9nkdmjqtf1n01gpdpp7uqb1h1icsw87d"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200
+    },
+    "uuid" : "5b7b02f9-6325-42a7-80ea-d107d4d3225f",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:25:19.224975Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "auth_verifyotp_get"
+        }
+      }
+    },
+    "insertionIndex" : 105
+  }, {
+    "id" : "7b47c155-8153-4ecd-a2ad-3ed2ac0dadf2",
+    "name" : "Deactivate auth key (logout) - 401",
+    "request" : {
+      "urlPath" : "/authentication/authkey",
+      "method" : "PUT",
+      "queryParameters" : {
+        "auth_key" : {
+          "equalTo" : "fgm8vd2d2w1mcs04f1ursn68wk9isz9f723qhvyf13xu5vzqqtjzw3ufbb5urkwg2gpssnf0a"
+        }
+      }
+    },
+    "response" : {
+      "status" : 401
+    },
+    "uuid" : "7b47c155-8153-4ecd-a2ad-3ed2ac0dadf2",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:25:19.224928Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "auth_authkey_put"
+        }
+      }
+    },
+    "insertionIndex" : 106
+  }, {
+    "id" : "61b44169-513f-4bb6-92aa-583e02d2fe0b",
+    "name" : "Deactivate auth key (logout) (application/json)",
+    "request" : {
+      "urlPath" : "/authentication/authkey",
+      "method" : "PUT",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/json"
+        }
+      },
+      "queryParameters" : {
+        "auth_key" : {
+          "equalTo" : "st5hchdexniw0sn2tndg2gobve76oxj6tcarbkzinqu7duaozvq585uk8b782ietx3ts0fjd99zi5e9fi25jew5q762mlz6ks1xsfrt4ja8qz"
+        }
+      }
+    },
+    "response" : {
+      "status" : 202,
+      "body" : "{\n  \"success\" : true\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "61b44169-513f-4bb6-92aa-583e02d2fe0b",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:25:19.224875Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "auth_authkey_put",
+          "schema" : {
+            "example" : {
+              "success" : true
+            },
+            "properties" : {
+              "success" : {
+                "example" : true,
+                "type" : "boolean"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 107
+  }, {
+    "id" : "352a497d-692b-4e14-b724-7437596fa9fb",
+    "name" : "Request auth key for user (login user) (application/json)",
+    "request" : {
+      "urlPath" : "/authentication/authkey",
+      "method" : "POST",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/json"
+        }
+      },
+      "queryParameters" : {
+        "password" : {
+          "equalTo" : "32y9ubro5rhrmfnp3n5c4byl14396w0vir7"
+        },
+        "username" : {
+          "equalTo" : "cassie.strosin"
+        }
+      }
+    },
+    "response" : {
+      "status" : 449,
+      "body" : "{\n  \"success\" : false,\n  \"message\" : \"OTP Required is configured for this User. Retry login with OTP\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "352a497d-692b-4e14-b724-7437596fa9fb",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:25:19.224802Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "auth_authkey_post",
+          "schema" : {
+            "description" : "OTP Required is configured for this User. Retry login with OTP",
+            "properties" : {
+              "message" : {
+                "example" : "OTP Required is configured for this User. Retry login with OTP",
+                "type" : "string"
+              },
+              "success" : {
+                "example" : false,
+                "type" : "boolean"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 108
+  }, {
+    "id" : "11777cb8-dacb-4f96-ada6-a9bfcb9ab4e1",
+    "name" : "Request auth key for user (login user) (application/json)",
+    "request" : {
+      "urlPath" : "/authentication/authkey",
+      "method" : "POST",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/json"
+        }
+      },
+      "queryParameters" : {
+        "password" : {
+          "equalTo" : "of8if78k3dwwozkbh5dw3ejhdnw9ihalpfpdke8g4ci09w9sv8nvlrg16mdilhjzuvwuf2j2x927h8uwyec6673uoxtwdyqzdkk5r7zv2gl5qi8kqz4xqic4g86nu2sgbpp1hde6645abzfvbnf1up6qzbbnzodfboj0kp4jfio29h7alxp4e3u0vy50o5g7nnrd"
+        },
+        "username" : {
+          "equalTo" : "millard.beier"
+        }
+      }
+    },
+    "response" : {
+      "status" : 403,
+      "body" : "{\n  \"success\" : false,\n  \"error\" : \"Access Denied\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "11777cb8-dacb-4f96-ada6-a9bfcb9ab4e1",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:25:19.224674Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "auth_authkey_post",
+          "schema" : {
+            "description" : "Access Denied",
+            "properties" : {
+              "error" : {
+                "example" : "Access Denied",
+                "type" : "string"
+              },
+              "success" : {
+                "example" : false,
+                "type" : "boolean"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 109
+  }, {
+    "id" : "3a3cc6d6-145c-402a-ad8d-d36e1acf8427",
+    "name" : "Request auth key for user (login user) - 401",
+    "request" : {
+      "urlPath" : "/authentication/authkey",
+      "method" : "POST",
+      "queryParameters" : {
+        "password" : {
+          "equalTo" : "o8fh3vsmbqf4ffhugy43sgks8m03uaq7ud61yi9aa8r7mpud1zu79kvm8eusxaop1ho6j5o579smv0ffihzardrtarzteod5r3f93mudwrmfgfvdmg1etovtrhvjc0aixfemcuysqoh"
+        },
+        "username" : {
+          "equalTo" : "debi.oconnell"
+        }
+      }
+    },
+    "response" : {
+      "status" : 401
+    },
+    "uuid" : "3a3cc6d6-145c-402a-ad8d-d36e1acf8427",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:25:19.224543Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "auth_authkey_post"
+        }
+      }
+    },
+    "insertionIndex" : 110
+  }, {
+    "id" : "45b23850-2a7f-4169-a5b6-1edc9348f002",
+    "name" : "Request auth key for user (login user) (application/json)",
+    "request" : {
+      "urlPath" : "/authentication/authkey",
+      "method" : "POST",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/json"
+        }
+      },
+      "queryParameters" : {
+        "password" : {
+          "equalTo" : "4op7xxvkhroxykkf2pdjo550wabxbf3dg0gypp0gy0z"
+        },
+        "username" : {
+          "equalTo" : "dee.marvin"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"auth_key\" : \"8ou7jyubj878h7iunk\",\n  \"success\" : true\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "45b23850-2a7f-4169-a5b6-1edc9348f002",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:25:19.22446Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "auth_authkey_post",
+          "schema" : {
+            "example" : {
+              "auth_key" : "8ou7jyubj878h7iunk",
+              "success" : true
+            },
+            "properties" : {
+              "auth_key" : {
+                "example" : "8ou7jyubj878h7iunk",
+                "type" : "string"
+              },
+              "success" : {
+                "example" : true,
+                "type" : "boolean"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 111
+  }, {
+    "id" : "0b6403b9-67e1-4eb0-abf1-698f0fdccc9b",
+    "name" : "Compromise auth key - 401",
+    "request" : {
+      "urlPath" : "/authentication/authkey",
+      "method" : "PATCH",
+      "queryParameters" : {
+        "auth_key" : {
+          "equalTo" : "3qbxm11u9b9zcnlfwvp8rsp8fst7x4xmmvrasmqfyq3nysrz9bdhmxkpzksqfo9ohvo5w0yxthsbm7ldsc0nr5612eow"
+        }
+      }
+    },
+    "response" : {
+      "status" : 401
+    },
+    "uuid" : "0b6403b9-67e1-4eb0-abf1-698f0fdccc9b",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:25:19.224346Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "auth_authkey_patch"
+        }
+      }
+    },
+    "insertionIndex" : 112
+  }, {
+    "id" : "65ae93de-febe-4303-ad85-e950f6650c59",
+    "name" : "Compromise auth key (application/json)",
+    "request" : {
+      "urlPath" : "/authentication/authkey",
+      "method" : "PATCH",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/json"
+        }
+      },
+      "queryParameters" : {
+        "auth_key" : {
+          "equalTo" : "43wsho8oc2ljhx1n624noyjkuin0log3sbve364pw8gmdgcs5o7b16j0jv8x71xgrso9xekaj3haette84yk92lbpqax9j6k7tu2bb50swye1fjemruorxyd3uindkqwwrbguh2akf18oo2a"
+        }
+      }
+    },
+    "response" : {
+      "status" : 202,
+      "body" : "{\n  \"success\" : true\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "65ae93de-febe-4303-ad85-e950f6650c59",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:25:19.224279Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "auth_authkey_patch",
+          "schema" : {
+            "example" : {
+              "success" : true
+            },
+            "properties" : {
+              "success" : {
+                "example" : true,
+                "type" : "boolean"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 113
+  }, {
+    "id" : "d781a608-dd52-433b-a05a-50187fe4a58d",
+    "name" : "Request auth key for user (login user) (application/json)",
+    "request" : {
+      "urlPath" : "/authentication/authkey",
+      "method" : "GET",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/json"
+        }
+      },
+      "queryParameters" : {
+        "password" : {
+          "equalTo" : "zczqb1icj6071zjxc0dfdokptdygo4ftkckg8j6qc2izy6scs7i6st5dtuwo81e1zcvk"
+        },
+        "username" : {
+          "equalTo" : "kathe.schmeler"
+        }
+      }
+    },
+    "response" : {
+      "status" : 449,
+      "body" : "{\n  \"success\" : false,\n  \"message\" : \"OTP Required is configured for this User. Retry login with OTP\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "d781a608-dd52-433b-a05a-50187fe4a58d",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:25:19.224205Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "auth_authkey_get",
+          "schema" : {
+            "description" : "OTP Required is configured for this User. Retry login with OTP",
+            "properties" : {
+              "message" : {
+                "example" : "OTP Required is configured for this User. Retry login with OTP",
+                "type" : "string"
+              },
+              "success" : {
+                "example" : false,
+                "type" : "boolean"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 114
+  }, {
+    "id" : "a7d38259-6a77-4f03-987d-4c524deb2a92",
+    "name" : "Request auth key for user (login user) (application/json)",
+    "request" : {
+      "urlPath" : "/authentication/authkey",
+      "method" : "GET",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/json"
+        }
+      },
+      "queryParameters" : {
+        "password" : {
+          "equalTo" : "dwnq6p23vy5qel2j1875tu1j3wzxw4pynkt2hxlxkcj7t67r"
+        },
+        "username" : {
+          "equalTo" : "courtney.gibson"
+        }
+      }
+    },
+    "response" : {
+      "status" : 403,
+      "body" : "{\n  \"success\" : false,\n  \"error\" : \"Access Denied\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "a7d38259-6a77-4f03-987d-4c524deb2a92",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:25:19.224085Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "auth_authkey_get",
+          "schema" : {
+            "description" : "Access Denied",
+            "properties" : {
+              "error" : {
+                "example" : "Access Denied",
+                "type" : "string"
+              },
+              "success" : {
+                "example" : false,
+                "type" : "boolean"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 115
+  }, {
+    "id" : "d15a4987-80a4-4ad2-aea4-967040bcfba8",
+    "name" : "Request auth key for user (login user) - 401",
+    "request" : {
+      "urlPath" : "/authentication/authkey",
+      "method" : "GET",
+      "queryParameters" : {
+        "password" : {
+          "equalTo" : "jrpc2kijb73l9993v0n4cn9qq43skx"
+        },
+        "username" : {
+          "equalTo" : "edmond.sporer"
+        }
+      }
+    },
+    "response" : {
+      "status" : 401
+    },
+    "uuid" : "d15a4987-80a4-4ad2-aea4-967040bcfba8",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:25:19.223949Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "auth_authkey_get"
+        }
+      }
+    },
+    "insertionIndex" : 116
+  }, {
+    "id" : "6a955b5e-bcae-40ea-b29c-a46476407c50",
+    "name" : "Request auth key for user (login user) (application/json)",
+    "request" : {
+      "urlPath" : "/authentication/authkey",
+      "method" : "GET",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/json"
+        }
+      },
+      "queryParameters" : {
+        "password" : {
+          "equalTo" : "gra845ma2cf"
+        },
+        "username" : {
+          "equalTo" : "wilhelmina.abbott"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"auth_key\" : \"8ou7jyubj878h7iunk\",\n  \"success\" : true\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "6a955b5e-bcae-40ea-b29c-a46476407c50",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:25:19.22382Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "auth_authkey_get",
+          "schema" : {
+            "example" : {
+              "auth_key" : "8ou7jyubj878h7iunk",
+              "success" : true
+            },
+            "properties" : {
+              "auth_key" : {
+                "example" : "8ou7jyubj878h7iunk",
+                "type" : "string"
+              },
+              "success" : {
+                "example" : true,
+                "type" : "boolean"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 117
+  }, {
+    "id" : "6a88566d-4fd4-451e-a9a4-d9a69d31272e",
+    "name" : "Deactivate app key",
+    "request" : {
+      "urlPath" : "/authentication/appkey",
+      "method" : "PUT",
+      "queryParameters" : {
+        "app_key" : {
+          "equalTo" : "hrn346jvky39zs2b9n4j2xfskumavxjyi0rmnmtbjkoskstoritpmub0z7e1nmaubmic1s7jfpc0g76hsplkv"
+        }
+      }
+    },
+    "response" : {
+      "status" : 202,
+      "body" : "{\n  \"success\" : true\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "6a88566d-4fd4-451e-a9a4-d9a69d31272e",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:25:19.223676Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "auth_appkey_put",
+          "schema" : {
+            "example" : {
+              "success" : true
+            },
+            "properties" : {
+              "success" : {
+                "example" : true,
+                "type" : "boolean"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 118
+  }, {
+    "id" : "1f3028dc-31b0-4fe4-b793-8c68ec78d0ef",
+    "name" : "Request app key",
+    "request" : {
+      "urlPath" : "/authentication/appkey",
+      "method" : "POST",
+      "queryParameters" : {
+        "supportsYubikey" : {
+          "equalTo" : "true"
+        },
+        "password" : {
+          "equalTo" : "sft8v3fbhftta2528hc1tru3i5qwor92wf4rda501pr8hdthr3o0nsuwe44hqydcagti6l8zouj0j5xk55osomiyu47l9klkabswq4h8v9hklarmgueinmybzguvexj"
+        },
+        "username" : {
+          "equalTo" : "ashleigh.littel"
+        }
+      }
+    },
+    "response" : {
+      "status" : 201,
+      "body" : "{\n  \"app_key\" : \"8765futybkunj98ho7gi6tybkuhj\",\n  \"success\" : true\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "1f3028dc-31b0-4fe4-b793-8c68ec78d0ef",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:25:19.223604Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "auth_appkey_post",
+          "schema" : {
+            "example" : {
+              "app_key" : "8765futybkunj98ho7gi6tybkuhj",
+              "success" : true
+            },
+            "properties" : {
+              "app_key" : {
+                "example" : "8765futybkunj98ho7gi6tybkuhj",
+                "type" : "string"
+              },
+              "success" : {
+                "example" : true,
+                "type" : "boolean"
+              }
+            },
+            "required" : [ "app_key" ],
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 119
+  }, {
+    "id" : "0daf9526-26b1-420e-8f66-98fe9b450220",
+    "name" : "Compromise app key",
+    "request" : {
+      "urlPath" : "/authentication/appkey",
+      "method" : "PATCH",
+      "queryParameters" : {
+        "app_key" : {
+          "equalTo" : "b16jn8p9m29k9jxbb5tejpahuxbbs13he08lu2wsa4rdg0rhj"
+        }
+      }
+    },
+    "response" : {
+      "status" : 202,
+      "body" : "{\n  \"success\" : true\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "0daf9526-26b1-420e-8f66-98fe9b450220",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:25:19.223472Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "auth_appkey_patch",
+          "schema" : {
+            "example" : {
+              "success" : true
+            },
+            "properties" : {
+              "success" : {
+                "example" : true,
+                "type" : "boolean"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 120
+  }, {
+    "id" : "562f8285-d679-46c7-898c-fdf4f14e9900",
+    "name" : "Deactivate app key",
+    "request" : {
+      "urlPath" : "/appkey",
+      "method" : "PUT",
+      "queryParameters" : {
+        "app_key" : {
+          "equalTo" : "3gpr4ptsyr761k1ddagqq9e7fvj4ifvselnq5h7lx3yndo2b98zzeonhwqgg3wig9lgs9caddfe"
+        }
+      }
+    },
+    "response" : {
+      "status" : 202,
+      "body" : "{\n  \"success\" : true\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "562f8285-d679-46c7-898c-fdf4f14e9900",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:25:19.223401Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "appkey_put",
+          "schema" : {
+            "example" : {
+              "success" : true
+            },
+            "properties" : {
+              "success" : {
+                "example" : true,
+                "type" : "boolean"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 121
+  }, {
+    "id" : "3ebfdafb-cd38-47fc-8a7a-0544ac860470",
+    "name" : "Request app key",
+    "request" : {
+      "urlPath" : "/appkey",
+      "method" : "POST",
+      "queryParameters" : {
+        "supportsYubikey" : {
+          "equalTo" : "false"
+        },
+        "password" : {
+          "equalTo" : "4nug0lkspt91sb2nywzppmlz48vqp0m3n9wvo2tar81cbwtxm4gd5v6bltez6h4jwcq78ffy9gf14an29lsxbawn81r47qgtjidc11lv9c9f2delk1eg8buuj3r2fdev7jvmift1oml0pukq3eeyf79lzorjjsptmpm18145209fesliy1o3"
+        },
+        "username" : {
+          "equalTo" : "napoleon.beier"
+        }
+      }
+    },
+    "response" : {
+      "status" : 201,
+      "body" : "{\n  \"app_key\" : \"8765futybkunj98ho7gi6tybkuhj\",\n  \"success\" : true\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "3ebfdafb-cd38-47fc-8a7a-0544ac860470",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:25:19.223309Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "appkey_post",
+          "schema" : {
+            "example" : {
+              "app_key" : "8765futybkunj98ho7gi6tybkuhj",
+              "success" : true
+            },
+            "properties" : {
+              "app_key" : {
+                "example" : "8765futybkunj98ho7gi6tybkuhj",
+                "type" : "string"
+              },
+              "success" : {
+                "example" : true,
+                "type" : "boolean"
+              }
+            },
+            "required" : [ "app_key" ],
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 122
+  }, {
+    "id" : "2d62444a-f1c8-4c17-941a-0c0288dcb855",
+    "name" : "Compromise app key",
+    "request" : {
+      "urlPath" : "/appkey",
+      "method" : "PATCH",
+      "queryParameters" : {
+        "app_key" : {
+          "equalTo" : "785p7mwhmcl0b1tl8215up4jmjdlvnhh8t4ih3q4inlaozm5tjiznkiforvttskn2kl9ieyesphnh8tygxgp80s4ek66hqjjzxwc13qn6ac1w15ylm9lagczqpy6iuml0cqt26jc92mrwh7knnb944ublkf"
+        }
+      }
+    },
+    "response" : {
+      "status" : 202,
+      "body" : "{\n  \"success\" : true\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "2d62444a-f1c8-4c17-941a-0c0288dcb855",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:25:19.223009Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "appkey_patch",
+          "schema" : {
+            "example" : {
+              "success" : true
+            },
+            "properties" : {
+              "success" : {
+                "example" : true,
+                "type" : "boolean"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 123
+  } ]
+}

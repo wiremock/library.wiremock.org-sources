@@ -1,0 +1,345 @@
+{
+  "mappings" : [ {
+    "id" : "27fd39db-c9aa-49ac-82e9-cda17ce5bbb9",
+    "name" : "Modify the list of owners for your website or domain.",
+    "request" : {
+      "urlPath" : "/webResource/6033",
+      "method" : "PUT"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"site\" : {\n    \"identifier\" : \"2xcehyc85enn9bffpk88eie9x35h7dnn8n7ik15j7pz1hb4wlt4i3kznewr3z6o28kz3ldjm81gdxpfqdzc4hp3j3up9sz6vx1o23g6svswj8mpgoja061allze0ako8rkd1sfb2pvt3ik4vnnk835\",\n    \"type\" : \"h19ur64pk5b1j6xbqtii7ibub6gofaegivx8p2j6uofxhfy9q1gdzqhn1qary8uouit0oew3tqs8n8a0\"\n  },\n  \"owners\" : [ \"ga6h6f235l4t4lhdhtka6m3r8sqydku9p2u8666dxaugx39rfoknbctyff98e5m41cab6k6l99jhwbbc2b0qkymvore5smnb4kofcr160mk4lbwbtpew0c2db7xyp5d7x5uwutcgfjitwlj4d6wpqu6hv42cf\", \"ubtgpydr1qrs4uoh3fiq6b5lepfulp05607k62xyjs8ifijqdxl7crbq5owik50pi0p8ziqyvp95zfh5p8pb8092j8u41b1\", \"56k8wn0nc354c2kt7kdv3cmqfguim0lgyg9cggbwxjcalogs8ughel83tejcugc656vdqbpvo8yy54vux5vdcn3tfz3m3upaws551wq9ueffokik4y7ze0n8p\", \"y2y63y7knkfy6sdeeodpiyigeqb3v70yu2o7o3l9ygwje6osequ7g6jzf8mtmos3vni5cum3i6bdeizgdwayy9h10vp97knfl1dviiverezp1gitu81g6bhun1rd55nbig4t38u66ts28hxtcrq096p6ykloqz2vn544bwcahxzs\", \"pwb35orwm2dfx0htuxa8vn558na4rsrwos\", \"rni9aclfo93i5y5y4wilammc6r44gd007i4b4\" ],\n  \"id\" : \"912l\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "27fd39db-c9aa-49ac-82e9-cda17ce5bbb9",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:28.987725Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "siteVerification.webResource.update",
+          "schema" : {
+            "properties" : {
+              "id" : {
+                "description" : "The string used to identify this site. This value should be used in the \"id\" portion of the REST URL for the Get, Update, and Delete operations.",
+                "type" : "string"
+              },
+              "owners" : {
+                "description" : "The email addresses of all verified owners.",
+                "items" : {
+                  "type" : "string"
+                },
+                "type" : "array"
+              },
+              "site" : {
+                "description" : "The address and type of a site that is verified or will be verified.",
+                "properties" : {
+                  "identifier" : {
+                    "description" : "The site identifier. If the type is set to SITE, the identifier is a URL. If the type is set to INET_DOMAIN, the site identifier is a domain name.",
+                    "type" : "string"
+                  },
+                  "type" : {
+                    "description" : "The site type. Can be SITE or INET_DOMAIN (domain name).",
+                    "type" : "string"
+                  }
+                },
+                "type" : "object"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 0
+  }, {
+    "id" : "1e1d2fbb-66ab-4d53-9842-386b03f39e92",
+    "name" : "Modify the list of owners for your website or domain. This method supports patch...",
+    "request" : {
+      "urlPath" : "/webResource/496p",
+      "method" : "PATCH"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"site\" : {\n    \"identifier\" : \"m82bvlvoky8w35n7qta8dj1vw6sefy\",\n    \"type\" : \"6sq4wp4idsel50ev5qha3xv2ksouat0xtefxgyf7tth79daxviedtdyfkerk9nkublu35tg6eg\"\n  },\n  \"owners\" : [ \"udz29y4upiopob3toz3i7v14u08n8pnernt0hp7qmj7i\" ],\n  \"id\" : \"v5np\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "1e1d2fbb-66ab-4d53-9842-386b03f39e92",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:28.987239Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "siteVerification.webResource.patch",
+          "schema" : {
+            "properties" : {
+              "id" : {
+                "description" : "The string used to identify this site. This value should be used in the \"id\" portion of the REST URL for the Get, Update, and Delete operations.",
+                "type" : "string"
+              },
+              "owners" : {
+                "description" : "The email addresses of all verified owners.",
+                "items" : {
+                  "type" : "string"
+                },
+                "type" : "array"
+              },
+              "site" : {
+                "description" : "The address and type of a site that is verified or will be verified.",
+                "properties" : {
+                  "identifier" : {
+                    "description" : "The site identifier. If the type is set to SITE, the identifier is a URL. If the type is set to INET_DOMAIN, the site identifier is a domain name.",
+                    "type" : "string"
+                  },
+                  "type" : {
+                    "description" : "The site type. Can be SITE or INET_DOMAIN (domain name).",
+                    "type" : "string"
+                  }
+                },
+                "type" : "object"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 1
+  }, {
+    "id" : "f664bd6c-dac6-431a-a511-39c1ce30f08e",
+    "name" : "Get the most current data for a website or domain.",
+    "request" : {
+      "urlPath" : "/webResource/6t0a",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"site\" : {\n    \"identifier\" : \"x5uo0teexx242ujt06x4ool3nvaj8xolbcx07mdk9iwj9jzm3c1xelxo9thivdh9dqeyfnbb7fdyp2f2gysu0txyv5o6m1ch7fcrvb2f6nox0sdwweeog49ykj0hk57d\",\n    \"type\" : \"pg71essx\"\n  },\n  \"owners\" : [ \"ths7b8gwoxn80m8idig170lyoxf\", \"egf7jc2y9rhxa99qh95jcpkmqrb6bvt5s6x35h2qf8f9ovanhrrdz8el62x4nfdr75o2vtzsbvajnh1j8fgf2tnqyyqw0bkerw\", \"cbwht74pynp7h1hzbj5mighz2huxlvujnjfqrfdueue0ynccaw60lmn3ga0o6mlj3yke9nxqva\", \"i7h03mnc99qu65765ffl7oixqlkvrtoaqgcb2fbh5zaql2r8gl20az8hgzwxfv69cls2imb9m5dfei3xi56ldv2la0vajqdtmhwll86iu9j1axeib3yjfnmy9fyisqnzvtdod0jr0h1caru6vuqjabun8t4d6\", \"qsf4geaao\" ],\n  \"id\" : \"q38u\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "f664bd6c-dac6-431a-a511-39c1ce30f08e",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:28.986882Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "siteVerification.webResource.get",
+          "schema" : {
+            "properties" : {
+              "id" : {
+                "description" : "The string used to identify this site. This value should be used in the \"id\" portion of the REST URL for the Get, Update, and Delete operations.",
+                "type" : "string"
+              },
+              "owners" : {
+                "description" : "The email addresses of all verified owners.",
+                "items" : {
+                  "type" : "string"
+                },
+                "type" : "array"
+              },
+              "site" : {
+                "description" : "The address and type of a site that is verified or will be verified.",
+                "properties" : {
+                  "identifier" : {
+                    "description" : "The site identifier. If the type is set to SITE, the identifier is a URL. If the type is set to INET_DOMAIN, the site identifier is a domain name.",
+                    "type" : "string"
+                  },
+                  "type" : {
+                    "description" : "The site type. Can be SITE or INET_DOMAIN (domain name).",
+                    "type" : "string"
+                  }
+                },
+                "type" : "object"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 2
+  }, {
+    "id" : "c3e16178-766b-4a2b-a778-08e570f79562",
+    "name" : "Relinquish ownership of a website or domain. - 200",
+    "request" : {
+      "urlPath" : "/webResource/808z",
+      "method" : "DELETE"
+    },
+    "response" : {
+      "status" : 200
+    },
+    "uuid" : "c3e16178-766b-4a2b-a778-08e570f79562",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:28.986524Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "siteVerification.webResource.delete"
+        }
+      }
+    },
+    "insertionIndex" : 3
+  }, {
+    "id" : "3f181fa7-f4f1-4d4f-b0ca-48b69dda754d",
+    "name" : "Attempt verification of a website or domain.",
+    "request" : {
+      "urlPath" : "/webResource",
+      "method" : "POST",
+      "queryParameters" : {
+        "verificationMethod" : {
+          "equalTo" : "tpcjka4mx453ewb5swhkm2pioa9jb1s8o2li3md93lpk5dd71n8o4lwsf9t5olqd983m2qf6kcrrk6ckmaay4pt1uqhr4bj"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"site\" : {\n    \"identifier\" : \"9y5yoztfmlihiarq320tzzx54x9ot8mpuose4a5l79v1yjaydqyzbpgd8hhl2r8h3shz1c83mi081h0jmhrdv5ovjinvb0j0h8s2g69hfi3a2zaeyn12uic2uqhlksc23q2rkgt7dg5ygen5t57r4md09a0byf6j\",\n    \"type\" : \"aaz3qb0zz1nbv7gwsgkezrytuubdr8s6h8hesn79pymb48u8n6s24emhisr7k0gjg4k\"\n  },\n  \"owners\" : [ \"09ls3hvtpgat14o5z5v4vuvzeib8r1k3s95hiei98us2cnjupelolx38h9997yxiohlq8b7pv4jferxbzqraye27m7x78agf25wl7picfoegv9d577o5\", \"7wbya5cxpb3cavktp3lhhw0zvxaco7idfhvabti8beix45abzfdmkpqbbnifn7g\" ],\n  \"id\" : \"i261\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "3f181fa7-f4f1-4d4f-b0ca-48b69dda754d",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:28.986377Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "siteVerification.webResource.insert",
+          "schema" : {
+            "properties" : {
+              "id" : {
+                "description" : "The string used to identify this site. This value should be used in the \"id\" portion of the REST URL for the Get, Update, and Delete operations.",
+                "type" : "string"
+              },
+              "owners" : {
+                "description" : "The email addresses of all verified owners.",
+                "items" : {
+                  "type" : "string"
+                },
+                "type" : "array"
+              },
+              "site" : {
+                "description" : "The address and type of a site that is verified or will be verified.",
+                "properties" : {
+                  "identifier" : {
+                    "description" : "The site identifier. If the type is set to SITE, the identifier is a URL. If the type is set to INET_DOMAIN, the site identifier is a domain name.",
+                    "type" : "string"
+                  },
+                  "type" : {
+                    "description" : "The site type. Can be SITE or INET_DOMAIN (domain name).",
+                    "type" : "string"
+                  }
+                },
+                "type" : "object"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 4
+  }, {
+    "id" : "5a3ec01a-9715-4683-8d09-c21e45da5ad8",
+    "name" : "Get the list of your verified websites and domains.",
+    "request" : {
+      "urlPath" : "/webResource",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"items\" : [ {\n    \"site\" : {\n      \"identifier\" : \"dhoiuk9v4eyoopj3asu1c6jdnc35zp3nh55v5c106hh0wrb65hsnhq2plrk98eqbbnc\",\n      \"type\" : \"wkkqckudnoflhl9fajndu4egq07ijjpzb4fggaekpiwsw5q1ye0fy829hm0wo0nhx0fc3pob375w3jezfql417cqzua1bd6qd9i\"\n    },\n    \"owners\" : [ \"71svzm185kfbix8l050czh2rh2ray14q2mzru34brh3v3nwos\" ],\n    \"id\" : \"jrbu\"\n  }, {\n    \"site\" : {\n      \"identifier\" : \"f6bmh\",\n      \"type\" : \"s74nb1y18m8dwqve0f0khia2olub5bxbsopbntwp3wzbasrzej6k9a4k078xx7v3hu9r0msia0paqu9axr4y0mihaukm23unm5vse2d10e8vt318grgreq7umhiw7593xuhq9obhmvaap3g8oacfja3end21s40vn\"\n    },\n    \"owners\" : [ \"io4820tk4med184rsj4c63ftvnz9hpp20oo7lqmytl5md295kiq1owvp6ftne1qk3alsd8ygovba0lyc2vgi7wcylgkago4l6l0qmekyozgs\", \"e53cm5xcle9eu8xvgl182zmkdlm6hqhdubuj83ukylz4886l9el83sv5y6decg2avwtg2rf8xgo4wgfvzomvnctlrxu7dzmyopav4dcg0j2nx2qy7g9y145bmuadfms2x5f7bldwxr9hsg9vyu5wilbbde08wexkuk782jdpmozl8o95ac62h9fheosro0debv3cim\", \"hglnivuu70t47pvgh79v6wdrmlgaw7isik5ziirqn08pk997o087u689jgfpqebxw538zk5omil5y80cauez0px3orwk8r4wkc37f9mr2nd40jzpok09b0wpij4fwxjrgenmjwkod4n8ehcwkmhv8o\", \"8d4afpqy8now28p7f1yicp3tbaiu0et9xp83zubx92mxcczh6gqmorspn1toa2b3mdllkf\", \"2cmvfwn34qbzz5969yrqn99af90anjf5ejm9o38ap76slnufv1mhg15nfdbm0m2saadfmql6usizi14eawl3kbgr2kawdhkkpo9pe13nfhazp1wn7pnvp3tq35v3gyy\", \"405w5p3jvzi19frf7zi4s05s9qvxpr51wav1r2u568ylwasts42oxd5otbhezgf7bnhgzvo7jrz5rak0xevkisf65u1ob9gljy2qa1ay7eb319myl7k1baazueqk\" ],\n    \"id\" : \"98te\"\n  }, {\n    \"site\" : {\n      \"identifier\" : \"7dw3oycl5je\",\n      \"type\" : \"2zl2ju3mas9b7sq7u3aoiv833e2fvpaumh6umxm46q6r7g3gtr4n1rv5gwu10dnu2zzln7q0gihjyd648tdzs7100etwhjst7uwntzf9hn9ifa3h1tk86\"\n    },\n    \"owners\" : [ \"l7pfix24gj0hf48o9fqc0frbbywz9l946qps66lgwr8kw27thb2lvq878v3nr605q0mu8i9egvmafdfkqhq0pwzqo\", \"ru3owacxe0pdaj9gka3p6x0en6rvnahtnjr9brh9k33vdaueb8lygfpko57v2gzy23dwl3k2qjm7psnlacbgrdrl0b8lnf7wbcwh6h6worxfgh7q6etmns95sjygmw0trkakexeqddey4iqkru378qg3fy0\", \"jnb9\", \"lebyy3pqhd3zqo40wlze\", \"lnuz1bzywfmkfummc90ij2xw5jxh2tuxv9hk36d6raahxnh86yx1punvgiffxe2xi41ompky4ms5qwysn40uq83ijs9m10mmik1mqyfgaf21iltqj1ynje\", \"01twa13wcvh48f1gg\", \"2rcbddr5tr3p8gs3f8slyd7nr8puza6b1f88m62iaz1hbq2fsy4oe28ssndyy3bg6uqu28vb2junr2g6yvx2nmj6mo13vcqnuje4mv0z3murnle6696mi1mgee6374r8l30v93v\" ],\n    \"id\" : \"c3wp\"\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "5a3ec01a-9715-4683-8d09-c21e45da5ad8",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:28.986081Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "siteVerification.webResource.list",
+          "schema" : {
+            "properties" : {
+              "items" : {
+                "description" : "The list of sites that are owned by the authenticated user.",
+                "items" : {
+                  "$ref" : "#/components/schemas/SiteVerificationWebResourceResource"
+                },
+                "type" : "array"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 5
+  }, {
+    "id" : "068bb31f-6fbb-44fb-b852-72a25ebae80b",
+    "name" : "Get a verification token for placing on a website or domain.",
+    "request" : {
+      "urlPath" : "/token",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"method\" : \"v4a5pgjn3uejl2vrylfqal0p9qf4ey5r67mhhto0bfttfu6bg94305b6n9smumsz9kd36i\",\n  \"token\" : \"naebqyarf44ht9cd5f8dxc0glr11dlza32px3r2cxj2peq61vm1p7a7z3qgvx4bebw5kmjiuvzbbx8dc1ihns6tl3folx2mpyj37j3zpi6qe3etl6bpsprtayecai294gof7prftxi4ylur3zuxc6qfi\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "068bb31f-6fbb-44fb-b852-72a25ebae80b",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:28.985424Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "siteVerification.webResource.getToken",
+          "schema" : {
+            "properties" : {
+              "method" : {
+                "description" : "The verification method to use in conjunction with this token. For FILE, the token should be placed in the top-level directory of the site, stored inside a file of the same name. For META, the token should be placed in the HEAD tag of the default page that is loaded for the site. For DNS, the token should be placed in a TXT record of the domain.",
+                "type" : "string"
+              },
+              "token" : {
+                "description" : "The verification token. The token must be placed appropriately in order for verification to succeed.",
+                "type" : "string"
+              }
+            },
+            "type" : "object"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 6
+  } ]
+}

@@ -1,0 +1,1085 @@
+{
+  "mappings" : [ {
+    "id" : "c8671680-f326-48cc-b8c9-3f5c04d04f31",
+    "name" : "Used to retreive a digital account reference list from Incontrol  (application/xml)",
+    "request" : {
+      "urlPath" : "/send/v1/qk32/digital-account/search",
+      "method" : "POST",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/xml"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"digital_account\" : {\n    \"reference\" : \"ABC_231231233243242\",\n    \"account_type\" : \"DEBIT\",\n    \"digital_account_reference_numbers\" : {\n      \"digital_account_reference_number\" : [ {\n        \"issue_timestamp\" : \"2015-03-18T14:18:55Z\",\n        \"pan\" : \"5234568000001230\"\n      }, {\n        \"issue_timestamp\" : \"2015-03-18T14:18:55Z\",\n        \"pan\" : \"5234568000001230\"\n      }, {\n        \"issue_timestamp\" : \"2015-03-18T14:18:55Z\",\n        \"pan\" : \"5234568000001230\"\n      }, {\n        \"issue_timestamp\" : \"2015-03-18T14:18:55Z\",\n        \"pan\" : \"5234568000001230\"\n      } ]\n    },\n    \"account_uri\" : \"raw:558900009012\"\n  }\n}",
+      "headers" : {
+        "Content-Type" : "application/xml"
+      }
+    },
+    "uuid" : "c8671680-f326-48cc-b8c9-3f5c04d04f31",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:15.486738Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "retrieveDigitalAccntRefNumList",
+          "schema" : {
+            "type" : "object",
+            "properties" : {
+              "digital_account" : {
+                "$ref" : "#/components/schemas/DigitalAccount_90"
+              }
+            },
+            "description" : "Response details for a retrieve digital account reference number"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 0
+  }, {
+    "id" : "3211fb82-f1fa-4b75-99a7-3953a1e3fc65",
+    "name" : "Used to retreive a digital account reference list from Incontrol  (application/json)",
+    "request" : {
+      "urlPath" : "/send/v1/alb1/digital-account/search",
+      "method" : "POST",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/json"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"digital_account\" : {\n    \"reference\" : \"ABC_231231233243242\",\n    \"account_type\" : \"DEBIT\",\n    \"digital_account_reference_numbers\" : {\n      \"digital_account_reference_number\" : [ {\n        \"issue_timestamp\" : \"2015-03-18T14:18:55Z\",\n        \"pan\" : \"5234568000001230\"\n      }, {\n        \"issue_timestamp\" : \"2015-03-18T14:18:55Z\",\n        \"pan\" : \"5234568000001230\"\n      } ]\n    },\n    \"account_uri\" : \"raw:558900009012\"\n  }\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "3211fb82-f1fa-4b75-99a7-3953a1e3fc65",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:15.486608Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "retrieveDigitalAccntRefNumList",
+          "schema" : {
+            "type" : "object",
+            "properties" : {
+              "digital_account" : {
+                "$ref" : "#/components/schemas/DigitalAccount_90"
+              }
+            },
+            "description" : "Response details for a retrieve digital account reference number"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 1
+  }, {
+    "id" : "c9fc0b43-ee46-4b43-9366-5e026900e1e3",
+    "name" : "Used to create a digital account reference number from Incontrol  (application/xml)",
+    "request" : {
+      "urlPath" : "/send/v1/xdvf/digital-account",
+      "method" : "POST",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/xml"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"digital_account\" : {\n    \"reference\" : \"ABC_231231233243242\",\n    \"account_type\" : \"DEBIT\",\n    \"digital_account_reference_number\" : {\n      \"issue_timestamp\" : \"2016-09-22T13:22:11-05:30\",\n      \"pan\" : \"5234568000001230\"\n    },\n    \"account_uri\" : \"raw:558900009012\"\n  }\n}",
+      "headers" : {
+        "Content-Type" : "application/xml"
+      }
+    },
+    "uuid" : "c9fc0b43-ee46-4b43-9366-5e026900e1e3",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:15.486455Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "createDigitalAccntRefNum",
+          "schema" : {
+            "type" : "object",
+            "properties" : {
+              "digital_account" : {
+                "$ref" : "#/components/schemas/DigitalAccount_87"
+              }
+            },
+            "description" : "Response details for a create digital account reference number"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 2
+  }, {
+    "id" : "fbc45813-32dc-477b-a3f0-b04372000eca",
+    "name" : "Used to create a digital account reference number from Incontrol  (application/json)",
+    "request" : {
+      "urlPath" : "/send/v1/8286/digital-account",
+      "method" : "POST",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/json"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"digital_account\" : {\n    \"reference\" : \"ABC_231231233243242\",\n    \"account_type\" : \"DEBIT\",\n    \"digital_account_reference_number\" : {\n      \"issue_timestamp\" : \"2016-09-22T13:22:11-05:30\",\n      \"pan\" : \"5234568000001230\"\n    },\n    \"account_uri\" : \"raw:558900009012\"\n  }\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "fbc45813-32dc-477b-a3f0-b04372000eca",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:15.486343Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "createDigitalAccntRefNum",
+          "schema" : {
+            "type" : "object",
+            "properties" : {
+              "digital_account" : {
+                "$ref" : "#/components/schemas/DigitalAccount_87"
+              }
+            },
+            "description" : "Response details for a create digital account reference number"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 3
+  }, {
+    "id" : "58d14322-b0b4-4141-95b3-28d83ed2367e",
+    "name" : "The Funding Transaction enables the 'pull' of money from the sender's card to the Transaction Originator who is providing the Person to Merchant service. The amount that is debited from the Funding Account (sending consumer's account) will be the amount 'pushed' to the recipient via a payment transfer request.  Funds can be transferred from Mastercard® or Maestro® debit card accounts. To initiate the funding transaction, users can provide the sending consumer's Primary Account Number (PAN) or a unique identifier previously mapped to the sending consumer's account.",
+    "request" : {
+      "urlPath" : "/send/v1/partners/w9t6/transfers/funding",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"transfer\" : {\n    \"sanction_screening_override\" : true,\n    \"device_id\" : \"DEV123456\",\n    \"original_status\" : \"APPROVED\",\n    \"transaction_history\" : {\n      \"item_count\" : 1,\n      \"data\" : {\n        \"transaction\" : [ {\n          \"authorization_id\" : \"801726\",\n          \"retrieval_reference\" : \"624200192616\",\n          \"system_trace_audit_number\" : \"926162\",\n          \"transaction_amount\" : { },\n          \"resource_type\" : \"transaction\",\n          \"type\" : \"FUNDING\",\n          \"network\" : \"MasterCard\",\n          \"network_status_code\" : \"54\",\n          \"payment_account_reference\" : \"5001ESVM4JQAAOP5JKSK1XGAPOPG2\",\n          \"create_timestamp\" : \"2015-03-18T14:18:55Z\",\n          \"network_status_description\" : \"Expired Card.\",\n          \"id\" : \"trn_8h4me233jk23l6c5lw5f\",\n          \"status_timestamp\" : \"2015-03-18T14:18:56Z\",\n          \"status_reason\" : \"APPROVED\",\n          \"account_uri\" : \"pan:************9012\",\n          \"status\" : \"APPROVED\"\n        }, {\n          \"authorization_id\" : \"801726\",\n          \"retrieval_reference\" : \"624200192616\",\n          \"system_trace_audit_number\" : \"926162\",\n          \"transaction_amount\" : { },\n          \"resource_type\" : \"transaction\",\n          \"type\" : \"FUNDING\",\n          \"network\" : \"MasterCard\",\n          \"network_status_code\" : \"54\",\n          \"payment_account_reference\" : \"5001ESVM4JQAAOP5JKSK1XGAPOPG2\",\n          \"create_timestamp\" : \"2015-03-18T14:18:55Z\",\n          \"network_status_description\" : \"Expired Card.\",\n          \"id\" : \"trn_8h4me233jk23l6c5lw5f\",\n          \"status_timestamp\" : \"2015-03-18T14:18:56Z\",\n          \"status_reason\" : \"APPROVED\",\n          \"account_uri\" : \"pan:************9012\",\n          \"status\" : \"APPROVED\"\n        }, {\n          \"authorization_id\" : \"801726\",\n          \"retrieval_reference\" : \"624200192616\",\n          \"system_trace_audit_number\" : \"926162\",\n          \"transaction_amount\" : { },\n          \"resource_type\" : \"transaction\",\n          \"type\" : \"FUNDING\",\n          \"network\" : \"MasterCard\",\n          \"network_status_code\" : \"54\",\n          \"payment_account_reference\" : \"5001ESVM4JQAAOP5JKSK1XGAPOPG2\",\n          \"create_timestamp\" : \"2015-03-18T14:18:55Z\",\n          \"network_status_description\" : \"Expired Card.\",\n          \"id\" : \"trn_8h4me233jk23l6c5lw5f\",\n          \"status_timestamp\" : \"2015-03-18T14:18:56Z\",\n          \"status_reason\" : \"APPROVED\",\n          \"account_uri\" : \"pan:************9012\",\n          \"status\" : \"APPROVED\"\n        }, {\n          \"authorization_id\" : \"801726\",\n          \"retrieval_reference\" : \"624200192616\",\n          \"system_trace_audit_number\" : \"926162\",\n          \"transaction_amount\" : { },\n          \"resource_type\" : \"transaction\",\n          \"type\" : \"FUNDING\",\n          \"network\" : \"MasterCard\",\n          \"network_status_code\" : \"54\",\n          \"payment_account_reference\" : \"5001ESVM4JQAAOP5JKSK1XGAPOPG2\",\n          \"create_timestamp\" : \"2015-03-18T14:18:55Z\",\n          \"network_status_description\" : \"Expired Card.\",\n          \"id\" : \"trn_8h4me233jk23l6c5lw5f\",\n          \"status_timestamp\" : \"2015-03-18T14:18:56Z\",\n          \"status_reason\" : \"APPROVED\",\n          \"account_uri\" : \"pan:************9012\",\n          \"status\" : \"APPROVED\"\n        } ]\n      },\n      \"resource_type\" : \"list\"\n    },\n    \"created\" : \"2015-03-18T14:18:55Z\",\n    \"channel\" : \"WEB\",\n    \"resource_type\" : \"transfer\",\n    \"interchange_rate_designator\" : \"QR\",\n    \"sender_account_uri\" : \"pan:************9012\",\n    \"reconciliation_data\" : {\n      \"custom_field\" : [ {\n        \"name\" : \"TransactionID\",\n        \"value\" : \"456FDWBS43\"\n      }, {\n        \"name\" : \"TransactionID\",\n        \"value\" : \"456FDWBS43\"\n      }, {\n        \"name\" : \"TransactionID\",\n        \"value\" : \"456FDWBS43\"\n      }, {\n        \"name\" : \"TransactionID\",\n        \"value\" : \"456FDWBS43\"\n      } ]\n    },\n    \"recipient_account_uri\" : \"pan:************7372\",\n    \"statement_descriptor\" : \"TST*THANKYOU\",\n    \"payment_type\" : \"P2M\",\n    \"sender\" : {\n      \"address\" : {\n        \"country\" : \"USA\",\n        \"city\" : \"OFallon\",\n        \"postal_code\" : \"63368\",\n        \"line2\" : \"Apartment 9\",\n        \"line1\" : \"1 Main St\",\n        \"country_subdivision\" : \"MO\"\n      },\n      \"government_ids\" : {\n        \"government_id_uri\" : [ \"r6cp0xgqy0h0hjgdaja\", \"yguw2t1vqeb8j8i8t23t\", \"zwvgty4v8llkenr9tlamm2hsx0xpdbbkwe8o8npxqnoiz8a2x9lu8o6ouyrnujvio\", \"qpd7h9nqjtgarpo7rykvl4qkgvkio1lc85gyp176o273z6f0czrujzs4n9pc5ucaupjuv4f3evw7m8jrrud358vzlu71wdn4rw5qa77xcl44k7lo4u3jj2xil1qyz4o5jyc7ric166\", \"93rwow19dfc1a0z9q4yu95u6if8i8najyirk6724xv3bh2ur33w5sk8rhsrpb2lghqt3ogngrhg\" ]\n      },\n      \"nationality\" : \"USA\",\n      \"phone\" : \"11234567890\",\n      \"date_of_birth\" : \"1999-12-30\",\n      \"additional_merchant_data\" : {\n        \"payment_facilitator_id\" : 123456,\n        \"sub_merchant_id\" : \"A1234\"\n      },\n      \"last_name\" : \"Jones\",\n      \"middle_name\" : \"Tyler\",\n      \"first_name\" : \"John\",\n      \"email\" : \"jane.smith123@abcmail.com\",\n      \"sanction_score\" : \"20\"\n    },\n    \"transfer_amount\" : {\n      \"currency\" : \"USD\",\n      \"value\" : \"5300\"\n    },\n    \"recipient\" : {\n      \"address\" : {\n        \"country\" : \"USA\",\n        \"city\" : \"OFallon\",\n        \"postal_code\" : \"63368\",\n        \"line2\" : \"Apartment 9\",\n        \"line1\" : \"1 Main St\",\n        \"country_subdivision\" : \"MO\"\n      },\n      \"government_ids\" : {\n        \"government_id_uri\" : [ \"6mhsk4dk6ciu0bt5goxmv17s6ljd27lpdey6842tw\", \"stkk5fic7\", \"9ih5ziucegaoy6hm4m3ulcx8h6qvbuhwd8ordled3wznudcyeoq4lbf7p4kxma31hj0sk0zzjxmps3hpj04wonk5lltldccu3y0bppte8vtfxx81rf3ws7sm5h0mdjh3el\", \"l3sia473slpzg0m4ak6u6s9jec2ksoporj0j919zm8\" ]\n      },\n      \"nationality\" : \"USA\",\n      \"phone\" : \"11234567890\",\n      \"date_of_birth\" : \"1999-12-30\",\n      \"merchant_category_code\" : \"0763\",\n      \"last_name\" : \"Jones\",\n      \"middle_name\" : \"Tyler\",\n      \"first_name\" : \"John\",\n      \"email\" : \"Jane.Smith123@abcmail.com\",\n      \"sanction_score\" : \"20\"\n    },\n    \"location\" : \"state:MO\",\n    \"id\" : \"trn_9abcd233jk23l6c5lw5f\",\n    \"status_timestamp\" : \"2015-03-18T14:18:55Z\",\n    \"transfer_reference\" : \"DEF123456\",\n    \"status\" : \"APPROVED\"\n  }\n}",
+      "headers" : {
+        "Content-Type" : "application/xml"
+      }
+    },
+    "uuid" : "58d14322-b0b4-4141-95b3-28d83ed2367e",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:15.486204Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "createFunding",
+          "schema" : {
+            "type" : "object",
+            "properties" : {
+              "transfer" : {
+                "$ref" : "#/components/schemas/Transfer_129"
+              }
+            },
+            "description" : "Response details"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 4
+  }, {
+    "id" : "0947f58d-2fd3-4b95-b97c-30a6b6fb56d0",
+    "name" : "This service allows Mastercard Merchant QR originating and receiving partners to delete a registered PAN for notifications.  (application/xml)",
+    "request" : {
+      "urlPath" : "/send/v1/partners/j9ys/notification-registries/2wzomwv5h8uk83ncxghwfhrzqkyi4e0kpu61c3d26mmo8vsbrjsf80jw75kvvkcp7zzmxvdacky6h9djebf4u2g5y83f6zq88eisd0kmpkal6lp6ymn5ynyofoz7aeudc3j7p9udj5s6ffpqbm3rje5jqltye8wc07mr1kbuogm5tvp5tz79ah4c7482f",
+      "method" : "DELETE",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/xml"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"accountregistration\" : {\n    \"account_registration_reference\" : \"areg_GDVUiwh1bXzA_xVdDXn4ctJEKOF\",\n    \"notification_partner_id\" : \"ptnr_A37V2q91WUqSonkfEG29Q-Bf4s9\",\n    \"notification_partner_name\" : \"PROVIDER XYZ\",\n    \"account_uri\" : \"pan:5299926000000542\"\n  }\n}",
+      "headers" : {
+        "Content-Type" : "application/xml"
+      }
+    },
+    "uuid" : "0947f58d-2fd3-4b95-b97c-30a6b6fb56d0",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:15.485558Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "deleteTransferNotificationRegistration",
+          "schema" : {
+            "type" : "object",
+            "properties" : {
+              "accountregistration" : {
+                "$ref" : "#/components/schemas/Accountregistration_171"
+              }
+            },
+            "description" : "Response details"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 5
+  }, {
+    "id" : "ed74182a-1280-4473-bb14-7b195b6bef41",
+    "name" : "This service allows Mastercard Merchant QR originating and receiving partners to delete a registered PAN for notifications.  (application/json)",
+    "request" : {
+      "urlPath" : "/send/v1/partners/obv7/notification-registries/hpjm148kzyc9kgme8obmqve804oxm38axgrbf32pimd3k01v1eqebs7defmu2az0ga1qvr2kdcxn94mb3ft4alzumper767m287pfd3snoeddm21twht5te2olczgwgs6cvxdamx24u98o4dg5357atyr",
+      "method" : "DELETE",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/json"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"accountregistration\" : {\n    \"account_registration_reference\" : \"areg_GDVUiwh1bXzA_xVdDXn4ctJEKOF\",\n    \"notification_partner_id\" : \"ptnr_A37V2q91WUqSonkfEG29Q-Bf4s9\",\n    \"notification_partner_name\" : \"PROVIDER XYZ\",\n    \"account_uri\" : \"pan:5299926000000542\"\n  }\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "ed74182a-1280-4473-bb14-7b195b6bef41",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:15.485432Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "deleteTransferNotificationRegistration",
+          "schema" : {
+            "type" : "object",
+            "properties" : {
+              "accountregistration" : {
+                "$ref" : "#/components/schemas/Accountregistration_171"
+              }
+            },
+            "description" : "Response details"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 6
+  }, {
+    "id" : "e0d5e0a9-d457-4cc5-bfc5-a6373cf9561f",
+    "name" : "This service allows Mastercard Merchant QR originating and receiving partners to update the notitification service provider for a registered PAN. (application/xml)",
+    "request" : {
+      "urlPath" : "/send/v1/partners/o6j5/notification-registries/yfk8xrvlxmbm2d2y39qqy28hbguveri7fzv6ieh4ksxqtp3v0x5dqi97qgu865ofbkqm2nii0i45ghrz891juq62gdhuconpmtl8so4zx8kv9523lbs6iw3txsv5uewnywwkkkp",
+      "method" : "PUT",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/xml"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"accountregistration\" : {\n    \"account_registration_reference\" : \"areg_GDVUiwh1bXzA_xVdDXn4ctJEKOF\",\n    \"notification_partner_id\" : \"ptnr_A37V2q91WUqSonkfEG29Q-Bf4s9\",\n    \"notification_partner_name\" : \"PROVIDER XYZ\",\n    \"account_uri\" : \"pan:5299926000000542\"\n  }\n}",
+      "headers" : {
+        "Content-Type" : "application/xml"
+      }
+    },
+    "uuid" : "e0d5e0a9-d457-4cc5-bfc5-a6373cf9561f",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:15.485286Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "NotificationRegistrationAPIUpdate",
+          "schema" : {
+            "type" : "object",
+            "properties" : {
+              "accountregistration" : {
+                "$ref" : "#/components/schemas/Accountregistration_170"
+              }
+            },
+            "description" : "Response details"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 7
+  }, {
+    "id" : "8a1e88b5-db92-4bb0-bab2-5c4f432a2c53",
+    "name" : "This service allows Mastercard Merchant QR originating and receiving partners to update the notitification service provider for a registered PAN. (application/json)",
+    "request" : {
+      "urlPath" : "/send/v1/partners/78ev/notification-registries/6bzkfptyrp8ce2hfeobzj7c9cdggmxla154mt30casks623ploo6bo00840o96k797y47chlepeup1cmmqgs59o0yrlwz9oeoy23yv0wji2dckgwx6ftxjvovp5b05d3s4qqd8ob5901h6qphktwgehya9qilnq",
+      "method" : "PUT",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/json"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"accountregistration\" : {\n    \"account_registration_reference\" : \"areg_GDVUiwh1bXzA_xVdDXn4ctJEKOF\",\n    \"notification_partner_id\" : \"ptnr_A37V2q91WUqSonkfEG29Q-Bf4s9\",\n    \"notification_partner_name\" : \"PROVIDER XYZ\",\n    \"account_uri\" : \"pan:5299926000000542\"\n  }\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "8a1e88b5-db92-4bb0-bab2-5c4f432a2c53",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:15.485163Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "NotificationRegistrationAPIUpdate",
+          "schema" : {
+            "type" : "object",
+            "properties" : {
+              "accountregistration" : {
+                "$ref" : "#/components/schemas/Accountregistration_170"
+              }
+            },
+            "description" : "Response details"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 8
+  }, {
+    "id" : "f040bb36-b9a9-4741-a807-3fb5d2788f3f",
+    "name" : "This service allows Mastercard Merchant QR originating and receiving partners to retrieve the service provider's information for a registered PAN for notifications.  (application/xml)",
+    "request" : {
+      "urlPath" : "/send/v1/partners/2wia/notification-registries/fv3hus",
+      "method" : "GET",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/xml"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"accountregistration\" : {\n    \"account_registration_reference\" : \"areg_GDVUiwh1bXzA_xVdDXn4ctJEKOF\",\n    \"notification_partner_id\" : \"ptnr_A37V2q91WUqSonkfEG29Q-Bf4s9\",\n    \"notification_partner_name\" : \"PROVIDER XYZ\",\n    \"account_uri\" : \"pan:5299926000000542\"\n  }\n}",
+      "headers" : {
+        "Content-Type" : "application/xml"
+      }
+    },
+    "uuid" : "f040bb36-b9a9-4741-a807-3fb5d2788f3f",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:15.485014Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "NotificationRegistrationAPIReadBy",
+          "schema" : {
+            "type" : "object",
+            "properties" : {
+              "accountregistration" : {
+                "$ref" : "#/components/schemas/Accountregistration_172"
+              }
+            },
+            "description" : "Response details"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 9
+  }, {
+    "id" : "7bdf8fc9-703a-4345-b54b-1a98c07ee8f2",
+    "name" : "This service allows Mastercard Merchant QR originating and receiving partners to retrieve the service provider's information for a registered PAN for notifications.  (application/json)",
+    "request" : {
+      "urlPath" : "/send/v1/partners/v9ni/notification-registries/g5gxv5uue3eadcdiepkksylbargtaszqab014n1zm1tkqqaq53n6q4w2mxwl68z1s5muzopxj7702s5pia127xhcgpx1yzew6ut7kokjw209d8lup66pxnh8l3bok00zqa2hzh4zmp0n282ctgcnebq8h3xi2ctuqe5v8xsc0cafv98dqapz8d",
+      "method" : "GET",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/json"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"accountregistration\" : {\n    \"account_registration_reference\" : \"areg_GDVUiwh1bXzA_xVdDXn4ctJEKOF\",\n    \"notification_partner_id\" : \"ptnr_A37V2q91WUqSonkfEG29Q-Bf4s9\",\n    \"notification_partner_name\" : \"PROVIDER XYZ\",\n    \"account_uri\" : \"pan:5299926000000542\"\n  }\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "7bdf8fc9-703a-4345-b54b-1a98c07ee8f2",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:15.484895Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "NotificationRegistrationAPIReadBy",
+          "schema" : {
+            "type" : "object",
+            "properties" : {
+              "accountregistration" : {
+                "$ref" : "#/components/schemas/Accountregistration_172"
+              }
+            },
+            "description" : "Response details"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 10
+  }, {
+    "id" : "21570ad8-c9c9-4d92-aa08-ab7c4c9399c2",
+    "name" : "This service allows Mastercard Merchant QR originating and receiving partners to register a PAN and service provider to receive notifications on an inbound Merchant Refund or Merchant Payment Transaction. (application/xml)",
+    "request" : {
+      "urlPath" : "/send/v1/partners/n9vo/notification-registries",
+      "method" : "POST",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/xml"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"accountregistration\" : {\n    \"account_registration_reference\" : \"areg_GDVUiwh1bXzA_xVdDXn4ctJEKOF\",\n    \"notification_partner_id\" : \"ptnr_A37V2q91WUqSonkfEG29Q-Bf4s9\",\n    \"notification_partner_name\" : \"PROVIDER XYZ\",\n    \"account_uri\" : \"pan:5299926000000542\"\n  }\n}",
+      "headers" : {
+        "Content-Type" : "application/xml"
+      }
+    },
+    "uuid" : "21570ad8-c9c9-4d92-aa08-ab7c4c9399c2",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:15.48474Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "createTransferNotificationRegistration",
+          "schema" : {
+            "type" : "object",
+            "properties" : {
+              "accountregistration" : {
+                "$ref" : "#/components/schemas/Accountregistration_168"
+              }
+            },
+            "description" : "Response details"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 11
+  }, {
+    "id" : "e6c66b76-4f18-4c79-afcc-a644ecc60abb",
+    "name" : "This service allows Mastercard Merchant QR originating and receiving partners to register a PAN and service provider to receive notifications on an inbound Merchant Refund or Merchant Payment Transaction. (application/json)",
+    "request" : {
+      "urlPath" : "/send/v1/partners/fmf4/notification-registries",
+      "method" : "POST",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/json"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"accountregistration\" : {\n    \"account_registration_reference\" : \"areg_GDVUiwh1bXzA_xVdDXn4ctJEKOF\",\n    \"notification_partner_id\" : \"ptnr_A37V2q91WUqSonkfEG29Q-Bf4s9\",\n    \"notification_partner_name\" : \"PROVIDER XYZ\",\n    \"account_uri\" : \"pan:5299926000000542\"\n  }\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "e6c66b76-4f18-4c79-afcc-a644ecc60abb",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:15.484626Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "createTransferNotificationRegistration",
+          "schema" : {
+            "type" : "object",
+            "properties" : {
+              "accountregistration" : {
+                "$ref" : "#/components/schemas/Accountregistration_168"
+              }
+            },
+            "description" : "Response details"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 12
+  }, {
+    "id" : "1bb00104-b70b-40cf-9800-37230faa814a",
+    "name" : "Client can simulate a Mastercard Merchant Presented QR Refund notification to the registered URL endpoint. ",
+    "request" : {
+      "urlPath" : "/send/v1/partners/7i9w/events/generate/refund",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"notification_response\" : {\n    \"transfer_reference\" : \"ref_jXgKR2WW1GyjImhv7_U3YI5JPF23\",\n    \"status\" : \"OK\"\n  }\n}",
+      "headers" : {
+        "Content-Type" : "N/A"
+      }
+    },
+    "uuid" : "1bb00104-b70b-40cf-9800-37230faa814a",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:15.484496Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "sendNotificationRefundRetry",
+          "schema" : {
+            "type" : "object",
+            "properties" : {
+              "notification_response" : {
+                "$ref" : "#/components/schemas/NotificationResponse_166"
+              }
+            },
+            "description" : "Contains the details of the response message."
+          }
+        }
+      }
+    },
+    "insertionIndex" : 13
+  }, {
+    "id" : "f70295b7-d92c-4849-a475-63e58515b97c",
+    "name" : "Client can simulate a Mastercard Merchant Presented QR Payment notification to the registered URL endpoint. ",
+    "request" : {
+      "urlPath" : "/send/v1/partners/csh0/events/generate/payment",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"notification_response\" : {\n    \"transfer_reference\" : \"ref_jXgKR2WW1GyjImhv7_U3YI5JPF23\",\n    \"status\" : \"OK\"\n  }\n}",
+      "headers" : {
+        "Content-Type" : "N/A"
+      }
+    },
+    "uuid" : "f70295b7-d92c-4849-a475-63e58515b97c",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:15.484376Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "sendNotificationPaymentRetry",
+          "schema" : {
+            "type" : "object",
+            "properties" : {
+              "notification_response" : {
+                "$ref" : "#/components/schemas/NotificationResponse_162"
+              }
+            },
+            "description" : "Contains the details of the response message."
+          }
+        }
+      }
+    },
+    "insertionIndex" : 14
+  }, {
+    "id" : "6cb1679a-504a-4a82-9e67-b6dc30b33bb9",
+    "name" : "Funding Reversals must be submitted within 30 minutes of the funding transfer request, and should only be submitted for the following conditions:  Funding Transaction must be reversed if payment transaction cannot complete successfully, i.e. the payment transaction is rejected or declined.  Upon a successful reversal of a funding transaction, the refund must be credited to the sending consumer’s Funding Account.",
+    "request" : {
+      "urlPath" : "/send/v1/partners/gn13/transfers/or72/transactions/v49a/reversals",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"transfer\" : {\n    \"sanction_screening_override\" : true,\n    \"device_id\" : \"DEV123456\",\n    \"original_status\" : \"APPROVED\",\n    \"transaction_history\" : {\n      \"item_count\" : 1,\n      \"data\" : {\n        \"transaction\" : [ {\n          \"authorization_id\" : \"67DS21\",\n          \"retrieval_reference\" : \"624200192616\",\n          \"system_trace_audit_number\" : \"926162\",\n          \"transaction_amount\" : { },\n          \"resource_type\" : \"transaction\",\n          \"type\" : \"PAYMENT\",\n          \"network\" : \"MasterCard\",\n          \"network_status_code\" : \"54\",\n          \"payment_account_reference\" : \"5001ESVM4JQAAOP5JKSK1XGAPOPG2\",\n          \"create_timestamp\" : \"2015-03-18T14:18:55Z\",\n          \"network_status_description\" : \"Expired Card.\",\n          \"id\" : \"trn_8h4me233jk23l6c5lw5f\",\n          \"status_timestamp\" : \"2015-03-18T14:18:56Z\",\n          \"reversal_reason\" : \"Incorrect Amount\",\n          \"status_reason\" : \"APPROVED\",\n          \"account_uri\" : \"pan:************9012\",\n          \"status\" : \"APPROVED\"\n        }, {\n          \"authorization_id\" : \"67DS21\",\n          \"retrieval_reference\" : \"624200192616\",\n          \"system_trace_audit_number\" : \"926162\",\n          \"transaction_amount\" : { },\n          \"resource_type\" : \"transaction\",\n          \"type\" : \"PAYMENT\",\n          \"network\" : \"MasterCard\",\n          \"network_status_code\" : \"54\",\n          \"payment_account_reference\" : \"5001ESVM4JQAAOP5JKSK1XGAPOPG2\",\n          \"create_timestamp\" : \"2015-03-18T14:18:55Z\",\n          \"network_status_description\" : \"Expired Card.\",\n          \"id\" : \"trn_8h4me233jk23l6c5lw5f\",\n          \"status_timestamp\" : \"2015-03-18T14:18:56Z\",\n          \"reversal_reason\" : \"Incorrect Amount\",\n          \"status_reason\" : \"APPROVED\",\n          \"account_uri\" : \"pan:************9012\",\n          \"status\" : \"APPROVED\"\n        }, {\n          \"authorization_id\" : \"67DS21\",\n          \"retrieval_reference\" : \"624200192616\",\n          \"system_trace_audit_number\" : \"926162\",\n          \"transaction_amount\" : { },\n          \"resource_type\" : \"transaction\",\n          \"type\" : \"PAYMENT\",\n          \"network\" : \"MasterCard\",\n          \"network_status_code\" : \"54\",\n          \"payment_account_reference\" : \"5001ESVM4JQAAOP5JKSK1XGAPOPG2\",\n          \"create_timestamp\" : \"2015-03-18T14:18:55Z\",\n          \"network_status_description\" : \"Expired Card.\",\n          \"id\" : \"trn_8h4me233jk23l6c5lw5f\",\n          \"status_timestamp\" : \"2015-03-18T14:18:56Z\",\n          \"reversal_reason\" : \"Incorrect Amount\",\n          \"status_reason\" : \"APPROVED\",\n          \"account_uri\" : \"pan:************9012\",\n          \"status\" : \"APPROVED\"\n        }, {\n          \"authorization_id\" : \"67DS21\",\n          \"retrieval_reference\" : \"624200192616\",\n          \"system_trace_audit_number\" : \"926162\",\n          \"transaction_amount\" : { },\n          \"resource_type\" : \"transaction\",\n          \"type\" : \"PAYMENT\",\n          \"network\" : \"MasterCard\",\n          \"network_status_code\" : \"54\",\n          \"payment_account_reference\" : \"5001ESVM4JQAAOP5JKSK1XGAPOPG2\",\n          \"create_timestamp\" : \"2015-03-18T14:18:55Z\",\n          \"network_status_description\" : \"Expired Card.\",\n          \"id\" : \"trn_8h4me233jk23l6c5lw5f\",\n          \"status_timestamp\" : \"2015-03-18T14:18:56Z\",\n          \"reversal_reason\" : \"Incorrect Amount\",\n          \"status_reason\" : \"APPROVED\",\n          \"account_uri\" : \"pan:************9012\",\n          \"status\" : \"APPROVED\"\n        }, {\n          \"authorization_id\" : \"67DS21\",\n          \"retrieval_reference\" : \"624200192616\",\n          \"system_trace_audit_number\" : \"926162\",\n          \"transaction_amount\" : { },\n          \"resource_type\" : \"transaction\",\n          \"type\" : \"PAYMENT\",\n          \"network\" : \"MasterCard\",\n          \"network_status_code\" : \"54\",\n          \"payment_account_reference\" : \"5001ESVM4JQAAOP5JKSK1XGAPOPG2\",\n          \"create_timestamp\" : \"2015-03-18T14:18:55Z\",\n          \"network_status_description\" : \"Expired Card.\",\n          \"id\" : \"trn_8h4me233jk23l6c5lw5f\",\n          \"status_timestamp\" : \"2015-03-18T14:18:56Z\",\n          \"reversal_reason\" : \"Incorrect Amount\",\n          \"status_reason\" : \"APPROVED\",\n          \"account_uri\" : \"pan:************9012\",\n          \"status\" : \"APPROVED\"\n        }, {\n          \"authorization_id\" : \"67DS21\",\n          \"retrieval_reference\" : \"624200192616\",\n          \"system_trace_audit_number\" : \"926162\",\n          \"transaction_amount\" : { },\n          \"resource_type\" : \"transaction\",\n          \"type\" : \"PAYMENT\",\n          \"network\" : \"MasterCard\",\n          \"network_status_code\" : \"54\",\n          \"payment_account_reference\" : \"5001ESVM4JQAAOP5JKSK1XGAPOPG2\",\n          \"create_timestamp\" : \"2015-03-18T14:18:55Z\",\n          \"network_status_description\" : \"Expired Card.\",\n          \"id\" : \"trn_8h4me233jk23l6c5lw5f\",\n          \"status_timestamp\" : \"2015-03-18T14:18:56Z\",\n          \"reversal_reason\" : \"Incorrect Amount\",\n          \"status_reason\" : \"APPROVED\",\n          \"account_uri\" : \"pan:************9012\",\n          \"status\" : \"APPROVED\"\n        } ]\n      },\n      \"resource_type\" : \"list\"\n    },\n    \"created\" : \"2015-03-18T14:18:55Z\",\n    \"channel\" : \"WEB\",\n    \"resource_type\" : \"transfer\",\n    \"sender_account_uri\" : \"pan:************9012\",\n    \"reconciliation_data\" : {\n      \"custom_field\" : [ {\n        \"name\" : \"TransactionID\",\n        \"value\" : \"456FDWBS43\"\n      }, {\n        \"name\" : \"TransactionID\",\n        \"value\" : \"456FDWBS43\"\n      }, {\n        \"name\" : \"TransactionID\",\n        \"value\" : \"456FDWBS43\"\n      }, {\n        \"name\" : \"TransactionID\",\n        \"value\" : \"456FDWBS43\"\n      }, {\n        \"name\" : \"TransactionID\",\n        \"value\" : \"456FDWBS43\"\n      }, {\n        \"name\" : \"TransactionID\",\n        \"value\" : \"456FDWBS43\"\n      } ]\n    },\n    \"recipient_account_uri\" : \"pan:************7372\",\n    \"statement_descriptor\" : \"TST*THANKYOU\",\n    \"payment_type\" : \"P2M\",\n    \"sender\" : {\n      \"address\" : {\n        \"country\" : \"USA\",\n        \"city\" : \"OFallon\",\n        \"postal_code\" : \"63368\",\n        \"line2\" : \"Apartment 9\",\n        \"line1\" : \"1 Main St\",\n        \"country_subdivision\" : \"MO\"\n      },\n      \"government_ids\" : {\n        \"government_id_uri\" : [ \"xxar1q3vu3bwd4z4bkkksplqg1mlfl4cf34ydey5tpyozrhvuhur8yps9c6l53rml4njqkj8ofnxqg2ho70cb\", \"46oyx145bc7hqxwec99eqqkpcjjz73if6fdtxqj2bh3cvoqpleyp28rkqpjiezz5fukxjissnos11yz33vdf1qhalytpd88ojbbqpkpzup0f2vi7q4wzok3ve5gcp6eim5sjcfo3u1ww\", \"mg1meowi1k0tx72s8keyu5vi1d4mo0awialhxb6y3yfb9pjw8tkvi4r4yrnc3j7tjwy3f05bwp0dmepw0pmj4ji4nh8samvu2euhypggb7oh0c0q8jkgtsn3aj90t9nyrlfm540iqdrhjdh97we33hqk5k3e2wqx\" ]\n      },\n      \"nationality\" : \"USA\",\n      \"phone\" : \"11234567890\",\n      \"date_of_birth\" : \"1999-12-30\",\n      \"last_name\" : \"Jones\",\n      \"middle_name\" : \"Tyler\",\n      \"first_name\" : \"John\",\n      \"email\" : \"jane.smith123@abcmail.com\",\n      \"sanction_score\" : \"20\"\n    },\n    \"transfer_amount\" : {\n      \"currency\" : \"USD\",\n      \"value\" : \"5300\"\n    },\n    \"recipient\" : {\n      \"address\" : {\n        \"country\" : \"USA\",\n        \"city\" : \"OFallon\",\n        \"postal_code\" : \"63368\",\n        \"line2\" : \"Apartment 9\",\n        \"line1\" : \"1 Main St\",\n        \"country_subdivision\" : \"MO\"\n      },\n      \"government_ids\" : {\n        \"government_id_uri\" : [ \"31lp23juj47birr48wa3xzfaxub6zl5268jc2sm6jc526szfdj7ev52o17wf0b7hqx5988ost81wo8nlb36em4c3cqospfe8ctmo07hwz\" ]\n      },\n      \"nationality\" : \"USA\",\n      \"phone\" : \"11234567890\",\n      \"date_of_birth\" : \"1999-12-30\",\n      \"last_name\" : \"Jones\",\n      \"middle_name\" : \"Tyler\",\n      \"first_name\" : \"John\",\n      \"email\" : \"Jane.Smith123@abcmail.com\",\n      \"sanction_score\" : \"20\"\n    },\n    \"location\" : \"state:MO\",\n    \"id\" : \"trn_9abcd233jk23l6c5lw5f\",\n    \"status_timestamp\" : \"2015-03-18T14:18:55Z\",\n    \"transfer_reference\" : \"DEF123456\",\n    \"status\" : \"APPROVED\"\n  }\n}",
+      "headers" : {
+        "Content-Type" : "application/xml"
+      }
+    },
+    "uuid" : "6cb1679a-504a-4a82-9e67-b6dc30b33bb9",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:15.48425Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "createFundingReversal",
+          "schema" : {
+            "type" : "object",
+            "properties" : {
+              "transfer" : {
+                "$ref" : "#/components/schemas/Transfer_145"
+              }
+            },
+            "description" : "Response details"
+          }
+        }
+      }
+    },
+    "insertionIndex" : 15
+  }, {
+    "id" : "8da078ba-1125-4419-82ae-99676a380cc6",
+    "name" : "Purpose of this service is to retrieve the Transfer resource associated with the specified transfer-id. (application/xml)",
+    "request" : {
+      "urlPath" : "/send/#env/v1/partners/j0gp/merchant/transfers/05k2",
+      "method" : "GET",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/xml"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"merchant_transfer\" : {\n    \"transaction_local_date_time\" : \"2016-09-22T13:22:11-05:30\",\n    \"original_status\" : \"APPROVED\",\n    \"channel\" : \"WEB\",\n    \"routing_transit_number\" : \"965730000\",\n    \"sender_account_uri\" : \"************9012\",\n    \"reconciliation_data\" : {\n      \"custom_field\" : [ {\n        \"name\" : \"TransactionID\",\n        \"value\" : \"456FDWBS43\"\n      }, {\n        \"name\" : \"TransactionID\",\n        \"value\" : \"456FDWBS43\"\n      }, {\n        \"name\" : \"TransactionID\",\n        \"value\" : \"456FDWBS43\"\n      }, {\n        \"name\" : \"TransactionID\",\n        \"value\" : \"456FDWBS43\"\n      } ]\n    },\n    \"participant\" : {\n      \"card_acceptor_id\" : \"CardAcceptor1\",\n      \"card_acceptor_name\" : \"THE BEST BANK\"\n    },\n    \"recipient_account_uri\" : \"pan:************7372\",\n    \"funding_source\" : \"DEBIT\",\n    \"processor_id\" : \"2147483647\",\n    \"id\" : \"mtrn_9abcd233jk23l6c5lw5f\",\n    \"status_timestamp\" : \"2016-09-22T13:22:11-05:30\",\n    \"transfer_reference\" : \"DEF123456\",\n    \"digital_account_reference_number\" : \"pan:************4562\",\n    \"device_id\" : \"DEV123456\",\n    \"transaction_history\" : {\n      \"item_count\" : 1,\n      \"data\" : {\n        \"transaction\" : [ {\n          \"authorization_id\" : \"801726\",\n          \"convenience_indicator\" : \"01\",\n          \"switch_serial_number\" : \"564727057\",\n          \"retrieval_reference\" : \"624200192616\",\n          \"system_trace_audit_number\" : \"926162\",\n          \"transaction_amount\" : { },\n          \"resource_type\" : \"transaction\",\n          \"type\" : \"PAYMENT\",\n          \"convenience_amount\" : \"10\",\n          \"network\" : \"MoneySend\",\n          \"network_status_code\" : \"54\",\n          \"payment_account_reference\" : \"5001ESVM4JQAAOP5JKSK1XGAPOPG2\",\n          \"create_timestamp\" : \"2016-09-22T13:22:11-05:30\",\n          \"network_status_description\" : \"Expired Card\",\n          \"qr_data\" : \"001006XX123400201012353611110030073041233004008LYL44354005009EEB\",\n          \"id\" : \"txn_8h4me233jk23l6c5lw5f\",\n          \"status_timestamp\" : \"2016-09-22T13:22:11-05:30\",\n          \"status_reason\" : \"APPROVED\",\n          \"account_uri\" : \"pan:************9012\",\n          \"status\" : \"APPROVED\",\n          \"unique_reference_number\" : \"592087939\"\n        } ]\n      },\n      \"resource_type\" : \"list\"\n    },\n    \"created\" : \"2016-09-22T13:22:11-05:30\",\n    \"payment_origination_country\" : \"USA\",\n    \"resource_type\" : \"merchant_transfer\",\n    \"interchange_rate_designator\" : \"QR\",\n    \"payment_type\" : \"P2M\",\n    \"sender\" : {\n      \"address\" : {\n        \"country\" : \"USA\",\n        \"city\" : \"Chicago\",\n        \"postal_code\" : \"60618\",\n        \"line2\" : \"Apartment 9\",\n        \"line1\" : \"123 Elm St\",\n        \"country_subdivision\" : \"IL\"\n      },\n      \"phone\" : \"12125551234\",\n      \"date_of_birth\" : \"1999-12-30\",\n      \"additional_merchant_data\" : {\n        \"payment_facilitator_id\" : 123456,\n        \"sub_merchant_id\" : \"A1234D\"\n      },\n      \"last_name\" : \"Jones\",\n      \"middle_name\" : \"Tyler\",\n      \"first_name\" : \"John\",\n      \"email\" : \"jane.smith123@abcmail.com\"\n    },\n    \"transfer_amount\" : {\n      \"currency\" : \"USD\",\n      \"value\" : \"5300\"\n    },\n    \"recipient\" : {\n      \"address\" : {\n        \"country\" : \"USA\",\n        \"city\" : \"OFallon\",\n        \"postal_code\" : \"63368\",\n        \"line2\" : \"Apartment 9\",\n        \"line1\" : \"1 Main St\",\n        \"country_subdivision\" : \"MO\"\n      },\n      \"phone\" : \"11234567890\",\n      \"merchant_category_code\" : \"0763\",\n      \"additional_merchant_data\" : {\n        \"payment_facilitator_id\" : 123456,\n        \"sub_merchant_id\" : \"A1234D\"\n      },\n      \"last_name\" : \"Jones\",\n      \"middle_name\" : \"Tyler\",\n      \"first_name\" : \"John\",\n      \"email\" : \"Jane.Smith123@abcmail.com\"\n    },\n    \"location\" : \"state:MO\",\n    \"status\" : \"APPROVED\"\n  }\n}",
+      "headers" : {
+        "Content-Type" : "application/xml"
+      }
+    },
+    "uuid" : "8da078ba-1125-4419-82ae-99676a380cc6",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:15.483409Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "getMerchantTransferById",
+          "schema" : {
+            "type" : "object",
+            "properties" : {
+              "merchant_transfer" : {
+                "$ref" : "#/components/schemas/MerchantTransfer_54"
+              }
+            },
+            "description" : "Response details for a merchant transfer."
+          }
+        }
+      }
+    },
+    "insertionIndex" : 16
+  }, {
+    "id" : "0c12214e-d9e6-4f2d-b3bd-4dd6947de70c",
+    "name" : "Purpose of this service is to retrieve the Transfer resource associated with the specified transfer-id. (application/json)",
+    "request" : {
+      "urlPath" : "/send/#env/v1/partners/540j/merchant/transfers/0mwe",
+      "method" : "GET",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/json"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"merchant_transfer\" : {\n    \"transaction_local_date_time\" : \"2016-09-22T13:22:11-05:30\",\n    \"original_status\" : \"APPROVED\",\n    \"channel\" : \"WEB\",\n    \"routing_transit_number\" : \"965730000\",\n    \"sender_account_uri\" : \"************9012\",\n    \"reconciliation_data\" : {\n      \"custom_field\" : [ {\n        \"name\" : \"TransactionID\",\n        \"value\" : \"456FDWBS43\"\n      }, {\n        \"name\" : \"TransactionID\",\n        \"value\" : \"456FDWBS43\"\n      }, {\n        \"name\" : \"TransactionID\",\n        \"value\" : \"456FDWBS43\"\n      }, {\n        \"name\" : \"TransactionID\",\n        \"value\" : \"456FDWBS43\"\n      }, {\n        \"name\" : \"TransactionID\",\n        \"value\" : \"456FDWBS43\"\n      } ]\n    },\n    \"participant\" : {\n      \"card_acceptor_id\" : \"CardAcceptor1\",\n      \"card_acceptor_name\" : \"THE BEST BANK\"\n    },\n    \"recipient_account_uri\" : \"pan:************7372\",\n    \"funding_source\" : \"DEBIT\",\n    \"processor_id\" : \"2147483647\",\n    \"id\" : \"mtrn_9abcd233jk23l6c5lw5f\",\n    \"status_timestamp\" : \"2016-09-22T13:22:11-05:30\",\n    \"transfer_reference\" : \"DEF123456\",\n    \"digital_account_reference_number\" : \"pan:************4562\",\n    \"device_id\" : \"DEV123456\",\n    \"transaction_history\" : {\n      \"item_count\" : 1,\n      \"data\" : {\n        \"transaction\" : [ {\n          \"authorization_id\" : \"801726\",\n          \"convenience_indicator\" : \"01\",\n          \"switch_serial_number\" : \"564727057\",\n          \"retrieval_reference\" : \"624200192616\",\n          \"system_trace_audit_number\" : \"926162\",\n          \"transaction_amount\" : { },\n          \"resource_type\" : \"transaction\",\n          \"type\" : \"PAYMENT\",\n          \"convenience_amount\" : \"10\",\n          \"network\" : \"MoneySend\",\n          \"network_status_code\" : \"54\",\n          \"payment_account_reference\" : \"5001ESVM4JQAAOP5JKSK1XGAPOPG2\",\n          \"create_timestamp\" : \"2016-09-22T13:22:11-05:30\",\n          \"network_status_description\" : \"Expired Card\",\n          \"qr_data\" : \"001006XX123400201012353611110030073041233004008LYL44354005009EEB\",\n          \"id\" : \"txn_8h4me233jk23l6c5lw5f\",\n          \"status_timestamp\" : \"2016-09-22T13:22:11-05:30\",\n          \"status_reason\" : \"APPROVED\",\n          \"account_uri\" : \"pan:************9012\",\n          \"status\" : \"APPROVED\",\n          \"unique_reference_number\" : \"592087939\"\n        } ]\n      },\n      \"resource_type\" : \"list\"\n    },\n    \"created\" : \"2016-09-22T13:22:11-05:30\",\n    \"payment_origination_country\" : \"USA\",\n    \"resource_type\" : \"merchant_transfer\",\n    \"interchange_rate_designator\" : \"QR\",\n    \"payment_type\" : \"P2M\",\n    \"sender\" : {\n      \"address\" : {\n        \"country\" : \"USA\",\n        \"city\" : \"Chicago\",\n        \"postal_code\" : \"60618\",\n        \"line2\" : \"Apartment 9\",\n        \"line1\" : \"123 Elm St\",\n        \"country_subdivision\" : \"IL\"\n      },\n      \"phone\" : \"12125551234\",\n      \"date_of_birth\" : \"1999-12-30\",\n      \"additional_merchant_data\" : {\n        \"payment_facilitator_id\" : 123456,\n        \"sub_merchant_id\" : \"A1234D\"\n      },\n      \"last_name\" : \"Jones\",\n      \"middle_name\" : \"Tyler\",\n      \"first_name\" : \"John\",\n      \"email\" : \"jane.smith123@abcmail.com\"\n    },\n    \"transfer_amount\" : {\n      \"currency\" : \"USD\",\n      \"value\" : \"5300\"\n    },\n    \"recipient\" : {\n      \"address\" : {\n        \"country\" : \"USA\",\n        \"city\" : \"OFallon\",\n        \"postal_code\" : \"63368\",\n        \"line2\" : \"Apartment 9\",\n        \"line1\" : \"1 Main St\",\n        \"country_subdivision\" : \"MO\"\n      },\n      \"phone\" : \"11234567890\",\n      \"merchant_category_code\" : \"0763\",\n      \"additional_merchant_data\" : {\n        \"payment_facilitator_id\" : 123456,\n        \"sub_merchant_id\" : \"A1234D\"\n      },\n      \"last_name\" : \"Jones\",\n      \"middle_name\" : \"Tyler\",\n      \"first_name\" : \"John\",\n      \"email\" : \"Jane.Smith123@abcmail.com\"\n    },\n    \"location\" : \"state:MO\",\n    \"status\" : \"APPROVED\"\n  }\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "0c12214e-d9e6-4f2d-b3bd-4dd6947de70c",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:15.483032Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "getMerchantTransferById",
+          "schema" : {
+            "type" : "object",
+            "properties" : {
+              "merchant_transfer" : {
+                "$ref" : "#/components/schemas/MerchantTransfer_54"
+              }
+            },
+            "description" : "Response details for a merchant transfer."
+          }
+        }
+      }
+    },
+    "insertionIndex" : 17
+  }, {
+    "id" : "affce98d-28a6-44c8-8974-995b6918c458",
+    "name" : "Initiates a Mastercard Merchant Presented QR Refund transaction by pushing funds from a merchant account back to the customer's account. (application/xml)",
+    "request" : {
+      "urlPath" : "/send/#env/v1/partners/01b6/merchant/transfers/refund",
+      "method" : "POST",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/xml"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"merchant_transfer\" : {\n    \"transaction_local_date_time\" : \"2016-09-22T13:22:11-05:30\",\n    \"original_status\" : \"APPROVED\",\n    \"channel\" : \"WEB\",\n    \"routing_transit_number\" : \"965730000\",\n    \"sender_account_uri\" : \"pan:************9012\",\n    \"reconciliation_data\" : {\n      \"custom_field\" : [ {\n        \"name\" : \"TransactionID\",\n        \"value\" : \"456FDWBS43\"\n      }, {\n        \"name\" : \"TransactionID\",\n        \"value\" : \"456FDWBS43\"\n      }, {\n        \"name\" : \"TransactionID\",\n        \"value\" : \"456FDWBS43\"\n      }, {\n        \"name\" : \"TransactionID\",\n        \"value\" : \"456FDWBS43\"\n      }, {\n        \"name\" : \"TransactionID\",\n        \"value\" : \"456FDWBS43\"\n      } ]\n    },\n    \"participant\" : {\n      \"card_acceptor_id\" : \"CardAcceptor1\",\n      \"card_acceptor_name\" : \"THE BEST BANK\"\n    },\n    \"recipient_account_uri\" : \"pan:************7372\",\n    \"funding_source\" : \"DEBIT\",\n    \"processor_id\" : \"2147483647\",\n    \"id\" : \"mtrn_9abcd233jk23l6c5lw5f\",\n    \"status_timestamp\" : \"2016-09-22T13:22:11-05:30\",\n    \"transfer_reference\" : \"DEF123456\",\n    \"digital_account_reference_number\" : \"pan:************1234\",\n    \"device_id\" : \"DEV123456\",\n    \"transaction_history\" : {\n      \"item_count\" : 1,\n      \"data\" : {\n        \"transaction\" : [ {\n          \"authorization_id\" : \"801726\",\n          \"switch_serial_number\" : \"564727057\",\n          \"retrieval_reference\" : \"624200192616\",\n          \"system_trace_audit_number\" : \"926162\",\n          \"transaction_amount\" : { },\n          \"resource_type\" : \"transaction\",\n          \"type\" : \"PAYMENT\",\n          \"network\" : \"Mastercard\",\n          \"network_status_code\" : \"54\",\n          \"payment_account_reference\" : \"5001ESVM4JQAAOP5JKSK1XGAPOPG2\",\n          \"create_timestamp\" : \"2015-03-18T14:18:55Z\",\n          \"network_status_description\" : \"Expired Card\",\n          \"funds_availability\" : \"IMMEDIATE\",\n          \"id\" : \"trn_8h4me233jk23l6c5lw5f\",\n          \"status_timestamp\" : \"2015-03-18T14:18:56Z\",\n          \"status_reason\" : \"APPROVED\",\n          \"account_uri\" : \"pan:************9012\",\n          \"status\" : \"APPROVED\",\n          \"unique_reference_number\" : \"592087939\"\n        }, {\n          \"authorization_id\" : \"801726\",\n          \"switch_serial_number\" : \"564727057\",\n          \"retrieval_reference\" : \"624200192616\",\n          \"system_trace_audit_number\" : \"926162\",\n          \"transaction_amount\" : { },\n          \"resource_type\" : \"transaction\",\n          \"type\" : \"PAYMENT\",\n          \"network\" : \"Mastercard\",\n          \"network_status_code\" : \"54\",\n          \"payment_account_reference\" : \"5001ESVM4JQAAOP5JKSK1XGAPOPG2\",\n          \"create_timestamp\" : \"2015-03-18T14:18:55Z\",\n          \"network_status_description\" : \"Expired Card\",\n          \"funds_availability\" : \"IMMEDIATE\",\n          \"id\" : \"trn_8h4me233jk23l6c5lw5f\",\n          \"status_timestamp\" : \"2015-03-18T14:18:56Z\",\n          \"status_reason\" : \"APPROVED\",\n          \"account_uri\" : \"pan:************9012\",\n          \"status\" : \"APPROVED\",\n          \"unique_reference_number\" : \"592087939\"\n        }, {\n          \"authorization_id\" : \"801726\",\n          \"switch_serial_number\" : \"564727057\",\n          \"retrieval_reference\" : \"624200192616\",\n          \"system_trace_audit_number\" : \"926162\",\n          \"transaction_amount\" : { },\n          \"resource_type\" : \"transaction\",\n          \"type\" : \"PAYMENT\",\n          \"network\" : \"Mastercard\",\n          \"network_status_code\" : \"54\",\n          \"payment_account_reference\" : \"5001ESVM4JQAAOP5JKSK1XGAPOPG2\",\n          \"create_timestamp\" : \"2015-03-18T14:18:55Z\",\n          \"network_status_description\" : \"Expired Card\",\n          \"funds_availability\" : \"IMMEDIATE\",\n          \"id\" : \"trn_8h4me233jk23l6c5lw5f\",\n          \"status_timestamp\" : \"2015-03-18T14:18:56Z\",\n          \"status_reason\" : \"APPROVED\",\n          \"account_uri\" : \"pan:************9012\",\n          \"status\" : \"APPROVED\",\n          \"unique_reference_number\" : \"592087939\"\n        }, {\n          \"authorization_id\" : \"801726\",\n          \"switch_serial_number\" : \"564727057\",\n          \"retrieval_reference\" : \"624200192616\",\n          \"system_trace_audit_number\" : \"926162\",\n          \"transaction_amount\" : { },\n          \"resource_type\" : \"transaction\",\n          \"type\" : \"PAYMENT\",\n          \"network\" : \"Mastercard\",\n          \"network_status_code\" : \"54\",\n          \"payment_account_reference\" : \"5001ESVM4JQAAOP5JKSK1XGAPOPG2\",\n          \"create_timestamp\" : \"2015-03-18T14:18:55Z\",\n          \"network_status_description\" : \"Expired Card\",\n          \"funds_availability\" : \"IMMEDIATE\",\n          \"id\" : \"trn_8h4me233jk23l6c5lw5f\",\n          \"status_timestamp\" : \"2015-03-18T14:18:56Z\",\n          \"status_reason\" : \"APPROVED\",\n          \"account_uri\" : \"pan:************9012\",\n          \"status\" : \"APPROVED\",\n          \"unique_reference_number\" : \"592087939\"\n        } ]\n      },\n      \"resource_type\" : \"list\"\n    },\n    \"created\" : \"2016-09-22T13:22:11-05:30\",\n    \"payment_origination_country\" : \"USA\",\n    \"resource_type\" : \"merchant_refund_transfer\",\n    \"interchange_rate_designator\" : \"QR\",\n    \"payment_type\" : \"P2M\",\n    \"sender\" : {\n      \"address\" : {\n        \"country\" : \"USA\",\n        \"city\" : \"Chicago\",\n        \"postal_code\" : \"60618\",\n        \"line2\" : \"Apartment 9\",\n        \"line1\" : \"123 Elm St\",\n        \"country_subdivision\" : \"IL\"\n      },\n      \"phone\" : \"12125551234\",\n      \"date_of_birth\" : \"1999-12-30\",\n      \"last_name\" : \"Jones\",\n      \"middle_name\" : \"Tyler\",\n      \"first_name\" : \"John\",\n      \"email\" : \"jane.smith123@abcmail.com\"\n    },\n    \"transfer_amount\" : {\n      \"currency\" : \"USD\",\n      \"value\" : \"5300\"\n    },\n    \"recipient\" : {\n      \"address\" : {\n        \"country\" : \"USA\",\n        \"city\" : \"OFallon\",\n        \"postal_code\" : \"63368\",\n        \"line2\" : \"Apartment 9\",\n        \"line1\" : \"1 Main St\",\n        \"country_subdivision\" : \"MO\"\n      },\n      \"phone\" : \"11234567890\",\n      \"merchant_category_code\" : \"0763\",\n      \"additional_merchant_data\" : {\n        \"payment_facilitator_id\" : 123456,\n        \"sub_merchant_id\" : \"A1234D\"\n      },\n      \"last_name\" : \"Jones\",\n      \"middle_name\" : \"Tyler\",\n      \"first_name\" : \"John\",\n      \"email\" : \"Jane.Smith123@abcmail.com\"\n    },\n    \"location\" : \"state:MO\",\n    \"status\" : \"APPROVED\"\n  }\n}",
+      "headers" : {
+        "Content-Type" : "application/xml"
+      }
+    },
+    "uuid" : "affce98d-28a6-44c8-8974-995b6918c458",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:15.48242Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "createMerchantRefund",
+          "schema" : {
+            "type" : "object",
+            "properties" : {
+              "merchant_transfer" : {
+                "$ref" : "#/components/schemas/MerchantTransfer_104"
+              }
+            },
+            "description" : "Response details for a merchant transfer."
+          }
+        }
+      }
+    },
+    "insertionIndex" : 18
+  }, {
+    "id" : "d5bf8bc5-16dc-4dfa-ad4f-b50935403fa8",
+    "name" : "Initiates a Mastercard Merchant Presented QR Refund transaction by pushing funds from a merchant account back to the customer's account. (application/json)",
+    "request" : {
+      "urlPath" : "/send/#env/v1/partners/oa4y/merchant/transfers/refund",
+      "method" : "POST",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/json"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"merchant_transfer\" : {\n    \"transaction_local_date_time\" : \"2016-09-22T13:22:11-05:30\",\n    \"original_status\" : \"APPROVED\",\n    \"channel\" : \"WEB\",\n    \"routing_transit_number\" : \"965730000\",\n    \"sender_account_uri\" : \"pan:************9012\",\n    \"reconciliation_data\" : {\n      \"custom_field\" : [ {\n        \"name\" : \"TransactionID\",\n        \"value\" : \"456FDWBS43\"\n      }, {\n        \"name\" : \"TransactionID\",\n        \"value\" : \"456FDWBS43\"\n      } ]\n    },\n    \"participant\" : {\n      \"card_acceptor_id\" : \"CardAcceptor1\",\n      \"card_acceptor_name\" : \"THE BEST BANK\"\n    },\n    \"recipient_account_uri\" : \"pan:************7372\",\n    \"funding_source\" : \"DEBIT\",\n    \"processor_id\" : \"2147483647\",\n    \"id\" : \"mtrn_9abcd233jk23l6c5lw5f\",\n    \"status_timestamp\" : \"2016-09-22T13:22:11-05:30\",\n    \"transfer_reference\" : \"DEF123456\",\n    \"digital_account_reference_number\" : \"pan:************1234\",\n    \"device_id\" : \"DEV123456\",\n    \"transaction_history\" : {\n      \"item_count\" : 1,\n      \"data\" : {\n        \"transaction\" : [ {\n          \"authorization_id\" : \"801726\",\n          \"switch_serial_number\" : \"564727057\",\n          \"retrieval_reference\" : \"624200192616\",\n          \"system_trace_audit_number\" : \"926162\",\n          \"transaction_amount\" : { },\n          \"resource_type\" : \"transaction\",\n          \"type\" : \"PAYMENT\",\n          \"network\" : \"Mastercard\",\n          \"network_status_code\" : \"54\",\n          \"payment_account_reference\" : \"5001ESVM4JQAAOP5JKSK1XGAPOPG2\",\n          \"create_timestamp\" : \"2015-03-18T14:18:55Z\",\n          \"network_status_description\" : \"Expired Card\",\n          \"funds_availability\" : \"IMMEDIATE\",\n          \"id\" : \"trn_8h4me233jk23l6c5lw5f\",\n          \"status_timestamp\" : \"2015-03-18T14:18:56Z\",\n          \"status_reason\" : \"APPROVED\",\n          \"account_uri\" : \"pan:************9012\",\n          \"status\" : \"APPROVED\",\n          \"unique_reference_number\" : \"592087939\"\n        }, {\n          \"authorization_id\" : \"801726\",\n          \"switch_serial_number\" : \"564727057\",\n          \"retrieval_reference\" : \"624200192616\",\n          \"system_trace_audit_number\" : \"926162\",\n          \"transaction_amount\" : { },\n          \"resource_type\" : \"transaction\",\n          \"type\" : \"PAYMENT\",\n          \"network\" : \"Mastercard\",\n          \"network_status_code\" : \"54\",\n          \"payment_account_reference\" : \"5001ESVM4JQAAOP5JKSK1XGAPOPG2\",\n          \"create_timestamp\" : \"2015-03-18T14:18:55Z\",\n          \"network_status_description\" : \"Expired Card\",\n          \"funds_availability\" : \"IMMEDIATE\",\n          \"id\" : \"trn_8h4me233jk23l6c5lw5f\",\n          \"status_timestamp\" : \"2015-03-18T14:18:56Z\",\n          \"status_reason\" : \"APPROVED\",\n          \"account_uri\" : \"pan:************9012\",\n          \"status\" : \"APPROVED\",\n          \"unique_reference_number\" : \"592087939\"\n        }, {\n          \"authorization_id\" : \"801726\",\n          \"switch_serial_number\" : \"564727057\",\n          \"retrieval_reference\" : \"624200192616\",\n          \"system_trace_audit_number\" : \"926162\",\n          \"transaction_amount\" : { },\n          \"resource_type\" : \"transaction\",\n          \"type\" : \"PAYMENT\",\n          \"network\" : \"Mastercard\",\n          \"network_status_code\" : \"54\",\n          \"payment_account_reference\" : \"5001ESVM4JQAAOP5JKSK1XGAPOPG2\",\n          \"create_timestamp\" : \"2015-03-18T14:18:55Z\",\n          \"network_status_description\" : \"Expired Card\",\n          \"funds_availability\" : \"IMMEDIATE\",\n          \"id\" : \"trn_8h4me233jk23l6c5lw5f\",\n          \"status_timestamp\" : \"2015-03-18T14:18:56Z\",\n          \"status_reason\" : \"APPROVED\",\n          \"account_uri\" : \"pan:************9012\",\n          \"status\" : \"APPROVED\",\n          \"unique_reference_number\" : \"592087939\"\n        }, {\n          \"authorization_id\" : \"801726\",\n          \"switch_serial_number\" : \"564727057\",\n          \"retrieval_reference\" : \"624200192616\",\n          \"system_trace_audit_number\" : \"926162\",\n          \"transaction_amount\" : { },\n          \"resource_type\" : \"transaction\",\n          \"type\" : \"PAYMENT\",\n          \"network\" : \"Mastercard\",\n          \"network_status_code\" : \"54\",\n          \"payment_account_reference\" : \"5001ESVM4JQAAOP5JKSK1XGAPOPG2\",\n          \"create_timestamp\" : \"2015-03-18T14:18:55Z\",\n          \"network_status_description\" : \"Expired Card\",\n          \"funds_availability\" : \"IMMEDIATE\",\n          \"id\" : \"trn_8h4me233jk23l6c5lw5f\",\n          \"status_timestamp\" : \"2015-03-18T14:18:56Z\",\n          \"status_reason\" : \"APPROVED\",\n          \"account_uri\" : \"pan:************9012\",\n          \"status\" : \"APPROVED\",\n          \"unique_reference_number\" : \"592087939\"\n        }, {\n          \"authorization_id\" : \"801726\",\n          \"switch_serial_number\" : \"564727057\",\n          \"retrieval_reference\" : \"624200192616\",\n          \"system_trace_audit_number\" : \"926162\",\n          \"transaction_amount\" : { },\n          \"resource_type\" : \"transaction\",\n          \"type\" : \"PAYMENT\",\n          \"network\" : \"Mastercard\",\n          \"network_status_code\" : \"54\",\n          \"payment_account_reference\" : \"5001ESVM4JQAAOP5JKSK1XGAPOPG2\",\n          \"create_timestamp\" : \"2015-03-18T14:18:55Z\",\n          \"network_status_description\" : \"Expired Card\",\n          \"funds_availability\" : \"IMMEDIATE\",\n          \"id\" : \"trn_8h4me233jk23l6c5lw5f\",\n          \"status_timestamp\" : \"2015-03-18T14:18:56Z\",\n          \"status_reason\" : \"APPROVED\",\n          \"account_uri\" : \"pan:************9012\",\n          \"status\" : \"APPROVED\",\n          \"unique_reference_number\" : \"592087939\"\n        }, {\n          \"authorization_id\" : \"801726\",\n          \"switch_serial_number\" : \"564727057\",\n          \"retrieval_reference\" : \"624200192616\",\n          \"system_trace_audit_number\" : \"926162\",\n          \"transaction_amount\" : { },\n          \"resource_type\" : \"transaction\",\n          \"type\" : \"PAYMENT\",\n          \"network\" : \"Mastercard\",\n          \"network_status_code\" : \"54\",\n          \"payment_account_reference\" : \"5001ESVM4JQAAOP5JKSK1XGAPOPG2\",\n          \"create_timestamp\" : \"2015-03-18T14:18:55Z\",\n          \"network_status_description\" : \"Expired Card\",\n          \"funds_availability\" : \"IMMEDIATE\",\n          \"id\" : \"trn_8h4me233jk23l6c5lw5f\",\n          \"status_timestamp\" : \"2015-03-18T14:18:56Z\",\n          \"status_reason\" : \"APPROVED\",\n          \"account_uri\" : \"pan:************9012\",\n          \"status\" : \"APPROVED\",\n          \"unique_reference_number\" : \"592087939\"\n        }, {\n          \"authorization_id\" : \"801726\",\n          \"switch_serial_number\" : \"564727057\",\n          \"retrieval_reference\" : \"624200192616\",\n          \"system_trace_audit_number\" : \"926162\",\n          \"transaction_amount\" : { },\n          \"resource_type\" : \"transaction\",\n          \"type\" : \"PAYMENT\",\n          \"network\" : \"Mastercard\",\n          \"network_status_code\" : \"54\",\n          \"payment_account_reference\" : \"5001ESVM4JQAAOP5JKSK1XGAPOPG2\",\n          \"create_timestamp\" : \"2015-03-18T14:18:55Z\",\n          \"network_status_description\" : \"Expired Card\",\n          \"funds_availability\" : \"IMMEDIATE\",\n          \"id\" : \"trn_8h4me233jk23l6c5lw5f\",\n          \"status_timestamp\" : \"2015-03-18T14:18:56Z\",\n          \"status_reason\" : \"APPROVED\",\n          \"account_uri\" : \"pan:************9012\",\n          \"status\" : \"APPROVED\",\n          \"unique_reference_number\" : \"592087939\"\n        }, {\n          \"authorization_id\" : \"801726\",\n          \"switch_serial_number\" : \"564727057\",\n          \"retrieval_reference\" : \"624200192616\",\n          \"system_trace_audit_number\" : \"926162\",\n          \"transaction_amount\" : { },\n          \"resource_type\" : \"transaction\",\n          \"type\" : \"PAYMENT\",\n          \"network\" : \"Mastercard\",\n          \"network_status_code\" : \"54\",\n          \"payment_account_reference\" : \"5001ESVM4JQAAOP5JKSK1XGAPOPG2\",\n          \"create_timestamp\" : \"2015-03-18T14:18:55Z\",\n          \"network_status_description\" : \"Expired Card\",\n          \"funds_availability\" : \"IMMEDIATE\",\n          \"id\" : \"trn_8h4me233jk23l6c5lw5f\",\n          \"status_timestamp\" : \"2015-03-18T14:18:56Z\",\n          \"status_reason\" : \"APPROVED\",\n          \"account_uri\" : \"pan:************9012\",\n          \"status\" : \"APPROVED\",\n          \"unique_reference_number\" : \"592087939\"\n        } ]\n      },\n      \"resource_type\" : \"list\"\n    },\n    \"created\" : \"2016-09-22T13:22:11-05:30\",\n    \"payment_origination_country\" : \"USA\",\n    \"resource_type\" : \"merchant_refund_transfer\",\n    \"interchange_rate_designator\" : \"QR\",\n    \"payment_type\" : \"P2M\",\n    \"sender\" : {\n      \"address\" : {\n        \"country\" : \"USA\",\n        \"city\" : \"Chicago\",\n        \"postal_code\" : \"60618\",\n        \"line2\" : \"Apartment 9\",\n        \"line1\" : \"123 Elm St\",\n        \"country_subdivision\" : \"IL\"\n      },\n      \"phone\" : \"12125551234\",\n      \"date_of_birth\" : \"1999-12-30\",\n      \"last_name\" : \"Jones\",\n      \"middle_name\" : \"Tyler\",\n      \"first_name\" : \"John\",\n      \"email\" : \"jane.smith123@abcmail.com\"\n    },\n    \"transfer_amount\" : {\n      \"currency\" : \"USD\",\n      \"value\" : \"5300\"\n    },\n    \"recipient\" : {\n      \"address\" : {\n        \"country\" : \"USA\",\n        \"city\" : \"OFallon\",\n        \"postal_code\" : \"63368\",\n        \"line2\" : \"Apartment 9\",\n        \"line1\" : \"1 Main St\",\n        \"country_subdivision\" : \"MO\"\n      },\n      \"phone\" : \"11234567890\",\n      \"merchant_category_code\" : \"0763\",\n      \"additional_merchant_data\" : {\n        \"payment_facilitator_id\" : 123456,\n        \"sub_merchant_id\" : \"A1234D\"\n      },\n      \"last_name\" : \"Jones\",\n      \"middle_name\" : \"Tyler\",\n      \"first_name\" : \"John\",\n      \"email\" : \"Jane.Smith123@abcmail.com\"\n    },\n    \"location\" : \"state:MO\",\n    \"status\" : \"APPROVED\"\n  }\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "d5bf8bc5-16dc-4dfa-ad4f-b50935403fa8",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:15.482003Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "createMerchantRefund",
+          "schema" : {
+            "type" : "object",
+            "properties" : {
+              "merchant_transfer" : {
+                "$ref" : "#/components/schemas/MerchantTransfer_104"
+              }
+            },
+            "description" : "Response details for a merchant transfer."
+          }
+        }
+      }
+    },
+    "insertionIndex" : 19
+  }, {
+    "id" : "3c80b511-4bbc-474a-a081-30c5c757929e",
+    "name" : "Initiates a Mastercard Merchant Presented QR purchase transaction by pushing funds to a merchant account. (application/xml)",
+    "request" : {
+      "urlPath" : "/send/#env/v1/partners/2d8n/merchant/transfers/payment",
+      "method" : "POST",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/xml"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"merchant_transfer\" : {\n    \"transaction_local_date_time\" : \"2016-09-22T13:22:11-05:30\",\n    \"convenience_indicator\" : \"02\",\n    \"original_status\" : \"APPROVED\",\n    \"channel\" : \"WEB\",\n    \"routing_transit_number\" : \"965730000\",\n    \"sender_account_uri\" : \"pan:************9012\",\n    \"reconciliation_data\" : {\n      \"custom_field\" : [ {\n        \"name\" : \"TransactionID\",\n        \"value\" : \"456FDWBS43\"\n      }, {\n        \"name\" : \"TransactionID\",\n        \"value\" : \"456FDWBS43\"\n      }, {\n        \"name\" : \"TransactionID\",\n        \"value\" : \"456FDWBS43\"\n      } ]\n    },\n    \"participant\" : {\n      \"card_acceptor_id\" : \"CardAcceptor1\",\n      \"card_acceptor_name\" : \"THE BEST BANK\"\n    },\n    \"participation_id\" : \"TERMINAL34728\",\n    \"recipient_account_uri\" : \"pan:************7372\",\n    \"funding_source\" : \"DEBIT\",\n    \"processor_id\" : \"2147483647\",\n    \"qr_data\" : \"Q1Q2Q3\",\n    \"id\" : \"mtrn_9abcd233jk23l6c5lw5f\",\n    \"status_timestamp\" : \"2016-09-22T13:22:11-05:30\",\n    \"transfer_reference\" : \"DEF123456\",\n    \"digital_account_reference_number\" : \"pan:************1234\",\n    \"device_id\" : \"DEV123456\",\n    \"transaction_history\" : {\n      \"item_count\" : 1,\n      \"data\" : {\n        \"transaction\" : [ {\n          \"authorization_id\" : \"801726\",\n          \"switch_serial_number\" : \"564727057\",\n          \"retrieval_reference\" : \"624200192616\",\n          \"system_trace_audit_number\" : \"926162\",\n          \"transaction_amount\" : { },\n          \"resource_type\" : \"transaction\",\n          \"type\" : \"PAYMENT\",\n          \"network\" : \"MasterCard\",\n          \"network_status_code\" : \"54\",\n          \"payment_account_reference\" : \"5001ESVM4JQAAOP5JKSK1XGAPOPG2\",\n          \"create_timestamp\" : \"2015-03-18T14:18:55Z\",\n          \"network_status_description\" : \"Expired Card\",\n          \"funds_availability\" : \"IMMEDIATE\",\n          \"id\" : \"trn_8h4me233jk23l6c5lw5f\",\n          \"status_timestamp\" : \"2015-03-18T14:18:56Z\",\n          \"status_reason\" : \"APPROVED\",\n          \"account_uri\" : \"pan:************9012\",\n          \"status\" : \"APPROVED\",\n          \"unique_reference_number\" : \"592087939\"\n        }, {\n          \"authorization_id\" : \"801726\",\n          \"switch_serial_number\" : \"564727057\",\n          \"retrieval_reference\" : \"624200192616\",\n          \"system_trace_audit_number\" : \"926162\",\n          \"transaction_amount\" : { },\n          \"resource_type\" : \"transaction\",\n          \"type\" : \"PAYMENT\",\n          \"network\" : \"MasterCard\",\n          \"network_status_code\" : \"54\",\n          \"payment_account_reference\" : \"5001ESVM4JQAAOP5JKSK1XGAPOPG2\",\n          \"create_timestamp\" : \"2015-03-18T14:18:55Z\",\n          \"network_status_description\" : \"Expired Card\",\n          \"funds_availability\" : \"IMMEDIATE\",\n          \"id\" : \"trn_8h4me233jk23l6c5lw5f\",\n          \"status_timestamp\" : \"2015-03-18T14:18:56Z\",\n          \"status_reason\" : \"APPROVED\",\n          \"account_uri\" : \"pan:************9012\",\n          \"status\" : \"APPROVED\",\n          \"unique_reference_number\" : \"592087939\"\n        }, {\n          \"authorization_id\" : \"801726\",\n          \"switch_serial_number\" : \"564727057\",\n          \"retrieval_reference\" : \"624200192616\",\n          \"system_trace_audit_number\" : \"926162\",\n          \"transaction_amount\" : { },\n          \"resource_type\" : \"transaction\",\n          \"type\" : \"PAYMENT\",\n          \"network\" : \"MasterCard\",\n          \"network_status_code\" : \"54\",\n          \"payment_account_reference\" : \"5001ESVM4JQAAOP5JKSK1XGAPOPG2\",\n          \"create_timestamp\" : \"2015-03-18T14:18:55Z\",\n          \"network_status_description\" : \"Expired Card\",\n          \"funds_availability\" : \"IMMEDIATE\",\n          \"id\" : \"trn_8h4me233jk23l6c5lw5f\",\n          \"status_timestamp\" : \"2015-03-18T14:18:56Z\",\n          \"status_reason\" : \"APPROVED\",\n          \"account_uri\" : \"pan:************9012\",\n          \"status\" : \"APPROVED\",\n          \"unique_reference_number\" : \"592087939\"\n        }, {\n          \"authorization_id\" : \"801726\",\n          \"switch_serial_number\" : \"564727057\",\n          \"retrieval_reference\" : \"624200192616\",\n          \"system_trace_audit_number\" : \"926162\",\n          \"transaction_amount\" : { },\n          \"resource_type\" : \"transaction\",\n          \"type\" : \"PAYMENT\",\n          \"network\" : \"MasterCard\",\n          \"network_status_code\" : \"54\",\n          \"payment_account_reference\" : \"5001ESVM4JQAAOP5JKSK1XGAPOPG2\",\n          \"create_timestamp\" : \"2015-03-18T14:18:55Z\",\n          \"network_status_description\" : \"Expired Card\",\n          \"funds_availability\" : \"IMMEDIATE\",\n          \"id\" : \"trn_8h4me233jk23l6c5lw5f\",\n          \"status_timestamp\" : \"2015-03-18T14:18:56Z\",\n          \"status_reason\" : \"APPROVED\",\n          \"account_uri\" : \"pan:************9012\",\n          \"status\" : \"APPROVED\",\n          \"unique_reference_number\" : \"592087939\"\n        } ]\n      },\n      \"resource_type\" : \"list\"\n    },\n    \"created\" : \"2016-09-22T13:22:11-05:30\",\n    \"payment_origination_country\" : \"USA\",\n    \"resource_type\" : \"merchant_transfer\",\n    \"interchange_rate_designator\" : \"QR\",\n    \"convenience_amount\" : \"11\",\n    \"payment_type\" : \"P2M\",\n    \"sender\" : {\n      \"address\" : {\n        \"country\" : \"USA\",\n        \"city\" : \"Chicago\",\n        \"postal_code\" : \"60618\",\n        \"line2\" : \"Apartment 9\",\n        \"line1\" : \"123 Elm St\",\n        \"country_subdivision\" : \"IL\"\n      },\n      \"phone\" : \"12125551234\",\n      \"date_of_birth\" : \"1999-12-30\",\n      \"last_name\" : \"Jones\",\n      \"middle_name\" : \"Tyler\",\n      \"first_name\" : \"John\",\n      \"email\" : \"jane.smith123@abcmail.com\"\n    },\n    \"transfer_amount\" : {\n      \"currency\" : \"USD\",\n      \"value\" : \"5300\"\n    },\n    \"recipient\" : {\n      \"address\" : {\n        \"country\" : \"USA\",\n        \"city\" : \"OFallon\",\n        \"postal_code\" : \"63368\",\n        \"line2\" : \"Apartment 9\",\n        \"line1\" : \"1 Main St\",\n        \"country_subdivision\" : \"MO\"\n      },\n      \"phone\" : \"11234567890\",\n      \"merchant_category_code\" : \"0763\",\n      \"additional_merchant_data\" : {\n        \"payment_facilitator_id\" : 123456,\n        \"sub_merchant_id\" : \"A1234D\"\n      },\n      \"last_name\" : \"Jones\",\n      \"middle_name\" : \"Tyler\",\n      \"first_name\" : \"John\",\n      \"email\" : \"Jane.Smith123@abcmail.com\"\n    },\n    \"location\" : \"state:MO\",\n    \"additional_message\" : \"DEV123456\",\n    \"status\" : \"APPROVED\"\n  }\n}",
+      "headers" : {
+        "Content-Type" : "application/xml"
+      }
+    },
+    "uuid" : "3c80b511-4bbc-474a-a081-30c5c757929e",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:15.481256Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "createMerchantPayment",
+          "schema" : {
+            "type" : "object",
+            "properties" : {
+              "merchant_transfer" : {
+                "$ref" : "#/components/schemas/MerchantTransfer_40"
+              }
+            },
+            "description" : "Response details for a merchant transfer."
+          }
+        }
+      }
+    },
+    "insertionIndex" : 20
+  }, {
+    "id" : "f2e9deda-fc08-4959-b3a5-54be65b358c6",
+    "name" : "Initiates a Mastercard Merchant Presented QR purchase transaction by pushing funds to a merchant account. (application/json)",
+    "request" : {
+      "urlPath" : "/send/#env/v1/partners/429o/merchant/transfers/payment",
+      "method" : "POST",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/json"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"merchant_transfer\" : {\n    \"transaction_local_date_time\" : \"2016-09-22T13:22:11-05:30\",\n    \"convenience_indicator\" : \"02\",\n    \"original_status\" : \"APPROVED\",\n    \"channel\" : \"WEB\",\n    \"routing_transit_number\" : \"965730000\",\n    \"sender_account_uri\" : \"pan:************9012\",\n    \"reconciliation_data\" : {\n      \"custom_field\" : [ {\n        \"name\" : \"TransactionID\",\n        \"value\" : \"456FDWBS43\"\n      }, {\n        \"name\" : \"TransactionID\",\n        \"value\" : \"456FDWBS43\"\n      }, {\n        \"name\" : \"TransactionID\",\n        \"value\" : \"456FDWBS43\"\n      }, {\n        \"name\" : \"TransactionID\",\n        \"value\" : \"456FDWBS43\"\n      }, {\n        \"name\" : \"TransactionID\",\n        \"value\" : \"456FDWBS43\"\n      }, {\n        \"name\" : \"TransactionID\",\n        \"value\" : \"456FDWBS43\"\n      }, {\n        \"name\" : \"TransactionID\",\n        \"value\" : \"456FDWBS43\"\n      } ]\n    },\n    \"participant\" : {\n      \"card_acceptor_id\" : \"CardAcceptor1\",\n      \"card_acceptor_name\" : \"THE BEST BANK\"\n    },\n    \"participation_id\" : \"TERMINAL34728\",\n    \"recipient_account_uri\" : \"pan:************7372\",\n    \"funding_source\" : \"DEBIT\",\n    \"processor_id\" : \"2147483647\",\n    \"qr_data\" : \"Q1Q2Q3\",\n    \"id\" : \"mtrn_9abcd233jk23l6c5lw5f\",\n    \"status_timestamp\" : \"2016-09-22T13:22:11-05:30\",\n    \"transfer_reference\" : \"DEF123456\",\n    \"digital_account_reference_number\" : \"pan:************1234\",\n    \"device_id\" : \"DEV123456\",\n    \"transaction_history\" : {\n      \"item_count\" : 1,\n      \"data\" : {\n        \"transaction\" : [ {\n          \"authorization_id\" : \"801726\",\n          \"switch_serial_number\" : \"564727057\",\n          \"retrieval_reference\" : \"624200192616\",\n          \"system_trace_audit_number\" : \"926162\",\n          \"transaction_amount\" : { },\n          \"resource_type\" : \"transaction\",\n          \"type\" : \"PAYMENT\",\n          \"network\" : \"MasterCard\",\n          \"network_status_code\" : \"54\",\n          \"payment_account_reference\" : \"5001ESVM4JQAAOP5JKSK1XGAPOPG2\",\n          \"create_timestamp\" : \"2015-03-18T14:18:55Z\",\n          \"network_status_description\" : \"Expired Card\",\n          \"funds_availability\" : \"IMMEDIATE\",\n          \"id\" : \"trn_8h4me233jk23l6c5lw5f\",\n          \"status_timestamp\" : \"2015-03-18T14:18:56Z\",\n          \"status_reason\" : \"APPROVED\",\n          \"account_uri\" : \"pan:************9012\",\n          \"status\" : \"APPROVED\",\n          \"unique_reference_number\" : \"592087939\"\n        }, {\n          \"authorization_id\" : \"801726\",\n          \"switch_serial_number\" : \"564727057\",\n          \"retrieval_reference\" : \"624200192616\",\n          \"system_trace_audit_number\" : \"926162\",\n          \"transaction_amount\" : { },\n          \"resource_type\" : \"transaction\",\n          \"type\" : \"PAYMENT\",\n          \"network\" : \"MasterCard\",\n          \"network_status_code\" : \"54\",\n          \"payment_account_reference\" : \"5001ESVM4JQAAOP5JKSK1XGAPOPG2\",\n          \"create_timestamp\" : \"2015-03-18T14:18:55Z\",\n          \"network_status_description\" : \"Expired Card\",\n          \"funds_availability\" : \"IMMEDIATE\",\n          \"id\" : \"trn_8h4me233jk23l6c5lw5f\",\n          \"status_timestamp\" : \"2015-03-18T14:18:56Z\",\n          \"status_reason\" : \"APPROVED\",\n          \"account_uri\" : \"pan:************9012\",\n          \"status\" : \"APPROVED\",\n          \"unique_reference_number\" : \"592087939\"\n        } ]\n      },\n      \"resource_type\" : \"list\"\n    },\n    \"created\" : \"2016-09-22T13:22:11-05:30\",\n    \"payment_origination_country\" : \"USA\",\n    \"resource_type\" : \"merchant_transfer\",\n    \"interchange_rate_designator\" : \"QR\",\n    \"convenience_amount\" : \"11\",\n    \"payment_type\" : \"P2M\",\n    \"sender\" : {\n      \"address\" : {\n        \"country\" : \"USA\",\n        \"city\" : \"Chicago\",\n        \"postal_code\" : \"60618\",\n        \"line2\" : \"Apartment 9\",\n        \"line1\" : \"123 Elm St\",\n        \"country_subdivision\" : \"IL\"\n      },\n      \"phone\" : \"12125551234\",\n      \"date_of_birth\" : \"1999-12-30\",\n      \"last_name\" : \"Jones\",\n      \"middle_name\" : \"Tyler\",\n      \"first_name\" : \"John\",\n      \"email\" : \"jane.smith123@abcmail.com\"\n    },\n    \"transfer_amount\" : {\n      \"currency\" : \"USD\",\n      \"value\" : \"5300\"\n    },\n    \"recipient\" : {\n      \"address\" : {\n        \"country\" : \"USA\",\n        \"city\" : \"OFallon\",\n        \"postal_code\" : \"63368\",\n        \"line2\" : \"Apartment 9\",\n        \"line1\" : \"1 Main St\",\n        \"country_subdivision\" : \"MO\"\n      },\n      \"phone\" : \"11234567890\",\n      \"merchant_category_code\" : \"0763\",\n      \"additional_merchant_data\" : {\n        \"payment_facilitator_id\" : 123456,\n        \"sub_merchant_id\" : \"A1234D\"\n      },\n      \"last_name\" : \"Jones\",\n      \"middle_name\" : \"Tyler\",\n      \"first_name\" : \"John\",\n      \"email\" : \"Jane.Smith123@abcmail.com\"\n    },\n    \"location\" : \"state:MO\",\n    \"additional_message\" : \"DEV123456\",\n    \"status\" : \"APPROVED\"\n  }\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "f2e9deda-fc08-4959-b3a5-54be65b358c6",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:15.480835Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "createMerchantPayment",
+          "schema" : {
+            "type" : "object",
+            "properties" : {
+              "merchant_transfer" : {
+                "$ref" : "#/components/schemas/MerchantTransfer_40"
+              }
+            },
+            "description" : "Response details for a merchant transfer."
+          }
+        }
+      }
+    },
+    "insertionIndex" : 21
+  }, {
+    "id" : "125f9ae7-7ad4-4f70-b5d0-6655f667f886",
+    "name" : "Purpose of this service is to retrieve the Transfer resource associated with a specified transfer_reference value. (application/xml)",
+    "request" : {
+      "urlPath" : "/send/#env/v1/partners/z867/merchant/transfers",
+      "method" : "GET",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/xml"
+        }
+      },
+      "queryParameters" : {
+        "ref" : {
+          "equalTo" : "bgzgw6z90yl5v7vo0802hv1equn8dal4c71fcuwkh80o2sxrfhfjmq0z8x6t5b4925my76r44x7c2mejh2kpoinbiu6xmu0ltmr5907gq3y8vo51eo1esklgvopvyos1piq0jek4tcqiky7waaw4d7f5tpmhh"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"merchant_transfers\" : {\n    \"item_count\" : 2,\n    \"data\" : {\n      \"merchant_transfer\" : [ {\n        \"transaction_local_date_time\" : \"2016-09-22T13:22:11-05:30\",\n        \"original_status\" : \"APPROVED\",\n        \"channel\" : \"WEB\",\n        \"routing_transit_number\" : \"965730000\",\n        \"sender_account_uri\" : \"pan:************9012\",\n        \"reconciliation_data\" : {\n          \"custom_field\" : [ { }, { }, { }, { }, { }, { } ]\n        },\n        \"participant\" : {\n          \"card_acceptor_id\" : \"CardAcceptor1\",\n          \"card_acceptor_name\" : \"THE BEST BANK\"\n        },\n        \"recipient_account_uri\" : \"pan:************7372\",\n        \"funding_source\" : \"DEBIT\",\n        \"processor_id\" : \"2147483647\",\n        \"id\" : \"mtrn_9abcd233jk23l6c5lw5f\",\n        \"status_timestamp\" : \"2016-09-22T13:22:11-05:30\",\n        \"transfer_reference\" : \"DEF123456\",\n        \"digital_account_reference_number\" : \"************4562\",\n        \"device_id\" : \"DEV123456\",\n        \"transaction_history\" : {\n          \"item_count\" : 1,\n          \"data\" : { },\n          \"resource_type\" : \"list\"\n        },\n        \"created\" : \"2016-09-22T13:22:11-05:30\",\n        \"payment_origination_country\" : \"USA\",\n        \"resource_type\" : \"merchant_transfer\",\n        \"interchange_rate_designator\" : \"QR\",\n        \"payment_type\" : \"P2M\",\n        \"sender\" : {\n          \"address\" : { },\n          \"phone\" : \"12125551234\",\n          \"date_of_birth\" : \"1999-12-30\",\n          \"additional_merchant_data\" : { },\n          \"last_name\" : \"Jones\",\n          \"middle_name\" : \"Tyler\",\n          \"first_name\" : \"John\",\n          \"email\" : \"jane.smith123@abcmail.com\"\n        },\n        \"transfer_amount\" : {\n          \"currency\" : \"USD\",\n          \"value\" : \"5300\"\n        },\n        \"recipient\" : {\n          \"address\" : { },\n          \"phone\" : \"11234567890\",\n          \"merchant_category_code\" : \"0763\",\n          \"additional_merchant_data\" : { },\n          \"last_name\" : \"Jones\",\n          \"middle_name\" : \"Tyler\",\n          \"first_name\" : \"John\",\n          \"email\" : \"Jane.Smith123@abcmail.com\"\n        },\n        \"location\" : \"state:MO\",\n        \"status\" : \"APPROVED\"\n      } ]\n    },\n    \"resource_type\" : \"list\"\n  }\n}",
+      "headers" : {
+        "Content-Type" : "application/xml"
+      }
+    },
+    "uuid" : "125f9ae7-7ad4-4f70-b5d0-6655f667f886",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:15.48025Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "getMerchantTransferByRef",
+          "schema" : {
+            "type" : "object",
+            "properties" : {
+              "merchant_transfers" : {
+                "$ref" : "#/components/schemas/MerchantTransfers_69"
+              }
+            },
+            "description" : "Response details for a merchant transfer."
+          }
+        }
+      }
+    },
+    "insertionIndex" : 22
+  }, {
+    "id" : "8ed0c95d-66fe-40f1-b904-654dd516aeaa",
+    "name" : "Purpose of this service is to retrieve the Transfer resource associated with a specified transfer_reference value. (application/json)",
+    "request" : {
+      "urlPath" : "/send/#env/v1/partners/41k5/merchant/transfers",
+      "method" : "GET",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/json"
+        }
+      },
+      "queryParameters" : {
+        "ref" : {
+          "equalTo" : "fvfbquasy1hayecdbd360qeykch82wwjoti68109odc9es3veet1dgh9jvp03ho"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"merchant_transfers\" : {\n    \"item_count\" : 2,\n    \"data\" : {\n      \"merchant_transfer\" : [ {\n        \"transaction_local_date_time\" : \"2016-09-22T13:22:11-05:30\",\n        \"original_status\" : \"APPROVED\",\n        \"channel\" : \"WEB\",\n        \"routing_transit_number\" : \"965730000\",\n        \"sender_account_uri\" : \"pan:************9012\",\n        \"reconciliation_data\" : {\n          \"custom_field\" : [ { } ]\n        },\n        \"participant\" : {\n          \"card_acceptor_id\" : \"CardAcceptor1\",\n          \"card_acceptor_name\" : \"THE BEST BANK\"\n        },\n        \"recipient_account_uri\" : \"pan:************7372\",\n        \"funding_source\" : \"DEBIT\",\n        \"processor_id\" : \"2147483647\",\n        \"id\" : \"mtrn_9abcd233jk23l6c5lw5f\",\n        \"status_timestamp\" : \"2016-09-22T13:22:11-05:30\",\n        \"transfer_reference\" : \"DEF123456\",\n        \"digital_account_reference_number\" : \"************4562\",\n        \"device_id\" : \"DEV123456\",\n        \"transaction_history\" : {\n          \"item_count\" : 1,\n          \"data\" : { },\n          \"resource_type\" : \"list\"\n        },\n        \"created\" : \"2016-09-22T13:22:11-05:30\",\n        \"payment_origination_country\" : \"USA\",\n        \"resource_type\" : \"merchant_transfer\",\n        \"interchange_rate_designator\" : \"QR\",\n        \"payment_type\" : \"P2M\",\n        \"sender\" : {\n          \"address\" : { },\n          \"phone\" : \"12125551234\",\n          \"date_of_birth\" : \"1999-12-30\",\n          \"additional_merchant_data\" : { },\n          \"last_name\" : \"Jones\",\n          \"middle_name\" : \"Tyler\",\n          \"first_name\" : \"John\",\n          \"email\" : \"jane.smith123@abcmail.com\"\n        },\n        \"transfer_amount\" : {\n          \"currency\" : \"USD\",\n          \"value\" : \"5300\"\n        },\n        \"recipient\" : {\n          \"address\" : { },\n          \"phone\" : \"11234567890\",\n          \"merchant_category_code\" : \"0763\",\n          \"additional_merchant_data\" : { },\n          \"last_name\" : \"Jones\",\n          \"middle_name\" : \"Tyler\",\n          \"first_name\" : \"John\",\n          \"email\" : \"Jane.Smith123@abcmail.com\"\n        },\n        \"location\" : \"state:MO\",\n        \"status\" : \"APPROVED\"\n      }, {\n        \"transaction_local_date_time\" : \"2016-09-22T13:22:11-05:30\",\n        \"original_status\" : \"APPROVED\",\n        \"channel\" : \"WEB\",\n        \"routing_transit_number\" : \"965730000\",\n        \"sender_account_uri\" : \"pan:************9012\",\n        \"reconciliation_data\" : {\n          \"custom_field\" : [ { }, { }, { }, { }, { } ]\n        },\n        \"participant\" : {\n          \"card_acceptor_id\" : \"CardAcceptor1\",\n          \"card_acceptor_name\" : \"THE BEST BANK\"\n        },\n        \"recipient_account_uri\" : \"pan:************7372\",\n        \"funding_source\" : \"DEBIT\",\n        \"processor_id\" : \"2147483647\",\n        \"id\" : \"mtrn_9abcd233jk23l6c5lw5f\",\n        \"status_timestamp\" : \"2016-09-22T13:22:11-05:30\",\n        \"transfer_reference\" : \"DEF123456\",\n        \"digital_account_reference_number\" : \"************4562\",\n        \"device_id\" : \"DEV123456\",\n        \"transaction_history\" : {\n          \"item_count\" : 1,\n          \"data\" : { },\n          \"resource_type\" : \"list\"\n        },\n        \"created\" : \"2016-09-22T13:22:11-05:30\",\n        \"payment_origination_country\" : \"USA\",\n        \"resource_type\" : \"merchant_transfer\",\n        \"interchange_rate_designator\" : \"QR\",\n        \"payment_type\" : \"P2M\",\n        \"sender\" : {\n          \"address\" : { },\n          \"phone\" : \"12125551234\",\n          \"date_of_birth\" : \"1999-12-30\",\n          \"additional_merchant_data\" : { },\n          \"last_name\" : \"Jones\",\n          \"middle_name\" : \"Tyler\",\n          \"first_name\" : \"John\",\n          \"email\" : \"jane.smith123@abcmail.com\"\n        },\n        \"transfer_amount\" : {\n          \"currency\" : \"USD\",\n          \"value\" : \"5300\"\n        },\n        \"recipient\" : {\n          \"address\" : { },\n          \"phone\" : \"11234567890\",\n          \"merchant_category_code\" : \"0763\",\n          \"additional_merchant_data\" : { },\n          \"last_name\" : \"Jones\",\n          \"middle_name\" : \"Tyler\",\n          \"first_name\" : \"John\",\n          \"email\" : \"Jane.Smith123@abcmail.com\"\n        },\n        \"location\" : \"state:MO\",\n        \"status\" : \"APPROVED\"\n      }, {\n        \"transaction_local_date_time\" : \"2016-09-22T13:22:11-05:30\",\n        \"original_status\" : \"APPROVED\",\n        \"channel\" : \"WEB\",\n        \"routing_transit_number\" : \"965730000\",\n        \"sender_account_uri\" : \"pan:************9012\",\n        \"reconciliation_data\" : {\n          \"custom_field\" : [ { }, { }, { }, { }, { }, { }, { } ]\n        },\n        \"participant\" : {\n          \"card_acceptor_id\" : \"CardAcceptor1\",\n          \"card_acceptor_name\" : \"THE BEST BANK\"\n        },\n        \"recipient_account_uri\" : \"pan:************7372\",\n        \"funding_source\" : \"DEBIT\",\n        \"processor_id\" : \"2147483647\",\n        \"id\" : \"mtrn_9abcd233jk23l6c5lw5f\",\n        \"status_timestamp\" : \"2016-09-22T13:22:11-05:30\",\n        \"transfer_reference\" : \"DEF123456\",\n        \"digital_account_reference_number\" : \"************4562\",\n        \"device_id\" : \"DEV123456\",\n        \"transaction_history\" : {\n          \"item_count\" : 1,\n          \"data\" : { },\n          \"resource_type\" : \"list\"\n        },\n        \"created\" : \"2016-09-22T13:22:11-05:30\",\n        \"payment_origination_country\" : \"USA\",\n        \"resource_type\" : \"merchant_transfer\",\n        \"interchange_rate_designator\" : \"QR\",\n        \"payment_type\" : \"P2M\",\n        \"sender\" : {\n          \"address\" : { },\n          \"phone\" : \"12125551234\",\n          \"date_of_birth\" : \"1999-12-30\",\n          \"additional_merchant_data\" : { },\n          \"last_name\" : \"Jones\",\n          \"middle_name\" : \"Tyler\",\n          \"first_name\" : \"John\",\n          \"email\" : \"jane.smith123@abcmail.com\"\n        },\n        \"transfer_amount\" : {\n          \"currency\" : \"USD\",\n          \"value\" : \"5300\"\n        },\n        \"recipient\" : {\n          \"address\" : { },\n          \"phone\" : \"11234567890\",\n          \"merchant_category_code\" : \"0763\",\n          \"additional_merchant_data\" : { },\n          \"last_name\" : \"Jones\",\n          \"middle_name\" : \"Tyler\",\n          \"first_name\" : \"John\",\n          \"email\" : \"Jane.Smith123@abcmail.com\"\n        },\n        \"location\" : \"state:MO\",\n        \"status\" : \"APPROVED\"\n      }, {\n        \"transaction_local_date_time\" : \"2016-09-22T13:22:11-05:30\",\n        \"original_status\" : \"APPROVED\",\n        \"channel\" : \"WEB\",\n        \"routing_transit_number\" : \"965730000\",\n        \"sender_account_uri\" : \"pan:************9012\",\n        \"reconciliation_data\" : {\n          \"custom_field\" : [ { }, { }, { } ]\n        },\n        \"participant\" : {\n          \"card_acceptor_id\" : \"CardAcceptor1\",\n          \"card_acceptor_name\" : \"THE BEST BANK\"\n        },\n        \"recipient_account_uri\" : \"pan:************7372\",\n        \"funding_source\" : \"DEBIT\",\n        \"processor_id\" : \"2147483647\",\n        \"id\" : \"mtrn_9abcd233jk23l6c5lw5f\",\n        \"status_timestamp\" : \"2016-09-22T13:22:11-05:30\",\n        \"transfer_reference\" : \"DEF123456\",\n        \"digital_account_reference_number\" : \"************4562\",\n        \"device_id\" : \"DEV123456\",\n        \"transaction_history\" : {\n          \"item_count\" : 1,\n          \"data\" : { },\n          \"resource_type\" : \"list\"\n        },\n        \"created\" : \"2016-09-22T13:22:11-05:30\",\n        \"payment_origination_country\" : \"USA\",\n        \"resource_type\" : \"merchant_transfer\",\n        \"interchange_rate_designator\" : \"QR\",\n        \"payment_type\" : \"P2M\",\n        \"sender\" : {\n          \"address\" : { },\n          \"phone\" : \"12125551234\",\n          \"date_of_birth\" : \"1999-12-30\",\n          \"additional_merchant_data\" : { },\n          \"last_name\" : \"Jones\",\n          \"middle_name\" : \"Tyler\",\n          \"first_name\" : \"John\",\n          \"email\" : \"jane.smith123@abcmail.com\"\n        },\n        \"transfer_amount\" : {\n          \"currency\" : \"USD\",\n          \"value\" : \"5300\"\n        },\n        \"recipient\" : {\n          \"address\" : { },\n          \"phone\" : \"11234567890\",\n          \"merchant_category_code\" : \"0763\",\n          \"additional_merchant_data\" : { },\n          \"last_name\" : \"Jones\",\n          \"middle_name\" : \"Tyler\",\n          \"first_name\" : \"John\",\n          \"email\" : \"Jane.Smith123@abcmail.com\"\n        },\n        \"location\" : \"state:MO\",\n        \"status\" : \"APPROVED\"\n      }, {\n        \"transaction_local_date_time\" : \"2016-09-22T13:22:11-05:30\",\n        \"original_status\" : \"APPROVED\",\n        \"channel\" : \"WEB\",\n        \"routing_transit_number\" : \"965730000\",\n        \"sender_account_uri\" : \"pan:************9012\",\n        \"reconciliation_data\" : {\n          \"custom_field\" : [ { }, { }, { }, { }, { }, { }, { }, { } ]\n        },\n        \"participant\" : {\n          \"card_acceptor_id\" : \"CardAcceptor1\",\n          \"card_acceptor_name\" : \"THE BEST BANK\"\n        },\n        \"recipient_account_uri\" : \"pan:************7372\",\n        \"funding_source\" : \"DEBIT\",\n        \"processor_id\" : \"2147483647\",\n        \"id\" : \"mtrn_9abcd233jk23l6c5lw5f\",\n        \"status_timestamp\" : \"2016-09-22T13:22:11-05:30\",\n        \"transfer_reference\" : \"DEF123456\",\n        \"digital_account_reference_number\" : \"************4562\",\n        \"device_id\" : \"DEV123456\",\n        \"transaction_history\" : {\n          \"item_count\" : 1,\n          \"data\" : { },\n          \"resource_type\" : \"list\"\n        },\n        \"created\" : \"2016-09-22T13:22:11-05:30\",\n        \"payment_origination_country\" : \"USA\",\n        \"resource_type\" : \"merchant_transfer\",\n        \"interchange_rate_designator\" : \"QR\",\n        \"payment_type\" : \"P2M\",\n        \"sender\" : {\n          \"address\" : { },\n          \"phone\" : \"12125551234\",\n          \"date_of_birth\" : \"1999-12-30\",\n          \"additional_merchant_data\" : { },\n          \"last_name\" : \"Jones\",\n          \"middle_name\" : \"Tyler\",\n          \"first_name\" : \"John\",\n          \"email\" : \"jane.smith123@abcmail.com\"\n        },\n        \"transfer_amount\" : {\n          \"currency\" : \"USD\",\n          \"value\" : \"5300\"\n        },\n        \"recipient\" : {\n          \"address\" : { },\n          \"phone\" : \"11234567890\",\n          \"merchant_category_code\" : \"0763\",\n          \"additional_merchant_data\" : { },\n          \"last_name\" : \"Jones\",\n          \"middle_name\" : \"Tyler\",\n          \"first_name\" : \"John\",\n          \"email\" : \"Jane.Smith123@abcmail.com\"\n        },\n        \"location\" : \"state:MO\",\n        \"status\" : \"APPROVED\"\n      }, {\n        \"transaction_local_date_time\" : \"2016-09-22T13:22:11-05:30\",\n        \"original_status\" : \"APPROVED\",\n        \"channel\" : \"WEB\",\n        \"routing_transit_number\" : \"965730000\",\n        \"sender_account_uri\" : \"pan:************9012\",\n        \"reconciliation_data\" : {\n          \"custom_field\" : [ { }, { }, { }, { }, { }, { }, { } ]\n        },\n        \"participant\" : {\n          \"card_acceptor_id\" : \"CardAcceptor1\",\n          \"card_acceptor_name\" : \"THE BEST BANK\"\n        },\n        \"recipient_account_uri\" : \"pan:************7372\",\n        \"funding_source\" : \"DEBIT\",\n        \"processor_id\" : \"2147483647\",\n        \"id\" : \"mtrn_9abcd233jk23l6c5lw5f\",\n        \"status_timestamp\" : \"2016-09-22T13:22:11-05:30\",\n        \"transfer_reference\" : \"DEF123456\",\n        \"digital_account_reference_number\" : \"************4562\",\n        \"device_id\" : \"DEV123456\",\n        \"transaction_history\" : {\n          \"item_count\" : 1,\n          \"data\" : { },\n          \"resource_type\" : \"list\"\n        },\n        \"created\" : \"2016-09-22T13:22:11-05:30\",\n        \"payment_origination_country\" : \"USA\",\n        \"resource_type\" : \"merchant_transfer\",\n        \"interchange_rate_designator\" : \"QR\",\n        \"payment_type\" : \"P2M\",\n        \"sender\" : {\n          \"address\" : { },\n          \"phone\" : \"12125551234\",\n          \"date_of_birth\" : \"1999-12-30\",\n          \"additional_merchant_data\" : { },\n          \"last_name\" : \"Jones\",\n          \"middle_name\" : \"Tyler\",\n          \"first_name\" : \"John\",\n          \"email\" : \"jane.smith123@abcmail.com\"\n        },\n        \"transfer_amount\" : {\n          \"currency\" : \"USD\",\n          \"value\" : \"5300\"\n        },\n        \"recipient\" : {\n          \"address\" : { },\n          \"phone\" : \"11234567890\",\n          \"merchant_category_code\" : \"0763\",\n          \"additional_merchant_data\" : { },\n          \"last_name\" : \"Jones\",\n          \"middle_name\" : \"Tyler\",\n          \"first_name\" : \"John\",\n          \"email\" : \"Jane.Smith123@abcmail.com\"\n        },\n        \"location\" : \"state:MO\",\n        \"status\" : \"APPROVED\"\n      }, {\n        \"transaction_local_date_time\" : \"2016-09-22T13:22:11-05:30\",\n        \"original_status\" : \"APPROVED\",\n        \"channel\" : \"WEB\",\n        \"routing_transit_number\" : \"965730000\",\n        \"sender_account_uri\" : \"pan:************9012\",\n        \"reconciliation_data\" : {\n          \"custom_field\" : [ { }, { }, { }, { }, { }, { }, { }, { } ]\n        },\n        \"participant\" : {\n          \"card_acceptor_id\" : \"CardAcceptor1\",\n          \"card_acceptor_name\" : \"THE BEST BANK\"\n        },\n        \"recipient_account_uri\" : \"pan:************7372\",\n        \"funding_source\" : \"DEBIT\",\n        \"processor_id\" : \"2147483647\",\n        \"id\" : \"mtrn_9abcd233jk23l6c5lw5f\",\n        \"status_timestamp\" : \"2016-09-22T13:22:11-05:30\",\n        \"transfer_reference\" : \"DEF123456\",\n        \"digital_account_reference_number\" : \"************4562\",\n        \"device_id\" : \"DEV123456\",\n        \"transaction_history\" : {\n          \"item_count\" : 1,\n          \"data\" : { },\n          \"resource_type\" : \"list\"\n        },\n        \"created\" : \"2016-09-22T13:22:11-05:30\",\n        \"payment_origination_country\" : \"USA\",\n        \"resource_type\" : \"merchant_transfer\",\n        \"interchange_rate_designator\" : \"QR\",\n        \"payment_type\" : \"P2M\",\n        \"sender\" : {\n          \"address\" : { },\n          \"phone\" : \"12125551234\",\n          \"date_of_birth\" : \"1999-12-30\",\n          \"additional_merchant_data\" : { },\n          \"last_name\" : \"Jones\",\n          \"middle_name\" : \"Tyler\",\n          \"first_name\" : \"John\",\n          \"email\" : \"jane.smith123@abcmail.com\"\n        },\n        \"transfer_amount\" : {\n          \"currency\" : \"USD\",\n          \"value\" : \"5300\"\n        },\n        \"recipient\" : {\n          \"address\" : { },\n          \"phone\" : \"11234567890\",\n          \"merchant_category_code\" : \"0763\",\n          \"additional_merchant_data\" : { },\n          \"last_name\" : \"Jones\",\n          \"middle_name\" : \"Tyler\",\n          \"first_name\" : \"John\",\n          \"email\" : \"Jane.Smith123@abcmail.com\"\n        },\n        \"location\" : \"state:MO\",\n        \"status\" : \"APPROVED\"\n      }, {\n        \"transaction_local_date_time\" : \"2016-09-22T13:22:11-05:30\",\n        \"original_status\" : \"APPROVED\",\n        \"channel\" : \"WEB\",\n        \"routing_transit_number\" : \"965730000\",\n        \"sender_account_uri\" : \"pan:************9012\",\n        \"reconciliation_data\" : {\n          \"custom_field\" : [ { }, { }, { }, { } ]\n        },\n        \"participant\" : {\n          \"card_acceptor_id\" : \"CardAcceptor1\",\n          \"card_acceptor_name\" : \"THE BEST BANK\"\n        },\n        \"recipient_account_uri\" : \"pan:************7372\",\n        \"funding_source\" : \"DEBIT\",\n        \"processor_id\" : \"2147483647\",\n        \"id\" : \"mtrn_9abcd233jk23l6c5lw5f\",\n        \"status_timestamp\" : \"2016-09-22T13:22:11-05:30\",\n        \"transfer_reference\" : \"DEF123456\",\n        \"digital_account_reference_number\" : \"************4562\",\n        \"device_id\" : \"DEV123456\",\n        \"transaction_history\" : {\n          \"item_count\" : 1,\n          \"data\" : { },\n          \"resource_type\" : \"list\"\n        },\n        \"created\" : \"2016-09-22T13:22:11-05:30\",\n        \"payment_origination_country\" : \"USA\",\n        \"resource_type\" : \"merchant_transfer\",\n        \"interchange_rate_designator\" : \"QR\",\n        \"payment_type\" : \"P2M\",\n        \"sender\" : {\n          \"address\" : { },\n          \"phone\" : \"12125551234\",\n          \"date_of_birth\" : \"1999-12-30\",\n          \"additional_merchant_data\" : { },\n          \"last_name\" : \"Jones\",\n          \"middle_name\" : \"Tyler\",\n          \"first_name\" : \"John\",\n          \"email\" : \"jane.smith123@abcmail.com\"\n        },\n        \"transfer_amount\" : {\n          \"currency\" : \"USD\",\n          \"value\" : \"5300\"\n        },\n        \"recipient\" : {\n          \"address\" : { },\n          \"phone\" : \"11234567890\",\n          \"merchant_category_code\" : \"0763\",\n          \"additional_merchant_data\" : { },\n          \"last_name\" : \"Jones\",\n          \"middle_name\" : \"Tyler\",\n          \"first_name\" : \"John\",\n          \"email\" : \"Jane.Smith123@abcmail.com\"\n        },\n        \"location\" : \"state:MO\",\n        \"status\" : \"APPROVED\"\n      } ]\n    },\n    \"resource_type\" : \"list\"\n  }\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "8ed0c95d-66fe-40f1-b904-654dd516aeaa",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:15.479981Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "getMerchantTransferByRef",
+          "schema" : {
+            "type" : "object",
+            "properties" : {
+              "merchant_transfers" : {
+                "$ref" : "#/components/schemas/MerchantTransfers_69"
+              }
+            },
+            "description" : "Response details for a merchant transfer."
+          }
+        }
+      }
+    },
+    "insertionIndex" : 23
+  }, {
+    "id" : "b1e65d81-2327-4691-a1eb-cc489b554fa8",
+    "name" : "Initiates a Mastercard Merchant Presented QR purchase transaction by securing funds from a consumer’s account with a Funding Transaction and pushing funds to a merchant account with a Payment Transaction. (application/xml)",
+    "request" : {
+      "urlPath" : "/send/#env/v1/partners/n341/merchant/transfer",
+      "method" : "POST",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/xml"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"merchant_transfer\" : {\n    \"transaction_local_date_time\" : \"2016-09-22T13:22:11-05:30\",\n    \"original_status\" : \"APPROVED\",\n    \"routing_transit_number\" : \"965730000\",\n    \"sender_account_uri\" : \"pan:************9012\",\n    \"reconciliation_data\" : {\n      \"custom_field\" : [ {\n        \"name\" : \"TransactionID\",\n        \"value\" : \"456FDWBS43\"\n      }, {\n        \"name\" : \"TransactionID\",\n        \"value\" : \"456FDWBS43\"\n      }, {\n        \"name\" : \"TransactionID\",\n        \"value\" : \"456FDWBS43\"\n      }, {\n        \"name\" : \"TransactionID\",\n        \"value\" : \"456FDWBS43\"\n      }, {\n        \"name\" : \"TransactionID\",\n        \"value\" : \"456FDWBS43\"\n      } ]\n    },\n    \"participant\" : {\n      \"card_acceptor_id\" : \"CardAcceptor1\",\n      \"card_acceptor_name\" : \"THE BEST BANK\"\n    },\n    \"participation_id\" : \"TERMINAL34728\",\n    \"recipient_account_uri\" : \"pan:************7372\",\n    \"funding_source\" : \"DEBIT\",\n    \"processor_id\" : \"2147483647\",\n    \"id\" : \"mtrn_9abcd233jk23l6c5lw5f\",\n    \"status_timestamp\" : \"2016-09-22T13:22:11-05:30\",\n    \"transfer_reference\" : \"TRANSFER123456\",\n    \"digital_account_reference_number\" : \"pan:************1234\",\n    \"mastercard_assigned_id\" : \"111111\",\n    \"transaction_history\" : {\n      \"item_count\" : 1,\n      \"data\" : {\n        \"transaction\" : [ {\n          \"authorization_id\" : \"801726\",\n          \"convenience_indicator\" : \"01\",\n          \"switch_serial_number\" : \"564727057\",\n          \"retrieval_reference\" : \"624200192616\",\n          \"system_trace_audit_number\" : \"926162\",\n          \"transaction_amount\" : { },\n          \"resource_type\" : \"transaction\",\n          \"type\" : \"PAYMENT\",\n          \"convenience_amount\" : \"10\",\n          \"network\" : \"MoneySend\",\n          \"network_status_code\" : \"0\",\n          \"payment_account_reference\" : \"5001ESVM4JQAAOP5JKSK1XGAPOPG2\",\n          \"create_timestamp\" : \"2016-09-22T13:22:11-05:30\",\n          \"network_status_description\" : \"APPROVED\",\n          \"funds_availability\" : \"IMMEDIATE\",\n          \"qr_data\" : \"001006XX123400201012353611110030073041233004008LYL44354005009EEB\",\n          \"id\" : \"txn_8h4me233jk23l6c5lw5f\",\n          \"status_timestamp\" : \"2016-09-22T13:22:11-05:30\",\n          \"status_reason\" : \"APPROVED\",\n          \"account_uri\" : \"pan:************9012\",\n          \"status\" : \"APPROVED\",\n          \"unique_reference_number\" : \"592087939\"\n        }, {\n          \"authorization_id\" : \"801726\",\n          \"convenience_indicator\" : \"01\",\n          \"switch_serial_number\" : \"564727057\",\n          \"retrieval_reference\" : \"624200192616\",\n          \"system_trace_audit_number\" : \"926162\",\n          \"transaction_amount\" : { },\n          \"resource_type\" : \"transaction\",\n          \"type\" : \"PAYMENT\",\n          \"convenience_amount\" : \"10\",\n          \"network\" : \"MoneySend\",\n          \"network_status_code\" : \"0\",\n          \"payment_account_reference\" : \"5001ESVM4JQAAOP5JKSK1XGAPOPG2\",\n          \"create_timestamp\" : \"2016-09-22T13:22:11-05:30\",\n          \"network_status_description\" : \"APPROVED\",\n          \"funds_availability\" : \"IMMEDIATE\",\n          \"qr_data\" : \"001006XX123400201012353611110030073041233004008LYL44354005009EEB\",\n          \"id\" : \"txn_8h4me233jk23l6c5lw5f\",\n          \"status_timestamp\" : \"2016-09-22T13:22:11-05:30\",\n          \"status_reason\" : \"APPROVED\",\n          \"account_uri\" : \"pan:************9012\",\n          \"status\" : \"APPROVED\",\n          \"unique_reference_number\" : \"592087939\"\n        }, {\n          \"authorization_id\" : \"801726\",\n          \"convenience_indicator\" : \"01\",\n          \"switch_serial_number\" : \"564727057\",\n          \"retrieval_reference\" : \"624200192616\",\n          \"system_trace_audit_number\" : \"926162\",\n          \"transaction_amount\" : { },\n          \"resource_type\" : \"transaction\",\n          \"type\" : \"PAYMENT\",\n          \"convenience_amount\" : \"10\",\n          \"network\" : \"MoneySend\",\n          \"network_status_code\" : \"0\",\n          \"payment_account_reference\" : \"5001ESVM4JQAAOP5JKSK1XGAPOPG2\",\n          \"create_timestamp\" : \"2016-09-22T13:22:11-05:30\",\n          \"network_status_description\" : \"APPROVED\",\n          \"funds_availability\" : \"IMMEDIATE\",\n          \"qr_data\" : \"001006XX123400201012353611110030073041233004008LYL44354005009EEB\",\n          \"id\" : \"txn_8h4me233jk23l6c5lw5f\",\n          \"status_timestamp\" : \"2016-09-22T13:22:11-05:30\",\n          \"status_reason\" : \"APPROVED\",\n          \"account_uri\" : \"pan:************9012\",\n          \"status\" : \"APPROVED\",\n          \"unique_reference_number\" : \"592087939\"\n        }, {\n          \"authorization_id\" : \"801726\",\n          \"convenience_indicator\" : \"01\",\n          \"switch_serial_number\" : \"564727057\",\n          \"retrieval_reference\" : \"624200192616\",\n          \"system_trace_audit_number\" : \"926162\",\n          \"transaction_amount\" : { },\n          \"resource_type\" : \"transaction\",\n          \"type\" : \"PAYMENT\",\n          \"convenience_amount\" : \"10\",\n          \"network\" : \"MoneySend\",\n          \"network_status_code\" : \"0\",\n          \"payment_account_reference\" : \"5001ESVM4JQAAOP5JKSK1XGAPOPG2\",\n          \"create_timestamp\" : \"2016-09-22T13:22:11-05:30\",\n          \"network_status_description\" : \"APPROVED\",\n          \"funds_availability\" : \"IMMEDIATE\",\n          \"qr_data\" : \"001006XX123400201012353611110030073041233004008LYL44354005009EEB\",\n          \"id\" : \"txn_8h4me233jk23l6c5lw5f\",\n          \"status_timestamp\" : \"2016-09-22T13:22:11-05:30\",\n          \"status_reason\" : \"APPROVED\",\n          \"account_uri\" : \"pan:************9012\",\n          \"status\" : \"APPROVED\",\n          \"unique_reference_number\" : \"592087939\"\n        }, {\n          \"authorization_id\" : \"801726\",\n          \"convenience_indicator\" : \"01\",\n          \"switch_serial_number\" : \"564727057\",\n          \"retrieval_reference\" : \"624200192616\",\n          \"system_trace_audit_number\" : \"926162\",\n          \"transaction_amount\" : { },\n          \"resource_type\" : \"transaction\",\n          \"type\" : \"PAYMENT\",\n          \"convenience_amount\" : \"10\",\n          \"network\" : \"MoneySend\",\n          \"network_status_code\" : \"0\",\n          \"payment_account_reference\" : \"5001ESVM4JQAAOP5JKSK1XGAPOPG2\",\n          \"create_timestamp\" : \"2016-09-22T13:22:11-05:30\",\n          \"network_status_description\" : \"APPROVED\",\n          \"funds_availability\" : \"IMMEDIATE\",\n          \"qr_data\" : \"001006XX123400201012353611110030073041233004008LYL44354005009EEB\",\n          \"id\" : \"txn_8h4me233jk23l6c5lw5f\",\n          \"status_timestamp\" : \"2016-09-22T13:22:11-05:30\",\n          \"status_reason\" : \"APPROVED\",\n          \"account_uri\" : \"pan:************9012\",\n          \"status\" : \"APPROVED\",\n          \"unique_reference_number\" : \"592087939\"\n        }, {\n          \"authorization_id\" : \"801726\",\n          \"convenience_indicator\" : \"01\",\n          \"switch_serial_number\" : \"564727057\",\n          \"retrieval_reference\" : \"624200192616\",\n          \"system_trace_audit_number\" : \"926162\",\n          \"transaction_amount\" : { },\n          \"resource_type\" : \"transaction\",\n          \"type\" : \"PAYMENT\",\n          \"convenience_amount\" : \"10\",\n          \"network\" : \"MoneySend\",\n          \"network_status_code\" : \"0\",\n          \"payment_account_reference\" : \"5001ESVM4JQAAOP5JKSK1XGAPOPG2\",\n          \"create_timestamp\" : \"2016-09-22T13:22:11-05:30\",\n          \"network_status_description\" : \"APPROVED\",\n          \"funds_availability\" : \"IMMEDIATE\",\n          \"qr_data\" : \"001006XX123400201012353611110030073041233004008LYL44354005009EEB\",\n          \"id\" : \"txn_8h4me233jk23l6c5lw5f\",\n          \"status_timestamp\" : \"2016-09-22T13:22:11-05:30\",\n          \"status_reason\" : \"APPROVED\",\n          \"account_uri\" : \"pan:************9012\",\n          \"status\" : \"APPROVED\",\n          \"unique_reference_number\" : \"592087939\"\n        } ]\n      },\n      \"resource_type\" : \"list\"\n    },\n    \"created\" : \"2016-09-22T13:22:11-05:30\",\n    \"payment_origination_country\" : \"USA\",\n    \"resource_type\" : \"merchant_transfer\",\n    \"interchange_rate_designator\" : \"QR\",\n    \"payment_type\" : \"P2M\",\n    \"sender\" : {\n      \"address\" : {\n        \"country\" : \"USA\",\n        \"city\" : \"Chicago\",\n        \"postal_code\" : \"60618\",\n        \"line2\" : \"Apartment 9\",\n        \"line1\" : \"123 Elm St\",\n        \"country_subdivision\" : \"IL\"\n      },\n      \"phone\" : \"12125551234\",\n      \"additional_merchant_data\" : {\n        \"payment_facilitator_id\" : 123456,\n        \"sub_merchant_id\" : \"A1234D\"\n      },\n      \"last_name\" : \"Jones\",\n      \"middle_name\" : \"Tyler\",\n      \"first_name\" : \"John\",\n      \"email\" : \"jane.smith123@abcmail.com\"\n    },\n    \"transfer_amount\" : {\n      \"currency\" : \"USD\",\n      \"value\" : \"5300\"\n    },\n    \"recipient\" : {\n      \"address\" : {\n        \"country\" : \"USA\",\n        \"city\" : \"OFallon\",\n        \"postal_code\" : \"63368\",\n        \"line2\" : \"Apartment 9\",\n        \"line1\" : \"1 Main St\",\n        \"country_subdivision\" : \"MO\"\n      },\n      \"phone\" : \"11234567890\",\n      \"merchant_category_code\" : \"0763\",\n      \"additional_merchant_data\" : {\n        \"payment_facilitator_id\" : 123456,\n        \"sub_merchant_id\" : \"A1234D\"\n      },\n      \"last_name\" : \"Jones\",\n      \"middle_name\" : \"Tyler\",\n      \"first_name\" : \"John\",\n      \"email\" : \"Jane.Smith123@abcmail.com\"\n    },\n    \"additional_message\" : \"DEV123456\",\n    \"status\" : \"APPROVED\"\n  }\n}",
+      "headers" : {
+        "Content-Type" : "application/xml"
+      }
+    },
+    "uuid" : "b1e65d81-2327-4691-a1eb-cc489b554fa8",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:15.478759Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "createMerchantTransfer",
+          "schema" : {
+            "type" : "object",
+            "properties" : {
+              "merchant_transfer" : {
+                "$ref" : "#/components/schemas/MerchantTransfer_14"
+              }
+            },
+            "description" : "Response details for a merchant transfer."
+          }
+        }
+      }
+    },
+    "insertionIndex" : 24
+  }, {
+    "id" : "b4f0e1e0-ea01-4350-ad0e-f819948a716f",
+    "name" : "Initiates a Mastercard Merchant Presented QR purchase transaction by securing funds from a consumer’s account with a Funding Transaction and pushing funds to a merchant account with a Payment Transaction. (application/json)",
+    "request" : {
+      "urlPath" : "/send/#env/v1/partners/meen/merchant/transfer",
+      "method" : "POST",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/json"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"merchant_transfer\" : {\n    \"transaction_local_date_time\" : \"2016-09-22T13:22:11-05:30\",\n    \"original_status\" : \"APPROVED\",\n    \"routing_transit_number\" : \"965730000\",\n    \"sender_account_uri\" : \"pan:************9012\",\n    \"reconciliation_data\" : {\n      \"custom_field\" : [ {\n        \"name\" : \"TransactionID\",\n        \"value\" : \"456FDWBS43\"\n      }, {\n        \"name\" : \"TransactionID\",\n        \"value\" : \"456FDWBS43\"\n      }, {\n        \"name\" : \"TransactionID\",\n        \"value\" : \"456FDWBS43\"\n      }, {\n        \"name\" : \"TransactionID\",\n        \"value\" : \"456FDWBS43\"\n      } ]\n    },\n    \"participant\" : {\n      \"card_acceptor_id\" : \"CardAcceptor1\",\n      \"card_acceptor_name\" : \"THE BEST BANK\"\n    },\n    \"participation_id\" : \"TERMINAL34728\",\n    \"recipient_account_uri\" : \"pan:************7372\",\n    \"funding_source\" : \"DEBIT\",\n    \"processor_id\" : \"2147483647\",\n    \"id\" : \"mtrn_9abcd233jk23l6c5lw5f\",\n    \"status_timestamp\" : \"2016-09-22T13:22:11-05:30\",\n    \"transfer_reference\" : \"TRANSFER123456\",\n    \"digital_account_reference_number\" : \"pan:************1234\",\n    \"mastercard_assigned_id\" : \"111111\",\n    \"transaction_history\" : {\n      \"item_count\" : 1,\n      \"data\" : {\n        \"transaction\" : [ {\n          \"authorization_id\" : \"801726\",\n          \"convenience_indicator\" : \"01\",\n          \"switch_serial_number\" : \"564727057\",\n          \"retrieval_reference\" : \"624200192616\",\n          \"system_trace_audit_number\" : \"926162\",\n          \"transaction_amount\" : { },\n          \"resource_type\" : \"transaction\",\n          \"type\" : \"PAYMENT\",\n          \"convenience_amount\" : \"10\",\n          \"network\" : \"MoneySend\",\n          \"network_status_code\" : \"0\",\n          \"payment_account_reference\" : \"5001ESVM4JQAAOP5JKSK1XGAPOPG2\",\n          \"create_timestamp\" : \"2016-09-22T13:22:11-05:30\",\n          \"network_status_description\" : \"APPROVED\",\n          \"funds_availability\" : \"IMMEDIATE\",\n          \"qr_data\" : \"001006XX123400201012353611110030073041233004008LYL44354005009EEB\",\n          \"id\" : \"txn_8h4me233jk23l6c5lw5f\",\n          \"status_timestamp\" : \"2016-09-22T13:22:11-05:30\",\n          \"status_reason\" : \"APPROVED\",\n          \"account_uri\" : \"pan:************9012\",\n          \"status\" : \"APPROVED\",\n          \"unique_reference_number\" : \"592087939\"\n        }, {\n          \"authorization_id\" : \"801726\",\n          \"convenience_indicator\" : \"01\",\n          \"switch_serial_number\" : \"564727057\",\n          \"retrieval_reference\" : \"624200192616\",\n          \"system_trace_audit_number\" : \"926162\",\n          \"transaction_amount\" : { },\n          \"resource_type\" : \"transaction\",\n          \"type\" : \"PAYMENT\",\n          \"convenience_amount\" : \"10\",\n          \"network\" : \"MoneySend\",\n          \"network_status_code\" : \"0\",\n          \"payment_account_reference\" : \"5001ESVM4JQAAOP5JKSK1XGAPOPG2\",\n          \"create_timestamp\" : \"2016-09-22T13:22:11-05:30\",\n          \"network_status_description\" : \"APPROVED\",\n          \"funds_availability\" : \"IMMEDIATE\",\n          \"qr_data\" : \"001006XX123400201012353611110030073041233004008LYL44354005009EEB\",\n          \"id\" : \"txn_8h4me233jk23l6c5lw5f\",\n          \"status_timestamp\" : \"2016-09-22T13:22:11-05:30\",\n          \"status_reason\" : \"APPROVED\",\n          \"account_uri\" : \"pan:************9012\",\n          \"status\" : \"APPROVED\",\n          \"unique_reference_number\" : \"592087939\"\n        } ]\n      },\n      \"resource_type\" : \"list\"\n    },\n    \"created\" : \"2016-09-22T13:22:11-05:30\",\n    \"payment_origination_country\" : \"USA\",\n    \"resource_type\" : \"merchant_transfer\",\n    \"interchange_rate_designator\" : \"QR\",\n    \"payment_type\" : \"P2M\",\n    \"sender\" : {\n      \"address\" : {\n        \"country\" : \"USA\",\n        \"city\" : \"Chicago\",\n        \"postal_code\" : \"60618\",\n        \"line2\" : \"Apartment 9\",\n        \"line1\" : \"123 Elm St\",\n        \"country_subdivision\" : \"IL\"\n      },\n      \"phone\" : \"12125551234\",\n      \"additional_merchant_data\" : {\n        \"payment_facilitator_id\" : 123456,\n        \"sub_merchant_id\" : \"A1234D\"\n      },\n      \"last_name\" : \"Jones\",\n      \"middle_name\" : \"Tyler\",\n      \"first_name\" : \"John\",\n      \"email\" : \"jane.smith123@abcmail.com\"\n    },\n    \"transfer_amount\" : {\n      \"currency\" : \"USD\",\n      \"value\" : \"5300\"\n    },\n    \"recipient\" : {\n      \"address\" : {\n        \"country\" : \"USA\",\n        \"city\" : \"OFallon\",\n        \"postal_code\" : \"63368\",\n        \"line2\" : \"Apartment 9\",\n        \"line1\" : \"1 Main St\",\n        \"country_subdivision\" : \"MO\"\n      },\n      \"phone\" : \"11234567890\",\n      \"merchant_category_code\" : \"0763\",\n      \"additional_merchant_data\" : {\n        \"payment_facilitator_id\" : 123456,\n        \"sub_merchant_id\" : \"A1234D\"\n      },\n      \"last_name\" : \"Jones\",\n      \"middle_name\" : \"Tyler\",\n      \"first_name\" : \"John\",\n      \"email\" : \"Jane.Smith123@abcmail.com\"\n    },\n    \"additional_message\" : \"DEV123456\",\n    \"status\" : \"APPROVED\"\n  }\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "b4f0e1e0-ea01-4350-ad0e-f819948a716f",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:24:15.478181Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "createMerchantTransfer",
+          "schema" : {
+            "type" : "object",
+            "properties" : {
+              "merchant_transfer" : {
+                "$ref" : "#/components/schemas/MerchantTransfer_14"
+              }
+            },
+            "description" : "Response details for a merchant transfer."
+          }
+        }
+      }
+    },
+    "insertionIndex" : 25
+  } ]
+}
