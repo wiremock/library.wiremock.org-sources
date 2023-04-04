@@ -1,0 +1,55 @@
+{
+  "mappings" : [ {
+    "id" : "e77442da-60d7-42e0-9bc3-4f64e42fc2ee",
+    "name" : "Gets all instance pool usage metrics",
+    "request" : {
+      "urlPath" : "/subscriptions/3r5t/resourceGroups/Moshe+Huel+Jr./providers/Microsoft.Sql/instancePools/Walter/usages",
+      "method" : "GET",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "8vxtyj9r7fw7374pblqzvtnl56c7o2rrh6rbt4oniygavse3pbyi49t4n9zr9mzsxd0olsbiz60rpuqofv91nqbr1es0hivbyuw3lcbsnmf0s0rhtnex1hf"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"value\" : [ {\n    \"requestedLimit\" : 1969185826,\n    \"unit\" : \"qajxn40ftfvq90clsp2inmwnqjffx1v0rhespgbn0x0j76t3nqe6c4v41g6utvpba8rj7i2gd2cxmz3rvhpcoqkyesbkgkr4jty5llilpsm066uca7\",\n    \"limit\" : 1044406272,\n    \"name\" : {\n      \"localizedValue\" : \"gn6v2thdd3gkjked3oozgz1fnkihe8gcghza5yd5qp9a00ql7ns7bm5oajkxcfmd4hno4te1gelwkf098hvsiqzrszea3v1oszo1lmj03ac3\",\n      \"value\" : \"uvni64lig3dwjcopyymtbeekbb8wvjv6t5fqnvgi64eigwy8altvgjleqmwfo7utc5bfczliccw3lyzr03nhy64us7c3k7hearfm963r6m33wc98vx8efrq488sri9ggzuwvuiechjkybcevvbeo9ibtqhjhg7bgb36ub6hqna6r0t9rwoop13ahu8qc8s\"\n    },\n    \"id\" : \"shb9\",\n    \"type\" : \"3lsfurd8vpk2brf0jw9p7g3klirq9idmhenno0kqs558opgg8afysfaj0ac53v006xwr5zrwd7cu4uv52fop1rvwtvfrbubwr1zxskvxv7jckfja30683a7nyhj6cp2iks8rxvsmundakqh3mt8h5r1jxr8g\",\n    \"currentValue\" : 1578046422\n  }, {\n    \"requestedLimit\" : 746768545,\n    \"unit\" : \"zisgnjgixn3df6lgyh8rqf2udx5d4ifh79hnufq54tox7ez3uz5y1szrr72urbyx4rchper3iru0d1oli49y6dkou1axgxirepoc0i5xeyl0vnsgwpp78thi0zt5wg03u9bj8fel0s8yqgsuihwsxdqtc96jvsux0u2wm3d0lc8wyr29gs0uvt8m7kprxgy2ag\",\n    \"limit\" : 1319300217,\n    \"name\" : {\n      \"localizedValue\" : \"roxk2msfpwzppwm2j0zwfbadox\",\n      \"value\" : \"o9orgcda45zrz6ae49k5b80q7ubdn0zxjqh3etqnyvefhjyk7r97lp66ghgzyxat7eewkr1mw5r9bqhv2ff91oohzroid6juyyrij\"\n    },\n    \"id\" : \"50xr\",\n    \"type\" : \"vooylplgbjq27hlzs4w8xrtlo5g240juz\",\n    \"currentValue\" : 925622560\n  } ],\n  \"nextLink\" : \"g4k188ejb0vchbink36qq13bow5iv1h7fke0q2\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "e77442da-60d7-42e0-9bc3-4f64e42fc2ee",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:48.952756Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "Usages_ListByInstancePool",
+          "schema" : {
+            "type" : "object",
+            "properties" : {
+              "nextLink" : {
+                "type" : "string",
+                "description" : "Link to retrieve next page of results.",
+                "readOnly" : true
+              },
+              "value" : {
+                "type" : "array",
+                "description" : "Array of results.",
+                "readOnly" : true,
+                "items" : {
+                  "$ref" : "#/components/schemas/Usage"
+                }
+              }
+            },
+            "description" : "A list of usages."
+          }
+        }
+      }
+    },
+    "insertionIndex" : 0
+  } ]
+}

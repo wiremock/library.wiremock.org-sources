@@ -1,0 +1,115 @@
+{
+  "mappings" : [ {
+    "id" : "1778a24d-837e-4a08-82e9-b48bfbcaaf9b",
+    "name" : "Gets an incident associated to an alert rule",
+    "request" : {
+      "urlPath" : "/subscriptions/55ts/resourcegroups/Jack+McDermott/providers/microsoft.insights/alertrules/Jeanetta+Ziemann/incidents/Youlanda+Kulas",
+      "method" : "GET",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "x9kaprtx16rxy722"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"activatedTime\" : \"2022-04-04T12:25:18.036Z\",\n  \"resolvedTime\" : \"2023-10-17T18:04:41.036Z\",\n  \"name\" : \"Will Bahringer\",\n  \"ruleName\" : \"Claud Wunsch\",\n  \"isActive\" : false\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "1778a24d-837e-4a08-82e9-b48bfbcaaf9b",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:39.036412Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "AlertRuleIncidents_Get",
+          "schema" : {
+            "type" : "object",
+            "properties" : {
+              "activatedTime" : {
+                "type" : "string",
+                "description" : "The time at which the incident was activated in ISO8601 format.",
+                "format" : "date-time",
+                "readOnly" : true
+              },
+              "isActive" : {
+                "type" : "boolean",
+                "description" : "A boolean to indicate whether the incident is active or resolved.",
+                "readOnly" : true
+              },
+              "name" : {
+                "type" : "string",
+                "description" : "Incident name.",
+                "readOnly" : true
+              },
+              "resolvedTime" : {
+                "type" : "string",
+                "description" : "The time at which the incident was resolved in ISO8601 format. If null, it means the incident is still active.",
+                "format" : "date-time",
+                "readOnly" : true
+              },
+              "ruleName" : {
+                "type" : "string",
+                "description" : "Rule name that is associated with the incident.",
+                "readOnly" : true
+              }
+            },
+            "description" : "An alert incident indicates the activation status of an alert rule."
+          }
+        }
+      }
+    },
+    "insertionIndex" : 0
+  }, {
+    "id" : "8946e4f2-1ae7-4833-80d3-1b029f01eb59",
+    "name" : "Gets a list of incidents associated to an alert rule",
+    "request" : {
+      "urlPath" : "/subscriptions/33wt/resourcegroups/Kelly+Weissnat/providers/microsoft.insights/alertrules/Alex+Kshlerin/incidents",
+      "method" : "GET",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "gkzjagutjlihmczj1qj5eejl3l57rn"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"value\" : [ {\n    \"activatedTime\" : \"2023-01-27T04:41:25.035Z\",\n    \"resolvedTime\" : \"2022-04-24T02:58:04.035Z\",\n    \"name\" : \"Franchesca Boehm\",\n    \"ruleName\" : \"Ms. Stefan Homenick\",\n    \"isActive\" : true\n  }, {\n    \"activatedTime\" : \"2023-08-18T14:41:58.035Z\",\n    \"resolvedTime\" : \"2023-06-05T23:30:53.035Z\",\n    \"name\" : \"Kira Ryan\",\n    \"ruleName\" : \"Vernon Turcotte\",\n    \"isActive\" : false\n  }, {\n    \"activatedTime\" : \"2024-01-03T11:50:16.035Z\",\n    \"resolvedTime\" : \"2023-03-09T22:59:11.035Z\",\n    \"name\" : \"Morgan Gibson\",\n    \"ruleName\" : \"Zella Olson\",\n    \"isActive\" : true\n  }, {\n    \"activatedTime\" : \"2022-10-18T03:56:20.035Z\",\n    \"resolvedTime\" : \"2023-01-23T19:49:06.035Z\",\n    \"name\" : \"Dr. Fausto Nader\",\n    \"ruleName\" : \"Miss Naomi Cormier\",\n    \"isActive\" : true\n  }, {\n    \"activatedTime\" : \"2023-02-26T05:17:31.035Z\",\n    \"resolvedTime\" : \"2023-08-21T22:11:58.035Z\",\n    \"name\" : \"Bradly Reilly\",\n    \"ruleName\" : \"Dr. Ray Zemlak\",\n    \"isActive\" : false\n  }, {\n    \"activatedTime\" : \"2022-04-17T00:42:31.035Z\",\n    \"resolvedTime\" : \"2022-04-18T13:41:29.035Z\",\n    \"name\" : \"Mrs. Fumiko Kling\",\n    \"ruleName\" : \"Lloyd Klein\",\n    \"isActive\" : true\n  }, {\n    \"activatedTime\" : \"2023-05-19T11:22:38.035Z\",\n    \"resolvedTime\" : \"2022-11-24T09:16:13.035Z\",\n    \"name\" : \"Maxwell Terry\",\n    \"ruleName\" : \"Claribel Harber\",\n    \"isActive\" : true\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "8946e4f2-1ae7-4833-80d3-1b029f01eb59",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:39.036019Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "AlertRuleIncidents_ListByAlertRule",
+          "schema" : {
+            "type" : "object",
+            "properties" : {
+              "value" : {
+                "type" : "array",
+                "description" : "the incident collection.",
+                "items" : {
+                  "$ref" : "#/components/schemas/Incident"
+                }
+              }
+            },
+            "description" : "The List incidents operation response."
+          }
+        }
+      }
+    },
+    "insertionIndex" : 1
+  } ]
+}

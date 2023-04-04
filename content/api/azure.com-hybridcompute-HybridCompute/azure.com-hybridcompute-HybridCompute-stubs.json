@@ -1,0 +1,1085 @@
+{
+  "mappings" : [ {
+    "id" : "5f64a07c-6547-402e-a7c7-129f3960e015",
+    "name" : "The operation to reconnect a hybrid machine resource to its identity in Azure.",
+    "request" : {
+      "urlPath" : "/subscriptions/8732/resourceGroups/Monty+Sauer/providers/Microsoft.HybridCompute/machines/Kanesha+Walter/reconnect",
+      "method" : "POST",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "g54rs5640g2kkk8i8pm201pg8ymq0l09vkojzbirqq4klrmvhrkhy43iff6kx79gy7lme3ww1at2fpjdj0xy7"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"identity\" : {\n    \"tenantId\" : \"i97w\",\n    \"principalId\" : \"m767\",\n    \"type\" : \"SystemAssigned\"\n  },\n  \"location\" : \"hrh21uo4f68dgftw0xp78ksbrc42dwpi3mb1k2lzwg7nsdrm3qsjhzvcxfnuwx0f9k98z9jf45if4ykvh3sev01r3koquhwv0ddnqw7\",\n  \"properties\" : { },\n  \"tags\" : { }\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "5f64a07c-6547-402e-a7c7-129f3960e015",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:43.501806Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "Machines_Reconnect",
+          "schema" : {
+            "properties" : {
+              "identity" : {
+                "type" : "object",
+                "allOf" : [ {
+                  "type" : "object",
+                  "properties" : {
+                    "principalId" : {
+                      "type" : "string",
+                      "description" : "The principal ID of resource identity.",
+                      "readOnly" : true
+                    },
+                    "tenantId" : {
+                      "type" : "string",
+                      "description" : "The tenant ID of resource.",
+                      "readOnly" : true
+                    },
+                    "type" : {
+                      "type" : "string",
+                      "description" : "The identity type.",
+                      "enum" : [ "SystemAssigned" ]
+                    }
+                  },
+                  "description" : "Identity for the resource."
+                } ]
+              },
+              "properties" : {
+                "type" : "object",
+                "description" : "Hybrid Compute Machine properties",
+                "allOf" : [ {
+                  "$ref" : "#/definitions/MachineProperties"
+                } ]
+              }
+            },
+            "description" : "Describes a hybrid machine.",
+            "allOf" : [ {
+              "required" : [ "location" ],
+              "properties" : {
+                "location" : {
+                  "type" : "string",
+                  "description" : "The geo-location where the resource lives"
+                },
+                "tags" : {
+                  "type" : "object",
+                  "additionalProperties" : {
+                    "type" : "string"
+                  },
+                  "description" : "Resource tags."
+                }
+              },
+              "description" : "The resource model definition for a ARM tracked top level resource",
+              "allOf" : [ {
+                "type" : "object",
+                "properties" : {
+                  "id" : {
+                    "type" : "string",
+                    "description" : "Fully qualified resource Id for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}",
+                    "readOnly" : true
+                  },
+                  "name" : {
+                    "type" : "string",
+                    "description" : "The name of the resource",
+                    "readOnly" : true
+                  },
+                  "type" : {
+                    "type" : "string",
+                    "description" : "The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.",
+                    "readOnly" : true
+                  }
+                }
+              } ]
+            } ]
+          }
+        }
+      }
+    },
+    "insertionIndex" : 0
+  }, {
+    "id" : "ee7669ef-dc3b-47df-b9b0-70ce73aaf742",
+    "name" : "The operation to create or update the extension. - 202",
+    "request" : {
+      "urlPath" : "/subscriptions/vj60/resourceGroups/Elliot+Renner/providers/Microsoft.HybridCompute/machines/Danyell+Mayert+III/extensions/Shirl+Bradtke",
+      "method" : "PATCH",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "m5k19xgs384kaox01o0cmzj46ev4a0002ps42m2lxrxsht9zyzxuzwnfq4jrhpjthhk0sp1ccctmyyfjt4ibmfbnhlv14bev84i06ferfmypff82pj"
+        }
+      }
+    },
+    "response" : {
+      "status" : 202
+    },
+    "uuid" : "ee7669ef-dc3b-47df-b9b0-70ce73aaf742",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:43.501239Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "MachineExtensions_Update"
+        }
+      }
+    },
+    "insertionIndex" : 1
+  }, {
+    "id" : "8daa383b-d99c-4818-b898-f601a1a4e225",
+    "name" : "The operation to create or update the extension. (application/json)",
+    "request" : {
+      "urlPath" : "/subscriptions/48p0/resourceGroups/Miss+Gaylord+Franecki/providers/Microsoft.HybridCompute/machines/Luis+Dicki/extensions/Christopher+Wyman",
+      "method" : "PATCH",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/json"
+        }
+      },
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "qa8676d9wwuiheunrzv0vwd45wvrdyf3tyqjn35v3kcg0"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"location\" : \"hqvu8t0gfrilvnnru3pahco1ut9s126fzkzi7cefw5na1eri7qdzy7zrnifj65vddz5xyqzdvensga6vvr9v\",\n  \"properties\" : { },\n  \"tags\" : { }\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "8daa383b-d99c-4818-b898-f601a1a4e225",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:43.500996Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "MachineExtensions_Update",
+          "schema" : {
+            "properties" : {
+              "properties" : {
+                "type" : "object",
+                "description" : "Describes Machine Extension Properties.",
+                "allOf" : [ {
+                  "$ref" : "#/definitions/MachineExtensionProperties"
+                } ]
+              }
+            },
+            "description" : "Describes a Machine Extension.",
+            "allOf" : [ {
+              "required" : [ "location" ],
+              "properties" : {
+                "location" : {
+                  "type" : "string",
+                  "description" : "The geo-location where the resource lives"
+                },
+                "tags" : {
+                  "type" : "object",
+                  "additionalProperties" : {
+                    "type" : "string"
+                  },
+                  "description" : "Resource tags."
+                }
+              },
+              "description" : "The resource model definition for a ARM tracked top level resource",
+              "allOf" : [ {
+                "type" : "object",
+                "properties" : {
+                  "id" : {
+                    "type" : "string",
+                    "description" : "Fully qualified resource Id for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}",
+                    "readOnly" : true
+                  },
+                  "name" : {
+                    "type" : "string",
+                    "description" : "The name of the resource",
+                    "readOnly" : true
+                  },
+                  "type" : {
+                    "type" : "string",
+                    "description" : "The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.",
+                    "readOnly" : true
+                  }
+                }
+              } ]
+            } ]
+          }
+        }
+      }
+    },
+    "insertionIndex" : 2
+  }, {
+    "id" : "f4aab743-f160-430a-a017-99f88db13025",
+    "name" : "The operation to delete the extension. - 204",
+    "request" : {
+      "urlPath" : "/subscriptions/j274/resourceGroups/Frederick+Weimann/providers/Microsoft.HybridCompute/machines/Amado+Koch/extensions/Isaiah+Swaniawski",
+      "method" : "DELETE",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "l3oacmwclarb8to1pa8ymn6vz2dpwn5gelnnu5e93w32nc0wultqb6bi"
+        }
+      }
+    },
+    "response" : {
+      "status" : 204
+    },
+    "uuid" : "f4aab743-f160-430a-a017-99f88db13025",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:43.500573Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "MachineExtensions_Delete"
+        }
+      }
+    },
+    "insertionIndex" : 3
+  }, {
+    "id" : "e9524e55-20be-421f-a1d0-3dad0a4afc93",
+    "name" : "The operation to delete the extension. - 202",
+    "request" : {
+      "urlPath" : "/subscriptions/i2vv/resourceGroups/Heath+Raynor/providers/Microsoft.HybridCompute/machines/Mira+Boyle/extensions/Mitchel+Hoeger",
+      "method" : "DELETE",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "sogki46ohfrltcz4qgrcctprp1svvlgn85ozyr4bl82thydhy80ajf9r2vlo9aggudbh9qr2kw1kwbgvisihu4en7jjnhrfl5fhpmlcrxo8fetr4yg"
+        }
+      }
+    },
+    "response" : {
+      "status" : 202
+    },
+    "uuid" : "e9524e55-20be-421f-a1d0-3dad0a4afc93",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:43.500301Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "MachineExtensions_Delete"
+        }
+      }
+    },
+    "insertionIndex" : 4
+  }, {
+    "id" : "8cf62cd9-ac4f-41f7-a1d4-7f1d753083a9",
+    "name" : "The operation to delete the extension. - 200",
+    "request" : {
+      "urlPath" : "/subscriptions/5slc/resourceGroups/Vincenzo+Bode+III/providers/Microsoft.HybridCompute/machines/Shon+Weber+IV/extensions/Mrs.+Keesha+Jones",
+      "method" : "DELETE",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "ld9ylftwfelbqi2jljjn9zrnm55lnwpw2zw53995k6e991uy5co4p66mb3l60rgn4l1xi67i2nujaol9xfqf55xdtgbzzuev76pg79swr8eze15os0138xy4i3eetntdn7vnl2pyi26fdql6"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200
+    },
+    "uuid" : "8cf62cd9-ac4f-41f7-a1d4-7f1d753083a9",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:43.500048Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "MachineExtensions_Delete"
+        }
+      }
+    },
+    "insertionIndex" : 5
+  }, {
+    "id" : "35cd61c2-b7af-4f76-ae7a-84e95cdee2e9",
+    "name" : "The operation to create or update the extension. - 202",
+    "request" : {
+      "urlPath" : "/subscriptions/4v7a/resourceGroups/Luciano+Boehm/providers/Microsoft.HybridCompute/machines/Alena+Lemke+II/extensions/France+Macejkovic",
+      "method" : "PUT",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "2eqtt6izm80txi7hprfwhiuomlqg9ctx9kzgiddzhk79kani"
+        }
+      }
+    },
+    "response" : {
+      "status" : 202
+    },
+    "uuid" : "35cd61c2-b7af-4f76-ae7a-84e95cdee2e9",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:43.499787Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "MachineExtensions_CreateOrUpdate"
+        }
+      }
+    },
+    "insertionIndex" : 6
+  }, {
+    "id" : "4602c3f7-f14e-4322-8852-05dcbbb9f2f2",
+    "name" : "The operation to create or update the extension. (application/json)",
+    "request" : {
+      "urlPath" : "/subscriptions/7572/resourceGroups/Gregg+Bashirian/providers/Microsoft.HybridCompute/machines/Mrs.+Lynna+Kuvalis/extensions/Jayson+Rippin+Jr.",
+      "method" : "PUT",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/json"
+        }
+      },
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "qawfl6410cfmlsq75f4pf4cchzaqvqov0ymg36dhe3phi0e6413tocqfgr4tohua437w0j5zb1qybz3yij7hyre8n8p2agf52bburdd523vjvz058h068gv9k3k8xai5dhq7sf0p5fgn7kiqmwh7tsd8duhvakjk697mkajdazy7m3g8j2cx"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"location\" : \"u8ojb5qpjdrlkdbu1m27v\",\n  \"properties\" : { },\n  \"tags\" : { }\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "4602c3f7-f14e-4322-8852-05dcbbb9f2f2",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:43.499558Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "MachineExtensions_CreateOrUpdate",
+          "schema" : {
+            "properties" : {
+              "properties" : {
+                "type" : "object",
+                "description" : "Describes Machine Extension Properties.",
+                "allOf" : [ {
+                  "$ref" : "#/definitions/MachineExtensionProperties"
+                } ]
+              }
+            },
+            "description" : "Describes a Machine Extension.",
+            "allOf" : [ {
+              "required" : [ "location" ],
+              "properties" : {
+                "location" : {
+                  "type" : "string",
+                  "description" : "The geo-location where the resource lives"
+                },
+                "tags" : {
+                  "type" : "object",
+                  "additionalProperties" : {
+                    "type" : "string"
+                  },
+                  "description" : "Resource tags."
+                }
+              },
+              "description" : "The resource model definition for a ARM tracked top level resource",
+              "allOf" : [ {
+                "type" : "object",
+                "properties" : {
+                  "id" : {
+                    "type" : "string",
+                    "description" : "Fully qualified resource Id for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}",
+                    "readOnly" : true
+                  },
+                  "name" : {
+                    "type" : "string",
+                    "description" : "The name of the resource",
+                    "readOnly" : true
+                  },
+                  "type" : {
+                    "type" : "string",
+                    "description" : "The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.",
+                    "readOnly" : true
+                  }
+                }
+              } ]
+            } ]
+          }
+        }
+      }
+    },
+    "insertionIndex" : 7
+  }, {
+    "id" : "1c7c86e9-dc9c-4aa5-82fa-f77ab8462243",
+    "name" : "The operation to get the extension.",
+    "request" : {
+      "urlPath" : "/subscriptions/3255/resourceGroups/Roseanne+Mann/providers/Microsoft.HybridCompute/machines/Ms.+Erasmo+Kuvalis/extensions/Sindy+Gulgowski",
+      "method" : "GET",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "6dztkr7t8q"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"location\" : \"jtg6wj18vzxl0y455m1f\",\n  \"properties\" : { },\n  \"tags\" : { }\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "1c7c86e9-dc9c-4aa5-82fa-f77ab8462243",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:43.499215Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "MachineExtensions_Get",
+          "schema" : {
+            "properties" : {
+              "properties" : {
+                "type" : "object",
+                "description" : "Describes Machine Extension Properties.",
+                "allOf" : [ {
+                  "$ref" : "#/definitions/MachineExtensionProperties"
+                } ]
+              }
+            },
+            "description" : "Describes a Machine Extension.",
+            "allOf" : [ {
+              "required" : [ "location" ],
+              "properties" : {
+                "location" : {
+                  "type" : "string",
+                  "description" : "The geo-location where the resource lives"
+                },
+                "tags" : {
+                  "type" : "object",
+                  "additionalProperties" : {
+                    "type" : "string"
+                  },
+                  "description" : "Resource tags."
+                }
+              },
+              "description" : "The resource model definition for a ARM tracked top level resource",
+              "allOf" : [ {
+                "type" : "object",
+                "properties" : {
+                  "id" : {
+                    "type" : "string",
+                    "description" : "Fully qualified resource Id for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}",
+                    "readOnly" : true
+                  },
+                  "name" : {
+                    "type" : "string",
+                    "description" : "The name of the resource",
+                    "readOnly" : true
+                  },
+                  "type" : {
+                    "type" : "string",
+                    "description" : "The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.",
+                    "readOnly" : true
+                  }
+                }
+              } ]
+            } ]
+          }
+        }
+      }
+    },
+    "insertionIndex" : 8
+  }, {
+    "id" : "f51880dd-1754-4573-be73-7df3ae5dfa8d",
+    "name" : "The operation to get all extensions of a non-Azure machine",
+    "request" : {
+      "urlPath" : "/subscriptions/3vyx/resourceGroups/Patsy+Pagac/providers/Microsoft.HybridCompute/machines/Samuel+Halvorson/extensions",
+      "method" : "GET",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "4drvpldc3pg9l6fd1y7dtr1gtum4vty449ona84x82ufdjnt97rtia23f319ws0kt7tc1dsx7wmgkm9ixd2gcpqzlj3qqcib0dm2b75i2y02vsp0o33q6b1hwghf2w58xulliynqubn7"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"value\" : [ {\n    \"location\" : \"e73no0c5dk6cyd2oglv0p0jonyd637owowb1p8c8xt4v682umrg870vz9klo6bmeqk0c9ip\",\n    \"properties\" : { },\n    \"tags\" : { }\n  }, {\n    \"location\" : \"7vigihui3nrq3u0x2n16tdibvvo7cudv80jzlclm96hryc68jyahkr81zh1wjbcw6vgna623wfxh5sr4fptewgml2758zcxxw6mf2gu1k7u94rgb47fmlphpgdc0qhjyqjwnk92j5cdi2k\",\n    \"properties\" : { },\n    \"tags\" : { }\n  }, {\n    \"location\" : \"d0np43c4u7n095uz42sdjmiip0vu16tfzp70hxcrm3ud0t9rg0u12ehjlen81b1q04mp4fjcwzldp1vm47bwqqct15nvdu6j6r10xf47qbawit1cvl6vmgg7elhu34dgy30s1vbtli7aqduyfxey6\",\n    \"properties\" : { },\n    \"tags\" : { }\n  }, {\n    \"location\" : \"qnk1d4rt9iw603uipjkqxf8lb3kd9np9rlp55z0atxkpflib7fhb5pecu0qr214diebduikc1g02gx6ywcojz25ufj2o3jicr8knjxn7jcaq2id01r1r8tgw0xme4sg1ytq94t0l4pdzq490q0clragqvex4c592y2b96\",\n    \"properties\" : { },\n    \"tags\" : { }\n  }, {\n    \"location\" : \"t4rbur30if19nmk2zyburp89u9175n3kg1jtf2\",\n    \"properties\" : { },\n    \"tags\" : { }\n  } ],\n  \"nextLink\" : \"so6\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "f51880dd-1754-4573-be73-7df3ae5dfa8d",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:43.498847Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "MachineExtensions_List",
+          "schema" : {
+            "type" : "object",
+            "properties" : {
+              "nextLink" : {
+                "type" : "string",
+                "description" : "The uri to fetch the next page of machine extensions. Call ListNext() with this to fetch the next page of extensions."
+              },
+              "value" : {
+                "type" : "array",
+                "description" : "The list of extensions",
+                "items" : {
+                  "$ref" : "#/components/schemas/MachineExtension"
+                }
+              }
+            },
+            "description" : "Describes the Machine Extensions List Result."
+          }
+        }
+      }
+    },
+    "insertionIndex" : 9
+  }, {
+    "id" : "78fdd64e-e406-45c0-91ee-694db5682dfc",
+    "name" : "The operation to update a hybrid machine.",
+    "request" : {
+      "urlPath" : "/subscriptions/g0l6/resourceGroups/Dewey+Wiegand/providers/Microsoft.HybridCompute/machines/Evia+Brown",
+      "method" : "PATCH",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "8gsn8avck7tgu4pq9nthi1jggfj6u3szrxoc9awf7o9odo4kb1jae2d12waoxm8i1xe75cyfyhnyh7msitacrvmsij9jy2x0leqbwh7bgk"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"identity\" : {\n    \"tenantId\" : \"3riz\",\n    \"principalId\" : \"8wc4\",\n    \"type\" : \"SystemAssigned\"\n  },\n  \"location\" : \"abgmzpgw8700ch6e94956pv8pdir1xbz8n3cws9lgakrumurn2jmvxhoj3wd\",\n  \"properties\" : { },\n  \"tags\" : { }\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "78fdd64e-e406-45c0-91ee-694db5682dfc",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:43.498417Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "Machines_Update",
+          "schema" : {
+            "properties" : {
+              "identity" : {
+                "type" : "object",
+                "allOf" : [ {
+                  "type" : "object",
+                  "properties" : {
+                    "principalId" : {
+                      "type" : "string",
+                      "description" : "The principal ID of resource identity.",
+                      "readOnly" : true
+                    },
+                    "tenantId" : {
+                      "type" : "string",
+                      "description" : "The tenant ID of resource.",
+                      "readOnly" : true
+                    },
+                    "type" : {
+                      "type" : "string",
+                      "description" : "The identity type.",
+                      "enum" : [ "SystemAssigned" ]
+                    }
+                  },
+                  "description" : "Identity for the resource."
+                } ]
+              },
+              "properties" : {
+                "type" : "object",
+                "description" : "Hybrid Compute Machine properties",
+                "allOf" : [ {
+                  "$ref" : "#/definitions/MachineProperties"
+                } ]
+              }
+            },
+            "description" : "Describes a hybrid machine.",
+            "allOf" : [ {
+              "required" : [ "location" ],
+              "properties" : {
+                "location" : {
+                  "type" : "string",
+                  "description" : "The geo-location where the resource lives"
+                },
+                "tags" : {
+                  "type" : "object",
+                  "additionalProperties" : {
+                    "type" : "string"
+                  },
+                  "description" : "Resource tags."
+                }
+              },
+              "description" : "The resource model definition for a ARM tracked top level resource",
+              "allOf" : [ {
+                "type" : "object",
+                "properties" : {
+                  "id" : {
+                    "type" : "string",
+                    "description" : "Fully qualified resource Id for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}",
+                    "readOnly" : true
+                  },
+                  "name" : {
+                    "type" : "string",
+                    "description" : "The name of the resource",
+                    "readOnly" : true
+                  },
+                  "type" : {
+                    "type" : "string",
+                    "description" : "The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.",
+                    "readOnly" : true
+                  }
+                }
+              } ]
+            } ]
+          }
+        }
+      }
+    },
+    "insertionIndex" : 10
+  }, {
+    "id" : "9b3a0c55-f195-4f94-952d-1d409a737dc2",
+    "name" : "The operation to remove a hybrid machine identity in Azure. - 204",
+    "request" : {
+      "urlPath" : "/subscriptions/231r/resourceGroups/Luann+Hessel/providers/Microsoft.HybridCompute/machines/Karly+Grimes",
+      "method" : "DELETE",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "w5r0ilpwezsjkof769wu6xuauct4v7rmvdz2exbn836emlksmyeo163sz520y2hdxo650k4oi665eis3nk36vgkar755ar52j6tagmbsx5i268kenmarirq0yor3eyd8peghq3km5f32hdr8whepkrkukp8aojkneo7irjoe995dn"
+        }
+      }
+    },
+    "response" : {
+      "status" : 204
+    },
+    "uuid" : "9b3a0c55-f195-4f94-952d-1d409a737dc2",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:43.497879Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "Machines_Delete"
+        }
+      }
+    },
+    "insertionIndex" : 11
+  }, {
+    "id" : "66d26adc-bba1-4e90-9c02-87f87f3affe0",
+    "name" : "The operation to remove a hybrid machine identity in Azure. - 200",
+    "request" : {
+      "urlPath" : "/subscriptions/c0y6/resourceGroups/Elwood+Huels/providers/Microsoft.HybridCompute/machines/Ms.+Ouida+Ward",
+      "method" : "DELETE",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "81yv9hicwoifv8h3ly4i71jra8jqta8l80rgpm9hcu6vjuo"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200
+    },
+    "uuid" : "66d26adc-bba1-4e90-9c02-87f87f3affe0",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:43.49767Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "Machines_Delete"
+        }
+      }
+    },
+    "insertionIndex" : 12
+  }, {
+    "id" : "6d710b8a-3d1b-4483-9ba3-ce0e47caf9f6",
+    "name" : "The operation to create or update a hybrid machine resource identity in Azure.",
+    "request" : {
+      "urlPath" : "/subscriptions/grnp/resourceGroups/Abel+Mante/providers/Microsoft.HybridCompute/machines/Lorilee+McCullough",
+      "method" : "PUT",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "gt9bdajfpkpa092dk2nmlenyd5zwaknshydyq4xf6qf1hv5wu3ya4u4x2on4fncqp5p34qugkrxf0dfqppk9remvaxxlldxt82u1djlxfw14e8pvef4wakfyk"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"identity\" : {\n    \"tenantId\" : \"cb40\",\n    \"principalId\" : \"wb50\",\n    \"type\" : \"SystemAssigned\"\n  },\n  \"location\" : \"l82adlud90de4z17cmsfuk7sic8w0g3z2ppoats1o6f5mgty07iwq3ypllp\",\n  \"properties\" : { },\n  \"tags\" : { }\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "6d710b8a-3d1b-4483-9ba3-ce0e47caf9f6",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:43.497427Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "Machines_CreateOrUpdate",
+          "schema" : {
+            "properties" : {
+              "identity" : {
+                "type" : "object",
+                "allOf" : [ {
+                  "type" : "object",
+                  "properties" : {
+                    "principalId" : {
+                      "type" : "string",
+                      "description" : "The principal ID of resource identity.",
+                      "readOnly" : true
+                    },
+                    "tenantId" : {
+                      "type" : "string",
+                      "description" : "The tenant ID of resource.",
+                      "readOnly" : true
+                    },
+                    "type" : {
+                      "type" : "string",
+                      "description" : "The identity type.",
+                      "enum" : [ "SystemAssigned" ]
+                    }
+                  },
+                  "description" : "Identity for the resource."
+                } ]
+              },
+              "properties" : {
+                "type" : "object",
+                "description" : "Hybrid Compute Machine properties",
+                "allOf" : [ {
+                  "$ref" : "#/definitions/MachineProperties"
+                } ]
+              }
+            },
+            "description" : "Describes a hybrid machine.",
+            "allOf" : [ {
+              "required" : [ "location" ],
+              "properties" : {
+                "location" : {
+                  "type" : "string",
+                  "description" : "The geo-location where the resource lives"
+                },
+                "tags" : {
+                  "type" : "object",
+                  "additionalProperties" : {
+                    "type" : "string"
+                  },
+                  "description" : "Resource tags."
+                }
+              },
+              "description" : "The resource model definition for a ARM tracked top level resource",
+              "allOf" : [ {
+                "type" : "object",
+                "properties" : {
+                  "id" : {
+                    "type" : "string",
+                    "description" : "Fully qualified resource Id for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}",
+                    "readOnly" : true
+                  },
+                  "name" : {
+                    "type" : "string",
+                    "description" : "The name of the resource",
+                    "readOnly" : true
+                  },
+                  "type" : {
+                    "type" : "string",
+                    "description" : "The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.",
+                    "readOnly" : true
+                  }
+                }
+              } ]
+            } ]
+          }
+        }
+      }
+    },
+    "insertionIndex" : 13
+  }, {
+    "id" : "2ec4c827-0556-4f1f-86c4-a22b8266e016",
+    "name" : "Retrieves information about the model view or the instance view of a hybrid mach...",
+    "request" : {
+      "urlPath" : "/subscriptions/7jgv/resourceGroups/Song+Kertzmann/providers/Microsoft.HybridCompute/machines/Ismael+Zulauf",
+      "method" : "GET",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "yai2agrf8l7ugovvgn24irasva4efcnf5vyfktc2sp02yd782ed8bh67mf5thxunfai30xv6jb0goum80m0est9uask6gwqkjfcfrq0lw"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"identity\" : {\n    \"tenantId\" : \"76lr\",\n    \"principalId\" : \"8ze1\",\n    \"type\" : \"SystemAssigned\"\n  },\n  \"location\" : \"75qv97tal\",\n  \"properties\" : { },\n  \"tags\" : { }\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "2ec4c827-0556-4f1f-86c4-a22b8266e016",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:43.496887Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "Machines_Get",
+          "schema" : {
+            "properties" : {
+              "identity" : {
+                "type" : "object",
+                "allOf" : [ {
+                  "type" : "object",
+                  "properties" : {
+                    "principalId" : {
+                      "type" : "string",
+                      "description" : "The principal ID of resource identity.",
+                      "readOnly" : true
+                    },
+                    "tenantId" : {
+                      "type" : "string",
+                      "description" : "The tenant ID of resource.",
+                      "readOnly" : true
+                    },
+                    "type" : {
+                      "type" : "string",
+                      "description" : "The identity type.",
+                      "enum" : [ "SystemAssigned" ]
+                    }
+                  },
+                  "description" : "Identity for the resource."
+                } ]
+              },
+              "properties" : {
+                "type" : "object",
+                "description" : "Hybrid Compute Machine properties",
+                "allOf" : [ {
+                  "$ref" : "#/definitions/MachineProperties"
+                } ]
+              }
+            },
+            "description" : "Describes a hybrid machine.",
+            "allOf" : [ {
+              "required" : [ "location" ],
+              "properties" : {
+                "location" : {
+                  "type" : "string",
+                  "description" : "The geo-location where the resource lives"
+                },
+                "tags" : {
+                  "type" : "object",
+                  "additionalProperties" : {
+                    "type" : "string"
+                  },
+                  "description" : "Resource tags."
+                }
+              },
+              "description" : "The resource model definition for a ARM tracked top level resource",
+              "allOf" : [ {
+                "type" : "object",
+                "properties" : {
+                  "id" : {
+                    "type" : "string",
+                    "description" : "Fully qualified resource Id for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}",
+                    "readOnly" : true
+                  },
+                  "name" : {
+                    "type" : "string",
+                    "description" : "The name of the resource",
+                    "readOnly" : true
+                  },
+                  "type" : {
+                    "type" : "string",
+                    "description" : "The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.",
+                    "readOnly" : true
+                  }
+                }
+              } ]
+            } ]
+          }
+        }
+      }
+    },
+    "insertionIndex" : 14
+  }, {
+    "id" : "6abc3f9e-70b3-4736-af04-711a1f7d4620",
+    "name" : "Lists all the hybrid machines in the specified resource group. Use the nextLink ...",
+    "request" : {
+      "urlPath" : "/subscriptions/iyl1/resourceGroups/Brynn+Gibson/providers/Microsoft.HybridCompute/machines",
+      "method" : "GET",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "ja81qq4i0bgkmdknhguzwx4o0eef4xa0tj2si729udnh3zc817"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"value\" : [ {\n    \"identity\" : {\n      \"tenantId\" : \"8k78\",\n      \"principalId\" : \"g4l8\",\n      \"type\" : \"SystemAssigned\"\n    },\n    \"location\" : \"bracdzs0reu8chzosn53y07mjqmeto4htz9g0xjqggetsz29ysi\",\n    \"properties\" : { },\n    \"tags\" : { }\n  }, {\n    \"identity\" : {\n      \"tenantId\" : \"p202\",\n      \"principalId\" : \"4q9f\",\n      \"type\" : \"SystemAssigned\"\n    },\n    \"location\" : \"pc8dq84mc0y9e\",\n    \"properties\" : { },\n    \"tags\" : { }\n  }, {\n    \"identity\" : {\n      \"tenantId\" : \"bx5z\",\n      \"principalId\" : \"999l\",\n      \"type\" : \"SystemAssigned\"\n    },\n    \"location\" : \"qk9nfjkc9k8pz42ex0e5pwhggfobufapx8i384jcdfssfc0j6o9c1ppzu4bce1msk5gngjufeyfso3145eby3cdf7oqtiq0sn2r3h1fh3wwyj68w5roy32hgb7y5ooqy6nboqaaaqi7pv4ytzl4xma4mlit8\",\n    \"properties\" : { },\n    \"tags\" : { }\n  }, {\n    \"identity\" : {\n      \"tenantId\" : \"jq14\",\n      \"principalId\" : \"5wsj\",\n      \"type\" : \"SystemAssigned\"\n    },\n    \"location\" : \"zaohuirdfjycggbf5idm25s1dl94o42xc9hcdqg\",\n    \"properties\" : { },\n    \"tags\" : { }\n  } ],\n  \"nextLink\" : \"1xzw9b43xbjwdikbdrv27thybli4n8j2ql87p9c6a5o419580klrx36p8n3y4g0wgz1qvta6n82hgvqv13yy9tzfzl0z3sztd56i1q4fml2vnnj30i5b5rm0iug8r5zuvd0ullcp6hby2ytu\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "6abc3f9e-70b3-4736-af04-711a1f7d4620",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:43.496306Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "Machines_ListByResourceGroup",
+          "schema" : {
+            "required" : [ "value" ],
+            "type" : "object",
+            "properties" : {
+              "nextLink" : {
+                "type" : "string",
+                "description" : "The URI to fetch the next page of Machines. Call ListNext() with this URI to fetch the next page of hybrid machines."
+              },
+              "value" : {
+                "type" : "array",
+                "description" : "The list of hybrid machines.",
+                "items" : {
+                  "$ref" : "#/components/schemas/Machine"
+                }
+              }
+            },
+            "description" : "The List hybrid machine operation response."
+          }
+        }
+      }
+    },
+    "insertionIndex" : 15
+  }, {
+    "id" : "ccfb47f0-51d6-4ebd-9060-3fcb797f556e",
+    "name" : "Lists all the hybrid machines in the specified subscription. Use the nextLink pr...",
+    "request" : {
+      "urlPath" : "/subscriptions/3q7b/providers/Microsoft.HybridCompute/machines",
+      "method" : "GET",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "uanoqgwcrx0thc3w5cvexjipf7wabala50wbvrzx13megwkntlq1pbrtun58dh1zwiteoogc"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"value\" : [ {\n    \"identity\" : {\n      \"tenantId\" : \"k624\",\n      \"principalId\" : \"qt74\",\n      \"type\" : \"SystemAssigned\"\n    },\n    \"location\" : \"173d38gjw3j8nlqqu5tbrx8rpkb0kgfnvuzos9aqcv848sg8exdjholyccvwbftcvg65w2f9q7xghknwzelvru0nbsyhv1aklglx2loybuao56yyje73muosbyq7wjd8xmufik07\",\n    \"properties\" : { },\n    \"tags\" : { }\n  }, {\n    \"identity\" : {\n      \"tenantId\" : \"al95\",\n      \"principalId\" : \"u1cq\",\n      \"type\" : \"SystemAssigned\"\n    },\n    \"location\" : \"34imyc9ifnhjvb7920prtgkypysru0p4jij2vec2tqacdiwyssyyuvd9jfs0j7qsntx6ijpygje9n86z7kb3wrlagpheqlrvbqep36u90rtyohj85748eiwoo8sf2rs4nd1i34nzhabfwa1y8je\",\n    \"properties\" : { },\n    \"tags\" : { }\n  }, {\n    \"identity\" : {\n      \"tenantId\" : \"602b\",\n      \"principalId\" : \"ulmm\",\n      \"type\" : \"SystemAssigned\"\n    },\n    \"location\" : \"dh32xloz1zn6q0xak6s6hqp8rx1mmjpkc8u6ogv9e3yrwit0v994qqqi5r3bqgdl4077420q1bkshz2p223wfedaj7qyoekr5za3ruxdmkan8ozmvhhm8r8tlafhym8no2ggb48eeuj2ynsic5w6439d3wu6peac00t8d0720l0n329dk2o0d\",\n    \"properties\" : { },\n    \"tags\" : { }\n  }, {\n    \"identity\" : {\n      \"tenantId\" : \"bk03\",\n      \"principalId\" : \"x20i\",\n      \"type\" : \"SystemAssigned\"\n    },\n    \"location\" : \"0r6jsgzip0d1i5ffi7783duljse7psq3dbqngvx3jd8il7g2gynbpnr0dl0v6a1j2fjtm26huutz12hg1npqh89tz4525\",\n    \"properties\" : { },\n    \"tags\" : { }\n  }, {\n    \"identity\" : {\n      \"tenantId\" : \"w12z\",\n      \"principalId\" : \"7y30\",\n      \"type\" : \"SystemAssigned\"\n    },\n    \"location\" : \"59py5m5udo3d140\",\n    \"properties\" : { },\n    \"tags\" : { }\n  }, {\n    \"identity\" : {\n      \"tenantId\" : \"2xt3\",\n      \"principalId\" : \"20t2\",\n      \"type\" : \"SystemAssigned\"\n    },\n    \"location\" : \"phz62bwm3dujkhz8e2hjw9ack0wji0utf70tex7w4qezz9cfv943h96mgjlk82yv5sfm6z9e40cyn2ah713g3rghj5lit7\",\n    \"properties\" : { },\n    \"tags\" : { }\n  }, {\n    \"identity\" : {\n      \"tenantId\" : \"7c82\",\n      \"principalId\" : \"672g\",\n      \"type\" : \"SystemAssigned\"\n    },\n    \"location\" : \"2mgti7imh4g06zk3gs2usnehx7vzsaja5i6oy6aazbddc3fc8oftvflbeb9t647\",\n    \"properties\" : { },\n    \"tags\" : { }\n  } ],\n  \"nextLink\" : \"0se10pwws8s20noamjjmau\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "ccfb47f0-51d6-4ebd-9060-3fcb797f556e",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:43.495393Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "Machines_ListBySubscription",
+          "schema" : {
+            "required" : [ "value" ],
+            "type" : "object",
+            "properties" : {
+              "nextLink" : {
+                "type" : "string",
+                "description" : "The URI to fetch the next page of Machines. Call ListNext() with this URI to fetch the next page of hybrid machines."
+              },
+              "value" : {
+                "type" : "array",
+                "description" : "The list of hybrid machines.",
+                "items" : {
+                  "$ref" : "#/components/schemas/Machine"
+                }
+              }
+            },
+            "description" : "The List hybrid machine operation response."
+          }
+        }
+      }
+    },
+    "insertionIndex" : 16
+  }, {
+    "id" : "7da7d0d0-009a-4469-b509-3bc35b8de726",
+    "name" : "Gets a list of hybrid compute operations.",
+    "request" : {
+      "urlPath" : "/providers/Microsoft.HybridCompute/operations",
+      "method" : "GET",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "hfo8tlm4xa4mbr9ptb0kbb4kjrwhelnaj0zlelxbwz1x2yl34whjbs96qsijmeeptvjy3vkiwqtqp8kbh5tzckizdp8s0m3rnf43lahlqe104pg9xp3myj8yy21cokdt2gtxfvei4pfc2ons3sv4o7k9z"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"value\" : [ {\n    \"display\" : {\n      \"provider\" : \"y1pyb68mwhwx8irm0kxi7ls1eon0ima97bdc9vwiylrg44vxahmle9pn9boj3avl711t28y8wtfjnvp4xmze67liujdshpl7\",\n      \"resource\" : \"48yey9p53yc29ridp3f686rrs3l30abt2zg6endkkvbtz7e04v2zyau0bk1ugymxwuha7wt5u\",\n      \"description\" : \"Ut qui eaque. Non architecto quas aut quis nesciunt. Quam facere dolor deleniti quisquam. In rerum et iusto velit aut ad illo. Nam quis dolorem et doloribus expedita quisquam.\",\n      \"operation\" : \"4chizf48lnsfjr2anad382ajfdsgm5ubjiclsinrboallgyjujt4ovv0nmtap83na85dsq7gefr63ugoqjt8xru273fryuktpeluzfkfj74m12o3dlyoiq9ktvvapchbl44tpxa05k08unj9zh3bx84mr255iu6r9b5\"\n    },\n    \"origin\" : \"kxh8yeosymgy35ldap037snzb0czjbyysyt0eyc3g14alnyxtpyflso0ea\",\n    \"name\" : \"Cortez Stroman\"\n  }, {\n    \"display\" : {\n      \"provider\" : \"l5odqkqe0gookn2nn\",\n      \"resource\" : \"2ctyr8s37s5mld8i0b9ii6y06gaa1v96kuxhyoi5c6o5231ey2ir1i6969r5ukl8efdmwe76936qsvie4l44k6wn8wwsx4k0yumr6dmr5ossexvfk8ezp5m7pnjvz08ym7ix\",\n      \"description\" : \"Corrupti officiis distinctio repellat. Nulla saepe blanditiis voluptatem expedita. Non sed inventore iure esse autem. Sunt culpa rerum cupiditate laboriosam corrupti.\",\n      \"operation\" : \"22gv0x103oedsz0xia97962n\"\n    },\n    \"origin\" : \"hyjucvmh0gdt8fkmrkp\",\n    \"name\" : \"Miss Nicolas Smith\"\n  }, {\n    \"display\" : {\n      \"provider\" : \"ne2sdfv98bznvhbddkodqsh9stke48462laneqo6hxi2w50ojf9gfwrc6oz9c5\",\n      \"resource\" : \"ev1teqnxlzzr40kpl2a16blrnl9d1tsrskhytsiv3y9al0lmsunemjjllawt4q4tscbu47ge7fe1uzl7rc3egru91e0z8tajwwnlquwhokafr64\",\n      \"description\" : \"Repudiandae aliquam consequatur. Qui occaecati voluptates. Qui voluptatem et aliquam recusandae. Aliquid ut quo facilis. Minus dolores dolor laboriosam nihil vero.\",\n      \"operation\" : \"ogdtf274wdvqtwumal683ecsuziz36s4h72nnsuy7u4cyf65h7fhs9426q78gavf7g\"\n    },\n    \"origin\" : \"eedpfpqjhq57sqmsc7hxyumbb7hivc2tzcqwwj3cwo12cuhwhgkhq4toqb9t93sgp55i76m6xbm9bd07ez0nxm61i93u\",\n    \"name\" : \"Shaneka Tillman\"\n  }, {\n    \"display\" : {\n      \"provider\" : \"n5ktnmxr3iwg10erh55fgt1ymvoy4swz1e24028vnom2v7m7hk84tx656f1oudwn8o59vvfqxsstte4gnaer7x6iu8ox1zd2y4jtdjs1v34cf4s9b1hqueg8\",\n      \"resource\" : \"iutctzaipokhp1yptbk3pzstwic62qcosataxxbymhs43kjtuooe8jud6yrnqvr9gakk8stnvwjr28tz2khzta9g1dbq9zt4ujoh8dk8q51vuidmy7aak1zl9cjorgvflwiu0ajm7vxw36a6twmbq20gqu1c\",\n      \"description\" : \"Qui quaerat voluptates. Expedita cupiditate cum dolores sit. Beatae non corrupti repellat ab recusandae inventore quam. Minima cupiditate maxime laboriosam veritatis impedit officiis.\",\n      \"operation\" : \"82u00l4wxxpi6x75gnr7c8b4z4eedogt2alehgfp3yjdaqa2jlddrpb6zlnrbip538qqm482c69u8h5yjkfzb5ru8lm4onfb85am6lce2le55b3nt01r0fkr7hhd8hesr443ezjdscmd8mtobrzlbl65cff2ar0utp8k5l9z9ql66bjle8a7cq0t\"\n    },\n    \"origin\" : \"5zxmaudb7z6pld3pgk61xf0jv769d0uznxebc9em1d\",\n    \"name\" : \"Ching Gerhold\"\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "7da7d0d0-009a-4469-b509-3bc35b8de726",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:43.493854Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "Operations_List",
+          "schema" : {
+            "type" : "object",
+            "properties" : {
+              "value" : {
+                "type" : "array",
+                "description" : "The list of compute operations",
+                "readOnly" : true,
+                "items" : {
+                  "$ref" : "#/components/schemas/OperationValue"
+                }
+              }
+            },
+            "description" : "The List Compute Operation operation response."
+          }
+        }
+      }
+    },
+    "insertionIndex" : 17
+  } ]
+}

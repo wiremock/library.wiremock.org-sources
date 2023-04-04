@@ -1,0 +1,1434 @@
+{
+  "mappings" : [ {
+    "id" : "16a7673a-474e-47a5-b228-bb207f8e6f82",
+    "name" : "Get shared keys for the project.",
+    "request" : {
+      "urlPath" : "/subscriptions/lz1t/resourcegroups/Ms.+Bryan+Berge/providers/Microsoft.Migrate/projects/Wallace+Schroeder/keys",
+      "method" : "POST",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "2018-02-02"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"workspaceId\" : \"49u5\",\n  \"workspaceKey\" : \"so2cc0hx5sxzsbf0nb3eyx3ek7i07j3hposkvo9jyrz5o25xhwue0rzu5ok6p4vopv680kj9ontv8rtmnbvrxvvndghyjxtpcrnz2krae00m69hpsk1lqx0ri3bs6mvla6zhvhow4q0pq5nsp7wcmu8va2og22ukbm7z8boliiv82ikwz0x9\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "16a7673a-474e-47a5-b228-bb207f8e6f82",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:36.479922Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "Projects_GetKeys",
+          "schema" : {
+            "type" : "object",
+            "properties" : {
+              "workspaceId" : {
+                "type" : "string",
+                "description" : "ID of Migration Project.",
+                "readOnly" : true
+              },
+              "workspaceKey" : {
+                "type" : "string",
+                "description" : "Key of Migration Project.",
+                "readOnly" : true
+              }
+            },
+            "description" : "ID and Key for Migration Project."
+          }
+        }
+      }
+    },
+    "insertionIndex" : 0
+  }, {
+    "id" : "199cb942-0f75-4d06-8695-082498b94eca",
+    "name" : "Update project.",
+    "request" : {
+      "urlPath" : "/subscriptions/i7gi/resourcegroups/Miss+Nathaniel+Boyer/providers/Microsoft.Migrate/projects/Florencia+Volkman",
+      "method" : "PATCH",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "2018-02-02"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"name\" : \"Arnette Hilll\",\n  \"eTag\" : \"aperiam\",\n  \"location\" : \"tzv2w92qqfgvn0poq3qo6hmtpy2mbhigpmumtyobf5j5dxl73rqs5b5j6edgjcthlow6f7hr18ezm34qx1j1g0gutdp8qi90rnh58g336l1yqiu716ik20jce7xmnc6rd6y0lrjqoat5czjka0ezgq2r5l67sp84yk7a1de6x8m81yz28w4syidwr\",\n  \"id\" : \"9xcu\",\n  \"type\" : \"nsrlu3taig0el40uao4wqx899ypy7g4t6gsqq9q3zt728\",\n  \"properties\" : {\n    \"customerWorkspaceLocation\" : \"otyz5gmsbqsp9niziabifwxqo12mefxy3p9k2wg3yaumuwxgba90en93mr\",\n    \"lastDiscoverySessionId\" : \"6vu7\",\n    \"numberOfAssessments\" : 1751844700,\n    \"numberOfMachines\" : 171768140,\n    \"createdTimestamp\" : \"2023-05-04T15:54:36.479Z\",\n    \"discoveryStatus\" : \"InProgress\",\n    \"numberOfGroups\" : 2068984533,\n    \"lastAssessmentTimestamp\" : \"2022-04-14T14:23:29.479Z\",\n    \"provisioningState\" : \"Creating\",\n    \"customerWorkspaceId\" : \"5ret\",\n    \"updatedTimestamp\" : \"2022-12-21T23:36:14.479Z\",\n    \"lastDiscoveryTimestamp\" : \"2023-07-31T21:13:23.479Z\"\n  },\n  \"tags\" : { }\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "199cb942-0f75-4d06-8695-082498b94eca",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:36.479582Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "Projects_Update",
+          "schema" : {
+            "type" : "object",
+            "properties" : {
+              "eTag" : {
+                "type" : "string",
+                "description" : "For optimistic concurrency control."
+              },
+              "id" : {
+                "type" : "string",
+                "description" : "Path reference to this project /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Migrate/projects/{projectName}",
+                "readOnly" : true
+              },
+              "location" : {
+                "type" : "string",
+                "description" : "Azure location in which project is created."
+              },
+              "name" : {
+                "type" : "string",
+                "description" : "Name of the project.",
+                "readOnly" : true
+              },
+              "properties" : {
+                "$ref" : "#/components/schemas/ProjectProperties"
+              },
+              "tags" : {
+                "type" : "object",
+                "description" : "Tags provided by Azure Tagging service."
+              },
+              "type" : {
+                "type" : "string",
+                "description" : "Type of the object = [Microsoft.Migrate/projects].",
+                "readOnly" : true
+              }
+            },
+            "description" : "Azure Migrate Project."
+          }
+        }
+      }
+    },
+    "insertionIndex" : 1
+  }, {
+    "id" : "47461d51-d77b-4d9c-a67a-8ae4fe1caaaa",
+    "name" : "Delete the project - 200",
+    "request" : {
+      "urlPath" : "/subscriptions/u80b/resourcegroups/Clarence+Altenwerth/providers/Microsoft.Migrate/projects/Lashonda+Klein",
+      "method" : "DELETE",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "2018-02-02"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200
+    },
+    "uuid" : "47461d51-d77b-4d9c-a67a-8ae4fe1caaaa",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:36.478962Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "Projects_Delete"
+        }
+      }
+    },
+    "insertionIndex" : 2
+  }, {
+    "id" : "72fa96e9-4adb-4bdd-9c29-b45396eef911",
+    "name" : "Create or update project.",
+    "request" : {
+      "urlPath" : "/subscriptions/68r0/resourcegroups/Miss+George+Pacocha/providers/Microsoft.Migrate/projects/Julio+Carter",
+      "method" : "PUT",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "2018-02-02"
+        }
+      }
+    },
+    "response" : {
+      "status" : 201,
+      "body" : "{\n  \"name\" : \"Shelley Predovic\",\n  \"eTag\" : \"eos\",\n  \"location\" : \"2dpfnm017ypmy657u5p7aznjewz58rm7otwafiunb3b18h8p69j8m9pvro1ta29qjfnjf3he26mrip9m3tslnt6qmoeq6hc8cjjhjr19uk\",\n  \"id\" : \"vml4\",\n  \"type\" : \"vn4jz9jrj58q8bzq7t02faeer9cq121k5r6wskv548631ebxu59xuoc2veqq9eskbzglu5jojcl4gp2n5ahg1ycx7rjf5xmsnca46h84hatw24ay2n74j5j\",\n  \"properties\" : {\n    \"customerWorkspaceLocation\" : \"dzqt3qcl2aa2t1arkovxhhuh78k443wiqny6v7nknrsck66z00stljqelul3hh7wmoxboqw702t8w5eh50icghl2h4slm3nu5jns2cixgor\",\n    \"lastDiscoverySessionId\" : \"0t4s\",\n    \"numberOfAssessments\" : 279955565,\n    \"numberOfMachines\" : 1470529803,\n    \"createdTimestamp\" : \"2023-06-03T09:02:52.478Z\",\n    \"discoveryStatus\" : \"NotStarted\",\n    \"numberOfGroups\" : 1721930546,\n    \"lastAssessmentTimestamp\" : \"2022-12-02T02:17:58.478Z\",\n    \"provisioningState\" : \"Succeeded\",\n    \"customerWorkspaceId\" : \"43ek\",\n    \"updatedTimestamp\" : \"2023-09-28T09:01:55.478Z\",\n    \"lastDiscoveryTimestamp\" : \"2023-02-04T22:36:17.478Z\"\n  },\n  \"tags\" : { }\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "72fa96e9-4adb-4bdd-9c29-b45396eef911",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:36.47876Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "Projects_Create",
+          "schema" : {
+            "type" : "object",
+            "properties" : {
+              "eTag" : {
+                "type" : "string",
+                "description" : "For optimistic concurrency control."
+              },
+              "id" : {
+                "type" : "string",
+                "description" : "Path reference to this project /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Migrate/projects/{projectName}",
+                "readOnly" : true
+              },
+              "location" : {
+                "type" : "string",
+                "description" : "Azure location in which project is created."
+              },
+              "name" : {
+                "type" : "string",
+                "description" : "Name of the project.",
+                "readOnly" : true
+              },
+              "properties" : {
+                "$ref" : "#/components/schemas/ProjectProperties"
+              },
+              "tags" : {
+                "type" : "object",
+                "description" : "Tags provided by Azure Tagging service."
+              },
+              "type" : {
+                "type" : "string",
+                "description" : "Type of the object = [Microsoft.Migrate/projects].",
+                "readOnly" : true
+              }
+            },
+            "description" : "Azure Migrate Project."
+          }
+        }
+      }
+    },
+    "insertionIndex" : 3
+  }, {
+    "id" : "ee8d7d9d-e9be-4fbe-8c79-90e6b123c7e3",
+    "name" : "Create or update project.",
+    "request" : {
+      "urlPath" : "/subscriptions/6u5g/resourcegroups/Jimmy+Hahn/providers/Microsoft.Migrate/projects/Marjory+Gerhold",
+      "method" : "PUT",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "2018-02-02"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"name\" : \"Daniele Doyle\",\n  \"eTag\" : \"repudiandae\",\n  \"location\" : \"0wsb0qqhnrvynevx2v21xlbi9bobu9u3ls6r4e9b4n95yf66eihku0fccnphlqc09ew47gb75yfmcx8p0l6ajnzz5negg5zbp6pgvhz5fdzbqbar48pnlkc2xldrcv4z1an5yyxem00me5nlt05hm9x1g1\",\n  \"id\" : \"cwr0\",\n  \"type\" : \"9xz68h9w55izz8dqujuuicjv3bozqyo9zh683z2fskyhvd1hemoc4tu0iptlk50gp87f1ro7hydd4gm4c5hlr2n5abe8huqj9lmzum2loyxb2b85ek1xcbqxancjx94zqva8s3bp56pnomu1rzq1fuvies2mzwpswcnndv03\",\n  \"properties\" : {\n    \"customerWorkspaceLocation\" : \"mab768slyvao83fsz7kgnw81qdn6oeq8epds7jyw0c\",\n    \"lastDiscoverySessionId\" : \"33oq\",\n    \"numberOfAssessments\" : 2146627504,\n    \"numberOfMachines\" : 2043202115,\n    \"createdTimestamp\" : \"2022-05-31T09:28:24.477Z\",\n    \"discoveryStatus\" : \"NotStarted\",\n    \"numberOfGroups\" : 1811917286,\n    \"lastAssessmentTimestamp\" : \"2022-12-21T12:31:54.477Z\",\n    \"provisioningState\" : \"Accepted\",\n    \"customerWorkspaceId\" : \"1787\",\n    \"updatedTimestamp\" : \"2022-09-01T02:15:55.477Z\",\n    \"lastDiscoveryTimestamp\" : \"2023-12-13T06:43:12.477Z\"\n  },\n  \"tags\" : { }\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "ee8d7d9d-e9be-4fbe-8c79-90e6b123c7e3",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:36.478152Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "Projects_Create",
+          "schema" : {
+            "type" : "object",
+            "properties" : {
+              "eTag" : {
+                "type" : "string",
+                "description" : "For optimistic concurrency control."
+              },
+              "id" : {
+                "type" : "string",
+                "description" : "Path reference to this project /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Migrate/projects/{projectName}",
+                "readOnly" : true
+              },
+              "location" : {
+                "type" : "string",
+                "description" : "Azure location in which project is created."
+              },
+              "name" : {
+                "type" : "string",
+                "description" : "Name of the project.",
+                "readOnly" : true
+              },
+              "properties" : {
+                "$ref" : "#/components/schemas/ProjectProperties"
+              },
+              "tags" : {
+                "type" : "object",
+                "description" : "Tags provided by Azure Tagging service."
+              },
+              "type" : {
+                "type" : "string",
+                "description" : "Type of the object = [Microsoft.Migrate/projects].",
+                "readOnly" : true
+              }
+            },
+            "description" : "Azure Migrate Project."
+          }
+        }
+      }
+    },
+    "insertionIndex" : 4
+  }, {
+    "id" : "755433d2-7646-4f99-b443-1aad0c81e6f0",
+    "name" : "Get the specified project.",
+    "request" : {
+      "urlPath" : "/subscriptions/726w/resourcegroups/Miss+Jonell+Renner/providers/Microsoft.Migrate/projects/Seth+Dickens",
+      "method" : "GET",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "2018-02-02"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"name\" : \"Loan Moore\",\n  \"eTag\" : \"error\",\n  \"location\" : \"zxpw2vo5gppgxt0gpvaoquzrxq6niqfvwkn0dkicwapmygr83cti0brg2fry9740058l2tjx75ws5hb2x25wqyfxj6ybao8wp9c26n8y0s45coo9ecuj04uw6yv18pfssef446l1cvz1f45rwys7rpay18q8gyv85ma5ly5crk7tc6j7h8ciic7c\",\n  \"id\" : \"4b9i\",\n  \"type\" : \"tmgkzb2ynlp8gdrb73vnksrvnkcwx4becmh7ghdky0ll3zit0x640lp2kg4awsprorjudmfd6p5ojdhzse1k0nbroklcr6xoh14k4r\",\n  \"properties\" : {\n    \"customerWorkspaceLocation\" : \"byj62raringqgznpvv5cz0ag9v7ov5juazroqp6tpe66grq1rl5dkfs689sg62vnpwpwt56vh872onzyx0h6i6kdukq571693w9wuwwoe14ma1m4pm29rxnp7g\",\n    \"lastDiscoverySessionId\" : \"3m10\",\n    \"numberOfAssessments\" : 1928782078,\n    \"numberOfMachines\" : 417017424,\n    \"createdTimestamp\" : \"2022-11-16T05:21:12.477Z\",\n    \"discoveryStatus\" : \"InProgress\",\n    \"numberOfGroups\" : 1508619600,\n    \"lastAssessmentTimestamp\" : \"2023-12-26T17:10:08.477Z\",\n    \"provisioningState\" : \"Accepted\",\n    \"customerWorkspaceId\" : \"k6j2\",\n    \"updatedTimestamp\" : \"2022-06-05T14:34:55.477Z\",\n    \"lastDiscoveryTimestamp\" : \"2023-01-13T06:44:37.477Z\"\n  },\n  \"tags\" : { }\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "755433d2-7646-4f99-b443-1aad0c81e6f0",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:36.477528Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "Projects_Get",
+          "schema" : {
+            "type" : "object",
+            "properties" : {
+              "eTag" : {
+                "type" : "string",
+                "description" : "For optimistic concurrency control."
+              },
+              "id" : {
+                "type" : "string",
+                "description" : "Path reference to this project /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Migrate/projects/{projectName}",
+                "readOnly" : true
+              },
+              "location" : {
+                "type" : "string",
+                "description" : "Azure location in which project is created."
+              },
+              "name" : {
+                "type" : "string",
+                "description" : "Name of the project.",
+                "readOnly" : true
+              },
+              "properties" : {
+                "$ref" : "#/components/schemas/ProjectProperties"
+              },
+              "tags" : {
+                "type" : "object",
+                "description" : "Tags provided by Azure Tagging service."
+              },
+              "type" : {
+                "type" : "string",
+                "description" : "Type of the object = [Microsoft.Migrate/projects].",
+                "readOnly" : true
+              }
+            },
+            "description" : "Azure Migrate Project."
+          }
+        }
+      }
+    },
+    "insertionIndex" : 5
+  }, {
+    "id" : "a1005b88-b0f7-4b36-8e09-717c318d7190",
+    "name" : "Get all projects.",
+    "request" : {
+      "urlPath" : "/subscriptions/kyj8/resourcegroups/Art+Ankunding+V/providers/Microsoft.Migrate/projects",
+      "method" : "GET",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "2018-02-02"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"value\" : [ {\n    \"name\" : \"Johnson Fritsch\",\n    \"eTag\" : \"repudiandae\",\n    \"location\" : \"gykoz4fbu9sk305\",\n    \"id\" : \"y355\",\n    \"type\" : \"iu5ivvg5cjfi0ajn7t9ov1g17048mdlrwibxrnq4xp3yupiw\",\n    \"properties\" : {\n      \"customerWorkspaceLocation\" : \"eu84fe7fb1r9fcnazix8rxri3enbpjiqt495b4vrmh77xqmhq2b7onbx2k023kudp7ox4b69kl38n2al12esro62vrsua06sjc7v87c3wxj1ocq8gatwxn1u805om0z7scd3mjyafr3honmwy6\",\n      \"lastDiscoverySessionId\" : \"2j73\",\n      \"numberOfAssessments\" : 454582793,\n      \"numberOfMachines\" : 1085704193,\n      \"createdTimestamp\" : \"2024-01-13T01:41:21.474Z\",\n      \"discoveryStatus\" : \"NotStarted\",\n      \"numberOfGroups\" : 536700329,\n      \"lastAssessmentTimestamp\" : \"2022-11-15T04:28:14.474Z\",\n      \"provisioningState\" : \"Accepted\",\n      \"customerWorkspaceId\" : \"o0df\",\n      \"updatedTimestamp\" : \"2023-07-25T22:10:09.474Z\",\n      \"lastDiscoveryTimestamp\" : \"2023-07-15T11:24:14.474Z\"\n    },\n    \"tags\" : { }\n  }, {\n    \"name\" : \"Pablo Halvorson\",\n    \"eTag\" : \"explicabo\",\n    \"location\" : \"qk23jquu6tg6p6mcf29mzdi6wzewv2tisj5zsijzq9z5au1vbwvcez3ig0fbc5cxrfno4c531gz0zwr7mezbeegz\",\n    \"id\" : \"i99e\",\n    \"type\" : \"3uirnlut1s9cqa2h78bn9dszn7brjim1069ung4n772kzrvso39y9gyhnuy719d8pkjeyqcl7xv5wc7wj2dqhpd142b6eulm45ld9buw9003e2diy2hh38v45ne9i5ek\",\n    \"properties\" : {\n      \"customerWorkspaceLocation\" : \"kxzn9b23558txthzxr4vj3pxw62muhdhhka8nyw816z6zjuqceze68kpwfnrkuuzfldv9ftcqy7neku56onzftv5d9bo4bb0ru75z9we7\",\n      \"lastDiscoverySessionId\" : \"do47\",\n      \"numberOfAssessments\" : 1137800566,\n      \"numberOfMachines\" : 197764077,\n      \"createdTimestamp\" : \"2022-11-01T19:02:43.474Z\",\n      \"discoveryStatus\" : \"Completed\",\n      \"numberOfGroups\" : 1325819140,\n      \"lastAssessmentTimestamp\" : \"2022-12-05T16:10:36.474Z\",\n      \"provisioningState\" : \"Deleting\",\n      \"customerWorkspaceId\" : \"w3ab\",\n      \"updatedTimestamp\" : \"2024-01-28T17:53:56.475Z\",\n      \"lastDiscoveryTimestamp\" : \"2022-07-18T13:14:31.475Z\"\n    },\n    \"tags\" : { }\n  }, {\n    \"name\" : \"Von Rutherford\",\n    \"eTag\" : \"autem\",\n    \"location\" : \"e5k7gg715w12ydbdkijr3cqha229hypabkz60n6irkxdm3y1rmhm9pzg0z89yuhes6p\",\n    \"id\" : \"lr9l\",\n    \"type\" : \"ae08mc7mje5wq3v7c99ckve86fbfc92ad5stopit3ztcwf2v40f56x3ek25lm1wshcxzq1jcrqz636j33xjoqrodt9j3cui8wvfw1zxphdq5oxvzzj328fwqom5400h9uz6fk4kxfy0l1gir14669747av0l0k91pji5jsp9q00\",\n    \"properties\" : {\n      \"customerWorkspaceLocation\" : \"hdo5dhporgf485ovbsqqgip4mu9amcrkbpcm9vk9vzy89dxkv7k5mv4wt7yqpmw27tw8r7otqzuv49k\",\n      \"lastDiscoverySessionId\" : \"6wd7\",\n      \"numberOfAssessments\" : 531773466,\n      \"numberOfMachines\" : 903137069,\n      \"createdTimestamp\" : \"2023-07-30T10:44:44.475Z\",\n      \"discoveryStatus\" : \"Unknown\",\n      \"numberOfGroups\" : 386849080,\n      \"lastAssessmentTimestamp\" : \"2022-07-11T09:54:51.475Z\",\n      \"provisioningState\" : \"Moving\",\n      \"customerWorkspaceId\" : \"50k3\",\n      \"updatedTimestamp\" : \"2023-11-11T07:54:24.475Z\",\n      \"lastDiscoveryTimestamp\" : \"2023-04-08T04:52:57.475Z\"\n    },\n    \"tags\" : { }\n  }, {\n    \"name\" : \"Francisco Denesik\",\n    \"eTag\" : \"voluptas\",\n    \"location\" : \"guedlwwgttccmbzuyj7nczcwwarvjh2ka3lyg5pe7o8b16wt8zxg10akt1gdatfthkm\",\n    \"id\" : \"k24b\",\n    \"type\" : \"gqa5y1kzq9t5xfv2ihcso396y117ndi2lbmzvs36mo5uwka1c14qyjjwoxmj0iw2p90scaini2xb3tlv77qzz0ve8tmi3l1m4c6w98s6zd54ov4bc0oc5n437h3muu83rgugml5e5vc1mxw6ygje\",\n    \"properties\" : {\n      \"customerWorkspaceLocation\" : \"yeop4bk76invzhn97zw84bsspykm1ri0twvy03jzcn1i5x9i6fwokg24fbfqs28s5jryp6i5jk4oi9l14evl3q78hfy4ok3sayi8js50h4cj2h2fdq0ym5y3oadrgfto0lq97pqwdl19c5225uo0c1th\",\n      \"lastDiscoverySessionId\" : \"6rb5\",\n      \"numberOfAssessments\" : 873749456,\n      \"numberOfMachines\" : 26881175,\n      \"createdTimestamp\" : \"2023-10-29T15:29:33.475Z\",\n      \"discoveryStatus\" : \"Completed\",\n      \"numberOfGroups\" : 431646671,\n      \"lastAssessmentTimestamp\" : \"2022-09-22T00:47:54.475Z\",\n      \"provisioningState\" : \"Deleting\",\n      \"customerWorkspaceId\" : \"y281\",\n      \"updatedTimestamp\" : \"2022-05-11T05:17:15.475Z\",\n      \"lastDiscoveryTimestamp\" : \"2023-07-16T23:38:07.475Z\"\n    },\n    \"tags\" : { }\n  }, {\n    \"name\" : \"Viola Jaskolski\",\n    \"eTag\" : \"nihil\",\n    \"location\" : \"mdfzsgwzhp9ahbp0s2byhl45bgwsit9pwt6ly315rpgujbq5g4pkin71y7f9yoydruc\",\n    \"id\" : \"5jd5\",\n    \"type\" : \"7ry21aumfjbxxhm2qzzlgnpsht173ybel4tvun9y2uq\",\n    \"properties\" : {\n      \"customerWorkspaceLocation\" : \"0f1qs9p9vb6i2y42ynbl5qvxi7vh5a1gbjbarlsp7w5m6iik23w2lhmodfl69qa9h2q0qgk5i1\",\n      \"lastDiscoverySessionId\" : \"jz60\",\n      \"numberOfAssessments\" : 178099894,\n      \"numberOfMachines\" : 1374717285,\n      \"createdTimestamp\" : \"2022-04-19T01:15:35.476Z\",\n      \"discoveryStatus\" : \"Unknown\",\n      \"numberOfGroups\" : 961160734,\n      \"lastAssessmentTimestamp\" : \"2023-04-19T00:19:50.476Z\",\n      \"provisioningState\" : \"Failed\",\n      \"customerWorkspaceId\" : \"zjdu\",\n      \"updatedTimestamp\" : \"2023-12-28T03:41:44.476Z\",\n      \"lastDiscoveryTimestamp\" : \"2024-01-15T01:09:57.476Z\"\n    },\n    \"tags\" : { }\n  }, {\n    \"name\" : \"Cameron Hirthe\",\n    \"eTag\" : \"consequatur\",\n    \"location\" : \"hnl8sntelckxula2m6gykwn2fvixn\",\n    \"id\" : \"696i\",\n    \"type\" : \"oy45n8psl4deahk6vapr8915e6b2d7xydsg34gg50imp727ahw2tl8vmt59gv0h65kk1ey2u6v\",\n    \"properties\" : {\n      \"customerWorkspaceLocation\" : \"iazsnbviwj68mtozsdgmjbqjikbus9t5wki8tm06nfnptrviouw0hkv7v3suu\",\n      \"lastDiscoverySessionId\" : \"2z57\",\n      \"numberOfAssessments\" : 297480307,\n      \"numberOfMachines\" : 1028972829,\n      \"createdTimestamp\" : \"2023-05-16T18:45:22.476Z\",\n      \"discoveryStatus\" : \"InProgress\",\n      \"numberOfGroups\" : 1582933376,\n      \"lastAssessmentTimestamp\" : \"2023-09-27T19:48:30.476Z\",\n      \"provisioningState\" : \"Failed\",\n      \"customerWorkspaceId\" : \"zti1\",\n      \"updatedTimestamp\" : \"2022-12-04T12:55:43.476Z\",\n      \"lastDiscoveryTimestamp\" : \"2023-03-21T10:33:34.476Z\"\n    },\n    \"tags\" : { }\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "a1005b88-b0f7-4b36-8e09-717c318d7190",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:36.476886Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "Projects_ListByResourceGroup",
+          "schema" : {
+            "type" : "object",
+            "properties" : {
+              "value" : {
+                "type" : "array",
+                "description" : "List of projects.",
+                "items" : {
+                  "$ref" : "#/components/schemas/Project"
+                }
+              }
+            },
+            "description" : "List of projects."
+          }
+        }
+      }
+    },
+    "insertionIndex" : 6
+  }, {
+    "id" : "8811d7e5-4f33-4151-b51b-4fe38e0ea13f",
+    "name" : "Get a specific machine.",
+    "request" : {
+      "urlPath" : "/subscriptions/3b7f/resourceGroups/Anitra+Heller/providers/Microsoft.Migrate/projects/Mr.+Rogelio+Roob/machines/Jose+Haley",
+      "method" : "GET",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "2018-02-02"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"name\" : \"Gregoria Runolfsdottir\",\n  \"eTag\" : \"iiiin\",\n  \"id\" : \"2009\",\n  \"type\" : \"ddmkk8am8c070efng5y7lfw2smb1cfi9k93x9oeu9oviykwal3k5algzdxl7sotfpavivpezolqj4sb5yna292mpzag720sdn7decya1lwzo45rmzq8rjaaaacci4km2jt0ia9suqpjaplsgbcabe55dptd8pxj2\",\n  \"properties\" : {\n    \"discoveredTimestamp\" : \"2023-12-05T20:49:20.473Z\",\n    \"disks\" : { },\n    \"displayName\" : \"Adan Gusikowski\",\n    \"createdTimestamp\" : \"2022-10-25T09:35:37.473Z\",\n    \"networkAdapters\" : { },\n    \"datacenterMachineId\" : \"c630\",\n    \"datacenterManagementServerId\" : \"8dz7\",\n    \"description\" : \"Iusto in doloremque vel assumenda. Facilis sed porro et perspiciatis. Minima quo magnam praesentium consequatur. Ratione voluptate corporis provident deserunt rerum nam cumque. In vel ut sed aliquid r\",\n    \"groups\" : [ \"tqbl8bsocutc6weuvd1ml254jzhk07rzuhq8s7hxnudulez0gekcrk73y9dhcjvvd4nuesoeng68j17nf1lutgcjnnbthinl4fxv9lxvuffy8a62f18vvbmuv8w\", \"k80m68ywj0h3bjikma34fr5ilooclwtkd0rqggj3at7k7z7lxs85\", \"qxvk536md5jyxsn1z2wvwycxo1xfo7etllysqowe282bjiunbrylpp3rsqiftpwemppo8wob5fqjjdgzijel10ywxtnbxq4nd58169nu0ofw4hat2wldb4yhi4qzwbhg2pgcxyp661i3z3gndsi3zbfddtp7n78\", \"774nt\", \"6uk48kcjy7oc3l1qrwf7havjo6tewze7gaukf8bxgrcobdubxvy1nkhowi8x5innnfi1054i7ccyms9jlhdjicu5zhe4shd3abt\" ],\n    \"numberOfCores\" : 3496957331880248252,\n    \"operatingSystem\" : \"pak9r25bqpm7rxqu0rhs5xynh5fz0ayrf8sx28umumndf4hm4wrzp9o7ryffa\",\n    \"updatedTimestamp\" : \"2023-04-08T05:39:25.473Z\",\n    \"bootType\" : \"BIOS\",\n    \"megabytesOfMemory\" : 1.5553322079757539E308,\n    \"datacenterContainer\" : \"7i4wvrgax8rej3ryly7ec08ue7ax4wmkelleg3y1jdxnkscb19g211xf14tfgtq1pqf61n8ckm131juluxk779ixq139sqbm6wlsagr87pidw2y993e3fnh3y\",\n    \"datacenterManagementServer\" : \"sr002peexx8k9278twxhh2ft32n6w2kcag1\"\n  }\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "8811d7e5-4f33-4151-b51b-4fe38e0ea13f",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:36.474221Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "Machines_Get",
+          "schema" : {
+            "type" : "object",
+            "properties" : {
+              "eTag" : {
+                "type" : "string",
+                "description" : "For optimistic concurrency control."
+              },
+              "id" : {
+                "type" : "string",
+                "description" : "Path reference to this machine. /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Migrate/projects/{projectName}/machines/{machineName}",
+                "readOnly" : true
+              },
+              "name" : {
+                "type" : "string",
+                "description" : "Name of the machine. It is a GUID which is unique identifier of machine in private data center. For user-readable name, we have a displayName property on this machine.",
+                "readOnly" : true
+              },
+              "properties" : {
+                "$ref" : "#/components/schemas/MachineProperties"
+              },
+              "type" : {
+                "type" : "string",
+                "description" : "Type of the object = [Microsoft.Migrate/projects/machines].",
+                "readOnly" : true
+              }
+            },
+            "description" : "A machine in a migration project."
+          }
+        }
+      }
+    },
+    "insertionIndex" : 7
+  }, {
+    "id" : "c52e9e6b-dcf0-4820-b814-06e2bbc17138",
+    "name" : "Get all machines in the project",
+    "request" : {
+      "urlPath" : "/subscriptions/g6ox/resourceGroups/Latisha+Olson/providers/Microsoft.Migrate/projects/Marcelina+Bashirian+V/machines",
+      "method" : "GET",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "2018-02-02"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"value\" : [ {\n    \"name\" : \"Rosario Cremin Jr.\",\n    \"eTag\" : \"culpa\",\n    \"id\" : \"8ggx\",\n    \"type\" : \"dca5vdtqmu9x154cajp6c6ic6s3o0581fafs6bkukua8oquops4l6p3mznywa55z4sxros7g78tv3fvgic3eelv2mky44zqiia93v7p97mucwr7wo9wt51am3oqvga5kbodjnhk53ldmuvtwxh0j\",\n    \"properties\" : {\n      \"discoveredTimestamp\" : \"2023-10-16T00:22:04.471Z\",\n      \"disks\" : { },\n      \"displayName\" : \"Hermila Fritsch\",\n      \"createdTimestamp\" : \"2024-01-21T11:48:26.471Z\",\n      \"networkAdapters\" : { },\n      \"datacenterMachineId\" : \"857c\",\n      \"datacenterManagementServerId\" : \"5ptm\",\n      \"description\" : \"Veniam accusantium possimus dolor. Odit aut perspiciatis fuga iure accusamus dolores libero. Et fuga dolorum et atque debitis nobis. Veniam ut aut totam nemo et harum aperiam. Esse quo eligendi ut.\",\n      \"groups\" : [ \"xvmnkmm8q6v4cmgnrxmxqrwwatd10zzyujptb4sgct3ldghomocjyjjeet9xv2xvmuns5ft4brfvy1pd17e\", \"dsv7o2hspv7afthkzr4bovwejj1hg8bd0damdr160f9juuz\", \"21ef4p6\", \"jzi0eg69eb5pxay9cjmfiy4eul1b4rcl767ese2ror\", \"bwdhonthqe9yj8insf1bun4rl0nrbl1j6yac4iarcipuebbxfnspm3odj4xxz0hcbswdlhruw7ue76tdh8tj2pjeinyofhad0il88ipyiahtvul8nkpppr1a1urd87uqe5fv120cm6p8lhyhbvykkead3g3n9smb9820zpcuwrej2c2oa8qgqi2\", \"ui5vs7loyq3akmi48xkuqeh3t2fshvr6u9fh2re8en40tiv0rrzceopyf21zne5z036jc4t0esj\", \"37rkux8okvqrlomqjf6celjj1giiclmav5bc3pp5s3jtr6lhb\" ],\n      \"numberOfCores\" : 5040647878377001604,\n      \"operatingSystem\" : \"7qbdcfmcx45kecdcmhxjzvezcm3icdilvuju9rv1vcpjzv5k4eu0a2yk41lfbyiwk9mzfj7g7ryzy7mzd64y40sjs1yrn\",\n      \"updatedTimestamp\" : \"2022-07-13T09:59:39.471Z\",\n      \"bootType\" : \"EFI\",\n      \"megabytesOfMemory\" : 1.1485361456834024E308,\n      \"datacenterContainer\" : \"uvghqnf5yibultt74vs4h2z8\",\n      \"datacenterManagementServer\" : \"xgnq3wyflai2zrw781gx1xcb28zvy3wk3\"\n    }\n  }, {\n    \"name\" : \"Cordelia Heidenreich\",\n    \"eTag\" : \"non\",\n    \"id\" : \"hkx0\",\n    \"type\" : \"n8m53snbspbmgz8ydu82pu2i7ov3np0psda1cgxu05ui7c83eyt1mcrktxte6scpti9705l0aj899zp411777h6yb8l54clb3rae83h79yyfjbhbi95h9tsvwfmtsz91d8ujammkt6o7tib5eckawrih59emlmh0kul6rdpjnja932bv8dzjc\",\n    \"properties\" : {\n      \"discoveredTimestamp\" : \"2022-12-05T01:12:47.471Z\",\n      \"disks\" : { },\n      \"displayName\" : \"Milo McDermott\",\n      \"createdTimestamp\" : \"2024-03-18T08:40:58.471Z\",\n      \"networkAdapters\" : { },\n      \"datacenterMachineId\" : \"04g6\",\n      \"datacenterManagementServerId\" : \"cbji\",\n      \"description\" : \"Non aut fugit ullam. Et mollitia iure voluptatem. Et voluptatibus maxime commodi aperiam.\",\n      \"groups\" : [ \"bjm1eoqsliutf19ervgw03b8rgb9j7kffmqnv990hf24i37fu562y8d8wpd88u0elqf7kfqwqekie1y2ppbw2ri6qvzboxpxrxwop04144\", \"qyi3jhbrztk0tyklbclqvla4svduzsiqiy90mcft56v8b5ei8k91bqlhj2p7\", \"puqrt9dvyp00rkyzwrnydypo8wlug3a9km56zmo1imct53qs7kt1ojq4hha6rd15x9wts4k7h8joe08ybmeaz03pjs7aqu0t0y4ejwy8u9julz5k18egeoev197un0j7gj9djdlly741497v44tkifxvw0n29fe89izoeod\" ],\n      \"numberOfCores\" : 3564992253294527211,\n      \"operatingSystem\" : \"j5crzcv283270sxmlxxvhnc7hnnljnw8eslg4qnz6qklcsobx1sagqqgltd5xacjceoihrng9xv2efkyn759dx5zcits7ikmbf4379vu6w1uqdwm02sjgk60mhn913e4y4ykhevvzookfmei6uzlmuhf0fg2i1ngsdg8w\",\n      \"updatedTimestamp\" : \"2024-02-03T12:40:19.471Z\",\n      \"bootType\" : \"Unknown\",\n      \"megabytesOfMemory\" : 9.843822650742734E307,\n      \"datacenterContainer\" : \"spylltbydgjum3q8qfir7rm16nymwqyccpw99zcfatstxvluqmlrbxmn5f3m5rm4km2rwzs75su3hev51byk83yadjzcloreitobko9mj6gpmvk\",\n      \"datacenterManagementServer\" : \"jw29o23prz0jd7v3tzu8xcgv3aegbk4aew3ctv2hrehciaar9mduwwbtegujrlzol5w27oi9xooih0n6gmlrmf5fsrgs6nil4sk1ztrvxt3tm6txqe2x4os22rdla00f9508b7bra8qdqmkj\"\n    }\n  }, {\n    \"name\" : \"Summer Haley DVM\",\n    \"eTag\" : \"eaque\",\n    \"id\" : \"735f\",\n    \"type\" : \"tkajnbiuuz6j2qxvvmlpky3wi8byn50v6xq1vx58o3h6j5zchjothr21tr15p6329bvbtzl8l9fx05o5yrt9y796dlji5ir16a2o21nj2aid8ag10qioggryz5te3p\",\n    \"properties\" : {\n      \"discoveredTimestamp\" : \"2023-10-10T06:56:23.472Z\",\n      \"disks\" : { },\n      \"displayName\" : \"Waylon Hermiston\",\n      \"createdTimestamp\" : \"2022-07-28T01:44:39.472Z\",\n      \"networkAdapters\" : { },\n      \"datacenterMachineId\" : \"4p4s\",\n      \"datacenterManagementServerId\" : \"9lc7\",\n      \"description\" : \"Rem voluptate vel et harum dolorem. Eos enim ratione tempora et at. Adipisci unde dolorem voluptatem eum voluptatum est enim. Voluptas nihil eos eligendi odio.\",\n      \"groups\" : [ \"sa38nqkyr5h17x05qemhh0t69v15y5e97jf21452rfbhh4ed2466gyksy9f8srq9jighmjnry6jr9e294uhvffao716u0tuv9lucwounro5f5agqfh73q4zy1\", \"lylm3gaztf5a2yojagw185ofvrxh3kme8jrgghodxjgby6d4mqrlxv8h8qa1n9l2a3xj4fvh03s1joe14ls32a7bv4yo2izvrf6tznze0f92oq2kpqbi58whfsi6ulw5bhgiqwv2rgw1tene0roq92g72u4h1ny05f129jwbe0j3zwhrg6k0mz3d62dgaze07zr2q\" ],\n      \"numberOfCores\" : 6035081940465633948,\n      \"operatingSystem\" : \"sfoh9kngz5f66wjyuoadb1lmq7tvq6loq8gr77tdu95t6ue70xkbw0o71yerqulh82b1smjclnaof1grnpcijf54es82x80y5pc7as7cls3zpo8uc40y8ln9qj1enp8n6913jlvy\",\n      \"updatedTimestamp\" : \"2023-04-14T14:49:39.472Z\",\n      \"bootType\" : \"Unknown\",\n      \"megabytesOfMemory\" : 9.868363445484758E307,\n      \"datacenterContainer\" : \"6l50aysingo77iumn5j6cxtn5yvyh6soze5ruwu54sbjvnoz8hyb0stpwab8obbok7ombbls6ke0ym5k6cyyv805dsq\",\n      \"datacenterManagementServer\" : \"xp5u9540xi399h1muqdc9q6rbw0jokw7lyezyhivdo83ab1aorvqlr9im216qfrgi4fkhs2zakexbzwxwbw694wj5talui8ha399w4i4by6\"\n    }\n  }, {\n    \"name\" : \"Rachael Bauch\",\n    \"eTag\" : \"voluptates\",\n    \"id\" : \"iiuj\",\n    \"type\" : \"5zky1uke0mfuy3nkkpy5yabw9j9bdklv5t36ca2a4ddcivlukhwu7zcdy4utcsjsq6p908z8utii1n4r48i5ofiamoo6ow36pi9l78vdvya662asav1adwdkw6wh8ilutyk4baekermqzcdk4555uxea1ne3q1hvuepr\",\n    \"properties\" : {\n      \"discoveredTimestamp\" : \"2023-07-22T02:41:46.472Z\",\n      \"disks\" : { },\n      \"displayName\" : \"Alba Keeling\",\n      \"createdTimestamp\" : \"2022-12-20T18:03:34.472Z\",\n      \"networkAdapters\" : { },\n      \"datacenterMachineId\" : \"17nh\",\n      \"datacenterManagementServerId\" : \"cl51\",\n      \"description\" : \"Qui voluptate vitae. Eum qui corporis reiciendis porro minima. Porro exercitationem autem itaque aut.\",\n      \"groups\" : [ \"yq69r9jx580nzro8bb5iml9eyuzmz3jpeuq81nly4xzosly3f2wt34fqgrwbtf4c7stg204ft6vjp0rkptvxl01dq5r4y9ek1qbff8h9s77jnam3rdcg1pai7t9gdpsaf2\", \"y56fvhhqjv38bjfd61qdh5w7dq00xlg388p46hzrd1zkwcheaaspcxkpolzo3glo40nrnqkno6qrztqnxeekfuydz4zhlhsvrhnv163swkrbpjoavu\" ],\n      \"numberOfCores\" : 9201348529575741236,\n      \"operatingSystem\" : \"c1pdvfj5ngfda7oa2kfqjdmjl9npwkn2132uqp5eda41xcie3eettesxh3h3lp7semh67lkdwqk60ku2lr6g738kg\",\n      \"updatedTimestamp\" : \"2023-09-12T18:34:17.472Z\",\n      \"bootType\" : \"EFI\",\n      \"megabytesOfMemory\" : 1.3235949222543919E308,\n      \"datacenterContainer\" : \"jd1d8z1pqebixg0vq0gbp6n596jxi2xie4vp63s3qtwaggod6ziue95pqk3bhdl4gg5foc4tpnqap9tgzmdcdpv3h6fe\",\n      \"datacenterManagementServer\" : \"pdxga5wkqe8sbnra2rf0jipk99i409bo09f1vyua0uv8vte3tyescyp4gq2kkcyxgxx6x6boo96s0aelifr5z6gila9gwdgt88aab8o78pp2vum1l2lw1a1xp7utrml9zzq3ivhxdy9qglolyi50aq7w4gp2uoccnp1mp\"\n    }\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "c52e9e6b-dcf0-4820-b814-06e2bbc17138",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:36.4733Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "Machines_ListByProject",
+          "schema" : {
+            "type" : "object",
+            "properties" : {
+              "value" : {
+                "type" : "array",
+                "description" : "List of machines.",
+                "items" : {
+                  "$ref" : "#/components/schemas/Machine"
+                }
+              }
+            },
+            "description" : "List of machines."
+          }
+        }
+      }
+    },
+    "insertionIndex" : 8
+  }, {
+    "id" : "04509d29-10a1-4ec6-8a99-bdbc8239cde3",
+    "name" : "Get download URL for the assessment report.",
+    "request" : {
+      "urlPath" : "/subscriptions/it81/resourceGroups/Roland+Nolan/providers/Microsoft.Migrate/projects/Agustin+Little/groups/Mr.+Marlin+Hermann/assessments/Denna+Renner/downloadUrl",
+      "method" : "POST",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "2018-02-02"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"expirationTime\" : \"2023-06-16T23:17:43.47Z\",\n  \"assessmentReportUrl\" : \"https://web.example.mocklab.io/054405\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "04509d29-10a1-4ec6-8a99-bdbc8239cde3",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:36.470837Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "Assessments_GetReportDownloadUrl",
+          "schema" : {
+            "type" : "object",
+            "properties" : {
+              "assessmentReportUrl" : {
+                "type" : "string",
+                "description" : "Hyperlink to download report.",
+                "readOnly" : true
+              },
+              "expirationTime" : {
+                "type" : "string",
+                "description" : "Expiry date of download url.",
+                "format" : "date-time",
+                "readOnly" : true
+              }
+            },
+            "description" : "Download URL for assessment report."
+          }
+        }
+      }
+    },
+    "insertionIndex" : 9
+  }, {
+    "id" : "27aad187-be0b-4d90-aaaf-aa0a8ba9cb13",
+    "name" : "Get an assessed machine.",
+    "request" : {
+      "urlPath" : "/subscriptions/k24s/resourceGroups/Sonja+Conroy+II/providers/Microsoft.Migrate/projects/Ms.+Silas+Padberg/groups/Nakita+Koss/assessments/Louis+Schinner/assessedMachines/Petronila+O%27Reilly",
+      "method" : "GET",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "2018-02-02"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"name\" : \"Preston Lockman PhD\",\n  \"eTag\" : \"nemo\",\n  \"id\" : \"5m78\",\n  \"type\" : \"e56mxl9rl3d1yi8tvpoxeunszv56e6yprx7u9aq8goys61dee89r33uszqnqb29lg95ogb1mne1ne7ggdyme9kewh4hkmfmgvxpon5f4tp7t5szlthu5lt2ypkgj45c3kdvqwmmbvp46tldb92z45ffq28gz3lr104e3oycesp8ut1ij2xvz\",\n  \"properties\" : {\n    \"discoveredTimestamp\" : \"2023-08-24T01:41:14.469Z\",\n    \"recommendedSize\" : \"Standard_GS1\",\n    \"disks\" : { },\n    \"displayName\" : \"Osvaldo Mayert\",\n    \"datacenterMachineId\" : \"8x5q\",\n    \"datacenterManagementServerId\" : \"o3f7\",\n    \"description\" : \"Blanditiis qui perspiciatis enim. Ad nesciunt eveniet repellendus et excepturi voluptatem voluptatem. Ducimus qui et quia tenetur ab. Et aspernatur velit sed non magni.\",\n    \"suitabilityExplanation\" : \"CheckUbuntuLinuxVersion\",\n    \"operatingSystem\" : \"edz1ph0f8qs98k2yf71wlkddav90b2073y5cp22as56s6xn5yxncdoq4os21kem5mclie5\",\n    \"percentageMemoryUtilizationDataPointsExpected\" : 1144284557,\n    \"updatedTimestamp\" : \"2023-03-12T19:58:30.469Z\",\n    \"percentageCoresUtilization\" : 1.4473004454992604E308,\n    \"megabytesOfMemory\" : 1.17773417503868E308,\n    \"percentageMemoryUtilizationDataPointsReceived\" : 753120343,\n    \"datacenterContainer\" : \"9ce277gobby2st4e5rcsw0s1cy1opm6q0sbbotg937igjosborwzuh8htosfxa78tp20geax28tjlbrfvrnvd352qyozr2k3vc6xmrle0o6rf0obu2tx8whepxfruobc08ghrxrakv1joh5ty0qt\",\n    \"datacenterManagementServer\" : \"mz0x6efjfm29924ugvhbtxoftqu6vtbha6dudl7lykjcq51cu1omtzsa6euap27jj\",\n    \"megabytesOfMemoryForRecommendedSize\" : 1.0367309864671676E307,\n    \"monthlyBandwidthCost\" : 1.5000281311318084E308,\n    \"monthlyStorageCost\" : 1.2415059816871344E308,\n    \"percentageCoresUtilizationDataPointsReceived\" : 1789739721,\n    \"percentageCoresUtilizationDataPointsExpected\" : 475805491,\n    \"suitability\" : \"Suitable\",\n    \"createdTimestamp\" : \"2023-10-27T05:07:22.469Z\",\n    \"networkAdapters\" : { },\n    \"monthlyComputeCostForRecommendedSize\" : 1.7531414703669463E308,\n    \"groups\" : [ \"h3hi98phekzibjg1f8o3lx19ai4za29mezgxh7rbwf8qck17cm7mtpnbjkevk4d9o5r8ch7i41975mc4cpard2577gvu99xjzessf2xt3wn1bneprh\", \"dpfq61vdb0mf92oa1vz289yumnkfrcdgejyomdu1lmemj5ugxeqalis3jhnh5h9jfrik93pfua5g7g5plc4mrf1nhoqrqzge9pjdows6h1dw2ahkbf1h84jzudhayy2f1iisqwbgiftqrwi7teac53ba8epdwvr4acubwii35hen0poki8rq9d6\", \"6hxai6zl\", \"5tul5pw0p50bsh1\" ],\n    \"numberOfCores\" : 200906307,\n    \"numberOfCoresForRecommendedSize\" : 205602527,\n    \"percentageMemoryUtilization\" : 1.3443931467372673E308,\n    \"bootType\" : \"Unknown\"\n  }\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "27aad187-be0b-4d90-aaaf-aa0a8ba9cb13",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:36.47043Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "AssessedMachines_Get",
+          "schema" : {
+            "type" : "object",
+            "properties" : {
+              "eTag" : {
+                "type" : "string",
+                "description" : "For optimistic concurrency control."
+              },
+              "id" : {
+                "type" : "string",
+                "description" : "Path reference to this assessed machine. /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Migrate/projects/{projectName}/groups/{groupName}/assessments/{assessmentName}/assessedMachines/{assessedMachineName}",
+                "readOnly" : true
+              },
+              "name" : {
+                "type" : "string",
+                "description" : "Name of the machine.",
+                "readOnly" : true
+              },
+              "properties" : {
+                "$ref" : "#/components/schemas/AssessedMachineProperties"
+              },
+              "type" : {
+                "type" : "string",
+                "description" : "Type of the object = [Microsoft.Migrate/projects/groups/assessments/assessedMachines].",
+                "readOnly" : true
+              }
+            },
+            "description" : "A machine evaluated as part of an assessment."
+          }
+        }
+      }
+    },
+    "insertionIndex" : 10
+  }, {
+    "id" : "7e04bd2f-552b-4eed-a39b-39f0b8200f9e",
+    "name" : "Get assessed machines for assessment.",
+    "request" : {
+      "urlPath" : "/subscriptions/6txj/resourceGroups/Billie+Osinski/providers/Microsoft.Migrate/projects/Jaimie+Marks+I/groups/Alyse+Lynch/assessments/Bradford+Franecki/assessedMachines",
+      "method" : "GET",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "2018-02-02"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"value\" : [ {\n    \"name\" : \"Joe Pfeffer\",\n    \"eTag\" : \"iure\",\n    \"id\" : \"8gta\",\n    \"type\" : \"mcqvbczwhvc67998im5jgod6psdk84vkcl1vqtn6yciup5u8sx3rkna1be27ckdgos3dzoryzdsxrfel0cti5ul0kql26xlyodvu9rl931hle335cwn4kv0pm7lkz5ziixoxigq80c9rdhb2mdik40ciaqu26tnkg7psmxeyh3gqhhry41hntfh9p21g49tggj78m34b\",\n    \"properties\" : {\n      \"discoveredTimestamp\" : \"2022-05-17T01:38:43.464Z\",\n      \"recommendedSize\" : \"Standard_A2\",\n      \"disks\" : { },\n      \"displayName\" : \"Tyrone Prosacco\",\n      \"datacenterMachineId\" : \"o9j7\",\n      \"datacenterManagementServerId\" : \"4p4v\",\n      \"description\" : \"Quas repellendus minus. Assumenda unde ducimus. At quo totam velit. Sint quo nihil aperiam quod dolore similique ut. Doloribus ad odit labore quo voluptas facilis laboriosam.\",\n      \"suitabilityExplanation\" : \"NotApplicable\",\n      \"operatingSystem\" : \"jh9zhhn81449n1zt0bzwz6gyknu8jyb6oa4ejakdzk1n87xlxiucpvs9bqvltfoa6bknb4jlr3sn4gu6ut0e8v\",\n      \"percentageMemoryUtilizationDataPointsExpected\" : 610399312,\n      \"updatedTimestamp\" : \"2024-02-01T11:51:20.465Z\",\n      \"percentageCoresUtilization\" : 2.1005442191059417E307,\n      \"megabytesOfMemory\" : 8.52845680703829E307,\n      \"percentageMemoryUtilizationDataPointsReceived\" : 1467534446,\n      \"datacenterContainer\" : \"85uc1llmv0yf8fnnz2hub3y0frxldpiss3geirdnsboscaqggsnas0xl6hgrb6h7r24xek45m01d0dl7moheb69kztfvncped9lk8g93yu00k3ffsez3nokill4g4zu50vogiewtip2bs1thf65wvbsvgo5a8os7r292bihduk3xkm19e82ldi0ud9z92y49www\",\n      \"datacenterManagementServer\" : \"rjqb53dvuqnj1id5k1weail3wrfl9knjffzr2ilsah27o0zr360bjb8kb9epoetzmej\",\n      \"megabytesOfMemoryForRecommendedSize\" : 4.582053702121036E307,\n      \"monthlyBandwidthCost\" : 1.1879166000553316E308,\n      \"monthlyStorageCost\" : 3.8668063446611516E307,\n      \"percentageCoresUtilizationDataPointsReceived\" : 1770739254,\n      \"percentageCoresUtilizationDataPointsExpected\" : 1360596575,\n      \"suitability\" : \"ConditionallySuitable\",\n      \"createdTimestamp\" : \"2023-09-03T10:55:46.465Z\",\n      \"networkAdapters\" : { },\n      \"monthlyComputeCostForRecommendedSize\" : 1.0026346668414326E308,\n      \"groups\" : [ \"w7h411auhlig0ee8qdv13yojyb3k3lsw9ozb5tk9ln65178nrd1c74nluqi15qg4ynph6epiu3inztwtiswuq1s7lplm6i4d4jn7knjecuvzwsk3zf9ekog6gxqdv6jpmywm71l5c85kvdahcyw1x1tuiie4sdhdtu2tjn4nipgqczuqqhh911ui48h2afu885\", \"6g07dyzeavmcp9afizo9lowtodw0gt17i3g891ersweolt4myvbm9y9af4rtlio5eg3ltatlnjpjnx6catvsq9yuf7gdkqe4dpg9pkidvfkvqlgwxivj6d57ai6u30pvb7xol0r37a6zlpmgs\", \"4pjkuy2jlas51p4ee5nkdo30dovudqjb7g0c6ai7hnmj5tnaus1n5biikisz30fab54xic8l0qccdmh5\", \"f9kr4yei4khwtgtsvqp47w93uvdldaek6v9k4syx57igh3kgrnesocnbgz7791j2sp8bbsri5blwc8t6w6vbtdqpsb2twe6cw6s0ob7rlrsnfib5p40f0m8ys6tl9lf23wuj5zlxkdh4e2byfb0zosf9zoxmbhknl9mtpriryspe1y\", \"tcw74pr53onizzwe5wx9mf162tjf7zkge58k34slqbf9xhip2ouynd2k1kf3dd1mg52i37qvpmyrho6b7hbsimyjc1fwndt25o\" ],\n      \"numberOfCores\" : 1046170480,\n      \"numberOfCoresForRecommendedSize\" : 386852185,\n      \"percentageMemoryUtilization\" : 1.7922769717247836E308,\n      \"bootType\" : \"BIOS\"\n    }\n  }, {\n    \"name\" : \"Wilbur Donnelly\",\n    \"eTag\" : \"eos\",\n    \"id\" : \"12l8\",\n    \"type\" : \"6vdcls275musbj5tyw9p3kghplflcy7wlcsy2izwq1il384z51ngcp4l0jlid9no5m97gw533icfyy9hp23128t9oc02fe3lo6mhmh1tfpl19oh6oizso95d1uv4b3gn17l6eezkq3w0jworndisvcxhypbt5m9bfe1uo0uin\",\n    \"properties\" : {\n      \"discoveredTimestamp\" : \"2023-04-05T14:02:41.465Z\",\n      \"recommendedSize\" : \"Standard_A8\",\n      \"disks\" : { },\n      \"displayName\" : \"Isidro Powlowski\",\n      \"datacenterMachineId\" : \"6mps\",\n      \"datacenterManagementServerId\" : \"8389\",\n      \"description\" : \"Autem molestias repellat quis. Quia quo perspiciatis sit consequatur incidunt corrupti alias. Sint aut nobis. Illum deserunt rerum sed nobis facilis repudiandae. Dolores est molestiae ut esse.\",\n      \"suitabilityExplanation\" : \"CheckOpenSuseLinuxVersion\",\n      \"operatingSystem\" : \"1kq1eiw19u\",\n      \"percentageMemoryUtilizationDataPointsExpected\" : 960752035,\n      \"updatedTimestamp\" : \"2023-03-31T01:44:25.465Z\",\n      \"percentageCoresUtilization\" : 3.7320542511935615E307,\n      \"megabytesOfMemory\" : 8.578718838687749E307,\n      \"percentageMemoryUtilizationDataPointsReceived\" : 1058007117,\n      \"datacenterContainer\" : \"w0chbqurvb5zw031ba201ziam20fc0qb8j7t0gyho6ny0msj2y49a9m359a18c0\",\n      \"datacenterManagementServer\" : \"pxd5s2ey0wr5s1p1v3n523s4bsv3ff3r0zv05g6og1txd663puta6ibhqgirg4k3aobr5jthz077bar1wmg\",\n      \"megabytesOfMemoryForRecommendedSize\" : 5.700372150180817E307,\n      \"monthlyBandwidthCost\" : 1.283934833900562E308,\n      \"monthlyStorageCost\" : 1.5326017916683E308,\n      \"percentageCoresUtilizationDataPointsReceived\" : 1124407753,\n      \"percentageCoresUtilizationDataPointsExpected\" : 661854528,\n      \"suitability\" : \"NotSuitable\",\n      \"createdTimestamp\" : \"2023-08-02T22:08:05.466Z\",\n      \"networkAdapters\" : { },\n      \"monthlyComputeCostForRecommendedSize\" : 1.170941240418888E308,\n      \"groups\" : [ \"11oyosr108p3qlv3q5rllthj4dfhv1gb8hue8vsv1wroy95s0i8y9uhon91i026r1rn5uzxib0eihsbjhavraq8df9dpnaqiwrjuq4app\", \"klhyz4du2nmamghv1zvv4td1smf1fdbphc\", \"oxf4lv0ocvceq4ks\", \"2adf04e3s925egokifajkv0qfzzdgef2iupmmfzfv52xgsxjuyftd3nhgspf9cqundoomj052td50ty8ud646tnmd2cyva7hjmv0lg8gffdcsgsr2lx30dhvbyp66bq4khofymgb7hhmfhasdg6e508yivljio9siap4xgw7u25oq45u4s767ao0yl\", \"dwacoreqly3yinrx216jikslpfxre248cvqwqzvwm6nq7wmvqs3e9fjejpelhc7tvusnjemuai2us9y3rcjuhnjen9kbic3xfc4wcor92gggy18o8aodernp01nfd2xcnrin7o3cquxyzpm776s1d0zm7fvg2kcfc9lptyo1pec71ov3l3b5sljmoljad\", \"9uwk32ixqqipmwzcj3egqgvwlsrfnkbrw452z1qlq48panljlypcow2rihq2k4vgu2mdwqxw2c0bhcjdooz0a3qri5xp149gvlh2v4g25ino2civ7hogr1k7n6stbtt9bha5bfyi1dfha6dw4lkzjmgga6vzdaxk5d7bkzko8z6\", \"jn26w2xi8zubieah6epkgbe963z9y74d7h73vh1d3s0231wb4rvxw151l01xrw484ewx2q46si3k9dygeqg03lx820r5rw1sgrpkdqetponk12k3p\", \"2ncrmupkfui4mec93s9056tqymgwuxn7hgohpf557fp1x043l029s8i2x0nffla2q8h272u1q4631o0g394s6xkqyhmsy2urqve78useet\" ],\n      \"numberOfCores\" : 1396682845,\n      \"numberOfCoresForRecommendedSize\" : 979239156,\n      \"percentageMemoryUtilization\" : 1.6405724526436453E308,\n      \"bootType\" : \"Unknown\"\n    }\n  }, {\n    \"name\" : \"Frederick Kris V\",\n    \"eTag\" : \"possimus\",\n    \"id\" : \"73ce\",\n    \"type\" : \"v1noqswtow028hvbtnz6a4301mhl7khytui7yfw\",\n    \"properties\" : {\n      \"discoveredTimestamp\" : \"2023-05-09T04:38:20.466Z\",\n      \"recommendedSize\" : \"Standard_DS13\",\n      \"disks\" : { },\n      \"displayName\" : \"Cori Bartoletti\",\n      \"datacenterMachineId\" : \"ccn2\",\n      \"datacenterManagementServerId\" : \"ucco\",\n      \"description\" : \"Voluptatum sint beatae quis quidem sed. Omnis dolores corrupti eos suscipit. Eos hic consequatur fugit voluptate eaque deserunt.\",\n      \"suitabilityExplanation\" : \"WindowsClientVersionsConditionallySupported\",\n      \"operatingSystem\" : \"qtck9igyc32hkk2tjq36l4ked6z2zpstvv9bhmicywcrs9wqnkhspdqycg7t6b0d22daigtfonl779z5y9ot8l4itmur5fglvbheksxnu1epfwhzjftdjakccwndw7ldwhbrvub97df\",\n      \"percentageMemoryUtilizationDataPointsExpected\" : 649635680,\n      \"updatedTimestamp\" : \"2023-05-14T01:02:46.466Z\",\n      \"percentageCoresUtilization\" : 2.0339067699005136E307,\n      \"megabytesOfMemory\" : 1.2539861832324461E308,\n      \"percentageMemoryUtilizationDataPointsReceived\" : 854563061,\n      \"datacenterContainer\" : \"ojcxbn2wcwnshge78lrx42urs6\",\n      \"datacenterManagementServer\" : \"i2crpfrhx5cwssuxzphucerz9r49isr\",\n      \"megabytesOfMemoryForRecommendedSize\" : 9.432800703751867E307,\n      \"monthlyBandwidthCost\" : 5.440955178938163E307,\n      \"monthlyStorageCost\" : 7.656060056718312E307,\n      \"percentageCoresUtilizationDataPointsReceived\" : 39882449,\n      \"percentageCoresUtilizationDataPointsExpected\" : 221796682,\n      \"suitability\" : \"ConditionallySuitable\",\n      \"createdTimestamp\" : \"2022-12-12T14:55:40.466Z\",\n      \"networkAdapters\" : { },\n      \"monthlyComputeCostForRecommendedSize\" : 1.1470265423523724E308,\n      \"groups\" : [ \"1k16u91hch4h9hyss4nogwcy95vxmk32ukfb94if8gyjuyenfw0dp0crh9b4v64oc2h9quurmiwllmhybp\", \"zl2med02y\", \"fx4q3qqb4m4bq6muytkq3042h8n88i40hhfm9c1fnvx1dwrgfjtwojis1g5u452l6io8xk7xuul2zl0xxg2f41efk3b088\", \"bk3y9ksz47t1r1gcrgxeypfjii7yvbmsbo5y0kpv05tr8j35b230rcrxq0s02augfh7jr3eacgs7yk4pgzjd90jzop1jh3rynqjsihio28kxmix5kprw24eiyhycz28trn3e9hqaopjkzzjtdmxlt6am6hfl8ixa2g9o54t27zjse3ppkwjlunwvd38uhw\", \"030df0fexjckmcmp5x6soee66wuf9ryi89f3c17pf58py8ti\" ],\n      \"numberOfCores\" : 593913334,\n      \"numberOfCoresForRecommendedSize\" : 1069696576,\n      \"percentageMemoryUtilization\" : 4.989489914613014E307,\n      \"bootType\" : \"BIOS\"\n    }\n  }, {\n    \"name\" : \"Rico Jacobs\",\n    \"eTag\" : \"similique\",\n    \"id\" : \"262p\",\n    \"type\" : \"xp6f82hy0b7z2lzvwfswequkrzb44ifdhcj\",\n    \"properties\" : {\n      \"discoveredTimestamp\" : \"2023-11-02T21:22:23.466Z\",\n      \"recommendedSize\" : \"Basic_A1\",\n      \"disks\" : { },\n      \"displayName\" : \"Ivonne Murazik\",\n      \"datacenterMachineId\" : \"p1et\",\n      \"datacenterManagementServerId\" : \"7625\",\n      \"description\" : \"Fugiat ut sed nulla molestiae ullam. Sit distinctio est. Sequi quod aut inventore.\",\n      \"suitabilityExplanation\" : \"CheckDebianLinuxVersion\",\n      \"operatingSystem\" : \"ahkcsjxs1553gxbl47zzf4m5r8ypkkjp1aq7h1ksqnbmhn5ks88oy96x1n6gmhsrtvjs3\",\n      \"percentageMemoryUtilizationDataPointsExpected\" : 1274858207,\n      \"updatedTimestamp\" : \"2022-08-24T22:42:10.467Z\",\n      \"percentageCoresUtilization\" : 1.1307620983925308E308,\n      \"megabytesOfMemory\" : 1.5176253295483878E308,\n      \"percentageMemoryUtilizationDataPointsReceived\" : 140418732,\n      \"datacenterContainer\" : \"bzqk4kz7o6bsdnqd2thf859tqw2oa93d7s1xul66aopkwujfrug199xok3el0al02690poo4\",\n      \"datacenterManagementServer\" : \"i6uypbgwbl4e52ih3sadl3ukdl3pv\",\n      \"megabytesOfMemoryForRecommendedSize\" : 1.4942951091860264E307,\n      \"monthlyBandwidthCost\" : 1.7891055555582996E307,\n      \"monthlyStorageCost\" : 1.6900725844065087E308,\n      \"percentageCoresUtilizationDataPointsReceived\" : 1232833675,\n      \"percentageCoresUtilizationDataPointsExpected\" : 386738207,\n      \"suitability\" : \"ReadinessUnknown\",\n      \"createdTimestamp\" : \"2022-05-10T13:15:50.467Z\",\n      \"networkAdapters\" : { },\n      \"monthlyComputeCostForRecommendedSize\" : 1.5375415629532076E308,\n      \"groups\" : [ \"d8gvy6qfwetqm9ft73sdejwbcarmehxmslwh84ojhbp2wyt409hv6h2womdgb00ocsjbbzbqsb2k4p9joqcj9t2yn792fj1sl5ua0yuwchw6uh1yq009r491hgpjwmquuw98da9oiz6qyzzcr5fi4h24vncjk0iaz5gr75s3l36zsy2uyqzc1ppkpu12lptv90nmqm8h\", \"bytl6sp5dmzjp6ktkxbellvf0yw7zmnflajaq1i7w7xxxk9t15f2fkjqv3a9kihbxi64ere7hy4l6oe7tm\", \"fhbeatd8xuofjapgxcjxzc9mnhwsxxc0jicdhmq7a587mrqcjhissaqhw3gctkzchfqdlmzn142tka422zjirqn7yxgh43n1c37t1z2w7h5gelwakfurd5d\", \"rv169fgtnmp\" ],\n      \"numberOfCores\" : 1556929644,\n      \"numberOfCoresForRecommendedSize\" : 1174409688,\n      \"percentageMemoryUtilization\" : 1.7604055827021087E308,\n      \"bootType\" : \"Unknown\"\n    }\n  }, {\n    \"name\" : \"Ms. Marcela Hirthe\",\n    \"eTag\" : \"quibusdam\",\n    \"id\" : \"6y72\",\n    \"type\" : \"85upz9hwaz0kylgtu6ce6tmqzy4pby3hufos41yu14s8sbj8ce1lua37c26ta6h343\",\n    \"properties\" : {\n      \"discoveredTimestamp\" : \"2024-01-05T11:27:09.467Z\",\n      \"recommendedSize\" : \"Standard_F4s\",\n      \"disks\" : { },\n      \"displayName\" : \"Jerrell Rolfson\",\n      \"datacenterMachineId\" : \"58w9\",\n      \"datacenterManagementServerId\" : \"51c9\",\n      \"description\" : \"Et sapiente consequatur exercitationem quia. Ut est quia est reprehenderit delectus. Neque magnam voluptate quo similique enim. Ipsum aspernatur et nisi nihil repudiandae cum. Recusandae temporibus op\",\n      \"suitabilityExplanation\" : \"GuestOperatingSystemNotSupported\",\n      \"operatingSystem\" : \"75qeezsmfn2iqnpd0f548sbdq26x5kmorfqxovj7722kpbbpc35bxoaxjmnenfg21dmhl770bjwt8gehd5q1r5jvih6jg79ydoeys36c9l6v75m2i6le1zdmqvw86mhp489gj5lbjxs7ijnssldm0b6inl\",\n      \"percentageMemoryUtilizationDataPointsExpected\" : 168005957,\n      \"updatedTimestamp\" : \"2023-01-18T23:39:53.467Z\",\n      \"percentageCoresUtilization\" : 4.154644969569004E307,\n      \"megabytesOfMemory\" : 4.507010832446321E307,\n      \"percentageMemoryUtilizationDataPointsReceived\" : 1776752982,\n      \"datacenterContainer\" : \"wejh8cjjp0npoocxbu0afphunn0ju0a6ib0hliotgo4\",\n      \"datacenterManagementServer\" : \"dgpogtq2ddmsepeaif7l9yfhqqt5un2tp\",\n      \"megabytesOfMemoryForRecommendedSize\" : 1.7119503099226779E308,\n      \"monthlyBandwidthCost\" : 7.30695095301019E307,\n      \"monthlyStorageCost\" : 5.16008798992829E307,\n      \"percentageCoresUtilizationDataPointsReceived\" : 1122092689,\n      \"percentageCoresUtilizationDataPointsExpected\" : 1639586622,\n      \"suitability\" : \"Unknown\",\n      \"createdTimestamp\" : \"2023-08-21T03:16:12.467Z\",\n      \"networkAdapters\" : { },\n      \"monthlyComputeCostForRecommendedSize\" : 2.868274885528177E307,\n      \"groups\" : [ \"zznrtvvp82xkbbdoflauhclagrtyhtm1h6efqv3pzi0dulrvru4nj0wmuxdgnrblb2gx6fkzqvyx884lp1zfie7m82nf7skaiy4ooc26zetjj9e1tbvqtblzpfvy\", \"yg2gg3clsvfsyzbg1k3ateaainber7s30g51twzqdd3nbxlzxpa95oixtoryflbjbhtchx34a2w5sglhi4zovggfuevrnude8s9dmyw7cmv72wkzlgvbnf57l52i1a\", \"xnkr7vxcqj4b3ma5npdxxsis901a2bp3zceaygddxqmxt0t29ivbx9pd2wvxx7vcjy5arcvzk2u7vy8ixx58x101wsmpq7bjefu5we42iq93lzi71669z60w4u7naigz\", \"mq4862lhx0815yp03iz7kmm3d2e397loccmcle9b0hnskymgzeaw4aaq0bm7bkzspaenwqm8grsx5jxcq0rkr2azqvmmoc\" ],\n      \"numberOfCores\" : 2011969739,\n      \"numberOfCoresForRecommendedSize\" : 275036450,\n      \"percentageMemoryUtilization\" : 1.699099092166234E307,\n      \"bootType\" : \"EFI\"\n    }\n  }, {\n    \"name\" : \"Lazaro Sipes\",\n    \"eTag\" : \"est\",\n    \"id\" : \"o1ex\",\n    \"type\" : \"sb4cjos00305gammvnsnq5v5a3wt5wuzw6j9qqau5otlnc6xwsy6rmr7narj5xzsbakzfalti72i4dx72s4bkrrw9mvtcgks9vw5l8e1ioulvef85ong4re1lmmn\",\n    \"properties\" : {\n      \"discoveredTimestamp\" : \"2023-05-01T20:51:38.468Z\",\n      \"recommendedSize\" : \"Standard_G3\",\n      \"disks\" : { },\n      \"displayName\" : \"Missy Torphy\",\n      \"datacenterMachineId\" : \"8qwt\",\n      \"datacenterManagementServerId\" : \"396a\",\n      \"description\" : \"Facere et aut. Dolorum aut nihil tempora veritatis sit reiciendis. Reiciendis dignissimos veritatis ipsam magnam quo. Sed non necessitatibus. Maiores corporis praesentium tempora rerum ratione qui qui\",\n      \"suitabilityExplanation\" : \"NoVmSizeSupportsStoragePerformance\",\n      \"operatingSystem\" : \"mz7piahda9h69quz2ql4nyactcomia3roa8espkzn2hqngmh14i1cc1ago7n4s20gwbyjksgr755madbrbcwet0w5fotew16ulc472xkahsrzl1kqbimwip6zgjk76wf6x4wjcnncmvg5skxl019k11eabeg007ql066kmuo5rd56k4e4m84\",\n      \"percentageMemoryUtilizationDataPointsExpected\" : 1767845782,\n      \"updatedTimestamp\" : \"2024-02-24T14:53:58.468Z\",\n      \"percentageCoresUtilization\" : 1.009665403915169E308,\n      \"megabytesOfMemory\" : 1.4137028008810134E308,\n      \"percentageMemoryUtilizationDataPointsReceived\" : 633104288,\n      \"datacenterContainer\" : \"dfh63mudtie8tdx09d9whnldxiiruz4aby026srnxczkedh6i0uet\",\n      \"datacenterManagementServer\" : \"6cg54idiu4a2t3olt44rvjod8mas7h8kmytyf3y26v6vcqd4ak7scuty9ql4v5yadigou9d8ydm1fb1ykdjvyo78o7qfihme091q0szuqep2rjepw\",\n      \"megabytesOfMemoryForRecommendedSize\" : 4.295708643345815E307,\n      \"monthlyBandwidthCost\" : 3.429127418240229E307,\n      \"monthlyStorageCost\" : 4.514806901149035E307,\n      \"percentageCoresUtilizationDataPointsReceived\" : 1526120251,\n      \"percentageCoresUtilizationDataPointsExpected\" : 1904342758,\n      \"suitability\" : \"Unknown\",\n      \"createdTimestamp\" : \"2022-06-15T21:45:38.468Z\",\n      \"networkAdapters\" : { },\n      \"monthlyComputeCostForRecommendedSize\" : 1.0735505577564766E307,\n      \"groups\" : [ \"jn1\", \"an6w6t7jpxj029e73wskytotc89dc304bw9wb5kae68jhagfqtm307pni2zjrr9zdermbjr8pt89oihas6d3g13uwk7ek8i4cy48oqcevjy61doei2mrhb1i627f5qd3l718gk7yrboguintr9dbtl3k9ll54c9gbxyis319qdj0hn9d\", \"bl5ej5u2h9wrgtgwtokxaefnsso9o48x4dhczog4a489n9twsvcdonmjy6mg3yx3rnpqcum3zbi7nwvl062ypk3lnucei1h8toej5436g9pql8lgslv0gq19cr6ngm69l2\" ],\n      \"numberOfCores\" : 1960394065,\n      \"numberOfCoresForRecommendedSize\" : 1201597288,\n      \"percentageMemoryUtilization\" : 5.869374238893136E307,\n      \"bootType\" : \"EFI\"\n    }\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "7e04bd2f-552b-4eed-a39b-39f0b8200f9e",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:36.469353Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "AssessedMachines_ListByAssessment",
+          "schema" : {
+            "type" : "object",
+            "properties" : {
+              "value" : {
+                "type" : "array",
+                "description" : "List of assessed machines.",
+                "items" : {
+                  "$ref" : "#/components/schemas/AssessedMachine"
+                }
+              }
+            },
+            "description" : "List of assessed machines."
+          }
+        }
+      }
+    },
+    "insertionIndex" : 11
+  }, {
+    "id" : "ba29a0ad-e257-49d2-8a56-457645a464a6",
+    "name" : "Deletes an assessment from the project. - 200",
+    "request" : {
+      "urlPath" : "/subscriptions/x59u/resourceGroups/Dorothy+Sporer/providers/Microsoft.Migrate/projects/Britt+Mertz/groups/Tonita+Mraz/assessments/Lamar+Nitzsche",
+      "method" : "DELETE",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "2018-02-02"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200
+    },
+    "uuid" : "ba29a0ad-e257-49d2-8a56-457645a464a6",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:36.464498Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "Assessments_Delete"
+        }
+      }
+    },
+    "insertionIndex" : 12
+  }, {
+    "id" : "17164d7f-fcb1-4d6f-947a-3d87a87178ee",
+    "name" : "Create or Update assessment.",
+    "request" : {
+      "urlPath" : "/subscriptions/184k/resourceGroups/Lovetta+Gutmann/providers/Microsoft.Migrate/projects/Elwood+Barton/groups/Doyle+Feil/assessments/Michiko+Beer",
+      "method" : "PUT",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "2018-02-02"
+        }
+      }
+    },
+    "response" : {
+      "status" : 201,
+      "body" : "{\n  \"name\" : \"Genevie Mohr\",\n  \"eTag\" : \"enim\",\n  \"id\" : \"yu92\",\n  \"type\" : \"jkc0yyk2xko80cxuaycd9ll4iwmftz6hi8regj5zryh1t7e890456wnmbg2sj1as7hlf\",\n  \"properties\" : {\n    \"createdTimestamp\" : \"2022-06-25T18:36:50.463Z\",\n    \"scalingFactor\" : 1.3612615330151194E308,\n    \"pricesTimestamp\" : \"2023-11-19T23:10:45.463Z\",\n    \"confidenceRatingInPercentage\" : 1.48006561589027E308,\n    \"updatedTimestamp\" : \"2024-02-21T09:29:09.463Z\",\n    \"azureStorageRedundancy\" : \"GeoRedundant\",\n    \"discountPercentage\" : 1.3535347200359167E308,\n    \"azurePricingTier\" : \"Standard\",\n    \"percentile\" : \"Percentile90\",\n    \"azureOfferCode\" : \"Unknown\",\n    \"stage\" : \"Approved\",\n    \"numberOfMachines\" : 1256321502,\n    \"azureLocation\" : \"CentralUs\",\n    \"sizingCriterion\" : \"PerformanceBased\",\n    \"currency\" : \"NOK\",\n    \"monthlyBandwidthCost\" : 9.007915409437294E307,\n    \"azureHybridUseBenefit\" : \"Yes\",\n    \"monthlyComputeCost\" : 7.686401499528943E307,\n    \"monthlyStorageCost\" : 1.463461572818952E308,\n    \"status\" : \"Updated\",\n    \"timeRange\" : \"Week\"\n  }\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "17164d7f-fcb1-4d6f-947a-3d87a87178ee",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:36.464223Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "Assessments_Create",
+          "schema" : {
+            "required" : [ "properties" ],
+            "type" : "object",
+            "properties" : {
+              "eTag" : {
+                "type" : "string",
+                "description" : "For optimistic concurrency control."
+              },
+              "id" : {
+                "type" : "string",
+                "description" : "Path reference to this assessment. /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Migrate/projects/{projectName}/groups/{groupName}/assessment/{assessmentName}",
+                "readOnly" : true
+              },
+              "name" : {
+                "type" : "string",
+                "description" : "Unique name of an assessment.",
+                "readOnly" : true
+              },
+              "properties" : {
+                "$ref" : "#/components/schemas/AssessmentProperties"
+              },
+              "type" : {
+                "type" : "string",
+                "description" : "Type of the object = [Microsoft.Migrate/projects/groups/assessments].",
+                "readOnly" : true
+              }
+            },
+            "description" : "An assessment created for a group in the Migration project."
+          }
+        }
+      }
+    },
+    "insertionIndex" : 13
+  }, {
+    "id" : "62f7caad-f58c-4fd5-90b8-735852de04fe",
+    "name" : "Create or Update assessment.",
+    "request" : {
+      "urlPath" : "/subscriptions/6p6q/resourceGroups/Wava+Crist/providers/Microsoft.Migrate/projects/Van+Reinger+MD/groups/Mariann+Sporer/assessments/Francis+McDermott+IV",
+      "method" : "PUT",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "2018-02-02"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"name\" : \"Heriberto Howell\",\n  \"eTag\" : \"eum\",\n  \"id\" : \"70i9\",\n  \"type\" : \"lburi2hglonl24mfu2jmrzy1a1j3i53b4yz8flzf5e4l4rs29y74vpwqcp8ohivsvmu7b3q6iwgp1owpa8nm\",\n  \"properties\" : {\n    \"createdTimestamp\" : \"2023-01-25T16:53:50.463Z\",\n    \"scalingFactor\" : 8.697785415061445E307,\n    \"pricesTimestamp\" : \"2023-10-25T23:34:01.463Z\",\n    \"confidenceRatingInPercentage\" : 9.174700174233744E307,\n    \"updatedTimestamp\" : \"2023-06-28T22:40:46.463Z\",\n    \"azureStorageRedundancy\" : \"GeoRedundant\",\n    \"discountPercentage\" : 2.9464305560284493E307,\n    \"azurePricingTier\" : \"Basic\",\n    \"percentile\" : \"Percentile50\",\n    \"azureOfferCode\" : \"MSAZR0122P\",\n    \"stage\" : \"UnderReview\",\n    \"numberOfMachines\" : 694938985,\n    \"azureLocation\" : \"CentralUs\",\n    \"sizingCriterion\" : \"PerformanceBased\",\n    \"currency\" : \"SEK\",\n    \"monthlyBandwidthCost\" : 1.3842801698679741E308,\n    \"azureHybridUseBenefit\" : \"No\",\n    \"monthlyComputeCost\" : 1.6478717621066793E308,\n    \"monthlyStorageCost\" : 5.083910296937956E307,\n    \"status\" : \"Running\",\n    \"timeRange\" : \"Month\"\n  }\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "62f7caad-f58c-4fd5-90b8-735852de04fe",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:36.46359Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "Assessments_Create",
+          "schema" : {
+            "required" : [ "properties" ],
+            "type" : "object",
+            "properties" : {
+              "eTag" : {
+                "type" : "string",
+                "description" : "For optimistic concurrency control."
+              },
+              "id" : {
+                "type" : "string",
+                "description" : "Path reference to this assessment. /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Migrate/projects/{projectName}/groups/{groupName}/assessment/{assessmentName}",
+                "readOnly" : true
+              },
+              "name" : {
+                "type" : "string",
+                "description" : "Unique name of an assessment.",
+                "readOnly" : true
+              },
+              "properties" : {
+                "$ref" : "#/components/schemas/AssessmentProperties"
+              },
+              "type" : {
+                "type" : "string",
+                "description" : "Type of the object = [Microsoft.Migrate/projects/groups/assessments].",
+                "readOnly" : true
+              }
+            },
+            "description" : "An assessment created for a group in the Migration project."
+          }
+        }
+      }
+    },
+    "insertionIndex" : 14
+  }, {
+    "id" : "7c88583e-7082-416e-9b22-6e3b19fb6975",
+    "name" : "Get an assessment.",
+    "request" : {
+      "urlPath" : "/subscriptions/t1w6/resourceGroups/Evangelina+Beatty/providers/Microsoft.Migrate/projects/Vanetta+Corkery/groups/Jimmie+Weissnat/assessments/Francine+Schiller",
+      "method" : "GET",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "2018-02-02"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"name\" : \"Clarinda Bode\",\n  \"eTag\" : \"nesciunt\",\n  \"id\" : \"4fq3\",\n  \"type\" : \"e046j27y0l060y6t86hwh9trn7vns9cwi6su4a4j091ohpi1c6c0zvp6dq91q6u5qpwyow0gd3r2n9a22p2deppnqosl479vahkmejbn0ja\",\n  \"properties\" : {\n    \"createdTimestamp\" : \"2023-08-23T00:56:26.462Z\",\n    \"scalingFactor\" : 1.795725428550101E308,\n    \"pricesTimestamp\" : \"2023-04-24T15:15:52.462Z\",\n    \"confidenceRatingInPercentage\" : 1.3141446714956057E308,\n    \"updatedTimestamp\" : \"2024-03-13T23:47:59.462Z\",\n    \"azureStorageRedundancy\" : \"ZoneRedundant\",\n    \"discountPercentage\" : 1.3846263875289835E308,\n    \"azurePricingTier\" : \"Basic\",\n    \"percentile\" : \"Percentile90\",\n    \"azureOfferCode\" : \"MSAZR0123P\",\n    \"stage\" : \"UnderReview\",\n    \"numberOfMachines\" : 1414882729,\n    \"azureLocation\" : \"JapanWest\",\n    \"sizingCriterion\" : \"PerformanceBased\",\n    \"currency\" : \"MXN\",\n    \"monthlyBandwidthCost\" : 9.312652663548386E307,\n    \"azureHybridUseBenefit\" : \"No\",\n    \"monthlyComputeCost\" : 1.7268264886267381E308,\n    \"monthlyStorageCost\" : 8.22782041134444E307,\n    \"status\" : \"Running\",\n    \"timeRange\" : \"Week\"\n  }\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "7c88583e-7082-416e-9b22-6e3b19fb6975",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:36.46295Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "Assessments_Get",
+          "schema" : {
+            "required" : [ "properties" ],
+            "type" : "object",
+            "properties" : {
+              "eTag" : {
+                "type" : "string",
+                "description" : "For optimistic concurrency control."
+              },
+              "id" : {
+                "type" : "string",
+                "description" : "Path reference to this assessment. /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Migrate/projects/{projectName}/groups/{groupName}/assessment/{assessmentName}",
+                "readOnly" : true
+              },
+              "name" : {
+                "type" : "string",
+                "description" : "Unique name of an assessment.",
+                "readOnly" : true
+              },
+              "properties" : {
+                "$ref" : "#/components/schemas/AssessmentProperties"
+              },
+              "type" : {
+                "type" : "string",
+                "description" : "Type of the object = [Microsoft.Migrate/projects/groups/assessments].",
+                "readOnly" : true
+              }
+            },
+            "description" : "An assessment created for a group in the Migration project."
+          }
+        }
+      }
+    },
+    "insertionIndex" : 15
+  }, {
+    "id" : "8b680e31-c8c6-4487-9032-0f7b26152d6c",
+    "name" : "Get all assessments created for the specified group.",
+    "request" : {
+      "urlPath" : "/subscriptions/i7cs/resourceGroups/Jack+Langworth/providers/Microsoft.Migrate/projects/Mitsue+Feeney+Sr./groups/Brendan+Skiles/assessments",
+      "method" : "GET",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "2018-02-02"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"value\" : [ {\n    \"name\" : \"Carly Huel\",\n    \"eTag\" : \"rerum\",\n    \"id\" : \"5699\",\n    \"type\" : \"2bzurme4xc3h30j5m1363z0911foty4eg23vgmek3cmfaq93\",\n    \"properties\" : {\n      \"createdTimestamp\" : \"2024-03-16T00:55:12.459Z\",\n      \"scalingFactor\" : 1.2721529783933146E307,\n      \"pricesTimestamp\" : \"2022-06-16T10:34:41.459Z\",\n      \"confidenceRatingInPercentage\" : 1.1023342285947164E308,\n      \"updatedTimestamp\" : \"2024-02-05T14:34:37.459Z\",\n      \"azureStorageRedundancy\" : \"ReadAccessGeoRedundant\",\n      \"discountPercentage\" : 2.0957963068773056E307,\n      \"azurePricingTier\" : \"Standard\",\n      \"percentile\" : \"Percentile50\",\n      \"azureOfferCode\" : \"MSAZR0120P\",\n      \"stage\" : \"UnderReview\",\n      \"numberOfMachines\" : 1787084074,\n      \"azureLocation\" : \"JapanWest\",\n      \"sizingCriterion\" : \"AsOnPremises\",\n      \"currency\" : \"CNY\",\n      \"monthlyBandwidthCost\" : 4.898815558072859E307,\n      \"azureHybridUseBenefit\" : \"No\",\n      \"monthlyComputeCost\" : 1.6595603933371787E308,\n      \"monthlyStorageCost\" : 1.6881736867311892E308,\n      \"status\" : \"Created\",\n      \"timeRange\" : \"Week\"\n    }\n  }, {\n    \"name\" : \"Reta Beahan\",\n    \"eTag\" : \"explicabo\",\n    \"id\" : \"n50y\",\n    \"type\" : \"8mlsafytkd2grtm3pkm3ek0hy1h95s7prib7m4o49bfcd376fmmgxmpfsbofktdaqy2k6h7vkm2w90nm8mwa8emly1673sqgr7pcgoufibisl20l5kdtfz95k64gr8s\",\n    \"properties\" : {\n      \"createdTimestamp\" : \"2022-04-01T14:37:16.459Z\",\n      \"scalingFactor\" : 8.20159525817589E307,\n      \"pricesTimestamp\" : \"2024-02-01T08:01:13.459Z\",\n      \"confidenceRatingInPercentage\" : 1.4300689597240174E308,\n      \"updatedTimestamp\" : \"2022-12-29T21:07:02.459Z\",\n      \"azureStorageRedundancy\" : \"LocallyRedundant\",\n      \"discountPercentage\" : 1.3285458533887896E308,\n      \"azurePricingTier\" : \"Basic\",\n      \"percentile\" : \"Percentile90\",\n      \"azureOfferCode\" : \"MSAZR0023P\",\n      \"stage\" : \"Approved\",\n      \"numberOfMachines\" : 668145425,\n      \"azureLocation\" : \"SoutheastAsia\",\n      \"sizingCriterion\" : \"PerformanceBased\",\n      \"currency\" : \"CAD\",\n      \"monthlyBandwidthCost\" : 1.1037865807428998E308,\n      \"azureHybridUseBenefit\" : \"No\",\n      \"monthlyComputeCost\" : 2.7181967770494337E307,\n      \"monthlyStorageCost\" : 8.423914820729865E307,\n      \"status\" : \"Completed\",\n      \"timeRange\" : \"Week\"\n    }\n  }, {\n    \"name\" : \"Lachelle Cruickshank\",\n    \"eTag\" : \"est\",\n    \"id\" : \"5s64\",\n    \"type\" : \"e4ysr1xyqkl6549rtqtoe9bh0g8xog5vdrrrdejdk2otj0a9j\",\n    \"properties\" : {\n      \"createdTimestamp\" : \"2022-09-24T01:46:28.46Z\",\n      \"scalingFactor\" : 5.854850914319847E307,\n      \"pricesTimestamp\" : \"2023-02-17T17:44:58.46Z\",\n      \"confidenceRatingInPercentage\" : 1.746488684271482E308,\n      \"updatedTimestamp\" : \"2022-07-03T22:45:25.46Z\",\n      \"azureStorageRedundancy\" : \"ZoneRedundant\",\n      \"discountPercentage\" : 1.3280049879811202E308,\n      \"azurePricingTier\" : \"Basic\",\n      \"percentile\" : \"Percentile90\",\n      \"azureOfferCode\" : \"MSMCAZR0120P\",\n      \"stage\" : \"InProgress\",\n      \"numberOfMachines\" : 1433214680,\n      \"azureLocation\" : \"AustraliaSoutheast\",\n      \"sizingCriterion\" : \"AsOnPremises\",\n      \"currency\" : \"MYR\",\n      \"monthlyBandwidthCost\" : 5.254493057617117E307,\n      \"azureHybridUseBenefit\" : \"Yes\",\n      \"monthlyComputeCost\" : 4.896196510280882E307,\n      \"monthlyStorageCost\" : 4.1979921998221364E307,\n      \"status\" : \"Completed\",\n      \"timeRange\" : \"Week\"\n    }\n  }, {\n    \"name\" : \"Mr. Michale Halvorson\",\n    \"eTag\" : \"illum\",\n    \"id\" : \"pdsw\",\n    \"type\" : \"kw47ww4dr0ci5wdjs5oiri86ztb0rg1ovxl0druj3epmtjehcdmy54d8k5hx1p5skawjls2mfdeyiiudk3g5p6u07f8gpfvxgz90hkhxq1l1j5eu1gdlpsjvs1k83el87cwrji19t2rjca152uj93n4x2ihhk7i840lxk295vcbco4j2s2kxtqu5din3\",\n    \"properties\" : {\n      \"createdTimestamp\" : \"2022-09-24T19:00:03.46Z\",\n      \"scalingFactor\" : 1.5522930721180628E308,\n      \"pricesTimestamp\" : \"2022-08-22T14:35:08.46Z\",\n      \"confidenceRatingInPercentage\" : 9.491987936374375E307,\n      \"updatedTimestamp\" : \"2023-12-26T22:00:42.46Z\",\n      \"azureStorageRedundancy\" : \"ZoneRedundant\",\n      \"discountPercentage\" : 1.1499894897240369E308,\n      \"azurePricingTier\" : \"Basic\",\n      \"percentile\" : \"Percentile99\",\n      \"azureOfferCode\" : \"MSMCAZR0120P\",\n      \"stage\" : \"Approved\",\n      \"numberOfMachines\" : 151153881,\n      \"azureLocation\" : \"BrazilSouth\",\n      \"sizingCriterion\" : \"AsOnPremises\",\n      \"currency\" : \"AUD\",\n      \"monthlyBandwidthCost\" : 5.383835794109957E306,\n      \"azureHybridUseBenefit\" : \"Unknown\",\n      \"monthlyComputeCost\" : 7.113131725524685E307,\n      \"monthlyStorageCost\" : 3.5547720960972415E307,\n      \"status\" : \"Updated\",\n      \"timeRange\" : \"Week\"\n    }\n  }, {\n    \"name\" : \"Craig O'Hara\",\n    \"eTag\" : \"magni\",\n    \"id\" : \"tb6u\",\n    \"type\" : \"jf5yl8nzd97yzrj47glmnpjxo5cpjqp7\",\n    \"properties\" : {\n      \"createdTimestamp\" : \"2023-09-15T14:22:42.46Z\",\n      \"scalingFactor\" : 6.563422919482911E307,\n      \"pricesTimestamp\" : \"2023-01-27T21:30:34.46Z\",\n      \"confidenceRatingInPercentage\" : 1.1042831696144737E308,\n      \"updatedTimestamp\" : \"2023-11-18T06:05:36.46Z\",\n      \"azureStorageRedundancy\" : \"Unknown\",\n      \"discountPercentage\" : 1.2809615108816861E308,\n      \"azurePricingTier\" : \"Basic\",\n      \"percentile\" : \"Percentile50\",\n      \"azureOfferCode\" : \"MSAZR0022P\",\n      \"stage\" : \"Approved\",\n      \"numberOfMachines\" : 1881174866,\n      \"azureLocation\" : \"Unknown\",\n      \"sizingCriterion\" : \"PerformanceBased\",\n      \"currency\" : \"KRW\",\n      \"monthlyBandwidthCost\" : 2.1694473384951E307,\n      \"azureHybridUseBenefit\" : \"No\",\n      \"monthlyComputeCost\" : 9.951715362323843E307,\n      \"monthlyStorageCost\" : 1.4337802406557089E308,\n      \"status\" : \"Completed\",\n      \"timeRange\" : \"Day\"\n    }\n  }, {\n    \"name\" : \"Mrs. Lesley Ward\",\n    \"eTag\" : \"cum\",\n    \"id\" : \"480f\",\n    \"type\" : \"r78nl5jdqj7dxnumwzp07g9g0a9x6mnvnn42eem4a1lsg3audq01xno1kfwugw8eimztq457ifesiomljnvkr05khbo3flpto5n13h006h12jmr13sdy4b3nysgnm1s82jo2q2kazr8i7pqs4b7emjddkkhnjvvf7owr3r88shcf6oq\",\n    \"properties\" : {\n      \"createdTimestamp\" : \"2024-01-06T23:31:24.461Z\",\n      \"scalingFactor\" : 1.2777741209963173E308,\n      \"pricesTimestamp\" : \"2023-04-13T05:51:26.461Z\",\n      \"confidenceRatingInPercentage\" : 1.2608817663077593E308,\n      \"updatedTimestamp\" : \"2023-10-15T18:05:55.461Z\",\n      \"azureStorageRedundancy\" : \"LocallyRedundant\",\n      \"discountPercentage\" : 1.1735579329089043E308,\n      \"azurePricingTier\" : \"Standard\",\n      \"percentile\" : \"Percentile95\",\n      \"azureOfferCode\" : \"MSAZR0148P\",\n      \"stage\" : \"UnderReview\",\n      \"numberOfMachines\" : 1787526122,\n      \"azureLocation\" : \"UkSouth\",\n      \"sizingCriterion\" : \"PerformanceBased\",\n      \"currency\" : \"NOK\",\n      \"monthlyBandwidthCost\" : 5.11457621773329E307,\n      \"azureHybridUseBenefit\" : \"Yes\",\n      \"monthlyComputeCost\" : 4.875707988184688E307,\n      \"monthlyStorageCost\" : 8.919511214476353E307,\n      \"status\" : \"Running\",\n      \"timeRange\" : \"Month\"\n    }\n  }, {\n    \"name\" : \"Rey Larkin\",\n    \"eTag\" : \"dolor\",\n    \"id\" : \"97f5\",\n    \"type\" : \"gcu9dwvuqofilejpcquup\",\n    \"properties\" : {\n      \"createdTimestamp\" : \"2023-05-20T17:21:55.461Z\",\n      \"scalingFactor\" : 1.1096743768731547E308,\n      \"pricesTimestamp\" : \"2022-12-15T00:45:48.461Z\",\n      \"confidenceRatingInPercentage\" : 3.5751327312254845E307,\n      \"updatedTimestamp\" : \"2023-10-12T21:06:09.461Z\",\n      \"azureStorageRedundancy\" : \"GeoRedundant\",\n      \"discountPercentage\" : 1.3194590098163903E308,\n      \"azurePricingTier\" : \"Standard\",\n      \"percentile\" : \"Percentile50\",\n      \"azureOfferCode\" : \"MSAZR0022P\",\n      \"stage\" : \"UnderReview\",\n      \"numberOfMachines\" : 134259100,\n      \"azureLocation\" : \"EastAsia\",\n      \"sizingCriterion\" : \"PerformanceBased\",\n      \"currency\" : \"RUB\",\n      \"monthlyBandwidthCost\" : 1.3597139490356648E308,\n      \"azureHybridUseBenefit\" : \"Yes\",\n      \"monthlyComputeCost\" : 4.433180910060305E307,\n      \"monthlyStorageCost\" : 1.6748819513661022E308,\n      \"status\" : \"Completed\",\n      \"timeRange\" : \"Month\"\n    }\n  }, {\n    \"name\" : \"Charlott Johnston\",\n    \"eTag\" : \"dignissimos\",\n    \"id\" : \"6154\",\n    \"type\" : \"vvanm19hy5zxyifhn8gg5ocbe9xp8ogbi2wrnsxyj4zm2jbpv7ksui2w2mpuj0d7fzrfgaborq8r4femrj3dx4yjbrwdpxsabbjbz\",\n    \"properties\" : {\n      \"createdTimestamp\" : \"2022-10-05T12:19:56.461Z\",\n      \"scalingFactor\" : 5.645908934950145E306,\n      \"pricesTimestamp\" : \"2023-12-01T02:20:18.461Z\",\n      \"confidenceRatingInPercentage\" : 1.4640437956130393E308,\n      \"updatedTimestamp\" : \"2023-02-08T01:46:35.461Z\",\n      \"azureStorageRedundancy\" : \"LocallyRedundant\",\n      \"discountPercentage\" : 1.6253823363961532E308,\n      \"azurePricingTier\" : \"Basic\",\n      \"percentile\" : \"Percentile99\",\n      \"azureOfferCode\" : \"MSAZR0129P\",\n      \"stage\" : \"Approved\",\n      \"numberOfMachines\" : 411930873,\n      \"azureLocation\" : \"SoutheastAsia\",\n      \"sizingCriterion\" : \"PerformanceBased\",\n      \"currency\" : \"KRW\",\n      \"monthlyBandwidthCost\" : 2.029048844624621E307,\n      \"azureHybridUseBenefit\" : \"Unknown\",\n      \"monthlyComputeCost\" : 1.6782382295790212E308,\n      \"monthlyStorageCost\" : 1.0456827256143456E307,\n      \"status\" : \"Updated\",\n      \"timeRange\" : \"Day\"\n    }\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "8b680e31-c8c6-4487-9032-0f7b26152d6c",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:36.462286Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "Assessments_ListByGroup",
+          "schema" : {
+            "type" : "object",
+            "properties" : {
+              "value" : {
+                "type" : "array",
+                "description" : "List of assessments.",
+                "items" : {
+                  "$ref" : "#/components/schemas/Assessment"
+                }
+              }
+            },
+            "description" : "List of assessments."
+          }
+        }
+      }
+    },
+    "insertionIndex" : 16
+  }, {
+    "id" : "0e86b3c0-2ff4-40d6-b1da-812867679489",
+    "name" : "Delete the group - 200",
+    "request" : {
+      "urlPath" : "/subscriptions/7uf2/resourceGroups/Jewel+Dooley+IV/providers/Microsoft.Migrate/projects/Mrs.+Osvaldo+Corwin/groups/Jenette+Raynor",
+      "method" : "DELETE",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "2018-02-02"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200
+    },
+    "uuid" : "0e86b3c0-2ff4-40d6-b1da-812867679489",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:36.458977Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "Groups_Delete"
+        }
+      }
+    },
+    "insertionIndex" : 17
+  }, {
+    "id" : "cf5ca72e-4a29-48ff-80ef-111c63f67d06",
+    "name" : "Create a new group with specified settings. If group with the name provided already exists, then the existing group is updated.",
+    "request" : {
+      "urlPath" : "/subscriptions/i0g9/resourceGroups/Kiley+Stokes/providers/Microsoft.Migrate/projects/Edna+McDermott/groups/Mr.+Adolfo+Kilback",
+      "method" : "PUT",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "2018-02-02"
+        }
+      }
+    },
+    "response" : {
+      "status" : 201,
+      "body" : "{\n  \"name\" : \"Golda Dibbert\",\n  \"eTag\" : \"placeat\",\n  \"id\" : \"070r\",\n  \"type\" : \"dg21hjpm5z8xw57bvpg7\",\n  \"properties\" : {\n    \"assessments\" : [ \"6ufidro1tmsg5nn1bo7352gwvnar27nfb863yasq9l5j26n5vhs4dka3k9gj5hf2hx6eiz810bxocdw4l2oxvylvd3er6562xbg6zvw1lfvoen65jf85n4umbzh37q7rdc7urqzk0zs6d41mvkrs0rd88gc8dx0gr37t6ez4m2yq\", \"82qq48j6io73qtx4fs8vz511r6ljeqr5big6g4hzywf5fwi63b386erq5nxg70x6jpwcsuch7ngia5xn2qkxgqxnyqhax5rny215dc1pl283z4carqi7xojmu727anrdmic6m45qtdr8q5xr73zb9i02edwmr9c3qowxl968y7cp2x6vx0jfns2g586\", \"3u08qjbmo567ivlt89375hed161eymxj2vlizmwy3ge1jjwoy54iqgzdp7q\", \"glkxvu2p5szkypdsiqdvpjpqg48y1f65nx5kwsks4nvsniskoqt8vl649bi85k6lhuqrbrh2w04\", \"lniyvte2gsyz0t\", \"8usytbw3clbqy82lt9zayu933q5oc62x1wgbaurn7n86jbpzd0pzk6v8tbw2z31a4g3ljaq1085bhrklzzk22349q9l7lkviq7behfduvwb1x99jjmls6be3f4h3ogw76byw14x2fri43grs6\", \"a520pndshpv8ap7ukud2qrz9tg22s1cw1fc5nwzgvvmlx9pr83npln3e763qjg39vgeytbaix0qg1ft6t3hekquumcaxufaebly8pxq5r01pcxsiij822es9qmida09cj0yz9k714qg4ahxuca5p\", \"9ud\" ],\n    \"createdTimestamp\" : \"2023-01-03T19:01:44.458Z\",\n    \"machines\" : [ \"fqnfi7tsml5fm36o7wh118bi77pfavkixxv4iis4ezyeaqszin22rcm7ls0gdwikr5u6k2qiazrrp6g985leppm\", \"wm2ztwa46zd1dd\", \"rndv1b2hf9yxbi318oz4i3vb72ez2v4fcm9acoadtlmftfedqivtu6uajcize26yzdafz84eaa8xcoxnwzbf3e59sp7ooye0l\", \"a3wrpecw6lka6o3grqbbkojdzq4grdr\", \"35o8afjxul2snof1vla1y0hxu5205t2lsbjs671dpl22hz1nr03p4hld466k628iqdoiq2nt6h88fzvuvpc330ai9ajdli42oelohmsw8q02g4m0187tfd88asngnhbo3mns7po65jiori13xnlw0wbo7lzdm7\", \"x5fq01nup0lmvi4a9puyyy\" ],\n    \"updatedTimestamp\" : \"2023-08-29T03:26:18.458Z\"\n  }\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "cf5ca72e-4a29-48ff-80ef-111c63f67d06",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:36.458746Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "Groups_Create",
+          "schema" : {
+            "required" : [ "properties" ],
+            "type" : "object",
+            "properties" : {
+              "eTag" : {
+                "type" : "string",
+                "description" : "For optimistic concurrency control."
+              },
+              "id" : {
+                "type" : "string",
+                "description" : "Path reference to this group. /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Migrate/projects/{projectName}/groups/{groupName}",
+                "readOnly" : true
+              },
+              "name" : {
+                "type" : "string",
+                "description" : "Name of the group.",
+                "readOnly" : true
+              },
+              "properties" : {
+                "$ref" : "#/components/schemas/GroupProperties"
+              },
+              "type" : {
+                "type" : "string",
+                "description" : "Type of the object = [Microsoft.Migrate/projects/groups].",
+                "readOnly" : true
+              }
+            },
+            "description" : "A group created in a Migration project."
+          }
+        }
+      }
+    },
+    "insertionIndex" : 18
+  }, {
+    "id" : "e12f4ee6-e6ca-421f-8dfc-10fbcb5bdd2a",
+    "name" : "Create a new group with specified settings. If group with the name provided already exists, then the existing group is updated.",
+    "request" : {
+      "urlPath" : "/subscriptions/vb91/resourceGroups/Margarito+Koss/providers/Microsoft.Migrate/projects/Cristobal+Zulauf+V/groups/Booker+Koepp",
+      "method" : "PUT",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "2018-02-02"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"name\" : \"Mr. Tory Breitenberg\",\n  \"eTag\" : \"eeeea\",\n  \"id\" : \"5105\",\n  \"type\" : \"6y2uilg8gzzccj21c25p4570j2y5x9a8taz9fw3v2wyu80cwefyr3nrw6f6zkzhfs205pi4leynd19czjj6y5ymxrjmol7owz63dzvq6f9bq45oexcokduo78eulypo2e6i6aema4d4bgdll50ysvq2ez9yxjkl2sqn3k4v5un0zixu8vuy77mseheeke\",\n  \"properties\" : {\n    \"assessments\" : [ \"y2cdjo7usagexg2w3j6vamaezte6wyeje6p5ov\" ],\n    \"createdTimestamp\" : \"2022-09-06T20:34:04.457Z\",\n    \"machines\" : [ \"adx5wvzr183vtscdvrnh7rugdsvnnejsavb8hb9hmks4kuha3dulzgh6mfyrwgm7qioh5yui9b5vlxeg5nlgmn8t8manqtuhvuu3x9x4m\", \"2rw8jtwtmi9jmep4y0aclnk1842pkrz0g3d5iv08tsxq0p3g6nch1dm8nvc3zfn399eg1yd7tc3jyxzykhtmkpbl7i6pybchhhjsv57b47en6up133t84oz1jmcsf3gygmhj6s7sw9nruwxackix\" ],\n    \"updatedTimestamp\" : \"2023-05-30T04:26:17.458Z\"\n  }\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "e12f4ee6-e6ca-421f-8dfc-10fbcb5bdd2a",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:36.458264Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "Groups_Create",
+          "schema" : {
+            "required" : [ "properties" ],
+            "type" : "object",
+            "properties" : {
+              "eTag" : {
+                "type" : "string",
+                "description" : "For optimistic concurrency control."
+              },
+              "id" : {
+                "type" : "string",
+                "description" : "Path reference to this group. /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Migrate/projects/{projectName}/groups/{groupName}",
+                "readOnly" : true
+              },
+              "name" : {
+                "type" : "string",
+                "description" : "Name of the group.",
+                "readOnly" : true
+              },
+              "properties" : {
+                "$ref" : "#/components/schemas/GroupProperties"
+              },
+              "type" : {
+                "type" : "string",
+                "description" : "Type of the object = [Microsoft.Migrate/projects/groups].",
+                "readOnly" : true
+              }
+            },
+            "description" : "A group created in a Migration project."
+          }
+        }
+      }
+    },
+    "insertionIndex" : 19
+  }, {
+    "id" : "cb13554d-f35a-4f3a-90b0-e04cff2037d4",
+    "name" : "Get a specific group.",
+    "request" : {
+      "urlPath" : "/subscriptions/g3lf/resourceGroups/Brendon+Thompson/providers/Microsoft.Migrate/projects/Faustino+Johns+DDS/groups/Hugh+Runte",
+      "method" : "GET",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "2018-02-02"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"name\" : \"Gennie Harvey PhD\",\n  \"eTag\" : \"iste\",\n  \"id\" : \"e564\",\n  \"type\" : \"b8g8lwf3y980oxpcoq48psihqio2ytro5togfbbchc62wfdckq21iznmai72bkudo6430g6hmxe5cvteax640qtpg21m1zjt6cdfr607sgbaj652i495qowza6mhuv7ipkrrh1\",\n  \"properties\" : {\n    \"assessments\" : [ \"9jkxogov3wtayjvm830\", \"z3vxgov666qtkxekz309qmj7d9n13twrp\", \"z0xshj5uqqj6m9chm6twgw2xzi3ctqcvyu34tk3hfuxtgu6ii1nb\", \"cjmjtv392ou3n0eqm03yyxdctrjuut78fsj38fmlyw50npgbd75rukck4c246lw9wfeqru2cdhrv4h0l1cnk90i4galju3hsj5xzn1j23ituznzy5paevmfgtum3mc9khz9erkxbkjyd04zjlnx872f2fcx0hsqfgrk38pvapn3y2jd4l7\" ],\n    \"createdTimestamp\" : \"2023-05-25T18:37:37.457Z\",\n    \"machines\" : [ \"6b5gfyauc3y8erkxji82owzzkwsp98te2ulr2wi8zc1rfam39ueoq16u2o1uxdfgaf2drd7hcjtnqyl6tx55a09hr5xid1c8z22xkc4kji98gj9k0xbjtuxtoy7hwt15ozd4ampij8rbv2nmtsyk86ou8p48gg9cmi5vqlqfdsxz0ymb0o\", \"d2r7wwwpdi6lkzfl75nu5tn9n54l578y9iuo\", \"q7l\", \"da24k7dih8mlsxqaywe7i0\", \"we1v8tszulyi7804smqhsuvygcmjxfuzshl1u6q5sztmtvcaqh3hoxempo7pmvnal3\", \"6j6lk8xzulm3gmmtndrqt\", \"9zfrerebtuiw\", \"e1ay4ipr1eu4x29nllorkhhrtf7yk3ghvq\" ],\n    \"updatedTimestamp\" : \"2023-07-10T13:26:58.457Z\"\n  }\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "cb13554d-f35a-4f3a-90b0-e04cff2037d4",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:36.457817Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "Groups_Get",
+          "schema" : {
+            "required" : [ "properties" ],
+            "type" : "object",
+            "properties" : {
+              "eTag" : {
+                "type" : "string",
+                "description" : "For optimistic concurrency control."
+              },
+              "id" : {
+                "type" : "string",
+                "description" : "Path reference to this group. /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Migrate/projects/{projectName}/groups/{groupName}",
+                "readOnly" : true
+              },
+              "name" : {
+                "type" : "string",
+                "description" : "Name of the group.",
+                "readOnly" : true
+              },
+              "properties" : {
+                "$ref" : "#/components/schemas/GroupProperties"
+              },
+              "type" : {
+                "type" : "string",
+                "description" : "Type of the object = [Microsoft.Migrate/projects/groups].",
+                "readOnly" : true
+              }
+            },
+            "description" : "A group created in a Migration project."
+          }
+        }
+      }
+    },
+    "insertionIndex" : 20
+  }, {
+    "id" : "9e582e4e-645d-45c5-bb52-2d110d249385",
+    "name" : "Get all groups",
+    "request" : {
+      "urlPath" : "/subscriptions/t584/resourceGroups/Jerrod+Cruickshank+III/providers/Microsoft.Migrate/projects/Lanny+Orn/groups",
+      "method" : "GET",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "2018-02-02"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"value\" : [ {\n    \"name\" : \"Joel Waters\",\n    \"eTag\" : \"rem\",\n    \"id\" : \"8q3z\",\n    \"type\" : \"elk5nqq9rjmomkin55lfmszqouqltxlld88d8nttdvy9sqvxe87dmh7uinz8c06fldxhle3eddwqlroooa8lbi8l8z3ptzwx0q25g2wvdq4l22t6xoqnd6228sv7rfhjzs022vkun0oyybqxsco7w2xak9mr3r71n01b6y3ty0arynv6e37ln15en60\",\n    \"properties\" : {\n      \"assessments\" : [ \"66vcizodoiedl46oej8v46c\", \"b0f5mumms8wix65jsciosi7xwnyhu2yz4jmmznkytm34retahxarn5uiovtfxh547awqek96feyn484247fc\", \"9qo0s0295ia5el5ekcphak58l12y1ub22oxh6gsl4ghrwlonubr7up2e\", \"w43x0req3lb3bra13k5blacfkhig7ukjagtuqujoonou7k60awv06qgkshd35cd17akszv28heenmspjz9uo07c14av7zcf5c6m4ekkrj4m0do4pdy0dllpy1qolfarup68mwkt46pq334iipwblfwi0eq4q0tcshjyqfbzv1avkg5gerv1p583a94rde3n81znrkp1\", \"fhwgbtjpo286i1iqoh83jfuu0esn2d5cv2xll4vnapyi1mcww15zfeb2eanc0okrkp4l00y52brlnxywwp87vsu0enkrzcihjqerqgphy85g8eptc9fonoem2xzjvqejd238e\", \"pve9icd6ke07hasbkcdw\", \"577lyk2yygv5vmkq7x1yec7c2xezz5wjhg3x7ex6q5usj0boy5awciblbl\" ],\n      \"createdTimestamp\" : \"2024-02-01T02:38:38.457Z\",\n      \"machines\" : [ \"88bqlx6gcvce3vpqciorybrgozkweanaoj8x2qjllc7cy15gl1y2ijkvbmaolr2bq6si07xo9spumrb524k5cdgcg8td4f0buki1nv870gn\", \"kpw91kpig1e9rubsh3jks7es9jstpynu87vkgvtnr66ryt2tk21yfb8uyalvymil2w5indifa7dtbsmqzq31sp1pz3fe0ltuns9igjw5oc33mvsnxvxkwstl35zzgmvolrvt98nrxa5fubx8x9w7bs0x3ukttmisu9raupzrarmz0fnp\", \"yq5p0dxpui17kzmyqv8y5hvy1i6wag2mtvo97a45gg9llp6d3xw\", \"h8qrngbwbcrq4mi5910lwh61c73amt3a3u1u950h5wae4e4lyqmvn73xi0a4srx3h7v4ao1kf9ay10rk0cdnjcmkp0s8o6y414x2mh7pkd3b1pwqzwngg1kopul62uv7874neva0dqhkelui3x7andcbo6dnzvga9aiz4315qi85k3ayvu16j53b4ct2ew0\", \"8vfnteto37rhuoj56nsa4z51dnvu4n99zhzhudfjkadbm3pe2uff1w\", \"rftdolsf4fzcrb64ngbx9456g88zdrw8q1xjlnyxcgf11epewfweic47nh\", \"xquoykgsfb01gaooityu7fx5eqdc7mdavzoqjtl6u25643855tfljzw81c37cm2gk21wpg4ytcisbj2vs8d3dawukuj1unzd8u1vd1xfv4i48ivox6okmt7nilxsvh5\", \"o9enirsvpx93vtgq6sdwqcwpb9vpip4cu2nv1jm9evvtjdy1oaw4rx86xpm02iy7p2qlgbonc93i0qlpo27txxp8348ls7m0waqq3bp7jh14pfgljnsr8jrsx1ms5z588pau4k6b1g0lim72d9h206nx3gh4ceeyhw3so0\" ],\n      \"updatedTimestamp\" : \"2023-09-01T02:32:35.457Z\"\n    }\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "9e582e4e-645d-45c5-bb52-2d110d249385",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:36.457313Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "Groups_ListByProject",
+          "schema" : {
+            "type" : "object",
+            "properties" : {
+              "value" : {
+                "type" : "array",
+                "description" : "List of groups.",
+                "items" : {
+                  "$ref" : "#/components/schemas/Group"
+                }
+              }
+            },
+            "description" : "List of groups."
+          }
+        }
+      }
+    },
+    "insertionIndex" : 21
+  }, {
+    "id" : "f5d8ca31-57c6-4907-abfd-29e6cbbe4647",
+    "name" : "Get all assessments created in the project.",
+    "request" : {
+      "urlPath" : "/subscriptions/23wr/resourceGroups/Jere+Zulauf+I/providers/Microsoft.Migrate/projects/Denver+Turner/assessments",
+      "method" : "GET",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "2018-02-02"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"value\" : [ {\n    \"name\" : \"Mafalda Rippin\",\n    \"eTag\" : \"corporis\",\n    \"id\" : \"wbej\",\n    \"type\" : \"m0com94ez2mawpwek271dlyzmsb6226xhp11yhi8y2k5pbsreyveyzi4iarh6islwodf9im7ynjmxfl2ztu9o5obztikc3kczg6x29mfb3foh29zxz2ne6q02fcmrhqj2t0kalgglttrpc1pmb5jgbu5khybcz6adf\",\n    \"properties\" : {\n      \"createdTimestamp\" : \"2022-12-21T23:23:14.455Z\",\n      \"scalingFactor\" : 9.482292608543047E307,\n      \"pricesTimestamp\" : \"2022-05-28T10:13:43.455Z\",\n      \"confidenceRatingInPercentage\" : 5.952623323620406E307,\n      \"updatedTimestamp\" : \"2023-09-03T00:07:22.455Z\",\n      \"azureStorageRedundancy\" : \"LocallyRedundant\",\n      \"discountPercentage\" : 1.4686423590687701E308,\n      \"azurePricingTier\" : \"Basic\",\n      \"percentile\" : \"Percentile95\",\n      \"azureOfferCode\" : \"MSAZR0130P\",\n      \"stage\" : \"UnderReview\",\n      \"numberOfMachines\" : 2016958716,\n      \"azureLocation\" : \"SoutheastAsia\",\n      \"sizingCriterion\" : \"PerformanceBased\",\n      \"currency\" : \"HKD\",\n      \"monthlyBandwidthCost\" : 8.736595547026827E307,\n      \"azureHybridUseBenefit\" : \"No\",\n      \"monthlyComputeCost\" : 9.898446268482526E307,\n      \"monthlyStorageCost\" : 1.5312007340281914E308,\n      \"status\" : \"Completed\",\n      \"timeRange\" : \"Day\"\n    }\n  }, {\n    \"name\" : \"Antony Reichert\",\n    \"eTag\" : \"quos\",\n    \"id\" : \"y74u\",\n    \"type\" : \"swtr2sopgyeqzbkie3pecgjisxybnsazqg4rfy2e5gskd7ac8afsr7g4agn246sh1klvevb5qfgblh8q5vl06aa2drt32qskdrtzaafzcids1v3r6akh91lo00snoils7uccgj6r4i9t7bhkiizp8l1qnkqr7g9e6l948mwxbn0zo3\",\n    \"properties\" : {\n      \"createdTimestamp\" : \"2023-08-10T18:36:31.455Z\",\n      \"scalingFactor\" : 2.74846642514494E307,\n      \"pricesTimestamp\" : \"2023-05-05T19:17:13.455Z\",\n      \"confidenceRatingInPercentage\" : 7.847155339698623E307,\n      \"updatedTimestamp\" : \"2024-02-15T18:54:26.455Z\",\n      \"azureStorageRedundancy\" : \"ZoneRedundant\",\n      \"discountPercentage\" : 6.684580653539272E307,\n      \"azurePricingTier\" : \"Standard\",\n      \"percentile\" : \"Percentile90\",\n      \"azureOfferCode\" : \"MSAZR0123P\",\n      \"stage\" : \"UnderReview\",\n      \"numberOfMachines\" : 611786465,\n      \"azureLocation\" : \"JapanWest\",\n      \"sizingCriterion\" : \"AsOnPremises\",\n      \"currency\" : \"DKK\",\n      \"monthlyBandwidthCost\" : 1.0061716373213673E308,\n      \"azureHybridUseBenefit\" : \"Yes\",\n      \"monthlyComputeCost\" : 1.2436586822688755E308,\n      \"monthlyStorageCost\" : 2.5698155515597605E307,\n      \"status\" : \"Running\",\n      \"timeRange\" : \"Day\"\n    }\n  }, {\n    \"name\" : \"Gerry McDermott\",\n    \"eTag\" : \"quia\",\n    \"id\" : \"jm83\",\n    \"type\" : \"rc7azq00prb8znydj52szxay7ahres\",\n    \"properties\" : {\n      \"createdTimestamp\" : \"2022-08-26T03:29:51.456Z\",\n      \"scalingFactor\" : 1.4094123583477452E308,\n      \"pricesTimestamp\" : \"2022-09-19T11:29:57.456Z\",\n      \"confidenceRatingInPercentage\" : 1.4243233711876297E308,\n      \"updatedTimestamp\" : \"2023-09-20T04:10:45.456Z\",\n      \"azureStorageRedundancy\" : \"Unknown\",\n      \"discountPercentage\" : 1.7598398320033406E308,\n      \"azurePricingTier\" : \"Basic\",\n      \"percentile\" : \"Percentile95\",\n      \"azureOfferCode\" : \"MSAZR0128P\",\n      \"stage\" : \"InProgress\",\n      \"numberOfMachines\" : 792700965,\n      \"azureLocation\" : \"WestCentralUs\",\n      \"sizingCriterion\" : \"PerformanceBased\",\n      \"currency\" : \"INR\",\n      \"monthlyBandwidthCost\" : 4.6881494206498365E306,\n      \"azureHybridUseBenefit\" : \"No\",\n      \"monthlyComputeCost\" : 1.2738892666399438E308,\n      \"monthlyStorageCost\" : 1.1352928941805658E308,\n      \"status\" : \"Updated\",\n      \"timeRange\" : \"Day\"\n    }\n  }, {\n    \"name\" : \"Mrs. Donny Beier\",\n    \"eTag\" : \"sed\",\n    \"id\" : \"1q13\",\n    \"type\" : \"jz1u6ica5xzhdlt2d5yrei8he5bhot18b5ltprzwdsa0mkmnvf5ij2dkcgbw9tb3240glwzmnto8w61o3g0n2asujncplco0af9fd7vgbrx875ibsznxs42quuyug0pl77zadn0fmbtavnnb41a9zyik\",\n    \"properties\" : {\n      \"createdTimestamp\" : \"2023-06-26T02:07:43.456Z\",\n      \"scalingFactor\" : 1.0047666949817222E308,\n      \"pricesTimestamp\" : \"2023-03-12T19:56:06.456Z\",\n      \"confidenceRatingInPercentage\" : 2.5436316341124553E307,\n      \"updatedTimestamp\" : \"2022-08-17T07:50:52.456Z\",\n      \"azureStorageRedundancy\" : \"Unknown\",\n      \"discountPercentage\" : 7.057602462770439E307,\n      \"azurePricingTier\" : \"Basic\",\n      \"percentile\" : \"Percentile90\",\n      \"azureOfferCode\" : \"MSAZR0064P\",\n      \"stage\" : \"UnderReview\",\n      \"numberOfMachines\" : 2142377108,\n      \"azureLocation\" : \"SouthCentralUs\",\n      \"sizingCriterion\" : \"AsOnPremises\",\n      \"currency\" : \"SAR\",\n      \"monthlyBandwidthCost\" : 4.614692981954109E307,\n      \"azureHybridUseBenefit\" : \"Yes\",\n      \"monthlyComputeCost\" : 4.1138799547204777E307,\n      \"monthlyStorageCost\" : 6.661660705007905E307,\n      \"status\" : \"Running\",\n      \"timeRange\" : \"Day\"\n    }\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "f5d8ca31-57c6-4907-abfd-29e6cbbe4647",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:36.456795Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "Assessments_ListByProject",
+          "schema" : {
+            "type" : "object",
+            "properties" : {
+              "value" : {
+                "type" : "array",
+                "description" : "List of assessments.",
+                "items" : {
+                  "$ref" : "#/components/schemas/Assessment"
+                }
+              }
+            },
+            "description" : "List of assessments."
+          }
+        }
+      }
+    },
+    "insertionIndex" : 22
+  }, {
+    "id" : "7ab12b3d-231d-4f5a-934f-33ca0181b443",
+    "name" : "Get all projects.",
+    "request" : {
+      "urlPath" : "/subscriptions/62qc/providers/Microsoft.Migrate/projects",
+      "method" : "GET",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "2018-02-02"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"value\" : [ {\n    \"name\" : \"Randell Kshlerin\",\n    \"eTag\" : \"harum\",\n    \"location\" : \"rrgw651nzne8dtc5hh3osyt19hstvalw0lee9zp6zvf3rrfl2wagjxdoh136y3day0c6z4t7ot1u5dkvay4uj9fv19hoyq0ppq79pvyssrwhs6rblbh7q6b9mwn4b3bn552bm6wri0xwb03tn536svzly2jewe26qh5jrjavm6ji7xmdsbgxv6plzofi5nxh11t6b\",\n    \"id\" : \"qp4l\",\n    \"type\" : \"xvvbvdrntja5g0syeldtw3q6fiol9oez2e0njka1qhirg9begunfmugf877686x37mvqatui4a1lg9zzt7p38m0u1tfl5m4uwx9r8trf8pb3z1h984afe6ymonk\",\n    \"properties\" : {\n      \"customerWorkspaceLocation\" : \"ygg3vafza5\",\n      \"lastDiscoverySessionId\" : \"825n\",\n      \"numberOfAssessments\" : 1017125492,\n      \"numberOfMachines\" : 1696009534,\n      \"createdTimestamp\" : \"2022-07-04T02:44:22.453Z\",\n      \"discoveryStatus\" : \"Unknown\",\n      \"numberOfGroups\" : 21371820,\n      \"lastAssessmentTimestamp\" : \"2023-06-10T10:25:27.453Z\",\n      \"provisioningState\" : \"Deleting\",\n      \"customerWorkspaceId\" : \"n1r5\",\n      \"updatedTimestamp\" : \"2022-07-13T17:03:50.453Z\",\n      \"lastDiscoveryTimestamp\" : \"2023-05-13T03:01:36.453Z\"\n    },\n    \"tags\" : { }\n  }, {\n    \"name\" : \"Dannie DuBuque\",\n    \"eTag\" : \"eeeea\",\n    \"location\" : \"gqtn8dduoadu47h5ojkhzb1c9iqnc7txnyskoqt06y3rvapiwtt7dpuzhjjvpm32xr1u73cpht53nyyr2r\",\n    \"id\" : \"2g41\",\n    \"type\" : \"wqvan0zy385z80d96bopzo2lph8hltu3repaijy4duuzkymoclg0l55mqp\",\n    \"properties\" : {\n      \"customerWorkspaceLocation\" : \"wme7wyfruhxmyfxbdiicvbasnrt3yfk6ydf8fq4zx2gzxnxqmf8kd8a6pddqcjrp3x1p4q7yfmql0sotkn0e3rd7fclv4im8139ds6cb3wpjmuyu1fgatcwcj2l3tsf16map21\",\n      \"lastDiscoverySessionId\" : \"94zd\",\n      \"numberOfAssessments\" : 2106255052,\n      \"numberOfMachines\" : 1519332213,\n      \"createdTimestamp\" : \"2022-12-27T22:14:16.453Z\",\n      \"discoveryStatus\" : \"InProgress\",\n      \"numberOfGroups\" : 2078965870,\n      \"lastAssessmentTimestamp\" : \"2022-09-24T15:35:21.453Z\",\n      \"provisioningState\" : \"Deleting\",\n      \"customerWorkspaceId\" : \"41vc\",\n      \"updatedTimestamp\" : \"2022-07-13T20:36:12.453Z\",\n      \"lastDiscoveryTimestamp\" : \"2023-10-17T23:40:15.453Z\"\n    },\n    \"tags\" : { }\n  }, {\n    \"name\" : \"Emily Treutel\",\n    \"eTag\" : \"voluptatem\",\n    \"location\" : \"qx39ofrcwfc48vdxaa5hwnz5hu3eusgkhay6v958ht05wf5j9x6m8b1y2c59vowt6b9ew6zpfjx6nzi4cjtbvzp9z5mawxfaot5l6iykc0wvoflrdmuoe4on8ijo3oqoi45z29efmx7fw7d8ic6fkdlhelyv1y15ind3fnikrocnij0r2xg21sy27h\",\n    \"id\" : \"t6c9\",\n    \"type\" : \"q2utik20u51riqv8n8y4t27lggc3h18ru51vglv3zh30cxz4qjph8s7n4aaxdq0gkg8gl108kpll6h43t3ewx2elb5iqssnedyrl16mbxhln51q4dwgfqr4uri6l8aikd\",\n    \"properties\" : {\n      \"customerWorkspaceLocation\" : \"7wxbxz5dsrh9w29x5fx59g5fny550btale7453p4xyf9ai12rbamg9dhegslt5o0wfglky27gpx52f4h7xbcxrwe256z4pz9re333x9bxoqfljdd7bmpq\",\n      \"lastDiscoverySessionId\" : \"j291\",\n      \"numberOfAssessments\" : 1597883989,\n      \"numberOfMachines\" : 1070136015,\n      \"createdTimestamp\" : \"2023-10-07T20:53:21.454Z\",\n      \"discoveryStatus\" : \"Completed\",\n      \"numberOfGroups\" : 1869219128,\n      \"lastAssessmentTimestamp\" : \"2023-02-12T21:51:11.454Z\",\n      \"provisioningState\" : \"Moving\",\n      \"customerWorkspaceId\" : \"jjg4\",\n      \"updatedTimestamp\" : \"2022-07-07T12:19:49.454Z\",\n      \"lastDiscoveryTimestamp\" : \"2024-01-11T21:27:46.454Z\"\n    },\n    \"tags\" : { }\n  }, {\n    \"name\" : \"Shirleen Gulgowski\",\n    \"eTag\" : \"totam\",\n    \"location\" : \"gyra34sp0fvm671j3stv2f6hu\",\n    \"id\" : \"yvdv\",\n    \"type\" : \"6e6r2d5a15mhwi22gvptep0kr2n5lbyly23lnyhj21lc34edth78l18726h9k0ta8lf69n7ey9nmrik2e510bv4szchqi8zdoqlpkzq0txp75ckg\",\n    \"properties\" : {\n      \"customerWorkspaceLocation\" : \"3q1b8a08a909lesgqlu914kglir07k33fgtuv5u5wyrtqm6xwlt7mv2sth3v15r496jb757hecdji51fjgelbt1\",\n      \"lastDiscoverySessionId\" : \"gf56\",\n      \"numberOfAssessments\" : 838247192,\n      \"numberOfMachines\" : 1862057049,\n      \"createdTimestamp\" : \"2022-10-07T22:43:18.454Z\",\n      \"discoveryStatus\" : \"Unknown\",\n      \"numberOfGroups\" : 1920766296,\n      \"lastAssessmentTimestamp\" : \"2023-07-28T09:40:20.454Z\",\n      \"provisioningState\" : \"Accepted\",\n      \"customerWorkspaceId\" : \"3n5r\",\n      \"updatedTimestamp\" : \"2024-02-18T17:02:29.454Z\",\n      \"lastDiscoveryTimestamp\" : \"2023-12-23T08:01:32.454Z\"\n    },\n    \"tags\" : { }\n  }, {\n    \"name\" : \"Ross O'Hara\",\n    \"eTag\" : \"aaaa\",\n    \"location\" : \"cxlu5nv0w1w0269bb5as6d\",\n    \"id\" : \"2yo0\",\n    \"type\" : \"2wf5zvwbj39vpur8jv5y1drb9fau\",\n    \"properties\" : {\n      \"customerWorkspaceLocation\" : \"gm3o4jnb8i4c4ky5md4sue1jc21g9lhoq9g86dqaipri0jidqbs31yppymqqgfgj8douzdgk2ef449dgpauemuugld1xyds\",\n      \"lastDiscoverySessionId\" : \"ma4u\",\n      \"numberOfAssessments\" : 1491794091,\n      \"numberOfMachines\" : 1991204938,\n      \"createdTimestamp\" : \"2023-07-17T11:08:28.454Z\",\n      \"discoveryStatus\" : \"Completed\",\n      \"numberOfGroups\" : 1207307314,\n      \"lastAssessmentTimestamp\" : \"2023-04-06T13:47:26.454Z\",\n      \"provisioningState\" : \"Accepted\",\n      \"customerWorkspaceId\" : \"ovd8\",\n      \"updatedTimestamp\" : \"2022-08-30T19:46:44.454Z\",\n      \"lastDiscoveryTimestamp\" : \"2023-04-16T20:56:47.455Z\"\n    },\n    \"tags\" : { }\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "7ab12b3d-231d-4f5a-934f-33ca0181b443",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:36.45517Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "Projects_ListBySubscription",
+          "schema" : {
+            "type" : "object",
+            "properties" : {
+              "value" : {
+                "type" : "array",
+                "description" : "List of projects.",
+                "items" : {
+                  "$ref" : "#/components/schemas/Project"
+                }
+              }
+            },
+            "description" : "List of projects."
+          }
+        }
+      }
+    },
+    "insertionIndex" : 23
+  }, {
+    "id" : "0f042918-4a1a-4a97-b487-dfc41993102f",
+    "name" : "Checks whether the project name is available in the specified region.",
+    "request" : {
+      "urlPath" : "/subscriptions/aa5n/providers/Microsoft.Migrate/locations/Idella+Yundt+Jr./checkNameAvailability",
+      "method" : "POST",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "2018-02-02"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"reason\" : \"Invalid\",\n  \"nameAvailable\" : true,\n  \"message\" : \"Nam rerum corporis harum. Ut facilis alias ipsam ex ullam asperiores et. Doloremque qui nisi laudantium voluptate. Tempora aut saepe dolorem dolore nemo et. Numquam asperiores molestiae inventore vel \"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "0f042918-4a1a-4a97-b487-dfc41993102f",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:36.453044Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "Location_CheckNameAvailability",
+          "schema" : {
+            "type" : "object",
+            "properties" : {
+              "message" : {
+                "type" : "string",
+                "description" : "Gets an error message explaining the Reason value in more detail.",
+                "readOnly" : true
+              },
+              "nameAvailable" : {
+                "type" : "boolean",
+                "description" : "Gets a boolean value that indicates whether the name is available for you to use. If true, the name is available. If false, the name has already been taken or invalid and cannot be used.",
+                "readOnly" : true
+              },
+              "reason" : {
+                "type" : "string",
+                "description" : "Gets the reason that a project name could not be used. The Reason element is only returned if NameAvailable is false.",
+                "readOnly" : true,
+                "enum" : [ "Available", "Invalid", "AlreadyExists" ]
+              }
+            },
+            "description" : "The CheckNameAvailability operation response."
+          }
+        }
+      }
+    },
+    "insertionIndex" : 24
+  }, {
+    "id" : "2004def4-9e49-4151-b4a1-ff665cc2b38d",
+    "name" : "Get the assessment options.",
+    "request" : {
+      "urlPath" : "/subscriptions/wu98/providers/Microsoft.Migrate/locations/Madeline+Nader+Sr./assessmentOptions",
+      "method" : "GET",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "2018-02-02"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"reservedInstanceVmFamilies\" : [ \"llaaxrpu3m7m\" ],\n  \"vmFamilies\" : [ {\n    \"familyName\" : \"Bayer\",\n    \"category\" : [ \"n42ry7nkl6tdl5u82rv8kxt73uilysnipp70ecrci2qma9hk0h3ldqv0wqzhh71at9km1e0naboin8qmez7p6j47n0vlg3rda7vh16zucfwsei6707thr39z2fkuxbl38wienjr8wn281pc647680udwpp066fsv1\", \"8695mnz1qi8ucekwkifps60i2yb21pqtv3z5cu157fmyrbiyqkq5qru88nw6rzjypygekch6wmw0pjf7luu80fgd0psboic7d3so986csg2nsemv0anmxnyq635f6ue9wx7vfm1zo4s9ic78g79ixgvhdasuk7sj2dlmqax83ndgtlegcjv\", \"kbbapur0ry35575ud47bgvftmbhyi827785y9koqntacrq1ylrc397xx3z0npzryoy20dkw87sudl2wthqlutzoe7lk03m679fei487pv28ssh7l3qv0p9fo8oqhchiiwffx759tv3m806e5hqpxc\", \"g7aeu5suvcppkqmmjoe4n\", \"ffjqs0ydi435v6h8apyne6fsofqgmo0n9k0rn868if2l2mdte7m83qbg4kt15cjtftf6654tozocen0cokeh4hbc4hzm282z6mpu0qm5ax1tpq9i8u39r6p07k6clvy393m40wemjoj1pvgwbv4hi6r8hsbnaftjkoxbz7z1o847geds4ny5a5o4na1mdmhlci\", \"3wihyiljq1p5s7oawaywgpxx8qn7w9x9jt39hqkyrlsf69pfu8nomk8km4dephjqtua43nwlcv1detmxwd1znl9wqa35d2h2knj2ulstvya1njmoq42v11xza07uoau9dhthlkcdcvx9576l4i7lygvlipv6yvzocsez9t\", \"nrod9a9i5c5k968ljy0xe6lgrghkb8sioym6oauw5er9jgnf0l3qhhpxjw5d5ujwednhj97r6hmxe7mb780vek4raqkq6pdpnyoh3lg6cbhkrunn7hh063w0gncrrd5u0cgz3b5677didwwoe4sowxuvp27eoi85qt7q\" ],\n    \"targetLocations\" : [ \"ugz4olnf74jj13f\", \"cc2vigwrd8ukiydlowdgmmv2zzchdvbtf3zzi1jqypd3i9m8\" ]\n  }, {\n    \"familyName\" : \"Gaylord\",\n    \"category\" : [ \"b8ambikgmqneaz7mc7i12qzz6i2pzjytezzd9ve9s147p4vg154md5i4wzl73rj37af9fggxh6huv47fvjgmaorgipep5ybores63k68mpf8a98f57m5bd7gud1ipqvb8r4kevjvmtprsu364hhq0zo2vez8r5h04xvfz59lmz0gyn\", \"3oix9kbsy86gmqkzs1m5nckiywk9euls3xf3bns1vu6i4nzvuvul130d5engodkjgebaryov\", \"pyeoj2ky9xu8cgcz9p8f4vt47nfl873arf69oxzk2v2axbpi2lpe8h4a9t7ln83eqtejw1oe9zkdxpd48lxfcnx2an7934t1l3jtvule9kfla2ufwkz7q\", \"zqyqse2agmwhj8un5y9sj0rvsmwycnbvovxcph0rse5o7f8dxp21gc1wwx8v1ttjmk8lo7rily0w61011ywqdgalcgbaf1kgwa74g7e5\", \"dthqejs4op5uexqda5m567xs3v9q8jngrqn1omoqvj4b14117ge7vnghbk9ng3348wl6ke8r27hrnlg14q4gbh2ux4wowv5hjntd2o8644wmmxvpzyyufrpkpo8ugfr0i2qq0rnsig6g1urs2qbnlodnv04l97zobyspsjyt0hxdhfc2jof94snem78hboaafzziq\" ],\n    \"targetLocations\" : [ \"4quod4fthxd7gr5f3m4537kfnz6f8r2htcb4nq5s7bdsk9zh1ovz2oysav10cc0xtb1gwzoo52zunlvv6emzd7k2n4coz70lesd47wljx9olpxarsvgo535jst0bqys35ueodyw05x3wvrozq7tuymf5n6zgznl6nywvdjt7f9\", \"9e2x1iop9mwzd48fai5wiaqctqz4fz1my0t3ubtc7vbkgusfj70vp958ca5nuu9cewwcz3y2l3buxfs4jbdozrcm1f25ujjdxu4xaqq5266d\", \"qpqz7m15e91emu9zatmyciysd8dzn7u0ls7d38ur3u4y3x31qvlqjb9cvahh402yeyod6hjp7ibikybatwonee5malscq2phc57brwrx9p1511i0or1wityghxswlr3s5zxkrzvircgwkaf3f16e6q146fy6esj6jbvbof6zr97yzo4xd38w2xa8\", \"ml0vpn3kv5ipp91vrdf6a9vb93sf7ol2p5bx82p4x8t05toc6fd33lneweu8p0vkp48uwqs39j7yuzjwn5l0up\", \"cyr6jgbx6v2zajbprbsuod\", \"3qam06c4y9d7z3vmwpzgw7tp52u99tlmpdb6r1go3kgdexet6wwbdfoev6j1bpelcf9k66oeldp5s36dvw193rhe2qdhwuhxoal7d2ryqdojgcn5n09maskyl7323g0ytv3cztrvc5az4dckygdzwdte566ztki74iad42ea5vqad6zpd4sr3n0t45p4yyq\", \"083pixyd0nc79a45h0a7jtgbcxea9sy0s93xsobotz\", \"5nt9i\" ]\n  }, {\n    \"familyName\" : \"Connelly\",\n    \"category\" : [ \"hagejj1c537t\", \"glhr6xvtcrupgkk\", \"te1kwkqs58apcnrelmzdmlhfrkgtrlb2sr5qosh07rfscwqj3ppw2x91wn43nm0rew73z6bp03rqhplemtc8eip9mi13uklxeaj2myveolmwmhi25\", \"sd64lzx32oaed34w1nl2mhbtt\", \"08ee0up9tuzj0qcpi1hu1wjmxf8q97td0g2hr766vyz40qr4c33sm6dwmlbyj17vcpdbkrqygz79fcylezdo3v78pa5wprmni14dedvz2p4253ju6cl1zuhyime5jk2q\", \"5f3w\", \"u4x412hdv48prewakuj1b9g81ynrykdbuvgkowde54zvn3vccyhp2n3bok73vwn1e9cyyn22qnnanr1vyrbxyo8vwltbq4d997otxvt3xmm3th925mf1\" ],\n    \"targetLocations\" : [ \"sdgigtx0uk525ogde5col6y23iloucu\", \"42w1evepyzl5wbmregsw5jcnvpsc5jozwj7tgzoihk54nfsv233ew08vx3ovssxl89p5gwb1gwu0pphvjmre55q3z28twsl8wx8x\", \"q97ypqt897vhq2xsa4qhmnrun6g6zanv7ulr2rdxpiw270vs1pkvvc0r1j6eguhe9vo2kt7fn53zx4v3buu9i5hrrl4r9r1\", \"qsjksxjw7wpe6at9p0bijipnzlq037eojqa4jntas317kp9l2izvctslp68z3y3at5gff161jfl2wh8xq33bcyglm3zuno6m4usqcj23vqsfi667g07nblsyv06ecxudrzy0aw4xx32auv51abrq6y9iwhrqdwvk8qx62d47ey7ghx\", \"f4zfimcl6fevt898nj4216auz88sdljhntg40quxauephz2jyads6sg9spfbfj2opu6hm2g5pmxza1p4obq8tdg\", \"two9ggizzdh22f2jh1ejee81cxr1w9cl02esvi16rck1nypv17s7j7vbfsld9nhgmkyli8mben7kldqfaqjqbyuqwp1mdsutel907xv4h2ml05pbuumi9zbdlcbxp4f1452i4e5zri3qadd67vuua9fxkxqdh245o4d9d6g1cl46\", \"6th6la5vh14ld8lm15qg40g9ydrnwutmxgpmfig8vxfqe0zfya76eq8auwi6ak2edvwyyiwpck2s05jdbp3p23hwiiygwuavo84ac8hfwgoy3hdconoqozhiu8f81kmy442qrbp97xdpn70l004dthbhoqwnx\" ]\n  }, {\n    \"familyName\" : \"Heller\",\n    \"category\" : [ \"45iks5kgxydv5liq35pmzsyws43yo22311jrfkmug348n0a52g8r3szd5hhalgqn33sifakq89s0r4mzbxbge960h2co49ncchb0q8dvoykh0b2s5pvnrsmsf3tw3kzugk5p955690fmynfw1k4rygzvvkvbdyt0sc6pddgrupq6h0zme2iwbi9yj1of6a2vfphgs9\", \"tvq543\", \"no3gq9etbx3cjsazbwncanzgvelhi8lbrf7o4vprdtq1ry7v7yg4m8gmc4jugo4hzwvyu955gtvappig8v4drncy4ykbmzw6i6su\", \"4mtoxofsjcs8xk51ow91hzd3375npbvxiockhg0akr4zvlqetugc8c3kjm2y5yo5otbvsgr8rn7\" ],\n    \"targetLocations\" : [ \"93ywek224nvf8s5vegi6ebphr2r569sx2bsab3ok9r40vcv\", \"2a5bb96560pon571yku3si5zz49dguisjjy3ibx0nvdf8mwocxg3wnz9jo907vk7a9f3frnajdururhky7hxe42tcxhpb1klwrxns6wter9fjo2tg1dvvqi7339ty1vq4e8mak\", \"3p0elfxe3b3oas7a1ycvqpf8b87prs7xg8qeu5631ah7kl8a1qlsqageb0auuwb3tdjp9pf7w062h9fjsxmqemj2i5\", \"2sq2o72nlfsmavy\", \"ispin38qzdzciok7ske63oasei9r27kl4ps1e3ubjtzkh2eh4b\" ]\n  }, {\n    \"familyName\" : \"Hessel\",\n    \"category\" : [ \"8f21c1lrerna9w7ncxaeshrzlqshjslsa8jbke6783wjlikwo2j11l6lpklxh49ahdpvgy4kkgmrucscv8eciu4up\", \"plyjusj6z8ngk6btcnwbit6uyzij6v34czfqe8ojl0j7sj9ilwxe2lj4md3ireyo7lpbruf68096q9mdsr63x9sohpr2riab7pxc90c29kmwei7i5y29zbu5z2xkfxfjbs6g0gnvu49mopyihd1fs5rklhn3v92wjhtizp0e97\", \"njsmqretkk2by9kbi0bzo386n6uo7yfuya6y8idq8slp8802g1jy4f6ep4eh25dwsqtw723momueltlx39qwchimgyt3mtvclvtkcwh0glai8d3r77c2rjfbt0a22xmupwi9u6qcfzrlm269od5xl\", \"6znc0oab0p5oip99j7fk2cd7adxwx6fczgowxcxqpqnzehplu0khhyy8mb2mkkdpdiqayih70099h6rg4grhr26\", \"8k220jnvrwikjql8jgqujtigk5ttid561oy7f0bah8oxjs9sdb0nzyum19286n3p8jpeu9comk16wue1brd9mk9sbv93evxbm5qwaaasyhmhfp2sh4zfg3ng7rxw6pz\", \"ono61ydrd96fy1dsknmzr8xbuugnjl7bnbftql5g0w663lkkh20yfpccoy5sbcxqwlq9txj36atb0qm3qoqrbk223yi4dvcjy0rcr0j9flpccvvxc\", \"dhclapegfdhidrkjpsj2h4hqv5ilkw45wwnn09ewwo8hptkv4d1me3jqfnbys9pipktecbreli4db2m5wa01htcxlme39ryj\", \"bqgwcj347rp8q450fsynb0czy8q3tvankfls6673c8ra4dle87htyl\" ],\n    \"targetLocations\" : [ \"hj7o8zxm0il8e4y1bsawxgask8mafa\", \"1lyuzj4y29ya1fcvt3o55ouwc1ajuw13cew5wjdj5ool0901hq0o5v10w2kay1whvca5x2j\", \"qxv73hh8axe66cssanox9clcoswos5sgdmdv1p2qi2jzoiji7brkq31nk1p5obxgkyoiqw9ssgjca1fhewggk8q0skdjiktzwi4k2cgs7asix5bl0n0occsag6lsm0vwdtp5igjlg1oi3338xsb68lol3asiokrfbw3kd7tkz4d3y94osuh8mgpuj\", \"jwylz2n3p5ha218r3rp7701\", \"hkc1t9sql81db15jgvcaeexnkza06bhyu57928u89ms1qmojm908fft5dlbcpcyoyxel3huxwnfylxk9dk7fp18ozcyiyf6kowcs0wlbnigzx\", \"6hxzeylgsd369dsujiucuzwe4u06o4q6s713fqgqyc7kigtoo96r6qefu1ll55ye8n3dni7j87yvcc6ey3n8oc21llnbxuxjchjb3vw86dchfae4oivoj5\" ]\n  }, {\n    \"familyName\" : \"Bauch\",\n    \"category\" : [ \"n6c7k05y40iujx5yenf4x3xlxxy0qz8djzmesczu6dmexo12g7d8bqooh9u4a3amrw9cmjlc11vud3jvhe2dhqq1x4elbps21hstotsan9q9sp7noj86mza6df9rtt6m0bbg9e7q27aki40izz14acud\", \"auc8ov47dua2xpwh6m51r6fq4igvf2hyfektz4\", \"2fyjb9xtcv5rauc51r1f88ndprg032ghxnpiqse9gn7xewl0ks20exgeogvswrgehxpgwdogijx4yxw8dsvxgzsxdev6y2gewxgeg0moox53t\", \"bod4nn0j2ckwtdwiiikgshc1u91x8svm\" ],\n    \"targetLocations\" : [ \"wy08r3m2hmv9reuaum7oo5mcnkgkoq58xvvbwyyl0kxr1mqx4u645m8o6rk31xsgdgnsyaar7lwhx8afjxcwxzboi2wc6nah86oclwuj62ma8gao7zmgsqsxw09y7aucudnexm9mpe2pt3c\", \"kkbjyoiddwbitt5pgg6zdxv2dr93aszxktw1x2cfz8j7hlmlxm7iiwv3v43pzx18bc1ah3szq4ca1oazz85dv40kwj8ntvsw1yiwwv3q276l3nl9v\", \"v78mkyz6x0xfbw17zm4953s24qq0pxm2bzvoi4h4x46z2k9g0eja8gx458o96j05zcflvg1r4552m4biqgynwlihv9u7h24o8x9srno7zv0tpj12pk9kxmcwc5y6yn5mg2h8u4hj2mpm8mr3cr36nw56lw1r\", \"88nw72pl1baf9j14zfytxn67fw35p13n9uww6y2q36\", \"dl8r8x3g5xenzsdb284dc4xlqasw9d9zhzz3arqqqogqn9i9ts6elyxqdolep20576circkitfxwjbvt8ifbbdl5q2j5mdkr4gjui2kmow9pnnfyka00q1xz9epqucl90uwldsi\", \"ka3bjso2s9u86f49rrdckehaej39axsqvlw3p6myyxuxdzf3cmopnh4gog5z61ikwwduqrkq09kx8wwa2v49rlh7yq214v2h8sdf3ylqo0pmuhl21z5kcy1waaezcvpg1ptlpujpo40d1qg1jdcuuoeir70cp2s9ujk0fslv8a22fvv\", \"5s2h9oebludmb132kgoiapkp1av1s6fjl51rh5mxjuildxyvkm3glfcivhunlh06igli35svvkjbph9q7umqjeu2e\" ]\n  }, {\n    \"familyName\" : \"Lang\",\n    \"category\" : [ \"6zozo8rv9vmflhemea9gocrdzupc76xgi8afyet8xciv5nkk2z4ks3tuneumac9dv2b0g7li7s5ogmbs5nr8zvox8ag01tewspe7133n2t3xlmk8uqab1hb6\", \"i716jqgr1kyz8h2ovbzox8w35hngnh8pmzvyvgv5kd7q78k6yxdavkz2g2x7sq6f2f67wwwztf3e3bo8ns3379m66quip8layzv996dvq6ssxdjjaafu1jck7dkfks9stjguqs1ugq7vwnodbp6g6dxu\", \"mrbxjdk1c8riesh9xlpu7umeizoygjkmonb5t4co3fmjyo6vrd33v9nqyl1gl9p5c08tj7b81hb5m19o2s8ffqcv4b7v4bz1q7rc72en2xuol0vhwnp7bk0\", \"ezim1vtdiuz69danoknmoo9jhn6xl8mzlcqzcmyrcwmwsuokwwyfdc8nomo12aiwi88xr97xado3sx1qgpxvzgbrlz0dd3z36ep01myxzmq1f6j7qmgumajp199sjs2wursznn8hx3z3\", \"fn51ul6oyfk4uyhu3c1wjtu6eyhjazazldq95nk6gi9xx5huzyw9ljp4wdq\", \"obqlmfj9sic99qcexogmb5z6ou12djvzhmt4xhjsll4z\", \"fawu9v7313o8kup5douju28m94naee\" ],\n    \"targetLocations\" : [ \"uem9h4v5ch2rbma2h3maarv2s5wr94u1py0g0j0jyl1tfs2gmorrurqp8psoow7tm5x5wpj00ske1f43ru91sx1\" ]\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "2004def4-9e49-4151-b4a1-ff665cc2b38d",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:36.452772Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "AssessmentOptions_Get",
+          "schema" : {
+            "type" : "object",
+            "properties" : {
+              "reservedInstanceVmFamilies" : {
+                "type" : "array",
+                "description" : "List of supported VM Families.",
+                "readOnly" : true,
+                "items" : {
+                  "type" : "string",
+                  "description" : "Azure VM family name.",
+                  "readOnly" : true
+                }
+              },
+              "vmFamilies" : {
+                "type" : "array",
+                "description" : "Dictionary of VM families grouped by vm family name describing the targeted azure locations of VM family and the category of the family.",
+                "readOnly" : true,
+                "items" : {
+                  "$ref" : "#/components/schemas/VmFamily"
+                }
+              }
+            },
+            "description" : "List of assessment options."
+          }
+        }
+      }
+    },
+    "insertionIndex" : 25
+  }, {
+    "id" : "c8fb4397-def6-4276-bd67-96be233b0f18",
+    "name" : "Get list of operations supported in the API.",
+    "request" : {
+      "urlPath" : "/providers/Microsoft.Migrate/operations",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"value\" : [ {\n    \"display\" : {\n      \"provider\" : \"yp0keq8h9x0a9fqv5qck844eod5othushucmlk532eb8zpgmg5c28sklfcjqul915415g3sl5kxjhae2ezz2tc5cu7k7au3aljrv00jdddbfbgvg5sko7by902kgbw2i4ygaw6tpmfz1cupouf395m1dx5d3heybojeh2u12gkk85auqu21jsgso\",\n      \"resource\" : \"5t7bfn37f1vumzjwka3bu4rr4d78d0ovsz937s8fgtti4kxatixpcuq2q9hxpfvinljsc75e9mbo70fgovk3cju30n9ywoyhe30ghgi2gzi9wrv0we8h7tomlsff7inzafdxfzuq4px83ojt3amiwigzpckqegfo1rgbtcnewr8a3pwz871vs8ar4pyd08e18brkr\",\n      \"description\" : \"Ullam id et qui eos aut sit debitis. Dignissimos deleniti sit distinctio quae consequatur. Est architecto officiis quia nulla architecto aliquam.\",\n      \"operation\" : \"jo0dvmmjak1uhqsf1aehznz7cc0pzvqjqszwawhhwjfcceyss39naqacz0qox3vng28sutmsh82du8jk3eu1g5p7rsqfcl9715pkcnnlqos7u539rmj1m8j6qp85i33rlasxyb3j6r7j0akd7lis76k4ljr\"\n    },\n    \"origin\" : \"ix9mehkd9819mxtybq48n2n3vwm1qgqnlo39iskfc0k1k1x5448suzrb517mno7ca5y0w9pry0knp4j1ljnkokzl8ooydy8bsai5s40oi\",\n    \"name\" : \"Mrs. Kenneth Schumm\"\n  }, {\n    \"display\" : {\n      \"provider\" : \"e830exq2mmbknho30d45pfs65clo7qj77w303g4hpkcrnpdci9sg1wajatuv3qst7eobsvv9cuyc030vx12n7mzy9s3oyax1ee0j4zbcgye1elt7qdr9jf0ba7rycwr2\",\n      \"resource\" : \"5a33833kghydtvtwan7asmbekw1qoi6rzt9ly45uucs2tw8dtz6wk4uyedrq1h0e0cqoeipdl3q27qn7dtzksh07u87w67vgjjntjgmb349jg98tu2hs09qjwj2oz1skqezqqa6dah8g\",\n      \"description\" : \"Ipsa voluptas sit dolor et explicabo iure qui. Libero quam magni architecto eum iusto sit. Est voluptates saepe laboriosam. Quas eum aperiam blanditiis est.\",\n      \"operation\" : \"cjtfaetljpb5ksme6gj9g04dyxwtgj7ifg8qevz32xlsiyf1pn736x7hyio9eja68yeyo9ktk0gbghtj5v0cs5j3bou3xjk3jri68spl93i892fj7\"\n    },\n    \"origin\" : \"dnf68n3cwumdq89id8ic7bngs90lchywu3k6st2qnodinpuo58jg93vhmdnthfl39w2h9h5a1362c5tww23qy\",\n    \"name\" : \"Denna Mayer MD\"\n  }, {\n    \"display\" : {\n      \"provider\" : \"nqbc63ldqia4r8opa9mszuxuhzwf8z7genbj2dur9xdlqvw8ustlhs100xw7odg17qtmjr11gbbpgpy6ykg4umol989bw4ldrafvlidarv12bzyery0\",\n      \"resource\" : \"3l8d3iz4iuswsca28vjxlfflo3njnwttr0ehc9wd2p3t0lgw4a62dkp7jjsqacu9mopo1tshaxk6q9mqisnjx4hmoi2ulw2ew1i5ceojeofajz1s98801zm1swz2cdp5ses71\",\n      \"description\" : \"Molestiae porro rerum fuga illo iusto accusamus. Reiciendis qui facilis. Quis nostrum laboriosam quas asperiores.\",\n      \"operation\" : \"j2xfwdoxh3wvhy56q4nbijbh8\"\n    },\n    \"origin\" : \"jhacbdfukvlfq9ipr5vdnd79plfddd6xlpcdjbn9mfpsd3thtmkf68wvyrx8uvw0yh96fuh63wiq5jrjwdj54cp8ocmamxwm4sfcr969fycabf1fjm8\",\n    \"name\" : \"Tynisha Stamm I\"\n  }, {\n    \"display\" : {\n      \"provider\" : \"o1pk34grvom9geqrwrg72esrg8k2uha2jtbkswl5soz5ipym3c1jbtfbv66thio57v1lnpvf4b6w3j8yhlxtg0dw2jrc10uztowjwfi47tis3mw6nzgfajuml50ra3pv00fam3ypk4xnytqv462xvd7ed1l\",\n      \"resource\" : \"gbfnzjtb4ctetwj0kvkeqiaboog8krh2ii27iasszjd3vnetyqmx9takm5klinym0zg325j5m85fmiuchxcuu5vsze\",\n      \"description\" : \"Nam perferendis sed nihil. Qui repellat perferendis saepe quia. A et modi omnis cumque et. Magni perspiciatis ea quidem qui quia autem. Consequuntur deleniti sunt.\",\n      \"operation\" : \"oa6lh57cp3yfbqqxt3zop5ykjn5acmajhz4vx6kn0921060cx6srdbdhzy\"\n    },\n    \"origin\" : \"yueprpfal66g4w60m95q6wh3rj2cjevu3qdhodxw8rp6vep3azss5iya5wigdk9s2rqc7ttcb5ncptv9xknthh2pldiq1coz0h8rsd3is2i3f\",\n    \"name\" : \"Nigel Blanda PhD\"\n  }, {\n    \"display\" : {\n      \"provider\" : \"zp0o76uko1d4v25j1vhk3fqvzfgz89cgy8mt1b2j2mrm6i3xe6eoua6xd0ckqzym788lbtk9akafx1dvzc2dwh68zenirvwp4d\",\n      \"resource\" : \"74occtoiruefv6pxmlaaa8bj05nf76tpt2qj5668sj7haotztw9clsppc564hi1byf45rrcwrqwhbc15\",\n      \"description\" : \"Cum at neque ex tempore molestiae. Aliquam magnam accusantium repellat vero quaerat. Repellendus ducimus tempora.\",\n      \"operation\" : \"pcitv3h1sdtzuwziezl57dqs9s5s27483s669zfb4n4fca25ye7cbvsa4wy1vmwganvo14l6qatedf7oi10yj841fusm558sfwp3ye5474z6cq7sl24fb80fruhfk8p5ilkjq\"\n    },\n    \"origin\" : \"ifwp3pp4f1kde3881h4jlawd0ldsllxt8xqdvfjgw9czq0qnsxqixr\",\n    \"name\" : \"Mrs. Effie Gleason\"\n  }, {\n    \"display\" : {\n      \"provider\" : \"841kp3vjbus122lq2spd6l7ehhscruod10v1e3qg5pr5gz28kmxikjz0wxqurvqbsyfvigncb7eaj5miuxemngfzya64p4yf3byel2jo187xu9j4e5rlcofo5x7x2w0t4qm59llub58u1fbnvp8ujjdiv50uhhnx97d5r9705tg4p8a60p6uv1vhq68\",\n      \"resource\" : \"t2367dvbo65up5f85caipt2s4qpukf0mxff1ja8emr8k6x6pxctsvatdd093e74ua0ufbgm5rymblvr487ofntabmpigqv3po92l8mgw2irf461sfgq1t8dwo68s2f1bprojpimswsijhw1tesdod6nfj2qidgzwb6sc6nd8cjxcrv9ccuzh06gl6qef3cwl6\",\n      \"description\" : \"Quis rerum sapiente omnis quia laborum perspiciatis aut. Eum doloremque expedita. Fuga id officiis soluta. Perferendis deserunt qui laborum ullam.\",\n      \"operation\" : \"ggv5pmo8dsdveex54fsiltg6qhjprtek08i93ypzltook0covrs3ekk029oj5iwh3ektwm91i6777d2c008gdmhwozt0yfzj5vcq57s7q6ooq7s3d5gr53q05v89x0p071q8l5lvz262eguurbllq3tqzn55610vzvy31ctrghe226kyjgiphmwdrp6\"\n    },\n    \"origin\" : \"7tjclhkhf9knazyopqua2xyaj9n6ssz1fkp06my2pwvtcjo423z0hl2zwq8xz2iit43u9i1j3dnkl9oj6jqh0t1rgkmx2el3hmbgpnl6gk654vzgc7t9h53y8rf86qs1pp3r9uyfafxghz4j67iwyh98zlen2o4v699avs9cmvgc973\",\n    \"name\" : \"Hershel Tillman\"\n  }, {\n    \"display\" : {\n      \"provider\" : \"ajnu1p3rtugfu5ji85alq0rnkdduv69xzw46wumw25sn7k7w3mkcnt9532uwyfdd5jweccg88jk8ynst5gkenptzhhieyrxwrsde42su4jx2qpr29daddqsq0s\",\n      \"resource\" : \"b2susiwpev3v4sg7m2m26nh2ah7cjc6q9f84tw8g0e5x9r5l6o8y3gvr9qw0br4j\",\n      \"description\" : \"Et porro iste aut. Repudiandae qui itaque quo incidunt quis. Iusto iure qui corporis distinctio.\",\n      \"operation\" : \"5qcl9ivts0qzdu54ij6bjjyx1zfnhvjp1oznf5aqarwpmwjxsgtr3a8fiynlwdrg2y7uj10bxyovgzlf1c7spnv3gjgwhixuc039fod7eyudm7odlkbagqc01rcqomh6alh2qku6wrmj74uknrmwsr2e69ct29zgxqj74riks0jg1iyn3bxv5am1uqp\"\n    },\n    \"origin\" : \"482r6w8avxmtab40c1ztu3447kx77hjhn5gz0wfdkrvjs5hc8o6tz4d3\",\n    \"name\" : \"Royce Kunde\"\n  } ]\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "c8fb4397-def6-4276-bd67-96be233b0f18",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:36.451888Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "Operations_List",
+          "schema" : {
+            "type" : "object",
+            "properties" : {
+              "value" : {
+                "type" : "array",
+                "description" : "List of operations.",
+                "items" : {
+                  "$ref" : "#/components/schemas/Operation"
+                }
+              }
+            },
+            "description" : "List of API operations."
+          }
+        }
+      }
+    },
+    "insertionIndex" : 26
+  } ]
+}

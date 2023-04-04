@@ -1,0 +1,99 @@
+{
+  "mappings" : [ {
+    "id" : "28aac45b-34f7-48bd-9441-75f28badfd8a",
+    "name" : "Gets a restorable dropped managed database.",
+    "request" : {
+      "urlPath" : "/subscriptions/3j1o/resourceGroups/Ms.+Carman+Walter/providers/Microsoft.Sql/managedInstances/Mr.+Ryan+Mante/restorableDroppedDatabases/gd4n",
+      "method" : "GET",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "1xq50dea8wct9umqk3fbhhvcztir99d5um8fij5cwy24depr8vpgwq1dyxl47z9bqpq4suc"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"location\" : \"lpqulkzw43y3nlii0jig9xic4p414pwg8drri26iky7lf\",\n  \"properties\" : {\n    \"databaseName\" : \"Un Bartoletti\",\n    \"deletionDate\" : \"2023-10-02T16:21:40.177Z\",\n    \"creationDate\" : \"2023-09-30T23:45:24.177Z\",\n    \"earliestRestoreDate\" : \"2024-02-17T11:48:38.177Z\"\n  },\n  \"tags\" : { }\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "28aac45b-34f7-48bd-9441-75f28badfd8a",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:45.177437Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "RestorableDroppedManagedDatabases_Get",
+          "schema" : {
+            "properties" : {
+              "properties" : {
+                "$ref" : "#/components/schemas/RestorableDroppedManagedDatabaseProperties"
+              }
+            },
+            "description" : "A restorable dropped managed database resource.",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/TrackedResource"
+            } ]
+          }
+        }
+      }
+    },
+    "insertionIndex" : 0
+  }, {
+    "id" : "3357cc0d-3c77-47f0-9529-500418db0541",
+    "name" : "Gets a list of restorable dropped managed databases.",
+    "request" : {
+      "urlPath" : "/subscriptions/t1ey/resourceGroups/Leisha+Lesch+PhD/providers/Microsoft.Sql/managedInstances/Mozell+Jacobson/restorableDroppedDatabases",
+      "method" : "GET",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "5z8t7imkqaxcn06c1juxp992kvhvrdfmqva4ot45f2lbrdtlmdalgm4aktu4bc7h7kdyxsx96nsmkj195hxxop1rjlvzlykgyk1rtcl"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"value\" : [ {\n    \"location\" : \"ifcp38qiov9arpgtwls66ov2mt9jb714y0mqmx5npg2bhuep192q0d3pk7r5pm5ghsekzyyy8svcew0f2tepavkkeqglr131timmbocdzgv0r07zupilc5blxraqzrwhb6895q1mgyov36axrqolvxrxh9jt\",\n    \"properties\" : {\n      \"databaseName\" : \"Tory Hilll\",\n      \"deletionDate\" : \"2022-11-27T07:55:47.176Z\",\n      \"creationDate\" : \"2023-08-26T13:56:21.176Z\",\n      \"earliestRestoreDate\" : \"2023-08-17T10:57:04.176Z\"\n    },\n    \"tags\" : { }\n  }, {\n    \"location\" : \"st62bdxlignfre3xv8hyn3ko9a31allio2r3fm82k0q75lslxw4z1aqacq6ygb3jmitd4fi9hx11hmkc7ep3uz83wlb224v513rgl5val7a1a4p252cqta8sdbgiggcomvokvju4ky4zl0l6vz2omk0sr8tf5wg7uvr18p4g6d8nll0hpe\",\n    \"properties\" : {\n      \"databaseName\" : \"Nancie Hegmann\",\n      \"deletionDate\" : \"2023-09-06T06:26:46.176Z\",\n      \"creationDate\" : \"2022-07-18T15:27:28.176Z\",\n      \"earliestRestoreDate\" : \"2023-07-17T01:39:44.176Z\"\n    },\n    \"tags\" : { }\n  } ],\n  \"nextLink\" : \"vws4pkrbltdx4ccfpn5fy1ovz8skc4j7qv30q7fxx0ceo5of0rhfveq0zgcs7zor35pssxta57ab213ck27c35qf0uc4hlb2fgl4ad305981uxzypnpbd\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "3357cc0d-3c77-47f0-9529-500418db0541",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:45.177053Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "RestorableDroppedManagedDatabases_ListByInstance",
+          "schema" : {
+            "type" : "object",
+            "properties" : {
+              "nextLink" : {
+                "type" : "string",
+                "description" : "Link to retrieve next page of results.",
+                "readOnly" : true
+              },
+              "value" : {
+                "type" : "array",
+                "description" : "Array of results.",
+                "readOnly" : true,
+                "items" : {
+                  "$ref" : "#/components/schemas/RestorableDroppedManagedDatabase"
+                }
+              }
+            },
+            "description" : "A list of restorable dropped managed databases."
+          }
+        }
+      }
+    },
+    "insertionIndex" : 1
+  } ]
+}

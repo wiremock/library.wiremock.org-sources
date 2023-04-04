@@ -1,0 +1,472 @@
+{
+  "mappings" : [ {
+    "id" : "5ca18791-1f64-4fd6-81b3-3b9922c6f8c8",
+    "name" : "Lists databases linked to a sync agent.",
+    "request" : {
+      "urlPath" : "/subscriptions/f5xd/resourceGroups/Mrs.+Denyse+Brakus/providers/Microsoft.Sql/servers/Yuk+Yost/syncAgents/Miss+Burl+Pfannerstill/linkedDatabases",
+      "method" : "GET",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "lwmw4pmniz8nrdycw0l0xwihlg699gj0t433rc2kotin7ifc6z5m1rh4ffknz5zpnv4h0xefzzk7ca1i5rcxeujjbpca8m4ewllmtvvctdw7mls4ko9e4c"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"value\" : [ {\n    \"properties\" : {\n      \"databaseType\" : \"AzureSqlDatabase\",\n      \"databaseName\" : \"Lacey Bednar\",\n      \"description\" : \"Quis repudiandae non. Dignissimos praesentium officia. Reiciendis vitae debitis nulla cum. Et et nisi necessitatibus dolor atque rem.\",\n      \"serverName\" : \"Joaquina Konopelski DDS\",\n      \"databaseId\" : \"u8xz\",\n      \"userName\" : \"emmanuel.dooley\"\n    }\n  }, {\n    \"properties\" : {\n      \"databaseType\" : \"AzureSqlDatabase\",\n      \"databaseName\" : \"Jefferey Wilderman\",\n      \"description\" : \"Voluptatem ut perspiciatis necessitatibus. Cupiditate aut dolorum velit enim recusandae consequuntur possimus. Harum repudiandae adipisci tempore sed beatae velit. Deserunt deserunt accusamus. Similiq\",\n      \"serverName\" : \"Cyril Wunsch\",\n      \"databaseId\" : \"s9l6\",\n      \"userName\" : \"majorie.smith\"\n    }\n  }, {\n    \"properties\" : {\n      \"databaseType\" : \"AzureSqlDatabase\",\n      \"databaseName\" : \"Romeo Mohr\",\n      \"description\" : \"Vitae ut veniam aspernatur doloribus omnis ea corrupti. Qui ut non. Odit ut deleniti ea. Rem totam illum error quia.\",\n      \"serverName\" : \"Miss Cornelius Schuppe\",\n      \"databaseId\" : \"4hu7\",\n      \"userName\" : \"zenobia.hodkiewicz\"\n    }\n  }, {\n    \"properties\" : {\n      \"databaseType\" : \"AzureSqlDatabase\",\n      \"databaseName\" : \"Benito Yundt\",\n      \"description\" : \"Ea voluptatibus odio ut quibusdam dolorem. Repudiandae minus temporibus quas commodi repellat. Sequi quam excepturi.\",\n      \"serverName\" : \"Dexter Rippin\",\n      \"databaseId\" : \"ytf7\",\n      \"userName\" : \"myriam.bayer\"\n    }\n  } ],\n  \"nextLink\" : \"v4o\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "5ca18791-1f64-4fd6-81b3-3b9922c6f8c8",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:48.023318Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "SyncAgents_ListLinkedDatabases",
+          "schema" : {
+            "type" : "object",
+            "properties" : {
+              "nextLink" : {
+                "type" : "string",
+                "description" : "Link to retrieve next page of results.",
+                "readOnly" : true
+              },
+              "value" : {
+                "type" : "array",
+                "description" : "Array of results.",
+                "readOnly" : true,
+                "items" : {
+                  "$ref" : "#/components/schemas/SyncAgentLinkedDatabase"
+                }
+              }
+            },
+            "description" : "A list of sync agent linked databases."
+          }
+        }
+      }
+    },
+    "insertionIndex" : 0
+  }, {
+    "id" : "d155a129-fc39-41ad-8212-193a5e9fd252",
+    "name" : "Generates a sync agent key.",
+    "request" : {
+      "urlPath" : "/subscriptions/c783/resourceGroups/Saturnina+Steuber/providers/Microsoft.Sql/servers/Ms.+Cecille+Harvey/syncAgents/Ivan+Schiller/generateKey",
+      "method" : "POST",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "ias8464gd8gxf0hgvja8hrr0rn62734oqjy0e6tkt9o0kepsilk61"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"syncAgentKey\" : \"sizbko4rfjdy0kwqkla93yvp22c2fhxdgs5s3ta10msp5thqiqa8k51dl2ipn\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "d155a129-fc39-41ad-8212-193a5e9fd252",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:48.022Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "SyncAgents_GenerateKey",
+          "schema" : {
+            "type" : "object",
+            "properties" : {
+              "syncAgentKey" : {
+                "type" : "string",
+                "description" : "Key of sync agent.",
+                "readOnly" : true
+              }
+            },
+            "description" : "Properties of an Azure SQL Database sync agent key."
+          }
+        }
+      }
+    },
+    "insertionIndex" : 1
+  }, {
+    "id" : "17d04ca7-13b3-435f-a1c0-a547b7ccd21e",
+    "name" : "Deletes a sync agent. - 204",
+    "request" : {
+      "urlPath" : "/subscriptions/53pd/resourceGroups/Carmelo+Auer/providers/Microsoft.Sql/servers/Leonardo+West/syncAgents/Sun+Upton",
+      "method" : "DELETE",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "at4uxzmrt3sffgjynzaqift0a2jz4zfxo63qaka8oi4qlxwhgejkqccsqv48f5eg1kf4o3hw"
+        }
+      }
+    },
+    "response" : {
+      "status" : 204
+    },
+    "uuid" : "17d04ca7-13b3-435f-a1c0-a547b7ccd21e",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:48.021714Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "SyncAgents_Delete"
+        }
+      }
+    },
+    "insertionIndex" : 2
+  }, {
+    "id" : "d45848c9-721e-4d85-963d-b39f5fcc46e8",
+    "name" : "Deletes a sync agent. - 202",
+    "request" : {
+      "urlPath" : "/subscriptions/8h1e/resourceGroups/Albina+Greenfelder/providers/Microsoft.Sql/servers/Rodger+Mueller/syncAgents/Kendall+Hand",
+      "method" : "DELETE",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "3pxowdx48we8bcxwiutakl1lk74qs26f8mkyq3hdtnwcqqhij2bipqgi5vlyejy4m62s1uo012o14zhck4xjtk0cburhd58zhqmanwiduutjgnehfr0e4i56pkfzg0crixx3"
+        }
+      }
+    },
+    "response" : {
+      "status" : 202
+    },
+    "uuid" : "d45848c9-721e-4d85-963d-b39f5fcc46e8",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:48.021505Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "SyncAgents_Delete"
+        }
+      }
+    },
+    "insertionIndex" : 3
+  }, {
+    "id" : "8d1de21a-fac4-4507-b66e-4300ce2cd12f",
+    "name" : "Deletes a sync agent. - 200",
+    "request" : {
+      "urlPath" : "/subscriptions/2o4h/resourceGroups/Miss+Rudolf+Veum/providers/Microsoft.Sql/servers/Larae+Wilderman/syncAgents/Cortney+Schuppe",
+      "method" : "DELETE",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "ssg9g8pwk"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200
+    },
+    "uuid" : "8d1de21a-fac4-4507-b66e-4300ce2cd12f",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:48.021294Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "SyncAgents_Delete"
+        }
+      }
+    },
+    "insertionIndex" : 4
+  }, {
+    "id" : "9b2e6c96-ec57-4d19-9a0e-e1079d55b603",
+    "name" : "Creates or updates a sync agent. - 202",
+    "request" : {
+      "urlPath" : "/subscriptions/1a77/resourceGroups/Ulysses+Bogan/providers/Microsoft.Sql/servers/Mr.+Hai+Johnson/syncAgents/Elly+Corkery",
+      "method" : "PUT",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "6rwl5reovqkxblvwp5wypkrlo6lhhgxf4guczrza3ki79bflei9lq7lgdbe0orm35m3797cr8hr5tcb19yyp9wwvr0td1998q1zxj6n5ancjt7709ydmv3l2t114a5bavy9ehly84sctb9j5zo4keeb4cenmpjb43"
+        }
+      }
+    },
+    "response" : {
+      "status" : 202
+    },
+    "uuid" : "9b2e6c96-ec57-4d19-9a0e-e1079d55b603",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:48.021063Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "SyncAgents_CreateOrUpdate"
+        }
+      }
+    },
+    "insertionIndex" : 5
+  }, {
+    "id" : "0e814e5b-9c63-442a-b229-932eca1731a8",
+    "name" : "Creates or updates a sync agent. (application/json)",
+    "request" : {
+      "urlPath" : "/subscriptions/l28e/resourceGroups/Pattie+Gaylord/providers/Microsoft.Sql/servers/Dave+Ebert/syncAgents/Jerry+Wyman+DVM",
+      "method" : "PUT",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/json"
+        }
+      },
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "aezly11o2kqjh3wrjrzq71glozddpauk"
+        }
+      }
+    },
+    "response" : {
+      "status" : 201,
+      "body" : "{\n  \"properties\" : {\n    \"isUpToDate\" : true,\n    \"syncDatabaseId\" : \"f033\",\n    \"expiryTime\" : \"2024-01-07T20:28:30.02Z\",\n    \"name\" : \"Mohamed Rolfson\",\n    \"state\" : \"Offline\",\n    \"version\" : \"xdervvcoe5tsdsysgafpzo67tzyzlwjv4twwjdrrksh07f4lqa1s2ezxjhsjfewpn2shucg5u6kqysma2qgp3mepy46bsk0ak6yz5bpfkbmhubf4ivfxdit5rt2nflxtgwfmrg8b9cg7dg59os\",\n    \"lastAliveTime\" : \"2024-01-03T10:40:17.02Z\"\n  }\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "0e814e5b-9c63-442a-b229-932eca1731a8",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:48.020829Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "SyncAgents_CreateOrUpdate",
+          "schema" : {
+            "properties" : {
+              "properties" : {
+                "$ref" : "#/components/schemas/SyncAgentProperties"
+              }
+            },
+            "description" : "An Azure SQL Database sync agent.",
+            "allOf" : [ {
+              "description" : "ARM proxy resource.",
+              "allOf" : [ {
+                "type" : "object",
+                "properties" : {
+                  "id" : {
+                    "type" : "string",
+                    "description" : "Resource ID.",
+                    "readOnly" : true
+                  },
+                  "name" : {
+                    "type" : "string",
+                    "description" : "Resource name.",
+                    "readOnly" : true
+                  },
+                  "type" : {
+                    "type" : "string",
+                    "description" : "Resource type.",
+                    "readOnly" : true
+                  }
+                },
+                "description" : "ARM resource."
+              } ]
+            } ]
+          }
+        }
+      }
+    },
+    "insertionIndex" : 6
+  }, {
+    "id" : "e2613119-ff53-43fb-a493-656323d4707b",
+    "name" : "Creates or updates a sync agent. (application/json)",
+    "request" : {
+      "urlPath" : "/subscriptions/36h0/resourceGroups/Gigi+Kuphal/providers/Microsoft.Sql/servers/Jesica+Vandervort/syncAgents/Tiffiny+Tremblay",
+      "method" : "PUT",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/json"
+        }
+      },
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "clj54lc9ekhe104bl9oe2at1li68w3dhnyr0l3w6wo5ugvdbnp5d3r03nrwez7q5qq3l24vjrt2glt64kfo4i883skc5vo20e"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"properties\" : {\n    \"isUpToDate\" : true,\n    \"syncDatabaseId\" : \"yf01\",\n    \"expiryTime\" : \"2023-09-03T10:26:33.02Z\",\n    \"name\" : \"Santo Terry\",\n    \"state\" : \"NeverConnected\",\n    \"version\" : \"xxknv5y5ckxdkxwt1j1seg5webw8gs6h8ihkjqug3rfyqtj34aqxukdq262m27twkp1d7tiutjt4si3dcw0oahaqsp2l9jeugjuktwekylkk6rw78djjcjimyrgfud37d7t8u6adzdzyrspvw0gtly8pi5lm9if91bg0m4ztreblspkacu7toivcf65\",\n    \"lastAliveTime\" : \"2023-10-18T16:23:21.02Z\"\n  }\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "e2613119-ff53-43fb-a493-656323d4707b",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:48.020392Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "SyncAgents_CreateOrUpdate",
+          "schema" : {
+            "properties" : {
+              "properties" : {
+                "$ref" : "#/components/schemas/SyncAgentProperties"
+              }
+            },
+            "description" : "An Azure SQL Database sync agent.",
+            "allOf" : [ {
+              "description" : "ARM proxy resource.",
+              "allOf" : [ {
+                "type" : "object",
+                "properties" : {
+                  "id" : {
+                    "type" : "string",
+                    "description" : "Resource ID.",
+                    "readOnly" : true
+                  },
+                  "name" : {
+                    "type" : "string",
+                    "description" : "Resource name.",
+                    "readOnly" : true
+                  },
+                  "type" : {
+                    "type" : "string",
+                    "description" : "Resource type.",
+                    "readOnly" : true
+                  }
+                },
+                "description" : "ARM resource."
+              } ]
+            } ]
+          }
+        }
+      }
+    },
+    "insertionIndex" : 7
+  }, {
+    "id" : "a36323b8-d5ce-4c1e-9c2b-feeeb6975de5",
+    "name" : "Gets a sync agent.",
+    "request" : {
+      "urlPath" : "/subscriptions/1ol6/resourceGroups/Daryl+Nader/providers/Microsoft.Sql/servers/Ms.+Leona+Pfeffer/syncAgents/Beth+Walter",
+      "method" : "GET",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "cxxe7w5n7v"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"properties\" : {\n    \"isUpToDate\" : true,\n    \"syncDatabaseId\" : \"1e7p\",\n    \"expiryTime\" : \"2023-04-19T16:23:15.019Z\",\n    \"name\" : \"Ulysses Purdy\",\n    \"state\" : \"Online\",\n    \"version\" : \"5d1o21g135pf8737o9cegtcvj7dq1fl341jtnewbuoq5i9nxn5zgiuwz01o89ke28q2274tihuww9d6p7gek1xgviw31ezsxvpaqut5s769cu54g2r4isqkrxbrol2y5ohzfby6k85dgc3sr99y24gwwl63banq7ebyjfrdiwm2tcdncc3fro9vke2n7472qb\",\n    \"lastAliveTime\" : \"2023-09-06T15:32:00.019Z\"\n  }\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "a36323b8-d5ce-4c1e-9c2b-feeeb6975de5",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:48.019934Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "SyncAgents_Get",
+          "schema" : {
+            "properties" : {
+              "properties" : {
+                "$ref" : "#/components/schemas/SyncAgentProperties"
+              }
+            },
+            "description" : "An Azure SQL Database sync agent.",
+            "allOf" : [ {
+              "description" : "ARM proxy resource.",
+              "allOf" : [ {
+                "type" : "object",
+                "properties" : {
+                  "id" : {
+                    "type" : "string",
+                    "description" : "Resource ID.",
+                    "readOnly" : true
+                  },
+                  "name" : {
+                    "type" : "string",
+                    "description" : "Resource name.",
+                    "readOnly" : true
+                  },
+                  "type" : {
+                    "type" : "string",
+                    "description" : "Resource type.",
+                    "readOnly" : true
+                  }
+                },
+                "description" : "ARM resource."
+              } ]
+            } ]
+          }
+        }
+      }
+    },
+    "insertionIndex" : 8
+  }, {
+    "id" : "6cac9ff5-edf7-4e90-8c64-0cae449e4d88",
+    "name" : "Lists sync agents in a server.",
+    "request" : {
+      "urlPath" : "/subscriptions/15tj/resourceGroups/Bong+Leannon+II/providers/Microsoft.Sql/servers/Shenna+Klein/syncAgents",
+      "method" : "GET",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "0m7lvika3ktkwodgzayu78r3z2shcsn0hlrmbb"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"value\" : [ {\n    \"properties\" : {\n      \"isUpToDate\" : true,\n      \"syncDatabaseId\" : \"nxf2\",\n      \"expiryTime\" : \"2022-06-28T15:53:58.018Z\",\n      \"name\" : \"Florencio Bode\",\n      \"state\" : \"Offline\",\n      \"version\" : \"fu3zz32up5frmhkubu4vz2aez6tg5nt9aqski7leu3tjencuzhpsxqe0dx4mgwverdc8zw3zr0vb6b90bsocrknpwla90sw66pnq3l8ky4t2kxq0mfghl1i84iuxq0rb3wwfhn6f4ro0e0vmxidznhjelljn1o8j\",\n      \"lastAliveTime\" : \"2023-07-25T01:01:19.018Z\"\n    }\n  }, {\n    \"properties\" : {\n      \"isUpToDate\" : true,\n      \"syncDatabaseId\" : \"9d5n\",\n      \"expiryTime\" : \"2022-09-18T22:18:57.018Z\",\n      \"name\" : \"Mrs. Laurice Fritsch\",\n      \"state\" : \"Offline\",\n      \"version\" : \"lr4q0ccrbl85idvkjt1w64vyycxsggs4hslweujn2ap9330cpm4fow6w5hbyk4bfaxsiycqplzg27n6358oeydyqys9wpo5uphh9zttkhc7huvaberjy44xrtds1zmet087def4b1uolsk66cjlauxyyv00p2nvk3f35scsshw3jpikeb50gbc15bq\",\n      \"lastAliveTime\" : \"2022-10-14T01:41:22.018Z\"\n    }\n  }, {\n    \"properties\" : {\n      \"isUpToDate\" : false,\n      \"syncDatabaseId\" : \"84o5\",\n      \"expiryTime\" : \"2023-05-10T08:18:10.018Z\",\n      \"name\" : \"Taunya Herman\",\n      \"state\" : \"Offline\",\n      \"version\" : \"q9haw4dzhem5wadt3yvuyyxx4jqa3o9xzc1rxs0sugfexagd3szvekfb155hfki8uxy9102nacvpus58epair49kqwzjugxwjrg98px9pzxbzah22h0u4h6qc0icaqkxnm02slmk7g6fjpcv6tqo\",\n      \"lastAliveTime\" : \"2023-07-02T04:29:06.018Z\"\n    }\n  } ],\n  \"nextLink\" : \"vv62w153ed6aq6hfwqqwdmiinfv3vhjyj7vvcy7s33qllswj9jfx2wj3l03p3ql5e6\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "6cac9ff5-edf7-4e90-8c64-0cae449e4d88",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:48.019379Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "SyncAgents_ListByServer",
+          "schema" : {
+            "type" : "object",
+            "properties" : {
+              "nextLink" : {
+                "type" : "string",
+                "description" : "Link to retrieve next page of results.",
+                "readOnly" : true
+              },
+              "value" : {
+                "type" : "array",
+                "description" : "Array of results.",
+                "readOnly" : true,
+                "items" : {
+                  "$ref" : "#/components/schemas/SyncAgent"
+                }
+              }
+            },
+            "description" : "A list of sync agents."
+          }
+        }
+      }
+    },
+    "insertionIndex" : 9
+  } ]
+}

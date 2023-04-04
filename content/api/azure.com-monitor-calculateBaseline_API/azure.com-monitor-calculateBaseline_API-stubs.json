@@ -1,0 +1,63 @@
+{
+  "mappings" : [ {
+    "id" : "8c65b0f1-901c-4f01-a7ac-2e4eb5e7823c",
+    "name" : "**Lists the baseline values for a resource**.",
+    "request" : {
+      "urlPath" : "/https%3A%2F%2Fweb.example.mocklab.io%2F193334/providers/microsoft.insights/calculatebaseline",
+      "method" : "POST",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "49lka9yq9eu28mydyts5ac1h4dli2rpnmjjonny5nj91n6t86y3edktzcm9wuz4i7jkv8w9ipxz8eetdv1rsx0h9mnvp2xxbkz4hcpsdvemvirdqtbcwb632ys7zkxx8p8zi99qxy0gzvk1958ekjlq79dcstsvala1b59nc6x12q5ie"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"timestamps\" : [ \"2023-03-22T07:17:46.194Z\", \"2023-03-17T09:42:48.194Z\", \"2023-07-01T09:52:17.194Z\", \"2023-01-25T09:42:56.194Z\", \"2022-06-23T07:47:45.194Z\", \"2022-05-11T20:43:31.194Z\", \"2023-11-13T10:16:43.194Z\" ],\n  \"baseline\" : [ {\n    \"lowThresholds\" : [ 1.5157776476101928E308, 7.690785124713566E307, 2.8806705939357587E307, 1.6773794883249495E308, 7.487983526865768E307, 5.887727914548044E307, 1.4534219868557284E308 ],\n    \"sensitivity\" : \"Medium\",\n    \"highThresholds\" : [ 8.216760538500737E307, 1.0401994428766345E307, 8.33573248982104E307, 4.937898052624054E307, 1.1094027081604708E307, 1.6818117215267393E308, 1.3633379507639495E308, 5.252821350895544E306 ]\n  }, {\n    \"lowThresholds\" : [ 7.64729914502909E307, 9.597444206396696E307, 7.873878209616956E307, 9.350495915054637E307 ],\n    \"sensitivity\" : \"Medium\",\n    \"highThresholds\" : [ 1.1535451394317742E308, 6.376629173338047E307, 1.095895417626712E308, 1.5701705175452789E308, 7.670965598209919E307, 1.351143908933335E308, 1.1235991256680674E308 ]\n  }, {\n    \"lowThresholds\" : [ 5.117068006716513E307, 2.916280364443432E307, 3.495425283853851E307, 1.6256694961307111E308, 1.4719345046119911E308 ],\n    \"sensitivity\" : \"Medium\",\n    \"highThresholds\" : [ 1.2452650561602883E308, 1.6943215593388222E308, 3.4956672253817864E307, 1.441487537432352E308, 8.058078168305009E307, 9.094468031939789E306 ]\n  }, {\n    \"lowThresholds\" : [ 8.500218631146728E307, 6.027000522287618E306, 1.2650483255912956E308, 1.212980043156778E308 ],\n    \"sensitivity\" : \"High\",\n    \"highThresholds\" : [ 3.6807817062795683E307, 9.689580701942913E307, 1.2923258586121952E308 ]\n  }, {\n    \"lowThresholds\" : [ 8.982272539500824E307, 7.987394183311418E307, 1.7689822982039427E307, 1.5726026798983296E308, 2.5743776604067834E306, 8.632186474654286E306 ],\n    \"sensitivity\" : \"Medium\",\n    \"highThresholds\" : [ 2.6351559365365963E307, 7.455540850488276E307, 3.027272172922736E306, 1.5749254469556702E308, 7.117938995768095E307, 1.2911567248856801E308, 1.5330842407077178E308 ]\n  }, {\n    \"lowThresholds\" : [ 1.393716701550246E308, 6.769409003114765E307, 1.6663503717841041E308, 6.83509680044063E307 ],\n    \"sensitivity\" : \"Medium\",\n    \"highThresholds\" : [ 9.62671670496405E307, 3.994293978854255E307, 6.270696803948966E307, 1.254472353608119E308, 9.27631537310976E307, 2.6971610497247297E307, 1.7485305437326924E308, 4.416481405445442E307 ]\n  } ],\n  \"type\" : \"cczcpxk99h217t89tddwe9ab7vgdszn7cr47d0iea95s3b44fu0aesuu78allbbitbbrmfz7pvji1pw4kq4m1h0iuxhyitgouso5s6i09gse6kw14draobecki9e3dft1u2osdw1s68plov7\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "8c65b0f1-901c-4f01-a7ac-2e4eb5e7823c",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:40.195443Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "MetricBaseline_CalculateBaseline",
+          "schema" : {
+            "required" : [ "baseline", "type" ],
+            "type" : "object",
+            "properties" : {
+              "baseline" : {
+                "type" : "array",
+                "description" : "The baseline values for each sensitivity.",
+                "items" : {
+                  "$ref" : "#/components/schemas/Baseline"
+                }
+              },
+              "timestamps" : {
+                "type" : "array",
+                "description" : "The array of timestamps of the baselines.",
+                "items" : {
+                  "type" : "string",
+                  "description" : "The timestamp for the baseline value in ISO 8601 format.",
+                  "format" : "date-time"
+                }
+              },
+              "type" : {
+                "type" : "string",
+                "description" : "The resource type of the baseline resource."
+              }
+            },
+            "description" : "The response to a calculate baseline call."
+          }
+        }
+      }
+    },
+    "insertionIndex" : 0
+  } ]
+}

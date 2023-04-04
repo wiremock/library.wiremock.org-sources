@@ -1,0 +1,53 @@
+{
+  "mappings" : [ {
+    "id" : "ef580e7c-302a-4b2b-91de-bb6fa9d0c922",
+    "name" : "List what values of endpoint services are available for use.",
+    "request" : {
+      "urlPath" : "/subscriptions/6r2c/providers/Microsoft.Network/locations/qa5ychzwhy8yh5agwrhlqkjj3fqhkcxu4yfwayfugwm2dhk05a9z9phd2a2k2bpois18vjsgodex6bnojwwum7tm452bntetagxmdwmwcsbqo7h33ulwxg1kr/virtualNetworkAvailableEndpointServices",
+      "method" : "GET",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "e5km83hmmuknv8vy5m9b0k7ge68g"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"value\" : [ {\n    \"name\" : \"Dr. Henry Koss\",\n    \"id\" : \"nu63\",\n    \"type\" : \"xd80rv7v7ry05xbdhm3tk423l1x0dvkw0hrn3i2xbt2pc048b5xw2y885gyoeh4xifkwwxv6n57locc0qvtkxn0vnv8ge90p4bo38g09o114kxplb1nf7hjxnnpeooologiwzsf7xyeh6wcgg3w3eu25q0985bzgovwzvnaiyzbecf6szsgqvln03258h0va\"\n  }, {\n    \"name\" : \"Janean Bradtke\",\n    \"id\" : \"888r\",\n    \"type\" : \"nxyac0oruz6aob3g69tg6u57s0zvhetq51mybp40ewnuxmmt9hsxbj0ohmuntgzdp5lt7jrbhp7i2f8tryswsg8in3s5v7veqxugx35cen2fltfsg5cooheo83vjpz5lt5i3hmawiylazx\"\n  }, {\n    \"name\" : \"Bev Swift\",\n    \"id\" : \"a1tv\",\n    \"type\" : \"vwzxxxadr123gad6k2ac962\"\n  } ],\n  \"nextLink\" : \"vye32f5u\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "ef580e7c-302a-4b2b-91de-bb6fa9d0c922",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:48.340333Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "AvailableEndpointServices_List",
+          "schema" : {
+            "type" : "object",
+            "properties" : {
+              "nextLink" : {
+                "type" : "string",
+                "description" : "The URL to get the next set of results."
+              },
+              "value" : {
+                "type" : "array",
+                "description" : "List of available endpoint services in a region.",
+                "items" : {
+                  "$ref" : "#/components/schemas/EndpointServiceResult"
+                }
+              }
+            },
+            "description" : "Response for the ListAvailableEndpointServices API service call."
+          }
+        }
+      }
+    },
+    "insertionIndex" : 0
+  } ]
+}

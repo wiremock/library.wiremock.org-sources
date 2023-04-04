@@ -1,0 +1,99 @@
+{
+  "mappings" : [ {
+    "id" : "538ef378-cde7-44f0-ab66-aeccc790611c",
+    "name" : "Gets a recoverable managed database.",
+    "request" : {
+      "urlPath" : "/subscriptions/z10n/resourceGroups/Derek+Ratke/providers/Microsoft.Sql/managedInstances/Reginald+Abernathy+II/recoverableDatabases/Walker+Lind",
+      "method" : "GET",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "s46pj63eg5wjxybxpa575rw08ne59ry3y5k77j9dc75z7p2umsaslldwdb8k6cylmt1sff1e666ebcfnff89rts93tssump9l48jknhzsge4gs2wvb6q96yim1h5a4gcp2yoa3iatblpco3hgtss858cufowl43"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"properties\" : {\n    \"lastAvailableBackupDate\" : \"2022-08-13T06:51:15.549556Z\"\n  }\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "538ef378-cde7-44f0-ab66-aeccc790611c",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:15.54984Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "RecoverableManagedDatabases_Get",
+          "schema" : {
+            "properties" : {
+              "properties" : {
+                "$ref" : "#/components/schemas/RecoverableManagedDatabaseProperties"
+              }
+            },
+            "description" : "A recoverable managed database resource.",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/ProxyResource"
+            } ]
+          }
+        }
+      }
+    },
+    "insertionIndex" : 0
+  }, {
+    "id" : "f411af69-c4ba-41fe-b79e-7ab17c01fcaa",
+    "name" : "Gets a list of recoverable managed databases.",
+    "request" : {
+      "urlPath" : "/subscriptions/5zwn/resourceGroups/Omer+Runolfsson/providers/Microsoft.Sql/managedInstances/Georgiana+Erdman/recoverableDatabases",
+      "method" : "GET",
+      "queryParameters" : {
+        "api-version" : {
+          "equalTo" : "kghq7lkiqko70x1aawq1iaassto9nrymrz66a6iraxafwgk47ccer26g0kayq525nlvu6z1e72hzg3mbblcx1cumk"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"value\" : [ {\n    \"properties\" : {\n      \"lastAvailableBackupDate\" : \"2023-03-12T08:53:15.548959Z\"\n    }\n  }, {\n    \"properties\" : {\n      \"lastAvailableBackupDate\" : \"2022-04-04T06:26:15.549025Z\"\n    }\n  }, {\n    \"properties\" : {\n      \"lastAvailableBackupDate\" : \"2022-07-26T08:53:15.549062Z\"\n    }\n  } ],\n  \"nextLink\" : \"305pgmhq9a4e9x88erxphgtxmwg3v9ff2y2\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "f411af69-c4ba-41fe-b79e-7ab17c01fcaa",
+    "persistent" : true,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2023-03-28T09:23:15.549484Z",
+          "via" : "OAS3_IMPORT"
+        },
+        "oas" : {
+          "operationId" : "RecoverableManagedDatabases_ListByInstance",
+          "schema" : {
+            "type" : "object",
+            "properties" : {
+              "nextLink" : {
+                "type" : "string",
+                "description" : "Link to retrieve next page of results.",
+                "readOnly" : true
+              },
+              "value" : {
+                "type" : "array",
+                "description" : "Array of results.",
+                "readOnly" : true,
+                "items" : {
+                  "$ref" : "#/components/schemas/RecoverableManagedDatabase"
+                }
+              }
+            },
+            "description" : "A list of recoverable managed databases."
+          }
+        }
+      }
+    },
+    "insertionIndex" : 1
+  } ]
+}
