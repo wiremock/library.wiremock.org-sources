@@ -3,7 +3,7 @@
     <div class="mx-auto max-w-7xl py-2.5 lg:py-3">
       <div class="flex items-center justify-between lg:justify-start lg:space-x-10">
         <div class="flex justify-start lg:w-0 lg:flex-1">
-          <a href="{{ "/" | relLangURL }}">
+          <a href="https://wiremock.org">
             <span class="sr-only">{{ .Site.Title }}</span>
             <img class="h-5 w-auto" src="{{ .Site.Params.logo | absURL }}" alt="{{ .Site.Title }}" />
           </a>
@@ -110,9 +110,9 @@
           {{ end }}
         </nav>
         <div class="hidden items-center justify-end lg:flex lg:w-0 lg:flex-1 gap-3">
-          {{ range .Site.Menus.navbar_cta }}
-            {{ partial "components/button-navbar.html" . }}
-          {{ end }}
+          <a href="https://wiremock.io/?utm_source=wiremock.org&utm_medium=masthead&utm_campaign=homepage_2022_baseline">
+            <img class="h-8 w-auto" src="{{ .Site.Params.logo_cloud | absURL }}" alt="{{ .Site.Title }}" />
+          </a>
         </div>        
       </div>
     </div>
@@ -179,9 +179,9 @@
         {{ end }}
       </div>
       <div class="px-8 sm:px-10 pb-8 sm:pb-10 flex flex-col sm:flex-row gap-5">
-        {{ range .Site.Menus.navbar_cta }}
-          {{ partial "components/button-navbar.html" . }}
-        {{ end }}    
+        <a href="https://wiremock.io/?utm_source=wiremock.org&utm_medium=masthead&utm_campaign=homepage_2022_baseline">
+          <img class="h-7 w-auto" src="{{ .Site.Params.logo_cloud | absURL }}" alt="{{ .Site.Title }}" />
+        </a>
       </div>
     </div>
   </div>

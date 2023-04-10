@@ -1,4 +1,10 @@
 {{define "main"}}
+  {{ $blocks := .Params.blocks }}
+  {{ range $blocks }}
+    {{ $file := (printf "%s%s%s" "blocks/" .block ".html" ) }}
+    {{ partial $file . }}
+  {{ end }}
+
   <section class="px-6 sm:px-10 pt-14 lg:pt-24">
     <div class="mx-auto max-w-md sm:max-w-3xl lg:max-w-7xl">
       <h1 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-sky-990">{{ .Title }}</h1>
@@ -16,11 +22,13 @@
           <div class="mt-10">
             {{ partial "pagination.html" . }}
           </div>
+          {{ with .Site.Params.cta }}
+            <div class="py-14 lg:py-24">
+              {{ partialCached "cta.html" . }}
+            </div>
+          {{ end }}
         </div>
       </div>
     </div>
   </section>
-  {{ with .Site.Params.cta }}
-    {{ partialCached "cta.html" . }}
-  {{ end }}
 {{ end }}

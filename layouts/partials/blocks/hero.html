@@ -1,0 +1,76 @@
+<section>
+  <div class="px-6 sm:px-10 pt-14 lg:pt-24">
+  <div class="mx-auto max-w-3xl lg:max-w-7xl">
+    {{ if eq .layout "left" }}
+      <div class="lg:flex items-center ">
+        <div class="max-w-2xl lg:w-1/2 space-y-10 lg:space-y-12">
+          <div class="space-y-4 lg:space-y-5">
+            {{ partial "components/superheading.html" . }}
+            {{ partial "components/h1.html" . }}
+            {{ if .subheading }}
+              <div class="max-w-lg">
+                {{ partial "components/subheading.html" . }}
+              </div>
+            {{ end }}
+          </div>
+          {{ partial "components/list.html" . }}
+          {{ with .buttons }}
+            <div class="flex flex-wrap gap-3">
+              {{ range . }}
+                {{ partial "components/button.html" . }}
+              {{ end }}
+            </div>
+          {{ end }}
+        </div>
+        <div class="h-full w-full lg:w-1/2 pt-12 lg:pt-0 lg:pl-8 xl:pl-14">
+          {{ partial "components/image.html" . }}
+        </div>
+      </div>
+    {{ else }}
+      <div class="max-w-6xl mx-auto space-y-8 lg:space-y-12 text-center">
+        {{ if or .superheading .heading .subheading }}
+          <div class="max-w-3xl mx-auto space-y-2 md:space-y-4">
+            {{ partial "components/superheading.html" . }}
+            {{ partial "components/h1.html" . }}
+            {{ partial "components/subheading.html" . }}
+          </div>
+        {{ end }}
+        {{ if .image }}
+          <div class="flex justify-center">
+            {{ partial "components/image.html" . }}
+          </div>
+        {{ end }}
+        {{ if .categories }}
+          <div class="grid lg:grid-cols-3 gap-4">
+            {{ range .categories }}
+              <div>
+                <div class="text-center mb-2">{{ partial "components/h4.html" . }}</div>
+                <div class="flex justify-center items-center">
+                  {{ range .logos }}
+                    <div class=" p-2">
+                      {{ if .url }}
+                        <a href="{{ .url }}"{{ if in .url "http" }} target="_blank" rel="noopener noreferrer"{{ end }}>
+                          <img src="{{ .image | absURL }}" class="mx-auto" alt="{{ .alt }}" />
+                        </a>
+                      {{ else }}
+                        <img src="{{ .image | absURL }}" class="mx-auto" alt="{{ .alt }}" />
+                      {{ end }}
+                    </div>
+                  {{ end }}
+                </div>
+              </div>
+            {{ end }}
+          </div>
+        {{ end }}
+        {{ partial "components/list.html" . }}
+        {{ with .buttons }}
+          <div class="flex flex-wrap gap-3 justify-center">
+            {{ range . }}
+              {{ partial "components/button.html" . }}
+            {{ end }}
+          </div>
+        {{ end }}
+      </div>
+    {{ end }}
+  </div>
+</div>

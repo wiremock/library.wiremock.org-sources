@@ -45,7 +45,7 @@
               <h2 class="text-sky-990 font-medium text-lg lg:text-xl mb-5">{{ i18n "use_api" }}</h2>
               {{ with .Resources.GetMatch .Params.stubs }}
                 <a href="{{ .Permalink }}" class="mt-5 flex items-center justify-center space-x-2 transition rounded-md focus:outline-none font-semibold antialiased
-                  px-4 py-3 text-lg sm:text-xl
+                  px-2 py-3 text-lg
                   text-white border border-sky-500 bg-sky-500 hover:bg-sky-600 hover:border-sky-600" target="_blank" rel="noopener noreferrer">
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g clip-path="url(#clip0_18373_127)">
@@ -57,12 +57,12 @@
                     </clipPath>
                     </defs>
                   </svg>                    
-                  <span class="pr-4">WireMock OSS</span>
+                  <span class="pr-4">Download WireMock JSON</span>
                 </a>
               {{ end }}
               {{ with .Resources.GetMatch .Params.stubs }}
                 <a href="https://app.wiremock.cloud/new-from-template?apiTemplate={{ $.Params.provider}}" class="mt-5 flex items-center justify-center space-x-2 transition rounded-md focus:outline-none font-semibold antialiased
-                  px-4 py-3 text-lg sm:text-xl
+                  px-2 py-3 text-lg
                   text-white border border-sky-500 bg-sky-500 hover:bg-sky-600 hover:border-sky-600" target="_blank" rel="noopener noreferrer">
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g clip-path="url(#clip0_18373_798)">
@@ -74,7 +74,7 @@
                     </clipPath>
                     </defs>
                   </svg>                                       
-                  <span class="pr-4">WireMock Cloud</span>
+                  <span class="pr-4">Run in WireMock Cloud</span>
                 </a>
               {{ end }}
               <a href="https://mockoon.com/mock-samples/1forgecom/#!" class="inline-flex mt-5 text-sky-600 hover:underline underline-offset-4 decoration-sky-600" 
@@ -93,6 +93,12 @@
     </div>
   </section>
   {{ with .Site.Params.cta }}
-    {{ partial "cta.html" . }}
+    <section>
+      <div class="px-6 lg:px-8 py-14 lg:py-24">
+        <div class="max-w-5xl mx-auto">
+          {{ partial "cta.html" . }}
+        </div>
+      </div>
+    </section>
   {{ end }}
 {{ end }}

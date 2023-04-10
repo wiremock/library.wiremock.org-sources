@@ -102,6 +102,6 @@
   {{ $start := add (mul (sub $paginator.PageNumber 1) $paginator.PageSize) 1 }}
   {{ $end := add $start (sub (len $paginator.Pages) 1) }}
   {{ $totalPosts := mul $paginator.TotalPages $paginator.PageSize }}
-  <p class="text-center mt-4 text-slate-900">Showing {{ $start }}-{{ $end }} of {{ $totalPosts }} stubs</p>
+  <p class="text-center mt-4 text-slate-900">Showing {{ $start }}-{{ $end }} of {{ $totalPosts }} API templates</p>
 
 {{ end }}
