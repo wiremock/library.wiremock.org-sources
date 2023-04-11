@@ -1,6 +1,7 @@
 ---
-title: mock API
+title: Flexible, open source API mocking
 description: 
+heading: mock API
 blocks:
 - block: hero
   # layout: left
