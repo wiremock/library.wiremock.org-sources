@@ -13,5 +13,9 @@ blocks:
     url: "https://wiremock.io/product?utm_source=wiremock.org&utm_medium=masthead&utm_campaign=homepage_2022_baseline"
     style: primary
     size: large
+  - text: Contribute
+    url: "/how-to-contribute"
+    style: secondary
+    size: large
 ---
 
