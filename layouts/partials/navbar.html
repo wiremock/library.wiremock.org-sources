@@ -105,13 +105,14 @@
                 </div>
               </div>
             {{ else }}
-              <a href="{{ .URL }}" class="text-sm tracking-wide text-slate-500 hover:text-sky-600 px-4 py-2.5 rounded-full"{{ if in .URL "http" }} target="_blank"{{ end }}> {{ .Name }} </a>
+              <a href="{{ .URL }}" class="text-sm tracking-wide text-slate-500 hover:text-sky-600 px-2 py-2.5 rounded-full"{{ if in .URL "http" }} target="_blank"{{ end }}>{{ .Pre }}{{ .Name }} </a>
             {{ end }}
           {{ end }}
         </nav>
-        <div class="hidden items-center justify-end lg:flex lg:w-0 lg:flex-1 gap-3">
-          <a href="https://wiremock.io/?utm_source=wiremock.org&utm_medium=masthead&utm_campaign=homepage_2022_baseline">
-            <img class="h-8 w-auto" src="{{ .Site.Params.logo_cloud | absURL }}" alt="{{ .Site.Title }}" />
+        <div class="hidden items-center justify-end lg:flex">
+          <a href="https://wiremock.io/product?utm_source=wiremock.org&utm_medium=masthead&utm_campaign=homepage_2022_baseline" class="bg-sky-100 border-sky-500 hover:border-slate-600 border-4 rounded relative px-4 pb-1 text-slate-500">
+            <img class="h-8 w-auto -mt-1" src="{{ .Site.Params.logo_cloud | absURL }}" alt="{{ .Site.Title }}" />
+            <span class="text-xs absolute bottom-0 left-2 font-bold">Start for Free*</span>
           </a>
         </div>        
       </div>
@@ -174,7 +175,7 @@
             </div>
           {{ else }}
             <a href="{{ .URL }}" class="block rounded-md  tracking-wide px-4 py-3 text-lg text-slate-500 hover:text-sky-600 hover:bg-slate-50" 
-            {{ if in .URL "http" }} target="_blank"{{ end }}>{{ .Name }}</a>
+            {{ if in .URL "http" }} target="_blank"{{ end }}>{{ .Pre }}{{ .Name }}</a>
           {{ end }}
         {{ end }}
       </div>
