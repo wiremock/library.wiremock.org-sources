@@ -90,7 +90,7 @@
       {{ $related := .Site.RegularPages.Related . | shuffle | first 6 }}
       {{ if $related }}
         <div>
-          <h3 class="text-2xl mt-4 mb-2">Related mocks</h3>
+          <h3 class="text-2xl mt-6 mb-4">Related mocks</h3>
           <div class="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {{ with $related }}
               {{ range . }}
