@@ -86,13 +86,20 @@
           </div>
         </div>
       </div>
-      
-      <div class="flex flex-col lg:flex-row gap-8 lg:gap-10 mt-6">
+
+      {{ $related := .Site.RegularPages.Related . | shuffle | first 6 }}
+      {{ if $related }}
         <div>
+          <h3 class="text-2xl mt-4 mb-2">Related mocks</h3>
+          <div class="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            {{ with $related }}
+              {{ range . }}
+                {{ partial "card-api.html" . }}
+              {{ end }}
+            {{ end }}
+          </div>
         </div>
-        <div class="flex-1">
-        </div>
-      </div>
+      {{ end }}
     </div>
   </section>
   {{ with .Site.Params.cta }}
