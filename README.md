@@ -2,14 +2,21 @@
 
 [![a](https://img.shields.io/badge/slack-Join%20us-brightgreen?style=flat&logo=slack)](http://slack.wiremock.org/)
 
-This site provides a catalog of API Templates that can be used with both
+<p align="center">
+    <a href="https://library.wiremock.org" target="_blank">
+        <img width="768px" src="static/images/logo/template-library-wide.png" alt="WireMock API Templates Lib Logo"/>
+    </a>
+</p>
+
+The [library.wiremock.org](https://library.wiremock.org) site provides a catalog of API Templates
+that can be used with both
 [WireMock](https://wiremock.org/) or [WireMock Cloud](https://wiremock.io).
 You can browse our library of mock API templates and examples,
 find the API that you need,
 and get a running mock in seconds - on your local machine or in the cloud.
 
-Template definitions are stored in another repository:
-[wiremock/api-template-library](https://github.com/wiremock/api-template-library)
+Template definitions can be found in another repository:
+[wiremock/api-template-library](https://github.com/wiremock/api-template-library).
 
 ## Using templates in WireMock
 
