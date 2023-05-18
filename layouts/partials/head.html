@@ -6,10 +6,11 @@
 <meta property="og:title" content="{{ .Title }} | {{ .Site.Title }}" />
 <meta name="twitter:title" content="{{ .Title }} | {{ .Site.Title }}" />
 <meta itemprop="name" content="{{ .Title }} | {{ .Site.Title }}" />
-<meta name="application-name" content="{{ .Title }} | {{ .Site.Title }}" />
+<meta name="application-name" content="{{ .Site.Title }}" />
 <meta property="og:site_name" content="{{ .Site.Params.sitename }}" />
 
-<meta name="description" content="{{ .Params.description | default .Site.Params.description }}" />
+<meta name="title" content="{{ if eq .Type "api" }}Free Mock API for {{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}" />
+<meta name="description" content="{{ .Site.Params.description }}" />
 <meta property="og:description" content="{{ .Params.description | default .Site.Params.description }}" />
 <meta name="twitter:description" content="{{ .Params.description | default .Site.Params.description }}" />
 
