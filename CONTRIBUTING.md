@@ -30,6 +30,7 @@ It is possible to do development on any modern platform.
 
 - Operating system: Linux, Windows, macOS
 - Hugo is installed ([installation guide](https://gohugo.io/installation/))
+- PostCSS is installed, use `npm install postcss-cli`
 
 ### Running in the development mode
 
