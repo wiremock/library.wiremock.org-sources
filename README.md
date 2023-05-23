@@ -20,7 +20,8 @@ Template definitions can be found in another repository:
 
 ## Using templates in WireMock
 
-1. Choose a template you need by using categorization and search capabilities of the website.
+1. Choose a template you need by using the categorization and search capabilities of the website.
+
 2. Click the _Download WireMock JSON_ button to download the JSON file
 3. Use the JSON file to configure your WireMock instance
   ([documentation](https://wiremock.org/3.x/docs/standalone/java-jar/#json-file-configuration))
@@ -28,7 +29,8 @@ Template definitions can be found in another repository:
 ## Using templates in WireMock Cloud
 
 For WireMock Cloud there is also the _Run in WireMock Cloud_ button that
-allows to quickly import the Mock API definition into your project.
+allows you to quickly import the Mock API definition into your project.
+
 
 ## License
 
