@@ -38,7 +38,7 @@ The website repository and custom code there are licensed under [Apache License 
 The artwork might be licensed differently,
 see the source code.
 
-License are licensed separately under different open source licenses.
+Templates are licensed separately under different open source licenses.
 See the metadata in [wiremock/api-template-library](https://github.com/wiremock/api-template-library)
 or on the website to learn more about template licenses.
 
