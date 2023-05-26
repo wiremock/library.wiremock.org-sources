@@ -8,7 +8,7 @@
   <span aria-hidden="true">→</span>
 </a>
 {{ else }}
-  <a href="{{ .url | relLangURL }}"{{ if in .url "https" }} target="_blank" rel="noopener noreferrer"{{ end }}
+  <a href="{{ if in .url "http" }}{{ .url }}{{ else }}{{ .url | relLangURL }}{{ end }}"{{ if in .url "https" }} target="_blank" rel="noopener noreferrer"{{ end }}
     class="inline-block tracking-wide transition rounded-md focus:outline-none font-semibold antialiased
     {{ if eq .size "small" }}px-4 py-1.5 text-sm{{ else if eq .size "large" }}px-8 py-3 md:px-12 text-lg sm:text-xl{{ else }}px-6 py-2{{ end }}
     {{ if eq .style "primary" }}text-white border border-sky-500 bg-sky-500 hover:bg-sky-600 hover:border-sky-600
