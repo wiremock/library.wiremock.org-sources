@@ -11,13 +11,9 @@ blocks:
   # TODO: Get the resource bundles sorted
   # image: images/logo/template-library.png
   buttons:
-  - text: Get started
-    url: "https://wiremock.io/product?utm_source=wiremock.org&utm_medium=masthead&utm_campaign=homepage_2022_baseline"
+  - text: How to contribute
+    url: "https://github.com/wiremock/api-template-library/blob/main/docs/CONTRIBUTING.md"
     style: primary
-    size: large
-  - text: Contribute
-    url: "/how-to-contribute"
-    style: secondary
     size: large
 ---
 
