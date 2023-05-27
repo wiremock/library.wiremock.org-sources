@@ -5,7 +5,7 @@
       {{ partial "components/subheading.html" . }}
     </div>
     {{ with .button }}
-    <a href="{{ .url | relLangURL }}"{{ if in .url "http" }} target="_blank" rel="noopener noreferrer"{{ end }} 
+    <a {{ if in .url "http" }} href="{{ .url }}" target="_blank" rel="noopener noreferrer" {{ else }} href="{{ .url | relLangURL }}" {{ end }} 
       class="inline-block tracking-wide transition rounded-md focus:outline-none font-semibold antialiased
       px-8 py-3 md:px-12 text-lg sm:text-xl
       text-white border border-orange-400 bg-orange-400 hover:bg-orange-500 hover:border-orange-500">
