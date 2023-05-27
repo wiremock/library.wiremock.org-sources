@@ -11,9 +11,13 @@ blocks:
   # TODO: Get the resource bundles sorted
   # image: images/logo/template-library.png
   buttons:
-  - text: How to contribute
-    url: "https://github.com/wiremock/api-template-library/blob/main/docs/CONTRIBUTING.md"
+  - text: Documentation
+    url: "https://wiremock.org/docs/mock-api-templates/usage/"
     style: primary
+    size: large
+  - text: How to contribute
+    url: "./how-to-contribute"
+    style: secondary
     size: large
 ---
 
