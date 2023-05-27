@@ -1,0 +1,33 @@
+name: Continuous Integration
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          submodules: "true"
+      
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: '0.110.0'
+          # extended: true
+
+      - name: Build
+        run: hugo --minify
+
+# TODO: Uncomment when cleaned up
+#      - name: Validate HTML and links
+#        uses: anishathalye/proof-html@v2
+#        with:
+#          directory: ./_site
+#          enforce_https: false
