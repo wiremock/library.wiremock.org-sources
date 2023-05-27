@@ -12,6 +12,11 @@
       {{ end }}
     </div>
   {{ end }}
+  {{ if .Params.logoPath }}
+    <div class="svg-logo border border-slate-200 p-2 rounded justify-center">
+      <img src="{{ .Params.logoPath | relLangURL }}" width="82px" height="82px">
+    </div>
+  {{ end }}
   <div class="relative text-center">
     <h3 class="text-xl font-medium break-words">{{ .Title }}</h3>
     {{ with .Params.description }}

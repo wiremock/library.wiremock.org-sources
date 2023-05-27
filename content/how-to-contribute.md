@@ -2,11 +2,13 @@
 title: Contribute!
 description: 
 heading: How to edit and add new templates
+description: Add new templates
 # We add the page to the listing for better UX
 tags:
 - all
 - featured
 tags_weight: 999
+logoPath: "/images/add.svg"
 ---
 
 ## If you would like to contribute
