@@ -7,18 +7,17 @@
 
   <section class="px-6 sm:px-10 pt-14 lg:pt-24">
     <div class="mx-auto max-w-md sm:max-w-3xl lg:max-w-7xl">
-      <h1 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-sky-990">Featured</h1>
+      <h1 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-sky-990">Featured templates</h1>
+      Select a category below to search for more templates
       <div class="flex flex-col lg:flex-row gap-8 lg:gap-10 mt-6">
         <div>
           {{ partial "nav-tags.html" . }}
         </div>
         <div class="flex-1">
-          {{ $paginator := .Paginate (where site.RegularPages "Type" "in" site.Params.mainSections  ) }}
+          {{ $paginator := .Paginate (where site.RegularPages "Params.tags" "intersect" (slice "featured") ) }}
           <div class="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {{ range $paginator.Pages }}
-              {{ if in .Params.tags "featured" }}
-                {{ partial "card-api.html" . }}
-              {{ end }}
+              {{ partial "card-api.html" . }}
             {{ end }}
           </div>
           <div class="mt-10">
