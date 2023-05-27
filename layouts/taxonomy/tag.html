@@ -9,7 +9,8 @@
         <div class="flex-1">
           <div class="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {{ if in .Permalink "/all" }}
-              {{ range (.Paginate site.RegularPages).Pages }}
+              {{ $allTemplates := .Paginate ( where site.RegularPages "Params.stubs" "!=" nil ) }}
+              {{ range $allTemplates.Pages }}
                 {{ partial "card-api.html" . }}
               {{ end }}
             {{ else }}
