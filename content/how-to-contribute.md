@@ -1,7 +1,12 @@
 ---
-title: How to contribute
+title: Contribute!
 description: 
 heading: How to edit and add new templates
+# We add the page to the listing for better UX
+tags:
+- all
+- featured
+tags_weight: 999
 ---
 
 ## If you would like to contribute
