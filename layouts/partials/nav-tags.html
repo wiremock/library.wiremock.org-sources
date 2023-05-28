@@ -29,17 +29,29 @@
     x-transition:leave-end="opacity-0 translate-y-1"
     @click.outside="dropdown = false"
    class="absolute z-10 top-12 min-w-[16rem] bg-white rounded-md shadow-xl hidden py-2.5">
-   <a class="{{ if .IsHome }}text-sky-600{{ else }}text-slate-500{{ end }} hover:text-sky-600 block px-5 py-2" href="{{ "/" | relLangURL }}">{{ i18n "all" }}</a>
-   {{ range site.Taxonomies.tags }}
+   {{ range $.Site.Data.navigation.tags }}
+    {{ $tagId := . }}
+    {{ $tagDisplay := .display }}
+    {{ range $taxonomyname, $taxonomy := $.Site.Taxonomies.tags }}
+      {{ if eq $taxonomyname $tagId }}
+      {{ $tagDisplay := default (strings.FirstUpper (replace .Page.Title "_" " ")) $tagDisplay }}
       <a class="{{ if eq .Page.Permalink $.Permalink }}text-sky-600{{ else }}text-slate-500{{ end }} hover:text-sky-600 block px-5 py-2" href="{{ .Page.Permalink }}">{{ strings.FirstUpper (replace .Page.Title "_" " ") }}</a>
+      {{ end }}
     {{ end }}
+  {{ end }}
   </div>
 </div>
 <div class="hidden lg:flex -mt-2">
   <div class="flex flex-col">
-    <a class="{{ if .IsHome }}text-sky-600 underline underline-offset-4 decoration-sky-600{{ else }}text-slate-500{{ end }} py-1.5 text-lg hover:text-sky-600" href="{{ "/" | relLangURL }}">{{ i18n "all" }}</a>
-    {{ range site.Taxonomies.tags }}
-      <a class="{{ if eq .Page.Permalink $.Permalink }}text-sky-600 underline underline-offset-4 decoration-sky-600{{ else }}text-slate-500{{ end }} py-1.5 text-lg hover:text-sky-600 whitespace-nowrap" href="{{ .Page.Permalink }}">{{ strings.FirstUpper (replace .Page.Title "_" " ") }}</a>
+    {{ range $.Site.Data.navigation.tags }}
+      {{ $tagId := .id }}
+      {{ $tagDisplay := .display }}
+      {{ range $taxonomyname, $taxonomy := $.Site.Taxonomies.tags }}
+        {{ if eq $taxonomyname $tagId }}
+          {{ $tagDisplay := default (strings.FirstUpper (replace .Page.Title "_" " ")) $tagDisplay }}
+          <a class="{{ if eq .Page.Permalink $.Permalink }}text-sky-600 underline underline-offset-4 decoration-sky-600{{ else }}text-slate-500{{ end }} py-1.5 text-lg hover:text-sky-600 whitespace-nowrap" href="{{ .Page.Permalink }}">{{ $tagDisplay }}</a>
+        {{ end }}
+      {{ end }}
     {{ end }}
   </div>
 </div>

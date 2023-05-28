@@ -8,8 +8,15 @@
         </div>
         <div class="flex-1">
           <div class="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-            {{ range .Paginator.Pages }}
-              {{ partial "card-api.html" . }}
+            {{ if in .Permalink "/all" }}
+              {{ $allTemplates := .Paginate ( where site.RegularPages "Params.stubs" "!=" nil ) }}
+              {{ range $allTemplates.Pages }}
+                {{ partial "card-api.html" . }}
+              {{ end }}
+            {{ else }}
+              {{ range .Paginator.Pages }}
+                {{ partial "card-api.html" . }}
+              {{ end }}
             {{ end }}
           </div>
           <div class="mt-10">
