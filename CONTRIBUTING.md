@@ -49,3 +49,9 @@ will be automatically propagated to the local site.
 All changes should be submitted as pull requests,
 then it will be reviewed and integrated by one of the maintainers.
 Make sure to follow the pull request template.
+
+## Deployment
+
+At the moment the site is automatically deployed to AWS Amplify.
+If any help with the operations is needed, contact the team in `#community-operations` on Slack.
+
