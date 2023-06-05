@@ -11,7 +11,10 @@
     {{ block "main" . }}{{ end }}
     {{ partialCached "footer.html" . }}
     {{ template "_internal/google_analytics_async.html" . }}
-    {{ partialCached "clarity.html" . }}
+
+    {{ if .Site.Params.enableClarity }}
+        {{ partialCached "clarity.html" . }}
+    {{ end }}
 </body>
 </html>
 
