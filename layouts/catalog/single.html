@@ -51,7 +51,7 @@
               {{ with .Resources.GetMatch .Params.stubs }}
                 <a href="{{ .Permalink }}" class="mt-5 flex items-center justify-center space-x-2 transition rounded-md focus:outline-none font-semibold antialiased
                   px-2 py-3 text-lg
-                  text-white border border-sky-500 bg-sky-500 hover:bg-sky-600 hover:border-sky-600" target="_blank" rel="noopener noreferrer">
+                  text-white border border-sky-500 bg-sky-500 hover:bg-sky-600 hover:border-sky-600" target="_blank" rel="noopener noreferrer" onclick="ga('send', 'event', 'library', 'download json', '{{ $.Title }}')">
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g clip-path="url(#clip0_18373_798)">
                       <path d="M19 12V19H5V12H3V19C3 20.1 3.9 21 5 21H19C20.1 21 21 20.1 21 19V12H19ZM13 12.67L15.59 10.09L17 11.5L12 16.5L7 11.5L8.41 10.09L11 12.67V3H13V12.67Z" fill="white"/>
