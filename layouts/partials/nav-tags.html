@@ -30,7 +30,7 @@
     @click.outside="dropdown = false"
    class="absolute z-10 top-12 min-w-[16rem] bg-white rounded-md shadow-xl hidden py-2.5">
    {{ range $.Site.Data.navigation.tags }}
-    {{ $tagId := . }}
+    {{ $tagId := .id }}
     {{ $tagDisplay := .display }}
     {{ range $taxonomyname, $taxonomy := $.Site.Taxonomies.tags }}
       {{ if eq $taxonomyname $tagId }}
